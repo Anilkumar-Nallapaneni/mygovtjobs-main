@@ -1,0 +1,1445 @@
+{
+  "_info": "Auto-generated HTML scrapers + RSS feeds. Run: node scripts/generate-scraper-registry.mjs",
+  "lookbackDays": 60,
+  "maxItems": 80,
+  "scrapers": [
+    {
+      "code": "pib-rss",
+      "module": "rss_feed",
+      "feed_id": "pib-press-reg3",
+      "category": "state",
+      "enabled": true
+    },
+    {
+      "code": "employment-news-rss",
+      "module": "rss_feed",
+      "feed_id": "employment-news",
+      "category": "state",
+      "enabled": false,
+      "notes": "RSS 404 — use employment-news HTML scraper"
+    },
+    {
+      "code": "upsc-rss",
+      "module": "rss_feed",
+      "feed_id": "upsc-notifications",
+      "category": "upsc",
+      "enabled": false,
+      "notes": "No public RSS — use upsc HTML scraper"
+    },
+    {
+      "code": "ssc-rss",
+      "module": "rss_feed",
+      "feed_id": "ssc-notifications",
+      "category": "ssc",
+      "enabled": false,
+      "notes": "Feed unreachable — use ssc HTML scraper (ssc.gov.in)"
+    },
+    {
+      "code": "ibps-rss",
+      "module": "rss_feed",
+      "feed_id": "ibps-careers",
+      "category": "banking",
+      "enabled": false,
+      "notes": "SSL cert error on feed — use ibps HTML scraper"
+    },
+    {
+      "code": "rrb-rss",
+      "module": "rss_feed",
+      "feed_id": "rrb-notifications",
+      "category": "railways",
+      "enabled": false,
+      "notes": "Enable after verifying feed URL in production"
+    },
+    {
+      "code": "drdo-rss",
+      "module": "rss_feed",
+      "feed_id": "drdo-careers",
+      "category": "defence",
+      "enabled": false
+    },
+    {
+      "code": "isro-rss",
+      "module": "rss_feed",
+      "feed_id": "isro-careers",
+      "category": "psu",
+      "enabled": false
+    },
+    {
+      "code": "employment-news",
+      "module": "state_portal_html",
+      "portal_url": "https://employmentnews.gov.in",
+      "state": "all",
+      "category": "general",
+      "enabled": true,
+      "maxItems": 50
+    },
+    {
+      "code": "pib",
+      "module": "state_portal_html",
+      "portal_url": "https://www.pib.gov.in",
+      "state": "all",
+      "category": "general",
+      "enabled": true,
+      "maxItems": 50
+    },
+    {
+      "code": "upsc",
+      "module": "state_portal_html",
+      "portal_url": "https://upsc.gov.in/whats-new",
+      "state": "all",
+      "category": "upsc",
+      "enabled": true,
+      "maxItems": 50
+    },
+    {
+      "code": "ssc",
+      "module": "state_portal_html",
+      "portal_url": "https://ssc.gov.in/home/notice-board",
+      "state": "all",
+      "category": "ssc",
+      "enabled": true,
+      "maxItems": 50
+    },
+    {
+      "code": "ibps",
+      "module": "state_portal_html",
+      "portal_url": "https://www.ibps.in/notification",
+      "state": "all",
+      "category": "banking",
+      "enabled": true,
+      "maxItems": 50
+    },
+    {
+      "code": "rbi",
+      "module": "state_portal_html",
+      "portal_url": "https://www.rbi.org.in/Scripts/Opportunities.aspx",
+      "state": "all",
+      "category": "banking",
+      "enabled": true,
+      "maxItems": 50
+    },
+    {
+      "code": "sebi",
+      "module": "state_portal_html",
+      "portal_url": "https://www.sebi.gov.in/sebiweb/home/HomeAction.do",
+      "state": "all",
+      "category": "banking",
+      "enabled": true,
+      "maxItems": 50
+    },
+    {
+      "code": "lic",
+      "module": "state_portal_html",
+      "portal_url": "https://licindia.in/careers",
+      "state": "all",
+      "category": "banking",
+      "enabled": true,
+      "maxItems": 50
+    },
+    {
+      "code": "epfo",
+      "module": "state_portal_html",
+      "portal_url": "https://www.epfindia.gov.in/site_en/Recruitment.php",
+      "state": "all",
+      "category": "psu",
+      "enabled": true,
+      "maxItems": 50
+    },
+    {
+      "code": "esic",
+      "module": "state_portal_html",
+      "portal_url": "https://www.esic.gov.in/recruitments",
+      "state": "all",
+      "category": "health",
+      "enabled": true,
+      "maxItems": 50
+    },
+    {
+      "code": "niti",
+      "module": "state_portal_html",
+      "portal_url": "https://www.niti.gov.in/whats-new",
+      "state": "all",
+      "category": "psu",
+      "enabled": true,
+      "maxItems": 50
+    },
+    {
+      "code": "apeda",
+      "module": "state_portal_html",
+      "portal_url": "https://apeda.gov.in/recruitment-appointment",
+      "state": "all",
+      "category": "psu",
+      "enabled": true,
+      "maxItems": 50
+    },
+    {
+      "code": "apprenticeship-india",
+      "module": "state_portal_html",
+      "portal_url": "https://www.apprenticeshipindia.gov.in",
+      "state": "all",
+      "category": "general",
+      "enabled": true,
+      "maxItems": 50
+    },
+    {
+      "code": "nsut",
+      "module": "state_portal_html",
+      "portal_url": "https://www.nsut.ac.in/teaching-post/105",
+      "state": "dl",
+      "category": "teaching",
+      "enabled": true,
+      "maxItems": 80
+    },
+    {
+      "code": "wii",
+      "module": "state_portal_html",
+      "portal_url": "https://www.wii.gov.in/recruitments",
+      "state": "all",
+      "category": "psu",
+      "enabled": true,
+      "maxItems": 50
+    },
+    {
+      "code": "bisag-n",
+      "module": "state_portal_html",
+      "portal_url": "https://bisag-n.gov.in",
+      "state": "gj",
+      "category": "psu",
+      "enabled": true,
+      "maxItems": 80
+    },
+    {
+      "code": "isro",
+      "module": "state_portal_html",
+      "portal_url": "https://www.isro.gov.in/Careers.html",
+      "state": "all",
+      "category": "psu",
+      "enabled": true,
+      "maxItems": 50
+    },
+    {
+      "code": "drdo",
+      "module": "state_portal_html",
+      "portal_url": "https://www.drdo.gov.in",
+      "state": "all",
+      "category": "defence",
+      "enabled": true,
+      "maxItems": 50
+    },
+    {
+      "code": "barc",
+      "module": "state_portal_html",
+      "portal_url": "https://www.barc.gov.in/careers",
+      "state": "all",
+      "category": "defence",
+      "enabled": true,
+      "maxItems": 50
+    },
+    {
+      "code": "npcil",
+      "module": "state_portal_html",
+      "portal_url": "https://www.npcil.nic.in/content/331_1_Recruitments.aspx",
+      "state": "all",
+      "category": "psu",
+      "enabled": true,
+      "maxItems": 50
+    },
+    {
+      "code": "rrb-cdg",
+      "module": "state_portal_html",
+      "portal_url": "https://www.rrbcdg.gov.in",
+      "state": "all",
+      "category": "railways",
+      "enabled": true,
+      "maxItems": 50
+    },
+    {
+      "code": "rrb-ald",
+      "module": "state_portal_html",
+      "portal_url": "https://www.rrbald.gov.in",
+      "state": "all",
+      "category": "railways",
+      "enabled": true,
+      "maxItems": 50
+    },
+    {
+      "code": "rrb-mumbai",
+      "module": "state_portal_html",
+      "portal_url": "https://rrbmumbai.gov.in",
+      "state": "all",
+      "category": "railways",
+      "enabled": true,
+      "maxItems": 50
+    },
+    {
+      "code": "rrcb",
+      "module": "state_portal_html",
+      "portal_url": "https://www.rrcb.gov.in",
+      "state": "all",
+      "category": "railways",
+      "enabled": true,
+      "maxItems": 50
+    },
+    {
+      "code": "ircon",
+      "module": "state_portal_html",
+      "portal_url": "https://ircon.org",
+      "state": "all",
+      "category": "railways",
+      "enabled": true,
+      "maxItems": 50
+    },
+    {
+      "code": "rrb-ajmer",
+      "module": "state_portal_html",
+      "portal_url": "https://www.rrbajmer.gov.in",
+      "state": "all",
+      "category": "railways",
+      "enabled": true,
+      "maxItems": 50
+    },
+    {
+      "code": "rrb-bhopal",
+      "module": "state_portal_html",
+      "portal_url": "https://www.rrbbhopal.gov.in",
+      "state": "all",
+      "category": "railways",
+      "enabled": true,
+      "maxItems": 50
+    },
+    {
+      "code": "rrb-bbs",
+      "module": "state_portal_html",
+      "portal_url": "https://www.rrbbbs.gov.in",
+      "state": "all",
+      "category": "railways",
+      "enabled": true,
+      "maxItems": 50
+    },
+    {
+      "code": "rrb-bilaspur",
+      "module": "state_portal_html",
+      "portal_url": "https://www.rrbbilaspur.gov.in",
+      "state": "all",
+      "category": "railways",
+      "enabled": true,
+      "maxItems": 50
+    },
+    {
+      "code": "rrb-gorakhpur",
+      "module": "state_portal_html",
+      "portal_url": "https://www.rrbgkp.gov.in",
+      "state": "all",
+      "category": "railways",
+      "enabled": true,
+      "maxItems": 50
+    },
+    {
+      "code": "rrb-guwahati",
+      "module": "state_portal_html",
+      "portal_url": "https://www.rrbguwahati.gov.in",
+      "state": "all",
+      "category": "railways",
+      "enabled": true,
+      "maxItems": 50
+    },
+    {
+      "code": "rrb-kolkata",
+      "module": "state_portal_html",
+      "portal_url": "https://www.rrbkolkata.gov.in",
+      "state": "all",
+      "category": "railways",
+      "enabled": true,
+      "maxItems": 50
+    },
+    {
+      "code": "rrb-malda",
+      "module": "state_portal_html",
+      "portal_url": "https://www.rrbmalda.gov.in",
+      "state": "all",
+      "category": "railways",
+      "enabled": true,
+      "maxItems": 50
+    },
+    {
+      "code": "rrb-patna",
+      "module": "state_portal_html",
+      "portal_url": "https://www.rrbpatna.gov.in",
+      "state": "all",
+      "category": "railways",
+      "enabled": true,
+      "maxItems": 50
+    },
+    {
+      "code": "rrb-ranchi",
+      "module": "state_portal_html",
+      "portal_url": "https://www.rrbranchi.gov.in",
+      "state": "all",
+      "category": "railways",
+      "enabled": true,
+      "maxItems": 50
+    },
+    {
+      "code": "rrb-sec",
+      "module": "state_portal_html",
+      "portal_url": "https://www.rrbsecunderabad.nic.in",
+      "state": "all",
+      "category": "railways",
+      "enabled": true,
+      "maxItems": 50
+    },
+    {
+      "code": "rrb-siliguri",
+      "module": "state_portal_html",
+      "portal_url": "https://www.rrbsiliguri.gov.in",
+      "state": "all",
+      "category": "railways",
+      "enabled": true,
+      "maxItems": 50
+    },
+    {
+      "code": "rrb-tvm",
+      "module": "state_portal_html",
+      "portal_url": "https://www.rrbthiruvananthapuram.gov.in",
+      "state": "all",
+      "category": "railways",
+      "enabled": true,
+      "maxItems": 50
+    },
+    {
+      "code": "fci",
+      "module": "state_portal_html",
+      "portal_url": "https://fci.gov.in/en/careers/recruitment-notices",
+      "state": "all",
+      "category": "psu",
+      "enabled": true,
+      "maxItems": 50
+    },
+    {
+      "code": "fssai",
+      "module": "state_portal_html",
+      "portal_url": "https://www.fssai.gov.in/cms/recruitment.php",
+      "state": "all",
+      "category": "health",
+      "enabled": true,
+      "maxItems": 50
+    },
+    {
+      "code": "indiapost",
+      "module": "state_portal_html",
+      "portal_url": "https://www.indiapost.gov.in/VAS/Pages/IndiaPosthome.aspx",
+      "state": "all",
+      "category": "psu",
+      "enabled": true,
+      "maxItems": 50
+    },
+    {
+      "code": "army",
+      "module": "state_portal_html",
+      "portal_url": "https://joinindianarmy.nic.in",
+      "state": "all",
+      "category": "defence",
+      "enabled": true,
+      "maxItems": 50
+    },
+    {
+      "code": "navy",
+      "module": "state_portal_html",
+      "portal_url": "https://www.joinindiannavy.gov.in",
+      "state": "all",
+      "category": "defence",
+      "enabled": true,
+      "maxItems": 50
+    },
+    {
+      "code": "iaf",
+      "module": "state_portal_html",
+      "portal_url": "https://careerindianairforce.cdac.in",
+      "state": "all",
+      "category": "defence",
+      "enabled": true,
+      "maxItems": 50
+    },
+    {
+      "code": "afcat",
+      "module": "state_portal_html",
+      "portal_url": "https://afcat.cdac.in",
+      "state": "all",
+      "category": "defence",
+      "enabled": true,
+      "maxItems": 50
+    },
+    {
+      "code": "coast-guard",
+      "module": "state_portal_html",
+      "portal_url": "https://joinindiancoastguard.cdac.in",
+      "state": "all",
+      "category": "defence",
+      "enabled": true,
+      "maxItems": 50
+    },
+    {
+      "code": "bsf",
+      "module": "state_portal_html",
+      "portal_url": "https://rectt.bsf.gov.in",
+      "state": "all",
+      "category": "police",
+      "enabled": true,
+      "maxItems": 50
+    },
+    {
+      "code": "crpf",
+      "module": "state_portal_html",
+      "portal_url": "https://crpf.gov.in/recruitment.htm",
+      "state": "all",
+      "category": "police",
+      "enabled": true,
+      "maxItems": 50
+    },
+    {
+      "code": "cisf",
+      "module": "state_portal_html",
+      "portal_url": "https://www.cisf.gov.in/recruitment",
+      "state": "all",
+      "category": "police",
+      "enabled": true,
+      "maxItems": 50
+    },
+    {
+      "code": "itbp",
+      "module": "state_portal_html",
+      "portal_url": "https://recruitment.itbpolice.nic.in",
+      "state": "all",
+      "category": "police",
+      "enabled": true,
+      "maxItems": 50
+    },
+    {
+      "code": "ssb",
+      "module": "state_portal_html",
+      "portal_url": "https://ssbrectt.gov.in",
+      "state": "all",
+      "category": "police",
+      "enabled": true,
+      "maxItems": 50
+    },
+    {
+      "code": "ib",
+      "module": "state_portal_html",
+      "portal_url": "https://www.mha.gov.in/en/notifications/vacancies",
+      "state": "all",
+      "category": "police",
+      "enabled": true,
+      "maxItems": 50
+    },
+    {
+      "code": "ugc",
+      "module": "state_portal_html",
+      "portal_url": "https://www.ugc.gov.in/page/Notices.aspx",
+      "state": "all",
+      "category": "teaching",
+      "enabled": true,
+      "maxItems": 50
+    },
+    {
+      "code": "ncert",
+      "module": "state_portal_html",
+      "portal_url": "https://ncert.nic.in/vacancies.php",
+      "state": "all",
+      "category": "teaching",
+      "enabled": true,
+      "maxItems": 50
+    },
+    {
+      "code": "ctet",
+      "module": "state_portal_html",
+      "portal_url": "https://ctet.nic.in",
+      "state": "all",
+      "category": "teaching",
+      "enabled": true,
+      "maxItems": 50
+    },
+    {
+      "code": "kvs",
+      "module": "state_portal_html",
+      "portal_url": "https://kvsangathan.nic.in",
+      "state": "all",
+      "category": "teaching",
+      "enabled": true,
+      "maxItems": 50
+    },
+    {
+      "code": "nvs",
+      "module": "state_portal_html",
+      "portal_url": "https://navodaya.gov.in/nvs/en/Recruitment-Notice/Recruitment",
+      "state": "all",
+      "category": "teaching",
+      "enabled": true,
+      "maxItems": 50
+    },
+    {
+      "code": "aiims",
+      "module": "state_portal_html",
+      "portal_url": "https://www.aiimsexams.ac.in",
+      "state": "all",
+      "category": "health",
+      "enabled": true,
+      "maxItems": 50
+    },
+    {
+      "code": "sbi",
+      "module": "state_portal_html",
+      "portal_url": "https://sbi.bank.in/web/careers/current-openings",
+      "state": "all",
+      "category": "banking",
+      "enabled": true,
+      "maxItems": 50
+    },
+    {
+      "code": "bob",
+      "module": "state_portal_html",
+      "portal_url": "https://www.bankofbaroda.in/career",
+      "state": "all",
+      "category": "banking",
+      "enabled": true,
+      "maxItems": 50
+    },
+    {
+      "code": "pnb",
+      "module": "state_portal_html",
+      "portal_url": "https://www.pnbindia.in/Recruitments.html",
+      "state": "all",
+      "category": "banking",
+      "enabled": true,
+      "maxItems": 50
+    },
+    {
+      "code": "canara",
+      "module": "state_portal_html",
+      "portal_url": "https://canarabank.com/pages/recruitment",
+      "state": "all",
+      "category": "banking",
+      "enabled": true,
+      "maxItems": 50
+    },
+    {
+      "code": "uco",
+      "module": "state_portal_html",
+      "portal_url": "https://www.uco.bank.in/job-opportunities",
+      "state": "all",
+      "category": "banking",
+      "enabled": true,
+      "maxItems": 50
+    },
+    {
+      "code": "nabard",
+      "module": "state_portal_html",
+      "portal_url": "https://www.nabard.org/career.aspx",
+      "state": "all",
+      "category": "banking",
+      "enabled": true,
+      "maxItems": 50
+    },
+    {
+      "code": "ongc",
+      "module": "state_portal_html",
+      "portal_url": "https://ongcindia.com/web/eng/career/recruitment-notice",
+      "state": "all",
+      "category": "psu",
+      "enabled": true,
+      "maxItems": 50
+    },
+    {
+      "code": "iocl",
+      "module": "state_portal_html",
+      "portal_url": "https://iocl.com/job-search",
+      "state": "all",
+      "category": "psu",
+      "enabled": true,
+      "maxItems": 50
+    },
+    {
+      "code": "bpcl",
+      "module": "state_portal_html",
+      "portal_url": "https://bharatpetroleum.in/About-BPCL/Careers/Careers.aspx",
+      "state": "all",
+      "category": "psu",
+      "enabled": true,
+      "maxItems": 50
+    },
+    {
+      "code": "hpcl",
+      "module": "state_portal_html",
+      "portal_url": "https://hindustanpetroleum.com/careersopportunities",
+      "state": "all",
+      "category": "psu",
+      "enabled": true,
+      "maxItems": 50
+    },
+    {
+      "code": "gail",
+      "module": "state_portal_html",
+      "portal_url": "https://gailonline.com/careers",
+      "state": "all",
+      "category": "psu",
+      "enabled": true,
+      "maxItems": 50
+    },
+    {
+      "code": "ntpc",
+      "module": "state_portal_html",
+      "portal_url": "https://www.ntpc.co.in/en/career",
+      "state": "all",
+      "category": "psu",
+      "enabled": true,
+      "maxItems": 50
+    },
+    {
+      "code": "bhel",
+      "module": "state_portal_html",
+      "portal_url": "https://careers.bhel.in",
+      "state": "all",
+      "category": "psu",
+      "enabled": true,
+      "maxItems": 50
+    },
+    {
+      "code": "hal",
+      "module": "state_portal_html",
+      "portal_url": "https://hal-india.co.in/Careers/M__93",
+      "state": "all",
+      "category": "defence",
+      "enabled": true,
+      "maxItems": 50
+    },
+    {
+      "code": "bel",
+      "module": "state_portal_html",
+      "portal_url": "https://bel-india.in/job-notifications",
+      "state": "all",
+      "category": "defence",
+      "enabled": true,
+      "maxItems": 50
+    },
+    {
+      "code": "sail",
+      "module": "state_portal_html",
+      "portal_url": "https://sail.co.in/en/career/career-opportunities",
+      "state": "all",
+      "category": "psu",
+      "enabled": true,
+      "maxItems": 50
+    },
+    {
+      "code": "ies",
+      "module": "state_portal_html",
+      "portal_url": "https://upsc.gov.in/whats-new",
+      "state": "all",
+      "category": "upsc",
+      "enabled": true,
+      "maxItems": 50
+    },
+    {
+      "code": "delhi-police",
+      "module": "state_portal_html",
+      "portal_url": "https://www.delhipolice.gov.in/recruitment",
+      "state": "dl",
+      "category": "police",
+      "enabled": true,
+      "maxItems": 50
+    },
+    {
+      "code": "psc-ap",
+      "module": "state_portal_html",
+      "portal_url": "https://psc.ap.gov.in",
+      "state": "ap",
+      "category": "state",
+      "enabled": true,
+      "maxItems": 80
+    },
+    {
+      "code": "psc-as",
+      "module": "state_portal_html",
+      "portal_url": "https://apsc.nic.in/notifications",
+      "state": "as",
+      "category": "state",
+      "enabled": true,
+      "maxItems": 80
+    },
+    {
+      "code": "psc-br",
+      "module": "state_portal_html",
+      "portal_url": "https://bpsc.bihar.gov.in/Notices.html",
+      "state": "br",
+      "category": "state",
+      "enabled": true,
+      "maxItems": 80
+    },
+    {
+      "code": "psc-cg",
+      "module": "state_portal_html",
+      "portal_url": "https://psc.cg.gov.in",
+      "state": "cg",
+      "category": "state",
+      "enabled": true,
+      "maxItems": 80
+    },
+    {
+      "code": "psc-ga",
+      "module": "state_portal_html",
+      "portal_url": "https://gpsc.goa.gov.in",
+      "state": "ga",
+      "category": "state",
+      "enabled": true,
+      "maxItems": 80
+    },
+    {
+      "code": "psc-gj",
+      "module": "state_portal_html",
+      "portal_url": "https://gpsc.gujarat.gov.in",
+      "state": "gj",
+      "category": "state",
+      "enabled": true,
+      "maxItems": 80
+    },
+    {
+      "code": "psc-hr",
+      "module": "state_portal_html",
+      "portal_url": "https://hpsc.gov.in/en-us/Recruitment",
+      "state": "hr",
+      "category": "state",
+      "enabled": true,
+      "maxItems": 80
+    },
+    {
+      "code": "psc-hp",
+      "module": "state_portal_html",
+      "portal_url": "https://hppsc.hp.gov.in/hppsc",
+      "state": "hp",
+      "category": "state",
+      "enabled": true,
+      "maxItems": 80
+    },
+    {
+      "code": "psc-jk",
+      "module": "state_portal_html",
+      "portal_url": "https://jkpsc.nic.in/Notifications.html",
+      "state": "jk",
+      "category": "state",
+      "enabled": true,
+      "maxItems": 80
+    },
+    {
+      "code": "psc-jh",
+      "module": "state_portal_html",
+      "portal_url": "https://jpsc.gov.in",
+      "state": "jh",
+      "category": "state",
+      "enabled": true,
+      "maxItems": 80
+    },
+    {
+      "code": "psc-ka",
+      "module": "state_portal_html",
+      "portal_url": "https://kpsc.kar.nic.in/notifications.html",
+      "state": "ka",
+      "category": "state",
+      "enabled": true,
+      "maxItems": 80
+    },
+    {
+      "code": "psc-kl",
+      "module": "state_portal_html",
+      "portal_url": "https://www.keralapsc.gov.in/notifications",
+      "state": "kl",
+      "category": "state",
+      "enabled": true,
+      "maxItems": 80
+    },
+    {
+      "code": "psc-mp",
+      "module": "state_portal_html",
+      "portal_url": "https://mppsc.mp.gov.in/news.aspx",
+      "state": "mp",
+      "category": "state",
+      "enabled": true,
+      "maxItems": 80
+    },
+    {
+      "code": "psc-mh",
+      "module": "state_portal_html",
+      "portal_url": "https://mpsc.gov.in/english/notices",
+      "state": "mh",
+      "category": "state",
+      "enabled": true,
+      "maxItems": 80
+    },
+    {
+      "code": "psc-mz",
+      "module": "state_portal_html",
+      "portal_url": "https://mpsc.mizoram.gov.in",
+      "state": "ne",
+      "category": "state",
+      "enabled": true,
+      "maxItems": 80
+    },
+    {
+      "code": "psc-nl",
+      "module": "state_portal_html",
+      "portal_url": "https://npsc.co.in/recruitment.html",
+      "state": "ne",
+      "category": "state",
+      "enabled": true,
+      "maxItems": 80
+    },
+    {
+      "code": "psc-od",
+      "module": "state_portal_html",
+      "portal_url": "https://opsc.gov.in",
+      "state": "od",
+      "category": "state",
+      "enabled": true,
+      "maxItems": 80
+    },
+    {
+      "code": "psc-pb",
+      "module": "state_portal_html",
+      "portal_url": "https://ppsc.gov.in/Notifications.aspx",
+      "state": "pb",
+      "category": "state",
+      "enabled": true,
+      "maxItems": 80
+    },
+    {
+      "code": "psc-rj",
+      "module": "state_portal_html",
+      "portal_url": "https://rpsc.rajasthan.gov.in/advertisements",
+      "state": "rj",
+      "category": "state",
+      "enabled": true,
+      "maxItems": 80
+    },
+    {
+      "code": "psc-sk",
+      "module": "state_portal_html",
+      "portal_url": "https://spscskm.gov.in",
+      "state": "sk",
+      "category": "state",
+      "enabled": true,
+      "maxItems": 80
+    },
+    {
+      "code": "psc-tn",
+      "module": "state_portal_html",
+      "portal_url": "https://www.tnpsc.gov.in",
+      "state": "tn",
+      "category": "state",
+      "enabled": true,
+      "maxItems": 80
+    },
+    {
+      "code": "psc-tg",
+      "module": "state_portal_html",
+      "portal_url": "https://tspsc.gov.in",
+      "state": "tg",
+      "category": "state",
+      "enabled": true,
+      "maxItems": 80
+    },
+    {
+      "code": "psc-tr",
+      "module": "state_portal_html",
+      "portal_url": "https://tpsc.tripura.gov.in",
+      "state": "ne",
+      "category": "state",
+      "enabled": true,
+      "maxItems": 80
+    },
+    {
+      "code": "psc-up",
+      "module": "state_portal_html",
+      "portal_url": "https://uppsc.up.nic.in/Notifications.aspx",
+      "state": "up",
+      "category": "state",
+      "enabled": true,
+      "maxItems": 80
+    },
+    {
+      "code": "psc-uk",
+      "module": "state_portal_html",
+      "portal_url": "https://psc.uk.gov.in",
+      "state": "uk",
+      "category": "state",
+      "enabled": true,
+      "maxItems": 80
+    },
+    {
+      "code": "psc-wb",
+      "module": "state_portal_html",
+      "portal_url": "https://wbpsc.gov.in",
+      "state": "wb",
+      "category": "state",
+      "enabled": true,
+      "maxItems": 80
+    },
+    {
+      "code": "psc-ar",
+      "module": "state_portal_html",
+      "portal_url": "https://appsc.gov.in/Index/institute_index/ins/RECINS001",
+      "state": "ne",
+      "category": "state",
+      "enabled": true,
+      "maxItems": 80
+    },
+    {
+      "code": "psc-mn",
+      "module": "state_portal_html",
+      "portal_url": "https://mpscmanipur.gov.in",
+      "state": "ne",
+      "category": "state",
+      "enabled": true,
+      "maxItems": 80
+    },
+    {
+      "code": "psc-ml",
+      "module": "state_portal_html",
+      "portal_url": "https://megpsc.gov.in",
+      "state": "ne",
+      "category": "state",
+      "enabled": true,
+      "maxItems": 80
+    },
+    {
+      "code": "ssb-up",
+      "module": "state_portal_html",
+      "portal_url": "https://upsssc.gov.in/AllNotifications.aspx",
+      "state": "up",
+      "category": "state",
+      "enabled": true,
+      "maxItems": 80
+    },
+    {
+      "code": "ssb-mh",
+      "module": "state_portal_html",
+      "portal_url": "https://mahapariksha.gov.in",
+      "state": "mh",
+      "category": "state",
+      "enabled": true,
+      "maxItems": 80
+    },
+    {
+      "code": "ssb-tn",
+      "module": "state_portal_html",
+      "portal_url": "https://trb.tn.gov.in",
+      "state": "tn",
+      "category": "teaching",
+      "enabled": true,
+      "maxItems": 80
+    },
+    {
+      "code": "ssb-rj",
+      "module": "state_portal_html",
+      "portal_url": "https://rsmssb.rajasthan.gov.in",
+      "state": "rj",
+      "category": "state",
+      "enabled": true,
+      "maxItems": 80
+    },
+    {
+      "code": "ssb-hr",
+      "module": "state_portal_html",
+      "portal_url": "https://hssc.gov.in",
+      "state": "hr",
+      "category": "state",
+      "enabled": true,
+      "maxItems": 80
+    },
+    {
+      "code": "ssb-gj",
+      "module": "state_portal_html",
+      "portal_url": "https://gsssb.gujarat.gov.in",
+      "state": "gj",
+      "category": "state",
+      "enabled": true,
+      "maxItems": 80
+    },
+    {
+      "code": "ssb-mp",
+      "module": "state_portal_html",
+      "portal_url": "https://esb.mp.gov.in",
+      "state": "mp",
+      "category": "state",
+      "enabled": true,
+      "maxItems": 80
+    },
+    {
+      "code": "police-up",
+      "module": "state_portal_html",
+      "portal_url": "https://uppbpb.gov.in",
+      "state": "up",
+      "category": "police",
+      "enabled": true,
+      "maxItems": 80
+    },
+    {
+      "code": "police-mh",
+      "module": "state_portal_html",
+      "portal_url": "https://www.mahapolice.gov.in",
+      "state": "mh",
+      "category": "police",
+      "enabled": true,
+      "maxItems": 80
+    },
+    {
+      "code": "police-tn",
+      "module": "state_portal_html",
+      "portal_url": "https://tnusrb.tn.gov.in",
+      "state": "tn",
+      "category": "police",
+      "enabled": true,
+      "maxItems": 80
+    },
+    {
+      "code": "police-rj",
+      "module": "state_portal_html",
+      "portal_url": "https://recruitment2.rajasthan.gov.in",
+      "state": "rj",
+      "category": "police",
+      "enabled": true,
+      "maxItems": 80
+    },
+    {
+      "code": "police-mp",
+      "module": "state_portal_html",
+      "portal_url": "https://mppolice.gov.in",
+      "state": "mp",
+      "category": "police",
+      "enabled": true,
+      "maxItems": 80
+    },
+    {
+      "code": "police-kl",
+      "module": "state_portal_html",
+      "portal_url": "https://keralapolice.gov.in/page/recruitment-board",
+      "state": "kl",
+      "category": "police",
+      "enabled": true,
+      "maxItems": 80
+    },
+    {
+      "code": "police-ka",
+      "module": "state_portal_html",
+      "portal_url": "https://ksp.karnataka.gov.in",
+      "state": "ka",
+      "category": "police",
+      "enabled": true,
+      "maxItems": 80
+    },
+    {
+      "code": "delhi-portal",
+      "module": "state_portal_html",
+      "portal_url": "https://labour.delhi.gov.in",
+      "state": "dl",
+      "category": "state",
+      "enabled": true,
+      "maxItems": 80
+    },
+    {
+      "code": "psc-dl",
+      "module": "state_portal_html",
+      "portal_url": "https://dsssbonline.nic.in",
+      "state": "dl",
+      "category": "state",
+      "enabled": true,
+      "maxItems": 80
+    },
+    {
+      "code": "py-rec",
+      "module": "state_portal_html",
+      "portal_url": "https://recruitment.py.gov.in",
+      "state": "py",
+      "category": "state",
+      "enabled": true,
+      "maxItems": 80
+    },
+    {
+      "code": "py-psc",
+      "module": "state_portal_html",
+      "portal_url": "https://py.gov.in/websites/PuducherryPublicServiceCommission",
+      "state": "py",
+      "category": "state",
+      "enabled": true,
+      "maxItems": 80
+    },
+    {
+      "code": "la-gov",
+      "module": "state_portal_html",
+      "portal_url": "https://ladakh.gov.in",
+      "state": "la",
+      "category": "state",
+      "enabled": true,
+      "maxItems": 80
+    },
+    {
+      "code": "la-recruitment",
+      "module": "state_portal_html",
+      "portal_url": "https://ladakh.gov.in/recruitment",
+      "state": "la",
+      "category": "state",
+      "enabled": true,
+      "maxItems": 80
+    },
+    {
+      "code": "an-rec",
+      "module": "state_portal_html",
+      "portal_url": "https://erecruitment.andamannicobar.gov.in",
+      "state": "an",
+      "category": "state",
+      "enabled": true,
+      "maxItems": 80
+    },
+    {
+      "code": "an-gov",
+      "module": "state_portal_html",
+      "portal_url": "https://andamannicobar.gov.in",
+      "state": "an",
+      "category": "state",
+      "enabled": true,
+      "maxItems": 80
+    },
+    {
+      "code": "dcourt-angul",
+      "module": "state_portal_html",
+      "portal_url": "https://angul.dcourts.gov.in/notice-category/recruitments",
+      "state": "od",
+      "category": "state",
+      "enabled": true,
+      "maxItems": 80
+    },
+    {
+      "code": "dcourt-balangir",
+      "module": "state_portal_html",
+      "portal_url": "https://balangir.dcourts.gov.in/notice-category/recruitments",
+      "state": "od",
+      "category": "state",
+      "enabled": true,
+      "maxItems": 80
+    },
+    {
+      "code": "dcourt-nayagarh",
+      "module": "state_portal_html",
+      "portal_url": "https://nayagarh.dcourts.gov.in/notice-category/recruitments",
+      "state": "od",
+      "category": "state",
+      "enabled": true,
+      "maxItems": 80
+    },
+    {
+      "code": "dcourt-jagatsinghpur",
+      "module": "state_portal_html",
+      "portal_url": "https://jagatsinghpur.dcourts.gov.in/notice-category/recruitments",
+      "state": "od",
+      "category": "state",
+      "enabled": true,
+      "maxItems": 80
+    },
+    {
+      "code": "dcourt-jharsuguda",
+      "module": "state_portal_html",
+      "portal_url": "https://jharsuguda.dcourts.gov.in/notice-category/recruitments",
+      "state": "od",
+      "category": "state",
+      "enabled": true,
+      "maxItems": 80
+    },
+    {
+      "code": "dcourt-puri",
+      "module": "state_portal_html",
+      "portal_url": "https://puri.dcourts.gov.in/notice-category/recruitments",
+      "state": "od",
+      "category": "state",
+      "enabled": true,
+      "maxItems": 80
+    },
+    {
+      "code": "dcourt-rayagada",
+      "module": "state_portal_html",
+      "portal_url": "https://rayagada.dcourts.gov.in/notice-category/recruitments",
+      "state": "od",
+      "category": "state",
+      "enabled": true,
+      "maxItems": 80
+    },
+    {
+      "code": "dcourt-dhenkanal",
+      "module": "state_portal_html",
+      "portal_url": "https://dhenkanal.dcourts.gov.in/notice-category/recruitments",
+      "state": "od",
+      "category": "state",
+      "enabled": true,
+      "maxItems": 80
+    },
+    {
+      "code": "dcourt-nuapada",
+      "module": "state_portal_html",
+      "portal_url": "https://nuapada.dcourts.gov.in/notice-category/recruitments",
+      "state": "od",
+      "category": "state",
+      "enabled": true,
+      "maxItems": 80
+    },
+    {
+      "code": "dcourt-sitapur",
+      "module": "state_portal_html",
+      "portal_url": "https://sitapur.dcourts.gov.in/notice-category/recruitments",
+      "state": "up",
+      "category": "state",
+      "enabled": true,
+      "maxItems": 80
+    },
+    {
+      "code": "dcourt-ludhiana",
+      "module": "state_portal_html",
+      "portal_url": "https://ludhiana.dcourts.gov.in/notice-category/recruitments",
+      "state": "pb",
+      "category": "state",
+      "enabled": true,
+      "maxItems": 80
+    },
+    {
+      "code": "dcourt-yamunanagar",
+      "module": "state_portal_html",
+      "portal_url": "https://yamunanagar.dcourts.gov.in/notice-category/recruitments",
+      "state": "hr",
+      "category": "state",
+      "enabled": true,
+      "maxItems": 80
+    },
+    {
+      "code": "dcourt-kullu",
+      "module": "state_portal_html",
+      "portal_url": "https://kullu.dcourts.gov.in/notice-category/recruitments",
+      "state": "hp",
+      "category": "state",
+      "enabled": true,
+      "maxItems": 80
+    },
+    {
+      "code": "dcourt-indore",
+      "module": "state_portal_html",
+      "portal_url": "https://indore.dcourts.gov.in/notice-category/recruitments",
+      "state": "mp",
+      "category": "state",
+      "enabled": true,
+      "maxItems": 80
+    },
+    {
+      "code": "dcourt-ujjain",
+      "module": "state_portal_html",
+      "portal_url": "https://ujjain.dcourts.gov.in/notice-category/recruitments",
+      "state": "mp",
+      "category": "state",
+      "enabled": true,
+      "maxItems": 80
+    },
+    {
+      "code": "dcourt-howrah",
+      "module": "state_portal_html",
+      "portal_url": "https://howrah.dcourts.gov.in/notice-category/recruitments",
+      "state": "wb",
+      "category": "state",
+      "enabled": true,
+      "maxItems": 80
+    },
+    {
+      "code": "dcourt-coochbehar",
+      "module": "state_portal_html",
+      "portal_url": "https://coochbehar.dcourts.gov.in/notice-category/recruitments",
+      "state": "wb",
+      "category": "state",
+      "enabled": true,
+      "maxItems": 80
+    },
+    {
+      "code": "dcourt-begusarai",
+      "module": "state_portal_html",
+      "portal_url": "https://begusarai.dcourts.gov.in/notice-category/recruitments",
+      "state": "br",
+      "category": "state",
+      "enabled": true,
+      "maxItems": 80
+    },
+    {
+      "code": "dcourt-bhojpur",
+      "module": "state_portal_html",
+      "portal_url": "https://bhojpur.dcourts.gov.in/notice-category/recruitments",
+      "state": "br",
+      "category": "state",
+      "enabled": true,
+      "maxItems": 80
+    },
+    {
+      "code": "dcourt-siddipet",
+      "module": "state_portal_html",
+      "portal_url": "https://siddipet.dcourts.gov.in/notice-category/recruitments",
+      "state": "tg",
+      "category": "state",
+      "enabled": true,
+      "maxItems": 80
+    },
+    {
+      "code": "ss-goalpara",
+      "module": "state_portal_html",
+      "portal_url": "https://sainikschoolgoalpara.org",
+      "state": "as",
+      "category": "teaching",
+      "enabled": true,
+      "maxItems": 80
+    },
+    {
+      "code": "ss-amaravathi",
+      "module": "state_portal_html",
+      "portal_url": "https://www.sainikschoolamaravathinagar.edu.in/careers.php",
+      "state": "tn",
+      "category": "teaching",
+      "enabled": true,
+      "maxItems": 80
+    },
+    {
+      "code": "ss-jhansi",
+      "module": "state_portal_html",
+      "portal_url": "https://www.sainikschooljhansi.com/files/recruitments",
+      "state": "up",
+      "category": "teaching",
+      "enabled": true,
+      "maxItems": 80
+    },
+    {
+      "code": "ss-bhubaneswar",
+      "module": "state_portal_html",
+      "portal_url": "https://www.sainikschoolbhubaneswar.edu.in",
+      "state": "od",
+      "category": "teaching",
+      "enabled": true,
+      "maxItems": 80
+    },
+    {
+      "code": "ss-gopalganj",
+      "module": "state_portal_html",
+      "portal_url": "https://www.ssgopalganj.in/Documents/vacancy",
+      "state": "br",
+      "category": "teaching",
+      "enabled": true,
+      "maxItems": 80
+    },
+    {
+      "code": "emrs-pakur",
+      "module": "state_portal_html",
+      "portal_url": "https://pakur.nic.in",
+      "state": "jh",
+      "category": "teaching",
+      "enabled": true,
+      "maxItems": 80
+    }
+  ]
+}

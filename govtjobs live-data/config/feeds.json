@@ -1,0 +1,26 @@
+{
+  "pib-press-reg3": {
+    "name": "PIB — Press releases",
+    "feedUrl": "https://www.pib.gov.in/RssMain.aspx?ModId=6&Lang=1&Regid=3",
+    "state": "all",
+    "category": "general"
+  },
+  "employment-news": {
+    "name": "Employment News",
+    "feedUrl": "https://employmentnews.gov.in/rss.xml",
+    "state": "all",
+    "category": "general"
+  },
+  "ssc-notifications": {
+    "name": "SSC Notifications",
+    "feedUrl": "https://ssc.nic.in/feed",
+    "state": "all",
+    "category": "ssc"
+  },
+  "ibps-careers": {
+    "name": "IBPS Careers",
+    "feedUrl": "https://www.ibps.in/rss/",
+    "state": "all",
+    "category": "banking"
+  }
+}

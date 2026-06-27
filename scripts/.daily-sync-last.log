@@ -1,0 +1,4 @@
+
+> daily:sync
+> node scripts/run-python.mjs scripts/run-daily-8am-sync.py --force
+

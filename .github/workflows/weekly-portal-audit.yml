@@ -1,0 +1,51 @@
+name: Weekly portal audit
+
+# Probe official portal URLs before users hit broken links.
+on:
+  schedule:
+    - cron: "0 4 * * 0" # Sunday 9:30 AM IST (after weekly enrich)
+  workflow_dispatch:
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+          cache: npm
+          cache-dependency-path: package-lock.json
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Audit official portal URLs (strict ≤10% stale 404/410)
+        env:
+          PORTAL_AUDIT_STRICT: "1"
+          PORTAL_AUDIT_MAX_FAIL_PCT: "10"
+        run: npm run audit:official-sites:strict
+        # Strict gate = stale deep links (404/410) only. Network timeouts on residential IPs are reported, not failed.
+        # Report artifact is uploaded even when this step fails (fix latestUrl in officialSites.ts).
+
+      - name: Upload audit report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: portal-audit-${{ github.run_id }}
+          path: scripts/data/site-audit.json
+          if-no-files-found: warn
+
+  notify-failure:
+    needs: audit
+    if: failure()
+    uses: ./.github/workflows/notify-on-failure.yml
+    secrets: inherit

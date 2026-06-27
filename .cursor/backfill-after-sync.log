@@ -1,0 +1,120 @@
+=== Watcher started 2026-06-21 16:55:24 ===
+16:55:24 daily-sync status: running
+16:56:54 daily-sync status: running
+16:58:24 daily-sync status: running
+16:59:54 daily-sync status: running
+17:01:24 daily-sync status: running
+17:05:06 daily-sync status: running
+17:06:36 daily-sync status: running
+17:08:06 daily-sync status: running
+17:09:36 daily-sync status: running
+17:11:06 daily-sync status: running
+17:12:36 daily-sync status: running
+17:14:06 daily-sync status: running
+17:15:36 daily-sync status: running
+17:17:06 daily-sync status: running
+17:18:36 daily-sync status: running
+17:20:06 daily-sync status: running
+17:21:36 daily-sync status: running
+17:23:06 daily-sync status: running
+17:24:36 daily-sync status: running
+17:26:06 daily-sync status: running
+17:27:36 daily-sync status: running
+17:29:06 daily-sync status: running
+17:30:36 daily-sync status: running
+17:32:06 daily-sync status: running
+17:33:36 daily-sync status: running
+17:35:06 daily-sync status: running
+17:36:36 daily-sync status: running
+17:38:06 daily-sync status: running
+17:39:36 daily-sync status: running
+17:41:06 daily-sync status: running
+17:42:36 daily-sync status: running
+17:44:06 daily-sync status: running
+17:45:36 daily-sync status: running
+17:47:06 daily-sync status: running
+17:48:36 daily-sync status: running
+17:50:06 daily-sync status: running
+17:51:36 daily-sync status: running
+17:53:06 daily-sync status: running
+17:54:36 daily-sync status: running
+17:56:06 daily-sync status: running
+17:57:36 daily-sync status: running
+17:59:06 daily-sync status: running
+18:00:36 daily-sync status: running
+18:02:06 daily-sync status: running
+18:49:52 daily-sync status: running
+18:51:22 daily-sync status: running
+18:52:52 daily-sync status: running
+18:54:22 daily-sync status: running
+18:55:52 daily-sync status: running
+18:57:22 daily-sync status: running
+18:58:52 daily-sync status: running
+19:00:22 daily-sync status: running
+19:01:52 daily-sync status: running
+19:03:22 daily-sync status: running
+19:04:52 daily-sync status: running
+19:06:22 daily-sync status: running
+19:07:52 daily-sync status: running
+19:09:22 daily-sync status: running
+19:10:52 daily-sync status: running
+19:12:22 daily-sync status: running
+19:13:52 daily-sync status: running
+19:15:22 daily-sync status: running
+19:16:52 daily-sync status: running
+19:18:22 daily-sync status: running
+19:19:52 daily-sync status: running
+20:50:24 daily-sync status: running
+20:51:54 daily-sync status: running
+20:53:24 daily-sync status: running
+20:54:54 daily-sync status: running
+20:56:24 daily-sync status: running
+20:57:54 daily-sync status: running
+20:59:24 daily-sync status: running
+21:00:54 daily-sync status: running
+21:02:24 daily-sync status: running
+21:03:54 daily-sync status: running
+21:05:24 daily-sync status: running
+21:06:55 daily-sync status: running
+21:08:25 daily-sync status: running
+21:09:56 daily-sync status: running
+21:11:26 daily-sync status: running
+21:12:56 daily-sync status: running
+21:14:26 daily-sync status: running
+21:15:56 daily-sync status: running
+21:17:26 daily-sync status: running
+=== Watcher restarted 2026-06-21 21:21:43 ===
+21:21:43 daily-sync status: running
+21:23:13 daily-sync status: running
+=== backfill:dates:all started 2026-06-21 21:24:33 (sync still running) ===
+
+> backfill:dates:all
+> node scripts/run-python.mjs scripts/backfill-job-dates.py --limit 0
+
+PDF date backfill ΓÇö targets: 1594, processing: 1594
+[1/1594] District Panchayat Kabirdham Accounts cum MIS Assistant Re
+  ? PDF read but no dates found
+[2/1594] BOBCAPS Business Development Manager Recruitment 2026 - Ap
+  ? PDF read but no dates found
+[3/1594] MPPSC Recruitment 2026 - Apply Online for 06 IAEO, AAO and
+  ? PDF read but no dates found
+[4/1594] 22nd April 202647th Post-Graduate Diploma Course in Advanc
+Multiple definitions in dictionary at byte 0x69a14 for key /Info
+Multiple definitions in dictionary at byte 0x69a20 for key /Info
+Multiple definitions in dictionary at byte 0x69a2c for key /Info
+[5/1594] Paradip Port Authority Deputy Chief Engineer Recruitment 2
+Multiple definitions in dictionary at byte 0x7bc38 for key /Info
+Multiple definitions in dictionary at byte 0x7bc44 for key /Info
+Multiple definitions in dictionary at byte 0x7bc50 for key /Info
+  Γ£ô posted 2026-09-01 | last 2026-09-30
+[6/1594] CMHO Raigarh Recruitment 2026 - Apply Offline for Dresser,
+  ? PDF read but no dates found
+[7/1594] UPSSSC Recruitment 2026 Notification Out - Apply Online fo
+  ? PDF read but no dates found
+[8/1594] RCFl Recruitment 2026 - Apply Offline for 46 Honorary Doct
+  Γ£ô posted 2027-01-01 | last 2029-12-31
+[9/1594] IIT Hyderabad Research Associate Recruitment 2026 - Apply 
+  = still same (2026-07-31) ΓÇö pdf: pub=None last=2026-07-31
+[10/1594] SFIO Recruitment 2026 - 38 Vacancies for Joint Director, D
+  = still same (2026-07-29) ΓÇö pdf: pub=None last=None
+[11/1594] UPSSSC Sugarcane Supervisor Recruitment 2026 Notification 

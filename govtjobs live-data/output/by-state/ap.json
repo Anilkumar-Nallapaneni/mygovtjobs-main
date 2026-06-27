@@ -1,0 +1,53 @@
+{
+  "generatedAt": "2026-06-09T14:35:25.260926Z",
+  "state": "ap",
+  "stateName": "Andhra Pradesh",
+  "count": 3,
+  "jobs": [
+    {
+      "id": "psc-ap-otpr-registration-9421233",
+      "title": "OTPR Registration",
+      "link": "https://otpr-psc.ap.gov.in/",
+      "source": "psc-ap",
+      "sourceName": "Andhra Pradesh PSC (APPSC)",
+      "state": "ap",
+      "stateName": "Andhra Pradesh",
+      "category": "state",
+      "published": null,
+      "summary": null,
+      "pdfUrls": [],
+      "status": "live",
+      "scrapedAt": "2026-06-09T14:28:55.421836Z"
+    },
+    {
+      "id": "psc-ap-online-application-submission-201971",
+      "title": "Online Application Submission",
+      "link": "https://applications-psc.ap.gov.in/",
+      "source": "psc-ap",
+      "sourceName": "Andhra Pradesh PSC (APPSC)",
+      "state": "ap",
+      "stateName": "Andhra Pradesh",
+      "category": "state",
+      "published": null,
+      "summary": null,
+      "pdfUrls": [],
+      "status": "live",
+      "scrapedAt": "2026-06-09T14:28:55.421836Z"
+    },
+    {
+      "id": "psc-ap-download-hallticket-8238745",
+      "title": "Download Hallticket",
+      "link": "https://portal-psc.ap.gov.in/Download_HallTickets",
+      "source": "psc-ap",
+      "sourceName": "Andhra Pradesh PSC (APPSC)",
+      "state": "ap",
+      "stateName": "Andhra Pradesh",
+      "category": "state",
+      "published": null,
+      "summary": null,
+      "pdfUrls": [],
+      "status": "live",
+      "scrapedAt": "2026-06-09T14:28:55.421836Z"
+    }
+  ]
+}

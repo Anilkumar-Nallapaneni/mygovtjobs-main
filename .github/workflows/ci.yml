@@ -1,0 +1,119 @@
+name: CI
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+
+# Cancel stale runs when you push again — saves Actions minutes.
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
+jobs:
+  frontend:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+          cache: npm
+          cache-dependency-path: package-lock.json
+      - run: npm ci
+      - run: npm run env:check
+      - run: npm run type-check --prefix frontend
+      - run: npm run lint --prefix frontend
+      - name: Unit tests (fast)
+        if: github.event_name == 'pull_request'
+        run: npm run test --prefix frontend
+      - name: Unit tests with coverage
+        if: github.event_name == 'push'
+        run: npm run test:coverage --prefix frontend
+      - name: Production build
+        if: github.event_name == 'push' && (github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master')
+        run: npm run build --prefix frontend
+
+  e2e:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+          cache: npm
+          cache-dependency-path: package-lock.json
+      - run: npm ci
+      - run: npm run build:e2e --prefix frontend
+      - run: npx playwright install --with-deps chromium
+        working-directory: frontend
+      - run: npm run test:e2e --prefix frontend
+        env:
+          CI: "1"
+
+  backend-smoke:
+    runs-on: ubuntu-latest
+    if: github.event_name == 'push' && (github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master')
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+          cache: npm
+          cache-dependency-path: package-lock.json
+      - run: npm ci
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r backend/requirements.txt
+      - name: Backend unit tests
+        working-directory: backend
+        run: python -m pytest tests -q
+      - name: Import app
+        working-directory: backend
+        env:
+          ALLOW_INSECURE_ADMIN: "1"
+          APP_ENV: development
+        run: python -c "from app.main import app; assert app.title"
+
+  data-quality:
+    runs-on: ubuntu-latest
+    if: github.event_name == 'push' && (github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master')
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+          cache: npm
+          cache-dependency-path: package-lock.json
+      - run: npm ci
+      - name: Job quality audit (strict thresholds)
+        env:
+          JOBS_AUDIT_STRICT: "1"
+          VITE_SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL }}
+          VITE_SUPABASE_ANON_KEY: ${{ secrets.VITE_SUPABASE_ANON_KEY }}
+        run: |
+          if [ -z "$VITE_SUPABASE_URL" ] || [ -z "$VITE_SUPABASE_ANON_KEY" ]; then
+            echo "Skipping jobs:audit — add VITE_SUPABASE_URL and VITE_SUPABASE_ANON_KEY repo secrets."
+            exit 0
+          fi
+          mkdir -p frontend
+          printf 'VITE_SUPABASE_URL=%s\nVITE_SUPABASE_ANON_KEY=%s\n' \
+            "$VITE_SUPABASE_URL" "$VITE_SUPABASE_ANON_KEY" > frontend/.env.local
+          npm run jobs:audit:strict
+
+  notify-failure:
+    needs: [frontend, e2e, backend-smoke, data-quality]
+    if: >-
+      always() &&
+      (
+        needs.frontend.result == 'failure' ||
+        needs.e2e.result == 'failure' ||
+        needs.backend-smoke.result == 'failure' ||
+        needs.data-quality.result == 'failure'
+      )
+    uses: ./.github/workflows/notify-on-failure.yml
+    secrets: inherit

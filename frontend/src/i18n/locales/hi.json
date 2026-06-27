@@ -1,0 +1,33 @@
+{
+  "profession": {
+    "medical": "चिकित्सा",
+    "engineering": "इंजीनियरिंग",
+    "law": "कानून",
+    "finance": "वित्त",
+    "nursing": "नर्सिंग",
+    "pharmacy": "फार्मेसी",
+    "teaching": "शिक्षण",
+    "itiDiploma": "आईटीआई/डिप्लोमा",
+    "anyDegree": "कोई भी डिग्री",
+    "dental": "दंत चिकित्सा",
+    "aviation": "विमानन",
+    "naval": "नौसेना",
+    "hotelManagement": "होटल प्रबंधन",
+    "sportsQuota": "खेल कोटा",
+    "architecture": "वास्तुकला",
+    "agriculture": "कृषि",
+    "arts": "कला और मानविकी",
+    "faqTitle": "अक्सर पूछे जाने वाले प्रश्न",
+    "sidebarTitle": "पेशे के अनुसार ब्राउज़ करें",
+    "recentJobs": "हाल की सूचियाँ",
+    "relatedProfessions": "संबंधित पेशे",
+    "alsoByQualification": "शिक्षा के अनुसार भी देखें:",
+    "canonicalHint": "पूरे सेक्टर के लिए देखें",
+    "indexTitle": "पेशे के अनुसार सरकारी नौकरियाँ",
+    "indexDesc": "पेशे के अनुसार लाइव भर्ती ब्राउज़ करें — चिकित्सा, इंजीनियरिंग, नर्सिंग, कानून, बैंकिंग और अधिक।"
+  },
+  "browse": {
+    "breadcrumbs": "ब्रेडक्रंब",
+    "sectorBrowserToggle": "राज्य और क्षेत्र के अनुसार ब्राउज़ करें"
+  }
+}

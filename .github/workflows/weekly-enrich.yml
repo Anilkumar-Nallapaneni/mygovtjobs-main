@@ -1,0 +1,70 @@
+name: Weekly PDF enrich
+
+# Heavy PDF work — separate from daily ingest so CI finishes in time.
+on:
+  schedule:
+    - cron: "0 3 * * 0" # Sunday 8:30 AM IST
+  workflow_dispatch:
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
+permissions:
+  contents: read
+
+jobs:
+  enrich:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+          persist-credentials: true
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+          cache: npm
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: |
+          npm ci
+          python -m venv backend/.venv
+          backend/.venv/bin/pip install -r backend/requirements.txt
+
+      - name: Configure DATABASE_URL from secrets
+        env:
+          SECRET_DATABASE_URL: ${{ secrets.DATABASE_URL }}
+          SUPABASE_PROJECT_REF: ${{ secrets.SUPABASE_PROJECT_REF }}
+          SUPABASE_DB_PASSWORD: ${{ secrets.SUPABASE_DB_PASSWORD }}
+          SUPABASE_DB_REGION: ${{ secrets.SUPABASE_DB_REGION }}
+          SUPABASE_POOLER_HOST: ${{ secrets.SUPABASE_POOLER_HOST }}
+        run: |
+          if [ -n "$SUPABASE_DB_PASSWORD" ]; then
+            node scripts/build-database-url-for-actions.mjs
+          elif [ -n "$SECRET_DATABASE_URL" ]; then
+            echo "DATABASE_URL=$SECRET_DATABASE_URL" >> "$GITHUB_ENV"
+          fi
+
+      - name: Enrich DB metadata (newest 100 jobs)
+        env:
+          DATABASE_URL: ${{ env.DATABASE_URL }}
+        run: node scripts/run-python.mjs scripts/enrich-jobs-metadata.py --limit 100
+
+      - name: PdfReaderAgent + JobDetailAgent (50 jobs)
+        env:
+          DATABASE_URL: ${{ env.DATABASE_URL }}
+          SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+        run: npm run weekly:enrich:ci
+
+  notify-failure:
+    needs: enrich
+    if: failure()
+    uses: ./.github/workflows/notify-on-failure.yml
+    secrets: inherit

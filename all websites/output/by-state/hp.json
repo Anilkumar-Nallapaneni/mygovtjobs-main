@@ -1,0 +1,59 @@
+{
+  "generatedAt": "2026-06-18T16:18:30.729100Z",
+  "startedAt": "2026-06-18T16:17:36.728820Z",
+  "durationSeconds": 54.0,
+  "probed": true,
+  "agent": "all-websites",
+  "version": "1.0",
+  "state": "hp",
+  "stateName": "Himachal Pradesh",
+  "count": 2,
+  "websites": [
+    {
+      "id": "dcourt-kullu",
+      "name": "dcourt-kullu",
+      "url": "https://kullu.dcourts.gov.in/notice-category/recruitments",
+      "latestUrl": "https://kullu.dcourts.gov.in/notice-category/recruitments",
+      "domain": "kullu.dcourts.gov.in",
+      "baseUrl": "https://kullu.dcourts.gov.in/",
+      "type": "official",
+      "scope": "scraper",
+      "category": "state",
+      "stateIds": [
+        "hp"
+      ],
+      "module": "state_portal_html",
+      "feedId": null,
+      "source": "scraper_registry.json",
+      "probe": {
+        "ok": true,
+        "status": 200,
+        "finalUrl": "https://kullu.dcourts.gov.in/notice-category/recruitments/",
+        "bytes": 103989,
+        "hasRss": true
+      }
+    },
+    {
+      "id": "psc-hp",
+      "name": "psc-hp",
+      "url": "https://hppsc.hp.gov.in/hppsc",
+      "latestUrl": "https://hppsc.hp.gov.in/hppsc",
+      "domain": "hppsc.hp.gov.in",
+      "baseUrl": "https://hppsc.hp.gov.in/",
+      "type": "official",
+      "scope": "scraper",
+      "category": "state",
+      "stateIds": [
+        "hp"
+      ],
+      "module": "state_portal_html",
+      "feedId": null,
+      "source": "scraper_registry.json",
+      "probe": {
+        "ok": false,
+        "status": 0,
+        "error": "[SSL: UNSAFE_LEGACY_RENEGOTIATION_DISABLED] unsafe legacy renegotiation disabled (_ssl.c:1081)"
+      }
+    }
+  ]
+}

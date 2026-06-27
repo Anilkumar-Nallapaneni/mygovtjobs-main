@@ -1,0 +1,35 @@
+{
+  "generatedAt": "2026-06-18T16:18:30.729100Z",
+  "startedAt": "2026-06-18T16:17:36.728820Z",
+  "durationSeconds": 54.0,
+  "probed": true,
+  "agent": "all-websites",
+  "version": "1.0",
+  "state": "sk",
+  "stateName": "Sikkim",
+  "count": 1,
+  "websites": [
+    {
+      "id": "psc-sk",
+      "name": "psc-sk",
+      "url": "https://spscskm.gov.in",
+      "latestUrl": "https://spscskm.gov.in",
+      "domain": "spscskm.gov.in",
+      "baseUrl": "https://spscskm.gov.in/",
+      "type": "official",
+      "scope": "scraper",
+      "category": "state",
+      "stateIds": [
+        "sk"
+      ],
+      "module": "state_portal_html",
+      "feedId": null,
+      "source": "scraper_registry.json",
+      "probe": {
+        "ok": false,
+        "status": 0,
+        "error": ""
+      }
+    }
+  ]
+}

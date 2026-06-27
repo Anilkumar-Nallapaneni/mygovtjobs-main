@@ -1,0 +1,47 @@
+{
+  "packageId": "me.govtjobs.app",
+  "host": "www.govtjobs.me",
+  "name": "My Govt Jobs",
+  "launcherName": "Govt Jobs",
+  "display": "standalone",
+  "themeColor": "#0F172A",
+  "themeColorDark": "#0F172A",
+  "navigationColor": "#0F172A",
+  "navigationColorDark": "#0F172A",
+  "navigationDividerColor": "#0F172A",
+  "navigationDividerColorDark": "#0F172A",
+  "backgroundColor": "#0F172A",
+  "enableNotifications": true,
+  "startUrl": "/",
+  "iconUrl": "https://www.govtjobs.me/pwa-512.png",
+  "maskableIconUrl": "https://www.govtjobs.me/pwa-512.png",
+  "monochromeIconUrl": "https://www.govtjobs.me/pwa-512.png",
+  "splashScreenFadeOutDuration": 300,
+  "signingKey": {
+    "path": "./android.keystore",
+    "alias": "govtjobs"
+  },
+  "appVersionName": "1.00.00",
+  "appVersionCode": 2,
+  "shortcuts": [],
+  "generatorApp": "bubblewrap-cli",
+  "webManifestUrl": "https://www.govtjobs.me/manifest.webmanifest",
+  "fallbackType": "customtabs",
+  "features": {
+    "playBilling": false,
+    "locationDelegation": false
+  },
+  "alphaDependencies": {
+    "enabled": false
+  },
+  "enableSiteSettingsShortcut": true,
+  "isChromeOSOnly": false,
+  "isMetaQuest": false,
+  "minSdkVersion": 21,
+  "orientation": "default",
+  "fingerprints": [],
+  "additionalTrustedOrigins": [],
+  "retainedBundles": [],
+  "displayOverride": [],
+  "appVersion": "1.00.00"
+}

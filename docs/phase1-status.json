@@ -1,0 +1,21 @@
+{
+  "phase": 1,
+  "startedAt": "2026-06-09T18:27:59.109Z",
+  "finishedAt": "2026-06-10T09:38:45.935Z",
+  "steps": {
+    "dailySyncFull": true,
+    "jobsAudit": true,
+    "portalAudit": true
+  },
+  "metrics": {
+    "liveJobCount": 1316,
+    "audit": null,
+    "jobDetailFiles": 1785,
+    "portalSourcesFailed": 3,
+    "portalSourcesOk": 100
+  },
+  "schedule": {
+    "windows": "Run as Admin: .\\scripts\\schedule-daily-8am-windows.ps1",
+    "github": ".github/workflows/supabase-auto-ingest.yml (cron 8 AM IST)"
+  }
+}

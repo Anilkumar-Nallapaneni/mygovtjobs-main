@@ -1,0 +1,319 @@
+import json
+import logging
+from datetime import datetime, timezone
+from pathlib import Path
+
+from sqlalchemy import select, text
+
+from app.config import get_settings
+from app.database.session import SessionLocal
+from app.models.job import Source
+from app.parsers.notification_parser import NotificationParser
+from app.parsers.pdf_enrich import merge_pdf_fields
+from app.scrapers.pdf_discover import ensure_pdf_urls
+from app.scrapers.rss_feed import RssFeedScraper
+from app.services.dedupe_service import content_hash
+from app.services.job_persist_service import JobPersistService, _resolve_state_codes
+from app.services.raw_ingest_service import RawIngestService
+from app.services.source_sync_service import SourceSyncService
+from app.services.validation_service import ValidationService
+
+logger = logging.getLogger(__name__)
+
+def _resolve_registry_path() -> Path:
+    """Monorepo dev (repo/scripts) and Docker (/app/scripts)."""
+    here = Path(__file__).resolve()
+    for base in (here.parents[2], here.parents[3]):
+        candidate = base / "scripts" / "scraper_registry.json"
+        if candidate.is_file():
+            return candidate
+    return here.parents[3] / "scripts" / "scraper_registry.json"
+
+
+REGISTRY_PATH = _resolve_registry_path()
+
+
+class IngestAgent:
+    """Runs scraper → parser → validation → dedupe → persist pipeline."""
+
+    def __init__(self):
+        self.parser = NotificationParser()
+        self.validator = ValidationService()
+        self.registry = json.loads(REGISTRY_PATH.read_text(encoding="utf-8"))
+        self.persist = JobPersistService()
+        self.source_sync = SourceSyncService()
+        self.raw_ingest = RawIngestService()
+
+    async def run_source(self, source_code: str) -> dict:
+        entry = next((s for s in self.registry.get("scrapers", []) if s.get("code") == source_code), None)
+        if not entry or not entry.get("enabled"):
+            return {"source": source_code, "fetched": 0, "saved": 0, "skipped": True}
+
+        scraper = self._scraper_for(entry)
+        rows = await scraper.fetch()
+        saved = 0
+        errors = 0
+        rejected = 0
+        db_error: str | None = None
+
+        try:
+            async with SessionLocal() as session:
+                await session.execute(text("SELECT 1"))
+                source_id = None
+                try:
+                    source_id = await self.source_sync.ensure_source(session, entry)
+                except Exception as exc:
+                    await session.rollback()
+                    logger.warning("source metadata skipped source=%s: %s", source_code, exc)
+
+                for raw in rows:
+                    try:
+                        if source_id:
+                            await self.raw_ingest.upsert_raw(session, source_id=source_id, raw=raw)
+                        normalized = await self._normalize_raw(raw, entry, source_code)
+                        if normalized is None:
+                            rejected += 1
+                            continue
+
+                        digest = content_hash(
+                            title=normalized.get("title", ""),
+                            apply_url=normalized.get("apply_url"),
+                            last_date=str(normalized.get("last_date") or ""),
+                        )
+                        normalized["content_hash"] = digest
+                        job = await self.persist.upsert_normalized(session, normalized, commit=False)
+                        if job:
+                            saved += 1
+                            if saved % 100 == 0:
+                                await session.commit()
+                    except Exception as exc:
+                        errors += 1
+                        await session.rollback()
+                        logger.warning("ingest row failed source=%s: %s", source_code, exc)
+
+                if saved:
+                    await session.commit()
+                if not get_settings().ingest_skip_per_source_export:
+                    try:
+                        await self.persist.export_live_jobs_json(session)
+                    except Exception as exc:
+                        await session.rollback()
+                        logger.warning("live jobs json export failed: %s", exc)
+                        try:
+                            async with SessionLocal() as export_session:
+                                await self.persist.export_live_jobs_json(export_session)
+                        except Exception as exc2:
+                            logger.warning("live jobs json export retry failed: %s", exc2)
+
+                if source_id:
+                    await self._record_source_run(session, source_code, error=None if saved else "no rows saved")
+        except Exception as exc:
+            db_error = str(exc)
+            logger.warning("database unavailable for source=%s: %s", source_code, exc)
+            if get_settings().allow_fallback_json_export:
+                self._export_fallback_json(rows, entry, source_code)
+            else:
+                logger.error("fallback JSON export disabled (set ALLOW_FALLBACK_JSON_EXPORT=1 to enable in dev)")
+
+        if rows and saved == 0 and not db_error and get_settings().allow_fallback_json_export:
+            self._export_fallback_json(rows, entry, source_code)
+
+        return {
+            "source": source_code,
+            "fetched": len(rows),
+            "saved": saved,
+            "rejected": rejected,
+            "errors": errors,
+            "db_error": db_error,
+        }
+
+    async def _normalize_raw(self, raw: dict, entry: dict, source_code: str) -> dict | None:
+        raw = {**raw, "source": source_code}
+        if entry.get("sourceName"):
+            raw["sourceName"] = entry["sourceName"]
+        apply_link = raw.get("link") or raw.get("applyUrl")
+        pdf_urls = await ensure_pdf_urls(raw.get("pdfUrls") or raw.get("pdf_urls") or [], apply_link)
+        raw["pdfUrls"] = pdf_urls
+
+        pdf_fields = await merge_pdf_fields(pdf_urls) if pdf_urls else {}
+
+        normalized = self.parser.parse(raw, pdf_fields=pdf_fields, source_code=source_code)
+        normalized["category"] = normalized.get("category") or entry.get("category")
+
+        st = entry.get("state")
+        if st and str(st).lower() not in ("all", "all india"):
+            normalized["state"] = str(st).lower()[:8]
+        else:
+            normalized["state"] = "All India"
+        normalized["state_codes"] = _resolve_state_codes(normalized)
+
+        valid, reasons = self.validator.validate(normalized)
+        if not valid:
+            logger.info(
+                "ingest rejected source=%s title=%r reasons=%s",
+                source_code,
+                normalized.get("title"),
+                reasons,
+            )
+            return None
+        return normalized
+
+    async def run_all_enabled(self) -> list[dict]:
+        async with SessionLocal() as session:
+            try:
+                n = await self.source_sync.sync_registry(session)
+                logger.info("synced %s sources to Supabase", n)
+            except Exception as exc:
+                logger.warning("source registry sync failed: %s", exc)
+
+        results = []
+        for entry in self.registry.get("scrapers", []):
+            if entry.get("enabled"):
+                try:
+                    results.append(await self.run_source(entry["code"]))
+                except Exception as exc:
+                    logger.exception("ingest source %s failed: %s", entry.get("code"), exc)
+                    results.append(
+                        {"source": entry.get("code"), "fetched": 0, "saved": 0, "errors": 1, "error": str(exc)}
+                    )
+        return results
+
+    async def _record_source_run(
+        self,
+        session,
+        source_code: str,
+        *,
+        error: str | None,
+    ) -> None:
+        now = datetime.now(timezone.utc)
+        owns = session is None
+        if owns:
+            session = SessionLocal()
+        try:
+            row = (await session.execute(select(Source).where(Source.code == source_code))).scalar_one_or_none()
+            if row:
+                row.last_run_at = now
+                row.last_error = error
+                await session.commit()
+        except Exception as exc:
+            logger.debug("source run timestamp not updated for %s: %s", source_code, exc)
+        finally:
+            if owns:
+                await session.close()
+
+    def _scraper_for(self, entry: dict):
+        settings = get_settings()
+        lookback = int(entry.get("lookbackDays") or settings.ingest_lookback_days)
+        max_items = int(entry.get("maxItems") or settings.ingest_max_items_per_source)
+        module = entry.get("module")
+
+        if module == "rss_feed":
+            return RssFeedScraper(
+                feed_id=entry.get("feed_id"),
+                lookback_days=lookback,
+                max_items=max_items,
+            )
+
+        if module == "state_portal_html":
+            from app.scrapers.state_portal_html import StatePortalHtmlScraper
+
+            return StatePortalHtmlScraper(
+                entry.get("portal_url", ""),
+                entry.get("state", ""),
+                max_items=max_items,
+                lookback_days=lookback,
+            )
+
+        return RssFeedScraper(lookback_days=lookback, max_items=max_items)
+
+    def _export_fallback_json(self, rows: list, entry: dict, source_code: str) -> None:
+        """Write validated rows only — never publish unvalidated scrape output."""
+        items = []
+        for raw in rows:
+            try:
+                raw_copy = {**raw, "source": source_code}
+                if entry.get("sourceName"):
+                    raw_copy["sourceName"] = entry["sourceName"]
+                normalized = self.parser.parse(raw_copy, source_code=source_code)
+                normalized["category"] = normalized.get("category") or entry.get("category")
+                st = entry.get("state")
+                if st and str(st).lower() not in ("all", "all india"):
+                    normalized["state"] = str(st).lower()[:8]
+                else:
+                    normalized["state"] = "All India"
+                normalized["state_codes"] = _resolve_state_codes(normalized)
+
+                valid, reasons = self.validator.validate(normalized)
+                if not valid:
+                    logger.info(
+                        "fallback export skipped source=%s title=%r reasons=%s",
+                        source_code,
+                        normalized.get("title"),
+                        reasons,
+                    )
+                    continue
+
+                from datetime import date
+
+                digest = content_hash(
+                    title=normalized.get("title", ""),
+                    apply_url=normalized.get("apply_url"),
+                    last_date=str(normalized.get("last_date") or ""),
+                )
+                last = normalized.get("last_date")
+                if last and str(last) < date.today().isoformat():
+                    row_status = "expired"
+                else:
+                    row_status = "live"
+
+                items.append(
+                    {
+                        "slug": f"{(normalized.get('title') or 'job')[:48].lower().replace(' ', '-')}-{digest[:8]}",
+                        "title": normalized.get("title"),
+                        "dept": normalized.get("dept"),
+                        "category": normalized.get("category"),
+                        "apply_url": normalized.get("apply_url"),
+                        "state_codes": normalized.get("state_codes") or [],
+                        "vacancies": int(normalized.get("vacancies") or 0),
+                        "last_date": normalized.get("last_date"),
+                        "status": row_status,
+                        "detail": {
+                            "source": source_code,
+                            "fallback": True,
+                            "pdfUrls": normalized.get("pdf_urls") or raw_copy.get("pdfUrls") or [],
+                        },
+                    }
+                )
+            except Exception as exc:
+                logger.debug("fallback export row skipped: %s", exc)
+
+        if not items:
+            logger.warning("fallback export produced no validated items for source=%s", source_code)
+            return
+
+        path = Path(get_settings().live_jobs_json_path)
+        path.parent.mkdir(parents=True, exist_ok=True)
+        existing: list[dict] = []
+        if path.exists():
+            try:
+                payload = json.loads(path.read_text(encoding="utf-8"))
+                existing = [row for row in payload.get("items", []) if isinstance(row, dict)]
+            except Exception as exc:
+                logger.warning("fallback export could not read existing JSON: %s", exc)
+
+        merged: dict[str, dict] = {}
+        for row in [*existing, *items]:
+            key = str(row.get("slug") or row.get("apply_url") or row.get("title") or "").lower()
+            if key:
+                merged[key] = row
+
+        path.write_text(
+            json.dumps(
+                {
+                    "generatedAt": datetime.now(timezone.utc).isoformat().replace("+00:00", "Z"),
+                    "items": list(merged.values()),
+                },
+                indent=2,
+            ),
+            encoding="utf-8",
+        )

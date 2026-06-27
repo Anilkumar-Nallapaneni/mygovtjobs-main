@@ -1,0 +1,22 @@
+{
+  "apply": false,
+  "upload_storage": false,
+  "purge_raw": true,
+  "jobs_total": 1826,
+  "jobs_with_sections": 0,
+  "jobs_updated": 0,
+  "bytes_before": 2191249,
+  "bytes_after": 2191249,
+  "bytes_saved": 0,
+  "storage_uploads": 0,
+  "storage_upload_failures": 0,
+  "raw_ingest_deleted": 1128,
+  "table_bytes_before": {
+    "jobs": 12509184,
+    "raw_ingest": 1294336
+  },
+  "table_bytes_after": {
+    "jobs": 12509184,
+    "raw_ingest": 1294336
+  }
+}

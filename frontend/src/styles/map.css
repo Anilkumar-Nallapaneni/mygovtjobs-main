@@ -1,0 +1,129 @@
+/* ========== IndiaMap ========== */
+/* Wrapper: use full width of parent; map scales with container */
+.india-map-container {
+  font-family: var(--font-sans);
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  position: relative;
+  min-width: 0;
+  min-height: 0;
+}
+
+.india-map-container svg {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  display: block;
+  overflow: visible;
+}
+
+.india-map-container path {
+  cursor: pointer;
+  outline: none;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .india-map-container path {
+    transition: fill 0.15s ease;
+  }
+
+  .india-map-container path:hover {
+    transition: fill 0.15s ease;
+  }
+}
+
+.india-map-container path:focus {
+  outline: none;
+}
+
+.india-map-container path[data-selected="true"] {
+  filter: brightness(1.08) saturate(1.18);
+  stroke: var(--ds-saffron) !important;
+}
+
+.india-map-container--isolated .india-map-svg-container {
+  aspect-ratio: unset;
+  min-height: 0;
+}
+
+.india-map-container--isolated path {
+  fill: var(--ds-mapStateFill, #dde3ed) !important;
+  stroke: none !important;
+  stroke-width: 0 !important;
+  cursor: default;
+  filter: none;
+}
+
+.india-map-container--isolated path[data-selected="true"] {
+  stroke: none !important;
+  stroke-width: 0 !important;
+  filter: none;
+}
+
+.india-map-container--isolated path:active {
+  filter: none;
+}
+
+.india-map-container path:active {
+  filter: brightness(0.96);
+}
+
+.india-map-svg-container {
+  width: 100%;
+  min-width: 0;
+  min-height: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: visible;
+  border-radius: 10px;
+  aspect-ratio: 611.86 / 695.7;
+}
+
+.state-tooltip {
+  transition: opacity 0.2s;
+  position: fixed;
+  z-index: 1000;
+  pointer-events: none;
+  min-width: 160px;
+  max-width: 260px;
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid var(--ds-borderHi);
+  background: color-mix(in srgb, var(--ds-bg1) 94%, transparent);
+  backdrop-filter: blur(10px);
+  box-shadow: var(--ds-shadowCardHover);
+  color: var(--ds-text-body, var(--ds-white));
+  font-family: var(--font-sans);
+  font-size: 12px;
+}
+
+.state-tooltip-header {
+  font-weight: bold;
+  margin-bottom: 5px;
+  border-bottom: 1px solid color-mix(in srgb, var(--ds-white) 20%, transparent);
+  padding-bottom: 5px;
+}
+
+.state-tooltip-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 3px;
+}
+
+.state-tooltip-row span:first-child {
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+.state-tooltip-custom-data {
+  margin-top: 5px;
+}
+
+@media (max-width: 768px) {
+  .india-map-container {
+    max-width: 100%;
+  }
+}

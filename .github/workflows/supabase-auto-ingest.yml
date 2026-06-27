@@ -1,0 +1,187 @@
+name: Supabase auto ingest
+
+on:
+  schedule:
+    # Daily 02:30 UTC (~8:00 AM IST)
+    - cron: "30 2 * * *"
+  workflow_dispatch:
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
+permissions:
+  contents: write
+
+jobs:
+  ingest:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - name: Start
+        run: echo "=== Daily ingest started at $(date -u +%Y-%m-%dT%H:%M:%SZ) ==="
+
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+          persist-credentials: true
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+          cache: npm
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: |
+          echo "=== $(date -u +%H:%M:%S) install ==="
+          npm ci
+          python -m venv backend/.venv
+          backend/.venv/bin/pip install -r backend/requirements.txt
+
+      - name: Configure DATABASE_URL from secrets
+        env:
+          SECRET_DATABASE_URL: ${{ secrets.DATABASE_URL }}
+          SUPABASE_PROJECT_REF: ${{ secrets.SUPABASE_PROJECT_REF }}
+          SUPABASE_DB_PASSWORD: ${{ secrets.SUPABASE_DB_PASSWORD }}
+          SUPABASE_DB_REGION: ${{ secrets.SUPABASE_DB_REGION }}
+          SUPABASE_POOLER_HOST: ${{ secrets.SUPABASE_POOLER_HOST }}
+        run: |
+          if [ -n "$SUPABASE_DB_PASSWORD" ]; then
+            echo "Building DATABASE_URL from pooler secrets..."
+            node scripts/build-database-url-for-actions.mjs
+          elif [ -n "$SECRET_DATABASE_URL" ]; then
+            echo "Using DATABASE_URL secret directly"
+            echo "DATABASE_URL=$SECRET_DATABASE_URL" >> "$GITHUB_ENV"
+          fi
+
+      - name: Validate secrets
+        env:
+          DATABASE_URL: ${{ env.DATABASE_URL }}
+          VITE_SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL }}
+          VITE_SUPABASE_ANON_KEY: ${{ secrets.VITE_SUPABASE_ANON_KEY }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+          # Alert secrets optional — ingest must not require Resend/Telegram to run.
+        run: |
+          if [ -z "$DATABASE_URL" ]; then
+            echo "::error::No database credentials. Add DATABASE_URL or SUPABASE_PROJECT_REF + SUPABASE_DB_PASSWORD"
+            exit 1
+          fi
+          node scripts/check-github-actions-secrets.mjs
+
+      - name: Test database
+        env:
+          DATABASE_URL: ${{ env.DATABASE_URL }}
+          GITHUB_ACTIONS: "true"
+        run: node scripts/run-python.mjs scripts/test-backend-db.py
+
+      # ~100 scrapers × 120s max / 6 parallel ≈ 15–35 min typical; 12 caused Supabase lock timeouts
+      - name: Daily sync (scrape + scrub + export live-jobs.json)
+        env:
+          DATABASE_URL: ${{ env.DATABASE_URL }}
+          SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+          ADMIN_API_KEY: ${{ secrets.ADMIN_API_KEY }}
+          DAILY_SYNC_ENFORCE_ONCE: "1"
+          ALLOW_FALLBACK_JSON_EXPORT: "0"
+        run: |
+          echo "=== $(date -u +%H:%M:%S) daily sync ==="
+          node scripts/run-python.mjs scripts/run-daily-8am-sync.py \
+            --force \
+            --skip-enrich \
+            --skip-official-import \
+            --concurrency 6 \
+            --source-timeout 120
+
+      - name: Fetch official feeds + admit/result portals
+        continue-on-error: true
+        run: |
+          echo "=== $(date -u +%H:%M:%S) official feeds ==="
+          npm run fetch:official:feeds
+        timeout-minutes: 45
+
+      - name: Build official archives
+        run: |
+          echo "=== $(date -u +%H:%M:%S) archives ==="
+          npm run build:official-archives
+
+      - name: Build sitemap (all job slugs)
+        env:
+          VITE_SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL }}
+          VITE_SUPABASE_ANON_KEY: ${{ secrets.VITE_SUPABASE_ANON_KEY }}
+          ALERT_SITE_URL: ${{ secrets.ALERT_SITE_URL }}
+        run: npm run build:sitemap
+
+      # Job detail pages load from Supabase first; static PDF files are built weekly.
+      # Do NOT run build:job-details or enrich:jobs:all here — they take hours.
+
+      - name: Deliver job alerts
+        env:
+          DATABASE_URL: ${{ env.DATABASE_URL }}
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          ALERT_FROM_EMAIL: ${{ secrets.ALERT_FROM_EMAIL }}
+          ALERT_SITE_URL: ${{ secrets.ALERT_SITE_URL }}
+          TWILIO_ACCOUNT_SID: ${{ secrets.TWILIO_ACCOUNT_SID }}
+          TWILIO_AUTH_TOKEN: ${{ secrets.TWILIO_AUTH_TOKEN }}
+          TWILIO_WHATSAPP_FROM: ${{ secrets.TWILIO_WHATSAPP_FROM }}
+          PUSH_WEBHOOK_URL: ${{ secrets.PUSH_WEBHOOK_URL }}
+          ALERT_DELIVERY_AFTER_SYNC: "1"
+        run: node scripts/run-python.mjs scripts/run-alert-delivery.py
+
+      - name: Data quality audits
+        env:
+          JOBS_AUDIT_STRICT: "1"
+          VITE_SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL }}
+          VITE_SUPABASE_ANON_KEY: ${{ secrets.VITE_SUPABASE_ANON_KEY }}
+        run: |
+          mkdir -p frontend
+          printf 'VITE_SUPABASE_URL=%s\nVITE_SUPABASE_ANON_KEY=%s\n' \
+            "$VITE_SUPABASE_URL" "$VITE_SUPABASE_ANON_KEY" > frontend/.env.local
+          npm run supabase:audit
+          npm run jobs:audit:strict
+
+      - name: Commit daily data (live-jobs only — not 1900+ detail files)
+        env:
+          BRANCH: ${{ github.ref_name }}
+        run: |
+          echo "=== $(date -u +%H:%M:%S) commit ==="
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          # Stage only paths that exist. official-feed-items.json is gitignored and committed by fetch-official-feeds.
+          for path in \
+            frontend/public/data/live-jobs.json \
+            frontend/public/data/live-jobs-list.json \
+            frontend/public/data/daily-sync-state.json \
+            frontend/public/sitemap.xml; do
+            if [ -e "$path" ]; then
+              git add "$path"
+            else
+              echo "Skip missing: $path"
+            fi
+          done
+          if [ -d frontend/public/data/official-archives ]; then
+            git add frontend/public/data/official-archives/
+          fi
+          if git diff --staged --quiet; then
+            echo "No static data changes to commit."
+            exit 0
+          fi
+          git commit -m "chore: daily job sync [skip ci]"
+          git fetch origin "${BRANCH}"
+          if ! git push origin "HEAD:${BRANCH}"; then
+            echo "Push rejected — rebasing on remote and retrying..."
+            git stash push -u -m "ingest-leftovers" || true
+            git rebase "origin/${BRANCH}"
+            git push origin "HEAD:${BRANCH}"
+            git stash drop || true
+          fi
+          echo "=== Finished at $(date -u +%Y-%m-%dT%H:%M:%SZ) ==="
+
+  notify-failure:
+    needs: ingest
+    if: failure()
+    uses: ./.github/workflows/notify-on-failure.yml
+    secrets: inherit

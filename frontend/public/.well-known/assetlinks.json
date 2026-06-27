@@ -1,0 +1,12 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "me.govtjobs.app",
+      "sha256_cert_fingerprints": [
+        "91:82:77:11:B2:8D:1B:99:64:0E:6B:D2:E6:00:DA:89:B1:FA:13:EC:50:94:AB:1B:FB:3F:65:5C:9A:1E:16:87"
+      ]
+    }
+  }
+]

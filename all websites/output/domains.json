@@ -1,0 +1,1469 @@
+{
+  "generatedAt": "2026-06-18T16:18:30.729100Z",
+  "startedAt": "2026-06-18T16:17:36.728820Z",
+  "durationSeconds": 54.0,
+  "probed": true,
+  "agent": "all-websites",
+  "version": "1.0",
+  "count": 162,
+  "domains": [
+    {
+      "domain": "afcat.cdac.in",
+      "type": "official",
+      "name": "afcat",
+      "url": "https://afcat.cdac.in",
+      "stateIds": [
+        "all"
+      ]
+    },
+    {
+      "domain": "andamannicobar.gov.in",
+      "type": "official",
+      "name": "an-gov",
+      "url": "https://andamannicobar.gov.in",
+      "stateIds": [
+        "an"
+      ]
+    },
+    {
+      "domain": "angul.dcourts.gov.in",
+      "type": "official",
+      "name": "dcourt-angul",
+      "url": "https://angul.dcourts.gov.in/notice-category/recruitments",
+      "stateIds": [
+        "od"
+      ]
+    },
+    {
+      "domain": "apeda.gov.in",
+      "type": "official",
+      "name": "apeda",
+      "url": "https://apeda.gov.in/recruitment-appointment",
+      "stateIds": [
+        "all"
+      ]
+    },
+    {
+      "domain": "appsc.gov.in",
+      "type": "official",
+      "name": "psc-ar",
+      "url": "https://appsc.gov.in/Index/institute_index/ins/RECINS001",
+      "stateIds": [
+        "ne"
+      ]
+    },
+    {
+      "domain": "apsc.nic.in",
+      "type": "official",
+      "name": "psc-as",
+      "url": "https://apsc.nic.in/notifications",
+      "stateIds": [
+        "as"
+      ]
+    },
+    {
+      "domain": "balangir.dcourts.gov.in",
+      "type": "official",
+      "name": "dcourt-balangir",
+      "url": "https://balangir.dcourts.gov.in/notice-category/recruitments",
+      "stateIds": [
+        "od"
+      ]
+    },
+    {
+      "domain": "begusarai.dcourts.gov.in",
+      "type": "official",
+      "name": "dcourt-begusarai",
+      "url": "https://begusarai.dcourts.gov.in/notice-category/recruitments",
+      "stateIds": [
+        "br"
+      ]
+    },
+    {
+      "domain": "bel-india.in",
+      "type": "official",
+      "name": "bel",
+      "url": "https://bel-india.in/job-notifications",
+      "stateIds": [
+        "all"
+      ]
+    },
+    {
+      "domain": "bharatpetroleum.in",
+      "type": "official",
+      "name": "bpcl",
+      "url": "https://bharatpetroleum.in/About-BPCL/Careers/Careers.aspx",
+      "stateIds": [
+        "all"
+      ]
+    },
+    {
+      "domain": "bhojpur.dcourts.gov.in",
+      "type": "official",
+      "name": "dcourt-bhojpur",
+      "url": "https://bhojpur.dcourts.gov.in/notice-category/recruitments",
+      "stateIds": [
+        "br"
+      ]
+    },
+    {
+      "domain": "bisag-n.gov.in",
+      "type": "official",
+      "name": "bisag-n",
+      "url": "https://bisag-n.gov.in",
+      "stateIds": [
+        "gj"
+      ]
+    },
+    {
+      "domain": "bpsc.bihar.gov.in",
+      "type": "official",
+      "name": "psc-br",
+      "url": "https://bpsc.bihar.gov.in/Notices.html",
+      "stateIds": [
+        "br"
+      ]
+    },
+    {
+      "domain": "canarabank.com",
+      "type": "official",
+      "name": "canara",
+      "url": "https://canarabank.com/pages/recruitment",
+      "stateIds": [
+        "all"
+      ]
+    },
+    {
+      "domain": "careerindianairforce.cdac.in",
+      "type": "official",
+      "name": "iaf",
+      "url": "https://careerindianairforce.cdac.in",
+      "stateIds": [
+        "all"
+      ]
+    },
+    {
+      "domain": "careers.bhel.in",
+      "type": "official",
+      "name": "bhel",
+      "url": "https://careers.bhel.in",
+      "stateIds": [
+        "all"
+      ]
+    },
+    {
+      "domain": "coochbehar.dcourts.gov.in",
+      "type": "official",
+      "name": "dcourt-coochbehar",
+      "url": "https://coochbehar.dcourts.gov.in/notice-category/recruitments",
+      "stateIds": [
+        "wb"
+      ]
+    },
+    {
+      "domain": "crpf.gov.in",
+      "type": "official",
+      "name": "crpf",
+      "url": "https://crpf.gov.in/recruitment.htm",
+      "stateIds": [
+        "all"
+      ]
+    },
+    {
+      "domain": "ctet.nic.in",
+      "type": "official",
+      "name": "ctet",
+      "url": "https://ctet.nic.in",
+      "stateIds": [
+        "all"
+      ]
+    },
+    {
+      "domain": "dhenkanal.dcourts.gov.in",
+      "type": "official",
+      "name": "dcourt-dhenkanal",
+      "url": "https://dhenkanal.dcourts.gov.in/notice-category/recruitments",
+      "stateIds": [
+        "od"
+      ]
+    },
+    {
+      "domain": "employmentnews.gov.in",
+      "type": "official",
+      "name": "employment-news",
+      "url": "https://employmentnews.gov.in",
+      "stateIds": [
+        "all"
+      ]
+    },
+    {
+      "domain": "erecruitment.andamannicobar.gov.in",
+      "type": "official",
+      "name": "an-rec",
+      "url": "https://erecruitment.andamannicobar.gov.in",
+      "stateIds": [
+        "an"
+      ]
+    },
+    {
+      "domain": "esb.mp.gov.in",
+      "type": "official",
+      "name": "ssb-mp",
+      "url": "https://esb.mp.gov.in",
+      "stateIds": [
+        "mp"
+      ]
+    },
+    {
+      "domain": "fci.gov.in",
+      "type": "official",
+      "name": "fci",
+      "url": "https://fci.gov.in/en/careers/recruitment-notices",
+      "stateIds": [
+        "all"
+      ]
+    },
+    {
+      "domain": "gailonline.com",
+      "type": "official",
+      "name": "gail",
+      "url": "https://gailonline.com/careers",
+      "stateIds": [
+        "all"
+      ]
+    },
+    {
+      "domain": "gpsc.goa.gov.in",
+      "type": "official",
+      "name": "psc-ga",
+      "url": "https://gpsc.goa.gov.in",
+      "stateIds": [
+        "ga"
+      ]
+    },
+    {
+      "domain": "gpsc.gujarat.gov.in",
+      "type": "official",
+      "name": "psc-gj",
+      "url": "https://gpsc.gujarat.gov.in",
+      "stateIds": [
+        "gj"
+      ]
+    },
+    {
+      "domain": "gsssb.gujarat.gov.in",
+      "type": "official",
+      "name": "ssb-gj",
+      "url": "https://gsssb.gujarat.gov.in",
+      "stateIds": [
+        "gj"
+      ]
+    },
+    {
+      "domain": "hal-india.co.in",
+      "type": "official",
+      "name": "hal",
+      "url": "https://hal-india.co.in/Careers/M__93",
+      "stateIds": [
+        "all"
+      ]
+    },
+    {
+      "domain": "hindustanpetroleum.com",
+      "type": "official",
+      "name": "hpcl",
+      "url": "https://hindustanpetroleum.com/careersopportunities",
+      "stateIds": [
+        "all"
+      ]
+    },
+    {
+      "domain": "howrah.dcourts.gov.in",
+      "type": "official",
+      "name": "dcourt-howrah",
+      "url": "https://howrah.dcourts.gov.in/notice-category/recruitments",
+      "stateIds": [
+        "wb"
+      ]
+    },
+    {
+      "domain": "hppsc.hp.gov.in",
+      "type": "official",
+      "name": "psc-hp",
+      "url": "https://hppsc.hp.gov.in/hppsc",
+      "stateIds": [
+        "hp"
+      ]
+    },
+    {
+      "domain": "hpsc.gov.in",
+      "type": "official",
+      "name": "psc-hr",
+      "url": "https://hpsc.gov.in/en-us/Recruitment",
+      "stateIds": [
+        "hr"
+      ]
+    },
+    {
+      "domain": "hssc.gov.in",
+      "type": "official",
+      "name": "ssb-hr",
+      "url": "https://hssc.gov.in",
+      "stateIds": [
+        "hr"
+      ]
+    },
+    {
+      "domain": "indore.dcourts.gov.in",
+      "type": "official",
+      "name": "dcourt-indore",
+      "url": "https://indore.dcourts.gov.in/notice-category/recruitments",
+      "stateIds": [
+        "mp"
+      ]
+    },
+    {
+      "domain": "iocl.com",
+      "type": "official",
+      "name": "iocl",
+      "url": "https://iocl.com/job-search",
+      "stateIds": [
+        "all"
+      ]
+    },
+    {
+      "domain": "ircon.org",
+      "type": "official",
+      "name": "ircon",
+      "url": "https://ircon.org",
+      "stateIds": [
+        "all"
+      ]
+    },
+    {
+      "domain": "jagatsinghpur.dcourts.gov.in",
+      "type": "official",
+      "name": "dcourt-jagatsinghpur",
+      "url": "https://jagatsinghpur.dcourts.gov.in/notice-category/recruitments",
+      "stateIds": [
+        "od"
+      ]
+    },
+    {
+      "domain": "jharsuguda.dcourts.gov.in",
+      "type": "official",
+      "name": "dcourt-jharsuguda",
+      "url": "https://jharsuguda.dcourts.gov.in/notice-category/recruitments",
+      "stateIds": [
+        "od"
+      ]
+    },
+    {
+      "domain": "jkpsc.nic.in",
+      "type": "official",
+      "name": "psc-jk",
+      "url": "https://jkpsc.nic.in/Notifications.html",
+      "stateIds": [
+        "jk"
+      ]
+    },
+    {
+      "domain": "joinindianarmy.nic.in",
+      "type": "official",
+      "name": "army",
+      "url": "https://joinindianarmy.nic.in",
+      "stateIds": [
+        "all"
+      ]
+    },
+    {
+      "domain": "joinindiancoastguard.cdac.in",
+      "type": "official",
+      "name": "coast-guard",
+      "url": "https://joinindiancoastguard.cdac.in",
+      "stateIds": [
+        "all"
+      ]
+    },
+    {
+      "domain": "jpsc.gov.in",
+      "type": "official",
+      "name": "psc-jh",
+      "url": "https://jpsc.gov.in",
+      "stateIds": [
+        "jh"
+      ]
+    },
+    {
+      "domain": "keralapolice.gov.in",
+      "type": "official",
+      "name": "police-kl",
+      "url": "https://keralapolice.gov.in/page/recruitment-board",
+      "stateIds": [
+        "kl"
+      ]
+    },
+    {
+      "domain": "kpsc.kar.nic.in",
+      "type": "official",
+      "name": "psc-ka",
+      "url": "https://kpsc.kar.nic.in/notifications.html",
+      "stateIds": [
+        "ka"
+      ]
+    },
+    {
+      "domain": "ksp.karnataka.gov.in",
+      "type": "official",
+      "name": "police-ka",
+      "url": "https://ksp.karnataka.gov.in",
+      "stateIds": [
+        "ka"
+      ]
+    },
+    {
+      "domain": "kullu.dcourts.gov.in",
+      "type": "official",
+      "name": "dcourt-kullu",
+      "url": "https://kullu.dcourts.gov.in/notice-category/recruitments",
+      "stateIds": [
+        "hp"
+      ]
+    },
+    {
+      "domain": "kvsangathan.nic.in",
+      "type": "official",
+      "name": "kvs",
+      "url": "https://kvsangathan.nic.in",
+      "stateIds": [
+        "all"
+      ]
+    },
+    {
+      "domain": "labour.delhi.gov.in",
+      "type": "official",
+      "name": "delhi-portal",
+      "url": "https://labour.delhi.gov.in",
+      "stateIds": [
+        "dl"
+      ]
+    },
+    {
+      "domain": "ladakh.gov.in",
+      "type": "official",
+      "name": "la-gov",
+      "url": "https://ladakh.gov.in",
+      "stateIds": [
+        "la"
+      ]
+    },
+    {
+      "domain": "licindia.in",
+      "type": "official",
+      "name": "lic",
+      "url": "https://licindia.in/careers",
+      "stateIds": [
+        "all"
+      ]
+    },
+    {
+      "domain": "ludhiana.dcourts.gov.in",
+      "type": "official",
+      "name": "dcourt-ludhiana",
+      "url": "https://ludhiana.dcourts.gov.in/notice-category/recruitments",
+      "stateIds": [
+        "pb"
+      ]
+    },
+    {
+      "domain": "mahapariksha.gov.in",
+      "type": "official",
+      "name": "ssb-mh",
+      "url": "https://mahapariksha.gov.in",
+      "stateIds": [
+        "mh"
+      ]
+    },
+    {
+      "domain": "megpsc.gov.in",
+      "type": "official",
+      "name": "psc-ml",
+      "url": "https://megpsc.gov.in",
+      "stateIds": [
+        "ne"
+      ]
+    },
+    {
+      "domain": "mppolice.gov.in",
+      "type": "official",
+      "name": "police-mp",
+      "url": "https://mppolice.gov.in",
+      "stateIds": [
+        "mp"
+      ]
+    },
+    {
+      "domain": "mppsc.mp.gov.in",
+      "type": "official",
+      "name": "psc-mp",
+      "url": "https://mppsc.mp.gov.in/news.aspx",
+      "stateIds": [
+        "mp"
+      ]
+    },
+    {
+      "domain": "mpsc.gov.in",
+      "type": "official",
+      "name": "psc-mh",
+      "url": "https://mpsc.gov.in/english/notices",
+      "stateIds": [
+        "mh"
+      ]
+    },
+    {
+      "domain": "mpsc.mizoram.gov.in",
+      "type": "official",
+      "name": "psc-mz",
+      "url": "https://mpsc.mizoram.gov.in",
+      "stateIds": [
+        "ne"
+      ]
+    },
+    {
+      "domain": "mpscmanipur.gov.in",
+      "type": "official",
+      "name": "psc-mn",
+      "url": "https://mpscmanipur.gov.in",
+      "stateIds": [
+        "ne"
+      ]
+    },
+    {
+      "domain": "navodaya.gov.in",
+      "type": "official",
+      "name": "nvs",
+      "url": "https://navodaya.gov.in/nvs/en/Recruitment-Notice/Recruitment",
+      "stateIds": [
+        "all"
+      ]
+    },
+    {
+      "domain": "nayagarh.dcourts.gov.in",
+      "type": "official",
+      "name": "dcourt-nayagarh",
+      "url": "https://nayagarh.dcourts.gov.in/notice-category/recruitments",
+      "stateIds": [
+        "od"
+      ]
+    },
+    {
+      "domain": "ncert.nic.in",
+      "type": "official",
+      "name": "ncert",
+      "url": "https://ncert.nic.in/vacancies.php",
+      "stateIds": [
+        "all"
+      ]
+    },
+    {
+      "domain": "npsc.co.in",
+      "type": "official",
+      "name": "psc-nl",
+      "url": "https://npsc.co.in/recruitment.html",
+      "stateIds": [
+        "ne"
+      ]
+    },
+    {
+      "domain": "nuapada.dcourts.gov.in",
+      "type": "official",
+      "name": "dcourt-nuapada",
+      "url": "https://nuapada.dcourts.gov.in/notice-category/recruitments",
+      "stateIds": [
+        "od"
+      ]
+    },
+    {
+      "domain": "ongcindia.com",
+      "type": "official",
+      "name": "ongc",
+      "url": "https://ongcindia.com/web/eng/career/recruitment-notice",
+      "stateIds": [
+        "all"
+      ]
+    },
+    {
+      "domain": "opsc.gov.in",
+      "type": "official",
+      "name": "psc-od",
+      "url": "https://opsc.gov.in",
+      "stateIds": [
+        "od"
+      ]
+    },
+    {
+      "domain": "pakur.nic.in",
+      "type": "official",
+      "name": "emrs-pakur",
+      "url": "https://pakur.nic.in",
+      "stateIds": [
+        "jh"
+      ]
+    },
+    {
+      "domain": "ppsc.gov.in",
+      "type": "official",
+      "name": "psc-pb",
+      "url": "https://ppsc.gov.in/Notifications.aspx",
+      "stateIds": [
+        "pb"
+      ]
+    },
+    {
+      "domain": "psc.ap.gov.in",
+      "type": "official",
+      "name": "psc-ap",
+      "url": "https://psc.ap.gov.in",
+      "stateIds": [
+        "ap"
+      ]
+    },
+    {
+      "domain": "psc.cg.gov.in",
+      "type": "official",
+      "name": "psc-cg",
+      "url": "https://psc.cg.gov.in",
+      "stateIds": [
+        "cg"
+      ]
+    },
+    {
+      "domain": "psc.uk.gov.in",
+      "type": "official",
+      "name": "psc-uk",
+      "url": "https://psc.uk.gov.in",
+      "stateIds": [
+        "uk"
+      ]
+    },
+    {
+      "domain": "puri.dcourts.gov.in",
+      "type": "official",
+      "name": "dcourt-puri",
+      "url": "https://puri.dcourts.gov.in/notice-category/recruitments",
+      "stateIds": [
+        "od"
+      ]
+    },
+    {
+      "domain": "rayagada.dcourts.gov.in",
+      "type": "official",
+      "name": "dcourt-rayagada",
+      "url": "https://rayagada.dcourts.gov.in/notice-category/recruitments",
+      "stateIds": [
+        "od"
+      ]
+    },
+    {
+      "domain": "recruitment.itbpolice.nic.in",
+      "type": "official",
+      "name": "itbp",
+      "url": "https://recruitment.itbpolice.nic.in",
+      "stateIds": [
+        "all"
+      ]
+    },
+    {
+      "domain": "recruitment.py.gov.in",
+      "type": "official",
+      "name": "py-rec",
+      "url": "https://recruitment.py.gov.in",
+      "stateIds": [
+        "py"
+      ]
+    },
+    {
+      "domain": "recruitment2.rajasthan.gov.in",
+      "type": "official",
+      "name": "police-rj",
+      "url": "https://recruitment2.rajasthan.gov.in",
+      "stateIds": [
+        "rj"
+      ]
+    },
+    {
+      "domain": "rectt.bsf.gov.in",
+      "type": "official",
+      "name": "bsf",
+      "url": "https://rectt.bsf.gov.in",
+      "stateIds": [
+        "all"
+      ]
+    },
+    {
+      "domain": "rpsc.rajasthan.gov.in",
+      "type": "official",
+      "name": "psc-rj",
+      "url": "https://rpsc.rajasthan.gov.in/advertisements",
+      "stateIds": [
+        "rj"
+      ]
+    },
+    {
+      "domain": "rrbmumbai.gov.in",
+      "type": "official",
+      "name": "rrb-mumbai",
+      "url": "https://rrbmumbai.gov.in",
+      "stateIds": [
+        "all"
+      ]
+    },
+    {
+      "domain": "rsmssb.rajasthan.gov.in",
+      "type": "official",
+      "name": "ssb-rj",
+      "url": "https://rsmssb.rajasthan.gov.in",
+      "stateIds": [
+        "rj"
+      ]
+    },
+    {
+      "domain": "sail.co.in",
+      "type": "official",
+      "name": "sail",
+      "url": "https://sail.co.in/en/career/career-opportunities",
+      "stateIds": [
+        "all"
+      ]
+    },
+    {
+      "domain": "sainikschoolgoalpara.org",
+      "type": "official",
+      "name": "ss-goalpara",
+      "url": "https://sainikschoolgoalpara.org",
+      "stateIds": [
+        "as"
+      ]
+    },
+    {
+      "domain": "sbi.bank.in",
+      "type": "official",
+      "name": "sbi",
+      "url": "https://sbi.bank.in/web/careers/current-openings",
+      "stateIds": [
+        "all"
+      ]
+    },
+    {
+      "domain": "siddipet.dcourts.gov.in",
+      "type": "official",
+      "name": "dcourt-siddipet",
+      "url": "https://siddipet.dcourts.gov.in/notice-category/recruitments",
+      "stateIds": [
+        "tg"
+      ]
+    },
+    {
+      "domain": "sitapur.dcourts.gov.in",
+      "type": "official",
+      "name": "dcourt-sitapur",
+      "url": "https://sitapur.dcourts.gov.in/notice-category/recruitments",
+      "stateIds": [
+        "up"
+      ]
+    },
+    {
+      "domain": "spscskm.gov.in",
+      "type": "official",
+      "name": "psc-sk",
+      "url": "https://spscskm.gov.in",
+      "stateIds": [
+        "sk"
+      ]
+    },
+    {
+      "domain": "ssbrectt.gov.in",
+      "type": "official",
+      "name": "ssb",
+      "url": "https://ssbrectt.gov.in",
+      "stateIds": [
+        "all"
+      ]
+    },
+    {
+      "domain": "ssc.gov.in",
+      "type": "official",
+      "name": "ssc",
+      "url": "https://ssc.gov.in/home/notice-board",
+      "stateIds": [
+        "all"
+      ]
+    },
+    {
+      "domain": "tnusrb.tn.gov.in",
+      "type": "official",
+      "name": "police-tn",
+      "url": "https://tnusrb.tn.gov.in",
+      "stateIds": [
+        "tn"
+      ]
+    },
+    {
+      "domain": "tpsc.tripura.gov.in",
+      "type": "official",
+      "name": "psc-tr",
+      "url": "https://tpsc.tripura.gov.in",
+      "stateIds": [
+        "ne"
+      ]
+    },
+    {
+      "domain": "trb.tn.gov.in",
+      "type": "official",
+      "name": "ssb-tn",
+      "url": "https://trb.tn.gov.in",
+      "stateIds": [
+        "tn"
+      ]
+    },
+    {
+      "domain": "tspsc.gov.in",
+      "type": "official",
+      "name": "psc-tg",
+      "url": "https://tspsc.gov.in",
+      "stateIds": [
+        "tg"
+      ]
+    },
+    {
+      "domain": "ujjain.dcourts.gov.in",
+      "type": "official",
+      "name": "dcourt-ujjain",
+      "url": "https://ujjain.dcourts.gov.in/notice-category/recruitments",
+      "stateIds": [
+        "mp"
+      ]
+    },
+    {
+      "domain": "uppbpb.gov.in",
+      "type": "official",
+      "name": "police-up",
+      "url": "https://uppbpb.gov.in",
+      "stateIds": [
+        "up"
+      ]
+    },
+    {
+      "domain": "uppsc.up.nic.in",
+      "type": "official",
+      "name": "psc-up",
+      "url": "https://uppsc.up.nic.in/Notifications.aspx",
+      "stateIds": [
+        "up"
+      ]
+    },
+    {
+      "domain": "upsc.gov.in",
+      "type": "official",
+      "name": "upsc",
+      "url": "https://upsc.gov.in/whats-new",
+      "stateIds": [
+        "all"
+      ]
+    },
+    {
+      "domain": "upsssc.gov.in",
+      "type": "official",
+      "name": "ssb-up",
+      "url": "https://upsssc.gov.in/AllNotifications.aspx",
+      "stateIds": [
+        "up"
+      ]
+    },
+    {
+      "domain": "wbpsc.gov.in",
+      "type": "official",
+      "name": "psc-wb",
+      "url": "https://wbpsc.gov.in",
+      "stateIds": [
+        "wb"
+      ]
+    },
+    {
+      "domain": "www.aiimsexams.ac.in",
+      "type": "official",
+      "name": "aiims",
+      "url": "https://www.aiimsexams.ac.in",
+      "stateIds": [
+        "all"
+      ]
+    },
+    {
+      "domain": "www.apprenticeshipindia.gov.in",
+      "type": "official",
+      "name": "apprenticeship-india",
+      "url": "https://www.apprenticeshipindia.gov.in",
+      "stateIds": [
+        "all"
+      ]
+    },
+    {
+      "domain": "www.bankofbaroda.in",
+      "type": "official",
+      "name": "bob",
+      "url": "https://www.bankofbaroda.in/career",
+      "stateIds": [
+        "all"
+      ]
+    },
+    {
+      "domain": "www.barc.gov.in",
+      "type": "official",
+      "name": "barc",
+      "url": "https://www.barc.gov.in/careers",
+      "stateIds": [
+        "all"
+      ]
+    },
+    {
+      "domain": "www.cisf.gov.in",
+      "type": "official",
+      "name": "cisf",
+      "url": "https://www.cisf.gov.in/recruitment",
+      "stateIds": [
+        "all"
+      ]
+    },
+    {
+      "domain": "www.delhipolice.gov.in",
+      "type": "official",
+      "name": "delhi-police",
+      "url": "https://www.delhipolice.gov.in/recruitment",
+      "stateIds": [
+        "dl"
+      ]
+    },
+    {
+      "domain": "www.drdo.gov.in",
+      "type": "official",
+      "name": "drdo",
+      "url": "https://www.drdo.gov.in",
+      "stateIds": [
+        "all"
+      ]
+    },
+    {
+      "domain": "www.epfindia.gov.in",
+      "type": "official",
+      "name": "epfo",
+      "url": "https://www.epfindia.gov.in/site_en/Recruitment.php",
+      "stateIds": [
+        "all"
+      ]
+    },
+    {
+      "domain": "www.esic.gov.in",
+      "type": "official",
+      "name": "esic",
+      "url": "https://www.esic.gov.in/recruitments",
+      "stateIds": [
+        "all"
+      ]
+    },
+    {
+      "domain": "www.fssai.gov.in",
+      "type": "official",
+      "name": "fssai",
+      "url": "https://www.fssai.gov.in/cms/recruitment.php",
+      "stateIds": [
+        "all"
+      ]
+    },
+    {
+      "domain": "www.ibps.in",
+      "type": "official",
+      "name": "ibps",
+      "url": "https://www.ibps.in/notification",
+      "stateIds": [
+        "all"
+      ]
+    },
+    {
+      "domain": "www.indiapost.gov.in",
+      "type": "official",
+      "name": "indiapost",
+      "url": "https://www.indiapost.gov.in/VAS/Pages/IndiaPosthome.aspx",
+      "stateIds": [
+        "all"
+      ]
+    },
+    {
+      "domain": "www.isro.gov.in",
+      "type": "official",
+      "name": "isro",
+      "url": "https://www.isro.gov.in/Careers.html",
+      "stateIds": [
+        "all"
+      ]
+    },
+    {
+      "domain": "www.joinindiannavy.gov.in",
+      "type": "official",
+      "name": "navy",
+      "url": "https://www.joinindiannavy.gov.in",
+      "stateIds": [
+        "all"
+      ]
+    },
+    {
+      "domain": "www.keralapsc.gov.in",
+      "type": "official",
+      "name": "psc-kl",
+      "url": "https://www.keralapsc.gov.in/notifications",
+      "stateIds": [
+        "kl"
+      ]
+    },
+    {
+      "domain": "www.mahapolice.gov.in",
+      "type": "official",
+      "name": "police-mh",
+      "url": "https://www.mahapolice.gov.in",
+      "stateIds": [
+        "mh"
+      ]
+    },
+    {
+      "domain": "www.mha.gov.in",
+      "type": "official",
+      "name": "ib",
+      "url": "https://www.mha.gov.in/en/notifications/vacancies",
+      "stateIds": [
+        "all"
+      ]
+    },
+    {
+      "domain": "www.nabard.org",
+      "type": "official",
+      "name": "nabard",
+      "url": "https://www.nabard.org/career.aspx",
+      "stateIds": [
+        "all"
+      ]
+    },
+    {
+      "domain": "www.niti.gov.in",
+      "type": "official",
+      "name": "niti",
+      "url": "https://www.niti.gov.in/whats-new",
+      "stateIds": [
+        "all"
+      ]
+    },
+    {
+      "domain": "www.npcil.nic.in",
+      "type": "official",
+      "name": "npcil",
+      "url": "https://www.npcil.nic.in/content/331_1_Recruitments.aspx",
+      "stateIds": [
+        "all"
+      ]
+    },
+    {
+      "domain": "www.nsut.ac.in",
+      "type": "official",
+      "name": "nsut",
+      "url": "https://www.nsut.ac.in/teaching-post/105",
+      "stateIds": [
+        "dl"
+      ]
+    },
+    {
+      "domain": "www.ntpc.co.in",
+      "type": "official",
+      "name": "ntpc",
+      "url": "https://www.ntpc.co.in/en/career",
+      "stateIds": [
+        "all"
+      ]
+    },
+    {
+      "domain": "www.pib.gov.in",
+      "type": "official",
+      "name": "Press Information Bureau (PIB)",
+      "url": "https://www.pib.gov.in/",
+      "stateIds": [
+        "all"
+      ]
+    },
+    {
+      "domain": "www.pnbindia.in",
+      "type": "official",
+      "name": "pnb",
+      "url": "https://www.pnbindia.in/Recruitments.html",
+      "stateIds": [
+        "all"
+      ]
+    },
+    {
+      "domain": "www.rbi.org.in",
+      "type": "official",
+      "name": "rbi",
+      "url": "https://www.rbi.org.in/Scripts/Opportunities.aspx",
+      "stateIds": [
+        "all"
+      ]
+    },
+    {
+      "domain": "www.rrbajmer.gov.in",
+      "type": "official",
+      "name": "rrb-ajmer",
+      "url": "https://www.rrbajmer.gov.in",
+      "stateIds": [
+        "all"
+      ]
+    },
+    {
+      "domain": "www.rrbald.gov.in",
+      "type": "official",
+      "name": "rrb-ald",
+      "url": "https://www.rrbald.gov.in",
+      "stateIds": [
+        "all"
+      ]
+    },
+    {
+      "domain": "www.rrbbbs.gov.in",
+      "type": "official",
+      "name": "rrb-bbs",
+      "url": "https://www.rrbbbs.gov.in",
+      "stateIds": [
+        "all"
+      ]
+    },
+    {
+      "domain": "www.rrbbhopal.gov.in",
+      "type": "official",
+      "name": "rrb-bhopal",
+      "url": "https://www.rrbbhopal.gov.in",
+      "stateIds": [
+        "all"
+      ]
+    },
+    {
+      "domain": "www.rrbbilaspur.gov.in",
+      "type": "official",
+      "name": "rrb-bilaspur",
+      "url": "https://www.rrbbilaspur.gov.in",
+      "stateIds": [
+        "all"
+      ]
+    },
+    {
+      "domain": "www.rrbcdg.gov.in",
+      "type": "official",
+      "name": "rrb-cdg",
+      "url": "https://www.rrbcdg.gov.in",
+      "stateIds": [
+        "all"
+      ]
+    },
+    {
+      "domain": "www.rrbgkp.gov.in",
+      "type": "official",
+      "name": "rrb-gorakhpur",
+      "url": "https://www.rrbgkp.gov.in",
+      "stateIds": [
+        "all"
+      ]
+    },
+    {
+      "domain": "www.rrbguwahati.gov.in",
+      "type": "official",
+      "name": "rrb-guwahati",
+      "url": "https://www.rrbguwahati.gov.in",
+      "stateIds": [
+        "all"
+      ]
+    },
+    {
+      "domain": "www.rrbkolkata.gov.in",
+      "type": "official",
+      "name": "rrb-kolkata",
+      "url": "https://www.rrbkolkata.gov.in",
+      "stateIds": [
+        "all"
+      ]
+    },
+    {
+      "domain": "www.rrbmalda.gov.in",
+      "type": "official",
+      "name": "rrb-malda",
+      "url": "https://www.rrbmalda.gov.in",
+      "stateIds": [
+        "all"
+      ]
+    },
+    {
+      "domain": "www.rrbpatna.gov.in",
+      "type": "official",
+      "name": "rrb-patna",
+      "url": "https://www.rrbpatna.gov.in",
+      "stateIds": [
+        "all"
+      ]
+    },
+    {
+      "domain": "www.rrbranchi.gov.in",
+      "type": "official",
+      "name": "rrb-ranchi",
+      "url": "https://www.rrbranchi.gov.in",
+      "stateIds": [
+        "all"
+      ]
+    },
+    {
+      "domain": "www.rrbsecunderabad.nic.in",
+      "type": "official",
+      "name": "rrb-sec",
+      "url": "https://www.rrbsecunderabad.nic.in",
+      "stateIds": [
+        "all"
+      ]
+    },
+    {
+      "domain": "www.rrbsiliguri.gov.in",
+      "type": "official",
+      "name": "rrb-siliguri",
+      "url": "https://www.rrbsiliguri.gov.in",
+      "stateIds": [
+        "all"
+      ]
+    },
+    {
+      "domain": "www.rrbthiruvananthapuram.gov.in",
+      "type": "official",
+      "name": "rrb-tvm",
+      "url": "https://www.rrbthiruvananthapuram.gov.in",
+      "stateIds": [
+        "all"
+      ]
+    },
+    {
+      "domain": "www.rrcb.gov.in",
+      "type": "official",
+      "name": "rrcb",
+      "url": "https://www.rrcb.gov.in",
+      "stateIds": [
+        "all"
+      ]
+    },
+    {
+      "domain": "www.sainikschoolamaravathinagar.edu.in",
+      "type": "official",
+      "name": "ss-amaravathi",
+      "url": "https://www.sainikschoolamaravathinagar.edu.in/careers.php",
+      "stateIds": [
+        "tn"
+      ]
+    },
+    {
+      "domain": "www.sainikschoolbhubaneswar.edu.in",
+      "type": "official",
+      "name": "ss-bhubaneswar",
+      "url": "https://www.sainikschoolbhubaneswar.edu.in",
+      "stateIds": [
+        "od"
+      ]
+    },
+    {
+      "domain": "www.sainikschooljhansi.com",
+      "type": "official",
+      "name": "ss-jhansi",
+      "url": "https://www.sainikschooljhansi.com/files/recruitments",
+      "stateIds": [
+        "up"
+      ]
+    },
+    {
+      "domain": "www.sebi.gov.in",
+      "type": "official",
+      "name": "sebi",
+      "url": "https://www.sebi.gov.in/sebiweb/home/HomeAction.do",
+      "stateIds": [
+        "all"
+      ]
+    },
+    {
+      "domain": "www.ssgopalganj.in",
+      "type": "official",
+      "name": "ss-gopalganj",
+      "url": "https://www.ssgopalganj.in/Documents/vacancy",
+      "stateIds": [
+        "br"
+      ]
+    },
+    {
+      "domain": "www.tnpsc.gov.in",
+      "type": "official",
+      "name": "psc-tn",
+      "url": "https://www.tnpsc.gov.in",
+      "stateIds": [
+        "tn"
+      ]
+    },
+    {
+      "domain": "www.uco.bank.in",
+      "type": "official",
+      "name": "uco",
+      "url": "https://www.uco.bank.in/job-opportunities",
+      "stateIds": [
+        "all"
+      ]
+    },
+    {
+      "domain": "www.ugc.gov.in",
+      "type": "official",
+      "name": "ugc",
+      "url": "https://www.ugc.gov.in/page/Notices.aspx",
+      "stateIds": [
+        "all"
+      ]
+    },
+    {
+      "domain": "www.wii.gov.in",
+      "type": "official",
+      "name": "wii",
+      "url": "https://www.wii.gov.in/recruitments",
+      "stateIds": [
+        "all"
+      ]
+    },
+    {
+      "domain": "yamunanagar.dcourts.gov.in",
+      "type": "official",
+      "name": "dcourt-yamunanagar",
+      "url": "https://yamunanagar.dcourts.gov.in/notice-category/recruitments",
+      "stateIds": [
+        "hr"
+      ]
+    },
+    {
+      "domain": "indgovtjobs.in",
+      "type": "unofficial",
+      "name": "IndGovtJobs",
+      "url": "https://indgovtjobs.in/",
+      "stateIds": [
+        "all"
+      ]
+    },
+    {
+      "domain": "rojgarresult.com",
+      "type": "unofficial",
+      "name": "Rojgar Result",
+      "url": "https://rojgarresult.com/",
+      "stateIds": [
+        "all"
+      ]
+    },
+    {
+      "domain": "sarkarijob.net",
+      "type": "unofficial",
+      "name": "Sarkari Job",
+      "url": "https://sarkarijob.net/",
+      "stateIds": [
+        "all"
+      ]
+    },
+    {
+      "domain": "sarkarijobfind.com",
+      "type": "unofficial",
+      "name": "Sarkari Job Find",
+      "url": "https://sarkarijobfind.com/",
+      "stateIds": [
+        "all"
+      ]
+    },
+    {
+      "domain": "sarkariresult.com",
+      "type": "unofficial",
+      "name": "Sarkari Result",
+      "url": "https://sarkariresult.com/",
+      "stateIds": [
+        "all"
+      ]
+    },
+    {
+      "domain": "sarkariresult.com.cm",
+      "type": "unofficial",
+      "name": "Sarkari Result (.cm)",
+      "url": "https://sarkariresult.com.cm/",
+      "stateIds": [
+        "all"
+      ]
+    },
+    {
+      "domain": "www.fresherslive.com",
+      "type": "unofficial",
+      "name": "FreshersLive — Govt Jobs",
+      "url": "https://www.fresherslive.com/government-jobs",
+      "stateIds": [
+        "all"
+      ]
+    },
+    {
+      "domain": "www.governmentjobs.co.in",
+      "type": "unofficial",
+      "name": "Government Jobs (.co.in)",
+      "url": "https://www.governmentjobs.co.in/",
+      "stateIds": [
+        "all"
+      ]
+    },
+    {
+      "domain": "www.jagranjosh.com",
+      "type": "unofficial",
+      "name": "Jagran Josh — Sarkari Naukri",
+      "url": "https://www.jagranjosh.com/government-jobs",
+      "stateIds": [
+        "all"
+      ]
+    },
+    {
+      "domain": "www.jobriya.in",
+      "type": "unofficial",
+      "name": "Jobriya",
+      "url": "https://www.jobriya.in/",
+      "stateIds": [
+        "all"
+      ]
+    },
+    {
+      "domain": "www.naukri.com",
+      "type": "unofficial",
+      "name": "Naukri — Govt Jobs section",
+      "url": "https://www.naukri.com/government-jobs",
+      "stateIds": [
+        "all"
+      ]
+    },
+    {
+      "domain": "www.sarkarinaukriblog.com",
+      "type": "unofficial",
+      "name": "Sarkari Naukri Blog",
+      "url": "https://www.sarkarinaukriblog.com/",
+      "stateIds": [
+        "all"
+      ]
+    },
+    {
+      "domain": "www.timesjobs.com",
+      "type": "unofficial",
+      "name": "TimesJobs — Govt",
+      "url": "https://www.timesjobs.com/",
+      "stateIds": [
+        "all"
+      ]
+    }
+  ]
+}

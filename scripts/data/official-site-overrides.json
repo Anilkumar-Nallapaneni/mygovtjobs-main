@@ -1,0 +1,299 @@
+{
+  "_info": "Per-portal fixes: latestUrl, altUrls, rssUrl, relaxed HTML. Merged into officialSites.js at fetch time.",
+  "employment-news": {
+    "rssUrl": null,
+    "latestUrl": "https://employmentnews.gov.in/",
+    "relaxed": true
+  },
+  "ssc": {
+    "latestUrl": "https://ssc.gov.in/home/notice-board",
+    "altUrls": [
+      "https://ssc.gov.in/Portal/Notices",
+      "https://ssc.gov.in/Portal/Apply",
+      "https://ssc.gov.in/"
+    ],
+    "relaxed": true
+  },
+  "ibps": {
+    "latestUrl": "https://www.ibps.in/index.php/cwe-notification/",
+    "altUrls": ["https://ibps.in/", "https://www.ibps.in/"],
+    "relaxed": true
+  },
+  "drdo": {
+    "latestUrl": "https://www.drdo.gov.in/",
+    "altUrls": ["https://www.drdo.gov.in/drdo/en/career", "https://drdo.gov.in/careers"]
+  },
+  "npcil": {
+    "latestUrl": "https://www.npcil.nic.in/career/",
+    "altUrls": ["https://npcil.nic.in/", "https://www.npcil.nic.in/"]
+  },
+  "lic": {
+    "latestUrl": "https://licindia.in/careers",
+    "altUrls": ["https://www.licindia.in/en/careers", "https://licindia.in/"],
+    "relaxed": true
+  },
+  "epfo": {
+    "latestUrl": "https://www.epfindia.gov.in/site_en/For_Employers.php?id=sm2_index",
+    "altUrls": ["https://www.epfindia.gov.in/site_en/Recruitment.php", "https://www.epfindia.gov.in/"],
+    "relaxed": true
+  },
+  "esic": {
+    "latestUrl": "https://www.esic.gov.in/recruitments",
+    "altUrls": ["https://esic.gov.in/recruitments", "https://www.esic.gov.in/"]
+  },
+  "navy": {
+    "latestUrl": "https://www.joinindiannavy.gov.in/",
+    "altUrls": [
+      "https://www.joinindiannavy.gov.in/en/page/notification.html",
+      "https://joinindiannavy.gov.in/"
+    ]
+  },
+  "iaf": {
+    "latestUrl": "https://indianairforce.nic.in/career.aspx",
+    "altUrls": ["https://careerindianairforce.cdac.in/", "https://indianairforce.nic.in/"]
+  },
+  "cisf": {
+    "latestUrl": "https://cisf.gov.in/cisfeng/Recruitment",
+    "altUrls": ["https://www.cisf.gov.in/", "https://cisf.gov.in/"]
+  },
+  "itbp": {
+    "latestUrl": "https://itbpolice.nic.in/recruitments/",
+    "altUrls": ["https://recruitment.itbpolice.nic.in/", "https://itbpolice.nic.in/"]
+  },
+  "ssb": {
+    "latestUrl": "https://ssbrectt.gov.in/",
+    "altUrls": ["https://www.ssb.nic.in/", "https://ssbrectt.gov.in/Index"]
+  },
+  "crpf": {
+    "latestUrl": "https://crpf.gov.in/Recruitment.htm",
+    "altUrls": ["https://crpf.gov.in/recruitment.htm", "https://crpf.gov.in/"]
+  },
+  "ugc": {
+    "latestUrl": "https://www.ugc.gov.in/page/Vacancies.aspx",
+    "altUrls": ["https://www.ugc.gov.in/page/Notices.aspx"],
+    "relaxed": true
+  },
+  "ncert": {
+    "latestUrl": "https://ncert.nic.in/vacancy.php",
+    "altUrls": ["https://ncert.nic.in/recruitment.php", "https://ncert.nic.in/"]
+  },
+  "kvs": {
+    "latestUrl": "https://kvsangathan.nic.in/announcements",
+    "altUrls": ["https://kvsangathan.nic.in/recruitment-notice", "https://kvsangathan.nic.in/"]
+  },
+  "nvs": {
+    "latestUrl": "https://navodaya.gov.in/nvs/en/Recruitment-Notice/",
+    "altUrls": ["https://navodaya.gov.in/"]
+  },
+  "aiims": {
+    "latestUrl": "https://www.aiims.edu/en/recruitment.html",
+    "altUrls": ["https://www.aiims.edu/index.php/en/recruitment-cell"]
+  },
+  "ongc": {
+    "latestUrl": "https://ongcindia.com/web/eng/careers/current-opening",
+    "altUrls": ["https://ongcindia.com/web/eng/careers", "https://ongcindia.com/"]
+  },
+  "iocl": {
+    "latestUrl": "https://iocl.com/job-openings",
+    "altUrls": ["https://iocl.com/job-search", "https://www.iocl.com/"]
+  },
+  "ntpc": {
+    "latestUrl": "https://careers.ntpc.co.in/",
+    "altUrls": ["https://www.ntpc.co.in/en/career", "https://www.ntpc.co.in/"]
+  },
+  "gail": {
+    "latestUrl": "https://gailonline.com/",
+    "altUrls": ["https://gailonline.com/Current-Opening.html", "https://gailonline.com/CRcareer.html"]
+  },
+  "hal": {
+    "latestUrl": "https://hal-india.co.in/CAREER/",
+    "altUrls": ["https://hal-india.co.in/Careers/M__93"],
+    "relaxed": true
+  },
+  "bel": {
+    "latestUrl": "https://bel-india.in/careers",
+    "altUrls": ["https://bel-india.in/careers/", "https://www.bel-india.in/"]
+  },
+  "bhel": {
+    "latestUrl": "https://careers.bhel.in/",
+    "altUrls": ["https://www.bhel.com/careers", "https://www.bhel.com/"]
+  },
+  "sail": {
+    "latestUrl": "https://sail.co.in/careers/current-openings",
+    "altUrls": ["https://sail.co.in/en/career/career-opportunities"]
+  },
+  "rrb-ald": {
+    "latestUrl": "https://www.rrbald.gov.in/rrbald/",
+    "altUrls": ["https://rrbald.gov.in/"]
+  },
+  "rrcb": {
+    "latestUrl": "https://www.rrcb.gov.in/",
+    "altUrls": ["https://rrcb.gov.in/"]
+  },
+  "ircon": {
+    "latestUrl": "https://ircon.org/career.php",
+    "altUrls": ["https://ircon.org/index.php/career"]
+  },
+  "uco": {
+    "latestUrl": "https://www.ucobank.com/english/recruitment.aspx",
+    "altUrls": ["https://www.ucobank.com/english/career-notification.aspx"]
+  },
+  "psc-ap": {
+    "latestUrl": "https://psc.ap.gov.in/Notifications",
+    "altUrls": ["https://psc.ap.gov.in/", "https://www.psc.ap.gov.in/"],
+    "relaxed": true
+  },
+  "psc-as": {
+    "latestUrl": "https://apsc.nic.in/notifications.aspx",
+    "altUrls": ["https://apsc.nic.in/notifications", "https://apsc.nic.in/"]
+  },
+  "psc-br": {
+    "latestUrl": "https://www.onlinebpsc.bihar.gov.in/",
+    "altUrls": ["https://bpsc.bihar.gov.in/Notices.html", "https://bpsc.bihar.gov.in/"]
+  },
+  "psc-hp": {
+    "latestUrl": "https://hppsc.hp.gov.in/hppscoafc/Notifications.aspx",
+    "altUrls": ["https://hppsc.hp.gov.in/hppsc/"]
+  },
+  "psc-jk": {
+    "latestUrl": "https://jkpsc.nic.in/View_Notifications.aspx",
+    "altUrls": ["https://jkpsc.nic.in/Notifications.html"]
+  },
+  "psc-ka": {
+    "latestUrl": "https://kpsc.kar.nic.in/selectionpostal17/index.html",
+    "altUrls": ["https://kpsc.kar.nic.in/notifications.html", "https://kpsc.kar.nic.in/"]
+  },
+  "psc-mh": {
+    "latestUrl": "https://mpsc.gov.in/english/notices",
+    "altUrls": ["https://mpsc.gov.in/1041/Notifications", "https://mpsc.gov.in/"],
+    "relaxed": true
+  },
+  "psc-pb": {
+    "latestUrl": "https://ppsc.gov.in/Advertisements.aspx",
+    "altUrls": ["https://ppsc.gov.in/Notifications.aspx"]
+  },
+  "psc-rj": {
+    "latestUrl": "https://rpsc.rajasthan.gov.in/advertisements",
+    "altUrls": [
+      "https://rpsc.rajasthan.gov.in/Static/recruitment-advertisement",
+      "https://rpsc.rajasthan.gov.in/"
+    ]
+  },
+  "psc-tn": {
+    "latestUrl": "https://www.tnpsc.gov.in/",
+    "altUrls": [
+      "https://www.tnpsc.gov.in/English/latest-notification.html",
+      "https://www.tnpsc.gov.in/notification.aspx"
+    ]
+  },
+  "psc-tg": {
+    "latestUrl": "https://tspsc.gov.in/",
+    "altUrls": [
+      "https://www.tspsc.gov.in/notification.do",
+      "https://www.tspsc.gov.in/notifications.do"
+    ]
+  },
+  "psc-up": {
+    "latestUrl": "https://uppsc.up.nic.in/View_All_Active_Notifications.aspx",
+    "altUrls": ["https://uppsc.up.nic.in/Notifications.aspx"]
+  },
+  "psc-uk": {
+    "latestUrl": "https://psc.uk.gov.in/Recruitment/ViewAll",
+    "altUrls": ["https://psc.uk.gov.in/"]
+  },
+  "psc-wb": {
+    "latestUrl": "https://wbpsc.gov.in/",
+    "altUrls": ["https://wbpsc.gov.in/Notifications.html", "https://wbpsc.wb.gov.in/"]
+  },
+  "ssb-up": {
+    "latestUrl": "https://upsssc.gov.in/Default.aspx",
+    "altUrls": ["https://upsssc.gov.in/AllNotifications.aspx", "https://upsssc.gov.in/"]
+  },
+  "ssb-mh": {
+    "latestUrl": "https://mpsc.gov.in/english/notices",
+    "altUrls": ["https://mahapariksha.gov.in/", "https://mahapariksha.gov.in/notice-board/"]
+  },
+  "ssb-rj": {
+    "latestUrl": "https://rsmssb.rajasthan.gov.in/CurrentOpenings",
+    "altUrls": ["https://rsmssb.rajasthan.gov.in/"]
+  },
+  "ssb-mp": {
+    "latestUrl": "https://esb.mp.gov.in/Advertisements.aspx",
+    "altUrls": ["https://esb.mp.gov.in/", "https://esb.mponline.gov.in/"]
+  },
+  "police-up": {
+    "latestUrl": "https://uppbpb.gov.in/Default.aspx",
+    "altUrls": ["https://uppbpb.gov.in/", "https://uppolice.gov.in/"]
+  },
+  "police-mh": {
+    "latestUrl": "https://www.mahapolice.gov.in/recruitment/",
+    "altUrls": ["https://mahapolice.gov.in/recruitment"]
+  },
+  "police-tn": {
+    "latestUrl": "https://tnusrb.tn.gov.in/Recruitment",
+    "altUrls": ["https://tnusrb.tn.gov.in/"]
+  },
+  "police-rj": {
+    "latestUrl": "https://police.rajasthan.gov.in/",
+    "altUrls": ["https://police.rajasthan.gov.in/recruitment", "https://recruitment.rajasthan.gov.in/"]
+  },
+  "police-kl": {
+    "latestUrl": "https://keralapolice.gov.in/page/recruitment",
+    "altUrls": ["https://keralapolice.gov.in/page/recruitment-board"]
+  },
+  "delhi-portal": {
+    "latestUrl": "https://delhi.gov.in/recruitment",
+    "altUrls": ["https://delhi.gov.in/jobs", "https://delhi.gov.in/"]
+  },
+  "delhi-police": {
+    "latestUrl": "https://delhipolice.gov.in/",
+    "altUrls": ["https://delhipolice.gov.in/recruitments", "https://www.delhipolice.gov.in/"]
+  },
+  "psc-sk": {
+    "latestUrl": "https://spscskm.gov.in/",
+    "altUrls": ["https://www.spscskm.gov.in/"]
+  },
+  "psc-nl": {
+    "latestUrl": "https://npsc.co.in/",
+    "altUrls": ["https://npsc.co.in/recruitment.html"]
+  },
+  "psc-ml": {
+    "latestUrl": "https://megpsc.gov.in/",
+    "altUrls": ["https://www.megpsc.gov.in/"]
+  },
+  "psc-mn": {
+    "latestUrl": "https://mpscmanipur.gov.in/",
+    "altUrls": ["https://www.mpscmanipur.gov.in/"]
+  },
+  "ssb-tn": {
+    "latestUrl": "https://trb.tn.gov.in/trb/www/",
+    "altUrls": ["https://trb.tn.gov.in/"]
+  },
+  "ss-goalpara": {
+    "latestUrl": "https://sainikschoolgoalpara.org/",
+    "relaxed": true
+  },
+  "ss-amaravathi": {
+    "latestUrl": "https://www.sainikschoolamaravathinagar.edu.in/careers.php",
+    "altUrls": ["https://www.sainikschoolamaravathinagar.edu.in/"],
+    "relaxed": true
+  },
+  "ss-jhansi": {
+    "latestUrl": "https://www.sainikschooljhansi.com/files/recruitments/",
+    "altUrls": ["https://www.sainikschooljhansi.com/"],
+    "relaxed": true
+  },
+  "ss-bhubaneswar": {
+    "latestUrl": "https://www.sainikschoolbhubaneswar.edu.in/",
+    "relaxed": true
+  },
+  "ss-gopalganj": {
+    "latestUrl": "https://www.ssgopalganj.in/Documents/vacancy/",
+    "altUrls": ["https://www.ssgopalganj.in/"],
+    "relaxed": true
+  },
+  "emrs-pakur": {
+    "latestUrl": "https://pakur.nic.in/",
+    "relaxed": true
+  }
+}

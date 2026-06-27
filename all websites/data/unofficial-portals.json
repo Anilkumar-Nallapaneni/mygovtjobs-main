@@ -1,0 +1,118 @@
+{
+  "_info": "Indian government job aggregator / unofficial portals (reference only — not used for apply links in prod).",
+  "portals": [
+    {
+      "id": "sarkariresult",
+      "name": "Sarkari Result",
+      "url": "https://sarkariresult.com/",
+      "listingUrl": "https://sarkariresult.com/",
+      "scope": "all-india",
+      "states": ["all"]
+    },
+    {
+      "id": "sarkariresultcm",
+      "name": "Sarkari Result (.cm)",
+      "url": "https://sarkariresult.com.cm/",
+      "listingUrl": "https://sarkariresult.com.cm/",
+      "scope": "all-india",
+      "states": ["all"]
+    },
+    {
+      "id": "sarkarijobfind",
+      "name": "Sarkari Job Find",
+      "url": "https://sarkarijobfind.com/",
+      "listingUrl": "https://sarkarijobfind.com/",
+      "scope": "all-india",
+      "states": ["all"]
+    },
+    {
+      "id": "sarkarijob",
+      "name": "Sarkari Job",
+      "url": "https://sarkarijob.net/",
+      "listingUrl": "https://sarkarijob.net/",
+      "scope": "all-india",
+      "states": ["all"]
+    },
+    {
+      "id": "sarkarinaukriblog",
+      "name": "Sarkari Naukri Blog",
+      "url": "https://www.sarkarinaukriblog.com/",
+      "listingUrl": "https://www.sarkarinaukriblog.com/",
+      "scope": "all-india",
+      "states": ["all"]
+    },
+    {
+      "id": "governmentjobs",
+      "name": "Government Jobs (.co.in)",
+      "url": "https://www.governmentjobs.co.in/",
+      "listingUrl": "https://www.governmentjobs.co.in/",
+      "scope": "all-india",
+      "states": ["all"]
+    },
+    {
+      "id": "indgovtjobs",
+      "name": "IndGovtJobs",
+      "url": "https://indgovtjobs.in/",
+      "listingUrl": "https://indgovtjobs.in/",
+      "scope": "all-india",
+      "states": ["all"]
+    },
+    {
+      "id": "rojgarresult",
+      "name": "Rojgar Result",
+      "url": "https://rojgarresult.com/",
+      "listingUrl": "https://rojgarresult.com/",
+      "scope": "all-india",
+      "states": ["all"]
+    },
+    {
+      "id": "jobriya",
+      "name": "Jobriya",
+      "url": "https://www.jobriya.in/",
+      "listingUrl": "https://www.jobriya.in/",
+      "scope": "all-india",
+      "states": ["all"]
+    },
+    {
+      "id": "fresherslive-govt",
+      "name": "FreshersLive — Govt Jobs",
+      "url": "https://www.fresherslive.com/government-jobs",
+      "listingUrl": "https://www.fresherslive.com/government-jobs",
+      "scope": "all-india",
+      "states": ["all"]
+    },
+    {
+      "id": "employmentnews",
+      "name": "Employment News (official bulletin)",
+      "url": "https://employmentnews.gov.in/",
+      "listingUrl": "https://employmentnews.gov.in/",
+      "scope": "all-india",
+      "states": ["all"],
+      "type": "official"
+    },
+    {
+      "id": "naukri-govt",
+      "name": "Naukri — Govt Jobs section",
+      "url": "https://www.naukri.com/government-jobs",
+      "listingUrl": "https://www.naukri.com/government-jobs",
+      "scope": "all-india",
+      "states": ["all"]
+    },
+    {
+      "id": "jagranjosh-govt",
+      "name": "Jagran Josh — Sarkari Naukri",
+      "url": "https://www.jagranjosh.com/government-jobs",
+      "listingUrl": "https://www.jagranjosh.com/government-jobs",
+      "scope": "all-india",
+      "states": ["all"]
+    },
+    {
+      "id": "timesjobs-govt",
+      "name": "TimesJobs — Govt",
+      "url": "https://www.timesjobs.com/candidate/job-search.html?searchType=personalizedSearch&from=submit&txtKeywords=Government",
+      "listingUrl": "https://www.timesjobs.com/",
+      "scope": "all-india",
+      "states": ["all"]
+    }
+  ]
+}

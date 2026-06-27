@@ -1,0 +1,35 @@
+"""State codes to display names for the All Websites agent."""
+
+from __future__ import annotations
+
+STATE_NAMES: dict[str, str] = {
+    "all": "All India",
+    "ap": "Andhra Pradesh",
+    "as": "Assam",
+    "br": "Bihar",
+    "cg": "Chhattisgarh",
+    "dl": "Delhi",
+    "ga": "Goa",
+    "gj": "Gujarat",
+    "hr": "Haryana",
+    "hp": "Himachal Pradesh",
+    "jk": "Jammu & Kashmir",
+    "jh": "Jharkhand",
+    "ka": "Karnataka",
+    "kl": "Kerala",
+    "la": "Ladakh",
+    "mp": "Madhya Pradesh",
+    "mh": "Maharashtra",
+    "ne": "North East States",
+    "od": "Odisha",
+    "pb": "Punjab",
+    "py": "Puducherry",
+    "rj": "Rajasthan",
+    "sk": "Sikkim",
+    "tn": "Tamil Nadu",
+    "tg": "Telangana",
+    "uk": "Uttarakhand",
+    "up": "Uttar Pradesh",
+    "wb": "West Bengal",
+    "an": "Andaman & Nicobar",
+}

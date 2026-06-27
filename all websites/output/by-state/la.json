@@ -1,0 +1,37 @@
+{
+  "generatedAt": "2026-06-18T16:18:30.729100Z",
+  "startedAt": "2026-06-18T16:17:36.728820Z",
+  "durationSeconds": 54.0,
+  "probed": true,
+  "agent": "all-websites",
+  "version": "1.0",
+  "state": "la",
+  "stateName": "Ladakh",
+  "count": 1,
+  "websites": [
+    {
+      "id": "la-gov",
+      "name": "la-gov",
+      "url": "https://ladakh.gov.in",
+      "latestUrl": "https://ladakh.gov.in",
+      "domain": "ladakh.gov.in",
+      "baseUrl": "https://ladakh.gov.in/",
+      "type": "official",
+      "scope": "scraper",
+      "category": "state",
+      "stateIds": [
+        "la"
+      ],
+      "module": "state_portal_html",
+      "feedId": null,
+      "source": "scraper_registry.json",
+      "probe": {
+        "ok": true,
+        "status": 200,
+        "finalUrl": "https://ladakh.gov.in",
+        "bytes": 230865,
+        "hasRss": true
+      }
+    }
+  ]
+}

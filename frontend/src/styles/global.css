@@ -1,0 +1,181 @@
+/* ========== GLOBAL ========== */
+/* ============================================================================
+   My Govt Jobs — Global element & shell styles (tokens in variables.css)
+============================================================================ */
+
+
+/* ---------------------------------------------------------------------------
+   BASE RESETS
+--------------------------------------------------------------------------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  min-height: 100%;
+  scrollbar-gutter: stable;
+}
+
+@media (max-width: 1024px) {
+  html {
+    scrollbar-gutter: auto;
+  }
+}
+
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  font-family: var(--font-sans);
+  background: var(--ds-bg0);
+  color: var(--ds-text-body, var(--ds-white));
+  line-height: 1.45;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: inherit;
+}
+
+input::placeholder {
+  color: var(--ds-muted) !important;
+}
+
+
+/* ---------------------------------------------------------------------------
+   SCROLLBARS
+--------------------------------------------------------------------------- */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--ds-bg0);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--ds-saffron);
+  border-radius: 3px;
+}
+
+
+/* ---------------------------------------------------------------------------
+   GLOBAL KEYFRAMES
+--------------------------------------------------------------------------- */
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50%      { opacity: 0.4; }
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateY(-8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ========== ErrorBoundary ========== */
+/* Follows global `--ds-*` tokens (dark or light theme). */
+.error-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: min(100vh, 720px);
+  padding: 40px 20px;
+  text-align: center;
+  background: var(--ds-bg1);
+  border: 1px solid var(--ds-border);
+  border-radius: var(--radius-md, 12px);
+  margin: 20px;
+  color: var(--ds-white);
+}
+
+.error-container h1 {
+  font-size: 2rem;
+  color: var(--ds-red);
+  margin-bottom: 16px;
+  font-weight: 700;
+  font-family: var(--font-display, "Sora", system-ui, sans-serif);
+}
+
+.error-container p {
+  font-size: 1rem;
+  color: var(--ds-mutedHi);
+  margin: 0;
+  line-height: 1.6;
+  font-family: var(--font-sans, "Outfit", system-ui, sans-serif);
+}
+
+.error-container pre {
+  margin-top: 12px;
+  padding: 12px 14px;
+  text-align: left;
+  width: 100%;
+  max-width: 720px;
+  font-size: 12px;
+  color: var(--ds-mutedHi);
+  background: var(--ds-bg0);
+  border: 1px solid var(--ds-borderHi);
+  border-radius: var(--radius-sm, 8px);
+  font-family: var(--font-mono, ui-monospace, monospace);
+}
+
+@media (max-width: 768px) {
+  .error-container {
+    min-height: min(100vh, 560px);
+    padding: 28px 16px;
+    margin: 12px;
+  }
+
+  .error-container h1 {
+    font-size: 1.5rem;
+  }
+
+  .error-container p {
+    font-size: 0.95rem;
+  }
+}
+
+/* ========== Route error fallback ========== */
+.route-error-fallback {
+  padding: 32px 24px;
+  margin: 24px auto;
+  max-width: 560px;
+  text-align: center;
+  border: 1px solid var(--ds-border, #334155);
+  border-radius: 12px;
+  background: var(--ds-surface, #0f172a);
+}
+
+.route-error-fallback__retry {
+  margin-top: 16px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .employment-news-bar__track {
+    animation: none !important;
+    transform: none !important;
+  }
+}
+
+/* ========== Brand logo ========== */
+.brand-logo {
+  display: block;
+  height: var(--brand-logo-height, 48px);
+  width: var(--brand-logo-width, auto);
+  min-width: min(var(--brand-logo-width, 96px), 42vw);
+  max-width: 100%;
+  aspect-ratio: 520 / 197;
+  object-fit: contain;
+  object-position: left center;
+  flex-shrink: 0;
+}

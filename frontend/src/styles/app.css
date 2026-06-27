@@ -1,0 +1,8 @@
+/* My Govt Jobs — domain stylesheets (split for maintainability) */
+@import './tokens.css';
+@import './global.css';
+@import './layout.css';
+@import './home.css';
+@import './jobs.css';
+@import './map.css';
+@import './polish.css';

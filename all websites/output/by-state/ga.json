@@ -1,0 +1,37 @@
+{
+  "generatedAt": "2026-06-18T16:18:30.729100Z",
+  "startedAt": "2026-06-18T16:17:36.728820Z",
+  "durationSeconds": 54.0,
+  "probed": true,
+  "agent": "all-websites",
+  "version": "1.0",
+  "state": "ga",
+  "stateName": "Goa",
+  "count": 1,
+  "websites": [
+    {
+      "id": "psc-ga",
+      "name": "psc-ga",
+      "url": "https://gpsc.goa.gov.in",
+      "latestUrl": "https://gpsc.goa.gov.in",
+      "domain": "gpsc.goa.gov.in",
+      "baseUrl": "https://gpsc.goa.gov.in/",
+      "type": "official",
+      "scope": "scraper",
+      "category": "state",
+      "stateIds": [
+        "ga"
+      ],
+      "module": "state_portal_html",
+      "feedId": null,
+      "source": "scraper_registry.json",
+      "probe": {
+        "ok": true,
+        "status": 200,
+        "finalUrl": "https://gpsc.goa.gov.in",
+        "bytes": 254770,
+        "hasRss": true
+      }
+    }
+  ]
+}

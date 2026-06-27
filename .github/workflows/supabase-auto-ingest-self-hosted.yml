@@ -1,0 +1,109 @@
+# Optional: daily sync on YOUR Windows PC (manual trigger only).
+# Prefer cloud workflow: supabase-auto-ingest.yml (no PC needed).
+#
+# Setup:
+#   1. Install actions-runner OUTSIDE this repo (e.g. C:\actions-runner\mygovtjobs)
+#   2. Register as self-hosted runner in GitHub → Settings → Actions → Runners
+#   3. Add GitHub secrets: DATABASE_URL, VITE_SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY
+#   4. Keep runner window open: .\run.cmd
+#
+# Requires: Node 20+, Python 3.12, Windows PowerShell (built-in — NOT pwsh)
+name: Supabase ingest (self-hosted PC)
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+defaults:
+  run:
+    shell: powershell
+
+jobs:
+  ingest:
+    runs-on: self-hosted
+    timeout-minutes: 180
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+
+      # Do NOT use actions/setup-node or setup-python on Windows self-hosted —
+      # they need admin registry access. Use Node/Python already on this PC.
+
+      - name: Verify Node and Python
+        run: |
+          node --version
+          if (Get-Command py -ErrorAction SilentlyContinue) {
+            py -3.12 --version
+          } elseif (Get-Command python -ErrorAction SilentlyContinue) {
+            python --version
+          } else {
+            Write-Error "Install Python 3.12 from python.org (or py launcher)"
+            exit 1
+          }
+
+      - name: Install dependencies
+        run: |
+          npm ci
+          $py = if (Get-Command py -ErrorAction SilentlyContinue) { "py -3.12" } else { "python" }
+          if (-not (Test-Path backend/.venv/Scripts/python.exe)) {
+            Invoke-Expression "$py -m venv backend/.venv"
+          }
+          backend/.venv/Scripts/pip install -r backend/requirements.txt
+
+      - name: Set database env from GitHub secrets
+        env:
+          SECRET_DATABASE_URL: ${{ secrets.DATABASE_URL }}
+          SECRET_SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL }}
+          SECRET_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+        run: |
+          if ($env:SECRET_DATABASE_URL) {
+            Add-Content -Path $env:GITHUB_ENV -Value "DATABASE_URL=$env:SECRET_DATABASE_URL"
+            Add-Content -Path $env:GITHUB_ENV -Value "SUPABASE_URL=$env:SECRET_SUPABASE_URL"
+            Add-Content -Path $env:GITHUB_ENV -Value "SUPABASE_SERVICE_ROLE_KEY=$env:SECRET_SERVICE_KEY"
+            Write-Host "Using DATABASE_URL from GitHub secrets"
+          } elseif (Test-Path backend/.env) {
+            Get-Content backend/.env | Where-Object {
+              $_ -match '^(DATABASE_URL|SUPABASE_URL|SUPABASE_SERVICE_ROLE_KEY)='
+            } | ForEach-Object { Add-Content -Path $env:GITHUB_ENV -Value $_ }
+            Write-Host "Using backend/.env from runner machine"
+          } else {
+            Write-Error "Add DATABASE_URL GitHub secret OR create backend/.env on this PC"
+            exit 1
+          }
+
+      - name: Test database
+        run: node scripts/run-python.mjs scripts/test-backend-db.py
+
+      - name: Daily sync
+        env:
+          DAILY_SYNC_ENFORCE_ONCE: "1"
+          ALLOW_FALLBACK_JSON_EXPORT: "0"
+        run: node scripts/run-python.mjs scripts/run-daily-8am-sync.py --skip-enrich --force
+
+      - name: Build static data + PDF/detail agents
+        env:
+          SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+        run: |
+          npm run build:official-archives
+          npm run weekly:enrich:ci
+
+      - name: Commit refreshed static job data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add frontend/public/data/live-jobs.json `
+            frontend/public/data/job-details/ `
+            frontend/public/data/pdf-memory-index.json `
+            frontend/public/data/official-archives/ `
+            frontend/public/data/daily-sync-state.json
+          git diff --staged --quiet
+          if ($LASTEXITCODE -eq 0) {
+            Write-Host "No static data changes to commit."
+          } else {
+            git commit -m "chore: refresh static job data from daily sync [skip ci]"
+            git push
+          }

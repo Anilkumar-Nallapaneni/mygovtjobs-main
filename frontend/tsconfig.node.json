@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "skipLibCheck": true,
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "allowSyntheticDefaultImports": true,
+    "noEmit": true,
+    "types": ["node"],
+    "typeRoots": ["../node_modules/@types", "./node_modules/@types"]
+  },
+  "include": ["vite.config.ts"]
+}

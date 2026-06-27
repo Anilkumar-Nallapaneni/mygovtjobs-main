@@ -1,0 +1,78 @@
+# dependencies
+node_modules/
+frontend/node_modules/
+
+# build
+dist/
+frontend/dist/
+frontend/dist-e2e/
+build/
+frontend/coverage/
+
+# env
+.env
+.env.local
+.env.*.local
+frontend/.env.local
+backend/.env
+backend/.venv/
+
+# generated snapshots
+frontend/public/data/official-feed-items.json
+frontend/public/data/job-details/
+
+# editor
+.DS_Store
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+.idea
+*.swp
+
+# logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+debug.log
+scripts/.last-job-quality-audit.json
+terminal.md
+
+# python
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyc
+
+# vite
+.vite/
+
+# Local junctions (Windows) so old IDE paths like src/ still open — optional
+/src
+/public
+
+.vercel
+.env*
+!.env.example
+!frontend/.env.example
+!backend/.env.example
+
+# GitHub Actions self-hosted runner (install OUTSIDE repo — never commit)
+actions-runner/
+
+# Android signing + build outputs (never commit)
+*.keystore
+android-twa/.gradle/
+android-twa/app/build/
+android-twa/*.aab
+android-twa/*.apk
+android-twa/app-release-*
+
+# Play Store / mobile review artifacts
+play-store-assets.zip
+.cursor-mobile-review/
+
+.vercel
+.env*
+
+.vercel
+.env*

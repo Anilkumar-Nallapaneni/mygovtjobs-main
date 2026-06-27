@@ -1,0 +1,14 @@
+{
+  "_info": "Scrapes recruitment links from officialSites.js. lookbackDays=60 (~2 months). maxSites: 0 = all.",
+  "lookbackDays": 60,
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36 GovJobAlert/1.0",
+  "concurrency": 3,
+  "delayBetweenMs": 650,
+  "requestTimeoutMs": 28000,
+  "maxItemsPerSite": 80,
+  "maxUrlsPerSite": 14,
+  "maxSites": 0,
+  "titlePattern": "recruit|vacanc|notif|advert|career|employment|bharti|naukri|exam|admit|result|apply|opening|posting|selection|appointment|walk-?in|notice",
+  "skipSiteIds": [],
+  "onlySiteIds": []
+}

@@ -1,0 +1,23 @@
+{
+  "_info": "Field extraction hints for PDF/HTML government notifications.",
+  "fields": {
+    "title": { "selectors": ["h1", ".notification-title", "title"] },
+    "vacancies": { "patterns": ["(\\d+)\\s*(?:posts?|vacancies|पद)"] },
+    "last_date": { "patterns": ["last date[:\\s]+([\\d/\\-]+)", "अंतिम तिथि[:\\s]+([\\d/\\-]+)"] },
+    "qualification": { "sections": ["eligibility", "qualification", "योग्यता"] },
+    "apply_url": { "patterns": ["https?://[^\\s]+"] }
+  },
+  "category_rules": [
+    { "category": "upsc", "pattern": "\\bUPSC\\b|Union Public Service" },
+    { "category": "ssc", "pattern": "\\bSSC\\b|Staff Selection" },
+    { "category": "railways", "pattern": "railway|RRB" },
+    { "category": "banking", "pattern": "bank|IBPS|RBI" },
+    { "category": "police", "pattern": "police|constable" },
+    { "category": "teaching", "pattern": "teacher|lecturer|professor" },
+    { "category": "defence", "pattern": "army|navy|air force|defence|DRDO" },
+    { "category": "psu", "pattern": "PSU|public sector|ISRO|BHEL|ONGC" },
+    { "category": "health", "pattern": "medical|nurse|doctor|health|AIIMS|ANM" },
+    { "category": "engineering", "pattern": "engineer|engineering|AEE|technical officer|Junior Engineer" },
+    { "category": "psu", "pattern": "ISRO|Indian Space Research|ONGC|NTPC|BHEL|Oil India|BPCL" }
+  ]
+}

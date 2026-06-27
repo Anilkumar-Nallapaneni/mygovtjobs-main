@@ -1,0 +1,277 @@
+{
+  "generatedAt": "2026-06-18T16:18:30.729100Z",
+  "startedAt": "2026-06-18T16:17:36.728820Z",
+  "durationSeconds": 54.0,
+  "probed": true,
+  "agent": "all-websites",
+  "version": "1.0",
+  "state": "od",
+  "stateName": "Odisha",
+  "count": 11,
+  "websites": [
+    {
+      "id": "dcourt-angul",
+      "name": "dcourt-angul",
+      "url": "https://angul.dcourts.gov.in/notice-category/recruitments",
+      "latestUrl": "https://angul.dcourts.gov.in/notice-category/recruitments",
+      "domain": "angul.dcourts.gov.in",
+      "baseUrl": "https://angul.dcourts.gov.in/",
+      "type": "official",
+      "scope": "scraper",
+      "category": "state",
+      "stateIds": [
+        "od"
+      ],
+      "module": "state_portal_html",
+      "feedId": null,
+      "source": "scraper_registry.json",
+      "probe": {
+        "ok": true,
+        "status": 200,
+        "finalUrl": "https://angul.dcourts.gov.in/notice-category/recruitments/",
+        "bytes": 104391,
+        "hasRss": true
+      }
+    },
+    {
+      "id": "dcourt-balangir",
+      "name": "dcourt-balangir",
+      "url": "https://balangir.dcourts.gov.in/notice-category/recruitments",
+      "latestUrl": "https://balangir.dcourts.gov.in/notice-category/recruitments",
+      "domain": "balangir.dcourts.gov.in",
+      "baseUrl": "https://balangir.dcourts.gov.in/",
+      "type": "official",
+      "scope": "scraper",
+      "category": "state",
+      "stateIds": [
+        "od"
+      ],
+      "module": "state_portal_html",
+      "feedId": null,
+      "source": "scraper_registry.json",
+      "probe": {
+        "ok": true,
+        "status": 200,
+        "finalUrl": "https://balangir.dcourts.gov.in/notice-category/recruitments/",
+        "bytes": 104420,
+        "hasRss": true
+      }
+    },
+    {
+      "id": "dcourt-dhenkanal",
+      "name": "dcourt-dhenkanal",
+      "url": "https://dhenkanal.dcourts.gov.in/notice-category/recruitments",
+      "latestUrl": "https://dhenkanal.dcourts.gov.in/notice-category/recruitments",
+      "domain": "dhenkanal.dcourts.gov.in",
+      "baseUrl": "https://dhenkanal.dcourts.gov.in/",
+      "type": "official",
+      "scope": "scraper",
+      "category": "state",
+      "stateIds": [
+        "od"
+      ],
+      "module": "state_portal_html",
+      "feedId": null,
+      "source": "scraper_registry.json",
+      "probe": {
+        "ok": true,
+        "status": 200,
+        "finalUrl": "https://dhenkanal.dcourts.gov.in/notice-category/recruitments/",
+        "bytes": 104880,
+        "hasRss": true
+      }
+    },
+    {
+      "id": "dcourt-jagatsinghpur",
+      "name": "dcourt-jagatsinghpur",
+      "url": "https://jagatsinghpur.dcourts.gov.in/notice-category/recruitments",
+      "latestUrl": "https://jagatsinghpur.dcourts.gov.in/notice-category/recruitments",
+      "domain": "jagatsinghpur.dcourts.gov.in",
+      "baseUrl": "https://jagatsinghpur.dcourts.gov.in/",
+      "type": "official",
+      "scope": "scraper",
+      "category": "state",
+      "stateIds": [
+        "od"
+      ],
+      "module": "state_portal_html",
+      "feedId": null,
+      "source": "scraper_registry.json",
+      "probe": {
+        "ok": true,
+        "status": 200,
+        "finalUrl": "https://jagatsinghpur.dcourts.gov.in/notice-category/recruitments/",
+        "bytes": 104960,
+        "hasRss": true
+      }
+    },
+    {
+      "id": "dcourt-jharsuguda",
+      "name": "dcourt-jharsuguda",
+      "url": "https://jharsuguda.dcourts.gov.in/notice-category/recruitments",
+      "latestUrl": "https://jharsuguda.dcourts.gov.in/notice-category/recruitments",
+      "domain": "jharsuguda.dcourts.gov.in",
+      "baseUrl": "https://jharsuguda.dcourts.gov.in/",
+      "type": "official",
+      "scope": "scraper",
+      "category": "state",
+      "stateIds": [
+        "od"
+      ],
+      "module": "state_portal_html",
+      "feedId": null,
+      "source": "scraper_registry.json",
+      "probe": {
+        "ok": true,
+        "status": 200,
+        "finalUrl": "https://jharsuguda.dcourts.gov.in/notice-category/recruitments/",
+        "bytes": 105453,
+        "hasRss": true
+      }
+    },
+    {
+      "id": "dcourt-nayagarh",
+      "name": "dcourt-nayagarh",
+      "url": "https://nayagarh.dcourts.gov.in/notice-category/recruitments",
+      "latestUrl": "https://nayagarh.dcourts.gov.in/notice-category/recruitments",
+      "domain": "nayagarh.dcourts.gov.in",
+      "baseUrl": "https://nayagarh.dcourts.gov.in/",
+      "type": "official",
+      "scope": "scraper",
+      "category": "state",
+      "stateIds": [
+        "od"
+      ],
+      "module": "state_portal_html",
+      "feedId": null,
+      "source": "scraper_registry.json",
+      "probe": {
+        "ok": true,
+        "status": 200,
+        "finalUrl": "https://nayagarh.dcourts.gov.in/notice-category/recruitments/",
+        "bytes": 104310,
+        "hasRss": true
+      }
+    },
+    {
+      "id": "dcourt-nuapada",
+      "name": "dcourt-nuapada",
+      "url": "https://nuapada.dcourts.gov.in/notice-category/recruitments",
+      "latestUrl": "https://nuapada.dcourts.gov.in/notice-category/recruitments",
+      "domain": "nuapada.dcourts.gov.in",
+      "baseUrl": "https://nuapada.dcourts.gov.in/",
+      "type": "official",
+      "scope": "scraper",
+      "category": "state",
+      "stateIds": [
+        "od"
+      ],
+      "module": "state_portal_html",
+      "feedId": null,
+      "source": "scraper_registry.json",
+      "probe": {
+        "ok": true,
+        "status": 200,
+        "finalUrl": "https://nuapada.dcourts.gov.in/notice-category/recruitments/",
+        "bytes": 101985,
+        "hasRss": true
+      }
+    },
+    {
+      "id": "dcourt-puri",
+      "name": "dcourt-puri",
+      "url": "https://puri.dcourts.gov.in/notice-category/recruitments",
+      "latestUrl": "https://puri.dcourts.gov.in/notice-category/recruitments",
+      "domain": "puri.dcourts.gov.in",
+      "baseUrl": "https://puri.dcourts.gov.in/",
+      "type": "official",
+      "scope": "scraper",
+      "category": "state",
+      "stateIds": [
+        "od"
+      ],
+      "module": "state_portal_html",
+      "feedId": null,
+      "source": "scraper_registry.json",
+      "probe": {
+        "ok": true,
+        "status": 200,
+        "finalUrl": "https://puri.dcourts.gov.in/notice-category/recruitments/",
+        "bytes": 103901,
+        "hasRss": true
+      }
+    },
+    {
+      "id": "dcourt-rayagada",
+      "name": "dcourt-rayagada",
+      "url": "https://rayagada.dcourts.gov.in/notice-category/recruitments",
+      "latestUrl": "https://rayagada.dcourts.gov.in/notice-category/recruitments",
+      "domain": "rayagada.dcourts.gov.in",
+      "baseUrl": "https://rayagada.dcourts.gov.in/",
+      "type": "official",
+      "scope": "scraper",
+      "category": "state",
+      "stateIds": [
+        "od"
+      ],
+      "module": "state_portal_html",
+      "feedId": null,
+      "source": "scraper_registry.json",
+      "probe": {
+        "ok": true,
+        "status": 200,
+        "finalUrl": "https://rayagada.dcourts.gov.in/notice-category/recruitments/",
+        "bytes": 102141,
+        "hasRss": true
+      }
+    },
+    {
+      "id": "psc-od",
+      "name": "psc-od",
+      "url": "https://opsc.gov.in",
+      "latestUrl": "https://opsc.gov.in",
+      "domain": "opsc.gov.in",
+      "baseUrl": "https://opsc.gov.in/",
+      "type": "official",
+      "scope": "scraper",
+      "category": "state",
+      "stateIds": [
+        "od"
+      ],
+      "module": "state_portal_html",
+      "feedId": null,
+      "source": "scraper_registry.json",
+      "probe": {
+        "ok": true,
+        "status": 200,
+        "finalUrl": "https://opsc.gov.in/Public/OPSC/Default.aspx",
+        "bytes": 44750,
+        "hasRss": false
+      }
+    },
+    {
+      "id": "ss-bhubaneswar",
+      "name": "ss-bhubaneswar",
+      "url": "https://www.sainikschoolbhubaneswar.edu.in",
+      "latestUrl": "https://www.sainikschoolbhubaneswar.edu.in",
+      "domain": "www.sainikschoolbhubaneswar.edu.in",
+      "baseUrl": "https://www.sainikschoolbhubaneswar.edu.in/",
+      "type": "official",
+      "scope": "scraper",
+      "category": "teaching",
+      "stateIds": [
+        "od"
+      ],
+      "module": "state_portal_html",
+      "feedId": null,
+      "source": "scraper_registry.json",
+      "probe": {
+        "ok": true,
+        "status": 200,
+        "finalUrl": "https://www.sainikschoolbhubaneswar.edu.in",
+        "bytes": 99993,
+        "hasRss": false
+      }
+    }
+  ]
+}

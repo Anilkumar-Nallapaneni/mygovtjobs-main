@@ -1,0 +1,319 @@
+{
+  "generatedAt": "2026-06-18T16:18:30.729100Z",
+  "startedAt": "2026-06-18T16:17:36.728820Z",
+  "durationSeconds": 54.0,
+  "probed": true,
+  "agent": "all-websites",
+  "version": "1.0",
+  "count": 13,
+  "websites": [
+    {
+      "id": "fresherslive-govt",
+      "name": "FreshersLive — Govt Jobs",
+      "url": "https://www.fresherslive.com/government-jobs",
+      "latestUrl": "https://www.fresherslive.com/government-jobs",
+      "domain": "www.fresherslive.com",
+      "baseUrl": "https://www.fresherslive.com/",
+      "type": "unofficial",
+      "scope": "all-india",
+      "category": "aggregator",
+      "stateIds": [
+        "all"
+      ],
+      "categories": [],
+      "stateListingUrl": null,
+      "source": "unofficial-portals.json",
+      "probe": {
+        "ok": false,
+        "status": 404,
+        "finalUrl": "https://www.fresherslive.com/government-jobs",
+        "bytes": 0,
+        "hasRss": false
+      }
+    },
+    {
+      "id": "governmentjobs",
+      "name": "Government Jobs (.co.in)",
+      "url": "https://www.governmentjobs.co.in/",
+      "latestUrl": "https://www.governmentjobs.co.in/",
+      "domain": "www.governmentjobs.co.in",
+      "baseUrl": "https://www.governmentjobs.co.in/",
+      "type": "unofficial",
+      "scope": "all-india",
+      "category": "aggregator",
+      "stateIds": [
+        "all"
+      ],
+      "categories": [],
+      "stateListingUrl": null,
+      "source": "unofficial-portals.json",
+      "probe": {
+        "ok": false,
+        "status": 0,
+        "error": "[Errno 11001] getaddrinfo failed"
+      }
+    },
+    {
+      "id": "indgovtjobs",
+      "name": "IndGovtJobs",
+      "url": "https://indgovtjobs.in/",
+      "latestUrl": "https://indgovtjobs.in/",
+      "domain": "indgovtjobs.in",
+      "baseUrl": "https://indgovtjobs.in/",
+      "type": "unofficial",
+      "scope": "all-india",
+      "category": "aggregator",
+      "stateIds": [
+        "all"
+      ],
+      "categories": [],
+      "stateListingUrl": null,
+      "source": "unofficial-portals.json",
+      "probe": {
+        "ok": true,
+        "status": 200,
+        "finalUrl": "https://www.indgovtjobs.in/",
+        "bytes": 203504,
+        "hasRss": true
+      }
+    },
+    {
+      "id": "jagranjosh-govt",
+      "name": "Jagran Josh — Sarkari Naukri",
+      "url": "https://www.jagranjosh.com/government-jobs",
+      "latestUrl": "https://www.jagranjosh.com/government-jobs",
+      "domain": "www.jagranjosh.com",
+      "baseUrl": "https://www.jagranjosh.com/",
+      "type": "unofficial",
+      "scope": "all-india",
+      "category": "aggregator",
+      "stateIds": [
+        "all"
+      ],
+      "categories": [],
+      "stateListingUrl": null,
+      "source": "unofficial-portals.json",
+      "probe": {
+        "ok": true,
+        "status": 200,
+        "finalUrl": "https://www.jagranjosh.com/government-jobs",
+        "bytes": 329766,
+        "hasRss": false
+      }
+    },
+    {
+      "id": "jobriya",
+      "name": "Jobriya",
+      "url": "https://www.jobriya.in/",
+      "latestUrl": "https://www.jobriya.in/",
+      "domain": "www.jobriya.in",
+      "baseUrl": "https://www.jobriya.in/",
+      "type": "unofficial",
+      "scope": "all-india",
+      "category": "aggregator",
+      "stateIds": [
+        "all"
+      ],
+      "categories": [],
+      "stateListingUrl": null,
+      "source": "unofficial-portals.json",
+      "probe": {
+        "ok": false,
+        "status": 500,
+        "finalUrl": "https://www.jobriya.in/",
+        "bytes": 0,
+        "hasRss": false
+      }
+    },
+    {
+      "id": "naukri-govt",
+      "name": "Naukri — Govt Jobs section",
+      "url": "https://www.naukri.com/government-jobs",
+      "latestUrl": "https://www.naukri.com/government-jobs",
+      "domain": "www.naukri.com",
+      "baseUrl": "https://www.naukri.com/",
+      "type": "unofficial",
+      "scope": "all-india",
+      "category": "aggregator",
+      "stateIds": [
+        "all"
+      ],
+      "categories": [],
+      "stateListingUrl": null,
+      "source": "unofficial-portals.json",
+      "probe": {
+        "ok": true,
+        "status": 200,
+        "finalUrl": "https://www.naukri.com/government-jobs",
+        "bytes": 34746,
+        "hasRss": false
+      }
+    },
+    {
+      "id": "rojgarresult",
+      "name": "Rojgar Result",
+      "url": "https://rojgarresult.com/",
+      "latestUrl": "https://rojgarresult.com/",
+      "domain": "rojgarresult.com",
+      "baseUrl": "https://rojgarresult.com/",
+      "type": "unofficial",
+      "scope": "all-india",
+      "category": "aggregator",
+      "stateIds": [
+        "all"
+      ],
+      "categories": [],
+      "stateListingUrl": null,
+      "source": "unofficial-portals.json",
+      "probe": {
+        "ok": true,
+        "status": 200,
+        "finalUrl": "https://rojgarresult.com/",
+        "bytes": 175541,
+        "hasRss": true
+      }
+    },
+    {
+      "id": "sarkarijob",
+      "name": "Sarkari Job",
+      "url": "https://sarkarijob.net/",
+      "latestUrl": "https://sarkarijob.net/",
+      "domain": "sarkarijob.net",
+      "baseUrl": "https://sarkarijob.net/",
+      "type": "unofficial",
+      "scope": "all-india",
+      "category": "aggregator",
+      "stateIds": [
+        "all"
+      ],
+      "categories": [],
+      "stateListingUrl": null,
+      "source": "unofficial-portals.json",
+      "probe": {
+        "ok": true,
+        "status": 200,
+        "finalUrl": "https://sarkarijob.net/",
+        "bytes": 329352,
+        "hasRss": true
+      }
+    },
+    {
+      "id": "sarkarijobfind",
+      "name": "Sarkari Job Find",
+      "url": "https://sarkarijobfind.com/",
+      "latestUrl": "https://sarkarijobfind.com/",
+      "domain": "sarkarijobfind.com",
+      "baseUrl": "https://sarkarijobfind.com/",
+      "type": "unofficial",
+      "scope": "all-india",
+      "category": "aggregator",
+      "stateIds": [
+        "all"
+      ],
+      "categories": [],
+      "stateListingUrl": null,
+      "source": "unofficial-portals.json",
+      "probe": {
+        "ok": true,
+        "status": 200,
+        "finalUrl": "https://sarkarijobfind.com/",
+        "bytes": 589603,
+        "hasRss": true
+      }
+    },
+    {
+      "id": "sarkarinaukriblog",
+      "name": "Sarkari Naukri Blog",
+      "url": "https://www.sarkarinaukriblog.com/",
+      "latestUrl": "https://www.sarkarinaukriblog.com/",
+      "domain": "www.sarkarinaukriblog.com",
+      "baseUrl": "https://www.sarkarinaukriblog.com/",
+      "type": "unofficial",
+      "scope": "all-india",
+      "category": "aggregator",
+      "stateIds": [
+        "all"
+      ],
+      "categories": [],
+      "stateListingUrl": null,
+      "source": "unofficial-portals.json",
+      "probe": {
+        "ok": true,
+        "status": 200,
+        "finalUrl": "https://www.sarkarinaukriblog.com/",
+        "bytes": 194346,
+        "hasRss": true
+      }
+    },
+    {
+      "id": "sarkariresult",
+      "name": "Sarkari Result",
+      "url": "https://sarkariresult.com/",
+      "latestUrl": "https://sarkariresult.com/",
+      "domain": "sarkariresult.com",
+      "baseUrl": "https://sarkariresult.com/",
+      "type": "unofficial",
+      "scope": "all-india",
+      "category": "aggregator",
+      "stateIds": [
+        "all"
+      ],
+      "categories": [],
+      "stateListingUrl": null,
+      "source": "unofficial-portals.json",
+      "probe": {
+        "ok": true,
+        "status": 200,
+        "finalUrl": "https://www.sarkariresult.com/",
+        "bytes": 152064,
+        "hasRss": true
+      }
+    },
+    {
+      "id": "sarkariresultcm",
+      "name": "Sarkari Result (.cm)",
+      "url": "https://sarkariresult.com.cm/",
+      "latestUrl": "https://sarkariresult.com.cm/",
+      "domain": "sarkariresult.com.cm",
+      "baseUrl": "https://sarkariresult.com.cm/",
+      "type": "unofficial",
+      "scope": "all-india",
+      "category": "aggregator",
+      "stateIds": [
+        "all"
+      ],
+      "categories": [],
+      "stateListingUrl": null,
+      "source": "unofficial-portals.json",
+      "probe": {
+        "ok": true,
+        "status": 200,
+        "finalUrl": "https://sarkariresult.com.cm/",
+        "bytes": 226744,
+        "hasRss": true
+      }
+    },
+    {
+      "id": "timesjobs-govt",
+      "name": "TimesJobs — Govt",
+      "url": "https://www.timesjobs.com/candidate/job-search.html?searchType=personalizedSearch&from=submit&txtKeywords=Government",
+      "latestUrl": "https://www.timesjobs.com/",
+      "domain": "www.timesjobs.com",
+      "baseUrl": "https://www.timesjobs.com/",
+      "type": "unofficial",
+      "scope": "all-india",
+      "category": "aggregator",
+      "stateIds": [
+        "all"
+      ],
+      "categories": [],
+      "stateListingUrl": null,
+      "source": "unofficial-portals.json",
+      "probe": {
+        "ok": false,
+        "status": 0,
+        "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1081)"
+      }
+    }
+  ]
+}

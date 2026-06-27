@@ -1,0 +1,35 @@
+{
+  "generatedAt": "2026-06-18T16:18:30.729100Z",
+  "startedAt": "2026-06-18T16:17:36.728820Z",
+  "durationSeconds": 54.0,
+  "probed": true,
+  "agent": "all-websites",
+  "version": "1.0",
+  "state": "ap",
+  "stateName": "Andhra Pradesh",
+  "count": 1,
+  "websites": [
+    {
+      "id": "psc-ap",
+      "name": "psc-ap",
+      "url": "https://psc.ap.gov.in",
+      "latestUrl": "https://psc.ap.gov.in",
+      "domain": "psc.ap.gov.in",
+      "baseUrl": "https://psc.ap.gov.in/",
+      "type": "official",
+      "scope": "scraper",
+      "category": "state",
+      "stateIds": [
+        "ap"
+      ],
+      "module": "state_portal_html",
+      "feedId": null,
+      "source": "scraper_registry.json",
+      "probe": {
+        "ok": false,
+        "status": 0,
+        "error": "Exceeded maximum allowed redirects."
+      }
+    }
+  ]
+}

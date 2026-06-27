@@ -1,0 +1,47 @@
+from app.services.noise_filter import (
+    clean_job_title,
+    looks_like_job_notification,
+    sanitize_json_for_postgres,
+    strip_postgres_control_chars,
+)
+
+
+def test_strip_postgres_control_chars_removes_nul():
+    assert strip_postgres_control_chars("hello\x00world") == "helloworld"
+
+
+def test_clean_job_title_strips_nul_before_chrome_cleanup():
+    assert "\x00" not in clean_job_title("DRDO\x00 Recruitment 2026 Read More")
+
+
+def test_rejects_gov_admin_noise_titles():
+    assert not looks_like_job_notification("Certificate No. RC9115 of 2026_A.P Nos 15441")
+    assert not looks_like_job_notification("Appeal No. 6877 of 2026 filed by Samar Imran")
+    assert not looks_like_job_notification("Details of foreign visits undertaken by Officers of the NITI Aayog")
+    assert not looks_like_job_notification(
+        "COPYRIGHT © 2018 | INDIAN AIR FORCE | DESIGNED AND DEVELOPED BY: C-DAC"
+    )
+    assert not looks_like_job_notification("Toll Free Helpline:1800 266 7575 or 1800 22 7575")
+    assert not looks_like_job_notification("Bharat Ka Share Bazaar @ INDIA INTERNATIONAL TRADE FAIR – 2025")
+    assert not looks_like_job_notification(
+        "Round-1 Online Counselling Results Declared: Results are now live on the portal"
+    )
+    assert not looks_like_job_notification(
+        "Remittance Advice against: Arvind Poddar [Defaulter] PAN: AODPA6026K in the matter of IPO"
+    )
+    assert not looks_like_job_notification(
+        "Notice of Demand under Recovery Certificate number 9152 of 2026 dated June 10, 2026"
+    )
+    assert not looks_like_job_notification(
+        "ISRO showcased its prestigious achievements and advancements in Pragatisheel Chhattisgarh"
+    )
+    assert not looks_like_job_notification("IRNSS-1F successfully completed its mission life of 10 years")
+    assert not looks_like_job_notification("Online Registration extended till 15.06.2026")
+    assert looks_like_job_notification("SSC CGL 2026 Recruitment Notification for 500 Posts")
+
+
+def test_sanitize_json_for_postgres_nested():
+    payload = {"summary": "fee\x00details", "posts": [{"title": "clerk\x07"}]}
+    out = sanitize_json_for_postgres(payload)
+    assert out["summary"] == "feedetails"
+    assert out["posts"][0]["title"] == "clerk"

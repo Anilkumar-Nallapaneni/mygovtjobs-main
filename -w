@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/pwa-512.png" />
+    <!-- live-jobs early prefetch: injected at build for static/auto jobs source only -->
+    <script>
+      window.__LIVE_JOBS_PREFETCH__ = fetch('/data/live-jobs-list.json?v=2026-06-21T19%3A22%3A47.675Z', { credentials: 'same-origin', cache: 'no-cache' })
+        .then(function (r) { return r.ok ? r.json() : fetch("/data/live-jobs.json?v=2026-06-21T19%3A22%3A47.675Z", { credentials: "same-origin", cache: "no-cache" }).then(function (r2) { return r2.ok ? r2.json() : null; }); })
+        .catch(function () { return null; });
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#03060d" media="(prefers-color-scheme: dark)" />
+    <meta name="theme-color" content="#f4f6fa" media="(prefers-color-scheme: light)" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="description" content="govtjobs.me — live government job notifications from official .gov.in sources across India." />
+    <meta name="application-name" content="govtjobs.me" />
+    <meta property="og:site_name" content="govtjobs.me" />
+    <meta property="og:title" content="govtjobs.me — Live Government Job Alerts" />
+    <meta property="og:description" content="Live government job notifications from official .gov.in sources across India." />
+    <meta property="og:url" content="https://govtjobs.me/" />
+    <meta property="og:image" content="https://govtjobs.me/logo.png" />
+    <meta name="twitter:image" content="https://govtjobs.me/logo.png" />
+    <meta name="twitter:title" content="govtjobs.me — Live Government Job Alerts" />
+    <meta name="twitter:description" content="Live government job notifications from official sources across India." />
+    <title>govtjobs.me — Live Government Job Alerts | Results | Admit Cards</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&display=swap"
+      media="print"
+      onload="this.media='all'"
+    />
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&display=swap"
+      />
+    </noscript>
+    <script type="module" crossorigin src="/assets/index-CXxJFdx2.js"></script>
+    <link rel="modulepreload" crossorigin href="/assets/react-vendor-DWaX0Lzu.js">
+    <link rel="modulepreload" crossorigin href="/assets/i18n-vendor-Di5su4-Z.js">
+    <link rel="modulepreload" crossorigin href="/assets/map-7Urw-dnf.js">
+    <link rel="stylesheet" crossorigin href="/assets/index-DuHZzRyi.css">
+      <meta name="app-build" content="2026-06-21T19:22:47.675Z" />
+      <meta name="google-site-verification" content="xQYWU-z5TuVVoBakN_oOeMrRO_9z-myEXsi7c0BstcM" />
+  <link rel="manifest" href="/manifest.webmanifest"><script id="vite-plugin-pwa:register-sw" src="/registerSW.js"></script></head>
+  <body>
+    <div id="root">
+      <style>
+        /* Static shell — aligned with HomePageShell + EmploymentNewsBarShell (CLS) */
+        .static-app-shell {
+          min-height: 100vh;
+          background: #f4f6fa;
+          font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+          color: #0f172a;
+        }
+        .static-app-shell__news {
+          max-width: min(1800px, calc(100vw - 24px));
+          margin: 0 auto;
+          padding: 0 20px;
+        }
+        .static-app-shell__news-inner {
+          display: flex;
+          align-items: center;
+          min-height: 36px;
+          background: color-mix(in srgb, #03060d 92%, #22c55e 6%);
+          border-bottom: 1px solid #dde3ed;
+          overflow: hidden;
+        }
+        .static-app-shell__news-badge {
+          display: flex;
+          align-items: center;
+          gap: 6px;
+          height: 36px;
+          padding: 0 12px;
+          background: #15803d;
+          color: #fff;
+          font-size: 10.5px;
+          font-weight: 700;
+          letter-spacing: 0.04em;
+          text-transform: uppercase;
+          white-space: nowrap;
+        }
+        .static-app-shell__news-dot {
+          width: 6px;
+          height: 6px;
+          border-radius: 50%;
+          background: #fff;
+        }
+        .static-app-shell__navbar {
+          height: 66px;
+          border-bottom: 1px solid #dde3ed;
+          background: rgba(255, 255, 255, 0.96);
+        }
+        .static-app-shell__main {
+          max-width: min(1800px, calc(100vw - 24px));
+          margin: 0 auto;
+          padding: 0 20px 28px;
+        }
+        .static-app-shell__tagline {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 10px;
+          padding: 8px 0 14px;
+          margin-bottom: 16px;
+        }
+        .static-app-shell__tagline-rule {
+          width: 28px;
+          height: 2px;
+          background: linear-gradient(90deg, #e85d00, #f59e0b);
+        }
+        .static-app-shell__tagline-text {
+          font-size: 11px;
+          font-weight: 700;
+          letter-spacing: 3px;
+          color: #e85d00;
+        }
+        .static-app-shell__stats {
+          margin: 0 auto 14px;
+          max-width: min(720px, calc(100% - 24px));
+          padding: 8px 14px;
+          text-align: center;
+          border: 1px solid #b8bac4;
+          border-radius: 12px;
+          background: #fff;
+          font-size: 10.5px;
+          font-weight: 600;
+          line-height: 1.35;
+        }
+        .static-app-shell__jobs-title {
+          margin: 0 0 6px;
+          font-size: 1.15rem;
+          font-weight: 700;
+        }
+        .static-app-shell__jobs-meta {
+          margin: 0 0 12px;
+          font-size: 0.85rem;
+          color: #5e6068;
+        }
+        .static-app-shell__cards {
+          display: grid;
+          grid-template-columns: 1fr;
+          gap: 14px;
+        }
+        .static-app-shell__card {
+          border: 1px solid #b8bac4;
+          border-radius: 14px;
+          min-height: 168px;
+          background: linear-gradient(90deg, #f3f4f7 0%, #e2e3e9 50%, #f3f4f7 100%);
+          background-size: 200% 100%;
+          animation: static-shell-shimmer 1.35s ease-in-out infinite;
+        }
+        @keyframes static-shell-shimmer {
+          0% { background-position: 200% 0; }
+          100% { background-position: -200% 0; }
+        }
+        @media (min-width: 641px) {
+          .static-app-shell__cards { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+        }
+        @media (min-width: 769px) {
+          .static-app-shell__stats { display: none; }
+        }
+      </style>
+      <div class="static-app-shell" aria-busy="true" aria-label="Loading government job listings">
+        <div class="static-app-shell__news">
+          <div class="static-app-shell__news-inner">
+            <div class="static-app-shell__news-badge">
+              <span class="static-app-shell__news-dot" aria-hidden="true"></span>
+              <span>Daily employment news</span>
+            </div>
+          </div>
+        </div>
+        <div class="static-app-shell__navbar" aria-hidden="true"></div>
+        <div class="static-app-shell__main">
+          <div class="static-app-shell__tagline">
+            <span class="static-app-shell__tagline-rule" aria-hidden="true"></span>
+            <span class="static-app-shell__tagline-text">NEVER MISS A GOVERNMENT NOTIFICATION</span>
+            <span class="static-app-shell__tagline-rule" aria-hidden="true"></span>
+          </div>
+          <div class="static-app-shell__stats">55,597 vacancies · 874 notifications · 75 orgs</div>
+          <section aria-label="Latest government jobs">
+            <h2 class="static-app-shell__jobs-title">Latest Government Jobs</h2>
+            <p class="static-app-shell__jobs-meta">Loading live listings from official sources…</p>
+            <div class="static-app-shell__cards" aria-hidden="true">
+              <div class="static-app-shell__card"></div>
+              <div class="static-app-shell__card"></div>
+              <div class="static-app-shell__card"></div>
+              <div class="static-app-shell__card"></div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

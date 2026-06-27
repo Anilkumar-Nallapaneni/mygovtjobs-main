@@ -1,0 +1,131 @@
+{
+  "generatedAt": "2026-06-18T16:18:30.729100Z",
+  "startedAt": "2026-06-18T16:17:36.728820Z",
+  "durationSeconds": 54.0,
+  "probed": true,
+  "agent": "all-websites",
+  "version": "1.0",
+  "state": "mp",
+  "stateName": "Madhya Pradesh",
+  "count": 5,
+  "websites": [
+    {
+      "id": "dcourt-indore",
+      "name": "dcourt-indore",
+      "url": "https://indore.dcourts.gov.in/notice-category/recruitments",
+      "latestUrl": "https://indore.dcourts.gov.in/notice-category/recruitments",
+      "domain": "indore.dcourts.gov.in",
+      "baseUrl": "https://indore.dcourts.gov.in/",
+      "type": "official",
+      "scope": "scraper",
+      "category": "state",
+      "stateIds": [
+        "mp"
+      ],
+      "module": "state_portal_html",
+      "feedId": null,
+      "source": "scraper_registry.json",
+      "probe": {
+        "ok": true,
+        "status": 200,
+        "finalUrl": "https://indore.dcourts.gov.in/notice-category/recruitments/",
+        "bytes": 105196,
+        "hasRss": true
+      }
+    },
+    {
+      "id": "dcourt-ujjain",
+      "name": "dcourt-ujjain",
+      "url": "https://ujjain.dcourts.gov.in/notice-category/recruitments",
+      "latestUrl": "https://ujjain.dcourts.gov.in/notice-category/recruitments",
+      "domain": "ujjain.dcourts.gov.in",
+      "baseUrl": "https://ujjain.dcourts.gov.in/",
+      "type": "official",
+      "scope": "scraper",
+      "category": "state",
+      "stateIds": [
+        "mp"
+      ],
+      "module": "state_portal_html",
+      "feedId": null,
+      "source": "scraper_registry.json",
+      "probe": {
+        "ok": true,
+        "status": 200,
+        "finalUrl": "https://ujjain.dcourts.gov.in/notice-category/recruitments/",
+        "bytes": 103158,
+        "hasRss": true
+      }
+    },
+    {
+      "id": "police-mp",
+      "name": "police-mp",
+      "url": "https://mppolice.gov.in",
+      "latestUrl": "https://mppolice.gov.in",
+      "domain": "mppolice.gov.in",
+      "baseUrl": "https://mppolice.gov.in/",
+      "type": "official",
+      "scope": "scraper",
+      "category": "police",
+      "stateIds": [
+        "mp"
+      ],
+      "module": "state_portal_html",
+      "feedId": null,
+      "source": "scraper_registry.json",
+      "probe": {
+        "ok": true,
+        "status": 200,
+        "finalUrl": "https://www.mppolice.gov.in/en",
+        "bytes": 158296,
+        "hasRss": true
+      }
+    },
+    {
+      "id": "psc-mp",
+      "name": "psc-mp",
+      "url": "https://mppsc.mp.gov.in/news.aspx",
+      "latestUrl": "https://mppsc.mp.gov.in/news.aspx",
+      "domain": "mppsc.mp.gov.in",
+      "baseUrl": "https://mppsc.mp.gov.in/",
+      "type": "official",
+      "scope": "scraper",
+      "category": "state",
+      "stateIds": [
+        "mp"
+      ],
+      "module": "state_portal_html",
+      "feedId": null,
+      "source": "scraper_registry.json",
+      "probe": {
+        "ok": true,
+        "status": 200,
+        "finalUrl": "https://mppsc.mp.gov.in/Errors",
+        "bytes": 18652,
+        "hasRss": false
+      }
+    },
+    {
+      "id": "ssb-mp",
+      "name": "ssb-mp",
+      "url": "https://esb.mp.gov.in",
+      "latestUrl": "https://esb.mp.gov.in",
+      "domain": "esb.mp.gov.in",
+      "baseUrl": "https://esb.mp.gov.in/",
+      "type": "official",
+      "scope": "scraper",
+      "category": "state",
+      "stateIds": [
+        "mp"
+      ],
+      "module": "state_portal_html",
+      "feedId": null,
+      "source": "scraper_registry.json",
+      "probe": {
+        "ok": false,
+        "status": 0,
+        "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1081)"
+      }
+    }
+  ]
+}

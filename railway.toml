@@ -1,0 +1,23 @@
+# Railway — deploy FastAPI backend (admin + ingest API)
+# https://docs.railway.com/guides/fastapi
+#
+# Setup:
+#   1. railway.app → New Project → Deploy from GitHub repo
+#   2. Settings → use this file (auto-detected) or set Dockerfile path: backend/Dockerfile
+#   3. Variables → copy from backend/.env (see docs/GO_LIVE.md)
+#   4. Settings → Networking → Generate Domain, then add CNAME api.govtjobs.me
+
+[build]
+builder = "DOCKERFILE"
+dockerfilePath = "backend/Dockerfile"
+watchPatterns = ["backend/**", "scripts/**"]
+
+[deploy]
+healthcheckPath = "/health"
+healthcheckTimeout = 120
+restartPolicyType = "ON_FAILURE"
+restartPolicyMaxRetries = 5
+
+# Recommended env (see docs/GO_LIVE.md + docs/RAZORPAY.md):
+#   PDF_OCR_ENABLED=0   # default off in production (Docker has Tesseract if you set 1)
+#   APP_ENV=production

@@ -1,0 +1,37 @@
+{
+  "generatedAt": "2026-06-18T16:18:30.729100Z",
+  "startedAt": "2026-06-18T16:17:36.728820Z",
+  "durationSeconds": 54.0,
+  "probed": true,
+  "agent": "all-websites",
+  "version": "1.0",
+  "state": "uk",
+  "stateName": "Uttarakhand",
+  "count": 1,
+  "websites": [
+    {
+      "id": "psc-uk",
+      "name": "psc-uk",
+      "url": "https://psc.uk.gov.in",
+      "latestUrl": "https://psc.uk.gov.in",
+      "domain": "psc.uk.gov.in",
+      "baseUrl": "https://psc.uk.gov.in/",
+      "type": "official",
+      "scope": "scraper",
+      "category": "state",
+      "stateIds": [
+        "uk"
+      ],
+      "module": "state_portal_html",
+      "feedId": null,
+      "source": "scraper_registry.json",
+      "probe": {
+        "ok": true,
+        "status": 200,
+        "finalUrl": "https://psc.uk.gov.in",
+        "bytes": 114224,
+        "hasRss": false
+      }
+    }
+  ]
+}

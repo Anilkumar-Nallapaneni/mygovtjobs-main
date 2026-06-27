@@ -1,0 +1,118 @@
+/* My Govt Jobs — single frontend stylesheet (tokens + all components) */
+
+/* ========== TOKENS ========== */
+/* ============================================================================
+   My Govt Jobs — Design tokens (CSS custom properties)
+   ----------------------------------------------------------------------------
+   Per-component styles use `var(--ds-*)` from here. Color tokens default to
+   the DARK palette at load; `applyColorMode()` in `src/theme/designSystem.ts`
+   overwrites them on `<html>` at runtime (first-time visitors use light `bw`).
+============================================================================ */
+
+
+/* ---------------------------------------------------------------------------
+   1. STRUCTURAL TOKENS (theme-independent)
+--------------------------------------------------------------------------- */
+:root {
+  /* Typography stacks */
+  --font-sans:    system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-display: "Sora", system-ui, sans-serif;
+  --font-mono:    ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  --font-serif:   Georgia, "Times New Roman", Times, serif;
+
+  /* Radius scale */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 14px;
+  --radius-xl: 22px;
+
+  /* Stacking */
+  --z-nav:     200;
+  --z-modal:   500;
+  --z-tooltip: 1000;
+
+  /* Layout */
+  --layout-max: min(1800px, calc(100vw - 24px));
+}
+
+
+/* ---------------------------------------------------------------------------
+   2. COLOR TOKENS — defaults (DARK palette)
+   Mirror src/theme/designSystem.ts → DARK. JS overrides at runtime.
+--------------------------------------------------------------------------- */
+:root {
+  /* Surfaces */
+  --ds-bg0:        #03060d;
+  --ds-bg1:        #080d1a;
+  --ds-bg2:        #0c1220;
+  --ds-bg3:        #101828;
+  --ds-border:     #131d2e;
+  --ds-borderHi:   #1e2d42;
+
+  /* Brand */
+  --ds-saffron:    #ff6b00;
+  --ds-saffronHi:  #ff8c35;
+  --ds-gold:       #ffaa00;
+
+  /* Text */
+  --ds-white:      #edf2ff;
+  --ds-muted:      #3d5068;
+  --ds-mutedHi:    #6b829a;
+  --ds-text-body:  #edf2ff;
+  --ds-text-muted: #6b829a;
+  --ds-text-subtle:#6b829a;
+
+  /* Status */
+  --ds-green:      #22c55e;
+  --ds-red:        #ef4444;
+  --ds-blue:       #38bdf8;
+
+  /* Accent overlays (orange tints) */
+  --ds-accentSoft:        rgba(255, 107, 0, 0.12);
+  --ds-accentSoftMid:     rgba(255, 107, 0, 0.10);
+  --ds-accentBorder:      rgba(255, 107, 0, 0.35);
+  --ds-accentBorderHi:    rgba(255, 107, 0, 0.45);
+  --ds-accentBorderLo:    rgba(255, 107, 0, 0.25);
+  --ds-accentBorderNav:   rgba(255, 107, 0, 0.30);
+  --ds-accentGlow:        rgba(255, 107, 0, 0.07);
+  --ds-accentChipActiveBg:     rgba(255, 107, 0, 0.15);
+  --ds-accentChipActiveBorder: rgba(255, 107, 0, 0.50);
+
+  /* Gradients */
+  --ds-gradientBrand: linear-gradient(135deg, #ff6b00, #ffaa00);
+  --ds-gradientRule:  linear-gradient(to right, #ff6b00, #ffaa00);
+  --ds-inkOnBrand:    #060a00;
+
+  /* Panels */
+  --ds-panelWarm:     linear-gradient(135deg, #1a0e00, #0a1228);
+  --ds-alertPanelBg:  linear-gradient(135deg, #0c1828, #1a0e00);
+  --ds-sheetBg:       rgba(3, 6, 13, 0.98);
+  --ds-navScrim:      rgba(3, 6, 13, 0.97);
+  --ds-jobsGridBg:    color-mix(in srgb, var(--ds-bg0) 92%, transparent);
+
+  /* Card */
+  --ds-jobCardHoverBg: #0e1828;
+  --ds-shadowCard:     0 1px 2px rgba(0, 0, 0, 0.28), 0 4px 16px rgba(0, 0, 0, 0.38);
+  --ds-shadowCardHover: 0 10px 30px rgba(0, 0, 0, 0.5);
+  --ds-mutedSoftBg:    rgba(107, 130, 154, 0.14);
+
+  /* Switch knob */
+  --ds-switchKnobShadow: 0 0 8px rgba(255, 107, 0, 0.35);
+
+  /* Modal scrim */
+  --ds-overlayScrim:    rgba(0, 0, 0, 0.88);
+
+  /* Soft status backgrounds */
+  --ds-greenSoftBg:     rgba(34, 197, 94, 0.12);
+  --ds-greenSoftBorder: rgba(34, 197, 94, 0.30);
+  --ds-redSoftBg:       rgba(239, 68, 68, 0.12);
+  --ds-redSoftBorder:   rgba(239, 68, 68, 0.30);
+
+  /* Table */
+  --ds-tableRowBorder:  rgba(19, 29, 46, 0.60);
+
+  /* UI misc */
+  --ds-shadow-dropdown: 0 12px 40px rgba(0, 0, 0, 0.45);
+  --ds-lang-error:       #f88;
+  --ds-lang-error-border:#c44;
+}

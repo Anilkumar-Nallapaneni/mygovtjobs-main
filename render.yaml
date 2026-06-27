@@ -1,0 +1,46 @@
+# Render Blueprint — alternative to Railway for FastAPI backend
+# Dashboard → New → Blueprint → connect repo (uses this file)
+#
+# After deploy: Settings → Custom Domain → api.govtjobs.me
+
+services:
+  - type: web
+    name: mygovtjobs-api
+    runtime: docker
+    dockerfilePath: ./backend/Dockerfile
+    dockerContext: .
+    plan: free
+    healthCheckPath: /health
+    envVars:
+      - key: APP_ENV
+        value: production
+      - key: ALLOW_INSECURE_ADMIN
+        value: "0"
+      - key: ALLOW_FALLBACK_JSON_EXPORT
+        value: "0"
+      - key: CORS_ORIGINS
+        value: https://govtjobs.me,https://www.govtjobs.me
+      - key: RATE_LIMIT_PER_MINUTE
+        value: "120"
+      - key: SQL_ECHO
+        value: "0"
+      - key: SUPABASE_URL
+        sync: false
+      - key: DATABASE_URL
+        sync: false
+      - key: SUPABASE_SERVICE_ROLE_KEY
+        sync: false
+      - key: ADMIN_API_KEY
+        generateValue: true
+      - key: INGEST_LOOKBACK_DAYS
+        value: "60"
+      - key: INGEST_MAX_ITEMS_PER_SOURCE
+        value: "120"
+      - key: PDF_OCR_ENABLED
+        value: "0"
+      - key: RAZORPAY_KEY_ID
+        sync: false
+      - key: RAZORPAY_KEY_SECRET
+        sync: false
+      - key: RAZORPAY_WEBHOOK_SECRET
+        sync: false

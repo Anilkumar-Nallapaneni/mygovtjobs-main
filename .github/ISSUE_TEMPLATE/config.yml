@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Roadmap & bulk issues
+    url: https://github.com/Anilkumar-Nallapaneni/gov-job-alert-Govt-Jobs/blob/main/docs/ROADMAP.md
+    about: Phased plan and how to create all 35 GitHub issues
+  - name: Offline checklist
+    url: https://github.com/Anilkumar-Nallapaneni/gov-job-alert-Govt-Jobs/blob/main/docs/github-issues/CHECKLIST.md
+    about: Track progress without the API script
