@@ -133,13 +133,18 @@ class DailySyncService:
         return True, "ok"
 
     def mark_started(self) -> dict[str, Any]:
+        """Mark sync in progress while keeping last-run stats for admin/UI until completion."""
         now = datetime.now(timezone.utc)
+        prior = self._read()
         payload = {
+            **prior,
             "status": "running",
             "startedAt": now.isoformat(),
             "startedAtIst": self.now_ist().isoformat(),
             "dateIst": self.today_ist().isoformat(),
         }
+        for stale in ("failedAt", "failedAtIst", "error"):
+            payload.pop(stale, None)
         self._write(payload)
         return payload
 

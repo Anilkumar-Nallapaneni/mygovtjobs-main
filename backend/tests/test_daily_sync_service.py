@@ -50,6 +50,37 @@ def test_early_run_does_not_block_scheduled_slot(sync_state_path: Path, monkeypa
     assert ok is True
 
 
+def test_mark_started_preserves_last_completion_metadata(sync_state_path: Path) -> None:
+    """While running, admin dashboard should still show prior completedAt/jobCount/sourcesScraped."""
+    _write_state(
+        sync_state_path,
+        {
+            "status": "completed",
+            "completedAt": "2026-06-23T07:10:02.094988+00:00",
+            "completedAtIst": "2026-06-23T12:40:02.095024+05:30",
+            "lastCompletedDateIst": "2026-06-23",
+            "nextRunAtIst": "2026-06-24T08:00:00+05:30",
+            "jobCount": 1822,
+            "sourcesScraped": 154,
+            "notes": "IngestAgent: official India govt portals + RSS",
+        },
+    )
+    sync = DailySyncService()
+    started = sync.mark_started()
+
+    assert started["status"] == "running"
+    assert started["jobCount"] == 1822
+    assert started["sourcesScraped"] == 154
+    assert started["completedAtIst"] == "2026-06-23T12:40:02.095024+05:30"
+    assert "startedAt" in started
+
+    public = sync.public_status()
+    assert public["lastCompletedAtIst"] == "2026-06-23T12:40:02.095024+05:30"
+    assert public["jobCount"] == 1822
+    assert public["sourcesScraped"] == 154
+    assert public["isRunning"] is True
+
+
 def test_post_slot_run_blocks_same_day(sync_state_path: Path, monkeypatch: pytest.MonkeyPatch) -> None:
     today = DailySyncService.today_ist()
     _write_state(
