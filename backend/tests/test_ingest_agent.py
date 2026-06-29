@@ -40,3 +40,46 @@ def test_ingest_agent_run_source_saves_normalized_row():
     result = asyncio.run(run())
     assert result["saved"] == 1
     assert result["fetched"] == 1
+
+
+def test_run_all_enabled_runs_sources_in_parallel():
+    agent = IngestAgent()
+    entries = [
+        {"code": "src-a", "enabled": True},
+        {"code": "src-b", "enabled": True},
+        {"code": "src-c", "enabled": False},
+    ]
+    first_started = asyncio.Event()
+    saw_parallel = asyncio.Event()
+    concurrent = 0
+    lock = asyncio.Lock()
+
+    async def fake_run_source(code: str) -> dict:
+        nonlocal concurrent
+        async with lock:
+            concurrent += 1
+            if concurrent >= 2:
+                saw_parallel.set()
+            if code == "src-a":
+                first_started.set()
+        if code != "src-a":
+            await first_started.wait()
+        await asyncio.sleep(0.05)
+        async with lock:
+            concurrent -= 1
+        return {"source": code, "fetched": 1, "saved": 1}
+
+    async def run():
+        with (
+            patch.object(agent, "registry", {"scrapers": entries}),
+            patch.object(agent, "run_source", side_effect=fake_run_source),
+            patch("app.agents.ingest_agent.SessionLocal") as session_local,
+            patch.object(agent.source_sync, "sync_registry", new_callable=AsyncMock, return_value=0),
+        ):
+            session = AsyncMock()
+            session_local.return_value.__aenter__.return_value = session
+            return await agent.run_all_enabled()
+
+    results = asyncio.run(run())
+    assert {r["source"] for r in results} == {"src-a", "src-b"}
+    assert saw_parallel.is_set()

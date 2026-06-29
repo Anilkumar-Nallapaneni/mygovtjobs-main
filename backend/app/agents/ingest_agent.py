@@ -1,3 +1,4 @@
+import asyncio
 import json
 import logging
 from datetime import datetime, timezone
@@ -166,17 +167,20 @@ class IngestAgent:
             except Exception as exc:
                 logger.warning("source registry sync failed: %s", exc)
 
-        results = []
-        for entry in self.registry.get("scrapers", []):
-            if entry.get("enabled"):
+        enabled = [e for e in self.registry.get("scrapers", []) if e.get("enabled")]
+        concurrency = max(1, get_settings().ingest_concurrency)
+        sem = asyncio.Semaphore(concurrency)
+
+        async def _run_one(entry: dict) -> dict:
+            code = entry.get("code", "unknown")
+            async with sem:
                 try:
-                    results.append(await self.run_source(entry["code"]))
+                    return await self.run_source(code)
                 except Exception as exc:
-                    logger.exception("ingest source %s failed: %s", entry.get("code"), exc)
-                    results.append(
-                        {"source": entry.get("code"), "fetched": 0, "saved": 0, "errors": 1, "error": str(exc)}
-                    )
-        return results
+                    logger.exception("ingest source %s failed: %s", code, exc)
+                    return {"source": code, "fetched": 0, "saved": 0, "errors": 1, "error": str(exc)}
+
+        return list(await asyncio.gather(*(_run_one(e) for e in enabled)))
 
     async def _record_source_run(
         self,

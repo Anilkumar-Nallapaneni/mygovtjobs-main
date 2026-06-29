@@ -2,11 +2,18 @@
 
 from __future__ import annotations
 
+import asyncio
 from collections.abc import AsyncIterator
 from contextlib import asynccontextmanager
 from dataclasses import dataclass
+import logging
 import ssl
 import httpx
+
+logger = logging.getLogger(__name__)
+
+DEFAULT_MAX_RETRIES = 3
+DEFAULT_RETRY_BACKOFF = 1.5
 
 
 def _headers(user_agent: str | None) -> dict[str, str]:
@@ -56,8 +63,42 @@ class TextResponse:
     url: str
 
 
-async def get_text(url: str, *, user_agent: str | None = None, timeout: float = 30) -> TextResponse:
-    async with create_async_client(timeout=timeout, user_agent=user_agent) as client:
-        res: httpx.Response = await client.get(url)
-        res.raise_for_status()
-        return TextResponse(text=res.text, status_code=res.status_code, url=str(res.url))
+def _is_retryable_http_error(exc: Exception) -> bool:
+    if isinstance(exc, httpx.TimeoutException | httpx.NetworkError | httpx.ConnectError):
+        return True
+    if isinstance(exc, httpx.HTTPStatusError):
+        code = exc.response.status_code
+        return code == 429 or code >= 500
+    return False
+
+
+async def get_text(
+    url: str,
+    *,
+    user_agent: str | None = None,
+    timeout: float = 30,
+    max_retries: int = DEFAULT_MAX_RETRIES,
+    retry_backoff: float = DEFAULT_RETRY_BACKOFF,
+) -> TextResponse:
+    last_exc: Exception | None = None
+    for attempt in range(max_retries):
+        try:
+            async with create_async_client(timeout=timeout, user_agent=user_agent) as client:
+                res: httpx.Response = await client.get(url)
+                res.raise_for_status()
+                return TextResponse(text=res.text, status_code=res.status_code, url=str(res.url))
+        except Exception as exc:
+            last_exc = exc
+            if attempt >= max_retries - 1 or not _is_retryable_http_error(exc):
+                raise
+            delay = retry_backoff**attempt
+            logger.warning(
+                "get_text retry %s/%s url=%s err=%s sleep=%.1fs",
+                attempt + 1,
+                max_retries,
+                url,
+                exc,
+                delay,
+            )
+            await asyncio.sleep(delay)
+    raise last_exc  # pragma: no cover

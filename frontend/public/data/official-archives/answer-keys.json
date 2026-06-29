@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-06-20T21:04:59.211Z",
-  "count": 31,
+  "generatedAt": "2026-06-28T17:34:41.448Z",
+  "count": 34,
   "items": [
     {
       "id": "ae3423a43808ca85",
@@ -20,42 +20,6 @@
         "all"
       ],
       "fetchMethod": "html-listing"
-    },
-    {
-      "id": "950adc952395e3bb",
-      "title": "FSSAI Technical Officer Answer Key 2019 to release soon, Check Result Date and Cut Off Marks Details[0.55 MB]",
-      "link": "https://www.fssai.gov.in/upload/media/FSSAI_News_Marks_Jagran_30_07_2019.pdf",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [
-        "https://www.fssai.gov.in/upload/media/FSSAI_News_Marks_Jagran_30_07_2019.pdf"
-      ],
-      "sourceId": "fssai",
-      "sourceName": "Food Safety and Standards Authority (FSSAI)",
-      "dept": "Food Safety and Standards Authority (FSSAI)",
-      "state": "All India",
-      "category": "health",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "65b953b91c3e8ca2",
-      "title": "FINAL ANSWER KEY",
-      "link": "https://ctet.nic.in/previous-year-final-answer-key/",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "ctet",
-      "sourceName": "CBSE — CTET",
-      "dept": "CBSE — CTET",
-      "state": "All India",
-      "category": "teaching",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
     },
     {
       "id": "e95ddc7b082ccd13",
@@ -90,6 +54,150 @@
       "category": "state",
       "stateIds": [
         "hr"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "c5eb2bad3fe7fa57",
+      "title": "Press Release and corrected Answer key of the Jharkhand Combined Civil Services PT Examination (BAcklog), Advt. No. 06/2026 (23-06-2026)",
+      "link": "https://jpsc.gov.in/data/Press_Release_and_Corrected_Answer_key_06_26_dated_23_06_2026.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://jpsc.gov.in/data/Press_Release_and_Corrected_Answer_key_06_26_dated_23_06_2026.pdf"
+      ],
+      "sourceId": "psc-jh",
+      "sourceName": "Jharkhand PSC (JPSC)",
+      "dept": "Jharkhand PSC (JPSC)",
+      "state": "Jharkhand",
+      "category": "state",
+      "stateIds": [
+        "jh"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "925084716af4a967",
+      "title": "Press Release and corrected Answer key of the Jharkhand Combined Civil Services PT Examination, Advt. No. 01/2026 (19-06-2026)",
+      "link": "https://jpsc.gov.in/data/Press_Release_01_26_dated_19_06_2026.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://jpsc.gov.in/data/Press_Release_01_26_dated_19_06_2026.pdf"
+      ],
+      "sourceId": "psc-jh",
+      "sourceName": "Jharkhand PSC (JPSC)",
+      "dept": "Jharkhand PSC (JPSC)",
+      "state": "Jharkhand",
+      "category": "state",
+      "stateIds": [
+        "jh"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "b0408e9076d75cad",
+      "title": "Answer Key-OMR Exams",
+      "link": "https://www.keralapsc.gov.in/index.php/answerkey_omrexams",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-kl",
+      "sourceName": "Kerala PSC",
+      "dept": "Kerala PSC",
+      "state": "Kerala",
+      "category": "state",
+      "stateIds": [
+        "kl"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "bfc1c395481cde09",
+      "title": "Answer key-Online Exam",
+      "link": "https://www.keralapsc.gov.in/index.php/answerkey_onlineexams",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-kl",
+      "sourceName": "Kerala PSC",
+      "dept": "Kerala PSC",
+      "state": "Kerala",
+      "category": "state",
+      "stateIds": [
+        "kl"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "37c45556314fa75d",
+      "title": "Answer Key-OMR Exams",
+      "link": "https://www.keralapsc.gov.in/answerkey_omrexams",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-kl",
+      "sourceName": "Kerala PSC",
+      "dept": "Kerala PSC",
+      "state": "Kerala",
+      "category": "state",
+      "stateIds": [
+        "kl"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "274a1d8e868c2d27",
+      "title": "Answer key-Online Exam",
+      "link": "https://www.keralapsc.gov.in/answerkey_onlineexams",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-kl",
+      "sourceName": "Kerala PSC",
+      "dept": "Kerala PSC",
+      "state": "Kerala",
+      "category": "state",
+      "stateIds": [
+        "kl"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "d6c989c006b16282",
+      "title": "Final Answer Key - Assistant Registrar Exam 2025, Dated 16/06/2026",
+      "link": "https://mppsc.mp.gov.in/uploads/files/Final_Answer_Key_Assistant_Registrar_Exam_2025_Dated_16_06_2026.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://mppsc.mp.gov.in/uploads/files/Final_Answer_Key_Assistant_Registrar_Exam_2025_Dated_16_06_2026.pdf"
+      ],
+      "sourceId": "psc-mp",
+      "sourceName": "Madhya Pradesh PSC (MPPSC)",
+      "dept": "Madhya Pradesh PSC (MPPSC)",
+      "state": "Madhya Pradesh",
+      "category": "state",
+      "stateIds": [
+        "mp"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "e3006c6e5bd6362b",
+      "title": "Final Answer Key - Assistant Research Officer Exam 2024, Dated 16/06/2026",
+      "link": "https://mppsc.mp.gov.in/uploads/files/Final_Answer_Key_Assistant_Research_Officer_Exam_2024_Dated_16_06_2026.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://mppsc.mp.gov.in/uploads/files/Final_Answer_Key_Assistant_Research_Officer_Exam_2024_Dated_16_06_2026.pdf"
+      ],
+      "sourceId": "psc-mp",
+      "sourceName": "Madhya Pradesh PSC (MPPSC)",
+      "dept": "Madhya Pradesh PSC (MPPSC)",
+      "state": "Madhya Pradesh",
+      "category": "state",
+      "stateIds": [
+        "mp"
       ],
       "fetchMethod": "html"
     },
@@ -185,114 +293,6 @@
       "fetchMethod": "html"
     },
     {
-      "id": "b0408e9076d75cad",
-      "title": "Answer Key-OMR Exams",
-      "link": "https://www.keralapsc.gov.in/index.php/answerkey_omrexams",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-kl",
-      "sourceName": "Kerala PSC",
-      "dept": "Kerala PSC",
-      "state": "Kerala",
-      "category": "state",
-      "stateIds": [
-        "kl"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "bfc1c395481cde09",
-      "title": "Answer key-Online Exam",
-      "link": "https://www.keralapsc.gov.in/index.php/answerkey_onlineexams",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-kl",
-      "sourceName": "Kerala PSC",
-      "dept": "Kerala PSC",
-      "state": "Kerala",
-      "category": "state",
-      "stateIds": [
-        "kl"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "d6c989c006b16282",
-      "title": "Final Answer Key - Assistant Registrar Exam 2025, Dated 16/06/2026",
-      "link": "https://mppsc.mp.gov.in/uploads/files/Final_Answer_Key_Assistant_Registrar_Exam_2025_Dated_16_06_2026.pdf",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [
-        "https://mppsc.mp.gov.in/uploads/files/Final_Answer_Key_Assistant_Registrar_Exam_2025_Dated_16_06_2026.pdf"
-      ],
-      "sourceId": "psc-mp",
-      "sourceName": "Madhya Pradesh PSC (MPPSC)",
-      "dept": "Madhya Pradesh PSC (MPPSC)",
-      "state": "Madhya Pradesh",
-      "category": "state",
-      "stateIds": [
-        "mp"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "e3006c6e5bd6362b",
-      "title": "Final Answer Key - Assistant Research Officer Exam 2024, Dated 16/06/2026",
-      "link": "https://mppsc.mp.gov.in/uploads/files/Final_Answer_Key_Assistant_Research_Officer_Exam_2024_Dated_16_06_2026.pdf",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [
-        "https://mppsc.mp.gov.in/uploads/files/Final_Answer_Key_Assistant_Research_Officer_Exam_2024_Dated_16_06_2026.pdf"
-      ],
-      "sourceId": "psc-mp",
-      "sourceName": "Madhya Pradesh PSC (MPPSC)",
-      "dept": "Madhya Pradesh PSC (MPPSC)",
-      "state": "Madhya Pradesh",
-      "category": "state",
-      "stateIds": [
-        "mp"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "925084716af4a967",
-      "title": "Press Release and corrected Answer key of the Jharkhand Combined Civil Services PT Examination, Advt. No. 01/2026 (19-06-2026)",
-      "link": "https://jpsc.gov.in/data/Press_Release_01_26_dated_19_06_2026.pdf",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [
-        "https://jpsc.gov.in/data/Press_Release_01_26_dated_19_06_2026.pdf"
-      ],
-      "sourceId": "psc-jh",
-      "sourceName": "Jharkhand PSC (JPSC)",
-      "dept": "Jharkhand PSC (JPSC)",
-      "state": "Jharkhand",
-      "category": "state",
-      "stateIds": [
-        "jh"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "00e31e8fe10932ac",
-      "title": "Answer Key and Online Objection",
-      "link": "https://psc.uk.gov.in/candidate-corner/answerkey",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-uk",
-      "sourceName": "Uttarakhand PSC (UKPSC)",
-      "dept": "Uttarakhand PSC (UKPSC)",
-      "state": "Uttarakhand",
-      "category": "state",
-      "stateIds": [
-        "uk"
-      ],
-      "fetchMethod": "html"
-    },
-    {
       "id": "30c6cc3da24883e7",
       "title": "Final Answer Key of Preliminary Exam. for recruitment to the Miscellaneous Posts (Advt. No. 18/2025)(Series-A,B,C & D)",
       "link": "https://tpsc.tripura.gov.in/sites/default/files/F_Ans_Misc_18_2025_190626.pdf",
@@ -365,6 +365,107 @@
       "category": "state",
       "stateIds": [
         "ne"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "00e31e8fe10932ac",
+      "title": "Answer Key and Online Objection",
+      "link": "https://psc.uk.gov.in/candidate-corner/answerkey",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-uk",
+      "sourceName": "Uttarakhand PSC (UKPSC)",
+      "dept": "Uttarakhand PSC (UKPSC)",
+      "state": "Uttarakhand",
+      "category": "state",
+      "stateIds": [
+        "uk"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "30504e63b8603f42",
+      "title": "Important Provisional Key (Prelim) - 89/2025-26 (Concerned Subject ) (Assistant Professor, Geography in Government Arts",
+      "link": "https://gpsc.gujarat.gov.in/Documents/AdvertismentDocument/PAK-89-2025-26.pdf",
+      "publishedAt": "2026-06-27T01:50:22.445969Z",
+      "summary": "BUJ Name of the post Advertisement No. Preliminary Test Held On Que. No Publish Date Last Date to Send Suggestion (s) PROVISIONAL ANSWER KEY Assistant Professor, Geography in Government Arts, Science & Commerce College, GES, Class-2 (Special Recruitment-PwD-Second Attempt) 89/2025-26 16-06-2026 001-200 22-06-2026 29-06-2026 (Till 04:00 PM) THE LINK FOR ONLINE OBJECTION SYSTEM WILL START FROM 23-06…",
+      "pdfUrls": [
+        "https://gpsc.gujarat.gov.in/Documents/AdvertismentDocument/PAK-89-2025-26.pdf"
+      ],
+      "sourceId": "psc-gj",
+      "sourceName": "Gpsc Gujarat",
+      "dept": "Gpsc Gujarat",
+      "state": "All India",
+      "category": "teaching",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "5c2bbe8e0afea240",
+      "title": "Important Provisional Key (Prelim) - 95/2025-26 (Concerned Subject ) (Assistant Professor, Botany in Government Arts, S",
+      "link": "https://gpsc.gujarat.gov.in/Documents/AdvertismentDocument/PAK-95-2025-26.pdf",
+      "publishedAt": "2026-06-27T01:50:21.258401Z",
+      "summary": "BUK Name of the post Advertisement No. Preliminary Test Held On Que. No Publish Date Last Date to Send Suggestion (s) PROVISIONAL ANSWER KEY Assistant Professor, Botany in Government Arts, Science & Commerce College, GES, Class-2 (Special Recruitment-PwD-Second Attempt) 95/2025-26 16-06-2026 001-200 22-06-2026 29-06-2026 (Till 04:00 PM) THE LINK FOR ONLINE OBJECTION SYSTEM WILL START FROM 23-06-20…",
+      "pdfUrls": [
+        "https://gpsc.gujarat.gov.in/Documents/AdvertismentDocument/PAK-95-2025-26.pdf"
+      ],
+      "sourceId": "psc-gj",
+      "sourceName": "Gpsc Gujarat",
+      "dept": "Gpsc Gujarat",
+      "state": "All India",
+      "category": "teaching",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "63d803f7abf661a9",
+      "title": "Important Provisional Key (Prelim) - 6/2026-27 (Accounts Officer, Class-2, Gujarat Accounts Service) Click here to see",
+      "link": "https://gpsc.gujarat.gov.in/Documents/AdvertismentDocument/PAK-9994-2026-27.pdf",
+      "publishedAt": "2026-06-19T22:49:23.518454Z",
+      "summary": "BUD Name of the post Advertisement No. Preliminary Test Held On Que. No Publish Date Last Date to Send Suggestion (s) PROVISIONAL ANSWER KEY Common General Studies Paper for Different Advertisements 9994/2026-27 07-06-2026 001-200 17-06-2026 22-06-2026 (Till 04:00 PM) THE LINK FOR ONLINE OBJECTION SYSTEM WILL START FROM 18-06-2026; 11:00 AM ONWARDS Instructions / Ʌ ૂચના Candidate must ensure compl…",
+      "pdfUrls": [
+        "https://gpsc.gujarat.gov.in/Documents/AdvertismentDocument/PAK-9994-2026-27.pdf"
+      ],
+      "sourceId": "psc-gj",
+      "sourceName": "Gpsc Gujarat",
+      "dept": "Gpsc Gujarat",
+      "state": "All India",
+      "category": "state",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "950adc952395e3bb",
+      "title": "FSSAI Technical Officer Answer Key 2019 to release soon, Check Result Date and Cut Off Marks Details[0.55 MB]",
+      "link": "https://www.fssai.gov.in/upload/media/FSSAI_News_Marks_Jagran_30_07_2019.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://www.fssai.gov.in/upload/media/FSSAI_News_Marks_Jagran_30_07_2019.pdf"
+      ],
+      "sourceId": "fssai",
+      "sourceName": "Food Safety and Standards Authority (FSSAI)",
+      "dept": "Food Safety and Standards Authority (FSSAI)",
+      "state": "All India",
+      "category": "health",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "65b953b91c3e8ca2",
+      "title": "FINAL ANSWER KEY",
+      "link": "https://ctet.nic.in/previous-year-final-answer-key/",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "ctet",
+      "sourceName": "CBSE — CTET",
+      "dept": "CBSE — CTET",
+      "state": "All India",
+      "category": "teaching",
+      "stateIds": [
+        "all"
       ],
       "fetchMethod": "html"
     },
@@ -500,22 +601,6 @@
       "fetchMethod": "html"
     },
     {
-      "id": "63d803f7abf661a9",
-      "title": "Important Provisional Key (Prelim) - 6/2026-27 (Accounts Officer, Class-2, Gujarat Accounts Service) Click here to see",
-      "link": "https://gpsc.gujarat.gov.in/Documents/AdvertismentDocument/PAK-9994-2026-27.pdf",
-      "publishedAt": "2026-06-19T22:49:23.518454Z",
-      "summary": "BUD Name of the post Advertisement No. Preliminary Test Held On Que. No Publish Date Last Date to Send Suggestion (s) PROVISIONAL ANSWER KEY Common General Studies Paper for Different Advertisements 9994/2026-27 07-06-2026 001-200 17-06-2026 22-06-2026 (Till 04:00 PM) THE LINK FOR ONLINE OBJECTION SYSTEM WILL START FROM 18-06-2026; 11:00 AM ONWARDS Instructions / Ʌ ૂચના Candidate must ensure compl…",
-      "pdfUrls": [
-        "https://gpsc.gujarat.gov.in/Documents/AdvertismentDocument/PAK-9994-2026-27.pdf"
-      ],
-      "sourceId": "psc-gj",
-      "sourceName": "Gpsc Gujarat",
-      "dept": "Gpsc Gujarat",
-      "state": "All India",
-      "category": "state",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
       "id": "cd4e83221070f816",
       "title": "Notice regarding viewing of CBT Question-Paper, Responses & keys and Raising of Objections if any for candidates of 08 categories",
       "link": "https://www.rrbcdg.gov.in/uploads/2024/04-PMED/CBT_Objection-Tracker_Reopening.pdf",
@@ -530,40 +615,6 @@
       "state": "All India",
       "category": "railways",
       "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "37c45556314fa75d",
-      "title": "Answer Key-OMR Exams",
-      "link": "https://www.keralapsc.gov.in/answerkey_omrexams",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-kl",
-      "sourceName": "Kerala PSC",
-      "dept": "Kerala PSC",
-      "state": "Kerala",
-      "category": "state",
-      "stateIds": [
-        "kl"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "274a1d8e868c2d27",
-      "title": "Answer key-Online Exam",
-      "link": "https://www.keralapsc.gov.in/answerkey_onlineexams",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-kl",
-      "sourceName": "Kerala PSC",
-      "dept": "Kerala PSC",
-      "state": "Kerala",
-      "category": "state",
-      "stateIds": [
-        "kl"
-      ],
-      "fetchMethod": "html"
     }
   ]
 }

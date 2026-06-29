@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-06-20T21:04:59.211Z",
-  "count": 23,
+  "generatedAt": "2026-06-28T17:34:41.448Z",
+  "count": 32,
   "items": [
     {
       "id": "05024659b743007f",
@@ -39,59 +39,55 @@
       "fetchMethod": "rss-config"
     },
     {
-      "id": "6228b92f7d48d30a",
-      "title": "Information regarding the Practical Examination centre, schedule, pattern and Tentative Syllabus of 11th FAE Practical Examination 2026",
-      "link": "https://www.fssai.gov.in/upload/uploadfiles/files/Notice%20to%20candidates%20for%20practicl%20exam-21-04-2026-final.pdf",
+      "id": "e5d59009e1eecc89",
+      "title": "Postwise Syllabus",
+      "link": "https://www.keralapsc.gov.in/index.php/syllabus1",
       "publishedAt": null,
       "summary": null,
-      "pdfUrls": [
-        "https://www.fssai.gov.in/upload/uploadfiles/files/Notice%20to%20candidates%20for%20practicl%20exam-21-04-2026-final.pdf"
-      ],
-      "sourceId": "fssai",
-      "sourceName": "Food Safety and Standards Authority (FSSAI)",
-      "dept": "Food Safety and Standards Authority (FSSAI)",
-      "state": "All India",
-      "category": "health",
+      "pdfUrls": [],
+      "sourceId": "psc-kl",
+      "sourceName": "Kerala PSC",
+      "dept": "Kerala PSC",
+      "state": "Kerala",
+      "category": "state",
       "stateIds": [
-        "all"
+        "kl"
       ],
       "fetchMethod": "html"
     },
     {
-      "id": "cdaa5c4d3f129118",
-      "title": "Circular of Scheme & Syllabus of exam for recruitment of Headmaster in RIEs through Limited Departmental Examination (LDE)",
-      "link": "https://ncert.nic.in/pdf/announcement/vacancies/academicvacancy/Circular_Syllabus_Schema_02-05-2025.pdf",
+      "id": "22dd56168d2566c0",
+      "title": "Syllabus and Scheme",
+      "link": "https://mppsc.mp.gov.in/Syllabus",
       "publishedAt": null,
       "summary": null,
-      "pdfUrls": [
-        "https://ncert.nic.in/pdf/announcement/vacancies/academicvacancy/Circular_Syllabus_Schema_02-05-2025.pdf"
-      ],
-      "sourceId": "ncert",
-      "sourceName": "NCERT",
-      "dept": "NCERT",
-      "state": "All India",
-      "category": "teaching",
+      "pdfUrls": [],
+      "sourceId": "psc-mp",
+      "sourceName": "Madhya Pradesh PSC (MPPSC)",
+      "dept": "Madhya Pradesh PSC (MPPSC)",
+      "state": "Madhya Pradesh",
+      "category": "state",
       "stateIds": [
-        "all"
+        "mp"
       ],
       "fetchMethod": "html"
     },
     {
-      "id": "51cd9efe8e6a1a01",
-      "title": "Notification Regarding Constitution of High-Powered Committee - The National Syllabus and Teaching Learning Material Committee (NSTC)",
-      "link": "https://ncert.nic.in/pdf/notice/Constitution_of_High-Powered_Committee-NSTC.pdf",
+      "id": "efe9cdba6df9b1ce",
+      "title": "Exam Plan and Syllabus - Specialist Ayurved 2024, Dated 24/06/2026",
+      "link": "https://mppsc.mp.gov.in/uploads/files/Exam_Plan_and_Syllabus_Specialist_Ayurveda_2024_Dated_24_06_2026.pdf",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [
-        "https://ncert.nic.in/pdf/notice/Constitution_of_High-Powered_Committee-NSTC.pdf"
+        "https://mppsc.mp.gov.in/uploads/files/Exam_Plan_and_Syllabus_Specialist_Ayurveda_2024_Dated_24_06_2026.pdf"
       ],
-      "sourceId": "ncert",
-      "sourceName": "NCERT",
-      "dept": "NCERT",
-      "state": "All India",
-      "category": "teaching",
+      "sourceId": "psc-mp",
+      "sourceName": "Madhya Pradesh PSC (MPPSC)",
+      "dept": "Madhya Pradesh PSC (MPPSC)",
+      "state": "Madhya Pradesh",
+      "category": "state",
       "stateIds": [
-        "all"
+        "mp"
       ],
       "fetchMethod": "html"
     },
@@ -134,53 +130,19 @@
       "fetchMethod": "html"
     },
     {
-      "id": "e5d59009e1eecc89",
-      "title": "Postwise Syllabus",
-      "link": "https://www.keralapsc.gov.in/index.php/syllabus1",
+      "id": "4245ad8cea4e9fc4",
+      "title": "Syllabus and Schemes",
+      "link": "https://tpsc.tripura.gov.in/syllabus-and-schemes",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
-      "sourceId": "psc-kl",
-      "sourceName": "Kerala PSC",
-      "dept": "Kerala PSC",
-      "state": "Kerala",
+      "sourceId": "psc-tr",
+      "sourceName": "Tripura PSC (TPSC)",
+      "dept": "Tripura PSC (TPSC)",
+      "state": "NE States",
       "category": "state",
       "stateIds": [
-        "kl"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "22dd56168d2566c0",
-      "title": "Syllabus and Scheme",
-      "link": "https://mppsc.mp.gov.in/Syllabus",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-mp",
-      "sourceName": "Madhya Pradesh PSC (MPPSC)",
-      "dept": "Madhya Pradesh PSC (MPPSC)",
-      "state": "Madhya Pradesh",
-      "category": "state",
-      "stateIds": [
-        "mp"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "112211388bbc6730",
-      "title": "Personal Assistant (Establishment, Hon. High Court) Exam-2025-- Corrigendum and Syllabus ( Recruitment Notification )",
-      "link": "https://psc.uk.gov.in/candidate-corner/recruitment",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-uk",
-      "sourceName": "Uttarakhand PSC (UKPSC)",
-      "dept": "Uttarakhand PSC (UKPSC)",
-      "state": "Uttarakhand",
-      "category": "state",
-      "stateIds": [
-        "uk"
+        "ne"
       ],
       "fetchMethod": "html"
     },
@@ -202,19 +164,251 @@
       "fetchMethod": "html"
     },
     {
-      "id": "4245ad8cea4e9fc4",
-      "title": "Syllabus and Schemes",
-      "link": "https://tpsc.tripura.gov.in/syllabus-and-schemes",
+      "id": "b1d028e16297f78b",
+      "title": "Notice to candidates for practicl exam 21 04 2026 final",
+      "link": "https://www.fssai.gov.in/",
+      "publishedAt": "2026-06-24T03:37:35.200047Z",
+      "summary": "Page 1 of 3 File No.:QA-11022/3/2025-QA-FSSAI (Quality Assurance Division) FDA Bhawan, Kotla Road, New Delhi – 110002 --------------------------------------------------------------------------------------------- Date: 21st April 2026 Information regarding the Practical Examination centre, schedule, pattern and Tentative Syllabus of 11th FAE Practical Examination 2026 All the candidates who have qu…",
+      "pdfUrls": [
+        "https://www.fssai.gov.in/upload/uploadfiles/files/Notice to candidates for practicl exam-21-04-2026-final.pdf",
+        "https://www.fssai.gov.in/upload/notifications/2026/06/6a339158a6626Notification dt 10.06.2026.pdf",
+        "https://www.fssai.gov.in/upload/media/scientificPanel_printWeek.pdf",
+        "https://www.fssai.gov.in/upload/media/fboNotice.pdf",
+        "https://www.fssai.gov.in/upload/media/BusinessStandards_TheMint_TheEconomicTimes.pdf",
+        "https://www.fssai.gov.in/upload/media/009.pdf"
+      ],
+      "sourceId": "fssai",
+      "sourceName": "Food Safety and Standards Authority (FSSAI)",
+      "dept": "Food Safety and Standards Authority (FSSAI)",
+      "state": "All India",
+      "category": "health",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "6228b92f7d48d30a",
+      "title": "Information regarding the Practical Examination centre, schedule, pattern and Tentative Syllabus of 11th FAE Practical Examination 2026",
+      "link": "https://www.fssai.gov.in/upload/uploadfiles/files/Notice%20to%20candidates%20for%20practicl%20exam-21-04-2026-final.pdf",
+      "publishedAt": "2026-06-24T03:33:08.815559Z",
+      "summary": "Page 1 of 3 File No.:QA-11022/3/2025-QA-FSSAI (Quality Assurance Division) FDA Bhawan, Kotla Road, New Delhi – 110002 --------------------------------------------------------------------------------------------- Date: 21st April 2026 Information regarding the Practical Examination centre, schedule, pattern and Tentative Syllabus of 11th FAE Practical Examination 2026 All the candidates who have qu…",
+      "pdfUrls": [
+        "https://www.fssai.gov.in/upload/uploadfiles/files/Notice%20to%20candidates%20for%20practicl%20exam-21-04-2026-final.pdf"
+      ],
+      "sourceId": "fssai",
+      "sourceName": "Food Safety and Standards Authority (FSSAI)",
+      "dept": "Food Safety and Standards Authority (FSSAI)",
+      "state": "All India",
+      "category": "health",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "cdaa5c4d3f129118",
+      "title": "Circular of Scheme & Syllabus of exam for recruitment of Headmaster in RIEs through Limited Departmental Examination (LDE)",
+      "link": "https://ncert.nic.in/pdf/announcement/vacancies/academicvacancy/Circular_Syllabus_Schema_02-05-2025.pdf",
+      "publishedAt": "2026-06-23T10:15:32.912595Z",
+      "summary": null,
+      "pdfUrls": [
+        "https://ncert.nic.in/pdf/announcement/vacancies/academicvacancy/Circular_Syllabus_Schema_02-05-2025.pdf"
+      ],
+      "sourceId": "ncert",
+      "sourceName": "NCERT",
+      "dept": "NCERT",
+      "state": "All India",
+      "category": "teaching",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "db1b8dc51e518a44",
+      "title": "Important Exam Syllabus (Prelim) - 30/2026-27 (Assistant Engineer (Mechanical), Class-2,(GMB)) Click here to see ATTACH",
+      "link": "https://gpsc.gujarat.gov.in/Documents/AdvertismentDocument/SY-30-202627.pdf",
+      "publishedAt": "2026-06-23T02:44:27.314305Z",
+      "summary": "( cr r. ae/ o t / a o euo t alryo r sr)21 Ssai sai is : u4 etq - Q o Qn- Qu-lt\\eo -+r rz&dl ) \\[iRLz-q. utLt L aLtL AutL.t[ uu.r\".fl t{t\\tr on.iluiL\"il xLtrhs 'q?'[fl1 tietd'ttL.tL*t r,Iou?t' [\\q{'it.tdt e{cttt?tsq_ rtLLrt\\: loftL.il je $r e.oo !R(*UfUB t. tiiSti[sL't't ilc{dt, {Rs grL, u}t qri o,ti \"ila tt i. z. .rt{ {RL,{r uL{\"il i\\& d,.u \\RsLtt. 3. lL.il\"t, r1c,tsLcft,r csrL i4q[or:li. otLt.t't…",
+      "pdfUrls": [
+        "https://gpsc.gujarat.gov.in/Documents/AdvertismentDocument/SY-30-202627.pdf"
+      ],
+      "sourceId": "psc-gj",
+      "sourceName": "Gpsc Gujarat",
+      "dept": "Gpsc Gujarat",
+      "state": "All India",
+      "category": "engineering",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "a55b67893bbb9ad9",
+      "title": "Important Exam Syllabus (Prelim) - 31/2026-27 (Assistant Engineer (Civil), Class-2, (GMB)) Click here to see ATTACHMENT",
+      "link": "https://gpsc.gujarat.gov.in/Documents/AdvertismentDocument/SY-31-202627.pdf",
+      "publishedAt": "2026-06-23T02:44:26.326014Z",
+      "summary": "( cr r. ae/ o t / a o euo t alryo r sr)21 Ssai sai is : u4 etq - Q o Qn- Qu-lt\\eo -+r rz&dl ) \\[iRLz-q. utLt L aLtL AutL.t[ uu.r\".fl t{t\\tr on.iluiL\"il xLtrhs 'q?'[fl1 tietd'ttL.tL*t r,Iou?t' [\\q{'it.tdt e{cttt?tsq_ rtLLrt\\: loftL.il je $r e.oo !R(*UfUB t. tiiSti[sL't't ilc{dt, {Rs grL, u}t qri o,ti \"ila tt i. z. .rt{ {RL,{r uL{\"il i\\& d,.u \\RsLtt. 3. lL.il\"t, r1c,tsLcft,r csrL i4q[or:li. otLt.t't…",
+      "pdfUrls": [
+        "https://gpsc.gujarat.gov.in/Documents/AdvertismentDocument/SY-31-202627.pdf"
+      ],
+      "sourceId": "psc-gj",
+      "sourceName": "Gpsc Gujarat",
+      "dept": "Gpsc Gujarat",
+      "state": "All India",
+      "category": "engineering",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "7c759396e0346023",
+      "title": "Important Exam Syllabus (Prelim) - 34/2026-27 Corrigendum (Deputy Director, Industrial Safety and Health, Class-1) Click",
+      "link": "https://gpsc.gujarat.gov.in/Documents/AdvertismentDocument/CSY-34-202526.pdf",
+      "publishedAt": "2026-06-23T02:44:24.553207Z",
+      "summary": "ગુજરાત જાહેર સેવા આયોગ અગત્યની જાહેરાત :: પ્રાથમિક કસોટીના અભ્યાસક્રિિાાં ફેરફાર બાબત :: આયોગ દ્વારા પ્રસિદ્ધ કરાયેલ જા.ક્ર:૩૪/૨૦૨૬-૨૭, નાયબ સનયામક ઔદ્યોસગક િલામતી અને સ્વાસ્્ય, વગગ-૧ની પ્રાથસમક કિોટીનો અભ્યાિક્રમ તા.૦૫/૦૬/૨૦૨૬ના રોજ પ્રસિદ્ધ કરવામાાં આવેલ હતો. હવે, પ્રસ્તુત જાહેરાતના પ્રાથસમક કિોટીના િાંબાંસિત સવષય(ભાગ-૨)ના અભ્યાિક્રમમાાં િુિારો થયેલ છે. ઉક્ત િુિારા િાથેનો પ્રાથસમક કિોટીનો અભ્યાિ…",
+      "pdfUrls": [
+        "https://gpsc.gujarat.gov.in/Documents/AdvertismentDocument/CSY-34-202526.pdf"
+      ],
+      "sourceId": "psc-gj",
+      "sourceName": "Gpsc Gujarat",
+      "dept": "Gpsc Gujarat",
+      "state": "All India",
+      "category": "health",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "3ddacd7f586f4548",
+      "title": "Important Exam Syllabus (Prelim) - 39/2026-27 (Industrial Safety and Health Officer, Class-2) Click here to see ATTACHM",
+      "link": "https://gpsc.gujarat.gov.in/Documents/AdvertismentDocument/SYA-39-202627.pdf",
+      "publishedAt": "2026-06-23T02:44:23.611477Z",
+      "summary": "ગુજરાત જાહેર સેવા આયોગ છ-૩ સર્કલ પાસે, છ રોડ, સેક્ટર-૧૦/એ, ગાાંધીનગર-૩૮૨૦૧૦ જા.ક્ર.૩૯/૨૦૨૬-૨૭, ઔદ્યોગિક સલામતી અને સ્વાસ્્ય અગિકારી,વિગ-૨ (શ્રમ,કૌશલ્ય ગવકાસ અને રોજિાર ગવભાિ)ની જગ્યા પર ભરતી માટેની પ્રાથગમક કસોટીના ભાિ-૧ અને ભાિ-૨ના પ્રશ્નપત્રોનો અભ્યાસક્રમ સીિી પસંદિીથી ભરતીની પ્રાથગમક કસોટીનો અભ્યાસક્રમ ભાિ-૧ (સામાન્ય અભ્યાસ) માધ્યમ: િુજરાતી કુલ િુણ : ૧૦૦ ઇગતહાસ અને સંસ્કૃગત 1. સસિંધુખીણની સભ્યત…",
+      "pdfUrls": [
+        "https://gpsc.gujarat.gov.in/Documents/AdvertismentDocument/SYA-39-202627.pdf"
+      ],
+      "sourceId": "psc-gj",
+      "sourceName": "Gpsc Gujarat",
+      "dept": "Gpsc Gujarat",
+      "state": "All India",
+      "category": "health",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "ec9e7e8f3ae66e5b",
+      "title": "Important Exam Syllabus (Prelim) - 41/2026-27 (District Education Offficer/District Primary Education Officer and Equiv",
+      "link": "https://gpsc.gujarat.gov.in/Documents/AdvertismentDocument/SY-41-2026-27.pdf",
+      "publishedAt": "2026-06-23T02:44:07.605573Z",
+      "summary": "Ȥુજરાત Ĥહ°ર સેવા આયોગ છ-૩ સકર્લ પાસે, છ રોડ, સેક્ટર-૧૦/એ, ગાંધીનગર-૩૮૨૦૧૦ ð.કર્.૪૧/૨૦૨૬-૨૭ િજĔા િશક્ષણાિધકારી/િજĔા પર્ાથિમક િશક્ષણાિધકારી અને સમકક્ષ, ગુજરાત િશક્ષણ સેવા (વહીવટી શાખા), વગર્-૧ ની જગ્યા પર ભરતી માટેની પર્ાથિમક કસોટીના ભાગ-૧ અને ભાગ-૨ના પર્Ėપતર્ોનો અભ્યાસકર્મ સીધી પસંદગીથી ભરતીની પર્ાથિમક કસોટીનો અભ્યાસકર્મ ભાગ-૧ (સામાન્ય અભ્યાસ) માધ્યમ: ગુજરાતી કુલ ગુણ : ૧૦૦ ઇિતહાસ અને સંસ્કૃિત 1. િસ…",
+      "pdfUrls": [
+        "https://gpsc.gujarat.gov.in/Documents/AdvertismentDocument/SY-41-2026-27.pdf"
+      ],
+      "sourceId": "psc-gj",
+      "sourceName": "Gpsc Gujarat",
+      "dept": "Gpsc Gujarat",
+      "state": "All India",
+      "category": "state",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "b43395150e746e6c",
+      "title": "Important Exam Syllabus (Prelim) - 37/2026-27 Concerned Subject (Legal Officer, Class-2, (VARIOUS MUNICIPALITIES)) Click",
+      "link": "https://gpsc.gujarat.gov.in/Documents/AdvertismentDocument/SYC-37-202627.pdf",
+      "publishedAt": "2026-06-22T13:45:07.145154Z",
+      "summary": null,
+      "pdfUrls": [
+        "https://gpsc.gujarat.gov.in/Documents/AdvertismentDocument/SYC-37-202627.pdf"
+      ],
+      "sourceId": "psc-gj",
+      "sourceName": "Gpsc Gujarat",
+      "dept": "Gpsc Gujarat",
+      "state": "All India",
+      "category": "state",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "d7e420ec29f9c6ea",
+      "title": "Important Exam Syllabus (Prelim) - 23/2026-27 (Research Officer, Class-2, Gujarat Administrative Department) Click here",
+      "link": "https://gpsc.gujarat.gov.in/Documents/AdvertismentDocument/SY-23-202627.pdf",
+      "publishedAt": "2026-06-22T00:39:52.874413Z",
+      "summary": "ગુજરાત જાહેર સેવા આયોગ છ-૩ સર્કલ પાસે, છ રોડ, સેક્ટર-૧૦/એ, ગાાંધીનગર-૩૮૨૦૧૦ જા.ક્ર.૨૩/૨૦૨૬-૨૭, સાંશોધન અધધર્ારી, ગુજરાત આાંર્ડાર્ીય સેવા, વગક-૨ (સામાન્ય વહીવટ ધવભાગ, આયોજન) ની જગ્યા પર ભરતી માટેની પ્રાથધમર્ ર્સોટીમાાં ભાગ-૧ અને ભાગ-૨ ના પ્રશ્નપત્રોનો અભ્યાસક્રમ સીધી પસાંદગીથી ભરતીની પ્રાથધમર્ ર્સોટીનો અભ્યાસક્રમ ભાગ-૧ (સામાન્ય અભ્યાસ) માધ્યમ: ગુજરાતી ર્ુલ ગુણ : ૧૦૦ ઇતિહાસ અને સંસ્કૃતિ 1. સસિંધુખીણ…",
+      "pdfUrls": [
+        "https://gpsc.gujarat.gov.in/Documents/AdvertismentDocument/SY-23-202627.pdf"
+      ],
+      "sourceId": "psc-gj",
+      "sourceName": "Gpsc Gujarat",
+      "dept": "Gpsc Gujarat",
+      "state": "All India",
+      "category": "state",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "c7220fca9bfff925",
+      "title": "Important Exam Syllabus (Prelim) - 40/2026-27 (Assistant Director(Boilers), Class-2) Click here to see ATTACHMENT",
+      "link": "https://gpsc.gujarat.gov.in/Documents/AdvertismentDocument/SY-40-202627.pdf",
+      "publishedAt": "2026-06-19T22:49:24.613269Z",
+      "summary": "Ȥુજરાત Ĥહ°ર સેવા આયોગ છ-૩ સકર્લ પાસે, છ રોડ, સેક્ટર-૧૦/એ, ગાંધીનગર-૩૮૨૦૧૦ ð.કર્.૪૦/૨૦૨૬-૨૭,મદદનીશ િનયામક,બોઈલરો,વગર્-૨ (શર્મ,કૌશલ્ય િવકાસ અને રોજગાર િવભાગ)ની જગ્યા પર ભરતી માટેની પર્ાથિમક કસોટીના ભાગ-૧ અને ભાગ-૨ના પર્Ėપતર્ોનો અભ્યાસકર્મ સીધી પસંદગીથી ભરતીની પર્ાથિમક કસોટીનો અભ્યાસકર્મ ભાગ-૧ (સામાન્ય અભ્યાસ) માધ્યમ: ગુજરાતી કુલ ગુણ : ૧૦૦ ઇિતહાસ અને સંસ્કૃિત 1. િસંધુખીણની સભ્યતા, વૈĬદક યુગ, જૈન ધમર્…",
+      "pdfUrls": [
+        "https://gpsc.gujarat.gov.in/Documents/AdvertismentDocument/SY-40-202627.pdf"
+      ],
+      "sourceId": "psc-gj",
+      "sourceName": "Gpsc Gujarat",
+      "dept": "Gpsc Gujarat",
+      "state": "All India",
+      "category": "state",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "a60e40f8f09fcba4",
+      "title": "Important Exam Syllabus (Prelim) - 38/2026-27 Concerned Subject (Administrative Officer, Class-2, (VARIOUS MUNICIPALITIE",
+      "link": "https://gpsc.gujarat.gov.in/Documents/AdvertismentDocument/SYC-38-2026-27.pdf",
+      "publishedAt": "2026-06-19T22:49:20.730116Z",
+      "summary": null,
+      "pdfUrls": [
+        "https://gpsc.gujarat.gov.in/Documents/AdvertismentDocument/SYC-38-2026-27.pdf"
+      ],
+      "sourceId": "psc-gj",
+      "sourceName": "Gpsc Gujarat",
+      "dept": "Gpsc Gujarat",
+      "state": "All India",
+      "category": "state",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "06f6e44dd1ba8077",
+      "title": "Important Exam Syllabus (Prelim) - 25/2026-27 (Geologist, Class-1, Industries and Mines) Click here to see ATTACHMENT",
+      "link": "https://gpsc.gujarat.gov.in/Documents/AdvertismentDocument/SYGC-25-2026-27_c.pdf",
+      "publishedAt": "2026-06-19T22:49:18.802525Z",
+      "summary": "ગુજરાત જાહેર સેવા આયોગ છ-૩ સર્કલ પાસે, છ રોડ, સેક્ટર-૧૦/એ, ગાાંધીનગર-૩૮૨૦૧૦ જા.ક્ર.૨૫/૨૦૨૬-૨૭, ભૂસ્તરશાસ્ત્રી, ગુજરાત ખાણ સેવા, વગક-૧ (ઉદ્યોગ અને ખાણ વવભાગ) ની જગ્યા પર ભરતી માટેની પ્રાથવમર્ ર્સોટીમાાં ભાગ-૧ અને ભાગ-૨ ના પ્રશ્નપત્રોનો અભ્યાસક્રમ સીધી પસાંદગીથી ભરતીની પ્રાથવમર્ ર્સોટીનો અભ્યાસક્રમ ભાગ-૧ (સામાન્ય અભ્યાસ) માધ્યમ: ગુજરાતી ર્ુલ ગુણ : ૧૦૦ ઇતિહાસ અને સંસ્કૃતિ 1. સસિંધુખીણની સભ્યતા, વૈદિક…",
+      "pdfUrls": [
+        "https://gpsc.gujarat.gov.in/Documents/AdvertismentDocument/SYGC-25-2026-27_c.pdf"
+      ],
+      "sourceId": "psc-gj",
+      "sourceName": "Gpsc Gujarat",
+      "dept": "Gpsc Gujarat",
+      "state": "All India",
+      "category": "state",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "51cd9efe8e6a1a01",
+      "title": "Notification Regarding Constitution of High-Powered Committee - The National Syllabus and Teaching Learning Material Committee (NSTC)",
+      "link": "https://ncert.nic.in/pdf/notice/Constitution_of_High-Powered_Committee-NSTC.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://ncert.nic.in/pdf/notice/Constitution_of_High-Powered_Committee-NSTC.pdf"
+      ],
+      "sourceId": "ncert",
+      "sourceName": "NCERT",
+      "dept": "NCERT",
+      "state": "All India",
+      "category": "teaching",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "112211388bbc6730",
+      "title": "Personal Assistant (Establishment, Hon. High Court) Exam-2025-- Corrigendum and Syllabus ( Recruitment Notification )",
+      "link": "https://psc.uk.gov.in/candidate-corner/recruitment",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
-      "sourceId": "psc-tr",
-      "sourceName": "Tripura PSC (TPSC)",
-      "dept": "Tripura PSC (TPSC)",
-      "state": "NE States",
+      "sourceId": "psc-uk",
+      "sourceName": "Uttarakhand PSC (UKPSC)",
+      "dept": "Uttarakhand PSC (UKPSC)",
+      "state": "Uttarakhand",
       "category": "state",
       "stateIds": [
-        "ne"
+        "uk"
       ],
       "fetchMethod": "html"
     },
@@ -289,54 +483,6 @@
         "an"
       ],
       "fetchMethod": "html"
-    },
-    {
-      "id": "c7220fca9bfff925",
-      "title": "Important Exam Syllabus (Prelim) - 40/2026-27 (Assistant Director(Boilers), Class-2) Click here to see ATTACHMENT",
-      "link": "https://gpsc.gujarat.gov.in/Documents/AdvertismentDocument/SY-40-202627.pdf",
-      "publishedAt": "2026-06-19T22:49:24.613269Z",
-      "summary": "Ȥુજરાત Ĥહ°ર સેવા આયોગ છ-૩ સકર્લ પાસે, છ રોડ, સેક્ટર-૧૦/એ, ગાંધીનગર-૩૮૨૦૧૦ ð.કર્.૪૦/૨૦૨૬-૨૭,મદદનીશ િનયામક,બોઈલરો,વગર્-૨ (શર્મ,કૌશલ્ય િવકાસ અને રોજગાર િવભાગ)ની જગ્યા પર ભરતી માટેની પર્ાથિમક કસોટીના ભાગ-૧ અને ભાગ-૨ના પર્Ėપતર્ોનો અભ્યાસકર્મ સીધી પસંદગીથી ભરતીની પર્ાથિમક કસોટીનો અભ્યાસકર્મ ભાગ-૧ (સામાન્ય અભ્યાસ) માધ્યમ: ગુજરાતી કુલ ગુણ : ૧૦૦ ઇિતહાસ અને સંસ્કૃિત 1. િસંધુખીણની સભ્યતા, વૈĬદક યુગ, જૈન ધમર્…",
-      "pdfUrls": [
-        "https://gpsc.gujarat.gov.in/Documents/AdvertismentDocument/SY-40-202627.pdf"
-      ],
-      "sourceId": "psc-gj",
-      "sourceName": "Gpsc Gujarat",
-      "dept": "Gpsc Gujarat",
-      "state": "All India",
-      "category": "state",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "a60e40f8f09fcba4",
-      "title": "Important Exam Syllabus (Prelim) - 38/2026-27 Concerned Subject (Administrative Officer, Class-2, (VARIOUS MUNICIPALITIE",
-      "link": "https://gpsc.gujarat.gov.in/Documents/AdvertismentDocument/SYC-38-2026-27.pdf",
-      "publishedAt": "2026-06-19T22:49:20.730116Z",
-      "summary": null,
-      "pdfUrls": [
-        "https://gpsc.gujarat.gov.in/Documents/AdvertismentDocument/SYC-38-2026-27.pdf"
-      ],
-      "sourceId": "psc-gj",
-      "sourceName": "Gpsc Gujarat",
-      "dept": "Gpsc Gujarat",
-      "state": "All India",
-      "category": "state",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "06f6e44dd1ba8077",
-      "title": "Important Exam Syllabus (Prelim) - 25/2026-27 (Geologist, Class-1, Industries and Mines) Click here to see ATTACHMENT",
-      "link": "https://gpsc.gujarat.gov.in/Documents/AdvertismentDocument/SYGC-25-2026-27_c.pdf",
-      "publishedAt": "2026-06-19T22:49:18.802525Z",
-      "summary": "ગુજરાત જાહેર સેવા આયોગ છ-૩ સર્કલ પાસે, છ રોડ, સેક્ટર-૧૦/એ, ગાાંધીનગર-૩૮૨૦૧૦ જા.ક્ર.૨૫/૨૦૨૬-૨૭, ભૂસ્તરશાસ્ત્રી, ગુજરાત ખાણ સેવા, વગક-૧ (ઉદ્યોગ અને ખાણ વવભાગ) ની જગ્યા પર ભરતી માટેની પ્રાથવમર્ ર્સોટીમાાં ભાગ-૧ અને ભાગ-૨ ના પ્રશ્નપત્રોનો અભ્યાસક્રમ સીધી પસાંદગીથી ભરતીની પ્રાથવમર્ ર્સોટીનો અભ્યાસક્રમ ભાગ-૧ (સામાન્ય અભ્યાસ) માધ્યમ: ગુજરાતી ર્ુલ ગુણ : ૧૦૦ ઇતિહાસ અને સંસ્કૃતિ 1. સસિંધુખીણની સભ્યતા, વૈદિક…",
-      "pdfUrls": [
-        "https://gpsc.gujarat.gov.in/Documents/AdvertismentDocument/SYGC-25-2026-27_c.pdf"
-      ],
-      "sourceId": "psc-gj",
-      "sourceName": "Gpsc Gujarat",
-      "dept": "Gpsc Gujarat",
-      "state": "All India",
-      "category": "state",
-      "fetchMethod": "live-jobs-supplement"
     },
     {
       "id": "39040ea6ce79506e",
