@@ -330,7 +330,10 @@ export function buildJobDetailView(job) {
 
   const title = job.title || "Government recruitment";
   const summary = job?.detail?.summary || job?.about || "";
-  const vacancies = resolveVacancyCount(job.vacancies, title, summary, job?.about);
+  const postsSum = (
+    Array.isArray(job.posts) ? job.posts : job.detail?.posts || []
+  ).reduce((s, p) => s + (Number(p?.vacancies) || 0), 0);
+  const vacancies = resolveVacancyCount(job.vacancies, title, summary, job?.about, postsSum);
   const applyHref = resolveJobApplyHref(job) || pickOfficialDetailUrl(job) || null;
 
   const pdfUrls = Array.isArray(job.pdfUrls) && job.pdfUrls.length ? job.pdfUrls : collectPdfUrls(job);

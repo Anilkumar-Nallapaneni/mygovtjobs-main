@@ -239,6 +239,12 @@ type RawPayload = {
 }
 
 async function loadJobsPayload(bustCache = false, jobsSource = getJobsSourceMode()) {
+  if (jobsSource === 'static') {
+    const hit = await tryStatic(bustCache)
+    if (hit) return hit
+    return { raw: [], sources: ['static'], hasBackend: false, error: 'live-jobs.json missing or empty' }
+  }
+
   const isExplicitSource = jobsSource !== 'auto'
   const order = sourceOrder(jobsSource)
 

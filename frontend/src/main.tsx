@@ -52,7 +52,7 @@ if (deployChanged) {
 if (jobsSourceMode !== 'api') {
   prefetchLiveJobsSnapshot()
 }
-warmLiveJobsCache(deployChanged)
+warmLiveJobsCache(deployChanged || jobsSourceMode === 'static')
 warmStateMapCache(STATES.map((s) => toSvgStateId(s.id)))
 
 if (typeof history !== 'undefined' && 'scrollRestoration' in history) {

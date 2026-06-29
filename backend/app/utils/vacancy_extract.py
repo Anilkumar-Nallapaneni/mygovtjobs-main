@@ -29,6 +29,10 @@ _VACANCY_PATTERNS: list[re.Pattern[str]] = [
 
 _TOTAL_PATTERN = re.compile(r"total\s*(?:no\.?\s*of\s*)?(?:posts?|vacancies|vacancy)\s*[:\-]?\s*([\d,]+)", re.I)
 
+# Address pin glued to a "Posts:" section header (e.g. "Haryana - 122001\nPosts :")
+_PINCODE_BEFORE_POSTS = re.compile(r"[-–—]\s*(\d{6})\s*(?:\n\s*)?Posts\s*:", re.I)
+_SALARY_NEARBY = re.compile(r"(?:rs\.?|inr|₹|remuneration|emolument|pay\s*scale|per\s*month|p\.?m\.?)", re.I)
+
 
 def _parse_num(raw: str) -> int:
     try:
@@ -55,7 +59,32 @@ def is_probable_year(n: int, context: str) -> bool:
     return True
 
 
-def _plausible(n: int, context: str) -> bool:
+def is_probable_salary_false_positive(match: re.Match[str], blob: str) -> bool:
+    n = _parse_num(match.group(1))
+    if not (1000 <= n <= 500_000):
+        return False
+    start = max(0, match.start() - 32)
+    end = min(len(blob), match.end() + 32)
+    return bool(_SALARY_NEARBY.search(blob[start:end]))
+
+
+def is_probable_pincode_posts_false_positive(match: re.Match[str], blob: str) -> bool:
+    """Reject 6-digit pincodes immediately before a 'Posts:' heading (not a vacancy count)."""
+    n = _parse_num(match.group(1))
+    if not (100000 <= n <= 999999):
+        return False
+    start = max(0, match.start() - 24)
+    end = min(len(blob), match.end() + 16)
+    window = blob[start:end]
+    return bool(re.search(r"-\s*(\d{6})\s*(?:\n\s*)?Posts\s*:", window, re.I))
+
+
+def _plausible(n: int, context: str, *, match: re.Match[str] | None = None, blob: str = "") -> bool:
+    if match and blob:
+        if is_probable_pincode_posts_false_positive(match, blob):
+            return False
+        if is_probable_salary_false_positive(match, blob):
+            return False
     return 1 <= n <= 250_000 and not is_probable_year(n, context)
 
 
@@ -81,7 +110,7 @@ def extract_vacancies(*chunks: str | None, title: str = "") -> int:
 
     for m in _TOTAL_PATTERN.finditer(blob_for_scan):
         n = _parse_num(m.group(1))
-        if _plausible(n, title_ctx):
+        if _plausible(n, title_ctx, match=m, blob=blob_for_scan):
             totals.append(n)
 
     if totals:
@@ -90,8 +119,19 @@ def extract_vacancies(*chunks: str | None, title: str = "") -> int:
     for pat in _VACANCY_PATTERNS:
         for m in pat.finditer(blob_for_scan):
             n = _parse_num(m.group(1))
-            if _plausible(n, title_ctx):
+            if _plausible(n, title_ctx, match=m, blob=blob_for_scan):
                 found.append(n)
+
+    posts_line_sum = 0
+    if _PINCODE_BEFORE_POSTS.search(blob_for_scan):
+        posts_block = _PINCODE_BEFORE_POSTS.split(blob_for_scan, maxsplit=1)[-1][:1200]
+        numbered = re.findall(r"[-–—]\s*(\d{1,4})\s*(?:\n|$|\()", posts_block)
+        subtotals = [_parse_num(x) for x in numbered if 1 <= _parse_num(x) <= 500]
+        if subtotals:
+            posts_line_sum = sum(subtotals)
+
+    if posts_line_sum and (not found or posts_line_sum > max(found)):
+        return sanitize_vacancies(posts_line_sum, title_ctx, blob_for_scan)
 
     if not found:
         return 0
@@ -110,23 +150,49 @@ def resolve_vacancies(
     stored: int,
     title: str = "",
     context: str = "",
+    *,
+    posts_sum: int = 0,
 ) -> int:
-    """Prefer title/body extraction; ignore year-like stored counts (e.g. Advt 06/2025)."""
+    """Prefer title/body extraction; posts breakdown is the floor when present."""
     merged = " ".join(filter(None, [title, context])).strip()
-    from_text = extract_vacancies(title, title=title) or (
-        extract_vacancies(merged, title=title) if merged and merged != title else 0
-    )
     raw = int(stored) if stored else 0
     stored_n = sanitize_vacancies(raw, title, context)
     ctx = merged or title
     if 1900 <= raw <= 2035 and (is_probable_year(raw, ctx) or str(raw) not in ctx):
         stored_n = 0
 
-    if from_text > 0:
-        if not stored_n or from_text <= stored_n:
-            return sanitize_vacancies(from_text, title, context)
-        title_only = extract_vacancies(title, title=title)
-        if title_only > 0:
+    title_only = extract_vacancies(title, title=title)
+    if posts_sum > 0:
+        if title_only >= posts_sum:
             return sanitize_vacancies(title_only, title, context)
-        return sanitize_vacancies(from_text, title, context)
-    return stored_n
+        if stored_n >= posts_sum and stored_n <= max(posts_sum * 2, 5000):
+            return stored_n
+        return posts_sum
+
+    from_text = extract_vacancies(title, title=title) or (
+        extract_vacancies(merged, title=title) if merged and merged != title else 0
+    )
+    safe_from = sanitize_vacancies(from_text, title, context) if from_text > 0 else 0
+    anchor = stored_n
+
+    if safe_from > 0:
+        if not anchor:
+            if title_only > 0:
+                return sanitize_vacancies(title_only, title, context)
+            if safe_from > 5000:
+                return 0
+            return safe_from
+        if safe_from > anchor:
+            if anchor < 5000 and safe_from > anchor * 2:
+                if title_only > 0 and title_only <= anchor * 3:
+                    return sanitize_vacancies(title_only, title, context)
+                return sanitize_vacancies(anchor, title, context)
+            if title_only > 0:
+                return sanitize_vacancies(title_only, title, context)
+            return safe_from
+        if safe_from < anchor and safe_from < 10:
+            if 1900 <= anchor <= 2035:
+                return safe_from if safe_from > 0 else (sanitize_vacancies(title_only, title, context) if title_only else 0)
+            return anchor
+        return safe_from
+    return anchor

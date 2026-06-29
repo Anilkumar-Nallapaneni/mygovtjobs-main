@@ -88,6 +88,30 @@ export function verifyLiveJobsSnapshot({ strict = false } = {}) {
     issues.push('live-jobs-list.json lost vacancy fields — rebuild list from full export')
   }
 
+  if (listItems.length && fullItems.length) {
+    const fullBySlug = new Map(fullItems.map((row) => [String(row?.slug || ''), row]))
+    let mismatch = 0
+    const samples = []
+    for (const listRow of listItems) {
+      const slug = String(listRow?.slug || '')
+      const fullRow = fullBySlug.get(slug)
+      if (!fullRow) continue
+      const lv = Number(listRow?.vacancies) || 0
+      const fv = Number(fullRow?.vacancies) || 0
+      if (lv !== fv) {
+        mismatch += 1
+        if (samples.length < 3) {
+          samples.push(`${slug.slice(0, 48)}… list=${lv} full=${fv}`)
+        }
+      }
+    }
+    if (mismatch > 0) {
+      issues.push(
+        `${mismatch} vacancy mismatch(es) between list and full JSON — run npm run build:live-jobs-list (e.g. ${samples.join('; ')})`
+      )
+    }
+  }
+
   return { ok: issues.length === 0, issues, warnings, fullVac, listVac }
 }
 

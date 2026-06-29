@@ -22,3 +22,15 @@ def test_real_post_count_kept():
     title = "Recruitment for 120 posts of Constable"
     assert extract_vacancies(title, title=title) == 120
     assert resolve_vacancies(120, title, "") == 120
+
+
+def test_pincode_before_posts_label_not_counted():
+    body = (
+        "Venue: ESIC Model Hospital, Sector 9A, Gurugram, Haryana - 122001\n"
+        "Posts :\n"
+        "1) Full-Time Contractual Specialist - 14\n"
+        "2) Senior Residents (03 Years) – 34\n"
+    )
+    assert extract_vacancies(body, title="ESIC Gurugram walk-in") == 48
+    assert resolve_vacancies(122001, "ESIC Gurugram walk-in", body) == 48
+    assert resolve_vacancies(122001, "ESIC Gurugram walk-in", body, posts_sum=48) == 48

@@ -56,6 +56,7 @@ export default function JobDetailPage({ jobs, loading }: JobDetailPageProps) {
   }, [jobs, slug]);
 
   const job = useMemo(() => {
+    if (listJob && hasFullDetail(listJob)) return listJob;
     if (resolvedJob && jobMatchesSlug(resolvedJob, slug)) return resolvedJob;
     if (detailLoading) return null;
     return listJob;

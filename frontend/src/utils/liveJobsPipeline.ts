@@ -1,5 +1,4 @@
 import { adaptLiveJob } from '@/utils/liveJobAdapter'
-import { effectiveVacancyCount } from '@/utils/jobMetadataUtils'
 import { isJobExpired } from '@/utils/jobFilters'
 import { isPortalNoiseJob } from '@/utils/jobNoiseFilter'
 import { isAllowedOfficialJob, rowHasBlockedHost } from '@/utils/officialDomains'
@@ -69,7 +68,9 @@ function scoreLiveRow(row: Record<string, unknown>) {
 }
 
 function vacancyCount(row: Record<string, unknown>) {
-  return effectiveVacancyCount(row as { vacancies?: number; rawVacancies?: number })
+  const v = Number(row?.vacancies) || 0
+  const raw = Number((row as { rawVacancies?: number }).rawVacancies) || 0
+  return v > 0 ? v : raw
 }
 
 export function dedupeLiveRows(rows: unknown[]) {

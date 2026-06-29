@@ -1,5 +1,6 @@
 import { dataJsonUrl } from '@/lib/dataCacheBust'
 import { getSupabase } from '@/lib/supabase'
+import { resolveJobsSourceMode } from '@/utils/liveJobsPipeline'
 import { fetchJobDetailFromStorage } from '@/utils/jobDetailsStorage'
 
 export type ApiJob = {
@@ -236,8 +237,42 @@ export type AlertSubscribePayload = {
   website?: string
 }
 
+let staticFullCatalogPromise: Promise<ApiJob[] | null> | null = null
+
+async function loadStaticFullCatalog(): Promise<ApiJob[] | null> {
+  if (!staticFullCatalogPromise) {
+    staticFullCatalogPromise = (async () => {
+      try {
+        const res = await fetchWithTimeout(dataJsonUrl(LIVE_JOBS_FULL_URL), {
+          cache: 'default',
+          timeoutMs: LIVE_JOBS_SNAPSHOT_TIMEOUT_MS,
+        })
+        if (!res.ok) return null
+        const json = (await res.json()) as { items?: ApiJob[] }
+        return Array.isArray(json.items) ? json.items : null
+      } catch {
+        return null
+      }
+    })()
+  }
+  return staticFullCatalogPromise
+}
+
+async function fetchJobFromStaticCatalog(slug: string): Promise<ApiJob | null> {
+  const items = await loadStaticFullCatalog()
+  if (!items?.length) return null
+  return items.find((row) => row.slug === slug || row.id === slug) ?? null
+}
+
 export async function fetchJobBySlug(slug: string): Promise<ApiJob | null> {
   if (!slug) return null
+
+  const jobsSource = resolveJobsSourceMode(import.meta.env.VITE_JOBS_SOURCE)
+
+  if (jobsSource === 'static') {
+    const staticJob = await fetchJobFromStaticCatalog(slug)
+    if (staticJob) return staticJob
+  }
 
   try {
     const res = await fetchWithTimeout(apiUrl(`/api/jobs/${encodeURIComponent(slug)}`), {
@@ -247,7 +282,14 @@ export async function fetchJobBySlug(slug: string): Promise<ApiJob | null> {
       return (await res.json()) as ApiJob
     }
   } catch {
-    /* fall through to Supabase */
+    /* fall through */
+  }
+
+  const staticJob = await fetchJobFromStaticCatalog(slug)
+  if (staticJob) return staticJob
+
+  if (jobsSource === 'static') {
+    return null
   }
 
   const supabase = await getSupabase()
