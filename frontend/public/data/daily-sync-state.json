@@ -1,10 +1,10 @@
 {
-  "status": "failed",
-  "startedAt": "2026-06-28T13:10:05.651896+00:00",
-  "startedAtIst": "2026-06-28T18:40:05.652044+05:30",
-  "dateIst": "2026-06-28",
-  "nextRunAtIst": "2026-06-29T08:00:00+05:30",
-  "failedAt": "2026-06-28T13:12:08.340547+00:00",
-  "failedAtIst": "2026-06-28T18:42:08.350449+05:30",
-  "error": "TimeoutError"
+  "status": "completed",
+  "completedAt": "2026-06-30T04:18:19.052265+00:00",
+  "completedAtIst": "2026-06-30T09:48:19.052308+05:30",
+  "lastCompletedDateIst": "2026-06-30",
+  "nextRunAtIst": "2026-07-01T08:00:00+05:30",
+  "jobCount": 1796,
+  "sourcesScraped": 154,
+  "notes": "IngestAgent: official India govt portals + RSS"
 }
