@@ -163,11 +163,14 @@ def resolve_vacancies(
 
     title_only = extract_vacancies(title, title=title)
     if posts_sum > 0:
-        if title_only >= posts_sum:
+        safe_posts = sanitize_vacancies(posts_sum, title, context)
+        if not safe_posts:
+            return 0
+        if title_only >= safe_posts:
             return sanitize_vacancies(title_only, title, context)
-        if stored_n >= posts_sum and stored_n <= max(posts_sum * 2, 5000):
+        if stored_n >= safe_posts and stored_n <= max(safe_posts * 2, 5000):
             return stored_n
-        return posts_sum
+        return safe_posts
 
     from_text = extract_vacancies(title, title=title) or (
         extract_vacancies(merged, title=title) if merged and merged != title else 0
