@@ -473,22 +473,6 @@
       "fetchMethod": "live-jobs-supplement"
     },
     {
-      "id": "6ba4fa2414631751",
-      "title": "DLSA Sitapur Para Legal Volunteer Recruitment 2026 - Apply Offline",
-      "link": "http://www.district.ecourts.gov.in/sitapur",
-      "publishedAt": "2026-06-25T00:00:00Z",
-      "summary": "District Legal Services Authority, Sitapur (DLSA Sitapur) Recruitment 2026 for 0 posts of Para Legal Volunteer. Candidates Can Apply Offline. The last date to apply offline is 25-06-2026. The candidate shall apply offline through DLSA Sitapur official website.",
-      "pdfUrls": [
-        "https://cdnbbsr.s3waas.gov.in/s3ec0515e122e839dfdaa7ce969536f94a/uploads/2026/06/20260602100.pdf"
-      ],
-      "sourceId": "structured-import",
-      "sourceName": "DLSA Sitapur",
-      "dept": "DLSA Sitapur",
-      "state": "All India",
-      "category": "state",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
       "id": "bc229f1363bec2e5",
       "title": "Meghalaya PSC Recruitment 2026 - Apply Online for 13 Fishery Officer and Junior Football Coach Posts",
       "link": "https://rpa.meghalaya.gov.in/rpaonline/",
@@ -500,6 +484,22 @@
       "sourceId": "structured-import",
       "sourceName": "Meghalaya PSC",
       "dept": "Meghalaya PSC",
+      "state": "All India",
+      "category": "state",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "6ba4fa2414631751",
+      "title": "DLSA Sitapur Para Legal Volunteer Recruitment 2026 - Apply Offline",
+      "link": "http://www.district.ecourts.gov.in/sitapur",
+      "publishedAt": "2026-06-25T00:00:00Z",
+      "summary": "District Legal Services Authority, Sitapur (DLSA Sitapur) Recruitment 2026 for 0 posts of Para Legal Volunteer. Candidates Can Apply Offline. The last date to apply offline is 25-06-2026. The candidate shall apply offline through DLSA Sitapur official website.",
+      "pdfUrls": [
+        "https://cdnbbsr.s3waas.gov.in/s3ec0515e122e839dfdaa7ce969536f94a/uploads/2026/06/20260602100.pdf"
+      ],
+      "sourceId": "structured-import",
+      "sourceName": "DLSA Sitapur",
+      "dept": "DLSA Sitapur",
       "state": "All India",
       "category": "state",
       "fetchMethod": "live-jobs-supplement"
@@ -872,7 +872,7 @@
     },
     {
       "id": "8cfab76f2d66f43b",
-      "title": "Recruitment for various category of Group B(NG) and Group C posts in Andaman and Nicobar Police Department. ( Start Date: 27-04-2026 and Last Date: 25-06-2026)",
+      "title": "Recruitment for various category of Group B(NG) and Group C posts in Andaman and Nicobar Police Department.( Start Date: 27-04-2026 and Last Date: 20-06-2026)",
       "link": "https://erecruitment.andamannicobar.gov.in/Advertisement/1051_f5f9a1d4-c66c-4346-b97a-3df5d0007124.pdf",
       "publishedAt": "2026-04-27T00:00:00Z",
       "summary": null,
@@ -880,10 +880,10 @@
         "https://erecruitment.andamannicobar.gov.in/Advertisement/1051_f5f9a1d4-c66c-4346-b97a-3df5d0007124.pdf"
       ],
       "sourceId": "an-rec",
-      "sourceName": "Andaman & Nicobar e-Recruitment",
-      "dept": "Andaman & Nicobar e-Recruitment",
+      "sourceName": "Erecruitment Andamannicobar",
+      "dept": "Erecruitment Andamannicobar",
       "state": "All India",
-      "category": "state",
+      "category": "police",
       "fetchMethod": "live-jobs-supplement"
     },
     {
@@ -1010,6 +1010,20 @@
       "sourceId": "psc-hr-notifications",
       "sourceName": "HPSC — Recruitment",
       "dept": "HPSC — Recruitment",
+      "state": "All India",
+      "category": "state",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "a210c9a77c445adc",
+      "title": "OSSC FSO Recruitment 2026 Notification Out - Apply Online for 84 Food Safety Officer Posts",
+      "link": "https://www.ossc.gov.in",
+      "publishedAt": "2026-07-08T00:00:00Z",
+      "summary": "OSSC Food Safety Officer Recruitment 2026: Get the latest OSSC recruitment notification 2026 for 84 Food Safety Officer (Group-B) vacancies under the Office of Commissioner of Food Safety, Odisha, Health & Family Welfare Department, Govt. of Odisha. The online registration starts on 09th June 2026 and the last date to submit the online application form is 11th July 2026. Find OSSC vacancies across…",
+      "pdfUrls": [],
+      "sourceId": "structured-import",
+      "sourceName": "OSSC",
+      "dept": "OSSC",
       "state": "All India",
       "category": "state",
       "fetchMethod": "live-jobs-supplement"
@@ -2052,20 +2066,6 @@
         "od"
       ],
       "fetchMethod": "html"
-    },
-    {
-      "id": "a210c9a77c445adc",
-      "title": "OSSC FSO Recruitment 2026 Notification Out - Apply Online for 84 Food Safety Officer Posts",
-      "link": "https://www.ossc.gov.in",
-      "publishedAt": "2026-07-08T00:00:00Z",
-      "summary": "OSSC Food Safety Officer Recruitment 2026: Get the latest OSSC recruitment notification 2026 for 84 Food Safety Officer (Group-B) vacancies under the Office of Commissioner of Food Safety, Odisha, Health & Family Welfare Department, Govt. of Odisha. The online registration starts on 09th June 2026 and the last date to submit the online application form is 11th July 2026. Find OSSC vacancies across…",
-      "pdfUrls": [],
-      "sourceId": "structured-import",
-      "sourceName": "OSSC",
-      "dept": "OSSC",
-      "state": "All India",
-      "category": "state",
-      "fetchMethod": "live-jobs-supplement"
     },
     {
       "id": "dd6098d6aba1a3f9",

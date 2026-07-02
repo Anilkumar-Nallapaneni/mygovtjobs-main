@@ -34,3 +34,9 @@ def test_pincode_before_posts_label_not_counted():
     assert extract_vacancies(body, title="ESIC Gurugram walk-in") == 48
     assert resolve_vacancies(122001, "ESIC Gurugram walk-in", body) == 48
     assert resolve_vacancies(122001, "ESIC Gurugram walk-in", body, posts_sum=48) == 48
+
+
+def test_posts_sum_out_of_range_sanitized():
+    title = "Recruitment for 120 posts of Constable"
+    assert resolve_vacancies(0, title, "", posts_sum=500_000) == 0
+    assert resolve_vacancies(0, "Advt 06/2025 recruitment", "", posts_sum=2025) == 0

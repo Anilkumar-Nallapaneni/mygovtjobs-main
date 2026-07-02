@@ -30,16 +30,16 @@
     "vacancies": 1487
   },
   {
+    "dept": "ESIC — Employees' State Insurance Corporation",
+    "slug": "esic-employees-state-insurance-corporation",
+    "count": 46,
+    "vacancies": 4169
+  },
+  {
     "dept": "Sainik School Jhansi",
     "slug": "sainik-school-jhansi",
     "count": 46,
     "vacancies": 8
-  },
-  {
-    "dept": "ESIC — Employees' State Insurance Corporation",
-    "slug": "esic-employees-state-insurance-corporation",
-    "count": 45,
-    "vacancies": 126136
   },
   {
     "dept": "Indo-Tibetan Border Police (ITBP)",
@@ -60,16 +60,16 @@
     "vacancies": 0
   },
   {
+    "dept": "NSUT",
+    "slug": "nsut",
+    "count": 41,
+    "vacancies": 122
+  },
+  {
     "dept": "Union Public Service Commission (UPSC)",
     "slug": "union-public-service-commission-upsc",
     "count": 40,
     "vacancies": 249
-  },
-  {
-    "dept": "NSUT",
-    "slug": "nsut",
-    "count": 39,
-    "vacancies": 122
   },
   {
     "dept": "Puducherry Recruitment Portal",
@@ -86,7 +86,7 @@
   {
     "dept": "NITI Aayog",
     "slug": "niti-aayog",
-    "count": 34,
+    "count": 35,
     "vacancies": 1
   },
   {
@@ -96,16 +96,16 @@
     "vacancies": 0
   },
   {
-    "dept": "Jammu & Kashmir PSC (JKPSC)",
-    "slug": "jammu-kashmir-psc-jkpsc",
-    "count": 30,
-    "vacancies": 0
-  },
-  {
     "dept": "UPSC — What's New",
     "slug": "upsc-what-s-new",
     "count": 30,
     "vacancies": 142
+  },
+  {
+    "dept": "Jammu & Kashmir PSC (JKPSC)",
+    "slug": "jammu-kashmir-psc-jkpsc",
+    "count": 29,
+    "vacancies": 0
   },
   {
     "dept": "Press Information Bureau (PIB)",
@@ -321,13 +321,13 @@
     "dept": "Drdo",
     "slug": "drdo",
     "count": 13,
-    "vacancies": 196
+    "vacancies": 203
   },
   {
     "dept": "Indian Navy — Notifications",
     "slug": "indian-navy-notifications",
     "count": 13,
-    "vacancies": 203
+    "vacancies": 228
   },
   {
     "dept": "Rrbguwahati",
@@ -501,7 +501,7 @@
     "dept": "ONGC — Careers",
     "slug": "ongc-careers",
     "count": 7,
-    "vacancies": 49
+    "vacancies": 72
   },
   {
     "dept": "Recruitment Itbpolice",
