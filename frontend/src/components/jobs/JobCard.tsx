@@ -1,3 +1,4 @@
+import type { CSSProperties } from "react";
 import { memo, useMemo } from "react";
 import { useTranslation } from "react-i18next";
 import { useMediaQuery } from "@/hooks/useMediaQuery";
@@ -42,12 +43,15 @@ function JobCard({
   compact = false,
   onEducationClick,
   onStateClick,
+  enterIndex = 0,
 }: {
   job: JobRecord
   onClick?: () => void
   compact?: boolean
   onEducationClick?: (key: string) => void
   onStateClick?: (stateId: string) => void
+  /** Stagger index for list entrance animation (capped in CSS). */
+  enterIndex?: number
 }) {
   const { t, i18n } = useTranslation();
   const now = useNow();
@@ -127,10 +131,14 @@ function JobCard({
   ].filter((m) => m.value && (m.kind === "education" || (m.value !== "—" && m.value !== "See notification")));
 
   const viewDetailsLabel = `${t("jobDetail.viewDetails")}: ${title}`;
+  const enterStyle = {
+    "--mgj-enter-index": Math.min(enterIndex, 8),
+  } as CSSProperties;
 
   return (
     <article
       className={`job-card${compact ? " job-card--compact" : ""}${isExpired ? " job-card--expired" : ""}${onClick ? " job-card--clickable" : ""}`}
+      style={enterStyle}
     >
       <div className="job-card__accent" style={{ background: `linear-gradient(180deg, ${catColor}, color-mix(in srgb, ${catColor} 30%, transparent))` }} aria-hidden />
 

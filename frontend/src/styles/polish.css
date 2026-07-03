@@ -273,7 +273,6 @@
 }
 
 .home-map-block__banner {
-  animation: slideIn 0.22s ease;
   box-shadow: var(--ds-shadowCard);
 }
 

@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+import { useEffect, useMemo } from 'react'
 import { Link } from 'react-router-dom'
 import JobCard from "@/components/jobs/JobCard";
 import JobCardGrid from "@/components/jobs/JobCardGrid";
@@ -91,6 +91,12 @@ export default function HomeJobsListSection({
     if (!professionEntry || jobsLoading) return
     trackProfessionLanding(professionEntry.slug, filtered.length)
   }, [professionEntry, jobsLoading, filtered.length])
+
+  const listAnimKey = useMemo(
+    () =>
+      [selectedState, activeCat, search.trim(), quickFilter, heroStatFilter, sort, filtered.length].join('|'),
+    [selectedState, activeCat, search, quickFilter, heroStatFilter, sort, filtered.length]
+  )
 
   return (
     <section id="main-jobs" className={`home-jobs-section${sectionClassName}`}>
@@ -225,13 +231,28 @@ export default function HomeJobsListSection({
           </div>
         )
       ) : (
-        <div className="home-jobs-section__panel" aria-label={t("home.latestJobs")}>
+        <div
+          key={listAnimKey}
+          className="home-jobs-section__panel home-jobs-section__panel--animate"
+          aria-label={t("home.latestJobs")}
+        >
           {showJobCardGrid && filtered.length >= VIRTUAL_GRID_MIN ? (
-            <JobCardGrid jobs={filtered} onJobClick={onJobClick} jobCardFilterProps={jobCardFilterProps} />
+            <JobCardGrid
+              jobs={filtered}
+              onJobClick={onJobClick}
+              jobCardFilterProps={jobCardFilterProps}
+              animateList
+            />
           ) : (
             <div className="home-jobs-grid home-jobs-grid--scroll">
-              {filtered.map((job) => (
-                <JobCard key={job.id} job={job} onClick={() => onJobClick(job)} {...jobCardFilterProps} />
+              {filtered.map((job, index) => (
+                <JobCard
+                  key={job.id}
+                  job={job}
+                  onClick={() => onJobClick(job)}
+                  enterIndex={index}
+                  {...jobCardFilterProps}
+                />
               ))}
             </div>
           )}

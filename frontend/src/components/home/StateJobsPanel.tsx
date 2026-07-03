@@ -24,12 +24,12 @@ function JobGridBlock({
   jobCardFilterProps: Record<string, unknown>;
 }) {
   if (jobs.length >= VIRTUAL_GRID_MIN) {
-    return <JobCardGrid jobs={jobs} onJobClick={onJobClick} jobCardFilterProps={jobCardFilterProps} />;
+    return <JobCardGrid jobs={jobs} onJobClick={onJobClick} jobCardFilterProps={jobCardFilterProps} animateList />;
   }
   return (
     <div className="home-jobs-grid home-jobs-grid--scroll state-jobs-panel__grid">
-      {jobs.map((job) => (
-        <JobCard key={job.id} job={job} onClick={() => onJobClick(job)} {...jobCardFilterProps} />
+      {jobs.map((job, index) => (
+        <JobCard key={job.id} job={job} onClick={() => onJobClick(job)} enterIndex={index} {...jobCardFilterProps} />
       ))}
     </div>
   );
@@ -85,7 +85,10 @@ export default function StateJobsPanel({
         </div>
       </header>
 
-      <div className="state-jobs-panel__body home-jobs-section__panel">
+      <div
+        key={`${stateName}-${sort}-${stateJobs.length}`}
+        className="state-jobs-panel__body home-jobs-section__panel home-jobs-section__panel--animate"
+      >
         {stateJobs.length === 0 ? (
           <div className="state-jobs-panel__empty">
             <div className="state-jobs-panel__empty-icon">📋</div>

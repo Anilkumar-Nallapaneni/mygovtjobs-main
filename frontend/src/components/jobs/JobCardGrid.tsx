@@ -1,4 +1,5 @@
 import { useRef } from "react";
+import type { CSSProperties } from "react";
 import { useVirtualizer } from "@tanstack/react-virtual";
 import JobCard from "@/components/jobs/JobCard";
 import { useMediaQuery } from "@/hooks/useMediaQuery";
@@ -14,7 +15,7 @@ const MOBILE_ROW_GAP = 12;
  * Responsive virtualized grid inside `.home-jobs-section__panel`.
  * One column on mobile, two on wider screens. Scroll is confined to this panel.
  */
-export default function JobCardGrid({ jobs, onJobClick, jobCardFilterProps = {} }) {
+export default function JobCardGrid({ jobs, onJobClick, jobCardFilterProps = {}, animateList = false }) {
   const isMobile = useMediaQuery("(max-width: 640px)");
   const colsPerRow = isMobile ? 1 : 2;
   const rowGap = isMobile ? MOBILE_ROW_GAP : ROW_GAP;
@@ -40,22 +41,26 @@ export default function JobCardGrid({ jobs, onJobClick, jobCardFilterProps = {} 
         {virtualizer.getVirtualItems().map((virtualRow) => {
           const i0 = virtualRow.index * colsPerRow;
           const rowJobs = jobs.slice(i0, i0 + colsPerRow);
+          const rowEnterIndex = Math.min(virtualRow.index, 8);
+          const rowStyle: CSSProperties = {
+            height: isMobile ? mobileRowEstimate : desktopRowSize,
+            transform: `translateY(${virtualRow.start}px)`,
+            ...(animateList ? { "--mgj-enter-index": rowEnterIndex } : {}),
+          };
           return (
             <div
               key={`${colsPerRow}-${virtualRow.key}`}
               data-index={virtualRow.index}
               className={`home-jobs-grid-virtual__row${isMobile ? " home-jobs-grid-virtual__row--single" : ""}`}
               role="listitem"
-              style={{
-                height: isMobile ? mobileRowEstimate : desktopRowSize,
-                transform: `translateY(${virtualRow.start}px)`,
-              }}
+              style={rowStyle}
             >
-              {rowJobs.map((job) => (
+              {rowJobs.map((job, colIdx) => (
                 <JobCard
                   key={job.id}
                   job={job}
                   onClick={() => onJobClick(job)}
+                  enterIndex={rowEnterIndex * colsPerRow + colIdx}
                   {...jobCardFilterProps}
                 />
               ))}

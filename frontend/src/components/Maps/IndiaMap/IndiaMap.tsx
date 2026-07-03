@@ -83,6 +83,7 @@ export const IndiaMap: React.FC<IndiaMapProps> = ({
         hovered && hoverTooltipEnabledRef.current ? mapStyle.hoverColor || base : base
       );
       path.setAttribute("data-has-jobs", jobCountForPath(id) > 0 ? "true" : "false");
+      path.setAttribute("data-hot-jobs", jobCountForPath(id) >= 8 ? "true" : "false");
       path.setAttribute("data-job-count", String(jobCountForPath(id)));
       path.style.opacity = "1";
 
@@ -228,6 +229,7 @@ export const IndiaMap: React.FC<IndiaMapProps> = ({
       const id = path.getAttribute("id") || "";
       const count = jobCountById.get(id) ?? 0;
       path.setAttribute("data-has-jobs", count > 0 ? "true" : "false");
+      path.setAttribute("data-hot-jobs", count >= 8 ? "true" : "false");
       path.setAttribute("data-job-count", String(count));
     });
   }, [jobCountById, svgContent, isIsolated]);
@@ -291,6 +293,8 @@ export const IndiaMap: React.FC<IndiaMapProps> = ({
       if (!id || isIsolated) return;
       dismissTooltip();
       applyPathStyle(path, false);
+      path.setAttribute("data-tapped", "true");
+      window.setTimeout(() => path.removeAttribute("data-tapped"), 320);
       onStateClick?.(id);
     },
     [applyPathStyle, dismissTooltip, isIsolated, onStateClick]

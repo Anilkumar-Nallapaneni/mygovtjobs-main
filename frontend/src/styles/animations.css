@@ -1,0 +1,208 @@
+/* Site-wide motion — mobile tap feedback, list entrances, map polish */
+
+/* ----- Keyframes ----- */
+@keyframes mgj-fade-slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes mgj-stat-pop {
+  from {
+    opacity: 0;
+    transform: scale(0.92);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes mgj-map-hot-pulse {
+  0%,
+  100% {
+    filter: brightness(1.04) saturate(1.08);
+  }
+  50% {
+    filter: brightness(1.1) saturate(1.15);
+  }
+}
+
+@keyframes mgj-map-zoom-in {
+  from {
+    opacity: 0.85;
+    transform: scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes mgj-empty-bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+/* ----- Hero stats ----- */
+.home-hero-stat {
+  transition:
+    border-color 0.14s ease,
+    background 0.14s ease,
+    box-shadow 0.14s ease,
+    transform 0.12s ease;
+}
+
+.home-hero-stat--animate .home-hero-stat__value {
+  animation: mgj-stat-pop 0.42s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.home-hero-stat--animate:nth-child(1) .home-hero-stat__value {
+  animation-delay: 0ms;
+}
+.home-hero-stat--animate:nth-child(2) .home-hero-stat__value {
+  animation-delay: 55ms;
+}
+.home-hero-stat--animate:nth-child(3) .home-hero-stat__value {
+  animation-delay: 110ms;
+}
+.home-hero-stat--animate:nth-child(4) .home-hero-stat__value {
+  animation-delay: 165ms;
+}
+
+.home-hero-stat--active {
+  animation: mgj-stat-pop 0.28s ease;
+}
+
+.home-hero-stat:active {
+  transform: scale(0.97);
+}
+
+/* ----- Job list entrance (filter / sort change) ----- */
+.home-jobs-section__panel--animate .job-card {
+  animation: mgj-fade-slide-up 0.4s cubic-bezier(0.22, 1, 0.36, 1) both;
+  animation-delay: calc(var(--mgj-enter-index, 0) * 42ms);
+}
+
+.home-jobs-section__panel--animate .home-jobs-grid-virtual__row {
+  animation: mgj-fade-slide-up 0.38s cubic-bezier(0.22, 1, 0.36, 1) both;
+  animation-delay: calc(var(--mgj-enter-index, 0) * 42ms);
+}
+
+/* ----- Job cards — mobile tap ----- */
+.job-card--clickable:active {
+  transform: scale(0.985);
+  transition: transform 0.08s ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .job-card--clickable:active {
+    transform: translateY(-1px) scale(0.99);
+  }
+}
+
+.job-card__badge--hot {
+  animation: pulse 2.2s ease-in-out infinite;
+}
+
+/* ----- Toolbar buttons — mobile tap ----- */
+.home-jobs-section__sort-btn,
+.home-jobs-section__filter-btn,
+.home-map-block__clear {
+  transition:
+    background 0.12s ease,
+    border-color 0.12s ease,
+    color 0.12s ease,
+    transform 0.1s ease;
+}
+
+.home-jobs-section__sort-btn:active,
+.home-jobs-section__filter-btn:active,
+.home-map-block__clear:active {
+  transform: scale(0.96);
+}
+
+.home-jobs-section__sort-btn--active {
+  animation: mgj-stat-pop 0.25s ease;
+}
+
+/* ----- Empty state ----- */
+.home-jobs-empty {
+  animation: mgj-fade-slide-up 0.45s ease both;
+}
+
+.home-jobs-empty__icon {
+  animation: mgj-empty-bounce 2.4s ease-in-out infinite;
+}
+
+/* ----- India map ----- */
+.india-map-container path {
+  transition: fill 0.16s ease, filter 0.16s ease, stroke 0.16s ease;
+}
+
+.india-map-container path[data-has-jobs="true"] {
+  filter: brightness(1.03) saturate(1.06);
+}
+
+.india-map-container path[data-hot-jobs="true"] {
+  animation: mgj-map-hot-pulse 3.2s ease-in-out infinite;
+}
+
+.india-map-container path[data-selected="true"] {
+  animation: mgj-stat-pop 0.32s ease;
+}
+
+.india-map-container path[data-tapped="true"] {
+  filter: brightness(1.14) saturate(1.22) !important;
+}
+
+.india-map-container--isolated .india-map-svg-container {
+  animation: mgj-map-zoom-in 0.42s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.home-map-block__banner {
+  animation: slideIn 0.24s ease;
+}
+
+/* ----- Mobile bottom nav tap ----- */
+.mobile-bottom-nav__tab:active {
+  transform: scale(0.94);
+  transition: transform 0.1s ease;
+}
+
+/* ----- Reduced motion ----- */
+@media (prefers-reduced-motion: reduce) {
+  .home-hero-stat--animate .home-hero-stat__value,
+  .home-jobs-section__panel--animate .job-card,
+  .home-jobs-section__panel--animate .home-jobs-grid-virtual__row,
+  .home-jobs-empty,
+  .india-map-container path[data-hot-jobs="true"],
+  .india-map-container--isolated .india-map-svg-container,
+  .home-map-block__banner,
+  .job-card__badge--hot,
+  .home-jobs-empty__icon {
+    animation: none !important;
+  }
+
+  .home-hero-stat:active,
+  .job-card--clickable:active,
+  .home-jobs-section__sort-btn:active,
+  .home-jobs-section__filter-btn:active,
+  .mobile-bottom-nav__tab:active {
+    transform: none;
+  }
+
+  .india-map-container path {
+    transition: fill 0.01ms ease;
+  }
+}
