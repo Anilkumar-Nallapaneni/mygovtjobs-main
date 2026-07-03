@@ -288,3 +288,24 @@ Production needs: `VITE_JOBS_SOURCE=supabase` on Vercel.
 | `docs/all agents and run.md` | Full install, deploy, GitHub Actions |
 | `docs/INSTALLATION_AND_RUN.md` | Step-by-step setup |
 | `docs/DAILY_8AM_SYNC.md` | Daily sync deep dive |
+
+One-command full audit (copy-paste)
+
+cd e:\mygovtjobs-main
+
+npm run check:frontend
+npm run type-check
+npm run lint
+npm run test --prefix frontend
+npm run test:backend
+npm run build
+npm run env:check
+npm run supabase:test
+npm run supabase:audit
+npm run db:test
+npm run jobs:audit
+npm run jobs:audit:detail-actions
+npm run i18n:audit
+npm run verify
+npm run audit:official-sites:strict
+npm run go-live:check
