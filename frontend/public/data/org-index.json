@@ -20,20 +20,20 @@
   {
     "dept": "Nsut",
     "slug": "nsut",
-    "count": 48,
+    "count": 49,
     "vacancies": 122
+  },
+  {
+    "dept": "Sainik School Jhansi",
+    "slug": "sainik-school-jhansi",
+    "count": 47,
+    "vacancies": 8
   },
   {
     "dept": "ESIC — Employees' State Insurance Corporation",
     "slug": "esic-employees-state-insurance-corporation",
     "count": 46,
     "vacancies": 4169
-  },
-  {
-    "dept": "Sainik School Jhansi",
-    "slug": "sainik-school-jhansi",
-    "count": 46,
-    "vacancies": 8
   },
   {
     "dept": "Indo-Tibetan Border Police (ITBP)",
@@ -102,6 +102,12 @@
     "vacancies": 0
   },
   {
+    "dept": "Staff Selection Commission (SSC)",
+    "slug": "staff-selection-commission-ssc",
+    "count": 30,
+    "vacancies": 1
+  },
+  {
     "dept": "UPSC — What's New",
     "slug": "upsc-what-s-new",
     "count": 30,
@@ -118,12 +124,6 @@
     "slug": "press-information-bureau-pib",
     "count": 29,
     "vacancies": 0
-  },
-  {
-    "dept": "Staff Selection Commission (SSC)",
-    "slug": "staff-selection-commission-ssc",
-    "count": 29,
-    "vacancies": 1
   },
   {
     "dept": "University Grants Commission (UGC)",
@@ -309,7 +309,7 @@
     "dept": "Drdo",
     "slug": "drdo",
     "count": 14,
-    "vacancies": 196
+    "vacancies": 203
   },
   {
     "dept": "Mizoram PSC",
@@ -462,6 +462,12 @@
     "vacancies": 29
   },
   {
+    "dept": "Fssai",
+    "slug": "fssai",
+    "count": 8,
+    "vacancies": 0
+  },
+  {
     "dept": "Kullu Dcourts",
     "slug": "kullu-dcourts",
     "count": 8,
@@ -494,12 +500,6 @@
   {
     "dept": "District & Sessions Judge, Indore",
     "slug": "district-sessions-judge-indore",
-    "count": 7,
-    "vacancies": 0
-  },
-  {
-    "dept": "Fssai",
-    "slug": "fssai",
     "count": 7,
     "vacancies": 0
   },
