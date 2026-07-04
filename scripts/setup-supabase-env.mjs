@@ -10,6 +10,11 @@ import { randomBytes } from 'node:crypto'
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs'
 import { dirname, join } from 'node:path'
 import { fileURLToPath } from 'node:url'
+import {
+  projectRefFromDatabaseUrl,
+  projectRefFromSupabaseUrl,
+  validateSupabaseAnonKey,
+} from './lib/supabase-env-utils.mjs'
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..')
 
@@ -89,25 +94,6 @@ function validateSupabaseUrl(value) {
   return ''
 }
 
-function projectRefFromUrl(value) {
-  const match = String(value || '').match(/^https:\/\/([^.]+)\.supabase\.co\/?$/)
-  return match ? match[1] : ''
-}
-
-function projectRefFromDatabaseUrl(value) {
-  try {
-    const parsed = new URL(value.replace(/^postgresql\+asyncpg:/, 'postgresql:'))
-    const username = decodeURIComponent(parsed.username || '')
-    if (username.startsWith('postgres.')) return username.slice('postgres.'.length)
-    if (parsed.hostname.startsWith('db.') && parsed.hostname.endsWith('.supabase.co')) {
-      return parsed.hostname.slice(3, -'.supabase.co'.length)
-    }
-  } catch {
-    return ''
-  }
-  return ''
-}
-
 function writeEnv(path, values, order) {
   mkdirSync(dirname(path), { recursive: true })
   const existing = loadEnv(path)
@@ -136,11 +122,12 @@ const adminKey = (args['admin-key'] || process.env.ADMIN_API_KEY || existingBack
 const errors = [
   validateDatabaseUrl(databaseUrl),
   validateSupabaseUrl(supabaseUrl),
-  anonKey ? '' : 'VITE_SUPABASE_ANON_KEY is required',
 ].filter(Boolean)
 
-const urlRef = projectRefFromUrl(supabaseUrl)
+const urlRef = projectRefFromSupabaseUrl(supabaseUrl)
 const dbRef = projectRefFromDatabaseUrl(databaseUrl)
+const anonKeyError = validateSupabaseAnonKey(anonKey, urlRef)
+if (anonKeyError) errors.push(anonKeyError)
 if (urlRef && dbRef && urlRef !== dbRef) {
   errors.push(`Supabase project ref mismatch: URL uses ${urlRef}, DATABASE_URL uses ${dbRef}`)
 }

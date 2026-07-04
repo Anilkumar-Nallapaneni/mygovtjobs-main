@@ -6,6 +6,11 @@
 import { readFileSync, existsSync } from 'fs'
 import { join, dirname } from 'path'
 import { fileURLToPath } from 'url'
+import {
+  projectRefFromDatabaseUrl,
+  projectRefFromSupabaseUrl,
+  validateSupabaseAnonKey,
+} from './lib/supabase-env-utils.mjs'
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..')
 
@@ -22,24 +27,6 @@ function loadEnv(path) {
   return out
 }
 
-function projectRef(url) {
-  const m = String(url || '').match(/https:\/\/([^.]+)\.supabase\.co/)
-  return m ? m[1] : null
-}
-
-function dbRef(databaseUrl) {
-  const s = String(databaseUrl || '')
-  const creds = s.match(/postgres(?:ql\+asyncpg)?:\/\/([^@]+)@/)
-  if (creds) {
-    const user = creds[1].split(':')[0]
-    if (user.startsWith('postgres.')) return user.slice('postgres.'.length)
-  }
-  const poolerHost = s.match(/postgres(?:ql\+asyncpg)?:\/\/[^@]+@postgres\.([^:/]+)/)
-  if (poolerHost) return poolerHost[1]
-  const direct = s.match(/postgres(?:ql\+asyncpg)?:\/\/[^@]+@db\.([^.]+)\.supabase\.co/)
-  return direct ? direct[1] : null
-}
-
 const fePath = join(root, 'frontend/.env.local')
 const bePath = join(root, 'backend/.env')
 if (process.env.CI === 'true' && !existsSync(fePath) && !existsSync(bePath)) {
@@ -50,9 +37,9 @@ if (process.env.CI === 'true' && !existsSync(fePath) && !existsSync(bePath)) {
 const fe = loadEnv(fePath)
 const be = loadEnv(bePath)
 
-const feRef = projectRef(fe.VITE_SUPABASE_URL)
-const beUrlRef = projectRef(be.SUPABASE_URL)
-const beDbRef = dbRef(be.DATABASE_URL)
+const feRef = projectRefFromSupabaseUrl(fe.VITE_SUPABASE_URL)
+const beUrlRef = projectRefFromSupabaseUrl(be.SUPABASE_URL)
+const beDbRef = projectRefFromDatabaseUrl(be.DATABASE_URL)
 
 let ok = true
 
@@ -78,6 +65,8 @@ if (feRef && beDbRef) {
 if (fe.VITE_SUPABASE_ANON_KEY?.includes('service_role')) {
   check('anon key is not service_role', false, 'use anon/public key in frontend only')
 }
+const anonKeyError = validateSupabaseAnonKey(fe.VITE_SUPABASE_ANON_KEY, feRef)
+check('VITE_SUPABASE_ANON_KEY is valid for frontend', !anonKeyError, anonKeyError)
 
 console.log(ok ? '\nEnv alignment OK' : '\nFix mismatched env files before ingest/deploy')
 process.exit(ok ? 0 : 1)
