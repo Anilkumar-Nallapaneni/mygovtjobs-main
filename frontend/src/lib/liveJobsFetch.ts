@@ -1,5 +1,6 @@
 import {
   fetchJobsFromApi,
+  fetchFullLiveJobsSnapshot,
   fetchLiveJobsSnapshot,
   JOBS_FETCH_TIMEOUT_MS,
 } from '@/lib/jobsApi'
@@ -326,7 +327,35 @@ export async function fetchLiveJobsCatalog(
     rows = processLiveJobPayload(payload.raw).rows
   }
 
-  return toCatalogResult(payload, rows, dailySyncFallback)
+  const result = toCatalogResult(payload, rows, dailySyncFallback)
+
+  if (
+    !bustCache &&
+    onPartial &&
+    payload.sources.includes('official-sites') &&
+    payload.raw.length <= INITIAL_LIVE_ROWS
+  ) {
+    void fetchFullLiveJobsSnapshot(false).then(async (fullSnap) => {
+      if (fullSnap.items.length <= payload.raw.length) return
+      const fullPayload: RawPayload = {
+        ...payload,
+        raw: fullSnap.items
+          .slice(0, JSON_CAP)
+          .filter((r) => !r.status || r.status !== 'draft'),
+        dailySync:
+          dailySyncFromJsonPayload({
+            dailySync: fullSnap.dailySync,
+            generatedAt: fullSnap.generatedAt,
+          }) ?? ('dailySync' in payload ? payload.dailySync : null),
+      }
+      const fullRows = await processPayloadRows(fullPayload.raw)
+      if (fullRows.length > rows.length) {
+        onPartial(toCatalogResult(fullPayload, fullRows, dailySyncFallback))
+      }
+    })
+  }
+
+  return result
 }
 
 export function needsSupabaseBackgroundRefresh(

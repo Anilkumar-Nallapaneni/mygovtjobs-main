@@ -42,6 +42,11 @@ vi.mock('@/lib/jobsApi', () => ({
     generatedAt: null,
     dailySync: null,
   }),
+  fetchFullLiveJobsSnapshot: vi.fn().mockResolvedValue({
+    items: [],
+    generatedAt: null,
+    dailySync: null,
+  }),
   fetchJobsFromApi: vi.fn().mockResolvedValue({
     items: [],
     total: 0,

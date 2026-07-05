@@ -12,6 +12,16 @@
   }
 }
 
+/** Virtual rows use inline translateY for positioning — must not animate transform. */
+@keyframes mgj-fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 @keyframes mgj-stat-pop {
   from {
     opacity: 0;
@@ -95,7 +105,7 @@
 }
 
 .home-jobs-section__panel--animate .home-jobs-grid-virtual__row {
-  animation: mgj-fade-slide-up 0.38s cubic-bezier(0.22, 1, 0.36, 1) both;
+  animation: mgj-fade-in 0.38s cubic-bezier(0.22, 1, 0.36, 1) both;
   animation-delay: calc(var(--mgj-enter-index, 0) * 42ms);
 }
 

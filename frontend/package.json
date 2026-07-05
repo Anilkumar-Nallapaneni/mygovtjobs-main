@@ -13,7 +13,7 @@
     "i18n:audit": "node scripts/audit-locale-flats.mjs",
     "i18n:sync": "npm run i18n:generate",
     "clean": "node scripts/clean-dist.mjs",
-    "build": "npm run clean && npx tsc -p tsconfig.build.json && node ../scripts/build-sitemap.mjs && node ../scripts/build-live-jobs-list.mjs && node ../scripts/verify-live-jobs-snapshot.mjs --strict && vite build && node ../scripts/prerender-job-pages.mjs",
+    "build": "npm run clean && npx tsc -p tsconfig.build.json && node ../scripts/build-sitemap.mjs && node ../scripts/build-live-jobs-list.mjs && node ../scripts/build-live-jobs-bootstrap.mjs && node ../scripts/verify-live-jobs-snapshot.mjs --strict && vite build && node ../scripts/prerender-job-pages.mjs",
     "build:e2e": "node scripts/build-e2e.mjs",
     "serve": "vite preview",
     "type-check": "tsc --noEmit",
@@ -28,6 +28,7 @@
     "vercel:deploy": "npm run vercel:deploy --prefix .."
   },
   "dependencies": {
+    "@fontsource/sora": "^5.2.8",
     "@sentry/react": "^9.30.0",
     "@supabase/supabase-js": "^2.49.8",
     "@tanstack/react-query": "^5.90.12",

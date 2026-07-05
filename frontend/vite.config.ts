@@ -49,20 +49,25 @@ function perfIndexHtmlPlugin(
       const lines = [marker]
       if (usePreloadLink) {
         lines.push(
-          `    <link rel="preload" href="/data/live-jobs-list.json?v=${version}" as="fetch" crossorigin="anonymous" />`
+          `    <link rel="preload" href="/data/live-jobs-bootstrap.json?v=${version}" as="fetch" crossorigin="anonymous" />`
         )
       }
       lines.push(
         '    <script>',
         `      window.__LIVE_JOBS_PREFETCH__ = (function () {`,
-        `        var timeoutMs = 20000; /* keep in sync with LIVE_JOBS_SNAPSHOT_TIMEOUT_MS in jobsApi.ts */`,
+        `        var timeoutMs = 12000; /* bootstrap is small — keep in sync with jobsApi.ts */`,
         `        var controller = new AbortController();`,
         `        var timer = setTimeout(function () { controller.abort(); }, timeoutMs);`,
         `        var fetchOpts = { credentials: 'same-origin', cache: '${fetchCache}', signal: controller.signal };`,
-        `        return fetch('/data/live-jobs-list.json?v=${version}', fetchOpts)`,
-        '          .then(function (r) { clearTimeout(timer); return r.ok ? r.json() : fetch("/data/live-jobs.json?v=' +
-          version +
-          '", fetchOpts).then(function (r2) { return r2.ok ? r2.json() : null; }); })',
+        `        var v = '?v=${version}';`,
+        `        return fetch('/data/live-jobs-bootstrap.json' + v, fetchOpts)`,
+        '          .then(function (r) {',
+        '            clearTimeout(timer);',
+        '            if (r.ok) return r.json();',
+        '            return fetch("/data/live-jobs-list.json" + v, fetchOpts).then(function (r2) {',
+        '              return r2.ok ? r2.json() : fetch("/data/live-jobs.json" + v, fetchOpts).then(function (r3) { return r3.ok ? r3.json() : null; });',
+        '            });',
+        '          })',
         '          .catch(function () { clearTimeout(timer); return null; });',
         '      })();',
         '    </script>'
@@ -80,7 +85,7 @@ export default defineConfig(({ mode }) => {
   const isDev = mode === 'development'
   // Stable stamp in dev avoids busting the 2MB jobs JSON + SW caches on every `npm run dev`.
   const buildStamp = isDev ? 'dev-local' : new Date().toISOString()
-  const jobsFetchCache = isDev ? 'default' : 'no-cache'
+  const jobsFetchCache = 'default'
 
   return {
     plugins: [
@@ -100,11 +105,10 @@ export default defineConfig(({ mode }) => {
           runtimeCaching: [
             {
               urlPattern: ({ url }) => url.pathname.startsWith('/data/') && url.pathname.endsWith('.json'),
-              handler: 'NetworkFirst',
+              handler: 'CacheFirst',
               options: {
                 cacheName: 'data-json',
-                expiration: { maxEntries: 8, maxAgeSeconds: 60 },
-                networkTimeoutSeconds: 8,
+                expiration: { maxEntries: 16, maxAgeSeconds: 60 * 60 * 24 * 30 },
                 cacheableResponse: { statuses: [0, 200] },
               },
             },
@@ -170,6 +174,8 @@ export default defineConfig(({ mode }) => {
           manualChunks(id) {
             if (id.includes('node_modules')) {
               if (id.includes('@supabase')) return 'supabase'
+              if (id.includes('@tanstack')) return 'query-vendor'
+              if (id.includes('react-router')) return 'router-vendor'
               if (id.includes('i18next') || id.includes('react-i18next')) return 'i18n-vendor'
               return 'react-vendor'
             }

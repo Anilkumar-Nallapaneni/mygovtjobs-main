@@ -17,6 +17,9 @@ import { resolveJobsSourceMode } from '@/utils/liveJobsPipeline'
 import { checkDeployVersionChanged, clearServiceWorkerDataCaches } from '@/lib/dataCacheBust'
 import { applyColorMode } from './theme/designSystem'
 import { initSentry } from '@/lib/sentry'
+import '@fontsource/sora/400.css'
+import '@fontsource/sora/600.css'
+import '@fontsource/sora/700.css'
 import './styles/app.css'
 
 const Analytics = lazy(() =>

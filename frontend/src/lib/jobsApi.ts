@@ -131,14 +131,17 @@ export type LiveJobsSnapshot = {
   dailySync?: Record<string, unknown> | null
 }
 
+export const LIVE_JOBS_BOOTSTRAP_URL = '/data/live-jobs-bootstrap.json'
 export const LIVE_JOBS_LIST_URL = '/data/live-jobs-list.json'
 export const LIVE_JOBS_FULL_URL = '/data/live-jobs.json'
 
 let snapshotPrefetch: Promise<LiveJobsSnapshot> | null = null
+let fullSnapshotPromise: Promise<LiveJobsSnapshot> | null = null
 
 /** Clear in-flight/static snapshot cache (e.g. after a new deploy). */
 export function invalidateLiveJobsSnapshotPrefetch(): void {
   snapshotPrefetch = null
+  fullSnapshotPromise = null
   if (typeof window !== 'undefined') {
     delete window.__LIVE_JOBS_PREFETCH__
   }
@@ -186,7 +189,7 @@ async function fetchSnapshotUrl(url: string, bustCache: boolean): Promise<LiveJo
   const requestUrl = bustCache ? `${dataJsonUrl(url)}&t=${Date.now()}` : dataJsonUrl(url)
   try {
     const res = await fetchWithTimeout(requestUrl, {
-      cache: bustCache ? 'no-store' : 'no-cache',
+      cache: bustCache ? 'no-store' : 'default',
       timeoutMs: LIVE_JOBS_SNAPSHOT_TIMEOUT_MS,
     })
     if (!res.ok) return { items: [] }
@@ -200,9 +203,31 @@ async function fetchSnapshotUrl(url: string, bustCache: boolean): Promise<LiveJo
 }
 
 async function fetchLiveJobsSnapshotFromNetwork(bustCache: boolean): Promise<LiveJobsSnapshot> {
+  const bootstrap = await fetchSnapshotUrl(LIVE_JOBS_BOOTSTRAP_URL, bustCache)
+  if (bootstrap.items.length) return bootstrap
   const listSnap = await fetchSnapshotUrl(LIVE_JOBS_LIST_URL, bustCache)
   if (listSnap.items.length) return listSnap
   return fetchSnapshotUrl(LIVE_JOBS_FULL_URL, bustCache)
+}
+
+/** Full catalog (list → full JSON). Used after bootstrap first paint. */
+export async function fetchFullLiveJobsSnapshot(bustCache = false): Promise<LiveJobsSnapshot> {
+  if (bustCache) {
+    fullSnapshotPromise = null
+  }
+  if (!bustCache && fullSnapshotPromise) {
+    return fullSnapshotPromise
+  }
+  const run = async (): Promise<LiveJobsSnapshot> => {
+    const listSnap = await fetchSnapshotUrl(LIVE_JOBS_LIST_URL, bustCache)
+    if (listSnap.items.length) return listSnap
+    return fetchSnapshotUrl(LIVE_JOBS_FULL_URL, bustCache)
+  }
+  if (!bustCache) {
+    fullSnapshotPromise = run()
+    return fullSnapshotPromise
+  }
+  return run()
 }
 
 /** Static snapshot written by daily IngestAgent sync (8 AM IST). */
@@ -218,6 +243,7 @@ export async function fetchLiveJobsSnapshot(options?: {
   const run = async (): Promise<LiveJobsSnapshot> => fetchLiveJobsSnapshotFromNetwork(bustCache)
 
   if (bustCache) {
+    fullSnapshotPromise = null
     snapshotPrefetch = run()
     return snapshotPrefetch
   }
@@ -334,7 +360,7 @@ export async function fetchJobBySlug(slug: string): Promise<ApiJob | null> {
   try {
     const res = await fetchWithTimeout(
       dataJsonUrl(`/data/job-details/${encodeURIComponent(slug)}.json`),
-      { cache: 'no-cache' }
+      { cache: 'default' }
     )
     if (res.ok) {
       return (await res.json()) as ApiJob
