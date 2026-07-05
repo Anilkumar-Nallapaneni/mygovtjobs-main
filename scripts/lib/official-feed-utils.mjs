@@ -109,6 +109,7 @@ const BROWSER_HEADERS = (userAgent) => ({
 
 const GOV_HOST =
   /\.(gov|nic)\.in$|\.gov\.|\.nic\.|\.co\.in$|\.org\.in$|cdac\.in$|rectt\.|recruitment\./i;
+const BASE_BACKOFF_MS = 700;
 
 const httpsGovAgent = new https.Agent({
   rejectUnauthorized: false,
@@ -204,7 +205,7 @@ function needsTlsFallback(err) {
 }
 
 function getBackoffDelayMs(attempt) {
-  return 700 * (attempt + 1);
+  return BASE_BACKOFF_MS * (attempt + 1);
 }
 
 export async function fetchHtml(url, userAgent, timeoutMs = 28000, retries = 2) {

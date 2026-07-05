@@ -80,7 +80,10 @@ jobs:
               echo "Push rejected once — rebasing latest remote changes and retrying..."
               git fetch origin "${BRANCH}"
               git rebase "origin/${BRANCH}"
-              git push origin "HEAD:${BRANCH}"
+              if ! git push origin "HEAD:${BRANCH}"; then
+                echo "::error::Unable to push refreshed RSS snapshot after retry."
+                exit 1
+              fi
             fi
           fi
 

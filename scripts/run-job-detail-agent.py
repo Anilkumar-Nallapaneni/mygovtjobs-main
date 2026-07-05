@@ -44,12 +44,13 @@ async def main() -> int:
     print(f"  Failed:   {stats.get('failed', 0)}")
     by = stats.get("by_source") or {}
     print(f"  Sources:  pdf={by.get('pdf', 0)} notification={by.get('notification', 0)} listing={by.get('listing', 0)}")
-    if stats.get("scanned", 0) == 0:
+    failed = stats.get("failed", 0)
+    if stats.get("scanned", 0) == 0 and failed == 0:
         print("No eligible jobs found for job-detail publishing. Nothing to do.")
         return 0
-    if stats.get("failed", 0):
+    if failed:
         print("JobDetailAgent reported failures. Re-run with a smaller --limit or inspect prior log lines for the first failing job.")
-    return 0 if stats.get("failed", 0) == 0 else 1
+    return 0 if failed == 0 else 1
 
 
 if __name__ == "__main__":

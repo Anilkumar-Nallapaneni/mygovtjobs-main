@@ -62,7 +62,7 @@ async function main() {
   const maxPortalSites = Math.max(0, parseNumberArg(process.argv, "max-portal-sites", 0));
   const maxTotalItems = Math.max(0, parseNumberArg(process.argv, "max-total-items", 0));
   const rssOnly = process.argv.includes("--rss-only");
-  const shouldMergeExisting =
+  const shouldMergeWithExisting =
     process.argv.includes("--merge-existing") ||
     shouldAutoMergeForBoundedRun({ maxRuntimeMinutes, maxFeeds, maxPortalSites, maxTotalItems, rssOnly });
   const runtimeDeadlineAtMs = maxRuntimeMinutes > 0 ? Date.now() + maxRuntimeMinutes * 60_000 : 0;
@@ -116,7 +116,7 @@ async function main() {
     items = items.slice(0, maxTotalItems);
   }
 
-  if (shouldMergeExisting || onlyFeedIds?.length) {
+  if (shouldMergeWithExisting || onlyFeedIds?.length) {
     try {
       const prev = JSON.parse(readFileSync(OUT_FILE, "utf8"));
       const prevItems = Array.isArray(prev.items) ? prev.items : [];

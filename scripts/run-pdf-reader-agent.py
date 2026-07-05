@@ -74,12 +74,13 @@ async def main() -> int:
     _log(f"  Skipped (exists):  {stats.get('skipped_existing', 0)}")
     _log(f"  Failed:            {stats.get('failed', 0)}")
     _log(f"  Memory index:      {agent.memory_index_path}")
-    if stats.get("scanned", 0) == 0:
+    failed = stats.get("failed", 0)
+    if stats.get("scanned", 0) == 0 and failed == 0:
         _log("No eligible jobs found for PDF reading. Nothing to do.")
         return 0
-    if stats.get("failed", 0):
+    if failed:
         _log("PdfReaderAgent reported failures. Re-run with a smaller --limit or inspect prior log lines for the first failing job.")
-    return 0 if stats.get("failed", 0) == 0 else 1
+    return 0 if failed == 0 else 1
 
 
 if __name__ == "__main__":
