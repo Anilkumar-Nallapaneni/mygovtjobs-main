@@ -95,8 +95,8 @@ jobs:
         env:
           DATABASE_URL: ${{ env.DATABASE_URL }}
         run: |
-          if [ -z "$METADATA_LIMIT" ]; then
-            echo "::error::metadata_limit is empty"
+          if ! [[ "$METADATA_LIMIT" =~ ^[0-9]+$ ]]; then
+            echo "::error::metadata_limit must be a non-negative integer"
             exit 1
           fi
           node scripts/run-python.mjs scripts/enrich-jobs-metadata.py --limit "$METADATA_LIMIT"
@@ -108,8 +108,8 @@ jobs:
           SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL }}
           SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
         run: |
-          if [ -z "$PDF_LIMIT" ]; then
-            echo "::error::pdf_limit is empty"
+          if ! [[ "$PDF_LIMIT" =~ ^[0-9]+$ ]]; then
+            echo "::error::pdf_limit must be a non-negative integer"
             exit 1
           fi
           node scripts/run-python.mjs scripts/run-pdf-reader-agent.py --limit "$PDF_LIMIT" --concurrency 4
@@ -121,8 +121,8 @@ jobs:
           SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL }}
           SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
         run: |
-          if [ -z "$DETAIL_LIMIT" ]; then
-            echo "::error::detail_limit is empty"
+          if ! [[ "$DETAIL_LIMIT" =~ ^[0-9]+$ ]]; then
+            echo "::error::detail_limit must be a non-negative integer"
             exit 1
           fi
           node scripts/run-python.mjs scripts/run-job-detail-agent.py --limit "$DETAIL_LIMIT" --concurrency 2

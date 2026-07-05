@@ -46,6 +46,10 @@ function parseNumberArg(argv, name, fallback = 0) {
   return Number.isFinite(value) ? value : fallback;
 }
 
+function shouldAutoMergeForBoundedRun({ maxRuntimeMinutes, maxFeeds, maxPortalSites, maxTotalItems, rssOnly }) {
+  return Boolean(rssOnly || maxRuntimeMinutes || maxFeeds || maxPortalSites || maxTotalItems);
+}
+
 async function main() {
   const raw = JSON.parse(readFileSync(CONFIG_PATH, "utf8"));
   const lookbackDays = parseDaysArg(process.argv, Number(raw.lookbackDays) || 60);
@@ -57,10 +61,10 @@ async function main() {
   const maxFeeds = Math.max(0, parseNumberArg(process.argv, "max-feeds", 0));
   const maxPortalSites = Math.max(0, parseNumberArg(process.argv, "max-portal-sites", 0));
   const maxTotalItems = Math.max(0, parseNumberArg(process.argv, "max-total-items", 0));
+  const rssOnly = process.argv.includes("--rss-only");
   const shouldMergeExisting =
     process.argv.includes("--merge-existing") ||
-    process.argv.includes("--rss-only") ||
-    Boolean(maxRuntimeMinutes || maxFeeds || maxPortalSites || maxTotalItems);
+    shouldAutoMergeForBoundedRun({ maxRuntimeMinutes, maxFeeds, maxPortalSites, maxTotalItems, rssOnly });
   const runtimeDeadlineAtMs = maxRuntimeMinutes > 0 ? Date.now() + maxRuntimeMinutes * 60_000 : 0;
   console.log(`Lookback window: ${lookbackDays} days`);
   console.log(
@@ -83,7 +87,7 @@ async function main() {
   const portalIds = loadAdmitResultPortalIds();
   let siteReports = [];
   let portalItems = [];
-  if (portalIds.length && (!runtimeDeadlineAtMs || Date.now() < runtimeDeadlineAtMs)) {
+  if (portalIds.length && !rssOnly && (!runtimeDeadlineAtMs || Date.now() < runtimeDeadlineAtMs)) {
     console.log(`\nScraping ${portalIds.length} admit/result portals (officialSites.js)…`);
     const sites = await fetchOfficialSiteItems({
       lookbackDays,

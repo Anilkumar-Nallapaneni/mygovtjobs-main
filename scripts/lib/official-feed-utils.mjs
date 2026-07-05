@@ -203,7 +203,7 @@ function needsTlsFallback(err) {
   );
 }
 
-function backoffDelayMs(attempt) {
+function getBackoffDelayMs(attempt) {
   return 700 * (attempt + 1);
 }
 
@@ -239,7 +239,7 @@ export async function fetchHtml(url, userAgent, timeoutMs = 28000, retries = 2) 
         }
       }
       if (attempt < retries) {
-        await new Promise((r) => setTimeout(r, backoffDelayMs(attempt)));
+        await new Promise((r) => setTimeout(r, getBackoffDelayMs(attempt)));
       }
     }
   }
@@ -276,7 +276,7 @@ export async function fetchText(url, userAgent, timeoutMs = 28000, retries = 2) 
         }
       }
       if (attempt < retries) {
-        await new Promise((r) => setTimeout(r, backoffDelayMs(attempt)));
+        await new Promise((r) => setTimeout(r, getBackoffDelayMs(attempt)));
       }
     }
   }

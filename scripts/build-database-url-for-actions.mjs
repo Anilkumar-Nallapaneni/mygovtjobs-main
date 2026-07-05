@@ -40,7 +40,7 @@ function validateDatabaseUrl(rawUrl) {
     fail('Invalid DATABASE_URL secret.', ['Missing host in database URL.'])
   }
 
-  if (/^db\.[^.]+\.supabase\.co$/.test(parsed.hostname) && (parsed.port || '5432') === '6543') {
+  if (/^db\.[^.]+\.supabase\.co$/.test(parsed.hostname) && parsed.port === '6543') {
     fail('Invalid DATABASE_URL secret.', [
       'Do not use db.PROJECT.supabase.co:6543 on GitHub Actions.',
       'Use the Transaction pooler host aws-N-REGION.pooler.supabase.com:6543 instead.',

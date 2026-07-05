@@ -75,12 +75,12 @@ jobs:
           else
             git commit -m "chore(data): refresh official RSS snapshot"
             git fetch origin "${BRANCH}"
+            git rebase "origin/${BRANCH}"
             if ! git push origin "HEAD:${BRANCH}"; then
-              echo "Push rejected — rebasing on remote and retrying..."
-              git stash push -u -m "official-rss-leftovers" || true
+              echo "Push rejected once — rebasing latest remote changes and retrying..."
+              git fetch origin "${BRANCH}"
               git rebase "origin/${BRANCH}"
               git push origin "HEAD:${BRANCH}"
-              git stash drop || true
             fi
           fi
 
