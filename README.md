@@ -474,7 +474,9 @@ Repo: [github.com/Anilkumar-Nallapaneni/mygovtjobs-main/actions](https://github.
 | `ADMIN_API_KEY` | Same as `backend/.env` |
 | `ALERT_SITE_URL` | `https://govtjobs.me` |
 
-**Alternative to `DATABASE_URL`:** set `SUPABASE_PROJECT_REF` + `SUPABASE_DB_PASSWORD` + `SUPABASE_DB_REGION`.
+**Alternative to `DATABASE_URL`:** set `SUPABASE_PROJECT_REF` + `SUPABASE_DB_PASSWORD` and, when needed, `SUPABASE_POOLER_HOST` / `SUPABASE_POOLER_PORT` / `SUPABASE_DB_REGION`.
+
+**Important:** GitHub Actions must use the Supabase **transaction pooler** host (`aws-N-REGION.pooler.supabase.com:6543`), not `db.PROJECT.supabase.co:6543`.
 
 ### Optional secrets (alerts)
 
@@ -488,13 +490,22 @@ Repo: [github.com/Anilkumar-Nallapaneni/mygovtjobs-main/actions](https://github.
 
 ### Workflows
 
-| File | Schedule | Purpose |
-|------|----------|---------|
-| `supabase-auto-ingest.yml` | Daily 8 AM IST | Main scrape + export + sitemap |
-| `weekly-enrich.yml` | Sunday | PDF enrich + detail JSON files |
-| `weekly-portal-audit.yml` | Weekly | Portal health check |
-| `ci.yml` | On PR/push | Lint, test, build |
-| `notify-on-failure.yml` | Called on failure | Email/Slack alert |
+| File | Trigger | Runtime target | Purpose | Current notes / risks |
+|------|---------|----------------|---------|------------------------|
+| `ci.yml` | PRs + pushes to `main`/`master` | ~10–30 min | Frontend/backend checks and E2E | Failure notifications are now push-only to avoid noisy PR alerts. |
+| `fetch-official-feeds.yml` | Every 4 hours + manual | ≤30 min fetch step | Refresh official RSS snapshot + archives | Runs **RSS only** on schedule; admit/result portal scraping stays in daily ingest to avoid duplicate work. |
+| `supabase-auto-ingest.yml` | Daily 8 AM IST + manual | ≤90 min | Main scrape → Supabase → exports → feeds → sitemap | Fails fast on missing/invalid DB credentials before ingest starts. |
+| `weekly-enrich.yml` | Sunday 8:30 AM IST + manual | ≤120 min | Metadata enrich + PDF reader + job-detail publish | Manual runs can override metadata/PDF/detail limits. |
+| `weekly-portal-audit.yml` | Sunday 9:30 AM IST + manual | ≤45 min | Official portal health audit | Uploads the JSON report even on failures. |
+| `ingest-api.yml` | Manual only | ≤10 min | Trigger hosted backend ingest endpoint | Kept as a manual fallback for hosted API deployments. |
+| `supabase-auto-ingest-self-hosted.yml` | Manual only | User-managed | Optional Windows self-hosted ingest | Kept as an escape hatch; not part of normal cloud automation. |
+| `notify-on-failure.yml` | Called by other workflows | ≤10 min | Email / Slack failure notifications | Reusable helper only. |
+
+### Workflow coverage cleanup
+
+- The 4-hourly RSS workflow no longer re-scrapes admit/result portals; that work remains covered by the daily Supabase ingest.
+- Manual fallback workflows (`ingest-api.yml`, `supabase-auto-ingest-self-hosted.yml`) are retained because they cover distinct hosted/self-hosted recovery paths.
+- Failure notifications are reused via `notify-on-failure.yml`; no duplicate notification jobs were added.
 
 ### Push GitHub secrets from local
 
@@ -504,7 +515,36 @@ npm run github:secrets:push
 
 ### Manual trigger
 
-GitHub → **Actions** → **Supabase auto ingest** → **Run workflow**
+GitHub → **Actions** → choose a workflow → **Run workflow**
+
+- **Supabase auto ingest:** run after updating DB secrets or after scraper fixes
+- **Fetch official RSS:** use for an on-demand RSS refresh
+- **Weekly PDF enrich:** optionally override `metadata_limit`, `pdf_limit`, and `detail_limit`
+- **Weekly portal audit:** use after fixing `officialSites.ts` links
+
+### Expected runtime bounds
+
+| Workflow | Expected bound |
+|----------|----------------|
+| `ci.yml` | 10–30 min depending on E2E |
+| `fetch-official-feeds.yml` | 10–30 min |
+| `supabase-auto-ingest.yml` | 20–90 min |
+| `weekly-enrich.yml` | 30–120 min |
+| `weekly-portal-audit.yml` | 10–45 min |
+
+### Troubleshooting quick checks
+
+1. **Database preflight**
+   - Missing credentials: add `DATABASE_URL` **or** `SUPABASE_PROJECT_REF` + `SUPABASE_DB_PASSWORD`
+   - Invalid pooler host: use `aws-N-REGION.pooler.supabase.com:6543`
+2. **RSS workflow**
+   - Re-run `Fetch official RSS` if a source times out; the workflow now merges bounded runs with the last snapshot
+   - Inspect `official-feed-items.json` generation if the validation step reports an empty snapshot
+3. **Weekly enrich**
+   - Start with smaller manual limits (`25/10/10`) to isolate bad PDF/detail jobs
+   - Check the failing stage directly: metadata enrich, `PdfReaderAgent`, or `JobDetailAgent`
+4. **Portal audit**
+   - Download the uploaded `portal-audit-<run_id>` artifact and fix stale URLs in `frontend/src/data/officialSites.ts`
 
 ---
 

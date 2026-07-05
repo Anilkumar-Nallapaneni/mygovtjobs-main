@@ -6,6 +6,10 @@ on:
     - cron: "0 4 * * 0" # Sunday 9:30 AM IST (after weekly enrich)
   workflow_dispatch:
 
+concurrency:
+  group: weekly-portal-audit-${{ github.ref_name }}
+  cancel-in-progress: true
+
 env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
@@ -17,16 +21,16 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 45
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v5
         with:
           node-version: "24"
           cache: npm
           cache-dependency-path: package-lock.json
 
       - name: Install dependencies
-        run: npm ci
+        run: npm ci --prefer-offline --no-audit
 
       - name: Audit official portal URLs (strict ≤10% stale 404/410)
         env:

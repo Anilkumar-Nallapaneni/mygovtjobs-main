@@ -203,6 +203,10 @@ function needsTlsFallback(err) {
   );
 }
 
+function backoffDelayMs(attempt) {
+  return 700 * (attempt + 1);
+}
+
 export async function fetchHtml(url, userAgent, timeoutMs = 28000, retries = 2) {
   let lastErr;
   let hostname = "";
@@ -235,7 +239,7 @@ export async function fetchHtml(url, userAgent, timeoutMs = 28000, retries = 2) 
         }
       }
       if (attempt < retries) {
-        await new Promise((r) => setTimeout(r, 700 * (attempt + 1)));
+        await new Promise((r) => setTimeout(r, backoffDelayMs(attempt)));
       }
     }
   }
@@ -243,25 +247,38 @@ export async function fetchHtml(url, userAgent, timeoutMs = 28000, retries = 2) 
 }
 
 /** Fetch any text response (RSS/XML/HTML) with the same gov TLS fallbacks. */
-export async function fetchText(url, userAgent, timeoutMs = 28000) {
-  try {
-    const res = await fetch(url, {
-      redirect: "follow",
-      signal: AbortSignal.timeout(timeoutMs),
-      headers: {
-        ...BROWSER_HEADERS(userAgent),
-        Accept: "application/rss+xml, application/xml, text/xml, text/html, */*",
-      },
-    });
-    const text = await res.text();
-    if (res.ok && text.length > 50) return { text, finalUrl: res.url || url };
-    if (text.length > 50 && isGovHost(new URL(url).hostname)) return { text, finalUrl: res.url || url };
-    throw new Error(`HTTP ${res.status}`);
-  } catch (e) {
-    if (isGovHost(new URL(url).hostname) && needsTlsFallback(e)) {
-      const { html } = await httpsGetHtml(url, userAgent, timeoutMs);
-      return { text: html, finalUrl: url };
+export async function fetchText(url, userAgent, timeoutMs = 28000, retries = 2) {
+  const hostname = new URL(url).hostname;
+  let lastErr;
+
+  for (let attempt = 0; attempt <= retries; attempt++) {
+    try {
+      const res = await fetch(url, {
+        redirect: "follow",
+        signal: AbortSignal.timeout(timeoutMs),
+        headers: {
+          ...BROWSER_HEADERS(userAgent),
+          Accept: "application/rss+xml, application/xml, text/xml, text/html, */*",
+        },
+      });
+      const text = await res.text();
+      if (res.ok && text.length > 50) return { text, finalUrl: res.url || url };
+      if (text.length > 50 && isGovHost(hostname)) return { text, finalUrl: res.url || url };
+      throw new Error(`HTTP ${res.status}`);
+    } catch (e) {
+      lastErr = e;
+      if (isGovHost(hostname) && needsTlsFallback(e)) {
+        try {
+          const { html } = await httpsGetHtml(url, userAgent, timeoutMs);
+          return { text: html, finalUrl: url };
+        } catch (tlsErr) {
+          lastErr = tlsErr;
+        }
+      }
+      if (attempt < retries) {
+        await new Promise((r) => setTimeout(r, backoffDelayMs(attempt)));
+      }
     }
-    throw e;
   }
+  throw lastErr;
 }

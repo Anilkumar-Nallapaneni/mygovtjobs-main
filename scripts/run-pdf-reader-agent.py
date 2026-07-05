@@ -49,6 +49,13 @@ async def main() -> int:
     parser.add_argument("--no-export", action="store_true", help="Skip live-jobs.json export")
     args = parser.parse_args()
 
+    if args.limit < 0:
+        _log("Invalid --limit: use 0 for all jobs or a positive integer.")
+        return 2
+    if args.concurrency < 1:
+        _log("Invalid --concurrency: must be at least 1.")
+        return 2
+
     live_only = not args.include_expired
     agent = PdfReaderAgent()
     stats = await agent.run(
@@ -67,6 +74,11 @@ async def main() -> int:
     _log(f"  Skipped (exists):  {stats.get('skipped_existing', 0)}")
     _log(f"  Failed:            {stats.get('failed', 0)}")
     _log(f"  Memory index:      {agent.memory_index_path}")
+    if stats.get("scanned", 0) == 0:
+        _log("No eligible jobs found for PDF reading. Nothing to do.")
+        return 0
+    if stats.get("failed", 0):
+        _log("PdfReaderAgent reported failures. Re-run with a smaller --limit or inspect prior log lines for the first failing job.")
     return 0 if stats.get("failed", 0) == 0 else 1
 
 

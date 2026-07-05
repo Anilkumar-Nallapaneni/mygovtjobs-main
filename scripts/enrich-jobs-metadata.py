@@ -56,6 +56,9 @@ async def main() -> None:
     )
     args = argp.parse_args()
 
+    if args.limit < 0:
+        raise SystemExit("Invalid --limit: use 0 for all jobs or a positive integer.")
+
     parser = NotificationParser()
     updated = 0
     scanned = 0
@@ -72,6 +75,9 @@ async def main() -> None:
 
         cap = args.limit if args.limit else len(rows)
         total = min(len(rows), cap)
+        if total == 0:
+            _log("No eligible jobs found for metadata enrichment. Nothing to do.")
+            return
         _log(f"Enriching up to {total} job(s)…")
 
         for job in rows:

@@ -8,6 +8,14 @@ import { DEFAULT_LOOKBACK_DAYS, isWithinLookback } from "./lookback.mjs";
 
 const CONFIG_PATH = join(dirname(fileURLToPath(import.meta.url)), "..", "official-sources.json");
 
+function withTimeout(promise, timeoutMs, label) {
+  if (!timeoutMs || timeoutMs <= 0) return promise;
+  return Promise.race([
+    promise,
+    new Promise((_, reject) => setTimeout(() => reject(new Error(`${label} timed out after ${timeoutMs}ms`)), timeoutMs)),
+  ]);
+}
+
 function listingUrlsFor(feed) {
   return [...new Set([feed.listingUrl, ...(feed.altListingUrls || [])].filter(Boolean))];
 }
@@ -62,12 +70,12 @@ async function parseRssText(xml, feed, sourceId, { titleRe, maxItems, scanLimit,
 }
 
 async function fetchRssFeed(feedUrl, feed, sourceId, ctx) {
-  const { text } = await fetchText(feedUrl, ctx.userAgent, ctx.timeoutMs);
+  const { text } = await fetchText(feedUrl, ctx.userAgent, ctx.timeoutMs, ctx.requestRetries);
   return parseRssText(text, feed, sourceId, { ...ctx, fetchMethod: "rss-feed" });
 }
 
 async function fetchHtmlListing(pageUrl, feed, sourceId, ctx) {
-  const { html, finalUrl } = await fetchHtml(pageUrl, ctx.userAgent, ctx.timeoutMs);
+  const { html, finalUrl } = await fetchHtml(pageUrl, ctx.userAgent, ctx.timeoutMs, ctx.requestRetries);
   const discovered = discoverRssUrl(html, finalUrl);
   if (discovered) {
     try {
@@ -181,16 +189,39 @@ export async function fetchOfficialRssSources(options = {}) {
   const lookbackDays = options.lookbackDays ?? Number(raw.lookbackDays) ?? DEFAULT_LOOKBACK_DAYS;
   const userAgent = raw.userAgent || "GovJobAlertFetcher/1.0";
   const timeoutMs = options.timeoutMs ?? 28000;
+  const requestRetries = Math.max(0, Number(options.requestRetries) || 0);
+  const sourceTimeoutMs = Math.max(timeoutMs, Number(options.sourceTimeoutMs) || timeoutMs * 3);
+  const runtimeDeadlineAtMs = Number(options.runtimeDeadlineAtMs) || 0;
   const feedIds = options.feedIds;
-  const feeds = (Array.isArray(raw.feeds) ? raw.feeds : []).filter(
-    (feed) => !feedIds?.length || feedIds.includes(feed.id)
-  );
+  const maxFeeds = Math.max(0, Number(options.maxFeeds) || 0);
+  let feeds = (Array.isArray(raw.feeds) ? raw.feeds : []).filter((feed) => !feedIds?.length || feedIds.includes(feed.id));
+  if (maxFeeds > 0) feeds = feeds.slice(0, maxFeeds);
   const sourceReports = [];
   const byLink = new Map();
 
   for (const feed of feeds) {
+    if (runtimeDeadlineAtMs && Date.now() >= runtimeDeadlineAtMs) {
+      console.warn("Stopping RSS fetch early: runtime budget exhausted.");
+      break;
+    }
     process.stdout.write(`  RSS/HTML ${feed.id || feed.name}…\n`);
-    const { report, rows } = await fetchOneSource(feed, { userAgent, lookbackDays, timeoutMs });
+    const { report, rows } = await withTimeout(
+      fetchOneSource(feed, { userAgent, lookbackDays, timeoutMs, requestRetries }),
+      sourceTimeoutMs,
+      feed.id || feed.name || "feed"
+    ).catch((error) => ({
+      report: {
+        id: feed.id || feed.feedUrl || feed.listingUrl,
+        name: feed.name || feed.id || feed.feedUrl || feed.listingUrl,
+        feedUrl: feed.feedUrl || null,
+        listingUrl: feed.listingUrl || null,
+        ok: false,
+        error: error instanceof Error ? error.message : String(error),
+        itemCount: 0,
+        fetchMethod: null,
+      },
+      rows: [],
+    }));
     sourceReports.push(report);
     for (const row of rows) {
       if (!byLink.has(row.link)) byLink.set(row.link, row);

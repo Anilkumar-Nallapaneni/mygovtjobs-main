@@ -24,6 +24,14 @@ import { DEFAULT_LOOKBACK_DAYS, filterByLookback, isWithinLookback, parseDaysArg
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const CONFIG_PATH = join(__dirname, "official-sites-fetch.json");
 
+function withTimeout(promise, timeoutMs, label) {
+  if (!timeoutMs || timeoutMs <= 0) return promise;
+  return Promise.race([
+    promise,
+    new Promise((_, reject) => setTimeout(() => reject(new Error(`${label} timed out after ${timeoutMs}ms`)), timeoutMs)),
+  ]);
+}
+
 function loadConfig() {
   const raw = JSON.parse(readFileSync(CONFIG_PATH, "utf8"));
   const limitArg = process.argv.find((a) => a.startsWith("--limit="));
@@ -70,8 +78,8 @@ function toFeedRows(rawItems, site, method) {
   }));
 }
 
-async function parseRssFeed(feedUrl, site, parser, userAgent, maxItems, timeoutMs, lookbackDays) {
-  const { text } = await fetchText(feedUrl, userAgent, timeoutMs);
+async function parseRssFeed(feedUrl, site, parser, userAgent, maxItems, timeoutMs, lookbackDays, requestRetries) {
+  const { text } = await fetchText(feedUrl, userAgent, timeoutMs, requestRetries);
   const feed = await parser.parseString(text);
   const rows = [];
   const scanLimit = Math.min(500, maxItems * 4);
@@ -95,7 +103,7 @@ async function parseRssFeed(feedUrl, site, parser, userAgent, maxItems, timeoutM
 }
 
 async function scrapeFromHtml(pageUrl, site, cfg) {
-  const { html, finalUrl } = await fetchHtml(pageUrl, cfg.userAgent, cfg.requestTimeoutMs);
+  const { html, finalUrl } = await fetchHtml(pageUrl, cfg.userAgent, cfg.requestTimeoutMs, cfg.requestRetries);
   const links = extractJobLinks(html, finalUrl, {
     maxItems: cfg.maxItemsPerSite,
     titlePattern: cfg.titlePattern,
@@ -135,7 +143,8 @@ async function scrapeSite(site, cfg, parser) {
         cfg.userAgent,
         maxItems,
         cfg.requestTimeoutMs,
-        cfg.lookbackDays
+        cfg.lookbackDays,
+        cfg.requestRetries
       );
       for (const row of toFeedRows(rows, enriched, "rss-config")) {
         if (row.link) byLink.set(row.link, row);
@@ -154,7 +163,7 @@ async function scrapeSite(site, cfg, parser) {
     report.triedUrls.push(pageUrl);
 
     try {
-      const { html, finalUrl } = await fetchHtml(pageUrl, cfg.userAgent, cfg.requestTimeoutMs);
+      const { html, finalUrl } = await fetchHtml(pageUrl, cfg.userAgent, cfg.requestTimeoutMs, cfg.requestRetries);
       if (!enriched.rssUrl) {
         const rssDiscovered = discoverRssUrl(html, finalUrl);
         if (rssDiscovered && byLink.size < maxItems) {
@@ -166,7 +175,8 @@ async function scrapeSite(site, cfg, parser) {
               cfg.userAgent,
               maxItems,
               cfg.requestTimeoutMs,
-              cfg.lookbackDays
+              cfg.lookbackDays,
+              cfg.requestRetries
             );
             for (const row of toFeedRows(rows, enriched, "rss-discovered")) {
               if (row.link && !byLink.has(row.link)) byLink.set(row.link, row);
@@ -216,13 +226,32 @@ export async function fetchOfficialSiteItems(options = {}) {
   const siteReports = [];
   const allItems = [];
   const concurrency = Math.max(1, Number(cfg.concurrency) || 3);
+  const siteTimeoutMs = Math.max(cfg.requestTimeoutMs, Number(cfg.siteTimeoutMs) || cfg.requestTimeoutMs * 3);
+  const runtimeDeadlineAtMs = Number(cfg.runtimeDeadlineAtMs) || 0;
   let index = 0;
 
   async function worker() {
     while (index < sites.length) {
+      if (runtimeDeadlineAtMs && Date.now() >= runtimeDeadlineAtMs) return;
       const i = index++;
       const site = sites[i];
-      const { report, items } = await scrapeSite(site, cfg, parser);
+      const { report, items } = await withTimeout(
+        scrapeSite(site, cfg, parser),
+        siteTimeoutMs,
+        site.id || site.name || "site"
+      ).catch((error) => ({
+        report: {
+          id: site.id,
+          name: site.name,
+          url: site.latestUrl || site.url,
+          ok: false,
+          error: error instanceof Error ? error.message : String(error),
+          itemCount: 0,
+          method: null,
+          triedUrls: [],
+        },
+        items: [],
+      }));
       siteReports.push(report);
       allItems.push(...items);
       const tag = report.ok ? "ok" : "fail";
@@ -235,6 +264,9 @@ export async function fetchOfficialSiteItems(options = {}) {
 
   console.log(`Scraping ${sites.length} official portals (with URL fixes + fallbacks) …`);
   await Promise.all(Array.from({ length: concurrency }, () => worker()));
+  if (runtimeDeadlineAtMs && Date.now() >= runtimeDeadlineAtMs) {
+    console.warn("Stopped portal scrape early: runtime budget exhausted.");
+  }
 
   return { siteReports, items: allItems };
 }

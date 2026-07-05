@@ -16,14 +16,15 @@ env:
 jobs:
   frontend:
     runs-on: ubuntu-latest
+    timeout-minutes: 25
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
         with:
           node-version: "24"
           cache: npm
           cache-dependency-path: package-lock.json
-      - run: npm ci
+      - run: npm ci --prefer-offline --no-audit
       - run: npm run env:check
       - run: npm run type-check --prefix frontend
       - run: npm run lint --prefix frontend
@@ -39,14 +40,15 @@ jobs:
 
   e2e:
     runs-on: ubuntu-latest
+    timeout-minutes: 30
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
         with:
           node-version: "24"
           cache: npm
           cache-dependency-path: package-lock.json
-      - run: npm ci
+      - run: npm ci --prefer-offline --no-audit
       - run: npm run build:e2e --prefix frontend
       - run: npx playwright install --with-deps chromium
         working-directory: frontend
@@ -57,15 +59,16 @@ jobs:
   backend-smoke:
     runs-on: ubuntu-latest
     if: github.event_name == 'push' && (github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master')
+    timeout-minutes: 20
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
         with:
           node-version: "24"
           cache: npm
           cache-dependency-path: package-lock.json
-      - run: npm ci
-      - uses: actions/setup-python@v5
+      - run: npm ci --prefer-offline --no-audit
+      - uses: actions/setup-python@v6
         with:
           python-version: "3.12"
       - run: pip install -r backend/requirements.txt
@@ -82,14 +85,15 @@ jobs:
   data-quality:
     runs-on: ubuntu-latest
     if: github.event_name == 'push' && (github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master')
+    timeout-minutes: 20
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
         with:
           node-version: "24"
           cache: npm
           cache-dependency-path: package-lock.json
-      - run: npm ci
+      - run: npm ci --prefer-offline --no-audit
       - name: Job quality audit (strict thresholds)
         env:
           JOBS_AUDIT_STRICT: "1"
@@ -109,6 +113,7 @@ jobs:
     needs: [frontend, e2e, backend-smoke, data-quality]
     if: >-
       always() &&
+      github.event_name == 'push' &&
       (
         needs.frontend.result == 'failure' ||
         needs.e2e.result == 'failure' ||

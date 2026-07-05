@@ -39,26 +39,60 @@ function parseOnlyFeedIds(argv) {
     .filter(Boolean);
 }
 
+function parseNumberArg(argv, name, fallback = 0) {
+  const arg = argv.find((a) => a.startsWith(`--${name}=`));
+  if (!arg) return fallback;
+  const value = Number(arg.slice(name.length + 3));
+  return Number.isFinite(value) ? value : fallback;
+}
+
 async function main() {
   const raw = JSON.parse(readFileSync(CONFIG_PATH, "utf8"));
   const lookbackDays = parseDaysArg(process.argv, Number(raw.lookbackDays) || 60);
+  const requestTimeoutMs = Math.max(5_000, parseNumberArg(process.argv, "request-timeout-ms", 18_000));
+  const requestRetries = Math.max(0, parseNumberArg(process.argv, "request-retries", 1));
+  const sourceTimeoutMs = Math.max(requestTimeoutMs, parseNumberArg(process.argv, "source-timeout-ms", 75_000));
+  const portalSiteTimeoutMs = Math.max(requestTimeoutMs, parseNumberArg(process.argv, "portal-site-timeout-ms", 45_000));
+  const maxRuntimeMinutes = Math.max(0, parseNumberArg(process.argv, "max-runtime-minutes", 0));
+  const maxFeeds = Math.max(0, parseNumberArg(process.argv, "max-feeds", 0));
+  const maxPortalSites = Math.max(0, parseNumberArg(process.argv, "max-portal-sites", 0));
+  const maxTotalItems = Math.max(0, parseNumberArg(process.argv, "max-total-items", 0));
+  const shouldMergeExisting =
+    process.argv.includes("--merge-existing") ||
+    process.argv.includes("--rss-only") ||
+    Boolean(maxRuntimeMinutes || maxFeeds || maxPortalSites || maxTotalItems);
+  const runtimeDeadlineAtMs = maxRuntimeMinutes > 0 ? Date.now() + maxRuntimeMinutes * 60_000 : 0;
   console.log(`Lookback window: ${lookbackDays} days`);
+  console.log(
+    `Runtime guards: requestTimeout=${requestTimeoutMs}ms retries=${requestRetries} rssSourceTimeout=${sourceTimeoutMs}ms portalSiteTimeout=${portalSiteTimeoutMs}ms${
+      maxRuntimeMinutes ? ` maxRuntime=${maxRuntimeMinutes}m` : ""
+    }${maxFeeds ? ` maxFeeds=${maxFeeds}` : ""}${maxPortalSites ? ` maxPortalSites=${maxPortalSites}` : ""}`
+  );
 
   const onlyFeedIds = parseOnlyFeedIds(process.argv);
   const { sourceReports, items: rssFetched } = await fetchOfficialRssSources({
     lookbackDays,
     feedIds: onlyFeedIds,
+    maxFeeds,
+    requestRetries,
+    timeoutMs: requestTimeoutMs,
+    sourceTimeoutMs,
+    runtimeDeadlineAtMs,
   });
 
   const portalIds = loadAdmitResultPortalIds();
   let siteReports = [];
   let portalItems = [];
-  if (portalIds.length) {
+  if (portalIds.length && (!runtimeDeadlineAtMs || Date.now() < runtimeDeadlineAtMs)) {
     console.log(`\nScraping ${portalIds.length} admit/result portals (officialSites.js)…`);
     const sites = await fetchOfficialSiteItems({
       lookbackDays,
       onlySiteIds: portalIds,
-      maxSites: 0,
+      maxSites: maxPortalSites,
+      requestTimeoutMs,
+      requestRetries,
+      siteTimeoutMs: portalSiteTimeoutMs,
+      runtimeDeadlineAtMs,
       titlePattern:
         "recruit|vacanc|notif|advert|career|employment|bharti|naukri|exam|admit|result|hall\\s*ticket|call\\s*letter|merit|cut[\\s-]*off|apply|opening|posting|selection|appointment|walk-?in|notice|marks|scorecard",
     });
@@ -74,8 +108,11 @@ async function main() {
     const tb = b.publishedAt ? Date.parse(b.publishedAt) : 0;
     return tb - ta;
   });
+  if (maxTotalItems > 0) {
+    items = items.slice(0, maxTotalItems);
+  }
 
-  if (onlyFeedIds?.length) {
+  if (shouldMergeExisting || onlyFeedIds?.length) {
     try {
       const prev = JSON.parse(readFileSync(OUT_FILE, "utf8"));
       const prevItems = Array.isArray(prev.items) ? prev.items : [];
@@ -84,7 +121,10 @@ async function main() {
         const tb = b.publishedAt ? Date.parse(b.publishedAt) : 0;
         return tb - ta;
       });
-      console.log(`Merged partial fetch (${onlyFeedIds.length} sources) with ${prevItems.length} existing items → ${items.length} total`);
+      if (maxTotalItems > 0) {
+        items = items.slice(0, maxTotalItems);
+      }
+      console.log(`Merged bounded fetch with ${prevItems.length} existing items → ${items.length} total`);
     } catch {
       /* first run */
     }

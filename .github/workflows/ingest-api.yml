@@ -8,6 +8,7 @@ on:
 jobs:
   ingest:
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     steps:
       - name: Trigger backend ingest
         env:
@@ -21,6 +22,8 @@ jobs:
           URL="${API_URL%/}/api/admin/ingest/run-all"
           echo "POST $URL"
           HTTP=$(curl -sS -o /tmp/ingest.json -w "%{http_code}" \
+            --connect-timeout 15 \
+            --max-time 120 \
             -X POST "$URL" \
             -H "X-Admin-Key: $ADMIN_KEY" \
             -H "Content-Type: application/json")

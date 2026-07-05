@@ -6,6 +6,10 @@ on:
     - cron: "30 2 * * *"
   workflow_dispatch:
 
+concurrency:
+  group: supabase-auto-ingest-${{ github.ref_name }}
+  cancel-in-progress: false
+
 env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
@@ -20,42 +24,42 @@ jobs:
       - name: Start
         run: echo "=== Daily ingest started at $(date -u +%Y-%m-%dT%H:%M:%SZ) ==="
 
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
         with:
           fetch-depth: 1
           persist-credentials: true
 
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v5
         with:
           node-version: "24"
           cache: npm
 
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@v6
         with:
           python-version: "3.12"
 
       - name: Install dependencies
         run: |
           echo "=== $(date -u +%H:%M:%S) install ==="
-          npm ci
+          npm ci --prefer-offline --no-audit
           python -m venv backend/.venv
           backend/.venv/bin/pip install -r backend/requirements.txt
 
-      - name: Configure DATABASE_URL from secrets
+      - name: Resolve DATABASE_URL from secrets
         env:
           SECRET_DATABASE_URL: ${{ secrets.DATABASE_URL }}
           SUPABASE_PROJECT_REF: ${{ secrets.SUPABASE_PROJECT_REF }}
           SUPABASE_DB_PASSWORD: ${{ secrets.SUPABASE_DB_PASSWORD }}
           SUPABASE_DB_REGION: ${{ secrets.SUPABASE_DB_REGION }}
           SUPABASE_POOLER_HOST: ${{ secrets.SUPABASE_POOLER_HOST }}
+          SUPABASE_POOLER_PORT: ${{ secrets.SUPABASE_POOLER_PORT }}
         run: |
-          if [ -n "$SUPABASE_DB_PASSWORD" ]; then
-            echo "Building DATABASE_URL from pooler secrets..."
-            node scripts/build-database-url-for-actions.mjs
-          elif [ -n "$SECRET_DATABASE_URL" ]; then
-            echo "Using DATABASE_URL secret directly"
-            echo "DATABASE_URL=$SECRET_DATABASE_URL" >> "$GITHUB_ENV"
-          fi
+          node scripts/build-database-url-for-actions.mjs
+
+      - name: Validate resolved DATABASE_URL
+        env:
+          DATABASE_URL: ${{ env.DATABASE_URL }}
+        run: node scripts/diagnose-database-url.mjs
 
       - name: Validate secrets
         env:
@@ -99,8 +103,14 @@ jobs:
         continue-on-error: true
         run: |
           echo "=== $(date -u +%H:%M:%S) official feeds ==="
-          npm run fetch:official:feeds
-        timeout-minutes: 45
+          npm run fetch:official:feeds -- \
+            --merge-existing \
+            --request-timeout-ms=18000 \
+            --request-retries=1 \
+            --source-timeout-ms=75000 \
+            --portal-site-timeout-ms=45000 \
+            --max-runtime-minutes=35
+        timeout-minutes: 40
 
       - name: Build official archives
         run: |
