@@ -2,7 +2,9 @@
 
 from __future__ import annotations
 
+from dataclasses import dataclass
 from datetime import datetime, timezone
+from typing import Any
 
 from sqlalchemy.ext.asyncio import AsyncSession
 
@@ -19,34 +21,59 @@ from app.utils.slim_detail import slim_detail_for_db
 from app.utils.vacancy_extract import sanitize_vacancies
 
 
-async def enrich_job_from_pdfs(
-    session: AsyncSession,
-    job: Job,
-    parser: NotificationParser,
-    *,
-    upload_storage: bool = True,
-) -> bool:
-    """Fetch PDFs, merge fields into job.detail, sync child rows. Returns True if mutated."""
-    detail = dict(job.detail or {})
+def job_row_for_pdf_prep(job: Job) -> dict[str, Any]:
+    """Plain row for PDF fetch — safe to use after the DB session is closed."""
+    return {
+        "title": job.title,
+        "apply_url": job.apply_url,
+        "detail": dict(job.detail or {}),
+    }
+
+
+@dataclass
+class PdfEnrichmentPrep:
+    pdf_fields: dict[str, Any]
+    norm: dict[str, Any]
+
+
+async def prepare_pdf_enrichment(row: dict[str, Any], parser: NotificationParser) -> PdfEnrichmentPrep:
+    """Download/parse PDFs (slow network I/O) without holding a DB connection."""
+    detail = dict(row.get("detail") or {})
     pdf_urls = list(detail.get("pdf_urls") or detail.get("pdfUrls") or [])
-    if job.apply_url and ".pdf" in str(job.apply_url).lower():
-        pdf_urls.insert(0, job.apply_url)
+    apply_url = row.get("apply_url")
+    if apply_url and ".pdf" in str(apply_url).lower():
+        pdf_urls.insert(0, apply_url)
 
     pdf_urls = await ensure_pdf_urls(
         pdf_urls,
-        job.apply_url if ".pdf" not in str(job.apply_url or "").lower() else None,
+        apply_url if apply_url and ".pdf" not in str(apply_url).lower() else None,
     )
     pdf_fields = await merge_pdf_fields(pdf_urls) if pdf_urls else {}
-
     norm = parser.parse(
         {
-            "title": job.title,
-            "link": job.apply_url,
+            "title": row.get("title"),
+            "link": apply_url,
             "pdfUrls": pdf_urls,
             "source": detail.get("source"),
         },
         pdf_fields=pdf_fields,
     )
+    return PdfEnrichmentPrep(pdf_fields=pdf_fields, norm=norm)
+
+
+async def apply_pdf_enrichment(
+    session: AsyncSession,
+    job: Job,
+    parser: NotificationParser,
+    prep: PdfEnrichmentPrep,
+    *,
+    upload_storage: bool = True,
+) -> bool:
+    """Persist prepared PDF fields — keep DB session open only for writes."""
+    _ = parser
+    pdf_fields = prep.pdf_fields
+    norm = prep.norm
+    detail = dict(job.detail or {})
     changed = False
     nd = norm.get("detail") or {}
     new_vac = int(norm.get("vacancies") or 0)
@@ -136,6 +163,18 @@ async def enrich_job_from_pdfs(
             changed = True
 
     return changed
+
+
+async def enrich_job_from_pdfs(
+    session: AsyncSession,
+    job: Job,
+    parser: NotificationParser,
+    *,
+    upload_storage: bool = True,
+) -> bool:
+    """Fetch PDFs, merge fields into job.detail, sync child rows. Returns True if mutated."""
+    prep = await prepare_pdf_enrichment(job_row_for_pdf_prep(job), parser)
+    return await apply_pdf_enrichment(session, job, parser, prep, upload_storage=upload_storage)
 
 
 def job_to_detail_payload(job: Job, detail: dict | None = None) -> dict:

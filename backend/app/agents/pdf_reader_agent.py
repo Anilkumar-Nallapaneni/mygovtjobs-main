@@ -11,15 +11,25 @@ from pathlib import Path
 from typing import Any
 
 from sqlalchemy import select
+from sqlalchemy.exc import InterfaceError, OperationalError
 
 from app.database.session import SessionLocal
 from app.models.job import Job
 from app.parsers.notification_parser import NotificationParser
-from app.services.job_pdf_enrich_service import enrich_job_from_pdfs, job_to_detail_payload
+from app.services.job_pdf_enrich_service import (
+    apply_pdf_enrichment,
+    job_row_for_pdf_prep,
+    job_to_detail_payload,
+    prepare_pdf_enrichment,
+)
 from app.services.job_persist_service import JobPersistService
 from app.utils.job_pdf_urls import collect_pdf_urls
 
 logger = logging.getLogger(__name__)
+
+_DB_RETRY_ERRORS = (InterfaceError, OperationalError)
+_MEMORY_INDEX_FLUSH_EVERY = 25
+
 
 def _resolve_repo_root() -> Path:
     here = Path(__file__).resolve()
@@ -60,6 +70,7 @@ class PdfReaderAgent:
         """
         statuses = ("live",) if live_only else ("live", "expired")
         sem = asyncio.Semaphore(max(1, concurrency))
+        stats_lock = asyncio.Lock()
         stats: dict[str, Any] = {
             "scanned": 0,
             "memorized": 0,
@@ -86,60 +97,90 @@ class PdfReaderAgent:
                     continue
                 candidates.append(job)
 
-            cap = limit if limit > 0 else len(candidates)
-            batch = candidates[:cap]
-            total = len(batch)
-            job_ids = [str(job.id) for job in batch]
-            print(
-                f"PdfReaderAgent: {total} job(s) to read "
-                f"({stats['skipped_existing']} already memorized, "
-                f"{stats['skipped_no_pdf']} without PDF)",
-                flush=True,
-            )
+        cap = limit if limit > 0 else len(candidates)
+        batch = candidates[:cap]
+        total = len(batch)
+        job_ids = [str(job.id) for job in batch]
+        print(
+            f"PdfReaderAgent: {total} job(s) to read "
+            f"({stats['skipped_existing']} already memorized, "
+            f"{stats['skipped_no_pdf']} without PDF)",
+            flush=True,
+        )
 
-            async def process_one(i: int, job_id: str) -> None:
-                async with sem:
-                    async with SessionLocal() as session:
-                        job = await session.get(Job, job_id)
-                        if not job:
-                            return
-                        stats["scanned"] += 1
-                        title = (job.title or "untitled")[:56]
-                        try:
-                            changed = await enrich_job_from_pdfs(
+        async def process_one(i: int, job_id: str) -> None:
+            async with sem:
+                title = "untitled"
+                scanned_marked = False
+                for attempt in range(3):
+                    try:
+                        async with SessionLocal() as session:
+                            job = await session.get(Job, job_id)
+                            if not job:
+                                return
+                            title = (job.title or "untitled")[:56]
+                            prep_row = job_row_for_pdf_prep(job)
+
+                        if not scanned_marked:
+                            async with stats_lock:
+                                stats["scanned"] += 1
+                            scanned_marked = True
+
+                        prep = await prepare_pdf_enrichment(prep_row, self.parser)
+
+                        async with SessionLocal() as session:
+                            job = await session.get(Job, job_id)
+                            if not job:
+                                return
+                            changed = await apply_pdf_enrichment(
                                 session,
                                 job,
                                 self.parser,
+                                prep,
                                 upload_storage=upload_storage,
                             )
                             sections = (job.detail or {}).get("content_sections") or []
                             summary = str((job.detail or {}).get("summary") or "").strip()
                             if changed and (sections or len(summary) >= 40):
-                                stats["memorized"] += 1
-                                if write_static and job.slug:
-                                    self._write_static_detail(job)
-                                stats["memory_items"].append(self._memory_entry(job))
+                                async with stats_lock:
+                                    stats["memorized"] += 1
+                                    if write_static and job.slug:
+                                        self._write_static_detail(job)
+                                    stats["memory_items"].append(self._memory_entry(job))
+                                    memorized = stats["memorized"]
                                 print(
                                     f"[{i}/{total}] memorized {title} "
                                     f"({len(sections)} sections, summary={len(summary)} chars)",
                                     flush=True,
                                 )
+                                if memorized % _MEMORY_INDEX_FLUSH_EVERY == 0:
+                                    self._write_memory_index(stats)
                             else:
                                 print(f"[{i}/{total}] no PDF text for {title}", flush=True)
                             await session.commit()
-                        except Exception as exc:
+                        return
+                    except _DB_RETRY_ERRORS as exc:
+                        if attempt < 2:
+                            await asyncio.sleep(1.5 * (attempt + 1))
+                            continue
+                        async with stats_lock:
                             stats["failed"] += 1
-                            await session.rollback()
-                            print(f"[{i}/{total}] failed {title}: {exc}", flush=True)
-
-            await asyncio.gather(*(process_one(i, jid) for i, jid in enumerate(job_ids, 1)))
-
-            if export_live_json and stats["memorized"]:
-                async with SessionLocal() as session:
-                    try:
-                        await self.persist.export_live_jobs_json(session)
+                        print(f"[{i}/{total}] failed {title}: {exc}", flush=True)
+                        return
                     except Exception as exc:
-                        logger.warning("live-jobs.json export failed: %s", exc)
+                        async with stats_lock:
+                            stats["failed"] += 1
+                        print(f"[{i}/{total}] failed {title}: {exc}", flush=True)
+                        return
+
+        await asyncio.gather(*(process_one(i, jid) for i, jid in enumerate(job_ids, 1)))
+
+        if export_live_json and stats["memorized"]:
+            async with SessionLocal() as session:
+                try:
+                    await self.persist.export_live_jobs_json(session)
+                except Exception as exc:
+                    logger.warning("live-jobs.json export failed: %s", exc)
 
         self._write_memory_index(stats)
         stats.pop("memory_items", None)

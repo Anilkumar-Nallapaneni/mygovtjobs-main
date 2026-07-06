@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-03T13:48:42.320Z",
+  "generatedAt": "2026-07-06T12:02:01.268Z",
   "results": [
     {
       "id": "employment-news",
@@ -10,7 +10,7 @@
         "ok": true,
         "stale": false,
         "finalUrl": "https://employmentnews.gov.in/",
-        "bytes": 4491,
+        "bytes": 2917,
         "hasRss": false
       },
       "home": null,
@@ -27,7 +27,7 @@
         "ok": true,
         "stale": false,
         "finalUrl": "https://www.pib.gov.in/index.aspx?reg=48&lang=2",
-        "bytes": 6084,
+        "bytes": 6083,
         "hasRss": false
       },
       "home": {
@@ -35,7 +35,7 @@
         "ok": true,
         "stale": false,
         "finalUrl": "https://www.pib.gov.in/RssMain.aspx?ModId=6&Lang=2&Regid=3&reg=48",
-        "bytes": 4421,
+        "bytes": 4272,
         "hasRss": false
       },
       "stale": false,
@@ -51,7 +51,7 @@
         "ok": true,
         "stale": false,
         "finalUrl": "https://www.upsc.gov.in/",
-        "bytes": 91096,
+        "bytes": 90411,
         "hasRss": false
       },
       "home": {
@@ -59,7 +59,7 @@
         "ok": true,
         "stale": false,
         "finalUrl": "https://www.upsc.gov.in/",
-        "bytes": 91096,
+        "bytes": 90411,
         "hasRss": false
       },
       "stale": false,
@@ -119,7 +119,7 @@
         "ok": true,
         "stale": false,
         "finalUrl": "https://www.rbi.org.in/Scripts/Error.aspx?aspxerrorpath=/Scripts/Opportunities.aspx",
-        "bytes": 49256,
+        "bytes": 48891,
         "hasRss": false
       },
       "home": {
@@ -127,7 +127,7 @@
         "ok": true,
         "stale": false,
         "finalUrl": "https://www.rbi.org.in/",
-        "bytes": 171199,
+        "bytes": 172666,
         "hasRss": false
       },
       "stale": false,
@@ -143,7 +143,7 @@
         "ok": true,
         "stale": false,
         "finalUrl": "https://www.sebi.gov.in/sebiweb/home/HomeAction.do?doListingAll=yes&search=&category=Notifications",
-        "bytes": 48953,
+        "bytes": 46416,
         "hasRss": false
       },
       "home": {
@@ -175,7 +175,7 @@
         "ok": true,
         "stale": false,
         "finalUrl": "https://licindia.in/",
-        "bytes": 250579,
+        "bytes": 250584,
         "hasRss": false
       },
       "stale": false,
@@ -191,7 +191,7 @@
         "ok": true,
         "stale": false,
         "finalUrl": "https://www.epfindia.gov.in/site_en/Recruitment.php",
-        "bytes": 246,
+        "bytes": 0,
         "hasRss": false
       },
       "home": {
@@ -199,7 +199,7 @@
         "ok": true,
         "stale": false,
         "finalUrl": "https://www.epfindia.gov.in/site_hi/index.php",
-        "bytes": 0,
+        "bytes": 291840,
         "hasRss": false
       },
       "stale": false,
@@ -243,7 +243,7 @@
         "ok": true,
         "stale": false,
         "finalUrl": "https://www.niti.gov.in/",
-        "bytes": 169810,
+        "bytes": 169809,
         "hasRss": false
       },
       "stale": false,
@@ -267,7 +267,7 @@
         "ok": true,
         "stale": false,
         "finalUrl": "https://apeda.gov.in/",
-        "bytes": 166556,
+        "bytes": 169098,
         "hasRss": false
       },
       "stale": false,
@@ -361,7 +361,7 @@
         "ok": true,
         "stale": false,
         "finalUrl": "https://www.isro.gov.in/Careers.html",
-        "bytes": 31826,
+        "bytes": 32832,
         "hasRss": false
       },
       "home": {
@@ -369,7 +369,7 @@
         "ok": true,
         "stale": false,
         "finalUrl": "https://www.isro.gov.in/",
-        "bytes": 303161,
+        "bytes": 304257,
         "hasRss": false
       },
       "stale": false,
@@ -385,7 +385,7 @@
         "ok": true,
         "stale": false,
         "finalUrl": "https://xn--m1b0a2bb8esed.xn--11b7cb3a6a.xn--h2brj9c/drdo/hi/",
-        "bytes": 404833,
+        "bytes": 403374,
         "hasRss": false
       },
       "home": null,
@@ -410,7 +410,7 @@
         "ok": true,
         "stale": false,
         "finalUrl": "https://www.barc.gov.in/",
-        "bytes": 51387,
+        "bytes": 51670,
         "hasRss": false
       },
       "stale": false,
@@ -561,7 +561,7 @@
         "ok": true,
         "stale": false,
         "finalUrl": "https://www.rrbbbs.gov.in/",
-        "bytes": 47729,
+        "bytes": 47852,
         "hasRss": false
       },
       "home": null,
@@ -593,7 +593,7 @@
         "ok": true,
         "stale": false,
         "finalUrl": "https://www.rrbgkp.gov.in/",
-        "bytes": 179753,
+        "bytes": 180471,
         "hasRss": false
       },
       "home": null,
@@ -610,7 +610,7 @@
         "ok": true,
         "stale": false,
         "finalUrl": "https://www.rrbguwahati.gov.in/",
-        "bytes": 140501,
+        "bytes": 147896,
         "hasRss": false
       },
       "home": null,
@@ -674,7 +674,7 @@
         "ok": true,
         "stale": false,
         "finalUrl": "https://www.rrbranchi.gov.in/",
-        "bytes": 80901,
+        "bytes": 80477,
         "hasRss": false
       },
       "home": null,
@@ -788,16 +788,14 @@
         "hasRss": false
       },
       "home": {
-        "status": 200,
-        "ok": true,
+        "status": 0,
+        "ok": false,
         "stale": false,
-        "finalUrl": "https://www.indiapost.gov.in/",
-        "bytes": 326581,
-        "hasRss": false
+        "error": "The operation was aborted due to timeout"
       },
       "stale": true,
       "networkFail": false,
-      "homeFallbackOk": true
+      "homeFallbackOk": false
     },
     {
       "id": "army",
@@ -923,7 +921,7 @@
         "ok": true,
         "stale": false,
         "finalUrl": "https://crpf.gov.in/",
-        "bytes": 188787,
+        "bytes": 192378,
         "hasRss": false
       },
       "stale": false,
@@ -996,7 +994,7 @@
         "ok": true,
         "stale": false,
         "finalUrl": "https://www.mha.gov.in/en/notifications/vacancies",
-        "bytes": 83510,
+        "bytes": 83540,
         "hasRss": false
       },
       "home": {
@@ -1004,7 +1002,7 @@
         "ok": true,
         "stale": false,
         "finalUrl": "https://www.mha.gov.in/hi",
-        "bytes": 105403,
+        "bytes": 105477,
         "hasRss": false
       },
       "stale": false,
@@ -1085,7 +1083,7 @@
         "ok": true,
         "stale": false,
         "finalUrl": "https://kvsangathan.nic.in/",
-        "bytes": 212267,
+        "bytes": 212263,
         "hasRss": false
       },
       "home": null,
@@ -1134,7 +1132,7 @@
         "ok": true,
         "stale": false,
         "finalUrl": "https://www.aiims.edu/index.php/en",
-        "bytes": 225999,
+        "bytes": 226019,
         "hasRss": true
       },
       "stale": false,
@@ -1150,7 +1148,7 @@
         "ok": true,
         "stale": false,
         "finalUrl": "https://sbi.bank.in/web/careers/current-openings",
-        "bytes": 313614,
+        "bytes": 313945,
         "hasRss": false
       },
       "home": {
@@ -1182,7 +1180,7 @@
         "ok": true,
         "stale": false,
         "finalUrl": "https://bankofbaroda.bank.in/",
-        "bytes": 1262573,
+        "bytes": 1262412,
         "hasRss": false
       },
       "stale": false,
@@ -1206,7 +1204,7 @@
         "ok": true,
         "stale": false,
         "finalUrl": "https://pnb.bank.in/",
-        "bytes": 336756,
+        "bytes": 336754,
         "hasRss": false
       },
       "stale": false,
@@ -1230,7 +1228,7 @@
         "ok": true,
         "stale": false,
         "finalUrl": "https://www.canarabank.bank.in/",
-        "bytes": 487211,
+        "bytes": 484351,
         "hasRss": false
       },
       "stale": false,
@@ -1246,7 +1244,7 @@
         "ok": true,
         "stale": false,
         "finalUrl": "https://www.uco.bank.in/job-opportunities",
-        "bytes": 269730,
+        "bytes": 269640,
         "hasRss": false
       },
       "home": {
@@ -1254,7 +1252,7 @@
         "ok": true,
         "stale": false,
         "finalUrl": "https://www.uco.bank.in/en/",
-        "bytes": 410241,
+        "bytes": 413465,
         "hasRss": false
       },
       "stale": false,
@@ -1318,7 +1316,7 @@
         "ok": false,
         "stale": false,
         "finalUrl": "https://iocl.com/job-search",
-        "bytes": 1415,
+        "bytes": 1463,
         "hasRss": false
       },
       "home": {
@@ -1326,7 +1324,7 @@
         "ok": false,
         "stale": false,
         "finalUrl": "https://iocl.com/",
-        "bytes": 1415,
+        "bytes": 1355,
         "hasRss": false
       },
       "stale": false,
@@ -1413,16 +1411,16 @@
         "status": 200,
         "ok": true,
         "stale": false,
-        "finalUrl": "https://validate.perfdrive.com/?ssa=f1f3caf5-3f6d-4c32-8116-8f983ac970bd&ssb=63209200378&ssc=https%3A%2F%2Fwww.ntpc.co.in%2Fen%2Fcareer&ssi=9527bcdd-cs5n-40c5-a50f-0c0ee8c73642&ssk=botmanager_support@radware.com&ssm=97226373255299013108477267327534&ssn=0a26461e53d542558f2ccb33976c1d1faf2c17ebf1d3-94e3-4ff4-85f5bf&sso=07b27937-ea4f215879d439be2afb98b9ba703d29b377a07982c14d3d&ssp=07024571601783076552178305495034087&ssq=35231688518682216472285186020844047226910&ssr=MTIyLjE3MS4xOC4yMA==&sst=Mozilla/5.0%20(Windows%20NT%2010.0;%20Win64;%20x64)%20AppleWebKit/537.36%20(KHTML,%20like%20Gecko)%20Chrome/121.0.0.0%20Safari/537.36&ssu=&ssv=&ssw=&ssx=eyJfX3V6bWYiOiI3ZjkwMDAxN2ViZjFkMy05NGUzLTRmZjQtODkzNy1lYTRmMjE1ODc5ZDQxLTE3ODMwODUxODY4MDgwLTAwNGRlN2UwOWZkYjYzOWMwZWYxMCIsInJkIjoibnRwYy5jby5pbiIsInV6bXgiOiI3ZjkwMDA2YjMzMDJlNC1mMDViLTQ1ZjEtOWRjYS1mY2FiOTc5OWI5MTYxLTE3ODMwODUxODY4MDgwLWVkNmExYTAxNGI4NmMxNTcxMCJ9",
-        "bytes": 15041,
+        "finalUrl": "https://validate.perfdrive.com/?ssa=a70f68f3-fb6f-4370-8695-210ada2162ba&ssb=79940229904&ssc=https%3A%2F%2Fwww.ntpc.co.in%2Fen%2Fcareer&ssi=25a4b9f8-cs5n-43d1-97e6-8ea2e2fe5653&ssk=botmanager_support@radware.com&ssm=84254174212737762101198173682857&ssn=bb46923cf300a48bc80c8923512dd4d2fcd9885d46a5-e547-4b3e-a59d22&sso=1229f32a-4c95f57be8ca0bbc4370db7a138fa5a25bab6efbdf3a54e7&ssp=63735087021783383385178339158664813&ssq=96633063900574160825139005225880305216977&ssr=MTIyLjE3MS4xNy4yMDA=&sst=Mozilla/5.0%20(Windows%20NT%2010.0;%20Win64;%20x64)%20AppleWebKit/537.36%20(KHTML,%20like%20Gecko)%20Chrome/121.0.0.0%20Safari/537.36&ssu=&ssv=&ssw=&ssx=eyJ1em14IjoiN2Y5MDAwMGE5NWI0M2QtMGJmZi00ODc2LTkzNGMtN2U3MjljYzAyMTIwMS0xNzgzMzM5MDA1OTM2MC00ZmU4NTQ1NzE1MWM4Njk1MTAiLCJfX3V6bWYiOiI3ZjkwMDA4ODVkNDZhNS1lNTQ3LTRiM2UtYTMyYS00Yzk1ZjU3YmU4Y2ExLTE3ODMzMzkwMDU5MzYwLTAwNGVmMWEzZDJiZmM1OWZiNjUxMCIsInJkIjoibnRwYy5jby5pbiJ9",
+        "bytes": 15042,
         "hasRss": false
       },
       "home": {
         "status": 200,
         "ok": true,
         "stale": false,
-        "finalUrl": "https://validate.perfdrive.com/?ssa=de33be8b-9a38-40c7-9553-72fd58f13c7c&ssb=93567277592&ssc=https%3A%2F%2Fwww.ntpc.co.in%2F&ssi=7e72d0de-cs5n-4973-a630-533bc65e9000&ssk=botmanager_support@radware.com&ssm=08397577292026542107019252651411&ssn=1fdac2bdef0b5143cd33d7ee9c18ceb716540c90eb40-5d5a-4b1b-ad31d9&sso=36b17f30-2d34c16c4a8d2adc1b42b3ac5b4ca0140a96b2a2624df46e&ssp=27740880801783012479178305443504797&ssq=18051488518797793139985187209186276275817&ssr=MTIyLjE3MS4xOC4yMA==&sst=Mozilla/5.0%20(Windows%20NT%2010.0;%20Win64;%20x64)%20AppleWebKit/537.36%20(KHTML,%20like%20Gecko)%20Chrome/121.0.0.0%20Safari/537.36&ssu=&ssv=&ssw=&ssx=eyJfX3V6bWYiOiI3ZjkwMDAwYzkwZWI0MC01ZDVhLTRiMWItYWYzMC0yZDM0YzE2YzRhOGQxLTE3ODMwODUxODc4NDcwLTAwNDAyNTkyOWIzNjNiNWI0ZjUxMCIsInJkIjoibnRwYy5jby5pbiIsInV6bXgiOiI3ZjkwMDAyZTE5YWI4OC1lZGFhLTQxYTEtOWNiNS1kZTM2NzYwN2JkMDcxLTE3ODMwODUxODc4NDcwLWJlNzEwNDQ0ZDI2YTU2NWYxMCJ9",
-        "bytes": 15032,
+        "finalUrl": "https://validate.perfdrive.com/?ssa=4a24e3c7-1f44-463a-94dd-7bd36465524f&ssb=32232220997&ssc=https%3A%2F%2Fwww.ntpc.co.in%2F&ssi=e515bbf1-cs5n-4a8b-a1f7-495481c8d5bc&ssk=botmanager_support@radware.com&ssm=10003268166847602104645899596083&ssn=9f6751639220e97057355e293ef81b50be5aa0c4f92a-d0b9-457d-bb2f00&sso=c2cf53c4-b464f7318bf47b9ea2e0b36d771cdf9de5db9c9fef00ceac&ssp=57379895121783392373178331898729547&ssq=46049203900613132880239006631156032189630&ssr=MTIyLjE3MS4xNy4yMDA=&sst=Mozilla/5.0%20(Windows%20NT%2010.0;%20Win64;%20x64)%20AppleWebKit/537.36%20(KHTML,%20like%20Gecko)%20Chrome/121.0.0.0%20Safari/537.36&ssu=&ssv=&ssw=&ssx=eyJ1em14IjoiN2Y5MDAwN2NkZjdlYjEtZTM0ZS00NWQ1LWJjZjgtMWY0MDgxNjdmNzA0MS0xNzgzMzM5MDA2ODQ1MC1mNWU5ZWJkYWM1OGJlZGQ1MTAiLCJfX3V6bWYiOiI3ZjkwMDBhMGM0ZjkyYS1kMGI5LTQ1N2QtYjNjNC1iNDY0ZjczMThiZjQxLTE3ODMzMzkwMDY4NDUwLTAwNGJhNGY3ZTllYmQ0M2U2YjQxMCIsInJkIjoibnRwYy5jby5pbiJ9",
+        "bytes": 15033,
         "hasRss": false
       },
       "stale": false,
@@ -1446,7 +1444,7 @@
         "ok": true,
         "stale": false,
         "finalUrl": "https://www.bhel.com/",
-        "bytes": 144656,
+        "bytes": 144654,
         "hasRss": false
       },
       "stale": false,
@@ -1462,7 +1460,7 @@
         "ok": true,
         "stale": false,
         "finalUrl": "https://hal-india.co.in/Careers/M__93",
-        "bytes": 9605,
+        "bytes": 20673,
         "hasRss": false
       },
       "home": {
@@ -1470,7 +1468,7 @@
         "ok": true,
         "stale": false,
         "finalUrl": "https://hal-india.co.in/",
-        "bytes": 9605,
+        "bytes": 20673,
         "hasRss": false
       },
       "stale": false,
@@ -1486,7 +1484,7 @@
         "ok": true,
         "stale": false,
         "finalUrl": "https://bel-india.in/job-notifications/",
-        "bytes": 364485,
+        "bytes": 364484,
         "hasRss": true
       },
       "home": {
@@ -1494,7 +1492,7 @@
         "ok": true,
         "stale": false,
         "finalUrl": "https://bel-india.in/",
-        "bytes": 321705,
+        "bytes": 321704,
         "hasRss": true
       },
       "stale": false,
@@ -1530,7 +1528,7 @@
         "ok": true,
         "stale": false,
         "finalUrl": "https://www.upsc.gov.in/",
-        "bytes": 91093,
+        "bytes": 90401,
         "hasRss": false
       },
       "home": {
@@ -1538,7 +1536,7 @@
         "ok": true,
         "stale": false,
         "finalUrl": "https://www.upsc.gov.in/",
-        "bytes": 91093,
+        "bytes": 90401,
         "hasRss": false
       },
       "stale": false,
@@ -1644,12 +1642,12 @@
       "name": "Goa PSC",
       "latestUrl": "https://gpsc.goa.gov.in/",
       "latest": {
-        "status": 200,
-        "ok": true,
+        "status": 500,
+        "ok": false,
         "stale": false,
         "finalUrl": "https://gpsc.goa.gov.in/",
-        "bytes": 246283,
-        "hasRss": true
+        "bytes": 1208,
+        "hasRss": false
       },
       "home": null,
       "stale": false,
@@ -1665,7 +1663,7 @@
         "ok": true,
         "stale": false,
         "finalUrl": "https://gpsc.gujarat.gov.in/",
-        "bytes": 483906,
+        "bytes": 432129,
         "hasRss": false
       },
       "home": null,
@@ -1682,7 +1680,7 @@
         "ok": true,
         "stale": false,
         "finalUrl": "https://hpsc.gov.in/en-us/Instructions",
-        "bytes": 128428,
+        "bytes": 118705,
         "hasRss": false
       },
       "home": {
@@ -1690,7 +1688,7 @@
         "ok": true,
         "stale": false,
         "finalUrl": "https://hpsc.gov.in/en-us/",
-        "bytes": 51943,
+        "bytes": 42220,
         "hasRss": false
       },
       "stale": false,
@@ -1734,7 +1732,7 @@
         "ok": true,
         "stale": false,
         "finalUrl": "https://jkpsc.nic.in/",
-        "bytes": 169739,
+        "bytes": 169945,
         "hasRss": false
       },
       "stale": false,
@@ -1750,7 +1748,7 @@
         "ok": true,
         "stale": false,
         "finalUrl": "https://jpsc.gov.in/",
-        "bytes": 34993,
+        "bytes": 34608,
         "hasRss": false
       },
       "home": null,
@@ -1791,7 +1789,7 @@
         "ok": true,
         "stale": false,
         "finalUrl": "https://www.keralapsc.gov.in/notifications",
-        "bytes": 48309,
+        "bytes": 48739,
         "hasRss": false
       },
       "home": {
@@ -1799,7 +1797,7 @@
         "ok": true,
         "stale": false,
         "finalUrl": "https://www.keralapsc.gov.in/",
-        "bytes": 70634,
+        "bytes": 70975,
         "hasRss": false
       },
       "stale": false,
@@ -1823,7 +1821,7 @@
         "ok": true,
         "stale": false,
         "finalUrl": "https://mppsc.mp.gov.in/",
-        "bytes": 58478,
+        "bytes": 55799,
         "hasRss": false
       },
       "stale": false,
@@ -1863,7 +1861,7 @@
         "ok": true,
         "stale": false,
         "finalUrl": "https://mpsc.mizoram.gov.in/",
-        "bytes": 1405766,
+        "bytes": 1405857,
         "hasRss": false
       },
       "home": null,
@@ -1896,24 +1894,20 @@
       "name": "Odisha PSC (OPSC)",
       "latestUrl": "https://opsc.gov.in/?LK=NRA",
       "latest": {
-        "status": 200,
-        "ok": true,
+        "status": 0,
+        "ok": false,
         "stale": false,
-        "finalUrl": "https://opsc.gov.in/Public/OPSC/Default.aspx",
-        "bytes": 43940,
-        "hasRss": false
+        "error": "fetch failed"
       },
       "home": {
-        "status": 200,
-        "ok": true,
+        "status": 0,
+        "ok": false,
         "stale": false,
-        "finalUrl": "https://opsc.gov.in/Public/OPSC/Default.aspx",
-        "bytes": 43940,
-        "hasRss": false
+        "error": "fetch failed"
       },
       "stale": false,
-      "networkFail": false,
-      "homeFallbackOk": true
+      "networkFail": true,
+      "homeFallbackOk": false
     },
     {
       "id": "psc-pb",
@@ -1944,7 +1938,7 @@
         "ok": true,
         "stale": false,
         "finalUrl": "https://rpsc.rajasthan.gov.in/advertisements",
-        "bytes": 792203,
+        "bytes": 793360,
         "hasRss": false
       },
       "home": {
@@ -1952,7 +1946,7 @@
         "ok": true,
         "stale": false,
         "finalUrl": "https://rpsc.rajasthan.gov.in/",
-        "bytes": 385280,
+        "bytes": 375853,
         "hasRss": false
       },
       "stale": false,
@@ -2015,7 +2009,7 @@
         "ok": true,
         "stale": false,
         "finalUrl": "https://tpsc.tripura.gov.in/",
-        "bytes": 127961,
+        "bytes": 127162,
         "hasRss": false
       },
       "home": null,
@@ -2040,7 +2034,7 @@
         "ok": true,
         "stale": false,
         "finalUrl": "https://uppsc.up.nic.in/",
-        "bytes": 179889,
+        "bytes": 181084,
         "hasRss": false
       },
       "stale": false,
@@ -2056,7 +2050,7 @@
         "ok": true,
         "stale": false,
         "finalUrl": "https://psc.uk.gov.in/",
-        "bytes": 114521,
+        "bytes": 116576,
         "hasRss": false
       },
       "home": null,
@@ -2200,7 +2194,7 @@
         "ok": true,
         "stale": false,
         "finalUrl": "https://hssc.gov.in/",
-        "bytes": 21762,
+        "bytes": 21896,
         "hasRss": false
       },
       "home": null,
@@ -2249,7 +2243,7 @@
         "ok": true,
         "stale": false,
         "finalUrl": "https://uppbpb.gov.in/",
-        "bytes": 67896,
+        "bytes": 67823,
         "hasRss": false
       },
       "home": null,
@@ -2262,14 +2256,16 @@
       "name": "Maharashtra Police Recruitment",
       "latestUrl": "https://www.mahapolice.gov.in/",
       "latest": {
-        "status": 0,
-        "ok": false,
+        "status": 200,
+        "ok": true,
         "stale": false,
-        "error": "fetch failed"
+        "finalUrl": "https://www.mahapolice.gov.in/",
+        "bytes": 216108,
+        "hasRss": false
       },
       "home": null,
       "stale": false,
-      "networkFail": true,
+      "networkFail": false,
       "homeFallbackOk": null
     },
     {
@@ -2320,7 +2316,7 @@
         "ok": true,
         "stale": false,
         "finalUrl": "https://www.mppolice.gov.in/en",
-        "bytes": 161226,
+        "bytes": 163757,
         "hasRss": true
       },
       "home": null,
@@ -2333,22 +2329,22 @@
       "name": "Kerala Police Recruitment Board",
       "latestUrl": "https://keralapolice.gov.in/page/recruitment-board",
       "latest": {
-        "status": 503,
+        "status": 404,
         "ok": false,
-        "stale": false,
+        "stale": true,
         "finalUrl": "https://keralapolice.gov.in/page/recruitment-board",
-        "bytes": 786,
+        "bytes": 0,
         "hasRss": false
       },
       "home": {
-        "status": 503,
-        "ok": false,
+        "status": 200,
+        "ok": true,
         "stale": false,
         "finalUrl": "https://keralapolice.gov.in/",
-        "bytes": 764,
+        "bytes": 353269,
         "hasRss": false
       },
-      "stale": false,
+      "stale": true,
       "networkFail": false,
       "homeFallbackOk": true
     },
@@ -2378,7 +2374,7 @@
         "ok": true,
         "stale": false,
         "finalUrl": "https://labour.delhi.gov.in/",
-        "bytes": 105882,
+        "bytes": 105872,
         "hasRss": false
       },
       "home": {
@@ -2386,7 +2382,7 @@
         "ok": true,
         "stale": false,
         "finalUrl": "https://delhi.gov.in/",
-        "bytes": 53585,
+        "bytes": 53404,
         "hasRss": false
       },
       "stale": false,
@@ -2453,7 +2449,7 @@
         "ok": true,
         "stale": false,
         "finalUrl": "https://ladakh.gov.in/",
-        "bytes": 230648,
+        "bytes": 230150,
         "hasRss": false
       },
       "home": null,
@@ -2504,7 +2500,7 @@
         "ok": true,
         "stale": false,
         "finalUrl": "https://andamannicobar.gov.in/",
-        "bytes": 130527,
+        "bytes": 126964,
         "hasRss": false
       },
       "home": null,
@@ -2545,7 +2541,7 @@
         "ok": true,
         "stale": false,
         "finalUrl": "https://balangir.dcourts.gov.in/notice-category/recruitments/",
-        "bytes": 102086,
+        "bytes": 104348,
         "hasRss": true
       },
       "home": {
@@ -2553,7 +2549,7 @@
         "ok": true,
         "stale": false,
         "finalUrl": "https://balangir.dcourts.gov.in/",
-        "bytes": 176525,
+        "bytes": 175964,
         "hasRss": false
       },
       "stale": false,
@@ -2577,7 +2573,7 @@
         "ok": true,
         "stale": false,
         "finalUrl": "https://nayagarh.dcourts.gov.in/",
-        "bytes": 159362,
+        "bytes": 158841,
         "hasRss": false
       },
       "stale": false,
@@ -2601,7 +2597,7 @@
         "ok": true,
         "stale": false,
         "finalUrl": "https://jagatsinghpur.dcourts.gov.in/",
-        "bytes": 168745,
+        "bytes": 168741,
         "hasRss": false
       },
       "stale": false,
@@ -2721,7 +2717,7 @@
         "ok": true,
         "stale": false,
         "finalUrl": "https://nuapada.dcourts.gov.in/",
-        "bytes": 167314,
+        "bytes": 167637,
         "hasRss": false
       },
       "stale": false,
@@ -2737,7 +2733,7 @@
         "ok": true,
         "stale": false,
         "finalUrl": "https://sitapur.dcourts.gov.in/notice-category/recruitments/",
-        "bytes": 102416,
+        "bytes": 104365,
         "hasRss": true
       },
       "home": {
@@ -2761,7 +2757,7 @@
         "ok": true,
         "stale": false,
         "finalUrl": "https://ludhiana.dcourts.gov.in/notice-category/recruitments/",
-        "bytes": 99192,
+        "bytes": 102614,
         "hasRss": true
       },
       "home": {
@@ -2769,7 +2765,7 @@
         "ok": true,
         "stale": false,
         "finalUrl": "https://ludhiana.dcourts.gov.in/",
-        "bytes": 164018,
+        "bytes": 164268,
         "hasRss": false
       },
       "stale": false,
@@ -2833,7 +2829,7 @@
         "ok": true,
         "stale": false,
         "finalUrl": "https://indore.dcourts.gov.in/notice-category/recruitments/",
-        "bytes": 103068,
+        "bytes": 105235,
         "hasRss": true
       },
       "home": {
@@ -2853,40 +2849,48 @@
       "name": "District & Sessions Judge, Ujjain",
       "latestUrl": "https://ujjain.dcourts.gov.in/notice-category/recruitments/",
       "latest": {
-        "status": 0,
-        "ok": false,
+        "status": 200,
+        "ok": true,
         "stale": false,
-        "error": "fetch failed"
+        "finalUrl": "https://ujjain.dcourts.gov.in/notice-category/recruitments/",
+        "bytes": 105154,
+        "hasRss": true
       },
       "home": {
-        "status": 0,
-        "ok": false,
+        "status": 200,
+        "ok": true,
         "stale": false,
-        "error": "fetch failed"
+        "finalUrl": "https://ujjain.dcourts.gov.in/",
+        "bytes": 164900,
+        "hasRss": false
       },
       "stale": false,
-      "networkFail": true,
-      "homeFallbackOk": false
+      "networkFail": false,
+      "homeFallbackOk": true
     },
     {
       "id": "dcourt-howrah",
       "name": "District & Sessions Judge, Howrah",
       "latestUrl": "https://howrah.dcourts.gov.in/notice-category/recruitments/",
       "latest": {
-        "status": 0,
-        "ok": false,
+        "status": 200,
+        "ok": true,
         "stale": false,
-        "error": "fetch failed"
+        "finalUrl": "https://howrah.dcourts.gov.in/notice-category/recruitments/",
+        "bytes": 104382,
+        "hasRss": true
       },
       "home": {
-        "status": 0,
-        "ok": false,
+        "status": 200,
+        "ok": true,
         "stale": false,
-        "error": "fetch failed"
+        "finalUrl": "https://howrah.dcourts.gov.in/",
+        "bytes": 154940,
+        "hasRss": false
       },
       "stale": false,
-      "networkFail": true,
-      "homeFallbackOk": false
+      "networkFail": false,
+      "homeFallbackOk": true
     },
     {
       "id": "dcourt-coochbehar",
@@ -2897,7 +2901,7 @@
         "ok": true,
         "stale": false,
         "finalUrl": "https://coochbehar.dcourts.gov.in/notice-category/recruitments/",
-        "bytes": 105216,
+        "bytes": 103031,
         "hasRss": true
       },
       "home": {
@@ -2969,7 +2973,7 @@
         "ok": true,
         "stale": false,
         "finalUrl": "https://siddipet.dcourts.gov.in/notice-category/recruitments/",
-        "bytes": 105472,
+        "bytes": 104304,
         "hasRss": true
       },
       "home": {
@@ -2993,7 +2997,7 @@
         "ok": true,
         "stale": false,
         "finalUrl": "https://sainikschoolgoalpara.org/",
-        "bytes": 169356,
+        "bytes": 169642,
         "hasRss": true
       },
       "home": null,
@@ -3010,7 +3014,7 @@
         "ok": true,
         "stale": false,
         "finalUrl": "https://www.sainikschoolamaravathinagar.edu.in/careers.php",
-        "bytes": 109791,
+        "bytes": 91864,
         "hasRss": false
       },
       "home": {
@@ -3018,7 +3022,7 @@
         "ok": true,
         "stale": false,
         "finalUrl": "https://www.sainikschoolamaravathinagar.edu.in/",
-        "bytes": 110602,
+        "bytes": 109328,
         "hasRss": false
       },
       "stale": false,
@@ -3083,7 +3087,7 @@
         "ok": true,
         "stale": false,
         "finalUrl": "https://www.ssgopalganj.in/",
-        "bytes": 45990,
+        "bytes": 46555,
         "hasRss": false
       },
       "stale": false,
@@ -3099,7 +3103,7 @@
         "ok": true,
         "stale": false,
         "finalUrl": "https://pakur.nic.in/",
-        "bytes": 209835,
+        "bytes": 208909,
         "hasRss": false
       },
       "home": null,

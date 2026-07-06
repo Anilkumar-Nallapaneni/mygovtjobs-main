@@ -44,18 +44,21 @@ async def main() -> int:
         help="Skip jobs that already have detail.content_sections",
     )
     parser.add_argument("--force", action="store_true", help="Re-read PDFs even if already memorized")
-    parser.add_argument("--concurrency", type=int, default=4, help="Parallel PDF fetches")
+    parser.add_argument("--concurrency", type=int, default=None, help="Parallel PDF fetches")
     parser.add_argument("--no-static", action="store_true", help="Skip job-details/*.json writes")
     parser.add_argument("--no-export", action="store_true", help="Skip live-jobs.json export")
     args = parser.parse_args()
 
     live_only = not args.include_expired
+    concurrency = args.concurrency
+    if concurrency is None:
+        concurrency = 2 if args.limit == 0 else 4
     agent = PdfReaderAgent()
     stats = await agent.run(
         limit=args.limit,
         live_only=live_only,
         only_missing=not args.force,
-        concurrency=args.concurrency,
+        concurrency=concurrency,
         write_static=not args.no_static,
         export_live_json=not args.no_export,
     )
