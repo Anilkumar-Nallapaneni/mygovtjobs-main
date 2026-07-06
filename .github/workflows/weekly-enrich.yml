@@ -51,6 +51,19 @@ jobs:
             echo "DATABASE_URL=$SECRET_DATABASE_URL" >> "$GITHUB_ENV"
           fi
 
+      - name: Validate secrets
+        env:
+          DATABASE_URL: ${{ env.DATABASE_URL }}
+          VITE_SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL }}
+          VITE_SUPABASE_ANON_KEY: ${{ secrets.VITE_SUPABASE_ANON_KEY }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+        run: |
+          if [ -z "$DATABASE_URL" ]; then
+            echo "::error::No database credentials. Add DATABASE_URL or SUPABASE_PROJECT_REF + SUPABASE_DB_PASSWORD"
+            exit 1
+          fi
+          node scripts/check-github-actions-secrets.mjs
+
       - name: Enrich DB metadata (newest 100 jobs)
         env:
           DATABASE_URL: ${{ env.DATABASE_URL }}

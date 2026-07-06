@@ -82,46 +82,69 @@ function uniqueUrls(...urls) {
   });
 }
 
+async function auditSite(s) {
+  const latest = await probe(s.latestUrl || s.url);
+  const fallbacks = uniqueUrls(s.url, s.rssUrl).filter((u) => u !== (s.latestUrl || s.url));
+  let home = null;
+  if (fallbacks.length > 0) {
+    home = await probe(fallbacks[0]);
+  }
+
+  const stale = isStale(latest);
+  const networkFail = !hasHttpResponse(latest);
+  const homeOk = home && hasHttpResponse(home) && !isStale(home);
+
+  const row = {
+    id: s.id,
+    name: s.name,
+    latestUrl: s.latestUrl,
+    latest,
+    home,
+    stale,
+    networkFail,
+    homeFallbackOk: homeOk,
+  };
+
+  let tag = "ok";
+  if (stale) tag = "STALE";
+  else if (networkFail && !homeOk) tag = "FAIL";
+  else if (networkFail && homeOk) tag = "warn-net";
+  else if (!latest.ok) tag = "warn";
+
+  const detail = latest.error || latest.finalUrl || s.latestUrl;
+  console.log(`[${tag}] ${s.id} ${latest.status} ${detail}`);
+  return row;
+}
+
+async function runPool(items, concurrency, worker) {
+  const results = new Array(items.length);
+  let next = 0;
+  async function runWorker() {
+    while (next < items.length) {
+      const index = next++;
+      results[index] = await worker(items[index], index);
+    }
+  }
+  const workers = Math.max(1, Math.min(concurrency, items.length));
+  await Promise.all(Array.from({ length: workers }, () => runWorker()));
+  return results;
+}
+
+function resolveAuditConcurrency() {
+  const fromEnv = Number(process.env.PORTAL_AUDIT_CONCURRENCY);
+  if (fromEnv > 0) return fromEnv;
+  return process.env.GITHUB_ACTIONS === "true" ? 10 : 3;
+}
+
 async function main() {
   const limitArg = process.argv.find((a) => a.startsWith("--limit="));
   const limit = limitArg ? Number(limitArg.split("=")[1]) : 0;
   let sites = [...OFFICIAL_SITES];
   if (limit > 0) sites = sites.slice(0, limit);
 
-  const results = [];
-  for (const s of sites) {
-    const latest = await probe(s.latestUrl || s.url);
-    const fallbacks = uniqueUrls(s.url, s.rssUrl).filter((u) => u !== (s.latestUrl || s.url));
-    let home = null;
-    if (fallbacks.length > 0) {
-      home = await probe(fallbacks[0]);
-    }
-
-    const stale = isStale(latest);
-    const networkFail = !hasHttpResponse(latest);
-    const homeOk = home && hasHttpResponse(home) && !isStale(home);
-
-    results.push({
-      id: s.id,
-      name: s.name,
-      latestUrl: s.latestUrl,
-      latest,
-      home,
-      stale,
-      networkFail,
-      homeFallbackOk: homeOk,
-    });
-
-    let tag = "ok";
-    if (stale) tag = "STALE";
-    else if (networkFail && !homeOk) tag = "FAIL";
-    else if (networkFail && homeOk) tag = "warn-net";
-    else if (!latest.ok) tag = "warn";
-
-    const detail = latest.error || latest.finalUrl || s.latestUrl;
-    console.log(`[${tag}] ${s.id} ${latest.status} ${detail}`);
-    await new Promise((r) => setTimeout(r, 250));
-  }
+  const concurrency = resolveAuditConcurrency();
+  console.log(`Auditing ${sites.length} portals (concurrency ${concurrency})…`);
+  const results = await runPool(sites, concurrency, (s) => auditSite(s));
 
   mkdirSync(dirname(OUT), { recursive: true });
   writeFileSync(OUT, JSON.stringify({ generatedAt: new Date().toISOString(), results }, null, 2));

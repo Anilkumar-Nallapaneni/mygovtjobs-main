@@ -15,7 +15,7 @@ permissions:
 jobs:
   audit:
     runs-on: ubuntu-latest
-    timeout-minutes: 45
+    timeout-minutes: 60
     steps:
       - uses: actions/checkout@v4
 
@@ -32,6 +32,7 @@ jobs:
         env:
           PORTAL_AUDIT_STRICT: "1"
           PORTAL_AUDIT_MAX_FAIL_PCT: "10"
+          PORTAL_AUDIT_CONCURRENCY: "10"
         run: npm run audit:official-sites:strict
         # Strict gate = stale deep links (404/410) only. Network timeouts on residential IPs are reported, not failed.
         # Report artifact is uploaded even when this step fails (fix latestUrl in officialSites.ts).

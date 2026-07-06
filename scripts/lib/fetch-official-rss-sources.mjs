@@ -176,11 +176,33 @@ async function fetchOneSource(feed, ctx) {
   return { report, rows };
 }
 
+async function runPool(items, concurrency, worker) {
+  const results = new Array(items.length);
+  let next = 0;
+  async function runWorker() {
+    while (next < items.length) {
+      const index = next++;
+      results[index] = await worker(items[index], index);
+    }
+  }
+  const workers = Math.max(1, Math.min(concurrency, items.length));
+  await Promise.all(Array.from({ length: workers }, () => runWorker()));
+  return results;
+}
+
+function resolveConcurrency(options) {
+  if (options.concurrency) return Math.max(1, Number(options.concurrency) || 1);
+  const fromEnv = Number(process.env.FEED_FETCH_CONCURRENCY);
+  if (fromEnv > 0) return fromEnv;
+  return process.env.GITHUB_ACTIONS === "true" ? 8 : 2;
+}
+
 export async function fetchOfficialRssSources(options = {}) {
   const raw = JSON.parse(readFileSync(CONFIG_PATH, "utf8"));
   const lookbackDays = options.lookbackDays ?? Number(raw.lookbackDays) ?? DEFAULT_LOOKBACK_DAYS;
   const userAgent = raw.userAgent || "GovJobAlertFetcher/1.0";
   const timeoutMs = options.timeoutMs ?? 28000;
+  const concurrency = resolveConcurrency(options);
   const feedIds = options.feedIds;
   const feeds = (Array.isArray(raw.feeds) ? raw.feeds : []).filter(
     (feed) => !feedIds?.length || feedIds.includes(feed.id)
@@ -188,9 +210,14 @@ export async function fetchOfficialRssSources(options = {}) {
   const sourceReports = [];
   const byLink = new Map();
 
-  for (const feed of feeds) {
+  console.log(`Fetching ${feeds.length} RSS/HTML sources (concurrency ${concurrency})…`);
+
+  const outcomes = await runPool(feeds, concurrency, async (feed) => {
     process.stdout.write(`  RSS/HTML ${feed.id || feed.name}…\n`);
-    const { report, rows } = await fetchOneSource(feed, { userAgent, lookbackDays, timeoutMs });
+    return fetchOneSource(feed, { userAgent, lookbackDays, timeoutMs });
+  });
+
+  for (const { report, rows } of outcomes) {
     sourceReports.push(report);
     for (const row of rows) {
       if (!byLink.has(row.link)) byLink.set(row.link, row);

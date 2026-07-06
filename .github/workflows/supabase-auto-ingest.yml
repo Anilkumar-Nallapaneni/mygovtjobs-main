@@ -154,6 +154,7 @@ jobs:
           for path in \
             frontend/public/data/live-jobs.json \
             frontend/public/data/live-jobs-list.json \
+            frontend/public/data/live-jobs-bootstrap.json \
             frontend/public/data/daily-sync-state.json \
             frontend/public/sitemap.xml; do
             if [ -e "$path" ]; then
