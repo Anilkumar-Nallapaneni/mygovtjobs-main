@@ -327,16 +327,15 @@ export async function fetchLiveJobsCatalog(
     rows = processLiveJobPayload(payload.raw).rows
   }
 
-  const result = toCatalogResult(payload, rows, dailySyncFallback)
+  let result = toCatalogResult(payload, rows, dailySyncFallback)
 
-  if (
-    !bustCache &&
-    onPartial &&
-    payload.sources.includes('official-sites') &&
-    payload.raw.length <= INITIAL_LIVE_ROWS
-  ) {
-    void fetchFullLiveJobsSnapshot(false).then(async (fullSnap) => {
-      if (fullSnap.items.length <= payload.raw.length) return
+  const isBootstrap =
+    payload.sources.includes('official-sites') && payload.raw.length <= INITIAL_LIVE_ROWS
+
+  if (isBootstrap) {
+    const hydrateFull = async (): Promise<LiveJobsCatalogResult | null> => {
+      const fullSnap = await fetchFullLiveJobsSnapshot(bustCache)
+      if (fullSnap.items.length <= payload.raw.length) return null
       const fullPayload: RawPayload = {
         ...payload,
         raw: fullSnap.items
@@ -348,11 +347,27 @@ export async function fetchLiveJobsCatalog(
             generatedAt: fullSnap.generatedAt,
           }) ?? ('dailySync' in payload ? payload.dailySync : null),
       }
-      const fullRows = await processPayloadRows(fullPayload.raw)
-      if (fullRows.length > rows.length) {
-        onPartial(toCatalogResult(fullPayload, fullRows, dailySyncFallback))
-      }
-    })
+      const fullRows = await processPayloadRows(
+        fullPayload.raw,
+        onPartial
+          ? (progressRows) => {
+              if (progressRows.length <= rows.length) return
+              onPartial(toCatalogResult(fullPayload, progressRows, dailySyncFallback))
+            }
+          : undefined
+      )
+      if (fullRows.length <= rows.length) return null
+      return toCatalogResult(fullPayload, fullRows, dailySyncFallback)
+    }
+
+    if (onPartial) {
+      void hydrateFull().then((fullResult) => {
+        if (fullResult) onPartial(fullResult)
+      })
+    } else {
+      const fullResult = await hydrateFull()
+      if (fullResult) result = fullResult
+    }
   }
 
   return result

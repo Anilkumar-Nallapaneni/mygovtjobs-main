@@ -73,6 +73,26 @@
       ]
     }
   ],
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "govtjobs.me" }],
+      "destination": "https://livegovtjobs.com/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "www.govtjobs.me" }],
+      "destination": "https://livegovtjobs.com/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "www.livegovtjobs.com" }],
+      "destination": "https://livegovtjobs.com/:path*",
+      "permanent": true
+    }
+  ],
   "rewrites": [
     { "source": "/data/:path*", "destination": "/data/:path*" },
     { "source": "/(.*)", "destination": "/index.html" }

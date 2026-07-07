@@ -4,7 +4,7 @@ const trim = (value: string | undefined) => (value || "").trim();
 
 export const SITE_ORIGIN =
   trim(import.meta.env.VITE_SITE_URL) ||
-  (typeof window !== "undefined" ? window.location.origin : "https://govtjobs.me");
+  (typeof window !== "undefined" ? window.location.origin : "https://livegovtjobs.com");
 
 export const SITE_LINKS = {
   about: "/about",

@@ -39,7 +39,10 @@ export function warmLiveJobsCache(bustCache = false) {
   if (queryClient.getQueryData(key) && !bustCache) return
   void queryClient.prefetchQuery({
     queryKey: key,
-    queryFn: () => fetchLiveJobsCatalog(bustCache),
+    queryFn: () =>
+      fetchLiveJobsCatalog(bustCache, (partial) => {
+        queryClient.setQueryData<LiveJobsCatalogResult>(key, partial)
+      }),
   })
 }
 
