@@ -38,7 +38,8 @@ function perfIndexHtmlPlugin(
 ): Plugin {
   const mode = (jobsSourceRaw || 'auto').toLowerCase()
   const injectStaticPrefetch = mode !== 'api'
-  const usePreloadLink = mode === 'static' || mode === 'auto'
+  // Preload bootstrap for every non-api build (production uses VITE_JOBS_SOURCE=supabase).
+  const usePreloadLink = injectStaticPrefetch
   const marker = '<!-- live-jobs early prefetch: injected at build for static/auto jobs source only -->'
   const version = encodeURIComponent(buildStamp)
 
@@ -60,11 +61,12 @@ function perfIndexHtmlPlugin(
         `        var timer = setTimeout(function () { controller.abort(); }, timeoutMs);`,
         `        var fetchOpts = { credentials: 'same-origin', cache: '${fetchCache}', signal: controller.signal };`,
         `        var v = '?v=${version}';`,
+        `        var listPrefetch = fetch('/data/live-jobs-list.json' + v, fetchOpts);`,
         `        return fetch('/data/live-jobs-bootstrap.json' + v, fetchOpts)`,
         '          .then(function (r) {',
         '            clearTimeout(timer);',
         '            if (r.ok) return r.json();',
-        '            return fetch("/data/live-jobs-list.json" + v, fetchOpts).then(function (r2) {',
+        '            return listPrefetch.then(function (r2) {',
         '              return r2.ok ? r2.json() : fetch("/data/live-jobs.json" + v, fetchOpts).then(function (r3) { return r3.ok ? r3.json() : null; });',
         '            });',
         '          })',
