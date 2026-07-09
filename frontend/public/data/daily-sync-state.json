@@ -1,10 +1,10 @@
 {
   "status": "completed",
-  "completedAt": "2026-07-08T06:15:01.622694+00:00",
-  "completedAtIst": "2026-07-08T11:45:01.622724+05:30",
-  "lastCompletedDateIst": "2026-07-08",
-  "nextRunAtIst": "2026-07-09T08:00:00+05:30",
-  "jobCount": 1905,
+  "completedAt": "2026-07-09T03:25:22.712328+00:00",
+  "completedAtIst": "2026-07-09T08:55:22.712368+05:30",
+  "lastCompletedDateIst": "2026-07-09",
+  "nextRunAtIst": "2026-07-10T08:00:00+05:30",
+  "jobCount": 1903,
   "sourcesScraped": 154,
   "notes": "IngestAgent: official India govt portals + RSS"
 }
