@@ -1,6 +1,6 @@
 {
   "packageId": "me.govtjobs.app",
-  "host": "www.govtjobs.me",
+  "host": "www.livegovtjobs.com",
   "name": "My Govt Jobs",
   "launcherName": "Govt Jobs",
   "display": "standalone",
@@ -13,19 +13,19 @@
   "backgroundColor": "#0F172A",
   "enableNotifications": true,
   "startUrl": "/",
-  "iconUrl": "https://www.govtjobs.me/pwa-512.png",
-  "maskableIconUrl": "https://www.govtjobs.me/pwa-512.png",
-  "monochromeIconUrl": "https://www.govtjobs.me/pwa-512.png",
+  "iconUrl": "https://www.livegovtjobs.com/pwa-512.png",
+  "maskableIconUrl": "https://www.livegovtjobs.com/pwa-512.png",
+  "monochromeIconUrl": "https://www.livegovtjobs.com/pwa-512.png",
   "splashScreenFadeOutDuration": 300,
   "signingKey": {
     "path": "./android.keystore",
     "alias": "govtjobs"
   },
-  "appVersionName": "1.00.00",
-  "appVersionCode": 2,
+  "appVersionName": "1.01.00",
+  "appVersionCode": 3,
   "shortcuts": [],
   "generatorApp": "bubblewrap-cli",
-  "webManifestUrl": "https://www.govtjobs.me/manifest.webmanifest",
+  "webManifestUrl": "https://www.livegovtjobs.com/manifest.webmanifest",
   "fallbackType": "customtabs",
   "features": {
     "playBilling": false,
@@ -40,8 +40,8 @@
   "minSdkVersion": 21,
   "orientation": "default",
   "fingerprints": [],
-  "additionalTrustedOrigins": [],
+  "additionalTrustedOrigins": ["govtjobs.me", "www.govtjobs.me", "livegovtjobs.com"],
   "retainedBundles": [],
   "displayOverride": [],
-  "appVersion": "1.00.00"
+  "appVersion": "1.01.00"
 }

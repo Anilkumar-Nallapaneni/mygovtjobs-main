@@ -118,9 +118,9 @@ export default defineConfig(({ mode }) => {
         },
         manifest: {
           id: '/',
-          name: 'My Govt Jobs',
-          short_name: 'MyGovtJobs',
-          description: 'Official government job alerts from verified sources across India.',
+          name: 'Live Govt Jobs',
+          short_name: 'Govt Jobs',
+          description: 'Official government job alerts, results, and admit cards from verified sources across India.',
           theme_color: '#0f172a',
           background_color: '#0f172a',
           display: 'standalone',

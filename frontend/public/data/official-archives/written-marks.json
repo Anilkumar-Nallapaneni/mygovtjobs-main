@@ -1,7 +1,53 @@
 {
-  "generatedAt": "2026-06-28T17:34:41.448Z",
-  "count": 20,
+  "generatedAt": "2026-07-07T10:11:51.863Z",
+  "count": 23,
   "items": [
+    {
+      "id": "a145835aa3e3662e",
+      "title": "Result and cut off marks of candidates shortlisted for Document Verification and Medical Examination.",
+      "link": "https://www.rrbbbs.gov.in/documentexplorer.php?prmt=TVRrd09RPT0=",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "rrb-bbs",
+      "sourceName": "Railway Recruitment Board (RRB) — Bhubaneswar",
+      "dept": "Railway Recruitment Board (RRB) — Bhubaneswar",
+      "state": "All India",
+      "category": "railways",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "48784078a287d44b",
+      "title": "CEN No. 04/2025 - Cutoff Marks of Candidates, selected for Section Controller",
+      "link": "https://www.rrbgkp.gov.in/results/Cut%20off%2004_2025.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://www.rrbgkp.gov.in/results/Cut%20off%2004_2025.pdf"
+      ],
+      "sourceId": "rrb-gorakhpur",
+      "sourceName": "Railway Recruitment Board (RRB) — Gorakhpur",
+      "dept": "Railway Recruitment Board (RRB) — Gorakhpur",
+      "state": "All India",
+      "category": "railways",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "a475d89f85721b33",
+      "title": "CEN No. 08/2024 - NORMALISED CUT OFF MARKS OF CANDIDATES SHORTLISTED FOR PHYSICAL EFFICIENCY TEST (PET)",
+      "link": "https://www.rrbgkp.gov.in/results/Cutoff%2008_2024.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://www.rrbgkp.gov.in/results/Cutoff%2008_2024.pdf"
+      ],
+      "sourceId": "rrb-gorakhpur",
+      "sourceName": "Railway Recruitment Board (RRB) — Gorakhpur",
+      "dept": "Railway Recruitment Board (RRB) — Gorakhpur",
+      "state": "All India",
+      "category": "railways",
+      "fetchMethod": "live-jobs-supplement"
+    },
     {
       "id": "6a567ed0e84b7017",
       "title": "CEN No. 06/2024 - Cutoff Marks of Candidates shortlisted for Category 1 & Category 4",
@@ -16,10 +62,7 @@
       "dept": "Railway Recruitment Board (RRB) — Gorakhpur",
       "state": "All India",
       "category": "railways",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
+      "fetchMethod": "live-jobs-supplement"
     },
     {
       "id": "2d5a9644a5702a7c",
@@ -35,10 +78,7 @@
       "dept": "Railway Recruitment Board (RRB) — Gorakhpur",
       "state": "All India",
       "category": "railways",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
+      "fetchMethod": "live-jobs-supplement"
     },
     {
       "id": "c3eca83eb3117e1d",
@@ -54,10 +94,7 @@
       "dept": "Railway Recruitment Board (RRB) — Gorakhpur",
       "state": "All India",
       "category": "railways",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
+      "fetchMethod": "live-jobs-supplement"
     },
     {
       "id": "456cb3b3a90f2f7b",
@@ -73,10 +110,7 @@
       "dept": "Railway Recruitment Board (RRB) — Gorakhpur",
       "state": "All India",
       "category": "railways",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
+      "fetchMethod": "live-jobs-supplement"
     },
     {
       "id": "8aec6bdf579bbad2",
@@ -92,10 +126,7 @@
       "dept": "Railway Recruitment Board (RRB) — Gorakhpur",
       "state": "All India",
       "category": "railways",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
+      "fetchMethod": "live-jobs-supplement"
     },
     {
       "id": "4936d52fa6626256",
@@ -111,10 +142,7 @@
       "dept": "Railway Recruitment Board (RRB) — Gorakhpur",
       "state": "All India",
       "category": "railways",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
+      "fetchMethod": "live-jobs-supplement"
     },
     {
       "id": "ec55e22ff74f2877",
@@ -130,29 +158,7 @@
       "dept": "Railway Recruitment Board (RRB) — Gorakhpur",
       "state": "All India",
       "category": "railways",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "86c4284b71d40cdc",
-      "title": "Cut-off Marks of Candidates shortlisted for NTPC (Graduate) 2nd Stage under CEN No. 05/2024",
-      "link": "https://www.rrbgkp.gov.in/results/Cutoff%202024%20NTPC.pdf",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [
-        "https://www.rrbgkp.gov.in/results/Cutoff%202024%20NTPC.pdf"
-      ],
-      "sourceId": "rrb-gorakhpur",
-      "sourceName": "Railway Recruitment Board (RRB) — Gorakhpur",
-      "dept": "Railway Recruitment Board (RRB) — Gorakhpur",
-      "state": "All India",
-      "category": "railways",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
+      "fetchMethod": "live-jobs-supplement"
     },
     {
       "id": "a85257eccf0fae59",
@@ -168,10 +174,7 @@
       "dept": "Railway Recruitment Board (RRB) — Patna",
       "state": "All India",
       "category": "railways",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
+      "fetchMethod": "live-jobs-supplement"
     },
     {
       "id": "9a9a584fce45ffc9",
@@ -187,10 +190,7 @@
       "dept": "Railway Recruitment Board (RRB) — Patna",
       "state": "All India",
       "category": "railways",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
+      "fetchMethod": "live-jobs-supplement"
     },
     {
       "id": "38b3d4cdabd03b9a",
@@ -206,10 +206,7 @@
       "dept": "Railway Recruitment Board (RRB) — Patna",
       "state": "All India",
       "category": "railways",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
+      "fetchMethod": "live-jobs-supplement"
     },
     {
       "id": "201d5233f3df3d97",
@@ -223,6 +220,22 @@
       "sourceId": "rrb-patna",
       "sourceName": "Railway Recruitment Board (RRB) — Patna",
       "dept": "Railway Recruitment Board (RRB) — Patna",
+      "state": "All India",
+      "category": "railways",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "86c4284b71d40cdc",
+      "title": "Cut-off Marks of Candidates shortlisted for NTPC (Graduate) 2nd Stage under CEN No. 05/2024",
+      "link": "https://www.rrbgkp.gov.in/results/Cutoff%202024%20NTPC.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://www.rrbgkp.gov.in/results/Cutoff%202024%20NTPC.pdf"
+      ],
+      "sourceId": "rrb-gorakhpur",
+      "sourceName": "Railway Recruitment Board (RRB) — Gorakhpur",
+      "dept": "Railway Recruitment Board (RRB) — Gorakhpur",
       "state": "All India",
       "category": "railways",
       "stateIds": [

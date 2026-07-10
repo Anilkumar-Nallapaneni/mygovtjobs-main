@@ -12,7 +12,9 @@ import { dailySyncLabel } from "@/lib/dailySync";
 import Navbar from "@/components/layout/Navbar";
 import EmploymentNewsBarShell from "@/components/layout/EmploymentNewsBarShell";
 import MobileBottomNav from "@/components/layout/MobileBottomNav";
+import MobileRouteTransition from "@/components/MobileRouteTransition";
 import RouteErrorBoundary from "@/components/RouteErrorBoundary";
+import { useStandaloneApp } from "@/hooks/useStandaloneApp";
 import AppRoutes from "@/components/AppRoutes";
 import { BrowseProvider, useBrowseContext } from "@/context/BrowseContext";
 import type { JobRecord } from "@/types/job";
@@ -54,6 +56,7 @@ function AppShell() {
   });
   const location = useLocation();
   const { colorMode, onColorModeChange } = useColorMode();
+  useStandaloneApp();
 
   useEffect(() => {
     if (browse.isJobDetailRoute) return undefined;
@@ -158,16 +161,18 @@ function AppShell() {
         </div>
       )}
       <main id="main-content" className="app-main">
-        <AppRoutes
-          homePageElement={homePageElement}
-          jobs={jobs}
-          jobsLoading={jobsLoading}
-          liveCount={liveCount}
-          catalogStats={catalogStats}
-          orgCount={ORG_INDEX.length}
-          onJobClick={handleJobClick}
-          onFooterLink={browse.handleFooterLink}
-        />
+        <MobileRouteTransition>
+          <AppRoutes
+            homePageElement={homePageElement}
+            jobs={jobs}
+            jobsLoading={jobsLoading}
+            liveCount={liveCount}
+            catalogStats={catalogStats}
+            orgCount={ORG_INDEX.length}
+            onJobClick={handleJobClick}
+            onFooterLink={browse.handleFooterLink}
+          />
+        </MobileRouteTransition>
       </main>
       <MobileBottomNav />
     </div>

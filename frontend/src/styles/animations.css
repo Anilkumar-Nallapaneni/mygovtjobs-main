@@ -190,6 +190,45 @@
   transition: transform 0.1s ease;
 }
 
+.mobile-bottom-nav__tab--active .mobile-bottom-nav__icon {
+  animation: mgj-stat-pop 0.32s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+/* ----- Mobile route transitions (PWA / Play Store TWA) ----- */
+@keyframes mgj-route-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.mobile-route-transition {
+  animation: mgj-route-in 0.34s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@media (min-width: 769px) {
+  .mobile-route-transition {
+    animation: none;
+  }
+}
+
+/* ----- Installed app shell (standalone / TWA) ----- */
+html[data-standalone] .mobile-bottom-nav {
+  box-shadow: 0 -6px 28px rgba(0, 0, 0, 0.1);
+}
+
+html[data-standalone] .install-app-banner {
+  display: none !important;
+}
+
+html[data-standalone] .navbar {
+  padding-top: env(safe-area-inset-top, 0);
+}
+
 /* ----- Reduced motion ----- */
 @media (prefers-reduced-motion: reduce) {
   .home-hero-stat--animate .home-hero-stat__value,
@@ -201,6 +240,10 @@
   .home-map-block__banner,
   .job-card__badge--hot,
   .home-jobs-empty__icon {
+    animation: none !important;
+  }
+
+  .mobile-route-transition {
     animation: none !important;
   }
 

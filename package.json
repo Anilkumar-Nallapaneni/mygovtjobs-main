@@ -107,6 +107,7 @@
     "setup:production": "node scripts/setup-production.mjs",
     "google:verify": "node scripts/setup-google-search.mjs",
     "go-live:check": "node scripts/go-live-check.mjs",
+    "play:store:check": "node scripts/play-store-check.mjs",
     "admin:key:generate": "node scripts/generate-admin-key.mjs",
     "supabase:test": "node scripts/test-supabase-connection.mjs",
     "supabase:audit": "node scripts/audit-supabase-tables.mjs",

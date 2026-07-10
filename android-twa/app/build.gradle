@@ -22,7 +22,7 @@ plugins {
 
 def twaManifest = [
     applicationId: 'me.govtjobs.app',
-    hostName: 'www.govtjobs.me', // The domain being opened in the TWA.
+    hostName: 'www.livegovtjobs.com', // The domain being opened in the TWA.
     launchUrl: '/', // The start path for the TWA. Must be relative to the domain.
     name: 'My Govt Jobs', // The application name.
     launcherName: 'Govt Jobs', // The name shown on the Android Launcher.
@@ -76,7 +76,7 @@ android {
             // The URL the Web Manifest for the Progressive Web App that the TWA points to. This
             // is used by Chrome OS and Meta Quest to open the Web version of the PWA instead of
             // the TWA, as it will probably give a better user experience for non-mobile devices.
-            resValue "string", "webManifestUrl", 'https://www.govtjobs.me/manifest.webmanifest'
+            resValue "string", "webManifestUrl", 'https://www.livegovtjobs.com/manifest.webmanifest'
         
 
         

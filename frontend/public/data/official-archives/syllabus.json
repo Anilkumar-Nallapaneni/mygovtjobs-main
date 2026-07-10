@@ -1,7 +1,160 @@
 {
-  "generatedAt": "2026-06-28T17:34:41.448Z",
-  "count": 32,
+  "generatedAt": "2026-07-07T10:11:51.863Z",
+  "count": 33,
   "items": [
+    {
+      "id": "4245ad8cea4e9fc4",
+      "title": "Syllabus and Schemes",
+      "link": "https://tpsc.tripura.gov.in/syllabus-and-schemes",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-tr",
+      "sourceName": "Tripura PSC (TPSC)",
+      "dept": "Tripura PSC (TPSC)",
+      "state": "NE States",
+      "category": "state",
+      "stateIds": [
+        "ne"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "19df6addea51f1a1",
+      "title": "Revised Syllabus and Scheme",
+      "link": "https://www.upsc.gov.in/examinations/revised-syllabus-scheme",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "upsc-e-admit-hub",
+      "sourceName": "UPSC — e-Admit cards",
+      "dept": "UPSC — e-Admit cards",
+      "state": "All India",
+      "category": "upsc",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "cdaa5c4d3f129118",
+      "title": "Circular of Scheme & Syllabus of exam for recruitment of Headmaster in RIEs through Limited Departmental Examination (LDE)",
+      "link": "https://ncert.nic.in/pdf/announcement/vacancies/academicvacancy/Circular_Syllabus_Schema_02-05-2025.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://ncert.nic.in/pdf/announcement/vacancies/academicvacancy/Circular_Syllabus_Schema_02-05-2025.pdf"
+      ],
+      "sourceId": "ncert",
+      "sourceName": "NCERT",
+      "dept": "NCERT",
+      "state": "All India",
+      "category": "teaching",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "51cd9efe8e6a1a01",
+      "title": "Notification Regarding Constitution of High-Powered Committee - The National Syllabus and Teaching Learning Material Committee (NSTC)",
+      "link": "https://ncert.nic.in/pdf/notice/Constitution_of_High-Powered_Committee-NSTC.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://ncert.nic.in/pdf/notice/Constitution_of_High-Powered_Committee-NSTC.pdf"
+      ],
+      "sourceId": "ncert",
+      "sourceName": "NCERT",
+      "dept": "NCERT",
+      "state": "All India",
+      "category": "teaching",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "3019953999ede974",
+      "title": "Syllabus",
+      "link": "http://hpsc.gov.in/en-us/Examination/Syllabus",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-hr",
+      "sourceName": "Haryana PSC (HPSC)",
+      "dept": "Haryana PSC (HPSC)",
+      "state": "All India",
+      "category": "state",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "85b1767449295db8",
+      "title": "Postwise Syllabus",
+      "link": "https://www.keralapsc.gov.in/syllabus1",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-kl",
+      "sourceName": "Kerala PSC",
+      "dept": "Kerala PSC",
+      "state": "All India",
+      "category": "state",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "22dd56168d2566c0",
+      "title": "Syllabus and Scheme",
+      "link": "https://mppsc.mp.gov.in/Syllabus",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-mp",
+      "sourceName": "Madhya Pradesh PSC (MPPSC)",
+      "dept": "Madhya Pradesh PSC (MPPSC)",
+      "state": "All India",
+      "category": "state",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "efe9cdba6df9b1ce",
+      "title": "Exam Plan and Syllabus - Specialist Ayurved 2024, Dated 24/06/2026",
+      "link": "https://mppsc.mp.gov.in/uploads/files/Exam_Plan_and_Syllabus_Specialist_Ayurveda_2024_Dated_24_06_2026.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://mppsc.mp.gov.in/uploads/files/Exam_Plan_and_Syllabus_Specialist_Ayurveda_2024_Dated_24_06_2026.pdf"
+      ],
+      "sourceId": "psc-mp",
+      "sourceName": "Madhya Pradesh PSC (MPPSC)",
+      "dept": "Madhya Pradesh PSC (MPPSC)",
+      "state": "All India",
+      "category": "state",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "780e165e84997f6a",
+      "title": "S.O. 41 - Syllabus for Prosecuting Officer (G) Examination",
+      "link": "https://jkpsc.nic.in/pdf/SO41of2021.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://jkpsc.nic.in/pdf/SO41of2021.pdf"
+      ],
+      "sourceId": "psc-jk",
+      "sourceName": "Jammu & Kashmir PSC (JKPSC)",
+      "dept": "Jammu & Kashmir PSC (JKPSC)",
+      "state": "All India",
+      "category": "state",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "2f1159565433b630",
+      "title": "SRO 103-Syllabus for CCE(Main),2018",
+      "link": "https://jkpsc.nic.in/pdf/SRO_103_CCE_2018.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://jkpsc.nic.in/pdf/SRO_103_CCE_2018.pdf"
+      ],
+      "sourceId": "psc-jk",
+      "sourceName": "Jammu & Kashmir PSC (JKPSC)",
+      "dept": "Jammu & Kashmir PSC (JKPSC)",
+      "state": "All India",
+      "category": "state",
+      "fetchMethod": "live-jobs-supplement"
+    },
     {
       "id": "05024659b743007f",
       "title": "Announcement dated 15.06.2026 regarding Scheme and Pattern of examination & Syllabus for the posts of Sub Divisional Engineer (Electrical) (Group-B) in Development & Panchayats Department, Haryana (Advt. No. 02/2026)",
@@ -22,23 +175,6 @@
       "fetchMethod": "html-listing"
     },
     {
-      "id": "19df6addea51f1a1",
-      "title": "Revised Syllabus and Scheme",
-      "link": "https://www.upsc.gov.in/examinations/revised-syllabus-scheme",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "upsc",
-      "sourceName": "Union Public Service Commission (UPSC)",
-      "dept": "Union Public Service Commission (UPSC)",
-      "state": "All India",
-      "category": "upsc",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "rss-config"
-    },
-    {
       "id": "e5d59009e1eecc89",
       "title": "Postwise Syllabus",
       "link": "https://www.keralapsc.gov.in/index.php/syllabus1",
@@ -52,97 +188,6 @@
       "category": "state",
       "stateIds": [
         "kl"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "22dd56168d2566c0",
-      "title": "Syllabus and Scheme",
-      "link": "https://mppsc.mp.gov.in/Syllabus",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-mp",
-      "sourceName": "Madhya Pradesh PSC (MPPSC)",
-      "dept": "Madhya Pradesh PSC (MPPSC)",
-      "state": "Madhya Pradesh",
-      "category": "state",
-      "stateIds": [
-        "mp"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "efe9cdba6df9b1ce",
-      "title": "Exam Plan and Syllabus - Specialist Ayurved 2024, Dated 24/06/2026",
-      "link": "https://mppsc.mp.gov.in/uploads/files/Exam_Plan_and_Syllabus_Specialist_Ayurveda_2024_Dated_24_06_2026.pdf",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [
-        "https://mppsc.mp.gov.in/uploads/files/Exam_Plan_and_Syllabus_Specialist_Ayurveda_2024_Dated_24_06_2026.pdf"
-      ],
-      "sourceId": "psc-mp",
-      "sourceName": "Madhya Pradesh PSC (MPPSC)",
-      "dept": "Madhya Pradesh PSC (MPPSC)",
-      "state": "Madhya Pradesh",
-      "category": "state",
-      "stateIds": [
-        "mp"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "780e165e84997f6a",
-      "title": "S.O. 41 - Syllabus for Prosecuting Officer (G) Examination",
-      "link": "https://jkpsc.nic.in/pdf/SO41of2021.pdf",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [
-        "https://jkpsc.nic.in/pdf/SO41of2021.pdf"
-      ],
-      "sourceId": "psc-jk",
-      "sourceName": "Jammu & Kashmir PSC (JKPSC)",
-      "dept": "Jammu & Kashmir PSC (JKPSC)",
-      "state": "Jammu & Kashmir",
-      "category": "state",
-      "stateIds": [
-        "jk"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "2f1159565433b630",
-      "title": "SRO 103-Syllabus for CCE(Main),2018",
-      "link": "https://jkpsc.nic.in/pdf/SRO_103_CCE_2018.pdf",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [
-        "https://jkpsc.nic.in/pdf/SRO_103_CCE_2018.pdf"
-      ],
-      "sourceId": "psc-jk",
-      "sourceName": "Jammu & Kashmir PSC (JKPSC)",
-      "dept": "Jammu & Kashmir PSC (JKPSC)",
-      "state": "Jammu & Kashmir",
-      "category": "state",
-      "stateIds": [
-        "jk"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "4245ad8cea4e9fc4",
-      "title": "Syllabus and Schemes",
-      "link": "https://tpsc.tripura.gov.in/syllabus-and-schemes",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-tr",
-      "sourceName": "Tripura PSC (TPSC)",
-      "dept": "Tripura PSC (TPSC)",
-      "state": "NE States",
-      "category": "state",
-      "stateIds": [
-        "ne"
       ],
       "fetchMethod": "html"
     },
@@ -198,22 +243,6 @@
       "dept": "Food Safety and Standards Authority (FSSAI)",
       "state": "All India",
       "category": "health",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "cdaa5c4d3f129118",
-      "title": "Circular of Scheme & Syllabus of exam for recruitment of Headmaster in RIEs through Limited Departmental Examination (LDE)",
-      "link": "https://ncert.nic.in/pdf/announcement/vacancies/academicvacancy/Circular_Syllabus_Schema_02-05-2025.pdf",
-      "publishedAt": "2026-06-23T10:15:32.912595Z",
-      "summary": null,
-      "pdfUrls": [
-        "https://ncert.nic.in/pdf/announcement/vacancies/academicvacancy/Circular_Syllabus_Schema_02-05-2025.pdf"
-      ],
-      "sourceId": "ncert",
-      "sourceName": "NCERT",
-      "dept": "NCERT",
-      "state": "All India",
-      "category": "teaching",
       "fetchMethod": "live-jobs-supplement"
     },
     {
@@ -377,25 +406,6 @@
       "fetchMethod": "live-jobs-supplement"
     },
     {
-      "id": "51cd9efe8e6a1a01",
-      "title": "Notification Regarding Constitution of High-Powered Committee - The National Syllabus and Teaching Learning Material Committee (NSTC)",
-      "link": "https://ncert.nic.in/pdf/notice/Constitution_of_High-Powered_Committee-NSTC.pdf",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [
-        "https://ncert.nic.in/pdf/notice/Constitution_of_High-Powered_Committee-NSTC.pdf"
-      ],
-      "sourceId": "ncert",
-      "sourceName": "NCERT",
-      "dept": "NCERT",
-      "state": "All India",
-      "category": "teaching",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
       "id": "112211388bbc6730",
       "title": "Personal Assistant (Establishment, Hon. High Court) Exam-2025-- Corrigendum and Syllabus ( Recruitment Notification )",
       "link": "https://psc.uk.gov.in/candidate-corner/recruitment",
@@ -513,23 +523,6 @@
       "state": "All India",
       "category": "state",
       "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "85b1767449295db8",
-      "title": "Postwise Syllabus",
-      "link": "https://www.keralapsc.gov.in/syllabus1",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-kl",
-      "sourceName": "Kerala PSC",
-      "dept": "Kerala PSC",
-      "state": "Kerala",
-      "category": "state",
-      "stateIds": [
-        "kl"
-      ],
-      "fetchMethod": "html"
     },
     {
       "id": "c26578e3079243ff",

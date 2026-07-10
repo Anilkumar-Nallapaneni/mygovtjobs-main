@@ -1,100 +1,180 @@
-# Publish My Govt Jobs on Google Play Store
+# Publish Live Govt Jobs on Google Play Store
 
-Yes — you can publish this site on the Play Store. The recommended path is a **Trusted Web Activity (TWA)**: a thin Android wrapper around your live PWA at [https://www.govtjobs.me](https://www.govtjobs.me).
+Publish as a **Trusted Web Activity (TWA)** — a native Android shell around your live PWA at [https://www.livegovtjobs.com](https://www.livegovtjobs.com).
 
-The site already has:
+**Why TWA?** Web changes deploy instantly on Vercel; users get updates without waiting for Play Store review. Play Store listing improves discovery and trust.
 
-- PWA manifest + service worker (`vite-plugin-pwa`)
-- Icons at `/pwa-192.png` and `/pwa-512.png`
-- Mobile layout, bottom navigation, and standalone display mode
-- Digital Asset Links template at `frontend/public/.well-known/assetlinks.json`
+## What you already have
 
-## What you need
-
-| Item | Notes |
+| Item | Status |
 |------|--------|
-| Google Play Developer account | One-time $25 registration |
-| Android signing keystore | Created by Bubblewrap or Android Studio |
-| SHA-256 fingerprint | Goes into `assetlinks.json` |
-| Privacy policy URL | Already on site (`/privacy`) |
-| App content rating | Complete in Play Console |
-| Screenshots | Phone + 7-inch tablet (Play Console) |
+| PWA manifest + service worker | ✅ `vite-plugin-pwa` |
+| Icons `/pwa-192.png`, `/pwa-512.png` | ✅ |
+| Mobile bottom nav + safe areas | ✅ |
+| List/card entrance animations | ✅ `animations.css` |
+| Mobile route transitions | ✅ `MobileRouteTransition` |
+| Android TWA project | ✅ `android-twa/` |
+| Digital Asset Links template | ✅ `frontend/public/.well-known/assetlinks.json` |
+| Privacy policy | ✅ `/privacy` |
 
-## Step 1 — Deploy mobile fixes
-
-Push the latest frontend to Vercel so production matches the improved mobile UI:
+## Preflight
 
 ```bash
-npm run build
-# deploy via Vercel (git push or `vercel --prod`)
+npm run play:store:check
 ```
 
-Verify:
+Fixes any ✗ before building the AAB.
 
-- [https://www.govtjobs.me/manifest.webmanifest](https://www.govtjobs.me/manifest.webmanifest) loads
-- [https://www.govtjobs.me/.well-known/assetlinks.json](https://www.govtjobs.me/.well-known/assetlinks.json) loads (after you add your SHA-256)
+---
 
-## Step 2 — Install Bubblewrap
+## Step 1 — Deploy latest web app
+
+```bash
+npm run vercel:deploy
+```
+
+Verify production:
+
+- [https://www.livegovtjobs.com/manifest.webmanifest](https://www.livegovtjobs.com/manifest.webmanifest)
+- [https://www.livegovtjobs.com/.well-known/assetlinks.json](https://www.livegovtjobs.com/.well-known/assetlinks.json)
+- [https://www.livegovtjobs.com/privacy](https://www.livegovtjobs.com/privacy)
+
+---
+
+## Step 2 — Install Bubblewrap (one-time)
 
 ```bash
 npm install -g @bubblewrap/cli
-cd android-twa
-bubblewrap init --manifest=https://www.govtjobs.me/manifest.webmanifest
 ```
 
-Or use the checked-in `twa-manifest.json`:
+Requires **JDK 17+** and Android SDK (Bubblewrap can install via `bubblewrap doctor`).
+
+---
+
+## Step 3 — Create signing keystore
 
 ```bash
 cd android-twa
-bubblewrap init --manifest=twa-manifest.json
+bubblewrap init --manifest=https://www.livegovtjobs.com/manifest.webmanifest
+```
+
+Or use the checked-in manifest:
+
+```bash
+cd android-twa
+bubblewrap update --manifest=twa-manifest.json
 bubblewrap build
 ```
 
-Bubblewrap generates an Android project and `.aab` file for Play Console.
+This creates `android.keystore` (keep it secret — never commit).
 
-## Step 3 — Digital Asset Links
-
-After Bubblewrap creates your keystore, get the SHA-256 fingerprint:
+Get SHA-256 fingerprint:
 
 ```bash
 keytool -list -v -keystore android.keystore -alias govtjobs
 ```
 
-Update `frontend/public/.well-known/assetlinks.json`:
+---
 
-1. Replace `REPLACE_WITH_YOUR_SHA256_FINGERPRINT` with your fingerprint (colons OK).
-2. Keep `package_name` as `me.govtjobs.app` (or change both manifest + assetlinks to match).
+## Step 4 — Update Digital Asset Links
 
-Redeploy to Vercel, then verify:
+Edit `frontend/public/.well-known/assetlinks.json`:
+
+- `package_name`: `me.govtjobs.app`
+- `sha256_cert_fingerprints`: your release keystore SHA-256 (colons OK)
+
+Redeploy:
 
 ```bash
-curl https://www.govtjobs.me/.well-known/assetlinks.json
+npm run vercel:deploy
 ```
 
-Google’s [Statement List Generator](https://developers.google.com/digital-asset-links/tools/generator) can validate the link.
+Validate: [Google Statement List Generator](https://developers.google.com/digital-asset-links/tools/generator)
 
-## Step 4 — Play Console upload
+---
 
-1. Create app → **My Govt Jobs**
-2. Upload the `.aab` from `bubblewrap build`
-3. Store listing: short/full description, category News or Business
-4. Privacy policy: `https://www.govtjobs.me/privacy`
-5. Complete Data safety + Content rating questionnaires
-6. Submit for review (typically 1–7 days)
+## Step 5 — Build release AAB
 
-## Step 5 — Updates
+```bash
+cd android-twa
+bubblewrap build
+```
 
-- **Web changes:** Deploy to Vercel — TWA users get updates instantly
-- **Native shell changes:** Bump `appVersionCode` in `twa-manifest.json`, rebuild AAB, upload new release
+Output: `app-release-bundle.aab` (path shown in build log).
 
-## Alternative: PWA install only (no Play Store)
+---
 
-Users on Android Chrome can install from the browser. Play Store is optional but improves discovery and trust.
+## Step 6 — Google Play Console
+
+1. [play.google.com/console](https://play.google.com/console) — pay **$25** developer registration (one-time)
+2. **Create app** → name: **Live Govt Jobs**
+3. **Release → Production → Create release** → upload `.aab`
+4. **Store listing:**
+   - Short description (80 chars): e.g. *Official government job alerts from verified India sources*
+   - Full description: mention jobs, results, admit cards, state filters
+   - App icon: 512×512 from `/pwa-512.png`
+   - Feature graphic: 1024×500 (create in Canva/Figma)
+   - Screenshots: **minimum 2 phone** (1080×1920 or similar) + **1 tablet** (7")
+5. **Privacy policy:** `https://www.livegovtjobs.com/privacy`
+6. **App category:** News or Business
+7. **Data safety** questionnaire — mostly “data collected for analytics” if using GA4
+8. **Content rating** — complete IARC questionnaire (likely Everyone)
+9. Submit for review (typically **1–7 days**)
+
+---
+
+## Step 7 — After approval
+
+| Change type | Action |
+|-------------|--------|
+| Web UI, jobs, content | `npm run vercel:deploy` — instant for TWA users |
+| Native shell (icons, package) | Bump `appVersionCode` in `twa-manifest.json`, rebuild AAB, new Play release |
+
+---
+
+## Domains
+
+| Domain | Role |
+|--------|------|
+| `www.livegovtjobs.com` | **TWA host** (canonical) |
+| `govtjobs.me` | Redirect alias — same analytics |
+| `livegovtjobs.com` | Redirects to www |
+
+TWA opens `www.livegovtjobs.com` in full-screen Chrome (no browser bar) when asset links verify.
+
+---
+
+## Screenshot tips for Play Store
+
+Capture on a real phone or Chrome DevTools (Pixel 7 preset):
+
+1. Home — job listings with stats
+2. Job detail — PDF / apply section
+3. Results / Admit card page
+4. Explore hub or India map
+5. (Optional) Dark mode screenshot
+
+Use **no** `?gtm_debug` in URLs when capturing.
+
+---
+
+## Troubleshooting
+
+| Issue | Fix |
+|-------|-----|
+| TWA opens in Chrome with URL bar | `assetlinks.json` SHA-256 mismatch — redeploy after fix |
+| Stuck loading skeleton | Hard refresh; verify `/data/live-jobs-list.json` returns 200 |
+| `bubblewrap build` fails | Run `bubblewrap doctor`, install JDK 17 |
+| Play rejects package | Bump `versionCode`; ensure unique `applicationId` |
+
+---
 
 ## Checklist before submit
 
-- [ ] `assetlinks.json` has correct SHA-256 + package name
-- [ ] Lighthouse PWA audit passes on production
-- [ ] No horizontal scroll on 320px width
-- [ ] Privacy policy and contact pages live
-- [ ] App icon 512×512 maskable looks good on Android launcher
+- [ ] `npm run play:store:check` passes
+- [ ] `assetlinks.json` SHA-256 matches release keystore
+- [ ] Tested on Android phone (Chrome → Install app, or internal test track)
+- [ ] No horizontal scroll at 320px width
+- [ ] Privacy + contact pages live
+- [ ] 512×512 maskable icon looks good on launcher
+- [ ] Screenshots uploaded to Play Console
