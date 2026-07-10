@@ -24,7 +24,7 @@
     "vacancies": 1865
   },
   {
-    "dept": "NSUT",
+    "dept": "Nsut",
     "slug": "nsut",
     "count": 49,
     "vacancies": 122
@@ -78,16 +78,16 @@
     "vacancies": 1487
   },
   {
-    "dept": "Rrbajmer",
-    "slug": "rrbajmer",
-    "count": 39,
-    "vacancies": 152
-  },
-  {
     "dept": "Erecruitment Andamannicobar",
     "slug": "erecruitment-andamannicobar",
     "count": 38,
     "vacancies": 28
+  },
+  {
+    "dept": "Rrbajmer",
+    "slug": "rrbajmer",
+    "count": 38,
+    "vacancies": 152
   },
   {
     "dept": "Puducherry Recruitment Portal",
@@ -105,7 +105,7 @@
     "dept": "NITI Aayog",
     "slug": "niti-aayog",
     "count": 36,
-    "vacancies": 7
+    "vacancies": 14
   },
   {
     "dept": "Staff Selection Commission (SSC)",
@@ -114,16 +114,16 @@
     "vacancies": 1
   },
   {
+    "dept": "Jammu & Kashmir PSC (JKPSC)",
+    "slug": "jammu-kashmir-psc-jkpsc",
+    "count": 30,
+    "vacancies": 0
+  },
+  {
     "dept": "UPSC — What's New",
     "slug": "upsc-what-s-new",
     "count": 30,
     "vacancies": 142
-  },
-  {
-    "dept": "Jammu & Kashmir PSC (JKPSC)",
-    "slug": "jammu-kashmir-psc-jkpsc",
-    "count": 29,
-    "vacancies": 0
   },
   {
     "dept": "University Grants Commission (UGC)",
@@ -165,7 +165,7 @@
     "dept": "Reserve Bank of India — Careers",
     "slug": "reserve-bank-of-india-careers",
     "count": 25,
-    "vacancies": 0
+    "vacancies": 71
   },
   {
     "dept": "Uppbpb",
@@ -321,7 +321,7 @@
     "dept": "Indian Navy — Notifications",
     "slug": "indian-navy-notifications",
     "count": 14,
-    "vacancies": 246
+    "vacancies": 271
   },
   {
     "dept": "Mizoram PSC",
@@ -585,7 +585,7 @@
     "dept": "DRDO — Recruitment",
     "slug": "drdo-recruitment",
     "count": 6,
-    "vacancies": 191
+    "vacancies": 224
   },
   {
     "dept": "HPSC — Recruitment",

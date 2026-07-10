@@ -42,3 +42,5 @@ Scraping 53 official portals (with URL fixes + fallbacks) ΓÇª
   [ok] Life Insurance Corporation ΓÇö Careers: 79 (html)
   [fail] Institute of Banking Personnel Selection: 0 (ΓÇö) ΓÇö fetch failed
   [ok] Indian Space Research Organisation (ISRO): 72 (html) ΓÇö socket hang up
+  [ok] Defence Research & Development Organisation: 60 (html) ΓÇö timeout
+  [fail] Railway Recruitment Board (RRB) ΓÇö Chandigarh: 0 (ΓÇö) ΓÇö connect ETIMEDOUT 164.100.228.58:443

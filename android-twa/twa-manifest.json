@@ -21,8 +21,8 @@
     "path": "./android.keystore",
     "alias": "govtjobs"
   },
-  "appVersionName": "1.01.00",
-  "appVersionCode": 3,
+  "appVersionName": "1.00.00",
+  "appVersionCode": 5,
   "shortcuts": [],
   "generatorApp": "bubblewrap-cli",
   "webManifestUrl": "https://www.livegovtjobs.com/manifest.webmanifest",
@@ -40,8 +40,12 @@
   "minSdkVersion": 21,
   "orientation": "default",
   "fingerprints": [],
-  "additionalTrustedOrigins": ["govtjobs.me", "www.govtjobs.me", "livegovtjobs.com"],
+  "additionalTrustedOrigins": [
+    "govtjobs.me",
+    "www.govtjobs.me",
+    "livegovtjobs.com"
+  ],
   "retainedBundles": [],
   "displayOverride": [],
-  "appVersion": "1.01.00"
+  "appVersion": "1.00.00"
 }

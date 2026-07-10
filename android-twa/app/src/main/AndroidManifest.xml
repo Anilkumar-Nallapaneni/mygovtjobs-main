@@ -134,6 +134,10 @@
                 android:value="@string/orientation"/>
 
             
+                <meta-data
+                    android:name="android.support.customtabs.trusted.ADDITIONAL_TRUSTED_ORIGINS"
+                    android:resource="@array/additional_trusted_origins" />
+            
 
             
 
@@ -154,6 +158,30 @@
                 />
             </intent-filter>
 
+            
+                <intent-filter android:autoVerify="true">
+                    <action android:name="android.intent.action.VIEW"/>
+                    <category android:name="android.intent.category.DEFAULT" />
+                    <category android:name="android.intent.category.BROWSABLE"/>
+                    <data android:scheme="https"
+                        android:host="govtjobs.me"/>
+                </intent-filter>
+            
+                <intent-filter android:autoVerify="true">
+                    <action android:name="android.intent.action.VIEW"/>
+                    <category android:name="android.intent.category.DEFAULT" />
+                    <category android:name="android.intent.category.BROWSABLE"/>
+                    <data android:scheme="https"
+                        android:host="www.govtjobs.me"/>
+                </intent-filter>
+            
+                <intent-filter android:autoVerify="true">
+                    <action android:name="android.intent.action.VIEW"/>
+                    <category android:name="android.intent.category.DEFAULT" />
+                    <category android:name="android.intent.category.BROWSABLE"/>
+                    <data android:scheme="https"
+                        android:host="livegovtjobs.com"/>
+                </intent-filter>
             
 
             
