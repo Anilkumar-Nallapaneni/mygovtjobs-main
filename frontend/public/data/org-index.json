@@ -8,14 +8,8 @@
   {
     "dept": "Nuclear Power Corporation of India (NPCIL)",
     "slug": "nuclear-power-corporation-of-india-npcil",
-    "count": 61,
+    "count": 65,
     "vacancies": 0
-  },
-  {
-    "dept": "Food Safety and Standards Authority (FSSAI)",
-    "slug": "food-safety-and-standards-authority-fssai",
-    "count": 60,
-    "vacancies": 1865
   },
   {
     "dept": "Madhya Pradesh PSC (MPPSC)",
@@ -24,15 +18,39 @@
     "vacancies": 21
   },
   {
-    "dept": "Union Public Service Commission (UPSC)",
-    "slug": "union-public-service-commission-upsc",
-    "count": 53,
-    "vacancies": 365
+    "dept": "Food Safety and Standards Authority (FSSAI)",
+    "slug": "food-safety-and-standards-authority-fssai",
+    "count": 58,
+    "vacancies": 1865
   },
   {
     "dept": "Nsut",
     "slug": "nsut",
+    "count": 49,
+    "vacancies": 122
+  },
+  {
+    "dept": "UPPSC — Hall tickets",
+    "slug": "uppsc-hall-tickets",
+    "count": 49,
+    "vacancies": 0
+  },
+  {
+    "dept": "ESIC — Employees' State Insurance Corporation",
+    "slug": "esic-employees-state-insurance-corporation",
     "count": 47,
+    "vacancies": 4169
+  },
+  {
+    "dept": "Sainik School Jhansi",
+    "slug": "sainik-school-jhansi",
+    "count": 46,
+    "vacancies": 8
+  },
+  {
+    "dept": "Press Information Bureau (PIB)",
+    "slug": "press-information-bureau-pib",
+    "count": 45,
     "vacancies": 0
   },
   {
@@ -48,28 +66,28 @@
     "vacancies": 3
   },
   {
-    "dept": "Sainik School Jhansi",
-    "slug": "sainik-school-jhansi",
-    "count": 44,
-    "vacancies": 4
-  },
-  {
-    "dept": "ESIC — Employees' State Insurance Corporation",
-    "slug": "esic-employees-state-insurance-corporation",
-    "count": 43,
-    "vacancies": 110
-  },
-  {
-    "dept": "UPPSC — Hall tickets",
-    "slug": "uppsc-hall-tickets",
+    "dept": "Union Public Service Commission (UPSC)",
+    "slug": "union-public-service-commission-upsc",
     "count": 42,
-    "vacancies": 0
+    "vacancies": 299
   },
   {
     "dept": "Jpsc",
     "slug": "jpsc",
     "count": 41,
     "vacancies": 1487
+  },
+  {
+    "dept": "Erecruitment Andamannicobar",
+    "slug": "erecruitment-andamannicobar",
+    "count": 38,
+    "vacancies": 28
+  },
+  {
+    "dept": "Rrbajmer",
+    "slug": "rrbajmer",
+    "count": 38,
+    "vacancies": 152
   },
   {
     "dept": "Puducherry Recruitment Portal",
@@ -84,46 +102,22 @@
     "vacancies": 0
   },
   {
-    "dept": "Press Information Bureau (PIB)",
-    "slug": "press-information-bureau-pib",
-    "count": 36,
-    "vacancies": 0
-  },
-  {
-    "dept": "Erecruitment Andamannicobar",
-    "slug": "erecruitment-andamannicobar",
-    "count": 35,
-    "vacancies": 0
-  },
-  {
     "dept": "NITI Aayog",
     "slug": "niti-aayog",
-    "count": 35,
-    "vacancies": 1
+    "count": 36,
+    "vacancies": 7
   },
   {
     "dept": "Staff Selection Commission (SSC)",
     "slug": "staff-selection-commission-ssc",
-    "count": 32,
+    "count": 35,
     "vacancies": 1
   },
   {
-    "dept": "Rrbajmer",
-    "slug": "rrbajmer",
-    "count": 31,
-    "vacancies": 95
-  },
-  {
-    "dept": "Railway Recruitment Board (RRB) — Gorakhpur",
-    "slug": "railway-recruitment-board-rrb-gorakhpur",
+    "dept": "UPSC — What's New",
+    "slug": "upsc-what-s-new",
     "count": 30,
-    "vacancies": 22
-  },
-  {
-    "dept": "Railway Recruitment Board (RRB) — Patna",
-    "slug": "railway-recruitment-board-rrb-patna",
-    "count": 30,
-    "vacancies": 3
+    "vacancies": 142
   },
   {
     "dept": "Jammu & Kashmir PSC (JKPSC)",
@@ -138,34 +132,46 @@
     "vacancies": 40
   },
   {
-    "dept": "UPSC — What's New",
-    "slug": "upsc-what-s-new",
-    "count": 28,
-    "vacancies": 142
-  },
-  {
     "dept": "Mha",
     "slug": "mha",
+    "count": 28,
+    "vacancies": 14298
+  },
+  {
+    "dept": "Railway Recruitment Board (RRB) — Gorakhpur",
+    "slug": "railway-recruitment-board-rrb-gorakhpur",
+    "count": 28,
+    "vacancies": 22
+  },
+  {
+    "dept": "Institute of Banking Personnel Selection (IBPS)",
+    "slug": "institute-of-banking-personnel-selection-ibps",
     "count": 27,
-    "vacancies": 14277
+    "vacancies": 0
   },
   {
     "dept": "Haryana PSC (HPSC)",
     "slug": "haryana-psc-hpsc",
     "count": 26,
-    "vacancies": 2577
-  },
-  {
-    "dept": "Institute of Banking Personnel Selection (IBPS)",
-    "slug": "institute-of-banking-personnel-selection-ibps",
-    "count": 25,
-    "vacancies": 0
+    "vacancies": 775
   },
   {
     "dept": "Reserve Bank of India — Careers",
     "slug": "reserve-bank-of-india-careers",
     "count": 25,
-    "vacancies": 71
+    "vacancies": 0
+  },
+  {
+    "dept": "Uppbpb",
+    "slug": "uppbpb",
+    "count": 25,
+    "vacancies": 0
+  },
+  {
+    "dept": "ISRO — Careers",
+    "slug": "isro-careers",
+    "count": 24,
+    "vacancies": 0
   },
   {
     "dept": "MP Police Headquarters — Recruitment",
@@ -174,20 +180,26 @@
     "vacancies": 3
   },
   {
-    "dept": "Recruitment Py",
-    "slug": "recruitment-py",
-    "count": 23,
-    "vacancies": 0
+    "dept": "Railway Recruitment Board (RRB) — Mumbai",
+    "slug": "railway-recruitment-board-rrb-mumbai",
+    "count": 24,
+    "vacancies": 12180
   },
   {
     "dept": "Sainik School Goalpara",
     "slug": "sainik-school-goalpara",
-    "count": 23,
-    "vacancies": 63
+    "count": 24,
+    "vacancies": 80
   },
   {
-    "dept": "Uppbpb",
-    "slug": "uppbpb",
+    "dept": "Railway Recruitment Board (RRB) — Guwahati",
+    "slug": "railway-recruitment-board-rrb-guwahati",
+    "count": 23,
+    "vacancies": 0
+  },
+  {
+    "dept": "Recruitment Py",
+    "slug": "recruitment-py",
     "count": 23,
     "vacancies": 0
   },
@@ -198,15 +210,9 @@
     "vacancies": 0
   },
   {
-    "dept": "ISRO — Careers",
-    "slug": "isro-careers",
-    "count": 22,
-    "vacancies": 0
-  },
-  {
-    "dept": "Railway Recruitment Board (RRB) — Guwahati",
-    "slug": "railway-recruitment-board-rrb-guwahati",
-    "count": 21,
+    "dept": "Railway Recruitment Board (RRB) — Patna",
+    "slug": "railway-recruitment-board-rrb-patna",
+    "count": 20,
     "vacancies": 0
   },
   {
@@ -216,10 +222,16 @@
     "vacancies": 0
   },
   {
-    "dept": "Rrbbbs",
-    "slug": "rrbbbs",
-    "count": 19,
-    "vacancies": 0
+    "dept": "Andaman & Nicobar Administration",
+    "slug": "andaman-nicobar-administration",
+    "count": 18,
+    "vacancies": 19507
+  },
+  {
+    "dept": "Ppsc",
+    "slug": "ppsc",
+    "count": 18,
+    "vacancies": 276
   },
   {
     "dept": "Tpsc Tripura",
@@ -228,10 +240,28 @@
     "vacancies": 0
   },
   {
-    "dept": "Andaman & Nicobar Administration",
-    "slug": "andaman-nicobar-administration",
+    "dept": "Andaman & Nicobar e-Recruitment",
+    "slug": "andaman-nicobar-e-recruitment",
     "count": 17,
-    "vacancies": 19502
+    "vacancies": 0
+  },
+  {
+    "dept": "District & Sessions Judge, Jagatsinghpur",
+    "slug": "district-sessions-judge-jagatsinghpur",
+    "count": 17,
+    "vacancies": 0
+  },
+  {
+    "dept": "Indian Space Research Organisation (ISRO)",
+    "slug": "indian-space-research-organisation-isro",
+    "count": 17,
+    "vacancies": 0
+  },
+  {
+    "dept": "Central Reserve Police Force (CRPF)",
+    "slug": "central-reserve-police-force-crpf",
+    "count": 16,
+    "vacancies": 105
   },
   {
     "dept": "District & Sessions Judge, Balangir",
@@ -240,52 +270,34 @@
     "vacancies": 0
   },
   {
-    "dept": "Indian Space Research Organisation (ISRO)",
-    "slug": "indian-space-research-organisation-isro",
-    "count": 16,
-    "vacancies": 0
-  },
-  {
-    "dept": "Apeda",
-    "slug": "apeda",
-    "count": 15,
-    "vacancies": 32
-  },
-  {
-    "dept": "District & Sessions Judge, Jagatsinghpur",
-    "slug": "district-sessions-judge-jagatsinghpur",
-    "count": 15,
-    "vacancies": 0
-  },
-  {
     "dept": "District & Sessions Judge, Jharsuguda",
     "slug": "district-sessions-judge-jharsuguda",
-    "count": 15,
+    "count": 16,
     "vacancies": 4
   },
   {
     "dept": "Kvsangathan",
     "slug": "kvsangathan",
-    "count": 15,
+    "count": 16,
     "vacancies": 1248
   },
   {
-    "dept": "Rrbguwahati",
-    "slug": "rrbguwahati",
+    "dept": "Rrbbbs",
+    "slug": "rrbbbs",
+    "count": 16,
+    "vacancies": 0
+  },
+  {
+    "dept": "APEDA",
+    "slug": "apeda",
     "count": 15,
-    "vacancies": 0
+    "vacancies": 67
   },
   {
-    "dept": "Andaman & Nicobar e-Recruitment",
-    "slug": "andaman-nicobar-e-recruitment",
-    "count": 14,
-    "vacancies": 0
-  },
-  {
-    "dept": "Central Reserve Police Force (CRPF)",
-    "slug": "central-reserve-police-force-crpf",
-    "count": 14,
-    "vacancies": 105
+    "dept": "Wii",
+    "slug": "wii",
+    "count": 15,
+    "vacancies": 9
   },
   {
     "dept": "Drdo",
@@ -294,16 +306,46 @@
     "vacancies": 203
   },
   {
-    "dept": "Ppsc",
-    "slug": "ppsc",
+    "dept": "Hpsc",
+    "slug": "hpsc",
     "count": 14,
-    "vacancies": 127
+    "vacancies": 0
   },
   {
-    "dept": "Wii",
-    "slug": "wii",
+    "dept": "India Post — Gramin Dak Sevak / GDS",
+    "slug": "india-post-gramin-dak-sevak-gds",
     "count": 14,
-    "vacancies": 5
+    "vacancies": 0
+  },
+  {
+    "dept": "Indian Navy — Notifications",
+    "slug": "indian-navy-notifications",
+    "count": 14,
+    "vacancies": 246
+  },
+  {
+    "dept": "Mizoram PSC",
+    "slug": "mizoram-psc",
+    "count": 14,
+    "vacancies": 1070
+  },
+  {
+    "dept": "Railway Recruitment Board",
+    "slug": "railway-recruitment-board",
+    "count": 14,
+    "vacancies": 4
+  },
+  {
+    "dept": "Rrbguwahati",
+    "slug": "rrbguwahati",
+    "count": 14,
+    "vacancies": 0
+  },
+  {
+    "dept": "Sainikschoolgoalpara Org",
+    "slug": "sainikschoolgoalpara-org",
+    "count": 14,
+    "vacancies": 18190
   },
   {
     "dept": "APEDA / BEDF — Recruitments",
@@ -312,34 +354,16 @@
     "vacancies": 59
   },
   {
-    "dept": "Hpsc",
-    "slug": "hpsc",
+    "dept": "District & Sessions Judge, Dhenkanal",
+    "slug": "district-sessions-judge-dhenkanal",
     "count": 13,
     "vacancies": 0
   },
   {
-    "dept": "Indian Navy — Notifications",
-    "slug": "indian-navy-notifications",
+    "dept": "Rrbmalda",
+    "slug": "rrbmalda",
     "count": 13,
-    "vacancies": 228
-  },
-  {
-    "dept": "Pakur",
-    "slug": "pakur",
-    "count": 13,
-    "vacancies": 0
-  },
-  {
-    "dept": "Railway Recruitment Board",
-    "slug": "railway-recruitment-board",
-    "count": 13,
-    "vacancies": 0
-  },
-  {
-    "dept": "Wildlife Institute of India (WII)",
-    "slug": "wildlife-institute-of-india-wii",
-    "count": 13,
-    "vacancies": 90
+    "vacancies": 2
   },
   {
     "dept": "Canara Bank — Careers",
@@ -348,46 +372,34 @@
     "vacancies": 500
   },
   {
-    "dept": "District & Sessions Judge, Dhenkanal",
-    "slug": "district-sessions-judge-dhenkanal",
-    "count": 12,
-    "vacancies": 0
-  },
-  {
     "dept": "District & Sessions Judge, Kullu",
     "slug": "district-sessions-judge-kullu",
     "count": 12,
     "vacancies": 0
   },
   {
-    "dept": "ISRO — Indian Space Research Organisation",
-    "slug": "isro-indian-space-research-organisation",
+    "dept": "Securities and Exchange Board of India",
+    "slug": "securities-and-exchange-board-of-india",
     "count": 12,
-    "vacancies": 72
-  },
-  {
-    "dept": "Mizoram PSC",
-    "slug": "mizoram-psc",
-    "count": 12,
-    "vacancies": 1064
-  },
-  {
-    "dept": "India Post — Gramin Dak Sevak / GDS",
-    "slug": "india-post-gramin-dak-sevak-gds",
-    "count": 11,
     "vacancies": 0
   },
   {
-    "dept": "Rrbmalda",
-    "slug": "rrbmalda",
-    "count": 11,
-    "vacancies": 2
+    "dept": "Wildlife Institute of India (WII)",
+    "slug": "wildlife-institute-of-india-wii",
+    "count": 12,
+    "vacancies": 1790
   },
   {
-    "dept": "Sainikschoolgoalpara Org",
-    "slug": "sainikschoolgoalpara-org",
+    "dept": "ISRO — Indian Space Research Organisation",
+    "slug": "isro-indian-space-research-organisation",
     "count": 11,
-    "vacancies": 49
+    "vacancies": 48
+  },
+  {
+    "dept": "Rrbthiruvananthapuram",
+    "slug": "rrbthiruvananthapuram",
+    "count": 11,
+    "vacancies": 6
   },
   {
     "dept": "UP Police Recruitment Board (UPPRPB)",
@@ -414,16 +426,28 @@
     "vacancies": 6
   },
   {
+    "dept": "Pakur",
+    "slug": "pakur",
+    "count": 10,
+    "vacancies": 0
+  },
+  {
+    "dept": "Railway Recruitment Board (RRB) — Bhubaneswar",
+    "slug": "railway-recruitment-board-rrb-bhubaneswar",
+    "count": 10,
+    "vacancies": 0
+  },
+  {
+    "dept": "Railway Recruitment Board (RRB) — Chandigarh",
+    "slug": "railway-recruitment-board-rrb-chandigarh",
+    "count": 10,
+    "vacancies": 0
+  },
+  {
     "dept": "Rajasthan PSC (RPSC)",
     "slug": "rajasthan-psc-rpsc",
     "count": 10,
     "vacancies": 66
-  },
-  {
-    "dept": "Rrbthiruvananthapuram",
-    "slug": "rrbthiruvananthapuram",
-    "count": 10,
-    "vacancies": 6
   },
   {
     "dept": "Sainikschoolbhubaneswar Edu In",
@@ -432,14 +456,26 @@
     "vacancies": 0
   },
   {
-    "dept": "Securities and Exchange Board of India",
-    "slug": "securities-and-exchange-board-of-india",
-    "count": 10,
-    "vacancies": 0
+    "dept": "Bhabha Atomic Research Centre (BARC)",
+    "slug": "bhabha-atomic-research-centre-barc",
+    "count": 9,
+    "vacancies": 83
   },
   {
     "dept": "District & Sessions Judge, Cooch Behar",
     "slug": "district-sessions-judge-cooch-behar",
+    "count": 9,
+    "vacancies": 0
+  },
+  {
+    "dept": "District & Sessions Judge, Rayagada",
+    "slug": "district-sessions-judge-rayagada",
+    "count": 9,
+    "vacancies": 0
+  },
+  {
+    "dept": "Fssai",
+    "slug": "fssai",
     "count": 9,
     "vacancies": 0
   },
@@ -450,28 +486,22 @@
     "vacancies": 4
   },
   {
-    "dept": "Railway Recruitment Board (RRB) — Bhubaneswar",
-    "slug": "railway-recruitment-board-rrb-bhubaneswar",
+    "dept": "Psc Uk",
+    "slug": "psc-uk",
     "count": 9,
-    "vacancies": 0
+    "vacancies": 14
   },
   {
-    "dept": "Railway Recruitment Board (RRB) — Mumbai",
-    "slug": "railway-recruitment-board-rrb-mumbai",
-    "count": 9,
-    "vacancies": 100
-  },
-  {
-    "dept": "District & Sessions Judge, Rayagada",
-    "slug": "district-sessions-judge-rayagada",
+    "dept": "AIIMS New Delhi — Recruitment",
+    "slug": "aiims-new-delhi-recruitment",
     "count": 8,
-    "vacancies": 0
+    "vacancies": 102
   },
   {
-    "dept": "Fssai",
-    "slug": "fssai",
+    "dept": "District & Sessions Judge, Ludhiana",
+    "slug": "district-sessions-judge-ludhiana",
     "count": 8,
-    "vacancies": 0
+    "vacancies": 29
   },
   {
     "dept": "Kullu Dcourts",
@@ -498,34 +528,22 @@
     "vacancies": 24
   },
   {
-    "dept": "Railway Recruitment Board (RRB) — Chandigarh",
-    "slug": "railway-recruitment-board-rrb-chandigarh",
-    "count": 8,
-    "vacancies": 0
-  },
-  {
-    "dept": "AIIMS New Delhi — Recruitment",
-    "slug": "aiims-new-delhi-recruitment",
-    "count": 7,
-    "vacancies": 52
-  },
-  {
     "dept": "District & Sessions Judge, Indore",
     "slug": "district-sessions-judge-indore",
     "count": 7,
     "vacancies": 0
   },
   {
-    "dept": "HPSC — Recruitment",
-    "slug": "hpsc-recruitment",
-    "count": 7,
-    "vacancies": 596
-  },
-  {
     "dept": "Mpsc Mizoram",
     "slug": "mpsc-mizoram",
     "count": 7,
     "vacancies": 36
+  },
+  {
+    "dept": "ONGC — Careers",
+    "slug": "ongc-careers",
+    "count": 7,
+    "vacancies": 72
   },
   {
     "dept": "Recruitment Itbpolice",
@@ -540,16 +558,16 @@
     "vacancies": 0
   },
   {
+    "dept": "Trb Tn",
+    "slug": "trb-tn",
+    "count": 7,
+    "vacancies": 150
+  },
+  {
     "dept": "Bpsc Bihar",
     "slug": "bpsc-bihar",
     "count": 6,
     "vacancies": 44
-  },
-  {
-    "dept": "District & Sessions Judge, Ludhiana",
-    "slug": "district-sessions-judge-ludhiana",
-    "count": 6,
-    "vacancies": 29
   },
   {
     "dept": "District & Sessions Judge, Nuapada",
@@ -567,7 +585,13 @@
     "dept": "DRDO — Recruitment",
     "slug": "drdo-recruitment",
     "count": 6,
-    "vacancies": 224
+    "vacancies": 191
+  },
+  {
+    "dept": "HPSC — Recruitment",
+    "slug": "hpsc-recruitment",
+    "count": 6,
+    "vacancies": 596
   },
   {
     "dept": "Jharkhand PSC (JPSC)",
@@ -576,28 +600,10 @@
     "vacancies": 0
   },
   {
-    "dept": "ONGC — Careers",
-    "slug": "ongc-careers",
+    "dept": "Rrbranchi",
+    "slug": "rrbranchi",
     "count": 6,
-    "vacancies": 49
-  },
-  {
-    "dept": "Psc Uk",
-    "slug": "psc-uk",
-    "count": 6,
-    "vacancies": 14
-  },
-  {
-    "dept": "Barc",
-    "slug": "barc",
-    "count": 5,
-    "vacancies": 21
-  },
-  {
-    "dept": "Bhabha Atomic Research Centre (BARC)",
-    "slug": "bhabha-atomic-research-centre-barc",
-    "count": 5,
-    "vacancies": 43
+    "vacancies": 0
   },
   {
     "dept": "Defence Research & Development Organisation",
@@ -606,16 +612,34 @@
     "vacancies": 50
   },
   {
+    "dept": "District & Sessions Judge, Puri",
+    "slug": "district-sessions-judge-puri",
+    "count": 5,
+    "vacancies": 1
+  },
+  {
     "dept": "Indore Dcourts",
     "slug": "indore-dcourts",
     "count": 5,
     "vacancies": 0
   },
   {
-    "dept": "Trb Tn",
-    "slug": "trb-tn",
+    "dept": "Rrbgkp",
+    "slug": "rrbgkp",
     "count": 5,
-    "vacancies": 150
+    "vacancies": 16
+  },
+  {
+    "dept": "Sitapur Dcourts",
+    "slug": "sitapur-dcourts",
+    "count": 5,
+    "vacancies": 0
+  },
+  {
+    "dept": "Tnpsc",
+    "slug": "tnpsc",
+    "count": 5,
+    "vacancies": 461
   },
   {
     "dept": "Uttarakhand PSC (UKPSC)",
@@ -630,6 +654,18 @@
     "vacancies": 176
   },
   {
+    "dept": "Coochbehar Dcourts",
+    "slug": "coochbehar-dcourts",
+    "count": 4,
+    "vacancies": 14
+  },
+  {
+    "dept": "Delhi",
+    "slug": "delhi",
+    "count": 4,
+    "vacancies": 819
+  },
+  {
     "dept": "District & Sessions Judge, Begusarai",
     "slug": "district-sessions-judge-begusarai",
     "count": 4,
@@ -642,14 +678,26 @@
     "vacancies": 0
   },
   {
-    "dept": "District & Sessions Judge, Puri",
-    "slug": "district-sessions-judge-puri",
+    "dept": "DLSA Sitapur",
+    "slug": "dlsa-sitapur",
     "count": 4,
-    "vacancies": 0
+    "vacancies": 2
   },
   {
     "dept": "Employees' Provident Fund Organisation",
     "slug": "employees-provident-fund-organisation",
+    "count": 4,
+    "vacancies": 0
+  },
+  {
+    "dept": "Howrah Dcourts",
+    "slug": "howrah-dcourts",
+    "count": 4,
+    "vacancies": 23
+  },
+  {
+    "dept": "Licindia In",
+    "slug": "licindia-in",
     "count": 4,
     "vacancies": 0
   },
@@ -666,38 +714,56 @@
     "vacancies": 0
   },
   {
-    "dept": "Rrbgkp",
-    "slug": "rrbgkp",
+    "dept": "NIT Rourkela",
+    "slug": "nit-rourkela",
     "count": 4,
-    "vacancies": 0
+    "vacancies": 4
   },
   {
-    "dept": "Rrbranchi",
-    "slug": "rrbranchi",
+    "dept": "Sainik School Gopalganj",
+    "slug": "sainik-school-gopalganj",
     "count": 4,
-    "vacancies": 0
+    "vacancies": 2
   },
   {
-    "dept": "Sitapur Dcourts",
-    "slug": "sitapur-dcourts",
-    "count": 4,
-    "vacancies": 0
-  },
-  {
-    "dept": "Coochbehar Dcourts",
-    "slug": "coochbehar-dcourts",
+    "dept": "Barc",
+    "slug": "barc",
     "count": 3,
-    "vacancies": 14
+    "vacancies": 1
   },
   {
-    "dept": "Delhi",
-    "slug": "delhi",
+    "dept": "BEDF",
+    "slug": "bedf",
     "count": 3,
-    "vacancies": 733
+    "vacancies": 15
+  },
+  {
+    "dept": "BITS Pilani",
+    "slug": "bits-pilani",
+    "count": 3,
+    "vacancies": 31
+  },
+  {
+    "dept": "CBSE — CTET",
+    "slug": "cbse-ctet",
+    "count": 3,
+    "vacancies": 150
+  },
+  {
+    "dept": "Ctet",
+    "slug": "ctet",
+    "count": 3,
+    "vacancies": 150
   },
   {
     "dept": "District & Sessions Judge, Angul",
     "slug": "district-sessions-judge-angul",
+    "count": 3,
+    "vacancies": 0
+  },
+  {
+    "dept": "District & Sessions Judge, Nayagarh",
+    "slug": "district-sessions-judge-nayagarh",
     "count": 3,
     "vacancies": 0
   },
@@ -714,10 +780,22 @@
     "vacancies": 0
   },
   {
-    "dept": "Howrah Dcourts",
-    "slug": "howrah-dcourts",
+    "dept": "IIT Dharwad",
+    "slug": "iit-dharwad",
     "count": 3,
-    "vacancies": 0
+    "vacancies": 3
+  },
+  {
+    "dept": "IIT Gandhinagar",
+    "slug": "iit-gandhinagar",
+    "count": 3,
+    "vacancies": 3
+  },
+  {
+    "dept": "Jagatsinghpur Dcourts",
+    "slug": "jagatsinghpur-dcourts",
+    "count": 3,
+    "vacancies": 1
   },
   {
     "dept": "Jharsuguda Dcourts",
@@ -732,14 +810,14 @@
     "vacancies": 13
   },
   {
-    "dept": "Licindia In",
-    "slug": "licindia-in",
+    "dept": "Life Insurance Corporation — Careers",
+    "slug": "life-insurance-corporation-careers",
     "count": 3,
     "vacancies": 0
   },
   {
-    "dept": "Life Insurance Corporation — Careers",
-    "slug": "life-insurance-corporation-careers",
+    "dept": "Mahapolice",
+    "slug": "mahapolice",
     "count": 3,
     "vacancies": 0
   },
@@ -748,6 +826,12 @@
     "slug": "ongcindia-com",
     "count": 3,
     "vacancies": 92
+  },
+  {
+    "dept": "Panjab University",
+    "slug": "panjab-university",
+    "count": 3,
+    "vacancies": 4
   },
   {
     "dept": "PIB — recent press releases",
@@ -762,22 +846,28 @@
     "vacancies": 0
   },
   {
-    "dept": "Sainik School Gopalganj",
-    "slug": "sainik-school-gopalganj",
+    "dept": "Puri Dcourts",
+    "slug": "puri-dcourts",
+    "count": 3,
+    "vacancies": 2
+  },
+  {
+    "dept": "Railway Recruitment Board (RRB) — Ranchi",
+    "slug": "railway-recruitment-board-rrb-ranchi",
     "count": 3,
     "vacancies": 0
   },
   {
-    "dept": "Sainikschooljhansi Com",
-    "slug": "sainikschooljhansi-com",
+    "dept": "RRI",
+    "slug": "rri",
     "count": 3,
-    "vacancies": 0
+    "vacancies": 136
   },
   {
-    "dept": "Sebi",
-    "slug": "sebi",
+    "dept": "SSC",
+    "slug": "ssc",
     "count": 3,
-    "vacancies": 0
+    "vacancies": 12632
   },
   {
     "dept": "Tnusrb Tn",
@@ -790,6 +880,12 @@
     "slug": "uco-bank-careers",
     "count": 3,
     "vacancies": 25
+  },
+  {
+    "dept": "UPSSSC",
+    "slug": "upsssc",
+    "count": 3,
+    "vacancies": 2074
   },
   {
     "dept": "Yamunanagar Dcourts",
