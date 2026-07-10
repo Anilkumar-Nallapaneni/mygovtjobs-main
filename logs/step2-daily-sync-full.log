@@ -1,0 +1,562 @@
+
+> daily:sync:full
+> node scripts/run-python.mjs scripts/run-daily-8am-sync.py --force
+
+Synced 161 sources to database
+=== IngestAgent ΓÇö 154 official sources (concurrency=6) ===
+[1/154] pib-rss: saved=0 fetched=0
+[3/154] pib: saved=0 fetched=0
+[2/154] employment-news: saved=0 fetched=0
+[5/154] ssc: saved=0 fetched=0
+[10/154] epfo: saved=0 fetched=0
+[9/154] lic: saved=3 fetched=29
+[12/154] niti: saved=0 fetched=0
+[6/154] ibps: saved=8 fetched=15
+[14/154] apprenticeship-india: saved=0 fetched=0
+Multiple definitions in dictionary at byte 0x65e60 for key /Info
+Multiple definitions in dictionary at byte 0x65e6c for key /Info
+[8/154] sebi: saved=3 fetched=47
+[4/154] upsc: saved=19 fetched=36
+Multiple definitions in dictionary at byte 0x911c3 for key /Info
+Multiple definitions in dictionary at byte 0x911cf for key /Info
+Multiple definitions in dictionary at byte 0x911db for key /Info
+[7/154] rbi: TIMEOUT 
+fallback export produced no validated items for source=bisag-n
+[17/154] bisag-n: saved=0 fetched=12
+[18/154] isro: saved=5 fetched=5
+Multiple definitions in dictionary at byte 0x559a7 for key /Info
+Multiple definitions in dictionary at byte 0x559b3 for key /Info
+Multiple definitions in dictionary at byte 0x559bf for key /Info
+Multiple definitions in dictionary at byte 0x49add for key /Info
+Multiple definitions in dictionary at byte 0x49ae9 for key /Info
+Multiple definitions in dictionary at byte 0x49af5 for key /Info
+[11/154] esic: TIMEOUT 
+[13/154] apeda: TIMEOUT 
+[15/154] nsut: TIMEOUT 
+[23/154] rrb-ald: saved=0 fetched=0
+Multiple definitions in dictionary at byte 0x100a84 for key /Info
+Multiple definitions in dictionary at byte 0x100a91 for key /Info
+Multiple definitions in dictionary at byte 0x100a9e for key /Info
+[16/154] wii: TIMEOUT 
+[19/154] drdo: saved=14 fetched=30
+[20/154] barc: TIMEOUT 
+[21/154] npcil: TIMEOUT 
+[28/154] rrb-bhopal: saved=0 fetched=0
+[22/154] rrb-cdg: TIMEOUT 
+[30/154] rrb-bilaspur: saved=0 fetched=0
+[24/154] rrb-mumbai: TIMEOUT 
+[25/154] rrcb: TIMEOUT 
+[33/154] rrb-kolkata: saved=0 fetched=0
+[26/154] ircon: TIMEOUT 
+[31/154] rrb-gorakhpur: saved=5 fetched=5
+[32/154] rrb-guwahati: saved=25 fetched=39
+[29/154] rrb-bbs: saved=11 fetched=22
+[35/154] rrb-patna: saved=3 fetched=3
+[27/154] rrb-ajmer: TIMEOUT 
+[40/154] fci: saved=0 fetched=0
+[41/154] fssai: saved=3 fetched=3
+[34/154] rrb-malda: TIMEOUT 
+[36/154] rrb-ranchi: TIMEOUT 
+[43/154] army: saved=0 fetched=0
+fallback export produced no validated items for source=iaf
+[45/154] iaf: saved=0 fetched=1
+[37/154] rrb-sec: TIMEOUT 
+[38/154] rrb-siliguri: TIMEOUT 
+[39/154] rrb-tvm: TIMEOUT 
+fallback export produced no validated items for source=afcat
+[46/154] afcat: saved=0 fetched=5
+fallback export produced no validated items for source=bsf
+[48/154] bsf: saved=0 fetched=1
+fallback export produced no validated items for source=coast-guard
+[47/154] coast-guard: saved=0 fetched=4
+[52/154] ssb: saved=0 fetched=0
+Multiple definitions in dictionary at byte 0x37e212 for key /Info
+Multiple definitions in dictionary at byte 0x37e21f for key /Info
+Multiple definitions in dictionary at byte 0x22aa7b for key /Info
+Multiple definitions in dictionary at byte 0x22aa88 for key /Info
+Multiple definitions in dictionary at byte 0x22aa95 for key /Info
+Multiple definitions in dictionary at byte 0x264f24 for key /Info
+Multiple definitions in dictionary at byte 0x264f31 for key /Info
+Multiple definitions in dictionary at byte 0x264f3e for key /Info
+[42/154] indiapost: TIMEOUT 
+Multiple definitions in dictionary at byte 0x150866 for key /Info
+Multiple definitions in dictionary at byte 0x150873 for key /Info
+[50/154] cisf: saved=0 fetched=5
+fallback export produced no validated items for source=cisf
+[55/154] ncert: saved=0 fetched=0
+[51/154] itbp: saved=6 fetched=8
+Multiple definitions in dictionary at byte 0x6fa96 for key /Info
+Multiple definitions in dictionary at byte 0x6faa2 for key /Info
+Multiple definitions in dictionary at byte 0x6faae for key /Info
+Multiple definitions in dictionary at byte 0x38d42 for key /Info
+Multiple definitions in dictionary at byte 0x38d4e for key /Info
+Multiple definitions in dictionary at byte 0x38d5a for key /Info
+[44/154] navy: TIMEOUT 
+[58/154] nvs: saved=0 fetched=0
+[49/154] crpf: TIMEOUT 
+[56/154] ctet: saved=3 fetched=28
+fallback export produced no validated items for source=aiims
+[59/154] aiims: saved=0 fetched=4
+[53/154] ib: TIMEOUT 
+[54/154] ugc: TIMEOUT 
+[57/154] kvs: saved=15 fetched=50
+[60/154] sbi: saved=5 fetched=42
+[63/154] canara: saved=23 fetched=50
+[61/154] bob: TIMEOUT 
+[62/154] pnb: TIMEOUT 
+[67/154] iocl: saved=0 fetched=0
+[66/154] ongc: saved=4 fetched=4
+[70/154] gail: saved=0 fetched=0
+[72/154] bhel: saved=0 fetched=0
+[71/154] ntpc: saved=0 fetched=0
+[73/154] hal: saved=0 fetched=0
+[75/154] sail: saved=0 fetched=0
+[64/154] uco: TIMEOUT 
+[77/154] delhi-police: saved=0 fetched=0
+fallback export produced no validated items for source=psc-ap
+[78/154] psc-ap: saved=0 fetched=1
+[79/154] psc-as: saved=0 fetched=0
+[65/154] nabard: TIMEOUT 
+[68/154] bpcl: TIMEOUT 
+[69/154] hpcl: TIMEOUT 
+Multiple definitions in dictionary at byte 0x2df8 for key /Info
+Multiple definitions in dictionary at byte 0x2e04 for key /Info
+Multiple definitions in dictionary at byte 0x37d0 for key /Info
+Multiple definitions in dictionary at byte 0x37dc for key /Info
+Multiple definitions in dictionary at byte 0x3292 for key /Info
+Multiple definitions in dictionary at byte 0x329e for key /Info
+Multiple definitions in dictionary at byte 0x759e for key /Info
+Multiple definitions in dictionary at byte 0x75aa for key /Info
+Multiple definitions in dictionary at byte 0x23e99 for key /Info
+Multiple definitions in dictionary at byte 0x23ea6 for key /Info
+[74/154] bel: TIMEOUT 
+Multiple definitions in dictionary at byte 0x2df8 for key /Info
+Multiple definitions in dictionary at byte 0x2e04 for key /Info
+Multiple definitions in dictionary at byte 0x37d0 for key /Info
+Multiple definitions in dictionary at byte 0x37dc for key /Info
+Multiple definitions in dictionary at byte 0x3292 for key /Info
+Multiple definitions in dictionary at byte 0x329e for key /Info
+Multiple definitions in dictionary at byte 0x759e for key /Info
+Multiple definitions in dictionary at byte 0x75aa for key /Info
+Multiple definitions in dictionary at byte 0xbfdba4 for key /Info
+Multiple definitions in dictionary at byte 0xbfdbb1 for key /Info
+Multiple definitions in dictionary at byte 0x5cba for key /Info
+Multiple definitions in dictionary at byte 0x5cc6 for key /Info
+Multiple definitions in dictionary at byte 0x5cd2 for key /Info
+Multiple definitions in dictionary at byte 0x249005 for key /Info
+Multiple definitions in dictionary at byte 0x249012 for key /Info
+Multiple definitions in dictionary at byte 0x672e for key /Info
+Multiple definitions in dictionary at byte 0x673a for key /Info
+Multiple definitions in dictionary at byte 0x3f415 for key /Info
+Multiple definitions in dictionary at byte 0x3f421 for key /Info
+Multiple definitions in dictionary at byte 0x6d48f for key /Info
+Multiple definitions in dictionary at byte 0x6d49b for key /Info
+Multiple definitions in dictionary at byte 0x6997f for key /Info
+Multiple definitions in dictionary at byte 0x6998b for key /Info
+Multiple definitions in dictionary at byte 0x7dbbe for key /Info
+Multiple definitions in dictionary at byte 0x7dbca for key /Info
+Multiple definitions in dictionary at byte 0x146c1b for key /Info
+Multiple definitions in dictionary at byte 0x146c28 for key /Info
+Multiple definitions in dictionary at byte 0x485b1 for key /Info
+Multiple definitions in dictionary at byte 0x485bd for key /Info
+[76/154] ies: TIMEOUT 
+[80/154] psc-br: saved=6 fetched=12
+Multiple definitions in dictionary at byte 0x4b40c for key /Info
+Multiple definitions in dictionary at byte 0x4b418 for key /Info
+Multiple definitions in dictionary at byte 0x4b40c for key /Info
+Multiple definitions in dictionary at byte 0x4b418 for key /Info
+[86/154] psc-jk: saved=0 fetched=0
+Multiple definitions in dictionary at byte 0x4b40c for key /Info
+Multiple definitions in dictionary at byte 0x4b418 for key /Info
+Multiple definitions in dictionary at byte 0x4b40c for key /Info
+Multiple definitions in dictionary at byte 0x4b418 for key /Info
+Multiple definitions in dictionary at byte 0x134b13 for key /Info
+Multiple definitions in dictionary at byte 0x134b20 for key /Info
+Multiple definitions in dictionary at byte 0x137b87 for key /Info
+Multiple definitions in dictionary at byte 0x137b94 for key /Info
+Multiple definitions in dictionary at byte 0x268cb2 for key /Info
+Multiple definitions in dictionary at byte 0x268cbf for key /Info
+Multiple definitions in dictionary at byte 0xa83a1 for key /Info
+Multiple definitions in dictionary at byte 0xa83ae for key /Info
+Multiple definitions in dictionary at byte 0xe13e3 for key /Info
+Multiple definitions in dictionary at byte 0xe13f0 for key /Info
+Multiple definitions in dictionary at byte 0x4b40c for key /Info
+Multiple definitions in dictionary at byte 0x4b418 for key /Info
+Multiple definitions in dictionary at byte 0x4b40c for key /Info
+Multiple definitions in dictionary at byte 0x4b418 for key /Info
+[84/154] psc-hr: saved=8 fetched=19
+[85/154] psc-hp: saved=1 fetched=5
+[88/154] psc-ka: saved=0 fetched=0
+[81/154] psc-cg: TIMEOUT 
+[91/154] psc-mh: saved=0 fetched=0
+fallback export produced no validated items for source=psc-mp
+[90/154] psc-mp: saved=0 fetched=1
+Multiple definitions in dictionary at byte 0x4d7ab9 for key /Info
+Multiple definitions in dictionary at byte 0x4d7ac6 for key /Info
+[93/154] psc-nl: saved=0 fetched=0
+[94/154] psc-od: saved=0 fetched=0
+Multiple definitions in dictionary at byte 0x5411e for key /Info
+Multiple definitions in dictionary at byte 0x5412a for key /Info
+Multiple definitions in dictionary at byte 0x534bd for key /Info
+Multiple definitions in dictionary at byte 0x534c9 for key /Info
+[82/154] psc-ga: TIMEOUT 
+[83/154] psc-gj: TIMEOUT 
+incorrect startxref pointer(3)
+parsing for Object Streams
+[89/154] psc-kl: saved=1 fetched=13
+incorrect startxref pointer(3)
+parsing for Object Streams
+[87/154] psc-jh: TIMEOUT 
+[99/154] psc-tg: saved=0 fetched=0
+Multiple definitions in dictionary at byte 0x64f3be for key /Info
+Multiple definitions in dictionary at byte 0x64f3cb for key /Info
+Multiple definitions in dictionary at byte 0x8bd22 for key /Info
+Multiple definitions in dictionary at byte 0x8bd2e for key /Info
+[92/154] psc-mz: saved=7 fetched=23
+Multiple definitions in dictionary at byte 0x5c7e77 for key /Info
+Multiple definitions in dictionary at byte 0x5c7e84 for key /Info
+[95/154] psc-pb: saved=18 fetched=18
+[98/154] psc-tn: saved=2 fetched=4
+fallback export produced no validated items for source=psc-rj
+[96/154] psc-rj: saved=0 fetched=14
+[104/154] psc-ar: saved=1 fetched=1
+fallback export produced no validated items for source=psc-up
+[101/154] psc-up: saved=0 fetched=7
+[106/154] psc-ml: saved=0 fetched=0
+[105/154] psc-mn: saved=7 fetched=8
+[108/154] ssb-mh: saved=0 fetched=0
+Multiple definitions in dictionary at byte 0x29649 for key /Info
+Multiple definitions in dictionary at byte 0x29655 for key /Info
+Multiple definitions in dictionary at byte 0x29661 for key /Info
+[97/154] psc-sk: TIMEOUT 
+[109/154] ssb-tn: saved=4 fetched=11
+[100/154] psc-tr: TIMEOUT 
+[102/154] psc-uk: TIMEOUT 
+fallback export produced no validated items for source=ssb-gj
+[112/154] ssb-gj: saved=0 fetched=1
+[113/154] ssb-mp: saved=0 fetched=0
+[111/154] ssb-hr: saved=19 fetched=27
+Multiple definitions in dictionary at byte 0x662a1 for key /Info
+Multiple definitions in dictionary at byte 0x662ad for key /Info
+[103/154] psc-wb: TIMEOUT 
+[107/154] ssb-up: TIMEOUT 
+fallback export produced no validated items for source=ssb-rj
+[110/154] ssb-rj: saved=0 fetched=4
+[119/154] police-kl: saved=0 fetched=0
+[117/154] police-rj: saved=0 fetched=0
+[116/154] police-tn: saved=3 fetched=34
+fallback export produced no validated items for source=psc-dl
+[122/154] psc-dl: saved=0 fetched=1
+[114/154] police-up: TIMEOUT 
+[115/154] police-mh: TIMEOUT 
+[118/154] police-mp: TIMEOUT 
+Multiple definitions in dictionary at byte 0x6f917a for key /Info
+Multiple definitions in dictionary at byte 0x6f9187 for key /Info
+Multiple definitions in dictionary at byte 0x28aafd for key /Info
+Multiple definitions in dictionary at byte 0x28ab0a for key /Info
+Multiple definitions in dictionary at byte 0xbebd2 for key /Info
+Multiple definitions in dictionary at byte 0xbebdf for key /Info
+Multiple definitions in dictionary at byte 0x51358 for key /Info
+Multiple definitions in dictionary at byte 0x51364 for key /Info
+Multiple definitions in dictionary at byte 0xcfc8c for key /Info
+Multiple definitions in dictionary at byte 0xcfc99 for key /Info
+Multiple definitions in dictionary at byte 0xbebd2 for key /Info
+Multiple definitions in dictionary at byte 0xbebdf for key /Info
+[123/154] py-rec: saved=23 fetched=23
+Multiple definitions in dictionary at byte 0x51358 for key /Info
+Multiple definitions in dictionary at byte 0x51364 for key /Info
+Multiple definitions in dictionary at byte 0xcfc8c for key /Info
+Multiple definitions in dictionary at byte 0xcfc99 for key /Info
+Multiple definitions in dictionary at byte 0xbebd2 for key /Info
+Multiple definitions in dictionary at byte 0xbebdf for key /Info
+Multiple definitions in dictionary at byte 0x51358 for key /Info
+Multiple definitions in dictionary at byte 0x51364 for key /Info
+Multiple definitions in dictionary at byte 0xcfc8c for key /Info
+Multiple definitions in dictionary at byte 0xcfc99 for key /Info
+Multiple definitions in dictionary at byte 0xbebd2 for key /Info
+Multiple definitions in dictionary at byte 0xbebdf for key /Info
+Multiple definitions in dictionary at byte 0x51358 for key /Info
+Multiple definitions in dictionary at byte 0x51364 for key /Info
+Multiple definitions in dictionary at byte 0xcfc8c for key /Info
+Multiple definitions in dictionary at byte 0xcfc99 for key /Info
+[120/154] police-ka: TIMEOUT 
+[121/154] delhi-portal: TIMEOUT 
+fallback export produced no validated items for source=la-recruitment
+[126/154] la-recruitment: saved=0 fetched=27
+Multiple definitions in dictionary at byte 0x76898c for key /Info
+Multiple definitions in dictionary at byte 0x768999 for key /Info
+Multiple definitions in dictionary at byte 0x7689a6 for key /Info
+Multiple definitions in dictionary at byte 0x4cc6f3 for key /Info
+Multiple definitions in dictionary at byte 0x4cc700 for key /Info
+Multiple definitions in dictionary at byte 0xbbe3b for key /Info
+Multiple definitions in dictionary at byte 0xbbe48 for key /Info
+Multiple definitions in dictionary at byte 0xbbe55 for key /Info
+Multiple definitions in dictionary at byte 0x112aad for key /Info
+Multiple definitions in dictionary at byte 0x112aba for key /Info
+Multiple definitions in dictionary at byte 0x112ac7 for key /Info
+Multiple definitions in dictionary at byte 0x31e96c for key /Info
+Multiple definitions in dictionary at byte 0x31e979 for key /Info
+Multiple definitions in dictionary at byte 0x31e986 for key /Info
+Multiple definitions in dictionary at byte 0x1c3661 for key /Info
+Multiple definitions in dictionary at byte 0x1c366e for key /Info
+Multiple definitions in dictionary at byte 0x1c367b for key /Info
+Multiple definitions in dictionary at byte 0x6f917a for key /Info
+Multiple definitions in dictionary at byte 0x6f9187 for key /Info
+Multiple definitions in dictionary at byte 0x242887 for key /Info
+Multiple definitions in dictionary at byte 0x242894 for key /Info
+Multiple definitions in dictionary at byte 0x10df13 for key /Info
+Multiple definitions in dictionary at byte 0x10df20 for key /Info
+Multiple definitions in dictionary at byte 0x28aafd for key /Info
+Multiple definitions in dictionary at byte 0x28ab0a for key /Info
+Multiple definitions in dictionary at byte 0x26154b for key /Info
+Multiple definitions in dictionary at byte 0x261558 for key /Info
+Multiple definitions in dictionary at byte 0x1c3661 for key /Info
+Multiple definitions in dictionary at byte 0x1c366e for key /Info
+Multiple definitions in dictionary at byte 0x1c367b for key /Info
+Multiple definitions in dictionary at byte 0xe63ed for key /Info
+Multiple definitions in dictionary at byte 0xe63fa for key /Info
+Multiple definitions in dictionary at byte 0x70c98 for key /Info
+Multiple definitions in dictionary at byte 0x70ca4 for key /Info
+Multiple definitions in dictionary at byte 0x5968a7 for key /Info
+Multiple definitions in dictionary at byte 0x5968b4 for key /Info
+Multiple definitions in dictionary at byte 0x5968c1 for key /Info
+Multiple definitions in dictionary at byte 0x897fff for key /Info
+Multiple definitions in dictionary at byte 0x89800c for key /Info
+Multiple definitions in dictionary at byte 0x898019 for key /Info
+Multiple definitions in dictionary at byte 0x6f917a for key /Info
+Multiple definitions in dictionary at byte 0x6f9187 for key /Info
+Multiple definitions in dictionary at byte 0x28aafd for key /Info
+Multiple definitions in dictionary at byte 0x28ab0a for key /Info
+Multiple definitions in dictionary at byte 0x169eae for key /Info
+Multiple definitions in dictionary at byte 0x169ebb for key /Info
+Multiple definitions in dictionary at byte 0x169ec8 for key /Info
+Multiple definitions in dictionary at byte 0xbebd2 for key /Info
+Multiple definitions in dictionary at byte 0xbebdf for key /Info
+Multiple definitions in dictionary at byte 0x51358 for key /Info
+Multiple definitions in dictionary at byte 0x51364 for key /Info
+Multiple definitions in dictionary at byte 0xcfc8c for key /Info
+Multiple definitions in dictionary at byte 0xcfc99 for key /Info
+[129/154] dcourt-angul: saved=1 fetched=13
+Multiple definitions in dictionary at byte 0xbebd2 for key /Info
+Multiple definitions in dictionary at byte 0xbebdf for key /Info
+Multiple definitions in dictionary at byte 0x51358 for key /Info
+Multiple definitions in dictionary at byte 0x51364 for key /Info
+Multiple definitions in dictionary at byte 0xcfc8c for key /Info
+Multiple definitions in dictionary at byte 0xcfc99 for key /Info
+[124/154] py-psc: TIMEOUT 
+[130/154] dcourt-balangir: saved=2 fetched=14
+[125/154] la-gov: TIMEOUT 
+Multiple definitions in dictionary at byte 0x37e95 for key /Info
+Multiple definitions in dictionary at byte 0x37ea1 for key /Info
+Multiple definitions in dictionary at byte 0x37ead for key /Info
+Multiple definitions in dictionary at byte 0xd76ad for key /Info
+Multiple definitions in dictionary at byte 0xd76ba for key /Info
+Multiple definitions in dictionary at byte 0xd76c7 for key /Info
+Multiple definitions in dictionary at byte 0x1e2092 for key /Info
+Multiple definitions in dictionary at byte 0x1e209f for key /Info
+Multiple definitions in dictionary at byte 0x1e20ac for key /Info
+[132/154] dcourt-jagatsinghpur: saved=2 fetched=13
+Ignoring missing Ascii85 end marker.
+Ignoring missing Ascii85 end marker.
+[133/154] dcourt-jharsuguda: saved=2 fetched=13
+[127/154] an-rec: TIMEOUT 
+[134/154] dcourt-puri: saved=1 fetched=12
+[131/154] dcourt-nayagarh: saved=1 fetched=13
+[128/154] an-gov: TIMEOUT 
+[135/154] dcourt-rayagada: saved=1 fetched=13
+[137/154] dcourt-nuapada: saved=1 fetched=13
+[136/154] dcourt-dhenkanal: saved=1 fetched=12
+[138/154] dcourt-sitapur: saved=1 fetched=13
+/Prev=0 in the trailer - assuming there is no previous xref table
+/Prev=0 in the trailer - assuming there is no previous xref table
+/Prev=0 in the trailer - assuming there is no previous xref table
+/Prev=0 in the trailer - assuming there is no previous xref table
+/Prev=0 in the trailer - assuming there is no previous xref table
+/Prev=0 in the trailer - assuming there is no previous xref table
+/Prev=0 in the trailer - assuming there is no previous xref table
+/Prev=0 in the trailer - assuming there is no previous xref table
+/Prev=0 in the trailer - assuming there is no previous xref table
+/Prev=0 in the trailer - assuming there is no previous xref table
+[139/154] dcourt-ludhiana: saved=5 fetched=19
+[140/154] dcourt-yamunanagar: saved=2 fetched=16
+Multiple definitions in dictionary at byte 0x186cfb for key /Info
+Multiple definitions in dictionary at byte 0x186d08 for key /Info
+Multiple definitions in dictionary at byte 0x428e0 for key /Info
+Multiple definitions in dictionary at byte 0x428ec for key /Info
+[141/154] dcourt-kullu: saved=5 fetched=17
+[142/154] dcourt-indore: saved=3 fetched=15
+[144/154] dcourt-howrah: saved=4 fetched=15
+Multiple definitions in dictionary at byte 0x123131 for key /Info
+Multiple definitions in dictionary at byte 0x12313e for key /Info
+Multiple definitions in dictionary at byte 0x12314b for key /Info
+Multiple definitions in dictionary at byte 0x123131 for key /Info
+Multiple definitions in dictionary at byte 0x12313e for key /Info
+Multiple definitions in dictionary at byte 0x12314b for key /Info
+[143/154] dcourt-ujjain: saved=4 fetched=16
+Multiple definitions in dictionary at byte 0xf038d for key /Info
+Multiple definitions in dictionary at byte 0xf0399 for key /Info
+Multiple definitions in dictionary at byte 0xf03a5 for key /Info
+Multiple definitions in dictionary at byte 0x123131 for key /Info
+Multiple definitions in dictionary at byte 0x12313e for key /Info
+Multiple definitions in dictionary at byte 0x12314b for key /Info
+Multiple definitions in dictionary at byte 0x7ab53 for key /Info
+Multiple definitions in dictionary at byte 0x7ab60 for key /Info
+Multiple definitions in dictionary at byte 0x7ab6d for key /Info
+Multiple definitions in dictionary at byte 0x72ff3 for key /Info
+Multiple definitions in dictionary at byte 0x73000 for key /Info
+Multiple definitions in dictionary at byte 0x7300d for key /Info
+/Prev=0 in the trailer - assuming there is no previous xref table
+Multiple definitions in dictionary at byte 0x72ff3 for key /Info
+Multiple definitions in dictionary at byte 0x73000 for key /Info
+Multiple definitions in dictionary at byte 0x7300d for key /Info
+Multiple definitions in dictionary at byte 0x7ab53 for key /Info
+Multiple definitions in dictionary at byte 0x7ab60 for key /Info
+Multiple definitions in dictionary at byte 0x7ab6d for key /Info
+Multiple definitions in dictionary at byte 0xf038d for key /Info
+Multiple definitions in dictionary at byte 0xf0399 for key /Info
+Multiple definitions in dictionary at byte 0xf03a5 for key /Info
+[145/154] dcourt-coochbehar: saved=4 fetched=16
+[146/154] dcourt-begusarai: saved=2 fetched=15
+[148/154] dcourt-siddipet: saved=1 fetched=13
+fallback export produced no validated items for source=ss-amaravathi
+[150/154] ss-amaravathi: saved=0 fetched=10
+[153/154] ss-gopalganj: saved=0 fetched=0
+[147/154] dcourt-bhojpur: saved=4 fetched=15
+[151/154] ss-jhansi: saved=4 fetched=13
+Multiple definitions in dictionary at byte 0xa9f64 for key /Info
+Multiple definitions in dictionary at byte 0xa9f71 for key /Info
+Multiple definitions in dictionary at byte 0x9ae6a for key /Info
+Multiple definitions in dictionary at byte 0x9ae77 for key /Info
+Multiple definitions in dictionary at byte 0xb6d10 for key /Info
+Multiple definitions in dictionary at byte 0xb6d1d for key /Info
+Multiple definitions in dictionary at byte 0x804ae for key /Info
+Multiple definitions in dictionary at byte 0x804bb for key /Info
+Multiple definitions in dictionary at byte 0x8ab65 for key /Info
+Multiple definitions in dictionary at byte 0x8ab72 for key /Info
+Multiple definitions in dictionary at byte 0xa9f64 for key /Info
+Multiple definitions in dictionary at byte 0xa9f71 for key /Info
+Multiple definitions in dictionary at byte 0x9ae6a for key /Info
+Multiple definitions in dictionary at byte 0x9ae77 for key /Info
+Multiple definitions in dictionary at byte 0xb6d10 for key /Info
+Multiple definitions in dictionary at byte 0xb6d1d for key /Info
+Multiple definitions in dictionary at byte 0x804ae for key /Info
+Multiple definitions in dictionary at byte 0x804bb for key /Info
+[149/154] ss-goalpara: saved=13 fetched=43
+Multiple definitions in dictionary at byte 0x12365 for key /Info
+Multiple definitions in dictionary at byte 0x12372 for key /Info
+Multiple definitions in dictionary at byte 0x1237f for key /Info
+Multiple definitions in dictionary at byte 0x5617c6 for key /Info
+Multiple definitions in dictionary at byte 0x5617d3 for key /Info
+Multiple definitions in dictionary at byte 0x28d7eb for key /Info
+Multiple definitions in dictionary at byte 0x28d7f8 for key /Info
+Multiple definitions in dictionary at byte 0xbe3e4 for key /Info
+Multiple definitions in dictionary at byte 0xbe3f1 for key /Info
+Multiple definitions in dictionary at byte 0x79ca9d for key /Info
+Multiple definitions in dictionary at byte 0x79caab for key /Info
+Multiple definitions in dictionary at byte 0x292078 for key /Info
+Multiple definitions in dictionary at byte 0x292085 for key /Info
+Multiple definitions in dictionary at byte 0x4dfb23 for key /Info
+Multiple definitions in dictionary at byte 0x4dfb30 for key /Info
+[152/154] ss-bhubaneswar: TIMEOUT 
+[154/154] emrs-pakur: saved=11 fetched=28
+Ingest saved 330 rows from 154 sources
+
+=== npm run fetch:official  ===
+
+> fetch:official
+> tsx scripts/fetch-all-official.mjs
+
+=== Notifications from last 60 days ===
+
+=== RSS feeds (official-sources.json) ===
+Fetching 29 RSS/HTML sources (concurrency 2)ΓÇª
+  RSS/HTML pib-press-reg3ΓÇª
+  RSS/HTML employment-newsΓÇª
+  RSS/HTML upsc-notificationsΓÇª
+  RSS/HTML upsc-previous-papersΓÇª
+  RSS/HTML ssc-notificationsΓÇª
+  RSS/HTML ibps-careersΓÇª
+  RSS/HTML rrb-notificationsΓÇª
+  RSS/HTML drdo-careersΓÇª
+  RSS/HTML isro-careersΓÇª
+  RSS/HTML psc-up-notificationsΓÇª
+  RSS/HTML psc-br-notificationsΓÇª
+  RSS/HTML psc-rj-notificationsΓÇª
+  RSS/HTML psc-mh-notificationsΓÇª
+  RSS/HTML psc-tn-notificationsΓÇª
+  RSS/HTML psc-wb-notificationsΓÇª
+  RSS/HTML psc-uk-notificationsΓÇª
+  RSS/HTML kvs-recruitmentΓÇª
+  RSS/HTML navy-careersΓÇª
+  RSS/HTML rrb-ald-notificationsΓÇª
+  RSS/HTML psc-od-notificationsΓÇª
+  RSS/HTML psc-hr-notificationsΓÇª
+  RSS/HTML psc-gj-notificationsΓÇª
+  RSS/HTML psc-cg-notificationsΓÇª
+  RSS/HTML upsc-e-admit-hubΓÇª
+  RSS/HTML appsc-hall-ticketsΓÇª
+  RSS/HTML ukpsc-admit-cornerΓÇª
+  RSS/HTML jkpsc-admitΓÇª
+  RSS/HTML tnpsc-hall-ticketsΓÇª
+  RSS/HTML uppsc-hall-ticketsΓÇª
+  [fail] RSS PIB ΓÇö recent press releases: 0 ΓÇö rss-empty
+  [ok] RSS Employment News ΓÇö Government vacancies: 1 (html-listing)
+  [ok] RSS UPSC ΓÇö What's New: 39 (html-listing)
+  [ok] RSS UPSC ΓÇö Previous Question Papers: 17 (html-listing)
+  [fail] RSS SSC ΓÇö Latest notifications: 0 ΓÇö no items
+  [fail] RSS IBPS ΓÇö Career notifications: 0 ΓÇö https://www.ibps.in/index.php/cwe-notification/: fetch failed; https://ibps.in/: fetch failed; https://www.ibps.in/: fetch failed
+  [ok] RSS Railway Recruitment Board: 1 (html-listing)
+  [ok] RSS DRDO ΓÇö Recruitment: 23 (html-listing)
+  [ok] RSS ISRO ΓÇö Careers: 60 (html-listing)
+  [fail] RSS UPPSC ΓÇö Notifications: 0 ΓÇö no items
+  [fail] RSS BPSC ΓÇö Notices: 0 ΓÇö https://bpsc.bihar.gov.in/Notices.html: socket hang up; https://www.onlinebpsc.bihar.gov.in/: getaddrinfo ENOTFOUND www.onlinebpsc.bihar.gov.in
+  [ok] RSS RPSC ΓÇö Advertisements: 60 (html-listing)
+  [fail] RSS MPSC ΓÇö Notices: 0 ΓÇö no items
+  [fail] RSS TNPSC ΓÇö Notifications: 0 ΓÇö https://www.tnpsc.gov.in/English/latest-notification.html: timeout; https://www.tnpsc.gov.in/notification.aspx: timeout
+  [fail] RSS WBPSC ΓÇö Notifications: 0 ΓÇö https://wbpsc.gov.in/: connect ETIMEDOUT 202.61.117.238:443; https://wbpsc.gov.in/Notifications.html: connect ETIMEDOUT 202.61.117.238:443
+  [fail] RSS UKPSC ΓÇö Notifications: 0 ΓÇö https://psc.uk.gov.in/Recruitment/ViewAll: timeout; https://psc.uk.gov.in/candidate-corner/admitcards: timeout
+  [ok] RSS KVS ΓÇö Recruitment notices: 50 (html-listing)
+  [ok] RSS Indian Navy ΓÇö Notifications: 37 (html-listing)
+  [fail] RSS RRB Prayagraj ΓÇö Notifications: 0 ΓÇö https://www.rrbald.gov.in/rrbald/: timeout; https://rrbald.gov.in/: timeout
+  [fail] RSS OPSC ΓÇö Notifications: 0 ΓÇö no items
+  [ok] RSS HPSC ΓÇö Recruitment: 15 (html-listing)
+  [ok] RSS GPSC ΓÇö Advertisements: 1 (html-listing)
+  [fail] RSS CGPSC ΓÇö Notifications: 0 ΓÇö no items
+  [ok] RSS UPSC ΓÇö e-Admit cards: 39 (html-listing)
+  [fail] RSS APPSC ΓÇö Hall tickets: 0 ΓÇö no items
+  [fail] RSS UKPSC ΓÇö Admit cards: 0 ΓÇö https://psc.uk.gov.in/candidate-corner/admitcards: timeout
+  [fail] RSS JKPSC ΓÇö Admit cards & call letters: 0 ΓÇö http://jkpsc.nic.in/: https only; http://jkpsc.nic.in/result/: https only; http://jkpsc.nic.in/PDF/: https only; http://jkpsc.nic.in/Notifications.html: https only
+  [ok] RSS TNPSC ΓÇö Hall tickets: 4 (html-listing)
+  [ok] RSS UPPSC ΓÇö Hall tickets: 60 (html-listing)
+
+=== Official portals (officialSites.js) ===
+Scraping 153 official portals (with URL fixes + fallbacks) ΓÇª
+  [ok] Union Public Service Commission (UPSC): 60 (html)
+  [fail] Staff Selection Commission (SSC): 0 (ΓÇö) ΓÇö no matching links
+  [ok] Press Information Bureau (PIB): 21 (rss-config)
+  [ok] Reserve Bank of India ΓÇö Careers: 80 (html)
+  [ok] Securities and Exchange Board of India: 80 (html)
+  [ok] Life Insurance Corporation ΓÇö Careers: 79 (html)
+  [ok] Employees' Provident Fund Organisation: 77 (html)
+  [fail] Institute of Banking Personnel Selection: 0 (ΓÇö) ΓÇö fetch failed
+  [ok] NITI Aayog: 65 (html)
+  [ok] APEDA / BEDF ΓÇö Recruitments: 80 (html)
+  [fail] National Apprenticeship Promotion Scheme: 0 (ΓÇö) ΓÇö no matching links
+  [fail] Netaji Subhas University of Technology (NSUT): 0 (ΓÇö) ΓÇö fetch failed
+  [ok] Wildlife Institute of India (WII): 62 (html)
+  [ok] Employment News (Government of India): 1 (html) ΓÇö timeout
+  [ok] BISAG-N ΓÇö Careers: 26 (html) ΓÇö timeout
+  [fail] Employees' State Insurance Corporation: 0 (ΓÇö) ΓÇö timeout
+  [ok] Bhabha Atomic Research Centre (BARC): 80 (rss-discovered)
+  [ok] Nuclear Power Corporation of India (NPCIL): 80 (html) ΓÇö timeout
+  [ok] Indian Space Research Organisation (ISRO): 72 (html) ΓÇö socket hang up
+  [ok] Defence Research & Development Organisation: 60 (html) ΓÇö timeout
+  [fail] Railway Recruitment Board (RRB) ΓÇö Chandigarh: 0 (ΓÇö) ΓÇö connect ETIMEDOUT 164.100.228.58:443
+  [fail] Railway Recruitment Board (RRB) ΓÇö Prayagraj: 0 (ΓÇö) ΓÇö timeout
+  [ok] IRCON International: 56 (html) ΓÇö HTTP 404
+  [ok] Railway Recruitment Board (RRB) ΓÇö Mumbai: 33 (html) ΓÇö timeout
+  [fail] Railway Recruitment Cells (RRC): 0 (ΓÇö) ΓÇö connect ETIMEDOUT 164.100.201.80:443
+  [ok] Railway Recruitment Board (RRB) ΓÇö Bhubaneswar: 41 (html)
+  [fail] Railway Recruitment Board (RRB) ΓÇö Ajmer: 0 (ΓÇö) ΓÇö timeout
+  [fail] Railway Recruitment Board (RRB) ΓÇö Bhopal: 0 (ΓÇö) ΓÇö timeout
+  [fail] Railway Recruitment Board (RRB) ΓÇö Bilaspur: 0 (ΓÇö) ΓÇö timeout

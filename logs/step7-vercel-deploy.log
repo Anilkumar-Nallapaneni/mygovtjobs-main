@@ -1,0 +1,142 @@
+
+> vercel:deploy
+> vercel --prod --yes --scope anilkumar-nallapanenis-projects --project mygovtjobs-main
+
+Vercel CLI 54.14.2 (Node.js 20.20.0)
+Retrieving projectΓÇª
+Deploying anilkumar-nallapanenis-projects/mygovtjobs-main
+Uploading [--------------------] (0.0B/21.7MB)
+Uploading [=====---------------] (5.4MB/21.7MB)
+Uploading [==========----------] (10.9MB/21.7MB)
+Uploading [===============-----] (16.3MB/21.7MB)
+Uploading [====================] (21.7MB/21.7MB)
+  Inspect         https://vercel.com/anilkumar-nallapanenis-projects/mygovtjobs-main/Ai7ENxFvTRAnLLQuLJYdRUi63AFZ
+  Production      https://mygovtjobs-main-b3dhgz21k-anilkumar-nallapanenis-projects.vercel.app
+BuildingΓÇª
+BuildingΓÇª
+Running build in Washington, D.C., USA (East) ΓÇô iad1
+Build machine configuration: 2 cores, 8 GB
+Retrieving list of deployment files...
+Downloading 4886 deployment files...
+Restored build cache from previous deployment (EnDvtez2f3Fxfj6DYyVyKPM26uTo)
+Running "vercel build"
+Vercel CLI 55.0.0
+Running "install" command: `npm ci`...
+added 607 packages, and audited 609 packages in 13s
+176 packages are looking for funding
+run `npm fund` for details
+1 low severity vulnerability
+To address all issues, run:
+npm audit fix
+Run `npm audit` for details.
+> build
+> npm run build --prefix frontend
+> mygovtjobs-frontend@0.0.0 build
+> npm run clean && npx tsc -p tsconfig.build.json && node ../scripts/build-sitemap.mjs && node ../scripts/build-live-jobs-list.mjs && node ../scripts/build-live-jobs-bootstrap.mjs && node ../scripts/verify-live-jobs-snapshot.mjs --strict && vite build && node ../scripts/prerender-job-pages.mjs
+> mygovtjobs-frontend@0.0.0 clean
+> node scripts/clean-dist.mjs
+Wrote /vercel/path0/frontend/public/data/org-index.json ΓÇö 151 organisations (min 3 jobs)
+Wrote /vercel/path0/frontend/public/sitemap.xml ΓÇö 2962 URLs (2715 jobs, source: supabase)
+Wrote /vercel/path0/frontend/public/data/live-jobs-list.json ΓÇö 2715 rows (2696 KB vs 4987 KB full)
+Wrote /vercel/path0/frontend/public/data/live-jobs-bootstrap.json ΓÇö 400 rows (194 KB vs 2696 KB list)
+Γ£ô live-jobs snapshot OK ΓÇö 2715 rows, 664 with vacancies, sumΓëê14,20,811
+vite v7.3.5 building client environment for production...
+transforming...
+Γ£ô 606 modules transformed.
+rendering chunks...
+[plugin vite:reporter]
+(!) /vercel/path0/frontend/src/lib/jobsApi.ts is dynamically imported by /vercel/path0/frontend/src/lib/alertsApi.ts but also statically imported by /vercel/path0/frontend/src/hooks/useServerJobSearch.ts, /vercel/path0/frontend/src/lib/liveJobsFetch.ts, /vercel/path0/frontend/src/main.tsx, /vercel/path0/frontend/src/pages/JobDetailPage.tsx, dynamic import will not move module into another chunk.
+computing gzip size...
+dist/registerSW.js                                      0.13 kB
+dist/manifest.webmanifest                               0.65 kB
+dist/assets/sora-latin-ext-400-normal-Twk1CgKs.woff2    7.34 kB
+dist/assets/sora-latin-ext-700-normal-DM0oy5s8.woff2    7.45 kB
+dist/assets/sora-latin-ext-600-normal-Cue1zdhl.woff2    7.54 kB
+dist/index.html                                         9.28 kB Γöé gzip:   2.64 kB
+dist/assets/sora-latin-ext-400-normal-BmhJC382.woff     9.67 kB
+dist/assets/sora-latin-ext-700-normal-Oc7uZIYt.woff     9.80 kB
+dist/assets/sora-latin-ext-600-normal-DLOJK0Ta.woff     9.82 kB
+dist/assets/sora-latin-400-normal-CRt88UEn.woff2       14.72 kB
+dist/assets/sora-latin-600-normal-Cdg4DaK0.woff2       15.00 kB
+dist/assets/sora-latin-700-normal-9waGdLWo.woff2       15.13 kB
+dist/assets/sora-latin-400-normal-OW7qkl5a.woff        18.54 kB
+dist/assets/sora-latin-600-normal-1_7fyUAY.woff        18.86 kB
+dist/assets/sora-latin-700-normal-BKPfQAnC.woff        18.86 kB
+dist/assets/react-vendor-BX1_-v90.css                   2.39 kB Γöé gzip:   0.48 kB
+dist/assets/index-CZK6fKTn.css                        174.95 kB Γöé gzip:  27.85 kB
+dist/assets/SubscribeBanner-Cvaqpqth.js                 1.44 kB Γöé gzip:   0.64 kB
+dist/assets/InstallAppBanner-vH-DFZxw.js                2.43 kB Γöé gzip:   0.92 kB
+dist/assets/EmploymentNewsBar-BfmJAMog.js               4.06 kB Γöé gzip:   1.69 kB
+dist/assets/page-admin-DgLgTJ7l.js                      7.34 kB Γöé gzip:   2.09 kB
+dist/assets/OfficialHeadlinesSection-CTO1h3mU.js        9.09 kB Γöé gzip:   2.73 kB
+dist/assets/map-BUClkeu8.js                            10.34 kB Γöé gzip:   4.03 kB
+dist/assets/router-vendor-BR2crJ1H.js                  11.94 kB Γöé gzip:   4.42 kB
+dist/assets/brx-lr6d92O7.js                            28.55 kB Γöé gzip:  10.24 kB
+dist/assets/ks-DkLd5fXi.js                             28.56 kB Γöé gzip:  10.28 kB
+dist/assets/mni-BBzBOykK.js                            28.60 kB Γöé gzip:  10.27 kB
+dist/assets/sd-BlhySPh9.js                             40.08 kB Γöé gzip:  12.69 kB
+dist/assets/ur-C9khO34o.js                             43.05 kB Γöé gzip:  12.76 kB
+dist/assets/JobDetail-DCFHbazb.js                      47.26 kB Γöé gzip:  14.47 kB
+dist/assets/i18n-vendor-BmxU3g8O.js                    48.01 kB Γöé gzip:  15.82 kB
+dist/assets/mai-CtzjyTxX.js                            55.60 kB Γöé gzip:  13.53 kB
+dist/assets/pa-BOHmE4Q3.js                             56.30 kB Γöé gzip:  13.36 kB
+dist/assets/mr-Cc-xQss8.js                             56.34 kB Γöé gzip:  13.31 kB
+dist/assets/query-vendor-CzjbVcR7.js                   56.44 kB Γöé gzip:  16.81 kB
+dist/assets/gu-D8DcsMaU.js                             56.51 kB Γöé gzip:  13.20 kB
+dist/assets/hi-C_JbqM7N.js                             56.57 kB Γöé gzip:  13.25 kB
+dist/assets/doi-DJXHVQRX.js                            58.18 kB Γöé gzip:  13.91 kB
+dist/assets/bn-BAjKXZIa.js                             58.23 kB Γöé gzip:  13.31 kB
+dist/assets/as-C9LvCVpb.js                             58.48 kB Γöé gzip:  13.60 kB
+dist/assets/kok-D1gOwmWe.js                            58.86 kB Γöé gzip:  13.79 kB
+dist/assets/sa-B1lfLb_0.js                             59.21 kB Γöé gzip:  14.20 kB
+dist/assets/ne-N9slF00A.js                             59.29 kB Γöé gzip:  13.37 kB
+dist/assets/sat-X0snmfRB.js                            59.74 kB Γöé gzip:  14.30 kB
+dist/assets/or-B-8o0_8c.js                             60.16 kB Γöé gzip:  13.37 kB
+dist/assets/kn-C99gsf8f.js                             64.09 kB Γöé gzip:  13.48 kB
+dist/assets/te-DWFbVR8G.js                             65.43 kB Γöé gzip:  13.79 kB
+dist/assets/ml-C1vdXbkz.js                             70.10 kB Γöé gzip:  14.28 kB
+dist/assets/ta-Du6rZRGH.js                             70.12 kB Γöé gzip:  13.66 kB
+dist/assets/home-discovery-MC7Opi0S.js                127.01 kB Γöé gzip:  38.14 kB
+dist/assets/pages-CnE3INdQ.js                         174.04 kB Γöé gzip:  49.89 kB
+dist/assets/supabase-DRmd5aGu.js                      204.67 kB Γöé gzip:  53.58 kB
+dist/assets/index-CNsjRxNB.js                         231.31 kB Γöé gzip:  70.08 kB
+dist/assets/react-vendor-DO5xc1xE.js                  533.63 kB Γöé gzip: 178.76 kB
+Γ£ô built in 7.52s
+(!) Some chunks are larger than 500 kB after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+PWA v1.3.0
+mode      generateSW
+precache  47 entries (2781.03 KiB)
+files generated
+dist/sw.js
+dist/workbox-835c8c05.js
+Prerendered 1000 job pages under frontend/dist/jobs/*/index.html
+Build Completed in /vercel/output [44s]
+Deploying outputs...
+[2K[1A[2K[G  Production      https://mygovtjobs-main-b3dhgz21k-anilkumar-nallapanenis-projects.vercel.app
+CompletingΓÇª
+Γû▓ Aliased         https://www.govtjobs.me
+{
+  "status": "ok",
+  "deployment": {
+    "id": "dpl_Ai7ENxFvTRAnLLQuLJYdRUi63AFZ",
+    "url": "https://mygovtjobs-main-b3dhgz21k-anilkumar-nallapanenis-projects.vercel.app",
+    "inspectorUrl": "https://vercel.com/anilkumar-nallapanenis-projects/mygovtjobs-main/Ai7ENxFvTRAnLLQuLJYdRUi63AFZ",
+    "readyState": "READY",
+    "target": "production",
+    "deploymentApiUrl": "https://api.vercel.com/v13/deployments/dpl_Ai7ENxFvTRAnLLQuLJYdRUi63AFZ"
+  },
+  "message": "Deployment mygovtjobs-main-b3dhgz21k-anilkumar-nallapanenis-projects.vercel.app ready.",
+  "next": [
+    {
+      "command": "vercel inspect mygovtjobs-main-b3dhgz21k-anilkumar-nallapanenis-projects.vercel.app --scope anilkumar-nallapanenis-projects",
+      "when": "Inspect deployment"
+    },
+    {
+      "command": "vercel deploy --prod --scope anilkumar-nallapanenis-projects",
+      "when": "Promote to production"
+    }
+  ]
+}

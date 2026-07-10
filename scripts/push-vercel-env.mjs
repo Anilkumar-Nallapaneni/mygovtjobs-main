@@ -47,7 +47,7 @@ const apiUrl =
     (process.env.GO_LIVE === '1' ? 'https://api.govtjobs.me' : ''))
 const dailySyncOnly = local.VITE_DAILY_SYNC_ONLY ?? (process.env.GO_LIVE === '1' ? '0' : '')
 const gaId = process.env.VERCEL_GA_MEASUREMENT_ID ?? local.VITE_GA_MEASUREMENT_ID ?? ''
-const siteUrl = process.env.VERCEL_SITE_URL ?? local.VITE_SITE_URL ?? (process.env.GO_LIVE === '1' ? 'https://livegovtjobs.com' : '')
+const siteUrl = process.env.VERCEL_SITE_URL ?? local.VITE_SITE_URL ?? (process.env.GO_LIVE === '1' ? 'https://www.livegovtjobs.com' : '')
 const googleVerify =
   process.env.VERCEL_GOOGLE_SITE_VERIFICATION ?? local.VITE_GOOGLE_SITE_VERIFICATION ?? ''
 
