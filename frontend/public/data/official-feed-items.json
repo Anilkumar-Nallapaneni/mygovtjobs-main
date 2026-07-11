@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-07-11T06:38:57.332Z",
+  "generatedAt": "2026-07-11T10:01:59.294Z",
   "sourceReports": [
     {
       "id": "pib-press-reg3",
       "name": "PIB — recent press releases",
       "feedUrl": "https://www.pib.gov.in/RssMain.aspx?ModId=6&Lang=2&Regid=3&reg=48",
       "listingUrl": null,
-      "ok": false,
-      "error": "rss-empty",
-      "itemCount": 0,
-      "fetchMethod": null
+      "ok": true,
+      "error": null,
+      "itemCount": 1,
+      "fetchMethod": "rss-feed"
     },
     {
       "id": "employment-news",
@@ -294,6 +294,23 @@
   ],
   "siteReports": [],
   "items": [
+    {
+      "id": "c8752cbb29e90295",
+      "title": "परिणामों की सूची: प्रधानमंत्री की न्यूजीलैंड की आधिकारिक यात्रा",
+      "link": "https://pib.gov.in/PressReleaseIframePage.aspx?PRID=2283581",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "pib-press-reg3",
+      "sourceName": "PIB — recent press releases",
+      "dept": "Press Information Bureau",
+      "state": "All India",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "rss-feed"
+    },
     {
       "id": "1320428f3dc24d77",
       "title": "Home.aspx",
