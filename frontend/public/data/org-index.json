@@ -24,7 +24,7 @@
     "vacancies": 1865
   },
   {
-    "dept": "Nsut",
+    "dept": "NSUT",
     "slug": "nsut",
     "count": 49,
     "vacancies": 122
@@ -78,16 +78,16 @@
     "vacancies": 1487
   },
   {
+    "dept": "Rrbajmer",
+    "slug": "rrbajmer",
+    "count": 39,
+    "vacancies": 152
+  },
+  {
     "dept": "Erecruitment Andamannicobar",
     "slug": "erecruitment-andamannicobar",
     "count": 38,
     "vacancies": 28
-  },
-  {
-    "dept": "Rrbajmer",
-    "slug": "rrbajmer",
-    "count": 38,
-    "vacancies": 152
   },
   {
     "dept": "Puducherry Recruitment Portal",
@@ -110,20 +110,20 @@
   {
     "dept": "Staff Selection Commission (SSC)",
     "slug": "staff-selection-commission-ssc",
-    "count": 35,
+    "count": 36,
     "vacancies": 1
-  },
-  {
-    "dept": "Jammu & Kashmir PSC (JKPSC)",
-    "slug": "jammu-kashmir-psc-jkpsc",
-    "count": 30,
-    "vacancies": 0
   },
   {
     "dept": "UPSC — What's New",
     "slug": "upsc-what-s-new",
     "count": 30,
     "vacancies": 142
+  },
+  {
+    "dept": "Jammu & Kashmir PSC (JKPSC)",
+    "slug": "jammu-kashmir-psc-jkpsc",
+    "count": 29,
+    "vacancies": 0
   },
   {
     "dept": "University Grants Commission (UGC)",
