@@ -1,18 +1,10 @@
 {
   "status": "completed",
-<<<<<<< HEAD
   "completedAt": "2026-07-10T13:30:00.000000+00:00",
   "completedAtIst": "2026-07-10T19:00:00.000000+05:30",
   "lastCompletedDateIst": "2026-07-10",
   "nextRunAtIst": "2026-07-11T08:00:00+05:30",
   "jobCount": 2715,
-=======
-  "completedAt": "2026-07-10T07:05:21.038059+00:00",
-  "completedAtIst": "2026-07-10T12:35:21.038088+05:30",
-  "lastCompletedDateIst": "2026-07-10",
-  "nextRunAtIst": "2026-07-11T08:00:00+05:30",
-  "jobCount": 1898,
->>>>>>> c6a3a12889a94a4e220e02e0f3b127ab3b323a28
   "sourcesScraped": 154,
   "notes": "IngestAgent completed; daily:sync:full interrupted during slow fetch:official — export/scrub finished manually"
 }

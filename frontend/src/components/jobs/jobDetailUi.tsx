@@ -2,19 +2,35 @@ import { useTranslation } from "react-i18next";
 import { isPdfUrl } from "@/utils/officialDomains";
 import { translateSectionHeading } from "@/utils/jobDetailLabels";
 import { sanitizeParagraphText } from "@/utils/jobDetailLinks";
-import type { ReactNode } from "react";
+import { useRevealOnScroll } from "@/hooks/useRevealOnScroll";
+import type { CSSProperties, ReactNode } from "react";
 
 export function Section({
   title,
   children,
   className = "",
+  reveal = true,
+  revealDelay = 0,
 }: {
   title?: string;
   children: ReactNode;
   className?: string;
+  reveal?: boolean;
+  revealDelay?: number;
 }) {
+  const { ref, visible } = useRevealOnScroll<HTMLElement>();
+  const revealClass =
+    reveal ? `mgj-reveal${visible ? " mgj-reveal--visible" : ""}` : "";
+  const style = reveal
+    ? ({ "--mgj-reveal-delay": `${revealDelay}ms` } as CSSProperties)
+    : undefined;
+
   return (
-    <section className={`job-detail-section ${className}`.trim()}>
+    <section
+      ref={reveal ? ref : undefined}
+      className={`job-detail-section ${revealClass} ${className}`.trim()}
+      style={style}
+    >
       {title ? <h3 className="job-detail-section-title">{title}</h3> : null}
       {children}
     </section>
@@ -293,11 +309,13 @@ export function JobDetailKeyFactsPanel({
   primaryAction: { url: string; label: string } | null;
   t: (key: string, opts?: Record<string, unknown>) => string;
 }) {
+  const { ref, visible } = useRevealOnScroll<HTMLElement>();
   if (!facts.length && (!lastDate || lastDate === "—")) return null;
 
   return (
     <section
-      className="job-detail-keyfacts"
+      ref={ref}
+      className={`job-detail-keyfacts mgj-reveal${visible ? " mgj-reveal--visible" : ""}`}
       aria-label={t("jobDetail.keyDetails", { defaultValue: "Key details" })}
     >
       <div className="job-detail-keyfacts__card">

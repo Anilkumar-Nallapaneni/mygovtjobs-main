@@ -1,0 +1,46 @@
+# Monorepo — exclude heavy/non-frontend paths (root-anchored so frontend/scripts/ is kept)
+/backend/
+/database/
+/docs/
+/all websites/
+/govtjobs live-data/
+/android-twa/
+/actions-runner/
+/.cursor/
+/.github/
+/agent-transcripts/
+
+# Python / local tooling (backend venv is ~130MB)
+**/.venv/
+**/__pycache__/
+*.py[cod]
+
+# Tests & dev artifacts
+frontend/coverage/
+frontend/dist-e2e/
+frontend/e2e/
+
+# Large generated snapshots (rebuilt during `npm run build` on Vercel)
+frontend/public/data/job-details/
+frontend/public/data/official-feed-items.json
+
+# Dependencies & build caches (Vercel installs fresh)
+node_modules/
+frontend/node_modules/
+.vite/
+dist/
+frontend/dist/
+
+# Secrets & local config
+.env
+.env.*
+!.env.example
+!frontend/.env.example
+!backend/.env.example
+.vercel/
+
+# Git & editor noise
+.git/
+.idea/
+*.swp
+.DS_Store

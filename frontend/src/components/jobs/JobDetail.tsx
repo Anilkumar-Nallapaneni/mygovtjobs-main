@@ -420,6 +420,8 @@ export default function JobDetail({
 
         <header className={`job-detail-hero job-detail-hero--premium${isPageLayout ? " job-detail-hero--page" : ""}`}>
           <div className="job-detail-hero__accent" aria-hidden />
+          <div className="job-detail-hero__glow" aria-hidden />
+          <div className="job-detail-hero__shimmer" aria-hidden />
           <div className="job-detail-hero__inner">
             <div className="job-detail-hero__top">
               <div className="job-detail-badges">
@@ -490,7 +492,7 @@ export default function JobDetail({
 
   if (layout === "page") {
     return (
-      <article className="job-detail-page" aria-label={view.title}>
+      <article className="job-detail-page job-detail-page--premium" aria-label={view.title}>
         <div className="job-detail-page__shell">{detailBody}</div>
       </article>
     );

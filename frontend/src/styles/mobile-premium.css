@@ -1,0 +1,394 @@
+/* Premium gold mobile shell — job detail, cards, bottom nav */
+
+/* ========== Gold design tokens (mobile premium layer) ========== */
+:root {
+  --ds-goldHi: #ffd54f;
+  --ds-goldChampagne: #ffe082;
+  --ds-goldSoftBg: rgba(255, 170, 0, 0.12);
+  --ds-goldSoftBorder: rgba(255, 170, 0, 0.38);
+  --ds-goldGlow: rgba(255, 170, 0, 0.16);
+  --ds-gradientGoldPremium: linear-gradient(135deg, #ff6b00 0%, #ffaa00 48%, #ffd54f 100%);
+  --ds-shadowGold: 0 4px 24px rgba(255, 170, 0, 0.2);
+  --ds-shadowGoldLg: 0 8px 40px rgba(255, 107, 0, 0.22);
+}
+
+/* ========== Scroll reveal ========== */
+.mgj-reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition:
+    opacity 0.55s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+  transition-delay: var(--mgj-reveal-delay, 0ms);
+}
+
+.mgj-reveal--visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ========== Job detail — premium gold page ========== */
+@media (max-width: 1024px) {
+  .job-detail-page--premium {
+    background:
+      radial-gradient(ellipse 120% 60% at 50% -8%, color-mix(in srgb, var(--ds-gold) 14%, transparent), transparent 55%),
+      var(--ds-bg0);
+  }
+
+  .job-detail-page--premium .job-detail-page__shell {
+    padding-top: 8px;
+    padding-bottom: calc(128px + env(safe-area-inset-bottom, 0));
+  }
+
+  /* Hero — gold mesh + entrance */
+  .job-detail-page--premium .job-detail-hero--premium {
+    border: 1px solid color-mix(in srgb, var(--ds-gold) 28%, var(--ds-borderHi));
+    border-radius: 20px;
+    background:
+      linear-gradient(
+        155deg,
+        color-mix(in srgb, var(--ds-gold) 8%, var(--ds-bg1)) 0%,
+        var(--ds-bg2) 55%,
+        color-mix(in srgb, var(--ds-saffron) 6%, var(--ds-bg1)) 100%
+      );
+    box-shadow: var(--ds-shadowGold), var(--ds-shadowCard);
+    animation: mgj-hero-enter 0.65s cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+
+  .job-detail-hero__glow {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background:
+      radial-gradient(circle at 88% 12%, color-mix(in srgb, var(--ds-gold) 22%, transparent) 0%, transparent 42%),
+      radial-gradient(circle at 8% 88%, color-mix(in srgb, var(--ds-saffron) 14%, transparent) 0%, transparent 38%);
+    opacity: 0.85;
+  }
+
+  .job-detail-hero__shimmer {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: linear-gradient(
+      105deg,
+      transparent 38%,
+      color-mix(in srgb, var(--ds-goldHi) 18%, transparent) 50%,
+      transparent 62%
+    );
+    background-size: 200% 100%;
+    animation: mgj-gold-shimmer 4.5s ease-in-out infinite;
+    opacity: 0.55;
+  }
+
+  .job-detail-page--premium .job-detail-hero__accent {
+    height: 5px;
+    background: var(--ds-gradientGoldPremium);
+    box-shadow: 0 2px 12px color-mix(in srgb, var(--ds-gold) 40%, transparent);
+  }
+
+  .job-detail-page--premium .job-detail-title {
+    font-family: var(--font-display);
+    letter-spacing: -0.025em;
+    line-height: 1.28;
+    background: linear-gradient(
+      180deg,
+      var(--ds-text-body, var(--ds-white)) 0%,
+      color-mix(in srgb, var(--ds-goldChampagne) 35%, var(--ds-text-body, var(--ds-white))) 100%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .job-detail-page--premium .job-detail-hero__vacancy-pill {
+    background: var(--ds-goldSoftBg);
+    border-color: var(--ds-goldSoftBorder);
+    box-shadow: inset 0 1px 0 color-mix(in srgb, var(--ds-goldHi) 25%, transparent);
+  }
+
+  .job-detail-page--premium .job-detail-hero__vacancy-num {
+    color: var(--ds-gold);
+    text-shadow: 0 0 20px color-mix(in srgb, var(--ds-gold) 35%, transparent);
+  }
+
+  .job-detail-page--premium .job-detail-badge {
+    backdrop-filter: blur(6px);
+  }
+
+  /* Key facts — glass gold card */
+  .job-detail-page--premium .job-detail-keyfacts__card {
+    border: 1px solid color-mix(in srgb, var(--ds-gold) 22%, var(--ds-borderHi));
+    border-radius: 18px;
+    background: color-mix(in srgb, var(--ds-bg2) 88%, transparent);
+    backdrop-filter: blur(12px);
+    box-shadow: var(--ds-shadowGold), var(--ds-shadowCard);
+  }
+
+  .job-detail-page--premium .job-detail-keyfacts__header {
+    background: linear-gradient(
+      135deg,
+      color-mix(in srgb, var(--ds-gold) 10%, var(--ds-bg2)),
+      color-mix(in srgb, var(--ds-saffron) 6%, var(--ds-bg1))
+    );
+    border-bottom: 1px solid color-mix(in srgb, var(--ds-gold) 18%, var(--ds-border));
+  }
+
+  .job-detail-page--premium .job-detail-keyfacts__logo {
+    background: var(--ds-gradientGoldPremium);
+    box-shadow: 0 4px 16px color-mix(in srgb, var(--ds-gold) 35%, transparent);
+    animation: mgj-stat-pop 0.5s cubic-bezier(0.22, 1, 0.36, 1) 0.15s both;
+  }
+
+  .job-detail-page--premium .job-detail-keyfacts__eyebrow {
+    color: var(--ds-gold);
+    letter-spacing: 0.1em;
+  }
+
+  .job-detail-page--premium .job-detail-keyfacts__tile {
+    border-color: color-mix(in srgb, var(--ds-gold) 12%, var(--ds-border));
+    background: color-mix(in srgb, var(--ds-bg3) 90%, transparent);
+    transition:
+      border-color 0.2s ease,
+      box-shadow 0.2s ease,
+      transform 0.15s ease;
+  }
+
+  .job-detail-page--premium .job-detail-keyfacts__tile:active {
+    transform: scale(0.98);
+    border-color: var(--ds-goldSoftBorder);
+    box-shadow: 0 0 0 1px color-mix(in srgb, var(--ds-gold) 20%, transparent);
+  }
+
+  .job-detail-page--premium .job-detail-keyfacts__deadline:not(.job-detail-keyfacts__deadline--urgent) {
+    border-color: color-mix(in srgb, var(--ds-gold) 25%, var(--ds-borderHi));
+    background: linear-gradient(
+      135deg,
+      color-mix(in srgb, var(--ds-gold) 6%, var(--ds-bg3)),
+      var(--ds-bg3)
+    );
+  }
+
+  .job-detail-page--premium .job-detail-keyfacts__deadline-value {
+    color: var(--ds-goldHi);
+  }
+
+  .job-detail-page--premium .job-detail-keyfacts__trust {
+    color: color-mix(in srgb, var(--ds-gold) 55%, var(--ds-muted));
+    border-top-color: color-mix(in srgb, var(--ds-gold) 15%, var(--ds-border));
+  }
+
+  /* Sections */
+  .job-detail-page--premium .job-detail-section {
+    border: 1px solid color-mix(in srgb, var(--ds-gold) 10%, var(--ds-border));
+    border-radius: 16px;
+    padding: 16px 14px;
+    margin-bottom: 12px;
+    background: color-mix(in srgb, var(--ds-bg1) 92%, transparent);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.12);
+  }
+
+  .job-detail-page--premium .job-detail-section-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: var(--font-display);
+    font-size: 13px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--ds-gold);
+    margin-bottom: 12px;
+  }
+
+  .job-detail-page--premium .job-detail-section-title::before {
+    content: "";
+    width: 4px;
+    height: 16px;
+    border-radius: 2px;
+    background: var(--ds-gradientGoldPremium);
+    flex-shrink: 0;
+    box-shadow: 0 0 10px color-mix(in srgb, var(--ds-gold) 50%, transparent);
+  }
+
+  .job-detail-page--premium .job-detail-fact-card {
+    border-color: color-mix(in srgb, var(--ds-gold) 14%, var(--ds-border));
+    background: var(--ds-bg2);
+    border-radius: 12px;
+    transition: transform 0.15s ease;
+  }
+
+  .job-detail-page--premium .job-detail-fact-card:active {
+    transform: scale(0.98);
+  }
+
+  .job-detail-page--premium .job-detail-fact-label {
+    color: color-mix(in srgb, var(--ds-gold) 70%, var(--ds-muted));
+  }
+
+  /* Timeline — gold rail */
+  .job-detail-page--premium .job-detail-timeline__dot {
+    background: var(--ds-gradientGoldPremium);
+    box-shadow: 0 0 12px color-mix(in srgb, var(--ds-gold) 55%, transparent);
+  }
+
+  .job-detail-page--premium .job-detail-timeline__line {
+    background: linear-gradient(
+      180deg,
+      var(--ds-gold),
+      color-mix(in srgb, var(--ds-gold) 20%, transparent)
+    );
+  }
+
+  .job-detail-page--premium .job-detail-timeline__date {
+    color: var(--ds-goldHi);
+    font-weight: 800;
+  }
+
+  /* Toolbar */
+  .job-detail-page--premium .job-detail-toolbar {
+    border-color: color-mix(in srgb, var(--ds-gold) 18%, var(--ds-border));
+    border-radius: 14px;
+    background: color-mix(in srgb, var(--ds-bg1) 90%, transparent);
+    backdrop-filter: blur(14px);
+  }
+
+  .job-detail-page--premium .job-detail-back-btn {
+    color: var(--ds-gold);
+    font-weight: 700;
+  }
+
+  /* Sticky CTA bar — floating gold */
+  .job-detail-page--premium .job-detail-sticky-bar {
+    position: fixed;
+    left: 10px;
+    right: 10px;
+    bottom: calc(56px + env(safe-area-inset-bottom, 0) + 8px);
+    z-index: 6;
+    padding: 8px 10px;
+    border-radius: 16px;
+    border: 1px solid color-mix(in srgb, var(--ds-gold) 30%, var(--ds-borderHi));
+    background: color-mix(in srgb, var(--ds-bg1) 94%, transparent);
+    backdrop-filter: blur(16px);
+    box-shadow:
+      var(--ds-shadowGoldLg),
+      0 -2px 0 color-mix(in srgb, var(--ds-gold) 40%, transparent) inset;
+    animation: mgj-sticky-slide-up 0.45s cubic-bezier(0.22, 1, 0.36, 1) 0.3s both;
+  }
+
+  .job-detail-page--premium .job-detail-sticky-bar__apply {
+    border-radius: 12px;
+    background: var(--ds-gradientGoldPremium);
+    background-size: 200% 100%;
+    animation: mgj-gold-shimmer-btn 3s ease-in-out infinite;
+    box-shadow: 0 4px 18px color-mix(in srgb, var(--ds-gold) 40%, transparent);
+    font-weight: 900;
+    letter-spacing: 0.02em;
+  }
+
+  .job-detail-page--premium .job-detail-sticky-bar__share,
+  .job-detail-page--premium .job-detail-sticky-bar__alert {
+    border-color: color-mix(in srgb, var(--ds-gold) 22%, var(--ds-borderHi));
+    border-radius: 12px;
+  }
+
+  /* Highlights chips */
+  .job-detail-page--premium .job-detail-highlights span {
+    border-color: color-mix(in srgb, var(--ds-gold) 28%, var(--ds-border));
+    background: var(--ds-goldSoftBg);
+    color: var(--ds-goldHi);
+  }
+
+  .job-detail-page--premium .job-detail-disclaimer {
+    border-left-color: var(--ds-gold);
+    background: color-mix(in srgb, var(--ds-gold) 5%, var(--ds-bg2));
+    border-radius: 0 12px 12px 0;
+  }
+}
+
+/* ========== Job cards — mobile gold accent ========== */
+@media (max-width: 640px) {
+  .job-card {
+    border-radius: 18px;
+    border-color: color-mix(in srgb, var(--ds-gold) 12%, var(--ds-border));
+    box-shadow:
+      var(--ds-shadowCard),
+      0 0 0 1px color-mix(in srgb, var(--ds-gold) 6%, transparent);
+  }
+
+  .job-card__accent {
+    width: 5px;
+    background: var(--ds-gradientGoldPremium) !important;
+    box-shadow: 2px 0 12px color-mix(in srgb, var(--ds-gold) 30%, transparent);
+  }
+
+  .job-card__vacancy {
+    background: var(--ds-goldSoftBg);
+    border-color: var(--ds-goldSoftBorder);
+  }
+
+  .job-card__vacancy-num {
+    color: var(--ds-gold);
+  }
+
+  .job-card__stat--highlight {
+    border-color: color-mix(in srgb, var(--ds-gold) 25%, var(--ds-borderHi));
+    background: linear-gradient(
+      135deg,
+      color-mix(in srgb, var(--ds-gold) 8%, var(--ds-bg2)),
+      var(--ds-bg2)
+    );
+  }
+
+  .job-card__stat-label--deadline {
+    color: var(--ds-gold);
+  }
+
+  .job-card--clickable:active {
+    border-color: var(--ds-goldSoftBorder);
+    box-shadow: var(--ds-shadowGold);
+  }
+}
+
+/* ========== Bottom nav — frosted gold ========== */
+@media (max-width: 1024px) {
+  .mobile-bottom-nav {
+    background: color-mix(in srgb, var(--ds-bg0) 88%, transparent);
+    backdrop-filter: blur(20px) saturate(1.2);
+    border-top: 1px solid color-mix(in srgb, var(--ds-gold) 18%, var(--ds-border));
+    box-shadow:
+      0 -8px 32px rgba(0, 0, 0, 0.18),
+      0 -1px 0 color-mix(in srgb, var(--ds-gold) 25%, transparent) inset;
+  }
+
+  .mobile-bottom-nav__tab--active {
+    color: var(--ds-gold);
+  }
+
+  .mobile-bottom-nav__tab--active::before {
+    width: 36px;
+    height: 4px;
+    border-radius: 0 0 4px 4px;
+    background: var(--ds-gradientGoldPremium);
+    box-shadow: 0 2px 12px color-mix(in srgb, var(--ds-gold) 55%, transparent);
+  }
+
+  .mobile-bottom-nav__tab--active .mobile-bottom-nav__icon {
+    filter: drop-shadow(0 0 6px color-mix(in srgb, var(--ds-gold) 50%, transparent));
+  }
+}
+
+/* ========== Reduced motion ========== */
+@media (prefers-reduced-motion: reduce) {
+  .mgj-reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .job-detail-page--premium .job-detail-hero--premium,
+  .job-detail-page--premium .job-detail-sticky-bar,
+  .job-detail-page--premium .job-detail-keyfacts__logo,
+  .job-detail-hero__shimmer,
+  .job-detail-page--premium .job-detail-sticky-bar__apply {
+    animation: none !important;
+  }
+}

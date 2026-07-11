@@ -64,6 +64,48 @@
   }
 }
 
+@keyframes mgj-gold-shimmer {
+  0%,
+  100% {
+    background-position: 200% 0;
+  }
+  50% {
+    background-position: -200% 0;
+  }
+}
+
+@keyframes mgj-gold-shimmer-btn {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes mgj-hero-enter {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes mgj-sticky-slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 /* ----- Hero stats ----- */
 .home-hero-stat {
   transition:
@@ -241,6 +283,20 @@ html[data-standalone] .navbar {
   .job-card__badge--hot,
   .home-jobs-empty__icon {
     animation: none !important;
+  }
+
+  .job-detail-hero__shimmer,
+  .job-detail-page--premium .job-detail-hero--premium,
+  .job-detail-page--premium .job-detail-sticky-bar,
+  .job-detail-page--premium .job-detail-keyfacts__logo,
+  .job-detail-page--premium .job-detail-sticky-bar__apply {
+    animation: none !important;
+  }
+
+  .mgj-reveal {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
   }
 
   .mobile-route-transition {
