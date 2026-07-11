@@ -29,7 +29,10 @@ npm run db:migrate       # supabase_setup.sql + migrations 001–013
 npm run supabase:audit   # table row counts via REST
 npm run ingest:direct:quick   # test ~20 sources
 npm run ingest:direct:quick   # 20 sources → DB + live-jobs.json
-npm run daily:sync            # 8 AM IST pipeline (parallel, fast)
+npm run sync:quick            # RSS + archives (~4 h CI)
+npm run sync:production       # full daily ingest (GitHub Actions)
+npm run verify:production       # env + DB + job quality audit
+npm run daily:sync            # local Agent 1 scrape (same core as production)
 npm run daily:sync:full       # daily sync + PDF enrich
 npm run weekly:enrich:ci      # CI: pdf:read (50) + job:details (50)
 npm run pdf:read              # PdfReaderAgent: read PDFs → DB + job-details JSON

@@ -5,7 +5,7 @@ from fastapi.openapi.utils import get_openapi
 
 from app.config import get_settings
 from app.middleware.rate_limit import RateLimitMiddleware
-from app.routes import admin, alerts, billing, contact, health, ingest, jobs, meta
+from app.routes import admin, alerts, billing, contact, health, ingest, job_reports, jobs, meta
 
 load_dotenv()
 
@@ -57,6 +57,7 @@ app.include_router(meta.router, prefix="/api/meta", tags=["meta"])
 app.include_router(ingest.router, prefix="/api/ingest", tags=["ingest"])
 app.include_router(alerts.router, prefix="/api/alerts", tags=["alerts"])
 app.include_router(contact.router, prefix="/api/contact", tags=["contact"])
+app.include_router(job_reports.router, prefix="/api/job-reports", tags=["job-reports"])
 app.include_router(billing.router, prefix="/api/billing", tags=["billing"])
 app.include_router(admin.router, prefix="/api/admin", tags=["admin"])
 

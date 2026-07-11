@@ -43,4 +43,6 @@ class JobListResponse(BaseModel):
     total: int
     limit: int
     offset: int
+    page: int = 1
+    total_pages: int = 1
     degraded: bool = False

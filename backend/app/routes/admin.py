@@ -2,7 +2,7 @@ from datetime import datetime, timedelta, timezone
 
 from fastapi import APIRouter, Depends, HTTPException, Query
 from pydantic import BaseModel
-from sqlalchemy import func, select
+from sqlalchemy import func, select, text
 
 from app.database.session import SessionLocal
 from app.middleware.auth import require_admin_key
@@ -256,6 +256,129 @@ async def admin_deliver_alerts(lookback_hours: int | None = Query(None, ge=1, le
     async with SessionLocal() as session:
         stats = await AlertDeliveryService().run(session, lookback_hours=lookback_hours)
     return stats
+
+
+@router.get("/moderation")
+async def admin_moderation_queue(limit: int = Query(50, ge=1, le=200)):
+    """Queues for admin review: reports, broken links, low confidence, missing fields."""
+    empty = {
+        "user_reports": [],
+        "broken_links": [],
+        "missing_apply_links": [],
+        "low_confidence": [],
+        "expired_still_live": [],
+    }
+    try:
+        async with SessionLocal() as session:
+        reports = (
+            await session.execute(
+                text(
+                    """
+                    SELECT r.id, r.job_id, r.reason, r.description, r.reporter_email, r.created_at,
+                           j.slug, j.title
+                    FROM job_reports r
+                    JOIN jobs j ON j.id = r.job_id
+                    WHERE r.status = 'open'
+                    ORDER BY r.created_at DESC
+                    LIMIT :limit
+                    """
+                ),
+                {"limit": limit},
+            )
+        ).mappings().all()
+
+        broken_links = (
+            await session.execute(
+                text(
+                    """
+                    SELECT id, slug, title, apply_url, link_consecutive_failures, link_last_http_status
+                    FROM jobs
+                    WHERE status = 'live' AND link_consecutive_failures >= 2
+                    ORDER BY link_consecutive_failures DESC, updated_at DESC
+                    LIMIT :limit
+                    """
+                ),
+                {"limit": limit},
+            )
+        ).mappings().all()
+
+        missing_apply = (
+            await session.execute(
+                text(
+                    """
+                    SELECT id, slug, title, dept, last_date
+                    FROM jobs
+                    WHERE status = 'live'
+                      AND (apply_url IS NULL OR trim(apply_url) = '')
+                    ORDER BY published_at DESC NULLS LAST
+                    LIMIT :limit
+                    """
+                ),
+                {"limit": limit},
+            )
+        ).mappings().all()
+
+        low_confidence = (
+            await session.execute(
+                text(
+                    """
+                    SELECT id, slug, title, confidence_score, source_domain
+                    FROM jobs
+                    WHERE status = 'live'
+                      AND confidence_score IS NOT NULL
+                      AND confidence_score < 0.5
+                    ORDER BY confidence_score ASC
+                    LIMIT :limit
+                    """
+                ),
+                {"limit": limit},
+            )
+        ).mappings().all()
+
+        expired_live = (
+            await session.execute(
+                text(
+                    """
+                    SELECT id, slug, title, last_date
+                    FROM jobs
+                    WHERE status = 'live' AND last_date IS NOT NULL AND last_date < CURRENT_DATE
+                    ORDER BY last_date ASC
+                    LIMIT :limit
+                    """
+                ),
+                {"limit": limit},
+            )
+        ).mappings().all()
+
+        return {
+            "user_reports": [dict(r) for r in reports],
+            "broken_links": [dict(r) for r in broken_links],
+            "missing_apply_links": [dict(r) for r in missing_apply],
+            "low_confidence": [dict(r) for r in low_confidence],
+            "expired_still_live": [dict(r) for r in expired_live],
+        }
+    except Exception:
+        return empty
+
+
+@router.get("/sync-runs")
+async def admin_sync_runs(limit: int = Query(20, ge=1, le=100)):
+    async with SessionLocal() as session:
+        rows = (
+            await session.execute(
+                text(
+                    """
+                    SELECT id, pipeline_name, trigger_type, status, started_at, completed_at,
+                           inserted_count, updated_count, rejected_count, error_message
+                    FROM sync_runs
+                    ORDER BY started_at DESC
+                    LIMIT :limit
+                    """
+                ),
+                {"limit": limit},
+            )
+        ).mappings().all()
+    return {"items": [dict(r) for r in rows]}
 
 
 @router.post("/ingest/run-all")

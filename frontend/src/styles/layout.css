@@ -54,6 +54,93 @@
   color: #92400e;
 }
 
+.jobs-stale-warning-banner {
+  max-width: var(--layout-max);
+  margin: 0 auto;
+  padding: 10px 20px;
+  width: 100%;
+  background: #fff7ed;
+  border-bottom: 1px solid #fdba74;
+  color: #9a3412;
+  font-size: 0.9rem;
+}
+
+.jobs-stale-warning-banner p {
+  margin: 0;
+  line-height: 1.45;
+}
+
+[data-color-mode="dark"] .jobs-stale-warning-banner {
+  background: #431407;
+  border-bottom-color: #ea580c;
+  color: #fed7aa;
+}
+
+.job-report {
+  margin: 16px 0 8px;
+}
+
+.job-report__toggle,
+.job-report__form button[type="submit"] {
+  border: 1px solid var(--ds-border);
+  background: var(--ds-surface1);
+  color: var(--ds-text);
+  border-radius: 8px;
+  padding: 8px 14px;
+  font-size: 0.875rem;
+  cursor: pointer;
+}
+
+.job-report__form {
+  display: grid;
+  gap: 10px;
+  padding: 14px;
+  border: 1px solid var(--ds-border);
+  border-radius: 12px;
+  background: var(--ds-surface1);
+}
+
+.job-report__label {
+  display: grid;
+  gap: 4px;
+  font-size: 0.85rem;
+}
+
+.job-report__label select,
+.job-report__label textarea,
+.job-report__label input {
+  width: 100%;
+  border: 1px solid var(--ds-border);
+  border-radius: 8px;
+  padding: 8px 10px;
+  font: inherit;
+  background: var(--ds-bg0);
+  color: var(--ds-text);
+}
+
+.job-report__actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.job-report__cancel {
+  border: none;
+  background: transparent;
+  color: var(--ds-text-muted);
+  cursor: pointer;
+}
+
+.job-report__success {
+  color: #15803d;
+  font-size: 0.875rem;
+}
+
+.job-report__error {
+  color: #b91c1c;
+  font-size: 0.875rem;
+}
+
 [data-color-mode="dark"] .jobs-load-error-banner {
   background: #422006;
   border-bottom-color: #b45309;

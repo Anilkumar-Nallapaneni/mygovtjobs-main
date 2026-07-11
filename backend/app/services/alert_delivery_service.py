@@ -66,7 +66,7 @@ def _official_apply_url(job: Job) -> str | None:
     return apply
 
 
-def build_alert_message(job: Job) -> tuple[str, str]:
+def build_alert_message(job: Job, *, subscription_id: str | None = None) -> tuple[str, str]:
     """Return (plain_text, html_body) for a job alert."""
     title = str(job.title or "Government recruitment").strip()
     dept = str(job.dept or "Official notification").strip()
@@ -99,6 +99,13 @@ def build_alert_message(job: Job) -> tuple[str, str]:
     if apply_url:
         html_parts.append(f'<p><a href="{html.escape(apply_url)}">Official apply link</a></p>')
     html_parts.append("<p><small>Official sources only — no aggregator links.</small></p>")
+    if subscription_id:
+        base = get_settings().alert_site_url.rstrip("/")
+        unsub = f"{base}/alerts?unsubscribe={subscription_id}"
+        lines.append(f"\nUnsubscribe: {unsub}")
+        html_parts.append(
+            f'<p><small><a href="{html.escape(unsub)}">Unsubscribe from these alerts</a></small></p>'
+        )
     html_body = "".join(html_parts)
 
     return plain, html_body
@@ -200,7 +207,7 @@ async def send_push_alert(token: str, subject: str, plain: str) -> bool:
 
 async def deliver_to_subscription(session: AsyncSession, job: Job, sub: AlertSubscription) -> bool:
     subject = f"New govt job: {(job.title or 'Notification')[:120]}"
-    plain, html_body = build_alert_message(job)
+    plain, html_body = build_alert_message(job, subscription_id=sub.id)
 
     if sub.channel == "email":
         ok = await send_email_alert(sub.channel_address, subject, plain, html_body)

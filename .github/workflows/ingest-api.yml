@@ -1,9 +1,10 @@
 name: Scheduled API ingest
 
+# Deprecated — production uses supabase-auto-ingest.yml → npm run sync:production.
+# Manual only when triggering hosted FastAPI /api/admin/ingest/run-all.
+
 on:
   workflow_dispatch:
-    # Manual only — scheduled ingest runs via supabase-auto-ingest.yml (direct DB sync).
-    # Set MYGOVTJOBS_API_URL + ADMIN_API_KEY when using a hosted FastAPI backend.
 
 jobs:
   ingest:

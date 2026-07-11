@@ -58,6 +58,7 @@ class Settings(BaseSettings):
     push_webhook_url: str | None = None
     sentry_dsn: str | None = None
     sentry_traces_sample_rate: float = 0.1
+    turnstile_secret_key: str | None = None
     # Razorpay Premium (India) — https://dashboard.razorpay.com
     razorpay_key_id: str | None = None
     razorpay_key_secret: str | None = None

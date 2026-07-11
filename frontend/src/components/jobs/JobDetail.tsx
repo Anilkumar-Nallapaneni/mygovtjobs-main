@@ -19,6 +19,7 @@ import {
 } from "@/utils/jobDetailLinks";
 import RelatedJobs from "@/components/jobs/RelatedJobs";
 import JobDetailFaq from "@/components/jobs/JobDetailFaq";
+import ReportJobButton from "@/components/jobs/ReportJobButton";
 import SocialAlertBar from "@/components/home/SocialAlertBar";
 import {
   buildGlanceFacts,
@@ -255,6 +256,10 @@ export default function JobDetail({
         shareTitle={view.title}
         shareUrl={shareUrl}
       />
+
+      {job.id || job.slug ? (
+        <ReportJobButton jobId={String(job.id || job.slug)} jobTitle={view.title} />
+      ) : null}
 
       {translating ? (
         <p className="job-detail-translating" role="status">

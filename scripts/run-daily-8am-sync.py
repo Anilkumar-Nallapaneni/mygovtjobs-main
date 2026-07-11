@@ -32,6 +32,7 @@ from app.services.daily_sync_service import DailySyncService  # noqa: E402
 from app.services.job_persist_service import JobPersistService  # noqa: E402
 from app.services.source_sync_service import SourceSyncService  # noqa: E402
 from app.services.supabase_audit_service import SupabaseAuditService  # noqa: E402
+from app.services.sync_run_service import SyncRunService  # noqa: E402
 
 SOURCE_TIMEOUT_SECONDS = 120
 DEFAULT_CONCURRENCY = 6
@@ -117,6 +118,11 @@ async def main() -> int:
     parser.add_argument("--retries", type=int, default=0, help="Retries per source after failure/timeout")
     parser.add_argument("--skip-official-import", action="store_true", help="Skip fetch:official JSON import")
     parser.add_argument("--skip-enrich", action="store_true", help="Skip PDF backfill + metadata enrich (much faster)")
+    parser.add_argument(
+        "--nested",
+        action="store_true",
+        help="Called from sync:production — skip advisory lock (outer pipeline holds it)",
+    )
     args = parser.parse_args()
 
     sync = DailySyncService()
@@ -125,21 +131,32 @@ async def main() -> int:
         print(f"SKIP: {reason}", flush=True)
         return 0
 
+    run_id = None
+    owns_lock = not args.nested
+    if owns_lock:
+        async with SessionLocal() as session:
+            run_id = await SyncRunService().start(session, pipeline_name="daily:sync")
+            if run_id is None:
+                print("SKIP: Another sync is already running (advisory lock).", flush=True)
+                return 0
+
     # Export live-jobs.json once at end — not after every source (major speedup)
     os.environ["INGEST_SKIP_PER_SOURCE_EXPORT"] = "1"
     get_settings.cache_clear()
 
     sync.mark_started()
+    saved_total = 0
+    scraped = 0
     try:
         n_sources = await sync_sources()
         print(f"Synced {n_sources} sources to database", flush=True)
 
-        scraped, saved = await run_ingest(
+        scraped, saved_total = await run_ingest(
             source_timeout=args.source_timeout,
             concurrency=args.concurrency,
             retries=args.retries,
         )
-        print(f"Ingest saved {saved} rows from {scraped} sources", flush=True)
+        print(f"Ingest saved {saved_total} rows from {scraped} sources", flush=True)
 
         if args.skip_official_import:
             print("\n=== Skipping fetch:official + import ===", flush=True)
@@ -170,6 +187,15 @@ async def main() -> int:
             f"{sync.next_run_ist().strftime('%Y-%m-%d %H:%M %Z')}",
             flush=True,
         )
+        if owns_lock and run_id is not None:
+            async with SessionLocal() as session:
+                await SyncRunService().finish(
+                    session,
+                    run_id,
+                    status="success",
+                    inserted_count=saved_total,
+                    updated_count=job_count,
+                )
         return 0
     except Exception as exc:
         import traceback
@@ -177,6 +203,16 @@ async def main() -> int:
         msg = str(exc).strip()
         detail = f"{type(exc).__name__}: {msg}" if msg else f"{type(exc).__name__}"
         sync.mark_failed(detail)
+        if owns_lock and run_id is not None:
+            async with SessionLocal() as session:
+                await SyncRunService().finish(
+                    session,
+                    run_id,
+                    status="failed",
+                    inserted_count=saved_total,
+                    updated_count=0,
+                    error_message=detail,
+                )
         print(f"FAILED: {detail}", flush=True)
         traceback.print_exc()
         return 1

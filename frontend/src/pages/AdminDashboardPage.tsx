@@ -4,10 +4,12 @@ import Footer from '@/components/layout/Footer'
 import type { FooterLinkTarget } from '@/hooks/useBrowseState'
 import {
   fetchAdminDashboard,
+  fetchAdminModeration,
   getStoredAdminKey,
   runIngest,
   setStoredAdminKey,
   type AdminDashboard,
+  type AdminModerationQueue,
 } from '@/lib/adminApi'
 
 type AdminDashboardPageProps = {
@@ -32,6 +34,7 @@ export default function AdminDashboardPage({ onFooterLink }: AdminDashboardPageP
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
   const [data, setData] = useState<AdminDashboard | null>(null)
+  const [moderation, setModeration] = useState<AdminModerationQueue | null>(null)
   const [ingestBusy, setIngestBusy] = useState(false)
   const [ingestMsg, setIngestMsg] = useState<string | null>(null)
 
@@ -41,7 +44,12 @@ export default function AdminDashboardPage({ onFooterLink }: AdminDashboardPageP
     setLoading(true)
     setError(null)
     try {
-      setData(await fetchAdminDashboard(key))
+      const [dash, mod] = await Promise.all([
+        fetchAdminDashboard(key),
+        fetchAdminModeration(key),
+      ])
+      setData(dash)
+      setModeration(mod)
     } catch (e) {
       setError(e instanceof Error ? e.message : String(e))
     } finally {
@@ -231,6 +239,24 @@ export default function AdminDashboardPage({ onFooterLink }: AdminDashboardPageP
               </li>
             ))}
           </ul>
+        </section>
+      )}
+
+      {moderation && (
+        <section className="admin-dashboard__section">
+          <h2>{t('admin.moderation', { defaultValue: 'Moderation queue' })}</h2>
+          <ul className="admin-dashboard__counts">
+            <li><span>Open reports</span><strong>{moderation.user_reports.length}</strong></li>
+            <li><span>Broken links</span><strong>{moderation.broken_links.length}</strong></li>
+            <li><span>Missing apply links</span><strong>{moderation.missing_apply_links.length}</strong></li>
+            <li><span>Low confidence</span><strong>{moderation.low_confidence.length}</strong></li>
+            <li><span>Expired still live</span><strong>{moderation.expired_still_live.length}</strong></li>
+          </ul>
+          {moderation.user_reports.slice(0, 8).map((r) => (
+            <p key={r.id} className="admin-dashboard__warn">
+              [{r.reason}] {r.title} — /jobs/{r.slug}
+            </p>
+          ))}
         </section>
       )}
 

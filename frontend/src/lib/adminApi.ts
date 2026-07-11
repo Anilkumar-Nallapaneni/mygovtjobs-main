@@ -61,6 +61,25 @@ export async function fetchAdminDashboard(adminKey: string): Promise<AdminDashbo
   return adminFetch<AdminDashboard>('/api/admin/dashboard', adminKey)
 }
 
+export type AdminModerationQueue = {
+  user_reports: Array<{
+    id: string
+    job_id: string
+    reason: string
+    title: string
+    slug: string
+    created_at: string
+  }>
+  broken_links: Array<{ id: string; slug: string; title: string; link_consecutive_failures: number }>
+  missing_apply_links: Array<{ id: string; slug: string; title: string }>
+  low_confidence: Array<{ id: string; slug: string; title: string; confidence_score: number }>
+  expired_still_live: Array<{ id: string; slug: string; title: string; last_date: string }>
+}
+
+export async function fetchAdminModeration(adminKey: string): Promise<AdminModerationQueue> {
+  return adminFetch<AdminModerationQueue>('/api/admin/moderation', adminKey)
+}
+
 export async function runIngest(adminKey: string): Promise<unknown> {
   const res = await fetch(`${API_BASE}/api/admin/ingest/run-all?force=true`, {
     method: 'POST',

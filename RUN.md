@@ -17,6 +17,24 @@ Copy-paste commands for My Govt Jobs. Run everything from **repo root**.
 
 ---
 
+## Production sync (canonical)
+
+GitHub Actions and local production use **three public commands** only:
+
+| Command | When | What it does |
+|---------|------|----------------|
+| **`npm run sync:quick`** | Every 4 hours (CI) | RSS feeds + official archives — no DB scrape |
+| **`npm run sync:production`** | Daily ~8 AM IST (CI) | Full scrape, export `live-jobs.json`, feeds, sitemap |
+| **`npm run verify:production`** | After deploy / manual | Env, DB, Supabase audit, job quality, snapshot verify |
+
+**CI workflows:** `fetch-official-feeds.yml` → `sync:quick` · `supabase-auto-ingest.yml` → `sync:production`
+
+Advisory lock `20260710` prevents two syncs at once. Run history is stored in Supabase `sync_runs`.
+
+Legacy aliases (`daily:sync`, `sync:all`, `supabase:full-sync`) still work for local dev; prefer the three commands above for production.
+
+---
+
 ## Canonical npm scripts
 
 Use these names — older aliases were removed to reduce duplication.
@@ -25,7 +43,10 @@ Use these names — older aliases were removed to reduce duplication.
 |----------|-------------------|-------|
 | **Dev** | `npm run dev` | Frontend :2222 |
 | **API** | `npm run api:dev` | Backend :8000 |
-| **Daily ingest** | `npm run daily:sync` | Agent 1 — scrape + export JSON |
+| **Production sync** | `npm run sync:production` | Daily ingest + export (CI) |
+| **RSS refresh** | `npm run sync:quick` | Feeds only (~4 h in CI) |
+| **Production verify** | `npm run verify:production` | Full stack validation |
+| **Daily ingest (local)** | `npm run daily:sync` | Agent 1 — scrape + export JSON |
 | **Full daily** | `npm run daily:sync:full` | Ingest + PDF backfill + enrich |
 | **Quick ingest test** | `npm run ingest:direct:quick` | ~20 sources |
 | **PDF backfill** | `npm run pdf:backfill` | Find missing PDF URLs in DB |
@@ -64,12 +85,18 @@ Official portals  →  Agent 1  →  Agent 2  →  Agent 3  →  Website
 
 ## Daily routine
 
-Run each morning (needs `backend/.env` with Supabase):
+**Production (recommended):**
+
+```bash
+npm run sync:production           # Full daily pipeline (~30–60 min)
+npm run verify:production         # Optional — audits + env check
+```
+
+**Local / manual steps** (needs `backend/.env` with Supabase):
 
 ```bash
 npm run daily:sync                  # Agent 1 — new jobs (~20–45 min)
-npm run fetch:official:feeds        # RSS + official notices
-npm run build:official-archives     # Archive pages for feeds
+npm run sync:quick                  # RSS + official notices only
 ```
 
 Quick check after:

@@ -17,6 +17,14 @@ vi.mock('@/hooks/useOfficialArchivesBatch', () => ({
   useOfficialArchivesBatch: () => ({}),
 }))
 
+vi.mock('@/components/home/HomeDiscoveryBlock', () => ({
+  default: () => (
+    <div className="home-discovery-block">
+      <div className="home-browse-strips" />
+    </div>
+  ),
+}))
+
 const mockJob: JobRecord = {
   id: '1',
   slug: 'test-recruitment-2026',

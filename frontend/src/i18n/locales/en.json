@@ -387,7 +387,26 @@
     "dailyUpdatedRelative": "Updated {{time}}",
     "dailyNext": "Next update {{time}} IST · no further updates today",
     "loadError": "Could not load job listings. Showing cached data if available.",
-    "retry": "Retry"
+    "retry": "Retry",
+    "dataStaleWarning": "Job data refresh is delayed (last update {{time}} IST). Please verify the official website before applying."
+  },
+  "jobReport": {
+    "button": "Report incorrect job",
+    "title": "Report: {{job}}",
+    "reasonLabel": "Reason",
+    "reasonExpired": "Expired job",
+    "reasonWrongDeadline": "Wrong deadline",
+    "reasonBrokenLink": "Broken link",
+    "reasonWrongVacancy": "Incorrect vacancy count",
+    "reasonDuplicate": "Duplicate listing",
+    "reasonNotRecruitment": "Not a recruitment post",
+    "reasonSuspiciousSource": "Suspicious source",
+    "detailsLabel": "Details (optional)",
+    "emailLabel": "Email (optional)",
+    "submit": "Submit report",
+    "sending": "Sending…",
+    "success": "Thank you — we will review this listing.",
+    "error": "Could not submit report. Please try again later."
   },
   "subscribeBanner": {
     "title": "Daily Govt Jobs Alerts",

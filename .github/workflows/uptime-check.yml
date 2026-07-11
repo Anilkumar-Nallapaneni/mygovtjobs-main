@@ -1,0 +1,42 @@
+name: Uptime and freshness
+
+on:
+  schedule:
+    - cron: "*/30 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Site homepage
+        run: |
+          code=$(curl -sS -o /dev/null -w "%{http_code}" --max-time 20 "https://www.livegovtjobs.com/")
+          echo "Homepage HTTP $code"
+          test "$code" = "200"
+
+      - name: API health (optional)
+        continue-on-error: true
+        env:
+          API_HEALTH_URL: ${{ secrets.API_HEALTH_URL }}
+        run: |
+          URL="${API_HEALTH_URL:-https://api.livegovtjobs.com/health}"
+          body=$(curl -sS --max-time 20 "$URL")
+          echo "$body" | grep -q '"status"' || exit 1
+
+      - name: Job data freshness
+        run: |
+          body=$(curl -sS --max-time 20 "https://www.livegovtjobs.com/data/daily-sync-state.json")
+          echo "$body" | grep -q 'completedAt' || echo "::warning::daily-sync-state missing completedAt"
+          completed=$(echo "$body" | node -e "let d='';process.stdin.on('data',c=>d+=c);process.stdin.on('end',()=>{try{const j=JSON.parse(d);const t=j.completedAt||j.completedAtIst;if(!t){console.log('no timestamp');process.exit(0)};const age=(Date.now()-new Date(t).getTime())/3600000;console.log('Age hours:',age.toFixed(1));if(age>72)process.exit(1)}catch(e){process.exit(0)}})")
+          echo "Freshness check done"
+
+  notify-failure:
+    needs: probe
+    if: failure()
+    uses: ./.github/workflows/notify-on-failure.yml
+    secrets: inherit

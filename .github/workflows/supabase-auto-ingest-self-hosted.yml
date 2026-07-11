@@ -22,6 +22,7 @@ defaults:
 
 jobs:
   ingest:
+    if: false # Disabled — use cloud workflow supabase-auto-ingest.yml (sync:production)
     runs-on: self-hosted
     timeout-minutes: 180
     steps:

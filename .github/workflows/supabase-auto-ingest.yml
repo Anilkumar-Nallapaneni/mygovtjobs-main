@@ -77,8 +77,8 @@ jobs:
           GITHUB_ACTIONS: "true"
         run: node scripts/run-python.mjs scripts/test-backend-db.py
 
-      # ~100 scrapers × 120s max / 6 parallel ≈ 15–35 min typical; 12 caused Supabase lock timeouts
-      - name: Daily sync (scrape + scrub + export live-jobs.json)
+      # ~100 scrapers — production canonical command (advisory lock + sync_runs)
+      - name: sync:production
         env:
           DATABASE_URL: ${{ env.DATABASE_URL }}
           SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL }}
@@ -86,33 +86,11 @@ jobs:
           ADMIN_API_KEY: ${{ secrets.ADMIN_API_KEY }}
           DAILY_SYNC_ENFORCE_ONCE: "1"
           ALLOW_FALLBACK_JSON_EXPORT: "0"
-        run: |
-          echo "=== $(date -u +%H:%M:%S) daily sync ==="
-          node scripts/run-python.mjs scripts/run-daily-8am-sync.py \
-            --force \
-            --skip-enrich \
-            --skip-official-import \
-            --concurrency 6 \
-            --source-timeout 120
-
-      - name: Fetch official feeds + admit/result portals
-        continue-on-error: true
-        run: |
-          echo "=== $(date -u +%H:%M:%S) official feeds ==="
-          npm run fetch:official:feeds
-        timeout-minutes: 45
-
-      - name: Build official archives
-        run: |
-          echo "=== $(date -u +%H:%M:%S) archives ==="
-          npm run build:official-archives
-
-      - name: Build sitemap (all job slugs)
-        env:
-          VITE_SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL }}
-          VITE_SUPABASE_ANON_KEY: ${{ secrets.VITE_SUPABASE_ANON_KEY }}
           ALERT_SITE_URL: ${{ secrets.ALERT_SITE_URL }}
-        run: npm run build:sitemap
+          SYNC_TRIGGER_TYPE: github_actions_schedule
+        run: |
+          echo "=== $(date -u +%H:%M:%S) sync:production ==="
+          node scripts/run-python.mjs scripts/run-sync-production.py
 
       # Job detail pages load from Supabase first; static PDF files are built weekly.
       # Do NOT run build:job-details or enrich:jobs:all here — they take hours.
@@ -156,7 +134,8 @@ jobs:
             frontend/public/data/live-jobs-list.json \
             frontend/public/data/live-jobs-bootstrap.json \
             frontend/public/data/daily-sync-state.json \
-            frontend/public/sitemap.xml; do
+            frontend/public/sitemap.xml \
+            frontend/public/sitemaps/; do
             if [ -e "$path" ]; then
               git add "$path"
             else

@@ -5,12 +5,14 @@
  *
  *   npm run build:sitemap
  */
-import { readFileSync, writeFileSync, existsSync } from "fs";
+import { readFileSync, writeFileSync, existsSync, mkdirSync } from "fs";
 import { join, dirname } from "path";
 import { fileURLToPath } from "url";
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
-const outPath = join(root, "frontend/public/sitemap.xml");
+const publicDir = join(root, "frontend/public");
+const sitemapDir = join(publicDir, "sitemaps");
+const indexPath = join(publicDir, "sitemap.xml");
 
 const siteUrl = (process.env.ALERT_SITE_URL || process.env.VITE_SITE_URL || "https://www.livegovtjobs.com").replace(
   /\/$/,
@@ -146,31 +148,32 @@ async function main() {
   const supabaseJobs = await loadJobsFromSupabase();
   const jobs = supabaseJobs ?? loadJobsFromJson();
 
-  const entries = [];
+  const staticEntries = [];
+  const jobEntries = [];
 
   for (const page of STATIC_PATHS) {
-    entries.push(urlEntry(`${siteUrl}${page.loc}`, page.changefreq, page.priority));
+    staticEntries.push(urlEntry(`${siteUrl}${page.loc}`, page.changefreq, page.priority));
   }
 
   for (const id of STATE_IDS) {
-    entries.push(urlEntry(`${siteUrl}/state/${id}`, "daily", "0.7"));
+    staticEntries.push(urlEntry(`${siteUrl}/state/${id}`, "daily", "0.7"));
   }
 
   for (const id of CATEGORY_IDS) {
-    entries.push(urlEntry(`${siteUrl}/category/${id}`, "daily", "0.7"));
+    staticEntries.push(urlEntry(`${siteUrl}/category/${id}`, "daily", "0.7"));
   }
 
   for (const slug of QUALIFICATION_SLUGS) {
-    entries.push(urlEntry(`${siteUrl}/qualification/${slug}`, "weekly", "0.75"));
+    staticEntries.push(urlEntry(`${siteUrl}/qualification/${slug}`, "weekly", "0.75"));
   }
 
   for (const slug of PROFESSION_SLUGS) {
-    entries.push(urlEntry(`${siteUrl}/profession/${slug}`, "weekly", "0.75"));
+    staticEntries.push(urlEntry(`${siteUrl}/profession/${slug}`, "weekly", "0.75"));
   }
 
   for (const slug of RESULT_TOPIC_SLUGS) {
     if (slug === "admit-card") continue;
-    entries.push(urlEntry(`${siteUrl}/results/${slug}`, "weekly", "0.75"));
+    staticEntries.push(urlEntry(`${siteUrl}/results/${slug}`, "weekly", "0.75"));
   }
 
   if (existsSync(orgIndexPath)) {
@@ -178,7 +181,7 @@ async function main() {
     if (Array.isArray(orgIndex)) {
       for (const row of orgIndex) {
         if (row?.slug) {
-          entries.push(urlEntry(`${siteUrl}/org/${row.slug}`, "weekly", "0.7"));
+          staticEntries.push(urlEntry(`${siteUrl}/org/${row.slug}`, "weekly", "0.7"));
         }
       }
     }
@@ -189,7 +192,7 @@ async function main() {
     const slug = job.slug || job.id;
     if (!slug || seen.has(slug)) continue;
     seen.add(slug);
-    entries.push(
+    jobEntries.push(
       urlEntry(
         `${siteUrl}/jobs/${encodeURIComponent(String(slug))}`,
         "weekly",
@@ -199,9 +202,34 @@ async function main() {
     );
   }
 
-  const xml = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${entries.join("\n")}\n</urlset>\n`;
-  writeFileSync(outPath, xml, "utf8");
-  console.log(`Wrote ${outPath} — ${entries.length} URLs (${seen.size} jobs, source: ${supabaseJobs ? "supabase" : "live-jobs.json"})`);
+  mkdirSync(sitemapDir, { recursive: true });
+
+  const staticXml = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${staticEntries.join("\n")}\n</urlset>\n`;
+  writeFileSync(join(sitemapDir, "static.xml"), staticXml, "utf8");
+
+  const chunkSize = 1000;
+  const jobChunks = [];
+  for (let i = 0; i < jobEntries.length; i += chunkSize) {
+    const chunk = jobEntries.slice(i, i + chunkSize);
+    const name = `jobs-${Math.floor(i / chunkSize) + 1}.xml`;
+    jobChunks.push(name);
+    const xml = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${chunk.join("\n")}\n</urlset>\n`;
+    writeFileSync(join(sitemapDir, name), xml, "utf8");
+  }
+
+  const indexEntries = [
+    `  <sitemap>\n    <loc>${xmlEscape(`${siteUrl}/sitemaps/static.xml`)}</loc>\n  </sitemap>`,
+    ...jobChunks.map(
+      (name) =>
+        `  <sitemap>\n    <loc>${xmlEscape(`${siteUrl}/sitemaps/${name}`)}</loc>\n  </sitemap>`
+    ),
+  ];
+  const indexXml = `<?xml version="1.0" encoding="UTF-8"?>\n<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${indexEntries.join("\n")}\n</sitemapindex>\n`;
+  writeFileSync(indexPath, indexXml, "utf8");
+
+  console.log(
+    `Wrote ${indexPath} — index with ${staticEntries.length} static + ${seen.size} jobs in ${jobChunks.length} chunk(s)`
+  );
 }
 
 main().catch((err) => {

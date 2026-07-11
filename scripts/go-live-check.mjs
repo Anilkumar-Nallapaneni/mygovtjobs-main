@@ -93,7 +93,27 @@ console.log('\n── Live probes (optional) ──')
 const apiHealth = process.env.API_HEALTH_URL || `${apiUrl}/health`
 const sitemapUrl = process.env.SITEMAP_URL || 'https://www.livegovtjobs.com/sitemap.xml'
 const liveApiOk = await probeUrl('API /health', apiHealth, { expectSubstr: '"status"' })
-await probeUrl('Public sitemap', sitemapUrl, { expectSubstr: '<urlset' })
+await probeUrl('Public sitemap index', sitemapUrl, {
+  expectSubstr: '<sitemapindex',
+})
+
+if (be.SENTRY_DSN) {
+  console.log('✓ SENTRY_DSN configured locally')
+} else {
+  console.log('⚠ Sentry — add SENTRY_DSN to backend/.env for production error tracking')
+}
+
+if (be.REDIS_URL) {
+  console.log('✓ REDIS_URL configured — shared rate limiting enabled')
+} else {
+  console.log('⚠ Redis — set REDIS_URL on Railway/Render for multi-instance rate limits')
+}
+
+if (be.TURNSTILE_SECRET_KEY) {
+  console.log('✓ TURNSTILE_SECRET_KEY set')
+} else {
+  console.log('⚠ Turnstile — optional bot protection; set TURNSTILE_SECRET_KEY + VITE_TURNSTILE_SITE_KEY')
+}
 
 if (fe.VITE_API_URL?.includes('api.livegovtjobs.com') || liveApiOk) {
   console.log('\n✓ VITE_API_URL — production API reachable (or set in frontend/.env.local)')

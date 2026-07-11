@@ -23,26 +23,39 @@ async def list_jobs(
     state: str | None = None,
     category: str | None = None,
     q: str | None = None,
+    page: int = Query(1, ge=1),
     limit: int = Query(50, ge=1, le=1000),
-    offset: int = Query(0, ge=0),
+    offset: int | None = Query(None, ge=0),
 ):
+    effective_offset = offset if offset is not None else (page - 1) * limit
     try:
         etag = await service.list_jobs_etag(
             state=state,
             category=category,
             q=q,
             limit=limit,
-            offset=offset,
+            offset=effective_offset,
         )
         if request.headers.get("if-none-match") == etag:
             return Response(status_code=304, headers=_list_cache_headers(etag))
-        items, total = await service.list_jobs(state=state, category=category, q=q, limit=limit, offset=offset)
+        items, total = await service.list_jobs(
+            state=state, category=category, q=q, limit=limit, offset=effective_offset
+        )
     except DatabaseUnavailableError:
         raise HTTPException(status_code=503, detail="Job database temporarily unavailable")
 
+    total_pages = max(1, (total + limit - 1) // limit) if limit else 1
     response.headers["Cache-Control"] = f"public, max-age={_LIST_CACHE_SECONDS}"
     response.headers["ETag"] = etag
-    return JobListResponse(items=items, total=total, limit=limit, offset=offset, degraded=False)
+    return JobListResponse(
+        items=items,
+        total=total,
+        limit=limit,
+        offset=effective_offset,
+        page=page,
+        total_pages=total_pages,
+        degraded=False,
+    )
 
 
 @router.get("/{slug}")
