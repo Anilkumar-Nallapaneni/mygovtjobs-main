@@ -4,7 +4,7 @@ name: Fetch official RSS
 on:
   workflow_dispatch:
   schedule:
-    - cron: "30 2 * * *"
+    - cron: "30 */4 * * *"
 
 permissions:
   contents: write
@@ -12,19 +12,30 @@ permissions:
 jobs:
   fetch:
     runs-on: ubuntu-latest
+    timeout-minutes: ${{ github.event_name == 'workflow_dispatch' && 180 || 60 }}
     steps:
       - uses: actions/checkout@v4
 
       - uses: actions/setup-node@v4
         with:
-          node-version: "20"
+          node-version: "24"
           cache: npm
           cache-dependency-path: package-lock.json
 
       - run: npm ci
 
-      - run: npm run fetch:official
-        working-directory: .
+      - name: Fetch official feeds
+        env:
+          FEED_FETCH_CONCURRENCY: ${{ github.event_name == 'workflow_dispatch' && '8' || '12' }}
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            npm run fetch:official:feeds
+          else
+            npm run fetch:official:feeds -- --rss-only
+          fi
+        timeout-minutes: ${{ github.event_name == 'workflow_dispatch' && 150 || 45 }}
+
+      - run: npm run build:official-archives
 
       - name: Commit snapshot
         run: |

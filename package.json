@@ -5,6 +5,9 @@
     "frontend"
   ],
   "description": "My Govt Jobs — frontend (Vite) and official-site fetch scripts",
+  "engines": {
+    "node": ">=24 <25"
+  },
   "overrides": {
     "encoding-sniffer": "^1.0.2",
     "workbox-build": {
@@ -32,6 +35,10 @@
     "ingest:direct": "node scripts/run-python.mjs scripts/run-ingest-direct.py",
     "ingest:direct:quick": "node scripts/run-python.mjs scripts/run-ingest-direct.py --limit 20",
     "data:refresh": "node scripts/run-python.mjs scripts/run-full-data-refresh.py",
+    "sync:quick": "node scripts/run-python.mjs scripts/run-sync-quick.py",
+    "sync:quick:rss": "node scripts/run-python.mjs scripts/run-sync-quick.py --rss-only",
+    "sync:production": "node scripts/run-python.mjs scripts/run-sync-production.py",
+    "verify:production": "npm run env:check && npm run supabase:test && npm run supabase:audit && npm run db:test && npm run jobs:audit:strict && npm run verify:live-jobs",
     "daily:sync": "node scripts/run-python.mjs scripts/run-daily-8am-sync.py --skip-enrich",
     "daily:sync:full": "node scripts/run-python.mjs scripts/run-daily-8am-sync.py",
     "daily:sync:fast": "node scripts/run-python.mjs scripts/run-daily-8am-sync.py --skip-enrich --skip-official-import --concurrency 8",
@@ -114,6 +121,7 @@
     "jobs:audit": "node scripts/audit-job-quality.mjs",
     "jobs:audit:strict": "node scripts/audit-job-quality.mjs --strict",
     "jobs:audit:detail-actions": "npx tsx scripts/audit-job-detail-actions.ts",
+    "jobs:check-links": "node scripts/run-python.mjs scripts/check-job-links.py",
     "supabase:sync-sources": "node scripts/run-python.mjs scripts/run-supabase-sync-sources.py",
     "supabase:full-sync": "node scripts/run-python.mjs scripts/run-supabase-full-sync.py",
     "supabase:full-sync:fast": "node scripts/run-python.mjs scripts/run-supabase-full-sync.py --concurrency 8 --source-timeout 120 --retries 1",

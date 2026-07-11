@@ -3,8 +3,11 @@ name: Fetch official RSS
 on:
   workflow_dispatch:
   schedule:
-    # Refresh the Official Wire & Notices snapshot every 4 hours.
+    # Lightweight metadata refresh every 4 hours (sync:quick).
     - cron: "30 */4 * * *"
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
 permissions:
   contents: write
@@ -12,28 +15,56 @@ permissions:
 jobs:
   fetch:
     runs-on: ubuntu-latest
-    timeout-minutes: 120
+    # Manual runs scrape 53 admit/result portals; scheduled runs are RSS-only.
+    timeout-minutes: ${{ github.event_name == 'workflow_dispatch' && 180 || 60 }}
 
     steps:
       - uses: actions/checkout@v4
 
       - uses: actions/setup-node@v4
         with:
-          node-version: "20"
+          node-version: "24"
           cache: npm
           cache-dependency-path: package-lock.json
 
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
       - name: Install dependencies
-        run: npm ci
+        run: |
+          npm ci
+          python -m venv backend/.venv
+          backend/.venv/bin/pip install -r backend/requirements.txt
 
-      - name: Fetch official RSS snapshot
+      - name: Configure DATABASE_URL from secrets
         env:
-          FEED_FETCH_CONCURRENCY: "8"
-        run: npm run fetch:official:feeds
-        timeout-minutes: 90
+          SECRET_DATABASE_URL: ${{ secrets.DATABASE_URL }}
+          SUPABASE_PROJECT_REF: ${{ secrets.SUPABASE_PROJECT_REF }}
+          SUPABASE_DB_PASSWORD: ${{ secrets.SUPABASE_DB_PASSWORD }}
+          SUPABASE_DB_REGION: ${{ secrets.SUPABASE_DB_REGION }}
+          SUPABASE_POOLER_HOST: ${{ secrets.SUPABASE_POOLER_HOST }}
+        run: |
+          if [ -n "$SUPABASE_DB_PASSWORD" ]; then
+            node scripts/build-database-url-for-actions.mjs
+          elif [ -n "$SECRET_DATABASE_URL" ]; then
+            echo "DATABASE_URL=$SECRET_DATABASE_URL" >> "$GITHUB_ENV"
+          fi
 
-      - name: Build official archives
-        run: npm run build:official-archives
+      - name: sync:quick (RSS + archives)
+        env:
+          DATABASE_URL: ${{ env.DATABASE_URL }}
+          SYNC_TRIGGER_TYPE: github_actions_schedule
+          FEED_FETCH_CONCURRENCY: ${{ github.event_name == 'workflow_dispatch' && '8' || '12' }}
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            echo "Full fetch (RSS + admit/result portals)"
+            node scripts/run-python.mjs scripts/run-sync-quick.py
+          else
+            echo "Scheduled RSS-only fetch (skips 53 portal scrapes)"
+            node scripts/run-python.mjs scripts/run-sync-quick.py --rss-only
+          fi
+        timeout-minutes: ${{ github.event_name == 'workflow_dispatch' && 150 || 45 }}
 
       - name: Commit snapshot
         run: |
