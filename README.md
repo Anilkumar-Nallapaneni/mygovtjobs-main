@@ -2,7 +2,7 @@
 
 Government job portal for India. Monorepo: **React frontend**, **FastAPI backend**, **Supabase Postgres**, **Vercel** hosting, **GitHub Actions** daily ingest.
 
-**Production:** [https://govtjobs.me](https://govtjobs.me)
+**Production:** [https://www.livegovtjobs.com](https://www.livegovtjobs.com)
 
 ---
 
@@ -253,7 +253,7 @@ You do **not** need to run these manually if GitHub Actions is configured.
 
 | # | Action | Command / URL |
 |---|--------|---------------|
-| 1 | Check site loads | Open [govtjobs.me](https://govtjobs.me) |
+| 1 | Check site loads | Open [govtjobs.me](https://www.livegovtjobs.com) |
 | 2 | Check last ingest ran | [GitHub Actions](https://github.com/Anilkumar-Nallapaneni/mygovtjobs-main/actions) → **Supabase auto ingest** → green ✓ |
 | 3 | Check job count | `npm run supabase:audit` → expect 600+ live jobs |
 | 4 | Spot-check 2–3 job details | Click job → title, PDF, Apply buttons match notification |
@@ -443,7 +443,7 @@ npm run vercel:deploy
 | `VITE_API_URL` | empty (unless API hosted elsewhere) |
 | `VITE_GA_MEASUREMENT_ID` | `G-XXXXXXXXXX` from GA4 |
 | `VITE_GOOGLE_SITE_VERIFICATION` | Search Console HTML tag token |
-| `VITE_SITE_URL` | `https://govtjobs.me` |
+| `VITE_SITE_URL` | `https://www.livegovtjobs.com` |
 
 `npm run vercel:env:push:live` reads `frontend/.env.local` and pushes all of the above.
 
@@ -472,7 +472,7 @@ Repo: [github.com/Anilkumar-Nallapaneni/mygovtjobs-main/actions](https://github.
 | `VITE_SUPABASE_ANON_KEY` | Supabase → API → anon public |
 | `SUPABASE_SERVICE_ROLE_KEY` | Supabase → API → service_role |
 | `ADMIN_API_KEY` | Same as `backend/.env` |
-| `ALERT_SITE_URL` | `https://govtjobs.me` |
+| `ALERT_SITE_URL` | `https://www.livegovtjobs.com` |
 
 **Alternative to `DATABASE_URL`:** set `SUPABASE_PROJECT_REF` + `SUPABASE_DB_PASSWORD` + `SUPABASE_DB_REGION`.
 
@@ -531,7 +531,7 @@ Installed via `@vercel/analytics` in `main.tsx`. No env var needed — view in *
 
 ### Google Search Console
 
-1. Add property `https://govtjobs.me` at [search.google.com/search-console](https://search.google.com/search-console).
+1. Add property `https://www.livegovtjobs.com` at [search.google.com/search-console](https://search.google.com/search-console).
 2. Verify via HTML tag:
    ```bash
    npm run google:verify
@@ -539,7 +539,7 @@ Installed via `@vercel/analytics` in `main.tsx`. No env var needed — view in *
    npm run vercel:env:push:live
    npm run vercel:deploy
    ```
-3. Submit sitemap: `https://govtjobs.me/sitemap.xml`
+3. Submit sitemap: `https://www.livegovtjobs.com/sitemap.xml`
    - Rebuilt on every `npm run build` and daily GitHub ingest.
 
 ---

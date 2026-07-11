@@ -21,7 +21,7 @@ describe('submitContactForm', () => {
     })
     expect(result.ok).toBe(false)
     if (result.ok === false) {
-      expect(result.error).toMatch(/contact@govtjobs.me/i)
+      expect(result.error).toMatch(/contact@livegovtjobs.com/i)
     }
   })
 

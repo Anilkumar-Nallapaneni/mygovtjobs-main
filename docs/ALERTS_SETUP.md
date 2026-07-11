@@ -13,7 +13,7 @@ Email, Telegram, WhatsApp, and push alerts run after daily ingest (`npm run aler
 | `TWILIO_AUTH_TOKEN` | WhatsApp | Optional |
 | `TWILIO_WHATSAPP_FROM` | e.g. `whatsapp:+14155238886` | Optional |
 | `PUSH_WEBHOOK_URL` | Web push bridge | Optional |
-| `ALERT_SITE_URL` | Links in messages | Recommended (`https://govtjobs.me`) |
+| `ALERT_SITE_URL` | Links in messages | Recommended (`https://www.livegovtjobs.com`) |
 
 Validate locally:
 
@@ -31,7 +31,7 @@ TWILIO_ACCOUNT_SID=AC...
 TWILIO_AUTH_TOKEN=...
 TWILIO_WHATSAPP_FROM=whatsapp:+14155238886
 PUSH_WEBHOOK_URL=https://your-push-bridge.example/hook
-ALERT_SITE_URL=https://govtjobs.me
+ALERT_SITE_URL=https://www.livegovtjobs.com
 ```
 
 ```bash

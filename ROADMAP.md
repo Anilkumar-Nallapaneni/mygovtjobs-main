@@ -11,4 +11,4 @@ Quick links:
 | [docs/GO_LIVE.md](docs/GO_LIVE.md) | Production go-live checklist |
 | [docs/DAILY_8AM_SYNC.md](docs/DAILY_8AM_SYNC.md) | Daily ingest pipeline details |
 
-**Live site:** [govtjobs.me](https://govtjobs.me) · **Quality score:** ~94–96/100
+**Live site:** [govtjobs.me](https://www.livegovtjobs.com) · **Quality score:** ~94–96/100

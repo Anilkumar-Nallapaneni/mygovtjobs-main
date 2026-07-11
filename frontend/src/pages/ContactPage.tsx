@@ -138,7 +138,7 @@ export default function ContactPage({ onFooterLink }: ContactPageProps) {
         </button>
         <p className="contact-page__fallback">
           {t('contact.fallback')}{' '}
-          <a href="mailto:contact@govtjobs.me">contact@govtjobs.me</a>
+          <a href="mailto:contact@livegovtjobs.com">contact@livegovtjobs.com</a>
         </p>
       </form>
 

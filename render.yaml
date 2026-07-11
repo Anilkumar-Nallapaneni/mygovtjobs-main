@@ -1,7 +1,7 @@
 # Render Blueprint — alternative to Railway for FastAPI backend
 # Dashboard → New → Blueprint → connect repo (uses this file)
 #
-# After deploy: Settings → Custom Domain → api.govtjobs.me
+# After deploy: Settings → Custom Domain → api.livegovtjobs.com
 
 services:
   - type: web
@@ -19,7 +19,7 @@ services:
       - key: ALLOW_FALLBACK_JSON_EXPORT
         value: "0"
       - key: CORS_ORIGINS
-        value: https://govtjobs.me,https://www.govtjobs.me
+        value: https://www.livegovtjobs.com,https://www.livegovtjobs.com
       - key: RATE_LIMIT_PER_MINUTE
         value: "120"
       - key: SQL_ECHO

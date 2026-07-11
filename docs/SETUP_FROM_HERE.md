@@ -1,12 +1,12 @@
 # Setup from here — GitHub + Supabase + Vercel only
 
-You already have the live site. Follow these steps **in order**. Use **Gmail** for all Google tools — **not** `contact@govtjobs.me`.
+You already have the live site. Follow these steps **in order**. Use **Gmail** for all Google tools — **not** `contact@livegovtjobs.com`.
 
 ---
 
 ## Step 1 — Confirm site works (1 minute)
 
-Open **https://govtjobs.me** — you should see job listings.
+Open **https://www.livegovtjobs.com** — you should see job listings.
 
 ---
 
@@ -54,12 +54,12 @@ Then: **GitHub.com** → your repo → **Actions** → **Supabase auto ingest** 
 
 1. Open **https://accounts.google.com**
 2. Sign in with **yourname@gmail.com** (create one if needed)
-3. **Do not** use `contact@govtjobs.me` — it is not a Google account
+3. **Do not** use `contact@livegovtjobs.com` — it is not a Google account
 
 ### 3b — Add your website
 
 1. **https://search.google.com/search-console**
-2. **Add property** → **URL prefix** → `https://govtjobs.me`
+2. **Add property** → **URL prefix** → `https://www.livegovtjobs.com`
 3. Choose **HTML tag** verification
 4. Google shows something like:
    ```html
@@ -92,7 +92,7 @@ npm run vercel:deploy
 ## Step 4 — Google Analytics (10 minutes, optional)
 
 1. **https://analytics.google.com** (same Gmail)
-2. **Admin** → **Create property** → Website URL: `https://govtjobs.me`
+2. **Admin** → **Create property** → Website URL: `https://www.livegovtjobs.com`
 3. Copy **Measurement ID** (`G-XXXXXXXXXX`)
 4. Add to `frontend/.env.local`:
    ```env
@@ -107,7 +107,7 @@ npm run vercel:deploy
 
 ---
 
-## Step 5 — contact@govtjobs.me (optional, later)
+## Step 5 — contact@livegovtjobs.com (optional, later)
 
 | What | Answer |
 |------|--------|
@@ -118,9 +118,9 @@ npm run vercel:deploy
 **Free option — forward to your Gmail:**
 
 1. Move DNS to **Cloudflare** (or use Cloudflare Email Routing if DNS is there)
-2. **Email Routing** → create `contact@govtjobs.me` → forward to your Gmail
+2. **Email Routing** → create `contact@livegovtjobs.com` → forward to your Gmail
 
-**Or use Zoho Mail** (free tier) for `contact@govtjobs.me`.
+**Or use Zoho Mail** (free tier) for `contact@livegovtjobs.com`.
 
 Until then, the email on the site is for display; mail won't arrive until you set up forwarding.
 
@@ -138,7 +138,7 @@ npm run vercel:deploy
 ## What you do NOT need
 
 - ❌ Railway (paid)
-- ❌ `contact@govtjobs.me` for Google sign-in
+- ❌ `contact@livegovtjobs.com` for Google sign-in
 - ❌ Backend hosting (GitHub Actions syncs jobs)
 
 ---
@@ -159,7 +159,7 @@ npm run vercel:deploy
 
 | Problem | Fix |
 |---------|-----|
-| Google "Couldn't find account" | Use **Gmail**, not contact@govtjobs.me |
+| Google "Couldn't find account" | Use **Gmail**, not contact@livegovtjobs.com |
 | Verify fails | Redeploy after `google:verify`, wait 2 min, retry |
 | No new jobs | Fix GitHub secrets, run ingest workflow |
 | GA no data | Add G- ID to `.env.local`, push env, redeploy |

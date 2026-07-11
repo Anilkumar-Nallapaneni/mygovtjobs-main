@@ -412,6 +412,7 @@ export default function JobDetail({
               target="_blank"
               rel="noopener noreferrer"
               className="job-detail-toolbar-apply"
+              data-testid="official-apply-link"
             >
               {primaryAction.label}
             </a>

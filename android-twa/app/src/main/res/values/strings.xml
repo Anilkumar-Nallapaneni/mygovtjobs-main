@@ -18,11 +18,11 @@
   
     <string-array name="additional_trusted_origins">
     
-      <item>https://govtjobs.me</item>
+      <item>https://www.livegovtjobs.com</item>
     
-      <item>https://www.govtjobs.me</item>
+      <item>https://www.livegovtjobs.com</item>
     
-      <item>https://livegovtjobs.com</item>
+      <item>https://www.livegovtjobs.com</item>
     
     </string-array>
   
@@ -52,7 +52,7 @@
           \"relation\": [\"delegate_permission/common.handle_all_urls\"],
           \"target\": {
               \"namespace\": \"web\",
-              \"site\": \"https://govtjobs.me\"
+              \"site\": \"https://www.livegovtjobs.com\"
           }
       }]        
     
@@ -60,7 +60,7 @@
           \"relation\": [\"delegate_permission/common.handle_all_urls\"],
           \"target\": {
               \"namespace\": \"web\",
-              \"site\": \"https://www.govtjobs.me\"
+              \"site\": \"https://www.livegovtjobs.com\"
           }
       }]        
     
@@ -68,7 +68,7 @@
           \"relation\": [\"delegate_permission/common.handle_all_urls\"],
           \"target\": {
               \"namespace\": \"web\",
-              \"site\": \"https://livegovtjobs.com\"
+              \"site\": \"https://www.livegovtjobs.com\"
           }
       }]        
     

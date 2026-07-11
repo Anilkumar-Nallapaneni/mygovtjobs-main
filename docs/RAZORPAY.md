@@ -1,6 +1,6 @@
 # Razorpay Premium — setup guide
 
-Enable **Premium** subscriptions on [govtjobs.me](https://govtjobs.me) via Razorpay (India).
+Enable **Premium** subscriptions on [govtjobs.me](https://www.livegovtjobs.com) via Razorpay (India).
 
 ## Architecture
 
@@ -19,7 +19,7 @@ Razorpay webhook → POST /api/billing/webhook (backup path)
 2. **Settings → API Keys** — generate **Test** keys first, then **Live** for production.
 3. **Settings → Webhooks** — add endpoint:
    ```
-   https://api.govtjobs.me/api/billing/webhook
+   https://api.livegovtjobs.com/api/billing/webhook
    ```
    Events: `payment.captured`  
    Copy the **Webhook Secret**.
@@ -53,7 +53,7 @@ Ensure Vercel has:
 
 | Variable | Value |
 |----------|--------|
-| `VITE_API_URL` | `https://api.govtjobs.me` |
+| `VITE_API_URL` | `https://api.livegovtjobs.com` |
 
 Users must **sign in** at `/account` before upgrading.
 

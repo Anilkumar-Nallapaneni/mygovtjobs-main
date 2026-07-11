@@ -475,6 +475,7 @@ export function JobDetailStickyBar({
           target="_blank"
           rel="noopener noreferrer"
           className="job-detail-sticky-bar__apply"
+          data-testid="official-apply-link"
         >
           {primaryAction.label}
         </a>
@@ -763,6 +764,7 @@ export function JobDetailActions({
                 ? "job-detail-action-btn job-detail-action-btn--primary"
                 : "job-detail-action-btn job-detail-action-btn--secondary"
             }
+            data-testid={action.variant === "primary" ? "official-apply-link" : undefined}
             onClick={(e) => e.stopPropagation()}
           >
             {isPdfUrl(action.url) ? "📄" : isMailto ? "✉️" : "🔗"} {action.label}

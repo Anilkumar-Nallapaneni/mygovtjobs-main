@@ -291,7 +291,7 @@ def patch_interview_archive() -> None:
 
 def patch_sitemap() -> None:
     text = SITEMAP.read_text(encoding="utf-8")
-    dup_url = f"https://govtjobs.me/jobs/{DUPLICATE_SLUG}"
+    dup_url = f"https://www.livegovtjobs.com/jobs/{DUPLICATE_SLUG}"
     import re
 
     text = re.sub(

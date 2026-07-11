@@ -51,7 +51,7 @@ run('npm', ['run', 'vercel:env:push:live'], 'Vercel production env')
 // 3. Status
 console.log('\n── Google (you do these in browser) ──')
 if (!fe.VITE_GOOGLE_SITE_VERIFICATION) {
-  console.log('○ Search Console: sign in with GMAIL → add https://govtjobs.me')
+  console.log('○ Search Console: sign in with GMAIL → add https://www.livegovtjobs.com')
   console.log('  Copy HTML tag token → npm run google:verify -- YOUR_TOKEN')
 } else {
   console.log('✓ VITE_GOOGLE_SITE_VERIFICATION in .env.local — redeploy if not done')
@@ -65,9 +65,9 @@ if (!fe.VITE_GA_MEASUREMENT_ID?.startsWith('G-')) {
   console.log('✓ VITE_GA_MEASUREMENT_ID in .env.local')
 }
 
-console.log('\n── contact@govtjobs.me ──')
+console.log('\n── contact@livegovtjobs.com ──')
 console.log('○ Not a Google login — optional inbox (Zoho/Cloudflare Email Routing)')
-console.log('  Site contact page now shows contact@govtjobs.me')
+console.log('  Site contact page now shows contact@livegovtjobs.com')
 
 console.log('\n── Deploy site ──')
 console.log('  npm run vercel:deploy')

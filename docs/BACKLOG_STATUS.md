@@ -8,7 +8,7 @@ Last updated: June 2026. Tracks audit backlog vs repo state.
 |------|--------|-------|
 | `npm run db:migrate` (migrations 011–012) | **Manual** | Run with `backend/.env` pooler URL on production Supabase |
 | Resend alert secrets | **Manual** | Add `RESEND_API_KEY`, `ALERT_FROM_EMAIL` to GitHub + Railway/Render |
-| Submit GSC sitemap | **Manual** | [Search Console](https://search.google.com/search-console) → `https://govtjobs.me/sitemap.xml` |
+| Submit GSC sitemap | **Manual** | [Search Console](https://search.google.com/search-console) → `https://www.livegovtjobs.com/sitemap.xml` |
 | Expand `.gitignore` (Android) | **Done** | `.gradle/`, `*.aab`, `*.apk`, review screenshots |
 | `npm run go-live:check` | **Manual** | Requires local `frontend/.env.local` + `backend/.env` |
 
@@ -60,6 +60,6 @@ npm run registry:generate        # after officialSites.ts edits
 ## Manual-only checklist
 
 1. **Alerts:** Subscribe on govtjobs.me → wait for daily ingest → verify inbox.
-2. **Backend health:** `curl https://api.govtjobs.me/health` → `"database":{"connected":true}`.
+2. **Backend health:** `curl https://api.livegovtjobs.com/health` → `"database":{"connected":true}`.
 3. **Vercel env:** `VITE_JOBS_SOURCE=supabase`, Supabase keys, optional `VITE_API_URL`, `VITE_SENTRY_DSN`.
 4. **Play Store:** TWA built; keystore stays local only.

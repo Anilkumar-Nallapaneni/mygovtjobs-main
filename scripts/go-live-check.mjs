@@ -4,8 +4,8 @@
  *   npm run go-live:check
  *
  * Optional live probes:
- *   API_HEALTH_URL=https://api.govtjobs.me/health npm run go-live:check
- *   SITEMAP_URL=https://govtjobs.me/sitemap.xml npm run go-live:check
+ *   API_HEALTH_URL=https://api.livegovtjobs.com/health npm run go-live:check
+ *   SITEMAP_URL=https://www.livegovtjobs.com/sitemap.xml npm run go-live:check
  */
 import { spawnSync } from 'child_process'
 import { existsSync, readFileSync } from 'fs'
@@ -75,10 +75,10 @@ if (!adminKey || adminKey === 'change-me-in-production') {
 }
 
 const cors = be.CORS_ORIGINS || ''
-if (cors.includes('govtjobs.me')) {
-  console.log('✓ CORS_ORIGINS includes govtjobs.me')
+if (cors.includes('livegovtjobs.com')) {
+  console.log('✓ CORS_ORIGINS includes livegovtjobs.com')
 } else {
-  console.log('⚠ CORS_ORIGINS — add https://govtjobs.me on Railway/Render (local .env may omit it)')
+  console.log('⚠ CORS_ORIGINS — add https://www.livegovtjobs.com on Railway/Render (local .env may omit it)')
 }
 
 if (fe.VITE_GA_MEASUREMENT_ID?.startsWith('G-')) {
@@ -87,18 +87,18 @@ if (fe.VITE_GA_MEASUREMENT_ID?.startsWith('G-')) {
   console.log('⚠ GA4 — add VITE_GA_MEASUREMENT_ID=G-XXXX to frontend/.env.local then vercel:env:push:live')
 }
 
-const apiUrl = fe.VITE_API_URL?.replace(/\/$/, '') || 'https://api.govtjobs.me'
+const apiUrl = fe.VITE_API_URL?.replace(/\/$/, '') || 'https://api.livegovtjobs.com'
 
 console.log('\n── Live probes (optional) ──')
 const apiHealth = process.env.API_HEALTH_URL || `${apiUrl}/health`
-const sitemapUrl = process.env.SITEMAP_URL || 'https://govtjobs.me/sitemap.xml'
+const sitemapUrl = process.env.SITEMAP_URL || 'https://www.livegovtjobs.com/sitemap.xml'
 const liveApiOk = await probeUrl('API /health', apiHealth, { expectSubstr: '"status"' })
 await probeUrl('Public sitemap', sitemapUrl, { expectSubstr: '<urlset' })
 
-if (fe.VITE_API_URL?.includes('api.govtjobs.me') || liveApiOk) {
+if (fe.VITE_API_URL?.includes('api.livegovtjobs.com') || liveApiOk) {
   console.log('\n✓ VITE_API_URL — production API reachable (or set in frontend/.env.local)')
 } else if (fe.VITE_API_URL) {
-  console.log(`\n⚠ VITE_API_URL=${fe.VITE_API_URL} — production should be https://api.govtjobs.me`)
+  console.log(`\n⚠ VITE_API_URL=${fe.VITE_API_URL} — production should be https://api.livegovtjobs.com`)
 } else {
   console.log('\n⚠ VITE_API_URL — add to frontend/.env.local or run vercel:env:push:live')
 }
@@ -108,7 +108,7 @@ console.log('  1. Railway/Render: see docs/DEPLOY_RAILWAY_RENDER.md')
 console.log('  2. Vercel:  npm run vercel:env:push:live && npm run vercel:deploy')
 console.log('  3. GA4:     analytics.google.com → Admin → Data Streams → copy G- ID')
 console.log('  4. Search Console: https://search.google.com/search-console')
-console.log('       → Sitemaps → submit: sitemap.xml  (full URL: https://govtjobs.me/sitemap.xml)')
+console.log('       → Sitemaps → submit: sitemap.xml  (full URL: https://www.livegovtjobs.com/sitemap.xml)')
 console.log('  5. Razorpay Premium: docs/RAZORPAY.md')
 console.log('\nFull guide: docs/GO_LIVE.md')
 

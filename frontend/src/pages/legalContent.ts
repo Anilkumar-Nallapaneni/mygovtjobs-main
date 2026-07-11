@@ -39,7 +39,7 @@ export const PRIVACY_PAGE = {
       heading: "Your choices",
       paragraphs: [
         "You can unsubscribe from alerts using the link in alert emails or by contacting us.",
-        "For data deletion requests, email contact@govtjobs.me with the address you used to subscribe.",
+        "For data deletion requests, email contact@livegovtjobs.com with the address you used to subscribe.",
       ],
     },
   ] satisfies StaticPageSection[],
@@ -169,7 +169,7 @@ export const ABOUT_PAGE = {
     {
       heading: "How do I report a wrong listing?",
       paragraphs: [
-        "Use the Contact page or email contact@govtjobs.me with the job title and a link to the official notification.",
+        "Use the Contact page or email contact@livegovtjobs.com with the job title and a link to the official notification.",
       ],
     },
   ] satisfies StaticPageSection[],
@@ -183,7 +183,7 @@ export const CONTACT_PAGE = {
     {
       heading: "General enquiries",
       paragraphs: [
-        "Email: contact@govtjobs.me",
+        "Email: contact@livegovtjobs.com",
         "For incorrect listings, please include the job title and a link to the official notification.",
       ],
     },
@@ -196,7 +196,7 @@ export const CONTACT_PAGE = {
     {
       heading: "Advertising",
       paragraphs: [
-        "For partnership or advertising enquiries, email contact@govtjobs.me with subject line \"Advertise\".",
+        "For partnership or advertising enquiries, email contact@livegovtjobs.com with subject line \"Advertise\".",
       ],
     },
   ] satisfies StaticPageSection[],

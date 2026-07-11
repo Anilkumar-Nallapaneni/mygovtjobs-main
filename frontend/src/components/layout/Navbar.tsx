@@ -217,7 +217,7 @@ export default function Navbar({
           className="navbar__brand"
           onClick={() => handleNavigate("home")}
           aria-label={t("brand.homeAria", {
-            defaultValue: "govtjobs.me — home",
+            defaultValue: "Live Govt Jobs — home",
           })}
         >
           <BrandLogo height={58} className="navbar__logo" />

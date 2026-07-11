@@ -18,7 +18,7 @@ export async function submitContactForm(
   if (!API_BASE) {
     return {
       ok: false,
-      error: 'Contact form requires the API backend. Email contact@govtjobs.me directly.',
+      error: 'Contact form requires the API backend. Email contact@livegovtjobs.com directly.',
     }
   }
 

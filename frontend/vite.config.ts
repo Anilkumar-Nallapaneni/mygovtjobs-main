@@ -106,11 +106,13 @@ export default defineConfig(({ mode }) => {
           navigateFallbackDenylist: [/^\/data\//],
           runtimeCaching: [
             {
-              urlPattern: ({ url }) => url.pathname.startsWith('/data/') && url.pathname.endsWith('.json'),
-              handler: 'CacheFirst',
+              urlPattern: ({ url }) =>
+                url.pathname.startsWith('/data/') && url.pathname.endsWith('.json'),
+              handler: 'NetworkFirst',
               options: {
-                cacheName: 'data-json',
-                expiration: { maxEntries: 16, maxAgeSeconds: 60 * 60 * 24 * 30 },
+                cacheName: 'job-data',
+                networkTimeoutSeconds: 5,
+                expiration: { maxEntries: 20, maxAgeSeconds: 60 * 60 * 24 },
                 cacheableResponse: { statuses: [0, 200] },
               },
             },
@@ -139,6 +141,7 @@ export default defineConfig(({ mode }) => {
     ],
     test: {
       environment: 'node',
+      setupFiles: ['src/test/setup.ts'],
       include: ['src/**/*.test.ts', 'src/**/*.test.tsx'],
       coverage: {
         provider: 'v8',

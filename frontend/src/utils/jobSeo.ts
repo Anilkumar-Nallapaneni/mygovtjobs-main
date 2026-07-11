@@ -47,7 +47,7 @@ function jobDescription(job: JobRecord): string {
 }
 
 function defaultOgImage(job?: JobRecord | null): string {
-  const origin = typeof window !== "undefined" ? window.location.origin : "https://govtjobs.me";
+  const origin = typeof window !== "undefined" ? window.location.origin : "https://www.livegovtjobs.com";
   if (job?.slug || job?.id) {
     return `${origin}/og/job.svg?title=${encodeURIComponent(String(job.title || "Govt Job").slice(0, 80))}`;
   }

@@ -2,7 +2,7 @@
 /**
  * Static deploy readiness — no Vercel login or backend required.
  *   npm run deploy:verify
- * Optional live probe: DEPLOY_URL=https://govtjobs.me npm run deploy:verify
+ * Optional live probe: DEPLOY_URL=https://www.livegovtjobs.com npm run deploy:verify
  */
 import { existsSync, readFileSync, readdirSync } from 'fs'
 import { join, dirname } from 'path'
@@ -162,13 +162,13 @@ if (deployUrl) {
   }
 } else {
   console.log('\n── Live probe skipped ──')
-  console.log('  Set DEPLOY_URL=https://govtjobs.me to verify production after deploy')
+  console.log('  Set DEPLOY_URL=https://www.livegovtjobs.com to verify production after deploy')
 }
 
 console.log('\n── Next steps ──')
 console.log('  1. npm run build && npm run vercel:deploy')
 console.log('  2. npm run vercel:env:check  (production env on Vercel)')
-console.log('  3. DEPLOY_URL=https://govtjobs.me npm run deploy:verify')
+console.log('  3. DEPLOY_URL=https://www.livegovtjobs.com npm run deploy:verify')
 console.log('  Full preflight: npm run go-live:check')
 
 const failed = checks.filter((c) => !c.pass).length

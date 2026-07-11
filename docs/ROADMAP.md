@@ -1,6 +1,6 @@
 # My Govt Jobs — Product Roadmap
 
-**Site:** [govtjobs.me](https://govtjobs.me)  
+**Site:** [govtjobs.me](https://www.livegovtjobs.com)  
 **Last updated:** June 2026  
 **Quality score:** ~94–96/100 (CI + audits passing; data purity ~87.5% recruitment-like in DB)
 
@@ -37,7 +37,7 @@ This roadmap covers what is **done**, what runs **daily**, and what to build **n
 | **Job detail pages** | ✅ | Slug routing, Supabase fetch, structured PDF sections |
 | **Google Analytics 4** | ✅ | `VITE_GA_MEASUREMENT_ID` on Vercel |
 | **Vercel Analytics** | ✅ | `@vercel/analytics` in `main.tsx` |
-| **Google Search Console** | 🟡 Setup | Submit `https://govtjobs.me/sitemap.xml` |
+| **Google Search Console** | 🟡 Setup | Submit `https://www.livegovtjobs.com/sitemap.xml` |
 | **i18n (22+ languages)** | ✅ | UI chrome translated; job body English |
 | **E2E + unit tests** | ✅ | 139 frontend + 65 backend |
 | **Job quality audit** | ✅ Strict pass | 0% blocked hosts, 0% missing apply |
@@ -186,7 +186,7 @@ Full ops guide: **[README.md](../README.md)**
 
 | Action | Command / URL |
 |--------|---------------|
-| Submit sitemap | [Google Search Console](https://search.google.com/search-console) → Sitemaps → `https://govtjobs.me/sitemap.xml` |
+| Submit sitemap | [Google Search Console](https://search.google.com/search-console) → Sitemaps → `https://www.livegovtjobs.com/sitemap.xml` |
 | Request indexing for homepage | GSC → URL Inspection → govtjobs.me |
 | Monitor GA4 | analytics.google.com → realtime after deploy |
 | Check Lighthouse | Vercel → Speed Insights |

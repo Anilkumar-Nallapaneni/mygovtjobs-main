@@ -12,7 +12,7 @@ import { fileURLToPath } from "url";
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
 const outPath = join(root, "frontend/public/sitemap.xml");
 
-const siteUrl = (process.env.ALERT_SITE_URL || process.env.VITE_SITE_URL || "https://livegovtjobs.com").replace(
+const siteUrl = (process.env.ALERT_SITE_URL || process.env.VITE_SITE_URL || "https://www.livegovtjobs.com").replace(
   /\/$/,
   ""
 );

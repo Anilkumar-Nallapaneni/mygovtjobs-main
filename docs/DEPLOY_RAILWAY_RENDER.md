@@ -1,6 +1,6 @@
 # Deploy backend API — Railway & Render step-by-step
 
-Host the FastAPI backend at **https://api.govtjobs.me** for admin dashboard, server-side search, alerts API, and Razorpay billing.
+Host the FastAPI backend at **https://api.livegovtjobs.com** for admin dashboard, server-side search, alerts API, and Razorpay billing.
 
 ---
 
@@ -33,12 +33,12 @@ In Railway → your service → **Variables**, add:
 | `SUPABASE_URL` | `https://YOUR_REF.supabase.co` |
 | `SUPABASE_SERVICE_ROLE_KEY` | Supabase → Settings → API → `service_role` |
 | `ADMIN_API_KEY` | from `npm run admin:key:generate` |
-| `CORS_ORIGINS` | `https://govtjobs.me,https://www.govtjobs.me` |
+| `CORS_ORIGINS` | `https://www.livegovtjobs.com,https://www.livegovtjobs.com` |
 | `ALLOW_INSECURE_ADMIN` | `0` |
 | `ALLOW_FALLBACK_JSON_EXPORT` | `0` |
 | `PDF_OCR_ENABLED` | `0` |
 | `RESEND_API_KEY` | (optional) for alert emails |
-| `ALERT_FROM_EMAIL` | `My Govt Jobs <alerts@govtjobs.me>` |
+| `ALERT_FROM_EMAIL` | `My Govt Jobs <alerts@livegovtjobs.com>` |
 | `RAZORPAY_KEY_ID` | (optional) see [RAZORPAY.md](./RAZORPAY.md) |
 | `RAZORPAY_KEY_SECRET` | |
 | `RAZORPAY_WEBHOOK_SECRET` | |
@@ -66,14 +66,14 @@ In Railway → your service → **Variables**, add:
 3. Wait 5–15 minutes for TLS.
 4. Verify:
    ```bash
-   curl https://api.govtjobs.me/health
+   curl https://api.livegovtjobs.com/health
    ```
 
 ### Step 5: Connect frontend
 
 ```bash
 # Add to frontend/.env.local:
-VITE_API_URL=https://api.govtjobs.me
+VITE_API_URL=https://api.livegovtjobs.com
 
 npm run vercel:env:push:live
 npm run vercel:deploy
@@ -103,7 +103,7 @@ In Render dashboard, set sync=false variables (same table as Railway above):
 
 1. **Settings → Custom Domains** → `api.govtjobs.me`.
 2. Add CNAME at DNS provider per Render instructions.
-3. `curl https://api.govtjobs.me/health`
+3. `curl https://api.livegovtjobs.com/health`
 
 ### Step 4: Vercel
 
@@ -115,8 +115,8 @@ Same as Railway Step 5.
 
 ```bash
 npm run go-live:check
-curl https://api.govtjobs.me/health
-curl https://api.govtjobs.me/api/billing/config
+curl https://api.livegovtjobs.com/health
+curl https://api.livegovtjobs.com/api/billing/config
 ```
 
 | Check | Expected |
@@ -133,7 +133,7 @@ curl https://api.govtjobs.me/api/billing/config
 | Symptom | Fix |
 |---------|-----|
 | `503` on `/api/jobs` | `DATABASE_URL` wrong — use pooler port **6543**, prefix `postgresql+asyncpg://` |
-| CORS errors in browser | Add `https://govtjobs.me` to `CORS_ORIGINS` |
+| CORS errors in browser | Add `https://www.livegovtjobs.com` to `CORS_ORIGINS` |
 | Admin 401 | Match `ADMIN_API_KEY` in browser session with Railway/Render env |
 | Cold start slow (Render free) | Upgrade plan or use Railway |
 

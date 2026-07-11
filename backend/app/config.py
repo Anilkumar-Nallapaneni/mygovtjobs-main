@@ -46,9 +46,9 @@ class Settings(BaseSettings):
     # Alert delivery (email via Resend, Telegram bot)
     resend_api_key: str | None = None
     alert_from_email: str = "My Govt Jobs <onboarding@resend.dev>"
-    contact_to_email: str = "contact@govtjobs.me"
+    contact_to_email: str = "contact@livegovtjobs.com"
     telegram_bot_token: str | None = None
-    alert_site_url: str = "https://govtjobs.me"
+    alert_site_url: str = "https://www.livegovtjobs.com"
     alert_delivery_lookback_hours: int = 48
     alert_delivery_after_sync: bool = False
     twilio_account_sid: str | None = None

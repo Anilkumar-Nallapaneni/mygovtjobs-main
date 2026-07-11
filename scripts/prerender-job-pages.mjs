@@ -9,7 +9,7 @@ import { fileURLToPath } from "url";
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
 const dist = join(root, "frontend/dist");
-const siteUrl = (process.env.ALERT_SITE_URL || process.env.VITE_SITE_URL || "https://govtjobs.me").replace(
+const siteUrl = (process.env.ALERT_SITE_URL || process.env.VITE_SITE_URL || "https://www.livegovtjobs.com").replace(
   /\/$/,
   ""
 );

@@ -23,6 +23,6 @@ async def submit_contact(request: Request, body: ContactRequest):
     if not ok:
         raise HTTPException(
             status_code=503,
-            detail="Could not send message. Email contact@govtjobs.me directly.",
+            detail="Could not send message. Email contact@livegovtjobs.com directly.",
         )
     return {"status": "sent"}

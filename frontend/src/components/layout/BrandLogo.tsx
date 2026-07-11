@@ -1,4 +1,4 @@
-import type { CSSProperties } from "react";
+import type { CSSProperties, ImgHTMLAttributes } from "react";
 import { useTranslation } from "react-i18next";
 
 type BrandLogoProps = {
@@ -9,7 +9,7 @@ type BrandLogoProps = {
   showTagline?: boolean;
 };
 
-/** Site logo — govtjobs.me 3D wordmark (`/logo.png`). */
+/** Site logo — Live Govt Jobs wordmark (`/logo.png`). */
 const LOGO_ASPECT = 520 / 197;
 
 export default function BrandLogo({
@@ -18,7 +18,7 @@ export default function BrandLogo({
 }: BrandLogoProps) {
   const { t } = useTranslation();
   const alt = t("brand.logoAlt", {
-    defaultValue: "GovtJobs.me — find your future",
+    defaultValue: "Live Govt Jobs — official government job alerts",
   });
   const width = Math.round(height * LOGO_ASPECT);
 
@@ -36,7 +36,7 @@ export default function BrandLogo({
       width={width}
       height={height}
       decoding="async"
-      fetchPriority="high"
+      {...({ fetchPriority: "high" } as ImgHTMLAttributes<HTMLImageElement>)}
     />
   );
 }

@@ -137,6 +137,7 @@ function JobCard({
 
   return (
     <article
+      data-testid={job?.id ? `job-card-${job.id}` : undefined}
       className={`job-card${compact ? " job-card--compact" : ""}${isExpired ? " job-card--expired" : ""}${onClick ? " job-card--clickable" : ""}`}
       style={enterStyle}
     >

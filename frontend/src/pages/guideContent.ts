@@ -149,7 +149,7 @@ export const FAQ_ITEMS: FaqItem[] = [
     id: 'contact',
     question: 'How can I contact the team?',
     answer:
-      'Use the Contact page or email contact@govtjobs.me. We respond within 2 business days for feedback, corrections, and partnership enquiries.',
+      'Use the Contact page or email contact@livegovtjobs.com. We respond within 2 business days for feedback, corrections, and partnership enquiries.',
   },
 ]
 
