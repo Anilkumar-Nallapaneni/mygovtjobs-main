@@ -1,24 +1,7 @@
 {
-  "generatedAt": "2026-07-11T14:06:13.093Z",
+  "generatedAt": "2026-07-11T17:34:57.855Z",
   "count": 568,
   "items": [
-    {
-      "id": "c8752cbb29e90295",
-      "title": "परिणामों की सूची: प्रधानमंत्री की न्यूजीलैंड की आधिकारिक यात्रा",
-      "link": "https://pib.gov.in/PressReleaseIframePage.aspx?PRID=2283581",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "pib-press-reg3",
-      "sourceName": "PIB — recent press releases",
-      "dept": "Press Information Bureau",
-      "state": "All India",
-      "category": "state",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "rss-feed"
-    },
     {
       "id": "4238c4faeae7a88c",
       "title": "Advt No. DOS/IV/1/2026 - Result for Engaging as Legal Consultant in DOS on contract basis Read More",
@@ -3084,6 +3067,23 @@
       "state": "All India",
       "category": "police",
       "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "c8752cbb29e90295",
+      "title": "परिणामों की सूची: प्रधानमंत्री की न्यूजीलैंड की आधिकारिक यात्रा",
+      "link": "https://pib.gov.in/PressReleaseIframePage.aspx?PRID=2283581",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "pib-press-reg3",
+      "sourceName": "PIB — recent press releases",
+      "dept": "Press Information Bureau",
+      "state": "All India",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "rss-feed"
     },
     {
       "id": "c4c9266da946f3d2",
