@@ -1,25 +1,23 @@
 {
-  "generatedAt": "2026-07-07T10:11:51.863Z",
+  "generatedAt": "2026-07-11T05:17:50.022Z",
   "count": 172,
   "items": [
     {
-      "id": "501d21c4457598cc",
-      "title": "03/07/2026 Additional Result Preamble (Qualified for Interview) for for Asst. Director - 2024",
-      "link": "https://rpsc.rajasthan.gov.in/Static/Result/B79DAC2A613C4C83AC3B0DAF60BE3AE6.pdf",
+      "id": "f43d7aa6e0241ca3",
+      "title": "Interview Schedule for the post of Scientist/Engineer 'SC' (Computer Science) against ICRB Advt. No. ISRO:ICRB:02(EMC):2025 dated 27.05.2025 Read More",
+      "link": "https://www.isro.gov.in/ICRB_Recruitment9.html",
       "publishedAt": null,
       "summary": null,
-      "pdfUrls": [
-        "https://rpsc.rajasthan.gov.in/Static/Result/B79DAC2A613C4C83AC3B0DAF60BE3AE6.pdf"
-      ],
-      "sourceId": "psc-rj",
-      "sourceName": "Rajasthan PSC (RPSC)",
-      "dept": "Rajasthan PSC (RPSC)",
-      "state": "Rajasthan",
-      "category": "state",
+      "pdfUrls": [],
+      "sourceId": "isro-careers",
+      "sourceName": "ISRO — Careers",
+      "dept": "Indian Space Research Organisation",
+      "state": "All India",
+      "category": "psu",
       "stateIds": [
-        "rj"
+        "all"
       ],
-      "fetchMethod": "html"
+      "fetchMethod": "html-listing"
     },
     {
       "id": "12ca81e8e0617c5b",
@@ -28,148 +26,15 @@
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
-      "sourceId": "psc-up",
-      "sourceName": "Uttar Pradesh PSC (UPPSC)",
-      "dept": "Uttar Pradesh PSC (UPPSC)",
+      "sourceId": "uppsc-hall-tickets",
+      "sourceName": "UPPSC — Hall tickets",
+      "dept": "Uttar Pradesh PSC",
       "state": "Uttar Pradesh",
       "category": "state",
       "stateIds": [
-        "up"
+        "all"
       ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "0cee7879cc8c4682",
-      "title": "Programme of Interview/Personality Test for recruitment to the post of Agriculture Officer, TAFS,Gr-I(Advt. No.-21/2025)",
-      "link": "https://tpsc.tripura.gov.in/sites/default/files/2026-06/Prog_Intv_Agri_220626.pdf",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [
-        "https://tpsc.tripura.gov.in/sites/default/files/2026-06/Prog_Intv_Agri_220626.pdf"
-      ],
-      "sourceId": "psc-tr",
-      "sourceName": "Tripura PSC (TPSC)",
-      "dept": "Tripura PSC (TPSC)",
-      "state": "NE States",
-      "category": "state",
-      "stateIds": [
-        "ne"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "573a484febc254f4",
-      "title": "Notification regarding Interview/Personality Test for the post of Agriculture Officer, TAFS, Grade-I (Advt. No-21/2025)",
-      "link": "https://tpsc.tripura.gov.in/sites/default/files/Notis_AGRI_090626.pdf",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [
-        "https://tpsc.tripura.gov.in/sites/default/files/Notis_AGRI_090626.pdf"
-      ],
-      "sourceId": "psc-tr",
-      "sourceName": "Tripura PSC (TPSC)",
-      "dept": "Tripura PSC (TPSC)",
-      "state": "NE States",
-      "category": "state",
-      "stateIds": [
-        "ne"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "1c082b301642027c",
-      "title": "Notification regarding for Interview/Personality Test for recruitment to the post of Assistant Professor(Advt. No-05/2025)(1st Phase)",
-      "link": "https://tpsc.tripura.gov.in/sites/default/files/Notif_AP_250526.pdf",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [
-        "https://tpsc.tripura.gov.in/sites/default/files/Notif_AP_250526.pdf"
-      ],
-      "sourceId": "psc-tr",
-      "sourceName": "Tripura PSC (TPSC)",
-      "dept": "Tripura PSC (TPSC)",
-      "state": "NE States",
-      "category": "state",
-      "stateIds": [
-        "ne"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "09ff44bf2cf34caf",
-      "title": "Notification regarding for Interview/Personality Test for recruitment to the post of Assistant Professor(Advt. No-05/2025)(1st Phase)",
-      "link": "https://tpsc.tripura.gov.in/sites/default/files/Notif_AF_190526.pdf",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [
-        "https://tpsc.tripura.gov.in/sites/default/files/Notif_AF_190526.pdf"
-      ],
-      "sourceId": "psc-tr",
-      "sourceName": "Tripura PSC (TPSC)",
-      "dept": "Tripura PSC (TPSC)",
-      "state": "NE States",
-      "category": "state",
-      "stateIds": [
-        "ne"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "c5993ec05c502859",
-      "title": "Revised eligible list for Interview/Personality Test for recruitment to the post of Assistant Professor (Advt. No-05/2025)(1st Phase)",
-      "link": "https://tpsc.tripura.gov.in/sites/default/files/Rev_Elg_AP_040626.pdf",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [
-        "https://tpsc.tripura.gov.in/sites/default/files/Rev_Elg_AP_040626.pdf"
-      ],
-      "sourceId": "psc-tr",
-      "sourceName": "Tripura PSC (TPSC)",
-      "dept": "Tripura PSC (TPSC)",
-      "state": "NE States",
-      "category": "state",
-      "stateIds": [
-        "ne"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "60ef47b60e47190d",
-      "title": "Eligible list for Interview/Personality Test for recruitment to the post of Assistant Professor (Advt. No-05/2025)(1st Phase)",
-      "link": "https://tpsc.tripura.gov.in/sites/default/files/Eligible_Asstt._Prof_1st_phase_160526.pdf",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [
-        "https://tpsc.tripura.gov.in/sites/default/files/Eligible_Asstt._Prof_1st_phase_160526.pdf"
-      ],
-      "sourceId": "psc-tr",
-      "sourceName": "Tripura PSC (TPSC)",
-      "dept": "Tripura PSC (TPSC)",
-      "state": "NE States",
-      "category": "state",
-      "stateIds": [
-        "ne"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "44b25fb342f01a59",
-      "title": "Notification regarding for the Interview/Personality Test for recruitment to the post of Assistant Professor(Advt. No-05/2025)",
-      "link": "https://tpsc.tripura.gov.in/sites/default/files/Intv_Astt._Prof_170426.pdf",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [
-        "https://tpsc.tripura.gov.in/sites/default/files/Intv_Astt._Prof_170426.pdf"
-      ],
-      "sourceId": "psc-tr",
-      "sourceName": "Tripura PSC (TPSC)",
-      "dept": "Tripura PSC (TPSC)",
-      "state": "NE States",
-      "category": "state",
-      "stateIds": [
-        "ne"
-      ],
-      "fetchMethod": "html"
+      "fetchMethod": "html-listing"
     },
     {
       "id": "7ab3d2658ff4ef35",
@@ -324,22 +189,6 @@
       "fetchMethod": "live-jobs-supplement"
     },
     {
-      "id": "75d059239a1f0ce1",
-      "title": "Walk- in interview on 07.07.2026 for the appointment of Full Time Contractual Specialists and Senior Resident on Contractual basis at ESIC Model Hospital Gurugram, Haryana",
-      "link": "https://www.esic.gov.in/attachments/recruitmentfile/Walk_in_interview_on_07_07_2026_for_the_appointment_of_Full_Time_Contractual_Specialists_and_Senior_Resident_on_Contractual_basis_at_ESIC_Model_Hospital_Gurugram_Haryana_1782382011.pdf",
-      "publishedAt": "2026-07-07T00:00:00Z",
-      "summary": "दिनांक:- 23/06/2026 ADVERTISEMENT NO. 03/2026 Walk- in interview on 07.07.2026 for the appointment of Full Time Contractual Specialists and Senior Resident on Contractual basis at ESIC Model Hospital Gurugram, Haryana Employees’ State Insurance Corporation is a statutory body constituted under an Act of Parliament (ESI Act, 1948) and works under the Administrative control of Ministry of Labour and…",
-      "pdfUrls": [
-        "https://www.esic.gov.in/attachments/recruitmentfile/Walk_in_interview_on_07_07_2026_for_the_appointment_of_Full_Time_Contractual_Specialists_and_Senior_Resident_on_Contractual_basis_at_ESIC_Model_Hospital_Gurugram_Haryana_1782382011.pdf"
-      ],
-      "sourceId": "esic",
-      "sourceName": "ESIC — Employees' State Insurance Corporation",
-      "dept": "ESIC — Employees' State Insurance Corporation",
-      "state": "All India",
-      "category": "health",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
       "id": "891fab584f47ef35",
       "title": "Regarding interview of PLVs 07/07/2026 08/07/2026 View (92 KB)",
       "link": "https://cdnbbsr.s3waas.gov.in/s3ec0515e122e839dfdaa7ce969536f94a/uploads/2026/07/2026070431.pdf",
@@ -356,13 +205,13 @@
       "fetchMethod": "live-jobs-supplement"
     },
     {
-      "id": "1e5ca315c6859c93",
-      "title": "5 ESIC Model Hospital Gurugram, Haryana Walk- in interview on 07.07.2026 for the appointment of Full Time Contractual S",
-      "link": "https://www.esic.gov.in/attachments/recruitmentfile/Annexure_1782382011.pdf",
+      "id": "75d059239a1f0ce1",
+      "title": "Walk- in interview on 07.07.2026 for the appointment of Full Time Contractual Specialists and Senior Resident on Contractual basis at ESIC Model Hospital Gurugram, Haryana",
+      "link": "https://www.esic.gov.in/attachments/recruitmentfile/Walk_in_interview_on_07_07_2026_for_the_appointment_of_Full_Time_Contractual_Specialists_and_Senior_Resident_on_Contractual_basis_at_ESIC_Model_Hospital_Gurugram_Haryana_1782382011.pdf",
       "publishedAt": "2026-07-07T00:00:00Z",
-      "summary": "ANNEXURE 'A' (FORMAT OF CERTIFICATE TO BE PRODUCED BY OTHER BACKWARD CLASSES APPLYING FOR APPOINTMENT TO POSTS UNDER THE GOVERNMENT OF INDIA) This is to certify that Shri/Smt./Kumari son/daughter of of village/town in District/Division in the State/Union Territory belongs to the Community which is recognized as a backward class under the Government of India, Ministry of Social Justice and Empowerm…",
+      "summary": "दिनांक:- 23/06/2026 ADVERTISEMENT NO. 03/2026 Walk- in interview on 07.07.2026 for the appointment of Full Time Contractual Specialists and Senior Resident on Contractual basis at ESIC Model Hospital Gurugram, Haryana Employees’ State Insurance Corporation is a statutory body constituted under an Act of Parliament (ESI Act, 1948) and works under the Administrative control of Ministry of Labour and…",
       "pdfUrls": [
-        "https://www.esic.gov.in/attachments/recruitmentfile/Annexure_1782382011.pdf"
+        "https://www.esic.gov.in/attachments/recruitmentfile/Walk_in_interview_on_07_07_2026_for_the_appointment_of_Full_Time_Contractual_Specialists_and_Senior_Resident_on_Contractual_basis_at_ESIC_Model_Hospital_Gurugram_Haryana_1782382011.pdf"
       ],
       "sourceId": "esic",
       "sourceName": "ESIC — Employees' State Insurance Corporation",
@@ -393,6 +242,38 @@
       "fetchMethod": "live-jobs-supplement"
     },
     {
+      "id": "1e5ca315c6859c93",
+      "title": "5 ESIC Model Hospital Gurugram, Haryana Walk- in interview on 07.07.2026 for the appointment of Full Time Contractual S",
+      "link": "https://www.esic.gov.in/attachments/recruitmentfile/Annexure_1782382011.pdf",
+      "publishedAt": "2026-07-07T00:00:00Z",
+      "summary": "ANNEXURE 'A' (FORMAT OF CERTIFICATE TO BE PRODUCED BY OTHER BACKWARD CLASSES APPLYING FOR APPOINTMENT TO POSTS UNDER THE GOVERNMENT OF INDIA) This is to certify that Shri/Smt./Kumari son/daughter of of village/town in District/Division in the State/Union Territory belongs to the Community which is recognized as a backward class under the Government of India, Ministry of Social Justice and Empowerm…",
+      "pdfUrls": [
+        "https://www.esic.gov.in/attachments/recruitmentfile/Annexure_1782382011.pdf"
+      ],
+      "sourceId": "esic",
+      "sourceName": "ESIC — Employees' State Insurance Corporation",
+      "dept": "ESIC — Employees' State Insurance Corporation",
+      "state": "All India",
+      "category": "health",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "c6cdb91ce9f42609",
+      "title": "DLSA Ujjain Contract Driver Interview Notification 03/07/2026 31/12/2026 View (745 KB)",
+      "link": "https://cdnbbsr.s3waas.gov.in/s3ec0229539ed932d32f1c56324cded92c/uploads/2026/07/2026070316.pdf",
+      "publishedAt": "2026-07-03T00:00:00Z",
+      "summary": null,
+      "pdfUrls": [
+        "https://cdnbbsr.s3waas.gov.in/s3ec0229539ed932d32f1c56324cded92c/uploads/2026/07/2026070316.pdf"
+      ],
+      "sourceId": "dcourt-ujjain",
+      "sourceName": "Ujjain Dcourts",
+      "dept": "Ujjain Dcourts",
+      "state": "All India",
+      "category": "state",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
       "id": "c6a74534615cfdc5",
       "title": "Recruitments Title Description Start Date End Date File DLSA Ujjain Contract Driver Interview Notification 03/07/2026 31",
       "link": "https://ujjain.dcourts.gov.in/past-notices/recruitments",
@@ -405,22 +286,6 @@
         "https://cdnbbsr.s3waas.gov.in/s3ec0229539ed932d32f1c56324cded92c/uploads/2025/10/2025102334.pdf",
         "https://cdnbbsr.s3waas.gov.in/s3ec0229539ed932d32f1c56324cded92c/uploads/2025/10/2025100826.pdf",
         "https://cdnbbsr.s3waas.gov.in/s3ec0229539ed932d32f1c56324cded92c/uploads/2025/09/2025092393.pdf"
-      ],
-      "sourceId": "dcourt-ujjain",
-      "sourceName": "Ujjain Dcourts",
-      "dept": "Ujjain Dcourts",
-      "state": "All India",
-      "category": "state",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "c6cdb91ce9f42609",
-      "title": "DLSA Ujjain Contract Driver Interview Notification 03/07/2026 31/12/2026 View (745 KB)",
-      "link": "https://cdnbbsr.s3waas.gov.in/s3ec0229539ed932d32f1c56324cded92c/uploads/2026/07/2026070316.pdf",
-      "publishedAt": "2026-07-03T00:00:00Z",
-      "summary": null,
-      "pdfUrls": [
-        "https://cdnbbsr.s3waas.gov.in/s3ec0229539ed932d32f1c56324cded92c/uploads/2026/07/2026070316.pdf"
       ],
       "sourceId": "dcourt-ujjain",
       "sourceName": "Ujjain Dcourts",
@@ -1286,22 +1151,6 @@
       "fetchMethod": "live-jobs-supplement"
     },
     {
-      "id": "0ba2d71e830c5905",
-      "title": "Walk in interview scheduled on 30 June 2026 at ESIC hospital Bikaner to engage specialists , senior resident and junior resident on contract",
-      "link": "https://www.esic.nic.in/recruitments",
-      "publishedAt": "2026-06-30T00:00:00Z",
-      "summary": "FL.No:.155/A/ESICH-BKN/REC/ADMN/2023-1 Date:-12-06-2026 Walk-in-interview The Medical Superintendent ESIC Hospital Jaisalmer Road, Bikaner invites applications for the engagements of Specialists (Full time) against the vacant posts of specialists, Senior Resident (for 01 year extendable up to 03 years & Two (2) Senior/Junior resident against the vacant post of GDMO for 44 days. All the doctors to …",
-      "pdfUrls": [
-        "https://www.esic.gov.in/attachments/recruitmentfile/Walk_in_interview_scheduled_on_30_June_2026_at_ESIC_hospital_Bikaner_to_engage_specialists_senior_resident_and_junior_resident_on_contract_1781335948.pdf"
-      ],
-      "sourceId": "esic",
-      "sourceName": "ESIC — Employees' State Insurance Corporation",
-      "dept": "ESIC — Employees' State Insurance Corporation",
-      "state": "All India",
-      "category": "health",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
       "id": "726ed4578ba6a67c",
       "title": "DMSRDE Junior Research Fellow Recruitment 2026 - Walkin",
       "link": "https://drdo.gov.in/",
@@ -1315,6 +1164,22 @@
       "dept": "DMSRDE",
       "state": "All India",
       "category": "state",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "0ba2d71e830c5905",
+      "title": "Walk in interview scheduled on 30 June 2026 at ESIC hospital Bikaner to engage specialists , senior resident and junior resident on contract",
+      "link": "https://www.esic.nic.in/recruitments",
+      "publishedAt": "2026-06-30T00:00:00Z",
+      "summary": "FL.No:.155/A/ESICH-BKN/REC/ADMN/2023-1 Date:-12-06-2026 Walk-in-interview The Medical Superintendent ESIC Hospital Jaisalmer Road, Bikaner invites applications for the engagements of Specialists (Full time) against the vacant posts of specialists, Senior Resident (for 01 year extendable up to 03 years & Two (2) Senior/Junior resident against the vacant post of GDMO for 44 days. All the doctors to …",
+      "pdfUrls": [
+        "https://www.esic.gov.in/attachments/recruitmentfile/Walk_in_interview_scheduled_on_30_June_2026_at_ESIC_hospital_Bikaner_to_engage_specialists_senior_resident_and_junior_resident_on_contract_1781335948.pdf"
+      ],
+      "sourceId": "esic",
+      "sourceName": "ESIC — Employees' State Insurance Corporation",
+      "dept": "ESIC — Employees' State Insurance Corporation",
+      "state": "All India",
+      "category": "health",
       "fetchMethod": "live-jobs-supplement"
     },
     {
@@ -1483,6 +1348,22 @@
       "fetchMethod": "live-jobs-supplement"
     },
     {
+      "id": "60ef47b60e47190d",
+      "title": "Eligible list for Interview/Personality Test for recruitment to the post of Assistant Professor (Advt. No-05/2025)(1st Phase)",
+      "link": "https://tpsc.tripura.gov.in/sites/default/files/Eligible_Asstt._Prof_1st_phase_160526.pdf",
+      "publishedAt": "2026-06-27T02:56:15.572355Z",
+      "summary": null,
+      "pdfUrls": [
+        "https://tpsc.tripura.gov.in/sites/default/files/Eligible_Asstt._Prof_1st_phase_160526.pdf"
+      ],
+      "sourceId": "psc-tr",
+      "sourceName": "Tpsc Tripura",
+      "dept": "Tpsc Tripura",
+      "state": "All India",
+      "category": "teaching",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
       "id": "e744f1c0dd064af7",
       "title": "Programme for Interview/Personality Test for recruitment to the post of Assistant Professor(Advt. No-05/2025)(1st Phase)",
       "link": "https://tpsc.tripura.gov.in/sites/default/files/2026-05/Prog_Intv_AF_1st_Phase_160526.pdf",
@@ -1496,6 +1377,38 @@
       "dept": "Tpsc Tripura",
       "state": "All India",
       "category": "teaching",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "c5993ec05c502859",
+      "title": "Revised eligible list for Interview/Personality Test for recruitment to the post of Assistant Professor (Advt. No-05/2025)(1st Phase)",
+      "link": "https://tpsc.tripura.gov.in/sites/default/files/Rev_Elg_AP_040626.pdf",
+      "publishedAt": "2026-06-27T02:56:10.643362Z",
+      "summary": null,
+      "pdfUrls": [
+        "https://tpsc.tripura.gov.in/sites/default/files/Rev_Elg_AP_040626.pdf"
+      ],
+      "sourceId": "psc-tr",
+      "sourceName": "Tpsc Tripura",
+      "dept": "Tpsc Tripura",
+      "state": "All India",
+      "category": "teaching",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "0cee7879cc8c4682",
+      "title": "Programme of Interview/Personality Test for recruitment to the post of Agriculture Officer, TAFS,Gr-I(Advt. No.-21/2025)",
+      "link": "https://tpsc.tripura.gov.in/sites/default/files/2026-06/Prog_Intv_Agri_220626.pdf",
+      "publishedAt": "2026-06-27T02:56:05.202053Z",
+      "summary": null,
+      "pdfUrls": [
+        "https://tpsc.tripura.gov.in/sites/default/files/2026-06/Prog_Intv_Agri_220626.pdf"
+      ],
+      "sourceId": "psc-tr",
+      "sourceName": "Tpsc Tripura",
+      "dept": "Tpsc Tripura",
+      "state": "All India",
+      "category": "state",
       "fetchMethod": "live-jobs-supplement"
     },
     {
@@ -1912,22 +1825,6 @@
       "fetchMethod": "live-jobs-supplement"
     },
     {
-      "id": "c83f1a32009b0b70",
-      "title": "Interview Details: 04 Posts of Assistant Veterinary Surgeon, NDMC",
-      "link": "https://www.upsc.gov.in/whats-new/04%20Posts%20of%20Assistant%20Veterinary%20Surgeon,%20NDMC/Interview%20Details",
-      "publishedAt": "2026-06-23T00:00:00Z",
-      "summary": "F.1/62(03)/2025-R-I/SPC-II UNION PUBLIC SERVICE COMMISSION DHOLPUR HOUSE, SHAHJAHAN ROAD NEW DELHI – 110069 Date: 23.06.2026 To Dear candidate/s, Subject: Recruitment to Four vacancies for the post of Assistant Veterinary Surgeon in New Delhi Municipal Council. (UR-03, OBC-01) (PwBD-01)* [Advt. No. 08/2025, Vacancy No. 25060841128] Sir/Madam, With reference to your application for the above mentio…",
-      "pdfUrls": [
-        "https://www.upsc.gov.in/sites/default/files/RT-Intv-04-AstVtrnrySurgeonNDMC-Engl-230626.pdf"
-      ],
-      "sourceId": "upsc-notifications",
-      "sourceName": "UPSC — What's New",
-      "dept": "UPSC — What's New",
-      "state": "All India",
-      "category": "upsc",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
       "id": "d1dbd4afe8dc0ad5",
       "title": "Walk-in Interview on 23.06.2026 . For Teaching Faculty (Super Specialty Department) on Contract Basis at ESIC Medical College & Hospital, Faridabad",
       "link": "https://www.esic.gov.in/attachments/recruitmentfile/Walk_in_Interview_on_23_06_2026_For_Teaching_Faculty_Super_Specialty_Department_on_Contract_Basis_at_ESIC_Medical_College_amp_Hospital_Faridabad_1782014473.pdf",
@@ -1957,6 +1854,22 @@
       "dept": "ACTREC",
       "state": "All India",
       "category": "state",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "c83f1a32009b0b70",
+      "title": "Interview Details: 04 Posts of Assistant Veterinary Surgeon, NDMC",
+      "link": "https://www.upsc.gov.in/whats-new/04%20Posts%20of%20Assistant%20Veterinary%20Surgeon,%20NDMC/Interview%20Details",
+      "publishedAt": "2026-06-23T00:00:00Z",
+      "summary": "F.1/62(03)/2025-R-I/SPC-II UNION PUBLIC SERVICE COMMISSION DHOLPUR HOUSE, SHAHJAHAN ROAD NEW DELHI – 110069 Date: 23.06.2026 To Dear candidate/s, Subject: Recruitment to Four vacancies for the post of Assistant Veterinary Surgeon in New Delhi Municipal Council. (UR-03, OBC-01) (PwBD-01)* [Advt. No. 08/2025, Vacancy No. 25060841128] Sir/Madam, With reference to your application for the above mentio…",
+      "pdfUrls": [
+        "https://www.upsc.gov.in/sites/default/files/RT-Intv-04-AstVtrnrySurgeonNDMC-Engl-230626.pdf"
+      ],
+      "sourceId": "upsc-notifications",
+      "sourceName": "UPSC — What's New",
+      "dept": "UPSC — What's New",
+      "state": "All India",
+      "category": "upsc",
       "fetchMethod": "live-jobs-supplement"
     },
     {
@@ -2054,13 +1967,13 @@
       "fetchMethod": "live-jobs-supplement"
     },
     {
-      "id": "6fd59eeb2115520a",
-      "title": "Important Interview Schedule - 152/2024-25 Detailed Interview Programme (Industries Officer (MSME), Class-2, Industries",
-      "link": "https://gpsc.gujarat.gov.in/Documents/AdvertismentDocument/DIP-152_202425.pdf",
+      "id": "d8980b7a971c14ad",
+      "title": "Important Final Stage - 152/2024-25 (Industries Officer (MSME), Class-2, Industries & Mines Department) Click here to s",
+      "link": "https://gpsc.gujarat.gov.in/Documents/AdvertismentDocument/FR-_152_24-25.pdf",
       "publishedAt": "2026-06-20T00:00:00Z",
-      "summary": "Name of Post: Advt. No. : Roll No Interview Date & Time E-01 101000001 Date:20-06-2026, Time: 09:30 a.m. Sd/- (Archana R. Jogiya) Section Officer Gujarat Public Service Commission Candidate wise Detailed Interview Programme Date 18-06-2026 Note: 1. candidate is requested to remain present at 09:30 a.m. at the GPSC Bhavan at above mentioned address. 2. candidate (including those who don’t get physi…",
+      "summary": "Date : 20-06-2026 Merit No. Name of Candidate Code E.No. M/F Category P.w.D. Group Type of Disability Weighted Marks in P.T. Weighted Marks in Interview Total Weighted Marks 1 Shri Jaydip Nanalal Makadiya SLT 1 EWS A L.V. 14.27 10 24.27 1) Place : Gandhinagar (A.M.Kansangara) Date : 20-06-2026 Joint Secretary Gujarat Public Service Commission RCT-2875-152-2025-R-1 Cut-off Marks :- Note :- The Weig…",
       "pdfUrls": [
-        "https://gpsc.gujarat.gov.in/Documents/AdvertismentDocument/DIP-152_202425.pdf"
+        "https://gpsc.gujarat.gov.in/Documents/AdvertismentDocument/FR-_152_24-25.pdf"
       ],
       "sourceId": "psc-gj",
       "sourceName": "Gpsc Gujarat",
@@ -2102,13 +2015,13 @@
       "fetchMethod": "live-jobs-supplement"
     },
     {
-      "id": "d8980b7a971c14ad",
-      "title": "Important Final Stage - 152/2024-25 (Industries Officer (MSME), Class-2, Industries & Mines Department) Click here to s",
-      "link": "https://gpsc.gujarat.gov.in/Documents/AdvertismentDocument/FR-_152_24-25.pdf",
+      "id": "6fd59eeb2115520a",
+      "title": "Important Interview Schedule - 152/2024-25 Detailed Interview Programme (Industries Officer (MSME), Class-2, Industries",
+      "link": "https://gpsc.gujarat.gov.in/Documents/AdvertismentDocument/DIP-152_202425.pdf",
       "publishedAt": "2026-06-20T00:00:00Z",
-      "summary": "Date : 20-06-2026 Merit No. Name of Candidate Code E.No. M/F Category P.w.D. Group Type of Disability Weighted Marks in P.T. Weighted Marks in Interview Total Weighted Marks 1 Shri Jaydip Nanalal Makadiya SLT 1 EWS A L.V. 14.27 10 24.27 1) Place : Gandhinagar (A.M.Kansangara) Date : 20-06-2026 Joint Secretary Gujarat Public Service Commission RCT-2875-152-2025-R-1 Cut-off Marks :- Note :- The Weig…",
+      "summary": "Name of Post: Advt. No. : Roll No Interview Date & Time E-01 101000001 Date:20-06-2026, Time: 09:30 a.m. Sd/- (Archana R. Jogiya) Section Officer Gujarat Public Service Commission Candidate wise Detailed Interview Programme Date 18-06-2026 Note: 1. candidate is requested to remain present at 09:30 a.m. at the GPSC Bhavan at above mentioned address. 2. candidate (including those who don’t get physi…",
       "pdfUrls": [
-        "https://gpsc.gujarat.gov.in/Documents/AdvertismentDocument/FR-_152_24-25.pdf"
+        "https://gpsc.gujarat.gov.in/Documents/AdvertismentDocument/DIP-152_202425.pdf"
       ],
       "sourceId": "psc-gj",
       "sourceName": "Gpsc Gujarat",
@@ -2551,6 +2464,20 @@
       "fetchMethod": "live-jobs-supplement"
     },
     {
+      "id": "52cd60643fc6de66",
+      "title": "public notice and interview reschedule including annexure-a for recruitment to 21 posts of district defence services welfare officer group-a in the department of defence services welfare government of Punjab uploaded on 25-05-2026",
+      "link": "https://ppsc.gov.in/index.aspx?page=2755&tabid=10&tablinkid=6794",
+      "publishedAt": "2026-05-25T00:00:00Z",
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-pb",
+      "sourceName": "Ppsc",
+      "dept": "Ppsc",
+      "state": "All India",
+      "category": "defence",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
       "id": "552f20a275f377ed",
       "title": "SELECTION LIST OF PRINCIPAL-CUM-PROFESSOR & VICE PRINCIPAL-CUM-PROFESSR ON CONTRACTUAL BASIS OF INTERVIEW HELD ON 25.05.2026 FOR ESIC NURSING COLLEGE, JOKA",
       "link": "https://www.esic.gov.in/attachments/recruitmentfile/SELECTION_LIST_OF_PRINCIPAL_CUM_PROFESSOR_amp_VICE_PRINCIPAL_CUM_PROFESSR_ON_CONTRACTUAL_BASIS_OF_INTERVIEW_HELD_ON_25_05_2026_FOR_ESIC_NURSING_COLLEGE_JOKA_1781256709.pdf",
@@ -2567,29 +2494,15 @@
       "fetchMethod": "live-jobs-supplement"
     },
     {
-      "id": "52cd60643fc6de66",
-      "title": "public notice and interview reschedule including annexure-a for recruitment to 21 posts of district defence services welfare officer group-a in the department of defence services welfare government of Punjab uploaded on 25-05-2026",
-      "link": "https://ppsc.gov.in/index.aspx?page=2755&tabid=10&tablinkid=6794",
-      "publishedAt": "2026-05-25T00:00:00Z",
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-pb",
-      "sourceName": "Ppsc",
-      "dept": "Ppsc",
-      "state": "All India",
-      "category": "defence",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
       "id": "583080ee2e24e894",
-      "title": "19-05-2026Food Safety Officer-- Written Examination and Interview( syllabus )",
+      "title": "19-05-2026 Food Safety Officer-- Written Examination and Interview ( syllabus )",
       "link": "https://psc.uk.gov.in/candidate-corner/syllabus",
       "publishedAt": "2026-05-19T00:00:00Z",
       "summary": null,
       "pdfUrls": [],
       "sourceId": "psc-uk",
-      "sourceName": "Psc Uk",
-      "dept": "Psc Uk",
+      "sourceName": "Uttarakhand PSC (UKPSC)",
+      "dept": "Uttarakhand PSC (UKPSC)",
       "state": "All India",
       "category": "state",
       "fetchMethod": "live-jobs-supplement"
@@ -2625,22 +2538,6 @@
       "fetchMethod": "live-jobs-supplement"
     },
     {
-      "id": "b5773e5c8e75d0e3",
-      "title": "Interview Schedule for recruitment to various posts in the Directorate of Handloom & Textiles, Manipur on contractual basis.Updated: 13/05/2026",
-      "link": "https://mpscmanipur.gov.in/files/MPSC_26051320250.pdf",
-      "publishedAt": "2026-05-13T00:00:00Z",
-      "summary": null,
-      "pdfUrls": [
-        "https://mpscmanipur.gov.in/files/MPSC_26051320250.pdf"
-      ],
-      "sourceId": "psc-mn",
-      "sourceName": "Mpscmanipur",
-      "dept": "Mpscmanipur",
-      "state": "All India",
-      "category": "state",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
       "id": "485a0fca5dbeb5d3",
       "title": "Regarding Interview schedule notice under recruitment advertisement number 233 dated 13.05.2026 in DLSA Ujjain 11/07/202",
       "link": "https://cdnbbsr.s3waas.gov.in/s3ec0229539ed932d32f1c56324cded92c/uploads/2026/07/2026070875.pdf",
@@ -2652,6 +2549,22 @@
       "sourceId": "dcourt-ujjain",
       "sourceName": "Ujjain Dcourts",
       "dept": "Ujjain Dcourts",
+      "state": "All India",
+      "category": "state",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "b5773e5c8e75d0e3",
+      "title": "Interview Schedule for recruitment to various posts in the Directorate of Handloom & Textiles, Manipur on contractual basis.Updated: 13/05/2026",
+      "link": "https://mpscmanipur.gov.in/files/MPSC_26051320250.pdf",
+      "publishedAt": "2026-05-13T00:00:00Z",
+      "summary": null,
+      "pdfUrls": [
+        "https://mpscmanipur.gov.in/files/MPSC_26051320250.pdf"
+      ],
+      "sourceId": "psc-mn",
+      "sourceName": "Mpscmanipur",
+      "dept": "Mpscmanipur",
       "state": "All India",
       "category": "state",
       "fetchMethod": "live-jobs-supplement"
@@ -2689,13 +2602,13 @@
       "fetchMethod": "live-jobs-supplement"
     },
     {
-      "id": "aeb69d8c5663f442",
-      "title": "18/03/2026 Interview Notice for the post of Lecturer Sociology in SED",
-      "link": "http://jkpsc.nic.in/pdf/Princedraft_1.pdf",
+      "id": "fb1b920d734235f4",
+      "title": "18/03/2026 Interview Notice for the post of Lecturer Commerce in SED",
+      "link": "http://jkpsc.nic.in/pdf/Princedraft_2.pdf",
       "publishedAt": "2026-03-18T00:00:00Z",
       "summary": null,
       "pdfUrls": [
-        "http://jkpsc.nic.in/pdf/Princedraft_1.pdf"
+        "http://jkpsc.nic.in/pdf/Princedraft_2.pdf"
       ],
       "sourceId": "psc-jk",
       "sourceName": "Jammu & Kashmir PSC (JKPSC)",
@@ -2705,13 +2618,13 @@
       "fetchMethod": "live-jobs-supplement"
     },
     {
-      "id": "fb1b920d734235f4",
-      "title": "18/03/2026 Interview Notice for the post of Lecturer Commerce in SED",
-      "link": "http://jkpsc.nic.in/pdf/Princedraft_2.pdf",
+      "id": "aeb69d8c5663f442",
+      "title": "18/03/2026 Interview Notice for the post of Lecturer Sociology in SED",
+      "link": "http://jkpsc.nic.in/pdf/Princedraft_1.pdf",
       "publishedAt": "2026-03-18T00:00:00Z",
       "summary": null,
       "pdfUrls": [
-        "http://jkpsc.nic.in/pdf/Princedraft_2.pdf"
+        "http://jkpsc.nic.in/pdf/Princedraft_1.pdf"
       ],
       "sourceId": "psc-jk",
       "sourceName": "Jammu & Kashmir PSC (JKPSC)",
@@ -2742,9 +2655,9 @@
       "fetchMethod": "live-jobs-supplement"
     },
     {
-      "id": "5ef8270d28b56c55",
-      "title": "SELECTED CANDIDATES FOR JR. CLERK-CUM-COPYIST, JR. TYPIST, STENOGRAPHER GR.-III AND SALARIED AMIN SHALL APPEAR FOR SKILL TEST/CS PRACTICAL/VIVA-VOCE ON 08.02.2026 AT DISTRICT COURT COMPLEX, NUAPADA",
-      "link": "https://nuapada.dcourts.gov.in/selected-candidates-for-jr-clerk-cum-copyist-jr-typist-stenographer-gr-iii-and-salaried-amin-shall-appear-for-skill-test-cs-practical-viva-voce-on-08-02-2026-at-district-court-complex-nuapada/",
+      "id": "0322c577a6354d28",
+      "title": "Selected candidates for Jr. Clerk-cum-Copyist, Jr. Typist, Stenographer Gr.-III and Salaried Amin shall appear for Skill Test/CS Practical/Viva-Voce on 08.02.2026 at District Court Complex, Nuapada",
+      "link": "https://cdnbbsr.s3waas.gov.in/s3ec019a96a2c73c0d477ff2a6da3bf538/uploads/2026/01/2026012873.pdf",
       "publishedAt": "2026-02-08T00:00:00Z",
       "summary": null,
       "pdfUrls": [
@@ -2758,9 +2671,9 @@
       "fetchMethod": "live-jobs-supplement"
     },
     {
-      "id": "0322c577a6354d28",
-      "title": "Selected candidates for Jr. Clerk-cum-Copyist, Jr. Typist, Stenographer Gr.-III and Salaried Amin shall appear for Skill Test/CS Practical/Viva-Voce on 08.02.2026 at District Court Complex, Nuapada",
-      "link": "https://cdnbbsr.s3waas.gov.in/s3ec019a96a2c73c0d477ff2a6da3bf538/uploads/2026/01/2026012873.pdf",
+      "id": "5ef8270d28b56c55",
+      "title": "SELECTED CANDIDATES FOR JR. CLERK-CUM-COPYIST, JR. TYPIST, STENOGRAPHER GR.-III AND SALARIED AMIN SHALL APPEAR FOR SKILL TEST/CS PRACTICAL/VIVA-VOCE ON 08.02.2026 AT DISTRICT COURT COMPLEX, NUAPADA",
+      "link": "https://nuapada.dcourts.gov.in/selected-candidates-for-jr-clerk-cum-copyist-jr-typist-stenographer-gr-iii-and-salaried-amin-shall-appear-for-skill-test-cs-practical-viva-voce-on-08-02-2026-at-district-court-complex-nuapada/",
       "publishedAt": "2026-02-08T00:00:00Z",
       "summary": null,
       "pdfUrls": [
@@ -2787,27 +2700,6 @@
       "dept": "District & Sessions Judge, Yamunanagar",
       "state": "All India",
       "category": "state",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "f43d7aa6e0241ca3",
-      "title": "Interview Schedule for the post of Scientist/Engineer 'SC' (Electronics) against ICRB Advt. No. ISRO:ICRB:02(EMC):2025 dated 27.05.2025",
-      "link": "https://www.isro.gov.in/ICRB_Recruitment9.html",
-      "publishedAt": "2025-05-27T00:00:00Z",
-      "summary": "Sl No. Regis No. Roll No Applicant Name Date and Day For Document Verification & Interview Reporting Time 1 20300404 310100012 BEDIYA RONAK KIRITBHAI 2 20304020 310100164 PATEL AMAN PRADIPKUMAR 3 20305150 310100211 VAHORA ADNAN ASIFBHAI 4 20305671 310100235 PATEL HET PRAVINBHAI 5 20312538 310100579 SHAH KAIVAL KAUSHAL 6 20322019 310101073 DEV NILESH BACHANI 7 20323508 310101153 AAYUSHI GUPTA 8 203…",
-      "pdfUrls": [
-        "https://www.isro.gov.in/media_isro/pdf/recruitmentNotice/2026/June/Schedule_of_Interview_Computer_Science_03072026.pdf",
-        "https://www.isro.gov.in/media_isro/pdf/recruitmentNotice/2026/June/Schedule_of_Interviews_Scientist_Engineer_SC_Electronics_25062026.pdf",
-        "https://www.isro.gov.in/media_isro/pdf/recruitmentNotice/2026/May/Electronics_BE001_1A_22052026.pdf",
-        "https://www.isro.gov.in/media_isro/pdf/recruitmentNotice/2026/May/Mechanical_BE002_22052026.pdf",
-        "https://www.isro.gov.in/media_isro/pdf/recruitmentNotice/2026/May/Computer_Science_BE003_3A_22052026.pdf",
-        "https://www.isro.gov.in/media_isro/pdf/recruitmentNotice/2026/May/ELECTRONICS_revised_answer_key_15052026.pdf"
-      ],
-      "sourceId": "isro-careers",
-      "sourceName": "ISRO — Careers",
-      "dept": "ISRO — Careers",
-      "state": "All India",
-      "category": "psu",
       "fetchMethod": "live-jobs-supplement"
     },
     {
@@ -2873,6 +2765,101 @@
       "state": "All India",
       "category": "health",
       "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "501d21c4457598cc",
+      "title": "03/07/2026 Additional Result Preamble (Qualified for Interview) for for Asst. Director - 2024",
+      "link": "https://rpsc.rajasthan.gov.in/Static/Result/B79DAC2A613C4C83AC3B0DAF60BE3AE6.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://rpsc.rajasthan.gov.in/Static/Result/B79DAC2A613C4C83AC3B0DAF60BE3AE6.pdf"
+      ],
+      "sourceId": "psc-rj",
+      "sourceName": "Rajasthan PSC (RPSC)",
+      "dept": "Rajasthan PSC (RPSC)",
+      "state": "Rajasthan",
+      "category": "state",
+      "stateIds": [
+        "rj"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "573a484febc254f4",
+      "title": "Notification regarding Interview/Personality Test for the post of Agriculture Officer, TAFS, Grade-I (Advt. No-21/2025)",
+      "link": "https://tpsc.tripura.gov.in/sites/default/files/Notis_AGRI_090626.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://tpsc.tripura.gov.in/sites/default/files/Notis_AGRI_090626.pdf"
+      ],
+      "sourceId": "psc-tr",
+      "sourceName": "Tripura PSC (TPSC)",
+      "dept": "Tripura PSC (TPSC)",
+      "state": "NE States",
+      "category": "state",
+      "stateIds": [
+        "ne"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "1c082b301642027c",
+      "title": "Notification regarding for Interview/Personality Test for recruitment to the post of Assistant Professor(Advt. No-05/2025)(1st Phase)",
+      "link": "https://tpsc.tripura.gov.in/sites/default/files/Notif_AP_250526.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://tpsc.tripura.gov.in/sites/default/files/Notif_AP_250526.pdf"
+      ],
+      "sourceId": "psc-tr",
+      "sourceName": "Tripura PSC (TPSC)",
+      "dept": "Tripura PSC (TPSC)",
+      "state": "NE States",
+      "category": "state",
+      "stateIds": [
+        "ne"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "09ff44bf2cf34caf",
+      "title": "Notification regarding for Interview/Personality Test for recruitment to the post of Assistant Professor(Advt. No-05/2025)(1st Phase)",
+      "link": "https://tpsc.tripura.gov.in/sites/default/files/Notif_AF_190526.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://tpsc.tripura.gov.in/sites/default/files/Notif_AF_190526.pdf"
+      ],
+      "sourceId": "psc-tr",
+      "sourceName": "Tripura PSC (TPSC)",
+      "dept": "Tripura PSC (TPSC)",
+      "state": "NE States",
+      "category": "state",
+      "stateIds": [
+        "ne"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "44b25fb342f01a59",
+      "title": "Notification regarding for the Interview/Personality Test for recruitment to the post of Assistant Professor(Advt. No-05/2025)",
+      "link": "https://tpsc.tripura.gov.in/sites/default/files/Intv_Astt._Prof_170426.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://tpsc.tripura.gov.in/sites/default/files/Intv_Astt._Prof_170426.pdf"
+      ],
+      "sourceId": "psc-tr",
+      "sourceName": "Tripura PSC (TPSC)",
+      "dept": "Tripura PSC (TPSC)",
+      "state": "NE States",
+      "category": "state",
+      "stateIds": [
+        "ne"
+      ],
+      "fetchMethod": "html"
     },
     {
       "id": "9ae3992d7dba996b",

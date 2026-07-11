@@ -1,23 +1,57 @@
 {
-  "generatedAt": "2026-07-07T10:11:51.863Z",
+  "generatedAt": "2026-07-11T05:17:50.022Z",
   "count": 25,
   "items": [
     {
-      "id": "d8e4b595dfe40717",
-      "title": "Old Question Paper",
-      "link": "https://tpsc.tripura.gov.in/old-question-paper",
+      "id": "3fc1696b18f30fa3",
+      "title": "Common mistakes committed by the candidates in Conventional Papers",
+      "link": "https://www.upsc.gov.in/examination/common-mistakes-committed-candidates-conventional-papers",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
-      "sourceId": "psc-tr",
-      "sourceName": "Tripura PSC (TPSC)",
-      "dept": "Tripura PSC (TPSC)",
-      "state": "NE States",
-      "category": "state",
+      "sourceId": "upsc-notifications",
+      "sourceName": "UPSC — What's New",
+      "dept": "Union Public Service Commission",
+      "state": "All India",
+      "category": "upsc",
       "stateIds": [
-        "ne"
+        "all"
       ],
-      "fetchMethod": "html"
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "3ae2d6fce5935dce",
+      "title": "Previous Question Papers",
+      "link": "https://www.upsc.gov.in/examinations/previous-question-papers",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "upsc-notifications",
+      "sourceName": "UPSC — What's New",
+      "dept": "Union Public Service Commission",
+      "state": "All India",
+      "category": "upsc",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "1bb2282873cb0efd",
+      "title": "Specimen Question Cum Answer Booklet (QCAB)",
+      "link": "https://www.upsc.gov.in/examination/model-question-and-answer-booklets",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "upsc-previous-papers",
+      "sourceName": "UPSC — Previous Question Papers",
+      "dept": "Union Public Service Commission",
+      "state": "All India",
+      "category": "upsc",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
     },
     {
       "id": "ba6df61f0df29b66",
@@ -52,46 +86,21 @@
       "fetchMethod": "live-jobs-supplement"
     },
     {
-      "id": "3fc1696b18f30fa3",
-      "title": "Common mistakes committed by the candidates in Conventional Papers",
-      "link": "https://www.upsc.gov.in/examination/common-mistakes-committed-candidates-conventional-papers",
+      "id": "d8e4b595dfe40717",
+      "title": "Old Question Paper",
+      "link": "https://tpsc.tripura.gov.in/old-question-paper",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
-      "sourceId": "upsc-notifications",
-      "sourceName": "UPSC — What's New",
-      "dept": "UPSC — What's New",
-      "state": "All India",
-      "category": "upsc",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "3ae2d6fce5935dce",
-      "title": "Previous Question Papers",
-      "link": "https://www.upsc.gov.in/examinations/previous-question-papers",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "upsc-notifications",
-      "sourceName": "UPSC — What's New",
-      "dept": "UPSC — What's New",
-      "state": "All India",
-      "category": "upsc",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "1bb2282873cb0efd",
-      "title": "Specimen Question Cum Answer Booklet (QCAB)",
-      "link": "https://www.upsc.gov.in/examination/model-question-and-answer-booklets",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "upsc-previous-papers",
-      "sourceName": "UPSC — Previous Question Papers",
-      "dept": "UPSC — Previous Question Papers",
-      "state": "All India",
-      "category": "upsc",
-      "fetchMethod": "live-jobs-supplement"
+      "sourceId": "psc-tr",
+      "sourceName": "Tripura PSC (TPSC)",
+      "dept": "Tripura PSC (TPSC)",
+      "state": "NE States",
+      "category": "state",
+      "stateIds": [
+        "ne"
+      ],
+      "fetchMethod": "html"
     },
     {
       "id": "c5f858985b70fccb",

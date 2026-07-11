@@ -1,23 +1,44 @@
 {
-  "generatedAt": "2026-07-07T10:11:51.863Z",
-  "count": 34,
+  "generatedAt": "2026-07-11T05:17:50.022Z",
+  "count": 35,
   "items": [
     {
-      "id": "4245ad8cea4e9fc4",
-      "title": "Syllabus and Schemes",
-      "link": "https://tpsc.tripura.gov.in/syllabus-and-schemes",
+      "id": "19df6addea51f1a1",
+      "title": "Revised Syllabus and Scheme",
+      "link": "https://www.upsc.gov.in/examinations/revised-syllabus-scheme",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
-      "sourceId": "psc-tr",
-      "sourceName": "Tripura PSC (TPSC)",
-      "dept": "Tripura PSC (TPSC)",
-      "state": "NE States",
-      "category": "state",
+      "sourceId": "upsc-e-admit-hub",
+      "sourceName": "UPSC — e-Admit cards",
+      "dept": "Union Public Service Commission",
+      "state": "All India",
+      "category": "upsc",
       "stateIds": [
-        "ne"
+        "all"
       ],
-      "fetchMethod": "html"
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "9423bfb2f1b6b8da",
+      "title": "Examination Advertisement (Direct Recruitment) Departmental Examination Forthcoming Examinations Syllabus and Schemes On",
+      "link": "https://tpsc.tripura.gov.in/examination",
+      "publishedAt": "2026-06-27T02:57:03.639543Z",
+      "summary": null,
+      "pdfUrls": [
+        "https://tpsc.tripura.gov.in/sites/default/files/2026-06/Prog_Intv_Agri_220626.pdf",
+        "https://tpsc.tripura.gov.in/sites/default/files/Tent_Exam_220626.pdf",
+        "https://tpsc.tripura.gov.in/sites/default/files/2026-06/Prog_Tech.-Asstt._180626.pdf",
+        "https://tpsc.tripura.gov.in/sites/default/files/2026-06/Prog_Sr._Comp_Astt._170626.pdf",
+        "https://tpsc.tripura.gov.in/sites/default/files/Notif_ATO_160626.pdf",
+        "https://tpsc.tripura.gov.in/sites/default/files/Notif_DIET_150626.pdf"
+      ],
+      "sourceId": "psc-tr",
+      "sourceName": "Tpsc Tripura",
+      "dept": "Tpsc Tripura",
+      "state": "All India",
+      "category": "state",
+      "fetchMethod": "live-jobs-supplement"
     },
     {
       "id": "41f8e67c901faa4e",
@@ -261,31 +282,34 @@
     },
     {
       "id": "583080ee2e24e894",
-      "title": "19-05-2026Food Safety Officer-- Written Examination and Interview( syllabus )",
+      "title": "19-05-2026 Food Safety Officer-- Written Examination and Interview ( syllabus )",
       "link": "https://psc.uk.gov.in/candidate-corner/syllabus",
       "publishedAt": "2026-05-19T00:00:00Z",
       "summary": null,
       "pdfUrls": [],
       "sourceId": "psc-uk",
-      "sourceName": "Psc Uk",
-      "dept": "Psc Uk",
+      "sourceName": "Uttarakhand PSC (UKPSC)",
+      "dept": "Uttarakhand PSC (UKPSC)",
       "state": "All India",
       "category": "state",
       "fetchMethod": "live-jobs-supplement"
     },
     {
-      "id": "19df6addea51f1a1",
-      "title": "Revised Syllabus and Scheme",
-      "link": "https://www.upsc.gov.in/examinations/revised-syllabus-scheme",
+      "id": "4245ad8cea4e9fc4",
+      "title": "Syllabus and Schemes",
+      "link": "https://tpsc.tripura.gov.in/syllabus-and-schemes",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
-      "sourceId": "upsc-e-admit-hub",
-      "sourceName": "UPSC — e-Admit cards",
-      "dept": "UPSC — e-Admit cards",
-      "state": "All India",
-      "category": "upsc",
-      "fetchMethod": "live-jobs-supplement"
+      "sourceId": "psc-tr",
+      "sourceName": "Tripura PSC (TPSC)",
+      "dept": "Tripura PSC (TPSC)",
+      "state": "NE States",
+      "category": "state",
+      "stateIds": [
+        "ne"
+      ],
+      "fetchMethod": "html"
     },
     {
       "id": "51cd9efe8e6a1a01",
