@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-11T10:01:59.294Z",
+  "generatedAt": "2026-07-11T14:06:13.093Z",
   "sourceReports": [
     {
       "id": "pib-press-reg3",
@@ -8,7 +8,7 @@
       "listingUrl": null,
       "ok": true,
       "error": null,
-      "itemCount": 1,
+      "itemCount": 2,
       "fetchMethod": "rss-feed"
     },
     {
@@ -294,6 +294,23 @@
   ],
   "siteReports": [],
   "items": [
+    {
+      "id": "145f00f636293f55",
+      "title": "भारत सरकार में विभिन्न पदों पर सीधी भर्ती",
+      "link": "https://pib.gov.in/PressReleaseIframePage.aspx?PRID=2283655",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "pib-press-reg3",
+      "sourceName": "PIB — recent press releases",
+      "dept": "Press Information Bureau",
+      "state": "All India",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "rss-feed"
+    },
     {
       "id": "c8752cbb29e90295",
       "title": "परिणामों की सूची: प्रधानमंत्री की न्यूजीलैंड की आधिकारिक यात्रा",
