@@ -1,0 +1,3243 @@
+{
+  "generatedAt": "2026-07-11T06:38:57.332Z",
+  "sourceReports": [
+    {
+      "id": "pib-press-reg3",
+      "name": "PIB — recent press releases",
+      "feedUrl": "https://www.pib.gov.in/RssMain.aspx?ModId=6&Lang=2&Regid=3&reg=48",
+      "listingUrl": null,
+      "ok": false,
+      "error": "rss-empty",
+      "itemCount": 0,
+      "fetchMethod": null
+    },
+    {
+      "id": "employment-news",
+      "name": "Employment News — Government vacancies",
+      "feedUrl": null,
+      "listingUrl": "https://employmentnews.gov.in/",
+      "ok": true,
+      "error": null,
+      "itemCount": 1,
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "upsc-notifications",
+      "name": "UPSC — What's New",
+      "feedUrl": null,
+      "listingUrl": "https://upsc.gov.in/whats-new",
+      "ok": false,
+      "error": "https://upsc.gov.in/whats-new: timeout; https://upsc.gov.in/examinations/active-exams: timeout; https://upsc.gov.in/examinations/previous-question-papers: timeout",
+      "itemCount": 0,
+      "fetchMethod": null
+    },
+    {
+      "id": "upsc-previous-papers",
+      "name": "UPSC — Previous Question Papers",
+      "feedUrl": null,
+      "listingUrl": "https://upsc.gov.in/examinations/previous-question-papers",
+      "ok": false,
+      "error": "https://upsc.gov.in/examinations/previous-question-papers: timeout",
+      "itemCount": 0,
+      "fetchMethod": null
+    },
+    {
+      "id": "ssc-notifications",
+      "name": "SSC — Latest notifications",
+      "feedUrl": null,
+      "listingUrl": "https://ssc.gov.in/home/notice-board",
+      "ok": false,
+      "error": "no items",
+      "itemCount": 0,
+      "fetchMethod": null
+    },
+    {
+      "id": "ibps-careers",
+      "name": "IBPS — Career notifications",
+      "feedUrl": null,
+      "listingUrl": "https://www.ibps.in/index.php/cwe-notification/",
+      "ok": false,
+      "error": "https://www.ibps.in/index.php/cwe-notification/: fetch failed; https://ibps.in/: fetch failed; https://www.ibps.in/: fetch failed",
+      "itemCount": 0,
+      "fetchMethod": null
+    },
+    {
+      "id": "rrb-notifications",
+      "name": "Railway Recruitment Board",
+      "feedUrl": null,
+      "listingUrl": "https://www.rrbcdg.gov.in/",
+      "ok": false,
+      "error": "https://www.rrbcdg.gov.in/: timeout; https://indianrailways.gov.in/: connect ECONNREFUSED 203.176.112.122:443",
+      "itemCount": 0,
+      "fetchMethod": null
+    },
+    {
+      "id": "drdo-careers",
+      "name": "DRDO — Recruitment",
+      "feedUrl": null,
+      "listingUrl": "https://rac.gov.in/",
+      "ok": false,
+      "error": "https://rac.gov.in/: connect ECONNREFUSED 164.100.54.223:443; https://www.drdo.gov.in/drdo/en/career: timeout; https://drdo.gov.in/careers: timeout",
+      "itemCount": 0,
+      "fetchMethod": null
+    },
+    {
+      "id": "isro-careers",
+      "name": "ISRO — Careers",
+      "feedUrl": null,
+      "listingUrl": "https://www.isro.gov.in/Careers.html",
+      "ok": true,
+      "error": null,
+      "itemCount": 60,
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "psc-up-notifications",
+      "name": "UPPSC — Notifications",
+      "feedUrl": null,
+      "listingUrl": "https://uppsc.up.nic.in/View_All_Active_Notifications.aspx",
+      "ok": false,
+      "error": "no items",
+      "itemCount": 0,
+      "fetchMethod": null
+    },
+    {
+      "id": "psc-br-notifications",
+      "name": "BPSC — Notices",
+      "feedUrl": null,
+      "listingUrl": "https://bpsc.bihar.gov.in/Notices.html",
+      "ok": false,
+      "error": "https://bpsc.bihar.gov.in/Notices.html: socket hang up; https://www.onlinebpsc.bihar.gov.in/: getaddrinfo ENOTFOUND www.onlinebpsc.bihar.gov.in",
+      "itemCount": 0,
+      "fetchMethod": null
+    },
+    {
+      "id": "psc-rj-notifications",
+      "name": "RPSC — Advertisements",
+      "feedUrl": null,
+      "listingUrl": "https://rpsc.rajasthan.gov.in/advertisements",
+      "ok": false,
+      "error": "https://rpsc.rajasthan.gov.in/advertisements: ; https://rpsc.rajasthan.gov.in/Static/recruitment-advertisement: ",
+      "itemCount": 0,
+      "fetchMethod": null
+    },
+    {
+      "id": "psc-mh-notifications",
+      "name": "MPSC — Notices",
+      "feedUrl": null,
+      "listingUrl": "https://mpsc.gov.in/english/notices",
+      "ok": false,
+      "error": "no items",
+      "itemCount": 0,
+      "fetchMethod": null
+    },
+    {
+      "id": "psc-tn-notifications",
+      "name": "TNPSC — Notifications",
+      "feedUrl": null,
+      "listingUrl": "https://www.tnpsc.gov.in/English/latest-notification.html",
+      "ok": false,
+      "error": "https://www.tnpsc.gov.in/English/latest-notification.html: timeout; https://www.tnpsc.gov.in/notification.aspx: timeout",
+      "itemCount": 0,
+      "fetchMethod": null
+    },
+    {
+      "id": "psc-wb-notifications",
+      "name": "WBPSC — Notifications",
+      "feedUrl": null,
+      "listingUrl": "https://wbpsc.gov.in/",
+      "ok": false,
+      "error": "https://wbpsc.gov.in/: timeout; https://wbpsc.gov.in/Notifications.html: timeout",
+      "itemCount": 0,
+      "fetchMethod": null
+    },
+    {
+      "id": "psc-uk-notifications",
+      "name": "UKPSC — Notifications",
+      "feedUrl": null,
+      "listingUrl": "https://psc.uk.gov.in/Recruitment/ViewAll",
+      "ok": false,
+      "error": "https://psc.uk.gov.in/Recruitment/ViewAll: timeout; https://psc.uk.gov.in/candidate-corner/admitcards: timeout",
+      "itemCount": 0,
+      "fetchMethod": null
+    },
+    {
+      "id": "kvs-recruitment",
+      "name": "KVS — Recruitment notices",
+      "feedUrl": null,
+      "listingUrl": "https://kvsangathan.nic.in/announcements",
+      "ok": true,
+      "error": null,
+      "itemCount": 50,
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "navy-careers",
+      "name": "Indian Navy — Notifications",
+      "feedUrl": null,
+      "listingUrl": "https://www.joinindiannavy.gov.in/en/page/notification.html",
+      "ok": false,
+      "error": "https://www.joinindiannavy.gov.in/en/page/notification.html: timeout; https://www.joinindiannavy.gov.in/: timeout",
+      "itemCount": 0,
+      "fetchMethod": null
+    },
+    {
+      "id": "rrb-ald-notifications",
+      "name": "RRB Prayagraj — Notifications",
+      "feedUrl": null,
+      "listingUrl": "https://www.rrbald.gov.in/rrbald/",
+      "ok": false,
+      "error": "https://www.rrbald.gov.in/rrbald/: timeout; https://rrbald.gov.in/: timeout",
+      "itemCount": 0,
+      "fetchMethod": null
+    },
+    {
+      "id": "psc-od-notifications",
+      "name": "OPSC — Notifications",
+      "feedUrl": null,
+      "listingUrl": "https://opsc.gov.in/?LK=NRA",
+      "ok": false,
+      "error": "no items",
+      "itemCount": 0,
+      "fetchMethod": null
+    },
+    {
+      "id": "psc-hr-notifications",
+      "name": "HPSC — Recruitment",
+      "feedUrl": null,
+      "listingUrl": "https://hpsc.gov.in/en-us/Recruitment",
+      "ok": false,
+      "error": "https://hpsc.gov.in/en-us/Recruitment: timeout; https://hpsc.gov.in/: timeout",
+      "itemCount": 0,
+      "fetchMethod": null
+    },
+    {
+      "id": "psc-gj-notifications",
+      "name": "GPSC — Advertisements",
+      "feedUrl": null,
+      "listingUrl": "https://gpsc.gujarat.gov.in/",
+      "ok": false,
+      "error": "https://gpsc.gujarat.gov.in/: ; https://gpsc.gujarat.gov.in/Advertisement: ",
+      "itemCount": 0,
+      "fetchMethod": null
+    },
+    {
+      "id": "psc-cg-notifications",
+      "name": "CGPSC — Notifications",
+      "feedUrl": null,
+      "listingUrl": "https://psc.cg.gov.in/",
+      "ok": false,
+      "error": "https://psc.cg.gov.in/: timeout",
+      "itemCount": 0,
+      "fetchMethod": null
+    },
+    {
+      "id": "upsc-e-admit-hub",
+      "name": "UPSC — e-Admit cards",
+      "feedUrl": null,
+      "listingUrl": "https://www.upsc.gov.in/e-admit-cards",
+      "ok": false,
+      "error": "https://www.upsc.gov.in/e-admit-cards: socket hang up",
+      "itemCount": 0,
+      "fetchMethod": null
+    },
+    {
+      "id": "appsc-hall-tickets",
+      "name": "APPSC — Hall tickets",
+      "feedUrl": null,
+      "listingUrl": "https://portal-psc.ap.gov.in/Download_HallTickets",
+      "ok": false,
+      "error": "no items",
+      "itemCount": 0,
+      "fetchMethod": null
+    },
+    {
+      "id": "ukpsc-admit-corner",
+      "name": "UKPSC — Admit cards",
+      "feedUrl": null,
+      "listingUrl": "https://psc.uk.gov.in/candidate-corner/admitcards",
+      "ok": false,
+      "error": "https://psc.uk.gov.in/candidate-corner/admitcards: timeout",
+      "itemCount": 0,
+      "fetchMethod": null
+    },
+    {
+      "id": "jkpsc-admit",
+      "name": "JKPSC — Admit cards & call letters",
+      "feedUrl": null,
+      "listingUrl": "http://jkpsc.nic.in/",
+      "ok": false,
+      "error": "http://jkpsc.nic.in/: https only; http://jkpsc.nic.in/result/: https only; http://jkpsc.nic.in/PDF/: https only; http://jkpsc.nic.in/Notifications.html: https only",
+      "itemCount": 0,
+      "fetchMethod": null
+    },
+    {
+      "id": "tnpsc-hall-tickets",
+      "name": "TNPSC — Hall tickets",
+      "feedUrl": null,
+      "listingUrl": "https://www.tnpsc.gov.in/English/hallticket.html",
+      "ok": false,
+      "error": "https://www.tnpsc.gov.in/English/hallticket.html: timeout; https://www.tnpsc.gov.in/: timeout",
+      "itemCount": 0,
+      "fetchMethod": null
+    },
+    {
+      "id": "uppsc-hall-tickets",
+      "name": "UPPSC — Hall tickets",
+      "feedUrl": null,
+      "listingUrl": "https://uppsc.up.nic.in/CandidateAdmitCard.aspx",
+      "ok": true,
+      "error": null,
+      "itemCount": 60,
+      "fetchMethod": "html-listing"
+    }
+  ],
+  "siteReports": [],
+  "items": [
+    {
+      "id": "1320428f3dc24d77",
+      "title": "Home.aspx",
+      "link": "https://employmentnews.gov.in/NewEmp/Home.aspx",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "employment-news",
+      "sourceName": "Employment News — Government vacancies",
+      "dept": "Ministry of Information & Broadcasting",
+      "state": "All India",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "f43d7aa6e0241ca3",
+      "title": "Interview Schedule for the post of Scientist/Engineer 'SC' (Computer Science) against ICRB Advt. No. ISRO:ICRB:02(EMC):2025 dated 27.05.2025 Read More",
+      "link": "https://www.isro.gov.in/ICRB_Recruitment9.html",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "isro-careers",
+      "sourceName": "ISRO — Careers",
+      "dept": "Indian Space Research Organisation",
+      "state": "All India",
+      "category": "psu",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "3ab90b393ed54006",
+      "title": "Advt No. ISTRAC:02:2026 dated 27.06.2026 - Recruitment to the posts of Technician 'B', Draughtsman 'B', Technical Assistant, Scientific Assistant, Library Assistant 'A' and Cook 'A' Read More",
+      "link": "https://www.isro.gov.in/ISTRACRecruitment4.html",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "isro-careers",
+      "sourceName": "ISRO — Careers",
+      "dept": "Indian Space Research Organisation",
+      "state": "All India",
+      "category": "psu",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "b7fdf26a0f380ae7",
+      "title": "Advt. No. SDSC SHAR/RMT/02/2026 dated June 23, 2026 - Recruitment to the position of Research Associat (RA-I). Read More",
+      "link": "https://www.isro.gov.in/SDSCRecruitment25.html",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "isro-careers",
+      "sourceName": "ISRO — Careers",
+      "dept": "Indian Space Research Organisation",
+      "state": "All India",
+      "category": "psu",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "599b446f057f269f",
+      "title": "Advt. No. ISTRAC:01:2026 dated June 22, 2026 - Recruitment to the posts of Graduate Apprentice Trainee, Diploma Apprentice Trainee, Diploma in Commercial Practice and Trade ITI in ISTRAC. Read More",
+      "link": "https://www.isro.gov.in/ISTRACRecruitment3.html",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "isro-careers",
+      "sourceName": "ISRO — Careers",
+      "dept": "Indian Space Research Organisation",
+      "state": "All India",
+      "category": "psu",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "e01e499d7dda9f49",
+      "title": "INVITING ONLINE APPLICATIONS FOR ENGAGEMENT TO THE POSITIONS OF JUNIOR RESEARCH FELLOW (JRF) IN URSC, BENGALURU. THE LINK FOR RECEIPT OF ONLINE APPLICATIONS WILL BE ACTIVE FROM 12.06.2026 TO 11.07.2026. Read More",
+      "link": "https://www.isro.gov.in/URSCRecruitment11.html",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "isro-careers",
+      "sourceName": "ISRO — Careers",
+      "dept": "Indian Space Research Organisation",
+      "state": "All India",
+      "category": "psu",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "43e3c09639986bed",
+      "title": "Advertisement NO. ISRO:ICRB:03(CEPO):2025 DATED JUNE 24, 2025 - CORRIGENDUM TO THE SELETION PANEL (OBC) PUBLISHED IN REFRIGERATION & AIR-CONDITIONING DISCIPLINE Read More",
+      "link": "https://www.isro.gov.in/ICRB_Recruitment10.html",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "isro-careers",
+      "sourceName": "ISRO — Careers",
+      "dept": "Indian Space Research Organisation",
+      "state": "All India",
+      "category": "psu",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "65890e7cb2565ef9",
+      "title": "ADVT. NO. IIST/Admin/RMT/14-2026 (1) dated 14.02.2026 - Recruitment for the post of Registrar, IIST Read More",
+      "link": "https://www.isro.gov.in/IISTRecruitment4.html",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "isro-careers",
+      "sourceName": "ISRO — Careers",
+      "dept": "Indian Space Research Organisation",
+      "state": "All India",
+      "category": "psu",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "4238c4faeae7a88c",
+      "title": "Advt No. DOS/IV/1/2026 - Result for Engaging as Legal Consultant in DOS on contract basis Read More",
+      "link": "https://www.isro.gov.in/DOSRecruitment8.html",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "isro-careers",
+      "sourceName": "ISRO — Careers",
+      "dept": "Indian Space Research Organisation",
+      "state": "All India",
+      "category": "psu",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "b4c9d6ecdc9c30a4",
+      "title": "ADVT. NO.URSC:01:2026 dated 21.03.2026 - Recruitment to the posts of Scientist/Engineer - 'SC', Scientist/Engineer - 'SD' & Medical Officer - 'SC' Read More",
+      "link": "https://www.isro.gov.in/URSCRecruitment2026_1.html",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "isro-careers",
+      "sourceName": "ISRO — Careers",
+      "dept": "Indian Space Research Organisation",
+      "state": "All India",
+      "category": "psu",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "45d6ff67f766e352",
+      "title": "Advt.No.ISRO:ICRB:02(A-JPA):2022 - VALIDITY OF THE SELECTION PANELS HAS BEEN EXTENDED UPTO 12.08.2026 Read More",
+      "link": "https://www.isro.gov.in/ICRB_Recruitment5.html",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "isro-careers",
+      "sourceName": "ISRO — Careers",
+      "dept": "Indian Space Research Organisation",
+      "state": "All India",
+      "category": "psu",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "4c5f13685ce19c5c",
+      "title": "CareerOpportunities.html",
+      "link": "https://www.isro.gov.in/CareerOpportunities.html",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "isro-careers",
+      "sourceName": "ISRO — Careers",
+      "dept": "Indian Space Research Organisation",
+      "state": "All India",
+      "category": "psu",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "43ef9d5d67c7930f",
+      "title": "FAQsonCareers.html",
+      "link": "https://www.isro.gov.in/FAQsonCareers.html",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "isro-careers",
+      "sourceName": "ISRO — Careers",
+      "dept": "Indian Space Research Organisation",
+      "state": "All India",
+      "category": "psu",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "e5d3ac5058672e5a",
+      "title": "Successful Launch of Axiom Mission 4 (Ax-04) with Indian Astronaut and Ax-04 Mission Pilot Shubhanshu Shukla Onboard SpaceX's Dragon Crew Module",
+      "link": "https://www.isro.gov.in/media_isro/pdf/Successful_Launch_of_Axiom_Mission.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://www.isro.gov.in/media_isro/pdf/Successful_Launch_of_Axiom_Mission.pdf"
+      ],
+      "sourceId": "isro-careers",
+      "sourceName": "ISRO — Careers",
+      "dept": "Indian Space Research Organisation",
+      "state": "All India",
+      "category": "psu",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "2fcd6ff34f094281",
+      "title": "The 2nd selection list for YUVIKA-2026",
+      "link": "https://www.isro.gov.in/media_isro/pdf/YUVIKA_2026_2nd_Selection_List.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://www.isro.gov.in/media_isro/pdf/YUVIKA_2026_2nd_Selection_List.pdf"
+      ],
+      "sourceId": "isro-careers",
+      "sourceName": "ISRO — Careers",
+      "dept": "Indian Space Research Organisation",
+      "state": "All India",
+      "category": "psu",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "22f2e46d5e07941f",
+      "title": "Selection List for YUVIKA 2026",
+      "link": "https://www.isro.gov.in/media_isro/pdf/YUVIKA_2026_Selection_List_Publication.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://www.isro.gov.in/media_isro/pdf/YUVIKA_2026_Selection_List_Publication.pdf"
+      ],
+      "sourceId": "isro-careers",
+      "sourceName": "ISRO — Careers",
+      "dept": "Indian Space Research Organisation",
+      "state": "All India",
+      "category": "psu",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "ce2498f9bb7c9ca8",
+      "title": "IN-SPACe Short-Term Skill Development Course on Essentials of Space Data Product and Services",
+      "link": "https://www.isro.gov.in/media_isro/pdf/Space_Data_Products_brochure30032026.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://www.isro.gov.in/media_isro/pdf/Space_Data_Products_brochure30032026.pdf"
+      ],
+      "sourceId": "isro-careers",
+      "sourceName": "ISRO — Careers",
+      "dept": "Indian Space Research Organisation",
+      "state": "All India",
+      "category": "psu",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "25517bc192210506",
+      "title": "XPoSat Mission: Announcement of Opportunity (AO) soliciting proposals for First AO cycle observations",
+      "link": "https://www.isro.gov.in/media_isro/pdf/XPoSat_first_cycle_AO.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://www.isro.gov.in/media_isro/pdf/XPoSat_first_cycle_AO.pdf"
+      ],
+      "sourceId": "isro-careers",
+      "sourceName": "ISRO — Careers",
+      "dept": "Indian Space Research Organisation",
+      "state": "All India",
+      "category": "psu",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "7b66c938863e9992",
+      "title": "ASI Excellence in Astronautics Awards for the Year 2023-24 Announced",
+      "link": "https://www.isro.gov.in/media_isro/pdf/ASI_awardee_list_100925.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://www.isro.gov.in/media_isro/pdf/ASI_awardee_list_100925.pdf"
+      ],
+      "sourceId": "isro-careers",
+      "sourceName": "ISRO — Careers",
+      "dept": "Indian Space Research Organisation",
+      "state": "All India",
+      "category": "psu",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "baff2e7f9410612d",
+      "title": "Bharatiya Antariksh Hackathon-2025: Teams selected for Grand Finale",
+      "link": "https://www.isro.gov.in/media_isro/pdf/FinalistTeamsforBAH-2025.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://www.isro.gov.in/media_isro/pdf/FinalistTeamsforBAH-2025.pdf"
+      ],
+      "sourceId": "isro-careers",
+      "sourceName": "ISRO — Careers",
+      "dept": "Indian Space Research Organisation",
+      "state": "All India",
+      "category": "psu",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "81c21e6be7dfae01",
+      "title": "Second Selection List for YUVIKA 2025",
+      "link": "https://www.isro.gov.in/media_isro/pdf/YUVIKA_2025_Selection_List_Publication_Second_List.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://www.isro.gov.in/media_isro/pdf/YUVIKA_2025_Selection_List_Publication_Second_List.pdf"
+      ],
+      "sourceId": "isro-careers",
+      "sourceName": "ISRO — Careers",
+      "dept": "Indian Space Research Organisation",
+      "state": "All India",
+      "category": "psu",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "24c1261bd2625f4d",
+      "title": "Selection List for YUVIKA 2025",
+      "link": "https://www.isro.gov.in/media_isro/pdf/YUVIKA_2025_Selection_List_070425.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://www.isro.gov.in/media_isro/pdf/YUVIKA_2025_Selection_List_070425.pdf"
+      ],
+      "sourceId": "isro-careers",
+      "sourceName": "ISRO — Careers",
+      "dept": "Indian Space Research Organisation",
+      "state": "All India",
+      "category": "psu",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "64982fae2548062a",
+      "title": "More Info.",
+      "link": "https://www.isro.gov.in/Careers.html",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "isro-careers",
+      "sourceName": "ISRO — Careers",
+      "dept": "Indian Space Research Organisation",
+      "state": "All India",
+      "category": "psu",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "9d5f9b33218c102b",
+      "title": "Axiom-4 Mission: A saga of ~12 million kilometers and ~282 orbits aboard ISS",
+      "link": "https://www.isro.gov.in/Axiom04_mission_successfully_concluded_return_ISRO_Gaganyatri_ShubhanshuShukla.html",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "isro-careers",
+      "sourceName": "ISRO — Careers",
+      "dept": "Indian Space Research Organisation",
+      "state": "All India",
+      "category": "psu",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "b8cabbaeb344c109",
+      "title": "ISRO conducts student interactions with Gaganyatri onboard ISS",
+      "link": "https://www.isro.gov.in/Student_interactions_with_Gaganyatri.html",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "isro-careers",
+      "sourceName": "ISRO — Careers",
+      "dept": "Indian Space Research Organisation",
+      "state": "All India",
+      "category": "psu",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "79fe48afb6732c30",
+      "title": "Update on Microgravity Research Experiments onboard the International Space Station",
+      "link": "https://www.isro.gov.in/Microgravity_Research_Experiments.html",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "isro-careers",
+      "sourceName": "ISRO — Careers",
+      "dept": "Indian Space Research Organisation",
+      "state": "All India",
+      "category": "psu",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "5236a907790f8217",
+      "title": "Solar Ultraviolet Imaging Telescope (SUIT) onboard Aditya-L1 Mission Observed Powerful Solar Flare and a First-of-Its-Kind Observation of Rare Plasma Ejection in Ultra-violet Light",
+      "link": "https://www.isro.gov.in/SUIT_onboard_Aditya-L1_Mission.html",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "isro-careers",
+      "sourceName": "ISRO — Careers",
+      "dept": "Indian Space Research Organisation",
+      "state": "All India",
+      "category": "psu",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "0d10e2f7a6d99a22",
+      "title": "ISRO Commissions Advanced Landing Gear Test Facility",
+      "link": "https://www.isro.gov.in/ISRO_Advanced_Landing_Gear_Test_Facility.html",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "isro-careers",
+      "sourceName": "ISRO — Careers",
+      "dept": "Indian Space Research Organisation",
+      "state": "All India",
+      "category": "psu",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "503512499f6aa0f2",
+      "title": "Historic First: India’s Solar Ultra-violet Imaging Telescope (SUIT) onboard Aditya-L1 Captures Unprecedented Solar Flare Details",
+      "link": "https://www.isro.gov.in/SUIT_Aditya-L1_Captures_SolarFlare.html",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "isro-careers",
+      "sourceName": "ISRO — Careers",
+      "dept": "Indian Space Research Organisation",
+      "state": "All India",
+      "category": "psu",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "6cbd8aca05b3265a",
+      "title": "Dr. V. Narayanan Assumed Charge of Secretary, Department of Space and Chairman, Space Commission",
+      "link": "https://www.isro.gov.in/DrVNarayanan_Assumed_Charge_Secretary_DOS_Chairman_Space_Commission.html",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "isro-careers",
+      "sourceName": "ISRO — Careers",
+      "dept": "Indian Space Research Organisation",
+      "state": "All India",
+      "category": "psu",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "f36a89d27557fe68",
+      "title": "e-Saral Hindi Vakyakosh",
+      "link": "https://www.isro.gov.in/media_isro/pdf/bilingual_100_sentences.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://www.isro.gov.in/media_isro/pdf/bilingual_100_sentences.pdf"
+      ],
+      "sourceId": "isro-careers",
+      "sourceName": "ISRO — Careers",
+      "dept": "Indian Space Research Organisation",
+      "state": "All India",
+      "category": "psu",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "9f4a6421a7989ede",
+      "title": "ISM Data Sheets",
+      "link": "https://www.isro.gov.in/media_isro/pdf/ISMDataSheets.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://www.isro.gov.in/media_isro/pdf/ISMDataSheets.pdf"
+      ],
+      "sourceId": "isro-careers",
+      "sourceName": "ISRO — Careers",
+      "dept": "Indian Space Research Organisation",
+      "state": "All India",
+      "category": "psu",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "1a0bba46faf331ea",
+      "title": "Mega Science",
+      "link": "https://www.isro.gov.in/media_isro/pdf/Highlights/MSV2035_Astronomy_Astrophysics.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://www.isro.gov.in/media_isro/pdf/Highlights/MSV2035_Astronomy_Astrophysics.pdf"
+      ],
+      "sourceId": "isro-careers",
+      "sourceName": "ISRO — Careers",
+      "dept": "Indian Space Research Organisation",
+      "state": "All India",
+      "category": "psu",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "6df6d99d752b52a2",
+      "title": "PSLV related Update: A National level expert committee constituted is reviewing the reason for anomaly in PSLV Vehicle.",
+      "link": "https://www.isro.gov.in/PSLV_Update.html",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "isro-careers",
+      "sourceName": "ISRO — Careers",
+      "dept": "Indian Space Research Organisation",
+      "state": "All India",
+      "category": "psu",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "a80a83e69d9ec953",
+      "title": "Research Areas in Space document - 2025 - Released",
+      "link": "https://www.isro.gov.in/SupportedAreasofResearch.html",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "isro-careers",
+      "sourceName": "ISRO — Careers",
+      "dept": "Indian Space Research Organisation",
+      "state": "All India",
+      "category": "psu",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "d497f1d4d8969ec0",
+      "title": "ISRO successfully conducts Integrated Main Parachute Air Drop Test (IMAT) for Gaganyaan Programme",
+      "link": "https://www.isro.gov.in/Integrated_Main_Parachute_Air_Drop_Test.html",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "isro-careers",
+      "sourceName": "ISRO — Careers",
+      "dept": "Indian Space Research Organisation",
+      "state": "All India",
+      "category": "psu",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "1e01b9415361ff65",
+      "title": "ISRO conducts Flight Acceptance Test of Cryogenic Engine successfully for next LVM3 mission",
+      "link": "https://www.isro.gov.in/ISRO_conducts_Flight_Acceptance_Test_of_Cryogenic_Engine.html",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "isro-careers",
+      "sourceName": "ISRO — Careers",
+      "dept": "Indian Space Research Organisation",
+      "state": "All India",
+      "category": "psu",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "764e1fe451b2346f",
+      "title": "ISRO conducts ground test for new sub-orbital solid motor-based test vehicle",
+      "link": "https://www.isro.gov.in/ISRO_SOLVE.html",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "isro-careers",
+      "sourceName": "ISRO — Careers",
+      "dept": "Indian Space Research Organisation",
+      "state": "All India",
+      "category": "psu",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "ed5cc9ecaee351f5",
+      "title": "Chandrayaan-3's Alpha Particle X-ray Spectrometer measurements connect the composition at Shiv Shakti Statio to the first Lunar Meteorite ALHA 81005",
+      "link": "https://www.isro.gov.in/Ch3_Alpha_Particle_X-ray_Spectrometer.html",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "isro-careers",
+      "sourceName": "ISRO — Careers",
+      "dept": "Indian Space Research Organisation",
+      "state": "All India",
+      "category": "psu",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "48365ac282bbf3be",
+      "title": "Iron Fluorescence on the Sun During Massive Solar Flares: Aditya-L1 Observation",
+      "link": "https://www.isro.gov.in/Iron_Fluorescence_on_Sun_Aditya-L1_Observation.html",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "isro-careers",
+      "sourceName": "ISRO — Careers",
+      "dept": "Indian Space Research Organisation",
+      "state": "All India",
+      "category": "psu",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "2eeda0ce877476e0",
+      "title": "ISRO successfully conducted hot test of Semicryogenic Engine Power Head Test Article at higher thrust level",
+      "link": "https://www.isro.gov.in/ISRO_successfully_conducted_hot_test_of_Semicryogenic_Engine.html",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "isro-careers",
+      "sourceName": "ISRO — Careers",
+      "dept": "Indian Space Research Organisation",
+      "state": "All India",
+      "category": "psu",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "eda564813e25a08a",
+      "title": "BRICS Heads of Space Agencies 2026 Conclude Meeting in Bengaluru, Advancing Discussions on Remote Sensing Satellite Constellation and Space Sustainability",
+      "link": "https://www.isro.gov.in/brics_heads_of_Space_Agencies_2026.html",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "isro-careers",
+      "sourceName": "ISRO — Careers",
+      "dept": "Indian Space Research Organisation",
+      "state": "All India",
+      "category": "psu",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "9e68927de9a7fb64",
+      "title": "BRICS Heads of Space Agencies to gather in India to Strengthen Space Cooperation",
+      "link": "https://www.isro.gov.in/BRICS_Heads_of_Space_Agencies_Strengthen_Space_Cooperation.html",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "isro-careers",
+      "sourceName": "ISRO — Careers",
+      "dept": "Indian Space Research Organisation",
+      "state": "All India",
+      "category": "psu",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "673188a78a83a67c",
+      "title": "XPoSat Mission: Announcement of Opportunity (AO) soliciting proposals for the second AO cycle observations",
+      "link": "https://www.isro.gov.in/XPoSat_Mission.html",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "isro-careers",
+      "sourceName": "ISRO — Careers",
+      "dept": "Indian Space Research Organisation",
+      "state": "All India",
+      "category": "psu",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "6123e512f9c49f00",
+      "title": "ISRO Participation in RISE Conclave 2026, Bengaluru",
+      "link": "https://www.isro.gov.in/ISRO_Participation_in_RISE_Conclave.html",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "isro-careers",
+      "sourceName": "ISRO — Careers",
+      "dept": "Indian Space Research Organisation",
+      "state": "All India",
+      "category": "psu",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "050230bcf4cc3f17",
+      "title": "NRSC Conducts Capacity Building Programme on Forest Fire Detection and Burnt Area Mapping for Bhutan Officials",
+      "link": "https://www.isro.gov.in/NRSC_Conducts_Capacity_Building_Programme.html",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "isro-careers",
+      "sourceName": "ISRO — Careers",
+      "dept": "Indian Space Research Organisation",
+      "state": "All India",
+      "category": "psu",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "7903d10dd847c24c",
+      "title": "ISRO and IIG Jointly Launch Space Weather Summer School 2026 to Nurture Future Space Scientists",
+      "link": "https://www.isro.gov.in/ISRO_IIG_Jointly_Launch_Space_Weather_Summer_School_2026.html",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "isro-careers",
+      "sourceName": "ISRO — Careers",
+      "dept": "Indian Space Research Organisation",
+      "state": "All India",
+      "category": "psu",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "99a1a8f6d6656f58",
+      "title": "13th Meeting of the NESAC Society",
+      "link": "https://www.isro.gov.in/Meeting_of_the_NESAC_Society.html",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "isro-careers",
+      "sourceName": "ISRO — Careers",
+      "dept": "Indian Space Research Organisation",
+      "state": "All India",
+      "category": "psu",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "56296f2685be560d",
+      "title": "International Planetary Data Alliance (IPDA) 2026 Concludes Successful Workshop & Steering Committee meeting at ISTRAC-ISRO",
+      "link": "https://www.isro.gov.in/International_Planetary_Data_Alliance_2026.html",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "isro-careers",
+      "sourceName": "ISRO — Careers",
+      "dept": "Indian Space Research Organisation",
+      "state": "All India",
+      "category": "psu",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "de9d69be92ec5e01",
+      "title": "Chandrayaan-2 Dual Frequency Synthetic Aperture Radar (DFSAR) Observations Reveal Subsurface Ice in Lunar South Polar Regions",
+      "link": "https://www.isro.gov.in/Chandrayaan2_Dual_Frequency_Synthetic_Aperture_Radar.html",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "isro-careers",
+      "sourceName": "ISRO — Careers",
+      "dept": "Indian Space Research Organisation",
+      "state": "All India",
+      "category": "psu",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "406576be9ee8551d",
+      "title": "Chandrayaan-3 \"Hop\" Experiment Reveals Hidden Lunar Secrets: Scientists Uncover Regolith Heterogeneity at Moon’s South Pole",
+      "link": "https://www.isro.gov.in/Chandrayaan_3Hop_Experiment_Reveals.html",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "isro-careers",
+      "sourceName": "ISRO — Careers",
+      "dept": "Indian Space Research Organisation",
+      "state": "All India",
+      "category": "psu",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "492f14be6a6b8c5e",
+      "title": "Young Scientists Programme (YUva VIgyani KAryakram - YUVIKA) 2026",
+      "link": "https://www.isro.gov.in/Young_Scientist_YUVIKA2026.html",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "isro-careers",
+      "sourceName": "ISRO — Careers",
+      "dept": "Indian Space Research Organisation",
+      "state": "All India",
+      "category": "psu",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "86f0f6bd4ab9b970",
+      "title": "ISRO at National Technology Day 2026",
+      "link": "https://www.isro.gov.in/ISRO_at_National_Technology_Day_2026.html",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "isro-careers",
+      "sourceName": "ISRO — Careers",
+      "dept": "Indian Space Research Organisation",
+      "state": "All India",
+      "category": "psu",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "981f89894a27f15d",
+      "title": "Workshop on Indigenisation of IT Applications",
+      "link": "https://www.isro.gov.in/Workshop_Indigenisation_of_IT_Applications.html",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "isro-careers",
+      "sourceName": "ISRO — Careers",
+      "dept": "Indian Space Research Organisation",
+      "state": "All India",
+      "category": "psu",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "8ee462230cb68461",
+      "title": "ISRO and TIFR Sign MoU for Collaboration in Space Science and Related Technologies",
+      "link": "https://www.isro.gov.in/ISRO_and_TIFR_Sign_MoU_for_Collaboration_n_Space_Science.html",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "isro-careers",
+      "sourceName": "ISRO — Careers",
+      "dept": "Indian Space Research Organisation",
+      "state": "All India",
+      "category": "psu",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "71c210cd748ea180",
+      "title": "International Conference on Spacecraft Mission Operations - SMOPS-2026",
+      "link": "https://www.isro.gov.in/Spacecraft_Mission_Operations_SMOPS_2026.html",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "isro-careers",
+      "sourceName": "ISRO — Careers",
+      "dept": "Indian Space Research Organisation",
+      "state": "All India",
+      "category": "psu",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "e8d26d831cd54c24",
+      "title": "Indian Space Situational Awareness Report (ISSAR) for 2025 Released",
+      "link": "https://www.isro.gov.in/Indian_Space_Situational_Awareness_Report_2025.html",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "isro-careers",
+      "sourceName": "ISRO — Careers",
+      "dept": "Indian Space Research Organisation",
+      "state": "All India",
+      "category": "psu",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "bd3293b28b530ead",
+      "title": "ISRO’s Achievements during FY 2025-2026",
+      "link": "https://www.isro.gov.in/ISRO_Achievements_FY_2025_2026.html",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "isro-careers",
+      "sourceName": "ISRO — Careers",
+      "dept": "Indian Space Research Organisation",
+      "state": "All India",
+      "category": "psu",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "a62123c7bdb5b60d",
+      "title": "ISRO conducts Second Integrated Air Drop Test (IADT-02) for Gaganyaan",
+      "link": "https://www.isro.gov.in/ISRO_conducts_Second_Integrated_Air_Drop_Test_for_Gaganyaan.html",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "isro-careers",
+      "sourceName": "ISRO — Careers",
+      "dept": "Indian Space Research Organisation",
+      "state": "All India",
+      "category": "psu",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "d2a1069277a781f2",
+      "title": "ISRO Conferred AIMA Special Award for Public Service Excellence - 2025",
+      "link": "https://www.isro.gov.in/ISRO_ConferredAIMA_SpecialAward.html",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "isro-careers",
+      "sourceName": "ISRO — Careers",
+      "dept": "Indian Space Research Organisation",
+      "state": "All India",
+      "category": "psu",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "ed0bfa23740fa775",
+      "title": "National Learning Week - “SADHANA SAPTAH” at ISRO",
+      "link": "https://www.isro.gov.in/National_Learning_Week.html",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "isro-careers",
+      "sourceName": "ISRO — Careers",
+      "dept": "Indian Space Research Organisation",
+      "state": "All India",
+      "category": "psu",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "c0fe23a17261e73d",
+      "title": "संगठनात्मक चार्ट",
+      "link": "https://cdnbbsr.s3waas.gov.in/s32d2ca7eedf739ef4c3800713ec482e1a/uploads/2025/05/2025051479.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://cdnbbsr.s3waas.gov.in/s32d2ca7eedf739ef4c3800713ec482e1a/uploads/2025/05/2025051479.pdf"
+      ],
+      "sourceId": "kvs-recruitment",
+      "sourceName": "KVS — Recruitment notices",
+      "dept": "Kendriya Vidyalaya Sangathan",
+      "state": "All India",
+      "category": "teaching",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "261688d5be6c011f",
+      "title": "स्कूल भवन की विशिष्टताएँ",
+      "link": "https://cdnbbsr.s3waas.gov.in/s32d2ca7eedf739ef4c3800713ec482e1a/uploads/2023/12/2023120857.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://cdnbbsr.s3waas.gov.in/s32d2ca7eedf739ef4c3800713ec482e1a/uploads/2023/12/2023120857.pdf"
+      ],
+      "sourceId": "kvs-recruitment",
+      "sourceName": "KVS — Recruitment notices",
+      "dept": "Kendriya Vidyalaya Sangathan",
+      "state": "All India",
+      "category": "teaching",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "653e5961cb9ec75d",
+      "title": "सतत् व्यावसायिक विकास",
+      "link": "https://cdnbbsr.s3waas.gov.in/s32d2ca7eedf739ef4c3800713ec482e1a/uploads/2025/04/2025042811.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://cdnbbsr.s3waas.gov.in/s32d2ca7eedf739ef4c3800713ec482e1a/uploads/2025/04/2025042811.pdf"
+      ],
+      "sourceId": "kvs-recruitment",
+      "sourceName": "KVS — Recruitment notices",
+      "dept": "Kendriya Vidyalaya Sangathan",
+      "state": "All India",
+      "category": "teaching",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "3fa899e5e6a66606",
+      "title": "भर्ती",
+      "link": "https://cdnbbsr.s3waas.gov.in/s32d2ca7eedf739ef4c3800713ec482e1a/uploads/2026/01/2026012368.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://cdnbbsr.s3waas.gov.in/s32d2ca7eedf739ef4c3800713ec482e1a/uploads/2026/01/2026012368.pdf"
+      ],
+      "sourceId": "kvs-recruitment",
+      "sourceName": "KVS — Recruitment notices",
+      "dept": "Kendriya Vidyalaya Sangathan",
+      "state": "All India",
+      "category": "teaching",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "1139bae6cba6a12c",
+      "title": "भवन का प्रकार",
+      "link": "https://cdnbbsr.s3waas.gov.in/s32d2ca7eedf739ef4c3800713ec482e1a/uploads/2023/12/2023120838.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://cdnbbsr.s3waas.gov.in/s32d2ca7eedf739ef4c3800713ec482e1a/uploads/2023/12/2023120838.pdf"
+      ],
+      "sourceId": "kvs-recruitment",
+      "sourceName": "KVS — Recruitment notices",
+      "dept": "Kendriya Vidyalaya Sangathan",
+      "state": "All India",
+      "category": "teaching",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "fad7c9454e2bee93",
+      "title": "प्रशिक्षण नीति",
+      "link": "https://cdnbbsr.s3waas.gov.in/s32d2ca7eedf739ef4c3800713ec482e1a/uploads/2023/11/2023112463.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://cdnbbsr.s3waas.gov.in/s32d2ca7eedf739ef4c3800713ec482e1a/uploads/2023/11/2023112463.pdf"
+      ],
+      "sourceId": "kvs-recruitment",
+      "sourceName": "KVS — Recruitment notices",
+      "dept": "Kendriya Vidyalaya Sangathan",
+      "state": "All India",
+      "category": "teaching",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "1a754699e9b7e890",
+      "title": "ई-कैलेंडर",
+      "link": "https://cdnbbsr.s3waas.gov.in/s32d2ca7eedf739ef4c3800713ec482e1a/uploads/2026/01/2026010266.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://cdnbbsr.s3waas.gov.in/s32d2ca7eedf739ef4c3800713ec482e1a/uploads/2026/01/2026010266.pdf"
+      ],
+      "sourceId": "kvs-recruitment",
+      "sourceName": "KVS — Recruitment notices",
+      "dept": "Kendriya Vidyalaya Sangathan",
+      "state": "All India",
+      "category": "teaching",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "2a61d0d6e9638604",
+      "title": "केन्द्रीय विद्यालय संगठन KENDRIYA VIDYALAYA SANGATHAN शिक्षा मंत्रालय, भारत सरकार के अधीन एक स्वायत्त निकाय AN AUTONOMOUS BODY UNDER MINISTRY OF EDUCATION, GOVERNMENT OF INDIA",
+      "link": "https://kvsangathan.nic.in/",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "kvs-recruitment",
+      "sourceName": "KVS — Recruitment notices",
+      "dept": "Kendriya Vidyalaya Sangathan",
+      "state": "All India",
+      "category": "teaching",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "b3c624302346d5f2",
+      "title": "के. वि. सं. – परिकल्पना एवं उद्देश्य",
+      "link": "https://kvsangathan.nic.in/%e0%a4%95%e0%a5%87-%e0%a4%b5%e0%a4%bf-%e0%a4%b8%e0%a4%82-%e0%a4%aa%e0%a4%b0%e0%a4%bf%e0%a4%95%e0%a4%b2%e0%a5%8d%e0%a4%aa%e0%a4%a8%e0%a4%be-%e0%a4%8f%e0%a4%b5%e0%a4%82-%e0%a4%89%e0%a4%a6%e0%a5%8d/",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "kvs-recruitment",
+      "sourceName": "KVS — Recruitment notices",
+      "dept": "Kendriya Vidyalaya Sangathan",
+      "state": "All India",
+      "category": "teaching",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "519c4914dbd452a8",
+      "title": "दसवीं कक्षा के लिए क्षेत्रवार उत्तीर्ण प्रतिशत",
+      "link": "https://kvsangathan.nic.in/%e0%a4%a6%e0%a4%b8%e0%a4%b5%e0%a5%80%e0%a4%82-%e0%a4%95%e0%a4%95%e0%a5%8d%e0%a4%b7%e0%a4%be-%e0%a4%95%e0%a5%87-%e0%a4%b2%e0%a4%bf%e0%a4%8f-%e0%a4%95%e0%a5%8d%e0%a4%b7%e0%a5%87%e0%a4%a4%e0%a5%8d/",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "kvs-recruitment",
+      "sourceName": "KVS — Recruitment notices",
+      "dept": "Kendriya Vidyalaya Sangathan",
+      "state": "All India",
+      "category": "teaching",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "f743b11858587701",
+      "title": "बारहवीं कक्षा के लिए क्षेत्रवार उत्तीर्ण प्रतिशत",
+      "link": "https://kvsangathan.nic.in/%e0%a4%ac%e0%a4%be%e0%a4%b0%e0%a4%b9%e0%a4%b5%e0%a5%80%e0%a4%82-%e0%a4%95%e0%a4%95%e0%a5%8d%e0%a4%b7%e0%a4%be-%e0%a4%95%e0%a5%87-%e0%a4%b2%e0%a4%bf%e0%a4%8f-%e0%a4%95%e0%a5%8d%e0%a4%b7%e0%a5%87/",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "kvs-recruitment",
+      "sourceName": "KVS — Recruitment notices",
+      "dept": "Kendriya Vidyalaya Sangathan",
+      "state": "All India",
+      "category": "teaching",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "8c5b9fc5789f9a22",
+      "title": "सीबीएसई-कक्षा दसवीं (राज्यवार पिछले 5 वर्ष)",
+      "link": "https://kvsangathan.nic.in/%e0%a4%b8%e0%a5%80%e0%a4%ac%e0%a5%80%e0%a4%8f%e0%a4%b8%e0%a4%88-%e0%a4%95%e0%a4%95%e0%a5%8d%e0%a4%b7%e0%a4%be-10-%e0%a4%b0%e0%a4%be%e0%a4%9c%e0%a5%8d%e0%a4%af%e0%a4%b5%e0%a4%be%e0%a4%b0-%e0%a4%aa/",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "kvs-recruitment",
+      "sourceName": "KVS — Recruitment notices",
+      "dept": "Kendriya Vidyalaya Sangathan",
+      "state": "All India",
+      "category": "teaching",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "be9f28b1ff615c74",
+      "title": "सीबीएसई-कक्षा बारहवीं (राज्यवार पिछले 5 वर्ष)",
+      "link": "https://kvsangathan.nic.in/%e0%a4%b8%e0%a5%80%e0%a4%ac%e0%a5%80%e0%a4%8f%e0%a4%b8%e0%a4%88-%e0%a4%95%e0%a4%95%e0%a5%8d%e0%a4%b7%e0%a4%be-%e0%a4%ac%e0%a4%be%e0%a4%b0%e0%a4%b9%e0%a4%b5%e0%a5%80%e0%a4%82-%e0%a4%b0%e0%a4%be/",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "kvs-recruitment",
+      "sourceName": "KVS — Recruitment notices",
+      "dept": "Kendriya Vidyalaya Sangathan",
+      "state": "All India",
+      "category": "teaching",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "d96438c8a45ec102",
+      "title": "तुलनात्मक परिणाम विश्लेषण-कक्षा बारहवीं",
+      "link": "https://kvsangathan.nic.in/%e0%a4%a4%e0%a5%81%e0%a4%b2%e0%a4%a8%e0%a4%be%e0%a4%a4%e0%a5%8d%e0%a4%ae%e0%a4%95-%e0%a4%aa%e0%a4%b0%e0%a4%bf%e0%a4%a3%e0%a4%be%e0%a4%ae-%e0%a4%b5%e0%a4%bf%e0%a4%b6%e0%a5%8d%e0%a4%b2%e0%a5%87-3/",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "kvs-recruitment",
+      "sourceName": "KVS — Recruitment notices",
+      "dept": "Kendriya Vidyalaya Sangathan",
+      "state": "All India",
+      "category": "teaching",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "b92e662ae3705475",
+      "title": "तुलनात्मक परिणाम विश्लेषण-कक्षा दसवीं",
+      "link": "https://kvsangathan.nic.in/%e0%a4%a4%e0%a5%81%e0%a4%b2%e0%a4%a8%e0%a4%be%e0%a4%a4%e0%a5%8d%e0%a4%ae%e0%a4%95-%e0%a4%aa%e0%a4%b0%e0%a4%bf%e0%a4%a3%e0%a4%be%e0%a4%ae-%e0%a4%b5%e0%a4%bf%e0%a4%b6%e0%a5%8d%e0%a4%b2%e0%a5%87%e0%a4%b7/",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "kvs-recruitment",
+      "sourceName": "KVS — Recruitment notices",
+      "dept": "Kendriya Vidyalaya Sangathan",
+      "state": "All India",
+      "category": "teaching",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "fabba84f802c1ffa",
+      "title": "नए के. वि. खोलने के लिए मानदंड",
+      "link": "https://kvsangathan.nic.in/%e0%a4%a8%e0%a4%8f-%e0%a4%95%e0%a5%87%e0%a4%b5%e0%a5%80-%e0%a4%96%e0%a5%8b%e0%a4%b2%e0%a4%a8%e0%a5%87-%e0%a4%95%e0%a5%87-%e0%a4%b2%e0%a4%bf%e0%a4%8f-%e0%a4%ae%e0%a4%be%e0%a4%a8%e0%a4%a6%e0%a4%82/",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "kvs-recruitment",
+      "sourceName": "KVS — Recruitment notices",
+      "dept": "Kendriya Vidyalaya Sangathan",
+      "state": "All India",
+      "category": "teaching",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "155230ae64300310",
+      "title": "संसद के पटल पर वार्षिक लेखों का प्राप्तिकरण",
+      "link": "https://kvsangathan.nic.in/%e0%a4%b8%e0%a4%82%e0%a4%b8%e0%a4%a6-%e0%a4%95%e0%a5%87-%e0%a4%aa%e0%a4%9f%e0%a4%b2-%e0%a4%aa%e0%a4%b0-%e0%a4%b5%e0%a4%be%e0%a4%b0%e0%a5%8d%e0%a4%b7%e0%a4%bf%e0%a4%95-%e0%a4%b2%e0%a5%87%e0%a4%96/",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "kvs-recruitment",
+      "sourceName": "KVS — Recruitment notices",
+      "dept": "Kendriya Vidyalaya Sangathan",
+      "state": "All India",
+      "category": "teaching",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "1c52d89e8b21bbb6",
+      "title": "सीडब्ल्यूएसएन के लिए उपलब्ध सुविधाएं",
+      "link": "https://kvsangathan.nic.in/%e0%a4%b8%e0%a5%80%e0%a4%a1%e0%a4%ac%e0%a5%8d%e0%a4%b2%e0%a5%8d%e0%a4%af%e0%a5%82%e0%a4%8f%e0%a4%b8%e0%a4%8f%e0%a4%a8-%e0%a4%95%e0%a5%87-%e0%a4%b2%e0%a4%bf%e0%a4%8f-%e0%a4%89%e0%a4%aa%e0%a4%b2-2/",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "kvs-recruitment",
+      "sourceName": "KVS — Recruitment notices",
+      "dept": "Kendriya Vidyalaya Sangathan",
+      "state": "All India",
+      "category": "teaching",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "eab6ce856a2acaf8",
+      "title": "लघु अवधि के पाठ्यक्रम एवं कार्यशालाएँ",
+      "link": "https://kvsangathan.nic.in/%e0%a4%9b%e0%a5%8b%e0%a4%9f%e0%a5%80-%e0%a4%85%e0%a4%b5%e0%a4%a7%e0%a4%bf-%e0%a4%95%e0%a5%87-%e0%a4%aa%e0%a4%be%e0%a4%a0%e0%a5%8d%e0%a4%af%e0%a4%95%e0%a5%8d%e0%a4%b0%e0%a4%ae/",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "kvs-recruitment",
+      "sourceName": "KVS — Recruitment notices",
+      "dept": "Kendriya Vidyalaya Sangathan",
+      "state": "All India",
+      "category": "teaching",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "72d4d257e3bffc53",
+      "title": "हमारे आस-पास की दुनिया – फाउंडेशन चरण",
+      "link": "https://kvsangathan.nic.in/%e0%a4%b9%e0%a4%ae%e0%a4%be%e0%a4%b0%e0%a5%87-%e0%a4%86%e0%a4%b8-%e0%a4%aa%e0%a4%be%e0%a4%b8-%e0%a4%95%e0%a5%80-%e0%a4%a6%e0%a5%81%e0%a4%a8%e0%a4%bf%e0%a4%af%e0%a4%be-%e0%a4%aa%e0%a5%8d%e0%a4%b0/",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "kvs-recruitment",
+      "sourceName": "KVS — Recruitment notices",
+      "dept": "Kendriya Vidyalaya Sangathan",
+      "state": "All India",
+      "category": "teaching",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "36c49e5b5f3888b5",
+      "title": "60वां स्थापना दिवस : कॉफी टेबल बुक",
+      "link": "https://kvsangathan.nic.in/60%e0%a4%b5%e0%a4%be%e0%a4%82-%e0%a4%b8%e0%a5%8d%e0%a4%a5%e0%a4%be%e0%a4%aa%e0%a4%a8%e0%a4%be-%e0%a4%a6%e0%a4%bf%e0%a4%b5%e0%a4%b8-%e0%a4%95%e0%a5%89%e0%a4%ab%e0%a5%80-%e0%a4%9f%e0%a5%87%e0%a4%ac/",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "kvs-recruitment",
+      "sourceName": "KVS — Recruitment notices",
+      "dept": "Kendriya Vidyalaya Sangathan",
+      "state": "All India",
+      "category": "teaching",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "8ace6a9faac547d9",
+      "title": "सूचना के अधिकार के अंतर्गत प्रकटन",
+      "link": "https://kvsangathan.nic.in/%e0%a4%b8%e0%a5%82%e0%a4%9a%e0%a4%a8%e0%a4%be-%e0%a4%95%e0%a5%87-%e0%a4%85%e0%a4%a7%e0%a4%bf%e0%a4%95%e0%a4%be%e0%a4%b0-%e0%a4%95%e0%a5%87-%e0%a4%85%e0%a4%82%e0%a4%a4%e0%a4%b0%e0%a5%8d%e0%a4%97/",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "kvs-recruitment",
+      "sourceName": "KVS — Recruitment notices",
+      "dept": "Kendriya Vidyalaya Sangathan",
+      "state": "All India",
+      "category": "teaching",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "71d3b2323cbf8e1b",
+      "title": "नोडल अधिकारी- श्री विकास गुप्ता, आईएएस,आयुक्त, केवीएस",
+      "link": "https://kvsangathan.nic.in/%e0%a4%a8%e0%a5%8b%e0%a4%a1%e0%a4%b2-%e0%a4%85%e0%a4%a7%e0%a4%bf%e0%a4%95%e0%a4%be%e0%a4%b0%e0%a5%80/",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "kvs-recruitment",
+      "sourceName": "KVS — Recruitment notices",
+      "dept": "Kendriya Vidyalaya Sangathan",
+      "state": "All India",
+      "category": "teaching",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "fbafad11209a9d9d",
+      "title": "केवीएस (मुख्यालय) के अपीलीय प्राधिकारी",
+      "link": "https://kvsangathan.nic.in/%e0%a4%95%e0%a5%87%e0%a4%b5%e0%a5%80%e0%a4%8f%e0%a4%b8-%e0%a4%ae%e0%a5%81%e0%a4%96%e0%a5%8d%e0%a4%af%e0%a4%be%e0%a4%b2%e0%a4%af-%e0%a4%95%e0%a5%87-%e0%a4%85%e0%a4%aa%e0%a5%80%e0%a4%b2%e0%a5%80/",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "kvs-recruitment",
+      "sourceName": "KVS — Recruitment notices",
+      "dept": "Kendriya Vidyalaya Sangathan",
+      "state": "All India",
+      "category": "teaching",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "829ca0cc8be02dec",
+      "title": "केवीएस मुख्यालय के केंद्रीय लोक सूचना अधिकारी",
+      "link": "https://kvsangathan.nic.in/%e0%a4%95%e0%a5%87%e0%a4%b5%e0%a5%80%e0%a4%8f%e0%a4%b8-%e0%a4%ae%e0%a5%81%e0%a4%96%e0%a5%8d%e0%a4%af%e0%a4%be%e0%a4%b2%e0%a4%af-%e0%a4%95%e0%a5%87-%e0%a4%95%e0%a5%87%e0%a4%82%e0%a4%a6%e0%a5%8d/",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "kvs-recruitment",
+      "sourceName": "KVS — Recruitment notices",
+      "dept": "Kendriya Vidyalaya Sangathan",
+      "state": "All India",
+      "category": "teaching",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "fc0ccfc3426534f0",
+      "title": "के. वि. सं. के सीपीआईओ और क्षेत्रीय कार्यालयों के अपीलीय प्राधिकारी",
+      "link": "https://kvsangathan.nic.in/%e0%a4%95%e0%a5%87%e0%a4%b5%e0%a5%80%e0%a4%8f%e0%a4%b8-%e0%a4%95%e0%a5%87-%e0%a4%b8%e0%a5%80%e0%a4%aa%e0%a5%80%e0%a4%86%e0%a4%88%e0%a4%93-%e0%a4%94%e0%a4%b0-%e0%a4%95%e0%a5%8d%e0%a4%b7%e0%a5%87/",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "kvs-recruitment",
+      "sourceName": "KVS — Recruitment notices",
+      "dept": "Kendriya Vidyalaya Sangathan",
+      "state": "All India",
+      "category": "teaching",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "5cc87f157d38b84f",
+      "title": "अधिकारियों एवं कर्मचारियों को प्राप्त वेतन",
+      "link": "https://kvsangathan.nic.in/%e0%a4%85%e0%a4%a7%e0%a4%bf%e0%a4%95%e0%a4%be%e0%a4%b0%e0%a4%bf%e0%a4%af%e0%a5%8b%e0%a4%82-%e0%a4%8f%e0%a4%b5%e0%a4%82-%e0%a4%95%e0%a4%b0%e0%a5%8d%e0%a4%ae%e0%a4%9a%e0%a4%be%e0%a4%b0%e0%a4%bf%e0%a4%af/",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "kvs-recruitment",
+      "sourceName": "KVS — Recruitment notices",
+      "dept": "Kendriya Vidyalaya Sangathan",
+      "state": "All India",
+      "category": "teaching",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "feacde6abcf722fc",
+      "title": "अधिकारियों, कर्मचारियों की शक्तियाँ, कर्तव्य और जवाबदेही",
+      "link": "https://kvsangathan.nic.in/%e0%a4%85%e0%a4%a7%e0%a4%bf%e0%a4%95%e0%a4%be%e0%a4%b0%e0%a4%bf%e0%a4%af%e0%a5%8b%e0%a4%82-%e0%a4%94%e0%a4%b0-%e0%a4%95%e0%a4%b0%e0%a5%8d%e0%a4%ae%e0%a4%9a%e0%a4%be%e0%a4%b0%e0%a4%bf%e0%a4%af%e0%a5%8b/",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "kvs-recruitment",
+      "sourceName": "KVS — Recruitment notices",
+      "dept": "Kendriya Vidyalaya Sangathan",
+      "state": "All India",
+      "category": "teaching",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "f857a68b0b381cd7",
+      "title": "केवीएस पारदर्शिता ऑडिट रिपोर्ट",
+      "link": "https://kvsangathan.nic.in/%e0%a4%95%e0%a5%87%e0%a4%b5%e0%a5%80%e0%a4%8f%e0%a4%b8-%e0%a4%aa%e0%a4%be%e0%a4%b0%e0%a4%a6%e0%a4%b0%e0%a5%8d%e0%a4%b6%e0%a4%bf%e0%a4%a4%e0%a4%be-%e0%a4%91%e0%a4%a1%e0%a4%bf%e0%a4%9f-%e0%a4%b0/",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "kvs-recruitment",
+      "sourceName": "KVS — Recruitment notices",
+      "dept": "Kendriya Vidyalaya Sangathan",
+      "state": "All India",
+      "category": "teaching",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "e0d99fcc690ad42a",
+      "title": "ऑडिट(भुगतान डीए एचआरए सीईए आदि)",
+      "link": "https://kvsangathan.nic.in/%e0%a4%91%e0%a4%a1%e0%a4%bf%e0%a4%9f%e0%a4%ad%e0%a5%81%e0%a4%97%e0%a4%a4%e0%a4%be%e0%a4%a8-%e0%a4%a1%e0%a5%80%e0%a4%8f-%e0%a4%8f%e0%a4%9a%e0%a4%86%e0%a4%b0%e0%a4%8f-%e0%a4%b8%e0%a5%80%e0%a4%88-2/",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "kvs-recruitment",
+      "sourceName": "KVS — Recruitment notices",
+      "dept": "Kendriya Vidyalaya Sangathan",
+      "state": "All India",
+      "category": "teaching",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "35a983a72f3bb0e9",
+      "title": "आयुक्त का संदेश",
+      "link": "https://kvsangathan.nic.in/%e0%a4%86%e0%a4%af%e0%a5%81%e0%a4%95%e0%a5%8d%e0%a4%a4-%e0%a4%95%e0%a4%be-%e0%a4%b8%e0%a4%82%e0%a4%a6%e0%a5%87%e0%a4%b6/",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "kvs-recruitment",
+      "sourceName": "KVS — Recruitment notices",
+      "dept": "Kendriya Vidyalaya Sangathan",
+      "state": "All India",
+      "category": "teaching",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "ece0479b88627f73",
+      "title": "के. वि. सं. के शीर्ष अधिकारी",
+      "link": "https://kvsangathan.nic.in/%e0%a4%b6%e0%a5%80%e0%a4%b0%e0%a5%8d%e0%a4%b7-%e0%a4%85%e0%a4%a7%e0%a4%bf%e0%a4%95%e0%a4%be%e0%a4%b0%e0%a5%80/",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "kvs-recruitment",
+      "sourceName": "KVS — Recruitment notices",
+      "dept": "Kendriya Vidyalaya Sangathan",
+      "state": "All India",
+      "category": "teaching",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "7a7954597888b6ca",
+      "title": "के. वि. की निर्देशिका",
+      "link": "https://kvsangathan.nic.in/%e0%a4%95%e0%a5%87-%e0%a4%b5%e0%a4%bf-%e0%a4%95%e0%a5%80-%e0%a4%a8%e0%a4%bf%e0%a4%b0%e0%a5%8d%e0%a4%a6%e0%a5%87%e0%a4%b6%e0%a4%bf%e0%a4%95%e0%a4%be/",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "kvs-recruitment",
+      "sourceName": "KVS — Recruitment notices",
+      "dept": "Kendriya Vidyalaya Sangathan",
+      "state": "All India",
+      "category": "teaching",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "e7e18b4e7a3a1fdf",
+      "title": "के. वि. के अध्यक्ष",
+      "link": "https://kvsangathan.nic.in/%e0%a4%95%e0%a5%87-%e0%a4%b5%e0%a4%bf-%e0%a4%95%e0%a5%87-%e0%a4%85%e0%a4%a7%e0%a5%8d%e0%a4%af%e0%a4%95%e0%a5%8d%e0%a4%b7/",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "kvs-recruitment",
+      "sourceName": "KVS — Recruitment notices",
+      "dept": "Kendriya Vidyalaya Sangathan",
+      "state": "All India",
+      "category": "teaching",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "08328bc72f3581ae",
+      "title": "हमसे संपर्क करें",
+      "link": "https://kvsangathan.nic.in/%e0%a4%b9%e0%a4%ae%e0%a4%b8%e0%a5%87-%e0%a4%b8%e0%a4%82%e0%a4%aa%e0%a4%b0%e0%a5%8d%e0%a4%95-%e0%a4%95%e0%a4%b0%e0%a5%87%e0%a4%82/",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "kvs-recruitment",
+      "sourceName": "KVS — Recruitment notices",
+      "dept": "Kendriya Vidyalaya Sangathan",
+      "state": "All India",
+      "category": "teaching",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "d452d86692d67f0d",
+      "title": "प्राथमिकता वार (राज्य)",
+      "link": "https://kvsangathan.nic.in/%e0%a4%aa%e0%a5%8d%e0%a4%b0%e0%a4%be%e0%a4%a5%e0%a4%ae%e0%a4%bf%e0%a4%95%e0%a4%a4%e0%a4%be-%e0%a4%b6%e0%a5%8d%e0%a4%b0%e0%a5%87%e0%a4%a3%e0%a5%80-%e0%a4%b5%e0%a4%be%e0%a4%b0-%e0%a4%b0%e0%a4%be/",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "kvs-recruitment",
+      "sourceName": "KVS — Recruitment notices",
+      "dept": "Kendriya Vidyalaya Sangathan",
+      "state": "All India",
+      "category": "teaching",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "6f2ad8cc368b2ab4",
+      "title": "कक्षा वार (राज्य)",
+      "link": "https://kvsangathan.nic.in/%e0%a4%95%e0%a4%95%e0%a5%8d%e0%a4%b7%e0%a4%be-%e0%a4%b5%e0%a4%be%e0%a4%b0-%e0%a4%b0%e0%a4%be%e0%a4%9c%e0%a5%8d%e0%a4%af/",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "kvs-recruitment",
+      "sourceName": "KVS — Recruitment notices",
+      "dept": "Kendriya Vidyalaya Sangathan",
+      "state": "All India",
+      "category": "teaching",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "39f237d33ac35dfa",
+      "title": "प्राथमिकता वार (संभाग)",
+      "link": "https://kvsangathan.nic.in/%e0%a4%aa%e0%a5%8d%e0%a4%b0%e0%a4%be%e0%a4%a5%e0%a4%ae%e0%a4%bf%e0%a4%95%e0%a4%a4%e0%a4%be-%e0%a4%b6%e0%a5%8d%e0%a4%b0%e0%a5%87%e0%a4%a3%e0%a5%80-%e0%a4%b5%e0%a4%be%e0%a4%b0-%e0%a4%b8%e0%a4%82/",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "kvs-recruitment",
+      "sourceName": "KVS — Recruitment notices",
+      "dept": "Kendriya Vidyalaya Sangathan",
+      "state": "All India",
+      "category": "teaching",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "0cc6b4fb79a4cbf6",
+      "title": "कक्षा वार (संभाग)",
+      "link": "https://kvsangathan.nic.in/%e0%a4%aa%e0%a5%8d%e0%a4%b0%e0%a4%be%e0%a4%a5%e0%a4%ae%e0%a4%bf%e0%a4%95%e0%a4%a4%e0%a4%be-%e0%a4%b6%e0%a5%8d%e0%a4%b0%e0%a5%87%e0%a4%a3%e0%a5%80-%e0%a4%b5%e0%a4%be%e0%a4%b0-%e0%a4%b8%e0%a4%82-2/",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "kvs-recruitment",
+      "sourceName": "KVS — Recruitment notices",
+      "dept": "Kendriya Vidyalaya Sangathan",
+      "state": "All India",
+      "category": "teaching",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "708fae930d7c5800",
+      "title": "के. वि. सं. शुल्क संरचना",
+      "link": "https://kvsangathan.nic.in/%e0%a4%95%e0%a5%87%e0%a4%b5%e0%a5%80%e0%a4%8f%e0%a4%b8-%e0%a4%b6%e0%a5%81%e0%a4%b2%e0%a5%8d%e0%a4%95-%e0%a4%b8%e0%a4%82%e0%a4%b0%e0%a4%9a%e0%a4%a8%e0%a4%be/",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "kvs-recruitment",
+      "sourceName": "KVS — Recruitment notices",
+      "dept": "Kendriya Vidyalaya Sangathan",
+      "state": "All India",
+      "category": "teaching",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "f4de5643783af98f",
+      "title": "आईसीटी अवसंरचना",
+      "link": "https://kvsangathan.nic.in/%e0%a4%86%e0%a4%88%e0%a4%b8%e0%a5%80%e0%a4%9f%e0%a5%80-%e0%a4%85%e0%a4%b5%e0%a4%b8%e0%a4%82%e0%a4%b0%e0%a4%9a%e0%a4%a8%e0%a4%be/",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "kvs-recruitment",
+      "sourceName": "KVS — Recruitment notices",
+      "dept": "Kendriya Vidyalaya Sangathan",
+      "state": "All India",
+      "category": "teaching",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "1f841ffdec181624",
+      "title": "स्थानांतरण आदेश",
+      "link": "https://kvsangathan.nic.in/%e0%a4%b8%e0%a5%8d%e0%a4%a5%e0%a4%be%e0%a4%a8%e0%a4%be%e0%a4%82%e0%a4%a4%e0%a4%b0%e0%a4%a3-%e0%a4%86%e0%a4%a6%e0%a5%87%e0%a4%b6/",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "kvs-recruitment",
+      "sourceName": "KVS — Recruitment notices",
+      "dept": "Kendriya Vidyalaya Sangathan",
+      "state": "All India",
+      "category": "teaching",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "d17483019b6a4dae",
+      "title": "निर्माण गतिविधियाँ",
+      "link": "https://kvsangathan.nic.in/%e0%a4%a8%e0%a4%bf%e0%a4%b0%e0%a5%8d%e0%a4%ae%e0%a4%be%e0%a4%a3-%e0%a4%97%e0%a4%a4%e0%a4%bf%e0%a4%b5%e0%a4%bf%e0%a4%a7%e0%a4%bf%e0%a4%af%e0%a4%be%e0%a4%82/",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "kvs-recruitment",
+      "sourceName": "KVS — Recruitment notices",
+      "dept": "Kendriya Vidyalaya Sangathan",
+      "state": "All India",
+      "category": "teaching",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "f868cf977341f034",
+      "title": "संसाधन व्यक्तियों का समूह",
+      "link": "https://kvsangathan.nic.in/%e0%a4%b8%e0%a5%87%e0%a4%b5%e0%a4%be%e0%a4%95%e0%a4%be%e0%a4%b2%e0%a5%80%e0%a4%a8-%e0%a4%aa%e0%a4%be%e0%a4%a0%e0%a5%8d%e0%a4%af%e0%a4%95%e0%a5%8d%e0%a4%b0%e0%a4%ae/",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "kvs-recruitment",
+      "sourceName": "KVS — Recruitment notices",
+      "dept": "Kendriya Vidyalaya Sangathan",
+      "state": "All India",
+      "category": "teaching",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "274d4978d604ed19",
+      "title": "गणित फाउंडेशन चरण",
+      "link": "https://kvsangathan.nic.in/%e0%a4%97%e0%a4%a3%e0%a4%bf%e0%a4%a4-%e0%a4%95%e0%a5%80-%e0%a4%a4%e0%a5%88%e0%a4%af%e0%a4%be%e0%a4%b0%e0%a5%80-%e0%a4%95%e0%a4%be-%e0%a4%9a%e0%a4%b0%e0%a4%a3/",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "kvs-recruitment",
+      "sourceName": "KVS — Recruitment notices",
+      "dept": "Kendriya Vidyalaya Sangathan",
+      "state": "All India",
+      "category": "teaching",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "5f66c41eb26b1b84",
+      "title": "हिंदी फाउंडेशन चरण",
+      "link": "https://kvsangathan.nic.in/%e0%a4%b9%e0%a4%bf%e0%a4%82%e0%a4%a6%e0%a5%80-%e0%a4%aa%e0%a5%8d%e0%a4%b0%e0%a4%be%e0%a4%b0%e0%a4%82%e0%a4%ad%e0%a4%bf%e0%a4%95-%e0%a4%9a%e0%a4%b0%e0%a4%a3/",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "kvs-recruitment",
+      "sourceName": "KVS — Recruitment notices",
+      "dept": "Kendriya Vidyalaya Sangathan",
+      "state": "All India",
+      "category": "teaching",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "d0f0fd6c7d5092a5",
+      "title": "अंग्रेजी फाउंडेशन चरण",
+      "link": "https://kvsangathan.nic.in/%e0%a4%85%e0%a4%82%e0%a4%97%e0%a5%8d%e0%a4%b0%e0%a5%87%e0%a4%9c%e0%a4%bc%e0%a5%80/",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "kvs-recruitment",
+      "sourceName": "KVS — Recruitment notices",
+      "dept": "Kendriya Vidyalaya Sangathan",
+      "state": "All India",
+      "category": "teaching",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "a3c7ee955047b064",
+      "title": "विज्ञान मिडिल चरण",
+      "link": "https://kvsangathan.nic.in/%e0%a4%b5%e0%a4%bf%e0%a4%9c%e0%a5%8d%e0%a4%9e%e0%a4%be%e0%a4%a8-%e0%a4%ae%e0%a4%a7%e0%a5%8d%e0%a4%af-%e0%a4%9a%e0%a4%b0%e0%a4%a3/",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "kvs-recruitment",
+      "sourceName": "KVS — Recruitment notices",
+      "dept": "Kendriya Vidyalaya Sangathan",
+      "state": "All India",
+      "category": "teaching",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "31a34fd21dbb3d09",
+      "title": "सामाजिक विज्ञान मिडिल चरण",
+      "link": "https://kvsangathan.nic.in/%e0%a4%b8%e0%a4%be%e0%a4%ae%e0%a4%be%e0%a4%9c%e0%a4%bf%e0%a4%95-%e0%a4%b5%e0%a4%bf%e0%a4%9c%e0%a5%8d%e0%a4%9e%e0%a4%be%e0%a4%a8-%e0%a4%ae%e0%a4%a7%e0%a5%8d%e0%a4%af-%e0%a4%9a%e0%a4%b0%e0%a4%a3/",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "kvs-recruitment",
+      "sourceName": "KVS — Recruitment notices",
+      "dept": "Kendriya Vidyalaya Sangathan",
+      "state": "All India",
+      "category": "teaching",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "80b4a7f989dbfc35",
+      "title": "हिंदी मिडिल चरण",
+      "link": "https://kvsangathan.nic.in/%e0%a4%b9%e0%a4%bf%e0%a4%82%e0%a4%a6%e0%a5%80-%e0%a4%ae%e0%a4%a7%e0%a5%8d%e0%a4%af-%e0%a4%9a%e0%a4%b0%e0%a4%a3/",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "kvs-recruitment",
+      "sourceName": "KVS — Recruitment notices",
+      "dept": "Kendriya Vidyalaya Sangathan",
+      "state": "All India",
+      "category": "teaching",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "7ebf9c63f70aaa86",
+      "title": "भारत सरकार GOVERNMENT OF INDIA",
+      "link": "http://india.gov.in/",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "uppsc-hall-tickets",
+      "sourceName": "UPPSC — Hall tickets",
+      "dept": "Uttar Pradesh PSC",
+      "state": "Uttar Pradesh",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "a9fcc98ed02335af",
+      "title": "Go to Home Page",
+      "link": "https://uppsc.up.nic.in/Default.aspx",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "uppsc-hall-tickets",
+      "sourceName": "UPPSC — Hall tickets",
+      "dept": "Uttar Pradesh PSC",
+      "state": "Uttar Pradesh",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "2519a1e6ab344c0e",
+      "title": "{{'Home_HM' | translate }}",
+      "link": "https://uppsc.up.nic.in/Home",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "uppsc-hall-tickets",
+      "sourceName": "UPPSC — Hall tickets",
+      "dept": "Uttar Pradesh PSC",
+      "state": "Uttar Pradesh",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "0f75dcf763081892",
+      "title": "{{'TNC_HM' | translate }}",
+      "link": "https://uppsc.up.nic.in/FooterPages/tnc.aspx",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "uppsc-hall-tickets",
+      "sourceName": "UPPSC — Hall tickets",
+      "dept": "Uttar Pradesh PSC",
+      "state": "Uttar Pradesh",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "a25f606bedc4cb45",
+      "title": "{{'HLP_HM' | translate }}",
+      "link": "https://uppsc.up.nic.in/FooterPages/hlp.aspx",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "uppsc-hall-tickets",
+      "sourceName": "UPPSC — Hall tickets",
+      "dept": "Uttar Pradesh PSC",
+      "state": "Uttar Pradesh",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "2aaa2e40dcd1090a",
+      "title": "{{'CP_HM' | translate }}",
+      "link": "https://uppsc.up.nic.in/FooterPages/CopyrightPolicy.aspx",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "uppsc-hall-tickets",
+      "sourceName": "UPPSC — Hall tickets",
+      "dept": "Uttar Pradesh PSC",
+      "state": "Uttar Pradesh",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "34570ff59c6c357c",
+      "title": "{{'SCA_HM' | translate }}",
+      "link": "https://uppsc.up.nic.in/FooterPages/ScreenAccess.aspx",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "uppsc-hall-tickets",
+      "sourceName": "UPPSC — Hall tickets",
+      "dept": "Uttar Pradesh PSC",
+      "state": "Uttar Pradesh",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "da6f0da546f1ccb3",
+      "title": "{{'DIS_HM' | translate }}",
+      "link": "https://uppsc.up.nic.in/FooterPages/Disclaimer.aspx",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "uppsc-hall-tickets",
+      "sourceName": "UPPSC — Hall tickets",
+      "dept": "Uttar Pradesh PSC",
+      "state": "Uttar Pradesh",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "3380a1e1786d6dc5",
+      "title": "{{'RTI_HM' | translate }}",
+      "link": "https://uppsc.up.nic.in/FooterPages/RTI.aspx",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "uppsc-hall-tickets",
+      "sourceName": "UPPSC — Hall tickets",
+      "dept": "Uttar Pradesh PSC",
+      "state": "Uttar Pradesh",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "23542436dab53d3a",
+      "title": "{{'ActiveExam_HM' | translate }}",
+      "link": "https://uppsc.up.nic.in/FooterPages/Upcoming-Exams",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "uppsc-hall-tickets",
+      "sourceName": "UPPSC — Hall tickets",
+      "dept": "Uttar Pradesh PSC",
+      "state": "Uttar Pradesh",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "2ca41b3dc963c620",
+      "title": "{{'OnlineNotifications_HM' | translate }}",
+      "link": "https://uppsc.up.nic.in/CandidatePages/Notifications.aspx",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "uppsc-hall-tickets",
+      "sourceName": "UPPSC — Hall tickets",
+      "dept": "Uttar Pradesh PSC",
+      "state": "Uttar Pradesh",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "519936d07334ada1",
+      "title": "{{'InterviewOnly_HM' | translate }}",
+      "link": "https://uppsc.up.nic.in/PublicPages/Recruitment_Details.aspx?ID=IO",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "uppsc-hall-tickets",
+      "sourceName": "UPPSC — Hall tickets",
+      "dept": "Uttar Pradesh PSC",
+      "state": "Uttar Pradesh",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "1b370092b3faa91c",
+      "title": "{{'ScreeningTestInt_HM' | translate }}",
+      "link": "https://uppsc.up.nic.in/PublicPages/Recruitment_Details.aspx?ID=SI",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "uppsc-hall-tickets",
+      "sourceName": "UPPSC — Hall tickets",
+      "dept": "Uttar Pradesh PSC",
+      "state": "Uttar Pradesh",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "2804b706c240ad91",
+      "title": "{{'ExaminationOnly_HM' | translate }}",
+      "link": "https://uppsc.up.nic.in/PublicPages/Recruitment_Details.aspx?ID=EO",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "uppsc-hall-tickets",
+      "sourceName": "UPPSC — Hall tickets",
+      "dept": "Uttar Pradesh PSC",
+      "state": "Uttar Pradesh",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "0cf2394e8bd82b4a",
+      "title": "{{'ExaminationAndInterviewOnly_HM' | translate }}",
+      "link": "https://uppsc.up.nic.in/PublicPages/Recruitment_Details.aspx?ID=EI",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "uppsc-hall-tickets",
+      "sourceName": "UPPSC — Hall tickets",
+      "dept": "Uttar Pradesh PSC",
+      "state": "Uttar Pradesh",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "ef37c34b90d3551d",
+      "title": "{{'PreExamMainExamInt_HM' | translate }}",
+      "link": "https://uppsc.up.nic.in/PublicPages/Recruitment_Details.aspx?ID=EIM",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "uppsc-hall-tickets",
+      "sourceName": "UPPSC — Hall tickets",
+      "dept": "Uttar Pradesh PSC",
+      "state": "Uttar Pradesh",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "a9f87c5eb39a8f07",
+      "title": "{{'DwldAdminCard_HM' | translate }}",
+      "link": "https://uppsc.up.nic.in/CandidatePages/Advertismentwise_DownloadDocument.aspx?inptprmtr=ac",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "uppsc-hall-tickets",
+      "sourceName": "UPPSC — Hall tickets",
+      "dept": "Uttar Pradesh PSC",
+      "state": "Uttar Pradesh",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "1f79f8698e4f7bad",
+      "title": "{{'DwldInterviewLetterDirect_HM' | translate }}",
+      "link": "https://uppsc.up.nic.in/CandidatePages/IntLtr/Interview_DetailsShowByAdvertisement_New.aspx",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "uppsc-hall-tickets",
+      "sourceName": "UPPSC — Hall tickets",
+      "dept": "Uttar Pradesh PSC",
+      "state": "Uttar Pradesh",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "c6b617289860a992",
+      "title": "{{'ExamCal_HM' | translate }}",
+      "link": "https://uppsc.up.nic.in/PublicPages/Examinations_Details.aspx?ID=EC",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "uppsc-hall-tickets",
+      "sourceName": "UPPSC — Hall tickets",
+      "dept": "Uttar Pradesh PSC",
+      "state": "Uttar Pradesh",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "c8061a61f2078df7",
+      "title": "{{'TheCommission_HM' | translate }}",
+      "link": "https://uppsc.up.nic.in/PublicPages/com.aspx?ID=DE",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "uppsc-hall-tickets",
+      "sourceName": "UPPSC — Hall tickets",
+      "dept": "Uttar Pradesh PSC",
+      "state": "Uttar Pradesh",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "94b006c26bff79a5",
+      "title": "{{'SetupofCommission_HM' | translate }}",
+      "link": "https://uppsc.up.nic.in/PublicPages/com.aspx?ID=CC",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "uppsc-hall-tickets",
+      "sourceName": "UPPSC — Hall tickets",
+      "dept": "Uttar Pradesh PSC",
+      "state": "Uttar Pradesh",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "1696b42f0e6f8334",
+      "title": "{{'FunctionCommission_HM' | translate }}",
+      "link": "https://uppsc.up.nic.in/PublicPages/com.aspx?ID=FC",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "uppsc-hall-tickets",
+      "sourceName": "UPPSC — Hall tickets",
+      "dept": "Uttar Pradesh PSC",
+      "state": "Uttar Pradesh",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "dc6edcffd94bad80",
+      "title": "{{'Examinations_HM' | translate }}",
+      "link": "https://uppsc.up.nic.in/#",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "uppsc-hall-tickets",
+      "sourceName": "UPPSC — Hall tickets",
+      "dept": "Uttar Pradesh PSC",
+      "state": "Uttar Pradesh",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "0fdf8bced793a20c",
+      "title": "{{'AppDashBoard_HM' | translate }}",
+      "link": "https://uppsc.up.nic.in/CandidatePages/OTRAppForm/Applicant_OtrAuthentication.aspx?WEqGEem9m0+8Y4tNQqJiNYurmbKsjJR/fgSlThSTh6o=",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "uppsc-hall-tickets",
+      "sourceName": "UPPSC — Hall tickets",
+      "dept": "Uttar Pradesh PSC",
+      "state": "Uttar Pradesh",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "206ead0ac32afa2e",
+      "title": "NOTICE REGARDING ADMIT CARD FOR ADVT. NO. A-1/E-1/2025, ASSISTANT CONSERVATOR OF..",
+      "link": "https://uppsc.up.nic.in/Open_PDF_DB.aspx?I4PnQ0tBagkC/gT4ITeNgr2lGuWeHTiD",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "uppsc-hall-tickets",
+      "sourceName": "UPPSC — Hall tickets",
+      "dept": "Uttar Pradesh PSC",
+      "state": "Uttar Pradesh",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "e3bde09b9ce1d605",
+      "title": "NOTICE REGARDING ADMIT CARD FOR ADVT. NO. A-5/E-1/2025, ASSISTANT TEACHER, TRAIN..",
+      "link": "https://uppsc.up.nic.in/Open_PDF_DB.aspx?I4PnQ0tBagkC/gT4ITeNgk2BzngWWzFg",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "uppsc-hall-tickets",
+      "sourceName": "UPPSC — Hall tickets",
+      "dept": "Uttar Pradesh PSC",
+      "state": "Uttar Pradesh",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "6d7bd8d10cd11d26",
+      "title": "NOTICE REGARDING ADMIT CARD FOR ADVT. NO. A-5/E-1/2025, ASSISTANT TEACHER, TRAIN..",
+      "link": "https://uppsc.up.nic.in/Open_PDF_DB.aspx?I4PnQ0tBaglAQaJlk9zBXlhOEDhP/tIb",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "uppsc-hall-tickets",
+      "sourceName": "UPPSC — Hall tickets",
+      "dept": "Uttar Pradesh PSC",
+      "state": "Uttar Pradesh",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "4c7420e82ddff65b",
+      "title": "NOTICE REGARDING ADMIT CARD FOR ADVT. NO. A-5/E-1/2025, ASSISTANT TEACHER, TRAIN..",
+      "link": "https://uppsc.up.nic.in/Open_PDF_DB.aspx?I4PnQ0tBaglAQaJlk9zBXrKsgj5nzxPY",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "uppsc-hall-tickets",
+      "sourceName": "UPPSC — Hall tickets",
+      "dept": "Uttar Pradesh PSC",
+      "state": "Uttar Pradesh",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "109b191431bd3b87",
+      "title": "NOTICE REGARDING ADMIT CARD FOR ADVT. NO. A-5/E-1/2025, ASSISTANT TEACHER, TRAIN..",
+      "link": "https://uppsc.up.nic.in/Open_PDF_DB.aspx?I4PnQ0tBaglAQaJlk9zBXllKWjcL56ha",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "uppsc-hall-tickets",
+      "sourceName": "UPPSC — Hall tickets",
+      "dept": "Uttar Pradesh PSC",
+      "state": "Uttar Pradesh",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "a432d8eed1a0dfed",
+      "title": "CORRIGENDUM NOTICE REGARDING ADVT.NO.D-6/E-1/2025, DIRECTORATE OF HOMOEOPATHY UT..",
+      "link": "https://uppsc.up.nic.in/Open_PDF_DB.aspx?I4PnQ0tBagkz0o52o77EYRiV9UshCHNK",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "uppsc-hall-tickets",
+      "sourceName": "UPPSC — Hall tickets",
+      "dept": "Uttar Pradesh PSC",
+      "state": "Uttar Pradesh",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "4b878c9fa6d0c6b1",
+      "title": "CORRIGENDUM NOTICE REGARDING ADVT.NO.D-6/E-1/2025, DIRECTORATE OF UNANI UTTAR PR..",
+      "link": "https://uppsc.up.nic.in/Open_PDF_DB.aspx?I4PnQ0tBagkz0o52o77EYadVpmKbwEUn",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "uppsc-hall-tickets",
+      "sourceName": "UPPSC — Hall tickets",
+      "dept": "Uttar Pradesh PSC",
+      "state": "Uttar Pradesh",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "002b75be89c5cb1f",
+      "title": "RESULT OF CANDIDATE SELECTED IN ADVT NO. D-4/E-1/2025 FOR THE POST OF REGIONAL A..",
+      "link": "https://uppsc.up.nic.in/Open_PDF_DB.aspx?I4PnQ0tBagloISrijFpWKJK4mFkCc1xW",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "uppsc-hall-tickets",
+      "sourceName": "UPPSC — Hall tickets",
+      "dept": "Uttar Pradesh PSC",
+      "state": "Uttar Pradesh",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "9b89e96e36d4f7b0",
+      "title": "LIST OF PROVISIONALLY SELECTED CANDIDATES AS SUPPLEMENTARY RESULT IN ADVT NO A-3..",
+      "link": "https://uppsc.up.nic.in/Open_PDF_DB.aspx?I4PnQ0tBagloISrijFpWKD2C54bGK0YR",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "uppsc-hall-tickets",
+      "sourceName": "UPPSC — Hall tickets",
+      "dept": "Uttar Pradesh PSC",
+      "state": "Uttar Pradesh",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "77ba4f9903f6e25e",
+      "title": "NOTICE REGARDING ADVT. NO. A-4/E-1/2025, COMPUTER ASSISTANT (UPPSC) EXAM-2025",
+      "link": "https://uppsc.up.nic.in/Open_PDF_DB.aspx?I4PnQ0tBagloISrijFpWKC1ZE/PjW2XD",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "uppsc-hall-tickets",
+      "sourceName": "UPPSC — Hall tickets",
+      "dept": "Uttar Pradesh PSC",
+      "state": "Uttar Pradesh",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "a083637aa0a5a45f",
+      "title": "NOTICE REGARDING ADVT. NO. D-6/E-1/2025, DIRECTORATE GENERAL OF FAMILY WELFARE U..",
+      "link": "https://uppsc.up.nic.in/Open_PDF_DB.aspx?I4PnQ0tBagnFvgVqjblDZARklky4+2Ju",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "uppsc-hall-tickets",
+      "sourceName": "UPPSC — Hall tickets",
+      "dept": "Uttar Pradesh PSC",
+      "state": "Uttar Pradesh",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "41d7a69fe7e325a5",
+      "title": "24 Oct 2026 CORRIGENDUM NOTICE REGARDING ADVT.NO.D-6/E-1/2025, DIRECTORATE OF HOMOEOPATHY UTTAR PRADESH / HOMOEOPATHIC MEDICAL OFFICER, S-11/32",
+      "link": "https://uppsc.up.nic.in/Open_PDF.aspx?I4PnQ0tBagkz0o52o77EYehACV4lKyrV",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "uppsc-hall-tickets",
+      "sourceName": "UPPSC — Hall tickets",
+      "dept": "Uttar Pradesh PSC",
+      "state": "Uttar Pradesh",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "e69479749b3f0319",
+      "title": "18 Dec 2026 CORRIGENDUM NOTICE REGARDING ADVT.NO.D-6/E-1/2025, DIRECTORATE OF UNANI UTTAR PRADESH / CHIKITSA ADHIKARI (UNANI), S-11/30",
+      "link": "https://uppsc.up.nic.in/Open_PDF.aspx?I4PnQ0tBagkz0o52o77EYd5icBBuNfGC",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "uppsc-hall-tickets",
+      "sourceName": "UPPSC — Hall tickets",
+      "dept": "Uttar Pradesh PSC",
+      "state": "Uttar Pradesh",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "d18260da694aeedc",
+      "title": "11 Jul 2026 NOTICE REGARDING ADVT. NO. A-5/E-1/2025, ASSISTANT TEACHER, TRAINED GRADUATE GRADE (M/F BRANCH) (MAINS.)EXAM-2025 (HINDI, SOCIAL SCIENCE, PHYSICAL ED.....",
+      "link": "https://uppsc.up.nic.in/Open_PDF.aspx?I4PnQ0tBagktt06NhTTxwvHFJTvTuEgu",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "uppsc-hall-tickets",
+      "sourceName": "UPPSC — Hall tickets",
+      "dept": "Uttar Pradesh PSC",
+      "state": "Uttar Pradesh",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "5a1ddb365b9f109d",
+      "title": "02 Aug 2026 LIST OF SELECTED CANDIDATES IN ADVT. NO. A-7/E-1/2021, U.P. TECHNICAL EDUCATION (TEACHING) SERVICE EXAMINATION-2021, LECT. INT.DSG.DECO.,FOOTWEAR,INS.....",
+      "link": "https://uppsc.up.nic.in/Open_PDF.aspx?I4PnQ0tBagkz0o52o77EYfBBw0BmR5fX",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "uppsc-hall-tickets",
+      "sourceName": "UPPSC — Hall tickets",
+      "dept": "Uttar Pradesh PSC",
+      "state": "Uttar Pradesh",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "d40841a3ad176246",
+      "title": "25 Jul 2026 LIST OF SELECTED CANDIDATES IN ADVT. NO. A-7/E-1/2021, U.P. TECHNICAL EDUCATION (TEACHING) SERVICE EXAMINATION-2021, LECT. ARCHITECTURE, PHARMACY, TE.....",
+      "link": "https://uppsc.up.nic.in/Open_PDF.aspx?I4PnQ0tBagloISrijFpWKFd9gEzGHmbY",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "uppsc-hall-tickets",
+      "sourceName": "UPPSC — Hall tickets",
+      "dept": "Uttar Pradesh PSC",
+      "state": "Uttar Pradesh",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "16fbfdd1b5a58249",
+      "title": "22 Jul 2026 RESULT OF CANDIDATE SELECTED IN ADVT NO. D-4/E-1/2025 FOR THE POST OF REGIONAL ARCHIVES OFFICER (S-03/05)",
+      "link": "https://uppsc.up.nic.in/Open_PDF.aspx?I4PnQ0tBagloISrijFpWKHbmEhtQCS5P",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "uppsc-hall-tickets",
+      "sourceName": "UPPSC — Hall tickets",
+      "dept": "Uttar Pradesh PSC",
+      "state": "Uttar Pradesh",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "82117dcbe336dd36",
+      "title": "22 Jul 2026 LIST OF PROVISIONALLY SELECTED CANDIDATES AS SUPPLEMENTARY RESULT IN ADVT NO A-3/E-1/2023 STAFF NURSE (MALE/FEMALE) (ALLOPATHY) EXAM 2023",
+      "link": "https://uppsc.up.nic.in/Open_PDF.aspx?I4PnQ0tBagloISrijFpWKKXLfSDf9AY8",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "uppsc-hall-tickets",
+      "sourceName": "UPPSC — Hall tickets",
+      "dept": "Uttar Pradesh PSC",
+      "state": "Uttar Pradesh",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "ee12a8dab0ad68f2",
+      "title": "More >>",
+      "link": "https://uppsc.up.nic.in/FooterPages/Results",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "uppsc-hall-tickets",
+      "sourceName": "UPPSC — Hall tickets",
+      "dept": "Uttar Pradesh PSC",
+      "state": "Uttar Pradesh",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "e560b5905b906211",
+      "title": "11 Jul 2026 NOTICE REGARDING ADVT. NO. A-5/E-1/2025, ASSISTANT TEACHER, TRAINED GRADUATE GRADE (M/F BRANCH) MAINS EXAM-2025, (SUBJECT-PHYSICAL EDUCATION)",
+      "link": "https://uppsc.up.nic.in/Open_PDF.aspx?I4PnQ0tBaglVdAQBMoJOOMuDtCs5Lh0l",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "uppsc-hall-tickets",
+      "sourceName": "UPPSC — Hall tickets",
+      "dept": "Uttar Pradesh PSC",
+      "state": "Uttar Pradesh",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "52148a17365131ed",
+      "title": "28 Jul 2026 NOTICE REGARDING ADMIT CARD FOR ADVT. NO. A-1/E-1/2025, ASSISTANT CONSERVATOR OF FOREST (A.C.F.) / RANGE FOREST OFFICER (R.F.O.) SERVICES (MAINS) EXA.....",
+      "link": "https://uppsc.up.nic.in/Open_PDF.aspx?I4PnQ0tBagkC/gT4ITeNgto2OzZNOra1",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "uppsc-hall-tickets",
+      "sourceName": "UPPSC — Hall tickets",
+      "dept": "Uttar Pradesh PSC",
+      "state": "Uttar Pradesh",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "f569e8ea9b6e8d94",
+      "title": "11 Jul 2026 NOTICE REGARDING ADMIT CARD FOR ADVT. NO. A-5/E-1/2025, ASSISTANT TEACHER, TRAINED GRADUATE GRADE (MALE / FEMALE BRANCH) (MAINS) EXAM - 2025 (PHYSICA.....",
+      "link": "https://uppsc.up.nic.in/Open_PDF.aspx?I4PnQ0tBagkC/gT4ITeNgmqeGxb9F+t6",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "uppsc-hall-tickets",
+      "sourceName": "UPPSC — Hall tickets",
+      "dept": "Uttar Pradesh PSC",
+      "state": "Uttar Pradesh",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "a29ecf7085806277",
+      "title": "11 Jul 2026 NOTICE REGARDING ADMIT CARD FOR ADVT. NO. A-5/E-1/2025, ASSISTANT TEACHER, TRAINED GRADUATE GRADE (MALE / FEMALE BRANCH) (MAINS) EXAM - 2025 (SOCIAL .....",
+      "link": "https://uppsc.up.nic.in/Open_PDF.aspx?I4PnQ0tBaglAQaJlk9zBXsC5HrYKge8K",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "uppsc-hall-tickets",
+      "sourceName": "UPPSC — Hall tickets",
+      "dept": "Uttar Pradesh PSC",
+      "state": "Uttar Pradesh",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "e4e63dd136d43111",
+      "title": "11 Jul 2026 NOTICE REGARDING ADMIT CARD FOR ADVT. NO. A-5/E-1/2025, ASSISTANT TEACHER, TRAINED GRADUATE GRADE (MALE / FEMALE BRANCH) (MAINS) EXAM - 2025 (HINDI)",
+      "link": "https://uppsc.up.nic.in/Open_PDF.aspx?I4PnQ0tBaglAQaJlk9zBXuQeFh5HTaCG",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "uppsc-hall-tickets",
+      "sourceName": "UPPSC — Hall tickets",
+      "dept": "Uttar Pradesh PSC",
+      "state": "Uttar Pradesh",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "12ca81e8e0617c5b",
+      "title": "Click here to view List of Candidates who are not selected in P.C.S. Examination-2022, but Qualified for Interview in P.C.S - 2022 (In Merit Order).",
+      "link": "https://uppsc.up.nic.in/Open_PDF.aspx?I4PnQ0tBagk9q6upnHHyW7Pdh9qfF6wa",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "uppsc-hall-tickets",
+      "sourceName": "UPPSC — Hall tickets",
+      "dept": "Uttar Pradesh PSC",
+      "state": "Uttar Pradesh",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "1925fbed62f4bfd9",
+      "title": "{{'DisplayNoticeE_HM' | translate }}",
+      "link": "https://uppsc.up.nic.in/OuterPages/DisplayOnlineNotice.aspx?ID=1",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "uppsc-hall-tickets",
+      "sourceName": "UPPSC — Hall tickets",
+      "dept": "Uttar Pradesh PSC",
+      "state": "Uttar Pradesh",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "09afeaebe939c4f5",
+      "title": "{{'DisplayNoticeI_HM' | translate }}",
+      "link": "https://uppsc.up.nic.in/OuterPages/DisplayOnlineNotice.aspx?ID=2",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "uppsc-hall-tickets",
+      "sourceName": "UPPSC — Hall tickets",
+      "dept": "Uttar Pradesh PSC",
+      "state": "Uttar Pradesh",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "27905717ab620382",
+      "title": "UPPSC Exam Calendar 2026",
+      "link": "https://uppsc.up.nic.in/Open_PDF_DB.aspx?I4PnQ0tBagmIqec6cDg6BUi0bxHlS/Ba",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "uppsc-hall-tickets",
+      "sourceName": "UPPSC — Hall tickets",
+      "dept": "Uttar Pradesh PSC",
+      "state": "Uttar Pradesh",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "a634b3485bc81255",
+      "title": "{{'ConstitutionalProvisions_HM' | translate }}",
+      "link": "https://uppsc.up.nic.in/PublicPages/com.aspx?ID=CP",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "uppsc-hall-tickets",
+      "sourceName": "UPPSC — Hall tickets",
+      "dept": "Uttar Pradesh PSC",
+      "state": "Uttar Pradesh",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "07698180198a1da2",
+      "title": "{{'OrganisationStructure_HM' | translate }}",
+      "link": "https://uppsc.up.nic.in/PublicPages/com.aspx?ID=OS",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "uppsc-hall-tickets",
+      "sourceName": "UPPSC — Hall tickets",
+      "dept": "Uttar Pradesh PSC",
+      "state": "Uttar Pradesh",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "b90b93067d08357a",
+      "title": "{{'CitizensCharter_HM' | translate }}",
+      "link": "https://uppsc.up.nic.in/PublicPages/com.aspx?ID=CZ",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "uppsc-hall-tickets",
+      "sourceName": "UPPSC — Hall tickets",
+      "dept": "Uttar Pradesh PSC",
+      "state": "Uttar Pradesh",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "130ee61970b2c5f7",
+      "title": "{{'DebardAppList_HM' | translate }}",
+      "link": "https://uppsc.up.nic.in/PublicPages/ReptDebardList.aspx?ID=dcl",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "uppsc-hall-tickets",
+      "sourceName": "UPPSC — Hall tickets",
+      "dept": "Uttar Pradesh PSC",
+      "state": "Uttar Pradesh",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "5604f42a701f8596",
+      "title": "{{'DebardECList_HM' | translate }}",
+      "link": "https://uppsc.up.nic.in/PublicPages/ReptDebardList.aspx?ID=decl",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "uppsc-hall-tickets",
+      "sourceName": "UPPSC — Hall tickets",
+      "dept": "Uttar Pradesh PSC",
+      "state": "Uttar Pradesh",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "b0bffe686b717646",
+      "title": "{{'ExpertForm_HM' | translate }}",
+      "link": "https://uppsc.up.nic.in/ExpertCorner/Frm_ExpertBioData.aspx",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "uppsc-hall-tickets",
+      "sourceName": "UPPSC — Hall tickets",
+      "dept": "Uttar Pradesh PSC",
+      "state": "Uttar Pradesh",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "e4eef873e191a139",
+      "title": "{{'CheckApp_HM' | translate }}",
+      "link": "https://uppsc.up.nic.in/CandidatePages/Status/ViewStatus.aspx",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "uppsc-hall-tickets",
+      "sourceName": "UPPSC — Hall tickets",
+      "dept": "Uttar Pradesh PSC",
+      "state": "Uttar Pradesh",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "de838a08989288b7",
+      "title": "{{'DwldEligibilityFormDirect_HM' | translate }}",
+      "link": "https://uppsc.up.nic.in/CandidatePages/ElgbtChkg/DownloadForm_EligibilityChecking_New.aspx",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "uppsc-hall-tickets",
+      "sourceName": "UPPSC — Hall tickets",
+      "dept": "Uttar Pradesh PSC",
+      "state": "Uttar Pradesh",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    }
+  ]
+}

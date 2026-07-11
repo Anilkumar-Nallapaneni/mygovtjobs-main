@@ -1,279 +1,7 @@
 {
-  "generatedAt": "2026-07-11T05:17:50.022Z",
-  "count": 565,
+  "generatedAt": "2026-07-11T06:38:57.332Z",
+  "count": 567,
   "items": [
-    {
-      "id": "c4c9266da946f3d2",
-      "title": "Marks of Recommended Candidates",
-      "link": "https://www.upsc.gov.in/examinations/marks-recommended-candidates",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "upsc-notifications",
-      "sourceName": "UPSC — What's New",
-      "dept": "Union Public Service Commission",
-      "state": "All India",
-      "category": "upsc",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "9f46af2ef87ad857",
-      "title": "Marks of Recommended Candidates (Reserve List)",
-      "link": "https://www.upsc.gov.in/examinations/marks-recommended-candidates-reserve-list",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "upsc-notifications",
-      "sourceName": "UPSC — What's New",
-      "dept": "Union Public Service Commission",
-      "state": "All India",
-      "category": "upsc",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "b5be7a7c543cf96d",
-      "title": "Final Result: 11 Posts of Assistant Director Grade-I (IEDS) (Leather & Footwear), Ministry of MSME",
-      "link": "https://www.upsc.gov.in/whats-new/11%20Posts%20of%20Assistant%20Director%20Grade-I%20(IEDS)%20(Leather%20&%20Footwear),%20Ministry%20of%20MSME/Final%20Result",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "upsc-notifications",
-      "sourceName": "UPSC — What's New",
-      "dept": "Union Public Service Commission",
-      "state": "All India",
-      "category": "upsc",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "bfd162485b54a261",
-      "title": "Final Result: 02 Posts of Scientific Officer, Ministry of Culture",
-      "link": "https://www.upsc.gov.in/whats-new/02%20Posts%20of%20Scientific%20Officer,%20Ministry%20of%20Culture/Final%20Result",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "upsc-notifications",
-      "sourceName": "UPSC — What's New",
-      "dept": "Union Public Service Commission",
-      "state": "All India",
-      "category": "upsc",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "110cc8918aa672c7",
-      "title": "Written Result: 19 Posts of Tutor, Lady Hardinge Medical College & Smt. Sucheta Kriplani Hospital",
-      "link": "https://www.upsc.gov.in/whats-new/19%20Posts%20of%20Tutor,%20Lady%20Hardinge%20Medical%20College%20&%20Smt.%20Sucheta%20Kriplani%20Hospital/Written%20Result",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "upsc-notifications",
-      "sourceName": "UPSC — What's New",
-      "dept": "Union Public Service Commission",
-      "state": "All India",
-      "category": "upsc",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "c411c81b02c200fc",
-      "title": "Written Result: 04 Posts of Homoeopathic Physician in NDMC",
-      "link": "https://www.upsc.gov.in/whats-new/04%20Posts%20of%20Homoeopathic%20Physician%20in%20NDMC/Written%20Result",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "upsc-notifications",
-      "sourceName": "UPSC — What's New",
-      "dept": "Union Public Service Commission",
-      "state": "All India",
-      "category": "upsc",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "25957800d8cd42d3",
-      "title": "Written Result: 45 Posts of Assistant Director (Systems), Ministry of Finance",
-      "link": "https://www.upsc.gov.in/whats-new/45%20Posts%20of%20Assistant%20Director%20(Systems),%20Ministry%20of%20Finance/Written%20Result",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "upsc-notifications",
-      "sourceName": "UPSC — What's New",
-      "dept": "Union Public Service Commission",
-      "state": "All India",
-      "category": "upsc",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "f527369019c0a734",
-      "title": "Written Result: 01 Post of Data Processing Assistant, Ministry of Defence",
-      "link": "https://www.upsc.gov.in/whats-new/01%20Post%20of%20Data%20Processing%20Assistant,%20Ministry%20of%20Defence/Written%20Result",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "upsc-notifications",
-      "sourceName": "UPSC — What's New",
-      "dept": "Union Public Service Commission",
-      "state": "All India",
-      "category": "upsc",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "e040280dcfcf130b",
-      "title": "Final Result: Combined Section Officers' (Grade 'B') LDCE-2025 and Combined Stenographers' (Grade 'B'-Grade-'I') LDCE-2019, 2020 & 2021",
-      "link": "https://www.upsc.gov.in/whats-new/Combined%20Section%20Officers%27%20%28Grade%20%27B%27%29%20LDCE-2025%20and%20Combined%20Stenographers%27%20%28Grade%20%27B%27-Grade-%27I%27%29%20LDCE-2019%2C%202020%20%26%202021/Final%20Result",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "upsc-notifications",
-      "sourceName": "UPSC — What's New",
-      "dept": "Union Public Service Commission",
-      "state": "All India",
-      "category": "upsc",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "2074a3b6476fb693",
-      "title": "Final Result: 09 Posts of Medical Officer (Ayurveda), Govt. of Puducherry",
-      "link": "https://www.upsc.gov.in/whats-new/09%20Posts%20of%20Medical%20Officer%20(Ayurveda),%20Govt.%20of%20Puducherry/Final%20Result",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "upsc-notifications",
-      "sourceName": "UPSC — What's New",
-      "dept": "Union Public Service Commission",
-      "state": "All India",
-      "category": "upsc",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "2601f9246c2a58c0",
-      "title": "Written Result (with name): Civil Services (Preliminary) Examination, 2026",
-      "link": "https://www.upsc.gov.in/whats-new/Civil%20Services%20%28Preliminary%29%20Examination%2C%202026/Written%20Result%20%28with%20name%29",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "upsc-notifications",
-      "sourceName": "UPSC — What's New",
-      "dept": "Union Public Service Commission",
-      "state": "All India",
-      "category": "upsc",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "56bd79701e7841ef",
-      "title": "Written Result (with name): Indian Forest Service (Preliminary) Examination, 2026 through CS(P) Examination, 2026",
-      "link": "https://www.upsc.gov.in/whats-new/Indian%20Forest%20Service%20%28Preliminary%29%20Examination%2C%202026%20through%20CS%28P%29%20Examination%2C%202026/Written%20Result%20%28with%20name%29",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "upsc-notifications",
-      "sourceName": "UPSC — What's New",
-      "dept": "Union Public Service Commission",
-      "state": "All India",
-      "category": "upsc",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "5e1a204629e1bda7",
-      "title": "Written Result: Indian Forest Service (Preliminary) Examination, 2026 through CS(P) Examination, 2026",
-      "link": "https://www.upsc.gov.in/whats-new/Indian%20Forest%20Service%20%28Preliminary%29%20Examination%2C%202026%20through%20CS%28P%29%20Examination%2C%202026/Written%20Result",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "upsc-notifications",
-      "sourceName": "UPSC — What's New",
-      "dept": "Union Public Service Commission",
-      "state": "All India",
-      "category": "upsc",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "37dd0b3d87677f96",
-      "title": "Written Result: Civil Services (Preliminary) Examination, 2026",
-      "link": "https://www.upsc.gov.in/whats-new/Civil%20Services%20%28Preliminary%29%20Examination%2C%202026/Written%20Result",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "upsc-notifications",
-      "sourceName": "UPSC — What's New",
-      "dept": "Union Public Service Commission",
-      "state": "All India",
-      "category": "upsc",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "246cf795a95a5a9f",
-      "title": "Cut-off Marks",
-      "link": "https://www.upsc.gov.in/examinations/cutoff-marks--",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "upsc-notifications",
-      "sourceName": "UPSC — What's New",
-      "dept": "Union Public Service Commission",
-      "state": "All India",
-      "category": "upsc",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "bf2ab913def084c8",
-      "title": "Marks Information",
-      "link": "https://upsconline.gov.in/marksheet/exam/marksheet_system/",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "upsc-notifications",
-      "sourceName": "UPSC — What's New",
-      "dept": "Union Public Service Commission",
-      "state": "All India",
-      "category": "upsc",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
     {
       "id": "4238c4faeae7a88c",
       "title": "Advt No. DOS/IV/1/2026 - Result for Engaging as Legal Consultant in DOS on contract basis Read More",
@@ -396,114 +124,6 @@
       "dept": "Kendriya Vidyalaya Sangathan",
       "state": "All India",
       "category": "teaching",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "79a1e771787e9b6a",
-      "title": "Subject Knowledge Test Result dated 04.07.2026 for the posts of Post Graduate Teacher (PGT) in the subject of Computer Science for Rest of Haryana Cadre & Mewat Cadre (Advt. No. 23/2026)",
-      "link": "https://hpsc.gov.in/Portals/0/SKT_Result_PGT_CS_04_07_2026.pdf",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [
-        "https://hpsc.gov.in/Portals/0/SKT_Result_PGT_CS_04_07_2026.pdf"
-      ],
-      "sourceId": "psc-hr-notifications",
-      "sourceName": "HPSC — Recruitment",
-      "dept": "Haryana PSC",
-      "state": "Haryana",
-      "category": "state",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "86b865539e361b0d",
-      "title": "Marks of all Interviewed Candidates",
-      "link": "http://hpsc.gov.in/en-us/Examination/Marks-of-all-Interviewed-Candidates",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-hr-notifications",
-      "sourceName": "HPSC — Recruitment",
-      "dept": "Haryana PSC",
-      "state": "Haryana",
-      "category": "state",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "10bf12b53e6cd695",
-      "title": "Marks of Subject Knowledge Test for all candidates",
-      "link": "http://hpsc.gov.in/en-us/Examination/Marks-of-Subject-Knowledge-Test-for-all-candidates",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-hr-notifications",
-      "sourceName": "HPSC — Recruitment",
-      "dept": "Haryana PSC",
-      "state": "Haryana",
-      "category": "state",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "e20e1897c955e09d",
-      "title": "Roll No. wise marks dated 09.07.2026 of all candidates who appeared in the Subject Knowledge Test for the posts of Assistant Professor (College Cadre) in the subject of Music (Vocal) in Higher Education Department (Advt. No. 58/2024)",
-      "link": "https://hpsc.gov.in/Portals/0/Rollwisemarks_SKT_Music_Vocal_09_07_2026.pdf",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [
-        "https://hpsc.gov.in/Portals/0/Rollwisemarks_SKT_Music_Vocal_09_07_2026.pdf"
-      ],
-      "sourceId": "psc-hr-notifications",
-      "sourceName": "HPSC — Recruitment",
-      "dept": "Haryana PSC",
-      "state": "Haryana",
-      "category": "state",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "4fcdf88267687a6a",
-      "title": "Roll No. wise marks dated 08.07.2026 of all candidates who appeared in the Subject Knowledge Test for the posts of Assistant Professor (College Cadre) in the subject of Sanskrit (Advt. No. 65/2024)",
-      "link": "https://hpsc.gov.in/Portals/0/Roll_wisemarks_SKT_AP_Sankrit_08_07_2026.pdf",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [
-        "https://hpsc.gov.in/Portals/0/Roll_wisemarks_SKT_AP_Sankrit_08_07_2026.pdf"
-      ],
-      "sourceId": "psc-hr-notifications",
-      "sourceName": "HPSC — Recruitment",
-      "dept": "Haryana PSC",
-      "state": "Haryana",
-      "category": "state",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "7606dfea71c92c42",
-      "title": "Marks of the Screening Test",
-      "link": "http://hpsc.gov.in/en-us/Marks",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-hr-notifications",
-      "sourceName": "HPSC — Recruitment",
-      "dept": "Haryana PSC",
-      "state": "Haryana",
-      "category": "state",
       "stateIds": [
         "all"
       ],
@@ -636,6 +256,34 @@
       "dept": "Staff Selection Commission (SSC)",
       "state": "All India",
       "category": "ssc",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "0a595b14634fcb2e",
+      "title": "MARKS AND RANK POSITION/ மதிப்பெண் மற்றும் தரவரிசை நிலை Group-II Group-IIA",
+      "link": "https://tnpscresults.tn.gov.in/ccsexam2a/ccs2aindex.aspx?token=P9X2R7K5A8KDJ8JD8967RG",
+      "publishedAt": "2026-07-10T09:33:37.241377Z",
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-tn",
+      "sourceName": "Tnpsc",
+      "dept": "Tnpsc",
+      "state": "All India",
+      "category": "state",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "197b8722362c6834",
+      "title": "MARKS AND RANK POSITION/ மதிப்பெண் மற்றும் தரவரிசை நிலை Group-II Group-IIA",
+      "link": "https://tnpscresults.tn.gov.in/ccsexam/ccsIndex.aspx?token=P9X2R7K5A8KDJ8JD6658GR",
+      "publishedAt": "2026-07-10T09:33:35.364259Z",
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-tn",
+      "sourceName": "Tnpsc",
+      "dept": "Tnpsc",
+      "state": "All India",
+      "category": "state",
       "fetchMethod": "live-jobs-supplement"
     },
     {
@@ -1096,6 +744,22 @@
       "dept": "Railway Recruitment Board (RRB) — Gorakhpur",
       "state": "All India",
       "category": "railways",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "d23ba41f6cb94798",
+      "title": "CAUTION / चेतावनी 308.89 KB Do not respond or act on fake emails / calls. Published on: 7 Oct, 2016",
+      "link": "https://rac.gov.in/download/cautionApplicants.pdf",
+      "publishedAt": "2026-07-07T09:27:33.595239Z",
+      "summary": "P a g e 1 of 2 rac.gov.in RECRUITMENT & ASSESSMENT CENTRE (RAC) DEFENCE R&D ORGANIZATION (DRDO) DEPARTMENT of DEFENCE R&D (DDR&D) MINISTRY OF DEFENCE , GOVT. OF INDIA सार्वजनिक सूचिा / Public Notice drdo.gov.in चेतावनी / CAUTION DO NOT RESPOND / ACT ON FAKE EMAILS / CALLS • विज्ञापन के अंतर्गत चयन प्रक्रिया के दौरान क्रकसी भी प्रकार का भुर्तान, जहााँ लार्ू हो (आिेदन के साथ अपेक्षित शुल्क के अलािा)…",
+      "pdfUrls": [
+        "https://rac.gov.in/download/cautionApplicants.pdf"
+      ],
+      "sourceId": "drdo-careers",
+      "sourceName": "DRDO — Recruitment",
+      "dept": "DRDO — Recruitment",
+      "state": "All India",
+      "category": "defence",
       "fetchMethod": "live-jobs-supplement"
     },
     {
@@ -2955,6 +2619,22 @@
       "fetchMethod": "live-jobs-supplement"
     },
     {
+      "id": "e8775d375a0dc81b",
+      "title": "Reserve List: Combined Medical Services Examination, 2025",
+      "link": "https://www.upsc.gov.in/whats-new/Combined%20Medical%20Services%20Examination%2C%202025/Reserve%20List",
+      "publishedAt": "2025-12-22T00:00:00Z",
+      "summary": "UNION PUBLIC SERVICE COMMISSION PRESS NOTE COMBINED MEDICAL SERVICES EXAMINATION, 2025 The result of the Combined Medical Services Examination, 2025 was declared vide press Note dated 22.12.2025 recommending 812 candidates in order of merit for appointment. 2. The Commission, in accordance with the Rule 13(4) and 13(5) of the Combined Medical Services Examination, 2025, has also maintained a conso…",
+      "pdfUrls": [
+        "https://www.upsc.gov.in/sites/default/files/ReserveListCMSE-2025-Engl-250626.pdf"
+      ],
+      "sourceId": "upsc-notifications",
+      "sourceName": "UPSC — What's New",
+      "dept": "UPSC — What's New",
+      "state": "All India",
+      "category": "upsc",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
       "id": "456cb3b3a90f2f7b",
       "title": "Cutoff Marks of Candidates shortlisted for NTPC (Graduate) CBTST under CEN No. 05/2024, RRB - GORAKHPUR",
       "link": "https://www.rrbgkp.gov.in/results/cut%20off_cen05_2024%2015dec25.pdf",
@@ -2968,6 +2648,22 @@
       "dept": "Railway Recruitment Board (RRB) — Gorakhpur",
       "state": "All India",
       "category": "railways",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "1cb1db43f071073c",
+      "title": "Reserve List: Central Armed Police Forces (ACs) Examination, 2024",
+      "link": "https://www.upsc.gov.in/whats-new/Central%20Armed%20Police%20Forces%20%28ACs%29%20Examination%2C%202024/Reserve%20List",
+      "publishedAt": "2025-12-10T00:00:00Z",
+      "summary": "UNION PUBLIC SERVICE COMMISSION PRESS NOTE Dated the 12th June, 2026 CENTRAL ARMED POLICE FORCES (ACs) EXAMINATION, 2024- Release of Reserve List and compliance of judgment dated 10.12.2025 of Hon’ble High Court of Delhi The Result of the Central Armed Police Forces (ACs) Examination, 2024 was declared vide Press Note dated 13.06.2025 recommending 459 candidates in the order of merit for appointme…",
+      "pdfUrls": [
+        "https://www.upsc.gov.in/sites/default/files/ReserveList-CAPF-2024-Engl-12062026.pdf"
+      ],
+      "sourceId": "upsc-notifications",
+      "sourceName": "UPSC — What's New",
+      "dept": "UPSC — What's New",
+      "state": "All India",
+      "category": "upsc",
       "fetchMethod": "live-jobs-supplement"
     },
     {
@@ -3371,6 +3067,386 @@
       "state": "All India",
       "category": "police",
       "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "c4c9266da946f3d2",
+      "title": "Marks of Recommended Candidates",
+      "link": "https://www.upsc.gov.in/examinations/marks-recommended-candidates",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "upsc-notifications",
+      "sourceName": "UPSC — What's New",
+      "dept": "Union Public Service Commission",
+      "state": "All India",
+      "category": "upsc",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "9f46af2ef87ad857",
+      "title": "Marks of Recommended Candidates (Reserve List)",
+      "link": "https://www.upsc.gov.in/examinations/marks-recommended-candidates-reserve-list",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "upsc-notifications",
+      "sourceName": "UPSC — What's New",
+      "dept": "Union Public Service Commission",
+      "state": "All India",
+      "category": "upsc",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "b5be7a7c543cf96d",
+      "title": "Final Result: 11 Posts of Assistant Director Grade-I (IEDS) (Leather & Footwear), Ministry of MSME",
+      "link": "https://www.upsc.gov.in/whats-new/11%20Posts%20of%20Assistant%20Director%20Grade-I%20(IEDS)%20(Leather%20&%20Footwear),%20Ministry%20of%20MSME/Final%20Result",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "upsc-notifications",
+      "sourceName": "UPSC — What's New",
+      "dept": "Union Public Service Commission",
+      "state": "All India",
+      "category": "upsc",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "bfd162485b54a261",
+      "title": "Final Result: 02 Posts of Scientific Officer, Ministry of Culture",
+      "link": "https://www.upsc.gov.in/whats-new/02%20Posts%20of%20Scientific%20Officer,%20Ministry%20of%20Culture/Final%20Result",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "upsc-notifications",
+      "sourceName": "UPSC — What's New",
+      "dept": "Union Public Service Commission",
+      "state": "All India",
+      "category": "upsc",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "110cc8918aa672c7",
+      "title": "Written Result: 19 Posts of Tutor, Lady Hardinge Medical College & Smt. Sucheta Kriplani Hospital",
+      "link": "https://www.upsc.gov.in/whats-new/19%20Posts%20of%20Tutor,%20Lady%20Hardinge%20Medical%20College%20&%20Smt.%20Sucheta%20Kriplani%20Hospital/Written%20Result",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "upsc-notifications",
+      "sourceName": "UPSC — What's New",
+      "dept": "Union Public Service Commission",
+      "state": "All India",
+      "category": "upsc",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "c411c81b02c200fc",
+      "title": "Written Result: 04 Posts of Homoeopathic Physician in NDMC",
+      "link": "https://www.upsc.gov.in/whats-new/04%20Posts%20of%20Homoeopathic%20Physician%20in%20NDMC/Written%20Result",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "upsc-notifications",
+      "sourceName": "UPSC — What's New",
+      "dept": "Union Public Service Commission",
+      "state": "All India",
+      "category": "upsc",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "25957800d8cd42d3",
+      "title": "Written Result: 45 Posts of Assistant Director (Systems), Ministry of Finance",
+      "link": "https://www.upsc.gov.in/whats-new/45%20Posts%20of%20Assistant%20Director%20(Systems),%20Ministry%20of%20Finance/Written%20Result",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "upsc-notifications",
+      "sourceName": "UPSC — What's New",
+      "dept": "Union Public Service Commission",
+      "state": "All India",
+      "category": "upsc",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "f527369019c0a734",
+      "title": "Written Result: 01 Post of Data Processing Assistant, Ministry of Defence",
+      "link": "https://www.upsc.gov.in/whats-new/01%20Post%20of%20Data%20Processing%20Assistant,%20Ministry%20of%20Defence/Written%20Result",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "upsc-notifications",
+      "sourceName": "UPSC — What's New",
+      "dept": "Union Public Service Commission",
+      "state": "All India",
+      "category": "upsc",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "e040280dcfcf130b",
+      "title": "Final Result: Combined Section Officers' (Grade 'B') LDCE-2025 and Combined Stenographers' (Grade 'B'-Grade-'I') LDCE-2019, 2020 & 2021",
+      "link": "https://www.upsc.gov.in/whats-new/Combined%20Section%20Officers%27%20%28Grade%20%27B%27%29%20LDCE-2025%20and%20Combined%20Stenographers%27%20%28Grade%20%27B%27-Grade-%27I%27%29%20LDCE-2019%2C%202020%20%26%202021/Final%20Result",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "upsc-notifications",
+      "sourceName": "UPSC — What's New",
+      "dept": "Union Public Service Commission",
+      "state": "All India",
+      "category": "upsc",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "2074a3b6476fb693",
+      "title": "Final Result: 09 Posts of Medical Officer (Ayurveda), Govt. of Puducherry",
+      "link": "https://www.upsc.gov.in/whats-new/09%20Posts%20of%20Medical%20Officer%20(Ayurveda),%20Govt.%20of%20Puducherry/Final%20Result",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "upsc-notifications",
+      "sourceName": "UPSC — What's New",
+      "dept": "Union Public Service Commission",
+      "state": "All India",
+      "category": "upsc",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "2601f9246c2a58c0",
+      "title": "Written Result (with name): Civil Services (Preliminary) Examination, 2026",
+      "link": "https://www.upsc.gov.in/whats-new/Civil%20Services%20%28Preliminary%29%20Examination%2C%202026/Written%20Result%20%28with%20name%29",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "upsc-notifications",
+      "sourceName": "UPSC — What's New",
+      "dept": "Union Public Service Commission",
+      "state": "All India",
+      "category": "upsc",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "56bd79701e7841ef",
+      "title": "Written Result (with name): Indian Forest Service (Preliminary) Examination, 2026 through CS(P) Examination, 2026",
+      "link": "https://www.upsc.gov.in/whats-new/Indian%20Forest%20Service%20%28Preliminary%29%20Examination%2C%202026%20through%20CS%28P%29%20Examination%2C%202026/Written%20Result%20%28with%20name%29",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "upsc-notifications",
+      "sourceName": "UPSC — What's New",
+      "dept": "Union Public Service Commission",
+      "state": "All India",
+      "category": "upsc",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "5e1a204629e1bda7",
+      "title": "Written Result: Indian Forest Service (Preliminary) Examination, 2026 through CS(P) Examination, 2026",
+      "link": "https://www.upsc.gov.in/whats-new/Indian%20Forest%20Service%20%28Preliminary%29%20Examination%2C%202026%20through%20CS%28P%29%20Examination%2C%202026/Written%20Result",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "upsc-notifications",
+      "sourceName": "UPSC — What's New",
+      "dept": "Union Public Service Commission",
+      "state": "All India",
+      "category": "upsc",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "37dd0b3d87677f96",
+      "title": "Written Result: Civil Services (Preliminary) Examination, 2026",
+      "link": "https://www.upsc.gov.in/whats-new/Civil%20Services%20%28Preliminary%29%20Examination%2C%202026/Written%20Result",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "upsc-notifications",
+      "sourceName": "UPSC — What's New",
+      "dept": "Union Public Service Commission",
+      "state": "All India",
+      "category": "upsc",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "246cf795a95a5a9f",
+      "title": "Cut-off Marks",
+      "link": "https://www.upsc.gov.in/examinations/cutoff-marks--",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "upsc-notifications",
+      "sourceName": "UPSC — What's New",
+      "dept": "Union Public Service Commission",
+      "state": "All India",
+      "category": "upsc",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "bf2ab913def084c8",
+      "title": "Marks Information",
+      "link": "https://upsconline.gov.in/marksheet/exam/marksheet_system/",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "upsc-notifications",
+      "sourceName": "UPSC — What's New",
+      "dept": "Union Public Service Commission",
+      "state": "All India",
+      "category": "upsc",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "79a1e771787e9b6a",
+      "title": "Subject Knowledge Test Result dated 04.07.2026 for the posts of Post Graduate Teacher (PGT) in the subject of Computer Science for Rest of Haryana Cadre & Mewat Cadre (Advt. No. 23/2026)",
+      "link": "https://hpsc.gov.in/Portals/0/SKT_Result_PGT_CS_04_07_2026.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://hpsc.gov.in/Portals/0/SKT_Result_PGT_CS_04_07_2026.pdf"
+      ],
+      "sourceId": "psc-hr-notifications",
+      "sourceName": "HPSC — Recruitment",
+      "dept": "Haryana PSC",
+      "state": "Haryana",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "86b865539e361b0d",
+      "title": "Marks of all Interviewed Candidates",
+      "link": "http://hpsc.gov.in/en-us/Examination/Marks-of-all-Interviewed-Candidates",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-hr-notifications",
+      "sourceName": "HPSC — Recruitment",
+      "dept": "Haryana PSC",
+      "state": "Haryana",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "10bf12b53e6cd695",
+      "title": "Marks of Subject Knowledge Test for all candidates",
+      "link": "http://hpsc.gov.in/en-us/Examination/Marks-of-Subject-Knowledge-Test-for-all-candidates",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-hr-notifications",
+      "sourceName": "HPSC — Recruitment",
+      "dept": "Haryana PSC",
+      "state": "Haryana",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "e20e1897c955e09d",
+      "title": "Roll No. wise marks dated 09.07.2026 of all candidates who appeared in the Subject Knowledge Test for the posts of Assistant Professor (College Cadre) in the subject of Music (Vocal) in Higher Education Department (Advt. No. 58/2024)",
+      "link": "https://hpsc.gov.in/Portals/0/Rollwisemarks_SKT_Music_Vocal_09_07_2026.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://hpsc.gov.in/Portals/0/Rollwisemarks_SKT_Music_Vocal_09_07_2026.pdf"
+      ],
+      "sourceId": "psc-hr-notifications",
+      "sourceName": "HPSC — Recruitment",
+      "dept": "Haryana PSC",
+      "state": "Haryana",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "4fcdf88267687a6a",
+      "title": "Roll No. wise marks dated 08.07.2026 of all candidates who appeared in the Subject Knowledge Test for the posts of Assistant Professor (College Cadre) in the subject of Sanskrit (Advt. No. 65/2024)",
+      "link": "https://hpsc.gov.in/Portals/0/Roll_wisemarks_SKT_AP_Sankrit_08_07_2026.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://hpsc.gov.in/Portals/0/Roll_wisemarks_SKT_AP_Sankrit_08_07_2026.pdf"
+      ],
+      "sourceId": "psc-hr-notifications",
+      "sourceName": "HPSC — Recruitment",
+      "dept": "Haryana PSC",
+      "state": "Haryana",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "7606dfea71c92c42",
+      "title": "Marks of the Screening Test",
+      "link": "http://hpsc.gov.in/en-us/Marks",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-hr-notifications",
+      "sourceName": "HPSC — Recruitment",
+      "dept": "Haryana PSC",
+      "state": "Haryana",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
     },
     {
       "id": "367b7df795b73ae9",
@@ -3821,54 +3897,6 @@
         "ne"
       ],
       "fetchMethod": "html"
-    },
-    {
-      "id": "d23ba41f6cb94798",
-      "title": "CAUTION / चेतावनी 308.89 KB Do not respond or act on fake emails / calls. Published on: 7 Oct, 2016",
-      "link": "https://rac.gov.in/download/cautionApplicants.pdf",
-      "publishedAt": "2026-07-07T09:27:33.595239Z",
-      "summary": "P a g e 1 of 2 rac.gov.in RECRUITMENT & ASSESSMENT CENTRE (RAC) DEFENCE R&D ORGANIZATION (DRDO) DEPARTMENT of DEFENCE R&D (DDR&D) MINISTRY OF DEFENCE , GOVT. OF INDIA सार्वजनिक सूचिा / Public Notice drdo.gov.in चेतावनी / CAUTION DO NOT RESPOND / ACT ON FAKE EMAILS / CALLS • विज्ञापन के अंतर्गत चयन प्रक्रिया के दौरान क्रकसी भी प्रकार का भुर्तान, जहााँ लार्ू हो (आिेदन के साथ अपेक्षित शुल्क के अलािा)…",
-      "pdfUrls": [
-        "https://rac.gov.in/download/cautionApplicants.pdf"
-      ],
-      "sourceId": "drdo-careers",
-      "sourceName": "DRDO — Recruitment",
-      "dept": "DRDO — Recruitment",
-      "state": "All India",
-      "category": "defence",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "e8775d375a0dc81b",
-      "title": "Reserve List: Combined Medical Services Examination, 2025",
-      "link": "https://www.upsc.gov.in/whats-new/Combined%20Medical%20Services%20Examination%2C%202025/Reserve%20List",
-      "publishedAt": "2025-12-22T00:00:00Z",
-      "summary": "UNION PUBLIC SERVICE COMMISSION PRESS NOTE COMBINED MEDICAL SERVICES EXAMINATION, 2025 The result of the Combined Medical Services Examination, 2025 was declared vide press Note dated 22.12.2025 recommending 812 candidates in order of merit for appointment. 2. The Commission, in accordance with the Rule 13(4) and 13(5) of the Combined Medical Services Examination, 2025, has also maintained a conso…",
-      "pdfUrls": [
-        "https://www.upsc.gov.in/sites/default/files/ReserveListCMSE-2025-Engl-250626.pdf"
-      ],
-      "sourceId": "upsc-notifications",
-      "sourceName": "UPSC — What's New",
-      "dept": "UPSC — What's New",
-      "state": "All India",
-      "category": "upsc",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "1cb1db43f071073c",
-      "title": "Reserve List: Central Armed Police Forces (ACs) Examination, 2024",
-      "link": "https://www.upsc.gov.in/whats-new/Central%20Armed%20Police%20Forces%20%28ACs%29%20Examination%2C%202024/Reserve%20List",
-      "publishedAt": "2025-12-10T00:00:00Z",
-      "summary": "UNION PUBLIC SERVICE COMMISSION PRESS NOTE Dated the 12th June, 2026 CENTRAL ARMED POLICE FORCES (ACs) EXAMINATION, 2024- Release of Reserve List and compliance of judgment dated 10.12.2025 of Hon’ble High Court of Delhi The Result of the Central Armed Police Forces (ACs) Examination, 2024 was declared vide Press Note dated 13.06.2025 recommending 459 candidates in the order of merit for appointme…",
-      "pdfUrls": [
-        "https://www.upsc.gov.in/sites/default/files/ReserveList-CAPF-2024-Engl-12062026.pdf"
-      ],
-      "sourceId": "upsc-notifications",
-      "sourceName": "UPSC — What's New",
-      "dept": "UPSC — What's New",
-      "state": "All India",
-      "category": "upsc",
-      "fetchMethod": "live-jobs-supplement"
     },
     {
       "id": "21f087f410423fec",
