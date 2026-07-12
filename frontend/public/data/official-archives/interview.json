@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-07-12T10:12:35.597Z",
-  "count": 172,
+  "generatedAt": "2026-07-12T17:38:14.596Z",
+  "count": 173,
   "items": [
     {
       "id": "f43d7aa6e0241ca3",
@@ -2764,6 +2764,22 @@
       "dept": "ESIC — Employees' State Insurance Corporation",
       "state": "All India",
       "category": "health",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "0cf2394e8bd82b4a",
+      "title": "{{'ExaminationAndInterviewOnly_HM' | translate }}",
+      "link": "https://uppsc.up.nic.in/PublicPages/Recruitment_Details.aspx?ID=EI",
+      "publishedAt": "2026-07-07T09:48:31.060996Z",
+      "summary": "UTTAR PRADESH PUBLIC SERVICE COMMISSION, PRAYAGRAJ उ0प्र0 लोक सेवा आयोग, प्रयागराज Posts to be filled by UPPSC based on Examination & Interview only. उ°र प्रदेश लोक सेवा आयोग द्वारा केवल परीक्षा एवं साक्षाÂकार के माÅयम से भरे जाने वाले पद- Sr. No. क्रं0सं0 Examination Name परीक्षा का नाम 1 Combined State Engineering Services (General Selection/Special Selection) Examination सिÌमिलत राºय अिभयंत्रण …",
+      "pdfUrls": [
+        "https://uppsc.up.nic.in/CMS\\Recruitment\\EI.pdf"
+      ],
+      "sourceId": "uppsc-hall-tickets",
+      "sourceName": "UPPSC — Hall tickets",
+      "dept": "UPPSC — Hall tickets",
+      "state": "All India",
+      "category": "state",
       "fetchMethod": "live-jobs-supplement"
     },
     {
