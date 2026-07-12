@@ -24,16 +24,16 @@
     "vacancies": 1865
   },
   {
-    "dept": "Nsut",
+    "dept": "UPPSC — Hall tickets",
+    "slug": "uppsc-hall-tickets",
+    "count": 51,
+    "vacancies": 0
+  },
+  {
+    "dept": "NSUT",
     "slug": "nsut",
     "count": 49,
     "vacancies": 122
-  },
-  {
-    "dept": "UPPSC — Hall tickets",
-    "slug": "uppsc-hall-tickets",
-    "count": 49,
-    "vacancies": 0
   },
   {
     "dept": "ESIC — Employees' State Insurance Corporation",
@@ -110,20 +110,20 @@
   {
     "dept": "Staff Selection Commission (SSC)",
     "slug": "staff-selection-commission-ssc",
-    "count": 35,
+    "count": 36,
     "vacancies": 1
-  },
-  {
-    "dept": "Jammu & Kashmir PSC (JKPSC)",
-    "slug": "jammu-kashmir-psc-jkpsc",
-    "count": 30,
-    "vacancies": 0
   },
   {
     "dept": "UPSC — What's New",
     "slug": "upsc-what-s-new",
     "count": 30,
     "vacancies": 142
+  },
+  {
+    "dept": "Jammu & Kashmir PSC (JKPSC)",
+    "slug": "jammu-kashmir-psc-jkpsc",
+    "count": 29,
+    "vacancies": 0
   },
   {
     "dept": "University Grants Commission (UGC)",
@@ -150,6 +150,12 @@
     "vacancies": 0
   },
   {
+    "dept": "ISRO — Careers",
+    "slug": "isro-careers",
+    "count": 27,
+    "vacancies": 48
+  },
+  {
     "dept": "Haryana PSC (HPSC)",
     "slug": "haryana-psc-hpsc",
     "count": 26,
@@ -162,22 +168,16 @@
     "vacancies": 3
   },
   {
+    "dept": "Uppbpb",
+    "slug": "uppbpb",
+    "count": 26,
+    "vacancies": 0
+  },
+  {
     "dept": "Reserve Bank of India — Careers",
     "slug": "reserve-bank-of-india-careers",
     "count": 25,
     "vacancies": 71
-  },
-  {
-    "dept": "Uppbpb",
-    "slug": "uppbpb",
-    "count": 25,
-    "vacancies": 0
-  },
-  {
-    "dept": "ISRO — Careers",
-    "slug": "isro-careers",
-    "count": 24,
-    "vacancies": 0
   },
   {
     "dept": "MP Police Headquarters — Recruitment",
@@ -222,12 +222,6 @@
     "vacancies": 452
   },
   {
-    "dept": "Kvsangathan",
-    "slug": "kvsangathan",
-    "count": 20,
-    "vacancies": 3728
-  },
-  {
     "dept": "Railway Recruitment Board (RRB) — Patna",
     "slug": "railway-recruitment-board-rrb-patna",
     "count": 20,
@@ -244,6 +238,12 @@
     "slug": "andaman-nicobar-administration",
     "count": 18,
     "vacancies": 19507
+  },
+  {
+    "dept": "Kvsangathan",
+    "slug": "kvsangathan",
+    "count": 18,
+    "vacancies": 1248
   },
   {
     "dept": "Tpsc Tripura",
@@ -382,12 +382,6 @@
     "slug": "wildlife-institute-of-india-wii",
     "count": 12,
     "vacancies": 1790
-  },
-  {
-    "dept": "ISRO — Indian Space Research Organisation",
-    "slug": "isro-indian-space-research-organisation",
-    "count": 11,
-    "vacancies": 48
   },
   {
     "dept": "Rrbthiruvananthapuram",
@@ -536,6 +530,12 @@
   {
     "dept": "District & Sessions Judge, Indore",
     "slug": "district-sessions-judge-indore",
+    "count": 7,
+    "vacancies": 0
+  },
+  {
+    "dept": "ISRO — Indian Space Research Organisation",
+    "slug": "isro-indian-space-research-organisation",
     "count": 7,
     "vacancies": 0
   },
