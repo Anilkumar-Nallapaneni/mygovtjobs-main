@@ -11,7 +11,7 @@ import {
 import { PROFESSIONS_INDEX_PATH } from '@/utils/browseRoutes'
 import { applyBrowseSeo } from '@/utils/browseSeo'
 import { numberLocale } from '@/utils/formatLocale'
-import type { FooterLinkTarget } from '@/hooks/useBrowseState'
+import type { FooterLinkTarget } from '@/hooks/browseStateTypes'
 import type { JobRecord } from '@/types/job'
 
 type ProfessionsIndexPageProps = {

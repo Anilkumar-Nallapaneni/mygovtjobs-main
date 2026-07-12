@@ -4,7 +4,7 @@ import JobCard from "@/components/jobs/JobCard";
 import JobCardGrid from "@/components/jobs/JobCardGrid";
 import BrowseBreadcrumbs from "@/components/browse/BrowseBreadcrumbs";
 import ProfessionLandingExtras from "@/components/home/ProfessionLandingExtras";
-import { HERO_STAT_FILTERS, VIRTUAL_GRID_MIN, vacancyCountForStats } from "@/components/home/homePageConstants";
+import { HERO_STAT_FILTERS, VIRTUAL_GRID_MIN, vacancyCountForStats } from "@/data/homePageConstants";
 import { getProfessionBySlug, professionLandingTitle } from "@/data/professions";
 import {
   getCanonicalProfessionForQualification,

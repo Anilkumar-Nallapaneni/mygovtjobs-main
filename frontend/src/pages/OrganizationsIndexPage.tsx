@@ -7,7 +7,7 @@ import { ORG_INDEX } from '@/data/orgIndex'
 import { orgRoutePath } from '@/utils/browseRoutes'
 import { applyBrowseSeo } from '@/utils/browseSeo'
 import { numberLocale } from '@/utils/formatLocale'
-import type { FooterLinkTarget } from '@/hooks/useBrowseState'
+import type { FooterLinkTarget } from '@/hooks/browseStateTypes'
 
 const INDEX_PATH = '/organizations'
 

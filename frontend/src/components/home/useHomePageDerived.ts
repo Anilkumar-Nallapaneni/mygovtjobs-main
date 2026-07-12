@@ -14,7 +14,7 @@ import {
 import { isJobExpired } from "@/utils/jobFilters";
 import { useBrowseContext } from "@/context/BrowseContext";
 import type { HomePageProps } from "@/types/homePage";
-import { vacancyCountForStats } from "@/components/home/homePageConstants";
+import { vacancyCountForStats } from "@/data/homePageConstants";
 
 type DerivedInput = Pick<HomePageProps, "jobs" | "catalogStats">;
 

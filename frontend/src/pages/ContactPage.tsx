@@ -5,7 +5,7 @@ import { useTranslation } from 'react-i18next'
 import Footer from '@/components/layout/Footer'
 import { submitContactForm } from '@/lib/contactApi'
 import { applyBrowseSeo } from '@/utils/browseSeo'
-import type { FooterLinkTarget } from '@/hooks/useBrowseState'
+import type { FooterLinkTarget } from '@/hooks/browseStateTypes'
 
 const CONTACT_PATH = '/contact'
 

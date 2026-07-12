@@ -9,7 +9,7 @@ import { applyBrowseSeo } from '@/utils/browseSeo'
 import { RESULTS_TOPICS_INDEX_PATH } from '@/utils/browseRoutes'
 import { resultTopicRoutePath } from '@/data/resultTopics'
 import { numberLocale } from '@/utils/formatLocale'
-import type { FooterLinkTarget } from '@/hooks/useBrowseState'
+import type { FooterLinkTarget } from '@/hooks/browseStateTypes'
 
 type ResultsTopicsIndexPageProps = {
   onFooterLink?: (target: FooterLinkTarget) => void

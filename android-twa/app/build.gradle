@@ -24,15 +24,15 @@ def twaManifest = [
     applicationId: 'me.govtjobs.app',
     hostName: 'www.livegovtjobs.com', // The domain being opened in the TWA.
     launchUrl: '/', // The start path for the TWA. Must be relative to the domain.
-    name: 'My Govt Jobs', // The application name.
+    name: 'Live Govt Jobs', // The application name.
     launcherName: 'Govt Jobs', // The name shown on the Android Launcher.
-    themeColor: '#0F172A', // The color used for the status bar.
-    themeColorDark: '#0F172A', // The color used for the dark status bar.
-    navigationColor: '#0F172A', // The color used for the navigation bar.
-    navigationColorDark: '#0F172A', // The color used for the dark navbar.
-    navigationDividerColor: '#0F172A', // The navbar divider color.
-    navigationDividerColorDark: '#0F172A', // The dark navbar divider color.
-    backgroundColor: '#0F172A', // The color used for the splash screen background.
+    themeColor: '#03060D', // The color used for the status bar.
+    themeColorDark: '#03060D', // The color used for the dark status bar.
+    navigationColor: '#03060D', // The color used for the navigation bar.
+    navigationColorDark: '#03060D', // The color used for the dark navbar.
+    navigationDividerColor: '#03060D', // The navbar divider color.
+    navigationDividerColorDark: '#03060D', // The dark navbar divider color.
+    backgroundColor: '#03060D', // The color used for the splash screen background.
     enableNotifications: true, // Set to true to enable notification delegation.
     // Every shortcut must include the following fields:
     // - name: String that will show up in the shortcut.
@@ -47,7 +47,7 @@ def twaManifest = [
     // 'customtabs' and 'webview'.
     fallbackType: 'customtabs',
     enableSiteSettingsShortcut: 'true',
-    orientation: 'default',
+    orientation: 'portrait-primary',
 ]
 
 android {

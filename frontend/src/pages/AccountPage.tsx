@@ -6,7 +6,7 @@ import AccountAlertsPanel from '@/components/account/AccountAlertsPanel'
 import PremiumUpgradePanel from '@/components/account/PremiumUpgradePanel'
 import Footer from '@/components/layout/Footer'
 import PageFallback from '@/components/PageFallback'
-import type { FooterLinkTarget } from '@/hooks/useBrowseState'
+import type { FooterLinkTarget } from '@/hooks/browseStateTypes'
 
 type AccountPageProps = {
   onFooterLink?: (target: FooterLinkTarget) => void

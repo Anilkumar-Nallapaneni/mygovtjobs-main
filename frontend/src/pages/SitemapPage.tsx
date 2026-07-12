@@ -25,7 +25,7 @@ import {
 } from '@/utils/browseRoutes'
 import { PROFESSIONS, professionRoutePath } from '@/data/professions'
 import { RESULT_TOPICS } from '@/data/resultTopics'
-import type { FooterLinkTarget } from '@/hooks/useBrowseState'
+import type { FooterLinkTarget } from '@/hooks/browseStateTypes'
 
 const SITEMAP_PATH = '/sitemap'
 

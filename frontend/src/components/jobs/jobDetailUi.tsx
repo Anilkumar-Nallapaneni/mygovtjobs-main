@@ -395,62 +395,6 @@ export function JobDetailKeyFactsPanel({
   );
 }
 
-export function JobDetailSummaryCard({
-  dept,
-  postName,
-  qualification,
-  lastDate,
-  vacancies,
-  countLocale,
-  t,
-}: {
-  dept: string;
-  postName: string;
-  qualification: string;
-  lastDate: string;
-  vacancies: number;
-  countLocale: string;
-  t: (key: string, opts?: Record<string, unknown>) => string;
-}) {
-  return (
-    <div className="job-detail-summary-card">
-      <div className="job-detail-summary-card__logo" aria-hidden>
-        {orgInitials(dept || "Govt")}
-      </div>
-      <div className="job-detail-summary-card__body">
-        {dept ? <p className="job-detail-summary-card__org">{dept}</p> : null}
-        <dl className="job-detail-summary-card__facts">
-          {postName ? (
-            <div className="job-detail-summary-card__fact">
-              <dt>{t("jobDetail.postName")}</dt>
-              <dd>{postName}</dd>
-            </div>
-          ) : vacancies > 0 ? (
-            <div className="job-detail-summary-card__fact">
-              <dt>{t("job.posts")}</dt>
-              <dd>
-                {vacancies.toLocaleString(countLocale)} {t("job.posts")}
-              </dd>
-            </div>
-          ) : null}
-          {qualification && qualification !== "—" ? (
-            <div className="job-detail-summary-card__fact">
-              <dt>{t("jobDetail.qualification", { defaultValue: "Qualification" })}</dt>
-              <dd>{qualification}</dd>
-            </div>
-          ) : null}
-          {lastDate && lastDate !== "—" ? (
-            <div className="job-detail-summary-card__fact">
-              <dt>{t("jobDetail.lastDateLabel")}</dt>
-              <dd>{lastDate}</dd>
-            </div>
-          ) : null}
-        </dl>
-      </div>
-    </div>
-  );
-}
-
 export function JobDetailStickyBar({
   primaryAction,
   shareTitle,

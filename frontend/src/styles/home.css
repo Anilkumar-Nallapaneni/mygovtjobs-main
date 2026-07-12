@@ -2670,26 +2670,6 @@
   font-size: 12px;
 }
 
-.state-map-mini {
-  display: block;
-  width: 34px;
-  height: 30px;
-  flex-shrink: 0;
-  line-height: 0;
-}
-
-.state-map-mini svg {
-  display: block;
-  width: 100%;
-  height: 100%;
-  overflow: visible;
-}
-
-.state-map-mini--placeholder {
-  border-radius: 6px;
-  background: color-mix(in srgb, var(--ds-muted) 14%, var(--ds-bg1));
-}
-
 .state-glance__region {
   margin: -2px 0 10px;
   font-size: 10px;

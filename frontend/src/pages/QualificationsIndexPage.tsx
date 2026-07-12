@@ -8,7 +8,7 @@ import { computeEducationVacancySummary } from '@/utils/educationVacancySummary'
 import { qualificationRoutePath } from '@/utils/browseRoutes'
 import { applyBrowseSeo } from '@/utils/browseSeo'
 import { numberLocale } from '@/utils/formatLocale'
-import type { FooterLinkTarget } from '@/hooks/useBrowseState'
+import type { FooterLinkTarget } from '@/hooks/browseStateTypes'
 import type { JobRecord } from '@/types/job'
 
 const INDEX_PATH = '/qualifications'

@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next";
 import JobCard from "@/components/jobs/JobCard";
 import JobCardGrid from "@/components/jobs/JobCardGrid";
-import { VIRTUAL_GRID_MIN } from "@/components/home/homePageConstants";
+import { VIRTUAL_GRID_MIN } from "@/data/homePageConstants";
 
 type StateJobsPanelProps = {
   stateName: string;

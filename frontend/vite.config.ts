@@ -131,8 +131,8 @@ export default defineConfig(({ mode }) => {
           name: 'Live Govt Jobs',
           short_name: 'Govt Jobs',
           description: 'Official government job alerts, results, and admit cards from verified sources across India.',
-          theme_color: '#0f172a',
-          background_color: '#0f172a',
+          theme_color: '#03060d',
+          background_color: '#03060d',
           display: 'standalone',
           orientation: 'portrait-primary',
           scope: '/',
@@ -188,10 +188,13 @@ export default defineConfig(({ mode }) => {
           manualChunks(id) {
             if (id.includes('node_modules')) {
               if (id.includes('@supabase')) return 'supabase'
+              if (id.includes('@sentry')) return 'sentry-vendor'
               if (id.includes('@tanstack')) return 'query-vendor'
               if (id.includes('react-router')) return 'router-vendor'
               if (id.includes('i18next') || id.includes('react-i18next')) return 'i18n-vendor'
-              return 'react-vendor'
+              if (id.includes('react-dom')) return 'react-dom-vendor'
+              if (id.includes('/react/')) return 'react-core-vendor'
+              return 'vendor-misc'
             }
             if (id.includes('IndiaMap')) return 'map'
             if (id.includes('/src/pages/AdminDashboardPage')) return 'page-admin'
@@ -202,14 +205,7 @@ export default defineConfig(({ mode }) => {
       },
     },
     resolve: {
-      alias: [
-        { find: '@', replacement: resolve(__dirname, 'src') },
-        { find: '@components', replacement: resolve(__dirname, 'src/components') },
-        { find: '@styles', replacement: resolve(__dirname, 'src/styles') },
-        { find: '@utils', replacement: resolve(__dirname, 'src/utils') },
-        { find: '@hooks', replacement: resolve(__dirname, 'src/hooks') },
-        { find: '@types', replacement: resolve(__dirname, 'src/types') },
-      ],
+      alias: [{ find: '@', replacement: resolve(__dirname, 'src') }],
     },
     server: {
       port: 2222,

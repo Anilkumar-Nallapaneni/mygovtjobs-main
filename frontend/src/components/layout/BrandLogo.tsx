@@ -5,8 +5,6 @@ type BrandLogoProps = {
   /** Scales the logo (maps to CSS `--brand-logo-height`). */
   height?: number;
   className?: string;
-  /** @deprecated Tagline is baked into logo.png */
-  showTagline?: boolean;
 };
 
 /** Cropped wordmark — Live Govt Jobs (`/logo.png`, transparent). */

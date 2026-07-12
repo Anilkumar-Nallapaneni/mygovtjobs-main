@@ -10,7 +10,7 @@ import { resolveJobQualification } from '@/utils/jobQualification'
 import { isJobExpired } from '@/utils/jobFilters'
 import { jobMatchesSearch } from '@/utils/jobSearch'
 import type { JobRecord } from '@/types/job'
-import { vacancyCountForStats } from '@/components/home/homePageConstants'
+import { vacancyCountForStats } from '@/data/homePageConstants'
 
 export const HOME_SORT_KEYS = ['lastDate', 'vacancies', 'expiringSoon'] as const
 export type HomeSortKey = (typeof HOME_SORT_KEYS)[number]
