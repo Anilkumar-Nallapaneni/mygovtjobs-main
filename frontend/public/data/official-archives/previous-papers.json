@@ -1,7 +1,58 @@
 {
-  "generatedAt": "2026-07-11T21:18:55.635Z",
+  "generatedAt": "2026-07-12T04:11:55.463Z",
   "count": 25,
   "items": [
+    {
+      "id": "1bb2282873cb0efd",
+      "title": "Specimen Question Cum Answer Booklet (QCAB)",
+      "link": "https://www.upsc.gov.in/examination/model-question-and-answer-booklets",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "upsc-e-admit-hub",
+      "sourceName": "UPSC — e-Admit cards",
+      "dept": "Union Public Service Commission",
+      "state": "All India",
+      "category": "upsc",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "3fc1696b18f30fa3",
+      "title": "Common mistakes committed by the candidates in Conventional Papers",
+      "link": "https://www.upsc.gov.in/examination/common-mistakes-committed-candidates-conventional-papers",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "upsc-e-admit-hub",
+      "sourceName": "UPSC — e-Admit cards",
+      "dept": "Union Public Service Commission",
+      "state": "All India",
+      "category": "upsc",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "3ae2d6fce5935dce",
+      "title": "Previous Question Papers",
+      "link": "https://www.upsc.gov.in/examinations/previous-question-papers",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "upsc-e-admit-hub",
+      "sourceName": "UPSC — e-Admit cards",
+      "dept": "Union Public Service Commission",
+      "state": "All India",
+      "category": "upsc",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
     {
       "id": "ba6df61f0df29b66",
       "title": "Representation on Question Paper for ESEM-26, IES-ISS-26 and Combined Geo-Scientist (Main) Examination, 2026",
@@ -33,57 +84,6 @@
       "state": "All India",
       "category": "upsc",
       "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "3fc1696b18f30fa3",
-      "title": "Common mistakes committed by the candidates in Conventional Papers",
-      "link": "https://www.upsc.gov.in/examination/common-mistakes-committed-candidates-conventional-papers",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "upsc-notifications",
-      "sourceName": "UPSC — What's New",
-      "dept": "Union Public Service Commission",
-      "state": "All India",
-      "category": "upsc",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "3ae2d6fce5935dce",
-      "title": "Previous Question Papers",
-      "link": "https://www.upsc.gov.in/examinations/previous-question-papers",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "upsc-notifications",
-      "sourceName": "UPSC — What's New",
-      "dept": "Union Public Service Commission",
-      "state": "All India",
-      "category": "upsc",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "1bb2282873cb0efd",
-      "title": "Specimen Question Cum Answer Booklet (QCAB)",
-      "link": "https://www.upsc.gov.in/examination/model-question-and-answer-booklets",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "upsc-previous-papers",
-      "sourceName": "UPSC — Previous Question Papers",
-      "dept": "Union Public Service Commission",
-      "state": "All India",
-      "category": "upsc",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
     },
     {
       "id": "d8e4b595dfe40717",
