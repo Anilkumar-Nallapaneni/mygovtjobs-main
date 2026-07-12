@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-11T05:17:50.022Z",
+  "generatedAt": "2026-07-12T10:12:35.597Z",
   "count": 200,
   "items": [
     {
@@ -14,40 +14,6 @@
       "dept": "Indian Space Research Organisation",
       "state": "All India",
       "category": "psu",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "ab1c1a47609d6c04",
-      "title": "Application window for AVR MR (Musician) 02/26 batch extended till 30 Apr 26. (Closed)",
-      "link": "https://www.joinindiannavy.gov.in/en/event/online-application-window-for-agniveer-mr-musician-02-26-entry-will-be-live-from-11-apr-26-apr-26.html",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "navy-careers",
-      "sourceName": "Indian Navy — Notifications",
-      "dept": "Indian Navy",
-      "state": "All India",
-      "category": "defence",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "5297577d415d93d5",
-      "title": "Online application window for 10+2 B.Tech Cadet entry Jul 26 course is extended till 1200 hrs on 23 Jan 26. (Closed)",
-      "link": "https://www.joinindiannavy.gov.in/en/event/online-application-window-for-10-2-b-tech-cadet-entry-jul-26-course-is-extended-till-1200-hrs-on-23-.html",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "navy-careers",
-      "sourceName": "Indian Navy — Notifications",
-      "dept": "Indian Navy",
-      "state": "All India",
-      "category": "defence",
       "stateIds": [
         "all"
       ],
@@ -202,6 +168,91 @@
         "https://www.joinindiannavy.gov.in/files/Advt_Agniveer_Apprentice_01_27_English.pdf",
         "https://www.joinindiannavy.gov.in/files/Advt_Agniveer_Apprentice_01_27_Hindi.pdf",
         "https://www.joinindiannavy.gov.in/images/OFFICIAL_IN_CALENDAR_2026_DMPR.pdf"
+      ],
+      "sourceId": "navy-careers",
+      "sourceName": "Indian Navy — Notifications",
+      "dept": "Indian Navy — Notifications",
+      "state": "All India",
+      "category": "defence",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "5297577d415d93d5",
+      "title": "Online application window for 10+2 B.Tech Cadet entry Jul 26 course is extended till 1200 hrs on 23 Jan 26. (Closed)",
+      "link": "https://www.joinindiannavy.gov.in/en/event/online-application-window-for-10-2-b-tech-cadet-entry-jul-26-course-is-extended-till-1200-hrs-on-23-.html",
+      "publishedAt": "2026-07-07T09:38:22.339139Z",
+      "summary": "1. Applications are invited from unmarried men and women candidates (fulfilling the conditions of nationality as laid down by the Govt. of India) for becoming Permanent Commissioned Officers in Executive and Technical branches under 10+2 B Tech Cadet Entry Scheme after undergoing four year B Tech course at the prestigious Indian Naval Academy, Ezhimala. 2. Vacancies & Age. The age eligibility & va…",
+      "pdfUrls": [
+        "https://www.joinindiannavy.gov.in/files/job_instructions/1764916242_62652.pdf",
+        "https://www.joinindiannavy.gov.in/images/OFFICIAL_IN_CALENDAR_2026_DMPR.pdf"
+      ],
+      "sourceId": "navy-careers",
+      "sourceName": "Indian Navy — Notifications",
+      "dept": "Indian Navy — Notifications",
+      "state": "All India",
+      "category": "defence",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "ab1c1a47609d6c04",
+      "title": "Application window for AVR MR (Musician) 02/26 batch extended till 30 Apr 26. (Closed)",
+      "link": "https://www.joinindiannavy.gov.in/en/event/online-application-window-for-agniveer-mr-musician-02-26-entry-will-be-live-from-11-apr-26-apr-26.html",
+      "publishedAt": "2026-07-07T09:38:13.227660Z",
+      "summary": "CALENDAR COMBAT READY COHESIVE ATMANIRBHAR ;q¼ rRij lqxfBr vkRefuHkZj Visit : www.joinindiannavy.gov.in SAFEGUARDING SEAS FOR A VIKSIT SAMRIDDHA BHARAT SAFEGUARDING SEAS FOR A VIKSIT SAMRIDDHA BHARAT Visit : www.joinindiannavy.gov.in Journey YEARS OVER THE COMBAT READY COHESIVE ATMANIRBHAR ;q¼ rRij lqxfBr vkRefuHkZj SAFEGUARDING SEAS FOR A VIKSIT SAMRIDDHA BHARAT SAFEGUARDING SEAS FOR A VIKSIT SAM…",
+      "pdfUrls": [
+        "https://www.joinindiannavy.gov.in/images/OFFICIAL_IN_CALENDAR_2026_DMPR.pdf",
+        "https://www.joinindiannavy.gov.in/files/Advt-Agniveer-MR-MUS-02-26-English.pdf",
+        "https://www.joinindiannavy.gov.in/files/Advt-Agniveer-MR-MUS-02-26-Hindi.pdf"
+      ],
+      "sourceId": "navy-careers",
+      "sourceName": "Indian Navy — Notifications",
+      "dept": "Indian Navy — Notifications",
+      "state": "All India",
+      "category": "defence",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "ac112892bcc752cd",
+      "title": "Online application window for SSC (IT) - Jan 27 course is live from 16 May to 01 Jun 26. (Closed)",
+      "link": "https://www.joinindiannavy.gov.in/en/event/online-application-window-for-ssc-it-jan-27-course-is-live-from-16-may-to-01-jun-26.html",
+      "publishedAt": "2026-07-07T09:38:07.477315Z",
+      "summary": "THE INDIAN NAVY INVITES APPLICATIONS FOR SHORT SERVICE COMMISSION IN EXECUTIVE (INFORMATION TECHNOLOGY) – JAN 27 COURSE Date of Opening - 16 May 26 Last date for Online Application - 01 Jun 26 1. Applications are invited from unmarried eligible men & women candidates for grant of Short Service Commission (SSC) in Information Technology (Executive Branch) of Indian Navy under Special Naval Orientat…",
+      "pdfUrls": [
+        "https://www.joinindiannavy.gov.in/files/Advertisement_SSC_IT_Jan_27.pdf",
+        "https://www.joinindiannavy.gov.in/images/OFFICIAL_IN_CALENDAR_2026_DMPR.pdf"
+      ],
+      "sourceId": "navy-careers",
+      "sourceName": "Indian Navy — Notifications",
+      "dept": "Indian Navy — Notifications",
+      "state": "All India",
+      "category": "defence",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "9cc8b977a762d40a",
+      "title": "Online application window for SSC (various entries) for Jun 27 Course is live from 25 Jun 26 to 27 Jul 26",
+      "link": "https://www.joinindiannavy.gov.in/en/event/online-application-window-for-ssc-various-entries-for-jun-27-course-is-live-from-25-jun-26-to-27-jul.html",
+      "publishedAt": "2026-07-07T09:37:38.573864Z",
+      "summary": "THE INDIAN NAVY INVITES APPLICATIONS FOR SHORT SERVICE COMMISSION OFFICERS FOR VARIOUS ENTRIES - JUN 2027 (AT 27) COURSE Apply Online from – 25 Jun 26 Last date for Online Application – 27 Jul 26 1. Applications are invited from eligible unmarried men and unmarried women candidates for grant of Short Service Commission (SSC) for course commencing Jun 2027 onwards at Indian Naval Academy (INA) Ezhi…",
+      "pdfUrls": [
+        "https://www.joinindiannavy.gov.in/files/SSC_Notification_for_ADV_Jun_27.pdf",
+        "https://www.joinindiannavy.gov.in/images/OFFICIAL_IN_CALENDAR_2026_DMPR.pdf"
+      ],
+      "sourceId": "navy-careers",
+      "sourceName": "Indian Navy — Notifications",
+      "dept": "Indian Navy — Notifications",
+      "state": "All India",
+      "category": "defence",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "0ed30b7f9a136f6a",
+      "title": "SSC Notification for ADV Jun 27",
+      "link": "https://www.joinindiannavy.gov.in/files/SSC_Notification_for_ADV_Jun_27.pdf",
+      "publishedAt": "2026-07-07T09:36:38.385683Z",
+      "summary": "THE INDIAN NAVY INVITES APPLICATIONS FOR SHORT SERVICE COMMISSION OFFICERS FOR VARIOUS ENTRIES - JUN 2027 (AT 27) COURSE Apply Online from – 25 Jun 26 Last date for Online Application – 27 Jul 26 1. Applications are invited from eligible unmarried men and unmarried women candidates for grant of Short Service Commission (SSC) for course commencing Jun 2027 onwards at Indian Naval Academy (INA) Ezhi…",
+      "pdfUrls": [
+        "https://www.joinindiannavy.gov.in/files/SSC_Notification_for_ADV_Jun_27.pdf"
       ],
       "sourceId": "navy-careers",
       "sourceName": "Indian Navy — Notifications",
@@ -963,56 +1014,6 @@
         "ne"
       ],
       "fetchMethod": "html"
-    },
-    {
-      "id": "ac112892bcc752cd",
-      "title": "Online application window for SSC (IT) - Jan 27 course is live from 16 May to 01 Jun 26. (Closed)",
-      "link": "https://www.joinindiannavy.gov.in/en/event/online-application-window-for-ssc-it-jan-27-course-is-live-from-16-may-to-01-jun-26.html",
-      "publishedAt": "2026-07-07T09:38:07.477315Z",
-      "summary": "THE INDIAN NAVY INVITES APPLICATIONS FOR SHORT SERVICE COMMISSION IN EXECUTIVE (INFORMATION TECHNOLOGY) – JAN 27 COURSE Date of Opening - 16 May 26 Last date for Online Application - 01 Jun 26 1. Applications are invited from unmarried eligible men & women candidates for grant of Short Service Commission (SSC) in Information Technology (Executive Branch) of Indian Navy under Special Naval Orientat…",
-      "pdfUrls": [
-        "https://www.joinindiannavy.gov.in/files/Advertisement_SSC_IT_Jan_27.pdf",
-        "https://www.joinindiannavy.gov.in/images/OFFICIAL_IN_CALENDAR_2026_DMPR.pdf"
-      ],
-      "sourceId": "navy-careers",
-      "sourceName": "Indian Navy — Notifications",
-      "dept": "Indian Navy — Notifications",
-      "state": "All India",
-      "category": "defence",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "9cc8b977a762d40a",
-      "title": "Online application window for SSC (various entries) for Jun 27 Course is live from 25 Jun 26 to 27 Jul 26",
-      "link": "https://www.joinindiannavy.gov.in/en/event/online-application-window-for-ssc-various-entries-for-jun-27-course-is-live-from-25-jun-26-to-27-jul.html",
-      "publishedAt": "2026-07-07T09:37:38.573864Z",
-      "summary": "THE INDIAN NAVY INVITES APPLICATIONS FOR SHORT SERVICE COMMISSION OFFICERS FOR VARIOUS ENTRIES - JUN 2027 (AT 27) COURSE Apply Online from – 25 Jun 26 Last date for Online Application – 27 Jul 26 1. Applications are invited from eligible unmarried men and unmarried women candidates for grant of Short Service Commission (SSC) for course commencing Jun 2027 onwards at Indian Naval Academy (INA) Ezhi…",
-      "pdfUrls": [
-        "https://www.joinindiannavy.gov.in/files/SSC_Notification_for_ADV_Jun_27.pdf",
-        "https://www.joinindiannavy.gov.in/images/OFFICIAL_IN_CALENDAR_2026_DMPR.pdf"
-      ],
-      "sourceId": "navy-careers",
-      "sourceName": "Indian Navy — Notifications",
-      "dept": "Indian Navy — Notifications",
-      "state": "All India",
-      "category": "defence",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "0ed30b7f9a136f6a",
-      "title": "SSC Notification for ADV Jun 27",
-      "link": "https://www.joinindiannavy.gov.in/files/SSC_Notification_for_ADV_Jun_27.pdf",
-      "publishedAt": "2026-07-07T09:36:38.385683Z",
-      "summary": "THE INDIAN NAVY INVITES APPLICATIONS FOR SHORT SERVICE COMMISSION OFFICERS FOR VARIOUS ENTRIES - JUN 2027 (AT 27) COURSE Apply Online from – 25 Jun 26 Last date for Online Application – 27 Jul 26 1. Applications are invited from eligible unmarried men and unmarried women candidates for grant of Short Service Commission (SSC) for course commencing Jun 2027 onwards at Indian Naval Academy (INA) Ezhi…",
-      "pdfUrls": [
-        "https://www.joinindiannavy.gov.in/files/SSC_Notification_for_ADV_Jun_27.pdf"
-      ],
-      "sourceId": "navy-careers",
-      "sourceName": "Indian Navy — Notifications",
-      "dept": "Indian Navy — Notifications",
-      "state": "All India",
-      "category": "defence",
-      "fetchMethod": "live-jobs-supplement"
     },
     {
       "id": "4d776097247b02d0",
