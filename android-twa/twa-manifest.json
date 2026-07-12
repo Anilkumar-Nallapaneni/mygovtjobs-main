@@ -14,8 +14,8 @@
   "enableNotifications": true,
   "startUrl": "/",
   "iconUrl": "https://www.livegovtjobs.com/pwa-512.png",
-  "maskableIconUrl": "https://www.livegovtjobs.com/pwa-512.png",
-  "monochromeIconUrl": "https://www.livegovtjobs.com/pwa-512.png",
+  "maskableIconUrl": "https://www.livegovtjobs.com/pwa-512-maskable.png",
+  "monochromeIconUrl": "https://www.livegovtjobs.com/pwa-512-maskable.png",
   "splashScreenFadeOutDuration": 300,
   "signingKey": {
     "path": "./android.keystore",

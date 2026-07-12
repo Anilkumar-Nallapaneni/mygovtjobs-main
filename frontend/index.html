@@ -2,8 +2,8 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="apple-touch-icon" href="/pwa-512.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <!-- live-jobs early prefetch: injected at build for static/auto jobs source only -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
     <meta name="theme-color" content="#03060d" media="(prefers-color-scheme: dark)" />
@@ -11,17 +11,17 @@
     <meta name="mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-    <meta name="description" content="Live Govt Jobs — official government job notifications from verified .gov.in sources across India." />
+    <meta name="description" content="Live Govt Jobs — live government job alerts from verified .gov.in sources across India." />
     <meta name="application-name" content="Live Govt Jobs" />
     <meta property="og:site_name" content="Live Govt Jobs" />
     <meta property="og:title" content="Live Govt Jobs — Government Job Alerts" />
-    <meta property="og:description" content="Live government job notifications from official .gov.in sources across India." />
+    <meta property="og:description" content="Live government job notifications, results, and admit cards from verified .gov.in sources across India." />
     <meta property="og:url" content="https://www.livegovtjobs.com/" />
     <meta property="og:image" content="https://www.livegovtjobs.com/logo.png" />
     <meta name="twitter:image" content="https://www.livegovtjobs.com/logo.png" />
     <meta name="twitter:title" content="Live Govt Jobs — Government Job Alerts" />
-    <meta name="twitter:description" content="Live government job notifications from official sources across India." />
-    <title>Live Govt Jobs — Government Job Alerts | Results | Admit Cards</title>
+    <meta name="twitter:description" content="Live government job notifications from verified .gov.in sources across India." />
+    <title>Live Govt Jobs — Government Jobs | Results | Admit Cards</title>
   </head>
   <body>
     <div id="root">
@@ -67,9 +67,21 @@
           background: #fff;
         }
         .static-app-shell__navbar {
+          display: flex;
+          align-items: center;
           height: 66px;
+          padding: 0 14px;
           border-bottom: 1px solid #dde3ed;
           background: rgba(255, 255, 255, 0.96);
+        }
+        .static-app-shell__logo {
+          display: block;
+          height: 58px;
+          width: min(340px, 34vw);
+          max-width: 100%;
+          aspect-ratio: 1486 / 558;
+          object-fit: contain;
+          object-position: left center;
         }
         .static-app-shell__main {
           max-width: min(1800px, calc(100vw - 24px));
@@ -150,7 +162,9 @@
             </div>
           </div>
         </div>
-        <div class="static-app-shell__navbar" aria-hidden="true"></div>
+        <div class="static-app-shell__navbar" aria-hidden="true">
+          <img class="static-app-shell__logo" src="/logo.png" alt="" width="340" height="58" decoding="async" fetchpriority="high" />
+        </div>
         <div class="static-app-shell__main">
           <div class="static-app-shell__tagline">
             <span class="static-app-shell__tagline-rule" aria-hidden="true"></span>

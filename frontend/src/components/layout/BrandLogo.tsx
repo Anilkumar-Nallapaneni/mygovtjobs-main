@@ -9,8 +9,8 @@ type BrandLogoProps = {
   showTagline?: boolean;
 };
 
-/** Site logo — Live Govt Jobs wordmark (`/logo.png`). */
-const LOGO_ASPECT = 520 / 197;
+/** Cropped wordmark — Live Govt Jobs (`/logo.png`, transparent). */
+const LOGO_ASPECT = 1486 / 558;
 
 export default function BrandLogo({
   height = 48,
@@ -18,7 +18,7 @@ export default function BrandLogo({
 }: BrandLogoProps) {
   const { t } = useTranslation();
   const alt = t("brand.logoAlt", {
-    defaultValue: "Live Govt Jobs — official government job alerts",
+    defaultValue: "Live Govt Jobs — never miss a government notification",
   });
   const width = Math.round(height * LOGO_ASPECT);
 

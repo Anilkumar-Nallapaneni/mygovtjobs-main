@@ -106,7 +106,7 @@ export default defineConfig(({ mode }) => {
       VitePWA({
         devOptions: { enabled: false },
         registerType: 'autoUpdate',
-        includeAssets: ['favicon.svg', 'logo.png', 'pwa-192.png', 'pwa-512.png', 'og/job.svg'],
+        includeAssets: ['favicon-32.png', 'apple-touch-icon.png', 'app-icon.png', 'logo.png', 'pwa-192.png', 'pwa-512.png', 'pwa-512-maskable.png', 'og/job.svg'],
         workbox: {
           cleanupOutdatedCaches: true,
           skipWaiting: true,
@@ -141,8 +141,9 @@ export default defineConfig(({ mode }) => {
           icons: [
             { src: '/pwa-192.png', sizes: '192x192', type: 'image/png', purpose: 'any' },
             { src: '/pwa-512.png', sizes: '512x512', type: 'image/png', purpose: 'any' },
-            { src: '/pwa-512.png', sizes: '512x512', type: 'image/png', purpose: 'maskable' },
-            { src: '/favicon.svg', sizes: 'any', type: 'image/svg+xml' },
+            { src: '/pwa-512-maskable.png', sizes: '512x512', type: 'image/png', purpose: 'maskable' },
+            { src: '/favicon-32.png', sizes: '32x32', type: 'image/png' },
+            { src: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
           ],
         },
       }),

@@ -446,9 +446,11 @@
   display: flex;
   align-items: center;
   gap: 10px;
-  flex: 0 0 auto;
+  flex: 0 1 auto;
   flex-shrink: 0;
-  min-width: min(220px, 34vw);
+  width: min(var(--navbar-brand-width, 340px), 34vw);
+  max-width: var(--navbar-brand-width, 340px);
+  min-width: 0;
   cursor: pointer;
   border: none;
   background: transparent;
@@ -467,6 +469,11 @@
 .navbar__logo {
   flex-shrink: 0;
   --brand-logo-height: 58px;
+  width: 100%;
+  max-width: 100%;
+  aspect-ratio: unset;
+  object-fit: contain;
+  object-position: left center;
 }
 
 .navbar__brand-name {
@@ -988,14 +995,16 @@
   }
 
   .navbar__brand {
-    flex-shrink: 0;
+    flex: 1 1 auto;
+    width: auto;
+    max-width: min(var(--navbar-brand-width, 340px), 58vw);
     min-width: 0;
-    max-width: min(52%, 220px);
   }
 
   .navbar__logo {
-    --brand-logo-height: 44px;
+    width: 100%;
     max-width: 100%;
+    --brand-logo-height: 52px;
   }
 }
 
@@ -1017,7 +1026,11 @@
   }
 
   .navbar__brand {
-    max-width: min(58%, 200px);
+    max-width: min(var(--navbar-brand-width, 340px), 62vw);
+  }
+
+  .navbar__logo {
+    --brand-logo-height: 48px;
   }
 
   .navbar__mobile-header-prefs-grid {

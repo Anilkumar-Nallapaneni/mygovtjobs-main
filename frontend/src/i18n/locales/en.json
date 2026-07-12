@@ -1,10 +1,12 @@
 {
   "brand": {
-    "primary": "My ",
+    "name": "Live Govt Jobs",
+    "primary": "Live ",
     "accent": "Govt Jobs",
-    "tagline": "OFFICIAL GOVT JOB ALERTS",
+    "tagline": "Never Miss a Govt Notification",
+    "subtitle": "livegovtjobs.com",
     "domain": "livegovtjobs.com",
-    "logoAlt": "Live Govt Jobs — official government job alerts",
+    "logoAlt": "Live Govt Jobs — never miss a government notification",
     "homeAria": "Live Govt Jobs — home"
   },
   "browse": {
@@ -87,7 +89,7 @@
     "allIndia": "All India"
   },
   "home": {
-    "tagline": "NEVER MISS A GOVERNMENT NOTIFICATION",
+    "tagline": "LIVE GOVERNMENT JOB NOTIFICATIONS · INDIA",
     "statsStrip": {
       "primary": "{{vacancies}} notified posts · {{liveNotices}} live notifications",
       "secondary": "{{sources}} official sources · {{syncLabel}}",

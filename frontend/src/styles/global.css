@@ -172,10 +172,13 @@ input::placeholder {
   display: block;
   height: var(--brand-logo-height, 48px);
   width: var(--brand-logo-width, auto);
-  min-width: min(var(--brand-logo-width, 96px), 42vw);
   max-width: 100%;
-  aspect-ratio: 520 / 197;
+  aspect-ratio: var(--brand-logo-aspect, 1486 / 558);
   object-fit: contain;
   object-position: left center;
   flex-shrink: 0;
+}
+
+[data-color-mode="dark"] .brand-logo {
+  filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.35));
 }
