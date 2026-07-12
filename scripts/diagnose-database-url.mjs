@@ -1,12 +1,35 @@
 #!/usr/bin/env node
 /**
  * Warn when DATABASE_URL will fail on GitHub Actions (IPv6-only db host, wrong port).
+ * Loads backend/.env when DATABASE_URL is not set in the shell.
  */
+import { readFileSync, existsSync } from 'node:fs'
+import { join, dirname } from 'node:path'
+import { fileURLToPath } from 'node:url'
 import { lookup } from 'node:dns/promises'
 
-const url = (process.env.DATABASE_URL || '').trim()
+const root = join(dirname(fileURLToPath(import.meta.url)), '..')
+
+function loadEnvFile(path) {
+  if (!existsSync(path)) return {}
+  const out = {}
+  for (const line of readFileSync(path, 'utf8').split('\n')) {
+    const t = line.trim()
+    if (!t || t.startsWith('#')) continue
+    const i = t.indexOf('=')
+    if (i < 1) continue
+    out[t.slice(0, i).trim()] = t.slice(i + 1).trim()
+  }
+  return out
+}
+
+const backendEnv = loadEnvFile(join(root, 'backend/.env'))
+const url = (process.env.DATABASE_URL || backendEnv.DATABASE_URL || '').trim()
+
 if (!url) {
   console.error('✗ DATABASE_URL is empty')
+  console.error('  Set it in backend/.env (Supabase transaction pooler, port 6543)')
+  console.error('  Example: postgresql+asyncpg://postgres.PROJECT_REF:PASSWORD@aws-0-REGION.pooler.supabase.com:6543/postgres')
   process.exit(1)
 }
 

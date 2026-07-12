@@ -65,7 +65,7 @@
     "audit:job-pdfs": "node scripts/run-python.mjs scripts/audit-job-pdfs.py",
     "audit:job-sources": "node scripts/run-python.mjs scripts/audit-job-sources.py",
     "audit:detail-coverage": "node scripts/audit-live-detail-coverage.mjs",
-    "audit:sites": "node scripts/audit-sites.mjs",
+    "audit:sites": "tsx scripts/audit-sites.mjs",
     "check:job-status": "node scripts/run-python.mjs scripts/check-job-status.py",
     "check:vacancy-totals": "node scripts/check-vacancy-totals.mjs",
     "verify:job-detail-route": "node scripts/verify-job-detail-route.mjs",

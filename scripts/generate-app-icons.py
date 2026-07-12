@@ -14,7 +14,7 @@ ROOT = Path(__file__).resolve().parents[1]
 PUBLIC = ROOT / "frontend" / "public"
 TWA_RES = ROOT / "android-twa" / "app" / "src" / "main" / "res"
 SRC = PUBLIC / "app-icon.png"
-BG = (15, 23, 42, 255)  # #0f172a — matches PWA theme_color
+BG = (3, 6, 13, 255)  # #03060d — matches PWA theme_color
 
 
 def load_emblem(path: Path) -> Image.Image:

@@ -2,7 +2,7 @@
  * Quick audit: node scripts/audit-sites.mjs
  */
 import https from "node:https";
-import { OFFICIAL_SITES } from "../frontend/src/data/officialSites.js";
+import { OFFICIAL_SITES } from "../frontend/src/data/officialSites.ts";
 
 const ua =
   "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36 GovJobAlert/1.0";
