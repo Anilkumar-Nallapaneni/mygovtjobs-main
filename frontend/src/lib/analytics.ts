@@ -44,30 +44,61 @@ function sendPageView(path: string, title?: string): void {
   })
 }
 
+function findGtagScript(): HTMLScriptElement | null {
+  if (typeof document === 'undefined') return null
+  return document.querySelector(`script[src*="gtag/js?id=${encodeURIComponent(GA_ID)}"]`)
+}
+
+function markScriptReady(): void {
+  scriptLoaded = true
+  flushPendingPageViews()
+}
+
 /** Load gtag.js once when VITE_GA_MEASUREMENT_ID is set. No-op otherwise. */
 export function initAnalytics(): void {
   if (!GA_ID || initialized || typeof window === 'undefined') return
   initialized = true
 
-  installGtagStub()
-  window.gtag!('js', new Date())
-  window.gtag!('config', GA_ID, {
+  const config = {
     send_page_view: false,
     ...(import.meta.env.DEV ? { debug_mode: true } : {}),
-  })
+  }
+
+  const existingScript = findGtagScript()
+  if (!window.gtag) {
+    installGtagStub()
+    window.gtag!('js', new Date())
+  }
+  window.gtag!('config', GA_ID, config)
+
+  if (existingScript) {
+    if (existingScript.dataset.gaReady === '1') {
+      markScriptReady()
+      return
+    }
+    existingScript.addEventListener('load', () => {
+      existingScript.dataset.gaReady = '1'
+      markScriptReady()
+    }, { once: true })
+    existingScript.addEventListener('error', () => {
+      if (import.meta.env.DEV) {
+        console.warn('[analytics] Failed to load gtag.js')
+      }
+    }, { once: true })
+    return
+  }
 
   const script = document.createElement('script')
   script.async = true
   if (import.meta.env.VITEST) {
-    scriptLoaded = true
+    markScriptReady()
     document.head.appendChild(script)
-    flushPendingPageViews()
     return
   }
   script.src = `https://www.googletagmanager.com/gtag/js?id=${encodeURIComponent(GA_ID)}`
   script.onload = () => {
-    scriptLoaded = true
-    flushPendingPageViews()
+    script.dataset.gaReady = '1'
+    markScriptReady()
   }
   script.onerror = () => {
     if (import.meta.env.DEV) {

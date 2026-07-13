@@ -14,6 +14,27 @@ function googleSiteVerificationPlugin(token: string): Plugin {
   }
 }
 
+/** GA4 in initial HTML — required for Search Console “Google Analytics” verification and early page_view. */
+function gaMeasurementPlugin(measurementId: string): Plugin {
+  return {
+    name: 'inject-ga-measurement',
+    transformIndexHtml(html) {
+      if (!measurementId || !/^G-[A-Z0-9]+$/i.test(measurementId)) return html
+      const src = `https://www.googletagmanager.com/gtag/js?id=${encodeURIComponent(measurementId)}`
+      const snippet = [
+        `    <script async src="${src}"></script>`,
+        '    <script>',
+        '      window.dataLayer = window.dataLayer || [];',
+        '      function gtag(){dataLayer.push(arguments);}',
+        '      gtag("js", new Date());',
+        `      gtag("config", ${JSON.stringify(measurementId)}, { send_page_view: false });`,
+        '    </script>',
+      ].join('\n')
+      return html.replace('</head>', `${snippet}\n  </head>`)
+    },
+  }
+}
+
 function buildStampPlugin(stamp: string): Plugin {
   return {
     name: 'build-stamp',
@@ -91,6 +112,7 @@ function perfIndexHtmlPlugin(
 export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, resolve(__dirname), '')
   const googleVerify = (env.VITE_GOOGLE_SITE_VERIFICATION || '').trim()
+  const gaMeasurementId = (env.VITE_GA_MEASUREMENT_ID || '').trim()
   const jobsSource = (env.VITE_JOBS_SOURCE || 'auto').trim()
   const isDev = mode === 'development'
   // Stable stamp in dev avoids busting the 2MB jobs JSON + SW caches on every `npm run dev`.
@@ -103,6 +125,7 @@ export default defineConfig(({ mode }) => {
       buildStampPlugin(buildStamp),
       perfIndexHtmlPlugin(jobsSource, buildStamp, jobsFetchCache),
       googleSiteVerificationPlugin(googleVerify),
+      gaMeasurementPlugin(gaMeasurementId),
       VitePWA({
         devOptions: { enabled: false },
         registerType: 'autoUpdate',
