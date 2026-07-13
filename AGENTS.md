@@ -101,9 +101,9 @@ npm run check:frontend && npm run type-check && npm run lint && npm run test && 
 
 Deps are pre-installed by the startup update script (`npm install` for the root + `frontend` workspace, and a Python venv at `backend/.venv` from `backend/requirements.txt`). Standard commands live in the table above and in `docs/INSTALLATION_AND_RUN.md`.
 
-- **No `.env*` templates are committed** (despite docs referencing `.env.example`). Create them by hand. None are needed to run the frontend on static data.
+- **`.env.example` templates** are at repo root, `frontend/`, and `backend/` — copy to `.env.local` / `.env` and fill secrets. None are needed to run the frontend on static data.
 - **Frontend runs fully standalone on committed static data** — `frontend/public/data/live-jobs.json` (~1,600 real jobs). Set `frontend/.env.local` to `VITE_JOBS_SOURCE=static` (or rely on the `auto` default), then `npm run dev` (:2222). No Supabase or backend required to browse/search/view job details.
 - **Backend boots without a database**, but DB-backed routes (`/api/jobs`, etc.) return `503` and `/health` reports `"degraded"` until `DATABASE_URL` (Supabase **transaction pooler**, port 6543) is set in `backend/.env`. Start it with `ALLOW_INSECURE_ADMIN=1 APP_ENV=development npm run api:dev`. The default `DATABASE_URL` points at `localhost:5432`, so logs show `ConnectionRefusedError` when no DB is configured — expected.
 - Python scripts/tests run through `backend/.venv` via `scripts/run-python.mjs` (`npm run test:backend`, ingest, etc.). After changing `backend/requirements.txt`, reinstall into `backend/.venv` — `api:dev`'s `--reload` does not pick up new packages.
-- `npm run lint` currently reports pre-existing errors in `frontend/src` (e.g. `usePwaInstall.ts`, `useBrowseState.test.tsx`) unrelated to environment setup. `npm run type-check`, frontend tests, backend tests, and `npm run build` all pass.
+- `npm run lint` runs on every PR with `--max-warnings 0` (see `.github/workflows/ci.yml`). `npm run type-check`, frontend tests, backend tests, and `npm run build` should pass before push.
 - Live-data features (fresh jobs, `supabase`/`api` job sources, alert persistence, ingest) require Supabase secrets: frontend `VITE_SUPABASE_URL`/`VITE_SUPABASE_ANON_KEY`, backend `DATABASE_URL`/`SUPABASE_SERVICE_ROLE_KEY`/`ADMIN_API_KEY`.

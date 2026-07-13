@@ -1,6 +1,13 @@
 import { Link, useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
+import {
+  NavIconAdmit,
+  NavIconExplore,
+  NavIconHome,
+  NavIconLatest,
+  NavIconResults,
+} from "@/components/layout/BottomNavIcons";
 import { LATEST_NOTIFICATIONS_PATH, EXPLORE_HUB_PATH } from "@/utils/browseRoutes";
 import { trackNavClick } from "@/lib/analytics";
 
@@ -9,28 +16,28 @@ const TABS = [
     key: "home",
     href: "/",
     labelKey: "nav.home",
-    icon: "⌂",
+    Icon: NavIconHome,
     isActive: (path: string) => path === "/" || path === "",
   },
   {
     key: "explore",
     href: EXPLORE_HUB_PATH,
     labelKey: "nav.explore",
-    icon: "🧭",
+    Icon: NavIconExplore,
     isActive: (path: string) => path.startsWith(EXPLORE_HUB_PATH),
   },
   {
     key: "latest",
     href: LATEST_NOTIFICATIONS_PATH,
     labelKey: "nav.latest",
-    icon: "📰",
+    Icon: NavIconLatest,
     isActive: (path: string) => path.startsWith(LATEST_NOTIFICATIONS_PATH),
   },
   {
     key: "results",
     href: "/results",
     labelKey: "nav.results",
-    icon: "📊",
+    Icon: NavIconResults,
     isActive: (path: string) =>
       path === "/results" ||
       (path.startsWith("/results/") &&
@@ -42,7 +49,7 @@ const TABS = [
     href: "/results/admit-card",
     labelKey: "nav.admitCard",
     shortLabelKey: "nav.admitCardShort",
-    icon: "🎫",
+    Icon: NavIconAdmit,
     isActive: (path: string) => path.startsWith("/results/admit-card"),
   },
 ] as const;
@@ -59,6 +66,7 @@ export default function MobileBottomNav() {
     >
       {TABS.map((tab) => {
         const active = tab.isActive(path);
+        const Icon = tab.Icon;
         return (
           <Link
             key={tab.key}
@@ -68,7 +76,7 @@ export default function MobileBottomNav() {
             onClick={() => trackNavClick(tab.key, tab.href)}
           >
             <span className="mobile-bottom-nav__icon" aria-hidden>
-              {tab.icon}
+              <Icon className="mobile-bottom-nav__icon-svg" />
             </span>
             <span className="mobile-bottom-nav__label mobile-bottom-nav__label--full">
               {t(tab.labelKey)}

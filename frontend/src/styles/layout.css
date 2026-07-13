@@ -54,28 +54,6 @@
   color: #92400e;
 }
 
-.jobs-stale-warning-banner {
-  max-width: var(--layout-max);
-  margin: 0 auto;
-  padding: 10px 20px;
-  width: 100%;
-  background: #fff7ed;
-  border-bottom: 1px solid #fdba74;
-  color: #9a3412;
-  font-size: 0.9rem;
-}
-
-.jobs-stale-warning-banner p {
-  margin: 0;
-  line-height: 1.45;
-}
-
-[data-color-mode="dark"] .jobs-stale-warning-banner {
-  background: #431407;
-  border-bottom-color: #ea580c;
-  color: #fed7aa;
-}
-
 .job-report {
   margin: 16px 0 8px;
 }
@@ -2849,8 +2827,17 @@ a.navbar__nav-btn {
   }
 
   .mobile-bottom-nav__icon {
-    font-size: 16px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
     line-height: 1;
+  }
+
+  .mobile-bottom-nav__icon-svg {
+    width: 18px;
+    height: 18px;
   }
 
   .mobile-bottom-nav__label {

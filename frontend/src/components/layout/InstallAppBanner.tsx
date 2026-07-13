@@ -66,7 +66,7 @@ export default function InstallAppBanner() {
           </p>
           <p className="install-app-banner__text">
             {t('pwa.iosSteps', {
-              defaultValue: 'Tap Share, then "Add to Home Screen" to install My Govt Jobs.',
+              defaultValue: 'Tap Share, then "Add to Home Screen" to install Live Govt Jobs.',
             })}
           </p>
           <button type="button" className="install-app-banner__dismiss" onClick={handleDismiss}>
@@ -84,7 +84,7 @@ export default function InstallAppBanner() {
       <div className="install-app-banner__inner">
         <div className="install-app-banner__body">
           <p id="install-banner-title" className="install-app-banner__title">
-            {t('pwa.bannerTitle', { defaultValue: 'Install My Govt Jobs' })}
+            {t('pwa.bannerTitle', { defaultValue: 'Install Live Govt Jobs' })}
           </p>
           <p className="install-app-banner__text">
             {t('pwa.bannerBody', {

@@ -8,7 +8,7 @@ import { useStateLabel } from "@/utils/stateLabels";
 import { useLiveJobs } from "@/hooks/useLiveJobs";
 import { useServerJobSearch } from "@/hooks/useServerJobSearch";
 import { useColorMode } from "@/hooks/useColorMode";
-import { dailySyncLabel, jobDataStaleWarning } from "@/lib/dailySync";
+import { dailySyncLabel } from "@/lib/dailySync";
 import Navbar from "@/components/layout/Navbar";
 import EmploymentNewsBarShell from "@/components/layout/EmploymentNewsBarShell";
 import MobileBottomNav from "@/components/layout/MobileBottomNav";
@@ -65,10 +65,6 @@ function AppShell() {
 
   const dailySyncLine = useMemo(
     () => dailySyncLabel(dailySyncMeta, syncStatus, t),
-    [dailySyncMeta, syncStatus, t]
-  );
-  const dataStaleWarning = useMemo(
-    () => jobDataStaleWarning(dailySyncMeta, syncStatus, t),
     [dailySyncMeta, syncStatus, t]
   );
 
@@ -153,11 +149,6 @@ function AppShell() {
       <Suspense fallback={null}>
         <SubscribeBanner />
       </Suspense>
-      {dataStaleWarning ? (
-        <div className="jobs-stale-warning-banner" role="status">
-          <p>{dataStaleWarning}</p>
-        </div>
-      ) : null}
       {jobsError && (
         <div className="jobs-load-error-banner" role="alert">
           <p className="jobs-load-error-banner__text">

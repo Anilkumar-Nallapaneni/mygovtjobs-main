@@ -1,36 +1,10 @@
+import { SITE_DESCRIPTION, SITE_NAME, SITE_OG_IMAGE_PATH } from "@/data/siteMeta";
+import { SITE_ORIGIN } from "@/data/siteLinks";
 import type { JobRecord } from "@/types/job";
 import { jobDetailUrl } from "@/utils/jobRoutes";
+import { beginSeoHead } from "@/utils/seoHead";
 
-const SITE_NAME = "My Govt Jobs";
-const DEFAULT_OG_IMAGE = "/logo.png";
-const DEFAULT_DESCRIPTION =
-  "Latest government jobs, official notifications, and apply links from verified .gov.in portals across India.";
-
-function upsertMeta(name: string, content: string, attr: "name" | "property" = "name") {
-  if (!content) return;
-  let el = document.head.querySelector(`meta[${attr}="${name}"]`) as Element | null;
-  if (!el) {
-    el = document.createElement("meta");
-    el.setAttribute(attr, name);
-    document.head.appendChild(el);
-  }
-  el.setAttribute("content", content);
-}
-
-function upsertLink(rel: string, href: string) {
-  if (!href) return;
-  let el = document.head.querySelector(`link[rel="${rel}"]`) as Element | null;
-  if (!el) {
-    el = document.createElement("link");
-    el.setAttribute("rel", rel);
-    document.head.appendChild(el);
-  }
-  el.setAttribute("href", href);
-}
-
-function removeJsonLd(id: string) {
-  document.getElementById(id)?.remove();
-}
+const DEFAULT_DESCRIPTION = SITE_DESCRIPTION;
 
 function jobDescription(job: JobRecord): string {
   const summary =
@@ -47,11 +21,11 @@ function jobDescription(job: JobRecord): string {
 }
 
 function defaultOgImage(job?: JobRecord | null): string {
-  const origin = typeof window !== "undefined" ? window.location.origin : "https://www.livegovtjobs.com";
+  const origin = typeof window !== "undefined" ? window.location.origin : SITE_ORIGIN;
   if (job?.slug || job?.id) {
-    return `${origin}/og/job.svg?title=${encodeURIComponent(String(job.title || "Govt Job").slice(0, 80))}`;
+    return `${origin}/api/og?title=${encodeURIComponent(String(job.title || "Govt Job").slice(0, 80))}`;
   }
-  return `${origin}${DEFAULT_OG_IMAGE}`;
+  return `${origin}${SITE_OG_IMAGE_PATH}`;
 }
 
 function parseIsoDate(value: unknown): string | undefined {
@@ -103,51 +77,45 @@ export function buildJobPostingJsonLd(job: JobRecord): Record<string, unknown> |
 
 export function applyJobSeo(job: JobRecord | null) {
   const jsonLdId = "job-posting-jsonld";
+  const head = beginSeoHead();
+  const fallbackTitle = `${SITE_NAME} — Latest Government Jobs India`;
 
   if (!job?.title) {
-    document.title = `${SITE_NAME} — Latest Government Jobs India`;
-    upsertMeta("description", DEFAULT_DESCRIPTION);
-    upsertMeta("og:title", `${SITE_NAME} — Latest Government Jobs India`, "property");
-    upsertMeta("og:description", DEFAULT_DESCRIPTION, "property");
-    upsertMeta("og:image", defaultOgImage(), "property");
-    removeJsonLd(jsonLdId);
-    return () => {
-      document.title = `${SITE_NAME} — Latest Government Jobs India`;
-      removeJsonLd(jsonLdId);
-    };
+    head.setTitle(fallbackTitle);
+    head.upsertMeta("description", DEFAULT_DESCRIPTION);
+    head.upsertMeta("og:site_name", SITE_NAME, "property");
+    head.upsertMeta("og:title", fallbackTitle, "property");
+    head.upsertMeta("og:description", DEFAULT_DESCRIPTION, "property");
+    head.upsertMeta("og:image", defaultOgImage(), "property");
+    head.upsertMeta("robots", "index, follow, max-image-preview:large");
+    return head.restore;
   }
 
   const title = `${job.title} | ${SITE_NAME}`;
   const description = jobDescription(job);
   const url = jobDetailUrl(job) || window.location.href;
-  const prevTitle = document.title;
-
-  document.title = title;
-  upsertMeta("description", description);
-  upsertMeta("og:title", title, "property");
-  upsertMeta("og:description", description, "property");
-  upsertMeta("og:type", "article", "property");
-  upsertMeta("og:url", url, "property");
   const ogImage = defaultOgImage(job);
-  upsertMeta("og:image", ogImage, "property");
-  upsertMeta("twitter:card", "summary_large_image", "name");
-  upsertMeta("twitter:image", ogImage, "name");
-  upsertMeta("twitter:title", title, "name");
-  upsertMeta("twitter:description", description, "name");
-  upsertLink("canonical", url);
 
-  removeJsonLd(jsonLdId);
+  head.setTitle(title);
+  head.upsertMeta("description", description);
+  head.upsertMeta("og:site_name", SITE_NAME, "property");
+  head.upsertMeta("og:locale", "en_IN", "property");
+  head.upsertMeta("og:title", title, "property");
+  head.upsertMeta("og:description", description, "property");
+  head.upsertMeta("og:type", "article", "property");
+  head.upsertMeta("og:url", url, "property");
+  head.upsertMeta("og:image", ogImage, "property");
+  head.upsertMeta("twitter:card", "summary_large_image", "name");
+  head.upsertMeta("twitter:image", ogImage, "name");
+  head.upsertMeta("twitter:title", title, "name");
+  head.upsertMeta("twitter:description", description, "name");
+  head.upsertLink("canonical", url);
+  head.upsertMeta("robots", "index, follow, max-image-preview:large");
+
   const jsonLd = buildJobPostingJsonLd(job);
   if (jsonLd) {
-    const script = document.createElement("script");
-    script.type = "application/ld+json";
-    script.id = jsonLdId;
-    script.textContent = JSON.stringify(jsonLd);
-    document.head.appendChild(script);
+    head.upsertJsonLd(jsonLdId, jsonLd);
   }
 
-  return () => {
-    document.title = prevTitle;
-    removeJsonLd(jsonLdId);
-  };
+  return head.restore;
 }

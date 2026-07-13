@@ -10,7 +10,7 @@ export const HOW_TO_APPLY_PAGE = {
     {
       heading: '1. Find the official notification',
       paragraphs: [
-        'Use My Govt Jobs to discover live recruitment, then open the job detail page. Every listing links to the recruiting organisation’s official .gov.in or .gov website.',
+        'Use Live Govt Jobs to discover live recruitment, then open the job detail page. Every listing links to the recruiting organisation’s official .gov.in or .gov website.',
         'Never apply through third-party aggregators that charge fees. The application portal URL should match the board’s official domain.',
       ],
     },
@@ -38,7 +38,7 @@ export const HOW_TO_APPLY_PAGE = {
     {
       heading: '5. Pay fee only on official site',
       paragraphs: [
-        'Application fees must be paid only on the official portal. My Govt Jobs never collects fees.',
+        'Application fees must be paid only on the official portal. Live Govt Jobs never collects fees.',
         'Fee exemptions apply for SC/ST/PwBD/female candidates on many notifications — verify in the PDF.',
       ],
     },
@@ -46,7 +46,7 @@ export const HOW_TO_APPLY_PAGE = {
       heading: '6. Track admit card & results',
       paragraphs: [
         'Bookmark the board’s admit-card and results pages. Use our Exam Calendar to watch deadlines and our Results section for official updates.',
-        'Subscribe to free job alerts on My Govt Jobs to get notified when new matching posts are published.',
+        'Subscribe to free job alerts on Live Govt Jobs to get notified when new matching posts are published.',
       ],
     },
   ] satisfies StaticPageSection[],
@@ -105,13 +105,13 @@ export type FaqItem = {
 export const FAQ_ITEMS: FaqItem[] = [
   {
     id: 'official',
-    question: 'Are the jobs on My Govt Jobs official?',
+    question: 'Are the jobs on Live Govt Jobs official?',
     answer:
       'Yes. We list recruitment only from verified government portals ending in .gov.in or .gov. Always double-check on the recruiting organisation’s website before applying or paying any fee.',
   },
   {
     id: 'fees',
-    question: 'Does My Govt Jobs charge application fees?',
+    question: 'Does Live Govt Jobs charge application fees?',
     answer:
       'No. We are an information service. Application fees, if any, are paid only on the official board portal mentioned in the notification.',
   },

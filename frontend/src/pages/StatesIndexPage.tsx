@@ -1,3 +1,4 @@
+import { pageTitle } from '@/data/siteMeta'
 import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
@@ -27,7 +28,7 @@ export default function StatesIndexPage({ jobs, onFooterLink }: StatesIndexPageP
   }, [])
 
   useEffect(() => {
-    document.title = `${t('states.indexTitle', { defaultValue: 'Government Jobs by State' })} | My Govt Jobs`
+    document.title = pageTitle(t('states.indexTitle', { defaultValue: 'Government Jobs by State' }));
   }, [t])
 
   const sorted = [...STATES].sort((a, b) => (stateCounts[b.id] ?? 0) - (stateCounts[a.id] ?? 0))

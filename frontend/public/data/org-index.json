@@ -116,14 +116,8 @@
   {
     "dept": "Jammu & Kashmir PSC (JKPSC)",
     "slug": "jammu-kashmir-psc-jkpsc",
-    "count": 30,
+    "count": 29,
     "vacancies": 0
-  },
-  {
-    "dept": "UPSC — What's New",
-    "slug": "upsc-what-s-new",
-    "count": 30,
-    "vacancies": 142
   },
   {
     "dept": "University Grants Commission (UGC)",
@@ -142,6 +136,12 @@
     "slug": "railway-recruitment-board-rrb-gorakhpur",
     "count": 28,
     "vacancies": 22
+  },
+  {
+    "dept": "UPSC — What's New",
+    "slug": "upsc-what-s-new",
+    "count": 28,
+    "vacancies": 11
   },
   {
     "dept": "Institute of Banking Personnel Selection (IBPS)",
@@ -486,6 +486,12 @@
     "vacancies": 14
   },
   {
+    "dept": "Trb Tn",
+    "slug": "trb-tn",
+    "count": 9,
+    "vacancies": 200
+  },
+  {
     "dept": "AIIMS New Delhi — Recruitment",
     "slug": "aiims-new-delhi-recruitment",
     "count": 8,
@@ -520,12 +526,6 @@
     "slug": "ntpc-careers",
     "count": 8,
     "vacancies": 24
-  },
-  {
-    "dept": "Trb Tn",
-    "slug": "trb-tn",
-    "count": 8,
-    "vacancies": 150
   },
   {
     "dept": "District & Sessions Judge, Indore",
@@ -726,6 +726,12 @@
     "vacancies": 2
   },
   {
+    "dept": "UPSC — e-Admit cards",
+    "slug": "upsc-e-admit-cards",
+    "count": 4,
+    "vacancies": 0
+  },
+  {
     "dept": "Barc",
     "slug": "barc",
     "count": 3,
@@ -753,7 +759,7 @@
     "dept": "Ctet",
     "slug": "ctet",
     "count": 3,
-    "vacancies": 300
+    "vacancies": 450
   },
   {
     "dept": "District & Sessions Judge, Angul",

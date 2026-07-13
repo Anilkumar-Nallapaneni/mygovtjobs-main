@@ -1,4 +1,4 @@
-/* My Govt Jobs — domain stylesheets (split for maintainability) */
+/* Live Govt Jobs — domain stylesheets (split for maintainability) */
 @import './tokens.css';
 @import './global.css';
 @import './layout.css';

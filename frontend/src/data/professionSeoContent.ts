@@ -16,7 +16,7 @@ const SEO_BY_SLUG: Record<string, ProfessionSeoSection[]> = {
   medical: [
     block('intro', 'Medical jobs in the government sector', [
       'Medical government recruitment in India spans MBBS doctors, specialists, dental surgeons, paramedics, lab technicians, and allied health staff appointed by central ministries, state health directorates, autonomous hospitals, and public health missions. Unlike private hospital hiring, every post is filled through a written notification published on an official .gov.in portal or a verified hospital career page, with transparent eligibility, age limits, and selection method stated in the PDF.',
-      'My Govt Jobs aggregates these notifications daily from AIIMS, ESIC, NHM, state medical health services, municipal corporations, and PSU medical units. Each card on this page links directly to the original notification or apply portal — we block unofficial aggregators so you never land on a third-party form that charges fees.',
+      'Live Govt Jobs aggregates these notifications daily from AIIMS, ESIC, NHM, state medical health services, municipal corporations, and PSU medical units. Each card on this page links directly to the original notification or apply portal — we block unofficial aggregators so you never land on a third-party form that charges fees.',
       'Whether you are a fresh MBBS graduate seeking medical officer posts, a specialist eyeing senior resident vacancies, or a paramedic targeting technician cadres, this listing filters live health-sector recruitment matched to medical qualifications and clinical roles.',
     ]),
     block('eligibility', 'Typical eligibility for medical government posts', [
@@ -62,7 +62,7 @@ const SEO_BY_SLUG: Record<string, ProfessionSeoSection[]> = {
     block('intro', 'Nursing careers in government hospitals', [
       'Government nursing recruitment includes staff nurse, nursing officer, ANM, GNM, community health nurse, and nursing superintendent posts in central hospitals, ESIC, AIIMS, state NHM, and district health facilities. Notifications specify qualification (B.Sc Nursing, GNM, ANM), registration with the state nursing council, and clinical experience where applicable.',
       'This listing narrows health-sector notifications to nursing-specific roles using official post titles and qualification keywords — so you see ward sister and staff nurse vacancies without unrelated doctor-only posts.',
-      'My Govt Jobs refreshes nursing listings daily from verified hospital and health department portals. Each apply link points to the original notification PDF — we do not list unofficial walk-in ads from social media reposts.',
+      'Live Govt Jobs refreshes nursing listings daily from verified hospital and health department portals. Each apply link points to the original notification PDF — we do not list unofficial walk-in ads from social media reposts.',
     ]),
     block('eligibility', 'Nursing qualification and age norms', [
       'Staff nurse posts usually require B.Sc Nursing or GNM with valid registration. ANM posts accept auxiliary nurse midwife certificates from recognised institutions. Supervisory posts may need MSc Nursing or years of ward experience.',
@@ -85,7 +85,7 @@ const SEO_BY_SLUG: Record<string, ProfessionSeoSection[]> = {
   pharmacy: [
     block('intro', 'Pharmacy jobs in government service', [
       'Pharmacy government recruitment includes pharmacist, drug inspector, hospital pharmacist, and store officer posts in central hospitals, ESIC, state health departments, railways, and municipal health units. Notifications specify D.Pharm or B.Pharm with state pharmacy council registration and sometimes experience in hospital or retail dispensing.',
-      'My Govt Jobs lists pharmacy cadre vacancies ingested from official .gov.in portals and verified hospital career pages. Each card resolves to the board that published the advertisement — we exclude unofficial mirrors that repost PDFs without source links.',
+      'Live Govt Jobs lists pharmacy cadre vacancies ingested from official .gov.in portals and verified hospital career pages. Each card resolves to the board that published the advertisement — we exclude unofficial mirrors that repost PDFs without source links.',
       'Use the expiring-soon sort on this page to prioritise applications before the last date, and open the original notification to confirm pay level, bond conditions, and domicile rules.',
     ]),
     block('eligibility', 'Pharmacy qualification and registration', [
@@ -133,7 +133,7 @@ const SEO_BY_SLUG: Record<string, ProfessionSeoSection[]> = {
   law: [
     block('intro', 'Law and legal services in government', [
       'Legal government recruitment in India covers law officers in central ministries, public prosecutors, judicial clerks, legal assistants, and notary cadres in high courts, district courts, and tribunals. Every post is advertised through an official notification on a .gov.in portal, high court website, or state public service commission — with LLB eligibility, age limits, and selection method stated in the PDF.',
-      'My Govt Jobs lists law-sector vacancies matched from official notifications using legal role keywords — law officer, prosecutor, judicial assistant, and court clerk posts. Each card links to the original PDF or apply portal on a verified government domain, not unofficial job boards that charge registration fees.',
+      'Live Govt Jobs lists law-sector vacancies matched from official notifications using legal role keywords — law officer, prosecutor, judicial assistant, and court clerk posts. Each card links to the original PDF or apply portal on a verified government domain, not unofficial job boards that charge registration fees.',
       'Whether you are a fresh LLB graduate targeting law officer trainee posts or an experienced advocate eyeing public prosecutor vacancies, this page filters live legal recruitment from official sources only.',
     ]),
     block('eligibility', 'Eligibility for legal government posts', [
@@ -148,7 +148,7 @@ const SEO_BY_SLUG: Record<string, ProfessionSeoSection[]> = {
     block('howToApply', 'How to apply for legal government recruitment', [
       'Open the job card and read the official notification PDF for post-wise qualification, experience, and reservation rules. Register on the recruiting portal (state PSC, high court recruitment cell, or ministry career page) before the last date.',
       'Upload LLB marksheets, bar council enrolment certificate, category documents, and photograph as per specifications. Pay the application fee online if applicable and download the confirmation page.',
-      'Track admit cards, written test schedules, and interview calls only on the same official portal. My Govt Jobs never collects applications or legal exam fees — we link you to the government source.',
+      'Track admit cards, written test schedules, and interview calls only on the same official portal. Live Govt Jobs never collects applications or legal exam fees — we link you to the government source.',
     ]),
   ],
   finance: [
@@ -177,7 +177,7 @@ const SEO_BY_SLUG: Record<string, ProfessionSeoSection[]> = {
   dental: [
     block('intro', 'Dental government jobs in India', [
       'Dental government recruitment includes BDS dental surgeons, dental officers, senior residents, and hospital dentist posts in AIIMS, ESIC, army dental corps, railway hospitals, and state health directorates. Notifications specify BDS from a DCI-recognised college, compulsory internship, and permanent registration with a state dental council.',
-      'My Govt Jobs narrows health-sector notifications to dental-specific roles using BDS and dental surgeon keywords — so you see oral surgery and dental officer vacancies without unrelated MBBS-only posts. Every apply link points to an official .gov.in or hospital career page.',
+      'Live Govt Jobs narrows health-sector notifications to dental-specific roles using BDS and dental surgeon keywords — so you see oral surgery and dental officer vacancies without unrelated MBBS-only posts. Every apply link points to an official .gov.in or hospital career page.',
     ]),
     block('eligibility', 'BDS eligibility and registration requirements', [
       'Dental surgeon and dental officer posts require BDS with completed rotating internship and valid state dental council registration. MDS specialists may be required for consultant and senior resident faculty posts in teaching hospitals.',
@@ -222,7 +222,7 @@ const SEO_BY_SLUG: Record<string, ProfessionSeoSection[]> = {
   'any-degree': [
     block('intro', 'Any degree government jobs for graduates', [
       'Any-degree government recruitment covers graduate-level posts open to candidates holding a recognised bachelor degree — regardless of stream — including clerks, assistants, stenographers, tax assistants, and multi-tasking officer cadres in SSC, state PSC, and central ministries. These posts form the backbone of general cadre hiring across India.',
-      'My Govt Jobs lists graduate-level vacancies from official SSC, UPSC, state PSC, and departmental notifications. Each card resolves to the board that published the advertisement — not tuition-centre aggregators reposting PDFs without source links.',
+      'Live Govt Jobs lists graduate-level vacancies from official SSC, UPSC, state PSC, and departmental notifications. Each card resolves to the board that published the advertisement — not tuition-centre aggregators reposting PDFs without source links.',
       'Use search and filters to find posts accepting BA, B.Com, B.Sc, or BBA graduates, then open the original notification to confirm stream restrictions if any.',
     ]),
     block('eligibility', 'Graduate eligibility for general cadre posts', [
@@ -245,7 +245,7 @@ const SEO_BY_SLUG: Record<string, ProfessionSeoSection[]> = {
   aviation: [
     block('intro', 'Aviation and civil aviation government jobs', [
       'Aviation government recruitment includes Airports Authority of India (AAI) junior executive and manager posts, DGCA vacancies, air traffic control trainees, fire service cadre at airports, and ministry of civil aviation appointments. These roles combine technical aviation knowledge with government service benefits and are advertised exclusively on official AAI, DGCA, and .gov.in career pages.',
-      'My Govt Jobs lists civil aviation sector vacancies matched from official notifications — AAI, DGCA, and ministry portals. We do not list commercial airline pilot hiring from private carriers; focus here is on government and PSU aviation roles.',
+      'Live Govt Jobs lists civil aviation sector vacancies matched from official notifications — AAI, DGCA, and ministry portals. We do not list commercial airline pilot hiring from private carriers; focus here is on government and PSU aviation roles.',
     ]),
     block('eligibility', 'Aviation sector eligibility requirements', [
       'AAI junior executive posts typically require B.Tech/B.E. in electronics, electrical, or civil engineering, or BBA/MBA for finance and commercial disciplines as specified per post code. ATC trainee posts may require physics and mathematics at 10+2 level plus engineering degree.',
@@ -267,7 +267,7 @@ const SEO_BY_SLUG: Record<string, ProfessionSeoSection[]> = {
   naval: [
     block('intro', 'Indian Navy and naval government jobs', [
       'Naval government recruitment covers Indian Navy sailor, Agniveer (SSR/MR), artificer apprentice, naval dockyard tradesman, and civilian posts in naval shipyards. Unlike generic defence listings, this page filters navy-specific notifications from joinindiannavy.gov.in and official dockyard career portals so army-only vacancies are excluded.',
-      'My Govt Jobs aggregates live naval recruitment from verified defence and PSU sources. Each card links to the official notification or apply portal — never third-party sites charging for sailor registration.',
+      'Live Govt Jobs aggregates live naval recruitment from verified defence and PSU sources. Each card links to the official notification or apply portal — never third-party sites charging for sailor registration.',
     ]),
     block('eligibility', 'Navy sailor and Agniveer eligibility', [
       'Agniveer SSR and MR entries require 10+2 with specified marks in physics, chemistry, and mathematics or biology depending on trade. Age limits are typically 17.5 to 21 years for sailor entries with unmarried status as per notification.',
@@ -311,7 +311,7 @@ const SEO_BY_SLUG: Record<string, ProfessionSeoSection[]> = {
   'sports-quota': [
     block('intro', 'Sports quota government jobs', [
       'Sports quota government recruitment reserves posts for candidates with documented national, state, or university-level sports achievements — common in Indian Railways, police departments, PSUs, and paramilitary forces. Each notification specifies eligible games, certificate level, and achievement period.',
-      'My Govt Jobs lists sports quota vacancies matched from official notifications using sports quota and sportsperson keywords. Every card links to the original PDF on a verified government domain.',
+      'Live Govt Jobs lists sports quota vacancies matched from official notifications using sports quota and sportsperson keywords. Every card links to the original PDF on a verified government domain.',
       'Eligible games and achievement years change per recruitment cycle — always match your sports certificate to the represented game list in the current PDF.',
     ]),
     block('eligibility', 'Sports quota certificate requirements', [
@@ -333,7 +333,7 @@ const SEO_BY_SLUG: Record<string, ProfessionSeoSection[]> = {
   architecture: [
     block('intro', 'Architecture and planning government jobs', [
       'Architecture government recruitment includes CPWD architect, town and country planning officer, PWD architectural assistant, and urban development authority posts requiring B.Arch or planning degrees. Notifications specify Council of Architecture (COA) registration and sometimes minimum experience in public works projects.',
-      'My Govt Jobs lists architecture cadre vacancies matched from CPWD, state PWD, smart city missions, and urban local body notifications using B.Arch and town planning keywords.',
+      'Live Govt Jobs lists architecture cadre vacancies matched from CPWD, state PWD, smart city missions, and urban local body notifications using B.Arch and town planning keywords.',
       'Smart city and AMRUT project posts may be contractual with defined tenure — confirm permanency and pay level in the official advertisement.',
     ]),
     block('eligibility', 'B.Arch and planning eligibility', [
@@ -355,7 +355,7 @@ const SEO_BY_SLUG: Record<string, ProfessionSeoSection[]> = {
   agriculture: [
     block('intro', 'Agriculture government jobs in India', [
       'Agriculture government recruitment spans ICAR scientist and technician posts, Krishi Vigyan Kendra (KVK) officers, state agriculture extension officers, horticulture department vacancies, and animal husbandry cadre in state krishi departments. India’s public agriculture sector hires graduates in agronomy, horticulture, soil science, and veterinary sciences through official ICAR and state .gov.in portals.',
-      'My Govt Jobs aggregates live agriculture-sector notifications from ICAR institutes, state agriculture universities, and official krishi department websites. Each listing links to the original PDF — not private agri-job aggregators.',
+      'Live Govt Jobs aggregates live agriculture-sector notifications from ICAR institutes, state agriculture universities, and official krishi department websites. Each listing links to the original PDF — not private agri-job aggregators.',
       'KVK and extension officer posts often require willingness to serve in rural blocks — confirm posting location and travel allowance in the official PDF.',
     ]),
     block('eligibility', 'Agriculture degree and experience norms', [
@@ -377,7 +377,7 @@ const SEO_BY_SLUG: Record<string, ProfessionSeoSection[]> = {
   arts: [
     block('intro', 'Arts and humanities government jobs', [
       'Arts and humanities government recruitment covers BA and MA graduate posts — clerks, assistants, welfare officers, cultural department assistants, librarians, and social sector cadres in SSC, state PSC, and central ministries. These listings help humanities graduates find official notifications that accept arts degrees without a technical specialisation.',
-      'My Govt Jobs filters graduate-level vacancies from official sources using arts and humanities qualification keywords. Each card links to the recruiting board’s PDF or apply portal on a verified government domain.',
+      'Live Govt Jobs filters graduate-level vacancies from official sources using arts and humanities qualification keywords. Each card links to the recruiting board’s PDF or apply portal on a verified government domain.',
       'Cultural department and museum posts may value subject MA degrees — use search to find history, economics, and sociology-specific notifications on this page.',
     ]),
     block('eligibility', 'BA and MA graduate eligibility', [
@@ -403,7 +403,7 @@ function genericSections(label: string, field: string): ProfessionSeoSection[] {
     block('intro', `${label} in government recruitment`, [
       `${label} government jobs in India are filled through official notifications published on verified .gov.in portals, public service commissions, and departmental career pages. Each vacancy specifies qualification, age, pay scale, and selection process in a downloadable PDF — transparency that private hiring often lacks.`,
       `This page tracks live ${field} recruitment from official sources only. Use the filters and sort options to find posts closing soon or with the highest vacancy counts, then open the original notification to apply.`,
-      `My Govt Jobs refreshes listings daily from central ministries, state PSC websites, PSU career pages, and autonomous bodies. We do not republish aggregator links — every card on this page should resolve to an official government domain or PDF.`,
+      `Live Govt Jobs refreshes listings daily from central ministries, state PSC websites, PSU career pages, and autonomous bodies. We do not republish aggregator links — every card on this page should resolve to an official government domain or PDF.`,
     ]),
     block('eligibility', 'General eligibility guidelines', [
       'Eligibility varies by post level: degree, diploma, or certificate requirements are listed explicitly in each notification. Age limits typically follow government service rules (often 18–40 years) with relaxations for reserved categories.',
@@ -417,7 +417,7 @@ function genericSections(label: string, field: string): ProfessionSeoSection[] {
     ]),
     block('howToApply', 'How to apply through official channels', [
       'Click a job card to open the official notification PDF or apply link. Register on the recruiting portal, fill the form, upload documents, and pay fees if required before the last date.',
-      'Download admit cards and check results only on the same official website. My Govt Jobs never collects applications or payments — we link you to the government source.',
+      'Download admit cards and check results only on the same official website. Live Govt Jobs never collects applications or payments — we link you to the government source.',
       'Save your registration ID, fee receipt, and a copy of the submitted form. If the last date is near, use the expiring-soon sort on this page to prioritise open applications.',
     ]),
   ]

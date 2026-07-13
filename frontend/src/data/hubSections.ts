@@ -251,7 +251,7 @@ export const HUB_SECTIONS: HubSectionDef[] = [
         titleKey: 'footer.sitemap',
         titleDefault: 'Sitemap',
         descKey: 'explore.cards.sitemapDesc',
-        descDefault: 'Every page on My Govt Jobs — categories, states, and exam topics.',
+        descDefault: 'Every page on Live Govt Jobs — categories, states, and exam topics.',
         accent: '#60A5FA',
       },
     ],

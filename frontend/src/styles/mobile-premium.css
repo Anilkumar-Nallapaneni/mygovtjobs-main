@@ -28,7 +28,7 @@
 }
 
 /* ========== Job detail — premium gold page ========== */
-@media (max-width: 1024px) {
+@media (min-width: 0) {
   .job-detail-page--premium {
     background:
       radial-gradient(ellipse 120% 60% at 50% -8%, color-mix(in srgb, var(--ds-gold) 14%, transparent), transparent 55%),
@@ -349,7 +349,7 @@
 }
 
 /* ========== Bottom nav — frosted gold ========== */
-@media (max-width: 1024px) {
+@media (min-width: 0) {
   .mobile-bottom-nav {
     background: color-mix(in srgb, var(--ds-bg0) 88%, transparent);
     backdrop-filter: blur(20px) saturate(1.2);

@@ -1,3 +1,4 @@
+import { pageTitle } from '@/data/siteMeta'
 import { FormEvent, useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
@@ -29,7 +30,7 @@ export default function ContactPage({ onFooterLink }: ContactPageProps) {
   }, [])
 
   useEffect(() => {
-    document.title = `${t('contact.title')} | My Govt Jobs`
+    document.title = pageTitle(t('contact.title'));
     const el = document.head.querySelector('meta[name="description"]')
     if (el) el.setAttribute('content', t('contact.description'))
   }, [t])

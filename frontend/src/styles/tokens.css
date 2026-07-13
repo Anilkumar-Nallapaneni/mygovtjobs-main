@@ -1,8 +1,8 @@
-/* My Govt Jobs — single frontend stylesheet (tokens + all components) */
+/* Live Govt Jobs — single frontend stylesheet (tokens + all components) */
 
 /* ========== TOKENS ========== */
 /* ============================================================================
-   My Govt Jobs — Design tokens (CSS custom properties)
+   Live Govt Jobs — Design tokens (CSS custom properties)
    ----------------------------------------------------------------------------
    Per-component styles use `var(--ds-*)` from here. Color tokens default to
    the DARK palette at load; `applyColorMode()` in `src/theme/designSystem.ts`

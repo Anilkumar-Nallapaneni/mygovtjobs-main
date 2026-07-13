@@ -14,15 +14,80 @@ ROOT = Path(__file__).resolve().parents[1]
 PUBLIC = ROOT / "frontend" / "public"
 TWA_RES = ROOT / "android-twa" / "app" / "src" / "main" / "res"
 SRC = PUBLIC / "app-icon.png"
+LOGO = PUBLIC / "logo.png"
 BG = (3, 6, 13, 255)  # #03060d — matches PWA theme_color
+
+
+def _strip_backdrop(arr: np.ndarray) -> None:
+    """Remove export backdrops so icons composite cleanly on #03060d."""
+    h, w = arr.shape[:2]
+    rgb = arr[:, :, :3]
+    alpha = arr[:, :, 3]
+
+    # Solid black crops from logo.png
+    dark = rgb.max(axis=2) < 24
+    arr[dark, 3] = 0
+
+    # Photoshop-style checkerboard transparency previews (baked into bad exports)
+    r, g, b = rgb[:, :, 0].astype(int), rgb[:, :, 1].astype(int), rgb[:, :, 2].astype(int)
+    grey = (np.abs(r - g) < 8) & (np.abs(g - b) < 8)
+    checker = grey & (
+        ((r >= 32) & (r <= 72))
+        | ((r >= 96) & (r <= 136))
+        | ((r >= 160) & (r <= 200))
+    )
+    arr[checker, 3] = 0
+
+    # Flood-fill light backdrop from image edges only (keeps white flag stripe, pillars, etc.)
+    backdrop = rgb.min(axis=2) > 190
+    visited = np.zeros((h, w), dtype=bool)
+    stack: list[tuple[int, int]] = []
+    for x in range(w):
+        stack.append((0, x))
+        stack.append((h - 1, x))
+    for y in range(h):
+        stack.append((y, 0))
+        stack.append((y, w - 1))
+    while stack:
+        y, x = stack.pop()
+        if y < 0 or y >= h or x < 0 or x >= w or visited[y, x]:
+            continue
+        if not backdrop[y, x]:
+            continue
+        visited[y, x] = True
+        alpha[y, x] = 0
+        stack.extend(((y - 1, x), (y + 1, x), (y, x - 1), (y, x + 1)))
+
+
+def emblem_from_logo(logo_path: Path = LOGO) -> Image.Image:
+    """Crop the parliament emblem from the wordmark banner (correct tricolor flag)."""
+    logo = Image.open(logo_path).convert("RGBA")
+    w, _h = logo.size
+    emblem = logo.crop((0, 0, int(w * 0.40), logo.size[1]))
+    arr = np.array(emblem)
+    _strip_backdrop(arr)
+    alpha = arr[:, :, 3]
+    ys, xs = np.where(alpha > 8)
+    x0, y0, x1, y1 = xs.min(), ys.min(), xs.max() + 1, ys.max() + 1
+    return Image.fromarray(arr[y0:y1, x0:x1], "RGBA")
+
+
+def write_app_icon_source() -> Path:
+    """Rebuild app-icon.png from logo.png so splash/launcher match the site wordmark."""
+    emblem = emblem_from_logo()
+    side = max(emblem.size)
+    canvas = Image.new("RGBA", (side, side), BG)
+    x = (side - emblem.size[0]) // 2
+    y = (side - emblem.size[1]) // 2
+    canvas.paste(emblem, (x, y), emblem)
+    canvas.save(SRC, "PNG", optimize=True)
+    return SRC
 
 
 def load_emblem(path: Path) -> Image.Image:
     im = Image.open(path).convert("RGBA")
     arr = np.array(im)
-    rgb = arr[:, :, :3]
-    light = rgb.min(axis=2) > 190
-    arr[light, 3] = 0
+    _strip_backdrop(arr)
     alpha = arr[:, :, 3]
     ys, xs = np.where(alpha > 8)
     x0, y0, x1, y1 = xs.min(), ys.min(), xs.max() + 1, ys.max() + 1
@@ -43,7 +108,10 @@ def fit_icon(emblem: Image.Image, size: int, pad: float = 0.12) -> Image.Image:
 
 
 def main() -> int:
-    if not SRC.is_file():
+    if LOGO.is_file():
+        write_app_icon_source()
+        print(f"rebuilt {SRC.name} from {LOGO.name}")
+    elif not SRC.is_file():
         print(f"Missing source emblem: {SRC}", file=sys.stderr)
         return 1
 

@@ -1,3 +1,4 @@
+import { pageTitle } from '@/data/siteMeta'
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
@@ -26,7 +27,7 @@ export default function StaticPage({ title, description, path, sections, onFoote
   }, [path]);
 
   useEffect(() => {
-    document.title = `${title} | My Govt Jobs`;
+    document.title = pageTitle(title);
     const el = document.head.querySelector('meta[name="description"]');
     if (el) el.setAttribute("content", description);
   }, [title, description]);

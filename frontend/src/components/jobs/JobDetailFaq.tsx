@@ -84,7 +84,7 @@ export default function JobDetailFaq({
       question: t('jobDetail.faqOfficialQ', { defaultValue: 'Is this listing from an official source?' }),
       answer: t('jobDetail.faqOfficialA', {
         defaultValue:
-          'My Govt Jobs links only to official government portals and verified recruitment board domains. Aggregator and unofficial links are blocked.',
+          'Live Govt Jobs links only to official government portals and verified recruitment board domains. Aggregator and unofficial links are blocked.',
       }),
     })
 

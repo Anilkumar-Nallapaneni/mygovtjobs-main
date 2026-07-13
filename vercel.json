@@ -88,6 +88,8 @@
     }
   ],
   "rewrites": [
+    { "source": "/api/(.*)", "destination": "/api/$1" },
+    { "source": "/og/job.svg", "destination": "/api/og" },
     { "source": "/data/:path*", "destination": "/data/:path*" },
     { "source": "/(.*)", "destination": "/index.html" }
   ]

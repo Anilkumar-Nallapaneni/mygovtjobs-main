@@ -62,7 +62,7 @@ export const EXAMS: ExamDef[] = [
     seoDescription:
       'Latest SSC CGL 2026 notifications, apply links, exam dates, and vacancy details from ssc.nic.in — official Combined Graduate Level recruitment.',
     seoBody:
-      'SSC CGL (Combined Graduate Level) is one of India\'s largest graduate recruitment exams for Group B and Group C posts in ministries, departments, and attached offices. My Govt Jobs lists only official CGL notifications from ssc.nic.in and verified .gov.in sources — never unofficial form mirrors.',
+      'SSC CGL (Combined Graduate Level) is one of India\'s largest graduate recruitment exams for Group B and Group C posts in ministries, departments, and attached offices. Live Govt Jobs lists only official CGL notifications from ssc.nic.in and verified .gov.in sources — never unofficial form mirrors.',
     links: { results: '/results', admitCard: '/results/admit-card', syllabus: '/results/syllabus', answerKey: '/results/answer-key' },
     faq: [
       {
@@ -71,7 +71,7 @@ export const EXAMS: ExamDef[] = [
       },
       {
         q: 'Where do I apply for SSC CGL?',
-        a: 'Only on ssc.nic.in when the official notification is live. My Govt Jobs links directly to the board portal — we never collect application fees.',
+        a: 'Only on ssc.nic.in when the official notification is live. Live Govt Jobs links directly to the board portal — we never collect application fees.',
       },
     ],
   },

@@ -13,7 +13,7 @@ const siteUrl = (process.env.ALERT_SITE_URL || process.env.VITE_SITE_URL || "htt
   /\/$/,
   ""
 );
-const MAX_PAGES = Number(process.env.PRERENDER_JOB_LIMIT || 1000);
+const MAX_PAGES = Number(process.env.PRERENDER_JOB_LIMIT || 5000);
 
 function escapeHtml(s) {
   return String(s ?? "")
@@ -43,7 +43,7 @@ function buildHtml(job) {
   const title = escapeHtml(job.title || "Government recruitment");
   const desc = escapeHtml(jobDescription(job));
   const canonical = `${siteUrl}/jobs/${encodeURIComponent(slug)}`;
-  const ogImage = `${siteUrl}/og/job.svg?title=${encodeURIComponent(job.title || "Govt Job")}`;
+  const ogImage = `${siteUrl}/api/og?title=${encodeURIComponent(job.title || "Govt Job")}`;
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -64,11 +64,12 @@ function buildHtml(job) {
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>${title} | My Govt Jobs</title>
+  <title>${title} | Live Govt Jobs</title>
   <meta name="description" content="${desc}" />
   <link rel="canonical" href="${canonical}" />
   <meta property="og:type" content="article" />
-  <meta property="og:title" content="${title} | My Govt Jobs" />
+  <meta property="og:site_name" content="Live Govt Jobs" />
+  <meta property="og:title" content="${title} | Live Govt Jobs" />
   <meta property="og:description" content="${desc}" />
   <meta property="og:url" content="${canonical}" />
   <meta property="og:image" content="${ogImage}" />
@@ -83,7 +84,7 @@ function buildHtml(job) {
   <main>
     <h1>${title}</h1>
     <p>${desc}</p>
-    <p><a href="${canonical}">View full notification on My Govt Jobs</a></p>
+    <p><a href="${canonical}">View full notification on Live Govt Jobs</a></p>
   </main>
   <script>location.replace(${JSON.stringify(canonical)});</script>
 </body>

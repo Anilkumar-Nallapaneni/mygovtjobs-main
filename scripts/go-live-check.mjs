@@ -87,6 +87,12 @@ if (fe.VITE_GA_MEASUREMENT_ID?.startsWith('G-')) {
   console.log('⚠ GA4 — add VITE_GA_MEASUREMENT_ID=G-XXXX to frontend/.env.local then vercel:env:push:live')
 }
 
+if (fe.VITE_GOOGLE_SITE_VERIFICATION?.trim()) {
+  console.log('✓ VITE_GOOGLE_SITE_VERIFICATION configured locally')
+} else {
+  console.log('⚠ Search Console verification — add VITE_GOOGLE_SITE_VERIFICATION to frontend/.env.local then redeploy')
+}
+
 const apiUrl = fe.VITE_API_URL?.replace(/\/$/, '') || 'https://api.livegovtjobs.com'
 
 console.log('\n── Live probes (optional) ──')

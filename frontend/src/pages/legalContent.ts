@@ -2,13 +2,13 @@ import type { StaticPageSection } from "@/pages/StaticPage";
 
 export const PRIVACY_PAGE = {
   title: "Privacy Policy",
-  description: "How My Govt Jobs collects, uses, and protects your information.",
+  description: "How Live Govt Jobs collects, uses, and protects your information.",
   path: "/privacy",
   sections: [
     {
       heading: "Overview",
       paragraphs: [
-        "My Govt Jobs lists government recruitment notifications from official portals (.gov.in / .gov). We do not sell your personal data.",
+        "Live Govt Jobs lists government recruitment notifications from official portals (.gov.in / .gov). We do not sell your personal data.",
         "If you subscribe to job alerts, we store only the contact details and filters you provide (email address, Telegram chat ID, state/category preferences).",
       ],
     },
@@ -47,13 +47,13 @@ export const PRIVACY_PAGE = {
 
 export const TERMS_PAGE = {
   title: "Terms of Service",
-  description: "Terms for using the My Govt Jobs website and alert service.",
+  description: "Terms for using the Live Govt Jobs website and alert service.",
   path: "/terms",
   sections: [
     {
       heading: "Service",
       paragraphs: [
-        "My Govt Jobs aggregates links to official government recruitment notifications. We are an information service, not a recruiting agency.",
+        "Live Govt Jobs aggregates links to official government recruitment notifications. We are an information service, not a recruiting agency.",
         "Always verify details on the recruiting organisation's official website before applying or paying any fee.",
       ],
     },
@@ -80,7 +80,7 @@ export const TERMS_PAGE = {
     {
       heading: "Limitation of liability",
       paragraphs: [
-        "My Govt Jobs is provided as-is. We are not liable for decisions made based on listings, missed deadlines, or third-party site content.",
+        "Live Govt Jobs is provided as-is. We are not liable for decisions made based on listings, missed deadlines, or third-party site content.",
       ],
     },
   ] satisfies StaticPageSection[],
@@ -95,14 +95,14 @@ export const ABOUT_PAGE = {
     {
       heading: "Mission",
       paragraphs: [
-        "My Govt Jobs helps candidates discover live recruitment notifications from official government portals across India — UPSC, SSC, railways, banking, state PSCs, and more.",
+        "Live Govt Jobs helps candidates discover live recruitment notifications from official government portals across India — UPSC, SSC, railways, banking, state PSCs, and more.",
         "We prioritise .gov.in and verified employer career sites over third-party aggregators.",
       ],
     },
     {
       heading: "Why trust us",
       paragraphs: [
-        "My Govt Jobs lists recruitment notifications scraped directly from official government portals (.gov.in, .gov, and verified employer career sites). We do not copy third-party aggregator sites.",
+        "Live Govt Jobs lists recruitment notifications scraped directly from official government portals (.gov.in, .gov, and verified employer career sites). We do not copy third-party aggregator sites.",
         "Every job detail page links to official PDFs and apply URLs whenever they are published by the recruiting body.",
       ],
     },
@@ -115,7 +115,7 @@ export const ABOUT_PAGE = {
       ],
     },
     {
-      heading: "What is My Govt Jobs?",
+      heading: "What is Live Govt Jobs?",
       paragraphs: [
         "A free portal for live government job notifications from official sources across India.",
       ],
@@ -127,7 +127,7 @@ export const ABOUT_PAGE = {
     {
       heading: "Do you take applications?",
       paragraphs: [
-        "No. My Govt Jobs is an information service only. Apply only on the recruiting organisation's official website.",
+        "No. Live Govt Jobs is an information service only. Apply only on the recruiting organisation's official website.",
       ],
     },
     {
@@ -177,7 +177,7 @@ export const ABOUT_PAGE = {
 
 export const CONTACT_PAGE = {
   title: "Contact",
-  description: "Get in touch with the My Govt Jobs team.",
+  description: "Get in touch with the Live Govt Jobs team.",
   path: "/contact",
   sections: [
     {
@@ -204,13 +204,13 @@ export const CONTACT_PAGE = {
 
 export const DISCLAIMER_PAGE = {
   title: "Disclaimer",
-  description: "Important notice about government job listings on My Govt Jobs.",
+  description: "Important notice about government job listings on Live Govt Jobs.",
   path: "/disclaimer",
   sections: [
     {
       heading: "Official sources only",
       paragraphs: [
-        "My Govt Jobs lists jobs from official government portals (.gov.in / .gov) and verified employer career sites.",
+        "Live Govt Jobs lists jobs from official government portals (.gov.in / .gov) and verified employer career sites.",
         "We are not affiliated with UPSC, SSC, state PSCs, or any recruiting body unless explicitly stated.",
       ],
     },

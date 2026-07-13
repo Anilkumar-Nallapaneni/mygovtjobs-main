@@ -1,3 +1,4 @@
+import { pageTitle } from '@/data/siteMeta'
 import type { CSSProperties } from 'react'
 import { useEffect, useMemo } from 'react'
 import { Link, useNavigate, useParams } from 'react-router-dom'
@@ -60,7 +61,7 @@ export default function ExamLandingPage({
 
   useEffect(() => {
     if (!exam) return
-    document.title = `${exam.title} | My Govt Jobs`
+    document.title = pageTitle(exam.title);
   }, [exam])
 
   useEffect(() => {

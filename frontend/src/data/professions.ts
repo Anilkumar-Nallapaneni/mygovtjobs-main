@@ -52,7 +52,7 @@ export const PROFESSIONS: ProfessionDef[] = [
     seoDescription:
       'MBBS, specialist doctor, and paramedical recruitment from AIIMS, ESIC, state health departments, and official .gov.in notifications.',
     seoBody:
-      'Medical government jobs cover MBBS officers, specialists, lab technicians, and allied health posts published on AIIMS, ESIC, state health directorates, and NHM portals. Every listing on My Govt Jobs links to the original PDF or apply page on a verified government domain — not third-party aggregators.',
+      'Medical government jobs cover MBBS officers, specialists, lab technicians, and allied health posts published on AIIMS, ESIC, state health directorates, and NHM portals. Every listing on Live Govt Jobs links to the original PDF or apply page on a verified government domain — not third-party aggregators.',
     faq: [
       {
         q: 'Which qualifications are eligible for medical government jobs?',

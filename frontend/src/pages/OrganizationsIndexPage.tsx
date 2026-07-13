@@ -1,3 +1,4 @@
+import { pageTitle } from '@/data/siteMeta'
 import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
@@ -24,7 +25,7 @@ export default function OrganizationsIndexPage({ onFooterLink }: OrganizationsIn
   }, [])
 
   useEffect(() => {
-    document.title = `${t('organization.indexTitle')} | My Govt Jobs`
+    document.title = pageTitle(t('organization.indexTitle'));
   }, [t])
 
   return (

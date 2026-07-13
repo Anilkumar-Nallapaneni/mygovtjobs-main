@@ -1,3 +1,4 @@
+import { pageTitle } from '@/data/siteMeta'
 import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
@@ -23,7 +24,7 @@ export default function AlertsPage({ onFooterLink }: AlertsPageProps) {
   }, [])
 
   useEffect(() => {
-    document.title = `${t('alertsPage.title', { defaultValue: 'Free Government Job Alerts' })} | My Govt Jobs`
+    document.title = pageTitle(t('alertsPage.title', { defaultValue: 'Free Government Job Alerts' }));
   }, [t])
 
   return (

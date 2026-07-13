@@ -132,31 +132,3 @@ export function dailySyncLabel(
     defaultValue: `Official listings refresh daily at ${scheduled}`,
   })
 }
-
-const STALE_MS = 24 * 60 * 60 * 1000
-
-/** True when last successful sync is older than 24 hours. */
-export function isJobDataStale(
-  meta: DailySyncMeta | null,
-  api: SyncStatusResponse | null
-): boolean {
-  const completed = meta?.completedAtIst || api?.lastCompletedAtIst || meta?.completedAt || api?.lastCompletedAt
-  if (!completed) return false
-  const d = new Date(completed)
-  if (Number.isNaN(d.getTime())) return false
-  return Date.now() - d.getTime() > STALE_MS
-}
-
-export function jobDataStaleWarning(
-  meta: DailySyncMeta | null,
-  api: SyncStatusResponse | null,
-  t: (key: string, opts?: Record<string, unknown>) => string
-): string | null {
-  if (!isJobDataStale(meta, api)) return null
-  const completed = meta?.completedAtIst || api?.lastCompletedAtIst || meta?.completedAt || api?.lastCompletedAt
-  return t('jobsStatus.dataStaleWarning', {
-    time: formatIstDisplay(completed),
-    defaultValue:
-      'Job data refresh is delayed. Please verify the official website before applying.',
-  })
-}

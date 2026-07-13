@@ -1,3 +1,4 @@
+import { pageTitle } from '@/data/siteMeta'
 import type { CSSProperties } from 'react'
 import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
@@ -28,7 +29,7 @@ export default function CategoriesIndexPage({ jobs, onFooterLink }: CategoriesIn
   }, [])
 
   useEffect(() => {
-    document.title = `${t('categories.indexTitle', { defaultValue: 'Government Jobs by Category' })} | My Govt Jobs`
+    document.title = pageTitle(t('categories.indexTitle', { defaultValue: 'Government Jobs by Category' }));
   }, [t])
 
   const sorted = [...CATS].sort((a, b) => (categoryCounts[b.id] ?? 0) - (categoryCounts[a.id] ?? 0))

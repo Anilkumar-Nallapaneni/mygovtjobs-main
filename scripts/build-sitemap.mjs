@@ -40,6 +40,14 @@ const STATIC_PATHS = [
   { loc: "/jobs", changefreq: "hourly", priority: "0.9" },
   { loc: "/jobs/latest-notifications", changefreq: "hourly", priority: "0.85" },
   { loc: "/jobs/all-india", changefreq: "daily", priority: "0.75" },
+  { loc: "/states", changefreq: "weekly", priority: "0.8" },
+  { loc: "/categories", changefreq: "weekly", priority: "0.8" },
+  { loc: "/explore", changefreq: "weekly", priority: "0.8" },
+  { loc: "/exams", changefreq: "weekly", priority: "0.85" },
+  { loc: "/exam-calendar", changefreq: "daily", priority: "0.8" },
+  { loc: "/faq", changefreq: "monthly", priority: "0.7" },
+  { loc: "/guide/how-to-apply", changefreq: "monthly", priority: "0.7" },
+  { loc: "/guide/exam-preparation", changefreq: "monthly", priority: "0.7" },
   { loc: "/qualifications", changefreq: "weekly", priority: "0.8" },
   { loc: "/professions", changefreq: "weekly", priority: "0.8" },
   { loc: "/organizations", changefreq: "weekly", priority: "0.8" },
@@ -139,6 +147,17 @@ function toLastmod(job) {
   return d.toISOString().slice(0, 10);
 }
 
+function loadExamSlugs() {
+  const examsPath = join(root, "frontend/src/data/exams.ts");
+  if (!existsSync(examsPath)) return [];
+  const text = readFileSync(examsPath, "utf8");
+  const slugs = [];
+  for (const match of text.matchAll(/slug:\s*'([^']+)'/g)) {
+    slugs.push(match[1]);
+  }
+  return [...new Set(slugs)];
+}
+
 async function main() {
   const orgIndexPath = join(root, "frontend/public/data/org-index.json");
   if (existsSync(join(root, "scripts/build-org-index.mjs"))) {
@@ -174,6 +193,10 @@ async function main() {
   for (const slug of RESULT_TOPIC_SLUGS) {
     if (slug === "admit-card") continue;
     staticEntries.push(urlEntry(`${siteUrl}/results/${slug}`, "weekly", "0.75"));
+  }
+
+  for (const slug of loadExamSlugs()) {
+    staticEntries.push(urlEntry(`${siteUrl}/exam/${slug}`, "weekly", "0.8"));
   }
 
   if (existsSync(orgIndexPath)) {

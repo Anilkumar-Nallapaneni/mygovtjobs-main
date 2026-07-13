@@ -1,3 +1,4 @@
+import { pageTitle } from '@/data/siteMeta'
 import { useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
 
@@ -25,7 +26,7 @@ export default function ExploreHubPage({ liveCount = 0, orgCount = 0, onFooterLi
   }, [])
 
   useEffect(() => {
-    document.title = `${t('explore.title', { defaultValue: 'Explore My Govt Jobs' })} | My Govt Jobs`
+    document.title = pageTitle(t('explore.title', { defaultValue: 'Explore Live Govt Jobs' }));
   }, [t])
 
   return (
@@ -39,7 +40,7 @@ export default function ExploreHubPage({ liveCount = 0, orgCount = 0, onFooterLi
             {t('explore.eyebrow', { defaultValue: 'Everything in one place' })}
           </p>
           <h1 className="explore-hub-page__title">
-            {t('explore.title', { defaultValue: 'Explore My Govt Jobs' })}
+            {t('explore.title', { defaultValue: 'Explore Live Govt Jobs' })}
           </h1>
           <p className="explore-hub-page__lede">
             {t('explore.lede', {

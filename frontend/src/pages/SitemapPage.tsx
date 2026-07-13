@@ -1,3 +1,4 @@
+import { pageTitle } from '@/data/siteMeta'
 import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
@@ -41,7 +42,7 @@ export default function SitemapPage({ onFooterLink }: SitemapPageProps) {
   }, [])
 
   useEffect(() => {
-    document.title = `${t('sitemap.title')} | My Govt Jobs`
+    document.title = pageTitle(t('sitemap.title'));
     const el = document.head.querySelector('meta[name="description"]')
     if (el) el.setAttribute('content', t('sitemap.description'))
   }, [t])

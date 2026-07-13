@@ -4,9 +4,12 @@ import { useTranslation } from 'react-i18next'
 
 import Footer from '@/components/layout/Footer'
 import TrackedLink from '@/components/TrackedLink'
+import { pageTitle } from '@/data/siteMeta'
 import { FAQ_ITEMS, FAQ_PATH } from '@/pages/guideContent'
 import { EXPLORE_HUB_PATH, GUIDE_HOW_TO_APPLY_PATH } from '@/utils/browseRoutes'
 import { applyBrowseSeo } from '@/utils/browseSeo'
+import { beginSeoHead } from '@/utils/seoHead'
+import { buildFaqPageJsonLd } from '@/utils/structuredData'
 import type { FooterLinkTarget } from '@/hooks/browseStateTypes'
 
 type FaqPageProps = {
@@ -17,11 +20,17 @@ export default function FaqPage({ onFooterLink }: FaqPageProps) {
   const { t } = useTranslation()
 
   useEffect(() => {
-    return applyBrowseSeo(FAQ_PATH)
+    const restoreBrowse = applyBrowseSeo(FAQ_PATH)
+    const head = beginSeoHead()
+    head.upsertJsonLd('faq-page-jsonld', buildFaqPageJsonLd(FAQ_ITEMS))
+    return () => {
+      head.restore()
+      restoreBrowse()
+    }
   }, [])
 
   useEffect(() => {
-    document.title = `${t('faq.title', { defaultValue: 'Frequently Asked Questions' })} | My Govt Jobs`
+    document.title = pageTitle(t('faq.title', { defaultValue: 'Frequently Asked Questions' }));
   }, [t])
 
   return (
@@ -33,7 +42,7 @@ export default function FaqPage({ onFooterLink }: FaqPageProps) {
         <h1 className="static-page__title">{t('faq.title', { defaultValue: 'Frequently Asked Questions' })}</h1>
         <p className="static-page__lede">
           {t('faq.lede', {
-            defaultValue: 'Common questions about government job alerts, applications, results, and how My Govt Jobs works.',
+            defaultValue: 'Common questions about government job alerts, applications, results, and how Live Govt Jobs works.',
           })}
         </p>
       </header>

@@ -21,6 +21,46 @@
     <priority>0.75</priority>
   </url>
   <url>
+    <loc>https://www.livegovtjobs.com/states</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.livegovtjobs.com/categories</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.livegovtjobs.com/explore</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.livegovtjobs.com/exams</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://www.livegovtjobs.com/exam-calendar</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.livegovtjobs.com/faq</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.livegovtjobs.com/guide/how-to-apply</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.livegovtjobs.com/guide/exam-preparation</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.livegovtjobs.com/qualifications</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -481,6 +521,146 @@
     <priority>0.75</priority>
   </url>
   <url>
+    <loc>https://www.livegovtjobs.com/exam/ssc-cgl</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.livegovtjobs.com/exam/ssc-chsl</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.livegovtjobs.com/exam/ssc-gd</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.livegovtjobs.com/exam/ssc-mts</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.livegovtjobs.com/exam/upsc-cse</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.livegovtjobs.com/exam/upsc-nda</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.livegovtjobs.com/exam/upsc-cds</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.livegovtjobs.com/exam/ibps-po</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.livegovtjobs.com/exam/ibps-clerk</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.livegovtjobs.com/exam/rrb-ntpc</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.livegovtjobs.com/exam/rrb-group-d</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.livegovtjobs.com/exam/rrb-alp</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.livegovtjobs.com/exam/ctet</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.livegovtjobs.com/exam/ssc-je</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.livegovtjobs.com/exam/capf</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.livegovtjobs.com/exam/afcat</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.livegovtjobs.com/exam/uppsc</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.livegovtjobs.com/exam/mpsc</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.livegovtjobs.com/exam/tnpsc</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.livegovtjobs.com/exam/kpsc-karnataka</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.livegovtjobs.com/exam/bpsc</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.livegovtjobs.com/exam/rpsc</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.livegovtjobs.com/exam/wbpsc</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.livegovtjobs.com/exam/appsc</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.livegovtjobs.com/exam/tspsc</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.livegovtjobs.com/exam/gpsc</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.livegovtjobs.com/exam/hpsc</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.livegovtjobs.com/exam/kerala-psc</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://www.livegovtjobs.com/org/gpsc-gujarat</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -581,11 +761,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.livegovtjobs.com/org/upsc-what-s-new</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://www.livegovtjobs.com/org/university-grants-commission-ugc</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -597,6 +772,11 @@
   </url>
   <url>
     <loc>https://www.livegovtjobs.com/org/railway-recruitment-board-rrb-gorakhpur</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.livegovtjobs.com/org/upsc-what-s-new</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -886,6 +1066,11 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://www.livegovtjobs.com/org/trb-tn</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.livegovtjobs.com/org/aiims-new-delhi-recruitment</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -912,11 +1097,6 @@
   </url>
   <url>
     <loc>https://www.livegovtjobs.com/org/ntpc-careers</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.livegovtjobs.com/org/trb-tn</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -1082,6 +1262,11 @@
   </url>
   <url>
     <loc>https://www.livegovtjobs.com/org/sainik-school-gopalganj</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.livegovtjobs.com/org/upsc-e-admit-cards</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>

@@ -389,8 +389,7 @@
     "dailyUpdatedRelative": "Updated {{time}}",
     "dailyNext": "Next update {{time}} IST · no further updates today",
     "loadError": "Could not load job listings. Showing cached data if available.",
-    "retry": "Retry",
-    "dataStaleWarning": "Job data refresh is delayed (last update {{time}} IST). Please verify the official website before applying."
+    "retry": "Retry"
   },
   "jobReport": {
     "button": "Report incorrect job",
@@ -425,15 +424,15 @@
   },
   "pwa": {
     "install": "Install",
-    "bannerTitle": "Install My Govt Jobs",
+    "bannerTitle": "Install Live Govt Jobs",
     "bannerBody": "Get faster access and offline browsing from your home screen.",
     "iosTitle": "Add to Home Screen",
-    "iosSteps": "Tap Share, then \"Add to Home Screen\" to install My Govt Jobs.",
+    "iosSteps": "Tap Share, then \"Add to Home Screen\" to install Live Govt Jobs.",
     "dismiss": "Not now"
   },
   "contact": {
     "title": "Contact",
-    "description": "Get in touch with the My Govt Jobs team.",
+    "description": "Get in touch with the Live Govt Jobs team.",
     "name": "Full name",
     "email": "Email",
     "mobile": "Mobile (optional)",
@@ -446,7 +445,7 @@
   },
   "sitemap": {
     "title": "Sitemap",
-    "description": "Browse all main pages, categories, and states on My Govt Jobs.",
+    "description": "Browse all main pages, categories, and states on Live Govt Jobs.",
     "mainPages": "Main pages",
     "resultsTopics": "Exam results & admit cards",
     "states": "States & UTs",
@@ -455,7 +454,7 @@
     "xmlLink": "XML sitemap (for search engines)"
   },
   "explore": {
-    "title": "Explore My Govt Jobs",
+    "title": "Explore Live Govt Jobs",
     "eyebrow": "Everything in one place",
     "lede": "Browse jobs by state, board, qualification, and profession. Track exam results, admit cards, and deadlines — every section has its own page.",
     "backToExplore": "Explore",
@@ -496,7 +495,7 @@
       "faqTitle": "FAQ",
       "faqDesc": "Answers to common questions about government job applications.",
       "contactDesc": "Questions, feedback, or partnership — we reply within 2 business days.",
-      "sitemapDesc": "Every page on My Govt Jobs — categories, states, and exam topics."
+      "sitemapDesc": "Every page on Live Govt Jobs — categories, states, and exam topics."
     }
   },
   "states": {
@@ -547,7 +546,7 @@
   },
   "faq": {
     "title": "Frequently Asked Questions",
-    "lede": "Common questions about government job alerts, applications, results, and how My Govt Jobs works.",
+    "lede": "Common questions about government job alerts, applications, results, and how Live Govt Jobs works.",
     "stillQuestions": "Still have questions?"
   },
   "qualification": {
@@ -582,12 +581,12 @@
   },
   "footer": {
     "blurb": "India's trusted government job alert platform. Live notifications from official sources — UPSC, SSC, Railways, Banking & all states.",
-    "disclaimer": "My Govt Jobs lists jobs from official government portals (.gov.in / .gov) only. Always verify on the recruiting organisation's website before applying.",
+    "disclaimer": "Live Govt Jobs lists jobs from official government portals (.gov.in / .gov) only. Always verify on the recruiting organisation's website before applying.",
     "quickLinks": "Quick Links",
     "categories": "Categories",
     "topStates": "Top States",
     "company": "Company",
-    "copyright": "© {{year}} My Govt Jobs · Made with ❤️ in India",
+    "copyright": "© {{year}} Live Govt Jobs · Made with ❤️ in India",
     "latestJobs": "Latest Jobs",
     "results": "Results",
     "admitCards": "Admit Cards",
@@ -743,7 +742,7 @@
     "boardExamLinksAria": "Exam updates for this board",
     "checkAdmitCards": "Check admit cards for {{board}}",
     "checkResults": "Check results for {{board}}",
-    "disclaimer": "My Govt Jobs lists jobs from official government portals (.gov.in / .gov) only. Always verify on the recruiting organisation's website before applying.",
+    "disclaimer": "Live Govt Jobs lists jobs from official government portals (.gov.in / .gov) only. Always verify on the recruiting organisation's website before applying.",
     "dates": {
       "Notification": "Notification",
       "ApplyStart": "Apply Start",

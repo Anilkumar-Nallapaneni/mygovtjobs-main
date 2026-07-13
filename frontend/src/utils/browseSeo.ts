@@ -27,32 +27,11 @@ import {
 import { getProfessionBySlug, professionRoutePath } from "@/data/professions";
 import { getExamBySlug } from "@/data/exams";
 import { getCanonicalProfessionForQualification } from "@/data/professionCrossLinks";
+import { isPrivatePath, SITE_DESCRIPTION, SITE_NAME, SITE_OG_IMAGE_PATH } from "@/data/siteMeta";
+import { beginSeoHead } from "@/utils/seoHead";
+import { buildOrganizationJsonLd, buildWebSiteJsonLd } from "@/utils/structuredData";
 
-const SITE_NAME = "My Govt Jobs";
-const DEFAULT_DESCRIPTION =
-  "Latest government jobs, official notifications, and apply links from verified .gov.in portals across India.";
-
-function upsertMeta(name: string, content: string, attr: "name" | "property" = "name") {
-  if (!content) return;
-  let el = document.head.querySelector(`meta[${attr}="${name}"]`) as Element | null;
-  if (!el) {
-    el = document.createElement("meta");
-    el.setAttribute(attr, name);
-    document.head.appendChild(el);
-  }
-  el.setAttribute("content", content);
-}
-
-function upsertLink(rel: string, href: string) {
-  if (!href) return;
-  let el = document.head.querySelector(`link[rel="${rel}"]`) as Element | null;
-  if (!el) {
-    el = document.createElement("link");
-    el.setAttribute("rel", rel);
-    document.head.appendChild(el);
-  }
-  el.setAttribute("href", href);
-}
+const DEFAULT_DESCRIPTION = SITE_DESCRIPTION;
 
 function stateLabel(stateId: string): string {
   return (
@@ -131,7 +110,7 @@ export function browseSeoForPath(pathname: string, _search = ""): BrowseSeoMeta 
     return {
       path,
       title: `Contact | ${SITE_NAME}`,
-      description: "Contact the My Govt Jobs team — report incorrect listings or ask about alerts.",
+      description: `Contact the ${SITE_NAME} team — report incorrect listings or ask about alerts.`,
     };
   }
 
@@ -139,7 +118,7 @@ export function browseSeoForPath(pathname: string, _search = ""): BrowseSeoMeta 
     return {
       path,
       title: `Sitemap | ${SITE_NAME}`,
-      description: "Browse all main pages, job categories, and states on My Govt Jobs.",
+      description: `Browse all main pages, job categories, and states on ${SITE_NAME}.`,
     };
   }
 
@@ -182,7 +161,7 @@ export function browseSeoForPath(pathname: string, _search = ""): BrowseSeoMeta 
       path,
       title: `Explore — Jobs, Results & Guides | ${SITE_NAME}`,
       description:
-        "Browse every section of My Govt Jobs — states, categories, qualifications, exam calendar, alerts, and how-to-apply guides.",
+        `Browse every section of ${SITE_NAME} — states, categories, qualifications, exam calendar, alerts, and how-to-apply guides.`,
     };
   }
 
@@ -386,23 +365,36 @@ export function browseSeoForPath(pathname: string, _search = ""): BrowseSeoMeta 
 
 export function applyBrowseSeo(pathname: string, search = "") {
   const meta = browseSeoForPath(pathname, search);
-  const canonical = `${SITE_ORIGIN}${meta.path}${search || ""}`;
-  const prevTitle = document.title;
+  const canonical = `${SITE_ORIGIN}${meta.path}`;
+  const ogImage = `${SITE_ORIGIN}${SITE_OG_IMAGE_PATH}`;
+  const privatePage = isPrivatePath(pathname);
+  const head = beginSeoHead();
 
-  document.title = meta.title;
-  upsertMeta("description", meta.description);
-  upsertMeta("og:title", meta.title, "property");
-  upsertMeta("og:description", meta.description, "property");
-  upsertMeta("og:type", "website", "property");
-  upsertMeta("og:url", canonical, "property");
-  upsertMeta("og:image", `${SITE_ORIGIN}/logo.png`, "property");
-  upsertMeta("twitter:card", "summary_large_image", "name");
-  upsertMeta("twitter:image", `${SITE_ORIGIN}/logo.png`, "name");
-  upsertMeta("twitter:title", meta.title, "name");
-  upsertMeta("twitter:description", meta.description, "name");
-  upsertLink("canonical", canonical);
+  head.setTitle(meta.title);
+  head.upsertMeta("description", meta.description);
+  head.upsertMeta("og:site_name", SITE_NAME, "property");
+  head.upsertMeta("og:locale", "en_IN", "property");
+  head.upsertMeta("og:title", meta.title, "property");
+  head.upsertMeta("og:description", meta.description, "property");
+  head.upsertMeta("og:type", "website", "property");
+  head.upsertMeta("og:url", canonical, "property");
+  head.upsertMeta("og:image", ogImage, "property");
+  head.upsertMeta("twitter:card", "summary_large_image", "name");
+  head.upsertMeta("twitter:image", ogImage, "name");
+  head.upsertMeta("twitter:title", meta.title, "name");
+  head.upsertMeta("twitter:description", meta.description, "name");
+  head.upsertLink("canonical", canonical);
 
-  return () => {
-    document.title = prevTitle;
-  };
+  if (privatePage) {
+    head.upsertMeta("robots", "noindex, nofollow");
+  } else {
+    head.upsertMeta("robots", "index, follow, max-image-preview:large");
+  }
+
+  if (meta.path === "/" || meta.path === "/jobs") {
+    head.upsertJsonLd("site-website-jsonld", buildWebSiteJsonLd());
+    head.upsertJsonLd("site-organization-jsonld", buildOrganizationJsonLd());
+  }
+
+  return head.restore;
 }

@@ -1,3 +1,4 @@
+import { pageTitle } from '@/data/siteMeta'
 import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
@@ -29,7 +30,7 @@ export default function QualificationsIndexPage({ jobs, onFooterLink }: Qualific
   }, [])
 
   useEffect(() => {
-    document.title = `${t('qualification.indexTitle')} | My Govt Jobs`
+    document.title = pageTitle(t('qualification.indexTitle'));
   }, [t])
 
   return (

@@ -1,3 +1,4 @@
+import { pageTitle } from '@/data/siteMeta'
 import { useEffect, useMemo } from 'react'
 import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
@@ -67,7 +68,7 @@ export default function ExamCalendarPage({
   }, [])
 
   useEffect(() => {
-    document.title = `${t('examCalendar.title', { defaultValue: 'Government Job Exam Calendar' })} | My Govt Jobs`
+    document.title = pageTitle(t('examCalendar.title', { defaultValue: 'Government Job Exam Calendar' }));
   }, [t])
 
   const handleRowClick = (job: JobRecord) => {

@@ -13,12 +13,35 @@ describe('useColorMode', () => {
   beforeEach(() => {
     localStorage.clear()
     vi.mocked(applyColorMode).mockClear()
+    Object.defineProperty(window, 'matchMedia', {
+      writable: true,
+      value: vi.fn().mockImplementation((query: string) => ({
+        matches: query.includes('dark') ? false : false,
+        media: query,
+        addEventListener: vi.fn(),
+        removeEventListener: vi.fn(),
+      })),
+    })
   })
 
-  it('defaults to bw when storage is empty', () => {
+  it('defaults to bw when storage is empty and system prefers light', () => {
     const { result } = renderHook(() => useColorMode())
     expect(result.current.colorMode).toBe('bw')
     expect(applyColorMode).toHaveBeenCalledWith('bw')
+  })
+
+  it('uses dark when storage is empty and system prefers dark', () => {
+    Object.defineProperty(window, 'matchMedia', {
+      writable: true,
+      value: vi.fn().mockImplementation((query: string) => ({
+        matches: query.includes('dark'),
+        media: query,
+        addEventListener: vi.fn(),
+        removeEventListener: vi.fn(),
+      })),
+    })
+    const { result } = renderHook(() => useColorMode())
+    expect(result.current.colorMode).toBe('dark')
   })
 
   it('migrates legacy night mode to dark', () => {
