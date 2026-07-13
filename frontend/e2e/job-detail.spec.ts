@@ -1,7 +1,6 @@
 import { expect, test } from '@playwright/test';
 
-const SAMPLE_SLUG =
-  'district-panchayat-kabirdham-accounts-cum-mis-assistant-recruitment-2026-apply-o-ad3a3a86';
+const SAMPLE_SLUG = 'e2e-test-job';
 
 test.describe('job detail flows', () => {
   test('opens job detail from home card click', async ({ page }) => {
