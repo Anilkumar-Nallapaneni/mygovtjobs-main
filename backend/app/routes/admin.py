@@ -270,93 +270,93 @@ async def admin_moderation_queue(limit: int = Query(50, ge=1, le=200)):
     }
     try:
         async with SessionLocal() as session:
-        reports = (
-            await session.execute(
-                text(
-                    """
-                    SELECT r.id, r.job_id, r.reason, r.description, r.reporter_email, r.created_at,
-                           j.slug, j.title
-                    FROM job_reports r
-                    JOIN jobs j ON j.id = r.job_id
-                    WHERE r.status = 'open'
-                    ORDER BY r.created_at DESC
-                    LIMIT :limit
-                    """
-                ),
-                {"limit": limit},
-            )
-        ).mappings().all()
-
-        broken_links = (
-            await session.execute(
-                text(
-                    """
-                    SELECT id, slug, title, apply_url, link_consecutive_failures, link_last_http_status
-                    FROM jobs
-                    WHERE status = 'live' AND link_consecutive_failures >= 2
-                    ORDER BY link_consecutive_failures DESC, updated_at DESC
-                    LIMIT :limit
-                    """
-                ),
-                {"limit": limit},
-            )
-        ).mappings().all()
-
-        missing_apply = (
-            await session.execute(
-                text(
-                    """
-                    SELECT id, slug, title, dept, last_date
-                    FROM jobs
-                    WHERE status = 'live'
-                      AND (apply_url IS NULL OR trim(apply_url) = '')
-                    ORDER BY published_at DESC NULLS LAST
-                    LIMIT :limit
-                    """
-                ),
-                {"limit": limit},
-            )
-        ).mappings().all()
-
-        low_confidence = (
-            await session.execute(
-                text(
-                    """
-                    SELECT id, slug, title, confidence_score, source_domain
-                    FROM jobs
-                    WHERE status = 'live'
-                      AND confidence_score IS NOT NULL
-                      AND confidence_score < 0.5
-                    ORDER BY confidence_score ASC
-                    LIMIT :limit
-                    """
-                ),
-                {"limit": limit},
-            )
-        ).mappings().all()
-
-        expired_live = (
-            await session.execute(
-                text(
-                    """
-                    SELECT id, slug, title, last_date
-                    FROM jobs
-                    WHERE status = 'live' AND last_date IS NOT NULL AND last_date < CURRENT_DATE
-                    ORDER BY last_date ASC
-                    LIMIT :limit
-                    """
-                ),
-                {"limit": limit},
-            )
-        ).mappings().all()
-
-        return {
-            "user_reports": [dict(r) for r in reports],
-            "broken_links": [dict(r) for r in broken_links],
-            "missing_apply_links": [dict(r) for r in missing_apply],
-            "low_confidence": [dict(r) for r in low_confidence],
-            "expired_still_live": [dict(r) for r in expired_live],
-        }
+            reports = (
+                await session.execute(
+                    text(
+                        """
+                        SELECT r.id, r.job_id, r.reason, r.description, r.reporter_email, r.created_at,
+                               j.slug, j.title
+                        FROM job_reports r
+                        JOIN jobs j ON j.id = r.job_id
+                        WHERE r.status = 'open'
+                        ORDER BY r.created_at DESC
+                        LIMIT :limit
+                        """
+                    ),
+                    {"limit": limit},
+                )
+            ).mappings().all()
+    
+            broken_links = (
+                await session.execute(
+                    text(
+                        """
+                        SELECT id, slug, title, apply_url, link_consecutive_failures, link_last_http_status
+                        FROM jobs
+                        WHERE status = 'live' AND link_consecutive_failures >= 2
+                        ORDER BY link_consecutive_failures DESC, updated_at DESC
+                        LIMIT :limit
+                        """
+                    ),
+                    {"limit": limit},
+                )
+            ).mappings().all()
+    
+            missing_apply = (
+                await session.execute(
+                    text(
+                        """
+                        SELECT id, slug, title, dept, last_date
+                        FROM jobs
+                        WHERE status = 'live'
+                          AND (apply_url IS NULL OR trim(apply_url) = '')
+                        ORDER BY published_at DESC NULLS LAST
+                        LIMIT :limit
+                        """
+                    ),
+                    {"limit": limit},
+                )
+            ).mappings().all()
+    
+            low_confidence = (
+                await session.execute(
+                    text(
+                        """
+                        SELECT id, slug, title, confidence_score, source_domain
+                        FROM jobs
+                        WHERE status = 'live'
+                          AND confidence_score IS NOT NULL
+                          AND confidence_score < 0.5
+                        ORDER BY confidence_score ASC
+                        LIMIT :limit
+                        """
+                    ),
+                    {"limit": limit},
+                )
+            ).mappings().all()
+    
+            expired_live = (
+                await session.execute(
+                    text(
+                        """
+                        SELECT id, slug, title, last_date
+                        FROM jobs
+                        WHERE status = 'live' AND last_date IS NOT NULL AND last_date < CURRENT_DATE
+                        ORDER BY last_date ASC
+                        LIMIT :limit
+                        """
+                    ),
+                    {"limit": limit},
+                )
+            ).mappings().all()
+    
+            return {
+                "user_reports": [dict(r) for r in reports],
+                "broken_links": [dict(r) for r in broken_links],
+                "missing_apply_links": [dict(r) for r in missing_apply],
+                "low_confidence": [dict(r) for r in low_confidence],
+                "expired_still_live": [dict(r) for r in expired_live],
+            }
     except Exception:
         return empty
 
