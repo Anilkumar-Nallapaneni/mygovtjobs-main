@@ -581,11 +581,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.livegovtjobs.com/org/upsc-what-s-new</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://www.livegovtjobs.com/org/university-grants-commission-ugc</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -597,6 +592,11 @@
   </url>
   <url>
     <loc>https://www.livegovtjobs.com/org/railway-recruitment-board-rrb-gorakhpur</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.livegovtjobs.com/org/upsc-what-s-new</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -886,6 +886,11 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://www.livegovtjobs.com/org/trb-tn</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.livegovtjobs.com/org/aiims-new-delhi-recruitment</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -912,11 +917,6 @@
   </url>
   <url>
     <loc>https://www.livegovtjobs.com/org/ntpc-careers</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.livegovtjobs.com/org/trb-tn</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -1082,6 +1082,11 @@
   </url>
   <url>
     <loc>https://www.livegovtjobs.com/org/sainik-school-gopalganj</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.livegovtjobs.com/org/upsc-e-admit-cards</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
