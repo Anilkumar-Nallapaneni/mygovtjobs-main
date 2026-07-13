@@ -1,39 +1,7 @@
 {
-  "generatedAt": "2026-07-13T18:23:22.366Z",
+  "generatedAt": "2026-07-13T21:33:11.249Z",
   "count": 25,
   "items": [
-    {
-      "id": "ba6df61f0df29b66",
-      "title": "Representation on Question Paper for ESEM-26, IES-ISS-26 and Combined Geo-Scientist (Main) Examination, 2026",
-      "link": "https://upsc.gov.in/content/representation-question-paper-esem-26-ies-iss-26-and-combined-geo-scientist-main-examination",
-      "publishedAt": "2026-06-29T08:16:36.532239Z",
-      "summary": "COMMON MISTAKES DONE WHILE FILLING OMR SHEET/SCANNABLE ATTENDANCE LIST OMR SHEET ERROR : Candidate encoded ‘C’ instead of ‘A’ MISTAKES IN OMR SHEET (1) ENCODING BOOKLET SERIES BY CANDIDATE (Series ‘A’ served to candidate) ERROR : Encoding not done by candidate MISTAKES IN OMR SHEET (1) ENCODING BOOKLET SERIES BY CANDIDATE contd. (Series ‘A’ served to candidate) ERROR : Wrong encoding of Subject Co…",
-      "pdfUrls": [
-        "https://www.upsc.gov.in/sites/default/files/Common_Mistake_OMR_SAL.pdf"
-      ],
-      "sourceId": "upsc",
-      "sourceName": "Union Public Service Commission (UPSC)",
-      "dept": "Union Public Service Commission (UPSC)",
-      "state": "All India",
-      "category": "upsc",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "9308d07d9fa7ec3a",
-      "title": "Representation on Question Paper for ESEM-26, IES-ISS-26 and Combined Geo-Scientist (Main) Examination, 2026",
-      "link": "https://www.upsc.gov.in/content/representation-question-paper-esem-26-ies-iss-26-and-combined-geo-scientist-main-examination",
-      "publishedAt": "2026-06-27T08:52:09.034216Z",
-      "summary": "The Window for submitting representations on the questions asked in the Engineering Services (Main) Examination - 2026, Indian Economic Service Examination - 2026, Indian Statistical Service Examination – 2026 and Combined Geo-Scientist (Main) Examination, 2026 will be opened from 27.06.2026. However, you can send your representation, if any, to the email ids mentioned below from today i.e. 25.06.…",
-      "pdfUrls": [
-        "https://www.upsc.gov.in/sites/default/files/QPRepExamNotice-Engl-25062026.pdf"
-      ],
-      "sourceId": "upsc-notifications",
-      "sourceName": "UPSC — What's New",
-      "dept": "UPSC — What's New",
-      "state": "All India",
-      "category": "upsc",
-      "fetchMethod": "live-jobs-supplement"
-    },
     {
       "id": "1bb2282873cb0efd",
       "title": "Specimen Question Cum Answer Booklet (QCAB)",
@@ -84,6 +52,38 @@
         "all"
       ],
       "fetchMethod": "html-listing"
+    },
+    {
+      "id": "ba6df61f0df29b66",
+      "title": "Representation on Question Paper for ESEM-26, IES-ISS-26 and Combined Geo-Scientist (Main) Examination, 2026",
+      "link": "https://upsc.gov.in/content/representation-question-paper-esem-26-ies-iss-26-and-combined-geo-scientist-main-examination",
+      "publishedAt": "2026-06-29T08:16:36.532239Z",
+      "summary": "COMMON MISTAKES DONE WHILE FILLING OMR SHEET/SCANNABLE ATTENDANCE LIST OMR SHEET ERROR : Candidate encoded ‘C’ instead of ‘A’ MISTAKES IN OMR SHEET (1) ENCODING BOOKLET SERIES BY CANDIDATE (Series ‘A’ served to candidate) ERROR : Encoding not done by candidate MISTAKES IN OMR SHEET (1) ENCODING BOOKLET SERIES BY CANDIDATE contd. (Series ‘A’ served to candidate) ERROR : Wrong encoding of Subject Co…",
+      "pdfUrls": [
+        "https://www.upsc.gov.in/sites/default/files/Common_Mistake_OMR_SAL.pdf"
+      ],
+      "sourceId": "upsc",
+      "sourceName": "Union Public Service Commission (UPSC)",
+      "dept": "Union Public Service Commission (UPSC)",
+      "state": "All India",
+      "category": "upsc",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "9308d07d9fa7ec3a",
+      "title": "Representation on Question Paper for ESEM-26, IES-ISS-26 and Combined Geo-Scientist (Main) Examination, 2026",
+      "link": "https://www.upsc.gov.in/content/representation-question-paper-esem-26-ies-iss-26-and-combined-geo-scientist-main-examination",
+      "publishedAt": "2026-06-27T08:52:09.034216Z",
+      "summary": "The Window for submitting representations on the questions asked in the Engineering Services (Main) Examination - 2026, Indian Economic Service Examination - 2026, Indian Statistical Service Examination – 2026 and Combined Geo-Scientist (Main) Examination, 2026 will be opened from 27.06.2026. However, you can send your representation, if any, to the email ids mentioned below from today i.e. 25.06.…",
+      "pdfUrls": [
+        "https://www.upsc.gov.in/sites/default/files/QPRepExamNotice-Engl-25062026.pdf"
+      ],
+      "sourceId": "upsc-notifications",
+      "sourceName": "UPSC — What's New",
+      "dept": "UPSC — What's New",
+      "state": "All India",
+      "category": "upsc",
+      "fetchMethod": "live-jobs-supplement"
     },
     {
       "id": "d8e4b595dfe40717",

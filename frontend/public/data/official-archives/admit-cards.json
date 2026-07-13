@@ -1,7 +1,58 @@
 {
-  "generatedAt": "2026-07-13T18:23:22.366Z",
-  "count": 145,
+  "generatedAt": "2026-07-13T21:33:11.249Z",
+  "count": 144,
   "items": [
+    {
+      "id": "dab406e23a6537a1",
+      "title": "E-Admit Cards for various Recruitment Posts",
+      "link": "https://upsconline.gov.in/oraadmitcard/",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "upsc-e-admit-hub",
+      "sourceName": "UPSC — e-Admit cards",
+      "dept": "Union Public Service Commission",
+      "state": "All India",
+      "category": "upsc",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "99c9f94d8e7c5a15",
+      "title": "e-Admit Cards For Computer Based Skill Test For Various Recruitment Posts (ORA)",
+      "link": "https://upsconline.gov.in/eadmitcard/admitcard_steno_2024/",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "upsc-e-admit-hub",
+      "sourceName": "UPSC — e-Admit cards",
+      "dept": "Union Public Service Commission",
+      "state": "All India",
+      "category": "upsc",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "7749ebd16d22dad7",
+      "title": "E- Admit Cards",
+      "link": "https://www.upsc.gov.in/e-admit-cards",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "upsc-e-admit-hub",
+      "sourceName": "UPSC — e-Admit cards",
+      "dept": "Union Public Service Commission",
+      "state": "All India",
+      "category": "upsc",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
     {
       "id": "206ead0ac32afa2e",
       "title": "NOTICE REGARDING ADMIT CARD FOR ADVT. NO. A-1/E-1/2025, ASSISTANT CONSERVATOR OF..",
@@ -79,68 +130,24 @@
       "fetchMethod": "live-jobs-supplement"
     },
     {
-      "id": "99c9f94d8e7c5a15",
-      "title": "e-Admit Cards For Computer Based Skill Test For Various Recruitment Posts (ORA)",
-      "link": "https://upsconline.gov.in/eadmitcard/admitcard_steno_2024/",
-      "publishedAt": "2026-07-13T03:44:36.273212Z",
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "upsc-e-admit-hub",
-      "sourceName": "UPSC — e-Admit cards",
-      "dept": "UPSC — e-Admit cards",
-      "state": "All India",
-      "category": "upsc",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "dab406e23a6537a1",
-      "title": "E-Admit Cards for various Recruitment Posts",
-      "link": "https://upsconline.gov.in/oraadmitcard/",
-      "publishedAt": "2026-07-13T03:44:31.911003Z",
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "upsc-e-admit-hub",
-      "sourceName": "UPSC — e-Admit cards",
-      "dept": "UPSC — e-Admit cards",
-      "state": "All India",
-      "category": "upsc",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "6db5c4ba16d574a6",
-      "title": "Recruitment cases kept on hold on account of Pending Litigations",
-      "link": "https://www.upsc.gov.in/recruitment/recruitment-cases-kept-hold-account-pending-litigations",
-      "publishedAt": "2026-07-13T03:38:01.974815Z",
-      "summary": "Union Public Service Commission Recruitment Branch *** Recruitment Cases kept on hold on account of pending litigation Sl. No. File No. Subject No. of Posts 1. F.1/70(12)/2021-R.1 Assistant Professor (Unani), IlmulAdvia, Government of NCT of Delhi 01 2. F.1/78(20)/2021-R.1 Assistant Professor (Unani), Qabalatwa Amraze Niswan, Government of NCT of Delhi 02 3. F.1/138(39)/2023-R.1 Professor (Pharmac…",
-      "pdfUrls": [
-        "https://www.upsc.gov.in/sites/default/files/Rectt_PendingLitigation_Eng_171225.pdf"
-      ],
-      "sourceId": "upsc-e-admit-hub",
-      "sourceName": "UPSC — e-Admit cards",
-      "dept": "UPSC — e-Admit cards",
-      "state": "All India",
-      "category": "upsc",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "2359d8c2c97ce9ef",
-      "title": "status recruitment cases advertisementwise",
-      "link": "https://www.upsc.gov.in/recruitment/status-recruitment-cases-advertisementwise",
-      "publishedAt": "2026-07-13T03:37:18.835237Z",
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "upsc-e-admit-hub",
-      "sourceName": "UPSC — e-Admit cards",
-      "dept": "UPSC — e-Admit cards",
-      "state": "All India",
-      "category": "upsc",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
       "id": "e46e2c2e5ba88b94",
       "title": "13 Jul 2026 NOTICE REGARDING ADVT. NO. A-4/E-1/2025, COMPUTER ASSISTANT (UPPSC) EXAM-2025",
       "link": "https://uppsc.up.nic.in/Open_PDF.aspx?I4PnQ0tBagloISrijFpWKEacuL4jX0gc",
       "publishedAt": "2026-07-13T00:00:00Z",
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "uppsc-hall-tickets",
+      "sourceName": "UPPSC — Hall tickets",
+      "dept": "UPPSC — Hall tickets",
+      "state": "All India",
+      "category": "state",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "77ba4f9903f6e25e",
+      "title": "NOTICE REGARDING ADVT. NO. A-4/E-1/2025, COMPUTER ASSISTANT (UPPSC) EXAM-2025",
+      "link": "https://uppsc.up.nic.in/Open_PDF_DB.aspx?I4PnQ0tBagloISrijFpWKC1ZE/PjW2XD",
+      "publishedAt": "2026-07-12T03:34:38.439308Z",
       "summary": null,
       "pdfUrls": [],
       "sourceId": "uppsc-hall-tickets",
@@ -1483,23 +1490,6 @@
       "state": "All India",
       "category": "railways",
       "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "7749ebd16d22dad7",
-      "title": "E- Admit Cards",
-      "link": "https://www.upsc.gov.in/e-admit-cards",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "upsc-e-admit-hub",
-      "sourceName": "UPSC — e-Admit cards",
-      "dept": "Union Public Service Commission",
-      "state": "All India",
-      "category": "upsc",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
     },
     {
       "id": "e3bde09b9ce1d605",
