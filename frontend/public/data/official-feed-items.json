@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-07-14T10:21:10.402Z",
+  "generatedAt": "2026-07-14T14:29:10.762Z",
   "sourceReports": [
     {
       "id": "pib-press-reg3",
       "name": "PIB — recent press releases",
       "feedUrl": "https://www.pib.gov.in/RssMain.aspx?ModId=6&Lang=2&Regid=3&reg=48",
       "listingUrl": null,
-      "ok": true,
-      "error": null,
-      "itemCount": 1,
-      "fetchMethod": "rss-feed"
+      "ok": false,
+      "error": "rss-empty",
+      "itemCount": 0,
+      "fetchMethod": null
     },
     {
       "id": "employment-news",
@@ -295,23 +295,6 @@
   "siteReports": [],
   "items": [
     {
-      "id": "9bb06fd136316e7c",
-      "title": "केंद्रीय संचार मंत्री श्री ज्योतिरादित्य एम. सिंधिया ने रणनीतिक समीक्षा एवं योजना बैठक में बीएसएनएल के वित्त वर्ष 2026-27 की पहली तिमाही के परिणामों की समीक्षा की",
-      "link": "https://pib.gov.in/PressReleaseIframePage.aspx?PRID=2284347",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "pib-press-reg3",
-      "sourceName": "PIB — recent press releases",
-      "dept": "Press Information Bureau",
-      "state": "All India",
-      "category": "state",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "rss-feed"
-    },
-    {
       "id": "1320428f3dc24d77",
       "title": "Home.aspx",
       "link": "https://employmentnews.gov.in/NewEmp/Home.aspx",
@@ -330,7 +313,7 @@
     },
     {
       "id": "f43d7aa6e0241ca3",
-      "title": "Interview Schedule for the post of Scientist/Engineer 'SC' (Computer Science) against ICRB Advt. No. ISRO:ICRB:02(EMC):2025 dated 27.05.2025 Read More",
+      "title": "Interview Schedule for the post of Scientist/Engineer 'SC' (Mechanical) - BE002 - Phase-I against ICRB Advt. No. ISRO:ICRB:02(EMC):2025 dated 27.05.2025 Read More",
       "link": "https://www.isro.gov.in/ICRB_Recruitment9.html",
       "publishedAt": null,
       "summary": null,
@@ -2883,9 +2866,9 @@
       "fetchMethod": "html-listing"
     },
     {
-      "id": "b25b8605451d6575",
-      "title": "16 Jul 2026 NOTICE REGARDING ADVT. NO. A-1/E-1/2025, ASSISTANT CONSERVATOR OF FOREST (A.C.F.) / RANGE FOREST OFFICER (R.F.O.) SERVICES (MAINS) EXAM.-2025",
-      "link": "https://uppsc.up.nic.in/Open_PDF.aspx?I4PnQ0tBagkC/gT4ITeNghe6OT5cuTuL",
+      "id": "4e33594dfdb46cdc",
+      "title": "24 Jul 2026 NOTICE REGARDING DOCUMENT VERIFICATION FOR ASSISTANT TEACHER (TRAINED GRADUATE M/F BRANCH) EXAM-2018 (SOCIAL SCIENCE, HINDI, ENGLISH AND ART)",
+      "link": "https://uppsc.up.nic.in/Open_PDF.aspx?I4PnQ0tBagmmrtVdJ7QQ3M4E+bmNVWKY",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
