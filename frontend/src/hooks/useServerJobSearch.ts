@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useState } from 'react'
 import { fetchJobsFromApi } from '@/lib/jobsApi'
 import { adaptLiveJob } from '@/utils/liveJobAdapter'
+import { filterDisplayJobs } from '@/utils/jobFilters'
 import type { JobRecord } from '@/types/job'
 
 const API_BASE = (import.meta.env.VITE_API_URL || '').replace(/\/$/, '')
@@ -36,7 +37,8 @@ export function useServerJobSearch(
       })
         .then(({ items }) => {
           if (cancelled) return
-          setRows(items.map((item) => adaptLiveJob(item as Record<string, unknown>)))
+          const adapted = items.map((item) => adaptLiveJob(item as Record<string, unknown>))
+          setRows(filterDisplayJobs(adapted))
         })
         .catch(() => {
           if (!cancelled) setRows([])
