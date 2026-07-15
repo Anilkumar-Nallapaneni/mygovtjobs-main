@@ -361,11 +361,12 @@ export function buildStructuredJobDetail(job: Record<string, unknown>): Structur
     overviewFacts = overviewFacts.filter((f) => !isFeeLabel(f.label));
   }
 
-  const articleSections = buildArticleSections(sections, {
+  const articleSections = buildArticleSections(effectiveSections, {
     stripExtractedFee: hasExtractedFee,
     summary,
     skipOverview: overviewFacts.length > 0,
     skipDates: importantDates.length > 0,
+    keepDumpParagraphs: pdfMemorized,
   });
 
   return {
@@ -400,6 +401,8 @@ type ArticleSectionOptions = {
   summary?: string;
   skipOverview?: boolean;
   skipDates?: boolean;
+  /** PDF memorized bodies often include field keywords — do not treat as dump. */
+  keepDumpParagraphs?: boolean;
 };
 
 /** Article layout — strip promos, duplicate summary, and link-only blocks (shown in action bar). */
@@ -409,6 +412,7 @@ function buildArticleSections(sections: unknown[], options: ArticleSectionOption
     summary = "",
     skipOverview = false,
     skipDates = false,
+    keepDumpParagraphs = false,
   } = options;
   const seenHeadings = new Set<string>();
 
@@ -437,9 +441,15 @@ function buildArticleSections(sections: unknown[], options: ArticleSectionOption
         tables = stripFeeRowsFromTables(tables);
       }
       let paragraphs = Array.isArray(s.paragraphs)
-        ? s.paragraphs.map((p) => cleanText(p)).filter((p) => p && !isDumpParagraph(p) && !isPromoParagraph(p))
+        ? s.paragraphs
+            .map((p) => cleanText(p))
+            .filter((p) => {
+              if (!p || isPromoParagraph(p)) return false;
+              if (!keepDumpParagraphs && isDumpParagraph(p)) return false;
+              return true;
+            })
         : [];
-      if (summary) {
+      if (summary && !keepDumpParagraphs) {
         paragraphs = paragraphs.filter((p) => !isSimilarText(p, summary));
       }
       const lists = Array.isArray(s.lists)

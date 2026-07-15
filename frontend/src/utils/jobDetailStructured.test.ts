@@ -154,4 +154,21 @@ describe("buildStructuredJobDetail", () => {
     expect(structured.isStructured).toBe(true);
     expect(structured.overviewFacts.length).toBeGreaterThan(0);
   });
+
+  it("shows memorized PDF summary as article body when sections are missing", () => {
+    const summary =
+      "Nuclear Power Corporation invites applications for Executive Trainee. " +
+      "Qualification BE/BTech required. Age limit 18 to 30 years. Last date 31 July 2026.";
+    const structured = buildStructuredJobDetail({
+      title: "NPCIL ET 2026",
+      detail: {
+        memorized_at: "2026-07-15T00:00:00Z",
+        detail_source: "pdf",
+        summary,
+      },
+    });
+    expect(structured.isStructured).toBe(true);
+    expect(structured.articleSections.some((s) => /notification/i.test(s.heading))).toBe(true);
+    expect(structured.articleSections[0]?.paragraphs.join(" ")).toContain("Nuclear Power");
+  });
 });

@@ -8,11 +8,11 @@ import { buildEmploymentNewsItems, type EmploymentNewsItem } from "@/utils/emplo
 import { numberLocale } from "@/utils/formatLocale";
 import type { JobRecord } from "@/types/job";
 
-/** Readable crawl speed — slightly faster so long tickers never look frozen. */
-const MARQUEE_PX_PER_SEC = 48;
-/** Cap half-cycle so a full loop stays under ~2 minutes even with 48 long headlines. */
-const MAX_MARQUEE_HALF_CYCLE_SEC = 55;
-const MIN_MARQUEE_HALF_CYCLE_SEC = 18;
+/** Comfortable crawl speed — slow enough to read, still continuous. */
+const MARQUEE_PX_PER_SEC = 32;
+/** Cap half-cycle so a full loop stays under ~2.5 minutes even with many headlines. */
+const MAX_MARQUEE_HALF_CYCLE_SEC = 75;
+const MIN_MARQUEE_HALF_CYCLE_SEC = 24;
 
 type EmploymentNewsBarProps = {
   jobs?: JobRecord[];

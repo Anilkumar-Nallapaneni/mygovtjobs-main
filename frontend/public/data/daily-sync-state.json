@@ -1,13 +1,10 @@
 {
-  "status": "failed",
-  "completedAt": "2026-07-15T16:16:42.048351+00:00",
-  "completedAtIst": "2026-07-15T21:46:42.048351+05:30",
-  "lastCompletedDateIst": "2026-07-15",
+  "status": "completed",
+  "completedAt": "2026-07-15T21:47:09.243992+00:00",
+  "completedAtIst": "2026-07-16T03:17:09.243992+05:30",
+  "lastCompletedDateIst": "2026-07-16",
   "nextRunAtIst": "2026-07-16T08:00:00+05:30",
-  "jobCount": 1476,
+  "jobCount": 1584,
   "sourcesScraped": 154,
-  "notes": "IngestAgent: official India govt portals + RSS",
-  "failedAt": "2026-07-15T16:31:44.889359+00:00",
-  "failedAtIst": "2026-07-15T22:01:44.904622+05:30",
-  "error": "OSError: [Errno 22] Invalid argument"
+  "notes": "IngestAgent: official India govt portals + RSS"
 }

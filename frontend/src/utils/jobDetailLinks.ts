@@ -154,6 +154,84 @@ function resolveKnownOrgRecruitmentPortal(job: Record<string, unknown>): string 
   return null;
 }
 
+/** Map PDF / notification host → curated recruitment listing from OFFICIAL_SITES. */
+function resolveOfficialPortalFromHost(host: string): string | null {
+  const key = host.replace(/^www\./i, "").toLowerCase();
+  if (!key) return null;
+  const upgraded = HOMEPAGE_UPGRADE_BY_HOST.get(key);
+  if (upgraded) return upgraded;
+  for (const site of OFFICIAL_SITES) {
+    try {
+      const siteHost = new URL(site.url).hostname.replace(/^www\./i, "").toLowerCase();
+      if (siteHost === key || key.endsWith(`.${siteHost}`) || siteHost.endsWith(`.${key}`)) {
+        return site.latestUrl || site.url;
+      }
+    } catch {
+      /* ignore */
+    }
+  }
+  return null;
+}
+
+function hostsFromJob(job: Record<string, unknown>): string[] {
+  const urls: string[] = [];
+  const detail = (job.detail && typeof job.detail === "object" ? job.detail : {}) as Record<
+    string,
+    unknown
+  >;
+  for (const raw of [
+    ...collectPdfUrls(job),
+    job.apply_url,
+    job.applyUrl,
+    detail.notification_url,
+    detail.source_url,
+    detail.link,
+    detail.pdf_url,
+  ]) {
+    const url = normalizeDetailUrl(raw);
+    if (url) urls.push(url);
+  }
+  const hosts: string[] = [];
+  const seen = new Set<string>();
+  for (const url of urls) {
+    try {
+      const host = new URL(url).hostname.replace(/^www\./i, "").toLowerCase();
+      if (!host || seen.has(host)) continue;
+      seen.add(host);
+      hosts.push(host);
+    } catch {
+      /* ignore */
+    }
+  }
+  return hosts;
+}
+
+const CDN_OR_STORAGE_HOST_RE =
+  /(?:^|\.)(?:s3waas\.gov\.in|amazonaws\.com|cloudfront\.net|azureedge\.net|blob\.core\.windows\.net|googleusercontent\.com|googleapis\.com)$/i;
+
+function isCdnOrStorageHost(host: string): boolean {
+  return CDN_OR_STORAGE_HOST_RE.test(host.replace(/^www\./i, "").toLowerCase());
+}
+
+/** Prefer curated portal; else org origin homepage (as Official Website, not Apply Now). */
+function resolveOfficialWebsiteFromJob(job: Record<string, unknown>): string | null {
+  for (const host of hostsFromJob(job)) {
+    if (isCdnOrStorageHost(host)) continue;
+    const curated = resolveOfficialPortalFromHost(host);
+    if (curated) return curated;
+  }
+  for (const host of hostsFromJob(job)) {
+    if (isCdnOrStorageHost(host)) continue;
+    if (!/\.(gov|nic|ac|res|edu)\.in$/i.test(host)) continue;
+    try {
+      return `https://www.${host}/`;
+    } catch {
+      /* ignore */
+    }
+  }
+  return null;
+}
+
 function pickUpgradedHtmlApplyUrl(url: unknown): string | null {
   const normalized = normalizeDetailUrl(url);
   if (!normalized || isPdfUrl(normalized)) return null;
@@ -522,6 +600,15 @@ export function resolveHtmlApplyHref(
     if (upgraded && (!pdfUrl || !sameOutboundUrl(upgraded, pdfUrl))) return upgraded;
   }
 
+  // Host-derived portals are Apply Now only when they look like a recruitment path.
+  for (const host of hostsFromJob(job)) {
+    if (isCdnOrStorageHost(host)) continue;
+    const curated = resolveOfficialPortalFromHost(host);
+    if (!curated || isGenericHomepageUrl(curated)) continue;
+    if (pdfUrl && sameOutboundUrl(curated, pdfUrl)) continue;
+    return curated;
+  }
+
   return resolveKnownOrgRecruitmentPortal(job);
 }
 
@@ -555,7 +642,16 @@ export function buildUnifiedDetailActions(
     add(pdfUrl, "View Notification", "secondary");
   }
 
-  const official = pickOfficialWebsiteLink(allLinks, htmlApply || pdfUrl);
+  const official =
+    pickOfficialWebsiteLink(allLinks, htmlApply || pdfUrl) ||
+    (() => {
+      if (!job) return null;
+      const fallback = resolveOfficialWebsiteFromJob(job);
+      if (!fallback) return null;
+      if (htmlApply && sameOutboundUrl(fallback, htmlApply)) return null;
+      if (pdfUrl && sameOutboundUrl(fallback, pdfUrl)) return null;
+      return { label: "Official Website", url: fallback };
+    })();
   if (official) {
     add(official.url, "Official Website", "secondary");
   }

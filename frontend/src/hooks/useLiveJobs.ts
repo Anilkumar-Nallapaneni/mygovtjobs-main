@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useMemo, useState } from 'react'
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { useQuery, useQueryClient } from '@tanstack/react-query'
 import {
   fetchDailySyncMeta,
@@ -111,10 +111,16 @@ export function useLiveJobs() {
     }
   }, [])
 
+  // One background hydrate per query generation — avoid re-firing on every partial catalog update.
+  const supabaseRefreshKey = useRef<string | null>(null)
   useEffect(() => {
     if (!catalogQuery.isSuccess || !needsSupabaseBackgroundRefresh(catalog, jobsSource)) {
       return undefined
     }
+
+    const gate = `${refetchGeneration}:${jobsSource}`
+    if (supabaseRefreshKey.current === gate) return undefined
+    supabaseRefreshKey.current = gate
 
     let cancelled = false
     void refreshSupabaseCatalog(dailySyncMeta).then((next) => {
@@ -125,7 +131,15 @@ export function useLiveJobs() {
     return () => {
       cancelled = true
     }
-  }, [catalog, catalogQuery.isSuccess, dailySyncMeta, jobsSource, qc, queryKey])
+  }, [
+    catalog,
+    catalogQuery.isSuccess,
+    dailySyncMeta,
+    jobsSource,
+    qc,
+    queryKey,
+    refetchGeneration,
+  ])
 
   const refresh = useCallback(() => {
     if (dailySyncOnly) return

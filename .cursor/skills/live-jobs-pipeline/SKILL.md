@@ -46,6 +46,17 @@ npm run pdf:backfill        # Find missing PDF URLs (228 jobs)
 - When `detail.memorized_at` or `detail_source=pdf`, UI shows **PDF summary** even without full `content_sections`
 - Static mode: commit `live-jobs.json` + `job-details/` after pipeline
 
+## After pipeline — health check
+
+When jobs look wrong on the site, or after a big sync/deploy, run **Agent 4**:
+
+```bash
+npm run health:website          # local code/data/env
+npm run health:website:full     # + production + live probes
+```
+
+Skill: `.cursor/skills/website-health-agent/`
+
 ## What's not automatic yet
 
 - **OCR** for scanned image PDFs (needs Tesseract on Windows)

@@ -2,6 +2,10 @@ import { dataJsonUrl } from '@/lib/dataCacheBust'
 import { getSupabase } from '@/lib/supabase'
 import { resolveJobsSourceMode } from '@/utils/liveJobsPipeline'
 import { fetchJobDetailFromStorage } from '@/utils/jobDetailsStorage'
+import {
+  jobDetailHasRichContent,
+  mergeJobDetailPayloads,
+} from '@/utils/jobDetailHydration'
 
 export type ApiJob = {
   id: string
@@ -290,71 +294,12 @@ async function fetchJobFromStaticCatalog(slug: string): Promise<ApiJob | null> {
   return items.find((row) => row.slug === slug || row.id === slug) ?? null
 }
 
-export async function fetchJobBySlug(slug: string): Promise<ApiJob | null> {
-  if (!slug) return null
-
-  const jobsSource = resolveJobsSourceMode(import.meta.env.VITE_JOBS_SOURCE)
-
-  if (jobsSource === 'static') {
-    const staticJob = await fetchJobFromStaticCatalog(slug)
-    if (staticJob) return staticJob
-  }
-
-  try {
-    const res = await fetchWithTimeout(apiUrl(`/api/jobs/${encodeURIComponent(slug)}`), {
-      cache: 'default',
-    })
-    if (res.ok) {
-      return (await res.json()) as ApiJob
-    }
-  } catch {
-    /* fall through */
-  }
-
-  const staticJob = await fetchJobFromStaticCatalog(slug)
-  if (staticJob) return staticJob
-
-  if (jobsSource === 'static') {
-    return null
-  }
-
-  const supabase = await getSupabase()
-  if (supabase) {
-    try {
-      const { data, error } = await promiseWithTimeout(
-        supabase
-          .from('jobs')
-          .select('*')
-          .eq('slug', slug)
-          .in('status', ['live', 'expired'])
-          .maybeSingle(),
-        JOBS_FETCH_TIMEOUT_MS,
-        'Supabase job detail'
-      )
-      if (!error && data) {
-        const job = data as ApiJob
-        const [postsRes, datesRes] = await promiseWithTimeout(
-          Promise.all([
-            supabase.from('job_posts').select('post_name,vacancies,pay_level').eq('job_id', job.id),
-            supabase.from('job_dates').select('event_key,event_date').eq('job_id', job.id),
-          ]),
-          JOBS_FETCH_TIMEOUT_MS,
-          'Supabase job detail relations'
-        )
-        if (postsRes.data?.length) job.posts = postsRes.data
-        if (datesRes.data?.length) job.important_dates = datesRes.data
-        return job
-      }
-    } catch {
-      /* fall through to static detail bundle */
-    }
-  }
-
+async function fetchJobDetailBundle(slug: string): Promise<ApiJob | null> {
   try {
     const stored = await fetchJobDetailFromStorage(slug)
-    if (stored) return stored as ApiJob
+    if (stored && typeof stored === 'object') return stored as ApiJob
   } catch {
-    /* fall through to git-tracked static bundle */
+    /* fall through */
   }
 
   try {
@@ -370,6 +315,79 @@ export async function fetchJobBySlug(slug: string): Promise<ApiJob | null> {
   }
 
   return null
+}
+
+async function hydrateJobDetail(slug: string, base: ApiJob | null): Promise<ApiJob | null> {
+  if (base && jobDetailHasRichContent(base)) return base
+  const bundle = await fetchJobDetailBundle(slug)
+  if (!bundle) return base
+  return mergeJobDetailPayloads(base, bundle) ?? bundle
+}
+
+export async function fetchJobBySlug(slug: string): Promise<ApiJob | null> {
+  if (!slug) return null
+
+  const jobsSource = resolveJobsSourceMode(import.meta.env.VITE_JOBS_SOURCE)
+  let base: ApiJob | null = null
+  // When VITE_API_URL is unset, Vite proxies /api → :8000. Fail fast if API isn't running.
+  const apiTimeoutMs = API_BASE ? JOBS_FETCH_TIMEOUT_MS : 2_500
+
+  if (jobsSource === 'static') {
+    base = await fetchJobFromStaticCatalog(slug)
+    return hydrateJobDetail(slug, base)
+  }
+
+  try {
+    const res = await fetchWithTimeout(apiUrl(`/api/jobs/${encodeURIComponent(slug)}`), {
+      cache: 'default',
+      timeoutMs: apiTimeoutMs,
+    })
+    if (res.ok) {
+      base = (await res.json()) as ApiJob
+    }
+  } catch {
+    /* fall through — local API often not running */
+  }
+
+  if (!base) {
+    base = await fetchJobFromStaticCatalog(slug)
+  }
+
+  if (!base) {
+    const supabase = await getSupabase()
+    if (supabase) {
+      try {
+        const { data, error } = await promiseWithTimeout(
+          supabase
+            .from('jobs')
+            .select('*')
+            .eq('slug', slug)
+            .in('status', ['live', 'expired'])
+            .maybeSingle(),
+          JOBS_FETCH_TIMEOUT_MS,
+          'Supabase job detail'
+        )
+        if (!error && data) {
+          const job = data as ApiJob
+          const [postsRes, datesRes] = await promiseWithTimeout(
+            Promise.all([
+              supabase.from('job_posts').select('post_name,vacancies,pay_level').eq('job_id', job.id),
+              supabase.from('job_dates').select('event_key,event_date').eq('job_id', job.id),
+            ]),
+            JOBS_FETCH_TIMEOUT_MS,
+            'Supabase job detail relations'
+          )
+          if (postsRes.data?.length) job.posts = postsRes.data
+          if (datesRes.data?.length) job.important_dates = datesRes.data
+          base = job
+        }
+      } catch {
+        /* fall through to detail bundle */
+      }
+    }
+  }
+
+  return hydrateJobDetail(slug, base)
 }
 
 async function subscribeToAlertsViaSupabase(

@@ -221,9 +221,9 @@ describe("jobDetailLinks", () => {
       },
     };
     const actions = buildUnifiedDetailActions(job);
-    expect(actions).toHaveLength(1);
     expect(actions[0]?.label).toBe("View Notification");
     expect(actions[0]?.url).toContain(".pdf");
+    expect(actions.some((a) => a.label === "Apply Now")).toBe(false);
     expect(actions.some((a) => /Apply Now — View Notification/i.test(a.label))).toBe(false);
   });
 
@@ -246,9 +246,10 @@ describe("jobDetailLinks", () => {
       },
     };
     const actions = buildUnifiedDetailActions(job);
-    expect(actions.map((a) => a.label)).toEqual(["Apply Now", "View Notification"]);
+    expect(actions[0]?.label).toBe("Apply Now");
     expect(actions[0]?.url).toContain("jagatsinghpur.dcourts.gov.in");
-    expect(actions[1]?.url).toContain(".pdf");
+    expect(actions.some((a) => a.label === "View Notification")).toBe(true);
+    expect(actions.find((a) => a.label === "View Notification")?.url).toContain(".pdf");
   });
 
   it("treats apprenticeshipindia.gov.in as a real apply portal", () => {
@@ -301,7 +302,8 @@ describe("jobDetailLinks", () => {
     };
     const actions = buildUnifiedDetailActions(job);
     expect(resolveHtmlApplyHref(job)).toBe(apply);
-    expect(actions.map((a) => a.label)).toEqual(["Apply Now", "View Notification"]);
+    expect(actions[0]?.label).toBe("Apply Now");
+    expect(actions.some((a) => a.label === "View Notification")).toBe(true);
   });
 
   it("does not duplicate official website when same as apply portal", () => {
@@ -338,9 +340,27 @@ describe("jobDetailLinks", () => {
     expect(actions[0]?.variant).toBe("primary");
     expect(actions[0]?.label).toBe("Apply Now");
     expect(actions[0]?.url).toContain("forms.gle");
-    expect(actions[1]?.label).toBe("View Notification");
-    expect(actions[1]?.url).toContain(".pdf");
-    expect(actions).toHaveLength(2);
+    expect(actions.some((a) => a.label === "View Notification")).toBe(true);
+    expect(actions.find((a) => a.label === "View Notification")?.url).toContain(".pdf");
+  });
+
+  it("shows Apply Now from curated portal when job only has an org PDF", () => {
+    const pdf =
+      "https://www.npcil.nic.in/writereaddata/Orders/202601011132535578347News_01012026_02.pdf";
+    const job = {
+      apply_url: pdf,
+      detail: {
+        pdf_url: pdf,
+        pdf_urls: [pdf],
+        summary: "NPCIL recruitment notification summary for executive trainees.",
+      },
+    };
+    expect(resolveHtmlApplyHref(job)).toMatch(/npcil\.nic\.in/i);
+    expect(resolveHtmlApplyHref(job)).not.toMatch(/\.pdf/i);
+    const actions = buildUnifiedDetailActions(job);
+    expect(actions[0]?.label).toBe("Apply Now");
+    expect(actions.some((a) => a.label === "View Notification")).toBe(true);
+    expect(actions.find((a) => a.label === "View Notification")?.url).toContain(".pdf");
   });
 
   it("strips embedded URLs from paragraph text", () => {

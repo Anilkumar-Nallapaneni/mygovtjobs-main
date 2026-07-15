@@ -132,21 +132,28 @@ class PdfReaderAgent:
                             job = await session.get(Job, job_id)
                             if not job:
                                 return
-                            changed = await apply_pdf_enrichment(
+                            result = await apply_pdf_enrichment(
                                 session,
                                 job,
                                 self.parser,
                                 prep,
                                 upload_storage=upload_storage,
                             )
-                            sections = (job.detail or {}).get("content_sections") or []
-                            summary = str((job.detail or {}).get("summary") or "").strip()
+                            changed = result.changed
+                            full_detail = result.full_detail or {}
+                            sections = full_detail.get("content_sections") or []
+                            summary = str(full_detail.get("summary") or (job.detail or {}).get("summary") or "").strip()
                             if changed and (sections or len(summary) >= 40):
                                 async with stats_lock:
                                     stats["memorized"] += 1
                                     if write_static and job.slug:
-                                        self._write_static_detail(job)
-                                    stats["memory_items"].append(self._memory_entry(job))
+                                        self._write_static_detail(
+                                            job,
+                                            full_detail if full_detail else None,
+                                        )
+                                    stats["memory_items"].append(
+                                        self._memory_entry(job, full_detail if full_detail else None)
+                                    )
                                     memorized = stats["memorized"]
                                 print(
                                     f"[{i}/{total}] memorized {title} "
@@ -186,24 +193,24 @@ class PdfReaderAgent:
         stats.pop("memory_items", None)
         return stats
 
-    def _write_static_detail(self, job: Job) -> None:
+    def _write_static_detail(self, job: Job, detail: dict[str, Any] | None = None) -> None:
         self.detail_dir.mkdir(parents=True, exist_ok=True)
         path = self.detail_dir / f"{job.slug}.json"
-        payload = job_to_detail_payload(job)
+        payload = job_to_detail_payload(job, detail)
         path.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
 
-    def _memory_entry(self, job: Job) -> dict[str, Any]:
-        detail = dict(job.detail or {})
-        summary = str(detail.get("summary") or "")[:500]
+    def _memory_entry(self, job: Job, detail: dict[str, Any] | None = None) -> dict[str, Any]:
+        d = detail if detail is not None else dict(job.detail or {})
+        summary = str(d.get("summary") or "")[:500]
         digest = hashlib.sha256(summary.encode("utf-8", errors="ignore")).hexdigest()[:16]
         return {
             "slug": job.slug,
             "title": job.title,
             "status": job.status,
             "vacancies": int(job.vacancies or 0),
-            "pdf_urls": list(detail.get("pdf_urls") or detail.get("pdfUrls") or [])[:6],
-            "section_count": len(detail.get("content_sections") or []),
-            "memorized_at": detail.get("memorized_at")
+            "pdf_urls": list(d.get("pdf_urls") or d.get("pdfUrls") or [])[:6],
+            "section_count": len(d.get("content_sections") or []),
+            "memorized_at": d.get("memorized_at")
             or datetime.now(timezone.utc).isoformat(),
             "content_digest": digest,
         }

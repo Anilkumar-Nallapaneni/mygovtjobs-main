@@ -10,6 +10,7 @@ build/
 frontend/coverage/
 playwright-report/
 test-results/
+scripts/output/
 
 # env
 .env
