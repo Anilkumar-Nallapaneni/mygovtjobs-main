@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-07-15T10:25:19.779Z",
+  "generatedAt": "2026-07-15T14:24:30.082Z",
   "sourceReports": [
     {
       "id": "pib-press-reg3",
       "name": "PIB — recent press releases",
       "feedUrl": "https://www.pib.gov.in/RssMain.aspx?ModId=6&Lang=2&Regid=3&reg=48",
       "listingUrl": null,
-      "ok": false,
-      "error": "rss-empty",
-      "itemCount": 0,
-      "fetchMethod": null
+      "ok": true,
+      "error": null,
+      "itemCount": 1,
+      "fetchMethod": "rss-feed"
     },
     {
       "id": "employment-news",
@@ -294,6 +294,23 @@
   ],
   "siteReports": [],
   "items": [
+    {
+      "id": "31850b8f7586a24c",
+      "title": "प्रधानमंत्री श्री नरेन्द्र मोदी की ऑस्ट्रेलिया यात्रा के परिणामों के हिस्से के रूप में व्यावसायिक शिक्षा और प्रशिक्षण में गुणवत्ता आश्वासन को मजबूत करने के लिए एनसीवीईटी और एएसक्यूए ने आशय पत्र पर हस्ताक्षर किए",
+      "link": "https://pib.gov.in/PressReleaseIframePage.aspx?PRID=2285021",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "pib-press-reg3",
+      "sourceName": "PIB — recent press releases",
+      "dept": "Press Information Bureau",
+      "state": "All India",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "rss-feed"
+    },
     {
       "id": "1320428f3dc24d77",
       "title": "Home.aspx",
@@ -914,6 +931,23 @@
       "fetchMethod": "html-listing"
     },
     {
+      "id": "dd31719bd4f4002b",
+      "title": "Special YUVIKA Programme for Oman Students",
+      "link": "https://www.isro.gov.in/Special_YUVIKA%20_Programme_Oman.html",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "isro-careers",
+      "sourceName": "ISRO — Careers",
+      "dept": "Indian Space Research Organisation",
+      "state": "All India",
+      "category": "psu",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
       "id": "81c2262f84f1f0b8",
       "title": "Successful accomplishment of Major Qualification Tests Crew Module systems of Gaganyaan Mission",
       "link": "https://www.isro.gov.in/Tests_Crew_Module_systems_of_Gaganyaan_Mission.html",
@@ -1325,23 +1359,6 @@
       "id": "a62123c7bdb5b60d",
       "title": "ISRO conducts Second Integrated Air Drop Test (IADT-02) for Gaganyaan",
       "link": "https://www.isro.gov.in/ISRO_conducts_Second_Integrated_Air_Drop_Test_for_Gaganyaan.html",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "isro-careers",
-      "sourceName": "ISRO — Careers",
-      "dept": "Indian Space Research Organisation",
-      "state": "All India",
-      "category": "psu",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "d2a1069277a781f2",
-      "title": "ISRO Conferred AIMA Special Award for Public Service Excellence - 2025",
-      "link": "https://www.isro.gov.in/ISRO_ConferredAIMA_SpecialAward.html",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
