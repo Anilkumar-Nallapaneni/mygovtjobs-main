@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-07-15T17:50:40.659Z",
-  "count": 200,
+  "generatedAt": "2026-07-15T21:34:53.226Z",
+  "count": 202,
   "items": [
     {
       "id": "45d6ff67f766e352",
@@ -52,26 +52,10 @@
       "fetchMethod": "live-jobs-supplement"
     },
     {
-      "id": "a0c781809b2cbecc",
-      "title": "Press Release-Revision of Vacancies & Extension of Online Application Submission Date – A&N Police Recruitment 2026",
-      "link": "https://erecruitment.andamannicobar.gov.in/Notice/111_875d5de8-1f35-44bf-b52a-851014ec79fe.pdf",
-      "publishedAt": "2026-07-13T02:59:31.162769Z",
-      "summary": null,
-      "pdfUrls": [
-        "https://erecruitment.andamannicobar.gov.in/Notice/111_875d5de8-1f35-44bf-b52a-851014ec79fe.pdf"
-      ],
-      "sourceId": "an-rec",
-      "sourceName": "Erecruitment Andamannicobar",
-      "dept": "Erecruitment Andamannicobar",
-      "state": "All India",
-      "category": "police",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
       "id": "e6d96f269a38f0ce",
       "title": "Advt. No. 05/2026 (Group-D) Closing Date Extension 2026-07-03",
       "link": "https://hssc.gov.in/file/ac1f23cd-9d9c-1328-819f-293dcbcf0080/advertisements",
-      "publishedAt": "2026-07-11T02:55:57.936009Z",
+      "publishedAt": "2026-07-15T15:18:34.309252Z",
       "summary": null,
       "pdfUrls": [],
       "sourceId": "ssb-hr",
@@ -85,7 +69,7 @@
       "id": "192a71093ffb92b1",
       "title": "PUBLIC NOTICE REGARDING CONSIDERING CLOSING DATE OF SUBMISSION OF APPLICATION FORM FOR THE POST OF GROUP-D AGAINST ADVERTISEMENT NO. 05/2026.|2026-07-07",
       "link": "https://hssc.gov.in/file/ac1f23cd-9d9c-1328-819f-3cc194ce008c/publicNotice",
-      "publishedAt": "2026-07-11T02:55:07.070449Z",
+      "publishedAt": "2026-07-15T15:17:41.833029Z",
       "summary": null,
       "pdfUrls": [],
       "sourceId": "ssb-hr",
@@ -93,6 +77,54 @@
       "dept": "Staff Selection Commission (SSC)",
       "state": "All India",
       "category": "ssc",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "0ff4a618bf67e1a6",
+      "title": "Extension of application window for posts under UT of Ladakh for Adv. no. 07 - 2026",
+      "link": "https://upsc.gov.in/sites/default/files/ExtensionApplWndwUTLadakh-07-2026-Engl-100726.pdf",
+      "publishedAt": "2026-07-15T15:03:32.509997Z",
+      "summary": null,
+      "pdfUrls": [
+        "https://upsc.gov.in/sites/default/files/ExtensionApplWndwUTLadakh-07-2026-Engl-100726.pdf"
+      ],
+      "sourceId": "upsc",
+      "sourceName": "Union Public Service Commission (UPSC)",
+      "dept": "Union Public Service Commission (UPSC)",
+      "state": "All India",
+      "category": "upsc",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "a0c781809b2cbecc",
+      "title": "Press Release-Revision of Vacancies & Extension of Online Application Submission Date – A&N Police Recruitment 2026",
+      "link": "https://erecruitment.andamannicobar.gov.in/Notice/111_875d5de8-1f35-44bf-b52a-851014ec79fe.pdf",
+      "publishedAt": "2026-07-15T02:58:38.342856Z",
+      "summary": null,
+      "pdfUrls": [
+        "https://erecruitment.andamannicobar.gov.in/Notice/111_875d5de8-1f35-44bf-b52a-851014ec79fe.pdf"
+      ],
+      "sourceId": "an-rec",
+      "sourceName": "Erecruitment Andamannicobar",
+      "dept": "Erecruitment Andamannicobar",
+      "state": "All India",
+      "category": "police",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "eda729642db5d6b2",
+      "title": "2 CEN 03/2026 14-07-2026 Notice Frequently Asked Questions (FAQ) - CEN No. 03/2026 English Version",
+      "link": "https://www.rrbajmer.gov.in/Upload_PDF/FINAL%20FAQ%20ENGLISH%20CEN%2003_2026%20SECTION%20CONTROLLER-639196630687276355.pdf",
+      "publishedAt": "2026-07-14T00:00:00Z",
+      "summary": "Page1of11 CEN No.03/2026 (Section Controller) FREQUENTLY ASKED QUESTIONS Q.1 What is the opening date of Application for CEN 03/2026? Ans. The opening date of application is 15-07-2026. Q.2 What is the closing date for submission of online Application for CEN 03/2026? Ans. The closing date for submission of online application is 14-08-2026 @ 23.59 Hrs. Q. 3 What is the last date for application fe…",
+      "pdfUrls": [
+        "https://www.rrbajmer.gov.in/Upload_PDF/FINAL%20FAQ%20ENGLISH%20CEN%2003_2026%20SECTION%20CONTROLLER-639196630687276355.pdf"
+      ],
+      "sourceId": "rrb-ajmer",
+      "sourceName": "Rrbajmer",
+      "dept": "Rrbajmer",
+      "state": "All India",
+      "category": "railways",
       "fetchMethod": "live-jobs-supplement"
     },
     {
@@ -280,22 +312,6 @@
       "fetchMethod": "live-jobs-supplement"
     },
     {
-      "id": "3bf261e4f7deb72d",
-      "title": "Sikkim PSC Veterinary Officer Recruitment 2026 - Apply Online for 47 Posts",
-      "link": "https://spscrecruitment.sikkim.gov.in/rpaonline/login",
-      "publishedAt": "2026-06-30T00:00:00Z",
-      "summary": "Sikkim Public Service Commission (Sikkim PSC) Recruitment 2026 for 47 posts of Veterinary Officer. Candidates with BVSC Can Apply Online. The last date to apply online is 30-06-2026. The candidate shall apply online through Sikkim PSC official website spsc.sikkim.gov.in.",
-      "pdfUrls": [
-        "https://spsc.sikkim.gov.in/Advertisements/VO%20Advertisement%202026.pdf"
-      ],
-      "sourceId": "structured-import",
-      "sourceName": "Sikkim PSC",
-      "dept": "Sikkim PSC",
-      "state": "All India",
-      "category": "state",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
       "id": "61bb45291d26ff55",
       "title": "NPCIL MAPS Apprentices Recruitment 2026 - Apply Offline for 158 Trade, Diploma and Graduate Apprentices Posts",
       "link": "https://www.apprenticeshipindia.gov.in/",
@@ -307,6 +323,22 @@
       "sourceId": "structured-import",
       "sourceName": "NPCIL MAPS",
       "dept": "NPCIL MAPS",
+      "state": "All India",
+      "category": "state",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "3bf261e4f7deb72d",
+      "title": "Sikkim PSC Veterinary Officer Recruitment 2026 - Apply Online for 47 Posts",
+      "link": "https://spscrecruitment.sikkim.gov.in/rpaonline/login",
+      "publishedAt": "2026-06-30T00:00:00Z",
+      "summary": "Sikkim Public Service Commission (Sikkim PSC) Recruitment 2026 for 47 posts of Veterinary Officer. Candidates with BVSC Can Apply Online. The last date to apply online is 30-06-2026. The candidate shall apply online through Sikkim PSC official website spsc.sikkim.gov.in.",
+      "pdfUrls": [
+        "https://spsc.sikkim.gov.in/Advertisements/VO%20Advertisement%202026.pdf"
+      ],
+      "sourceId": "structured-import",
+      "sourceName": "Sikkim PSC",
+      "dept": "Sikkim PSC",
       "state": "All India",
       "category": "state",
       "fetchMethod": "live-jobs-supplement"
@@ -406,22 +438,6 @@
       "fetchMethod": "live-jobs-supplement"
     },
     {
-      "id": "6ba4fa2414631751",
-      "title": "DLSA Sitapur Para Legal Volunteer Recruitment 2026 - Apply Offline",
-      "link": "http://www.district.ecourts.gov.in/sitapur",
-      "publishedAt": "2026-06-25T00:00:00Z",
-      "summary": "District Legal Services Authority, Sitapur (DLSA Sitapur) Recruitment 2026 for 0 posts of Para Legal Volunteer. Candidates Can Apply Offline. The last date to apply offline is 25-06-2026. The candidate shall apply offline through DLSA Sitapur official website.",
-      "pdfUrls": [
-        "https://cdnbbsr.s3waas.gov.in/s3ec0515e122e839dfdaa7ce969536f94a/uploads/2026/06/20260602100.pdf"
-      ],
-      "sourceId": "structured-import",
-      "sourceName": "DLSA Sitapur",
-      "dept": "DLSA Sitapur",
-      "state": "All India",
-      "category": "state",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
       "id": "bc229f1363bec2e5",
       "title": "Meghalaya PSC Recruitment 2026 - Apply Online for 13 Fishery Officer and Junior Football Coach Posts",
       "link": "https://rpa.meghalaya.gov.in/rpaonline/",
@@ -433,6 +449,22 @@
       "sourceId": "structured-import",
       "sourceName": "Meghalaya PSC",
       "dept": "Meghalaya PSC",
+      "state": "All India",
+      "category": "state",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "6ba4fa2414631751",
+      "title": "DLSA Sitapur Para Legal Volunteer Recruitment 2026 - Apply Offline",
+      "link": "http://www.district.ecourts.gov.in/sitapur",
+      "publishedAt": "2026-06-25T00:00:00Z",
+      "summary": "District Legal Services Authority, Sitapur (DLSA Sitapur) Recruitment 2026 for 0 posts of Para Legal Volunteer. Candidates Can Apply Offline. The last date to apply offline is 25-06-2026. The candidate shall apply offline through DLSA Sitapur official website.",
+      "pdfUrls": [
+        "https://cdnbbsr.s3waas.gov.in/s3ec0515e122e839dfdaa7ce969536f94a/uploads/2026/06/20260602100.pdf"
+      ],
+      "sourceId": "structured-import",
+      "sourceName": "DLSA Sitapur",
+      "dept": "DLSA Sitapur",
       "state": "All India",
       "category": "state",
       "fetchMethod": "live-jobs-supplement"
@@ -821,7 +853,7 @@
     },
     {
       "id": "8cfab76f2d66f43b",
-      "title": "Recruitment for various category of Group B(NG) and Group C posts in Andaman and Nicobar Police Department.( Start Date: 27-04-2026 and Last Date: 20-06-2026)",
+      "title": "Recruitment for various category of Group B(NG) and Group C posts in Andaman and Nicobar Police Department. ( Start Date: 27-04-2026 and Last Date: 25-06-2026)",
       "link": "https://erecruitment.andamannicobar.gov.in/Advertisement/1051_f5f9a1d4-c66c-4346-b97a-3df5d0007124.pdf",
       "publishedAt": "2026-04-27T00:00:00Z",
       "summary": null,
@@ -829,10 +861,10 @@
         "https://erecruitment.andamannicobar.gov.in/Advertisement/1051_f5f9a1d4-c66c-4346-b97a-3df5d0007124.pdf"
       ],
       "sourceId": "an-rec",
-      "sourceName": "Erecruitment Andamannicobar",
-      "dept": "Erecruitment Andamannicobar",
+      "sourceName": "Andaman & Nicobar e-Recruitment",
+      "dept": "Andaman & Nicobar e-Recruitment",
       "state": "All India",
-      "category": "police",
+      "category": "state",
       "fetchMethod": "live-jobs-supplement"
     },
     {
