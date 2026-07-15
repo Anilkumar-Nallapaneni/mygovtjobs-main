@@ -66,6 +66,12 @@
     "vacancies": 3
   },
   {
+    "dept": "Rrbajmer",
+    "slug": "rrbajmer",
+    "count": 42,
+    "vacancies": 596
+  },
+  {
     "dept": "Union Public Service Commission (UPSC)",
     "slug": "union-public-service-commission-upsc",
     "count": 42,
@@ -80,14 +86,8 @@
   {
     "dept": "Erecruitment Andamannicobar",
     "slug": "erecruitment-andamannicobar",
-    "count": 38,
+    "count": 39,
     "vacancies": 28
-  },
-  {
-    "dept": "Rrbajmer",
-    "slug": "rrbajmer",
-    "count": 38,
-    "vacancies": 182
   },
   {
     "dept": "Puducherry Recruitment Portal",
@@ -126,6 +126,12 @@
     "vacancies": 40
   },
   {
+    "dept": "ISRO — Careers",
+    "slug": "isro-careers",
+    "count": 28,
+    "vacancies": 48
+  },
+  {
     "dept": "Mha",
     "slug": "mha",
     "count": 28,
@@ -148,12 +154,6 @@
     "slug": "institute-of-banking-personnel-selection-ibps",
     "count": 27,
     "vacancies": 0
-  },
-  {
-    "dept": "ISRO — Careers",
-    "slug": "isro-careers",
-    "count": 27,
-    "vacancies": 48
   },
   {
     "dept": "Haryana PSC (HPSC)",
@@ -486,12 +486,6 @@
     "vacancies": 14
   },
   {
-    "dept": "Trb Tn",
-    "slug": "trb-tn",
-    "count": 9,
-    "vacancies": 200
-  },
-  {
     "dept": "AIIMS New Delhi — Recruitment",
     "slug": "aiims-new-delhi-recruitment",
     "count": 8,
@@ -526,6 +520,12 @@
     "slug": "ntpc-careers",
     "count": 8,
     "vacancies": 24
+  },
+  {
+    "dept": "Trb Tn",
+    "slug": "trb-tn",
+    "count": 8,
+    "vacancies": 150
   },
   {
     "dept": "District & Sessions Judge, Indore",
@@ -729,7 +729,7 @@
     "dept": "UPSC — e-Admit cards",
     "slug": "upsc-e-admit-cards",
     "count": 4,
-    "vacancies": 131
+    "vacancies": 0
   },
   {
     "dept": "Barc",
