@@ -89,6 +89,37 @@ function validateSupabaseUrl(value) {
   return ''
 }
 
+function decodeJwtPayload(value) {
+  const parts = String(value || '').split('.')
+  if (parts.length !== 3) return null
+  try {
+    return JSON.parse(Buffer.from(parts[1], 'base64url').toString('utf8'))
+  } catch {
+    return null
+  }
+}
+
+function validateAnonKey(value, expectedProjectRef) {
+  if (!value) return 'VITE_SUPABASE_ANON_KEY is required'
+
+  // Newer Supabase publishable keys are opaque. Validate only legacy JWT-shaped
+  // anon keys because malformed JWTs otherwise fail later as "invalid api key".
+  if (!String(value).includes('.')) return ''
+
+  const payload = decodeJwtPayload(value)
+  if (!payload) return 'VITE_SUPABASE_ANON_KEY is not a valid JWT'
+  if (payload.iss !== 'supabase') {
+    return 'VITE_SUPABASE_ANON_KEY has invalid issuer; copy the anon/public key from Supabase API settings'
+  }
+  if (payload.role && payload.role !== 'anon') {
+    return `VITE_SUPABASE_ANON_KEY must have role "anon", not "${payload.role}"`
+  }
+  if (expectedProjectRef && payload.ref && payload.ref !== expectedProjectRef) {
+    return `VITE_SUPABASE_ANON_KEY project ref mismatch: key uses ${payload.ref}, URL uses ${expectedProjectRef}`
+  }
+  return ''
+}
+
 function projectRefFromUrl(value) {
   const match = String(value || '').match(/^https:\/\/([^.]+)\.supabase\.co\/?$/)
   return match ? match[1] : ''
@@ -136,11 +167,12 @@ const adminKey = (args['admin-key'] || process.env.ADMIN_API_KEY || existingBack
 const errors = [
   validateDatabaseUrl(databaseUrl),
   validateSupabaseUrl(supabaseUrl),
-  anonKey ? '' : 'VITE_SUPABASE_ANON_KEY is required',
 ].filter(Boolean)
 
 const urlRef = projectRefFromUrl(supabaseUrl)
 const dbRef = projectRefFromDatabaseUrl(databaseUrl)
+const anonKeyError = validateAnonKey(anonKey, urlRef)
+if (anonKeyError) errors.push(anonKeyError)
 if (urlRef && dbRef && urlRef !== dbRef) {
   errors.push(`Supabase project ref mismatch: URL uses ${urlRef}, DATABASE_URL uses ${dbRef}`)
 }
