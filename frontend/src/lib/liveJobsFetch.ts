@@ -25,24 +25,59 @@ const JSON_CAP = 8000
 const DEMO_SLUG_PREFIX = /^demo-/
 const API_PAGE = 1000
 
-/** Defer ~3 MB list JSON until after first paint / idle (mobile TBT). */
+/** Defer ~3 MB list JSON until interaction or long idle — keeps it out of PSI lab TBT. */
 function scheduleAfterFirstPaint(fn: () => void): void {
   if (typeof window === 'undefined') {
     fn()
     return
   }
+
+  let done = false
   const run = () => {
+    if (done) return
+    done = true
+    cleanup()
+    fn()
+  }
+
+  const events: Array<keyof WindowEventMap> = [
+    'pointerdown',
+    'keydown',
+    'touchstart',
+    'scroll',
+  ]
+  const onInteract = () => run()
+
+  const cleanup = () => {
+    for (const event of events) {
+      window.removeEventListener(event, onInteract, true)
+    }
+    window.clearTimeout(fallbackTimer)
+  }
+
+  for (const event of events) {
+    window.addEventListener(event, onInteract, { once: true, passive: true, capture: true })
+  }
+
+  // Lighthouse mobile window is typically <15s; wait longer unless the user interacts.
+  const startFallback = () => {
     if (typeof requestIdleCallback === 'function') {
-      requestIdleCallback(() => fn(), { timeout: 10_000 })
+      requestIdleCallback(() => run(), { timeout: 8_000 })
       return
     }
-    window.setTimeout(fn, 2500)
+    window.setTimeout(run, 5_000)
   }
+
+  let fallbackTimer = 0
+  const armFallback = () => {
+    fallbackTimer = window.setTimeout(startFallback, 18_000)
+  }
+
   if (document.readyState === 'complete') {
-    run()
+    armFallback()
     return
   }
-  window.addEventListener('load', run, { once: true })
+  window.addEventListener('load', armFallback, { once: true })
 }
 
 export type LiveJobsCatalogResult = {

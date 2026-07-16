@@ -14,23 +14,15 @@ function googleSiteVerificationPlugin(token: string): Plugin {
   }
 }
 
-/** GA4 in initial HTML — required for Search Console “Google Analytics” verification and early page_view. */
+/** GA4 measurement id is available to the app; script loads after first paint via analytics.ts (not in <head>). */
 function gaMeasurementPlugin(measurementId: string): Plugin {
   return {
     name: 'inject-ga-measurement',
     transformIndexHtml(html) {
       if (!measurementId || !/^G-[A-Z0-9]+$/i.test(measurementId)) return html
-      const src = `https://www.googletagmanager.com/gtag/js?id=${encodeURIComponent(measurementId)}`
-      const snippet = [
-        `    <script async src="${src}"></script>`,
-        '    <script>',
-        '      window.dataLayer = window.dataLayer || [];',
-        '      function gtag(){dataLayer.push(arguments);}',
-        '      gtag("js", new Date());',
-        `      gtag("config", ${JSON.stringify(measurementId)}, { send_page_view: false });`,
-        '    </script>',
-      ].join('\n')
-      return html.replace('</head>', `${snippet}\n  </head>`)
+      // Keep a lightweight marker for debugging/deploy checks — do not inject gtag.js on the critical path.
+      const tag = `    <meta name="ga-measurement-id" content="${measurementId}" />`
+      return html.replace('</head>', `${tag}\n  </head>`)
     },
   }
 }

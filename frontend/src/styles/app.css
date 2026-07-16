@@ -4,7 +4,6 @@
 @import './layout.css';
 @import './home.css';
 @import './jobs.css';
-@import './map.css';
+/* map.css + animations.css load with lazy map/home chunks (see IndiaMap / HomePage) */
 @import './polish.css';
-@import './animations.css';
 @import './mobile-premium.css';

@@ -18,8 +18,6 @@ import { checkDeployVersionChanged, clearServiceWorkerDataCaches } from '@/lib/d
 import { applyColorMode } from './theme/designSystem'
 import { initSentry } from '@/lib/sentry'
 import '@fontsource/sora/400.css'
-import '@fontsource/sora/600.css'
-import '@fontsource/sora/700.css'
 import './styles/app.css'
 
 const Analytics = lazy(() =>
@@ -28,6 +26,19 @@ const Analytics = lazy(() =>
 const SpeedInsights = lazy(() =>
   import('@vercel/speed-insights/react').then((m) => ({ default: m.SpeedInsights }))
 )
+
+/** Load heavier Sora weights after first paint (mobile TBT). */
+function loadDisplayFonts(): void {
+  const run = () => {
+    void import('@fontsource/sora/600.css')
+    void import('@fontsource/sora/700.css')
+  }
+  if (typeof requestIdleCallback === 'function') {
+    requestIdleCallback(run, { timeout: 4_000 })
+  } else {
+    window.setTimeout(run, 2_000)
+  }
+}
 
 initSentry()
 
@@ -57,6 +68,11 @@ if (jobsSourceMode !== 'api') {
 }
 warmLiveJobsCache(deployChanged || jobsSourceMode === 'static')
 warmStateMapCache(STATES.map((s) => toSvgStateId(s.id)))
+
+if (typeof document !== 'undefined') {
+  if (document.readyState === 'complete') loadDisplayFonts()
+  else window.addEventListener('load', loadDisplayFonts, { once: true })
+}
 
 if (typeof history !== 'undefined' && 'scrollRestoration' in history) {
   history.scrollRestoration = 'manual'

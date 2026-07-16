@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useRef } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { fromSvgStateId, toSvgStateId } from "@/data/states";
 import { IndiaMap } from "@/components/Maps/IndiaMap/IndiaMap";
 import StateGlancePanel from "@/components/home/StateGlancePanel";
@@ -25,7 +25,10 @@ export default function HomeMapBlock({
 }: HomeMapBlockProps) {
   const glanceRowRef = useRef<HTMLDivElement>(null);
   const glancePanelRef = useRef<HTMLElement>(null);
+  const shellRef = useRef<HTMLDivElement>(null);
   const isolatedSvgId = selectedState ? toSvgStateId(selectedState) : null;
+  // Defer SVG fetch so logo/bootstrap paint first (PSI mobile LCP/TBT).
+  const [mapReady, setMapReady] = useState(Boolean(import.meta.env.VITEST));
 
   const handleMapStateClick = useCallback(
     (svgId: string) => {
@@ -34,6 +37,50 @@ export default function HomeMapBlock({
     },
     [onStateSelect]
   );
+
+  useEffect(() => {
+    if (mapReady) return undefined;
+
+    let cancelled = false;
+    const mount = () => {
+      if (!cancelled) setMapReady(true);
+    };
+
+    const node = shellRef.current;
+    if (node && typeof IntersectionObserver !== "undefined") {
+      const observer = new IntersectionObserver(
+        ([entry]) => {
+          if (entry?.isIntersecting) {
+            mount();
+            observer.disconnect();
+          }
+        },
+        { rootMargin: "80px 0px" }
+      );
+      observer.observe(node);
+
+      const idleHandle =
+        typeof requestIdleCallback === "function"
+          ? requestIdleCallback(mount, { timeout: 4_000 })
+          : null;
+      const timerHandle = idleHandle == null ? window.setTimeout(mount, 1_200) : null;
+
+      return () => {
+        cancelled = true;
+        observer.disconnect();
+        if (idleHandle != null && typeof cancelIdleCallback === "function") {
+          cancelIdleCallback(idleHandle);
+        }
+        if (timerHandle != null) window.clearTimeout(timerHandle);
+      };
+    }
+
+    const timer = window.setTimeout(mount, 800);
+    return () => {
+      cancelled = true;
+      window.clearTimeout(timer);
+    };
+  }, [mapReady]);
 
   useEffect(() => {
     if (!selectedState) return undefined;
@@ -96,12 +143,20 @@ export default function HomeMapBlock({
         className={selectedState ? "home-state-map-glance-row" : undefined}
         ref={selectedState ? glanceRowRef : undefined}
       >
-        <div className={`home-map-shell${selectedState ? " home-map-shell--isolated" : ""}`}>
-          <IndiaMap
-            stateData={mapStateData}
-            isolateStateId={isolatedSvgId}
-            onStateClick={handleMapStateClick}
-          />
+        <div
+          ref={shellRef}
+          className={`home-map-shell${selectedState ? " home-map-shell--isolated" : ""}`}
+          style={mapReady ? undefined : { minHeight: 280 }}
+        >
+          {mapReady ? (
+            <IndiaMap
+              stateData={mapStateData}
+              isolateStateId={isolatedSvgId}
+              onStateClick={handleMapStateClick}
+            />
+          ) : (
+            <div className="home-map-shell__placeholder" aria-hidden />
+          )}
         </div>
         {selectedState ? (
           <StateGlancePanel

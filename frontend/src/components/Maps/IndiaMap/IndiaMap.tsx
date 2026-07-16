@@ -11,6 +11,7 @@ import {
 } from "@/utils/mapUtils";
 import stateColors from '@/data/stateColors';
 import { jobCountFromStateData } from '@/components/Maps/IndiaMap/mapStateJobCount';
+import '@/styles/map.css';
 
 interface HoverInfo {
   name: string;
