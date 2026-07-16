@@ -1,5 +1,4 @@
 import { lazy, Suspense, useCallback, useDeferredValue, useEffect, useMemo, startTransition } from "react";
-import HomePage from "@/components/home/HomePage";
 import { useLocation, useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { STATES, toSvgStateId } from "@/data/states";
@@ -19,9 +18,10 @@ import AppRoutes from "@/components/AppRoutes";
 import { BrowseProvider, useBrowseContext } from "@/context/BrowseContext";
 import type { JobRecord } from "@/types/job";
 import { jobDetailPath } from "@/utils/jobRoutes";
-import { ORG_INDEX } from "@/data/orgIndex";
+import { HOME_SHELL_ORG_COUNT } from "@/data/homeShellStats";
 import { applyBrowseSeo } from "@/utils/browseSeo";
 
+const HomePage = lazy(() => import("@/components/home/HomePage"));
 const EmploymentNewsBar = lazy(() => import("@/components/layout/EmploymentNewsBar"));
 const SubscribeBanner = lazy(() => import("@/components/home/SubscribeBanner"));
 const InstallAppBanner = lazy(() => import("@/components/layout/InstallAppBanner"));
@@ -109,18 +109,24 @@ function AppShell() {
 
   const homePageElement = (
     <RouteErrorBoundary label="Home">
-      <HomePage
-        key={`home-${i18n.resolvedLanguage || i18n.language}`}
-        jobs={displayJobs}
-        jobsLoading={homeJobsLoading}
-        liveCount={liveCount}
-        catalogStats={catalogStats}
-        onJobClick={handleJobClick}
-        mapStateData={mapStateData}
-        dailySyncLine={dailySyncLine}
-        stateCounts={stateCounts}
-        categoryCounts={categoryCounts}
-      />
+      <Suspense
+        fallback={
+          <div className="home-page-fallback" aria-busy="true" style={{ minHeight: "70vh" }} />
+        }
+      >
+        <HomePage
+          key={`home-${i18n.resolvedLanguage || i18n.language}`}
+          jobs={displayJobs}
+          jobsLoading={homeJobsLoading}
+          liveCount={liveCount}
+          catalogStats={catalogStats}
+          onJobClick={handleJobClick}
+          mapStateData={mapStateData}
+          dailySyncLine={dailySyncLine}
+          stateCounts={stateCounts}
+          categoryCounts={categoryCounts}
+        />
+      </Suspense>
     </RouteErrorBoundary>
   );
 
@@ -168,7 +174,7 @@ function AppShell() {
             jobsLoading={jobsLoading}
             liveCount={liveCount}
             catalogStats={catalogStats}
-            orgCount={ORG_INDEX.length}
+            orgCount={HOME_SHELL_ORG_COUNT}
             onJobClick={handleJobClick}
             onFooterLink={browse.handleFooterLink}
           />

@@ -209,10 +209,9 @@ export default defineConfig(({ mode }) => {
               if (id.includes('/react/')) return 'react-core-vendor'
               return 'vendor-misc'
             }
-            if (id.includes('IndiaMap')) return 'map'
+            // Do NOT force pages/home-discovery/map into named chunks — that made
+            // index.js statically import them and defeated React.lazy().
             if (id.includes('/src/pages/AdminDashboardPage')) return 'page-admin'
-            if (id.includes('/src/pages/')) return 'pages'
-            if (id.includes('/src/components/home/HomeDiscoveryBlock')) return 'home-discovery'
           },
         },
       },

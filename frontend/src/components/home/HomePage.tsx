@@ -1,12 +1,10 @@
 import { lazy, Suspense, useCallback, useEffect, useRef, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import { OFFICIAL_SITES } from "@/data/officialSites";
 import { scrollToSection } from "@/utils/scrollToSection";
 import { useStateLabel } from "@/utils/stateLabels";
 import { numberLocale } from "@/utils/formatLocale";
 import type { HeroStatFilterKey } from "@/utils/homePageFilters";
-import AlertSection from "@/components/home/AlertSection";
 import EducationFilterPill from "@/components/home/EducationFilterPill";
 import HomeHeroMarketing from "@/components/home/HomeHeroMarketing";
 import ExploreHubBanner from "@/components/home/ExploreHubBanner";
@@ -14,11 +12,13 @@ import HomeJobsListSection from "@/components/home/HomeJobsListSection";
 import ResultsHubFilters from "@/components/home/ResultsHubFilters";
 import { useHomePageDerived } from "@/components/home/useHomePageDerived";
 import HeadlineStatsBar from "@/components/layout/HeadlineStatsBar";
-import { ORG_INDEX } from "@/data/orgIndex";
-import { HOME_SHELL_HEADLINE_STATS, HOME_SHELL_HERO_STATS } from "@/data/homeShellStats";
+import {
+  HOME_SHELL_HEADLINE_STATS,
+  HOME_SHELL_HERO_STATS,
+  HOME_SHELL_OFFICIAL_SOURCE_COUNT,
+  HOME_SHELL_ORG_COUNT,
+} from "@/data/homeShellStats";
 import StateJobsPanel from "@/components/home/StateJobsPanel";
-import Footer from "@/components/layout/Footer";
-import SectorBrowser from "@/components/browse/SectorBrowser";
 import { useBrowseContext } from "@/context/BrowseContext";
 import { RESULTS_TOPICS_INDEX_PATH } from "@/utils/browseRoutes";
 import type { HomePageProps } from "@/types/homePage";
@@ -29,6 +29,9 @@ import "@/styles/animations.css";
 const OfficialHeadlinesSection = lazy(() => import("@/components/home/OfficialHeadlinesSection"));
 const HomeDiscoveryBlock = lazy(() => import("@/components/home/HomeDiscoveryBlock"));
 const HomeMapBlock = lazy(() => import("@/components/home/HomeMapBlock"));
+const SectorBrowser = lazy(() => import("@/components/browse/SectorBrowser"));
+const Footer = lazy(() => import("@/components/layout/Footer"));
+const AlertSection = lazy(() => import("@/components/home/AlertSection"));
 
 export default function HomePage({
   jobs = [],
@@ -250,11 +253,13 @@ export default function HomePage({
     <div className={resultsHubMode ? "results-hub-page" : undefined}>
       {!resultsHubMode ? <section className={`home-page-main${isBrowseLanding ? " home-page-main--landing" : ""}`}>
         {!resultsHubMode && stateCounts && categoryCounts ? (
-          <SectorBrowser
-            stateCounts={stateCounts}
-            categoryCounts={categoryCounts}
-            loading={jobsLoading}
-          />
+          <Suspense fallback={<div className="sector-browser-fallback" aria-hidden style={{ minHeight: 120 }} />}>
+            <SectorBrowser
+              stateCounts={stateCounts}
+              categoryCounts={categoryCounts}
+              loading={jobsLoading}
+            />
+          </Suspense>
         ) : null}
 
         {!selectedState && !resultsHubMode && !isBrowseLanding && (
@@ -268,7 +273,7 @@ export default function HomePage({
           <HeadlineStatsBar
             catalogStats={catalogStats}
             liveCount={liveCount}
-            orgCount={ORG_INDEX.length}
+            orgCount={HOME_SHELL_ORG_COUNT}
             variant="hero"
             className="home-headline-stats-mobile"
             loading={paintShellStats}
@@ -293,7 +298,7 @@ export default function HomePage({
             </p>
             <p className="home-stats-strip__secondary">
               {t("home.statsStrip.secondary", {
-                sources: OFFICIAL_SITES.length.toLocaleString(locale),
+                sources: HOME_SHELL_OFFICIAL_SOURCE_COUNT.toLocaleString(locale),
                 syncLabel: dailySyncLine || t("home.statsStrip.syncFallback", { defaultValue: "daily" }),
                 defaultValue: "{{sources}} official sources · {{syncLabel}}",
               })}
@@ -468,8 +473,14 @@ export default function HomePage({
         </Suspense>
       )}
 
-      {!resultsHubMode && <AlertSection />}
-      <Footer onFooterLink={onFooterLink} />
+      {!resultsHubMode && (
+        <Suspense fallback={null}>
+          <AlertSection />
+        </Suspense>
+      )}
+      <Suspense fallback={null}>
+        <Footer onFooterLink={onFooterLink} />
+      </Suspense>
     </div>
   );
 }

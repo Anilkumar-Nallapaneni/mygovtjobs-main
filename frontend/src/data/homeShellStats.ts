@@ -8,6 +8,10 @@ export const HOME_SHELL_HEADLINE_STATS: HeadlineStats = {
   orgs: 75,
 }
 
+/** Avoid importing full ORG_INDEX / OFFICIAL_SITES just for counts on the home shell. */
+export const HOME_SHELL_ORG_COUNT = 79
+export const HOME_SHELL_OFFICIAL_SOURCE_COUNT = 153
+
 export const HOME_SHELL_CATALOG_STATS: CatalogStats = {
   totalNotices: 874,
   liveNotices: 874,

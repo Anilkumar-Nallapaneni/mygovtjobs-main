@@ -1,9 +1,8 @@
-import { useEffect, useMemo } from 'react'
+import BrowseBreadcrumbs from "@/components/browse/BrowseBreadcrumbs";
+import { lazy, Suspense, useEffect, useMemo } from 'react'
 import { Link } from 'react-router-dom'
 import JobCard from "@/components/jobs/JobCard";
 import JobCardGrid from "@/components/jobs/JobCardGrid";
-import BrowseBreadcrumbs from "@/components/browse/BrowseBreadcrumbs";
-import ProfessionLandingExtras from "@/components/home/ProfessionLandingExtras";
 import { HERO_STAT_FILTERS, VIRTUAL_GRID_MIN, vacancyCountForStats } from "@/data/homePageConstants";
 import { getProfessionBySlug, professionLandingTitle } from "@/data/professions";
 import {
@@ -17,6 +16,8 @@ import type { HeroStatFilterKey, HomeSortKey } from "@/utils/homePageFilters";
 import type { JobRecord } from "@/types/job";
 import type { CategoryId } from "@/data/categories";
 import HomeJobsSkeleton from "@/components/home/HomeJobsSkeleton";
+
+const ProfessionLandingExtras = lazy(() => import("@/components/home/ProfessionLandingExtras"));
 
 type HomeJobsListSectionProps = {
   filtered: JobRecord[];
@@ -260,12 +261,14 @@ export default function HomeJobsListSection({
       )}
 
       {professionEntry ? (
-        <ProfessionLandingExtras
-          profession={professionEntry}
-          listingCount={filtered.length}
-          recentJobs={filtered}
-          onJobClick={onJobClick}
-        />
+        <Suspense fallback={null}>
+          <ProfessionLandingExtras
+            profession={professionEntry}
+            listingCount={filtered.length}
+            recentJobs={filtered}
+            onJobClick={onJobClick}
+          />
+        </Suspense>
       ) : null}
     </section>
   );
