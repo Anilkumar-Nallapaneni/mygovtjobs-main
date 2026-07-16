@@ -27,7 +27,7 @@ import type { HeadlinesViewMode } from "@/lib/officialFeed";
 
 const OfficialHeadlinesSection = lazy(() => import("@/components/home/OfficialHeadlinesSection"));
 const HomeDiscoveryBlock = lazy(() => import("@/components/home/HomeDiscoveryBlock"));
-import HomeMapBlock from "@/components/home/HomeMapBlock";
+const HomeMapBlock = lazy(() => import("@/components/home/HomeMapBlock"));
 
 export default function HomePage({
   jobs = [],
@@ -325,14 +325,24 @@ export default function HomePage({
           className={`home-hero-grid${selectedState ? " home-hero-grid--state" : ""}${resultsHubMode ? " home-hero-grid--hidden" : ""}`}
         >
           <div id="india-map-panel" ref={mapPanelRef}>
-            <HomeMapBlock
-              mapStateData={mapStateData}
-              selectedState={selectedState}
-              stateName={stateName}
-              onStateSelect={handleStateSelect}
-              onClearState={() => handleStateSelect(null)}
-              t={t}
-            />
+            <Suspense
+              fallback={
+                <div
+                  className="home-map-block home-map-block--placeholder"
+                  aria-hidden
+                  style={{ minHeight: 280 }}
+                />
+              }
+            >
+              <HomeMapBlock
+                mapStateData={mapStateData}
+                selectedState={selectedState}
+                stateName={stateName}
+                onStateSelect={handleStateSelect}
+                onClearState={() => handleStateSelect(null)}
+                t={t}
+              />
+            </Suspense>
           </div>
 
           <div

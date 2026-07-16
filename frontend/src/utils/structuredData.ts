@@ -26,7 +26,7 @@ export function buildOrganizationJsonLd(): Record<string, unknown> {
     "@type": "Organization",
     name: SITE_NAME,
     url: SITE_ORIGIN,
-    logo: `${SITE_ORIGIN}/logo.png`,
+    logo: `${SITE_ORIGIN}/logo-ui.png`,
     description: SITE_DESCRIPTION,
     sameAs: [
       "https://t.me/MyGovtJobs",

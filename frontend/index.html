@@ -14,14 +14,15 @@
     <meta name="description" content="Live Govt Jobs — live government job alerts from verified .gov.in sources across India." />
     <meta name="application-name" content="Live Govt Jobs" />
     <link rel="canonical" href="https://www.livegovtjobs.com/" />
+    <link rel="preload" as="image" href="/logo.webp" type="image/webp" fetchpriority="high" />
     <meta property="og:site_name" content="Live Govt Jobs" />
     <meta property="og:title" content="Live Govt Jobs — Government Job Alerts" />
     <meta property="og:description" content="Live government job notifications, results, and admit cards from verified .gov.in sources across India." />
     <meta property="og:url" content="https://www.livegovtjobs.com/" />
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://www.livegovtjobs.com/logo.png" />
+    <meta property="og:image" content="https://www.livegovtjobs.com/logo-og.jpg" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:image" content="https://www.livegovtjobs.com/logo.png" />
+    <meta name="twitter:image" content="https://www.livegovtjobs.com/logo-og.jpg" />
     <meta name="twitter:title" content="Live Govt Jobs — Government Job Alerts" />
     <meta name="twitter:description" content="Live government job notifications from verified .gov.in sources across India." />
     <title>Live Govt Jobs — Government Jobs | Results | Admit Cards</title>
@@ -80,9 +81,9 @@
         .static-app-shell__logo {
           display: block;
           height: 58px;
-          width: min(340px, 34vw);
+          width: min(155px, 34vw);
           max-width: 100%;
-          aspect-ratio: 1486 / 558;
+          aspect-ratio: 480 / 180;
           object-fit: contain;
           object-position: left center;
         }
@@ -166,7 +167,10 @@
           </div>
         </div>
         <div class="static-app-shell__navbar" aria-hidden="true">
-          <img class="static-app-shell__logo" src="/logo.png" alt="" width="340" height="58" decoding="async" fetchpriority="high" />
+          <picture>
+            <source type="image/webp" srcset="/logo.webp" />
+            <img class="static-app-shell__logo" src="/logo-ui.png" alt="" width="155" height="58" decoding="async" fetchpriority="high" />
+          </picture>
         </div>
         <div class="static-app-shell__main">
           <div class="static-app-shell__tagline">

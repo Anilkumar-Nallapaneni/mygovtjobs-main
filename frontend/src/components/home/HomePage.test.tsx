@@ -25,6 +25,10 @@ vi.mock('@/components/home/HomeDiscoveryBlock', () => ({
   ),
 }))
 
+vi.mock('@/components/home/HomeMapBlock', () => ({
+  default: () => <div id="india-map-panel-mock" data-testid="home-map-block" />,
+}))
+
 const mockJob: JobRecord = {
   id: '1',
   slug: 'test-recruitment-2026',

@@ -196,18 +196,32 @@ export function paintIsolatedStateMapPaths(root: HTMLElement | null | undefined)
 }
 
 /** Prefetch India + per-state map SVGs during idle time so state picks feel instant. */
+/** Prefetch map SVGs well after first paint — never compete with LCP/bootstrap. */
 export function warmStateMapCache(stateIds: string[] = []): void {
   if (typeof window === "undefined") return;
   const run = () => {
-    void fetchSVGContent();
+    // india.svg loads when IndiaMap mounts; only warm state silhouettes here.
     const unique = [...new Set(stateIds.filter(Boolean))];
     void Promise.all(unique.map((id) => fetchStateSvgContent(id)));
   };
-  if (window.requestIdleCallback) {
-    window.requestIdleCallback(run, { timeout: 3000 });
-  } else {
-    window.setTimeout(run, 800);
+  const start = () => {
+    if (window.requestIdleCallback) {
+      window.requestIdleCallback(run, { timeout: 12_000 });
+    } else {
+      window.setTimeout(run, 4000);
+    }
+  };
+  if (document.readyState === "complete") {
+    window.setTimeout(start, 2000);
+    return;
   }
+  window.addEventListener(
+    "load",
+    () => {
+      window.setTimeout(start, 2000);
+    },
+    { once: true }
+  );
 }
 
 /** Hint the browser to fetch a state silhouette before the user clicks. */

@@ -25,6 +25,26 @@ const JSON_CAP = 8000
 const DEMO_SLUG_PREFIX = /^demo-/
 const API_PAGE = 1000
 
+/** Defer ~3 MB list JSON until after first paint / idle (mobile TBT). */
+function scheduleAfterFirstPaint(fn: () => void): void {
+  if (typeof window === 'undefined') {
+    fn()
+    return
+  }
+  const run = () => {
+    if (typeof requestIdleCallback === 'function') {
+      requestIdleCallback(() => fn(), { timeout: 10_000 })
+      return
+    }
+    window.setTimeout(fn, 2500)
+  }
+  if (document.readyState === 'complete') {
+    run()
+    return
+  }
+  window.addEventListener('load', run, { once: true })
+}
+
 export type LiveJobsCatalogResult = {
   rows: JobRecord[]
   sources: string[]
@@ -365,8 +385,11 @@ export async function fetchLiveJobsCatalog(
     }
 
     if (onPartial) {
-      void hydrateFull().then((fullResult) => {
-        if (fullResult) onPartial(fullResult)
+      // Bootstrap paints first; full list hydrate waits for load + idle.
+      scheduleAfterFirstPaint(() => {
+        void hydrateFull().then((fullResult) => {
+          if (fullResult) onPartial(fullResult)
+        })
       })
     } else {
       const fullResult = await hydrateFull()

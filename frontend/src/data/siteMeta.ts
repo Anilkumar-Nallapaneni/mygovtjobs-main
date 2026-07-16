@@ -5,7 +5,7 @@ export const SITE_NAME = "Live Govt Jobs";
 export const SITE_DESCRIPTION =
   "Latest government jobs, official notifications, and apply links from verified .gov.in portals across India.";
 
-export const SITE_OG_IMAGE_PATH = "/logo.png";
+export const SITE_OG_IMAGE_PATH = "/logo-og.jpg";
 
 export const PRIVATE_PATH_PREFIXES = ["/admin", "/account"] as const;
 

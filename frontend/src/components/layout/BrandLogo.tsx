@@ -7,8 +7,8 @@ type BrandLogoProps = {
   className?: string;
 };
 
-/** Cropped wordmark — Live Govt Jobs (`/logo.png`, transparent). */
-const LOGO_ASPECT = 1486 / 558;
+/** Cropped wordmark — Live Govt Jobs (`/logo.webp`, PNG fallback). */
+const LOGO_ASPECT = 480 / 180;
 
 /** React 18 DOM typing uses camelCase; the runtime attribute must be lowercase. */
 type ImgWithFetchPriority = ImgHTMLAttributes<HTMLImageElement> & {
@@ -26,7 +26,7 @@ export default function BrandLogo({
   const width = Math.round(height * LOGO_ASPECT);
 
   const imgProps: ImgWithFetchPriority = {
-    src: "/logo.png",
+    src: "/logo-ui.png",
     alt,
     className: `brand-logo ${className}`.trim(),
     style: {
@@ -36,8 +36,14 @@ export default function BrandLogo({
     width,
     height,
     decoding: "async",
+    // ~30 KB WebP is safe for LCP; preferred via <source> below.
     fetchpriority: "high",
   };
 
-  return <img {...imgProps} />;
+  return (
+    <picture className="brand-logo-picture">
+      <source type="image/webp" srcSet="/logo.webp" />
+      <img {...imgProps} />
+    </picture>
+  );
 }

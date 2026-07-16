@@ -60,7 +60,7 @@ function perfIndexHtmlPlugin(
   const mode = (jobsSourceRaw || 'auto').toLowerCase()
   const injectStaticPrefetch = mode !== 'api'
   const usePreloadLink = injectStaticPrefetch
-  const bootstrapOnly = mode === 'supabase' || mode === 'api'
+  // Bootstrap only on the critical path — never race the ~3 MB list JSON in <head>.
   const marker = '<!-- live-jobs early prefetch: injected at build for static/auto jobs source only -->'
   const version = encodeURIComponent(buildStamp)
 
@@ -82,24 +82,9 @@ function perfIndexHtmlPlugin(
         `        var timer = setTimeout(function () { controller.abort(); }, timeoutMs);`,
         `        var fetchOpts = { credentials: 'same-origin', cache: '${fetchCache}', signal: controller.signal };`,
         `        var v = '?v=${version}';`,
-        ...(bootstrapOnly
-          ? [
-              `        return fetch('/data/live-jobs-bootstrap.json' + v, fetchOpts)`,
-              '          .then(function (r) { clearTimeout(timer); return r.ok ? r.json() : null; })',
-              '          .catch(function () { clearTimeout(timer); return null; });',
-            ]
-          : [
-              `        var listPrefetch = fetch('/data/live-jobs-list.json' + v, fetchOpts);`,
-              `        return fetch('/data/live-jobs-bootstrap.json' + v, fetchOpts)`,
-              '          .then(function (r) {',
-              '            clearTimeout(timer);',
-              '            if (r.ok) return r.json();',
-              '            return listPrefetch.then(function (r2) {',
-              '              return r2.ok ? r2.json() : fetch("/data/live-jobs.json" + v, fetchOpts).then(function (r3) { return r3.ok ? r3.json() : null; });',
-              '            });',
-              '          })',
-              '          .catch(function () { clearTimeout(timer); return null; });',
-            ]),
+        `        return fetch('/data/live-jobs-bootstrap.json' + v, fetchOpts)`,
+        '          .then(function (r) { clearTimeout(timer); return r.ok ? r.json() : null; })',
+        '          .catch(function () { clearTimeout(timer); return null; });',
         '      })();',
         '    </script>'
       )
@@ -129,7 +114,7 @@ export default defineConfig(({ mode }) => {
       VitePWA({
         devOptions: { enabled: false },
         registerType: 'autoUpdate',
-        includeAssets: ['favicon-32.png', 'apple-touch-icon.png', 'app-icon.png', 'logo.png', 'pwa-192.png', 'pwa-512.png', 'pwa-512-maskable.png', 'og/job.svg'],
+        includeAssets: ['favicon-32.png', 'apple-touch-icon.png', 'app-icon.png', 'logo.webp', 'logo-ui.png', 'logo-og.jpg', 'pwa-192.png', 'pwa-512.png', 'pwa-512-maskable.png', 'og/job.svg'],
         workbox: {
           cleanupOutdatedCaches: true,
           skipWaiting: true,
@@ -206,6 +191,19 @@ export default defineConfig(({ mode }) => {
     },
     build: {
       emptyOutDir: true,
+      // Keep heavy route/map chunks off the home modulepreload list (LCP/TBT).
+      modulePreload: {
+        resolveDependencies(filename, deps) {
+          return deps.filter(
+            (dep) =>
+              !/(?:^|\/)(?:pages|home-discovery|map|page-admin)-[^/]+\.js$/.test(dep) &&
+              !dep.includes('/pages-') &&
+              !dep.includes('/home-discovery-') &&
+              !dep.includes('/map-') &&
+              !dep.includes('/page-admin-')
+          )
+        },
+      },
       rollupOptions: {
         output: {
           manualChunks(id) {

@@ -168,12 +168,16 @@ input::placeholder {
 }
 
 /* ========== Brand logo ========== */
+.brand-logo-picture {
+  display: contents;
+}
+
 .brand-logo {
   display: block;
   height: var(--brand-logo-height, 48px);
   width: var(--brand-logo-width, auto);
   max-width: 100%;
-  aspect-ratio: var(--brand-logo-aspect, 1486 / 558);
+  aspect-ratio: var(--brand-logo-aspect, 480 / 180);
   object-fit: contain;
   object-position: left center;
   flex-shrink: 0;
