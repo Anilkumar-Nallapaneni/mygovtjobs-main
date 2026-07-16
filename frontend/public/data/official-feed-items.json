@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-16T06:46:38.500Z",
+  "generatedAt": "2026-07-16T10:30:41.119Z",
   "sourceReports": [
     {
       "id": "pib-press-reg3",
@@ -67,7 +67,7 @@
       "feedUrl": null,
       "listingUrl": "https://www.rrbcdg.gov.in/",
       "ok": false,
-      "error": "https://www.rrbcdg.gov.in/: timeout; https://indianrailways.gov.in/: connect ECONNREFUSED 203.176.112.122:443",
+      "error": "https://www.rrbcdg.gov.in/: connect ECONNREFUSED 203.176.113.43:443; https://indianrailways.gov.in/: connect ECONNREFUSED 203.176.112.122:443",
       "itemCount": 0,
       "fetchMethod": null
     },
