@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-07-16T10:30:41.119Z",
-  "count": 592,
+  "generatedAt": "2026-07-16T14:38:35.691Z",
+  "count": 594,
   "items": [
     {
       "id": "4238c4faeae7a88c",
@@ -130,6 +130,23 @@
       "fetchMethod": "html-listing"
     },
     {
+      "id": "2db2d16ecdc1865a",
+      "title": "RESULT OF CANDIDATE SELECTED IN ADVT. NO D-4/E-1/2025, DEPT. S-10/02, UPPSC SYST..",
+      "link": "https://uppsc.up.nic.in/Open_PDF_DB.aspx?I4PnQ0tBagkKFmHgqmmkW30lDXcVzR9+",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "uppsc-hall-tickets",
+      "sourceName": "UPPSC — Hall tickets",
+      "dept": "Uttar Pradesh PSC",
+      "state": "Uttar Pradesh",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
       "id": "002b75be89c5cb1f",
       "title": "RESULT OF CANDIDATE SELECTED IN ADVT NO. D-4/E-1/2025 FOR THE POST OF REGIONAL A..",
       "link": "https://uppsc.up.nic.in/Open_PDF_DB.aspx?I4PnQ0tBagloISrijFpWKJK4mFkCc1xW",
@@ -164,9 +181,9 @@
       "fetchMethod": "html-listing"
     },
     {
-      "id": "16fbfdd1b5a58249",
-      "title": "22 Jul 2026 RESULT OF CANDIDATE SELECTED IN ADVT NO. D-4/E-1/2025 FOR THE POST OF REGIONAL ARCHIVES OFFICER (S-03/05)",
-      "link": "https://uppsc.up.nic.in/Open_PDF.aspx?I4PnQ0tBagloISrijFpWKHbmEhtQCS5P",
+      "id": "26931ebe902f0df0",
+      "title": "15 Aug 2026 RESULT OF CANDIDATE SELECTED IN ADVT. NO D-4/E-1/2025, DEPT. S-10/02, UPPSC SYSTEM ANALYST",
+      "link": "https://uppsc.up.nic.in/Open_PDF.aspx?I4PnQ0tBagkKFmHgqmmkW6sZX/ReYjvj",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
@@ -181,9 +198,9 @@
       "fetchMethod": "html-listing"
     },
     {
-      "id": "82117dcbe336dd36",
-      "title": "22 Jul 2026 LIST OF PROVISIONALLY SELECTED CANDIDATES AS SUPPLEMENTARY RESULT IN ADVT NO A-3/E-1/2023 STAFF NURSE (MALE/FEMALE) (ALLOPATHY) EXAM 2023",
-      "link": "https://uppsc.up.nic.in/Open_PDF.aspx?I4PnQ0tBagloISrijFpWKKXLfSDf9AY8",
+      "id": "16fbfdd1b5a58249",
+      "title": "22 Jul 2026 RESULT OF CANDIDATE SELECTED IN ADVT NO. D-4/E-1/2025 FOR THE POST OF REGIONAL ARCHIVES OFFICER (S-03/05)",
+      "link": "https://uppsc.up.nic.in/Open_PDF.aspx?I4PnQ0tBagloISrijFpWKHbmEhtQCS5P",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
@@ -213,6 +230,36 @@
         "all"
       ],
       "fetchMethod": "html-listing"
+    },
+    {
+      "id": "82117dcbe336dd36",
+      "title": "22 Jul 2026 LIST OF PROVISIONALLY SELECTED CANDIDATES AS SUPPLEMENTARY RESULT IN ADVT NO A-3/E-1/2023 STAFF NURSE (MALE/FEMALE) (ALLOPATHY) EXAM 2023",
+      "link": "https://uppsc.up.nic.in/Open_PDF.aspx?I4PnQ0tBagloISrijFpWKKXLfSDf9AY8",
+      "publishedAt": "2026-07-22T00:00:00Z",
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "uppsc-hall-tickets",
+      "sourceName": "UPPSC — Hall tickets",
+      "dept": "UPPSC — Hall tickets",
+      "state": "All India",
+      "category": "state",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "28031d3f9bd129b5",
+      "title": "AISSAC 2026 Offline Admission Merit List No 1 for Class VI",
+      "link": "https://pesa.ncog.gov.in/sainikschoolecounselling/landingpage",
+      "publishedAt": "2026-07-15T21:46:10.922295Z",
+      "summary": "SAINIK SCHOOL GOALPARA ALL INDIA SAINIK SCHOOLS ADMISSION COUNSELLING 2026 OFFLINE ADMISSION MERIT LIST NO.01 CLASS VI – 08 JUN 2026 1. Admission process through Online E-Counselling was completed on 01 Jun 2026. Now, the School is in the process of filling remaining seats / vacancies through the Offline Admission as per order of merit. The admission of the candidate is subject to Medical Fitness …",
+      "pdfUrls": [
+        "https://sainikschoolgoalpara.org/wp-content/uploads/2026/06/Merit-List-Class-VI-Offline.pdf"
+      ],
+      "sourceId": "ss-goalpara",
+      "sourceName": "Sainikschoolgoalpara Org",
+      "dept": "Sainikschoolgoalpara Org",
+      "state": "All India",
+      "category": "teaching",
+      "fetchMethod": "live-jobs-supplement"
     },
     {
       "id": "9e47578d3766fa8b",
@@ -674,22 +721,6 @@
       "dept": "Rrbgkp",
       "state": "All India",
       "category": "railways",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "28031d3f9bd129b5",
-      "title": "AISSAC 2026 Offline Admission Merit List No 1 for Class VI",
-      "link": "https://pesa.ncog.gov.in/sainikschoolecounselling/landingpage",
-      "publishedAt": "2026-07-15T15:24:57.622394Z",
-      "summary": "SAINIK SCHOOL GOALPARA ALL INDIA SAINIK SCHOOLS ADMISSION COUNSELLING 2026 OFFLINE ADMISSION MERIT LIST NO.01 CLASS VI – 08 JUN 2026 1. Admission process through Online E-Counselling was completed on 01 Jun 2026. Now, the School is in the process of filling remaining seats / vacancies through the Offline Admission as per order of merit. The admission of the candidate is subject to Medical Fitness …",
-      "pdfUrls": [
-        "https://sainikschoolgoalpara.org/wp-content/uploads/2026/06/Merit-List-Class-VI-Offline.pdf"
-      ],
-      "sourceId": "ss-goalpara",
-      "sourceName": "Sainikschoolgoalpara Org",
-      "dept": "Sainikschoolgoalpara Org",
-      "state": "All India",
-      "category": "teaching",
       "fetchMethod": "live-jobs-supplement"
     },
     {
@@ -1829,17 +1860,17 @@
       "fetchMethod": "live-jobs-supplement"
     },
     {
-      "id": "4daeb809f7c128f6",
-      "title": "22/06/2026 Main Merit List for Asst. Professor (Medical Edu.) - 2024 (Uro Oncology (SS))",
-      "link": "https://rpsc.rajasthan.gov.in/Static/Result/4560E2BAB8434F26A10CE0F5831DFB05.pdf",
+      "id": "fa769e840feafedf",
+      "title": "Selection List - Food Safety Officer Exam 2025, Dated 22/06/2026",
+      "link": "https://mppsc.mp.gov.in/uploads/files/Selection_List_Food_Safety_Officer_Exam_2025_Dated_22_06_2026.pdf",
       "publishedAt": "2026-06-22T00:00:00Z",
-      "summary": "RAJASTHAN PUBLIC SERVICE COMMISSION, AJMER MAIN MERIT LIST (AFTER INTV) FOR THE POST OF ASST. PROF. (MEDICAL EDU.) EXAM 2024 ASST. PROF. (SS) URO ONCOLOGYPG- 1 22/06/2026 --------------------------------------------------------------------------------------------------------------------------------------------------------------------- SNO MRT_NO RNO CATEGORY NAME MUL.DIS. TOTAL INTV_MARKS GRAND_TO…",
+      "summary": "OnlyS/w fyesifpied & Dfvtloptdby^ ^ 1 ^ eil<t> ^cii 3rprt^ H.}..^..9..../05/202e/WF^ f^^..?...^....!:!.!:!.!!!..l[!.?^ sffferanft ^511—2025 ■q'ij'i — (5^ ~ irf^RTtf) ^gfT 3TFfrT ^ 04/2025 23.06.2025 ^ ^ ^jfewR, ^g^RT3Tf 3nR ^ ^f m^o efR? %m RTfm\" ^ 3TcrfcT terte ^ ^err arffer^r^t ^ ^ 123 ^ (ar^TRfecT-so, sr.w. -17, 3T.'^.'^.-28, 3T.1xr.^-38, t^^^-10) ^ ^ 3TRgfcT (3FTRfecr-11, 3T.m -06, sr.^.^-10, …",
       "pdfUrls": [
-        "https://rpsc.rajasthan.gov.in/Static/Result/4560E2BAB8434F26A10CE0F5831DFB05.pdf"
+        "https://mppsc.mp.gov.in/uploads/files/Selection_List_Food_Safety_Officer_Exam_2025_Dated_22_06_2026.pdf"
       ],
-      "sourceId": "psc-rj",
-      "sourceName": "Rajasthan PSC (RPSC)",
-      "dept": "Rajasthan PSC (RPSC)",
+      "sourceId": "psc-mp",
+      "sourceName": "Madhya Pradesh PSC (MPPSC)",
+      "dept": "Madhya Pradesh PSC (MPPSC)",
       "state": "All India",
       "category": "state",
       "fetchMethod": "live-jobs-supplement"
@@ -1861,17 +1892,17 @@
       "fetchMethod": "live-jobs-supplement"
     },
     {
-      "id": "fa769e840feafedf",
-      "title": "Selection List - Food Safety Officer Exam 2025, Dated 22/06/2026",
-      "link": "https://mppsc.mp.gov.in/uploads/files/Selection_List_Food_Safety_Officer_Exam_2025_Dated_22_06_2026.pdf",
+      "id": "4daeb809f7c128f6",
+      "title": "22/06/2026 Main Merit List for Asst. Professor (Medical Edu.) - 2024 (Uro Oncology (SS))",
+      "link": "https://rpsc.rajasthan.gov.in/Static/Result/4560E2BAB8434F26A10CE0F5831DFB05.pdf",
       "publishedAt": "2026-06-22T00:00:00Z",
-      "summary": "OnlyS/w fyesifpied & Dfvtloptdby^ ^ 1 ^ eil<t> ^cii 3rprt^ H.}..^..9..../05/202e/WF^ f^^..?...^....!:!.!:!.!!!..l[!.?^ sffferanft ^511—2025 ■q'ij'i — (5^ ~ irf^RTtf) ^gfT 3TFfrT ^ 04/2025 23.06.2025 ^ ^ ^jfewR, ^g^RT3Tf 3nR ^ ^f m^o efR? %m RTfm\" ^ 3TcrfcT terte ^ ^err arffer^r^t ^ ^ 123 ^ (ar^TRfecT-so, sr.w. -17, 3T.'^.'^.-28, 3T.1xr.^-38, t^^^-10) ^ ^ 3TRgfcT (3FTRfecr-11, 3T.m -06, sr.^.^-10, …",
+      "summary": "RAJASTHAN PUBLIC SERVICE COMMISSION, AJMER MAIN MERIT LIST (AFTER INTV) FOR THE POST OF ASST. PROF. (MEDICAL EDU.) EXAM 2024 ASST. PROF. (SS) URO ONCOLOGYPG- 1 22/06/2026 --------------------------------------------------------------------------------------------------------------------------------------------------------------------- SNO MRT_NO RNO CATEGORY NAME MUL.DIS. TOTAL INTV_MARKS GRAND_TO…",
       "pdfUrls": [
-        "https://mppsc.mp.gov.in/uploads/files/Selection_List_Food_Safety_Officer_Exam_2025_Dated_22_06_2026.pdf"
+        "https://rpsc.rajasthan.gov.in/Static/Result/4560E2BAB8434F26A10CE0F5831DFB05.pdf"
       ],
-      "sourceId": "psc-mp",
-      "sourceName": "Madhya Pradesh PSC (MPPSC)",
-      "dept": "Madhya Pradesh PSC (MPPSC)",
+      "sourceId": "psc-rj",
+      "sourceName": "Rajasthan PSC (RPSC)",
+      "dept": "Rajasthan PSC (RPSC)",
       "state": "All India",
       "category": "state",
       "fetchMethod": "live-jobs-supplement"
@@ -1971,6 +2002,22 @@
       "fetchMethod": "live-jobs-supplement"
     },
     {
+      "id": "2d5f52bd89b49ce2",
+      "title": "Caveat Vigyapti on Revised Selection List of Anesthesia Specialist 2024, Dated 19/06/2026",
+      "link": "https://mppsc.mp.gov.in/uploads/advertisement/Caveat_Vigyapti_Revised_Result_Anesthesia_Specialist_2024_Dated_19_06_2026.pdf",
+      "publishedAt": "2026-06-19T00:00:00Z",
+      "summary": "//RgRi// . . J S JUN 2026 wm ^2-3^ /50/2024/^^rq^ fcT^iw ^ 87 ^ ^ c^fcp^ ^\\MK 3n^ ^ W^ fcl^lM^ jFW 03/2024/f^^ 24.07.2024 ^ ^ \"H.y. \"^TRT^, cite ^ f^rfteHT 1%5TT tefRT 3MteT ^^^\\^ - Pllj^dHI ^ ^fn^TR^ v3M^!ld ^mtfeT ^ (87 wRl^ia WT) ;fte^ .h.?r3.Zr../5Q/2024/W^ tete 19.06.2026 ^ ^ ^ ^ — \"^teeRR ^ illftcpi \"^T^ ^ \"t 1 3 / TTF ftfrftr ^HTTRT STRf^Tlt ^ ^Tte te 11 wo efte anter, V",
+      "pdfUrls": [
+        "https://mppsc.mp.gov.in/uploads/advertisement/Caveat_Vigyapti_Revised_Result_Anesthesia_Specialist_2024_Dated_19_06_2026.pdf"
+      ],
+      "sourceId": "psc-mp",
+      "sourceName": "Madhya Pradesh PSC (MPPSC)",
+      "dept": "Madhya Pradesh PSC (MPPSC)",
+      "state": "All India",
+      "category": "state",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
       "id": "863835fa27303549",
       "title": "अनंतिम रूप से चयनित छात्रों की सूची: जीटीआरई में सवेतन प्रशिक्षुता योजना 2026-27",
       "link": "https://www.drdo.gov.in/drdo/hi/offerings/vacancies/anantaima-rauupa-sae-cayanaita-chaataraon-kai-sauucai-jaitaiarai-maen-savaetana",
@@ -1992,22 +2039,6 @@
       "summary": "OnifSM DesignedA Ofvttoptd 4 [ c S - - \" = 'I oft^ arpfK snnicp f?..?:.5.2/50/2024/'ERFT fqiict)....!....^.....'!! WTPT - f^ty^cPTT Wrt^RT (5^ wr - 87 uRiiJid) STRtTT 1%m sfRTcfJ 03/2024 RhI* 24.07.2024 W WT-WT >? ^ ^q^HTsff 3nf^ Tf WO ?iRR, ^ RiPbc>Hi fWr ^ sraTfcr - a-ll ^ — 228 '\"7^ (3)-IK [81^—59, 3T.Wr. —40, 3T.W.W.—51, Sf.ft'.^—51, iS6^^.-27) ^ if ^ TftcTOff 3TRl$t?T - 3FTR%r-21, 3T.W. -14, …",
       "pdfUrls": [
         "https://mppsc.mp.gov.in/uploads/files/Revised_Selection_List_Anesthesia_Specialist_2024_Dated_19_06_2026.pdf"
-      ],
-      "sourceId": "psc-mp",
-      "sourceName": "Madhya Pradesh PSC (MPPSC)",
-      "dept": "Madhya Pradesh PSC (MPPSC)",
-      "state": "All India",
-      "category": "state",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "2d5f52bd89b49ce2",
-      "title": "Caveat Vigyapti on Revised Selection List of Anesthesia Specialist 2024, Dated 19/06/2026",
-      "link": "https://mppsc.mp.gov.in/uploads/advertisement/Caveat_Vigyapti_Revised_Result_Anesthesia_Specialist_2024_Dated_19_06_2026.pdf",
-      "publishedAt": "2026-06-19T00:00:00Z",
-      "summary": "//RgRi// . . J S JUN 2026 wm ^2-3^ /50/2024/^^rq^ fcT^iw ^ 87 ^ ^ c^fcp^ ^\\MK 3n^ ^ W^ fcl^lM^ jFW 03/2024/f^^ 24.07.2024 ^ ^ \"H.y. \"^TRT^, cite ^ f^rfteHT 1%5TT tefRT 3MteT ^^^\\^ - Pllj^dHI ^ ^fn^TR^ v3M^!ld ^mtfeT ^ (87 wRl^ia WT) ;fte^ .h.?r3.Zr../5Q/2024/W^ tete 19.06.2026 ^ ^ ^ ^ — \"^teeRR ^ illftcpi \"^T^ ^ \"t 1 3 / TTF ftfrftr ^HTTRT STRf^Tlt ^ ^Tte te 11 wo efte anter, V",
-      "pdfUrls": [
-        "https://mppsc.mp.gov.in/uploads/advertisement/Caveat_Vigyapti_Revised_Result_Anesthesia_Specialist_2024_Dated_19_06_2026.pdf"
       ],
       "sourceId": "psc-mp",
       "sourceName": "Madhya Pradesh PSC (MPPSC)",
@@ -2161,13 +2192,29 @@
       "fetchMethod": "live-jobs-supplement"
     },
     {
-      "id": "848e6d1d258067ed",
-      "title": "19 CEN 02/2024 (Technicians) 16-06-2026 Notice Provisional Panel-6 for the various posts of Technician Grade-III under C",
-      "link": "https://www.rrbajmer.gov.in/Upload_PDF/CEN02_2024_Tech_GrIII_Panel_Part-6_dated_15062026-639172310304024228.pdf",
+      "id": "632a570d32baa9c3",
+      "title": "16/06/2026 List of Disqualified Candidates for Veterinary Officer - 2025",
+      "link": "https://rpsc.rajasthan.gov.in/Static/Result/E66AA45FA06C4FE2856C8CC085282BE2.pdf",
       "publishedAt": "2026-06-16T00:00:00Z",
-      "summary": "jsyos HkrhZ cksMZ] vtesj 2010] usg: ekxZ] vEcsMdj lfdZy] vtesj&305028] osclkbZV&www.rrbajmer.gov.in dsUnzh;d`r jkstxkj lwpuk la[;k 02@2024 ¼rduhf’k;u xzsM&AAAa½ ikVZ iSuy&6 dsUnzh;d`r jkstxkj lwpuk la[;k 02@2024 rduhf’k;u xzsM&AAA dh fofHkUu dksfV;ka is ysoy&2 gsrq jsyos HkrhZ cksMZ] vtesj }kjk vk;ksftr dEI;wVj vk/kkfjr ijh{kk ¼lhchVh½ fnukad 20-12-2024 ,oa 30-12-2024 rFkk nLrkost lR;kiu ,oa fpfdR…",
+      "summary": "RAJASTHAN PUBLIC SERVICE COMMISSION, AJMER VETERINARY OFFICER COMP. EXAM 2025 (ANIMAL HUSBANDRY DEPARTMENT) LIST OF DISQUALIFIED CANDIDATES AS PER RESULT NOTE 1 Page 1 of 1 Date:- 16/06/2026 ------------------------------------------------------------------------------- 1784075 1784117 1784192 1784310 1784514 1784773 1784841 1785514 1785593 1785979 1786085 1786179 1786248 1786611 1786621 1786782 1…",
       "pdfUrls": [
-        "https://www.rrbajmer.gov.in/Upload_PDF/CEN02_2024_Tech_GrIII_Panel_Part-6_dated_15062026-639172310304024228.pdf"
+        "https://rpsc.rajasthan.gov.in/Static/Result/E66AA45FA06C4FE2856C8CC085282BE2.pdf"
+      ],
+      "sourceId": "psc-rj",
+      "sourceName": "Rajasthan PSC (RPSC)",
+      "dept": "Rajasthan PSC (RPSC)",
+      "state": "All India",
+      "category": "state",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "6702c4dd4b48bab1",
+      "title": "20 CEN 01/2024 (ALP) 16-06-2026 Notice Provisional Panel Part-4 for the post of ALP under CEN 01/2024 English Version",
+      "link": "https://www.rrbajmer.gov.in/Upload_PDF/CEN_01_2024_ALP_Panel-4_dated_16062026-639172317656534029.pdf",
+      "publishedAt": "2026-06-16T00:00:00Z",
+      "summary": "Page 1 of 1 jsyos HkrhZ cksMZ] vtesj 2010] usg: ekxZ] vEcsMdj lfdZy] vtesj&305028] osclkbZV&www.rrbajmer.gov.in dsUnzh;d`r jkstxkj lwpuk la[;k 01@2024 ¼lgk;d yksdks ik;yV½ iSuy ikVZ&4 dsUnzh;d`r jkstxkj lwpuk la[;k 01@2024&lgk;d yksdks ik;yV] is ysoy&2 gsrq jsyos HkrhZ cksMZ] vtesj }kjk vk;ksftr izFke pj.k dEI;wVj vk/kkfjr ijh{kk ¼lhchVh&1½ fnukad 25-11-2024 ls 29-11-2024] f}rh; pj.k dEI;wVj vk/kk…",
+      "pdfUrls": [
+        "https://www.rrbajmer.gov.in/Upload_PDF/CEN_01_2024_ALP_Panel-4_dated_16062026-639172317656534029.pdf"
       ],
       "sourceId": "rrb-ajmer",
       "sourceName": "Rrbajmer",
@@ -2193,19 +2240,19 @@
       "fetchMethod": "live-jobs-supplement"
     },
     {
-      "id": "632a570d32baa9c3",
-      "title": "16/06/2026 List of Disqualified Candidates for Veterinary Officer - 2025",
-      "link": "https://rpsc.rajasthan.gov.in/Static/Result/E66AA45FA06C4FE2856C8CC085282BE2.pdf",
+      "id": "848e6d1d258067ed",
+      "title": "19 CEN 02/2024 (Technicians) 16-06-2026 Notice Provisional Panel-6 for the various posts of Technician Grade-III under C",
+      "link": "https://www.rrbajmer.gov.in/Upload_PDF/CEN02_2024_Tech_GrIII_Panel_Part-6_dated_15062026-639172310304024228.pdf",
       "publishedAt": "2026-06-16T00:00:00Z",
-      "summary": "RAJASTHAN PUBLIC SERVICE COMMISSION, AJMER VETERINARY OFFICER COMP. EXAM 2025 (ANIMAL HUSBANDRY DEPARTMENT) LIST OF DISQUALIFIED CANDIDATES AS PER RESULT NOTE 1 Page 1 of 1 Date:- 16/06/2026 ------------------------------------------------------------------------------- 1784075 1784117 1784192 1784310 1784514 1784773 1784841 1785514 1785593 1785979 1786085 1786179 1786248 1786611 1786621 1786782 1…",
+      "summary": "jsyos HkrhZ cksMZ] vtesj 2010] usg: ekxZ] vEcsMdj lfdZy] vtesj&305028] osclkbZV&www.rrbajmer.gov.in dsUnzh;d`r jkstxkj lwpuk la[;k 02@2024 ¼rduhf’k;u xzsM&AAAa½ ikVZ iSuy&6 dsUnzh;d`r jkstxkj lwpuk la[;k 02@2024 rduhf’k;u xzsM&AAA dh fofHkUu dksfV;ka is ysoy&2 gsrq jsyos HkrhZ cksMZ] vtesj }kjk vk;ksftr dEI;wVj vk/kkfjr ijh{kk ¼lhchVh½ fnukad 20-12-2024 ,oa 30-12-2024 rFkk nLrkost lR;kiu ,oa fpfdR…",
       "pdfUrls": [
-        "https://rpsc.rajasthan.gov.in/Static/Result/E66AA45FA06C4FE2856C8CC085282BE2.pdf"
+        "https://www.rrbajmer.gov.in/Upload_PDF/CEN02_2024_Tech_GrIII_Panel_Part-6_dated_15062026-639172310304024228.pdf"
       ],
-      "sourceId": "psc-rj",
-      "sourceName": "Rajasthan PSC (RPSC)",
-      "dept": "Rajasthan PSC (RPSC)",
+      "sourceId": "rrb-ajmer",
+      "sourceName": "Rrbajmer",
+      "dept": "Rrbajmer",
       "state": "All India",
-      "category": "state",
+      "category": "railways",
       "fetchMethod": "live-jobs-supplement"
     },
     {
@@ -2225,33 +2272,17 @@
       "fetchMethod": "live-jobs-supplement"
     },
     {
-      "id": "6702c4dd4b48bab1",
-      "title": "20 CEN 01/2024 (ALP) 16-06-2026 Notice Provisional Panel Part-4 for the post of ALP under CEN 01/2024 English Version",
-      "link": "https://www.rrbajmer.gov.in/Upload_PDF/CEN_01_2024_ALP_Panel-4_dated_16062026-639172317656534029.pdf",
-      "publishedAt": "2026-06-16T00:00:00Z",
-      "summary": "Page 1 of 1 jsyos HkrhZ cksMZ] vtesj 2010] usg: ekxZ] vEcsMdj lfdZy] vtesj&305028] osclkbZV&www.rrbajmer.gov.in dsUnzh;d`r jkstxkj lwpuk la[;k 01@2024 ¼lgk;d yksdks ik;yV½ iSuy ikVZ&4 dsUnzh;d`r jkstxkj lwpuk la[;k 01@2024&lgk;d yksdks ik;yV] is ysoy&2 gsrq jsyos HkrhZ cksMZ] vtesj }kjk vk;ksftr izFke pj.k dEI;wVj vk/kkfjr ijh{kk ¼lhchVh&1½ fnukad 25-11-2024 ls 29-11-2024] f}rh; pj.k dEI;wVj vk/kk…",
-      "pdfUrls": [
-        "https://www.rrbajmer.gov.in/Upload_PDF/CEN_01_2024_ALP_Panel-4_dated_16062026-639172317656534029.pdf"
-      ],
-      "sourceId": "rrb-ajmer",
-      "sourceName": "Rrbajmer",
-      "dept": "Rrbajmer",
-      "state": "All India",
-      "category": "railways",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "e669de468da98967",
-      "title": "15/06/2026 Main Merit List for Asst. Professor (Medical Edu.) - 2024 (Ophthalmology (BS))",
-      "link": "https://rpsc.rajasthan.gov.in/Static/Result/BA5BB5B0F3024706A7E06267D8327140.pdf",
+      "id": "4df6e8404cd8de59",
+      "title": "Selection List - Assistant Professor (Geology) Exam 2024, Dated 15/06/2026",
+      "link": "https://mppsc.mp.gov.in/uploads/files/Selection_List_Assistant_Professor_Geology_Exam_2024_Dated_15_06_2026.pdf",
       "publishedAt": "2026-06-15T00:00:00Z",
-      "summary": "RAJASTHAN PUBLIC SERVICE COMMISSION, AJMER MAIN MERIT LIST (AFTER INTV) FOR THE POST OF ASST. PROF. (MEDICAL EDU.) EXAM 2024 (33 POSTS) ASST. PROF. (BS) OPHTHALMOLOGY PG- 1 11/06/2026 --------------------------------------------------------------------------------------------------------------------------------------------------------------------- SNO MRT_NO RNO CATEGORY NAME MUL.DIS. TOTAL INTV_M…",
+      "summary": "'S s- Only Dfsignftl A DevftoptJby.^ _ 1 5 JUN 2026 .^.).XO./54/2025/^cm R^l'cb WFT^ TTTKJTTW (^J^nf^TR^) ^CT^-2024 (5^ ~ ^rfa^Jici) 3TFiW ^ ferm 31 /2024 30.12.2024 WfT ^q^3T! snf^ ^ ^ ^0^10 f^«n f^wr ^ ar^rrjcr R^iif^d uit^iM4>. TjTpff^n^ ^ ^ 15 ^ (3PTNf^-03, -02, 3T.'^.^.-02, 3f.Pr.\"^-06, i^5^X^.-02 ^ ^ ^ ^rrflc^ tg 3fRf^RT ^ - 3HR1^-01, ar.\"^. -01, Sf.^.w.-Ol, 3T.Pr.^-02, i.^^^^^-0^ ^ ^ Tro^ro…",
       "pdfUrls": [
-        "https://rpsc.rajasthan.gov.in/Static/Result/BA5BB5B0F3024706A7E06267D8327140.pdf"
+        "https://mppsc.mp.gov.in/uploads/files/Selection_List_Assistant_Professor_Geology_Exam_2024_Dated_15_06_2026.pdf"
       ],
-      "sourceId": "psc-rj",
-      "sourceName": "Rajasthan PSC (RPSC)",
-      "dept": "Rajasthan PSC (RPSC)",
+      "sourceId": "psc-mp",
+      "sourceName": "Madhya Pradesh PSC (MPPSC)",
+      "dept": "Madhya Pradesh PSC (MPPSC)",
       "state": "All India",
       "category": "state",
       "fetchMethod": "live-jobs-supplement"
@@ -2264,6 +2295,22 @@
       "summary": "RAJASTHAN PUBLIC SERVICE COMMISSION, AJMER MAIN MERIT LIST FOR THE POST OF SR. TEACHER (SEC. EDU.) COMP. EXAM 2024 ( SA ) HINDI 15/06/2026 PG- 1 ---------------------------------------------------------------------------------------------------------------------------------- SNO MRT_NO RNO CATEGORY NAME MPLD TOTAL_MRK --------------------------------------------------------------------------------…",
       "pdfUrls": [
         "https://rpsc.rajasthan.gov.in/Static/Result/CEE6CC01A72E454295B536D5E03587ED.pdf"
+      ],
+      "sourceId": "psc-rj",
+      "sourceName": "Rajasthan PSC (RPSC)",
+      "dept": "Rajasthan PSC (RPSC)",
+      "state": "All India",
+      "category": "state",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "604f946d33bdf4f7",
+      "title": "15/06/2026 Main Merit List for Sr. Teacher (Sec. Edu.) Comp. Exam - 2024 (English)",
+      "link": "https://rpsc.rajasthan.gov.in/Static/Result/AB7CA3FCBFB34D069A41425F0D089B69.pdf",
+      "publishedAt": "2026-06-15T00:00:00Z",
+      "summary": "RAJASTHAN PUBLIC SERVICE COMMISSION, AJMER MAIN MERIT LIST FOR THE POST OF SR. TEACHER (SEC. EDU.) COMP. EXAM 2024 ( SA ) ENGLISH 15/06/2026 PG- 1 ---------------------------------------------------------------------------------------------------------------------------------- SNO MRT_NO RNO CATEGORY NAME MPLD TOTAL_MRK ------------------------------------------------------------------------------…",
+      "pdfUrls": [
+        "https://rpsc.rajasthan.gov.in/Static/Result/AB7CA3FCBFB34D069A41425F0D089B69.pdf"
       ],
       "sourceId": "psc-rj",
       "sourceName": "Rajasthan PSC (RPSC)",
@@ -2289,29 +2336,13 @@
       "fetchMethod": "live-jobs-supplement"
     },
     {
-      "id": "4df6e8404cd8de59",
-      "title": "Selection List - Assistant Professor (Geology) Exam 2024, Dated 15/06/2026",
-      "link": "https://mppsc.mp.gov.in/uploads/files/Selection_List_Assistant_Professor_Geology_Exam_2024_Dated_15_06_2026.pdf",
+      "id": "e669de468da98967",
+      "title": "15/06/2026 Main Merit List for Asst. Professor (Medical Edu.) - 2024 (Ophthalmology (BS))",
+      "link": "https://rpsc.rajasthan.gov.in/Static/Result/BA5BB5B0F3024706A7E06267D8327140.pdf",
       "publishedAt": "2026-06-15T00:00:00Z",
-      "summary": "'S s- Only Dfsignftl A DevftoptJby.^ _ 1 5 JUN 2026 .^.).XO./54/2025/^cm R^l'cb WFT^ TTTKJTTW (^J^nf^TR^) ^CT^-2024 (5^ ~ ^rfa^Jici) 3TFiW ^ ferm 31 /2024 30.12.2024 WfT ^q^3T! snf^ ^ ^ ^0^10 f^«n f^wr ^ ar^rrjcr R^iif^d uit^iM4>. TjTpff^n^ ^ ^ 15 ^ (3PTNf^-03, -02, 3T.'^.^.-02, 3f.Pr.\"^-06, i^5^X^.-02 ^ ^ ^ ^rrflc^ tg 3fRf^RT ^ - 3HR1^-01, ar.\"^. -01, Sf.^.w.-Ol, 3T.Pr.^-02, i.^^^^^-0^ ^ ^ Tro^ro…",
+      "summary": "RAJASTHAN PUBLIC SERVICE COMMISSION, AJMER MAIN MERIT LIST (AFTER INTV) FOR THE POST OF ASST. PROF. (MEDICAL EDU.) EXAM 2024 (33 POSTS) ASST. PROF. (BS) OPHTHALMOLOGY PG- 1 11/06/2026 --------------------------------------------------------------------------------------------------------------------------------------------------------------------- SNO MRT_NO RNO CATEGORY NAME MUL.DIS. TOTAL INTV_M…",
       "pdfUrls": [
-        "https://mppsc.mp.gov.in/uploads/files/Selection_List_Assistant_Professor_Geology_Exam_2024_Dated_15_06_2026.pdf"
-      ],
-      "sourceId": "psc-mp",
-      "sourceName": "Madhya Pradesh PSC (MPPSC)",
-      "dept": "Madhya Pradesh PSC (MPPSC)",
-      "state": "All India",
-      "category": "state",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "b6543a932d73ec8c",
-      "title": "15/06/2026 Main Merit List for Sr. Teacher (Sec. Edu.) Comp. Exam - 2024 (Punjabi)",
-      "link": "https://rpsc.rajasthan.gov.in/Static/Result/43E7B7DECF6D4C3DA5C26AD0A8E93632.pdf",
-      "publishedAt": "2026-06-15T00:00:00Z",
-      "summary": "RAJASTHAN PUBLIC SERVICE COMMISSION, AJMER MAIN MERIT LIST FOR THE POST OF SR. TEACHER (SEC. EDU.) COMP. EXAM 2024 ( NSA ) PUNJABI 15/06/2026 PG- 1 ---------------------------------------------------------------------------------------------------------------------------------- SNO MRT_NO RNO CATEGORY NAME MPLD TOTAL_MRK -----------------------------------------------------------------------------…",
-      "pdfUrls": [
-        "https://rpsc.rajasthan.gov.in/Static/Result/43E7B7DECF6D4C3DA5C26AD0A8E93632.pdf"
+        "https://rpsc.rajasthan.gov.in/Static/Result/BA5BB5B0F3024706A7E06267D8327140.pdf"
       ],
       "sourceId": "psc-rj",
       "sourceName": "Rajasthan PSC (RPSC)",
@@ -2337,13 +2368,13 @@
       "fetchMethod": "live-jobs-supplement"
     },
     {
-      "id": "604f946d33bdf4f7",
-      "title": "15/06/2026 Main Merit List for Sr. Teacher (Sec. Edu.) Comp. Exam - 2024 (English)",
-      "link": "https://rpsc.rajasthan.gov.in/Static/Result/AB7CA3FCBFB34D069A41425F0D089B69.pdf",
+      "id": "b6543a932d73ec8c",
+      "title": "15/06/2026 Main Merit List for Sr. Teacher (Sec. Edu.) Comp. Exam - 2024 (Punjabi)",
+      "link": "https://rpsc.rajasthan.gov.in/Static/Result/43E7B7DECF6D4C3DA5C26AD0A8E93632.pdf",
       "publishedAt": "2026-06-15T00:00:00Z",
-      "summary": "RAJASTHAN PUBLIC SERVICE COMMISSION, AJMER MAIN MERIT LIST FOR THE POST OF SR. TEACHER (SEC. EDU.) COMP. EXAM 2024 ( SA ) ENGLISH 15/06/2026 PG- 1 ---------------------------------------------------------------------------------------------------------------------------------- SNO MRT_NO RNO CATEGORY NAME MPLD TOTAL_MRK ------------------------------------------------------------------------------…",
+      "summary": "RAJASTHAN PUBLIC SERVICE COMMISSION, AJMER MAIN MERIT LIST FOR THE POST OF SR. TEACHER (SEC. EDU.) COMP. EXAM 2024 ( NSA ) PUNJABI 15/06/2026 PG- 1 ---------------------------------------------------------------------------------------------------------------------------------- SNO MRT_NO RNO CATEGORY NAME MPLD TOTAL_MRK -----------------------------------------------------------------------------…",
       "pdfUrls": [
-        "https://rpsc.rajasthan.gov.in/Static/Result/AB7CA3FCBFB34D069A41425F0D089B69.pdf"
+        "https://rpsc.rajasthan.gov.in/Static/Result/43E7B7DECF6D4C3DA5C26AD0A8E93632.pdf"
       ],
       "sourceId": "psc-rj",
       "sourceName": "Rajasthan PSC (RPSC)",
@@ -2385,13 +2416,29 @@
       "fetchMethod": "live-jobs-supplement"
     },
     {
-      "id": "a6d511003ed07bda",
-      "title": "[सहायक लोको पायलट की भर्ती]सीबीटी-2 के लिए शॉर्टलिस्ट किए गए अभ्यर्थियों के सामान्यीकृत कट-ऑफ अंकके लिए यहां क्लिक करेंप्रकाशित तिथि: 12-06-2026",
-      "link": "https://www.rrbsiliguri.gov.in/notifications/downloads/2026_june/notice_12a.pdf",
+      "id": "33c688c1e9f78ceb",
+      "title": "CEN No. 01/2025 - CUT_OFF OF FIRST STAGE EXAMINATION(CBT-I)",
+      "link": "https://www.rrbgkp.gov.in/results/CuttOff 01_2025.pdf",
+      "publishedAt": "2026-06-12T00:00:00Z",
+      "summary": "Cat No UR SC ST OBC EWS EXSM 1 80 65.67506 64.31303 74.54163 58.21923 36.88889 Date: 12/06/2026 FOR THE POST OF ALP AGAINST CEN 01/2025 सीबीटȣ-2 के ͧ लए शॉट[ͧ लèट ͩ कए गए अßयͬ थ[यɉ के सामाÛयीकृत कट-ऑफ अंक (out of 100) NORMALISED CUT OFF MARKS (out of 100) OF CANDIDATES SHORTLISTED FOR CBT-2 RAILWAY RECRUITMENT BOARD/GORAKHPUR रेलवे भतȸ बोड[ - गोरखपुर RAILWAY RECRUITMENT BOARD - GORAKHPUR सीईएन 01/…",
+      "pdfUrls": [
+        "https://www.rrbgkp.gov.in/results/CuttOff 01_2025.pdf"
+      ],
+      "sourceId": "rrb-gorakhpur",
+      "sourceName": "Rrbgkp",
+      "dept": "Rrbgkp",
+      "state": "All India",
+      "category": "railways",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "4e6d43fe50634618",
+      "title": "[सहायक लोको पायलट की भर्ती]प्रथम चरण परीक्षा (सीबीटी-1) के परिणामके लिए यहां क्लिक करेंप्रकाशित तिथि: 12-06-2026",
+      "link": "https://www.rrbsiliguri.gov.in/notifications/downloads/2026_june/notice_12.pdf",
       "publishedAt": "2026-06-12T00:00:00Z",
       "summary": null,
       "pdfUrls": [
-        "https://www.rrbsiliguri.gov.in/notifications/downloads/2026_june/notice_12a.pdf"
+        "https://www.rrbsiliguri.gov.in/notifications/downloads/2026_june/notice_12.pdf"
       ],
       "sourceId": "rrb-siliguri",
       "sourceName": "Rrbsiliguri",
@@ -2414,6 +2461,38 @@
       "dept": "Madhya Pradesh PSC (MPPSC)",
       "state": "All India",
       "category": "state",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "a6d511003ed07bda",
+      "title": "[सहायक लोको पायलट की भर्ती]सीबीटी-2 के लिए शॉर्टलिस्ट किए गए अभ्यर्थियों के सामान्यीकृत कट-ऑफ अंकके लिए यहां क्लिक करेंप्रकाशित तिथि: 12-06-2026",
+      "link": "https://www.rrbsiliguri.gov.in/notifications/downloads/2026_june/notice_12a.pdf",
+      "publishedAt": "2026-06-12T00:00:00Z",
+      "summary": null,
+      "pdfUrls": [
+        "https://www.rrbsiliguri.gov.in/notifications/downloads/2026_june/notice_12a.pdf"
+      ],
+      "sourceId": "rrb-siliguri",
+      "sourceName": "Rrbsiliguri",
+      "dept": "Rrbsiliguri",
+      "state": "All India",
+      "category": "railways",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "4d2716ebf0aee31e",
+      "title": "CEN No. 01/2025 - CUT_OFF OF FIRST STAGE EXAMINATION(CBT-I)",
+      "link": "https://www.rrbgkp.gov.in/results/CuttOff%2001_2025.pdf",
+      "publishedAt": "2026-06-12T00:00:00Z",
+      "summary": "Cat No UR SC ST OBC EWS EXSM 1 80 65.67506 64.31303 74.54163 58.21923 36.88889 Date: 12/06/2026 FOR THE POST OF ALP AGAINST CEN 01/2025 सीबीटȣ-2 के ͧ लए शॉट[ͧ लèट ͩ कए गए अßयͬ थ[यɉ के सामाÛयीकृत कट-ऑफ अंक (out of 100) NORMALISED CUT OFF MARKS (out of 100) OF CANDIDATES SHORTLISTED FOR CBT-2 RAILWAY RECRUITMENT BOARD/GORAKHPUR रेलवे भतȸ बोड[ - गोरखपुर RAILWAY RECRUITMENT BOARD - GORAKHPUR सीईएन 01/…",
+      "pdfUrls": [
+        "https://www.rrbgkp.gov.in/results/CuttOff%2001_2025.pdf"
+      ],
+      "sourceId": "rrb-gorakhpur",
+      "sourceName": "Railway Recruitment Board (RRB) — Gorakhpur",
+      "dept": "Railway Recruitment Board (RRB) — Gorakhpur",
+      "state": "All India",
+      "category": "railways",
       "fetchMethod": "live-jobs-supplement"
     },
     {
@@ -2449,45 +2528,13 @@
       "fetchMethod": "live-jobs-supplement"
     },
     {
-      "id": "4d2716ebf0aee31e",
-      "title": "CEN No. 01/2025 - CUT_OFF OF FIRST STAGE EXAMINATION(CBT-I)",
-      "link": "https://www.rrbgkp.gov.in/results/CuttOff%2001_2025.pdf",
-      "publishedAt": "2026-06-12T00:00:00Z",
-      "summary": "Cat No UR SC ST OBC EWS EXSM 1 80 65.67506 64.31303 74.54163 58.21923 36.88889 Date: 12/06/2026 FOR THE POST OF ALP AGAINST CEN 01/2025 सीबीटȣ-2 के ͧ लए शॉट[ͧ लèट ͩ कए गए अßयͬ थ[यɉ के सामाÛयीकृत कट-ऑफ अंक (out of 100) NORMALISED CUT OFF MARKS (out of 100) OF CANDIDATES SHORTLISTED FOR CBT-2 RAILWAY RECRUITMENT BOARD/GORAKHPUR रेलवे भतȸ बोड[ - गोरखपुर RAILWAY RECRUITMENT BOARD - GORAKHPUR सीईएन 01/…",
-      "pdfUrls": [
-        "https://www.rrbgkp.gov.in/results/CuttOff%2001_2025.pdf"
-      ],
-      "sourceId": "rrb-gorakhpur",
-      "sourceName": "Railway Recruitment Board (RRB) — Gorakhpur",
-      "dept": "Railway Recruitment Board (RRB) — Gorakhpur",
-      "state": "All India",
-      "category": "railways",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "33c688c1e9f78ceb",
-      "title": "CEN No. 01/2025 - CUT_OFF OF FIRST STAGE EXAMINATION(CBT-I)",
-      "link": "https://www.rrbgkp.gov.in/results/CuttOff 01_2025.pdf",
-      "publishedAt": "2026-06-12T00:00:00Z",
-      "summary": "Cat No UR SC ST OBC EWS EXSM 1 80 65.67506 64.31303 74.54163 58.21923 36.88889 Date: 12/06/2026 FOR THE POST OF ALP AGAINST CEN 01/2025 सीबीटȣ-2 के ͧ लए शॉट[ͧ लèट ͩ कए गए अßयͬ थ[यɉ के सामाÛयीकृत कट-ऑफ अंक (out of 100) NORMALISED CUT OFF MARKS (out of 100) OF CANDIDATES SHORTLISTED FOR CBT-2 RAILWAY RECRUITMENT BOARD/GORAKHPUR रेलवे भतȸ बोड[ - गोरखपुर RAILWAY RECRUITMENT BOARD - GORAKHPUR सीईएन 01/…",
-      "pdfUrls": [
-        "https://www.rrbgkp.gov.in/results/CuttOff 01_2025.pdf"
-      ],
-      "sourceId": "rrb-gorakhpur",
-      "sourceName": "Rrbgkp",
-      "dept": "Rrbgkp",
-      "state": "All India",
-      "category": "railways",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "4e6d43fe50634618",
-      "title": "[सहायक लोको पायलट की भर्ती]प्रथम चरण परीक्षा (सीबीटी-1) के परिणामके लिए यहां क्लिक करेंप्रकाशित तिथि: 12-06-2026",
-      "link": "https://www.rrbsiliguri.gov.in/notifications/downloads/2026_june/notice_12.pdf",
-      "publishedAt": "2026-06-12T00:00:00Z",
+      "id": "cae8e254d45725f8",
+      "title": "[विभिन्न गैर तकनीकी लोकप्रिय कोटियों (स्नातक) के पदों के लिए भर्ती]प्रथम चरण कंप्यूटर आधारित परीक्षा (सीबीटी-1) का परिणाम और प्रथम चरण कंप्यूटर आधारित परीक्षा (सीबीटी-1) के आधार पर द्वितीय चरण सीबीटी के लिए अभ्यर्थियों की शॉर्टलिस्टिंगप्रकाशित तिथि: 11-06-2026",
+      "link": "https://www.rrbsiliguri.gov.in/notifications/downloads/2026_june/notice_11.pdf",
+      "publishedAt": "2026-06-11T00:00:00Z",
       "summary": null,
       "pdfUrls": [
-        "https://www.rrbsiliguri.gov.in/notifications/downloads/2026_june/notice_12.pdf"
+        "https://www.rrbsiliguri.gov.in/notifications/downloads/2026_june/notice_11.pdf"
       ],
       "sourceId": "rrb-siliguri",
       "sourceName": "Rrbsiliguri",
@@ -2529,36 +2576,6 @@
       "fetchMethod": "live-jobs-supplement"
     },
     {
-      "id": "f4dc78c867d60ac9",
-      "title": "11/06/2026 Download Marks Card for Civil Services (Judicial) Competitive Examination, 2025",
-      "link": "http://jkpsc.nic.in/RESULT/KCSJ_MARKS_CARD_2025.HTML",
-      "publishedAt": "2026-06-11T00:00:00Z",
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-jk",
-      "sourceName": "Jammu & Kashmir PSC (JKPSC)",
-      "dept": "Jammu & Kashmir PSC (JKPSC)",
-      "state": "All India",
-      "category": "state",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "cae8e254d45725f8",
-      "title": "[विभिन्न गैर तकनीकी लोकप्रिय कोटियों (स्नातक) के पदों के लिए भर्ती]प्रथम चरण कंप्यूटर आधारित परीक्षा (सीबीटी-1) का परिणाम और प्रथम चरण कंप्यूटर आधारित परीक्षा (सीबीटी-1) के आधार पर द्वितीय चरण सीबीटी के लिए अभ्यर्थियों की शॉर्टलिस्टिंगप्रकाशित तिथि: 11-06-2026",
-      "link": "https://www.rrbsiliguri.gov.in/notifications/downloads/2026_june/notice_11.pdf",
-      "publishedAt": "2026-06-11T00:00:00Z",
-      "summary": null,
-      "pdfUrls": [
-        "https://www.rrbsiliguri.gov.in/notifications/downloads/2026_june/notice_11.pdf"
-      ],
-      "sourceId": "rrb-siliguri",
-      "sourceName": "Rrbsiliguri",
-      "dept": "Rrbsiliguri",
-      "state": "All India",
-      "category": "railways",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
       "id": "0c3ddeeac82b8aa4",
       "title": "[विभिन्न गैर तकनीकी लोकप्रिय कोटियों (स्नातक) के पदों के लिए भर्ती]गैर तकनीकी लोकप्रिय कोटियों (स्नातक) द्वितीय चरण के लिए चुने गए अभ्यर्थियों का कट ऑफ अंक (100 अंकों में से)देखने के लिए यहाँ क्लिक करेंप्रकाशित तिथि: 11-06-2026",
       "link": "https://www.rrbsiliguri.gov.in/notifications/downloads/2026_june/notice_11a.pdf",
@@ -2572,6 +2589,20 @@
       "dept": "Rrbsiliguri",
       "state": "All India",
       "category": "railways",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "f4dc78c867d60ac9",
+      "title": "11/06/2026 Download Marks Card for Civil Services (Judicial) Competitive Examination, 2025",
+      "link": "http://jkpsc.nic.in/RESULT/KCSJ_MARKS_CARD_2025.HTML",
+      "publishedAt": "2026-06-11T00:00:00Z",
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-jk",
+      "sourceName": "Jammu & Kashmir PSC (JKPSC)",
+      "dept": "Jammu & Kashmir PSC (JKPSC)",
+      "state": "All India",
+      "category": "state",
       "fetchMethod": "live-jobs-supplement"
     },
     {
@@ -2728,22 +2759,6 @@
       "fetchMethod": "live-jobs-supplement"
     },
     {
-      "id": "1788e22683b873f6",
-      "title": "CORRIGENDUM - Recruitment of Part‑Time Homoeopathy Physician on Contract Basis dated 08.06.2026",
-      "link": "https://www.esic.gov.in/attachments/recruitmentfile/CORRIGENDUM_Recruitment_of_Part_Time_Homoeopathy_Physician_on_Contract_Basis_dated_08_06_2026_1781330896.pdf",
-      "publishedAt": "2026-06-08T00:00:00Z",
-      "summary": "No.543. A/12/16/1/2025-Admin(Rect) Dated:13-06-2026 संशोधन /CORRIGENDUM दनांक 08.06.2026 को जार संवदा आधार पर अंशकािलक होयोपैथी िचकसक क भत हेतु सा#ाकार संबंधी अिधसूचना म' आंिशक संशोधन करते हुए, ई‑मेल आईड “m s ‑ u d y o g m a n d a l . k e @ e s i c . n i c . i n ” को “ms‑udyogmandal.ke@esic.gov.in” पढ़ा जाए। इसके अित.र/, ई‑मेल 0ारा आवेदन 12तुत करने क अंितम ितिथ, जो पूव3 म' “18.06.2026” अंकत थी, उसे…",
-      "pdfUrls": [
-        "https://www.esic.gov.in/attachments/recruitmentfile/CORRIGENDUM_Recruitment_of_Part_Time_Homoeopathy_Physician_on_Contract_Basis_dated_08_06_2026_1781330896.pdf"
-      ],
-      "sourceId": "esic",
-      "sourceName": "ESIC — Employees' State Insurance Corporation",
-      "dept": "ESIC — Employees' State Insurance Corporation",
-      "state": "All India",
-      "category": "health",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
       "id": "e4e970f3d7cc16a2",
       "title": "CORRIGENDUM - Recruitment of Part‑Time Homoeopathy Physician on Contract Basis dated 08.06.2026",
       "link": "https://www.esic.gov.in/attachments/recruitmentfile/CORRIGENDUM_Recruitment_of_Part_Time_Homoeopathy_Physician_on_Contract_Basis_dated_08_06_2026_1781330780.pdf",
@@ -2760,19 +2775,19 @@
       "fetchMethod": "live-jobs-supplement"
     },
     {
-      "id": "52abb05e857e92ef",
-      "title": "Selection List - Dental Surgeon Exam 2024 Public Health and Medical Education Department, Dated 07/06/2026",
-      "link": "https://mppsc.mp.gov.in/uploads/files/Selection_List_Dental_Surgeon_Exam_2024_PHMED_Dated_07_06_2026.pdf",
-      "publishedAt": "2026-06-07T00:00:00Z",
-      "summary": "\\ I I. s + 4 £l M Xi 4 n? ^ b cn ro o N3 O) A NJ hO b Ul ro o lO O) a /:n{«- -sl^ S> '5'^ g tSr I ,2^- on. a 1 i' 2 5 I 4 3 5t i? ^ 2 a a I a N) O ro :S' V^* ir^ ON •H \\ \\ ro o ro O) \\ si S: A Display list AD A /< A ro C3 hO CT> (i?0^0 TTRPT, Rlf^rHI f^KTT f^Wr) 3T^TRf^RT 3T.^. ar.R^. i ' <(id M^i1 'tl^l 99 58 98 48 38 341 -tl Hf^dl^l' <i> cilKlSld q< 35 20 34 17 13 ^ ^ 3TRfSlcT 50 29 49 24 19 ^ ^…",
+      "id": "1788e22683b873f6",
+      "title": "CORRIGENDUM - Recruitment of Part‑Time Homoeopathy Physician on Contract Basis dated 08.06.2026",
+      "link": "https://www.esic.gov.in/attachments/recruitmentfile/CORRIGENDUM_Recruitment_of_Part_Time_Homoeopathy_Physician_on_Contract_Basis_dated_08_06_2026_1781330896.pdf",
+      "publishedAt": "2026-06-08T00:00:00Z",
+      "summary": "No.543. A/12/16/1/2025-Admin(Rect) Dated:13-06-2026 संशोधन /CORRIGENDUM दनांक 08.06.2026 को जार संवदा आधार पर अंशकािलक होयोपैथी िचकसक क भत हेतु सा#ाकार संबंधी अिधसूचना म' आंिशक संशोधन करते हुए, ई‑मेल आईड “m s ‑ u d y o g m a n d a l . k e @ e s i c . n i c . i n ” को “ms‑udyogmandal.ke@esic.gov.in” पढ़ा जाए। इसके अित.र/, ई‑मेल 0ारा आवेदन 12तुत करने क अंितम ितिथ, जो पूव3 म' “18.06.2026” अंकत थी, उसे…",
       "pdfUrls": [
-        "https://mppsc.mp.gov.in/uploads/files/Selection_List_Dental_Surgeon_Exam_2024_PHMED_Dated_07_06_2026.pdf"
+        "https://www.esic.gov.in/attachments/recruitmentfile/CORRIGENDUM_Recruitment_of_Part_Time_Homoeopathy_Physician_on_Contract_Basis_dated_08_06_2026_1781330896.pdf"
       ],
-      "sourceId": "psc-mp",
-      "sourceName": "Madhya Pradesh PSC (MPPSC)",
-      "dept": "Madhya Pradesh PSC (MPPSC)",
+      "sourceId": "esic",
+      "sourceName": "ESIC — Employees' State Insurance Corporation",
+      "dept": "ESIC — Employees' State Insurance Corporation",
       "state": "All India",
-      "category": "state",
+      "category": "health",
       "fetchMethod": "live-jobs-supplement"
     },
     {
@@ -2783,6 +2798,22 @@
       "summary": "/ /f^^Ri// 1Q,Q.^/^^/2026/WH Riicp0 ^ JUN 2026 reiR?oMcfi ^gTT — 2024 ^ ^ 87 yfcmcf (Wf ^ ^ ^ \"^T^ SMTH\" ^ ^ ra^llMH 46/2024/31.12.2024 ^ ^ ^ Rj[^^43 - 2024 ^ ?r^ ^.\"SJ. \"^TT^, eff^ ftRbotll ftm fcTHFT ^ sj^PfcT WTTT - ^ ^aiHr^K vdH^iia (87 mRI^IcI \"3^ \"^TRT) 1%.6..6..7 /11/2026/'cRH, t^. 07.06.2026 ^ £^ tjlRa ^ ^ 11 2 / WT ^ \"OTCr ^ TTFT^ \"^3^ - ufeT^^, tth. ^Mlel-4, xyu-^Ljld — TcfrfeRK\" ^ ifqi^…",
       "pdfUrls": [
         "https://mppsc.mp.gov.in/uploads/advertisement/Caveat_Vigyapti_Dental_Surgeon_Exam_2024_PHMED_Dated_07_06_2026.pdf"
+      ],
+      "sourceId": "psc-mp",
+      "sourceName": "Madhya Pradesh PSC (MPPSC)",
+      "dept": "Madhya Pradesh PSC (MPPSC)",
+      "state": "All India",
+      "category": "state",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "52abb05e857e92ef",
+      "title": "Selection List - Dental Surgeon Exam 2024 Public Health and Medical Education Department, Dated 07/06/2026",
+      "link": "https://mppsc.mp.gov.in/uploads/files/Selection_List_Dental_Surgeon_Exam_2024_PHMED_Dated_07_06_2026.pdf",
+      "publishedAt": "2026-06-07T00:00:00Z",
+      "summary": "\\ I I. s + 4 £l M Xi 4 n? ^ b cn ro o N3 O) A NJ hO b Ul ro o lO O) a /:n{«- -sl^ S> '5'^ g tSr I ,2^- on. a 1 i' 2 5 I 4 3 5t i? ^ 2 a a I a N) O ro :S' V^* ir^ ON •H \\ \\ ro o ro O) \\ si S: A Display list AD A /< A ro C3 hO CT> (i?0^0 TTRPT, Rlf^rHI f^KTT f^Wr) 3T^TRf^RT 3T.^. ar.R^. i ' <(id M^i1 'tl^l 99 58 98 48 38 341 -tl Hf^dl^l' <i> cilKlSld q< 35 20 34 17 13 ^ ^ 3TRfSlcT 50 29 49 24 19 ^ ^…",
+      "pdfUrls": [
+        "https://mppsc.mp.gov.in/uploads/files/Selection_List_Dental_Surgeon_Exam_2024_PHMED_Dated_07_06_2026.pdf"
       ],
       "sourceId": "psc-mp",
       "sourceName": "Madhya Pradesh PSC (MPPSC)",
@@ -2808,13 +2839,13 @@
       "fetchMethod": "live-jobs-supplement"
     },
     {
-      "id": "4381c6fce3629602",
-      "title": "Notice: 19 Posts of Tutor, Lady Hardinge Medical College & Smt. Sucheta Kriplani Hospital",
-      "link": "https://www.upsc.gov.in/whats-new/19%20Posts%20of%20Tutor,%20Lady%20Hardinge%20Medical%20College%20&%20Smt.%20Sucheta%20Kriplani%20Hospital/Notice",
+      "id": "5b05d783210a93d8",
+      "title": "Notice: 04 Posts of Homoeopathic Physician in NDMC",
+      "link": "https://www.upsc.gov.in/whats-new/04%20Posts%20of%20Homoeopathic%20Physician%20in%20NDMC/Notice",
       "publishedAt": "2026-06-05T00:00:00Z",
-      "summary": "SPECIAL CELL-II Dated: 05.06.2026 Subject: Recruitment to Nineteen vacancies for the post of Tutor in College of Nursing, Lady Hardinge Medical College & Smt. Sucheta Kriplani Hospital, New Delhi, Directorate General of Health Services, Ministry of Health & Family Welfare. (UR-10, EWS-02, OBC-05, SC-02) (PwBD-01)*.[Advt. No. 08/2025, Vacancy No. 25060825128]- Publication of Provisional Answer keys…",
+      "summary": "SPECIAL CELL-II Dated: 05.06.2026 Subject: Recruitment to Four vacancies for the post of Homoeopathic Physician in New Delhi Municipal Council. (UR-01, OBC-02, ST-01).[Advt. No. 07/2025, Vacancy No. 25060752114]- Publication of Provisional Answer keys after conclusion of RTs/ CRTs – Reg. ****** In reference to the RT for the subject post scheduled to be held on 06.06.2026 (Forenoon Session), it is…",
       "pdfUrls": [
-        "https://www.upsc.gov.in/sites/default/files/ProAnsKeyNotice-19-Tutor-LHMC-Engl-050626_0.pdf"
+        "https://www.upsc.gov.in/sites/default/files/ProAnsKeyNotice-04-HomeoPhyscnNDMC-Engl-050626_0.pdf"
       ],
       "sourceId": "upsc",
       "sourceName": "Union Public Service Commission (UPSC)",
@@ -2824,13 +2855,13 @@
       "fetchMethod": "live-jobs-supplement"
     },
     {
-      "id": "5b05d783210a93d8",
-      "title": "Notice: 04 Posts of Homoeopathic Physician in NDMC",
-      "link": "https://www.upsc.gov.in/whats-new/04%20Posts%20of%20Homoeopathic%20Physician%20in%20NDMC/Notice",
+      "id": "4381c6fce3629602",
+      "title": "Notice: 19 Posts of Tutor, Lady Hardinge Medical College & Smt. Sucheta Kriplani Hospital",
+      "link": "https://www.upsc.gov.in/whats-new/19%20Posts%20of%20Tutor,%20Lady%20Hardinge%20Medical%20College%20&%20Smt.%20Sucheta%20Kriplani%20Hospital/Notice",
       "publishedAt": "2026-06-05T00:00:00Z",
-      "summary": "SPECIAL CELL-II Dated: 05.06.2026 Subject: Recruitment to Four vacancies for the post of Homoeopathic Physician in New Delhi Municipal Council. (UR-01, OBC-02, ST-01).[Advt. No. 07/2025, Vacancy No. 25060752114]- Publication of Provisional Answer keys after conclusion of RTs/ CRTs – Reg. ****** In reference to the RT for the subject post scheduled to be held on 06.06.2026 (Forenoon Session), it is…",
+      "summary": "SPECIAL CELL-II Dated: 05.06.2026 Subject: Recruitment to Nineteen vacancies for the post of Tutor in College of Nursing, Lady Hardinge Medical College & Smt. Sucheta Kriplani Hospital, New Delhi, Directorate General of Health Services, Ministry of Health & Family Welfare. (UR-10, EWS-02, OBC-05, SC-02) (PwBD-01)*.[Advt. No. 08/2025, Vacancy No. 25060825128]- Publication of Provisional Answer keys…",
       "pdfUrls": [
-        "https://www.upsc.gov.in/sites/default/files/ProAnsKeyNotice-04-HomeoPhyscnNDMC-Engl-050626_0.pdf"
+        "https://www.upsc.gov.in/sites/default/files/ProAnsKeyNotice-19-Tutor-LHMC-Engl-050626_0.pdf"
       ],
       "sourceId": "upsc",
       "sourceName": "Union Public Service Commission (UPSC)",
@@ -3458,9 +3489,9 @@
       "fetchMethod": "live-jobs-supplement"
     },
     {
-      "id": "dcc45da8418d620e",
+      "id": "29dbfbcb1c41cd3d",
       "title": "The static mock link of JE DMS CMA CBT II exam",
-      "link": "https://www.rrbranchi.gov.in?p=packages",
+      "link": "https://www.rrbranchi.gov.in/?p=packages",
       "publishedAt": "2025-02-03T00:00:00Z",
       "summary": "GOVERNMENT OF INDIA MINISTRY OF RAILWAYS RAILWAY RECRUITMENT BOARDS Modification Window for Course Completed Act Apprentices (CCAAs) Trained in Railway Establishment Under CEN No. 08/2024 1. CCAAs trained in Railway Establishment are given due weightage of marks obtained in their NCVT examination in preparation of final merit list after conduct of CBT. CCAAs trained in Railway Establishment are ex…",
       "pdfUrls": [
@@ -3472,8 +3503,8 @@
         "https://www.rrbranchi.gov.in/upload/files/pdf/05_29_31pm7c7528f0a4da8429555743926438725b.pdf"
       ],
       "sourceId": "rrb-ranchi",
-      "sourceName": "Rrbranchi",
-      "dept": "Rrbranchi",
+      "sourceName": "Railway Recruitment Board (RRB) — Ranchi",
+      "dept": "Railway Recruitment Board (RRB) — Ranchi",
       "state": "All India",
       "category": "railways",
       "fetchMethod": "live-jobs-supplement"
@@ -3495,9 +3526,9 @@
       "fetchMethod": "live-jobs-supplement"
     },
     {
-      "id": "29dbfbcb1c41cd3d",
-      "title": "The static mock link of JE DMS CMA CBT II exam",
-      "link": "https://www.rrbranchi.gov.in/?p=packages",
+      "id": "dcc45da8418d620e",
+      "title": "Modification Window for Course Completed Act Apprentices (CCAAs) Trained in Railway Establishment in English | रेलवे प्र",
+      "link": "https://www.rrbranchi.gov.in?p=packages",
       "publishedAt": "2025-02-03T00:00:00Z",
       "summary": "GOVERNMENT OF INDIA MINISTRY OF RAILWAYS RAILWAY RECRUITMENT BOARDS Modification Window for Course Completed Act Apprentices (CCAAs) Trained in Railway Establishment Under CEN No. 08/2024 1. CCAAs trained in Railway Establishment are given due weightage of marks obtained in their NCVT examination in preparation of final merit list after conduct of CBT. CCAAs trained in Railway Establishment are ex…",
       "pdfUrls": [
@@ -3509,8 +3540,29 @@
         "https://www.rrbranchi.gov.in/upload/files/pdf/05_29_31pm7c7528f0a4da8429555743926438725b.pdf"
       ],
       "sourceId": "rrb-ranchi",
-      "sourceName": "Railway Recruitment Board (RRB) — Ranchi",
-      "dept": "Railway Recruitment Board (RRB) — Ranchi",
+      "sourceName": "Rrbranchi",
+      "dept": "Rrbranchi",
+      "state": "All India",
+      "category": "railways",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "459613b1dbbe7f80",
+      "title": "CEN -03/2024 -- JE , DMA , CMA and others POSTS Click to know Update",
+      "link": "https://rrbmumbai.gov.in/JE-July-2024.php",
+      "publishedAt": "2024-11-04T00:00:00Z",
+      "summary": "Page 1 of 2 GOVERNMENT OF INDIA MINISTRY OF RAILWAYS LRAILWAY RECRUITMENT BOARDS (RECRUITMENT TO VARIOUS POSTS IN VARIOUS LEVELS OF 7th CPC Matrix) NOTICE ON NORMALIZATION METHODOLOGY FOR COMPUTER BASED TEST(CBT) EXAMS {FOR ALL CENTRALIZED EMPLOYMENT NOTICES (CENs)} It is notified for all concerned that following normalization methodology for normalization of scores/marks shall be followed by RRBs…",
+      "pdfUrls": [
+        "https://rrbmumbai.gov.in/newpdf/NOTICE FOR NORMALIZATION METHODOLOGY FOR ALL CENs 04.11.2024 (1).pdf",
+        "https://rrbmumbai.gov.in/newpdf/Technician_FEB_2024/Exam Schedule Notice .pdf",
+        "https://rrbmumbai.gov.in/newpdf/Technician_FEB_2024/HIndi Notice for Exam Schedule.pdf",
+        "https://rrbmumbai.gov.in/newpdf/Technician_FEB_2024/HIindi version Tentative Exam Date notice.pdf",
+        "https://rrbmumbai.gov.in/newpdf/Intimation-for medical appeal CEN 03_2024 JE,DMS & CMA.pdf",
+        "https://rrbmumbai.gov.in/newpdf/JE SUPPLEMENTARY 25.05.2026.pdf"
+      ],
+      "sourceId": "rrb-mumbai",
+      "sourceName": "Railway Recruitment Board (RRB) — Mumbai",
+      "dept": "Railway Recruitment Board (RRB) — Mumbai",
       "state": "All India",
       "category": "railways",
       "fetchMethod": "live-jobs-supplement"
@@ -3570,27 +3622,6 @@
         "https://rrbmumbai.gov.in/newpdf/Technician_FEB_2024/HIindi version Tentative Exam Date notice.pdf",
         "https://rrbmumbai.gov.in/newpdf/Technician_FEB_2024/CORRIGENDUM & ADDENDUM No.-1 22_08_2024.pdf",
         "https://rrbmumbai.gov.in/newpdf/Technician_FEB_2024/Detailed CEN 02-2024 - Hindi.pdf"
-      ],
-      "sourceId": "rrb-mumbai",
-      "sourceName": "Railway Recruitment Board (RRB) — Mumbai",
-      "dept": "Railway Recruitment Board (RRB) — Mumbai",
-      "state": "All India",
-      "category": "railways",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "459613b1dbbe7f80",
-      "title": "CEN -03/2024 -- JE , DMA , CMA and others POSTS Click to know Update",
-      "link": "https://rrbmumbai.gov.in/JE-July-2024.php",
-      "publishedAt": "2024-11-04T00:00:00Z",
-      "summary": "Page 1 of 2 GOVERNMENT OF INDIA MINISTRY OF RAILWAYS LRAILWAY RECRUITMENT BOARDS (RECRUITMENT TO VARIOUS POSTS IN VARIOUS LEVELS OF 7th CPC Matrix) NOTICE ON NORMALIZATION METHODOLOGY FOR COMPUTER BASED TEST(CBT) EXAMS {FOR ALL CENTRALIZED EMPLOYMENT NOTICES (CENs)} It is notified for all concerned that following normalization methodology for normalization of scores/marks shall be followed by RRBs…",
-      "pdfUrls": [
-        "https://rrbmumbai.gov.in/newpdf/NOTICE FOR NORMALIZATION METHODOLOGY FOR ALL CENs 04.11.2024 (1).pdf",
-        "https://rrbmumbai.gov.in/newpdf/Technician_FEB_2024/Exam Schedule Notice .pdf",
-        "https://rrbmumbai.gov.in/newpdf/Technician_FEB_2024/HIndi Notice for Exam Schedule.pdf",
-        "https://rrbmumbai.gov.in/newpdf/Technician_FEB_2024/HIindi version Tentative Exam Date notice.pdf",
-        "https://rrbmumbai.gov.in/newpdf/Intimation-for medical appeal CEN 03_2024 JE,DMS & CMA.pdf",
-        "https://rrbmumbai.gov.in/newpdf/JE SUPPLEMENTARY 25.05.2026.pdf"
       ],
       "sourceId": "rrb-mumbai",
       "sourceName": "Railway Recruitment Board (RRB) — Mumbai",

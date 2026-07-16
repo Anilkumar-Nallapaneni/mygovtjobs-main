@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-16T10:30:41.119Z",
+  "generatedAt": "2026-07-16T14:38:35.691Z",
   "count": 202,
   "items": [
     {
@@ -484,22 +484,6 @@
       "fetchMethod": "live-jobs-supplement"
     },
     {
-      "id": "6b423d3c130466a9",
-      "title": "MPPHSCL Recruitment 2026 Notification OUT, Apply Online for 34 Vacancies @mpphscl.in, Check Eligibility, Salary, Last Date",
-      "link": "https://iforms.mponline.gov.in/Profile/Login",
-      "publishedAt": "2026-06-24T00:00:00Z",
-      "summary": "User Manual for Profiling & Application Step 1: Candidate has to login through below Page (Registered candidate) https://iforms.mponline.gov.in/Profile/Login Candidate has to make registration through below Page by creating id & password (Only for new Registration). Screen will be looked as below: https://iforms.mponline.gov.in/Profile/Registration Below Screen will be appeared after successfully …",
-      "pdfUrls": [
-        "https://mpphscl.mp.gov.in/Files/PDF/6365f6af-1e5a-4e3d-ac91-8852f98b9a8f_0_Final%20Rule%20Book%20-%202026%20%20ToR.pdf"
-      ],
-      "sourceId": "structured-import",
-      "sourceName": "MPPHSCL",
-      "dept": "MPPHSCL",
-      "state": "All India",
-      "category": "state",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
       "id": "1d6608af4b383aa4",
       "title": "NIT Rourkela Junior Research Fellow Recruitment 2026 - Apply Online",
       "link": "https://www.nitrkl.ac.in/docs/Career/ProjectFelow/2026/03062026122716319.pdf",
@@ -511,6 +495,22 @@
       "sourceId": "structured-import",
       "sourceName": "NIT Rourkela",
       "dept": "NIT Rourkela",
+      "state": "All India",
+      "category": "state",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "6b423d3c130466a9",
+      "title": "MPPHSCL Recruitment 2026 Notification OUT, Apply Online for 34 Vacancies @mpphscl.in, Check Eligibility, Salary, Last Date",
+      "link": "https://iforms.mponline.gov.in/Profile/Login",
+      "publishedAt": "2026-06-24T00:00:00Z",
+      "summary": "User Manual for Profiling & Application Step 1: Candidate has to login through below Page (Registered candidate) https://iforms.mponline.gov.in/Profile/Login Candidate has to make registration through below Page by creating id & password (Only for new Registration). Screen will be looked as below: https://iforms.mponline.gov.in/Profile/Registration Below Screen will be appeared after successfully …",
+      "pdfUrls": [
+        "https://mpphscl.mp.gov.in/Files/PDF/6365f6af-1e5a-4e3d-ac91-8852f98b9a8f_0_Final%20Rule%20Book%20-%202026%20%20ToR.pdf"
+      ],
+      "sourceId": "structured-import",
+      "sourceName": "MPPHSCL",
+      "dept": "MPPHSCL",
       "state": "All India",
       "category": "state",
       "fetchMethod": "live-jobs-supplement"
@@ -994,6 +994,22 @@
       "fetchMethod": "live-jobs-supplement"
     },
     {
+      "id": "853c69cd104ab780",
+      "title": "1 Extension of Last Date for Submission of Applications for Engagement of Retired Indian Air Force Officer as Consultant",
+      "link": "https://mha.nic.in",
+      "publishedAt": "2020-12-09T00:00:00Z",
+      "summary": "-iits2ir/File No. IV-23012/01/2024-DGCD(Comn.) 51' of India, Tjb 4-micqzr/Ministry of Home Affairs, 31R-1:21,1-1 'NI, .11,1N, Tell Sa 41t: ,<E14, Directorate General Fire Service, Civil Defence & Home Guards arTTPT/Communication Section f 114-7, def-7 East Block-VIE, Level-VI! zi[1:41.11--ilt, 714 fkc.-1- 110066 R.K. Puram, New Delhi-110066 Dated: I9 May,2026 Circular Subject: Engagement of 01 Ret…",
+      "pdfUrls": [
+        "https://www.mha.gov.in/sites/default/files/AirVacancy_19062026.PDF"
+      ],
+      "sourceId": "ib",
+      "sourceName": "Mha",
+      "dept": "Mha",
+      "state": "All India",
+      "category": "defence",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
       "id": "fe0019fdb44c61a8",
       "title": "Advt No. 23 of 2023 - Treasury Officer & Assistant Treasury Officer (Group-B), Examination - 2022",
       "link": "http://hpsc.gov.in/en-us/",
@@ -1007,22 +1023,6 @@
       "dept": "HPSC — Recruitment",
       "state": "All India",
       "category": "state",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "853c69cd104ab780",
-      "title": "2 Extension of Last Date for Submission of Applications for Engagement of Retired Indian Air Force Officer as Consultant",
-      "link": "https://mha.nic.in",
-      "publishedAt": "2020-12-09T00:00:00Z",
-      "summary": "-iits2ir/File No. IV-23012/01/2024-DGCD(Comn.) 51' of India, Tjb 4-micqzr/Ministry of Home Affairs, 31R-1:21,1-1 'NI, .11,1N, Tell Sa 41t: ,<E14, Directorate General Fire Service, Civil Defence & Home Guards arTTPT/Communication Section f 114-7, def-7 East Block-VIE, Level-VI! zi[1:41.11--ilt, 714 fkc.-1- 110066 R.K. Puram, New Delhi-110066 Dated: I9 May,2026 Circular Subject: Engagement of 01 Ret…",
-      "pdfUrls": [
-        "https://www.mha.gov.in/sites/default/files/AirVacancy_19062026.PDF"
-      ],
-      "sourceId": "ib",
-      "sourceName": "Mha",
-      "dept": "Mha",
-      "state": "All India",
-      "category": "defence",
       "fetchMethod": "live-jobs-supplement"
     },
     {
