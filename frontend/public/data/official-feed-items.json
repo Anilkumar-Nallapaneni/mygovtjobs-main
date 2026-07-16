@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-16T03:52:51.212Z",
+  "generatedAt": "2026-07-16T06:46:38.500Z",
   "sourceReports": [
     {
       "id": "pib-press-reg3",
@@ -914,9 +914,26 @@
       "fetchMethod": "html-listing"
     },
     {
-      "id": "dd31719bd4f4002b",
+      "id": "1f570957787f6f33",
+      "title": "Aditya-L1 Mission: Announcement of Opportunity (AO) soliciting proposals for the third AO cycle observations",
+      "link": "https://www.isro.gov.in/AdityaL1_Mission_Announcement_of_opportunity.html",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "isro-careers",
+      "sourceName": "ISRO — Careers",
+      "dept": "Indian Space Research Organisation",
+      "state": "All India",
+      "category": "psu",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "125641c9153ddb89",
       "title": "Special YUVIKA Programme for Oman Students",
-      "link": "https://www.isro.gov.in/Special_YUVIKA%20_Programme_Oman.html",
+      "link": "https://www.isro.gov.in/Special_YUVIKA_Programme_Oman.html",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
@@ -1325,23 +1342,6 @@
       "id": "bd3293b28b530ead",
       "title": "ISRO’s Achievements during FY 2025-2026",
       "link": "https://www.isro.gov.in/ISRO_Achievements_FY_2025_2026.html",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "isro-careers",
-      "sourceName": "ISRO — Careers",
-      "dept": "Indian Space Research Organisation",
-      "state": "All India",
-      "category": "psu",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "a62123c7bdb5b60d",
-      "title": "ISRO conducts Second Integrated Air Drop Test (IADT-02) for Gaganyaan",
-      "link": "https://www.isro.gov.in/ISRO_conducts_Second_Integrated_Air_Drop_Test_for_Gaganyaan.html",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
@@ -2220,6 +2220,159 @@
       "fetchMethod": "html-listing"
     },
     {
+      "id": "7ebf9c63f70aaa86",
+      "title": "भारत सरकार GOVERNMENT OF INDIA",
+      "link": "http://india.gov.in/",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "uppsc-hall-tickets",
+      "sourceName": "UPPSC — Hall tickets",
+      "dept": "Uttar Pradesh PSC",
+      "state": "Uttar Pradesh",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "a9fcc98ed02335af",
+      "title": "Go to Home Page",
+      "link": "https://uppsc.up.nic.in/Default.aspx",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "uppsc-hall-tickets",
+      "sourceName": "UPPSC — Hall tickets",
+      "dept": "Uttar Pradesh PSC",
+      "state": "Uttar Pradesh",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "2519a1e6ab344c0e",
+      "title": "{{'Home_HM' | translate }}",
+      "link": "https://uppsc.up.nic.in/Home",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "uppsc-hall-tickets",
+      "sourceName": "UPPSC — Hall tickets",
+      "dept": "Uttar Pradesh PSC",
+      "state": "Uttar Pradesh",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "0f75dcf763081892",
+      "title": "{{'TNC_HM' | translate }}",
+      "link": "https://uppsc.up.nic.in/FooterPages/tnc.aspx",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "uppsc-hall-tickets",
+      "sourceName": "UPPSC — Hall tickets",
+      "dept": "Uttar Pradesh PSC",
+      "state": "Uttar Pradesh",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "a25f606bedc4cb45",
+      "title": "{{'HLP_HM' | translate }}",
+      "link": "https://uppsc.up.nic.in/FooterPages/hlp.aspx",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "uppsc-hall-tickets",
+      "sourceName": "UPPSC — Hall tickets",
+      "dept": "Uttar Pradesh PSC",
+      "state": "Uttar Pradesh",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "2aaa2e40dcd1090a",
+      "title": "{{'CP_HM' | translate }}",
+      "link": "https://uppsc.up.nic.in/FooterPages/CopyrightPolicy.aspx",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "uppsc-hall-tickets",
+      "sourceName": "UPPSC — Hall tickets",
+      "dept": "Uttar Pradesh PSC",
+      "state": "Uttar Pradesh",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "34570ff59c6c357c",
+      "title": "{{'SCA_HM' | translate }}",
+      "link": "https://uppsc.up.nic.in/FooterPages/ScreenAccess.aspx",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "uppsc-hall-tickets",
+      "sourceName": "UPPSC — Hall tickets",
+      "dept": "Uttar Pradesh PSC",
+      "state": "Uttar Pradesh",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "da6f0da546f1ccb3",
+      "title": "{{'DIS_HM' | translate }}",
+      "link": "https://uppsc.up.nic.in/FooterPages/Disclaimer.aspx",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "uppsc-hall-tickets",
+      "sourceName": "UPPSC — Hall tickets",
+      "dept": "Uttar Pradesh PSC",
+      "state": "Uttar Pradesh",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "3380a1e1786d6dc5",
+      "title": "{{'RTI_HM' | translate }}",
+      "link": "https://uppsc.up.nic.in/FooterPages/RTI.aspx",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "uppsc-hall-tickets",
+      "sourceName": "UPPSC — Hall tickets",
+      "dept": "Uttar Pradesh PSC",
+      "state": "Uttar Pradesh",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
       "id": "23542436dab53d3a",
       "title": "{{'ActiveExam_HM' | translate }}",
       "link": "https://uppsc.up.nic.in/FooterPages/Upcoming-Exams",
@@ -3073,159 +3226,6 @@
       "id": "ab9d718c33d82026",
       "title": "{{'SampleForm_HM' | translate }}",
       "link": "https://uppsc.up.nic.in/OTR_Section/Otr_SampleForm.aspx",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "uppsc-hall-tickets",
-      "sourceName": "UPPSC — Hall tickets",
-      "dept": "Uttar Pradesh PSC",
-      "state": "Uttar Pradesh",
-      "category": "state",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "99d9b0e8b8b71d8e",
-      "title": "{{'SimplifiedForm_HM' | translate }}",
-      "link": "https://uppsc.up.nic.in/OTR_Section/Otr_SimplifiedForm.aspx",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "uppsc-hall-tickets",
-      "sourceName": "UPPSC — Hall tickets",
-      "dept": "Uttar Pradesh PSC",
-      "state": "Uttar Pradesh",
-      "category": "state",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "99127beb81da4720",
-      "title": "{{'HelpDesk_Enquiry_HM' | translate }}",
-      "link": "https://uppsc.up.nic.in/PublicPages/Contus.aspx",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "uppsc-hall-tickets",
-      "sourceName": "UPPSC — Hall tickets",
-      "dept": "Uttar Pradesh PSC",
-      "state": "Uttar Pradesh",
-      "category": "state",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "48a1017e3e7a4591",
-      "title": "{{'WhatsNew_HM' | translate }}",
-      "link": "https://uppsc.up.nic.in/FooterPages/Latest-News",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "uppsc-hall-tickets",
-      "sourceName": "UPPSC — Hall tickets",
-      "dept": "Uttar Pradesh PSC",
-      "state": "Uttar Pradesh",
-      "category": "state",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "f67d12c126cd41e5",
-      "title": "NOTICE REGARDING ADVT.NO. D-3/E-1/2023, UTTAR PRADESH FORENSIC SCIENCE LABORATOR..",
-      "link": "https://uppsc.up.nic.in/Open_PDF_DB.aspx?I4PnQ0tBagmmrtVdJ7QQ3OHtwQgttuDL",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "uppsc-hall-tickets",
-      "sourceName": "UPPSC — Hall tickets",
-      "dept": "Uttar Pradesh PSC",
-      "state": "Uttar Pradesh",
-      "category": "state",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "6ba6c236519d80e0",
-      "title": "NOTICE REGARDING DOCUMENT VERIFICATION FOR ASSISTANT TEACHER (TRAINED GRADUATE ..",
-      "link": "https://uppsc.up.nic.in/Open_PDF_DB.aspx?I4PnQ0tBagmmrtVdJ7QQ3PHE7wT2dvNZ",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "uppsc-hall-tickets",
-      "sourceName": "UPPSC — Hall tickets",
-      "dept": "Uttar Pradesh PSC",
-      "state": "Uttar Pradesh",
-      "category": "state",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "2b2e7e531a568f21",
-      "title": "NOTICE REGARDING ONE TIME REGISTRATION (O.T.R.)",
-      "link": "https://uppsc.up.nic.in/Open_PDF_DB.aspx?I4PnQ0tBagkC/gT4ITeNgnKNE4iAYvos",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "uppsc-hall-tickets",
-      "sourceName": "UPPSC — Hall tickets",
-      "dept": "Uttar Pradesh PSC",
-      "state": "Uttar Pradesh",
-      "category": "state",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "3b4f42acccfc7ac4",
-      "title": "NOTICE REGARDING OF ADVT NO: D-6/E-1/2025, UTTAR PRADESH LEGISLATIVE DEPARTMENT ..",
-      "link": "https://uppsc.up.nic.in/Open_PDF_DB.aspx?I4PnQ0tBagkC/gT4ITeNgrXkVJ6dwkRn",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "uppsc-hall-tickets",
-      "sourceName": "UPPSC — Hall tickets",
-      "dept": "Uttar Pradesh PSC",
-      "state": "Uttar Pradesh",
-      "category": "state",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "25b5c3e7c37c823e",
-      "title": "NOTICE REGARDING ADVT. NO. A-1/E-1/2025, ASSISTANT CONSERVATOR OF FOREST (A.C.F...",
-      "link": "https://uppsc.up.nic.in/Open_PDF_DB.aspx?I4PnQ0tBagkC/gT4ITeNgnuzZX+7sNqJ",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "uppsc-hall-tickets",
-      "sourceName": "UPPSC — Hall tickets",
-      "dept": "Uttar Pradesh PSC",
-      "state": "Uttar Pradesh",
-      "category": "state",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "ec3f4047aa831cf8",
-      "title": "LIST OF SELECTED CANDIDATES IN ADVT. NO. A-7/E-1/2021, U.P. TECHNICAL EDUCATION ..",
-      "link": "https://uppsc.up.nic.in/Open_PDF_DB.aspx?I4PnQ0tBagkz0o52o77EYV3xGBfPBQae",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
