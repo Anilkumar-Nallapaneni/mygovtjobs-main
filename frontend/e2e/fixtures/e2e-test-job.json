@@ -1,10 +1,10 @@
 {
   "id": "e2e-test-job",
   "slug": "e2e-test-job",
-  "title": "E2E Test Recruitment",
-  "dept": "E2E Test Department",
-  "category": "state",
-  "state_codes": ["dl"],
+  "title": "E2E Medical Officer Recruitment",
+  "dept": "E2E Test Health Department",
+  "category": "health",
+  "state_codes": ["up"],
   "vacancies": 1,
   "qualification": "Graduate",
   "salary": "—",
@@ -14,7 +14,7 @@
   "status": "live",
   "published_at": "2026-07-11T00:00:00Z",
   "detail": {
-    "summary": "Deterministic E2E test job — not a real recruitment.",
+    "summary": "Deterministic E2E Medical Officer test job — not a real recruitment.",
     "content_sections": [
       {
         "heading": "Important Links",

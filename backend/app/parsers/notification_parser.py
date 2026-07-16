@@ -164,8 +164,24 @@ class NotificationParser:
         best_apply = pick_best_official_url(apply_candidates)
         if best_apply and not looks_like_notification_document(best_apply):
             apply_url = best_apply
+        elif apply_url and looks_like_notification_document(str(apply_url)):
+            apply_url = next(
+                (
+                    u
+                    for u in pdf_apply_urls
+                    if u and not looks_like_notification_document(str(u))
+                ),
+                None,
+            )
         elif pdf_apply_urls and not apply_url:
-            apply_url = pdf_apply_urls[0]
+            apply_url = next(
+                (
+                    u
+                    for u in pdf_apply_urls
+                    if u and not looks_like_notification_document(str(u))
+                ),
+                None,
+            )
 
         published_dt = row_published_at(raw)
         if pdf.get("content_sections"):
@@ -248,9 +264,19 @@ class NotificationParser:
             or text_fields.get("qualification")
         )
 
+        html_apply = None
+        if apply_url and not re.search(r"\.pdf(\?|/|$)", str(apply_url), re.I):
+            if not looks_like_notification_document(str(apply_url)):
+                html_apply = apply_url
+        if not html_apply:
+            for u in pdf_apply_urls:
+                if u and not looks_like_notification_document(str(u)):
+                    html_apply = u
+                    break
+
         return {
             "title": clean_job_title(title),
-            "apply_url": apply_url if apply_url and not re.search(r"\.pdf(\?|/|$)", apply_url, re.I) else (apply_url or primary_pdf),
+            "apply_url": html_apply,
             "pdf_urls": merged_pdfs,
             "dept": dept,
             "state": state,

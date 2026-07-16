@@ -44,7 +44,7 @@ function sendPageView(path: string, title?: string): void {
   })
 }
 
-function findGtagScript(): HTMLScriptElement | null {
+function findGtagScript(): HTMLElement | null {
   if (typeof document === 'undefined') return null
   return document.querySelector(`script[src*="gtag/js?id=${encodeURIComponent(GA_ID)}"]`)
 }

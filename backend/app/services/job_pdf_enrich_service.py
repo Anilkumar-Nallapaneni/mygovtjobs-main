@@ -11,6 +11,7 @@ from sqlalchemy.ext.asyncio import AsyncSession
 from app.models.job import Job
 from app.parsers.notification_parser import NotificationParser
 from app.parsers.pdf_enrich import merge_pdf_fields
+from app.parsers.pdf_sections import text_to_content_sections
 from app.scrapers.pdf_discover import ensure_pdf_urls
 from app.services.job_child_service import sync_job_children
 from app.services.job_persist_service import _parse_date
@@ -34,6 +35,41 @@ def job_row_for_pdf_prep(job: Job) -> dict[str, Any]:
 class PdfEnrichmentPrep:
     pdf_fields: dict[str, Any]
     norm: dict[str, Any]
+
+
+@dataclass
+class PdfEnrichmentResult:
+    changed: bool
+    full_detail: dict[str, Any] | None = None
+
+
+def _sections_from_summary(summary: str, *, pdf_url: str | None = None) -> list[dict[str, Any]]:
+    text = str(summary or "").strip()
+    if len(text) < 40:
+        return []
+    sections = text_to_content_sections(text, pdf_url=pdf_url)
+    if sections:
+        return sections
+    return [
+        {
+            "heading": "Notification",
+            "paragraphs": [text[:12_000]],
+            "tables": [],
+            "lists": [],
+            "links": [],
+        }
+    ]
+
+
+def _ensure_pdf_list(detail: dict[str, Any], url: str | None) -> None:
+    if not url:
+        return
+    pdfs = list(detail.get("pdf_urls") or detail.get("pdfUrls") or [])
+    if url not in pdfs:
+        pdfs.insert(0, url)
+    detail["pdf_urls"] = pdfs[:8]
+    if not detail.get("pdf_url"):
+        detail["pdf_url"] = url
 
 
 async def prepare_pdf_enrichment(row: dict[str, Any], parser: NotificationParser) -> PdfEnrichmentPrep:
@@ -68,7 +104,7 @@ async def apply_pdf_enrichment(
     prep: PdfEnrichmentPrep,
     *,
     upload_storage: bool = True,
-) -> bool:
+) -> PdfEnrichmentResult:
     """Persist prepared PDF fields — keep DB session open only for writes."""
     _ = parser
     pdf_fields = prep.pdf_fields
@@ -149,20 +185,50 @@ async def apply_pdf_enrichment(
                 job.apply_url = best_apply
                 changed = True
 
+    # Never keep a PDF (or notification document) as the apply destination.
+    if job.apply_url and looks_like_notification_document(str(job.apply_url)):
+        _ensure_pdf_list(detail, job.apply_url)
+        best_apply = pick_best_official_url(list(detail.get("apply_urls") or []))
+        job.apply_url = (
+            best_apply
+            if best_apply and not looks_like_notification_document(best_apply)
+            else None
+        )
+        changed = True
+
     if changed:
-        if detail.get("content_sections") and job.slug and upload_storage:
-            upload_job_detail_json(
-                str(job.slug),
-                job_to_detail_payload(job, detail),
-            )
-            detail = slim_detail_for_db(detail, status=str(job.status or "live"))
+        if not detail.get("content_sections"):
+            summary = str(detail.get("summary") or "").strip()
+            if len(summary) >= 40:
+                built = _sections_from_summary(
+                    summary,
+                    pdf_url=str(detail.get("pdf_url") or "") or None,
+                )
+                if built:
+                    detail["content_sections"] = built
+
+        full_detail = dict(detail)
+        if job.slug and (full_detail.get("content_sections") or full_detail.get("summary")):
+            payload = job_to_detail_payload(job, full_detail)
+            if upload_storage:
+                upload_job_detail_json(str(job.slug), payload)
+
+        detail = slim_detail_for_db(full_detail, status=str(job.status or "live"))
+        if full_detail.get("memorized_at"):
+            detail["memorized_at"] = full_detail["memorized_at"]
+        if full_detail.get("detail_source"):
+            detail["detail_source"] = full_detail["detail_source"]
         job.detail = sanitize_json_for_postgres(detail)
 
-    if detail.get("content_sections"):
-        if await sync_job_children(session, job):
-            changed = True
+        if full_detail.get("content_sections"):
+            # Temporarily restore sections for child sync, then keep slim on job.detail.
+            job.detail = sanitize_json_for_postgres(full_detail)
+            await sync_job_children(session, job)
+            job.detail = sanitize_json_for_postgres(detail)
 
-    return changed
+        return PdfEnrichmentResult(changed=True, full_detail=full_detail)
+
+    return PdfEnrichmentResult(changed=False, full_detail=None)
 
 
 async def enrich_job_from_pdfs(
@@ -174,7 +240,8 @@ async def enrich_job_from_pdfs(
 ) -> bool:
     """Fetch PDFs, merge fields into job.detail, sync child rows. Returns True if mutated."""
     prep = await prepare_pdf_enrichment(job_row_for_pdf_prep(job), parser)
-    return await apply_pdf_enrichment(session, job, parser, prep, upload_storage=upload_storage)
+    result = await apply_pdf_enrichment(session, job, parser, prep, upload_storage=upload_storage)
+    return result.changed
 
 
 def job_to_detail_payload(job: Job, detail: dict | None = None) -> dict:

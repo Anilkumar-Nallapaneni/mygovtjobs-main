@@ -13,10 +13,12 @@ This doc has the **full** install, deploy, and GitHub Actions details.
 | 1 | **IngestAgent** | `npm run daily:sync` | Scrape official portals → Supabase + `live-jobs.json` |
 | 2 | **PdfReaderAgent** | `npm run pdf:read:live` | Read PDFs → vacancies, dates, sections |
 | 3 | **JobDetailAgent** | `npm run job:details` | Build job detail UI pages |
+| 4 | **WebsiteHealthAgent** | `npm run health:website` / `health:website:full` | Audit code, GitHub, Supabase, Vercel, API, analytics, live site |
 | — | RSS feeds | `npm run fetch:official:feeds` | Official Wire & Notices |
 | — | All Websites | `npm run websites:discover` | Catalog gov job portals |
 
-**Combined:** `npm run pipeline:live:full` (all 3 agents)
+**Combined:** `npm run pipeline:live:full` (agents 1–3). Health is Agent 4 — run after pipeline or when the site has issues.  
+**Cursor skill:** `.cursor/skills/website-health-agent/`
 
 ---
 

@@ -2218,8 +2218,11 @@ a.navbar__nav-btn {
   animation: employment-news-marquee var(--employment-news-duration) linear infinite;
 }
 
-.employment-news-bar__viewport:hover .employment-news-bar__track--ready {
-  animation-play-state: paused;
+/* Only pause on real hover devices — sticky :hover on touch looked like a frozen ticker. */
+@media (hover: hover) and (pointer: fine) {
+  .employment-news-bar__viewport:hover .employment-news-bar__track--ready {
+    animation-play-state: paused;
+  }
 }
 
 @keyframes employment-news-marquee {
@@ -2237,12 +2240,18 @@ a.navbar__nav-btn {
   justify-content: center;
   gap: 0;
   flex-shrink: 0;
-  max-width: min(360px, 78vw);
-  padding: 0 18px;
+  max-width: min(300px, 72vw);
+  padding: 0 16px;
   height: 36px;
   border-right: 1px solid var(--ds-border);
   text-decoration: none;
   color: inherit;
+  outline: none;
+}
+
+.employment-news-bar__item:focus-visible {
+  outline: 2px solid var(--ds-saffron, #ff9933);
+  outline-offset: -2px;
 }
 
 .employment-news-bar__item:hover .employment-news-bar__headline {

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-14T21:36:11.598Z",
+  "generatedAt": "2026-07-16T06:46:38.500Z",
   "sourceReports": [
     {
       "id": "pib-press-reg3",
@@ -914,6 +914,40 @@
       "fetchMethod": "html-listing"
     },
     {
+      "id": "1f570957787f6f33",
+      "title": "Aditya-L1 Mission: Announcement of Opportunity (AO) soliciting proposals for the third AO cycle observations",
+      "link": "https://www.isro.gov.in/AdityaL1_Mission_Announcement_of_opportunity.html",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "isro-careers",
+      "sourceName": "ISRO — Careers",
+      "dept": "Indian Space Research Organisation",
+      "state": "All India",
+      "category": "psu",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "125641c9153ddb89",
+      "title": "Special YUVIKA Programme for Oman Students",
+      "link": "https://www.isro.gov.in/Special_YUVIKA_Programme_Oman.html",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "isro-careers",
+      "sourceName": "ISRO — Careers",
+      "dept": "Indian Space Research Organisation",
+      "state": "All India",
+      "category": "psu",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
       "id": "81c2262f84f1f0b8",
       "title": "Successful accomplishment of Major Qualification Tests Crew Module systems of Gaganyaan Mission",
       "link": "https://www.isro.gov.in/Tests_Crew_Module_systems_of_Gaganyaan_Mission.html",
@@ -1308,40 +1342,6 @@
       "id": "bd3293b28b530ead",
       "title": "ISRO’s Achievements during FY 2025-2026",
       "link": "https://www.isro.gov.in/ISRO_Achievements_FY_2025_2026.html",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "isro-careers",
-      "sourceName": "ISRO — Careers",
-      "dept": "Indian Space Research Organisation",
-      "state": "All India",
-      "category": "psu",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "a62123c7bdb5b60d",
-      "title": "ISRO conducts Second Integrated Air Drop Test (IADT-02) for Gaganyaan",
-      "link": "https://www.isro.gov.in/ISRO_conducts_Second_Integrated_Air_Drop_Test_for_Gaganyaan.html",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "isro-careers",
-      "sourceName": "ISRO — Careers",
-      "dept": "Indian Space Research Organisation",
-      "state": "All India",
-      "category": "psu",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "d2a1069277a781f2",
-      "title": "ISRO Conferred AIMA Special Award for Public Service Excellence - 2025",
-      "link": "https://www.isro.gov.in/ISRO_ConferredAIMA_SpecialAward.html",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],

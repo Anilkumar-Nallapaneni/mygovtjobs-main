@@ -4,6 +4,10 @@ import { useTranslation } from "react-i18next";
 
 import { fetchJobBySlug } from "@/lib/jobsApi";
 import { adaptLiveJob } from "@/utils/liveJobAdapter";
+import {
+  jobDetailHasRichContent,
+  mergeJobDetailPayloads,
+} from "@/utils/jobDetailHydration";
 import { applyJobSeo } from "@/utils/jobSeo";
 import { pickRelatedJobs } from "@/utils/relatedJobs";
 import { jobDetailPath } from "@/utils/jobRoutes";
@@ -14,15 +18,7 @@ import type { JobRecord } from "@/types/job";
 const JobDetail = lazy(() => import("@/components/jobs/JobDetail"));
 
 function hasFullDetail(job: JobRecord | null): boolean {
-  const detail = job?.detail;
-  if (!detail || typeof detail !== "object") return false;
-  const d = detail as Record<string, unknown>;
-  const sections = d.content_sections;
-  if (Array.isArray(sections) && sections.length > 0) return true;
-  const summary = String(d.summary || "").trim();
-  if (summary.length < 40) return false;
-  const source = String(d.detail_source || "").toLowerCase();
-  return source === "notification" || source === "pdf" || Boolean(d.memorized_at);
+  return jobDetailHasRichContent(job);
 }
 
 /** Prevent showing a fetched job when the URL slug has already changed. */
@@ -87,7 +83,11 @@ export default function JobDetailPage({ jobs, loading }: JobDetailPageProps) {
       .then((row) => {
         if (cancelled || !row) return;
         if (row.slug !== slug && row.id !== slug) return;
-        setResolvedJob(adaptLiveJob(row, 0));
+        const listPayload = listJob
+          ? ({ ...listJob, detail: listJob.detail ?? {} } as Record<string, unknown>)
+          : null;
+        const merged = mergeJobDetailPayloads(listPayload, row as Record<string, unknown>) ?? row;
+        setResolvedJob(adaptLiveJob(merged, 0));
       })
       .finally(() => {
         if (!cancelled) setDetailLoading(false);

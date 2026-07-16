@@ -10,6 +10,7 @@ Copy-paste commands for My Govt Jobs. Run everything from **repo root**.
 |------|----------|
 | **Browse jobs locally (no setup)** | `npm run dev` → http://localhost:2222 |
 | **Daily morning update** | See [Daily routine](#daily-routine) below |
+| **Find / fix website issues** | `npm run health:website` · full: `npm run health:website:full` |
 | **Full CI check (before PR)** | `npm run everything` |
 | **Frontend unit + E2E tests** | `npm run test` · `npm run test:e2e` |
 | **All 3 agents in one go** | `npm run pipeline:live:full` |
@@ -46,6 +47,7 @@ Use these names — older aliases were removed to reduce duplication.
 | **Production sync** | `npm run sync:production` | Daily ingest + export (CI) |
 | **RSS refresh** | `npm run sync:quick` | Feeds only (~4 h in CI) |
 | **Production verify** | `npm run verify:production` | Full stack validation |
+| **Website health (Agent 4)** | `npm run health:website` | Fast audit; `:code` for tests; `:full` for live probes |
 | **Daily ingest (local)** | `npm run daily:sync` | Agent 1 — scrape + export JSON |
 | **Full daily** | `npm run daily:sync:full` | Ingest + PDF backfill + enrich |
 | **Quick ingest test** | `npm run ingest:direct:quick` | ~20 sources |
@@ -76,10 +78,12 @@ Official portals  →  Agent 1  →  Agent 2  →  Agent 3  →  Website
 | **1** | **IngestAgent** | Scrape 100+ official gov.in sites → Supabase + `live-jobs.json` | `npm run daily:sync` |
 | **2** | **PdfReaderAgent** | Download notification PDFs → vacancies, dates, sections in DB | `npm run pdf:read:live` |
 | **3** | **JobDetailAgent** | Build job detail pages for the UI | `npm run job:details` |
+| **4** | **WebsiteHealthAgent** | Audit + guide fixes for code, Supabase, Vercel, GitHub, API, analytics, live site | `npm run health:website` / `health:website:full` |
 | — | **All Websites** | Catalog gov job portals across India (discovery only) | `npm run websites:discover` |
 | — | **RSS feeds** | Official Wire & Notices (separate from main ingest) | `npm run fetch:official:feeds` |
 
-**Code:** `backend/app/agents/ingest_agent.py`, `pdf_reader_agent.py`, `job_detail_agent.py`
+**Code:** `backend/app/agents/ingest_agent.py`, `pdf_reader_agent.py`, `job_detail_agent.py`  
+**Health skill:** `.cursor/skills/website-health-agent/` · report → `scripts/output/website-health-report.json`
 
 ---
 

@@ -8,9 +8,11 @@ import { buildEmploymentNewsItems, type EmploymentNewsItem } from "@/utils/emplo
 import { numberLocale } from "@/utils/formatLocale";
 import type { JobRecord } from "@/types/job";
 
-/** Readable crawl speed — ~32px/s feels like TV news tickers. */
+/** Comfortable crawl speed — slow enough to read, still continuous. */
 const MARQUEE_PX_PER_SEC = 32;
-const MIN_MARQUEE_HALF_CYCLE_SEC = 45;
+/** Cap half-cycle so a full loop stays under ~2.5 minutes even with many headlines. */
+const MAX_MARQUEE_HALF_CYCLE_SEC = 75;
+const MIN_MARQUEE_HALF_CYCLE_SEC = 24;
 
 type EmploymentNewsBarProps = {
   jobs?: JobRecord[];
@@ -49,6 +51,11 @@ function NewsScrollItem({ item }: { item: EmploymentNewsItem }) {
   return <span className="employment-news-bar__item">{content}</span>;
 }
 
+function newsContentKey(items: EmploymentNewsItem[]): string {
+  if (!items.length) return "0";
+  return `${items.length}:${items[0]?.id ?? ""}:${items[items.length - 1]?.id ?? ""}`;
+}
+
 export default function EmploymentNewsBar({
   jobs = [],
   liveCount = 0,
@@ -85,6 +92,8 @@ export default function EmploymentNewsBar({
     [jobs, feedItems]
   );
 
+  const itemsKey = useMemo(() => newsContentKey(newsItems), [newsItems]);
+
   const marqueeItems = useMemo(
     () => (newsItems.length > 1 ? [...newsItems, ...newsItems] : newsItems),
     [newsItems]
@@ -101,18 +110,24 @@ export default function EmploymentNewsBar({
     }
 
     let cancelled = false;
+    let raf1 = 0;
+    let raf2 = 0;
 
     const syncDuration = () => {
-      requestAnimationFrame(() => {
-        requestAnimationFrame(() => {
+      cancelAnimationFrame(raf1);
+      cancelAnimationFrame(raf2);
+      raf1 = requestAnimationFrame(() => {
+        raf2 = requestAnimationFrame(() => {
           if (cancelled) return;
           const halfWidth = el.scrollWidth / 2;
-          if (halfWidth <= 0) {
-            setMarqueeReady(false);
-            return;
-          }
-          const durationSec = Math.max(halfWidth / MARQUEE_PX_PER_SEC, MIN_MARQUEE_HALF_CYCLE_SEC);
+          if (halfWidth <= 0) return;
+          const natural = halfWidth / MARQUEE_PX_PER_SEC;
+          const durationSec = Math.min(
+            MAX_MARQUEE_HALF_CYCLE_SEC,
+            Math.max(natural, MIN_MARQUEE_HALF_CYCLE_SEC)
+          );
           el.style.setProperty("--employment-news-duration", `${durationSec}s`);
+          // Only turn animation on — never toggle off on resize/job refresh (that restarts at 0).
           setMarqueeReady(true);
         });
       });
@@ -124,11 +139,12 @@ export default function EmploymentNewsBar({
     window.addEventListener("resize", syncDuration);
     return () => {
       cancelled = true;
-      setMarqueeReady(false);
+      cancelAnimationFrame(raf1);
+      cancelAnimationFrame(raf2);
       observer?.disconnect();
       window.removeEventListener("resize", syncDuration);
     };
-  }, [marqueeItems, reducedMotion, newsItems.length]);
+  }, [itemsKey, reducedMotion, newsItems.length]);
 
   if (!newsItems.length && !feedLoading) return null;
 

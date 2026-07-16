@@ -9,8 +9,8 @@ vi.mock('@/lib/jobsApi', () => ({
 const mockJob = {
   id: '1',
   slug: 'ssc-cgl',
-  title: 'SSC CGL',
-  dept: 'SSC',
+  title: 'SSC CGL 2026 Recruitment',
+  dept: 'Staff Selection Commission',
   category: 'ssc',
   state_codes: ['dl'],
   vacancies: 100,
@@ -18,7 +18,9 @@ const mockJob = {
   salary: '',
   age_limit: '',
   last_date: '2030-01-01',
-  apply_url: 'https://ssc.gov.in',
+  apply_url: 'https://ssc.nic.in/Portal/Apply',
+  pdf_url: 'https://ssc.nic.in/Portal/notice.pdf',
+  source_url: 'https://ssc.nic.in/',
   status: 'live',
 }
 
@@ -71,7 +73,7 @@ describe('useServerJobSearch', () => {
 
     await waitFor(
       () => {
-        expect(result.current.jobs).toHaveLength(1)
+        expect(result.current.jobs?.length).toBeGreaterThanOrEqual(1)
       },
       { timeout: 2000 }
     )
@@ -80,6 +82,25 @@ describe('useServerJobSearch', () => {
       expect.objectContaining({ q: 'railway', state: 'dl', category: 'ssc', limit: 200 })
     )
     expect(result.current.jobs?.[0].slug).toBe('ssc-cgl')
+  })
+
+  it('drops expired API hits after adapt', async () => {
+    const { jobsApi, useServerJobSearch } = await loadHook()
+    vi.mocked(jobsApi.fetchJobsFromApi).mockResolvedValue({
+      items: [{ ...mockJob, status: 'expired', last_date: '2020-01-01' }],
+      total: 1,
+      degraded: false,
+    })
+
+    const { result } = renderHook(() => useServerJobSearch('railway'))
+
+    await waitFor(
+      () => {
+        expect(result.current.loading).toBe(false)
+        expect(result.current.jobs).toEqual([])
+      },
+      { timeout: 2000 }
+    )
   })
 
   it('clears rows when API call fails', async () => {

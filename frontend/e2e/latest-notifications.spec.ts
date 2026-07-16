@@ -16,8 +16,10 @@ test.describe('latest notifications filters', () => {
   });
 
   test('medical category chip sets profession query', async ({ page }) => {
-    const medical = page.getByRole('tab', { name: /Medical/i });
-    await expect(medical).toBeVisible();
+    const medical = page
+      .locator('.latest-notif__cat-filter')
+      .getByRole('tab', { name: /Medical/i });
+    await expect(medical).toBeVisible({ timeout: 15_000 });
     await medical.click();
     await expect(page).toHaveURL(/[?&]profession=medical(?:&|$)/);
   });

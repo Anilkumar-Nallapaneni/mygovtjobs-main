@@ -51,22 +51,22 @@ describe('filterDisplayJobs', () => {
     expect(filterDisplayJobs([{ ...officialJob, status: 'expired' }])).toHaveLength(0)
   })
 
-  it('keeps jobs within grace period after deadline', () => {
+  it('drops jobs with past last apply date immediately (no grace)', () => {
     vi.useFakeTimers()
     vi.setSystemTime(new Date('2026-06-03T12:00:00Z'))
     expect(
       filterDisplayJobs([{ ...officialJob, status: 'live', lastDate: '2026-05-25' }])
-    ).toHaveLength(1)
-    vi.useRealTimers()
-  })
-
-  it('drops jobs past last apply date', () => {
-    vi.useFakeTimers()
-    vi.setSystemTime(new Date('2026-06-03T12:00:00Z'))
+    ).toHaveLength(0)
     expect(
       filterDisplayJobs([{ ...officialJob, status: 'live', lastDate: '2026-01-01' }])
     ).toHaveLength(0)
     vi.useRealTimers()
+  })
+
+  it('drops status=expired even when last date is in the future', () => {
+    expect(
+      filterDisplayJobs([{ ...officialJob, status: 'expired', lastDate: '2099-01-01' }])
+    ).toHaveLength(0)
   })
 
   it('drops draft and pending rows', () => {

@@ -93,14 +93,19 @@ function trimRowForList(row: Record<string, unknown>) {
   return { ...row, detail: d }
 }
 
+type SupabasePageResult =
+  | { ok: true; rows: Array<Record<string, unknown>> }
+  | { ok: false; message: string }
+
 async function fetchSupabasePage(
   supabase: Awaited<ReturnType<typeof getSupabase>>,
   offset: number,
   rangeEnd: number
-) {
-  if (!supabase) return []
+): Promise<SupabasePageResult> {
+  if (!supabase) return { ok: true, rows: [] }
+  // `detail` is JSONB on jobs — select the column. Never use detail(…) (that is FK embed syntax).
   const select =
-    'id,slug,title,dept,category,state_codes,vacancies,qualification,salary,age_limit,last_date,apply_url,status,published_at,updated_at,detail(source,summary,pdf_urls,pdfUrls,published,post_name,dates,fee,selection,howApply,notification_url,source_url,link,apply_url)'
+    'id,slug,title,dept,category,state_codes,vacancies,qualification,salary,age_limit,last_date,apply_url,status,published_at,updated_at,detail'
 
   const query = supabase
     .from('jobs')
@@ -109,8 +114,9 @@ async function fetchSupabasePage(
     .order('published_at', { ascending: false })
     .range(offset, rangeEnd)
 
+  // supabase-js builders are thenables — await the request (with timeout), not the builder object.
   const { data, error } = await withTimeout(
-    Promise.resolve(query) as Promise<{
+    Promise.resolve(query) as unknown as Promise<{
       data: Record<string, unknown>[] | null
       error: { message: string } | null
     }>,
@@ -119,10 +125,12 @@ async function fetchSupabasePage(
   )
 
   if (error) {
-    console.warn('[liveJobs] Supabase:', error.message)
-    return []
+    return { ok: false, message: error.message }
   }
-  return (data || []).map((row) => trimRowForList(row as Record<string, unknown>))
+  return {
+    ok: true,
+    rows: (data || []).map((row) => trimRowForList(row as Record<string, unknown>)),
+  }
 }
 
 async function fetchJobsFromSupabase({
@@ -136,23 +144,19 @@ async function fetchJobsFromSupabase({
   if (!supabase) return []
 
   const endOffset = Math.min(MAX_LIVE_ROWS, startOffset + maxRows)
-  const pageStarts: number[] = []
-  for (let offset = startOffset; offset < endOffset; offset += SUPABASE_PAGE) {
-    pageStarts.push(offset)
-  }
-
-  const pages = await Promise.all(
-    pageStarts.map((offset) => {
-      const rangeEnd = Math.min(offset + SUPABASE_PAGE - 1, endOffset - 1)
-      return fetchSupabasePage(supabase, offset, rangeEnd)
-    })
-  )
-
   const all: Array<Record<string, unknown>> = []
-  for (const batch of pages) {
-    if (!batch.length) break
-    all.push(...batch)
-    if (batch.length < SUPABASE_PAGE) break
+
+  // Sequential pages so a schema/400 error fails once instead of flooding N parallel requests.
+  for (let offset = startOffset; offset < endOffset; offset += SUPABASE_PAGE) {
+    const rangeEnd = Math.min(offset + SUPABASE_PAGE - 1, endOffset - 1)
+    const page = await fetchSupabasePage(supabase, offset, rangeEnd)
+    if (page.ok === false) {
+      console.warn('[liveJobs] Supabase:', page.message)
+      break
+    }
+    if (!page.rows.length) break
+    all.push(...page.rows)
+    if (page.rows.length < SUPABASE_PAGE) break
   }
   return all
 }
@@ -379,9 +383,12 @@ export function needsSupabaseBackgroundRefresh(
 ): boolean {
   if (!isSupabaseConfigured()) return false
   if (jobsSource === 'static' || jobsSource === 'api') return false
-  const usedStatic = data.sources.includes('official-sites')
-  const usedSupabase = data.sources.includes('supabase')
-  return usedStatic || (usedSupabase && data.rawLength >= INITIAL_LIVE_ROWS)
+  // CDN/static first paint — hydrate from live DB once in the background.
+  if (data.sources.includes('official-sites')) return true
+  // Soft-capped supabase first page (explicit supabase mode when static missed).
+  // Exact INITIAL_LIVE_ROWS avoids a loop after a full refresh that already has more rows.
+  if (data.sources.includes('supabase') && data.rawLength === INITIAL_LIVE_ROWS) return true
+  return false
 }
 
 export async function refreshSupabaseCatalog(

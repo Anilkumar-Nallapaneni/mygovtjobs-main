@@ -15,6 +15,7 @@ Government job portal monorepo. Read this before editing code or running ingest.
 | Ingest | `scripts/` | — | **Official gov.in scrapers** (primary) |
 | PDF reader | `backend/app/agents/pdf_reader_agent.py` | — | Read & memorize official notification PDFs |
 | Job detail | `backend/app/agents/job_detail_agent.py` | — | Publish detail UI (PDF > notification > listing) |
+| Website health | `.cursor/skills/website-health-agent/` + `scripts/website-health-agent.mjs` | — | Audit/fix code, Supabase, Vercel, GitHub, API, analytics |
 | All Websites | `all websites/` | — | Discover official + unofficial govt job portals across India |
 
 ## Commands (repo root)
@@ -24,6 +25,9 @@ npm run dev              # frontend :2222
 npm run api:dev          # backend :8000
 npm run everything       # full CI-like check
 npm run verify           # quick stack smoke test
+npm run health:website   # Agent 4 — code/data/env audit (add :full for live site)
+npm run health:website:full # + verify:production + Vercel + live probes
+npm run export:live-jobs # DB → live-jobs.json (+ list/bootstrap via clean:live-jobs)
 npm run env:check        # frontend/backend Supabase ref alignment
 npm run db:migrate       # supabase_setup.sql + migrations 001–013
 npm run supabase:audit   # table row counts via REST

@@ -28,7 +28,7 @@ Last updated: June 2026. Tracks audit backlog vs repo state.
 |------|--------|-------|
 | Weak-state PSC scrapers | **Done** | DSSSB Delhi, Ladakh recruitment, Puducherry PSC in `officialSites.ts` — run `npm run registry:generate` |
 | `title_fingerprint` dedupe | **Done** | Migration `012`; set on ingest in `job_persist_service.py` |
-| Expired jobs auto-hide (30d grace) | **Done** | `shouldHideFromBrowse()` in `jobFilters.ts` |
+| Expired jobs auto-hide (no grace) | **Done** | `isJobExpired()` + `shouldHideFromBrowse()` in `jobFilters.ts`; search also uses `filterDisplayJobs` |
 | Coverage in CI | **Done** | `npm run test:coverage` in `ci.yml` |
 | Security headers | **Done** | Root `vercel.json` (HSTS, X-Frame-Options, CSP-adjacent) |
 | Ingest metrics on admin | **Done** | Stale count + success rate on `/api/admin/dashboard` |
