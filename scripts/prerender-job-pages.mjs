@@ -38,6 +38,27 @@ function jobDescription(job) {
   return [job.title, job.dept, job.qualification].filter(Boolean).join(" — ");
 }
 
+function parseIsoDate(value) {
+  const raw = String(value ?? "").trim();
+  if (!raw || raw === "—") return undefined;
+  const d = new Date(raw);
+  if (Number.isNaN(d.getTime())) return undefined;
+  return d.toISOString().slice(0, 10);
+}
+
+/** Google JobPosting requires datePosted — never omit it. */
+function resolveDatePosted(job) {
+  return (
+    parseIsoDate(job.published_at) ||
+    parseIsoDate(job.publishedDate) ||
+    parseIsoDate(job.updatedDate) ||
+    parseIsoDate(job.updated_at) ||
+    parseIsoDate(job.created_at) ||
+    parseIsoDate(job.createdAt) ||
+    new Date().toISOString().slice(0, 10)
+  );
+}
+
 function buildHtml(job) {
   const slug = job.slug || job.id;
   const title = escapeHtml(job.title || "Government recruitment");
@@ -50,14 +71,27 @@ function buildHtml(job) {
     "@type": "JobPosting",
     title: job.title,
     description: jobDescription(job),
+    datePosted: resolveDatePosted(job),
     hiringOrganization: {
       "@type": "Organization",
       name: job.dept || "Government of India recruitment",
     },
+    jobLocation: {
+      "@type": "Place",
+      address: {
+        "@type": "PostalAddress",
+        addressCountry: "IN",
+        addressRegion: String(job.state || "India"),
+      },
+    },
+    employmentType: "FULL_TIME",
+    industry: "Government",
     url: canonical,
   };
-  if (job.last_date) jsonLd.validThrough = String(job.last_date).slice(0, 10);
-  if (job.published_at) jsonLd.datePosted = String(job.published_at).slice(0, 10);
+  const lastDate = job.last_date || job.lastDate;
+  if (lastDate) jsonLd.validThrough = String(lastDate).slice(0, 10);
+  const dateModified = parseIsoDate(job.updatedDate ?? job.updated_at);
+  if (dateModified) jsonLd.dateModified = dateModified;
 
   return `<!DOCTYPE html>
 <html lang="en">

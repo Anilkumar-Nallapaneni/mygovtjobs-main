@@ -36,17 +36,31 @@ function parseIsoDate(value: unknown): string | undefined {
   return d.toISOString().slice(0, 10);
 }
 
+/** Google JobPosting requires datePosted — never omit it. */
+function resolveDatePosted(job: JobRecord): string {
+  return (
+    parseIsoDate(job.published_at) ||
+    parseIsoDate(job.publishedDate) ||
+    parseIsoDate(job.updatedDate) ||
+    parseIsoDate(job.updated_at) ||
+    parseIsoDate(job.created_at) ||
+    parseIsoDate(job.createdAt) ||
+    new Date().toISOString().slice(0, 10)
+  );
+}
+
 export function buildJobPostingJsonLd(job: JobRecord): Record<string, unknown> | null {
   if (!job.title) return null;
   const url = jobDetailUrl(job);
   const validThrough = parseIsoDate(job.lastDate ?? job.last_date);
-  const datePosted = parseIsoDate(job.published_at ?? job.publishedDate);
+  const datePosted = resolveDatePosted(job);
 
   const posting: Record<string, unknown> = {
     "@context": "https://schema.org",
     "@type": "JobPosting",
     title: job.title,
     description: jobDescription(job),
+    datePosted,
     hiringOrganization: {
       "@type": "Organization",
       name: String(job.dept || "Government of India recruitment"),
@@ -64,7 +78,6 @@ export function buildJobPostingJsonLd(job: JobRecord): Record<string, unknown> |
     url: url || undefined,
   };
 
-  if (datePosted) posting.datePosted = datePosted;
   const dateModified = parseIsoDate(job.updatedDate ?? job.updated_at);
   if (dateModified) posting.dateModified = dateModified;
   if (validThrough) posting.validThrough = validThrough;

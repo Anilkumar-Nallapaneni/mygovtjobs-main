@@ -22,4 +22,29 @@ describe("buildJobPostingJsonLd", () => {
     expect(jsonLd?.datePosted).toBe("2026-06-01");
     expect(jsonLd?.totalJobOpenings).toBe(7500);
   });
+
+  it("always includes datePosted when published_at is missing", () => {
+    const jsonLd = buildJobPostingJsonLd({
+      id: "2",
+      slug: "csir-csmcri-missing-published",
+      title: "CSIR CSMCRI Recruitment 2026",
+      dept: "CSIR",
+      state: "Gujarat",
+      updated_at: "2026-05-20T12:00:00Z",
+    });
+
+    expect(jsonLd?.datePosted).toBe("2026-05-20");
+  });
+
+  it("falls back to today when no date fields exist", () => {
+    const today = new Date().toISOString().slice(0, 10);
+    const jsonLd = buildJobPostingJsonLd({
+      id: "3",
+      slug: "no-dates",
+      title: "Recruitment Without Dates",
+      dept: "Government",
+    });
+
+    expect(jsonLd?.datePosted).toBe(today);
+  });
 });
