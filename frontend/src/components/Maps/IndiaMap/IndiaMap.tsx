@@ -378,8 +378,7 @@ export const IndiaMap: React.FC<IndiaMapProps> = ({
 
       {loadError && !svgContent && (
         <p style={{ padding: 24, textAlign: "center", color: "#94a3b8", fontSize: 13 }}>
-          Map could not load. Ensure map assets exist under <code>frontend/public/maps/states/</code>{" "}
-          and refresh the page.
+          Map could not load. Please refresh the page.
         </p>
       )}
 

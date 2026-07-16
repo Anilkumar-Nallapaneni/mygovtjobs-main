@@ -8,18 +8,19 @@ export type ContactPayload = {
   website?: string
 }
 
+/** Stable codes for UI — never expose HTTP bodies or env details to visitors. */
+export type ContactErrorCode = 'unavailable' | 'failed' | 'network'
+
 export type ContactResult =
   | { ok: true }
-  | { ok: false; error: string }
+  | { ok: false; error: ContactErrorCode }
 
 export async function submitContactForm(
   payload: ContactPayload
 ): Promise<ContactResult> {
   if (!API_BASE) {
-    return {
-      ok: false,
-      error: 'Contact form requires the API backend. Email contact@livegovtjobs.com directly.',
-    }
+    console.warn('[contactApi] API base not configured')
+    return { ok: false, error: 'unavailable' }
   }
 
   try {
@@ -29,18 +30,13 @@ export async function submitContactForm(
       body: JSON.stringify(payload),
     })
     if (!res.ok) {
-      let detail = `HTTP ${res.status}`
-      try {
-        const json = await res.json()
-        if (json?.detail) detail = String(json.detail)
-      } catch {
-        const text = await res.text().catch(() => '')
-        if (text) detail = text
-      }
-      return { ok: false, error: detail }
+      const text = await res.text().catch(() => '')
+      console.warn('[contactApi] submit failed', res.status, text.slice(0, 200))
+      return { ok: false, error: 'failed' }
     }
     return { ok: true }
   } catch (err) {
-    return { ok: false, error: err instanceof Error ? err.message : 'Network error' }
+    console.warn('[contactApi] network error', err)
+    return { ok: false, error: 'network' }
   }
 }

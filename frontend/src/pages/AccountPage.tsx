@@ -30,8 +30,10 @@ export default function AccountPage({ onFooterLink }: AccountPageProps) {
     const result = await signInWithEmail(email)
     if (result.ok) {
       setStatus(t('account.magicLinkSent', { defaultValue: 'Check your email for a sign-in link.' }))
+    } else if (result.error === 'email_required') {
+      setError(t('account.emailRequired', { defaultValue: 'Please enter a valid email address.' }))
     } else {
-      setError(result.error || t('account.signInFailed', { defaultValue: 'Sign-in failed' }))
+      setError(t('account.signInFailed', { defaultValue: 'Sign-in failed. Please try again.' }))
     }
   }
 
@@ -47,7 +49,7 @@ export default function AccountPage({ onFooterLink }: AccountPageProps) {
     if (result.ok) {
       setStatus(t('account.profileSaved', { defaultValue: 'Profile saved.' }))
     } else {
-      setError(result.error || t('account.saveFailed', { defaultValue: 'Could not save profile' }))
+      setError(t('account.saveFailed', { defaultValue: 'Could not save profile. Please try again.' }))
     }
   }
 
@@ -62,7 +64,12 @@ export default function AccountPage({ onFooterLink }: AccountPageProps) {
     return (
       <div className="static-page">
         <h1>{t('account.title', { defaultValue: 'Account' })}</h1>
-        <p>{t('account.notConfigured', { defaultValue: 'Sign-in requires Supabase configuration.' })}</p>
+        <p>
+          {t('account.notConfigured', {
+            defaultValue:
+              'Sign-in is temporarily unavailable. You can still browse jobs without an account.',
+          })}
+        </p>
       </div>
     )
   }

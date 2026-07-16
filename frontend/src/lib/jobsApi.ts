@@ -398,7 +398,8 @@ async function subscribeToAlertsViaSupabase(
   }
   const supabase = await getSupabase()
   if (!supabase) {
-    return { ok: false, error: 'Supabase not configured' }
+    console.warn('[jobsApi] alert subscribe unavailable — auth not configured')
+    return { ok: false, error: 'unavailable' }
   }
 
   const { data, error } = await supabase
@@ -415,7 +416,8 @@ async function subscribeToAlertsViaSupabase(
     .single()
 
   if (error) {
-    return { ok: false, error: error.message }
+    console.warn('[jobsApi] alert subscribe failed', error.message)
+    return { ok: false, error: 'failed' }
   }
   return { ok: true, id: String(data?.id ?? 'subscribed') }
 }
@@ -435,16 +437,17 @@ export async function subscribeToAlerts(
     })
     if (!res.ok) {
       const text = await res.text().catch(() => '')
-      const apiError = text || `HTTP ${res.status}`
+      console.warn('[jobsApi] alert API failed', res.status, text.slice(0, 200))
       const fallback = await subscribeToAlertsViaSupabase(payload)
       if (fallback.ok) return fallback
-      return { ok: false, error: apiError }
+      return { ok: false, error: 'failed' }
     }
     const json = await res.json()
     return { ok: true, id: String(json.id ?? 'subscribed') }
   } catch (err) {
+    console.warn('[jobsApi] alert network error', err)
     const fallback = await subscribeToAlertsViaSupabase(payload)
     if (fallback.ok) return fallback
-    return { ok: false, error: err instanceof Error ? err.message : 'Network error' }
+    return { ok: false, error: 'Network error' }
   }
 }

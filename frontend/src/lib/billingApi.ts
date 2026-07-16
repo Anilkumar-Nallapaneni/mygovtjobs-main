@@ -25,7 +25,10 @@ async function billingFetch<T>(
   accessToken: string,
   init?: RequestInit
 ): Promise<T> {
-  if (!API_BASE) throw new Error('VITE_API_URL is not set')
+  if (!API_BASE) {
+    console.warn('[billingApi] API base not configured')
+    throw new Error('UNAVAILABLE')
+  }
   const res = await fetch(`${API_BASE}${path}`, {
     ...init,
     headers: {
@@ -36,7 +39,8 @@ async function billingFetch<T>(
   })
   if (!res.ok) {
     const text = await res.text().catch(() => '')
-    throw new Error(text || `HTTP ${res.status}`)
+    console.warn('[billingApi] request failed', path, res.status, text.slice(0, 200))
+    throw new Error('FAILED')
   }
   return res.json() as Promise<T>
 }
@@ -86,7 +90,7 @@ export function loadRazorpayScript(): Promise<void> {
     script.src = 'https://checkout.razorpay.com/v1/checkout.js'
     script.async = true
     script.onload = () => resolve()
-    script.onerror = () => reject(new Error('Failed to load Razorpay checkout'))
+    script.onerror = () => reject(new Error('CHECKOUT_UNAVAILABLE'))
     document.head.appendChild(script)
   })
 }
@@ -101,7 +105,7 @@ export async function openPremiumCheckout(
   const order = await createPremiumOrder(accessToken)
 
   if (!window.Razorpay) {
-    onError('Payment checkout unavailable')
+    onError('CHECKOUT_UNAVAILABLE')
     return
   }
 
@@ -123,7 +127,8 @@ export async function openPremiumCheckout(
         await verifyPremiumPayment(accessToken, response)
         onSuccess()
       } catch (err) {
-        onError(err instanceof Error ? err.message : 'Payment verification failed')
+        console.warn('[billingApi] verify failed', err)
+        onError('VERIFY_FAILED')
       }
     },
   })

@@ -17,7 +17,7 @@ export const PRIVACY_PAGE = {
       paragraphs: [
         "Alert subscriptions: channel type, delivery address, and optional filters you choose.",
         "Technical logs: standard web server and analytics data (browser type, pages visited) to keep the service reliable.",
-        "Optional sign-in (Supabase Auth) stores a display name and favourite states in your profile. We do not require account registration to browse jobs.",
+        "Optional sign-in stores a display name and favourite states in your profile. We do not require account registration to browse jobs.",
       ],
     },
     {
@@ -102,14 +102,14 @@ export const ABOUT_PAGE = {
     {
       heading: "Why trust us",
       paragraphs: [
-        "Live Govt Jobs lists recruitment notifications scraped directly from official government portals (.gov.in, .gov, and verified employer career sites). We do not copy third-party aggregator sites.",
+        "Live Govt Jobs lists recruitment notifications collected directly from official government portals (.gov.in, .gov, and verified employer career sites). We do not copy third-party aggregator sites.",
         "Every job detail page links to official PDFs and apply URLs whenever they are published by the recruiting body.",
       ],
     },
     {
       heading: "How daily sync works",
       paragraphs: [
-        "Every morning (IST), our ingest pipeline scans 100+ official sources, validates titles and deadlines, and publishes live listings on the website.",
+        "Every morning (IST), our daily update process scans 100+ official sources, validates titles and deadlines, and publishes live listings on the website.",
         "The homepage shows when data was last synced. Job detail pages are enriched from official PDF notifications where available.",
         "The site interface is available in many Indian languages, but job notification text stays in its original language (usually English) as published by the recruiting body.",
       ],

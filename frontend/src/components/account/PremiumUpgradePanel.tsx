@@ -47,13 +47,23 @@ export default function PremiumUpgradePanel({
           setBusy(false)
         },
         (msg) => {
-          setError(msg)
+          console.warn('[PremiumUpgrade]', msg)
+          setError(
+            t('account.premiumError', {
+              defaultValue: 'Could not start checkout. Please try again later.',
+            })
+          )
           setBusy(false)
         }
       )
       setBusy(false)
     } catch (err) {
-      setError(err instanceof Error ? err.message : String(err))
+      console.warn('[PremiumUpgrade]', err)
+      setError(
+        t('account.premiumError', {
+          defaultValue: 'Could not start checkout. Please try again later.',
+        })
+      )
       setBusy(false)
     }
   }, [accessToken, userEmail, onUpgraded, t])

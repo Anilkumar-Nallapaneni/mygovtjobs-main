@@ -86,15 +86,21 @@ export function useAuth(): AuthState & {
 
   const signInWithEmail = useCallback(async (email: string) => {
     const supabase = await getSupabase()
-    if (!supabase) return { ok: false, error: 'Supabase not configured' }
+    if (!supabase) {
+      console.warn('[useAuth] sign-in unavailable — auth not configured')
+      return { ok: false as const, error: 'unavailable' }
+    }
     const trimmed = email.trim()
-    if (!trimmed) return { ok: false, error: 'Email required' }
+    if (!trimmed) return { ok: false as const, error: 'email_required' }
     const { error } = await supabase.auth.signInWithOtp({
       email: trimmed,
       options: { emailRedirectTo: `${window.location.origin}/account` },
     })
-    if (error) return { ok: false, error: error.message }
-    return { ok: true }
+    if (error) {
+      console.warn('[useAuth] signInWithOtp failed', error.message)
+      return { ok: false as const, error: 'failed' }
+    }
+    return { ok: true as const }
   }, [])
 
   const signOut = useCallback(async () => {
@@ -108,14 +114,17 @@ export function useAuth(): AuthState & {
     async (patch: Partial<Pick<UserProfile, 'display_name' | 'preferred_language' | 'favorite_state_codes'>>) => {
       const supabase = await getSupabase()
       const userId = session?.user?.id
-      if (!supabase || !userId) return { ok: false, error: 'Not signed in' }
+      if (!supabase || !userId) return { ok: false as const, error: 'not_signed_in' }
       const { error } = await supabase
         .from('profiles')
         .update({ ...patch, updated_at: new Date().toISOString() })
         .eq('id', userId)
-      if (error) return { ok: false, error: error.message }
+      if (error) {
+        console.warn('[useAuth] updateProfile failed', error.message)
+        return { ok: false as const, error: 'failed' }
+      }
       setProfile(await loadProfile(userId))
-      return { ok: true }
+      return { ok: true as const }
     },
     [loadProfile, session?.user?.id]
   )

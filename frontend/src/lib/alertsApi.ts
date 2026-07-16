@@ -57,11 +57,17 @@ export async function unsubscribeAlert(
   }
 
   const supabase = await getSupabase()
-  if (!supabase) return { ok: false, error: 'Not configured' }
+  if (!supabase) {
+    console.warn('[alertsApi] unsubscribe unavailable — auth not configured')
+    return { ok: false, error: 'unavailable' }
+  }
 
   const { error } = await supabase.from('alert_subscriptions').update({ is_active: false }).eq('id', row.id)
 
-  if (error) return { ok: false, error: error.message }
+  if (error) {
+    console.warn('[alertsApi] unsubscribe failed', error.message)
+    return { ok: false, error: 'failed' }
+  }
   return { ok: true }
 }
 

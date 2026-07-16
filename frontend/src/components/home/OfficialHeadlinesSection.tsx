@@ -102,9 +102,12 @@ export default function OfficialHeadlinesSection({
   const activeLabel = describeActiveFilters({ stateId, categoryId, topicKey, search });
 
   if (error && items.length === 0) {
+    if (import.meta.env.DEV) {
+      console.warn("[OfficialHeadlines] feed unavailable:", error);
+    }
+    // Never surface raw/technical errors to visitors — show portals only.
     return (
       <section id="official-headlines" className="official-headlines official-headlines--compact" aria-label="Official headlines">
-        <div className="official-headlines__muted">{t("headlines.feedError", { error })}</div>
         <OfficialPortalGrid sites={fallbackSites} t={t} />
       </section>
     );

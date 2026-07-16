@@ -88,7 +88,7 @@ describe('useAuth', () => {
 
     res = await result.current.signInWithEmail('')
     expect(res.ok).toBe(false)
-    expect(res.error).toMatch(/email/i)
+    expect(res.error).toBe('email_required')
   })
 
   it('signInWithEmail surfaces Supabase errors', async () => {
@@ -97,7 +97,7 @@ describe('useAuth', () => {
     await waitFor(() => expect(result.current.loading).toBe(false))
     const res = await result.current.signInWithEmail('user@test.com')
     expect(res.ok).toBe(false)
-    expect(res.error).toBe('Rate limited')
+    expect(res.error).toBe('failed')
   })
 
   it('signOut clears profile', async () => {

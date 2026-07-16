@@ -145,7 +145,7 @@ const T = {
     headlines: {
       title: "आधिकारिक सुर्खियाँ",
       wireTitle: "आधिकारिक समाचार और सूचनाएँ",
-      wireDesc: "आधिकारिक RSS फ़ीड से सुर्खियाँ (npm run fetch:official चलाएँ)।",
+      wireDesc: "आधिकारिक सरकारी RSS फ़ीड से सुर्खियाँ।",
       filteredBy: "फ़िल्टर",
       fromSources: "सत्यापित सरकारी RSS स्रोतों से",
       noMatches: "आपके फ़िल्टर से कोई सुर्खी मेल नहीं खाती।",
@@ -153,7 +153,7 @@ const T = {
       noPortals: "इस फ़िल्टर के लिए कोई पोर्टल नहीं। राज्य या श्रेणी हटाएँ।",
       clearTopic: "विषय हटाएँ",
       snapshot: "स्नैपशॉट:",
-      feedError: "आधिकारिक फ़ीड उपलब्ध नहीं ({{error}})। npm run fetch:official चलाएँ।",
+      feedError: "आधिकारिक सुर्खियाँ अस्थायी रूप से उपलब्ध नहीं हैं। नीचे पोर्टल देखें।",
       updated: "अपडेट {{time}}",
       pdf: "PDF",
     },

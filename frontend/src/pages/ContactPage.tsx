@@ -49,7 +49,13 @@ export default function ContactPage({ onFooterLink }: ContactPageProps) {
     })
     setLoading(false)
     if (result.ok === false) {
-      setError(result.error || t('contact.error'))
+      setError(
+        result.error === 'network'
+          ? t('contact.offlineError', {
+              defaultValue: 'Could not reach the server. Check your connection and try again.',
+            })
+          : t('contact.error')
+      )
       return
     }
     setStatus(t('contact.success'))

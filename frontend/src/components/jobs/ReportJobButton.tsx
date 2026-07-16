@@ -52,8 +52,9 @@ export default function ReportJobButton({ jobId, jobTitle }: ReportJobButtonProp
         }),
       })
       if (!res.ok) {
-        const text = await res.text()
-        throw new Error(text || `HTTP ${res.status}`)
+        const text = await res.text().catch(() => '')
+        console.warn('[jobReport] submit failed', res.status, text.slice(0, 200))
+        throw new Error('SUBMIT_FAILED')
       }
       setMessage(
         t('jobReport.success', {
@@ -63,11 +64,8 @@ export default function ReportJobButton({ jobId, jobTitle }: ReportJobButtonProp
       setOpen(false)
       setDescription('')
     } catch (err) {
-      setError(
-        err instanceof Error
-          ? err.message
-          : t('jobReport.error', { defaultValue: 'Could not submit report.' })
-      )
+      console.warn('[jobReport]', err)
+      setError(t('jobReport.error', { defaultValue: 'Could not submit report.' }))
     } finally {
       setBusy(false)
     }

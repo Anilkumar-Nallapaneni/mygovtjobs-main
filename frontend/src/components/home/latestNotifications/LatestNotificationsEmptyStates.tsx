@@ -15,9 +15,8 @@ export function LatestNotificationsEmptyState({ t }: { t: TranslateFn }) {
     <div className="latest-notif">
       <p className="latest-notif__status">
         {t('latestNotif.empty', {
-          defaultValue: 'No official listings yet. Run ingest to pull jobs from .gov.in / .gov portals only.',
-        })}{' '}
-        <code className="latest-notif__code">npm run ingest:direct</code>
+          defaultValue: 'No official listings available right now. Please check back soon.',
+        })}
       </p>
     </div>
   )

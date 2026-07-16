@@ -29,7 +29,7 @@ export default function AccountAlertsPanel({ userId }: AccountAlertsPanelProps) 
     if (result.ok) {
       setRows((prev) => prev.filter((r) => r.id !== row.id))
     } else {
-      setError(result.error || t('account.alertsUnsubscribeFailed', { defaultValue: 'Could not unsubscribe' }))
+      setError(t('account.alertsUnsubscribeFailed', { defaultValue: 'Could not unsubscribe. Please try again.' }))
     }
   }
 

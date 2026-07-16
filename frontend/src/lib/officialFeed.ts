@@ -44,7 +44,7 @@ export type OfficialFeedSnapshot = {
 }
 
 let CACHE: OfficialFeedSnapshot | null = null;
-let INFLIGHT = null;
+let INFLIGHT: Promise<OfficialFeedSnapshot> | null = null;
 let CACHE_AT = 0;
 
 const DEFAULT_MAX_AGE_MS = 15 * 60 * 1000;
@@ -69,7 +69,21 @@ export async function loadOfficialFeed({ cache = "no-cache", maxAgeMs = DEFAULT_
           cache: cache as RequestCache,
         });
         if (!res.ok) throw new Error(`HTTP ${res.status}`);
-        const json = await res.json();
+        const contentType = (res.headers.get("content-type") || "").toLowerCase();
+        if (contentType.includes("text/html")) {
+          throw new Error("Feed snapshot missing");
+        }
+        const text = await res.text();
+        const trimmed = text.trim();
+        if (!trimmed || trimmed.startsWith("<")) {
+          throw new Error("Feed snapshot missing");
+        }
+        let json: OfficialFeedSnapshot;
+        try {
+          json = JSON.parse(trimmed) as OfficialFeedSnapshot;
+        } catch {
+          throw new Error("Feed snapshot invalid");
+        }
         CACHE = json;
         CACHE_AT = Date.now();
         return json;
