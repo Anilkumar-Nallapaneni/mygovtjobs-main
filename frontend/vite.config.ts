@@ -43,6 +43,32 @@ function buildStampPlugin(stamp: string): Plugin {
   }
 }
 
+/** Make built CSS non-render-blocking — static shell already has critical styles. */
+function deferCssPlugin(): Plugin {
+  return {
+    name: 'defer-css',
+    enforce: 'post',
+    transformIndexHtml(html) {
+      return html.replace(
+        /<link([^>]*rel="stylesheet"[^>]*)>/g,
+        (_match, attrs: string) => {
+          if (attrs.includes('data-critical') || attrs.includes('media=')) return `<link${attrs}>`
+          const hrefMatch = attrs.match(/href="([^"]+)"/)
+          const href = hrefMatch?.[1] ?? ''
+          return [
+            `<link${attrs} media="print" onload="this.media='all'" />`,
+            href
+              ? `<noscript><link rel="stylesheet" href="${href}" /></noscript>`
+              : '',
+          ]
+            .filter(Boolean)
+            .join('\n    ')
+        }
+      )
+    },
+  }
+}
+
 /** Inject static JSON prefetch when jobs can load from live-jobs.json (all modes except api-only). */
 function perfIndexHtmlPlugin(
   jobsSourceRaw: string,
@@ -103,6 +129,7 @@ export default defineConfig(({ mode }) => {
       perfIndexHtmlPlugin(jobsSource, buildStamp, jobsFetchCache),
       googleSiteVerificationPlugin(googleVerify),
       gaMeasurementPlugin(gaMeasurementId),
+      deferCssPlugin(),
       VitePWA({
         devOptions: { enabled: false },
         registerType: 'autoUpdate',
@@ -183,17 +210,20 @@ export default defineConfig(({ mode }) => {
     },
     build: {
       emptyOutDir: true,
-      // Keep heavy route/map chunks off the home modulepreload list (LCP/TBT).
+      // Keep vendor CSS/JS that is not needed for first paint off the preload list.
       modulePreload: {
         resolveDependencies(filename, deps) {
-          return deps.filter(
-            (dep) =>
-              !/(?:^|\/)(?:pages|home-discovery|map|page-admin)-[^/]+\.js$/.test(dep) &&
-              !dep.includes('/pages-') &&
-              !dep.includes('/home-discovery-') &&
-              !dep.includes('/map-') &&
-              !dep.includes('/page-admin-')
-          )
+          return deps.filter((dep) => {
+            if (dep.includes('/i18n-vendor-')) return false
+            if (dep.includes('/query-vendor-')) return false
+            if (dep.includes('/page-admin-')) return false
+            if (dep.includes('/pages-') || dep.includes('/home-discovery-') || dep.includes('/map-')) {
+              return false
+            }
+            return !/(?:^|\/)(?:pages|home-discovery|map|page-admin|i18n-vendor|query-vendor)-[^/]+\.js$/.test(
+              dep
+            )
+          })
         },
       },
       rollupOptions: {

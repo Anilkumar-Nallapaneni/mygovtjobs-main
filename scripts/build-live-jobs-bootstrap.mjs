@@ -10,7 +10,7 @@ import { fileURLToPath } from 'url'
 const root = join(dirname(fileURLToPath(import.meta.url)), '..')
 const listPath = join(root, 'frontend/public/data/live-jobs-list.json')
 const bootstrapPath = join(root, 'frontend/public/data/live-jobs-bootstrap.json')
-const BOOTSTRAP_ROWS = Number(process.env.LIVE_JOBS_BOOTSTRAP_ROWS || 400)
+const BOOTSTRAP_ROWS = Number(process.env.LIVE_JOBS_BOOTSTRAP_ROWS || 80)
 
 /** Minimal fields for home/browse first paint — no detail blob. */
 const BOOTSTRAP_JOB_KEYS = new Set([

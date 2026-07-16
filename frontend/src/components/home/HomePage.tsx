@@ -24,6 +24,8 @@ import { RESULTS_TOPICS_INDEX_PATH } from "@/utils/browseRoutes";
 import type { HomePageProps } from "@/types/homePage";
 
 import type { HeadlinesViewMode } from "@/lib/officialFeed";
+import "@/styles/home.css";
+import "@/styles/polish.css";
 import "@/styles/animations.css";
 
 const OfficialHeadlinesSection = lazy(() => import("@/components/home/OfficialHeadlinesSection"));

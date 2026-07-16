@@ -14,7 +14,7 @@ const OFFICIAL_JOB_HINT_RE =
 export const MAX_LIVE_ROWS = 8000
 
 /** First paint: process/fetch this many rows, then fill the catalog in the background. */
-export const INITIAL_LIVE_ROWS = 400
+export const INITIAL_LIVE_ROWS = 80
 
 export type CatalogStats = {
   totalNotices: number

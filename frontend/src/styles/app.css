@@ -1,9 +1,4 @@
-/* Live Govt Jobs — domain stylesheets (split for maintainability) */
+/* Critical path only — home/jobs/polish/mobile load with their chunks */
 @import './tokens.css';
 @import './global.css';
 @import './layout.css';
-@import './home.css';
-@import './jobs.css';
-/* map.css + animations.css load with lazy map/home chunks (see IndiaMap / HomePage) */
-@import './polish.css';
-@import './mobile-premium.css';

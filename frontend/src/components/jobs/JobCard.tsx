@@ -13,6 +13,7 @@ import { resolveJobApplyHref, resolveTrustedPdfHref } from "@/utils/jobDetailLin
 import { dateTimeLocale, numberLocale } from "@/utils/formatLocale";
 import { resolvePdfUrl } from "@/utils/resolvePdfUrl";
 import { extractPostName } from "@/utils/extractPostName";
+import "@/styles/jobs.css";
 
 const DAY_MS = 1000 * 60 * 60 * 24;
 

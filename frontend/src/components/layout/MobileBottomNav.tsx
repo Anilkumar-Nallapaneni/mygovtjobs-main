@@ -10,6 +10,7 @@ import {
 } from "@/components/layout/BottomNavIcons";
 import { LATEST_NOTIFICATIONS_PATH, EXPLORE_HUB_PATH } from "@/utils/browseRoutes";
 import { trackNavClick } from "@/lib/analytics";
+import "@/styles/mobile-premium.css";
 
 const TABS = [
   {
