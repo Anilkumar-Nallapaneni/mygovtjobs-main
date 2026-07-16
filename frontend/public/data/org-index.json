@@ -6,16 +6,16 @@
     "vacancies": 2570
   },
   {
+    "dept": "Union Public Service Commission (UPSC)",
+    "slug": "union-public-service-commission-upsc",
+    "count": 66,
+    "vacancies": 395
+  },
+  {
     "dept": "Nuclear Power Corporation of India (NPCIL)",
     "slug": "nuclear-power-corporation-of-india-npcil",
     "count": 65,
     "vacancies": 0
-  },
-  {
-    "dept": "Union Public Service Commission (UPSC)",
-    "slug": "union-public-service-commission-upsc",
-    "count": 65,
-    "vacancies": 394
   },
   {
     "dept": "Madhya Pradesh PSC (MPPSC)",
@@ -48,12 +48,6 @@
     "vacancies": 0
   },
   {
-    "dept": "Mppolice",
-    "slug": "mppolice",
-    "count": 45,
-    "vacancies": 3
-  },
-  {
     "dept": "Press Information Bureau (PIB)",
     "slug": "press-information-bureau-pib",
     "count": 45,
@@ -64,6 +58,12 @@
     "slug": "indo-tibetan-border-police-itbp",
     "count": 44,
     "vacancies": 1
+  },
+  {
+    "dept": "Mppolice",
+    "slug": "mppolice",
+    "count": 44,
+    "vacancies": 3
   },
   {
     "dept": "Sainik School Jhansi",
@@ -228,6 +228,12 @@
     "vacancies": 63
   },
   {
+    "dept": "Sainikschoolgoalpara Org",
+    "slug": "sainikschoolgoalpara-org",
+    "count": 23,
+    "vacancies": 3894
+  },
+  {
     "dept": "Canarabank Com",
     "slug": "canarabank-com",
     "count": 22,
@@ -328,12 +334,6 @@
     "slug": "indian-navy-notifications",
     "count": 14,
     "vacancies": 271
-  },
-  {
-    "dept": "Sainikschoolgoalpara Org",
-    "slug": "sainikschoolgoalpara-org",
-    "count": 14,
-    "vacancies": 1951
   },
   {
     "dept": "Wii",
