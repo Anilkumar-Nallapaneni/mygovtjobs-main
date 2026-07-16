@@ -16,7 +16,7 @@
     "i18n:audit": "node scripts/audit-locale-flats.mjs",
     "i18n:sync": "npm run i18n:generate",
     "clean": "node scripts/clean-dist.mjs",
-    "build": "npm run clean && npx tsc -p tsconfig.build.json && node ../scripts/build-sitemap.mjs && node ../scripts/build-live-jobs-list.mjs && node ../scripts/build-live-jobs-bootstrap.mjs && node ../scripts/verify-live-jobs-snapshot.mjs --strict && vite build && node ../scripts/prerender-job-pages.mjs",
+    "build": "npm run clean && npx tsc -p tsconfig.build.json && node ../scripts/build-sitemap.mjs && node ../scripts/build-live-jobs-list.mjs && node ../scripts/build-live-jobs-bootstrap.mjs && node ../scripts/verify-live-jobs-snapshot.mjs --strict && vite build && node ../scripts/prerender-home-shell.mjs && node ../scripts/prerender-job-pages.mjs",
     "build:e2e": "node scripts/build-e2e.mjs",
     "serve": "vite preview",
     "type-check": "tsc --noEmit",

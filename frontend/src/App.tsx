@@ -20,6 +20,7 @@ import type { JobRecord } from "@/types/job";
 import { jobDetailPath } from "@/utils/jobRoutes";
 import { HOME_SHELL_ORG_COUNT } from "@/data/homeShellStats";
 import { applyBrowseSeo } from "@/utils/browseSeo";
+import { markAppReady } from "@/lib/appReady";
 
 const HomePage = lazy(() => import("@/components/home/HomePage"));
 const EmploymentNewsBar = lazy(() => import("@/components/layout/EmploymentNewsBar"));
@@ -57,6 +58,14 @@ function AppShell() {
   const location = useLocation();
   const { colorMode, onColorModeChange } = useColorMode();
   useStandaloneApp();
+
+  useEffect(() => {
+    // Reveal React UI after first commit; LCP shell stays until then.
+    const id = requestAnimationFrame(() => {
+      markAppReady();
+    });
+    return () => cancelAnimationFrame(id);
+  }, []);
 
   useEffect(() => {
     if (browse.isJobDetailRoute) return undefined;
@@ -157,10 +166,7 @@ function AppShell() {
       </Suspense>
       {jobsError && (
         <div className="jobs-load-error-banner" role="alert">
-          <p className="jobs-load-error-banner__text">
-            {t("jobsStatus.loadError")}
-            <span className="jobs-load-error-banner__detail">{jobsError}</span>
-          </p>
+          <p className="jobs-load-error-banner__text">{t("jobsStatus.loadError")}</p>
           <button type="button" className="jobs-load-error-banner__retry" onClick={refreshJobs}>
             {t("jobsStatus.retry")}
           </button>

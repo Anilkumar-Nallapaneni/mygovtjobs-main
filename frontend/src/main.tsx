@@ -17,6 +17,7 @@ import { resolveJobsSourceMode } from '@/utils/liveJobsPipeline'
 import { checkDeployVersionChanged, clearServiceWorkerDataCaches } from '@/lib/dataCacheBust'
 import { applyColorMode } from './theme/designSystem'
 import { initSentry } from '@/lib/sentry'
+import { markAppReady } from '@/lib/appReady'
 import '@fontsource/sora/400.css'
 import './styles/app.css'
 
@@ -145,7 +146,10 @@ function mountApp(): void {
 
 // Tests / Vitest need sync mount; production delays hydrate for LCP.
 if (import.meta.env.VITEST) {
+  markAppReady()
   mountApp()
 } else {
   scheduleAfterPaint(mountApp)
+  // Fallback if App mount fails — never leave users on a permanent shell.
+  window.setTimeout(markAppReady, 5_000)
 }

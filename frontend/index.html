@@ -26,172 +26,224 @@
     <meta name="twitter:title" content="Live Govt Jobs — Government Job Alerts" />
     <meta name="twitter:description" content="Live government job notifications from verified .gov.in sources across India." />
     <title>Live Govt Jobs — Government Jobs | Results | Admit Cards</title>
+    <style>
+      /* LCP island shell — outside #root so React hydrate cannot wipe first paint */
+      .static-app-shell {
+        min-height: 100vh;
+        background: #f4f6fa;
+        font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+        color: #0f172a;
+      }
+      .static-app-shell__news {
+        max-width: min(1800px, calc(100vw - 24px));
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+      .static-app-shell__news-inner {
+        display: flex;
+        align-items: center;
+        min-height: 36px;
+        background: color-mix(in srgb, #03060d 92%, #22c55e 6%);
+        border-bottom: 1px solid #dde3ed;
+        overflow: hidden;
+      }
+      .static-app-shell__news-badge {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        height: 36px;
+        padding: 0 12px;
+        background: #15803d;
+        color: #fff;
+        font-size: 10.5px;
+        font-weight: 700;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        white-space: nowrap;
+      }
+      .static-app-shell__news-dot {
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: #fff;
+      }
+      .static-app-shell__navbar {
+        display: flex;
+        align-items: center;
+        height: 66px;
+        padding: 0 14px;
+        border-bottom: 1px solid #dde3ed;
+        background: rgba(255, 255, 255, 0.96);
+      }
+      .static-app-shell__logo {
+        display: block;
+        height: 58px;
+        width: min(155px, 34vw);
+        max-width: 100%;
+        aspect-ratio: 480 / 180;
+        object-fit: contain;
+        object-position: left center;
+      }
+      .static-app-shell__main {
+        max-width: min(1800px, calc(100vw - 24px));
+        margin: 0 auto;
+        padding: 0 20px 28px;
+      }
+      .static-app-shell__tagline {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        padding: 8px 0 14px;
+        margin-bottom: 16px;
+      }
+      .static-app-shell__tagline-rule {
+        width: 28px;
+        height: 2px;
+        background: linear-gradient(90deg, #e85d00, #f59e0b);
+      }
+      .static-app-shell__tagline-text {
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 3px;
+        color: #e85d00;
+      }
+      .static-app-shell__stats {
+        margin: 0 auto 14px;
+        max-width: min(720px, calc(100% - 24px));
+        padding: 8px 14px;
+        text-align: center;
+        border: 1px solid #b8bac4;
+        border-radius: 12px;
+        background: #fff;
+        font-size: 10.5px;
+        font-weight: 600;
+        line-height: 1.35;
+      }
+      .static-app-shell__jobs-title {
+        margin: 0 0 6px;
+        font-size: 1.15rem;
+        font-weight: 700;
+      }
+      .static-app-shell__jobs-meta {
+        margin: 0 0 12px;
+        font-size: 0.85rem;
+        color: #5e6068;
+      }
+      .static-app-shell__cards {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 14px;
+      }
+      .static-app-shell__card {
+        border: 1px solid #b8bac4;
+        border-radius: 14px;
+        min-height: 168px;
+        background: linear-gradient(90deg, #f3f4f7 0%, #e2e3e9 50%, #f3f4f7 100%);
+        background-size: 200% 100%;
+        animation: static-shell-shimmer 1.35s ease-in-out infinite;
+      }
+      .static-app-shell__job {
+        border: 1px solid #b8bac4;
+        border-radius: 14px;
+        padding: 16px 18px;
+        background: #fff;
+        min-height: 120px;
+      }
+      .static-app-shell__job-title {
+        margin: 0 0 8px;
+        font-size: 1rem;
+        font-weight: 700;
+        line-height: 1.35;
+        color: #0f172a;
+      }
+      .static-app-shell__job-dept {
+        margin: 0 0 6px;
+        font-size: 0.85rem;
+        color: #334155;
+      }
+      .static-app-shell__job-meta {
+        margin: 0;
+        font-size: 0.8rem;
+        color: #64748b;
+      }
+      @keyframes static-shell-shimmer {
+        0% { background-position: 200% 0; }
+        100% { background-position: -200% 0; }
+      }
+      @media (min-width: 641px) {
+        .static-app-shell__cards { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      }
+      @media (min-width: 769px) {
+        .static-app-shell__stats { display: none; }
+      }
+      /* Islands: hide React root until ready; keep LCP shell visible */
+      #root {
+        min-height: 0;
+      }
+      body:not(.app-ready) #root {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+      }
+      body.app-ready #lcp-shell {
+        display: none !important;
+      }
+      body.app-ready #root {
+        position: static;
+        width: auto;
+        height: auto;
+        margin: 0;
+        clip: auto;
+        overflow: visible;
+        white-space: normal;
+        min-height: 100vh;
+      }
+    </style>
   </head>
   <body>
-    <div id="root">
-      <style>
-        /* Static shell — aligned with HomePageShell + EmploymentNewsBarShell (CLS) */
-        .static-app-shell {
-          min-height: 100vh;
-          background: #f4f6fa;
-          font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
-          color: #0f172a;
-        }
-        .static-app-shell__news {
-          max-width: min(1800px, calc(100vw - 24px));
-          margin: 0 auto;
-          padding: 0 20px;
-        }
-        .static-app-shell__news-inner {
-          display: flex;
-          align-items: center;
-          min-height: 36px;
-          background: color-mix(in srgb, #03060d 92%, #22c55e 6%);
-          border-bottom: 1px solid #dde3ed;
-          overflow: hidden;
-        }
-        .static-app-shell__news-badge {
-          display: flex;
-          align-items: center;
-          gap: 6px;
-          height: 36px;
-          padding: 0 12px;
-          background: #15803d;
-          color: #fff;
-          font-size: 10.5px;
-          font-weight: 700;
-          letter-spacing: 0.04em;
-          text-transform: uppercase;
-          white-space: nowrap;
-        }
-        .static-app-shell__news-dot {
-          width: 6px;
-          height: 6px;
-          border-radius: 50%;
-          background: #fff;
-        }
-        .static-app-shell__navbar {
-          display: flex;
-          align-items: center;
-          height: 66px;
-          padding: 0 14px;
-          border-bottom: 1px solid #dde3ed;
-          background: rgba(255, 255, 255, 0.96);
-        }
-        .static-app-shell__logo {
-          display: block;
-          height: 58px;
-          width: min(155px, 34vw);
-          max-width: 100%;
-          aspect-ratio: 480 / 180;
-          object-fit: contain;
-          object-position: left center;
-        }
-        .static-app-shell__main {
-          max-width: min(1800px, calc(100vw - 24px));
-          margin: 0 auto;
-          padding: 0 20px 28px;
-        }
-        .static-app-shell__tagline {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          gap: 10px;
-          padding: 8px 0 14px;
-          margin-bottom: 16px;
-        }
-        .static-app-shell__tagline-rule {
-          width: 28px;
-          height: 2px;
-          background: linear-gradient(90deg, #e85d00, #f59e0b);
-        }
-        .static-app-shell__tagline-text {
-          font-size: 11px;
-          font-weight: 700;
-          letter-spacing: 3px;
-          color: #e85d00;
-        }
-        .static-app-shell__stats {
-          margin: 0 auto 14px;
-          max-width: min(720px, calc(100% - 24px));
-          padding: 8px 14px;
-          text-align: center;
-          border: 1px solid #b8bac4;
-          border-radius: 12px;
-          background: #fff;
-          font-size: 10.5px;
-          font-weight: 600;
-          line-height: 1.35;
-        }
-        .static-app-shell__jobs-title {
-          margin: 0 0 6px;
-          font-size: 1.15rem;
-          font-weight: 700;
-        }
-        .static-app-shell__jobs-meta {
-          margin: 0 0 12px;
-          font-size: 0.85rem;
-          color: #5e6068;
-        }
-        .static-app-shell__cards {
-          display: grid;
-          grid-template-columns: 1fr;
-          gap: 14px;
-        }
-        .static-app-shell__card {
-          border: 1px solid #b8bac4;
-          border-radius: 14px;
-          min-height: 168px;
-          background: linear-gradient(90deg, #f3f4f7 0%, #e2e3e9 50%, #f3f4f7 100%);
-          background-size: 200% 100%;
-          animation: static-shell-shimmer 1.35s ease-in-out infinite;
-        }
-        @keyframes static-shell-shimmer {
-          0% { background-position: 200% 0; }
-          100% { background-position: -200% 0; }
-        }
-        @media (min-width: 641px) {
-          .static-app-shell__cards { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-        }
-        @media (min-width: 769px) {
-          .static-app-shell__stats { display: none; }
-        }
-      </style>
-      <div class="static-app-shell" aria-busy="true" aria-label="Loading government job listings">
-        <div class="static-app-shell__news">
-          <div class="static-app-shell__news-inner">
-            <div class="static-app-shell__news-badge">
-              <span class="static-app-shell__news-dot" aria-hidden="true"></span>
-              <span>Daily employment news</span>
-            </div>
+    <!-- LCP island: outside #root so createRoot cannot destroy first paint -->
+    <div id="lcp-shell" class="static-app-shell" aria-busy="true" aria-label="Loading government job listings">
+      <div class="static-app-shell__news">
+        <div class="static-app-shell__news-inner">
+          <div class="static-app-shell__news-badge">
+            <span class="static-app-shell__news-dot" aria-hidden="true"></span>
+            <span>Daily employment news</span>
           </div>
-        </div>
-        <div class="static-app-shell__navbar" aria-hidden="true">
-          <picture>
-            <source type="image/webp" srcset="/logo.webp" />
-            <img class="static-app-shell__logo" src="/logo-ui.png" alt="" width="155" height="58" decoding="async" fetchpriority="high" />
-          </picture>
-        </div>
-        <div class="static-app-shell__main">
-          <div class="static-app-shell__tagline">
-            <span class="static-app-shell__tagline-rule" aria-hidden="true"></span>
-            <span class="static-app-shell__tagline-text">NEVER MISS A GOVERNMENT NOTIFICATION</span>
-            <span class="static-app-shell__tagline-rule" aria-hidden="true"></span>
-          </div>
-          <div class="static-app-shell__stats">55,597 vacancies · 874 notifications · 75 orgs</div>
-          <section aria-label="Latest government jobs">
-            <h2 class="static-app-shell__jobs-title">Latest Government Jobs</h2>
-            <p class="static-app-shell__jobs-meta">Loading live listings from official sources…</p>
-            <div class="static-app-shell__cards" aria-hidden="true">
-              <div class="static-app-shell__card"></div>
-              <div class="static-app-shell__card"></div>
-              <div class="static-app-shell__card"></div>
-              <div class="static-app-shell__card"></div>
-            </div>
-          </section>
         </div>
       </div>
+      <div class="static-app-shell__navbar">
+        <picture>
+          <source type="image/webp" srcset="/logo.webp" />
+          <img class="static-app-shell__logo" src="/logo-ui.png" alt="Live Govt Jobs" width="155" height="58" decoding="async" fetchpriority="high" />
+        </picture>
+      </div>
+      <div class="static-app-shell__main">
+        <div class="static-app-shell__tagline">
+          <span class="static-app-shell__tagline-rule" aria-hidden="true"></span>
+          <span class="static-app-shell__tagline-text">NEVER MISS A GOVERNMENT NOTIFICATION</span>
+          <span class="static-app-shell__tagline-rule" aria-hidden="true"></span>
+        </div>
+        <div class="static-app-shell__stats">55,597 vacancies · 874 notifications · 75 orgs</div>
+        <section aria-label="Latest government jobs">
+          <h2 class="static-app-shell__jobs-title">Latest Government Jobs</h2>
+          <p class="static-app-shell__jobs-meta">Official .gov.in listings — loading live catalog…</p>
+          <div class="static-app-shell__cards" aria-busy="true">
+            <div class="static-app-shell__card"></div>
+            <div class="static-app-shell__card"></div>
+            <div class="static-app-shell__card"></div>
+            <div class="static-app-shell__card"></div>
+          </div>
+        </section>
+      </div>
     </div>
+    <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
