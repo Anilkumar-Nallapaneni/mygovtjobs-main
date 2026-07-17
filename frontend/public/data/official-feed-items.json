@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-07-17T14:17:12.670Z",
+  "generatedAt": "2026-07-17T17:42:17.366Z",
   "sourceReports": [
     {
       "id": "pib-press-reg3",
       "name": "PIB — recent press releases",
       "feedUrl": "https://www.pib.gov.in/RssMain.aspx?ModId=6&Lang=2&Regid=3&reg=48",
       "listingUrl": null,
-      "ok": true,
-      "error": null,
-      "itemCount": 1,
-      "fetchMethod": "rss-feed"
+      "ok": false,
+      "error": "rss-empty",
+      "itemCount": 0,
+      "fetchMethod": null
     },
     {
       "id": "employment-news",
@@ -276,10 +276,10 @@
       "name": "TNPSC — Hall tickets",
       "feedUrl": null,
       "listingUrl": "https://www.tnpsc.gov.in/English/hallticket.html",
-      "ok": true,
-      "error": null,
-      "itemCount": 4,
-      "fetchMethod": "html-listing"
+      "ok": false,
+      "error": "https://www.tnpsc.gov.in/English/hallticket.html: timeout; https://www.tnpsc.gov.in/: timeout",
+      "itemCount": 0,
+      "fetchMethod": null
     },
     {
       "id": "uppsc-hall-tickets",
@@ -294,23 +294,6 @@
   ],
   "siteReports": [],
   "items": [
-    {
-      "id": "917f21a4fd55a324",
-      "title": "संघ लोक सेवा आयोग ने जून, 2026 के दौरान भर्ती परिणाम घोषित किए",
-      "link": "https://pib.gov.in/PressReleaseIframePage.aspx?PRID=2285731",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "pib-press-reg3",
-      "sourceName": "PIB — recent press releases",
-      "dept": "Press Information Bureau",
-      "state": "All India",
-      "category": "state",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "rss-feed"
-    },
     {
       "id": "1320428f3dc24d77",
       "title": "Home.aspx",
@@ -2231,74 +2214,6 @@
       "dept": "Kendriya Vidyalaya Sangathan",
       "state": "All India",
       "category": "teaching",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "197b8722362c6834",
-      "title": "Group-II",
-      "link": "https://tnpscresults.tn.gov.in/ccsexam/ccsIndex.aspx?token=P9X2R7K5A8KDJ8JD6658GR",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "tnpsc-hall-tickets",
-      "sourceName": "TNPSC — Hall tickets",
-      "dept": "Tamil Nadu PSC",
-      "state": "Tamil Nadu",
-      "category": "state",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "0a595b14634fcb2e",
-      "title": "Group-IIA",
-      "link": "https://tnpscresults.tn.gov.in/ccsexam2a/ccs2aindex.aspx?token=P9X2R7K5A8KDJ8JD8967RG",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "tnpsc-hall-tickets",
-      "sourceName": "TNPSC — Hall tickets",
-      "dept": "Tamil Nadu PSC",
-      "state": "Tamil Nadu",
-      "category": "state",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "be876904dfd0ff31",
-      "title": "CTS (DIPLOMA / ITI LEVEL)",
-      "link": "https://tnpscresults.tn.gov.in/cts_diploma_iti_phase2/ctsindex.aspx?token=P9X2R7K5A8KDJ8M2S3N0A1",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "tnpsc-hall-tickets",
-      "sourceName": "TNPSC — Hall tickets",
-      "dept": "Tamil Nadu PSC",
-      "state": "Tamil Nadu",
-      "category": "state",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "be361aedaacbfbca",
-      "title": "முதன்மை பக்கம் / Home Page",
-      "link": "https://tnpsc.gov.in/home.aspx",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "tnpsc-hall-tickets",
-      "sourceName": "TNPSC — Hall tickets",
-      "dept": "Tamil Nadu PSC",
-      "state": "Tamil Nadu",
-      "category": "state",
       "stateIds": [
         "all"
       ],
