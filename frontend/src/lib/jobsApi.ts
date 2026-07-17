@@ -265,6 +265,8 @@ export type AlertSubscribePayload = {
   user_id?: string
   /** Honeypot — bots that fill this are silently rejected server-side. */
   website?: string
+  /** Cloudflare Turnstile token when VITE_TURNSTILE_SITE_KEY is set. */
+  turnstileToken?: string | null
 }
 
 let staticFullCatalogPromise: Promise<ApiJob[] | null> | null = null
@@ -430,10 +432,15 @@ export async function subscribeToAlerts(
   }
 
   try {
+    const { turnstileToken, ...body } = payload
+    const { turnstileHeaders } = await import('@/lib/turnstile')
     const res = await fetch(apiUrl('/api/alerts/subscribe'), {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(payload),
+      headers: {
+        'Content-Type': 'application/json',
+        ...turnstileHeaders(turnstileToken),
+      },
+      body: JSON.stringify(body),
     })
     if (!res.ok) {
       const text = await res.text().catch(() => '')

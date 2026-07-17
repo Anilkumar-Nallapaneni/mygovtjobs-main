@@ -1,9 +1,11 @@
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import AlertBellIcon from "@/components/layout/AlertBellIcon";
+import TurnstileWidget from "@/components/TurnstileWidget";
 import { useAuth } from "@/hooks/useAuth";
 import { useWebPushToken } from "@/hooks/useWebPushToken";
 import { subscribeWithUser } from "@/lib/alertsApi";
+import { isTurnstileConfigured } from "@/lib/turnstile";
 
 const CHANNEL_KEYS = ["email", "whatsapp", "telegram", "push"] as const;
 type AlertChannel = (typeof CHANNEL_KEYS)[number];
@@ -32,6 +34,7 @@ export default function AlertSection() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
   const [honeypot, setHoneypot] = useState("");
+  const [turnstileToken, setTurnstileToken] = useState<string | null>(null);
 
   const validateAddress = () => {
     const v = address.trim();
@@ -56,6 +59,14 @@ export default function AlertSection() {
       );
       return;
     }
+    if (isTurnstileConfigured() && !turnstileToken?.trim()) {
+      setError(
+        t("alert.turnstileRequired", {
+          defaultValue: "Please complete the security check.",
+        })
+      );
+      return;
+    }
     setError("");
     setLoading(true);
     const result = await subscribeWithUser(
@@ -66,6 +77,7 @@ export default function AlertSection() {
         categories: [],
         qualification_tags: [],
         website: honeypot,
+        turnstileToken,
       },
       user?.id
     );
@@ -161,6 +173,7 @@ export default function AlertSection() {
                   {loading ? t("alert.subscribing") : t("alert.subscribe")}
                 </button>
               </div>
+              <TurnstileWidget onToken={setTurnstileToken} className="alert-section__turnstile" />
               {error && <p className="alert-section__error">{error}</p>}
             </form>
           )}

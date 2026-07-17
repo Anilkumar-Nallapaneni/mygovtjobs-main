@@ -1,5 +1,7 @@
 import { FormEvent, useState } from 'react'
 import { useTranslation } from 'react-i18next'
+import TurnstileWidget from '@/components/TurnstileWidget'
+import { isTurnstileConfigured, turnstileHeaders } from '@/lib/turnstile'
 
 const API_BASE = (import.meta.env.VITE_API_URL || '').replace(/\/$/, '')
 
@@ -27,11 +29,20 @@ export default function ReportJobButton({ jobId, jobTitle }: ReportJobButtonProp
   const [busy, setBusy] = useState(false)
   const [message, setMessage] = useState<string | null>(null)
   const [error, setError] = useState<string | null>(null)
+  const [turnstileToken, setTurnstileToken] = useState<string | null>(null)
 
   if (!API_BASE) return null
 
   async function submit(e: FormEvent) {
     e.preventDefault()
+    if (isTurnstileConfigured() && !turnstileToken?.trim()) {
+      setError(
+        t('jobReport.turnstileRequired', {
+          defaultValue: 'Please complete the security check.',
+        })
+      )
+      return
+    }
     setBusy(true)
     setError(null)
     setMessage(null)
@@ -40,9 +51,7 @@ export default function ReportJobButton({ jobId, jobTitle }: ReportJobButtonProp
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          ...(import.meta.env.VITE_TURNSTILE_SITE_KEY
-            ? { 'X-Turnstile-Token': '' }
-            : {}),
+          ...turnstileHeaders(turnstileToken),
         },
         body: JSON.stringify({
           job_id: jobId,
@@ -63,6 +72,7 @@ export default function ReportJobButton({ jobId, jobTitle }: ReportJobButtonProp
       )
       setOpen(false)
       setDescription('')
+      setTurnstileToken(null)
     } catch (err) {
       console.warn('[jobReport]', err)
       setError(t('jobReport.error', { defaultValue: 'Could not submit report.' }))
@@ -108,6 +118,7 @@ export default function ReportJobButton({ jobId, jobTitle }: ReportJobButtonProp
             {t('jobReport.emailLabel', { defaultValue: 'Email (optional)' })}
             <input type="email" value={email} onChange={(ev) => setEmail(ev.target.value)} />
           </label>
+          <TurnstileWidget onToken={setTurnstileToken} className="job-report__turnstile" />
           <div className="job-report__actions">
             <button type="submit" disabled={busy}>
               {busy

@@ -29,7 +29,7 @@ npm run health:website   # Agent 4 — code/data/env audit (add :full for live s
 npm run health:website:full # + verify:production + Vercel + live probes
 npm run export:live-jobs # DB → live-jobs.json (+ list/bootstrap via clean:live-jobs)
 npm run env:check        # frontend/backend Supabase ref alignment
-npm run db:migrate       # supabase_setup.sql + migrations 001–013
+npm run db:migrate       # supabase_setup.sql + migrations 001–019
 npm run supabase:audit   # table row counts via REST
 npm run ingest:direct:quick   # test ~20 sources
 npm run ingest:direct:quick   # 20 sources → DB + live-jobs.json

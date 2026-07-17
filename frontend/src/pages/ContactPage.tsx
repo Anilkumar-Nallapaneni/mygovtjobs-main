@@ -4,7 +4,9 @@ import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 
 import Footer from '@/components/layout/Footer'
+import TurnstileWidget from '@/components/TurnstileWidget'
 import { submitContactForm } from '@/lib/contactApi'
+import { isTurnstileConfigured } from '@/lib/turnstile'
 import { applyBrowseSeo } from '@/utils/browseSeo'
 import type { FooterLinkTarget } from '@/hooks/browseStateTypes'
 
@@ -21,6 +23,7 @@ export default function ContactPage({ onFooterLink }: ContactPageProps) {
   const [mobile, setMobile] = useState('')
   const [message, setMessage] = useState('')
   const [honeypot, setHoneypot] = useState('')
+  const [turnstileToken, setTurnstileToken] = useState<string | null>(null)
   const [loading, setLoading] = useState(false)
   const [status, setStatus] = useState<string | null>(null)
   const [error, setError] = useState<string | null>(null)
@@ -39,6 +42,14 @@ export default function ContactPage({ onFooterLink }: ContactPageProps) {
     e.preventDefault()
     setError(null)
     setStatus(null)
+    if (isTurnstileConfigured() && !turnstileToken?.trim()) {
+      setError(
+        t('contact.turnstileRequired', {
+          defaultValue: 'Please complete the security check.',
+        })
+      )
+      return
+    }
     setLoading(true)
     const result = await submitContactForm({
       name: name.trim(),
@@ -46,6 +57,7 @@ export default function ContactPage({ onFooterLink }: ContactPageProps) {
       mobile: mobile.trim(),
       message: message.trim(),
       website: honeypot,
+      turnstileToken,
     })
     setLoading(false)
     if (result.ok === false) {
@@ -63,6 +75,7 @@ export default function ContactPage({ onFooterLink }: ContactPageProps) {
     setEmail('')
     setMobile('')
     setMessage('')
+    setTurnstileToken(null)
   }
 
   return (
@@ -130,6 +143,7 @@ export default function ContactPage({ onFooterLink }: ContactPageProps) {
           value={honeypot}
           onChange={(e) => setHoneypot(e.target.value)}
         />
+        <TurnstileWidget onToken={setTurnstileToken} className="contact-page__turnstile" />
         {error && (
           <p className="contact-page__feedback contact-page__feedback--error" role="alert">
             {error}

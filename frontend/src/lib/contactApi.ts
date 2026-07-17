@@ -1,3 +1,5 @@
+import { turnstileHeaders } from '@/lib/turnstile'
+
 const API_BASE = (import.meta.env.VITE_API_URL || '').replace(/\/$/, '')
 
 export type ContactPayload = {
@@ -6,6 +8,7 @@ export type ContactPayload = {
   mobile?: string
   message: string
   website?: string
+  turnstileToken?: string | null
 }
 
 /** Stable codes for UI — never expose HTTP bodies or env details to visitors. */
@@ -24,10 +27,14 @@ export async function submitContactForm(
   }
 
   try {
+    const { turnstileToken, ...body } = payload
     const res = await fetch(`${API_BASE}/api/contact`, {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(payload),
+      headers: {
+        'Content-Type': 'application/json',
+        ...turnstileHeaders(turnstileToken),
+      },
+      body: JSON.stringify(body),
     })
     if (!res.ok) {
       const text = await res.text().catch(() => '')

@@ -6,11 +6,12 @@ Last updated: June 2026. Tracks audit backlog vs repo state.
 
 | Item | Status | Notes |
 |------|--------|-------|
-| `npm run db:migrate` (migrations 011–012) | **Manual** | Run with `backend/.env` pooler URL on production Supabase |
+| `npm run db:migrate` (migrations 011–012) | **Done** | Prod applied through 020 (service-role RLS) |
 | Resend alert secrets | **Manual** | Add `RESEND_API_KEY`, `ALERT_FROM_EMAIL` to GitHub + Railway/Render |
 | Submit GSC sitemap | **Manual** | [Search Console](https://search.google.com/search-console) → `https://www.livegovtjobs.com/sitemap.xml` |
 | Expand `.gitignore` (Android) | **Done** | `.gradle/`, `*.aab`, `*.apk`, review screenshots |
 | `npm run go-live:check` | **Manual** | Requires local `frontend/.env.local` + `backend/.env` |
+| Turnstile on alerts/contact/report | **Done** | Set `VITE_TURNSTILE_SITE_KEY` + `TURNSTILE_SECRET_KEY` in prod |
 
 ## P1 — Month 1
 
