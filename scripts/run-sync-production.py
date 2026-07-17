@@ -25,8 +25,16 @@ def run_npm(script: str, *extra: str) -> int:
 
 
 def run_daily_nested() -> int:
+    # run-python.mjs forwards argv to Python as-is — do not insert a bare "--"
+    # (argparse treats it as an unrecognized argument).
     return subprocess.run(
-        [PYTHON, "scripts/run-python.mjs", "scripts/run-daily-8am-sync.py", "--", "--nested", "--skip-enrich"],
+        [
+            PYTHON,
+            "scripts/run-python.mjs",
+            "scripts/run-daily-8am-sync.py",
+            "--nested",
+            "--skip-enrich",
+        ],
         cwd=ROOT,
         check=False,
     ).returncode

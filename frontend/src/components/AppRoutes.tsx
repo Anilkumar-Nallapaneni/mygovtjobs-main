@@ -1,5 +1,5 @@
 import { lazy, Suspense, type ComponentProps, type ReactNode } from "react";
-import { Navigate, Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import RouteErrorBoundary from "@/components/RouteErrorBoundary";
 import RoutePageFallback from "@/components/RoutePageFallback";
 import type StaticPage from "@/pages/StaticPage";
@@ -62,6 +62,7 @@ const ContactPage = lazy(() => import("@/pages/ContactPage"));
 const SitemapPage = lazy(() => import("@/pages/SitemapPage"));
 const AccountPage = lazy(() => import("@/pages/AccountPage"));
 const AdminDashboardPage = lazy(() => import("@/pages/AdminDashboardPage"));
+const NotFoundPage = lazy(() => import("@/pages/NotFoundPage"));
 
 const AboutPage = lazyStaticLegalPage(() => import("@/pages/legalContent"), "ABOUT_PAGE");
 const PrivacyPage = lazyStaticLegalPage(() => import("@/pages/legalContent"), "PRIVACY_PAGE");
@@ -320,7 +321,14 @@ export default function AppRoutes({
           </LazyRoute>
         }
       />
-      <Route path="*" element={<Navigate to="/" replace />} />
+      <Route
+        path="*"
+        element={
+          <LazyRoute>
+            <NotFoundPage onFooterLink={onFooterLink} />
+          </LazyRoute>
+        }
+      />
     </Routes>
   );
 }

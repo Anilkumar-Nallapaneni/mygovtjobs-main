@@ -178,7 +178,7 @@ export default defineConfig(({ mode }) => {
     test: {
       environment: 'node',
       setupFiles: ['src/test/setup.ts'],
-      include: ['src/**/*.test.ts', 'src/**/*.test.tsx'],
+      include: ['src/tests/**/*.test.ts', 'src/tests/**/*.test.tsx'],
       coverage: {
         provider: 'v8',
         include: ['src/utils/**', 'src/hooks/**', 'src/lib/**', 'src/components/**'],

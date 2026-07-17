@@ -5,7 +5,7 @@ import { describe, expect, it } from "vitest";
 import { fromSvgStateId, STATES, toSvgStateId } from "@/data/states";
 import { STATE_GLANCE } from "@/data/stateFacts";
 
-const mapsDir = join(dirname(fileURLToPath(import.meta.url)), "../../public/maps/states");
+const mapsDir = join(dirname(fileURLToPath(import.meta.url)), "../../../public/maps/states");
 const svgIds = new Set(
   readdirSync(mapsDir)
     .filter((name) => name.endsWith(".svg"))

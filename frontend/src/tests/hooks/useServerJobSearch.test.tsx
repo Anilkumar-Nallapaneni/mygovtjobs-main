@@ -28,7 +28,7 @@ async function loadHook() {
   vi.stubEnv('VITE_API_URL', 'http://127.0.0.1:8000')
   vi.resetModules()
   const jobsApi = await import('@/lib/jobsApi')
-  const { useServerJobSearch } = await import('./useServerJobSearch')
+  const { useServerJobSearch } = await import('@/hooks/useServerJobSearch')
   return { jobsApi, useServerJobSearch }
 }
 
@@ -52,7 +52,7 @@ describe('useServerJobSearch', () => {
   it('stays inactive when API base URL is unset', async () => {
     vi.stubEnv('VITE_API_URL', '')
     vi.resetModules()
-    const { useServerJobSearch } = await import('./useServerJobSearch')
+    const { useServerJobSearch } = await import('@/hooks/useServerJobSearch')
     const { result } = renderHook(() => useServerJobSearch('railway jobs'))
     expect(result.current.active).toBe(false)
   })

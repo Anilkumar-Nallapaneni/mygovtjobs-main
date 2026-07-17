@@ -10,6 +10,17 @@ export function jobDetailsPublicUrl(slug: string): string | null {
 
 /** Fetch detail JSON from Supabase Storage when configured. */
 export async function fetchJobDetailFromStorage(slug: string): Promise<unknown | null> {
+  // Prefer public object URL — works without storage SELECT/listing policies.
+  const publicUrl = jobDetailsPublicUrl(slug)
+  if (publicUrl) {
+    try {
+      const res = await fetch(publicUrl, { cache: 'default' })
+      if (res.ok) return (await res.json()) as unknown
+    } catch {
+      /* fall through to SDK download */
+    }
+  }
+
   if (!isSupabaseConfigured()) return null
 
   const supabase = await getSupabase()
@@ -21,13 +32,5 @@ export async function fetchJobDetailFromStorage(slug: string): Promise<unknown |
     }
   }
 
-  const publicUrl = jobDetailsPublicUrl(slug)
-  if (!publicUrl) return null
-  try {
-    const res = await fetch(publicUrl, { cache: 'default' })
-    if (!res.ok) return null
-    return (await res.json()) as unknown
-  } catch {
-    return null
-  }
+  return null
 }

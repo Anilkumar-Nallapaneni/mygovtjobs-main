@@ -6,6 +6,8 @@ All application source under `src/` uses TypeScript React extensions:
 |------|-----------|----------|
 | React components | `.tsx` | `App.tsx`, `components/**/*.tsx` |
 | Hooks, utils, data, i18n | `.ts` | `hooks/`, `utils/`, `data/`, `lib/` |
+| Unit tests | `.test.ts` / `.test.tsx` | `tests/` (mirrors source paths; not colocated) |
+| Test helpers | `.ts` / `.tsx` | `test/setup.ts`, `test/queryWrapper.tsx` |
 | Entry | `main.tsx` | |
 | Types | `.ts` | `types/` |
 | Styles | `styles/*.css` via `styles/app.css` `@import` bundle (imported in `main.tsx`) |
@@ -23,6 +25,8 @@ All application source under `src/` uses TypeScript React extensions:
 - No `.js` / `.jsx` under `src/` (`allowJs: false` in `tsconfig.json`).
 - Import without file extensions: `import App from './App'`.
 - Shared types: `types/job.ts`. Deadline UI: `hooks/useNow.ts` (not `Date.now()` in render).
+- Put unit tests under `src/tests/` (e.g. `utils/jobDetailLinks.ts` → `tests/utils/jobDetailLinks.test.ts`); import modules via `@/…`, not relative siblings.
+- E2E specs stay in `frontend/e2e/`.
 - Run `npm run check:frontend`, `npm run type-check`, and `npm run lint` before PRs.
 - Category grid counts come from `computeJobAggregates(jobs)` — not static strings in `categories.ts`.
 

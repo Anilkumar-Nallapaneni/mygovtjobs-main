@@ -1,6 +1,6 @@
 /** @vitest-environment node */
 import { describe, expect, it } from "vitest";
-import { jobCountFromStateData } from "./mapStateJobCount";
+import { jobCountFromStateData } from "@/components/Maps/IndiaMap/mapStateJobCount";
 import type { StateData } from "@/types/MapTypes";
 
 describe("jobCountFromStateData", () => {

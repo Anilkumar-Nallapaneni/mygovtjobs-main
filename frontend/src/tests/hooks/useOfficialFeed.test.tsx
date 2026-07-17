@@ -1,7 +1,7 @@
 /** @vitest-environment happy-dom */
 import { describe, expect, it, vi, beforeEach, afterEach } from 'vitest'
 import { renderHook, waitFor } from '@testing-library/react'
-import { useOfficialFeed } from './useOfficialFeed'
+import { useOfficialFeed } from '@/hooks/useOfficialFeed'
 
 vi.mock('@/lib/officialFeed', () => ({
   loadOfficialFeed: vi.fn(),
@@ -20,9 +20,8 @@ describe('useOfficialFeed', () => {
 
   it('loads feed items when enabled', async () => {
     vi.mocked(loadOfficialFeed).mockResolvedValue({
-      items: [{ title: 'SSC notice' }],
+      items: [{ id: 'ssc-1', title: 'SSC notice', link: 'https://ssc.gov.in/notice' }],
       generatedAt: '2026-06-01',
-      sourceReports: [],
     })
 
     const { result } = renderHook(() => useOfficialFeed(true))

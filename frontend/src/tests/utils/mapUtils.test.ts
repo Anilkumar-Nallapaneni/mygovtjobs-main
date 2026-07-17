@@ -10,7 +10,7 @@ import {
   setIndiaMapPathVisibility,
   resetIndiaMapToFullView,
   INDIA_MAP_VIEWBOX,
-} from './mapUtils'
+} from '@/utils/mapUtils'
 
 describe('prepareResponsiveSvgMarkup', () => {
   it('strips width and height from svg root', () => {

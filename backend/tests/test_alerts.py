@@ -16,7 +16,11 @@ def test_subscribe_rate_limited(monkeypatch):
     async def fake_subscribe(_body):
         return "test-sub-id"
 
+    async def fake_turnstile(*_a, **_k):
+        return True
+
     monkeypatch.setattr("app.routes.alerts.service.subscribe", fake_subscribe)
+    monkeypatch.setattr("app.routes.alerts.verify_turnstile", fake_turnstile)
 
     payload = {
         "channel": "email",

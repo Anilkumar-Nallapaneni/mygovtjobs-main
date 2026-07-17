@@ -7,7 +7,7 @@ export const SITE_DESCRIPTION =
 
 export const SITE_OG_IMAGE_PATH = "/logo-og.jpg";
 
-export const PRIVATE_PATH_PREFIXES = ["/admin", "/account"] as const;
+export const PRIVATE_PATH_PREFIXES = ["/admin", "/account", "/404"] as const;
 
 export function isPrivatePath(pathname: string): boolean {
   const path = (pathname || "/").replace(/\/+$/, "") || "/";

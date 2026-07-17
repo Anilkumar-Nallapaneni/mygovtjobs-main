@@ -1,7 +1,7 @@
 /** @vitest-environment happy-dom */
 import { describe, expect, it, vi, beforeEach, afterEach } from 'vitest'
 import { renderHook, waitFor } from '@testing-library/react'
-import { useOfficialArchive } from './useOfficialArchive'
+import { useOfficialArchive } from '@/hooks/useOfficialArchive'
 
 describe('useOfficialArchive', () => {
   beforeEach(() => {

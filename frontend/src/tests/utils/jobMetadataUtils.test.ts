@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { enrichJobMetadata, isSameCalendarDay } from './jobMetadataUtils'
+import { enrichJobMetadata, isSameCalendarDay } from '@/utils/jobMetadataUtils'
 
 describe('isSameCalendarDay', () => {
   it('matches ISO date and datetime on the same day', () => {

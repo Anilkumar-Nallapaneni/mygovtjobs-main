@@ -43,7 +43,7 @@ if (!existsSync(py)) {
   process.exit(1);
 }
 
-const args = process.argv.slice(2);
+const args = process.argv.slice(2).filter((a) => a !== "--");
 if (!args.length) {
   console.error("Usage: node scripts/run-python.mjs <script.py> [args…]");
   process.exit(1);

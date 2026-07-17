@@ -1,7 +1,7 @@
 /** @vitest-environment happy-dom */
 import { describe, expect, it, vi, beforeEach } from 'vitest'
 import { renderHook, act } from '@testing-library/react'
-import { useColorMode } from './useColorMode'
+import { useColorMode } from '@/hooks/useColorMode'
 
 vi.mock('@/theme/designSystem', () => ({
   applyColorMode: vi.fn(),

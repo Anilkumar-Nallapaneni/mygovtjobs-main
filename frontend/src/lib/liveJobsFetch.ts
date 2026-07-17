@@ -40,12 +40,7 @@ function scheduleAfterFirstPaint(fn: () => void): void {
     fn()
   }
 
-  const events: Array<keyof WindowEventMap> = [
-    'pointerdown',
-    'keydown',
-    'touchstart',
-    'scroll',
-  ]
+  const events = ['pointerdown', 'keydown', 'touchstart', 'scroll'] as const
   const onInteract = () => run()
 
   const cleanup = () => {

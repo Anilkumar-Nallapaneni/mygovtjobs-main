@@ -26,6 +26,25 @@
   margin-bottom: 8px;
 }
 
+.home-hero-marketing__title {
+  margin: 0 0 4px;
+  font-family: var(--font-sans);
+  font-size: clamp(1.25rem, 2.4vw, 1.65rem);
+  font-weight: 700;
+  line-height: 1.25;
+  color: var(--ds-text);
+  letter-spacing: -0.02em;
+}
+
+.home-hero-marketing__lede {
+  margin: 0 0 10px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--ds-mutedHi);
+}
+
 .home-first-visit {
   display: flex;
   flex-wrap: wrap;

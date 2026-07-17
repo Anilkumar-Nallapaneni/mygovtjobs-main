@@ -61,7 +61,7 @@ npm run websites:discover     # catalog all govt job websites → all websites/o
 ## Database
 
 1. Run `database/supabase_setup.sql` in Supabase SQL Editor.
-2. Run migrations in `database/migrations/` in order.
+2. Run migrations in `database/migrations/` in order (001–019).
 3. Backend connects via **Transaction pooler** (`postgresql+asyncpg://…:6543/…`).
 
 ## File map

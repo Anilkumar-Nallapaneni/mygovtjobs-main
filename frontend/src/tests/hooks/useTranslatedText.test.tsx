@@ -1,7 +1,7 @@
 /** @vitest-environment happy-dom */
 import { describe, expect, it, vi } from 'vitest'
 import { renderHook, waitFor } from '@testing-library/react'
-import { useTranslatedText } from './useTranslatedText'
+import { useTranslatedText } from '@/hooks/useTranslatedText'
 
 vi.mock('@/utils/jobContentTranslate', () => ({
   needsEnglishNormalization: vi.fn((text: string) => text.includes('हिंदी')),

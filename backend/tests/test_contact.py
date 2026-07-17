@@ -30,7 +30,11 @@ def test_contact_rate_limited(monkeypatch):
     async def fake_send(_body):
         return True
 
+    async def fake_turnstile(*_a, **_k):
+        return True
+
     monkeypatch.setattr("app.routes.contact.send_contact_email", fake_send)
+    monkeypatch.setattr("app.routes.contact.verify_turnstile", fake_turnstile)
 
     payload = {
         "name": "Test User",

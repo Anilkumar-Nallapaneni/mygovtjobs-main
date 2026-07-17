@@ -6,7 +6,7 @@ import {
   isOfficialRecruitmentUrl,
   isStructuredImportSource,
   pickOfficialDetailUrl,
-} from './officialDomains'
+} from '@/utils/officialDomains'
 
 describe('hostnameOf', () => {
   it('extracts hostname from valid URLs', () => {

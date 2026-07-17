@@ -1,7 +1,7 @@
 /** @vitest-environment happy-dom */
 import { describe, expect, it, vi, beforeEach, afterEach } from 'vitest'
 import { renderHook, act } from '@testing-library/react'
-import { useNow } from './useNow'
+import { useNow } from '@/hooks/useNow'
 
 describe('useNow', () => {
   beforeEach(() => {

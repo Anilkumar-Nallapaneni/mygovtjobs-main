@@ -110,7 +110,12 @@ ALTER TABLE alert_subscriptions ENABLE ROW LEVEL SECURITY;
 
 DROP POLICY IF EXISTS alerts_public_insert ON alert_subscriptions;
 CREATE POLICY alerts_public_insert ON alert_subscriptions
-  FOR INSERT WITH CHECK (true);
+  FOR INSERT WITH CHECK (
+  channel = 'email' AND channel_address ~* '^[^@\s]+@[^@\s]+\.[^@\s]+$'
+  OR channel = 'telegram' AND channel_address ~ '^[0-9]+$'
+  OR channel = 'whatsapp' AND channel_address ~ '^\+?[0-9]{10,15}$'
+  OR channel = 'push' AND length(trim(channel_address)) >= 8
+);
 
 -- No demo seed rows — run ingest after setup:
 --   npm run ingest:official

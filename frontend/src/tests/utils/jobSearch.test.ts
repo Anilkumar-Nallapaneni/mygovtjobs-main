@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { jobMatchesSearch, jobSearchHaystack } from './jobSearch'
+import { jobMatchesSearch, jobSearchHaystack } from '@/utils/jobSearch'
 
 const sampleJob = {
   title: 'UPSC Civil Services Examination 2026',

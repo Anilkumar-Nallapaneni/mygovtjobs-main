@@ -76,8 +76,14 @@ const sample = live.find((j) => (j.detail?.content_sections?.length || 0) >= 3);
 console.log("── Live job detail coverage (Supabase) ──");
 console.log(`  Live jobs:           ${live.length}`);
 console.log(`  With PDF:            ${withPdf} (${((100 * withPdf) / live.length).toFixed(1)}%)`);
-console.log(`  With content_sections: ${withSections} (${((100 * withSections) / live.length).toFixed(1)}%)`);
+console.log(
+  `  With content_sections (DB): ${withSections} (${((100 * withSections) / live.length).toFixed(1)}%)`
+);
 console.log(`  PDF but no sections: ${pdfNoSections}`);
+console.log(
+  "  Note: Agent 3 stores rich content_sections in Storage (job-details bucket) / static JSON;"
+);
+console.log("  jobs.detail is slimmed — DB content_sections near 0% is expected.");
 if (sample) {
   const secs = sample.detail.content_sections;
   console.log(`\n  Sample with PDF sections: ${sample.slug}`);

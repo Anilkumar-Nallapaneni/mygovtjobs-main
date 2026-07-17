@@ -1,6 +1,6 @@
 /** @vitest-environment happy-dom */
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
-import { scrollToSection } from './scrollToSection'
+import { scrollToSection } from '@/utils/scrollToSection'
 
 describe('scrollToSection', () => {
   beforeEach(() => {

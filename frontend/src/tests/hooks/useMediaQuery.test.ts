@@ -1,7 +1,7 @@
 /** @vitest-environment happy-dom */
 import { describe, expect, it, vi, beforeEach } from 'vitest'
 import { renderHook, act } from '@testing-library/react'
-import { useMediaQuery } from './useMediaQuery'
+import { useMediaQuery } from '@/hooks/useMediaQuery'
 
 describe('useMediaQuery', () => {
   beforeEach(() => {

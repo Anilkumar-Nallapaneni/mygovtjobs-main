@@ -1,7 +1,7 @@
 /** @vitest-environment happy-dom */
 import { describe, expect, it, vi, beforeEach } from 'vitest'
 import { renderHook, act, waitFor } from '@testing-library/react'
-import { useAuth } from './useAuth'
+import { useAuth } from '@/hooks/useAuth'
 
 const mockGetSession = vi.fn()
 const mockSignInWithOtp = vi.fn()

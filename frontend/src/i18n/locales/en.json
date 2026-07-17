@@ -93,6 +93,7 @@
   },
   "home": {
     "tagline": "LIVE GOVERNMENT JOB NOTIFICATIONS · INDIA",
+    "heroHeading": "Live government job notifications across India",
     "statsStrip": {
       "primary": "{{vacancies}} notified posts · {{liveNotices}} live notifications",
       "secondary": "{{sources}} official sources · {{syncLabel}}",
@@ -582,6 +583,10 @@
   "errorBoundary": {
     "title": "Something went wrong",
     "message": "Please refresh the page. If the problem continues, try again later."
+  },
+  "notFound": {
+    "title": "Page not found",
+    "description": "That link does not match a page on this site. Try home, latest notifications, or explore."
   },
   "footer": {
     "blurb": "India's trusted government job alert platform. Live notifications from official sources — UPSC, SSC, Railways, Banking & all states.",

@@ -15,7 +15,7 @@ describe('analytics', () => {
 
   it('no-ops when VITE_GA_MEASUREMENT_ID is unset', async () => {
     vi.stubEnv('VITE_GA_MEASUREMENT_ID', '')
-    const { initAnalytics, trackPageView, getGaMeasurementId } = await import('./analytics')
+    const { initAnalytics, trackPageView, getGaMeasurementId } = await import('@/lib/analytics')
     initAnalytics()
     trackPageView('/jobs')
     expect(getGaMeasurementId()).toBe('')
@@ -24,7 +24,7 @@ describe('analytics', () => {
 
   it('loads gtag script and queues page views until script onload', async () => {
     vi.stubEnv('VITE_GA_MEASUREMENT_ID', 'G-TEST12345')
-    const { initAnalytics, trackPageView, getGaMeasurementId } = await import('./analytics')
+    const { initAnalytics, trackPageView, getGaMeasurementId } = await import('@/lib/analytics')
 
     initAnalytics()
     trackPageView('/?q=1')
@@ -40,7 +40,7 @@ describe('analytics', () => {
 
   it('fires custom events when gtag is ready', async () => {
     vi.stubEnv('VITE_GA_MEASUREMENT_ID', 'G-TEST12345')
-    const { initAnalytics, trackProfessionLanding, trackEvent } = await import('./analytics')
+    const { initAnalytics, trackProfessionLanding, trackEvent } = await import('@/lib/analytics')
 
     initAnalytics()
     const before = window.dataLayer?.length ?? 0

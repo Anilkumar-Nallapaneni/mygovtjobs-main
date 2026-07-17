@@ -1,7 +1,7 @@
 /** @vitest-environment happy-dom */
 import { describe, expect, it, vi } from 'vitest'
 import { renderHook, waitFor } from '@testing-library/react'
-import { useTranslatedJob } from './useTranslatedJob'
+import { useTranslatedJob } from '@/hooks/useTranslatedJob'
 import type { JobRecord } from '@/types/job'
 
 vi.mock('@/utils/jobContentTranslate', () => ({

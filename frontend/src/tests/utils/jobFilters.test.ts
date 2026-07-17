@@ -1,5 +1,5 @@
 import { describe, expect, it, vi, afterEach } from 'vitest'
-import { filterDisplayJobs, isJobExpired, parseLastDate } from './jobFilters'
+import { filterDisplayJobs, isJobExpired, parseLastDate } from '@/utils/jobFilters'
 
 describe('parseLastDate', () => {
   it('parses ISO dates', () => {
