@@ -204,7 +204,7 @@ writeEnv(
     ADMIN_API_KEY: adminKey,
     CORS_ORIGINS:
       existingBackend.CORS_ORIGINS ||
-      'http://localhost:2222,http://localhost:2223,http://127.0.0.1:2222,http://127.0.0.1:2223',
+      'http://localhost:2222,http://localhost:2223,http://127.0.0.1:2222,http://127.0.0.1:2223,https://www.livegovtjobs.com,https://livegovtjobs.com,https://www.govtjobs.me,https://govtjobs.me',
     SQL_ECHO: existingBackend.SQL_ECHO || '0',
     APP_ENV: existingBackend.APP_ENV || 'development',
     DAILY_SYNC_ENFORCE_ONCE: existingBackend.DAILY_SYNC_ENFORCE_ONCE || '1',

@@ -33,7 +33,7 @@ In Railway → your service → **Variables**, add:
 | `SUPABASE_URL` | `https://YOUR_REF.supabase.co` |
 | `SUPABASE_SERVICE_ROLE_KEY` | Supabase → Settings → API → `service_role` |
 | `ADMIN_API_KEY` | from `npm run admin:key:generate` |
-| `CORS_ORIGINS` | `https://www.livegovtjobs.com,https://www.livegovtjobs.com` |
+| `CORS_ORIGINS` | `https://www.livegovtjobs.com,https://livegovtjobs.com,https://www.govtjobs.me,https://govtjobs.me` |
 | `ALLOW_INSECURE_ADMIN` | `0` |
 | `ALLOW_FALLBACK_JSON_EXPORT` | `0` |
 | `PDF_OCR_ENABLED` | `0` |
@@ -133,7 +133,7 @@ curl https://api.livegovtjobs.com/api/billing/config
 | Symptom | Fix |
 |---------|-----|
 | `503` on `/api/jobs` | `DATABASE_URL` wrong — use pooler port **6543**, prefix `postgresql+asyncpg://` |
-| CORS errors in browser | Add `https://www.livegovtjobs.com` to `CORS_ORIGINS` |
+| CORS errors in browser | Add both `https://www.livegovtjobs.com` and `https://www.govtjobs.me` to `CORS_ORIGINS` |
 | Admin 401 | Match `ADMIN_API_KEY` in browser session with Railway/Render env |
 | Cold start slow (Render free) | Upgrade plan or use Railway |
 

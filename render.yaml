@@ -19,7 +19,7 @@ services:
       - key: ALLOW_FALLBACK_JSON_EXPORT
         value: "0"
       - key: CORS_ORIGINS
-        value: https://www.livegovtjobs.com,https://www.livegovtjobs.com
+        value: https://www.livegovtjobs.com,https://livegovtjobs.com,https://www.govtjobs.me,https://govtjobs.me
       - key: RATE_LIMIT_PER_MINUTE
         value: "120"
       - key: SQL_ECHO

@@ -1,5 +1,5 @@
 import { SITE_DESCRIPTION, SITE_NAME, SITE_OG_IMAGE_PATH } from "@/data/siteMeta";
-import { SITE_ORIGIN } from "@/data/siteLinks";
+import { getSiteOrigin } from "@/data/siteLinks";
 import type { JobRecord } from "@/types/job";
 import { jobDetailUrl } from "@/utils/jobRoutes";
 import { beginSeoHead } from "@/utils/seoHead";
@@ -21,7 +21,7 @@ function jobDescription(job: JobRecord): string {
 }
 
 function defaultOgImage(job?: JobRecord | null): string {
-  const origin = typeof window !== "undefined" ? window.location.origin : SITE_ORIGIN;
+  const origin = getSiteOrigin();
   if (job?.slug || job?.id) {
     return `${origin}/api/og?title=${encodeURIComponent(String(job.title || "Govt Job").slice(0, 80))}`;
   }

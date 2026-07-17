@@ -77,12 +77,12 @@
     {
       "source": "/:path*",
       "has": [{ "type": "host", "value": "govtjobs.me" }],
-      "destination": "https://www.livegovtjobs.com/:path*",
+      "destination": "https://www.govtjobs.me/:path*",
       "permanent": true
     },
     {
       "source": "/:path*",
-      "has": [{ "type": "host", "value": "www.govtjobs.me" }],
+      "has": [{ "type": "host", "value": "livegovtjobs.com" }],
       "destination": "https://www.livegovtjobs.com/:path*",
       "permanent": true
     }

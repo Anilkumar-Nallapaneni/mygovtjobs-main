@@ -1,7 +1,7 @@
 import { CATS } from "@/data/categories";
 import { STATES } from "@/data/states";
 import { getLatestNotifStateChip } from "@/data/statesChips";
-import { SITE_ORIGIN } from "@/data/siteLinks";
+import { getSiteOrigin } from "@/data/siteLinks";
 import { getOrgBySlug } from "@/data/orgIndex";
 import { getQualificationBySlug } from "@/data/qualifications";
 import { getResultTopicByKey } from "@/data/resultTopics";
@@ -288,7 +288,7 @@ export function browseSeoForPath(pathname: string, _search = ""): BrowseSeoMeta 
     if (qual) {
       const canonical = getCanonicalProfessionForQualification(parsed.qualificationSlug);
       const professionHint = canonical
-        ? ` Browse the full ${canonical.slug.replace(/-/g, " ")} sector at ${SITE_ORIGIN}${professionRoutePath(canonical.slug)}.`
+        ? ` Browse the full ${canonical.slug.replace(/-/g, " ")} sector at ${getSiteOrigin()}${professionRoutePath(canonical.slug)}.`
         : "";
       const titleBase = canonical?.title ?? qual.title;
       const descriptionBase = canonical?.seoDescription ?? qual.seoDescription;
@@ -365,8 +365,9 @@ export function browseSeoForPath(pathname: string, _search = ""): BrowseSeoMeta 
 
 export function applyBrowseSeo(pathname: string, search = "") {
   const meta = browseSeoForPath(pathname, search);
-  const canonical = `${SITE_ORIGIN}${meta.path}`;
-  const ogImage = `${SITE_ORIGIN}${SITE_OG_IMAGE_PATH}`;
+  const origin = getSiteOrigin();
+  const canonical = `${origin}${meta.path}`;
+  const ogImage = `${origin}${SITE_OG_IMAGE_PATH}`;
   const privatePage = isPrivatePath(pathname);
   const head = beginSeoHead();
 
