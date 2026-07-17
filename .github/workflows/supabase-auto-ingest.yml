@@ -15,7 +15,7 @@ permissions:
 jobs:
   ingest:
     runs-on: ubuntu-latest
-    timeout-minutes: 90
+    timeout-minutes: 150
     steps:
       - name: Start
         run: echo "=== Daily ingest started at $(date -u +%Y-%m-%dT%H:%M:%SZ) ==="
@@ -88,6 +88,7 @@ jobs:
           ALLOW_FALLBACK_JSON_EXPORT: "0"
           ALERT_SITE_URL: ${{ secrets.ALERT_SITE_URL }}
           SYNC_TRIGGER_TYPE: github_actions_schedule
+          SYNC_CONCURRENCY: "8"
         run: |
           echo "=== $(date -u +%H:%M:%S) sync:production ==="
           node scripts/run-python.mjs scripts/run-sync-production.py

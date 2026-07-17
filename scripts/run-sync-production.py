@@ -27,6 +27,12 @@ def run_npm(script: str, *extra: str) -> int:
 def run_daily_nested() -> int:
     # run-python.mjs forwards argv to Python as-is — do not insert a bare "--"
     # (argparse treats it as an unrecognized argument).
+    extra: list[str] = []
+    if os.environ.get("SYNC_FORCE", "").strip() in ("1", "true", "yes"):
+        extra.append("--force")
+    concurrency = os.environ.get("SYNC_CONCURRENCY", "").strip()
+    if concurrency.isdigit():
+        extra.extend(["--concurrency", concurrency])
     return subprocess.run(
         [
             PYTHON,
@@ -34,6 +40,7 @@ def run_daily_nested() -> int:
             "scripts/run-daily-8am-sync.py",
             "--nested",
             "--skip-enrich",
+            *extra,
         ],
         cwd=ROOT,
         check=False,
