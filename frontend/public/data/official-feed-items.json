@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-07-17T10:22:44.061Z",
+  "generatedAt": "2026-07-17T14:17:12.670Z",
   "sourceReports": [
     {
       "id": "pib-press-reg3",
       "name": "PIB — recent press releases",
       "feedUrl": "https://www.pib.gov.in/RssMain.aspx?ModId=6&Lang=2&Regid=3&reg=48",
       "listingUrl": null,
-      "ok": false,
-      "error": "rss-empty",
-      "itemCount": 0,
-      "fetchMethod": null
+      "ok": true,
+      "error": null,
+      "itemCount": 1,
+      "fetchMethod": "rss-feed"
     },
     {
       "id": "employment-news",
@@ -237,7 +237,7 @@
       "feedUrl": null,
       "listingUrl": "https://www.upsc.gov.in/e-admit-cards",
       "ok": false,
-      "error": "https://www.upsc.gov.in/e-admit-cards: socket hang up; https://upsconline.nic.in/: timeout",
+      "error": "https://www.upsc.gov.in/e-admit-cards: socket hang up",
       "itemCount": 0,
       "fetchMethod": null
     },
@@ -276,10 +276,10 @@
       "name": "TNPSC — Hall tickets",
       "feedUrl": null,
       "listingUrl": "https://www.tnpsc.gov.in/English/hallticket.html",
-      "ok": false,
-      "error": "https://www.tnpsc.gov.in/English/hallticket.html: timeout; https://www.tnpsc.gov.in/: timeout",
-      "itemCount": 0,
-      "fetchMethod": null
+      "ok": true,
+      "error": null,
+      "itemCount": 4,
+      "fetchMethod": "html-listing"
     },
     {
       "id": "uppsc-hall-tickets",
@@ -295,6 +295,23 @@
   "siteReports": [],
   "items": [
     {
+      "id": "917f21a4fd55a324",
+      "title": "संघ लोक सेवा आयोग ने जून, 2026 के दौरान भर्ती परिणाम घोषित किए",
+      "link": "https://pib.gov.in/PressReleaseIframePage.aspx?PRID=2285731",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "pib-press-reg3",
+      "sourceName": "PIB — recent press releases",
+      "dept": "Press Information Bureau",
+      "state": "All India",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "rss-feed"
+    },
+    {
       "id": "1320428f3dc24d77",
       "title": "Home.aspx",
       "link": "https://employmentnews.gov.in/NewEmp/Home.aspx",
@@ -306,6 +323,23 @@
       "dept": "Ministry of Information & Broadcasting",
       "state": "All India",
       "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "b62d1717ae852663",
+      "title": "ADVT. NO.NESAC/RMT-TEMP/WI-02/2026 dated 17.07.2026 - Recruitment for the positions of Research Scientists, Junior Research Fellows and Project Associate - I Read More",
+      "link": "https://www.isro.gov.in/NESACRecruitment23.html",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "isro-careers",
+      "sourceName": "ISRO — Careers",
+      "dept": "Indian Space Research Organisation",
+      "state": "All India",
+      "category": "psu",
       "stateIds": [
         "all"
       ],
@@ -383,91 +417,6 @@
       "id": "e01e499d7dda9f49",
       "title": "INVITING ONLINE APPLICATIONS FOR ENGAGEMENT TO THE POSITIONS OF JUNIOR RESEARCH FELLOW (JRF) IN URSC, BENGALURU. THE LINK FOR RECEIPT OF ONLINE APPLICATIONS WILL BE ACTIVE FROM 12.06.2026 TO 11.07.2026. Read More",
       "link": "https://www.isro.gov.in/URSCRecruitment11.html",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "isro-careers",
-      "sourceName": "ISRO — Careers",
-      "dept": "Indian Space Research Organisation",
-      "state": "All India",
-      "category": "psu",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "43e3c09639986bed",
-      "title": "Advertisement NO. ISRO:ICRB:03(CEPO):2025 DATED JUNE 24, 2025 - CORRIGENDUM TO THE SELETION PANEL (OBC) PUBLISHED IN REFRIGERATION & AIR-CONDITIONING DISCIPLINE Read More",
-      "link": "https://www.isro.gov.in/ICRB_Recruitment10.html",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "isro-careers",
-      "sourceName": "ISRO — Careers",
-      "dept": "Indian Space Research Organisation",
-      "state": "All India",
-      "category": "psu",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "65890e7cb2565ef9",
-      "title": "ADVT. NO. IIST/Admin/RMT/14-2026 (1) dated 14.02.2026 - Recruitment for the post of Registrar, IIST Read More",
-      "link": "https://www.isro.gov.in/IISTRecruitment4.html",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "isro-careers",
-      "sourceName": "ISRO — Careers",
-      "dept": "Indian Space Research Organisation",
-      "state": "All India",
-      "category": "psu",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "4238c4faeae7a88c",
-      "title": "Advt No. DOS/IV/1/2026 - Result for Engaging as Legal Consultant in DOS on contract basis Read More",
-      "link": "https://www.isro.gov.in/DOSRecruitment8.html",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "isro-careers",
-      "sourceName": "ISRO — Careers",
-      "dept": "Indian Space Research Organisation",
-      "state": "All India",
-      "category": "psu",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "b4c9d6ecdc9c30a4",
-      "title": "ADVT. NO.URSC:01:2026 dated 21.03.2026 - Recruitment to the posts of Scientist/Engineer - 'SC', Scientist/Engineer - 'SD' & Medical Officer - 'SC' Read More",
-      "link": "https://www.isro.gov.in/URSCRecruitment2026_1.html",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "isro-careers",
-      "sourceName": "ISRO — Careers",
-      "dept": "Indian Space Research Organisation",
-      "state": "All India",
-      "category": "psu",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "45d6ff67f766e352",
-      "title": "Advt.No.ISRO:ICRB:02(A-JPA):2022 - VALIDITY OF THE SELECTION PANELS HAS BEEN EXTENDED UPTO 12.08.2026 Read More",
-      "link": "https://www.isro.gov.in/ICRB_Recruitment5.html",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
@@ -1356,6 +1305,74 @@
       "fetchMethod": "html-listing"
     },
     {
+      "id": "a62123c7bdb5b60d",
+      "title": "ISRO conducts Second Integrated Air Drop Test (IADT-02) for Gaganyaan",
+      "link": "https://www.isro.gov.in/ISRO_conducts_Second_Integrated_Air_Drop_Test_for_Gaganyaan.html",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "isro-careers",
+      "sourceName": "ISRO — Careers",
+      "dept": "Indian Space Research Organisation",
+      "state": "All India",
+      "category": "psu",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "d2a1069277a781f2",
+      "title": "ISRO Conferred AIMA Special Award for Public Service Excellence - 2025",
+      "link": "https://www.isro.gov.in/ISRO_ConferredAIMA_SpecialAward.html",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "isro-careers",
+      "sourceName": "ISRO — Careers",
+      "dept": "Indian Space Research Organisation",
+      "state": "All India",
+      "category": "psu",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "ed0bfa23740fa775",
+      "title": "National Learning Week - “SADHANA SAPTAH” at ISRO",
+      "link": "https://www.isro.gov.in/National_Learning_Week.html",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "isro-careers",
+      "sourceName": "ISRO — Careers",
+      "dept": "Indian Space Research Organisation",
+      "state": "All India",
+      "category": "psu",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "ed32e3144c0ae16f",
+      "title": "MISSION MITRA by ISRO Mapping of Interoperable Traits and Response Assessment (MITRA)",
+      "link": "https://www.isro.gov.in/mission_mitra_by_ISRO.html",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "isro-careers",
+      "sourceName": "ISRO — Careers",
+      "dept": "Indian Space Research Organisation",
+      "state": "All India",
+      "category": "psu",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
       "id": "c0fe23a17261e73d",
       "title": "संगठनात्मक चार्ट",
       "link": "https://cdnbbsr.s3waas.gov.in/s32d2ca7eedf739ef4c3800713ec482e1a/uploads/2025/05/2025051479.pdf",
@@ -2220,6 +2237,74 @@
       "fetchMethod": "html-listing"
     },
     {
+      "id": "197b8722362c6834",
+      "title": "Group-II",
+      "link": "https://tnpscresults.tn.gov.in/ccsexam/ccsIndex.aspx?token=P9X2R7K5A8KDJ8JD6658GR",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "tnpsc-hall-tickets",
+      "sourceName": "TNPSC — Hall tickets",
+      "dept": "Tamil Nadu PSC",
+      "state": "Tamil Nadu",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "0a595b14634fcb2e",
+      "title": "Group-IIA",
+      "link": "https://tnpscresults.tn.gov.in/ccsexam2a/ccs2aindex.aspx?token=P9X2R7K5A8KDJ8JD8967RG",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "tnpsc-hall-tickets",
+      "sourceName": "TNPSC — Hall tickets",
+      "dept": "Tamil Nadu PSC",
+      "state": "Tamil Nadu",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "be876904dfd0ff31",
+      "title": "CTS (DIPLOMA / ITI LEVEL)",
+      "link": "https://tnpscresults.tn.gov.in/cts_diploma_iti_phase2/ctsindex.aspx?token=P9X2R7K5A8KDJ8M2S3N0A1",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "tnpsc-hall-tickets",
+      "sourceName": "TNPSC — Hall tickets",
+      "dept": "Tamil Nadu PSC",
+      "state": "Tamil Nadu",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "be361aedaacbfbca",
+      "title": "முதன்மை பக்கம் / Home Page",
+      "link": "https://tnpsc.gov.in/home.aspx",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "tnpsc-hall-tickets",
+      "sourceName": "TNPSC — Hall tickets",
+      "dept": "Tamil Nadu PSC",
+      "state": "Tamil Nadu",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
       "id": "7ebf9c63f70aaa86",
       "title": "भारत सरकार GOVERNMENT OF INDIA",
       "link": "http://india.gov.in/",
@@ -2798,6 +2883,23 @@
       "fetchMethod": "html-listing"
     },
     {
+      "id": "dae63d6cfc1ec8e0",
+      "title": "17 Aug 2026 LIST OF CANDIDATES PROVISIONALLY QUALIFIED FOR INTERVIEW IN ADVT. NO. A-7/E-1/2021, U.P. TECH. EDU. (TCHNG.) SER. EXAM.-2021, LECT. PAINT TECH, LEATH.....",
+      "link": "https://uppsc.up.nic.in/Open_PDF.aspx?I4PnQ0tBagkKFmHgqmmkW38pQGn0K/SU",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "uppsc-hall-tickets",
+      "sourceName": "UPPSC — Hall tickets",
+      "dept": "Uttar Pradesh PSC",
+      "state": "Uttar Pradesh",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
       "id": "26931ebe902f0df0",
       "title": "15 Aug 2026 RESULT OF CANDIDATE SELECTED IN ADVT. NO D-4/E-1/2025, DEPT. S-10/02, UPPSC SYSTEM ANALYST",
       "link": "https://uppsc.up.nic.in/Open_PDF.aspx?I4PnQ0tBagkKFmHgqmmkW6sZX/ReYjvj",
@@ -2835,23 +2937,6 @@
       "id": "d40841a3ad176246",
       "title": "25 Jul 2026 LIST OF SELECTED CANDIDATES IN ADVT. NO. A-7/E-1/2021, U.P. TECHNICAL EDUCATION (TEACHING) SERVICE EXAMINATION-2021, LECT. ARCHITECTURE, PHARMACY, TE.....",
       "link": "https://uppsc.up.nic.in/Open_PDF.aspx?I4PnQ0tBagloISrijFpWKFd9gEzGHmbY",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "uppsc-hall-tickets",
-      "sourceName": "UPPSC — Hall tickets",
-      "dept": "Uttar Pradesh PSC",
-      "state": "Uttar Pradesh",
-      "category": "state",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "16fbfdd1b5a58249",
-      "title": "22 Jul 2026 RESULT OF CANDIDATE SELECTED IN ADVT NO. D-4/E-1/2025 FOR THE POST OF REGIONAL ARCHIVES OFFICER (S-03/05)",
-      "link": "https://uppsc.up.nic.in/Open_PDF.aspx?I4PnQ0tBagloISrijFpWKHbmEhtQCS5P",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],

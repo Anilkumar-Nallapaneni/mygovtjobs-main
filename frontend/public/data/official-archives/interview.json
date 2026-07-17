@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-07-17T10:22:44.061Z",
-  "count": 175,
+  "generatedAt": "2026-07-17T14:17:12.670Z",
+  "count": 176,
   "items": [
     {
       "id": "f43d7aa6e0241ca3",
@@ -14,6 +14,23 @@
       "dept": "Indian Space Research Organisation",
       "state": "All India",
       "category": "psu",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "dae63d6cfc1ec8e0",
+      "title": "17 Aug 2026 LIST OF CANDIDATES PROVISIONALLY QUALIFIED FOR INTERVIEW IN ADVT. NO. A-7/E-1/2021, U.P. TECH. EDU. (TCHNG.) SER. EXAM.-2021, LECT. PAINT TECH, LEATH.....",
+      "link": "https://uppsc.up.nic.in/Open_PDF.aspx?I4PnQ0tBagkKFmHgqmmkW38pQGn0K/SU",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "uppsc-hall-tickets",
+      "sourceName": "UPPSC — Hall tickets",
+      "dept": "Uttar Pradesh PSC",
+      "state": "Uttar Pradesh",
+      "category": "state",
       "stateIds": [
         "all"
       ],
@@ -53,6 +70,22 @@
       "fetchMethod": "live-jobs-supplement"
     },
     {
+      "id": "481473008e181ee4",
+      "title": "Press note regarding the personal interview for the Post of Assistant Engineer MGNREGA, C.D Block Little Andaman under South Andaman District",
+      "link": "https://erecruitment.andamannicobar.gov.in/Notice/64_fbe80dee-4dc3-4385-9622-d2f8e1ad2f29.pdf",
+      "publishedAt": "2026-07-17T02:58:27.625085Z",
+      "summary": null,
+      "pdfUrls": [
+        "https://erecruitment.andamannicobar.gov.in/Notice/64_fbe80dee-4dc3-4385-9622-d2f8e1ad2f29.pdf"
+      ],
+      "sourceId": "an-rec",
+      "sourceName": "Erecruitment Andamannicobar",
+      "dept": "Erecruitment Andamannicobar",
+      "state": "All India",
+      "category": "engineering",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
       "id": "8d5959b9e8633c00",
       "title": "New Vacancies",
       "link": "https://www.barc.gov.in/careers/recruitment.html",
@@ -71,22 +104,6 @@
       "dept": "Barc",
       "state": "All India",
       "category": "defence",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "481473008e181ee4",
-      "title": "Press note regarding the personal interview for the Post of Assistant Engineer MGNREGA, C.D Block Little Andaman under South Andaman District",
-      "link": "https://erecruitment.andamannicobar.gov.in/Notice/64_fbe80dee-4dc3-4385-9622-d2f8e1ad2f29.pdf",
-      "publishedAt": "2026-07-15T02:59:55.148207Z",
-      "summary": null,
-      "pdfUrls": [
-        "https://erecruitment.andamannicobar.gov.in/Notice/64_fbe80dee-4dc3-4385-9622-d2f8e1ad2f29.pdf"
-      ],
-      "sourceId": "an-rec",
-      "sourceName": "Erecruitment Andamannicobar",
-      "dept": "Erecruitment Andamannicobar",
-      "state": "All India",
-      "category": "engineering",
       "fetchMethod": "live-jobs-supplement"
     },
     {
@@ -205,13 +222,13 @@
       "fetchMethod": "live-jobs-supplement"
     },
     {
-      "id": "1e5ca315c6859c93",
-      "title": "5 ESIC Model Hospital Gurugram, Haryana Walk- in interview on 07.07.2026 for the appointment of Full Time Contractual S",
-      "link": "https://www.esic.gov.in/attachments/recruitmentfile/Annexure_1782382011.pdf",
+      "id": "75d059239a1f0ce1",
+      "title": "Walk- in interview on 07.07.2026 for the appointment of Full Time Contractual Specialists and Senior Resident on Contractual basis at ESIC Model Hospital Gurugram, Haryana",
+      "link": "https://www.esic.gov.in/attachments/recruitmentfile/Walk_in_interview_on_07_07_2026_for_the_appointment_of_Full_Time_Contractual_Specialists_and_Senior_Resident_on_Contractual_basis_at_ESIC_Model_Hospital_Gurugram_Haryana_1782382011.pdf",
       "publishedAt": "2026-07-07T00:00:00Z",
-      "summary": "ANNEXURE 'A' (FORMAT OF CERTIFICATE TO BE PRODUCED BY OTHER BACKWARD CLASSES APPLYING FOR APPOINTMENT TO POSTS UNDER THE GOVERNMENT OF INDIA) This is to certify that Shri/Smt./Kumari son/daughter of of village/town in District/Division in the State/Union Territory belongs to the Community which is recognized as a backward class under the Government of India, Ministry of Social Justice and Empowerm…",
+      "summary": "दिनांक:- 23/06/2026 ADVERTISEMENT NO. 03/2026 Walk- in interview on 07.07.2026 for the appointment of Full Time Contractual Specialists and Senior Resident on Contractual basis at ESIC Model Hospital Gurugram, Haryana Employees’ State Insurance Corporation is a statutory body constituted under an Act of Parliament (ESI Act, 1948) and works under the Administrative control of Ministry of Labour and…",
       "pdfUrls": [
-        "https://www.esic.gov.in/attachments/recruitmentfile/Annexure_1782382011.pdf"
+        "https://www.esic.gov.in/attachments/recruitmentfile/Walk_in_interview_on_07_07_2026_for_the_appointment_of_Full_Time_Contractual_Specialists_and_Senior_Resident_on_Contractual_basis_at_ESIC_Model_Hospital_Gurugram_Haryana_1782382011.pdf"
       ],
       "sourceId": "esic",
       "sourceName": "ESIC — Employees' State Insurance Corporation",
@@ -237,35 +254,19 @@
       "fetchMethod": "live-jobs-supplement"
     },
     {
-      "id": "75d059239a1f0ce1",
-      "title": "Walk- in interview on 07.07.2026 for the appointment of Full Time Contractual Specialists and Senior Resident on Contractual basis at ESIC Model Hospital Gurugram, Haryana",
-      "link": "https://www.esic.gov.in/attachments/recruitmentfile/Walk_in_interview_on_07_07_2026_for_the_appointment_of_Full_Time_Contractual_Specialists_and_Senior_Resident_on_Contractual_basis_at_ESIC_Model_Hospital_Gurugram_Haryana_1782382011.pdf",
+      "id": "1e5ca315c6859c93",
+      "title": "5 ESIC Model Hospital Gurugram, Haryana Walk- in interview on 07.07.2026 for the appointment of Full Time Contractual S",
+      "link": "https://www.esic.gov.in/attachments/recruitmentfile/Annexure_1782382011.pdf",
       "publishedAt": "2026-07-07T00:00:00Z",
-      "summary": "दिनांक:- 23/06/2026 ADVERTISEMENT NO. 03/2026 Walk- in interview on 07.07.2026 for the appointment of Full Time Contractual Specialists and Senior Resident on Contractual basis at ESIC Model Hospital Gurugram, Haryana Employees’ State Insurance Corporation is a statutory body constituted under an Act of Parliament (ESI Act, 1948) and works under the Administrative control of Ministry of Labour and…",
+      "summary": "ANNEXURE 'A' (FORMAT OF CERTIFICATE TO BE PRODUCED BY OTHER BACKWARD CLASSES APPLYING FOR APPOINTMENT TO POSTS UNDER THE GOVERNMENT OF INDIA) This is to certify that Shri/Smt./Kumari son/daughter of of village/town in District/Division in the State/Union Territory belongs to the Community which is recognized as a backward class under the Government of India, Ministry of Social Justice and Empowerm…",
       "pdfUrls": [
-        "https://www.esic.gov.in/attachments/recruitmentfile/Walk_in_interview_on_07_07_2026_for_the_appointment_of_Full_Time_Contractual_Specialists_and_Senior_Resident_on_Contractual_basis_at_ESIC_Model_Hospital_Gurugram_Haryana_1782382011.pdf"
+        "https://www.esic.gov.in/attachments/recruitmentfile/Annexure_1782382011.pdf"
       ],
       "sourceId": "esic",
       "sourceName": "ESIC — Employees' State Insurance Corporation",
       "dept": "ESIC — Employees' State Insurance Corporation",
       "state": "All India",
       "category": "health",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "c6cdb91ce9f42609",
-      "title": "DLSA Ujjain Contract Driver Interview Notification 03/07/2026 31/12/2026 View (745 KB)",
-      "link": "https://cdnbbsr.s3waas.gov.in/s3ec0229539ed932d32f1c56324cded92c/uploads/2026/07/2026070316.pdf",
-      "publishedAt": "2026-07-03T00:00:00Z",
-      "summary": null,
-      "pdfUrls": [
-        "https://cdnbbsr.s3waas.gov.in/s3ec0229539ed932d32f1c56324cded92c/uploads/2026/07/2026070316.pdf"
-      ],
-      "sourceId": "dcourt-ujjain",
-      "sourceName": "Ujjain Dcourts",
-      "dept": "Ujjain Dcourts",
-      "state": "All India",
-      "category": "state",
       "fetchMethod": "live-jobs-supplement"
     },
     {
@@ -281,6 +282,22 @@
         "https://cdnbbsr.s3waas.gov.in/s3ec0229539ed932d32f1c56324cded92c/uploads/2025/11/2025112521.pdf",
         "https://cdnbbsr.s3waas.gov.in/s3ec0229539ed932d32f1c56324cded92c/uploads/2025/10/2025102334.pdf",
         "https://cdnbbsr.s3waas.gov.in/s3ec0229539ed932d32f1c56324cded92c/uploads/2025/10/2025100826.pdf"
+      ],
+      "sourceId": "dcourt-ujjain",
+      "sourceName": "Ujjain Dcourts",
+      "dept": "Ujjain Dcourts",
+      "state": "All India",
+      "category": "state",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "c6cdb91ce9f42609",
+      "title": "DLSA Ujjain Contract Driver Interview Notification 03/07/2026 31/12/2026 View (745 KB)",
+      "link": "https://cdnbbsr.s3waas.gov.in/s3ec0229539ed932d32f1c56324cded92c/uploads/2026/07/2026070316.pdf",
+      "publishedAt": "2026-07-03T00:00:00Z",
+      "summary": null,
+      "pdfUrls": [
+        "https://cdnbbsr.s3waas.gov.in/s3ec0229539ed932d32f1c56324cded92c/uploads/2026/07/2026070316.pdf"
       ],
       "sourceId": "dcourt-ujjain",
       "sourceName": "Ujjain Dcourts",
@@ -1162,22 +1179,6 @@
       "fetchMethod": "live-jobs-supplement"
     },
     {
-      "id": "726ed4578ba6a67c",
-      "title": "DMSRDE Junior Research Fellow Recruitment 2026 - Walkin",
-      "link": "https://drdo.gov.in/",
-      "publishedAt": "2026-06-30T00:00:00Z",
-      "summary": "ra&jrf_2026 MINISTRY OF DEFENCE DEFENCE RESEARCH & DEVELOPMENT ORGANIZATION ISO 9001:2015 ISO 9001:2015 DEFENCE MATERIALS & STORES RESEARCH & DEVELOPMENT ESTABLISHMENT (DMSRDE) G.T. ROAD, KANPUR – 208 013 WALK IN INTERVIEW FOR THE POSITION OF JUNIOR RESEARCH FELLOW Walk-in interview of the candidates fulfilling the qualifications mentioned below initially for a period of two years is to be held in…",
-      "pdfUrls": [
-        "https://drdo.gov.in/drdo/sites/default/files/vacancy/advtDMSRDE15052026.pdf"
-      ],
-      "sourceId": "structured-import",
-      "sourceName": "DMSRDE",
-      "dept": "DMSRDE",
-      "state": "All India",
-      "category": "state",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
       "id": "baf7c9d47647c0c5",
       "title": "22nd May 2026List of short-listed, eliminated and rejected candidate for online Interview of Advt. No. WII/ADVT. 1/RP–CELL/April, 2026",
       "link": "https://www.wii.gov.in/news/list_shortlisted_eliminated_rejected_candidate_online_interview_advtno_wii_advt1_rpcell_april_2026",
@@ -1295,22 +1296,6 @@
       "fetchMethod": "live-jobs-supplement"
     },
     {
-      "id": "291462b3c0794264",
-      "title": "TNPSC CTS Non-Interview Notification 2026 Released for 461 Posts, Apply Online at tnpscexams.in",
-      "link": "https://tnpsc.gov.in/",
-      "publishedAt": "2026-06-29T00:00:00Z",
-      "summary": "Page 1 of 145 Applications are invited only through online mode for direct recruitment to the posts in Combined Technical Services Examination (Non - Interview Posts). 1. Important Instructions: 1.1. Candidates to ensure their eligibility for the examination: All candidates are requested to carefully read the “Instructions to Applicants” available in the Commission’s website www.tnpsc.gov.in and t…",
-      "pdfUrls": [
-        "https://tnpsc.gov.in/document/english/CTS(Non%20Interview)%20English%20Final_.pdf"
-      ],
-      "sourceId": "structured-import",
-      "sourceName": "TNPSC",
-      "dept": "TNPSC",
-      "state": "All India",
-      "category": "state",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
       "id": "0a4c0b2fcbd8e066",
       "title": "Walk-in Interview will be conducted on 29/06/2026 for recruitment of Contractual Senior Resident",
       "link": "https://www.esic.gov.in/attachments/recruitmentfile/Walk_in_Interview_will_be_conducted_on_29_06_2026_for_recruitment_of_Contractual_Senior_Resident_1782121313.pdf",
@@ -1324,6 +1309,22 @@
       "dept": "ESIC — Employees' State Insurance Corporation",
       "state": "All India",
       "category": "health",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "291462b3c0794264",
+      "title": "TNPSC CTS Non-Interview Notification 2026 Released for 461 Posts, Apply Online at tnpscexams.in",
+      "link": "https://tnpsc.gov.in/",
+      "publishedAt": "2026-06-29T00:00:00Z",
+      "summary": "Page 1 of 145 Applications are invited only through online mode for direct recruitment to the posts in Combined Technical Services Examination (Non - Interview Posts). 1. Important Instructions: 1.1. Candidates to ensure their eligibility for the examination: All candidates are requested to carefully read the “Instructions to Applicants” available in the Commission’s website www.tnpsc.gov.in and t…",
+      "pdfUrls": [
+        "https://tnpsc.gov.in/document/english/CTS(Non%20Interview)%20English%20Final_.pdf"
+      ],
+      "sourceId": "structured-import",
+      "sourceName": "TNPSC",
+      "dept": "TNPSC",
+      "state": "All India",
+      "category": "state",
       "fetchMethod": "live-jobs-supplement"
     },
     {
@@ -1820,22 +1821,6 @@
       "fetchMethod": "live-jobs-supplement"
     },
     {
-      "id": "22b198a06cd52195",
-      "title": "ACTREC Assistant Security Officer Recruitment 2026 - Walkin",
-      "link": "https://actrec.gov.in/sites/default/files/2026-06/Walk%20in%20ASO%2023.06.2026.docx.pdf",
-      "publishedAt": "2026-06-23T00:00:00Z",
-      "summary": "Advt- OS-A/77/2026 02.06.2026 WALK- IN – INTERVIEW FOR Assistant Security Officer (On Outsourced Contract Basis A-1 Facility and Property Managers Pvt. Ltd.) An Outsourced Contractor for Manpower Services, looking for Assistant Security Officer to be placed on contract at Tata Memorial Centre- ACTREC, Kharghar, Navi Mumbai-410 210 detailed as below: ESSENTIAL QUALIFICATION & EXPERIENCE: 1. Ex Serv…",
-      "pdfUrls": [
-        "https://actrec.gov.in/sites/default/files/2026-06/Walk%20in%20ASO%2023.06.2026.docx.pdf"
-      ],
-      "sourceId": "structured-import",
-      "sourceName": "ACTREC",
-      "dept": "ACTREC",
-      "state": "All India",
-      "category": "state",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
       "id": "c83f1a32009b0b70",
       "title": "Interview Details: 04 Posts of Assistant Veterinary Surgeon, NDMC",
       "link": "https://www.upsc.gov.in/whats-new/04%20Posts%20of%20Assistant%20Veterinary%20Surgeon,%20NDMC/Interview%20Details",
@@ -1849,6 +1834,22 @@
       "dept": "UPSC — What's New",
       "state": "All India",
       "category": "upsc",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "22b198a06cd52195",
+      "title": "ACTREC Assistant Security Officer Recruitment 2026 - Walkin",
+      "link": "https://actrec.gov.in/sites/default/files/2026-06/Walk%20in%20ASO%2023.06.2026.docx.pdf",
+      "publishedAt": "2026-06-23T00:00:00Z",
+      "summary": "Advt- OS-A/77/2026 02.06.2026 WALK- IN – INTERVIEW FOR Assistant Security Officer (On Outsourced Contract Basis A-1 Facility and Property Managers Pvt. Ltd.) An Outsourced Contractor for Manpower Services, looking for Assistant Security Officer to be placed on contract at Tata Memorial Centre- ACTREC, Kharghar, Navi Mumbai-410 210 detailed as below: ESSENTIAL QUALIFICATION & EXPERIENCE: 1. Ex Serv…",
+      "pdfUrls": [
+        "https://actrec.gov.in/sites/default/files/2026-06/Walk%20in%20ASO%2023.06.2026.docx.pdf"
+      ],
+      "sourceId": "structured-import",
+      "sourceName": "ACTREC",
+      "dept": "ACTREC",
+      "state": "All India",
+      "category": "state",
       "fetchMethod": "live-jobs-supplement"
     },
     {
@@ -1978,13 +1979,13 @@
       "fetchMethod": "live-jobs-supplement"
     },
     {
-      "id": "d8980b7a971c14ad",
-      "title": "Important Final Stage - 152/2024-25 (Industries Officer (MSME), Class-2, Industries & Mines Department) Click here to s",
-      "link": "https://gpsc.gujarat.gov.in/Documents/AdvertismentDocument/FR-_152_24-25.pdf",
+      "id": "11e89a0ea23a3770",
+      "title": "Important Final Stage - 153/2024-25 (Industries Officer (Commissioner Office), Class-2, Industries & Mines Department)",
+      "link": "https://gpsc.gujarat.gov.in/Documents/AdvertismentDocument/FR-153_24-25.pdf",
       "publishedAt": "2026-06-20T00:00:00Z",
-      "summary": "Date : 20-06-2026 Merit No. Name of Candidate Code E.No. M/F Category P.w.D. Group Type of Disability Weighted Marks in P.T. Weighted Marks in Interview Total Weighted Marks 1 Shri Jaydip Nanalal Makadiya SLT 1 EWS A L.V. 14.27 10 24.27 1) Place : Gandhinagar (A.M.Kansangara) Date : 20-06-2026 Joint Secretary Gujarat Public Service Commission RCT-2875-152-2025-R-1 Cut-off Marks :- Note :- The Weig…",
+      "summary": "Date : 20-06-2026 Merit No. Name of Candidate Code E.No. M/F Category P.w.D. Group Type of Disability Weighted Marks in P.T. Weighted Marks in Interview Total Weighted Marks 1 Shri Jaydip Nanalal Makadiya SLT 1 EWS A L.V. 14.27 10 24.27 1) Place : Gandhinagar (A.M.Kansangara) Date : 20-06-2026 Joint Secretary Gujarat Public Service Commission RCT-2935-153-2025-R-1 Cut-off Marks :- Note :- The Weig…",
       "pdfUrls": [
-        "https://gpsc.gujarat.gov.in/Documents/AdvertismentDocument/FR-_152_24-25.pdf"
+        "https://gpsc.gujarat.gov.in/Documents/AdvertismentDocument/FR-153_24-25.pdf"
       ],
       "sourceId": "psc-gj",
       "sourceName": "Gpsc Gujarat",
@@ -2010,13 +2011,13 @@
       "fetchMethod": "live-jobs-supplement"
     },
     {
-      "id": "11e89a0ea23a3770",
-      "title": "Important Final Stage - 153/2024-25 (Industries Officer (Commissioner Office), Class-2, Industries & Mines Department)",
-      "link": "https://gpsc.gujarat.gov.in/Documents/AdvertismentDocument/FR-153_24-25.pdf",
+      "id": "d8980b7a971c14ad",
+      "title": "Important Final Stage - 152/2024-25 (Industries Officer (MSME), Class-2, Industries & Mines Department) Click here to s",
+      "link": "https://gpsc.gujarat.gov.in/Documents/AdvertismentDocument/FR-_152_24-25.pdf",
       "publishedAt": "2026-06-20T00:00:00Z",
-      "summary": "Date : 20-06-2026 Merit No. Name of Candidate Code E.No. M/F Category P.w.D. Group Type of Disability Weighted Marks in P.T. Weighted Marks in Interview Total Weighted Marks 1 Shri Jaydip Nanalal Makadiya SLT 1 EWS A L.V. 14.27 10 24.27 1) Place : Gandhinagar (A.M.Kansangara) Date : 20-06-2026 Joint Secretary Gujarat Public Service Commission RCT-2935-153-2025-R-1 Cut-off Marks :- Note :- The Weig…",
+      "summary": "Date : 20-06-2026 Merit No. Name of Candidate Code E.No. M/F Category P.w.D. Group Type of Disability Weighted Marks in P.T. Weighted Marks in Interview Total Weighted Marks 1 Shri Jaydip Nanalal Makadiya SLT 1 EWS A L.V. 14.27 10 24.27 1) Place : Gandhinagar (A.M.Kansangara) Date : 20-06-2026 Joint Secretary Gujarat Public Service Commission RCT-2875-152-2025-R-1 Cut-off Marks :- Note :- The Weig…",
       "pdfUrls": [
-        "https://gpsc.gujarat.gov.in/Documents/AdvertismentDocument/FR-153_24-25.pdf"
+        "https://gpsc.gujarat.gov.in/Documents/AdvertismentDocument/FR-_152_24-25.pdf"
       ],
       "sourceId": "psc-gj",
       "sourceName": "Gpsc Gujarat",
@@ -2459,6 +2460,20 @@
       "fetchMethod": "live-jobs-supplement"
     },
     {
+      "id": "52cd60643fc6de66",
+      "title": "public notice and interview reschedule including annexure-a for recruitment to 21 posts of district defence services welfare officer group-a in the department of defence services welfare government of Punjab uploaded on 25-05-2026",
+      "link": "https://ppsc.gov.in/index.aspx?page=2755&tabid=10&tablinkid=6794",
+      "publishedAt": "2026-05-25T00:00:00Z",
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-pb",
+      "sourceName": "Ppsc",
+      "dept": "Ppsc",
+      "state": "All India",
+      "category": "defence",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
       "id": "552f20a275f377ed",
       "title": "SELECTION LIST OF PRINCIPAL-CUM-PROFESSOR & VICE PRINCIPAL-CUM-PROFESSR ON CONTRACTUAL BASIS OF INTERVIEW HELD ON 25.05.2026 FOR ESIC NURSING COLLEGE, JOKA",
       "link": "https://www.esic.gov.in/attachments/recruitmentfile/SELECTION_LIST_OF_PRINCIPAL_CUM_PROFESSOR_amp_VICE_PRINCIPAL_CUM_PROFESSR_ON_CONTRACTUAL_BASIS_OF_INTERVIEW_HELD_ON_25_05_2026_FOR_ESIC_NURSING_COLLEGE_JOKA_1781256709.pdf",
@@ -2475,29 +2490,15 @@
       "fetchMethod": "live-jobs-supplement"
     },
     {
-      "id": "52cd60643fc6de66",
-      "title": "public notice and interview reschedule including annexure-a for recruitment to 21 posts of district defence services welfare officer group-a in the department of defence services welfare government of Punjab uploaded on 25-05-2026",
-      "link": "https://ppsc.gov.in/index.aspx?page=2755&tabid=10&tablinkid=6794",
-      "publishedAt": "2026-05-25T00:00:00Z",
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-pb",
-      "sourceName": "Ppsc",
-      "dept": "Ppsc",
-      "state": "All India",
-      "category": "defence",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
       "id": "583080ee2e24e894",
-      "title": "19-05-2026Food Safety Officer-- Written Examination and Interview( syllabus )",
+      "title": "19-05-2026 Food Safety Officer-- Written Examination and Interview ( syllabus )",
       "link": "https://psc.uk.gov.in/candidate-corner/syllabus",
       "publishedAt": "2026-05-19T00:00:00Z",
       "summary": null,
       "pdfUrls": [],
       "sourceId": "psc-uk",
-      "sourceName": "Psc Uk",
-      "dept": "Psc Uk",
+      "sourceName": "Uttarakhand PSC (UKPSC)",
+      "dept": "Uttarakhand PSC (UKPSC)",
       "state": "All India",
       "category": "state",
       "fetchMethod": "live-jobs-supplement"
@@ -2533,22 +2534,6 @@
       "fetchMethod": "live-jobs-supplement"
     },
     {
-      "id": "485a0fca5dbeb5d3",
-      "title": "Regarding Interview schedule notice under recruitment advertisement number 233 dated 13.05.2026 in DLSA Ujjain 11/07/202",
-      "link": "https://cdnbbsr.s3waas.gov.in/s3ec0229539ed932d32f1c56324cded92c/uploads/2026/07/2026070875.pdf",
-      "publishedAt": "2026-05-13T00:00:00Z",
-      "summary": null,
-      "pdfUrls": [
-        "https://cdnbbsr.s3waas.gov.in/s3ec0229539ed932d32f1c56324cded92c/uploads/2026/07/2026070875.pdf"
-      ],
-      "sourceId": "dcourt-ujjain",
-      "sourceName": "Ujjain Dcourts",
-      "dept": "Ujjain Dcourts",
-      "state": "All India",
-      "category": "state",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
       "id": "b5773e5c8e75d0e3",
       "title": "Interview Schedule for recruitment to various posts in the Directorate of Handloom & Textiles, Manipur on contractual basis.Updated: 13/05/2026",
       "link": "https://mpscmanipur.gov.in/files/MPSC_26051320250.pdf",
@@ -2560,6 +2545,22 @@
       "sourceId": "psc-mn",
       "sourceName": "Mpscmanipur",
       "dept": "Mpscmanipur",
+      "state": "All India",
+      "category": "state",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "485a0fca5dbeb5d3",
+      "title": "Regarding Interview schedule notice under recruitment advertisement number 233 dated 13.05.2026 in DLSA Ujjain 11/07/202",
+      "link": "https://cdnbbsr.s3waas.gov.in/s3ec0229539ed932d32f1c56324cded92c/uploads/2026/07/2026070875.pdf",
+      "publishedAt": "2026-05-13T00:00:00Z",
+      "summary": null,
+      "pdfUrls": [
+        "https://cdnbbsr.s3waas.gov.in/s3ec0229539ed932d32f1c56324cded92c/uploads/2026/07/2026070875.pdf"
+      ],
+      "sourceId": "dcourt-ujjain",
+      "sourceName": "Ujjain Dcourts",
+      "dept": "Ujjain Dcourts",
       "state": "All India",
       "category": "state",
       "fetchMethod": "live-jobs-supplement"
@@ -2597,13 +2598,13 @@
       "fetchMethod": "live-jobs-supplement"
     },
     {
-      "id": "fb1b920d734235f4",
-      "title": "18/03/2026 Interview Notice for the post of Lecturer Commerce in SED",
-      "link": "http://jkpsc.nic.in/pdf/Princedraft_2.pdf",
+      "id": "aeb69d8c5663f442",
+      "title": "18/03/2026 Interview Notice for the post of Lecturer Sociology in SED",
+      "link": "http://jkpsc.nic.in/pdf/Princedraft_1.pdf",
       "publishedAt": "2026-03-18T00:00:00Z",
       "summary": null,
       "pdfUrls": [
-        "http://jkpsc.nic.in/pdf/Princedraft_2.pdf"
+        "http://jkpsc.nic.in/pdf/Princedraft_1.pdf"
       ],
       "sourceId": "psc-jk",
       "sourceName": "Jammu & Kashmir PSC (JKPSC)",
@@ -2613,13 +2614,13 @@
       "fetchMethod": "live-jobs-supplement"
     },
     {
-      "id": "aeb69d8c5663f442",
-      "title": "18/03/2026 Interview Notice for the post of Lecturer Sociology in SED",
-      "link": "http://jkpsc.nic.in/pdf/Princedraft_1.pdf",
+      "id": "fb1b920d734235f4",
+      "title": "18/03/2026 Interview Notice for the post of Lecturer Commerce in SED",
+      "link": "http://jkpsc.nic.in/pdf/Princedraft_2.pdf",
       "publishedAt": "2026-03-18T00:00:00Z",
       "summary": null,
       "pdfUrls": [
-        "http://jkpsc.nic.in/pdf/Princedraft_1.pdf"
+        "http://jkpsc.nic.in/pdf/Princedraft_2.pdf"
       ],
       "sourceId": "psc-jk",
       "sourceName": "Jammu & Kashmir PSC (JKPSC)",
@@ -2759,6 +2760,22 @@
       "dept": "ESIC — Employees' State Insurance Corporation",
       "state": "All India",
       "category": "health",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "726ed4578ba6a67c",
+      "title": "DMSRDE Junior Research Fellow Recruitment 2026 - Walkin",
+      "link": "https://drdo.gov.in/",
+      "publishedAt": "2026-06-30T00:00:00Z",
+      "summary": "ra&jrf_2026 MINISTRY OF DEFENCE DEFENCE RESEARCH & DEVELOPMENT ORGANIZATION ISO 9001:2015 ISO 9001:2015 DEFENCE MATERIALS & STORES RESEARCH & DEVELOPMENT ESTABLISHMENT (DMSRDE) G.T. ROAD, KANPUR – 208 013 WALK IN INTERVIEW FOR THE POSITION OF JUNIOR RESEARCH FELLOW Walk-in interview of the candidates fulfilling the qualifications mentioned below initially for a period of two years is to be held in…",
+      "pdfUrls": [
+        "https://drdo.gov.in/drdo/sites/default/files/vacancy/advtDMSRDE15052026.pdf"
+      ],
+      "sourceId": "structured-import",
+      "sourceName": "DMSRDE",
+      "dept": "DMSRDE",
+      "state": "All India",
+      "category": "state",
       "fetchMethod": "live-jobs-supplement"
     },
     {

@@ -1,24 +1,7 @@
 {
-  "generatedAt": "2026-07-17T10:22:44.061Z",
+  "generatedAt": "2026-07-17T14:17:12.670Z",
   "count": 202,
   "items": [
-    {
-      "id": "45d6ff67f766e352",
-      "title": "Advt.No.ISRO:ICRB:02(A-JPA):2022 - VALIDITY OF THE SELECTION PANELS HAS BEEN EXTENDED UPTO 12.08.2026 Read More",
-      "link": "https://www.isro.gov.in/ICRB_Recruitment5.html",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "isro-careers",
-      "sourceName": "ISRO — Careers",
-      "dept": "Indian Space Research Organisation",
-      "state": "All India",
-      "category": "psu",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
     {
       "id": "c92837a7ea14b603",
       "title": "UPSSSC Sugarcane Supervisor Recruitment 2026 Notification Out - Apply Online for 1182 Posts",
@@ -49,6 +32,22 @@
       "dept": "IIPS",
       "state": "All India",
       "category": "state",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "a0c781809b2cbecc",
+      "title": "Press Release-Revision of Vacancies & Extension of Online Application Submission Date – A&N Police Recruitment 2026",
+      "link": "https://erecruitment.andamannicobar.gov.in/Notice/111_875d5de8-1f35-44bf-b52a-851014ec79fe.pdf",
+      "publishedAt": "2026-07-17T02:57:11.225013Z",
+      "summary": null,
+      "pdfUrls": [
+        "https://erecruitment.andamannicobar.gov.in/Notice/111_875d5de8-1f35-44bf-b52a-851014ec79fe.pdf"
+      ],
+      "sourceId": "an-rec",
+      "sourceName": "Erecruitment Andamannicobar",
+      "dept": "Erecruitment Andamannicobar",
+      "state": "All India",
+      "category": "police",
       "fetchMethod": "live-jobs-supplement"
     },
     {
@@ -96,22 +95,6 @@
       "fetchMethod": "live-jobs-supplement"
     },
     {
-      "id": "a0c781809b2cbecc",
-      "title": "Press Release-Revision of Vacancies & Extension of Online Application Submission Date – A&N Police Recruitment 2026",
-      "link": "https://erecruitment.andamannicobar.gov.in/Notice/111_875d5de8-1f35-44bf-b52a-851014ec79fe.pdf",
-      "publishedAt": "2026-07-15T02:58:38.342856Z",
-      "summary": null,
-      "pdfUrls": [
-        "https://erecruitment.andamannicobar.gov.in/Notice/111_875d5de8-1f35-44bf-b52a-851014ec79fe.pdf"
-      ],
-      "sourceId": "an-rec",
-      "sourceName": "Erecruitment Andamannicobar",
-      "dept": "Erecruitment Andamannicobar",
-      "state": "All India",
-      "category": "police",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
       "id": "eda729642db5d6b2",
       "title": "2 CEN 03/2026 14-07-2026 Notice Frequently Asked Questions (FAQ) - CEN No. 03/2026 English Version",
       "link": "https://www.rrbajmer.gov.in/Upload_PDF/FINAL%20FAQ%20ENGLISH%20CEN%2003_2026%20SECTION%20CONTROLLER-639196630687276355.pdf",
@@ -125,20 +108,6 @@
       "dept": "Rrbajmer",
       "state": "All India",
       "category": "railways",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "a210c9a77c445adc",
-      "title": "OSSC FSO Recruitment 2026 Notification Out - Apply Online for 84 Food Safety Officer Posts",
-      "link": "https://www.ossc.gov.in",
-      "publishedAt": "2026-07-08T00:00:00Z",
-      "summary": "OSSC Food Safety Officer Recruitment 2026: Get the latest OSSC recruitment notification 2026 for 84 Food Safety Officer (Group-B) vacancies under the Office of Commissioner of Food Safety, Odisha, Health & Family Welfare Department, Govt. of Odisha. The online registration starts on 09th June 2026 and the last date to submit the online application form is 11th July 2026. Find OSSC vacancies across…",
-      "pdfUrls": [],
-      "sourceId": "structured-import",
-      "sourceName": "OSSC",
-      "dept": "OSSC",
-      "state": "All India",
-      "category": "state",
       "fetchMethod": "live-jobs-supplement"
     },
     {
@@ -326,22 +295,6 @@
       "fetchMethod": "live-jobs-supplement"
     },
     {
-      "id": "3bf261e4f7deb72d",
-      "title": "Sikkim PSC Veterinary Officer Recruitment 2026 - Apply Online for 47 Posts",
-      "link": "https://spscrecruitment.sikkim.gov.in/rpaonline/login",
-      "publishedAt": "2026-06-30T00:00:00Z",
-      "summary": "Sikkim Public Service Commission (Sikkim PSC) Recruitment 2026 for 47 posts of Veterinary Officer. Candidates with BVSC Can Apply Online. The last date to apply online is 30-06-2026. The candidate shall apply online through Sikkim PSC official website spsc.sikkim.gov.in.",
-      "pdfUrls": [
-        "https://spsc.sikkim.gov.in/Advertisements/VO%20Advertisement%202026.pdf"
-      ],
-      "sourceId": "structured-import",
-      "sourceName": "Sikkim PSC",
-      "dept": "Sikkim PSC",
-      "state": "All India",
-      "category": "state",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
       "id": "2f839cbe5056c4b9",
       "title": "AISSEE 2026-27 - Information Bulletin - Click Here",
       "link": "https://www.nta.ac.in/",
@@ -369,6 +322,22 @@
       "sourceId": "structured-import",
       "sourceName": "NPCIL MAPS",
       "dept": "NPCIL MAPS",
+      "state": "All India",
+      "category": "state",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "3bf261e4f7deb72d",
+      "title": "Sikkim PSC Veterinary Officer Recruitment 2026 - Apply Online for 47 Posts",
+      "link": "https://spscrecruitment.sikkim.gov.in/rpaonline/login",
+      "publishedAt": "2026-06-30T00:00:00Z",
+      "summary": "Sikkim Public Service Commission (Sikkim PSC) Recruitment 2026 for 47 posts of Veterinary Officer. Candidates with BVSC Can Apply Online. The last date to apply online is 30-06-2026. The candidate shall apply online through Sikkim PSC official website spsc.sikkim.gov.in.",
+      "pdfUrls": [
+        "https://spsc.sikkim.gov.in/Advertisements/VO%20Advertisement%202026.pdf"
+      ],
+      "sourceId": "structured-import",
+      "sourceName": "Sikkim PSC",
+      "dept": "Sikkim PSC",
       "state": "All India",
       "category": "state",
       "fetchMethod": "live-jobs-supplement"
@@ -785,22 +754,6 @@
       "fetchMethod": "live-jobs-supplement"
     },
     {
-      "id": "4792f891eee4a0b0",
-      "title": "BITS Pilani Institute Research Fellow Recruitment 2026 - Apply Online",
-      "link": "https://www.bits-pilani.ac.in/wp-content/uploads/PhD-Advertisement-CDRF-PRoposal.pdf",
-      "publishedAt": "2026-05-26T00:00:00Z",
-      "summary": "Date: 26/05/2026 Institute Research Fellow Electrochromic Polymers | Deadline: 25/06/2026 | Joining: At the earliest at Goa Campus Applications are invited for an Institute Research Fellow willing to do PhD in the Cross Disciplinary Research Framework III funded project, “Mechanically Robust Electrochromic Fibers Based on Conducting Fibers from Saloon Waste” under the supervision of Prof. Rashmi C…",
-      "pdfUrls": [
-        "https://www.bits-pilani.ac.in/wp-content/uploads/PhD-Advertisement-CDRF-PRoposal.pdf"
-      ],
-      "sourceId": "structured-import",
-      "sourceName": "BITS Pilani",
-      "dept": "BITS Pilani",
-      "state": "All India",
-      "category": "state",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
       "id": "135ab213e454f5cd",
       "title": "Press release for Extension of Online Application Submission Date – A&N Police Recruitment 2026",
       "link": "https://erecruitment.andamannicobar.gov.in/Notice/105_36255c39-9bd3-49ab-b8cc-670d20d363dd.pdf",
@@ -814,6 +767,22 @@
       "dept": "Erecruitment Andamannicobar",
       "state": "All India",
       "category": "police",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "4792f891eee4a0b0",
+      "title": "BITS Pilani Institute Research Fellow Recruitment 2026 - Apply Online",
+      "link": "https://www.bits-pilani.ac.in/wp-content/uploads/PhD-Advertisement-CDRF-PRoposal.pdf",
+      "publishedAt": "2026-05-26T00:00:00Z",
+      "summary": "Date: 26/05/2026 Institute Research Fellow Electrochromic Polymers | Deadline: 25/06/2026 | Joining: At the earliest at Goa Campus Applications are invited for an Institute Research Fellow willing to do PhD in the Cross Disciplinary Research Framework III funded project, “Mechanically Robust Electrochromic Fibers Based on Conducting Fibers from Saloon Waste” under the supervision of Prof. Rashmi C…",
+      "pdfUrls": [
+        "https://www.bits-pilani.ac.in/wp-content/uploads/PhD-Advertisement-CDRF-PRoposal.pdf"
+      ],
+      "sourceId": "structured-import",
+      "sourceName": "BITS Pilani",
+      "dept": "BITS Pilani",
+      "state": "All India",
+      "category": "state",
       "fetchMethod": "live-jobs-supplement"
     },
     {
@@ -994,22 +963,6 @@
       "fetchMethod": "live-jobs-supplement"
     },
     {
-      "id": "853c69cd104ab780",
-      "title": "1 Extension of Last Date for Submission of Applications for Engagement of Retired Indian Air Force Officer as Consultant",
-      "link": "https://mha.nic.in",
-      "publishedAt": "2020-12-09T00:00:00Z",
-      "summary": "-iits2ir/File No. IV-23012/01/2024-DGCD(Comn.) 51' of India, Tjb 4-micqzr/Ministry of Home Affairs, 31R-1:21,1-1 'NI, .11,1N, Tell Sa 41t: ,<E14, Directorate General Fire Service, Civil Defence & Home Guards arTTPT/Communication Section f 114-7, def-7 East Block-VIE, Level-VI! zi[1:41.11--ilt, 714 fkc.-1- 110066 R.K. Puram, New Delhi-110066 Dated: I9 May,2026 Circular Subject: Engagement of 01 Ret…",
-      "pdfUrls": [
-        "https://www.mha.gov.in/sites/default/files/AirVacancy_19062026.PDF"
-      ],
-      "sourceId": "ib",
-      "sourceName": "Mha",
-      "dept": "Mha",
-      "state": "All India",
-      "category": "defence",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
       "id": "fe0019fdb44c61a8",
       "title": "Advt No. 23 of 2023 - Treasury Officer & Assistant Treasury Officer (Group-B), Examination - 2022",
       "link": "http://hpsc.gov.in/en-us/",
@@ -1023,6 +976,53 @@
       "dept": "HPSC — Recruitment",
       "state": "All India",
       "category": "state",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "45d6ff67f766e352",
+      "title": "Advt.No.ISRO:ICRB:02(A-JPA):2022 - VALIDITY OF THE SELECTION PANELS HAS BEEN EXTENDED UPTO 12.08.2026 Read More",
+      "link": "https://www.isro.gov.in/ICRB_Recruitment5.html",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "isro-careers",
+      "sourceName": "ISRO — Careers",
+      "dept": "Indian Space Research Organisation",
+      "state": "All India",
+      "category": "psu",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "a210c9a77c445adc",
+      "title": "OSSC FSO Recruitment 2026 Notification Out - Apply Online for 84 Food Safety Officer Posts",
+      "link": "https://www.ossc.gov.in",
+      "publishedAt": "2026-07-08T00:00:00Z",
+      "summary": "OSSC Food Safety Officer Recruitment 2026: Get the latest OSSC recruitment notification 2026 for 84 Food Safety Officer (Group-B) vacancies under the Office of Commissioner of Food Safety, Odisha, Health & Family Welfare Department, Govt. of Odisha. The online registration starts on 09th June 2026 and the last date to submit the online application form is 11th July 2026. Find OSSC vacancies across…",
+      "pdfUrls": [],
+      "sourceId": "structured-import",
+      "sourceName": "OSSC",
+      "dept": "OSSC",
+      "state": "All India",
+      "category": "state",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "853c69cd104ab780",
+      "title": "1 Extension of Last Date for Submission of Applications for Engagement of Retired Indian Air Force Officer as Consultant",
+      "link": "https://mha.nic.in",
+      "publishedAt": "2020-12-09T00:00:00Z",
+      "summary": "-iits2ir/File No. IV-23012/01/2024-DGCD(Comn.) 51' of India, Tjb 4-micqzr/Ministry of Home Affairs, 31R-1:21,1-1 'NI, .11,1N, Tell Sa 41t: ,<E14, Directorate General Fire Service, Civil Defence & Home Guards arTTPT/Communication Section f 114-7, def-7 East Block-VIE, Level-VI! zi[1:41.11--ilt, 714 fkc.-1- 110066 R.K. Puram, New Delhi-110066 Dated: I9 May,2026 Circular Subject: Engagement of 01 Ret…",
+      "pdfUrls": [
+        "https://www.mha.gov.in/sites/default/files/AirVacancy_19062026.PDF"
+      ],
+      "sourceId": "ib",
+      "sourceName": "Mha",
+      "dept": "Mha",
+      "state": "All India",
+      "category": "defence",
       "fetchMethod": "live-jobs-supplement"
     },
     {
