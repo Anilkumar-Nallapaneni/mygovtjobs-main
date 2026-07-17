@@ -1,7 +1,24 @@
 {
-  "generatedAt": "2026-07-17T14:17:12.670Z",
+  "generatedAt": "2026-07-17T10:22:44.061Z",
   "count": 202,
   "items": [
+    {
+      "id": "45d6ff67f766e352",
+      "title": "Advt.No.ISRO:ICRB:02(A-JPA):2022 - VALIDITY OF THE SELECTION PANELS HAS BEEN EXTENDED UPTO 12.08.2026 Read More",
+      "link": "https://www.isro.gov.in/ICRB_Recruitment5.html",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "isro-careers",
+      "sourceName": "ISRO — Careers",
+      "dept": "Indian Space Research Organisation",
+      "state": "All India",
+      "category": "psu",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
     {
       "id": "c92837a7ea14b603",
       "title": "UPSSSC Sugarcane Supervisor Recruitment 2026 Notification Out - Apply Online for 1182 Posts",
@@ -35,10 +52,40 @@
       "fetchMethod": "live-jobs-supplement"
     },
     {
+      "id": "e6d96f269a38f0ce",
+      "title": "Advt. No. 05/2026 (Group-D) Closing Date Extension 2026-07-03",
+      "link": "https://hssc.gov.in/file/ac1f23cd-9d9c-1328-819f-293dcbcf0080/advertisements",
+      "publishedAt": "2026-07-17T14:27:11.038476Z",
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "ssb-hr",
+      "sourceName": "Staff Selection Commission (SSC)",
+      "dept": "Staff Selection Commission (SSC)",
+      "state": "All India",
+      "category": "ssc",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "0ff4a618bf67e1a6",
+      "title": "Extension of application window for posts under UT of Ladakh for Adv. no. 07 - 2026",
+      "link": "https://upsc.gov.in/sites/default/files/ExtensionApplWndwUTLadakh-07-2026-Engl-100726.pdf",
+      "publishedAt": "2026-07-17T14:24:02.827331Z",
+      "summary": null,
+      "pdfUrls": [
+        "https://upsc.gov.in/sites/default/files/ExtensionApplWndwUTLadakh-07-2026-Engl-100726.pdf"
+      ],
+      "sourceId": "ies",
+      "sourceName": "Union Public Service Commission (UPSC)",
+      "dept": "Union Public Service Commission (UPSC)",
+      "state": "All India",
+      "category": "upsc",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
       "id": "a0c781809b2cbecc",
       "title": "Press Release-Revision of Vacancies & Extension of Online Application Submission Date – A&N Police Recruitment 2026",
       "link": "https://erecruitment.andamannicobar.gov.in/Notice/111_875d5de8-1f35-44bf-b52a-851014ec79fe.pdf",
-      "publishedAt": "2026-07-17T02:57:11.225013Z",
+      "publishedAt": "2026-07-17T13:13:34.724576Z",
       "summary": null,
       "pdfUrls": [
         "https://erecruitment.andamannicobar.gov.in/Notice/111_875d5de8-1f35-44bf-b52a-851014ec79fe.pdf"
@@ -48,20 +95,6 @@
       "dept": "Erecruitment Andamannicobar",
       "state": "All India",
       "category": "police",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "e6d96f269a38f0ce",
-      "title": "Advt. No. 05/2026 (Group-D) Closing Date Extension 2026-07-03",
-      "link": "https://hssc.gov.in/file/ac1f23cd-9d9c-1328-819f-293dcbcf0080/advertisements",
-      "publishedAt": "2026-07-15T21:40:22.344803Z",
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "ssb-hr",
-      "sourceName": "Staff Selection Commission (SSC)",
-      "dept": "Staff Selection Commission (SSC)",
-      "state": "All India",
-      "category": "ssc",
       "fetchMethod": "live-jobs-supplement"
     },
     {
@@ -76,22 +109,6 @@
       "dept": "Staff Selection Commission (SSC)",
       "state": "All India",
       "category": "ssc",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "0ff4a618bf67e1a6",
-      "title": "Extension of application window for posts under UT of Ladakh for Adv. no. 07 - 2026",
-      "link": "https://upsc.gov.in/sites/default/files/ExtensionApplWndwUTLadakh-07-2026-Engl-100726.pdf",
-      "publishedAt": "2026-07-15T21:35:14.650510Z",
-      "summary": null,
-      "pdfUrls": [
-        "https://upsc.gov.in/sites/default/files/ExtensionApplWndwUTLadakh-07-2026-Engl-100726.pdf"
-      ],
-      "sourceId": "ies",
-      "sourceName": "Union Public Service Commission (UPSC)",
-      "dept": "Union Public Service Commission (UPSC)",
-      "state": "All India",
-      "category": "upsc",
       "fetchMethod": "live-jobs-supplement"
     },
     {
@@ -295,19 +312,19 @@
       "fetchMethod": "live-jobs-supplement"
     },
     {
-      "id": "2f839cbe5056c4b9",
-      "title": "AISSEE 2026-27 - Information Bulletin - Click Here",
-      "link": "https://www.nta.ac.in/",
+      "id": "3bf261e4f7deb72d",
+      "title": "Sikkim PSC Veterinary Officer Recruitment 2026 - Apply Online for 47 Posts",
+      "link": "https://spscrecruitment.sikkim.gov.in/rpaonline/login",
       "publishedAt": "2026-06-30T00:00:00Z",
-      "summary": "INFORMATION BULLETIN ALL INDIA SAINIK SCHOOLS ENTRANCE ALL INDIA SAINIK SCHOOLS ENTRANCE EXAMINATION - 2026 1 IMPORTANT INFORMATION AND DATES AT A GLANCE FEE DETAILS AND IMPORTANT DATES Activity Dates Online Submission of Application Forms 10.10.2025 to 30.10.2025 (Upto 05:00 PM) Last Date of Successful Transaction of Fee through Credit/ Debit Card/Net-Banking 31.10.2025 (Upto 11:50 PM) Fee Payabl…",
+      "summary": "Sikkim Public Service Commission (Sikkim PSC) Recruitment 2026 for 47 posts of Veterinary Officer. Candidates with BVSC Can Apply Online. The last date to apply online is 30-06-2026. The candidate shall apply online through Sikkim PSC official website spsc.sikkim.gov.in.",
       "pdfUrls": [
-        "https://sainikschoolgoalpara.org/wp-content/uploads/2025/10/20251010937989896.pdf"
+        "https://spsc.sikkim.gov.in/Advertisements/VO%20Advertisement%202026.pdf"
       ],
-      "sourceId": "ss-goalpara",
-      "sourceName": "Sainikschoolgoalpara Org",
-      "dept": "Sainikschoolgoalpara Org",
+      "sourceId": "structured-import",
+      "sourceName": "Sikkim PSC",
+      "dept": "Sikkim PSC",
       "state": "All India",
-      "category": "teaching",
+      "category": "state",
       "fetchMethod": "live-jobs-supplement"
     },
     {
@@ -327,19 +344,19 @@
       "fetchMethod": "live-jobs-supplement"
     },
     {
-      "id": "3bf261e4f7deb72d",
-      "title": "Sikkim PSC Veterinary Officer Recruitment 2026 - Apply Online for 47 Posts",
-      "link": "https://spscrecruitment.sikkim.gov.in/rpaonline/login",
+      "id": "2f839cbe5056c4b9",
+      "title": "AISSEE 2026-27 - Information Bulletin - Click Here",
+      "link": "https://www.nta.ac.in/",
       "publishedAt": "2026-06-30T00:00:00Z",
-      "summary": "Sikkim Public Service Commission (Sikkim PSC) Recruitment 2026 for 47 posts of Veterinary Officer. Candidates with BVSC Can Apply Online. The last date to apply online is 30-06-2026. The candidate shall apply online through Sikkim PSC official website spsc.sikkim.gov.in.",
+      "summary": "INFORMATION BULLETIN ALL INDIA SAINIK SCHOOLS ENTRANCE ALL INDIA SAINIK SCHOOLS ENTRANCE EXAMINATION - 2026 1 IMPORTANT INFORMATION AND DATES AT A GLANCE FEE DETAILS AND IMPORTANT DATES Activity Dates Online Submission of Application Forms 10.10.2025 to 30.10.2025 (Upto 05:00 PM) Last Date of Successful Transaction of Fee through Credit/ Debit Card/Net-Banking 31.10.2025 (Upto 11:50 PM) Fee Payabl…",
       "pdfUrls": [
-        "https://spsc.sikkim.gov.in/Advertisements/VO%20Advertisement%202026.pdf"
+        "https://sainikschoolgoalpara.org/wp-content/uploads/2025/10/20251010937989896.pdf"
       ],
-      "sourceId": "structured-import",
-      "sourceName": "Sikkim PSC",
-      "dept": "Sikkim PSC",
+      "sourceId": "ss-goalpara",
+      "sourceName": "Sainikschoolgoalpara Org",
+      "dept": "Sainikschoolgoalpara Org",
       "state": "All India",
-      "category": "state",
+      "category": "teaching",
       "fetchMethod": "live-jobs-supplement"
     },
     {
@@ -421,22 +438,6 @@
       "fetchMethod": "live-jobs-supplement"
     },
     {
-      "id": "6ba4fa2414631751",
-      "title": "DLSA Sitapur Para Legal Volunteer Recruitment 2026 - Apply Offline",
-      "link": "http://www.district.ecourts.gov.in/sitapur",
-      "publishedAt": "2026-06-25T00:00:00Z",
-      "summary": "District Legal Services Authority, Sitapur (DLSA Sitapur) Recruitment 2026 for 0 posts of Para Legal Volunteer. Candidates Can Apply Offline. The last date to apply offline is 25-06-2026. The candidate shall apply offline through DLSA Sitapur official website.",
-      "pdfUrls": [
-        "https://cdnbbsr.s3waas.gov.in/s3ec0515e122e839dfdaa7ce969536f94a/uploads/2026/06/20260602100.pdf"
-      ],
-      "sourceId": "structured-import",
-      "sourceName": "DLSA Sitapur",
-      "dept": "DLSA Sitapur",
-      "state": "All India",
-      "category": "state",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
       "id": "bc229f1363bec2e5",
       "title": "Meghalaya PSC Recruitment 2026 - Apply Online for 13 Fishery Officer and Junior Football Coach Posts",
       "link": "https://rpa.meghalaya.gov.in/rpaonline/",
@@ -453,17 +454,17 @@
       "fetchMethod": "live-jobs-supplement"
     },
     {
-      "id": "1d6608af4b383aa4",
-      "title": "NIT Rourkela Junior Research Fellow Recruitment 2026 - Apply Online",
-      "link": "https://www.nitrkl.ac.in/docs/Career/ProjectFelow/2026/03062026122716319.pdf",
-      "publishedAt": "2026-06-24T00:00:00Z",
-      "summary": "NATIONAL INSTITUTE OF TECHNOLOGY ROURKELA [An Institute of National Importance under Ministry of Education, Govt. of India] Sector 1, Rourkela, Sundergarh Dist., Odisha 769 008 SPONSORED RESEARCH INDUSTRIAL CONSULTANCY CONTINUING EDUCATION Page 1 of 1 SR-R03 NITR /65/ / Advt.- Candidates who fulfill the below mentioned criteria may submit the application form before the last date. Engagement will …",
+      "id": "6ba4fa2414631751",
+      "title": "DLSA Sitapur Para Legal Volunteer Recruitment 2026 - Apply Offline",
+      "link": "http://www.district.ecourts.gov.in/sitapur",
+      "publishedAt": "2026-06-25T00:00:00Z",
+      "summary": "District Legal Services Authority, Sitapur (DLSA Sitapur) Recruitment 2026 for 0 posts of Para Legal Volunteer. Candidates Can Apply Offline. The last date to apply offline is 25-06-2026. The candidate shall apply offline through DLSA Sitapur official website.",
       "pdfUrls": [
-        "https://www.nitrkl.ac.in/docs/Career/ProjectFelow/2026/03062026122716319.pdf"
+        "https://cdnbbsr.s3waas.gov.in/s3ec0515e122e839dfdaa7ce969536f94a/uploads/2026/06/20260602100.pdf"
       ],
       "sourceId": "structured-import",
-      "sourceName": "NIT Rourkela",
-      "dept": "NIT Rourkela",
+      "sourceName": "DLSA Sitapur",
+      "dept": "DLSA Sitapur",
       "state": "All India",
       "category": "state",
       "fetchMethod": "live-jobs-supplement"
@@ -480,6 +481,22 @@
       "sourceId": "structured-import",
       "sourceName": "MPPHSCL",
       "dept": "MPPHSCL",
+      "state": "All India",
+      "category": "state",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "1d6608af4b383aa4",
+      "title": "NIT Rourkela Junior Research Fellow Recruitment 2026 - Apply Online",
+      "link": "https://www.nitrkl.ac.in/docs/Career/ProjectFelow/2026/03062026122716319.pdf",
+      "publishedAt": "2026-06-24T00:00:00Z",
+      "summary": "NATIONAL INSTITUTE OF TECHNOLOGY ROURKELA [An Institute of National Importance under Ministry of Education, Govt. of India] Sector 1, Rourkela, Sundergarh Dist., Odisha 769 008 SPONSORED RESEARCH INDUSTRIAL CONSULTANCY CONTINUING EDUCATION Page 1 of 1 SR-R03 NITR /65/ / Advt.- Candidates who fulfill the below mentioned criteria may submit the application form before the last date. Engagement will …",
+      "pdfUrls": [
+        "https://www.nitrkl.ac.in/docs/Career/ProjectFelow/2026/03062026122716319.pdf"
+      ],
+      "sourceId": "structured-import",
+      "sourceName": "NIT Rourkela",
+      "dept": "NIT Rourkela",
       "state": "All India",
       "category": "state",
       "fetchMethod": "live-jobs-supplement"
@@ -723,7 +740,7 @@
     },
     {
       "id": "1c7c8c1504bcd6a5",
-      "title": "Recruitment for the post of Common Matric Level Posts 2026( Start Date: 08-06-2026 and Last Date: 15-07-2026)",
+      "title": "Recruitment for the post of Common Matric Level Posts 2026 ( Start Date: 08-06-2026 and Last Date: 28-06-2026)",
       "link": "https://erecruitment.andamannicobar.gov.in/Advertisement/1053_9fbd4da9-78b1-46ac-992e-dc6c636e4308.pdf",
       "publishedAt": "2026-06-08T00:00:00Z",
       "summary": null,
@@ -731,8 +748,8 @@
         "https://erecruitment.andamannicobar.gov.in/Advertisement/1053_9fbd4da9-78b1-46ac-992e-dc6c636e4308.pdf"
       ],
       "sourceId": "an-rec",
-      "sourceName": "Erecruitment Andamannicobar",
-      "dept": "Erecruitment Andamannicobar",
+      "sourceName": "Andaman & Nicobar e-Recruitment",
+      "dept": "Andaman & Nicobar e-Recruitment",
       "state": "All India",
       "category": "state",
       "fetchMethod": "live-jobs-supplement"
@@ -836,7 +853,7 @@
     },
     {
       "id": "8cfab76f2d66f43b",
-      "title": "Recruitment for various category of Group B(NG) and Group C posts in Andaman and Nicobar Police Department. ( Start Date: 27-04-2026 and Last Date: 25-06-2026)",
+      "title": "Recruitment for various category of Group B(NG) and Group C posts in Andaman and Nicobar Police Department.( Start Date: 27-04-2026 and Last Date: 20-06-2026)",
       "link": "https://erecruitment.andamannicobar.gov.in/Advertisement/1051_f5f9a1d4-c66c-4346-b97a-3df5d0007124.pdf",
       "publishedAt": "2026-04-27T00:00:00Z",
       "summary": null,
@@ -844,10 +861,10 @@
         "https://erecruitment.andamannicobar.gov.in/Advertisement/1051_f5f9a1d4-c66c-4346-b97a-3df5d0007124.pdf"
       ],
       "sourceId": "an-rec",
-      "sourceName": "Andaman & Nicobar e-Recruitment",
-      "dept": "Andaman & Nicobar e-Recruitment",
+      "sourceName": "Erecruitment Andamannicobar",
+      "dept": "Erecruitment Andamannicobar",
       "state": "All India",
-      "category": "state",
+      "category": "police",
       "fetchMethod": "live-jobs-supplement"
     },
     {
@@ -963,6 +980,22 @@
       "fetchMethod": "live-jobs-supplement"
     },
     {
+      "id": "853c69cd104ab780",
+      "title": "3 Extension of Last Date for Submission of Applications for Engagement of Retired Indian Air Force Officer as Consultant",
+      "link": "https://mha.nic.in",
+      "publishedAt": "2020-12-09T00:00:00Z",
+      "summary": "-iits2ir/File No. IV-23012/01/2024-DGCD(Comn.) 51' of India, Tjb 4-micqzr/Ministry of Home Affairs, 31R-1:21,1-1 'NI, .11,1N, Tell Sa 41t: ,<E14, Directorate General Fire Service, Civil Defence & Home Guards arTTPT/Communication Section f 114-7, def-7 East Block-VIE, Level-VI! zi[1:41.11--ilt, 714 fkc.-1- 110066 R.K. Puram, New Delhi-110066 Dated: I9 May,2026 Circular Subject: Engagement of 01 Ret…",
+      "pdfUrls": [
+        "https://www.mha.gov.in/sites/default/files/AirVacancy_19062026.PDF"
+      ],
+      "sourceId": "ib",
+      "sourceName": "Mha",
+      "dept": "Mha",
+      "state": "All India",
+      "category": "defence",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
       "id": "fe0019fdb44c61a8",
       "title": "Advt No. 23 of 2023 - Treasury Officer & Assistant Treasury Officer (Group-B), Examination - 2022",
       "link": "http://hpsc.gov.in/en-us/",
@@ -979,23 +1012,6 @@
       "fetchMethod": "live-jobs-supplement"
     },
     {
-      "id": "45d6ff67f766e352",
-      "title": "Advt.No.ISRO:ICRB:02(A-JPA):2022 - VALIDITY OF THE SELECTION PANELS HAS BEEN EXTENDED UPTO 12.08.2026 Read More",
-      "link": "https://www.isro.gov.in/ICRB_Recruitment5.html",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "isro-careers",
-      "sourceName": "ISRO — Careers",
-      "dept": "Indian Space Research Organisation",
-      "state": "All India",
-      "category": "psu",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
       "id": "a210c9a77c445adc",
       "title": "OSSC FSO Recruitment 2026 Notification Out - Apply Online for 84 Food Safety Officer Posts",
       "link": "https://www.ossc.gov.in",
@@ -1007,22 +1023,6 @@
       "dept": "OSSC",
       "state": "All India",
       "category": "state",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "853c69cd104ab780",
-      "title": "1 Extension of Last Date for Submission of Applications for Engagement of Retired Indian Air Force Officer as Consultant",
-      "link": "https://mha.nic.in",
-      "publishedAt": "2020-12-09T00:00:00Z",
-      "summary": "-iits2ir/File No. IV-23012/01/2024-DGCD(Comn.) 51' of India, Tjb 4-micqzr/Ministry of Home Affairs, 31R-1:21,1-1 'NI, .11,1N, Tell Sa 41t: ,<E14, Directorate General Fire Service, Civil Defence & Home Guards arTTPT/Communication Section f 114-7, def-7 East Block-VIE, Level-VI! zi[1:41.11--ilt, 714 fkc.-1- 110066 R.K. Puram, New Delhi-110066 Dated: I9 May,2026 Circular Subject: Engagement of 01 Ret…",
-      "pdfUrls": [
-        "https://www.mha.gov.in/sites/default/files/AirVacancy_19062026.PDF"
-      ],
-      "sourceId": "ib",
-      "sourceName": "Mha",
-      "dept": "Mha",
-      "state": "All India",
-      "category": "defence",
       "fetchMethod": "live-jobs-supplement"
     },
     {
