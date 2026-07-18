@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-18T14:02:08.223Z",
+  "generatedAt": "2026-07-18T17:34:35.966Z",
   "count": 595,
   "items": [
     {
@@ -239,6 +239,34 @@
       "dept": "Staff Selection Commission (SSC)",
       "state": "All India",
       "category": "ssc",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "0a595b14634fcb2e",
+      "title": "MARKS AND RANK POSITION/ மதிப்பெண் மற்றும் தரவரிசை நிலை Group-II Group-IIA",
+      "link": "https://tnpscresults.tn.gov.in/ccsexam2a/ccs2aindex.aspx?token=P9X2R7K5A8KDJ8JD8967RG",
+      "publishedAt": "2026-07-17T14:25:18.094637Z",
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-tn",
+      "sourceName": "Tnpsc",
+      "dept": "Tnpsc",
+      "state": "All India",
+      "category": "state",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "197b8722362c6834",
+      "title": "MARKS AND RANK POSITION/ மதிப்பெண் மற்றும் தரவரிசை நிலை Group-II Group-IIA",
+      "link": "https://tnpscresults.tn.gov.in/ccsexam/ccsIndex.aspx?token=P9X2R7K5A8KDJ8JD6658GR",
+      "publishedAt": "2026-07-17T14:25:16.619881Z",
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-tn",
+      "sourceName": "Tnpsc",
+      "dept": "Tnpsc",
+      "state": "All India",
+      "category": "state",
       "fetchMethod": "live-jobs-supplement"
     },
     {
@@ -3232,34 +3260,6 @@
       "dept": "UP Police Recruitment Board (UPPRPB)",
       "state": "All India",
       "category": "police",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "0a595b14634fcb2e",
-      "title": "MARKS AND RANK POSITION/ மதிப்பெண் மற்றும் தரவரிசை நிலை Group-II Group-IIA",
-      "link": "https://tnpscresults.tn.gov.in/ccsexam2a/ccs2aindex.aspx?token=P9X2R7K5A8KDJ8JD8967RG",
-      "publishedAt": "2026-07-17T14:25:18.094637Z",
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-tn",
-      "sourceName": "Tnpsc",
-      "dept": "Tnpsc",
-      "state": "All India",
-      "category": "state",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "197b8722362c6834",
-      "title": "MARKS AND RANK POSITION/ மதிப்பெண் மற்றும் தரவரிசை நிலை Group-II Group-IIA",
-      "link": "https://tnpscresults.tn.gov.in/ccsexam/ccsIndex.aspx?token=P9X2R7K5A8KDJ8JD6658GR",
-      "publishedAt": "2026-07-17T14:25:16.619881Z",
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-tn",
-      "sourceName": "Tnpsc",
-      "dept": "Tnpsc",
-      "state": "All India",
-      "category": "state",
       "fetchMethod": "live-jobs-supplement"
     },
     {
