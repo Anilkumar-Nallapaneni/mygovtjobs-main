@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-18T06:33:26.579Z",
+  "generatedAt": "2026-07-18T09:59:37.244Z",
   "sourceReports": [
     {
       "id": "pib-press-reg3",
@@ -846,6 +846,23 @@
       "fetchMethod": "html-listing"
     },
     {
+      "id": "205a52cab38ac71e",
+      "title": "First private orbital launch lifts off from Sriharikota",
+      "link": "https://www.isro.gov.in/First_private_orbital_launch_lifts_from_Sriharikota.html",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "isro-careers",
+      "sourceName": "ISRO — Careers",
+      "dept": "Indian Space Research Organisation",
+      "state": "All India",
+      "category": "psu",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
       "id": "1f570957787f6f33",
       "title": "Aditya-L1 Mission: Announcement of Opportunity (AO) soliciting proposals for the third AO cycle observations",
       "link": "https://www.isro.gov.in/AdityaL1_Mission_Announcement_of_opportunity.html",
@@ -1325,23 +1342,6 @@
       "id": "ed0bfa23740fa775",
       "title": "National Learning Week - “SADHANA SAPTAH” at ISRO",
       "link": "https://www.isro.gov.in/National_Learning_Week.html",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "isro-careers",
-      "sourceName": "ISRO — Careers",
-      "dept": "Indian Space Research Organisation",
-      "state": "All India",
-      "category": "psu",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "ed32e3144c0ae16f",
-      "title": "MISSION MITRA by ISRO Mapping of Interoperable Traits and Response Assessment (MITRA)",
-      "link": "https://www.isro.gov.in/mission_mitra_by_ISRO.html",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
