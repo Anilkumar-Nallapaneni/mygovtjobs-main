@@ -32,7 +32,13 @@
   {
     "dept": "Uco Bank In",
     "slug": "uco-bank-in",
-    "count": 52,
+    "count": 53,
+    "vacancies": 0
+  },
+  {
+    "dept": "UPPSC — Hall tickets",
+    "slug": "uppsc-hall-tickets",
+    "count": 53,
     "vacancies": 0
   },
   {
@@ -40,12 +46,6 @@
     "slug": "union-public-service-commission-upsc",
     "count": 52,
     "vacancies": 299
-  },
-  {
-    "dept": "UPPSC — Hall tickets",
-    "slug": "uppsc-hall-tickets",
-    "count": 52,
-    "vacancies": 0
   },
   {
     "dept": "Nsut",
@@ -126,6 +126,12 @@
     "vacancies": 14
   },
   {
+    "dept": "ISRO — Careers",
+    "slug": "isro-careers",
+    "count": 33,
+    "vacancies": 48
+  },
+  {
     "dept": "Uppbpb",
     "slug": "uppbpb",
     "count": 32,
@@ -135,12 +141,6 @@
     "dept": "Institute of Banking Personnel Selection (IBPS)",
     "slug": "institute-of-banking-personnel-selection-ibps",
     "count": 30,
-    "vacancies": 0
-  },
-  {
-    "dept": "ISRO — Careers",
-    "slug": "isro-careers",
-    "count": 29,
     "vacancies": 0
   },
   {
@@ -270,12 +270,6 @@
     "vacancies": 19507
   },
   {
-    "dept": "Andaman & Nicobar e-Recruitment",
-    "slug": "andaman-nicobar-e-recruitment",
-    "count": 18,
-    "vacancies": 0
-  },
-  {
     "dept": "Kvsangathan",
     "slug": "kvsangathan",
     "count": 18,
@@ -285,6 +279,12 @@
     "dept": "Tpsc Tripura",
     "slug": "tpsc-tripura",
     "count": 18,
+    "vacancies": 0
+  },
+  {
+    "dept": "Andaman & Nicobar e-Recruitment",
+    "slug": "andaman-nicobar-e-recruitment",
+    "count": 17,
     "vacancies": 0
   },
   {
@@ -430,12 +430,6 @@
     "slug": "hindustanpetroleum-com",
     "count": 11,
     "vacancies": 0
-  },
-  {
-    "dept": "ISRO — Indian Space Research Organisation",
-    "slug": "isro-indian-space-research-organisation",
-    "count": 11,
-    "vacancies": 48
   },
   {
     "dept": "Kullu Dcourts",
@@ -590,6 +584,12 @@
   {
     "dept": "District & Sessions Judge, Indore",
     "slug": "district-sessions-judge-indore",
+    "count": 7,
+    "vacancies": 0
+  },
+  {
+    "dept": "ISRO — Indian Space Research Organisation",
+    "slug": "isro-indian-space-research-organisation",
     "count": 7,
     "vacancies": 0
   },
