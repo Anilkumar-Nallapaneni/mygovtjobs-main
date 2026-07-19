@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-19T04:08:49.942Z",
+  "generatedAt": "2026-07-19T07:10:01.731Z",
   "sourceReports": [
     {
       "id": "pib-press-reg3",
@@ -97,7 +97,7 @@
       "feedUrl": null,
       "listingUrl": "https://uppsc.up.nic.in/View_All_Active_Notifications.aspx",
       "ok": false,
-      "error": "no items",
+      "error": "https://uppsc.up.nic.in/View_All_Active_Notifications.aspx: timeout",
       "itemCount": 0,
       "fetchMethod": null
     },
