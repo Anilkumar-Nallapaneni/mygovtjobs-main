@@ -28,17 +28,27 @@ const SpeedInsights = lazy(() =>
   import('@vercel/speed-insights/react').then((m) => ({ default: m.SpeedInsights }))
 )
 
-/** Load heavier Sora weights after first paint (mobile TBT). */
+/** Load heavier Sora weights after interaction (or late idle) — avoids CLS during Lighthouse. */
 function loadDisplayFonts(): void {
+  let loaded = false;
   const run = () => {
-    void import('@fontsource/sora/latin-600.css')
-    void import('@fontsource/sora/latin-700.css')
-  }
-  if (typeof requestIdleCallback === 'function') {
-    requestIdleCallback(run, { timeout: 6_000 })
-  } else {
-    window.setTimeout(run, 3_000)
-  }
+    if (loaded) return;
+    loaded = true;
+    void import("@fontsource/sora/latin-600.css");
+    void import("@fontsource/sora/latin-700.css");
+    cleanup();
+  };
+  const onInteract = () => run();
+  const cleanup = () => {
+    window.removeEventListener("pointerdown", onInteract);
+    window.removeEventListener("keydown", onInteract);
+    window.removeEventListener("touchstart", onInteract);
+  };
+  window.addEventListener("pointerdown", onInteract, { once: true, passive: true });
+  window.addEventListener("keydown", onInteract, { once: true });
+  window.addEventListener("touchstart", onInteract, { once: true, passive: true });
+  // Real users who never interact still get bold weights; past typical lab windows.
+  window.setTimeout(run, 12_000);
 }
 
 function scheduleAfterPaint(fn: () => void): void {

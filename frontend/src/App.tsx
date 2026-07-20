@@ -20,7 +20,7 @@ import type { JobRecord } from "@/types/job";
 import { jobDetailPath } from "@/utils/jobRoutes";
 import { HOME_SHELL_ORG_COUNT } from "@/data/homeShellStats";
 import { applyBrowseSeo } from "@/utils/browseSeo";
-import { scheduleMarkAppReady, notifyAppContentReady } from "@/lib/appReady";
+import { scheduleMarkAppReady } from "@/lib/appReady";
 
 const HomePage = lazy(() => import("@/components/home/HomePage"));
 const EmploymentNewsBar = lazy(() => import("@/components/layout/EmploymentNewsBar"));
@@ -60,16 +60,9 @@ function AppShell() {
   useStandaloneApp();
 
   useEffect(() => {
-    // Wait for CSS + HomePage/route content before swapping shell (CLS).
+    // Wait for critical CSS before swapping shell → React (cuts FOUC/CLS).
     return scheduleMarkAppReady();
   }, []);
-
-  useEffect(() => {
-    // Non-home routes: content is ready once chrome mounts (no HomePage).
-    if (browse.isJobDetailRoute || location.pathname !== "/") {
-      notifyAppContentReady();
-    }
-  }, [browse.isJobDetailRoute, location.pathname]);
 
   useEffect(() => {
     if (browse.isJobDetailRoute) return undefined;
