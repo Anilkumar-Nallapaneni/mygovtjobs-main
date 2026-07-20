@@ -30,10 +30,16 @@
     "vacancies": 1865
   },
   {
+    "dept": "UPPSC — Hall tickets",
+    "slug": "uppsc-hall-tickets",
+    "count": 53,
+    "vacancies": 0
+  },
+  {
     "dept": "Uco Bank In",
     "slug": "uco-bank-in",
     "count": 52,
-    "vacancies": 0
+    "vacancies": 173
   },
   {
     "dept": "Union Public Service Commission (UPSC)",
@@ -42,13 +48,7 @@
     "vacancies": 299
   },
   {
-    "dept": "UPPSC — Hall tickets",
-    "slug": "uppsc-hall-tickets",
-    "count": 52,
-    "vacancies": 0
-  },
-  {
-    "dept": "Nsut",
+    "dept": "NSUT",
     "slug": "nsut",
     "count": 49,
     "vacancies": 122
@@ -126,6 +126,18 @@
     "vacancies": 14
   },
   {
+    "dept": "ISRO — Careers",
+    "slug": "isro-careers",
+    "count": 33,
+    "vacancies": 48
+  },
+  {
+    "dept": "Kvsangathan",
+    "slug": "kvsangathan",
+    "count": 32,
+    "vacancies": 1256
+  },
+  {
     "dept": "Uppbpb",
     "slug": "uppbpb",
     "count": 32,
@@ -135,12 +147,6 @@
     "dept": "Institute of Banking Personnel Selection (IBPS)",
     "slug": "institute-of-banking-personnel-selection-ibps",
     "count": 30,
-    "vacancies": 0
-  },
-  {
-    "dept": "ISRO — Careers",
-    "slug": "isro-careers",
-    "count": 29,
     "vacancies": 0
   },
   {
@@ -270,21 +276,15 @@
     "vacancies": 19507
   },
   {
-    "dept": "Andaman & Nicobar e-Recruitment",
-    "slug": "andaman-nicobar-e-recruitment",
+    "dept": "Tpsc Tripura",
+    "slug": "tpsc-tripura",
     "count": 18,
     "vacancies": 0
   },
   {
-    "dept": "Kvsangathan",
-    "slug": "kvsangathan",
-    "count": 18,
-    "vacancies": 1248
-  },
-  {
-    "dept": "Tpsc Tripura",
-    "slug": "tpsc-tripura",
-    "count": 18,
+    "dept": "Andaman & Nicobar e-Recruitment",
+    "slug": "andaman-nicobar-e-recruitment",
+    "count": 17,
     "vacancies": 0
   },
   {
@@ -432,12 +432,6 @@
     "vacancies": 0
   },
   {
-    "dept": "ISRO — Indian Space Research Organisation",
-    "slug": "isro-indian-space-research-organisation",
-    "count": 11,
-    "vacancies": 48
-  },
-  {
     "dept": "Kullu Dcourts",
     "slug": "kullu-dcourts",
     "count": 11,
@@ -516,6 +510,12 @@
     "vacancies": 4
   },
   {
+    "dept": "Mpsc Mizoram",
+    "slug": "mpsc-mizoram",
+    "count": 9,
+    "vacancies": 36
+  },
+  {
     "dept": "Psc Uk",
     "slug": "psc-uk",
     "count": 9,
@@ -544,12 +544,6 @@
     "slug": "labour-delhi",
     "count": 8,
     "vacancies": 66
-  },
-  {
-    "dept": "Mpsc Mizoram",
-    "slug": "mpsc-mizoram",
-    "count": 8,
-    "vacancies": 36
   },
   {
     "dept": "NTPC — Careers",
@@ -590,6 +584,12 @@
   {
     "dept": "District & Sessions Judge, Indore",
     "slug": "district-sessions-judge-indore",
+    "count": 7,
+    "vacancies": 0
+  },
+  {
+    "dept": "ISRO — Indian Space Research Organisation",
+    "slug": "isro-indian-space-research-organisation",
     "count": 7,
     "vacancies": 0
   },
@@ -836,6 +836,12 @@
   {
     "dept": "District & Sessions Judge, Ujjain",
     "slug": "district-sessions-judge-ujjain",
+    "count": 3,
+    "vacancies": 0
+  },
+  {
+    "dept": "Dsssbonline",
+    "slug": "dsssbonline",
     "count": 3,
     "vacancies": 0
   },
