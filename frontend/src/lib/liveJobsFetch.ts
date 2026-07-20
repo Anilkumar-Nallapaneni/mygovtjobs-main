@@ -299,10 +299,18 @@ type RawPayload = {
 }
 
 async function loadJobsPayload(bustCache = false, jobsSource = getJobsSourceMode()) {
+  const dailySyncOnly = import.meta.env.VITE_DAILY_SYNC_ONLY === '1'
+
   if (jobsSource === 'static') {
     const hit = await tryStatic(bustCache)
     if (hit) return hit
     return { raw: [], sources: ['static'], hasBackend: false, error: 'live-jobs.json missing or empty' }
+  }
+
+  // Snapshot-only: prefer CDN JSON so we avoid a cold Supabase pull on the homepage.
+  if (dailySyncOnly) {
+    const snap = await tryStatic(bustCache)
+    if (snap) return snap
   }
 
   const isExplicitSource = jobsSource !== 'auto'
@@ -311,7 +319,6 @@ async function loadJobsPayload(bustCache = false, jobsSource = getJobsSourceMode
   const runStep = async (step: 'static' | 'supabase' | 'api') => {
     if (step === 'static') return tryStatic(bustCache)
     if (step === 'supabase' && isSupabaseConfigured()) {
-      const dailySyncOnly = import.meta.env.VITE_DAILY_SYNC_ONLY === '1'
       // Soft-cap only when a deferred background refresh will fill the rest.
       const maxRows =
         jobsSource === 'supabase' && !dailySyncOnly ? INITIAL_LIVE_ROWS : MAX_LIVE_ROWS
