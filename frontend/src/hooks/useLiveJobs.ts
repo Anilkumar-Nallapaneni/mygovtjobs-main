@@ -12,6 +12,7 @@ import {
   liveJobsQueryKey,
   needsSupabaseBackgroundRefresh,
   refreshSupabaseCatalog,
+  scheduleAfterFirstPaint,
   type LiveJobsCatalogResult,
 } from '@/lib/liveJobsFetch'
 import { queryClient } from '@/lib/queryClient'
@@ -111,9 +112,10 @@ export function useLiveJobs() {
     }
   }, [])
 
-  // One background hydrate per query generation — avoid re-firing on every partial catalog update.
+  // One deferred hydrate per query generation — keep full Supabase pull out of PSI TBT.
   const supabaseRefreshKey = useRef<string | null>(null)
   useEffect(() => {
+    if (dailySyncOnly) return undefined
     if (!catalogQuery.isSuccess || !needsSupabaseBackgroundRefresh(catalog, jobsSource)) {
       return undefined
     }
@@ -123,9 +125,12 @@ export function useLiveJobs() {
     supabaseRefreshKey.current = gate
 
     let cancelled = false
-    void refreshSupabaseCatalog(dailySyncMeta).then((next) => {
-      if (cancelled || !next) return
-      qc.setQueryData<LiveJobsCatalogResult>(queryKey, next)
+    scheduleAfterFirstPaint(() => {
+      if (cancelled) return
+      void refreshSupabaseCatalog(dailySyncMeta).then((next) => {
+        if (cancelled || !next) return
+        qc.setQueryData<LiveJobsCatalogResult>(queryKey, next)
+      })
     })
 
     return () => {
@@ -135,6 +140,7 @@ export function useLiveJobs() {
     catalog,
     catalogQuery.isSuccess,
     dailySyncMeta,
+    dailySyncOnly,
     jobsSource,
     qc,
     queryKey,

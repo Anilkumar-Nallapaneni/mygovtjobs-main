@@ -18,7 +18,7 @@ import { checkDeployVersionChanged, clearServiceWorkerDataCaches } from '@/lib/d
 import { applyColorMode } from './theme/designSystem'
 import { initSentry } from '@/lib/sentry'
 import { markAppReady } from '@/lib/appReady'
-import '@fontsource/sora/400.css'
+import '@fontsource/sora/latin-400.css'
 import './styles/app.css'
 
 const Analytics = lazy(() =>
@@ -31,13 +31,13 @@ const SpeedInsights = lazy(() =>
 /** Load heavier Sora weights after first paint (mobile TBT). */
 function loadDisplayFonts(): void {
   const run = () => {
-    void import('@fontsource/sora/600.css')
-    void import('@fontsource/sora/700.css')
+    void import('@fontsource/sora/latin-600.css')
+    void import('@fontsource/sora/latin-700.css')
   }
   if (typeof requestIdleCallback === 'function') {
-    requestIdleCallback(run, { timeout: 4_000 })
+    requestIdleCallback(run, { timeout: 6_000 })
   } else {
-    window.setTimeout(run, 2_000)
+    window.setTimeout(run, 3_000)
   }
 }
 
@@ -55,7 +55,22 @@ function scheduleAfterPaint(fn: () => void): void {
   })
 }
 
-initSentry()
+function scheduleDeferredBoot(fn: () => void): void {
+  const start = () => {
+    if (typeof requestIdleCallback === 'function') {
+      requestIdleCallback(fn, { timeout: 8_000 })
+      return
+    }
+    window.setTimeout(fn, 3_000)
+  }
+  if (document.readyState === 'complete') start()
+  else window.addEventListener('load', start, { once: true })
+}
+
+// Sentry is large (~350KB) — never on the critical path.
+scheduleDeferredBoot(() => {
+  void initSentry()
+})
 
 try {
   const key = 'mygovtjobs-color-mode'
@@ -82,11 +97,27 @@ if (jobsSourceMode !== 'api') {
   prefetchLiveJobsSnapshot()
 }
 warmLiveJobsCache(deployChanged || jobsSourceMode === 'static')
-warmStateMapCache(STATES.map((s) => toSvgStateId(s.id)))
+// State SVG warm is off critical path — map panel is below the fold / lazy.
+scheduleDeferredBoot(() => {
+  warmStateMapCache(STATES.map((s) => toSvgStateId(s.id)))
+})
 
 if (typeof document !== 'undefined') {
   if (document.readyState === 'complete') loadDisplayFonts()
   else window.addEventListener('load', loadDisplayFonts, { once: true })
+}
+
+// PWA: register after load so registerSW.js is not on the critical HTML path.
+if (typeof window !== 'undefined' && import.meta.env.PROD) {
+  scheduleDeferredBoot(() => {
+    void import('virtual:pwa-register')
+      .then(({ registerSW }) => {
+        registerSW({ immediate: false })
+      })
+      .catch(() => {
+        /* PWA optional in some builds */
+      })
+  })
 }
 
 if (typeof history !== 'undefined' && 'scrollRestoration' in history) {

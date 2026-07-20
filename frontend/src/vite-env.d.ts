@@ -1,4 +1,5 @@
 /// <reference types="vite/client" />
+/// <reference types="vite-plugin-pwa/client" />
 
 interface ImportMetaEnv {
   readonly VITE_SUPABASE_URL?: string
@@ -12,6 +13,7 @@ interface ImportMetaEnv {
   readonly VITE_SENTRY_DSN?: string
   readonly VITE_VAPID_PUBLIC_KEY?: string
   readonly VITE_BUILD_STAMP?: string
+  readonly VITE_DAILY_SYNC_ONLY?: string
 }
 
 interface ImportMeta {

@@ -132,6 +132,8 @@ export default defineConfig(({ mode }) => {
       deferCssPlugin(),
       VitePWA({
         devOptions: { enabled: false },
+        // Avoid sync registerSW.js on critical HTML — register after load via workbox.
+        injectRegister: null,
         registerType: 'autoUpdate',
         includeAssets: ['favicon-32.png', 'apple-touch-icon.png', 'app-icon.png', 'logo.webp', 'logo-ui.png', 'logo-og.jpg', 'pwa-192.png', 'pwa-512.png', 'pwa-512-maskable.png', 'og/job.svg'],
         workbox: {

@@ -26,7 +26,7 @@ export default function BrandLogo({
   const width = Math.round(height * LOGO_ASPECT);
 
   const imgProps: ImgWithFetchPriority = {
-    src: "/logo-ui.png",
+    src: "/logo.webp",
     alt,
     className: `brand-logo ${className}`.trim(),
     style: {
@@ -36,14 +36,9 @@ export default function BrandLogo({
     width,
     height,
     decoding: "async",
-    // ~30 KB WebP is safe for LCP; preferred via <source> below.
+    // Match LCP shell preload — avoid competing PNG download.
     fetchpriority: "high",
   };
 
-  return (
-    <picture className="brand-logo-picture">
-      <source type="image/webp" srcSet="/logo.webp" />
-      <img {...imgProps} />
-    </picture>
-  );
+  return <img {...imgProps} />;
 }

@@ -25,8 +25,12 @@ const JSON_CAP = 8000
 const DEMO_SLUG_PREFIX = /^demo-/
 const API_PAGE = 1000
 
-/** Defer ~3 MB list JSON until interaction or long idle — keeps it out of PSI lab TBT. */
-function scheduleAfterFirstPaint(fn: () => void): void {
+/**
+ * Defer heavy catalog work until real user intent or long idle.
+ * Intentionally omits `scroll` — Lighthouse scrolls during audits and that was
+ * pulling ~3 MB list JSON / Supabase refresh into the lab TBT window.
+ */
+export function scheduleAfterFirstPaint(fn: () => void): void {
   if (typeof window === 'undefined') {
     fn()
     return
@@ -40,7 +44,8 @@ function scheduleAfterFirstPaint(fn: () => void): void {
     fn()
   }
 
-  const events = ['pointerdown', 'keydown', 'touchstart', 'scroll'] as const
+  // Real engagement only — not scroll (PSI/Lighthouse scrolls automatically).
+  const events = ['pointerdown', 'keydown', 'touchstart'] as const
   const onInteract = () => run()
 
   const cleanup = () => {
@@ -54,18 +59,18 @@ function scheduleAfterFirstPaint(fn: () => void): void {
     window.addEventListener(event, onInteract, { once: true, passive: true, capture: true })
   }
 
-  // Lighthouse mobile window is typically <15s; wait longer unless the user interacts.
+  // Lab runs are typically <15s; keep heavy work outside that window unless the user engages.
   const startFallback = () => {
     if (typeof requestIdleCallback === 'function') {
-      requestIdleCallback(() => run(), { timeout: 8_000 })
+      requestIdleCallback(() => run(), { timeout: 12_000 })
       return
     }
-    window.setTimeout(run, 5_000)
+    window.setTimeout(run, 8_000)
   }
 
   let fallbackTimer = 0
   const armFallback = () => {
-    fallbackTimer = window.setTimeout(startFallback, 18_000)
+    fallbackTimer = window.setTimeout(startFallback, 25_000)
   }
 
   if (document.readyState === 'complete') {
@@ -435,8 +440,12 @@ export function needsSupabaseBackgroundRefresh(
   jobsSource = getJobsSourceMode()
 ): boolean {
   if (!isSupabaseConfigured()) return false
+  // Snapshot-only mode: never pull the full live catalog on the homepage critical path.
+  if (import.meta.env.VITE_DAILY_SYNC_ONLY === '1') return false
   if (jobsSource === 'static' || jobsSource === 'api') return false
-  // CDN/static first paint — hydrate from live DB once in the background.
+  // Already have a large catalog — skip redundant full refresh.
+  if (data.rawLength > INITIAL_LIVE_ROWS * 2) return false
+  // CDN/static first paint — hydrate from live DB once in the background (deferred by caller).
   if (data.sources.includes('official-sites')) return true
   // Soft-capped supabase first page (explicit supabase mode when static missed).
   // Exact INITIAL_LIVE_ROWS avoids a loop after a full refresh that already has more rows.

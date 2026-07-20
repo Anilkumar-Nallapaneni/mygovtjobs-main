@@ -1,4 +1,4 @@
-import { lazy, Suspense, useCallback, useDeferredValue, useEffect, useMemo, startTransition } from "react";
+import { lazy, Suspense, useCallback, useDeferredValue, useEffect, useMemo, useState, startTransition } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { STATES, toSvgStateId } from "@/data/states";
@@ -20,7 +20,7 @@ import type { JobRecord } from "@/types/job";
 import { jobDetailPath } from "@/utils/jobRoutes";
 import { HOME_SHELL_ORG_COUNT } from "@/data/homeShellStats";
 import { applyBrowseSeo } from "@/utils/browseSeo";
-import { markAppReady } from "@/lib/appReady";
+import { scheduleMarkAppReady } from "@/lib/appReady";
 
 const HomePage = lazy(() => import("@/components/home/HomePage"));
 const EmploymentNewsBar = lazy(() => import("@/components/layout/EmploymentNewsBar"));
@@ -60,11 +60,8 @@ function AppShell() {
   useStandaloneApp();
 
   useEffect(() => {
-    // Reveal React UI after first commit; LCP shell stays until then.
-    const id = requestAnimationFrame(() => {
-      markAppReady();
-    });
-    return () => cancelAnimationFrame(id);
+    // Wait for deferred CSS before swapping shell → React (CLS / FOUC).
+    return scheduleMarkAppReady();
   }, []);
 
   useEffect(() => {
@@ -81,27 +78,50 @@ function AppShell() {
   const aggregateJobs = useDeferredValue(displayJobs);
   const homeJobsLoading = jobsLoading || serverSearch.loading;
 
+  // Defer aggregate work until after first paint when the catalog is still tiny (bootstrap).
+  const [aggregatesReady, setAggregatesReady] = useState(false);
+  useEffect(() => {
+    if (aggregatesReady) return undefined;
+    if (aggregateJobs.length === 0) return undefined;
+    let cancelled = false;
+    const arm = () => {
+      if (typeof requestIdleCallback === "function") {
+        const id = requestIdleCallback(() => {
+          if (!cancelled) setAggregatesReady(true);
+        }, { timeout: 2_500 });
+        return () => cancelIdleCallback(id);
+      }
+      const timer = window.setTimeout(() => {
+        if (!cancelled) setAggregatesReady(true);
+      }, 800);
+      return () => window.clearTimeout(timer);
+    };
+    return arm();
+  }, [aggregateJobs.length, aggregatesReady]);
+
   const { stateCounts, categoryCounts } = useMemo(
-    () => computeJobAggregates(aggregateJobs),
-    [aggregateJobs]
+    () => (aggregatesReady ? computeJobAggregates(aggregateJobs) : { stateCounts: {}, categoryCounts: {} }),
+    [aggregateJobs, aggregatesReady]
   );
 
   const mapStateData = useMemo(
     () =>
-      STATES.map((state) => {
-        const label = stateLabel(state.id);
-        return {
-          id: toSvgStateId(state.id),
-          name: label,
-          fill: "#ffffff",
-          customData: {
-            name: label,
-            jobCount: stateCounts[state.id] || 0,
-            listings: (stateCounts[state.id] || 0).toLocaleString(),
-          },
-        };
-      }),
-    [stateCounts, stateLabel]
+      aggregatesReady
+        ? STATES.map((state) => {
+            const label = stateLabel(state.id);
+            return {
+              id: toSvgStateId(state.id),
+              name: label,
+              fill: "#ffffff",
+              customData: {
+                name: label,
+                jobCount: stateCounts[state.id] || 0,
+                listings: (stateCounts[state.id] || 0).toLocaleString(),
+              },
+            };
+          })
+        : [],
+    [aggregatesReady, stateCounts, stateLabel]
   );
 
   const handleJobClick = useCallback(
