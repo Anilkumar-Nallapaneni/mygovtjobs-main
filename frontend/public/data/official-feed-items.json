@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-20T04:19:26.582Z",
+  "generatedAt": "2026-07-20T07:46:28.309Z",
   "sourceReports": [
     {
       "id": "pib-press-reg3",
@@ -455,6 +455,25 @@
       "summary": null,
       "pdfUrls": [
         "https://www.isro.gov.in/media_isro/pdf/Successful_Launch_of_Axiom_Mission.pdf"
+      ],
+      "sourceId": "isro-careers",
+      "sourceName": "ISRO — Careers",
+      "dept": "Indian Space Research Organisation",
+      "state": "All India",
+      "category": "psu",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "3edab052bcb9b1ff",
+      "title": "Bharatiya Antariksh Hackathon (BAH) – 2026: Shortlisted Teams for Grand Finale Scheduled at NRSC Hyderabad during 6th & 7th August, 2026",
+      "link": "https://www.isro.gov.in/media_isro/pdf/BAH_2026_Shortlisted_Teams_16072026_Publication.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://www.isro.gov.in/media_isro/pdf/BAH_2026_Shortlisted_Teams_16072026_Publication.pdf"
       ],
       "sourceId": "isro-careers",
       "sourceName": "ISRO — Careers",
@@ -1325,23 +1344,6 @@
       "id": "a62123c7bdb5b60d",
       "title": "ISRO conducts Second Integrated Air Drop Test (IADT-02) for Gaganyaan",
       "link": "https://www.isro.gov.in/ISRO_conducts_Second_Integrated_Air_Drop_Test_for_Gaganyaan.html",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "isro-careers",
-      "sourceName": "ISRO — Careers",
-      "dept": "Indian Space Research Organisation",
-      "state": "All India",
-      "category": "psu",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "d2a1069277a781f2",
-      "title": "ISRO Conferred AIMA Special Award for Public Service Excellence - 2025",
-      "link": "https://www.isro.gov.in/ISRO_ConferredAIMA_SpecialAward.html",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
