@@ -1,13 +1,10 @@
 {
-  "status": "running",
-  "completedAt": "2026-07-16T08:57:51.608497+00:00",
-  "completedAtIst": "2026-07-16T14:27:51.608497+05:30",
-  "lastCompletedDateIst": "2026-07-16",
-  "nextRunAtIst": "2026-07-17T08:00:00+05:30",
-  "jobCount": 1583,
+  "status": "completed",
+  "completedAt": "2026-07-20T13:35:15.098283+00:00",
+  "completedAtIst": "2026-07-20T19:05:15.098283+05:30",
+  "lastCompletedDateIst": "2026-07-20",
+  "nextRunAtIst": "2026-07-21T08:00:00+05:30",
+  "jobCount": 1607,
   "sourcesScraped": 154,
-  "notes": "IngestAgent: official India govt portals + RSS",
-  "startedAt": "2026-07-20T11:54:09.293659+00:00",
-  "startedAtIst": "2026-07-20T17:24:09.293659+05:30",
-  "dateIst": "2026-07-20"
+  "notes": "IngestAgent: official India govt portals + RSS"
 }
