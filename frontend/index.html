@@ -192,7 +192,16 @@
         white-space: nowrap;
         border: 0;
       }
+      /* Soft dismiss — avoid display:none jump that tanks CLS */
       body.app-ready #lcp-shell {
+        position: fixed;
+        inset: 0;
+        opacity: 0;
+        pointer-events: none;
+        z-index: -1;
+        transition: opacity 0.2s ease;
+      }
+      body.app-ready #lcp-shell[hidden] {
         display: none !important;
       }
       body.app-ready #root {
@@ -204,6 +213,12 @@
         overflow: visible;
         white-space: normal;
         min-height: 100vh;
+      }
+      /* Match React mobile bottom-nav padding so swap doesn't shift content */
+      @media (max-width: 1024px) {
+        .static-app-shell {
+          padding-bottom: calc(56px + env(safe-area-inset-bottom, 0));
+        }
       }
     </style>
   </head>

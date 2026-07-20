@@ -1,11 +1,14 @@
 /** Reveal React root and hide the LCP island shell (see index.html #lcp-shell). */
 
+let contentReady = false;
+let stylesReadyLatch = false;
+let revealScheduled = false;
+
 function stylesheetsReady(): boolean {
   if (typeof document === "undefined") return true;
   const sheets = Array.from(document.querySelectorAll('link[rel="stylesheet"]')) as HTMLLinkElement[];
   if (!sheets.length) return true;
   return sheets.every((link) => {
-    // print→all deferred CSS still counts as a stylesheet; wait until media is all or sheet loaded.
     try {
       return Boolean(link.sheet) || link.media === "all" || link.dataset.loaded === "1";
     } catch {
@@ -49,7 +52,6 @@ function whenStylesReady(fn: () => void): () => void {
     });
   }
 
-  // Safety — never block shell forever if a stylesheet hangs.
   const timer = window.setTimeout(finish, 2_500);
   cleanupFns.push(() => window.clearTimeout(timer));
 
@@ -61,34 +63,64 @@ function whenStylesReady(fn: () => void): () => void {
   return cleanup;
 }
 
+function tryReveal(): void {
+  if (revealScheduled) return;
+  if (!stylesReadyLatch || !contentReady) return;
+  revealScheduled = true;
+  // Double rAF: let React commit layout before measuring/hiding the shell.
+  requestAnimationFrame(() => {
+    requestAnimationFrame(() => {
+      markAppReady();
+    });
+  });
+}
+
 export function markAppReady(): void {
   if (typeof document === "undefined") return;
   if (document.body.classList.contains("app-ready")) return;
   document.body.classList.add("app-ready");
   const shell = document.getElementById("lcp-shell");
-  if (shell) {
-    shell.setAttribute("aria-busy", "false");
+  if (!shell) return;
+  shell.setAttribute("aria-busy", "false");
+  shell.setAttribute("aria-hidden", "true");
+  // Soft hide first (CSS), then remove from a11y tree after paint settle.
+  window.setTimeout(() => {
     shell.setAttribute("hidden", "");
-  }
+  }, 320);
 }
 
-/** Reveal React after critical CSS is applied — cuts FOUC/CLS from deferred stylesheets. */
+/** Call once first meaningful React content has mounted (HomePage / route page). */
+export function notifyAppContentReady(): void {
+  if (contentReady) return;
+  contentReady = true;
+  tryReveal();
+}
+
+/**
+ * Arm style waiters. Content reveal still needs `notifyAppContentReady()`
+ * (or the safety timeout) so we don't swap onto an empty Suspense fallback.
+ */
 export function scheduleMarkAppReady(): () => void {
   let cancelled = false;
   let innerCleanup: (() => void) | undefined;
 
-  const reveal = () => {
+  innerCleanup = whenStylesReady(() => {
     if (cancelled) return;
-    requestAnimationFrame(() => {
-      if (cancelled) return;
-      markAppReady();
-    });
-  };
+    stylesReadyLatch = true;
+    tryReveal();
+  });
 
-  innerCleanup = whenStylesReady(reveal);
+  // Safety — never leave users on a permanent shell.
+  const safety = window.setTimeout(() => {
+    if (cancelled) return;
+    contentReady = true;
+    stylesReadyLatch = true;
+    tryReveal();
+  }, 4_500);
 
   return () => {
     cancelled = true;
+    window.clearTimeout(safety);
     innerCleanup?.();
   };
 }

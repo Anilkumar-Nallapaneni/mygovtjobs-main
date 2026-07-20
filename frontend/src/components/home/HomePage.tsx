@@ -1,4 +1,4 @@
-import { lazy, Suspense, useCallback, useEffect, useRef, useState } from "react";
+import { lazy, Suspense, useCallback, useEffect, useLayoutEffect, useRef, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { scrollToSection } from "@/utils/scrollToSection";
@@ -22,6 +22,7 @@ import StateJobsPanel from "@/components/home/StateJobsPanel";
 import { useBrowseContext } from "@/context/BrowseContext";
 import { RESULTS_TOPICS_INDEX_PATH } from "@/utils/browseRoutes";
 import type { HomePageProps } from "@/types/homePage";
+import { notifyAppContentReady } from "@/lib/appReady";
 
 import type { HeadlinesViewMode } from "@/lib/officialFeed";
 import "@/styles/home.css";
@@ -84,6 +85,11 @@ export default function HomePage({
   } = browse;
   const { t, i18n } = useTranslation();
   const navigate = useNavigate();
+
+  // Reveal React only after HomePage has committed — avoids empty Suspense CLS.
+  useLayoutEffect(() => {
+    notifyAppContentReady();
+  }, []);
   const locale = numberLocale(i18n.language);
   const stateLabel = useStateLabel();
   const mapPanelRef = useRef<HTMLDivElement | null>(null);
