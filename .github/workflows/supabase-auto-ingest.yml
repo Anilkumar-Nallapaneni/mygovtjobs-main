@@ -97,7 +97,8 @@ jobs:
           SYNC_TRIGGER_TYPE: github_actions_schedule
           # Force so a prior cancelled run (stuck "running" state) cannot skip today.
           SYNC_FORCE: "1"
-          SYNC_CONCURRENCY: "8"
+          # Lower concurrency reduces hang risk on slow portals; hard deadlines also apply.
+          SYNC_CONCURRENCY: "4"
         run: |
           echo "=== $(date -u +%H:%M:%S) sync:production ==="
           node scripts/run-python.mjs scripts/run-sync-production.py

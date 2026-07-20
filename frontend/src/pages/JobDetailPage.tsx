@@ -113,11 +113,11 @@ export default function JobDetailPage({ jobs, loading }: JobDetailPageProps) {
         </div>
       );
     }
-    return <PageFallback />;
+    return <PageFallback className="page-fallback" />;
   }
 
   return (
-    <Suspense fallback={<PageFallback />}>
+    <Suspense fallback={<PageFallback className="page-fallback" />}>
       <JobDetail
         key={`${slug}-${job.id}-${i18n.language}`}
         job={job}

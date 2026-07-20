@@ -75,7 +75,7 @@ export default function AccountPage({ onFooterLink }: AccountPageProps) {
   }
 
   if (loading) {
-    return <PageFallback />
+    return <PageFallback className="page-fallback" />
   }
 
   if (!user) {

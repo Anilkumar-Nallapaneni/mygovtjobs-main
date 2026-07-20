@@ -11,6 +11,7 @@ Copy-paste commands for My Govt Jobs. Run everything from **repo root**.
 | **Browse jobs locally (no setup)** | `npm run dev` → http://localhost:2222 |
 | **Daily morning update** | See [Daily routine](#daily-routine) below |
 | **Find / fix website issues** | `npm run health:website` · full: `npm run health:website:full` |
+| **Manual secrets / GSC / API DNS** | [docs/HUMAN_CHECKLIST.md](docs/HUMAN_CHECKLIST.md) |
 | **Full CI check (before PR)** | `npm run everything` |
 | **Frontend unit + E2E tests** | `npm run test` · `npm run test:e2e` |
 | **All 3 agents in one go** | `npm run pipeline:live:full` |

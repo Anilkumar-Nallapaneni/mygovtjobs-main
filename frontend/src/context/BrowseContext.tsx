@@ -26,5 +26,3 @@ export function BrowseContextOverride({
 }) {
   return <BrowseContext.Provider value={value}>{children}</BrowseContext.Provider>
 }
-
-export { BrowseContext }

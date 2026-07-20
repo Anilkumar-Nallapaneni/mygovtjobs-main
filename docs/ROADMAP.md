@@ -29,21 +29,25 @@ This roadmap covers what is **done**, what runs **daily**, and what to build **n
 
 | Area | Status | Notes |
 |------|--------|-------|
-| **Frontend on Vercel** | ✅ Live | `govtjobs.me`, auto-deploy on `main` push |
-| **Supabase Postgres** | ✅ Live | ~695 live jobs, ~1570 total |
-| **Daily GitHub ingest** | ✅ 8 AM IST | `supabase-auto-ingest.yml` |
-| **Weekly PDF enrich** | ✅ Sunday | `weekly-enrich.yml` |
-| **Dynamic sitemap** | ✅ | 1600+ URLs, rebuilt daily |
+| **Frontend on Vercel** | ✅ Live | `livegovtjobs.com`, auto-deploy on `main` push |
+| **Supabase Postgres** | ✅ Live | ~2,800+ live jobs, ~3,000+ total (Jul 2026) |
+| **Daily GitHub ingest** | ✅ 8 AM IST | `supabase-auto-ingest.yml` (360m timeout, SYNC_CONCURRENCY=4) |
+| **Sync freshness** | ✅ | `daily-sync-state.json` completed 2026-07-20 |
+| **Weekly PDF enrich** | ✅ Sunday | `weekly-enrich.yml` → `weekly:enrich:ci` |
+| **Dynamic sitemap** | ✅ | Rebuilt with snapshot export |
 | **Job detail pages** | ✅ | Slug routing, Supabase fetch, structured PDF sections |
 | **Google Analytics 4** | ✅ | `VITE_GA_MEASUREMENT_ID` on Vercel |
 | **Vercel Analytics** | ✅ | `@vercel/analytics` in `main.tsx` |
-| **Google Search Console** | 🟡 Setup | Submit `https://www.livegovtjobs.com/sitemap.xml` |
+| **Google Search Console** | 🟡 Setup | See [HUMAN_CHECKLIST.md](./HUMAN_CHECKLIST.md) |
 | **i18n (22+ languages)** | ✅ | UI chrome translated; job body English |
-| **E2E + unit tests** | ✅ | 139 frontend + 65 backend |
-| **Job quality audit** | ✅ Strict pass | 0% blocked hosts, 0% missing apply |
-| **Backend API on cloud** | 🟡 Optional | Deploy via `render.yaml` / `railway.toml`; `vercel:env:push:live` sets `VITE_API_URL` |
-| **Email/Telegram alerts** | 🟡 Partial | Subscribe API + delivery worker; needs Resend secrets |
+| **E2E + unit tests** | ✅ | Frontend + backend unit suite |
+| **Job quality audit** | ✅ Strict pass | 0% blocked hosts |
+| **Backend API on cloud** | 🟡 Optional | DNS for `api.livegovtjobs.com` not set — browse uses Supabase/static |
+| **Email/Telegram alerts** | 🟡 Partial | Subscribe API + worker; needs Resend secrets |
 | **Monetization** | ⬜ Not started | Freemium, sponsored listings |
+| **Code clarity cleanup** | ✅ Jul 2026 | COMPONENTS.md, fallbacks, jobDetailUi split, browse nav split, scripts/archive |
+
+**Manual leftover items:** [HUMAN_CHECKLIST.md](./HUMAN_CHECKLIST.md)
 
 ---
 
