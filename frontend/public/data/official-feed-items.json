@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-20T07:46:28.309Z",
+  "generatedAt": "2026-07-20T11:27:23.492Z",
   "sourceReports": [
     {
       "id": "pib-press-reg3",
@@ -247,7 +247,7 @@
       "feedUrl": null,
       "listingUrl": "https://portal-psc.ap.gov.in/Download_HallTickets",
       "ok": false,
-      "error": "no items",
+      "error": "https://portal-psc.ap.gov.in/Download_HallTickets: timeout",
       "itemCount": 0,
       "fetchMethod": null
     },
@@ -2749,6 +2749,23 @@
       "fetchMethod": "html-listing"
     },
     {
+      "id": "3e429f5552ac3a81",
+      "title": "20 Aug 2026 NOTICE REGARDING TYPE TEST FOR ADVT. NO. A-4/E-1/2025, COMPUTER ASSISTANT (UPPSC) EXAM-2025",
+      "link": "https://uppsc.up.nic.in/Open_PDF.aspx?I4PnQ0tBaglP18XMjN55aOcwfMGOQ4T+",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "uppsc-hall-tickets",
+      "sourceName": "UPPSC — Hall tickets",
+      "dept": "Uttar Pradesh PSC",
+      "state": "Uttar Pradesh",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
       "id": "41d7a69fe7e325a5",
       "title": "24 Oct 2026 CORRIGENDUM NOTICE REGARDING ADVT.NO.D-6/E-1/2025, DIRECTORATE OF HOMOEOPATHY UTTAR PRADESH / HOMOEOPATHIC MEDICAL OFFICER, S-11/32",
       "link": "https://uppsc.up.nic.in/Open_PDF.aspx?I4PnQ0tBagkz0o52o77EYehACV4lKyrV",
@@ -2769,23 +2786,6 @@
       "id": "e69479749b3f0319",
       "title": "18 Dec 2026 CORRIGENDUM NOTICE REGARDING ADVT.NO.D-6/E-1/2025, DIRECTORATE OF UNANI UTTAR PRADESH / CHIKITSA ADHIKARI (UNANI), S-11/30",
       "link": "https://uppsc.up.nic.in/Open_PDF.aspx?I4PnQ0tBagkz0o52o77EYd5icBBuNfGC",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "uppsc-hall-tickets",
-      "sourceName": "UPPSC — Hall tickets",
-      "dept": "Uttar Pradesh PSC",
-      "state": "Uttar Pradesh",
-      "category": "state",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "e10f17a17dd26511",
-      "title": "31 Dec 2026 UPPSC Exam Calendar 2026",
-      "link": "https://uppsc.up.nic.in/Open_PDF.aspx?I4PnQ0tBagmIqec6cDg6Bagq4jCvO4Zt",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
