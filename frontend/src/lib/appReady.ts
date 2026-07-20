@@ -82,11 +82,7 @@ export function markAppReady(): void {
   const shell = document.getElementById("lcp-shell");
   if (!shell) return;
   shell.setAttribute("aria-busy", "false");
-  shell.setAttribute("aria-hidden", "true");
-  // Soft hide first (CSS), then remove from a11y tree after paint settle.
-  window.setTimeout(() => {
-    shell.setAttribute("hidden", "");
-  }, 320);
+  shell.setAttribute("hidden", "");
 }
 
 /** Call once first meaningful React content has mounted (HomePage / route page). */

@@ -192,16 +192,7 @@
         white-space: nowrap;
         border: 0;
       }
-      /* Soft dismiss — avoid display:none jump that tanks CLS */
       body.app-ready #lcp-shell {
-        position: fixed;
-        inset: 0;
-        opacity: 0;
-        pointer-events: none;
-        z-index: -1;
-        transition: opacity 0.2s ease;
-      }
-      body.app-ready #lcp-shell[hidden] {
         display: none !important;
       }
       body.app-ready #root {
