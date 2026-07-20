@@ -1,6 +1,11 @@
 import { describe, expect, it } from "vitest";
 
-import { buildJobPostingJsonLd, resolveJobPostalAddress } from "@/utils/jobSeo";
+import {
+  buildJobPostingJsonLd,
+  parseJobBaseSalary,
+  resolveJobPostalAddress,
+  resolveValidThrough,
+} from "@/utils/jobSeo";
 
 describe("resolveJobPostalAddress", () => {
   it("uses explicit city when present", () => {
@@ -65,6 +70,39 @@ describe("resolveJobPostalAddress", () => {
   });
 });
 
+describe("parseJobBaseSalary", () => {
+  it("parses INR monthly ranges", () => {
+    expect(parseJobBaseSalary("Rs. 35400 - 112400 Per Month")).toEqual({
+      "@type": "MonetaryAmount",
+      currency: "INR",
+      value: { "@type": "QuantitativeValue", minValue: 35400, maxValue: 112400, unitText: "MONTH" },
+    });
+  });
+
+  it("parses single INR amounts", () => {
+    expect(parseJobBaseSalary("Rs. 25000 Per Month")).toEqual({
+      "@type": "MonetaryAmount",
+      currency: "INR",
+      value: { "@type": "QuantitativeValue", value: 25000, unitText: "MONTH" },
+    });
+  });
+
+  it("skips pay-matrix / free-text salaries", () => {
+    expect(parseJobBaseSalary("Level-10 in the Pay Matrix")).toBeNull();
+    expect(parseJobBaseSalary("Not specified in the notification")).toBeNull();
+  });
+});
+
+describe("resolveValidThrough", () => {
+  it("uses lastDate when present", () => {
+    expect(resolveValidThrough({ lastDate: "2026-08-15" }, "2026-01-01")).toBe("2026-08-15");
+  });
+
+  it("falls back to datePosted + 180 days", () => {
+    expect(resolveValidThrough({}, "2026-01-01")).toBe("2026-06-30");
+  });
+});
+
 describe("buildJobPostingJsonLd", () => {
   it("builds schema.org JobPosting from a job row", () => {
     const jsonLd = buildJobPostingJsonLd({
@@ -110,6 +148,7 @@ describe("buildJobPostingJsonLd", () => {
     expect(location.address.addressLocality).toBe("Gujarat");
     expect(location.address.addressRegion).toBe("Gujarat");
     expect(location.address.addressCountry).toBe("IN");
+    expect(jsonLd?.validThrough).toBeTruthy();
   });
 
   it("always includes datePosted when published_at is missing", () => {
@@ -135,9 +174,10 @@ describe("buildJobPostingJsonLd", () => {
     });
 
     expect(jsonLd?.datePosted).toBe(today);
+    expect(jsonLd?.validThrough).toBeTruthy();
   });
 
-  it("includes identifier and educationRequirements when available", () => {
+  it("includes identifier, educationRequirements, and baseSalary when available", () => {
     const jsonLd = buildJobPostingJsonLd({
       id: "job-42",
       slug: "test-slug",
@@ -145,6 +185,7 @@ describe("buildJobPostingJsonLd", () => {
       dept: "High Court",
       state: "Assam",
       qual: "Graduate",
+      salary: "Rs. 25000 Per Month",
       published_at: "2026-01-01",
     });
 
@@ -154,5 +195,25 @@ describe("buildJobPostingJsonLd", () => {
       value: "job-42",
     });
     expect(jsonLd?.educationRequirements).toBe("Graduate");
+    expect(jsonLd?.baseSalary).toEqual({
+      "@type": "MonetaryAmount",
+      currency: "INR",
+      value: { "@type": "QuantitativeValue", value: 25000, unitText: "MONTH" },
+    });
+  });
+
+  it("includes streetAddress and postalCode only when real values exist", () => {
+    const jsonLd = buildJobPostingJsonLd({
+      id: "addr-1",
+      slug: "with-address",
+      title: "Office Recruitment",
+      state: "Delhi",
+      streetAddress: "CGO Complex, Lodhi Road",
+      postalCode: "110003",
+      published_at: "2026-01-01",
+    });
+    const address = (jsonLd?.jobLocation as { address: Record<string, string> }).address;
+    expect(address.streetAddress).toBe("CGO Complex, Lodhi Road");
+    expect(address.postalCode).toBe("110003");
   });
 });

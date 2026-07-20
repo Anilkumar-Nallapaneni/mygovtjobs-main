@@ -134,6 +134,63 @@ function resolveDatePosted(job) {
   );
 }
 
+function resolveValidThrough(job, datePosted) {
+  const fromLast = parseIsoDate(job.last_date || job.lastDate);
+  if (fromLast) return fromLast;
+  const base = new Date(`${datePosted}T00:00:00Z`);
+  if (Number.isNaN(base.getTime())) {
+    const fallback = new Date();
+    fallback.setUTCDate(fallback.getUTCDate() + 180);
+    return fallback.toISOString().slice(0, 10);
+  }
+  base.setUTCDate(base.getUTCDate() + 180);
+  return base.toISOString().slice(0, 10);
+}
+
+function parseMoneyToken(raw) {
+  const cleaned = String(raw).replace(/,/g, "").replace(/\s+/g, "");
+  const n = Number(cleaned);
+  if (!Number.isFinite(n) || n < 100 || n > 10_000_000) return undefined;
+  return Math.round(n);
+}
+
+function parseJobBaseSalary(salary) {
+  const raw = String(salary ?? "").replace(/\s+/g, " ").trim();
+  if (!raw || raw === "—" || raw.length > 120) return null;
+  if (/not specified|see (official|notification)|pay matrix|level[- ]?\d/i.test(raw)) return null;
+  const unitText = /\b(per\s*month|p\.?\s*m\.?|monthly|\/\s*month)\b/i.test(raw)
+    ? "MONTH"
+    : /\b(per\s*annum|per\s*year|p\.?\s*a\.?|yearly|annually|\/\s*year)\b/i.test(raw)
+      ? "YEAR"
+      : "MONTH";
+  const range = raw.match(
+    /(?:rs\.?|inr|₹)?\s*([\d,]+(?:\.\d+)?)\s*(?:[-–—]|to)\s*(?:rs\.?|inr|₹)?\s*([\d,]+(?:\.\d+)?)/i
+  );
+  if (range) {
+    const minValue = parseMoneyToken(range[1]);
+    const maxValue = parseMoneyToken(range[2]);
+    if (minValue && maxValue && maxValue >= minValue) {
+      return {
+        "@type": "MonetaryAmount",
+        currency: "INR",
+        value: { "@type": "QuantitativeValue", minValue, maxValue, unitText },
+      };
+    }
+  }
+  const single = raw.match(/(?:rs\.?|inr|₹)\s*([\d,]+(?:\.\d+)?)/i) || raw.match(/^([\d,]+(?:\.\d+)?)$/);
+  if (single) {
+    const value = parseMoneyToken(single[1]);
+    if (value) {
+      return {
+        "@type": "MonetaryAmount",
+        currency: "INR",
+        value: { "@type": "QuantitativeValue", value, unitText },
+      };
+    }
+  }
+  return null;
+}
+
 function buildJobPostingJsonLd(job, canonical) {
   const address = resolveJobPostalAddress(job);
   const slug = job.slug || job.id;
@@ -147,21 +204,32 @@ function buildJobPostingJsonLd(job, canonical) {
     hiringOrganization.sameAs = applyUrl;
   }
 
+  const datePosted = resolveDatePosted(job);
+  const postalAddress = {
+    "@type": "PostalAddress",
+    addressLocality: address.addressLocality,
+    addressRegion: address.addressRegion,
+    addressCountry: address.addressCountry,
+  };
+  const detail = job.detail && typeof job.detail === "object" ? job.detail : {};
+  const street = String(
+    job.streetAddress || job.street_address || detail.streetAddress || detail.street_address || detail.address || ""
+  ).trim();
+  const pin = String(job.postalCode || job.postal_code || job.pincode || detail.postalCode || detail.pincode || "").trim();
+  if (street.length >= 5 && street.length <= 200) postalAddress.streetAddress = street;
+  if (/^\d{6}$/.test(pin)) postalAddress.postalCode = pin;
+
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "JobPosting",
     title: job.title,
     description: jobDescription(job),
-    datePosted: resolveDatePosted(job),
+    datePosted,
+    validThrough: resolveValidThrough(job, datePosted),
     hiringOrganization,
     jobLocation: {
       "@type": "Place",
-      address: {
-        "@type": "PostalAddress",
-        addressLocality: address.addressLocality,
-        addressRegion: address.addressRegion,
-        addressCountry: address.addressCountry,
-      },
+      address: postalAddress,
     },
     employmentType: "FULL_TIME",
     industry: "Government",
@@ -172,11 +240,11 @@ function buildJobPostingJsonLd(job, canonical) {
       value: String(job.id || slug),
     },
   };
-  const lastDate = job.last_date || job.lastDate;
-  if (lastDate) jsonLd.validThrough = String(lastDate).slice(0, 10);
   const dateModified = parseIsoDate(job.updatedDate ?? job.updated_at);
   if (dateModified) jsonLd.dateModified = dateModified;
   if (Number(job.vacancies) > 0) jsonLd.totalJobOpenings = Number(job.vacancies);
+  const baseSalary = parseJobBaseSalary(job.salary);
+  if (baseSalary) jsonLd.baseSalary = baseSalary;
   const qual = String(job.qualification || job.qual || "").trim();
   if (qual && qual !== "—" && qual.toLowerCase() !== "see notification") {
     jsonLd.educationRequirements = qual;

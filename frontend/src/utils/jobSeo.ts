@@ -123,12 +123,103 @@ function resolveApplyUrl(job: JobRecord): string | undefined {
   return undefined;
 }
 
+/** Always emit validThrough — fall back to datePosted + 180 days when last date is missing. */
+export function resolveValidThrough(job: JobRecord, datePosted: string): string {
+  const fromLast = parseIsoDate(job.lastDate ?? job.last_date);
+  if (fromLast) return fromLast;
+  const base = new Date(`${datePosted}T00:00:00Z`);
+  if (Number.isNaN(base.getTime())) {
+    const fallback = new Date();
+    fallback.setUTCDate(fallback.getUTCDate() + 180);
+    return fallback.toISOString().slice(0, 10);
+  }
+  base.setUTCDate(base.getUTCDate() + 180);
+  return base.toISOString().slice(0, 10);
+}
+
+function parseMoneyToken(raw: string): number | undefined {
+  const cleaned = raw.replace(/,/g, "").replace(/\s+/g, "");
+  const n = Number(cleaned);
+  if (!Number.isFinite(n) || n <= 0) return undefined;
+  // Guard against scraped garbage (e.g. years, tiny ids)
+  if (n < 100 || n > 10_000_000) return undefined;
+  return Math.round(n);
+}
+
+/**
+ * Parse Indian salary strings into schema.org MonetaryAmount when confident.
+ * Returns null for pay-matrix / free-text that is not a clear INR figure.
+ */
+export function parseJobBaseSalary(salary: unknown): Record<string, unknown> | null {
+  const raw = String(salary ?? "").replace(/\s+/g, " ").trim();
+  if (!raw || raw === "—" || raw.length > 120) return null;
+  if (/not specified|see (official|notification)|pay matrix|level[- ]?\d/i.test(raw)) return null;
+
+  const unitText = /\b(per\s*month|p\.?\s*m\.?|monthly|\/\s*month)\b/i.test(raw)
+    ? "MONTH"
+    : /\b(per\s*annum|per\s*year|p\.?\s*a\.?|yearly|annually|\/\s*year)\b/i.test(raw)
+      ? "YEAR"
+      : "MONTH";
+
+  const range = raw.match(
+    /(?:rs\.?|inr|₹)?\s*([\d,]+(?:\.\d+)?)\s*(?:[-–—]|to)\s*(?:rs\.?|inr|₹)?\s*([\d,]+(?:\.\d+)?)/i
+  );
+  if (range) {
+    const minValue = parseMoneyToken(range[1]);
+    const maxValue = parseMoneyToken(range[2]);
+    if (minValue && maxValue && maxValue >= minValue) {
+      return {
+        "@type": "MonetaryAmount",
+        currency: "INR",
+        value: { "@type": "QuantitativeValue", minValue, maxValue, unitText },
+      };
+    }
+  }
+
+  const single = raw.match(/(?:rs\.?|inr|₹)\s*([\d,]+(?:\.\d+)?)/i) || raw.match(/^([\d,]+(?:\.\d+)?)$/);
+  if (single) {
+    const value = parseMoneyToken(single[1]);
+    if (value) {
+      return {
+        "@type": "MonetaryAmount",
+        currency: "INR",
+        value: { "@type": "QuantitativeValue", value, unitText },
+      };
+    }
+  }
+
+  return null;
+}
+
+/** Only emit street/PIN when the job record actually has them — never invent. */
+function resolveOptionalStreetFields(job: JobRecord): {
+  streetAddress?: string;
+  postalCode?: string;
+} {
+  const streetAddress = String(
+    job.streetAddress ||
+      job.street_address ||
+      detailString(job, ["streetAddress", "street_address", "address", "office_address"])
+  ).trim();
+  const postalCode = String(
+    job.postalCode || job.postal_code || job.pincode || detailString(job, ["postalCode", "postal_code", "pincode", "pin"])
+  ).trim();
+
+  const out: { streetAddress?: string; postalCode?: string } = {};
+  if (streetAddress && streetAddress.length >= 5 && streetAddress.length <= 200) {
+    out.streetAddress = streetAddress;
+  }
+  if (/^\d{6}$/.test(postalCode)) out.postalCode = postalCode;
+  return out;
+}
+
 export function buildJobPostingJsonLd(job: JobRecord): Record<string, unknown> | null {
   if (!job.title) return null;
   const url = jobDetailUrl(job);
-  const validThrough = parseIsoDate(job.lastDate ?? job.last_date);
   const datePosted = resolveDatePosted(job);
+  const validThrough = resolveValidThrough(job, datePosted);
   const address = resolveJobPostalAddress(job);
+  const streetFields = resolveOptionalStreetFields(job);
   const applyUrl = resolveApplyUrl(job);
   const orgName = String(job.dept || "Government of India recruitment");
 
@@ -138,21 +229,26 @@ export function buildJobPostingJsonLd(job: JobRecord): Record<string, unknown> |
   };
   if (applyUrl) hiringOrganization.sameAs = applyUrl;
 
+  const postalAddress: Record<string, unknown> = {
+    "@type": "PostalAddress",
+    addressLocality: address.addressLocality,
+    addressRegion: address.addressRegion,
+    addressCountry: address.addressCountry,
+  };
+  if (streetFields.streetAddress) postalAddress.streetAddress = streetFields.streetAddress;
+  if (streetFields.postalCode) postalAddress.postalCode = streetFields.postalCode;
+
   const posting: Record<string, unknown> = {
     "@context": "https://schema.org",
     "@type": "JobPosting",
     title: job.title,
     description: jobDescription(job),
     datePosted,
+    validThrough,
     hiringOrganization,
     jobLocation: {
       "@type": "Place",
-      address: {
-        "@type": "PostalAddress",
-        addressLocality: address.addressLocality,
-        addressRegion: address.addressRegion,
-        addressCountry: address.addressCountry,
-      },
+      address: postalAddress,
     },
     employmentType: "FULL_TIME",
     industry: "Government",
@@ -169,10 +265,12 @@ export function buildJobPostingJsonLd(job: JobRecord): Record<string, unknown> |
 
   const dateModified = parseIsoDate(job.updatedDate ?? job.updated_at);
   if (dateModified) posting.dateModified = dateModified;
-  if (validThrough) posting.validThrough = validThrough;
   if (Number(job.vacancies) > 0) {
     posting.totalJobOpenings = Number(job.vacancies);
   }
+
+  const baseSalary = parseJobBaseSalary(job.salary);
+  if (baseSalary) posting.baseSalary = baseSalary;
 
   const qual = String(job.qual || job.qualification || "").trim();
   if (qual && qual !== "—" && qual.toLowerCase() !== "see notification") {
