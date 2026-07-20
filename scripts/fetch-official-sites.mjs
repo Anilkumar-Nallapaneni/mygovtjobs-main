@@ -222,7 +222,30 @@ export async function fetchOfficialSiteItems(options = {}) {
     while (index < sites.length) {
       const i = index++;
       const site = sites[i];
-      const { report, items } = await scrapeSite(site, cfg, parser);
+      // Per-site wall clock so one hung .gov host cannot stall the whole daily sync.
+      const siteBudgetMs = Math.max((Number(cfg.requestTimeoutMs) || 28000) * 4, 120_000);
+      let report;
+      let items;
+      try {
+        const result = await Promise.race([
+          scrapeSite(site, cfg, parser),
+          new Promise((_, reject) =>
+            setTimeout(() => reject(new Error("site budget timeout")), siteBudgetMs)
+          ),
+        ]);
+        report = result.report;
+        items = result.items;
+      } catch (e) {
+        report = {
+          id: site.id,
+          name: site.name,
+          ok: false,
+          itemCount: 0,
+          method: null,
+          error: e instanceof Error ? e.message : String(e),
+        };
+        items = [];
+      }
       siteReports.push(report);
       allItems.push(...items);
       const tag = report.ok ? "ok" : "fail";

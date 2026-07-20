@@ -126,30 +126,48 @@ function shouldAcceptHtml(status, html) {
   return html.length >= 2500;
 }
 
+/** Hard wall-clock deadline — socket "timeout" alone can still hang on some .gov hosts. */
+function withHardDeadline(promise, timeoutMs, label = "timeout") {
+  const ms = Math.max(1000, Number(timeoutMs) || 28000);
+  let timer;
+  return Promise.race([
+    Promise.resolve(promise).finally(() => clearTimeout(timer)),
+    new Promise((_, reject) => {
+      timer = setTimeout(() => reject(new Error(label)), ms);
+    }),
+  ]);
+}
+
 function httpsGetHtml(url, userAgent, timeoutMs) {
-  return new Promise((resolve, reject) => {
+  const work = new Promise((resolve, reject) => {
+    let settled = false;
+    const done = (fn, value) => {
+      if (settled) return;
+      settled = true;
+      fn(value);
+    };
     let target;
     try {
       target = new URL(url);
     } catch {
-      reject(new Error("invalid url"));
+      done(reject, new Error("invalid url"));
       return;
     }
     if (target.protocol !== "https:") {
-      reject(new Error("https only"));
+      done(reject, new Error("https only"));
       return;
     }
 
     const visit = (current, hops) => {
       if (hops > 8) {
-        reject(new Error("too many redirects"));
+        done(reject, new Error("too many redirects"));
         return;
       }
       let u;
       try {
         u = new URL(current);
       } catch {
-        reject(new Error("invalid redirect"));
+        done(reject, new Error("invalid redirect"));
         return;
       }
 
@@ -173,27 +191,33 @@ function httpsGetHtml(url, userAgent, timeoutMs) {
               try {
                 visit(new URL(loc, current).toString(), hops + 1);
               } catch {
-                reject(new Error("bad redirect"));
+                done(reject, new Error("bad redirect"));
               }
               return;
             }
             if (!shouldAcceptHtml(res.statusCode, html)) {
-              reject(new Error(`HTTP ${res.statusCode}`));
+              done(reject, new Error(`HTTP ${res.statusCode}`));
               return;
             }
-            resolve({ html, finalUrl: current });
+            done(resolve, { html, finalUrl: current });
           });
         }
       );
-      req.on("error", reject);
+      req.setTimeout(timeoutMs, () => {
+        req.destroy();
+        done(reject, new Error("timeout"));
+      });
+      req.on("error", (err) => done(reject, err));
       req.on("timeout", () => {
         req.destroy();
-        reject(new Error("timeout"));
+        done(reject, new Error("timeout"));
       });
+      req.end();
     };
 
     visit(url, 0);
   });
+  return withHardDeadline(work, timeoutMs + 5000, "timeout");
 }
 
 function needsTlsFallback(err) {
@@ -214,11 +238,15 @@ export async function fetchHtml(url, userAgent, timeoutMs = 28000, retries = 2) 
 
   for (let attempt = 0; attempt <= retries; attempt++) {
     try {
-      const res = await fetch(url, {
-        redirect: "follow",
-        signal: AbortSignal.timeout(timeoutMs),
-        headers: BROWSER_HEADERS(userAgent),
-      });
+      const res = await withHardDeadline(
+        fetch(url, {
+          redirect: "follow",
+          signal: AbortSignal.timeout(timeoutMs),
+          headers: BROWSER_HEADERS(userAgent),
+        }),
+        timeoutMs + 5000,
+        "timeout"
+      );
       const html = await res.text();
       if (!shouldAcceptHtml(res.status, html)) throw new Error(`HTTP ${res.status}`);
       return { html, finalUrl: res.url || url };
@@ -245,14 +273,18 @@ export async function fetchHtml(url, userAgent, timeoutMs = 28000, retries = 2) 
 /** Fetch any text response (RSS/XML/HTML) with the same gov TLS fallbacks. */
 export async function fetchText(url, userAgent, timeoutMs = 28000) {
   try {
-    const res = await fetch(url, {
-      redirect: "follow",
-      signal: AbortSignal.timeout(timeoutMs),
-      headers: {
-        ...BROWSER_HEADERS(userAgent),
-        Accept: "application/rss+xml, application/xml, text/xml, text/html, */*",
-      },
-    });
+    const res = await withHardDeadline(
+      fetch(url, {
+        redirect: "follow",
+        signal: AbortSignal.timeout(timeoutMs),
+        headers: {
+          ...BROWSER_HEADERS(userAgent),
+          Accept: "application/rss+xml, application/xml, text/xml, text/html, */*",
+        },
+      }),
+      timeoutMs + 5000,
+      "timeout"
+    );
     const text = await res.text();
     if (res.ok && text.length > 50) return { text, finalUrl: res.url || url };
     if (text.length > 50 && isGovHost(new URL(url).hostname)) return { text, finalUrl: res.url || url };

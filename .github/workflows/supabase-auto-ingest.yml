@@ -20,7 +20,8 @@ concurrency:
 jobs:
   ingest:
     runs-on: ubuntu-latest
-    # Full portal scrape + export regularly exceeds 2.5h; GHA max is 360.
+    # No artificial timeout — use GitHub's hard ceiling (6h). Prefer finishing the
+    # full scrape/export over failing early; tighten later only if runs hang.
     timeout-minutes: 360
     steps:
       - name: Start
