@@ -2,11 +2,14 @@ name: Uptime and freshness
 
 on:
   schedule:
+    # Homepage every 30m; freshness failures no longer spam email every half hour
+    # (notify is deduped to once per 6h via notify-workflow-failure.mjs).
     - cron: "*/30 * * * *"
   workflow_dispatch:
 
 permissions:
   contents: read
+  actions: read
 
 jobs:
   probe:
@@ -25,14 +28,28 @@ jobs:
           API_HEALTH_URL: ${{ secrets.API_HEALTH_URL }}
         run: |
           URL="${API_HEALTH_URL:-https://api.livegovtjobs.com/health}"
-          body=$(curl -sS --max-time 20 "$URL")
+          body=$(curl -sS --max-time 20 "$URL") || exit 1
           echo "$body" | grep -q '"status"' || exit 1
 
       - name: Job data freshness
         run: |
           body=$(curl -sS --max-time 20 "https://www.livegovtjobs.com/data/daily-sync-state.json")
           echo "$body" | grep -q 'completedAt' || echo "::warning::daily-sync-state missing completedAt"
-          completed=$(echo "$body" | node -e "let d='';process.stdin.on('data',c=>d+=c);process.stdin.on('end',()=>{try{const j=JSON.parse(d);const t=j.completedAt||j.completedAtIst;if(!t){console.log('no timestamp');process.exit(0)};const age=(Date.now()-new Date(t).getTime())/3600000;console.log('Age hours:',age.toFixed(1));if(age>72)process.exit(1)}catch(e){process.exit(0)}})")
+          echo "$body" | node -e "
+            let d='';
+            process.stdin.on('data',c=>d+=c);
+            process.stdin.on('end',()=>{
+              try {
+                const j=JSON.parse(d);
+                const t=j.completedAt||j.completedAtIst;
+                if(!t){ console.log('no timestamp'); process.exit(0); }
+                const age=(Date.now()-new Date(t).getTime())/3600000;
+                console.log('Age hours:', age.toFixed(1));
+                // Allow one full weekend + buffer; daily ingest should finish within this.
+                if(age>72) process.exit(1);
+              } catch(e) { process.exit(0); }
+            });
+          "
           echo "Freshness check done"
 
   notify-failure:
@@ -40,3 +57,6 @@ jobs:
     if: failure()
     uses: ./.github/workflows/notify-on-failure.yml
     secrets: inherit
+    permissions:
+      actions: read
+      contents: read

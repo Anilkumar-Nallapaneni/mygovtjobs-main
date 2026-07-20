@@ -12,10 +12,16 @@ env:
 permissions:
   contents: write
 
+# One ingest at a time — do not cancel an in-flight run when a new schedule fires.
+concurrency:
+  group: supabase-auto-ingest
+  cancel-in-progress: false
+
 jobs:
   ingest:
     runs-on: ubuntu-latest
-    timeout-minutes: 150
+    # Full portal scrape + export regularly exceeds 2.5h; GHA max is 360.
+    timeout-minutes: 360
     steps:
       - name: Start
         run: echo "=== Daily ingest started at $(date -u +%Y-%m-%dT%H:%M:%SZ) ==="
@@ -88,10 +94,21 @@ jobs:
           ALLOW_FALLBACK_JSON_EXPORT: "0"
           ALERT_SITE_URL: ${{ secrets.ALERT_SITE_URL }}
           SYNC_TRIGGER_TYPE: github_actions_schedule
+          # Force so a prior cancelled run (stuck "running" state) cannot skip today.
+          SYNC_FORCE: "1"
           SYNC_CONCURRENCY: "8"
         run: |
           echo "=== $(date -u +%H:%M:%S) sync:production ==="
           node scripts/run-python.mjs scripts/run-sync-production.py
+
+      # If the runner is killed (timeout/cancel), mark file + DB so the next run is not stuck.
+      - name: Mark sync failed on cancel/timeout
+        if: cancelled()
+        continue-on-error: true
+        env:
+          DATABASE_URL: ${{ env.DATABASE_URL }}
+          SYNC_FAIL_REASON: GitHub Actions cancelled or timed out before sync finished
+        run: node scripts/run-python.mjs scripts/mark-daily-sync-failed.py
 
       # Job detail pages load from Supabase first; static PDF files are built weekly.
       # Do NOT run build:job-details or enrich:jobs:all here — they take hours.
@@ -166,3 +183,6 @@ jobs:
     if: failure()
     uses: ./.github/workflows/notify-on-failure.yml
     secrets: inherit
+    permissions:
+      actions: read
+      contents: read

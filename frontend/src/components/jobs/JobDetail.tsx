@@ -21,6 +21,7 @@ import RelatedJobs from "@/components/jobs/RelatedJobs";
 import JobDetailFaq from "@/components/jobs/JobDetailFaq";
 import ReportJobButton from "@/components/jobs/ReportJobButton";
 import SocialAlertBar from "@/components/home/SocialAlertBar";
+import "@/styles/jobs.css";
 import {
   buildGlanceFacts,
   ContentSections,

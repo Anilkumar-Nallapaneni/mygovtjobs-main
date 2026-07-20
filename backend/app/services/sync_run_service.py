@@ -3,13 +3,15 @@
 from __future__ import annotations
 
 import os
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from uuid import uuid4
 
 from sqlalchemy import text
 from sqlalchemy.ext.asyncio import AsyncSession
 
 ADVISORY_LOCK_KEY = 20260710
+# Transaction pooler (6543) releases session advisory locks at commit — also use row mutex.
+STALE_RUNNING_HOURS = 4
 
 
 class SyncRunService:
@@ -26,6 +28,67 @@ class SyncRunService:
         await session.execute(text("SELECT pg_advisory_unlock(:key)"), {"key": ADVISORY_LOCK_KEY})
         await session.commit()
 
+    async def abandon_stale(
+        self,
+        session: AsyncSession,
+        *,
+        older_than_hours: float | None = None,
+    ) -> int:
+        """Mark stuck running rows failed. older_than_hours=0 abandons all running rows."""
+        hours = STALE_RUNNING_HOURS if older_than_hours is None else float(older_than_hours)
+        if hours <= 0:
+            result = await session.execute(
+                text(
+                    """
+                    UPDATE sync_runs
+                    SET status = 'failed',
+                        completed_at = :completed_at,
+                        error_message = COALESCE(
+                          NULLIF(error_message, ''),
+                          'abandoned: runner cancelled or timed out'
+                        )
+                    WHERE status = 'running'
+                    """
+                ),
+                {"completed_at": datetime.now(timezone.utc)},
+            )
+        else:
+            cutoff = datetime.now(timezone.utc) - timedelta(hours=hours)
+            result = await session.execute(
+                text(
+                    """
+                    UPDATE sync_runs
+                    SET status = 'failed',
+                        completed_at = :completed_at,
+                        error_message = COALESCE(
+                          NULLIF(error_message, ''),
+                          'abandoned: stale running row'
+                        )
+                    WHERE status = 'running' AND started_at < :cutoff
+                    """
+                ),
+                {"completed_at": datetime.now(timezone.utc), "cutoff": cutoff},
+            )
+        await session.commit()
+        return int(result.rowcount or 0)
+
+    async def has_active_run(self, session: AsyncSession) -> bool:
+        cutoff = datetime.now(timezone.utc) - timedelta(hours=STALE_RUNNING_HOURS)
+        row = (
+            await session.execute(
+                text(
+                    """
+                    SELECT 1 AS ok
+                    FROM sync_runs
+                    WHERE status = 'running' AND started_at >= :cutoff
+                    LIMIT 1
+                    """
+                ),
+                {"cutoff": cutoff},
+            )
+        ).first()
+        return row is not None
+
     async def start(
         self,
         session: AsyncSession,
@@ -33,6 +96,12 @@ class SyncRunService:
         pipeline_name: str,
         trigger_type: str | None = None,
     ) -> str | None:
+        await self.abandon_stale(session)
+
+        # Row-based mutex (works on transaction pooler; advisory lock alone does not).
+        if await self.has_active_run(session):
+            return None
+
         if not await self.try_lock(session):
             return None
 

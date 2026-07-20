@@ -47,6 +47,28 @@ def run_daily_nested() -> int:
     ).returncode
 
 
+def _install_signal_handlers(run_id: str | None) -> None:
+    """Best-effort cleanup when GitHub Actions kills the job (SIGTERM)."""
+    import signal
+
+    def _handler(signum: int, _frame: object) -> None:
+        from app.services.daily_sync_service import DailySyncService
+
+        reason = f"received signal {signum} (runner cancelled or timed out)"
+        try:
+            DailySyncService().mark_failed(reason)
+        except Exception as exc:  # noqa: BLE001
+            print(f"mark_failed during signal: {exc}", flush=True)
+        print(f"sync:production interrupted: {reason}", flush=True)
+        raise SystemExit(143)
+
+    for sig in (signal.SIGTERM, signal.SIGINT):
+        try:
+            signal.signal(sig, _handler)
+        except Exception:  # noqa: BLE001
+            pass
+
+
 async def main() -> int:
     trigger = os.environ.get("SYNC_TRIGGER_TYPE", "manual")
     run_id: str | None = None
@@ -60,6 +82,8 @@ async def main() -> int:
         if run_id is None:
             print("SKIP: Another sync is already running (advisory lock).", flush=True)
             return 0
+
+    _install_signal_handlers(run_id)
 
     code = 0
     inserted = 0
