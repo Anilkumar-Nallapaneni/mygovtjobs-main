@@ -4,6 +4,7 @@
   "outputDirectory": "frontend/dist",
   "installCommand": "npm ci",
   "framework": "vite",
+  "cleanUrls": true,
   "headers": [
     {
       "source": "/(.*)",

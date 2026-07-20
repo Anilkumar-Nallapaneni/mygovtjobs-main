@@ -1,10 +1,12 @@
 import { SITE_DESCRIPTION, SITE_NAME, SITE_OG_IMAGE_PATH } from "@/data/siteMeta";
 import { getSiteOrigin } from "@/data/siteLinks";
+import { STATES } from "@/data/states";
 import type { JobRecord } from "@/types/job";
 import { jobDetailUrl } from "@/utils/jobRoutes";
 import { beginSeoHead } from "@/utils/seoHead";
 
 const DEFAULT_DESCRIPTION = SITE_DESCRIPTION;
+const NATIONWIDE_RE = /^(all[\s-]?india|india|nationwide|pan[\s-]?india)$/i;
 
 function jobDescription(job: JobRecord): string {
   const summary =
@@ -49,11 +51,92 @@ function resolveDatePosted(job: JobRecord): string {
   );
 }
 
+function stateNameFromId(id: string): string | undefined {
+  return STATES.find((s) => s.id === id.toLowerCase())?.n;
+}
+
+function detailString(job: JobRecord, keys: string[]): string {
+  const detail = job.detail;
+  if (!detail || typeof detail !== "object") return "";
+  const row = detail as Record<string, unknown>;
+  for (const key of keys) {
+    const value = String(row[key] ?? "").trim();
+    if (value && value !== "—") return value;
+  }
+  return "";
+}
+
+/**
+ * Resolve PostalAddress fields for every job.
+ * Google recommends addressLocality + addressCountry; we always emit both.
+ */
+export function resolveJobPostalAddress(job: JobRecord): {
+  addressLocality: string;
+  addressRegion: string;
+  addressCountry: "IN";
+} {
+  const explicitLocality = String(
+    job.city || job.location || job.district || detailString(job, ["city", "location", "district", "place"])
+  ).trim();
+
+  const fromStateField = String(job.state || "").trim();
+  const fromCodes = Array.isArray(job.stateIds)
+    ? job.stateIds
+        .map((id) => stateNameFromId(String(id)))
+        .filter((n): n is string => Boolean(n))
+    : [];
+  const fromRawCodes = Array.isArray(job.state_codes)
+    ? (job.state_codes as unknown[])
+        .map((id) => stateNameFromId(String(id)))
+        .filter((n): n is string => Boolean(n))
+    : [];
+
+  const regionCandidate =
+    (fromStateField && !NATIONWIDE_RE.test(fromStateField) ? fromStateField : "") ||
+    fromCodes[0] ||
+    fromRawCodes[0] ||
+    "";
+
+  const isNationwide =
+    !regionCandidate ||
+    NATIONWIDE_RE.test(fromStateField) ||
+    (Array.isArray(job.stateIds) && job.stateIds.includes("all"));
+
+  const addressRegion = isNationwide ? "India" : regionCandidate;
+  const addressLocality =
+    explicitLocality ||
+    (isNationwide ? "India" : regionCandidate.split(",")[0]?.trim() || addressRegion);
+
+  return {
+    addressLocality,
+    addressRegion,
+    addressCountry: "IN",
+  };
+}
+
+function resolveApplyUrl(job: JobRecord): string | undefined {
+  const candidates = [job.apply_url, job.applyUrl, job.officialUrl];
+  for (const raw of candidates) {
+    const url = String(raw || "").trim();
+    if (url && url !== "#" && /^https?:\/\//i.test(url)) return url;
+  }
+  return undefined;
+}
+
 export function buildJobPostingJsonLd(job: JobRecord): Record<string, unknown> | null {
   if (!job.title) return null;
   const url = jobDetailUrl(job);
   const validThrough = parseIsoDate(job.lastDate ?? job.last_date);
   const datePosted = resolveDatePosted(job);
+  const address = resolveJobPostalAddress(job);
+  const applyUrl = resolveApplyUrl(job);
+  const orgName = String(job.dept || "Government of India recruitment");
+
+  const hiringOrganization: Record<string, unknown> = {
+    "@type": "Organization",
+    name: orgName,
+  };
+  if (applyUrl) hiringOrganization.sameAs = applyUrl;
 
   const posting: Record<string, unknown> = {
     "@context": "https://schema.org",
@@ -61,16 +144,14 @@ export function buildJobPostingJsonLd(job: JobRecord): Record<string, unknown> |
     title: job.title,
     description: jobDescription(job),
     datePosted,
-    hiringOrganization: {
-      "@type": "Organization",
-      name: String(job.dept || "Government of India recruitment"),
-    },
+    hiringOrganization,
     jobLocation: {
       "@type": "Place",
       address: {
         "@type": "PostalAddress",
-        addressCountry: "IN",
-        addressRegion: String(job.state || "India"),
+        addressLocality: address.addressLocality,
+        addressRegion: address.addressRegion,
+        addressCountry: address.addressCountry,
       },
     },
     employmentType: "FULL_TIME",
@@ -78,11 +159,24 @@ export function buildJobPostingJsonLd(job: JobRecord): Record<string, unknown> |
     url: url || undefined,
   };
 
+  if (job.id || job.slug) {
+    posting.identifier = {
+      "@type": "PropertyValue",
+      name: SITE_NAME,
+      value: String(job.id || job.slug),
+    };
+  }
+
   const dateModified = parseIsoDate(job.updatedDate ?? job.updated_at);
   if (dateModified) posting.dateModified = dateModified;
   if (validThrough) posting.validThrough = validThrough;
   if (Number(job.vacancies) > 0) {
     posting.totalJobOpenings = Number(job.vacancies);
+  }
+
+  const qual = String(job.qual || job.qualification || "").trim();
+  if (qual && qual !== "—" && qual.toLowerCase() !== "see notification") {
+    posting.educationRequirements = qual;
   }
 
   return posting;
