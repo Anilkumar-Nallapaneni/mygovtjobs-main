@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-07-17T14:17:12.670Z",
+  "generatedAt": "2026-07-20T11:27:23.492Z",
   "sourceReports": [
     {
       "id": "pib-press-reg3",
       "name": "PIB — recent press releases",
       "feedUrl": "https://www.pib.gov.in/RssMain.aspx?ModId=6&Lang=2&Regid=3&reg=48",
       "listingUrl": null,
-      "ok": true,
-      "error": null,
-      "itemCount": 1,
-      "fetchMethod": "rss-feed"
+      "ok": false,
+      "error": "rss-empty",
+      "itemCount": 0,
+      "fetchMethod": null
     },
     {
       "id": "employment-news",
@@ -247,7 +247,7 @@
       "feedUrl": null,
       "listingUrl": "https://portal-psc.ap.gov.in/Download_HallTickets",
       "ok": false,
-      "error": "no items",
+      "error": "https://portal-psc.ap.gov.in/Download_HallTickets: timeout",
       "itemCount": 0,
       "fetchMethod": null
     },
@@ -276,10 +276,10 @@
       "name": "TNPSC — Hall tickets",
       "feedUrl": null,
       "listingUrl": "https://www.tnpsc.gov.in/English/hallticket.html",
-      "ok": true,
-      "error": null,
-      "itemCount": 4,
-      "fetchMethod": "html-listing"
+      "ok": false,
+      "error": "https://www.tnpsc.gov.in/English/hallticket.html: timeout; https://www.tnpsc.gov.in/: timeout",
+      "itemCount": 0,
+      "fetchMethod": null
     },
     {
       "id": "uppsc-hall-tickets",
@@ -294,23 +294,6 @@
   ],
   "siteReports": [],
   "items": [
-    {
-      "id": "917f21a4fd55a324",
-      "title": "संघ लोक सेवा आयोग ने जून, 2026 के दौरान भर्ती परिणाम घोषित किए",
-      "link": "https://pib.gov.in/PressReleaseIframePage.aspx?PRID=2285731",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "pib-press-reg3",
-      "sourceName": "PIB — recent press releases",
-      "dept": "Press Information Bureau",
-      "state": "All India",
-      "category": "state",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "rss-feed"
-    },
     {
       "id": "1320428f3dc24d77",
       "title": "Home.aspx",
@@ -472,6 +455,25 @@
       "summary": null,
       "pdfUrls": [
         "https://www.isro.gov.in/media_isro/pdf/Successful_Launch_of_Axiom_Mission.pdf"
+      ],
+      "sourceId": "isro-careers",
+      "sourceName": "ISRO — Careers",
+      "dept": "Indian Space Research Organisation",
+      "state": "All India",
+      "category": "psu",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "3edab052bcb9b1ff",
+      "title": "Bharatiya Antariksh Hackathon (BAH) – 2026: Shortlisted Teams for Grand Finale Scheduled at NRSC Hyderabad during 6th & 7th August, 2026",
+      "link": "https://www.isro.gov.in/media_isro/pdf/BAH_2026_Shortlisted_Teams_16072026_Publication.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://www.isro.gov.in/media_isro/pdf/BAH_2026_Shortlisted_Teams_16072026_Publication.pdf"
       ],
       "sourceId": "isro-careers",
       "sourceName": "ISRO — Careers",
@@ -849,6 +851,40 @@
       "id": "a80a83e69d9ec953",
       "title": "Research Areas in Space document - 2025 - Released",
       "link": "https://www.isro.gov.in/SupportedAreasofResearch.html",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "isro-careers",
+      "sourceName": "ISRO — Careers",
+      "dept": "Indian Space Research Organisation",
+      "state": "All India",
+      "category": "psu",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "03611b5d76cfe32e",
+      "title": "First National Workshop on Microgravity Research",
+      "link": "https://www.isro.gov.in/First_National_Workshop_on_Microgravity_Research.html",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "isro-careers",
+      "sourceName": "ISRO — Careers",
+      "dept": "Indian Space Research Organisation",
+      "state": "All India",
+      "category": "psu",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "205a52cab38ac71e",
+      "title": "First private orbital launch lifts off from Sriharikota",
+      "link": "https://www.isro.gov.in/First_private_orbital_launch_lifts_from_Sriharikota.html",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
@@ -1308,57 +1344,6 @@
       "id": "a62123c7bdb5b60d",
       "title": "ISRO conducts Second Integrated Air Drop Test (IADT-02) for Gaganyaan",
       "link": "https://www.isro.gov.in/ISRO_conducts_Second_Integrated_Air_Drop_Test_for_Gaganyaan.html",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "isro-careers",
-      "sourceName": "ISRO — Careers",
-      "dept": "Indian Space Research Organisation",
-      "state": "All India",
-      "category": "psu",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "d2a1069277a781f2",
-      "title": "ISRO Conferred AIMA Special Award for Public Service Excellence - 2025",
-      "link": "https://www.isro.gov.in/ISRO_ConferredAIMA_SpecialAward.html",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "isro-careers",
-      "sourceName": "ISRO — Careers",
-      "dept": "Indian Space Research Organisation",
-      "state": "All India",
-      "category": "psu",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "ed0bfa23740fa775",
-      "title": "National Learning Week - “SADHANA SAPTAH” at ISRO",
-      "link": "https://www.isro.gov.in/National_Learning_Week.html",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "isro-careers",
-      "sourceName": "ISRO — Careers",
-      "dept": "Indian Space Research Organisation",
-      "state": "All India",
-      "category": "psu",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "ed32e3144c0ae16f",
-      "title": "MISSION MITRA by ISRO Mapping of Interoperable Traits and Response Assessment (MITRA)",
-      "link": "https://www.isro.gov.in/mission_mitra_by_ISRO.html",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
@@ -2237,74 +2222,6 @@
       "fetchMethod": "html-listing"
     },
     {
-      "id": "197b8722362c6834",
-      "title": "Group-II",
-      "link": "https://tnpscresults.tn.gov.in/ccsexam/ccsIndex.aspx?token=P9X2R7K5A8KDJ8JD6658GR",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "tnpsc-hall-tickets",
-      "sourceName": "TNPSC — Hall tickets",
-      "dept": "Tamil Nadu PSC",
-      "state": "Tamil Nadu",
-      "category": "state",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "0a595b14634fcb2e",
-      "title": "Group-IIA",
-      "link": "https://tnpscresults.tn.gov.in/ccsexam2a/ccs2aindex.aspx?token=P9X2R7K5A8KDJ8JD8967RG",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "tnpsc-hall-tickets",
-      "sourceName": "TNPSC — Hall tickets",
-      "dept": "Tamil Nadu PSC",
-      "state": "Tamil Nadu",
-      "category": "state",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "be876904dfd0ff31",
-      "title": "CTS (DIPLOMA / ITI LEVEL)",
-      "link": "https://tnpscresults.tn.gov.in/cts_diploma_iti_phase2/ctsindex.aspx?token=P9X2R7K5A8KDJ8M2S3N0A1",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "tnpsc-hall-tickets",
-      "sourceName": "TNPSC — Hall tickets",
-      "dept": "Tamil Nadu PSC",
-      "state": "Tamil Nadu",
-      "category": "state",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "be361aedaacbfbca",
-      "title": "முதன்மை பக்கம் / Home Page",
-      "link": "https://tnpsc.gov.in/home.aspx",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "tnpsc-hall-tickets",
-      "sourceName": "TNPSC — Hall tickets",
-      "dept": "Tamil Nadu PSC",
-      "state": "Tamil Nadu",
-      "category": "state",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
       "id": "7ebf9c63f70aaa86",
       "title": "भारत सरकार GOVERNMENT OF INDIA",
       "link": "http://india.gov.in/",
@@ -2832,6 +2749,23 @@
       "fetchMethod": "html-listing"
     },
     {
+      "id": "3e429f5552ac3a81",
+      "title": "20 Aug 2026 NOTICE REGARDING TYPE TEST FOR ADVT. NO. A-4/E-1/2025, COMPUTER ASSISTANT (UPPSC) EXAM-2025",
+      "link": "https://uppsc.up.nic.in/Open_PDF.aspx?I4PnQ0tBaglP18XMjN55aOcwfMGOQ4T+",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "uppsc-hall-tickets",
+      "sourceName": "UPPSC — Hall tickets",
+      "dept": "Uttar Pradesh PSC",
+      "state": "Uttar Pradesh",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
       "id": "41d7a69fe7e325a5",
       "title": "24 Oct 2026 CORRIGENDUM NOTICE REGARDING ADVT.NO.D-6/E-1/2025, DIRECTORATE OF HOMOEOPATHY UTTAR PRADESH / HOMOEOPATHIC MEDICAL OFFICER, S-11/32",
       "link": "https://uppsc.up.nic.in/Open_PDF.aspx?I4PnQ0tBagkz0o52o77EYehACV4lKyrV",
@@ -2852,23 +2786,6 @@
       "id": "e69479749b3f0319",
       "title": "18 Dec 2026 CORRIGENDUM NOTICE REGARDING ADVT.NO.D-6/E-1/2025, DIRECTORATE OF UNANI UTTAR PRADESH / CHIKITSA ADHIKARI (UNANI), S-11/30",
       "link": "https://uppsc.up.nic.in/Open_PDF.aspx?I4PnQ0tBagkz0o52o77EYd5icBBuNfGC",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "uppsc-hall-tickets",
-      "sourceName": "UPPSC — Hall tickets",
-      "dept": "Uttar Pradesh PSC",
-      "state": "Uttar Pradesh",
-      "category": "state",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "e10f17a17dd26511",
-      "title": "31 Dec 2026 UPPSC Exam Calendar 2026",
-      "link": "https://uppsc.up.nic.in/Open_PDF.aspx?I4PnQ0tBagmIqec6cDg6Bagq4jCvO4Zt",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
