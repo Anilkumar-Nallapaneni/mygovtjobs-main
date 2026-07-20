@@ -311,7 +311,10 @@ async function loadJobsPayload(bustCache = false, jobsSource = getJobsSourceMode
   const runStep = async (step: 'static' | 'supabase' | 'api') => {
     if (step === 'static') return tryStatic(bustCache)
     if (step === 'supabase' && isSupabaseConfigured()) {
-      const maxRows = jobsSource === 'supabase' ? INITIAL_LIVE_ROWS : MAX_LIVE_ROWS
+      const dailySyncOnly = import.meta.env.VITE_DAILY_SYNC_ONLY === '1'
+      // Soft-cap only when a deferred background refresh will fill the rest.
+      const maxRows =
+        jobsSource === 'supabase' && !dailySyncOnly ? INITIAL_LIVE_ROWS : MAX_LIVE_ROWS
       return trySupabase(maxRows)
     }
     if (step === 'api') return tryApi()
