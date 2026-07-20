@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-07-20T11:27:23.492Z",
-  "count": 179,
+  "generatedAt": "2026-07-20T14:43:08.919Z",
+  "count": 180,
   "items": [
     {
       "id": "f43d7aa6e0241ca3",
@@ -14,6 +14,23 @@
       "dept": "Indian Space Research Organisation",
       "state": "All India",
       "category": "psu",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "98096e0f3c848ae9",
+      "title": "Interview Letter",
+      "link": "https://bpsc.bihar.gov.in/interview-letter/",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-br-notifications",
+      "sourceName": "BPSC — Notices",
+      "dept": "Bihar PSC",
+      "state": "Bihar",
+      "category": "state",
       "stateIds": [
         "all"
       ],

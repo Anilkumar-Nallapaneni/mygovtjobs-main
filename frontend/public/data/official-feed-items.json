@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-20T11:27:23.492Z",
+  "generatedAt": "2026-07-20T14:43:08.919Z",
   "sourceReports": [
     {
       "id": "pib-press-reg3",
@@ -77,7 +77,7 @@
       "feedUrl": null,
       "listingUrl": "https://rac.gov.in/",
       "ok": false,
-      "error": "https://rac.gov.in/: connect ECONNREFUSED 164.100.54.223:443; https://www.drdo.gov.in/drdo/en/career: timeout; https://drdo.gov.in/careers: timeout",
+      "error": "https://rac.gov.in/: connect ECONNREFUSED 164.100.54.223:443; https://www.drdo.gov.in/drdo/en/career: HTTP 404; https://drdo.gov.in/careers: HTTP 404",
       "itemCount": 0,
       "fetchMethod": null
     },
@@ -106,10 +106,10 @@
       "name": "BPSC — Notices",
       "feedUrl": null,
       "listingUrl": "https://bpsc.bihar.gov.in/Notices.html",
-      "ok": false,
-      "error": "https://bpsc.bihar.gov.in/Notices.html: socket hang up; https://www.onlinebpsc.bihar.gov.in/: getaddrinfo ENOTFOUND www.onlinebpsc.bihar.gov.in",
-      "itemCount": 0,
-      "fetchMethod": null
+      "ok": true,
+      "error": null,
+      "itemCount": 13,
+      "fetchMethod": "html-listing"
     },
     {
       "id": "psc-rj-notifications",
@@ -187,7 +187,7 @@
       "feedUrl": null,
       "listingUrl": "https://www.rrbald.gov.in/rrbald/",
       "ok": false,
-      "error": "https://www.rrbald.gov.in/rrbald/: timeout; https://rrbald.gov.in/: timeout",
+      "error": "https://www.rrbald.gov.in/rrbald/: HTTP 404",
       "itemCount": 0,
       "fetchMethod": null
     },
@@ -237,7 +237,7 @@
       "feedUrl": null,
       "listingUrl": "https://www.upsc.gov.in/e-admit-cards",
       "ok": false,
-      "error": "https://www.upsc.gov.in/e-admit-cards: socket hang up",
+      "error": "https://www.upsc.gov.in/e-admit-cards: timeout",
       "itemCount": 0,
       "fetchMethod": null
     },
@@ -247,7 +247,7 @@
       "feedUrl": null,
       "listingUrl": "https://portal-psc.ap.gov.in/Download_HallTickets",
       "ok": false,
-      "error": "https://portal-psc.ap.gov.in/Download_HallTickets: timeout",
+      "error": "no items",
       "itemCount": 0,
       "fetchMethod": null
     },
@@ -1352,6 +1352,227 @@
       "dept": "Indian Space Research Organisation",
       "state": "All India",
       "category": "psu",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "9a29c5bc0e17caf6",
+      "title": "Bihar Public Service Commission",
+      "link": "https://bpsc.bihar.gov.in/",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-br-notifications",
+      "sourceName": "BPSC — Notices",
+      "dept": "Bihar PSC",
+      "state": "Bihar",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "2fdfdd4ae6eb5dda",
+      "title": "Exam Calendar",
+      "link": "https://bpsc.bihar.gov.in/exam-calendar/",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-br-notifications",
+      "sourceName": "BPSC — Notices",
+      "dept": "Bihar PSC",
+      "state": "Bihar",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "64ac3ff0687484f3",
+      "title": "Debarred by other Commission",
+      "link": "https://bpsc.bihar.gov.in/debarred-by-other-commission/",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-br-notifications",
+      "sourceName": "BPSC — Notices",
+      "dept": "Bihar PSC",
+      "state": "Bihar",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "be5aa870e3e20f05",
+      "title": "The Commission",
+      "link": "https://bpsc.bihar.gov.in/the-commission/",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-br-notifications",
+      "sourceName": "BPSC — Notices",
+      "dept": "Bihar PSC",
+      "state": "Bihar",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "0941d95ef5eca1ed",
+      "title": "Archives",
+      "link": "https://bpsc.bihar.gov.in/archived-news/",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-br-notifications",
+      "sourceName": "BPSC — Notices",
+      "dept": "Bihar PSC",
+      "state": "Bihar",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "ea793bdab255dd9c",
+      "title": "Constitutional Provisions",
+      "link": "https://bpsc.bihar.gov.in/constitutional-provisions/",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-br-notifications",
+      "sourceName": "BPSC — Notices",
+      "dept": "Bihar PSC",
+      "state": "Bihar",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "98096e0f3c848ae9",
+      "title": "Interview Letter",
+      "link": "https://bpsc.bihar.gov.in/interview-letter/",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-br-notifications",
+      "sourceName": "BPSC — Notices",
+      "dept": "Bihar PSC",
+      "state": "Bihar",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "887d78b3be48ac62",
+      "title": "Invitation Letters",
+      "link": "https://bpsc.bihar.gov.in/invitation-letters/",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-br-notifications",
+      "sourceName": "BPSC — Notices",
+      "dept": "Bihar PSC",
+      "state": "Bihar",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "657feaaa27cbd215",
+      "title": "Question Booklets",
+      "link": "https://bpsc.bihar.gov.in/question-booklets/",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-br-notifications",
+      "sourceName": "BPSC — Notices",
+      "dept": "Bihar PSC",
+      "state": "Bihar",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "432d7bdf532c4da3",
+      "title": "Statistical Information",
+      "link": "https://bpsc.bihar.gov.in/statistical-information/",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-br-notifications",
+      "sourceName": "BPSC — Notices",
+      "dept": "Bihar PSC",
+      "state": "Bihar",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "085ed76d74822a33",
+      "title": "Debarred by BPSC",
+      "link": "https://bpsc.bihar.gov.in/debarred-by-bpsc/",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-br-notifications",
+      "sourceName": "BPSC — Notices",
+      "dept": "Bihar PSC",
+      "state": "Bihar",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "df0dabb34622c83f",
+      "title": "Historical Perspective",
+      "link": "https://bpsc.bihar.gov.in/history/",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-br-notifications",
+      "sourceName": "BPSC — Notices",
+      "dept": "Bihar PSC",
+      "state": "Bihar",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "006045439e7139d7",
+      "title": "List of Debarred Candidates",
+      "link": "https://bpsc.bihar.gov.in/debarred/",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-br-notifications",
+      "sourceName": "BPSC — Notices",
+      "dept": "Bihar PSC",
+      "state": "Bihar",
+      "category": "state",
       "stateIds": [
         "all"
       ],
@@ -2800,6 +3021,23 @@
       "fetchMethod": "html-listing"
     },
     {
+      "id": "7e15b7df2ff140b3",
+      "title": "20 Aug 2026 LIST OF CANDIDATES PROVISIONALLY QUALIFIED FOR MAINS IN ADVT. NO. A-6/E-1/2025, LECT. (M./F.) GOVT. INTER COLLEGE EXAM.-2025, SOCIOLOGY, GEOGRAPHY",
+      "link": "https://uppsc.up.nic.in/Open_PDF.aspx?I4PnQ0tBaglP18XMjN55aBoFGbe89Wuk",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "uppsc-hall-tickets",
+      "sourceName": "UPPSC — Hall tickets",
+      "dept": "Uttar Pradesh PSC",
+      "state": "Uttar Pradesh",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
       "id": "dae63d6cfc1ec8e0",
       "title": "17 Aug 2026 LIST OF CANDIDATES PROVISIONALLY QUALIFIED FOR INTERVIEW IN ADVT. NO. A-7/E-1/2021, U.P. TECH. EDU. (TCHNG.) SER. EXAM.-2021, LECT. PAINT TECH, LEATH.....",
       "link": "https://uppsc.up.nic.in/Open_PDF.aspx?I4PnQ0tBagkKFmHgqmmkW38pQGn0K/SU",
@@ -2837,23 +3075,6 @@
       "id": "5a1ddb365b9f109d",
       "title": "02 Aug 2026 LIST OF SELECTED CANDIDATES IN ADVT. NO. A-7/E-1/2021, U.P. TECHNICAL EDUCATION (TEACHING) SERVICE EXAMINATION-2021, LECT. INT.DSG.DECO.,FOOTWEAR,INS.....",
       "link": "https://uppsc.up.nic.in/Open_PDF.aspx?I4PnQ0tBagkz0o52o77EYfBBw0BmR5fX",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "uppsc-hall-tickets",
-      "sourceName": "UPPSC — Hall tickets",
-      "dept": "Uttar Pradesh PSC",
-      "state": "Uttar Pradesh",
-      "category": "state",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "d40841a3ad176246",
-      "title": "25 Jul 2026 LIST OF SELECTED CANDIDATES IN ADVT. NO. A-7/E-1/2021, U.P. TECHNICAL EDUCATION (TEACHING) SERVICE EXAMINATION-2021, LECT. ARCHITECTURE, PHARMACY, TE.....",
-      "link": "https://uppsc.up.nic.in/Open_PDF.aspx?I4PnQ0tBagloISrijFpWKFd9gEzGHmbY",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
