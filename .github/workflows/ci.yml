@@ -116,3 +116,6 @@ jobs:
       )
     uses: ./.github/workflows/notify-on-failure.yml
     secrets: inherit
+    permissions:
+      actions: read
+      contents: read
