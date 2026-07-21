@@ -13,6 +13,7 @@ const browserGlobals = {
   URL: 'readonly',
   HTMLElement: 'readonly',
   HTMLAnchorElement: 'readonly',
+  HTMLLinkElement: 'readonly',
   HTMLImageElement: 'readonly',
   HTMLInputElement: 'readonly',
   HTMLButtonElement: 'readonly',

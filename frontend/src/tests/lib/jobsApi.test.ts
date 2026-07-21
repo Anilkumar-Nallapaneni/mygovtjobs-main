@@ -47,11 +47,8 @@ describe("subscribeToAlerts", () => {
 
   it("uses Supabase insert when VITE_API_URL is empty", async () => {
     vi.stubEnv("VITE_API_URL", "");
-    const insert = vi.fn().mockReturnValue({
-      select: vi.fn().mockReturnValue({
-        single: vi.fn().mockResolvedValue({ data: { id: "sub-1" }, error: null }),
-      }),
-    });
+    // Anonymous insert must NOT chain `.select()` (anon has no SELECT policy → 42501).
+    const insert = vi.fn().mockResolvedValue({ error: null });
     vi.mocked(getSupabase).mockResolvedValue({
       from: vi.fn().mockReturnValue({ insert }),
     } as never);
@@ -63,7 +60,7 @@ describe("subscribeToAlerts", () => {
       categories: ["banking"],
     });
 
-    expect(result).toEqual({ ok: true, id: "sub-1" });
+    expect(result).toEqual({ ok: true, id: "subscribed" });
     expect(insert).toHaveBeenCalledWith({
       channel: "email",
       channel_address: "user@example.com",

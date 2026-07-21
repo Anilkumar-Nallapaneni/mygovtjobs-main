@@ -404,24 +404,22 @@ async function subscribeToAlertsViaSupabase(
     return { ok: false, error: 'unavailable' }
   }
 
-  const { data, error } = await supabase
-    .from('alert_subscriptions')
-    .insert({
-      channel: payload.channel,
-      channel_address: payload.channel_address.trim(),
-      state_codes: payload.state_codes ?? [],
-      categories: payload.categories ?? [],
-      qualification_tags: payload.qualification_tags ?? [],
-      ...(payload.user_id ? { user_id: payload.user_id } : {}),
-    })
-    .select('id')
-    .single()
+  // No `.select()` here: anonymous visitors can INSERT (RLS `alerts_public_insert`)
+  // but have no SELECT policy, so requesting the row back would fail with 42501.
+  const { error } = await supabase.from('alert_subscriptions').insert({
+    channel: payload.channel,
+    channel_address: payload.channel_address.trim(),
+    state_codes: payload.state_codes ?? [],
+    categories: payload.categories ?? [],
+    qualification_tags: payload.qualification_tags ?? [],
+    ...(payload.user_id ? { user_id: payload.user_id } : {}),
+  })
 
   if (error) {
     console.warn('[jobsApi] alert subscribe failed', error.message)
     return { ok: false, error: 'failed' }
   }
-  return { ok: true, id: String(data?.id ?? 'subscribed') }
+  return { ok: true, id: 'subscribed' }
 }
 
 export async function subscribeToAlerts(
