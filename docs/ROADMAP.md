@@ -31,7 +31,7 @@ This roadmap covers what is **done**, what runs **daily**, and what to build **n
 |------|--------|-------|
 | **Frontend on Vercel** | ✅ Live | `livegovtjobs.com`, auto-deploy on `main` push |
 | **Supabase Postgres** | ✅ Live | ~2,800+ live jobs, ~3,000+ total (Jul 2026) |
-| **Daily GitHub ingest** | ✅ 8 AM IST | `supabase-auto-ingest.yml` (360m timeout, SYNC_CONCURRENCY=4) |
+| **Daily GitHub ingest** | ✅ 8 AM IST | `supabase-auto-ingest.yml` (360m cap, SYNC_CONCURRENCY=8, 4h scrape budget → always commits a fresh snapshot) |
 | **Sync freshness** | ✅ | `daily-sync-state.json` completed 2026-07-20 |
 | **Weekly PDF enrich** | ✅ Sunday | `weekly-enrich.yml` → `weekly:enrich:ci` |
 | **Dynamic sitemap** | ✅ | Rebuilt with snapshot export |
