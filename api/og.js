@@ -35,7 +35,15 @@ export default function handler(req, res) {
     /\/$/,
     ""
   );
-  const titleLines = wrapTitle(req.query?.title);
+  // Parse with the WHATWG URL API instead of req.query, whose getter relies on
+  // the deprecated url.parse() (DEP0169) inside Vercel's Node request bridge.
+  let title = "";
+  try {
+    title = new URL(req.url, "http://localhost").searchParams.get("title") || "";
+  } catch {
+    title = "";
+  }
+  const titleLines = wrapTitle(title);
   const titleSvg = titleLines
     .map((line, index) => {
       const y = 300 + index * 46;
