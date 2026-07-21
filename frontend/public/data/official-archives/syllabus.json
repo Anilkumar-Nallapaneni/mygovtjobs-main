@@ -1,24 +1,7 @@
 {
-  "generatedAt": "2026-07-21T17:56:48.263Z",
+  "generatedAt": "2026-07-21T21:43:56.515Z",
   "count": 35,
   "items": [
-    {
-      "id": "19df6addea51f1a1",
-      "title": "Revised Syllabus and Scheme",
-      "link": "https://www.upsc.gov.in/examinations/revised-syllabus-scheme",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "upsc-e-admit-hub",
-      "sourceName": "UPSC — e-Admit cards",
-      "dept": "Union Public Service Commission",
-      "state": "All India",
-      "category": "upsc",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
     {
       "id": "9423bfb2f1b6b8da",
       "title": "Examination Advertisement (Direct Recruitment) Departmental Examination Forthcoming Examinations Syllabus and Schemes On",
@@ -293,6 +276,23 @@
       "state": "All India",
       "category": "state",
       "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "19df6addea51f1a1",
+      "title": "Revised Syllabus and Scheme",
+      "link": "https://www.upsc.gov.in/examinations/revised-syllabus-scheme",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "upsc-e-admit-hub",
+      "sourceName": "UPSC — e-Admit cards",
+      "dept": "Union Public Service Commission",
+      "state": "All India",
+      "category": "upsc",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
     },
     {
       "id": "4245ad8cea4e9fc4",

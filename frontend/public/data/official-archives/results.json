@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-21T17:56:48.263Z",
+  "generatedAt": "2026-07-21T21:43:56.515Z",
   "count": 597,
   "items": [
     {
@@ -107,74 +107,6 @@
       "dept": "Kendriya Vidyalaya Sangathan",
       "state": "All India",
       "category": "teaching",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "c4c9266da946f3d2",
-      "title": "Marks of Recommended Candidates",
-      "link": "https://www.upsc.gov.in/examinations/marks-recommended-candidates",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "upsc-e-admit-hub",
-      "sourceName": "UPSC — e-Admit cards",
-      "dept": "Union Public Service Commission",
-      "state": "All India",
-      "category": "upsc",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "9f46af2ef87ad857",
-      "title": "Marks of Recommended Candidates (Reserve List)",
-      "link": "https://www.upsc.gov.in/examinations/marks-recommended-candidates-reserve-list",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "upsc-e-admit-hub",
-      "sourceName": "UPSC — e-Admit cards",
-      "dept": "Union Public Service Commission",
-      "state": "All India",
-      "category": "upsc",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "246cf795a95a5a9f",
-      "title": "Cut-off Marks",
-      "link": "https://www.upsc.gov.in/examinations/cutoff-marks--",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "upsc-e-admit-hub",
-      "sourceName": "UPSC — e-Admit cards",
-      "dept": "Union Public Service Commission",
-      "state": "All India",
-      "category": "upsc",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "bf2ab913def084c8",
-      "title": "Marks Information",
-      "link": "https://upsconline.gov.in/marksheet/exam/marksheet_system/",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "upsc-e-admit-hub",
-      "sourceName": "UPSC — e-Admit cards",
-      "dept": "Union Public Service Commission",
-      "state": "All India",
-      "category": "upsc",
       "stateIds": [
         "all"
       ],
@@ -3340,6 +3272,74 @@
       "state": "All India",
       "category": "police",
       "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "c4c9266da946f3d2",
+      "title": "Marks of Recommended Candidates",
+      "link": "https://www.upsc.gov.in/examinations/marks-recommended-candidates",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "upsc-e-admit-hub",
+      "sourceName": "UPSC — e-Admit cards",
+      "dept": "Union Public Service Commission",
+      "state": "All India",
+      "category": "upsc",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "9f46af2ef87ad857",
+      "title": "Marks of Recommended Candidates (Reserve List)",
+      "link": "https://www.upsc.gov.in/examinations/marks-recommended-candidates-reserve-list",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "upsc-e-admit-hub",
+      "sourceName": "UPSC — e-Admit cards",
+      "dept": "Union Public Service Commission",
+      "state": "All India",
+      "category": "upsc",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "246cf795a95a5a9f",
+      "title": "Cut-off Marks",
+      "link": "https://www.upsc.gov.in/examinations/cutoff-marks--",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "upsc-e-admit-hub",
+      "sourceName": "UPSC — e-Admit cards",
+      "dept": "Union Public Service Commission",
+      "state": "All India",
+      "category": "upsc",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "bf2ab913def084c8",
+      "title": "Marks Information",
+      "link": "https://upsconline.gov.in/marksheet/exam/marksheet_system/",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "upsc-e-admit-hub",
+      "sourceName": "UPSC — e-Admit cards",
+      "dept": "Union Public Service Commission",
+      "state": "All India",
+      "category": "upsc",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
     },
     {
       "id": "7ec53985ab668c68",
