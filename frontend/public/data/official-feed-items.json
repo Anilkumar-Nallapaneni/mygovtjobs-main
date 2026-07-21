@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-20T21:45:39.634Z",
+  "generatedAt": "2026-07-21T03:59:56.836Z",
   "sourceReports": [
     {
       "id": "pib-press-reg3",
@@ -247,7 +247,7 @@
       "feedUrl": null,
       "listingUrl": "https://portal-psc.ap.gov.in/Download_HallTickets",
       "ok": false,
-      "error": "https://portal-psc.ap.gov.in/Download_HallTickets: getaddrinfo EAI_AGAIN portal-psc.ap.gov.in",
+      "error": "no items",
       "itemCount": 0,
       "fetchMethod": null
     },
