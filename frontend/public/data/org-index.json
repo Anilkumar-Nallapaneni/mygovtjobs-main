@@ -8,7 +8,7 @@
   {
     "dept": "Erecruitment Andamannicobar",
     "slug": "erecruitment-andamannicobar",
-    "count": 71,
+    "count": 72,
     "vacancies": 28
   },
   {
@@ -48,7 +48,7 @@
     "vacancies": 299
   },
   {
-    "dept": "Nsut",
+    "dept": "NSUT",
     "slug": "nsut",
     "count": 49,
     "vacancies": 122
@@ -92,8 +92,8 @@
   {
     "dept": "Rrbajmer",
     "slug": "rrbajmer",
-    "count": 43,
-    "vacancies": 597
+    "count": 42,
+    "vacancies": 596
   },
   {
     "dept": "Jpsc",
@@ -142,6 +142,12 @@
     "slug": "uppbpb",
     "count": 32,
     "vacancies": 0
+  },
+  {
+    "dept": "Wii",
+    "slug": "wii",
+    "count": 30,
+    "vacancies": 75
   },
   {
     "dept": "ISRO — Careers",
@@ -336,12 +342,6 @@
     "vacancies": 67
   },
   {
-    "dept": "Wii",
-    "slug": "wii",
-    "count": 15,
-    "vacancies": 9
-  },
-  {
     "dept": "Fssai",
     "slug": "fssai",
     "count": 14,
@@ -351,7 +351,7 @@
     "dept": "India Post — Gramin Dak Sevak / GDS",
     "slug": "india-post-gramin-dak-sevak-gds",
     "count": 14,
-    "vacancies": 0
+    "vacancies": 10
   },
   {
     "dept": "Indian Navy — Notifications",
@@ -390,6 +390,12 @@
     "vacancies": 2
   },
   {
+    "dept": "Bpsc Bihar",
+    "slug": "bpsc-bihar",
+    "count": 12,
+    "vacancies": 88
+  },
+  {
     "dept": "Canara Bank — Careers",
     "slug": "canara-bank-careers",
     "count": 12,
@@ -414,18 +420,6 @@
     "vacancies": 200
   },
   {
-    "dept": "Wildlife Institute of India (WII)",
-    "slug": "wildlife-institute-of-india-wii",
-    "count": 12,
-    "vacancies": 1790
-  },
-  {
-    "dept": "Bpsc Bihar",
-    "slug": "bpsc-bihar",
-    "count": 11,
-    "vacancies": 88
-  },
-  {
     "dept": "Hindustanpetroleum Com",
     "slug": "hindustanpetroleum-com",
     "count": 11,
@@ -442,6 +436,12 @@
     "slug": "kullu-dcourts",
     "count": 11,
     "vacancies": 18
+  },
+  {
+    "dept": "Pakur",
+    "slug": "pakur",
+    "count": 11,
+    "vacancies": 0
   },
   {
     "dept": "Rrbthiruvananthapuram",
@@ -478,12 +478,6 @@
     "slug": "maharashtra-police-recruitment",
     "count": 10,
     "vacancies": 6
-  },
-  {
-    "dept": "Pakur",
-    "slug": "pakur",
-    "count": 10,
-    "vacancies": 0
   },
   {
     "dept": "Railway Recruitment Board (RRB) — Chandigarh",
@@ -534,6 +528,12 @@
     "vacancies": 102
   },
   {
+    "dept": "Bhabha Atomic Research Centre (BARC)",
+    "slug": "bhabha-atomic-research-centre-barc",
+    "count": 8,
+    "vacancies": 69
+  },
+  {
     "dept": "District & Sessions Judge, Ludhiana",
     "slug": "district-sessions-judge-ludhiana",
     "count": 8,
@@ -568,12 +568,6 @@
     "slug": "sitapur-dcourts",
     "count": 8,
     "vacancies": 0
-  },
-  {
-    "dept": "Bhabha Atomic Research Centre (BARC)",
-    "slug": "bhabha-atomic-research-centre-barc",
-    "count": 7,
-    "vacancies": 63
   },
   {
     "dept": "Coochbehar Dcourts",
@@ -802,6 +796,12 @@
     "slug": "upsc-e-admit-cards",
     "count": 4,
     "vacancies": 0
+  },
+  {
+    "dept": "Wildlife Institute of India (WII)",
+    "slug": "wildlife-institute-of-india-wii",
+    "count": 4,
+    "vacancies": 1729
   },
   {
     "dept": "BEDF",
