@@ -10,6 +10,11 @@ import { EXPLORE_HUB_PATH, LATEST_NOTIFICATIONS_PATH } from '@/utils/browseRoute
 import { applyBrowseSeo } from '@/utils/browseSeo'
 import type { FooterLinkTarget } from '@/hooks/browseStateTypes'
 
+// AlertSection styling lives in home.css/polish.css (originally home-only).
+// Import here so the standalone /alerts route renders the styled card too.
+import '@/styles/home.css'
+import '@/styles/polish.css'
+
 const ALERTS_PATH = '/alerts'
 
 type AlertsPageProps = {
