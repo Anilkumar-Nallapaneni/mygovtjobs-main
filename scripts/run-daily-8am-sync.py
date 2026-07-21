@@ -18,8 +18,11 @@ from __future__ import annotations
 import argparse
 import asyncio
 import os
+import socket
 import subprocess
 import sys
+import threading
+import time
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -37,6 +40,61 @@ from app.services.sync_run_service import SyncRunService  # noqa: E402
 SOURCE_TIMEOUT_SECONDS = 120
 DEFAULT_CONCURRENCY = 6
 NPM = "npm.cmd" if sys.platform == "win32" else "npm"
+
+
+def _apply_socket_timeout_floor() -> None:
+    """Stop one blocking (synchronous) scraper socket read from freezing the whole
+    asyncio event loop.
+
+    Some gov.in sources accept the TCP connection from cloud/CI IPs but never send a
+    response. A synchronous scraper doing an unbounded ``recv()`` then blocks the loop
+    thread outright, so even the per-source ``asyncio.wait_for`` and the ingest budget
+    timer can never fire — the job idles until CI's 6h hard cancel. A process-wide
+    default timeout gives every synchronous socket a floor. asyncio / asyncpg / aiohttp
+    manage their own non-blocking sockets and are unaffected.
+    """
+    raw = os.environ.get("INGEST_SOCKET_TIMEOUT_SECONDS", "").strip()
+    seconds = int(raw) if raw.isdigit() else 60
+    if seconds > 0:
+        socket.setdefaulttimeout(seconds)
+        print(f"[ingest] socket default timeout floor = {seconds}s", flush=True)
+
+
+def _start_wallclock_watchdog() -> None:
+    """Belt-and-suspenders hard cap on total runtime.
+
+    If the loop still freezes (e.g. a blocking C call that ignores the socket timeout),
+    force-terminate so CI fails fast instead of hanging to the 6h ceiling. When this is
+    the nested child, the parent (run-sync-production.py) sees the non-zero exit and
+    marks the DB run row failed; ``mark_failed`` here also updates the JSON state file.
+    Armed from ``SYNC_HARD_WALLCLOCK_SECONDS`` or, if unset, the scrape budget + 30min.
+    """
+    raw = os.environ.get("SYNC_HARD_WALLCLOCK_SECONDS", "").strip()
+    hard = int(raw) if raw.isdigit() else 0
+    if hard <= 0:
+        budget_raw = os.environ.get("SYNC_INGEST_BUDGET_SECONDS", "").strip()
+        if budget_raw.isdigit():
+            hard = int(budget_raw) + 1800
+    if hard <= 0:
+        return
+
+    def _watch() -> None:
+        time.sleep(hard)
+        reason = (
+            f"hard wall-clock {hard}s exceeded — event loop likely frozen on blocking "
+            f"network I/O; forcing exit"
+        )
+        print(f"\n=== WATCHDOG: {reason} ===", flush=True)
+        try:
+            from app.services.daily_sync_service import DailySyncService
+
+            DailySyncService().mark_failed(reason)
+        except Exception as exc:  # noqa: BLE001
+            print(f"watchdog mark_failed failed: {exc}", flush=True)
+        os._exit(1)
+
+    threading.Thread(target=_watch, daemon=True, name="ingest-wallclock-watchdog").start()
+    print(f"[ingest] wall-clock watchdog armed at {hard}s", flush=True)
 
 
 async def sync_sources() -> int:
@@ -154,6 +212,9 @@ async def main() -> int:
         help="Called from sync:production — skip advisory lock (outer pipeline holds it)",
     )
     args = parser.parse_args()
+
+    _apply_socket_timeout_floor()
+    _start_wallclock_watchdog()
 
     sync = DailySyncService()
     ok, reason = sync.can_start(force=args.force)
