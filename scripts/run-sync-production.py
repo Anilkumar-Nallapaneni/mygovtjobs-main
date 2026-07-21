@@ -21,10 +21,28 @@ NPM = "npm.cmd" if sys.platform == "win32" else "npm"
 PYTHON = "node"
 
 
+def _npm_step_timeout() -> int | None:
+    """Per-subprocess wall-clock cap so a hung node build/fetch step (separate process,
+    not covered by the socket floor) cannot block the pipeline. NPM_STEP_TIMEOUT_SECONDS,
+    default 30min; 0 disables."""
+    raw = os.environ.get("NPM_STEP_TIMEOUT_SECONDS", "").strip()
+    if raw.isdigit():
+        return int(raw) or None
+    return 1800
+
+
 def run_npm(script: str, *extra: str) -> int:
     cmd = [NPM, "run", script, *extra]
     print(f"\n=== npm run {script} {' '.join(extra)} ===", flush=True)
-    return subprocess.run(cmd, cwd=ROOT, check=False).returncode
+    timeout = _npm_step_timeout()
+    try:
+        return subprocess.run(cmd, cwd=ROOT, check=False, timeout=timeout).returncode
+    except subprocess.TimeoutExpired:
+        print(
+            f"=== npm run {script}: exceeded {timeout}s — killed; continuing pipeline ===",
+            flush=True,
+        )
+        return 124
 
 
 def _apply_socket_timeout_floor() -> None:

@@ -171,19 +171,45 @@ async def run_ingest(
     return completed, saved_total
 
 
+def _npm_step_timeout() -> int | None:
+    """Per-subprocess wall-clock cap. Node build/fetch steps (tsx fetch:official etc.)
+    are separate processes not covered by this process's socket timeout floor; a hung
+    fetch to a dead host would otherwise block the whole pipeline until the watchdog
+    fires. Bound each step (NPM_STEP_TIMEOUT_SECONDS, default 30min; 0 disables)."""
+    raw = os.environ.get("NPM_STEP_TIMEOUT_SECONDS", "").strip()
+    if raw.isdigit():
+        return int(raw) or None
+    return 1800
+
+
 def run_npm(script: str, *extra: str) -> None:
     cmd = [NPM, "run", script, *extra]
     print(f"\n=== npm run {script} {' '.join(extra)} ===", flush=True)
-    subprocess.run(cmd, cwd=ROOT, check=False)
+    timeout = _npm_step_timeout()
+    try:
+        subprocess.run(cmd, cwd=ROOT, check=False, timeout=timeout)
+    except subprocess.TimeoutExpired:
+        print(
+            f"=== npm run {script}: exceeded {timeout}s — killed; continuing pipeline ===",
+            flush=True,
+        )
 
 
 def run_official_import() -> None:
     run_npm("fetch:official")
-    subprocess.run(
-        ["node", "scripts/run-python.mjs", "scripts/import-official-json-to-db.py"],
-        cwd=ROOT,
-        check=False,
-    )
+    timeout = _npm_step_timeout()
+    try:
+        subprocess.run(
+            ["node", "scripts/run-python.mjs", "scripts/import-official-json-to-db.py"],
+            cwd=ROOT,
+            check=False,
+            timeout=timeout,
+        )
+    except subprocess.TimeoutExpired:
+        print(
+            f"=== import-official-json-to-db: exceeded {timeout}s — killed; continuing ===",
+            flush=True,
+        )
 
 
 async def export_and_finish(sources_scraped: int) -> int:
