@@ -55,9 +55,10 @@ async def run_ingest(
     print(f"=== IngestAgent — {len(enabled)} official sources (concurrency={concurrency}) ===", flush=True)
     semaphore = asyncio.Semaphore(max(1, concurrency))
     saved_total = 0
+    completed = 0
 
     async def run_one(i: int, entry: dict) -> int:
-        nonlocal saved_total
+        nonlocal saved_total, completed
         code = entry.get("code", "?")
         attempts = max(0, retries) + 1
         for attempt in range(1, attempts + 1):
@@ -66,6 +67,7 @@ async def run_ingest(
                     row = await asyncio.wait_for(agent.run_source(code), timeout=source_timeout)
                 saved = int(row.get("saved") or 0)
                 saved_total += saved
+                completed += 1
                 print(
                     f"[{i}/{len(enabled)}] {code}: saved={saved} fetched={row.get('fetched', 0)}",
                     flush=True,
@@ -74,13 +76,41 @@ async def run_ingest(
             except Exception as exc:
                 if attempt >= attempts:
                     label = "TIMEOUT" if isinstance(exc, asyncio.TimeoutError) else "FAIL"
+                    completed += 1
                     print(f"[{i}/{len(enabled)}] {code}: {label} {exc}", flush=True)
                     return 0
                 print(f"[{i}/{len(enabled)}] {code}: retry {attempt}/{retries}", flush=True)
         return 0
 
-    await asyncio.gather(*(run_one(i, entry) for i, entry in enumerate(enabled, 1)))
-    return len(enabled), saved_total
+    # Global wall-clock budget so a slow full scrape never blows past CI's hard cap.
+    # GitHub cancels the job at 6h; a mid-scrape cancel skips the commit step and loses
+    # the whole day. After the budget we cancel unfinished sources and export what we saved.
+    budget = 0
+    raw_budget = os.environ.get("SYNC_INGEST_BUDGET_SECONDS", "").strip()
+    if raw_budget.isdigit():
+        budget = int(raw_budget)
+
+    tasks = [asyncio.create_task(run_one(i, entry)) for i, entry in enumerate(enabled, 1)]
+    if budget > 0:
+        _, pending = await asyncio.wait(tasks, timeout=budget)
+        if pending:
+            print(
+                f"=== ingest budget {budget}s reached — cancelling {len(pending)} unfinished "
+                f"source(s); exporting {completed}/{len(enabled)} scraped ===",
+                flush=True,
+            )
+            for task in pending:
+                task.cancel()
+            try:
+                await asyncio.wait_for(
+                    asyncio.gather(*pending, return_exceptions=True), timeout=90
+                )
+            except asyncio.TimeoutError:
+                print("some sources ignored cancellation; proceeding to export", flush=True)
+    else:
+        await asyncio.gather(*tasks)
+
+    return completed, saved_total
 
 
 def run_npm(script: str, *extra: str) -> None:

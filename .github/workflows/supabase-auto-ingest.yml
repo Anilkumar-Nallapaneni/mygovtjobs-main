@@ -97,8 +97,12 @@ jobs:
           SYNC_TRIGGER_TYPE: github_actions_schedule
           # Force so a prior cancelled run (stuck "running" state) cannot skip today.
           SYNC_FORCE: "1"
-          # Lower concurrency reduces hang risk on slow portals; hard deadlines also apply.
-          SYNC_CONCURRENCY: "4"
+          # Higher concurrency finishes the ~154-source scrape faster (each source still
+          # has its own 120s timeout). Combined with the wall-clock budget below.
+          SYNC_CONCURRENCY: "8"
+          # Stop scraping after 4h and export/commit what we have — leaves ~2h for import,
+          # scrub, export, audits and commit under GitHub's 6h hard cancel.
+          SYNC_INGEST_BUDGET_SECONDS: "14400"
         run: |
           echo "=== $(date -u +%H:%M:%S) sync:production ==="
           node scripts/run-python.mjs scripts/run-sync-production.py
