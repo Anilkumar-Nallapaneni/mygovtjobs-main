@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-22T17:53:50.074Z",
+  "generatedAt": "2026-07-22T21:41:10.984Z",
   "count": 652,
   "items": [
     {
@@ -133,40 +133,6 @@
       "id": "2db2d16ecdc1865a",
       "title": "RESULT OF CANDIDATE SELECTED IN ADVT. NO D-4/E-1/2025, DEPT. S-10/02, UPPSC SYST..",
       "link": "https://uppsc.up.nic.in/Open_PDF_DB.aspx?I4PnQ0tBagkKFmHgqmmkW30lDXcVzR9+",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "uppsc-hall-tickets",
-      "sourceName": "UPPSC — Hall tickets",
-      "dept": "Uttar Pradesh PSC",
-      "state": "Uttar Pradesh",
-      "category": "state",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "002b75be89c5cb1f",
-      "title": "RESULT OF CANDIDATE SELECTED IN ADVT NO. D-4/E-1/2025 FOR THE POST OF REGIONAL A..",
-      "link": "https://uppsc.up.nic.in/Open_PDF_DB.aspx?I4PnQ0tBagloISrijFpWKJK4mFkCc1xW",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "uppsc-hall-tickets",
-      "sourceName": "UPPSC — Hall tickets",
-      "dept": "Uttar Pradesh PSC",
-      "state": "Uttar Pradesh",
-      "category": "state",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "9b89e96e36d4f7b0",
-      "title": "LIST OF PROVISIONALLY SELECTED CANDIDATES AS SUPPLEMENTARY RESULT IN ADVT NO A-3..",
-      "link": "https://uppsc.up.nic.in/Open_PDF_DB.aspx?I4PnQ0tBagloISrijFpWKD2C54bGK0YR",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
@@ -3363,6 +3329,40 @@
       "state": "All India",
       "category": "police",
       "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "002b75be89c5cb1f",
+      "title": "RESULT OF CANDIDATE SELECTED IN ADVT NO. D-4/E-1/2025 FOR THE POST OF REGIONAL A..",
+      "link": "https://uppsc.up.nic.in/Open_PDF_DB.aspx?I4PnQ0tBagloISrijFpWKJK4mFkCc1xW",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "uppsc-hall-tickets",
+      "sourceName": "UPPSC — Hall tickets",
+      "dept": "Uttar Pradesh PSC",
+      "state": "Uttar Pradesh",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "9b89e96e36d4f7b0",
+      "title": "LIST OF PROVISIONALLY SELECTED CANDIDATES AS SUPPLEMENTARY RESULT IN ADVT NO A-3..",
+      "link": "https://uppsc.up.nic.in/Open_PDF_DB.aspx?I4PnQ0tBagloISrijFpWKD2C54bGK0YR",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "uppsc-hall-tickets",
+      "sourceName": "UPPSC — Hall tickets",
+      "dept": "Uttar Pradesh PSC",
+      "state": "Uttar Pradesh",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
     },
     {
       "id": "47b63350ad7e31a5",

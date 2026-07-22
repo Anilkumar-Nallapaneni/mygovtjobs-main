@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-22T17:53:50.074Z",
+  "generatedAt": "2026-07-22T21:41:10.984Z",
   "sourceReports": [
     {
       "id": "pib-press-reg3",
@@ -2919,40 +2919,6 @@
       "fetchMethod": "html-listing"
     },
     {
-      "id": "002b75be89c5cb1f",
-      "title": "RESULT OF CANDIDATE SELECTED IN ADVT NO. D-4/E-1/2025 FOR THE POST OF REGIONAL A..",
-      "link": "https://uppsc.up.nic.in/Open_PDF_DB.aspx?I4PnQ0tBagloISrijFpWKJK4mFkCc1xW",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "uppsc-hall-tickets",
-      "sourceName": "UPPSC — Hall tickets",
-      "dept": "Uttar Pradesh PSC",
-      "state": "Uttar Pradesh",
-      "category": "state",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "9b89e96e36d4f7b0",
-      "title": "LIST OF PROVISIONALLY SELECTED CANDIDATES AS SUPPLEMENTARY RESULT IN ADVT NO A-3..",
-      "link": "https://uppsc.up.nic.in/Open_PDF_DB.aspx?I4PnQ0tBagloISrijFpWKD2C54bGK0YR",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "uppsc-hall-tickets",
-      "sourceName": "UPPSC — Hall tickets",
-      "dept": "Uttar Pradesh PSC",
-      "state": "Uttar Pradesh",
-      "category": "state",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
       "id": "a083637aa0a5a45f",
       "title": "NOTICE REGARDING ADVT. NO. D-6/E-1/2025, DIRECTORATE GENERAL OF FAMILY WELFARE U..",
       "link": "https://uppsc.up.nic.in/Open_PDF_DB.aspx?I4PnQ0tBagnFvgVqjblDZARklky4+2Ju",
@@ -3092,23 +3058,6 @@
       "id": "ee12a8dab0ad68f2",
       "title": "More >>",
       "link": "https://uppsc.up.nic.in/FooterPages/Results",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "uppsc-hall-tickets",
-      "sourceName": "UPPSC — Hall tickets",
-      "dept": "Uttar Pradesh PSC",
-      "state": "Uttar Pradesh",
-      "category": "state",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "8979eebe5c9073e4",
-      "title": "22 Jul 2026 CORRIGENDUM NOTICE REGARDING ADVT. NO. A-6/E-1/2025, LECT. (M./F.) GOVT. INTER COLLEGE EXAM.-2025, SOCIOLOGY, GEOGRAPHY",
-      "link": "https://uppsc.up.nic.in/Open_PDF.aspx?I4PnQ0tBaglP18XMjN55aCR5Eer9JcoY",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
@@ -3449,6 +3398,57 @@
       "id": "1020952024544a28",
       "title": "{{'GUIDELINES_HM' | translate }}",
       "link": "https://uppsc.up.nic.in/PublicPages/GeneralGuidelines.aspx?ID=guidlns",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "uppsc-hall-tickets",
+      "sourceName": "UPPSC — Hall tickets",
+      "dept": "Uttar Pradesh PSC",
+      "state": "Uttar Pradesh",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "36be70164e7f2c00",
+      "title": "{{'UserMannual_HM' | translate }}",
+      "link": "https://uppsc.up.nic.in/OTR_Section/OTR_UserMannual.aspx",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "uppsc-hall-tickets",
+      "sourceName": "UPPSC — Hall tickets",
+      "dept": "Uttar Pradesh PSC",
+      "state": "Uttar Pradesh",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "ab9d718c33d82026",
+      "title": "{{'SampleForm_HM' | translate }}",
+      "link": "https://uppsc.up.nic.in/OTR_Section/Otr_SampleForm.aspx",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "uppsc-hall-tickets",
+      "sourceName": "UPPSC — Hall tickets",
+      "dept": "Uttar Pradesh PSC",
+      "state": "Uttar Pradesh",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "99d9b0e8b8b71d8e",
+      "title": "{{'SimplifiedForm_HM' | translate }}",
+      "link": "https://uppsc.up.nic.in/OTR_Section/Otr_SimplifiedForm.aspx",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
