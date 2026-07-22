@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-07-22T07:12:38.235Z",
-  "count": 120,
+  "generatedAt": "2026-07-22T10:43:24.000Z",
+  "count": 121,
   "items": [
     {
       "id": "206ead0ac32afa2e",
@@ -35,6 +35,20 @@
         "all"
       ],
       "fetchMethod": "html-listing"
+    },
+    {
+      "id": "36be70164e7f2c00",
+      "title": "{{'UserMannual_HM' | translate }}",
+      "link": "https://uppsc.up.nic.in/OTR_Section/OTR_UserMannual.aspx",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "uppsc-hall-tickets",
+      "sourceName": "UPPSC — Hall tickets",
+      "dept": "UPPSC — Hall tickets",
+      "state": "All India",
+      "category": "state",
+      "fetchMethod": "live-jobs-supplement"
     },
     {
       "id": "1907c47beb18293c",

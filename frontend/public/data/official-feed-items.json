@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-22T07:12:38.235Z",
+  "generatedAt": "2026-07-22T10:43:24.000Z",
   "sourceReports": [
     {
       "id": "pib-press-reg3",
@@ -77,7 +77,7 @@
       "feedUrl": null,
       "listingUrl": "https://rac.gov.in/",
       "ok": false,
-      "error": "https://rac.gov.in/: connect ECONNREFUSED 164.100.54.223:443; https://www.drdo.gov.in/drdo/en/career: HTTP 404; https://drdo.gov.in/careers: HTTP 404",
+      "error": "https://rac.gov.in/: connect ECONNREFUSED 164.100.54.223:443; https://www.drdo.gov.in/drdo/en/career: socket hang up; https://drdo.gov.in/careers: socket hang up",
       "itemCount": 0,
       "fetchMethod": null
     },
@@ -1916,23 +1916,6 @@
       "fetchMethod": "html-listing"
     },
     {
-      "id": "72d4d257e3bffc53",
-      "title": "हमारे आस-पास की दुनिया – फाउंडेशन चरण",
-      "link": "https://kvsangathan.nic.in/%e0%a4%b9%e0%a4%ae%e0%a4%be%e0%a4%b0%e0%a5%87-%e0%a4%86%e0%a4%b8-%e0%a4%aa%e0%a4%be%e0%a4%b8-%e0%a4%95%e0%a5%80-%e0%a4%a6%e0%a5%81%e0%a4%a8%e0%a4%bf%e0%a4%af%e0%a4%be-%e0%a4%aa%e0%a5%8d%e0%a4%b0/",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "kvs-recruitment",
-      "sourceName": "KVS — Recruitment notices",
-      "dept": "Kendriya Vidyalaya Sangathan",
-      "state": "All India",
-      "category": "teaching",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
       "id": "36c49e5b5f3888b5",
       "title": "60वां स्थापना दिवस : कॉफी टेबल बुक",
       "link": "https://kvsangathan.nic.in/60%e0%a4%b5%e0%a4%be%e0%a4%82-%e0%a4%b8%e0%a5%8d%e0%a4%a5%e0%a4%be%e0%a4%aa%e0%a4%a8%e0%a4%be-%e0%a4%a6%e0%a4%bf%e0%a4%b5%e0%a4%b8-%e0%a4%95%e0%a5%89%e0%a4%ab%e0%a5%80-%e0%a4%9f%e0%a5%87%e0%a4%ac/",
@@ -2341,9 +2324,9 @@
       "fetchMethod": "html-listing"
     },
     {
-      "id": "274d4978d604ed19",
-      "title": "गणित फाउंडेशन चरण",
-      "link": "https://kvsangathan.nic.in/%e0%a4%97%e0%a4%a3%e0%a4%bf%e0%a4%a4-%e0%a4%95%e0%a5%80-%e0%a4%a4%e0%a5%88%e0%a4%af%e0%a4%be%e0%a4%b0%e0%a5%80-%e0%a4%95%e0%a4%be-%e0%a4%9a%e0%a4%b0%e0%a4%a3/",
+      "id": "77e80a337c363666",
+      "title": "सीमित विभाग परीक्षा",
+      "link": "https://kvsangathan.nic.in/%e0%a4%b8%e0%a5%80%e0%a4%ae%e0%a4%bf%e0%a4%a4-%e0%a4%b5%e0%a4%bf%e0%a4%ad%e0%a4%be%e0%a4%97-%e0%a4%aa%e0%a4%b0%e0%a5%80%e0%a4%95%e0%a5%8d%e0%a4%b7%e0%a4%be/",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
@@ -2358,9 +2341,9 @@
       "fetchMethod": "html-listing"
     },
     {
-      "id": "5f66c41eb26b1b84",
-      "title": "हिंदी फाउंडेशन चरण",
-      "link": "https://kvsangathan.nic.in/%e0%a4%b9%e0%a4%bf%e0%a4%82%e0%a4%a6%e0%a5%80-%e0%a4%aa%e0%a5%8d%e0%a4%b0%e0%a4%be%e0%a4%b0%e0%a4%82%e0%a4%ad%e0%a4%bf%e0%a4%95-%e0%a4%9a%e0%a4%b0%e0%a4%a3/",
+      "id": "ddef950428ea8bef",
+      "title": "परिणाम/विविध/उत्तर कुंजी",
+      "link": "https://kvsangathan.nic.in/%e0%a4%aa%e0%a4%b0%e0%a4%bf%e0%a4%a3%e0%a4%be%e0%a4%ae-%e0%a4%b5%e0%a4%bf%e0%a4%b5%e0%a4%bf%e0%a4%a7-%e0%a4%89%e0%a4%a4%e0%a5%8d%e0%a4%a4%e0%a4%b0-%e0%a4%95%e0%a5%81%e0%a4%82%e0%a4%9c%e0%a5%80/",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
@@ -2375,9 +2358,9 @@
       "fetchMethod": "html-listing"
     },
     {
-      "id": "d0f0fd6c7d5092a5",
-      "title": "अंग्रेजी फाउंडेशन चरण",
-      "link": "https://kvsangathan.nic.in/%e0%a4%85%e0%a4%82%e0%a4%97%e0%a5%8d%e0%a4%b0%e0%a5%87%e0%a4%9c%e0%a4%bc%e0%a5%80/",
+      "id": "02e8e1ae1833b6ed",
+      "title": "वार्षिक रिपोर्ट",
+      "link": "https://kvsangathan.nic.in/%e0%a4%b5%e0%a4%be%e0%a4%b0%e0%a5%8d%e0%a4%b7%e0%a4%bf%e0%a4%95-%e0%a4%b0%e0%a4%bf%e0%a4%aa%e0%a5%8b%e0%a4%b0%e0%a5%8d%e0%a4%9f/",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
@@ -2392,9 +2375,9 @@
       "fetchMethod": "html-listing"
     },
     {
-      "id": "a3c7ee955047b064",
-      "title": "विज्ञान मिडिल चरण",
-      "link": "https://kvsangathan.nic.in/%e0%a4%b5%e0%a4%bf%e0%a4%9c%e0%a5%8d%e0%a4%9e%e0%a4%be%e0%a4%a8-%e0%a4%ae%e0%a4%a7%e0%a5%8d%e0%a4%af-%e0%a4%9a%e0%a4%b0%e0%a4%a3/",
+      "id": "8c70c31e60aac1d4",
+      "title": "केन्द्रीय विद्यालय क्रॉनिकल",
+      "link": "https://kvsangathan.nic.in/%e0%a4%95%e0%a5%87%e0%a4%a8%e0%a5%8d%e0%a4%a6%e0%a5%8d%e0%a4%b0%e0%a5%80%e0%a4%af-%e0%a4%b5%e0%a4%bf%e0%a4%a6%e0%a5%8d%e0%a4%af%e0%a4%be%e0%a4%b2%e0%a4%af-%e0%a4%95%e0%a5%8d%e0%a4%b0%e0%a5%89%e0%a4%a8/",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
@@ -2409,9 +2392,9 @@
       "fetchMethod": "html-listing"
     },
     {
-      "id": "31a34fd21dbb3d09",
-      "title": "सामाजिक विज्ञान मिडिल चरण",
-      "link": "https://kvsangathan.nic.in/%e0%a4%b8%e0%a4%be%e0%a4%ae%e0%a4%be%e0%a4%9c%e0%a4%bf%e0%a4%95-%e0%a4%b5%e0%a4%bf%e0%a4%9c%e0%a5%8d%e0%a4%9e%e0%a4%be%e0%a4%a8-%e0%a4%ae%e0%a4%a7%e0%a5%8d%e0%a4%af-%e0%a4%9a%e0%a4%b0%e0%a4%a3/",
+      "id": "3903d5a33c7f629d",
+      "title": "पीएम श्री वीडियो गैलरी",
+      "link": "https://kvsangathan.nic.in/%e0%a4%aa%e0%a5%80%e0%a4%8f%e0%a4%ae-%e0%a4%b6%e0%a5%8d%e0%a4%b0%e0%a5%80-%e0%a4%b5%e0%a5%80%e0%a4%a1%e0%a4%bf%e0%a4%af%e0%a5%8b-%e0%a4%97%e0%a5%88%e0%a4%b2%e0%a4%b0%e0%a5%80/",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
@@ -2426,9 +2409,26 @@
       "fetchMethod": "html-listing"
     },
     {
-      "id": "80b4a7f989dbfc35",
-      "title": "हिंदी मिडिल चरण",
-      "link": "https://kvsangathan.nic.in/%e0%a4%b9%e0%a4%bf%e0%a4%82%e0%a4%a6%e0%a5%80-%e0%a4%ae%e0%a4%a7%e0%a5%8d%e0%a4%af-%e0%a4%9a%e0%a4%b0%e0%a4%a3/",
+      "id": "b21c7fccd980d928",
+      "title": "प्रकटीकरण का विवरण",
+      "link": "https://kvsangathan.nic.in/%e0%a4%aa%e0%a5%8d%e0%a4%b0%e0%a4%95%e0%a4%9f%e0%a5%80%e0%a4%95%e0%a4%b0%e0%a4%a3-%e0%a4%95%e0%a4%be-%e0%a4%b5%e0%a4%bf%e0%a4%b5%e0%a4%b0%e0%a4%a3/",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "kvs-recruitment",
+      "sourceName": "KVS — Recruitment notices",
+      "dept": "Kendriya Vidyalaya Sangathan",
+      "state": "All India",
+      "category": "teaching",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "98da38ba1fe437a9",
+      "title": "शैक्षणिक सलाहकार समिति",
+      "link": "https://kvsangathan.nic.in/%e0%a4%b6%e0%a5%88%e0%a4%95%e0%a5%8d%e0%a4%b7%e0%a4%a3%e0%a4%bf%e0%a4%95-%e0%a4%b8%e0%a4%b2%e0%a4%be%e0%a4%b9%e0%a4%95%e0%a4%be%e0%a4%b0-%e0%a4%b8%e0%a4%ae%e0%a4%bf%e0%a4%a4%e0%a4%bf/",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
@@ -3106,6 +3106,23 @@
       "fetchMethod": "html-listing"
     },
     {
+      "id": "8979eebe5c9073e4",
+      "title": "22 Jul 2026 CORRIGENDUM NOTICE REGARDING ADVT. NO. A-6/E-1/2025, LECT. (M./F.) GOVT. INTER COLLEGE EXAM.-2025, SOCIOLOGY, GEOGRAPHY",
+      "link": "https://uppsc.up.nic.in/Open_PDF.aspx?I4PnQ0tBaglP18XMjN55aCR5Eer9JcoY",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "uppsc-hall-tickets",
+      "sourceName": "UPPSC — Hall tickets",
+      "dept": "Uttar Pradesh PSC",
+      "state": "Uttar Pradesh",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
       "id": "4e33594dfdb46cdc",
       "title": "24 Jul 2026 NOTICE REGARDING DOCUMENT VERIFICATION FOR ASSISTANT TEACHER (TRAINED GRADUATE M/F BRANCH) EXAM-2018 (SOCIAL SCIENCE, HINDI, ENGLISH AND ART)",
       "link": "https://uppsc.up.nic.in/Open_PDF.aspx?I4PnQ0tBagmmrtVdJ7QQ3M4E+bmNVWKY",
@@ -3432,23 +3449,6 @@
       "id": "1020952024544a28",
       "title": "{{'GUIDELINES_HM' | translate }}",
       "link": "https://uppsc.up.nic.in/PublicPages/GeneralGuidelines.aspx?ID=guidlns",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "uppsc-hall-tickets",
-      "sourceName": "UPPSC — Hall tickets",
-      "dept": "Uttar Pradesh PSC",
-      "state": "Uttar Pradesh",
-      "category": "state",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "36be70164e7f2c00",
-      "title": "{{'UserMannual_HM' | translate }}",
-      "link": "https://uppsc.up.nic.in/OTR_Section/OTR_UserMannual.aspx",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
