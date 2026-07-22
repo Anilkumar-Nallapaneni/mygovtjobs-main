@@ -2,7 +2,7 @@
 
 Full product roadmap: **[docs/ROADMAP.md](docs/ROADMAP.md)**
 
-**Last audit:** 22 July 2026 — verdict **degraded** (local `everything` ✅; Vercel prod deploys failing on empty-vacancy snapshot; Jul 22 ingest push conflicted with RSS archives).
+**Last audit:** 22 July 2026 — verdict **healthy**. Vacancy-valid snapshot restored; RSS/ingest race fixed; Vercel production Ready; Agent 2+3 enrich batch done; Agent 1 re-dispatched.
 
 Quick links:
 
@@ -15,4 +15,4 @@ Quick links:
 | [docs/GO_LIVE.md](docs/GO_LIVE.md) | Production go-live checklist |
 | [docs/DAILY_8AM_SYNC.md](docs/DAILY_8AM_SYNC.md) | Daily ingest pipeline details |
 
-**Live site:** [livegovtjobs.com](https://www.livegovtjobs.com) · **Local quality:** everything green · **Prod deploy:** needs good `live-jobs.json` on `main`
+**Live site:** [livegovtjobs.com](https://www.livegovtjobs.com) · **everything:** green · **Prod:** Ready
