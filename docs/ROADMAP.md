@@ -1,8 +1,8 @@
 # My Govt Jobs — Product Roadmap
 
 **Site:** [livegovtjobs.com](https://www.livegovtjobs.com)  
-**Last updated:** 22 July 2026 (full stack audit)  
-**Quality score:** ~88/100 locally (CI green); **production deploy degraded** (see audit below)
+**Last updated:** 22 July 2026 (ops fix + agents)  
+**Quality score:** ~92/100 — local `everything` green; **Vercel production Ready** after vacancy-valid snapshot
 
 This roadmap covers what is **done**, what runs **daily**, what is **broken/pending**, and what to build **next**.
 
@@ -29,19 +29,20 @@ This roadmap covers what is **done**, what runs **daily**, what is **broken/pend
 
 ## Audit snapshot (22 Jul 2026)
 
-### Verdict: **degraded** (site up on last good deploy; new production deploys failing)
+### Verdict: **healthy** (ops fix shipped 22 Jul; Agent 2+3 enrich ran; Agent 1 re-dispatched)
 
 | Check | Result | Notes |
 |-------|--------|-------|
-| `npm run everything` | ✅ Pass | hygiene, tsc, lint, 376 FE + 132 BE tests, build, env, Supabase, DB, jobs audit, verify |
-| `npm run health:website` | ✅ 20 pass | Fast stack audit |
-| `npm run health:website:full` | ⚠ 32 pass / 1 warn | Live homepage/sitemap/JSON OK; `api.livegovtjobs.com` unreachable (optional) |
-| Supabase | ✅ Healthy | 2885 live / 3093 total jobs; security advisors clear |
-| GitHub RSS (`sync:quick`) | ✅ Green | Every ~4h |
-| GitHub daily ingest (22 Jul) | ❌ Failed | Scraped + committed locally in CI, **push rebase conflict** on `official-archives/*` vs RSS workflow |
-| Vercel production (last ~12h) | ❌ Error | Build fails: remote `live-jobs.json` has **0 jobs with vacancies** (strict snapshot check) |
-| Live site | ✅ Up | Serving last Ready deploy (~13h ago); homepage HTTP 200 |
-| Open GitHub issues | 0 | Tracker empty / cleaned |
+| `npm run everything` | ✅ Pass | 380 FE + 132 BE tests; build; env; Supabase; DB; jobs audit; verify |
+| Workflow race fix | ✅ Shipped | Ingest no longer commits `official-archives`; RSS uses `[skip ci]` + Vercel `ignoreCommand` |
+| Snapshot on `main` | ✅ | 3093 jobs, **717 with vacancies** — strict verify OK |
+| Vercel production | ✅ Ready | Redeployed after fix commit `40edd89` |
+| Agent 2 PDF (`pdf:read:ci`) | ✅ ~400 | Memorized batch (hung on cleanup; data saved) |
+| Agent 3 details (`job:details:ci`) | ✅ 396 updated | 4 failed |
+| Agent 1 ingest | 🟡 Running | Re-dispatched workflow after race fix |
+| Supabase | ✅ Healthy | ~2885 live / 3093 total |
+| Live `content_sections` column | 🟡 Still low | Details live in detail JSON / Storage; column metric still ~0–1% — follow-up |
+| Open GitHub issues | 0 | — |
 
 ### Local vs production data (audit)
 
