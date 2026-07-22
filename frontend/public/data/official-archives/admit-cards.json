@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-07-21T21:43:56.515Z",
-  "count": 154,
+  "generatedAt": "2026-07-22T00:39:16.103Z",
+  "count": 120,
   "items": [
     {
       "id": "206ead0ac32afa2e",
@@ -37,48 +37,451 @@
       "fetchMethod": "html-listing"
     },
     {
+      "id": "1907c47beb18293c",
+      "title": "City%20intimation%20Slip%20Notice%20CEN%2007-2025.pdf",
+      "link": "https://www.rrbguwahati.gov.in/documents/City%20intimation%20Slip%20Notice%20CEN%2007-2025.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://www.rrbguwahati.gov.in/documents/City%20intimation%20Slip%20Notice%20CEN%2007-2025.pdf"
+      ],
+      "sourceId": "rrb-guwahati",
+      "sourceName": "Railway Recruitment Board (RRB) — Guwahati",
+      "dept": "Railway Recruitment Board (RRB) — Guwahati",
+      "state": "All India",
+      "category": "railways",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "0157354131476c03",
+      "title": "Intimation to Stock Exchange(s)",
+      "link": "https://ongcindia.com/web/eng/investors/intimation-to-stock-exchange",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "ongc",
+      "sourceName": "ONGC — Careers",
+      "dept": "ONGC — Careers",
+      "state": "All India",
+      "category": "psu",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "2b909d8e996d4c94",
+      "title": "Conference call/analyst meet with Investors",
+      "link": "https://ntpc.co.in/investors/confrence-call-analyst-meet-investors/conference-call-analysts-investors",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "ntpc",
+      "sourceName": "NTPC — Careers",
+      "dept": "NTPC — Careers",
+      "state": "All India",
+      "category": "psu",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "4e1bcf588af156f0",
+      "title": "NTPC Ltd. Q4/12M FY26 Conference Call on May 23, 2026",
+      "link": "https://ntpc.co.in/ntpc-ltd-q412m-fy26-conference-call-may-23-2026",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "ntpc",
+      "sourceName": "NTPC — Careers",
+      "dept": "NTPC — Careers",
+      "state": "All India",
+      "category": "psu",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "eea0763a5451a158",
+      "title": "Presentations & Conference Calls",
+      "link": "https://www.bhel.com/presentations-conference-calls",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "bhel",
+      "sourceName": "BHEL — Careers",
+      "dept": "BHEL — Careers",
+      "state": "All India",
+      "category": "psu",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "22143ab863af0a09",
+      "title": "26/05/2026 Download Admit Card for SAC Departmental Examination, 2026",
+      "link": "http://jkpsc.nic.in/PDF/AC_SAC.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "http://jkpsc.nic.in/PDF/AC_SAC.pdf"
+      ],
+      "sourceId": "psc-jk",
+      "sourceName": "Jammu & Kashmir PSC (JKPSC)",
+      "dept": "Jammu & Kashmir PSC (JKPSC)",
+      "state": "Jammu & Kashmir",
+      "category": "state",
+      "stateIds": [
+        "jk"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "b101927674f4f0fa",
+      "title": "26/05/2026 Download Admit Card for Foundation Course Departmental Examination, 2026 (Rollno 01 to 100)",
+      "link": "http://jkpsc.nic.in/PDF/AC_FC_1_100.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "http://jkpsc.nic.in/PDF/AC_FC_1_100.pdf"
+      ],
+      "sourceId": "psc-jk",
+      "sourceName": "Jammu & Kashmir PSC (JKPSC)",
+      "dept": "Jammu & Kashmir PSC (JKPSC)",
+      "state": "Jammu & Kashmir",
+      "category": "state",
+      "stateIds": [
+        "jk"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "29ca1b7dee287a0d",
+      "title": "26/05/2026 Download Admit Card for Foundation Course Departmental Examination, 2026 (Rollno 101 to 176)",
+      "link": "http://jkpsc.nic.in/PDF/AC_FC_101_176.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "http://jkpsc.nic.in/PDF/AC_FC_101_176.pdf"
+      ],
+      "sourceId": "psc-jk",
+      "sourceName": "Jammu & Kashmir PSC (JKPSC)",
+      "dept": "Jammu & Kashmir PSC (JKPSC)",
+      "state": "Jammu & Kashmir",
+      "category": "state",
+      "stateIds": [
+        "jk"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "8a9ba85648648a8d",
+      "title": "08/07/2026 Download Admit Card for Prosecuting Officer (G)(Mains) Examination, 2025",
+      "link": "http://jkpsc.nic.in/result/POMAINS_ADMITCARD_2025.html",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-jk",
+      "sourceName": "Jammu & Kashmir PSC (JKPSC)",
+      "dept": "Jammu & Kashmir PSC (JKPSC)",
+      "state": "Jammu & Kashmir",
+      "category": "state",
+      "stateIds": [
+        "jk"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "f4dc78c867d60ac9",
+      "title": "11/06/2026 Download Marks Card for Civil Services (Judicial) Competitive Examination, 2025",
+      "link": "http://jkpsc.nic.in/RESULT/KCSJ_MARKS_CARD_2025.HTML",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-jk",
+      "sourceName": "Jammu & Kashmir PSC (JKPSC)",
+      "dept": "Jammu & Kashmir PSC (JKPSC)",
+      "state": "Jammu & Kashmir",
+      "category": "state",
+      "stateIds": [
+        "jk"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "5d904412163e6c44",
+      "title": "04/06/2026 Download Marks Card for Combined Competitive Examination, 2024",
+      "link": "http://jkpsc.nic.in/result/KASM_MARKS_CARD_2025.html",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-jk",
+      "sourceName": "Jammu & Kashmir PSC (JKPSC)",
+      "dept": "Jammu & Kashmir PSC (JKPSC)",
+      "state": "Jammu & Kashmir",
+      "category": "state",
+      "stateIds": [
+        "jk"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "ec303e191a0d4b56",
+      "title": "06/05/2026 Download Marks Card for Assistant Director (ES) Competitive Examination- 2023/24",
+      "link": "http://jkpsc.nic.in/resulT/MAARKSCARD_ADSTS_23_24.html",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-jk",
+      "sourceName": "Jammu & Kashmir PSC (JKPSC)",
+      "dept": "Jammu & Kashmir PSC (JKPSC)",
+      "state": "Jammu & Kashmir",
+      "category": "state",
+      "stateIds": [
+        "jk"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "4299efa0380c1d11",
+      "title": "16/06/2026 Download Admit Card for JK Combined Competitive (Mains) Examination, 2025",
+      "link": "http://jkpsc.nic.in/result/KASMAINS_ADMITCARD_2025.html",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-jk",
+      "sourceName": "Jammu & Kashmir PSC (JKPSC)",
+      "dept": "Jammu & Kashmir PSC (JKPSC)",
+      "state": "Jammu & Kashmir",
+      "category": "state",
+      "stateIds": [
+        "jk"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "01dd1a07ccadb21c",
+      "title": "26/05/2026 Download Admit Card for SATC Departmental Examination, 2026",
+      "link": "http://jkpsc.nic.in/RESULT/AC_SATC_2026.html",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-jk",
+      "sourceName": "Jammu & Kashmir PSC (JKPSC)",
+      "dept": "Jammu & Kashmir PSC (JKPSC)",
+      "state": "Jammu & Kashmir",
+      "category": "state",
+      "stateIds": [
+        "jk"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "2cb6ef6de1513685",
+      "title": "Under Secretary (Law) and Law Officer Recruitment – Examination Schedule Updated: 08/05/2026",
+      "link": "https://mpscmanipur.gov.in/files/Notification_Under_Secy_Law_Officer_Admit_card.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://mpscmanipur.gov.in/files/Notification_Under_Secy_Law_Officer_Admit_card.pdf"
+      ],
+      "sourceId": "psc-mn",
+      "sourceName": "Manipur PSC",
+      "dept": "Manipur PSC",
+      "state": "NE States",
+      "category": "state",
+      "stateIds": [
+        "ne"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "686e8d5b26f137a9",
+      "title": "Planning Department Research Assistant Recruitment – Examination Schedule Updated: 08/05/2026",
+      "link": "https://mpscmanipur.gov.in/files/Research_Asst_notification_Admit_card.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://mpscmanipur.gov.in/files/Research_Asst_notification_Admit_card.pdf"
+      ],
+      "sourceId": "psc-mn",
+      "sourceName": "Manipur PSC",
+      "dept": "Manipur PSC",
+      "state": "NE States",
+      "category": "state",
+      "stateIds": [
+        "ne"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "56de02281a84cf5b",
+      "title": "Admit Cards",
+      "link": "https://empsconline.gov.in/downloadadmitcardv2.aspx",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-mn",
+      "sourceName": "Manipur PSC",
+      "dept": "Manipur PSC",
+      "state": "NE States",
+      "category": "state",
+      "stateIds": [
+        "ne"
+      ],
+      "fetchMethod": "html"
+    },
+    {
       "id": "20b56c13b7d29dbc",
       "title": "उत्तर प्रदेश होमगार्ड्स के पदों पर एनरोलमेंट-2025 जनपद-सहारनपुर, शामली, मुजफ्फरनगर, मेरठ, गाजियाबाद, बुलन्दशहर, हापुड़, गौतमबुद्धनगर व बागपत में निर्धारित अभिलेखों की संवीक्षा एवं शारीरिक मानक परीक्षा (डीवी/पीएसटी) की तिथियों (दिनांक 04-08-2026, 05-08-2026 व 06-08-2026) में परिवर्तन हेतु महत्वपूर्ण सूचना एवं संशोधित प्रवेश पत्र डाउनलोड किये जाने विषयक ।",
       "link": "https://uppbpb.gov.in/FilesUploaded/Notice/img20260713_170704299779d63a-5d71-4b27-8b1a-cdf96f7616ff.pdf",
-      "publishedAt": "2026-08-04T00:00:00Z",
+      "publishedAt": null,
       "summary": null,
       "pdfUrls": [
         "https://uppbpb.gov.in/FilesUploaded/Notice/img20260713_170704299779d63a-5d71-4b27-8b1a-cdf96f7616ff.pdf"
       ],
       "sourceId": "police-up",
-      "sourceName": "Uppbpb",
-      "dept": "Uppbpb",
-      "state": "All India",
+      "sourceName": "UP Police Recruitment Board (UPPRPB)",
+      "dept": "UP Police Recruitment Board (UPPRPB)",
+      "state": "Uttar Pradesh",
       "category": "police",
-      "fetchMethod": "live-jobs-supplement"
+      "stateIds": [
+        "up"
+      ],
+      "fetchMethod": "html"
     },
     {
-      "id": "8528fed56389c2ef",
-      "title": "28 Jul 2026 CORRIGENDUM NOTICE REGARDING ADVT. NO. A-5/E-1/2025, ASSISTANT TEACHER, TRAINED GRADUATE GRADE (M/F BRANCH) EXAM-2025",
-      "link": "https://uppsc.up.nic.in/Open_PDF.aspx?I4PnQ0tBagnbSVudLPThSLUMpsH8pUZu",
-      "publishedAt": "2026-07-28T00:00:00Z",
+      "id": "acbcfc629871cb05",
+      "title": "उत्तर प्रदेश होमगार्ड के पदों पर एनरोलमेंट-2025 के अन्तर्गत अभिलेखों की संवीक्षा एवं शारीरिक मानक परीक्षा (डीवी / पीएसटी) हेतु प्रवेश पत्र डाउनलोड किये जाने हेतु लिंक |",
+      "link": "https://www.hgupexam2025.com/hg25DVPSTAdmitcard/loginpage.aspx",
+      "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
-      "sourceId": "uppsc-hall-tickets",
-      "sourceName": "UPPSC — Hall tickets",
-      "dept": "UPPSC — Hall tickets",
-      "state": "All India",
-      "category": "state",
-      "fetchMethod": "live-jobs-supplement"
+      "sourceId": "police-up",
+      "sourceName": "UP Police Recruitment Board (UPPRPB)",
+      "dept": "UP Police Recruitment Board (UPPRPB)",
+      "state": "Uttar Pradesh",
+      "category": "police",
+      "stateIds": [
+        "up"
+      ],
+      "fetchMethod": "html"
     },
     {
-      "id": "d40841a3ad176246",
-      "title": "25 Jul 2026 LIST OF SELECTED CANDIDATES IN ADVT. NO. A-7/E-1/2021, U.P. TECHNICAL EDUCATION (TEACHING) SERVICE EXAMINATION-2021, LECT. ARCHITECTURE, PHARMACY, TE",
-      "link": "https://uppsc.up.nic.in/Open_PDF.aspx?I4PnQ0tBagloISrijFpWKFd9gEzGHmbY",
-      "publishedAt": "2026-07-25T00:00:00Z",
+      "id": "8c7104cb7aea4338",
+      "title": "Admit Cards",
+      "link": "http://rsmssb.rajasthan.gov.in/page?menuName=/ur7491nQtP/eTfIoLmSTQ==",
+      "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
-      "sourceId": "uppsc-hall-tickets",
-      "sourceName": "UPPSC — Hall tickets",
-      "dept": "UPPSC — Hall tickets",
-      "state": "All India",
+      "sourceId": "ssb-rj",
+      "sourceName": "Rajasthan Staff Selection Board (RSSB)",
+      "dept": "Rajasthan Staff Selection Board (RSSB)",
+      "state": "Rajasthan",
       "category": "state",
-      "fetchMethod": "live-jobs-supplement"
+      "stateIds": [
+        "rj"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "a11c8ece90f5c6bb",
+      "title": "Admit Card",
+      "link": "http://rsmssb.rajasthan.gov.in/page?menuName=/ur7491nQtP6K0BefutjEQ==",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "ssb-rj",
+      "sourceName": "Rajasthan Staff Selection Board (RSSB)",
+      "dept": "Rajasthan Staff Selection Board (RSSB)",
+      "state": "Rajasthan",
+      "category": "state",
+      "stateIds": [
+        "rj"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "a735c78dc83b6ec4",
+      "title": "Download",
+      "link": "https://delhi.gov.in/sites/default/files/documents/Conduction%20of%20AAO%20Examination%2C%20downloading%20of%20admit%20card.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://delhi.gov.in/sites/default/files/documents/Conduction%20of%20AAO%20Examination%2C%20downloading%20of%20admit%20card.pdf"
+      ],
+      "sourceId": "delhi-portal",
+      "sourceName": "Delhi Govt — Job Notifications",
+      "dept": "Delhi Govt — Job Notifications",
+      "state": "Delhi",
+      "category": "state",
+      "stateIds": [
+        "dl"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "a89250f5430ced9a",
+      "title": "Conduction of AAO Examination, downloading of admit card",
+      "link": "https://delhi.gov.in/sites/default/files/news-documents/scan0027.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://delhi.gov.in/sites/default/files/news-documents/scan0027.pdf"
+      ],
+      "sourceId": "delhi-portal",
+      "sourceName": "Delhi Govt — Job Notifications",
+      "dept": "Delhi Govt — Job Notifications",
+      "state": "Delhi",
+      "category": "state",
+      "stateIds": [
+        "dl"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "a38d507836aede97",
+      "title": "AISSEE 2026 CATEGORY WISE LIST OF CANDIDATES ADMITTED IN CLASS VI THROUGH OFFLINE ADMISSION AS ON DATE: 30 JUNE 2026 - Click Here",
+      "link": "https://sainikschoolgoalpara.org/wp-content/uploads/2026/07/Final-Admitted-Candidates-06-30-Jun-26.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://sainikschoolgoalpara.org/wp-content/uploads/2026/07/Final-Admitted-Candidates-06-30-Jun-26.pdf"
+      ],
+      "sourceId": "ss-goalpara",
+      "sourceName": "Sainik School Goalpara",
+      "dept": "Sainik School Goalpara",
+      "state": "Assam",
+      "category": "teaching",
+      "stateIds": [
+        "as"
+      ],
+      "fetchMethod": "rss-discovered"
+    },
+    {
+      "id": "bd7a84534bd530b5",
+      "title": "AISSEE 2026 CATEGORY WISE LIST OF CANDIDATES ADMITTED IN CLASS IX THROUGH OFFLINE ADMISSION AS ON DATE: 30 JUNE 2026 - Click Here",
+      "link": "https://sainikschoolgoalpara.org/wp-content/uploads/2026/07/Final-Admitted-Candidates-09-30-Jun-26.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://sainikschoolgoalpara.org/wp-content/uploads/2026/07/Final-Admitted-Candidates-09-30-Jun-26.pdf"
+      ],
+      "sourceId": "ss-goalpara",
+      "sourceName": "Sainik School Goalpara",
+      "dept": "Sainik School Goalpara",
+      "state": "Assam",
+      "category": "teaching",
+      "stateIds": [
+        "as"
+      ],
+      "fetchMethod": "rss-discovered"
     },
     {
       "id": "d0324124867abf9e",
@@ -179,34 +582,6 @@
       "fetchMethod": "live-jobs-supplement"
     },
     {
-      "id": "b25b8605451d6575",
-      "title": "16 Jul 2026 NOTICE REGARDING ADVT. NO. A-1/E-1/2025, ASSISTANT CONSERVATOR OF FOREST (A.C.F.) / RANGE FOREST OFFICER (R.F.O.) SERVICES (MAINS) EXAM.-2025",
-      "link": "https://uppsc.up.nic.in/Open_PDF.aspx?I4PnQ0tBagkC/gT4ITeNghe6OT5cuTuL",
-      "publishedAt": "2026-07-16T00:00:00Z",
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "uppsc-hall-tickets",
-      "sourceName": "UPPSC — Hall tickets",
-      "dept": "UPPSC — Hall tickets",
-      "state": "All India",
-      "category": "state",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "77ba4f9903f6e25e",
-      "title": "NOTICE REGARDING ADVT. NO. A-4/E-1/2025, COMPUTER ASSISTANT (UPPSC) EXAM-2025",
-      "link": "https://uppsc.up.nic.in/Open_PDF_DB.aspx?I4PnQ0tBagloISrijFpWKC1ZE/PjW2XD",
-      "publishedAt": "2026-07-15T16:31:26.610540Z",
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "uppsc-hall-tickets",
-      "sourceName": "UPPSC — Hall tickets",
-      "dept": "UPPSC — Hall tickets",
-      "state": "All India",
-      "category": "state",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
       "id": "99c9f94d8e7c5a15",
       "title": "e-Admit Cards For Computer Based Skill Test For Various Recruitment Posts (ORA)",
       "link": "https://upsconline.gov.in/eadmitcard/admitcard_steno_2024/",
@@ -235,164 +610,10 @@
       "fetchMethod": "live-jobs-supplement"
     },
     {
-      "id": "6db5c4ba16d574a6",
-      "title": "Recruitment cases kept on hold on account of Pending Litigations",
-      "link": "https://www.upsc.gov.in/recruitment/recruitment-cases-kept-hold-account-pending-litigations",
-      "publishedAt": "2026-07-14T03:41:10.481723Z",
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "upsc-e-admit-hub",
-      "sourceName": "UPSC — e-Admit cards",
-      "dept": "UPSC — e-Admit cards",
-      "state": "All India",
-      "category": "upsc",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "2359d8c2c97ce9ef",
-      "title": "status recruitment cases advertisementwise",
-      "link": "https://www.upsc.gov.in/recruitment/status-recruitment-cases-advertisementwise",
-      "publishedAt": "2026-07-14T03:40:27.235989Z",
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "upsc-e-admit-hub",
-      "sourceName": "UPSC — e-Admit cards",
-      "dept": "UPSC — e-Admit cards",
-      "state": "All India",
-      "category": "upsc",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "24c56d25433472ca",
-      "title": "14 Jul 2026 NOTICE REGARDING ADVT. NO. A-5/E-1/2025, ASSISTANT TEACHER, TRAINED GRADUATE GRADE (M/F BRANCH) (MAINS) EXAM-2025 (COMPUTER)",
-      "link": "https://uppsc.up.nic.in/Open_PDF.aspx?I4PnQ0tBagloISrijFpWKBMXr2M2qn91",
-      "publishedAt": "2026-07-14T00:00:00Z",
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "uppsc-hall-tickets",
-      "sourceName": "UPPSC — Hall tickets",
-      "dept": "UPPSC — Hall tickets",
-      "state": "All India",
-      "category": "state",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "ecc0078de1c0eba4",
-      "title": "14 Jul 2026 NOTICE REGARDING ADVT. NO. A-2/E-1/2025, U.P. TECHNICAL EDUCATION (TEACHING) SERVICES EXAMINATION-2025 (PRINCIPAL)",
-      "link": "https://uppsc.up.nic.in/Open_PDF.aspx?I4PnQ0tBagloISrijFpWKGk/6BmlRlpB",
-      "publishedAt": "2026-07-14T00:00:00Z",
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "uppsc-hall-tickets",
-      "sourceName": "UPPSC — Hall tickets",
-      "dept": "UPPSC — Hall tickets",
-      "state": "All India",
-      "category": "state",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "e46e2c2e5ba88b94",
-      "title": "13 Jul 2026 NOTICE REGARDING ADVT. NO. A-4/E-1/2025, COMPUTER ASSISTANT (UPPSC) EXAM-2025",
-      "link": "https://uppsc.up.nic.in/Open_PDF.aspx?I4PnQ0tBagloISrijFpWKEacuL4jX0gc",
-      "publishedAt": "2026-07-13T00:00:00Z",
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "uppsc-hall-tickets",
-      "sourceName": "UPPSC — Hall tickets",
-      "dept": "UPPSC — Hall tickets",
-      "state": "All India",
-      "category": "state",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "b15afb44ab9c397f",
-      "title": "11 Jul 2026 NOTICE REGARDING ADVT. NO. A-5/E-1/2025, ASSISTANT TEACHER, TRAINED GRADUATE GRADE (M/F BRANCH) MAINS EXAM-2025, SUBJECT-SOCIAL SCIENCE",
-      "link": "https://uppsc.up.nic.in/Open_PDF.aspx?I4PnQ0tBagkz0o52o77EYU1Scw20fSeX",
-      "publishedAt": "2026-07-11T00:00:00Z",
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "uppsc-hall-tickets",
-      "sourceName": "UPPSC — Hall tickets",
-      "dept": "UPPSC — Hall tickets",
-      "state": "All India",
-      "category": "state",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "d18260da694aeedc",
-      "title": "11 Jul 2026 NOTICE REGARDING ADVT. NO. A-5/E-1/2025, ASSISTANT TEACHER, TRAINED GRADUATE GRADE (M/F BRANCH) (MAINS.)EXAM-2025 (HINDI, SOCIAL SCIENCE, PHYSICAL ED",
-      "link": "https://uppsc.up.nic.in/Open_PDF.aspx?I4PnQ0tBagktt06NhTTxwvHFJTvTuEgu",
-      "publishedAt": "2026-07-11T00:00:00Z",
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "uppsc-hall-tickets",
-      "sourceName": "UPPSC — Hall tickets",
-      "dept": "UPPSC — Hall tickets",
-      "state": "All India",
-      "category": "state",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "35911c39786631dc",
-      "title": "11 Jul 2026 NOTICE REGARDING ADVT. NO. A-5/E-1/2025, ASSISTANT TEACHER, TRAINED GRADUATE GRADE (M/F BRANCH) MAINS EXAM-2025, SUBJECT-MUSIC",
-      "link": "https://uppsc.up.nic.in/Open_PDF.aspx?I4PnQ0tBaglAQaJlk9zBXsPCh4jrOQ50",
-      "publishedAt": "2026-07-11T00:00:00Z",
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "uppsc-hall-tickets",
-      "sourceName": "UPPSC — Hall tickets",
-      "dept": "UPPSC — Hall tickets",
-      "state": "All India",
-      "category": "state",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "7e7433ae0ce7e83d",
-      "title": "11 Jul 2026 REVISED NOTICE REGARDING ADVT. NO. A-5/E-1/2025, ASSISTANT TEACHER, TRAINED GRADUATE GRADE (M/F BRANCH) MAINS EXAM-2025, SUBJECT-HINDI",
-      "link": "https://uppsc.up.nic.in/Open_PDF.aspx?I4PnQ0tBagkz0o52o77EYTFqmK5sYObt",
-      "publishedAt": "2026-07-11T00:00:00Z",
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "uppsc-hall-tickets",
-      "sourceName": "UPPSC — Hall tickets",
-      "dept": "UPPSC — Hall tickets",
-      "state": "All India",
-      "category": "state",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
       "id": "e59a6123a577856c",
       "title": "11 Jul 2026 NOTICE REGARDING ADMIT CARD FOR ADVT. NO. A-5/E-1/2025, ASSISTANT TEACHER, TRAINED GRADUATE GRADE (MALE / FEMALE BRANCH) (MAINS) EXAM - 2025 (MUSIC)",
       "link": "https://uppsc.up.nic.in/Open_PDF.aspx?I4PnQ0tBaglAQaJlk9zBXvikcfA3fKqC",
       "publishedAt": "2026-07-11T00:00:00Z",
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "uppsc-hall-tickets",
-      "sourceName": "UPPSC — Hall tickets",
-      "dept": "UPPSC — Hall tickets",
-      "state": "All India",
-      "category": "state",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "1c45e11bcc7a9d8d",
-      "title": "10 Jul 2026 NOTICE REAGRDING ASSISTANT CONSERVATOR OF FOREST (A.C.F.) / RANGE FOREST OFFICER (R.F.O.) SERVICES (MAINS) EXAM.-2025",
-      "link": "https://uppsc.up.nic.in/Open_PDF.aspx?I4PnQ0tBagloISrijFpWKGKS6z9zJ3fx",
-      "publishedAt": "2026-07-10T00:00:00Z",
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "uppsc-hall-tickets",
-      "sourceName": "UPPSC — Hall tickets",
-      "dept": "UPPSC — Hall tickets",
-      "state": "All India",
-      "category": "state",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "d85a833adf776743",
-      "title": "09 Jul 2026 NOTICE REGARDING ADVT. NO. A-10/E-1/2023, U.P. KHADI AND VILLAGE INDUSTRIES BOARD/PRASHIKSHAK (HAND MADE PAPER)",
-      "link": "https://uppsc.up.nic.in/Open_PDF.aspx?I4PnQ0tBagkz0o52o77EYTyaBuQ6BJkS",
-      "publishedAt": "2026-07-09T00:00:00Z",
       "summary": null,
       "pdfUrls": [],
       "sourceId": "uppsc-hall-tickets",
@@ -433,52 +654,10 @@
       "fetchMethod": "live-jobs-supplement"
     },
     {
-      "id": "49ffff39d422ed96",
-      "title": "NOTICE REGARDING ADVT. NO. A-6/E-1/2025, GOVERNEMENT INTER COLLEGE (PRE.) EXAM",
-      "link": "https://uppsc.up.nic.in/Open_PDF_DB.aspx?I4PnQ0tBagkz0o52o77EYZgRUmC091XE",
-      "publishedAt": "2026-07-07T09:48:57.286767Z",
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "uppsc-hall-tickets",
-      "sourceName": "UPPSC — Hall tickets",
-      "dept": "UPPSC — Hall tickets",
-      "state": "All India",
-      "category": "state",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "858ff6cee2970a79",
-      "title": "NOTICE REGARDING ADVT. NO. A-6/E-1/2025, GOVERNEMENT INTER COLLEGE (PRE.) EXAM",
-      "link": "https://uppsc.up.nic.in/Open_PDF_DB.aspx?I4PnQ0tBagkz0o52o77EYWdy7eXBrUXB",
-      "publishedAt": "2026-07-07T09:48:55.292000Z",
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "uppsc-hall-tickets",
-      "sourceName": "UPPSC — Hall tickets",
-      "dept": "UPPSC — Hall tickets",
-      "state": "All India",
-      "category": "state",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
       "id": "109b191431bd3b87",
       "title": "NOTICE REGARDING ADMIT CARD FOR ADVT. NO. A-5/E-1/2025, ASSISTANT TEACHER, TRAIN",
       "link": "https://uppsc.up.nic.in/Open_PDF_DB.aspx?I4PnQ0tBaglAQaJlk9zBXllKWjcL56ha",
       "publishedAt": "2026-07-07T09:48:53.255141Z",
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "uppsc-hall-tickets",
-      "sourceName": "UPPSC — Hall tickets",
-      "dept": "UPPSC — Hall tickets",
-      "state": "All India",
-      "category": "state",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "57196e9aaf78eae6",
-      "title": "NOTICE REGARDING ADVT. NO. A-5/E-1/2023, ADDITIONAL PRIVATE SECRETARY EXAM-2023",
-      "link": "https://uppsc.up.nic.in/Open_PDF_DB.aspx?I4PnQ0tBaglkFvRfMi9SvgTDsAYwjENl",
-      "publishedAt": "2026-07-06T11:16:32.411985Z",
       "summary": null,
       "pdfUrls": [],
       "sourceId": "uppsc-hall-tickets",
@@ -510,20 +689,6 @@
       "fetchMethod": "live-jobs-supplement"
     },
     {
-      "id": "90d5f45ecbbf13bc",
-      "title": "06 Jul 2026 NOTICE REGARDING ADVT. NO. A-5/E-1/2025, ASSISTANT TEACHER, TRAINED GRADUATE GRADE (M/F BRANCH) MAINS EXAM-2025, SUBJECT-PHYSICAL EDUCATION",
-      "link": "https://uppsc.up.nic.in/Open_PDF.aspx?I4PnQ0tBagkz0o52o77EYYrQ4pzCaoHr",
-      "publishedAt": "2026-07-06T00:00:00Z",
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "uppsc-hall-tickets",
-      "sourceName": "UPPSC — Hall tickets",
-      "dept": "UPPSC — Hall tickets",
-      "state": "All India",
-      "category": "state",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
       "id": "0e4239436ef1f658",
       "title": "06-07-2026Personal Assistant (Establishment, Hon. High Court) Exam-2025- Notification and Link for Download Admit Card( Admit Card )",
       "link": "https://psc.uk.gov.in/candidate-corner/admitcards",
@@ -533,20 +698,6 @@
       "sourceId": "psc-uk",
       "sourceName": "Psc Uk",
       "dept": "Psc Uk",
-      "state": "All India",
-      "category": "state",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "8d58c744169b648e",
-      "title": "06 Jul 2026 CORRIGENDUM NOTICE REGARDING ADVT. NO. A-5/E-1/2025, ASSISTANT TEACHER, TRAINED GRADUATE GRADE (M/F BRANCH) MAINS EXAM-2025, SUBJECT-PHYSICAL EDUCATI",
-      "link": "https://uppsc.up.nic.in/Open_PDF.aspx?I4PnQ0tBaglAQaJlk9zBXgIn6zbFJmHq",
-      "publishedAt": "2026-07-06T00:00:00Z",
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "uppsc-hall-tickets",
-      "sourceName": "UPPSC — Hall tickets",
-      "dept": "UPPSC — Hall tickets",
       "state": "All India",
       "category": "state",
       "fetchMethod": "live-jobs-supplement"
@@ -568,66 +719,10 @@
       "fetchMethod": "live-jobs-supplement"
     },
     {
-      "id": "f236a78dd736636e",
-      "title": "02 Jul 2026 NOTICE REGARDING ADVT. NO. A-5/E-1/2023, ADDITIONAL PRIVATE SECRETARY EXAM-2023",
-      "link": "https://uppsc.up.nic.in/Open_PDF.aspx?I4PnQ0tBaglkFvRfMi9SvtjgU/8fGQj5",
-      "publishedAt": "2026-07-02T00:00:00Z",
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "uppsc-hall-tickets",
-      "sourceName": "UPPSC — Hall tickets",
-      "dept": "UPPSC — Hall tickets",
-      "state": "All India",
-      "category": "state",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "c5fe1df0474fb722",
-      "title": "30 Jun 2026 NOTICE REGARDING ADVT. NO. A-8/E-1/2025, ASSISTANT PROSECUTION OFFICER (MAINS) EXAM-2025",
-      "link": "https://uppsc.up.nic.in/Open_PDF.aspx?I4PnQ0tBagnbSVudLPThSAelINPNCNGK",
-      "publishedAt": "2026-06-30T00:00:00Z",
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "uppsc-hall-tickets",
-      "sourceName": "UPPSC — Hall tickets",
-      "dept": "UPPSC — Hall tickets",
-      "state": "All India",
-      "category": "state",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "42fa3ce5bf439d6e",
-      "title": "30 Jun 2026 NOTICE REGARDING ADVT. NO.A-8/E-1/2025-ASSISTANT PROSECUTION OFFICER (MAINS) EXAM.-2025",
-      "link": "https://uppsc.up.nic.in/Open_PDF.aspx?I4PnQ0tBagnr3CRo1wnbJin6Q/tSLthp",
-      "publishedAt": "2026-06-30T00:00:00Z",
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "uppsc-hall-tickets",
-      "sourceName": "UPPSC — Hall tickets",
-      "dept": "UPPSC — Hall tickets",
-      "state": "All India",
-      "category": "state",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
       "id": "d0a220bca5a286ad",
       "title": "30 Jun 2026 NOTICE REGARDING ADMIT CARD FOR ADVT. NO.A-8/E-1/2025-ASSISTANT PROSECUTION OFFICER (MAINS) EXAM.-2025",
       "link": "https://uppsc.up.nic.in/Open_PDF.aspx?I4PnQ0tBagnr3CRo1wnbJnT6GtkqBL2r",
       "publishedAt": "2026-06-30T00:00:00Z",
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "uppsc-hall-tickets",
-      "sourceName": "UPPSC — Hall tickets",
-      "dept": "UPPSC — Hall tickets",
-      "state": "All India",
-      "category": "state",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "5d762c4ca7d791cd",
-      "title": "28 Jun 2026 NOTICE REGARDING ADVT. NO. A-8/E-1/2025, ASSISTANT PROSECUTION OFFICER (MAINS) EXAM-2025",
-      "link": "https://uppsc.up.nic.in/Open_PDF.aspx?I4PnQ0tBagmFMCnaKTv0VXvpc4aJHZxO",
-      "publishedAt": "2026-06-28T00:00:00Z",
       "summary": null,
       "pdfUrls": [],
       "sourceId": "uppsc-hall-tickets",
@@ -698,20 +793,6 @@
       "fetchMethod": "live-jobs-supplement"
     },
     {
-      "id": "61594c993734c027",
-      "title": "COMBINED TECHNICAL SERVICES EXAMINATION (NON – INTERVIEW POSTS) (Notification)",
-      "link": "https://tnpsc.gov.in/examdashboard/web/index.aspx?key=ksojs2efre3WFDsw5",
-      "publishedAt": "2026-06-24T01:38:08.391932Z",
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "tnpsc-hall-tickets",
-      "sourceName": "TNPSC — Hall tickets",
-      "dept": "TNPSC — Hall tickets",
-      "state": "All India",
-      "category": "state",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
       "id": "c8bf0192b6a96d1c",
       "title": "d 2016 Amendment Repealing and Amending Act 2016 Gazette Notification No 26 dated 09 May 2016",
       "link": "http://www.wcd-sh.nic.in/",
@@ -776,38 +857,6 @@
       "sourceId": "dcourt-balangir",
       "sourceName": "District & Sessions Judge, Balangir",
       "dept": "District & Sessions Judge, Balangir",
-      "state": "All India",
-      "category": "state",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "a89250f5430ced9a",
-      "title": "Conduction of AAO Examination, downloading of admit card",
-      "link": "https://delhi.gov.in/sites/default/files/news-documents/scan0027.pdf",
-      "publishedAt": "2026-06-23T14:41:08.042352Z",
-      "summary": null,
-      "pdfUrls": [
-        "https://delhi.gov.in/sites/default/files/news-documents/scan0027.pdf"
-      ],
-      "sourceId": "delhi-portal",
-      "sourceName": "Delhi Govt — Job Notifications",
-      "dept": "Delhi Govt — Job Notifications",
-      "state": "All India",
-      "category": "state",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "a735c78dc83b6ec4",
-      "title": "Conduction of AAO Examination, downloading of admit card",
-      "link": "https://delhi.gov.in/sites/default/files/documents/Conduction%20of%20AAO%20Examination%2C%20downloading%20of%20admit%20card.pdf",
-      "publishedAt": "2026-06-23T14:38:12.229771Z",
-      "summary": null,
-      "pdfUrls": [
-        "https://delhi.gov.in/sites/default/files/documents/Conduction%20of%20AAO%20Examination%2C%20downloading%20of%20admit%20card.pdf"
-      ],
-      "sourceId": "delhi-portal",
-      "sourceName": "Delhi Govt — Job Notifications",
-      "dept": "Delhi Govt — Job Notifications",
       "state": "All India",
       "category": "state",
       "fetchMethod": "live-jobs-supplement"
@@ -893,202 +942,6 @@
       "sourceId": "psc-jk",
       "sourceName": "Jammu & Kashmir PSC (JKPSC)",
       "dept": "Jammu & Kashmir PSC (JKPSC)",
-      "state": "All India",
-      "category": "state",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "f4db2e123108fadd",
-      "title": "NOTICE REGARDING ADVT. NO. A-6/E-1/2025, GOVERNEMENT INTER COLLEGE (PRE.) EXAM",
-      "link": "https://uppsc.up.nic.in/Open_PDF_DB.aspx?I4PnQ0tBagm1I38phqc5atS2/sNW3GBf",
-      "publishedAt": "2026-06-23T06:50:54.850560Z",
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "uppsc-hall-tickets",
-      "sourceName": "UPPSC — Hall tickets",
-      "dept": "UPPSC — Hall tickets",
-      "state": "All India",
-      "category": "state",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "a1af982e03797fc1",
-      "title": "NOTICE REGARDING ADVT. NO. A-6/E-1/2025, GOVERNEMENT INTER COLLEGE (PRE.) EXAM",
-      "link": "https://uppsc.up.nic.in/Open_PDF_DB.aspx?I4PnQ0tBagm1I38phqc5anPFSNMOl0DI",
-      "publishedAt": "2026-06-23T06:50:51.447019Z",
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "uppsc-hall-tickets",
-      "sourceName": "UPPSC — Hall tickets",
-      "dept": "UPPSC — Hall tickets",
-      "state": "All India",
-      "category": "state",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "15bb40981aa5271a",
-      "title": "NOTICE REGARDING ADVT. NO. A-6/E-1/2025, GOVERNEMENT INTER COLLEGE (PRE.) EXAM",
-      "link": "https://uppsc.up.nic.in/Open_PDF_DB.aspx?I4PnQ0tBagm1I38phqc5ap2nzRebT4xb",
-      "publishedAt": "2026-06-23T06:50:47.502535Z",
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "uppsc-hall-tickets",
-      "sourceName": "UPPSC — Hall tickets",
-      "dept": "UPPSC — Hall tickets",
-      "state": "All India",
-      "category": "state",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "06ba6917404445aa",
-      "title": "NOTICE REGARDING ADVT. NO. A-6/E-1/2025, GOVERNEMENT INTER COLLEGE (PRE.) EXAM",
-      "link": "https://uppsc.up.nic.in/Open_PDF_DB.aspx?I4PnQ0tBagm1I38phqc5at6QJTLmeom7",
-      "publishedAt": "2026-06-23T06:50:42.524162Z",
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "uppsc-hall-tickets",
-      "sourceName": "UPPSC — Hall tickets",
-      "dept": "UPPSC — Hall tickets",
-      "state": "All India",
-      "category": "state",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "4bf9cff7b54e51c1",
-      "title": "NOTICE REGARDING ADVT. NO. A-6/E-1/2025, GOVERNEMENT INTER COLLEGE (PRE.) EXAM",
-      "link": "https://uppsc.up.nic.in/Open_PDF_DB.aspx?I4PnQ0tBagm1I38phqc5ai92sugN8eGo",
-      "publishedAt": "2026-06-23T06:50:38.911094Z",
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "uppsc-hall-tickets",
-      "sourceName": "UPPSC — Hall tickets",
-      "dept": "UPPSC — Hall tickets",
-      "state": "All India",
-      "category": "state",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "3fa87dc0ff03525a",
-      "title": "NOTICE REGARDING ADVT. NO. A-6/E-1/2025, GOVERNEMENT INTER COLLEGE (PRE.) EXAM",
-      "link": "https://uppsc.up.nic.in/Open_PDF_DB.aspx?I4PnQ0tBagm1I38phqc5aojCxKwshvqL",
-      "publishedAt": "2026-06-23T06:50:35.407023Z",
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "uppsc-hall-tickets",
-      "sourceName": "UPPSC — Hall tickets",
-      "dept": "UPPSC — Hall tickets",
-      "state": "All India",
-      "category": "state",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "6ec4808788e42edd",
-      "title": "NOTICE REGARDING ADVT. NO. A-6/E-1/2025, GOVERNEMENT INTER COLLEGE (PRE.) EXAM",
-      "link": "https://uppsc.up.nic.in/Open_PDF_DB.aspx?I4PnQ0tBagnr3CRo1wnbJnMtzpmBqhy1",
-      "publishedAt": "2026-06-23T06:50:31.791999Z",
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "uppsc-hall-tickets",
-      "sourceName": "UPPSC — Hall tickets",
-      "dept": "UPPSC — Hall tickets",
-      "state": "All India",
-      "category": "state",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "ab5fb23c8fdd61d9",
-      "title": "NOTICE REGARDING ADVT. NO. A-6/E-1/2025, GOVERNEMENT INTER COLLEGE (PRE.) EXAM",
-      "link": "https://uppsc.up.nic.in/Open_PDF_DB.aspx?I4PnQ0tBagnr3CRo1wnbJjBscDHzE08a",
-      "publishedAt": "2026-06-23T06:50:28.189321Z",
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "uppsc-hall-tickets",
-      "sourceName": "UPPSC — Hall tickets",
-      "dept": "UPPSC — Hall tickets",
-      "state": "All India",
-      "category": "state",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "62ebd45fbf2b4bef",
-      "title": "NOTICE REGARDING ADVT. NO. A-6/E-1/2025, GOVERNEMENT INTER COLLEGE (PRE.) EXAM",
-      "link": "https://uppsc.up.nic.in/Open_PDF_DB.aspx?I4PnQ0tBagnr3CRo1wnbJuOz1NfKYf8l",
-      "publishedAt": "2026-06-23T06:50:24.133154Z",
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "uppsc-hall-tickets",
-      "sourceName": "UPPSC — Hall tickets",
-      "dept": "UPPSC — Hall tickets",
-      "state": "All India",
-      "category": "state",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "fb16d8b70d8cd7eb",
-      "title": "NOTICE REGARDING ADVT. NO. A-6/E-1/2025, GOVERNEMENT INTER COLLEGE (PRE.) EXAM",
-      "link": "https://uppsc.up.nic.in/Open_PDF_DB.aspx?I4PnQ0tBagnr3CRo1wnbJo2b704Cbc+A",
-      "publishedAt": "2026-06-23T06:50:19.758587Z",
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "uppsc-hall-tickets",
-      "sourceName": "UPPSC — Hall tickets",
-      "dept": "UPPSC — Hall tickets",
-      "state": "All India",
-      "category": "state",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "d495d67b1dc1cdd9",
-      "title": "NOTICE REGARDING ADVT. NO. A-6/E-1/2025, GOVERNEMENT INTER COLLEGE (PRE.) EXAM",
-      "link": "https://uppsc.up.nic.in/Open_PDF_DB.aspx?I4PnQ0tBagnr3CRo1wnbJjOmJoJJdRjw",
-      "publishedAt": "2026-06-23T06:50:16.046327Z",
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "uppsc-hall-tickets",
-      "sourceName": "UPPSC — Hall tickets",
-      "dept": "UPPSC — Hall tickets",
-      "state": "All India",
-      "category": "state",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "30f438c2ad8b5a72",
-      "title": "NOTICE REGARDING ADVT. NO. A-6/E-1/2025, GOVERNEMENT INTER COLLEGE (PRE.) EXAM",
-      "link": "https://uppsc.up.nic.in/Open_PDF_DB.aspx?I4PnQ0tBagnr3CRo1wnbJrlCyEKQkEBd",
-      "publishedAt": "2026-06-23T06:50:12.157759Z",
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "uppsc-hall-tickets",
-      "sourceName": "UPPSC — Hall tickets",
-      "dept": "UPPSC — Hall tickets",
-      "state": "All India",
-      "category": "state",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "ccb2b4d042f03de9",
-      "title": "NOTICE REGARDING ADVT. NO. A-6/E-1/2025, GOVERNEMENT INTER COLLEGE (PRE.) EXAM",
-      "link": "https://uppsc.up.nic.in/Open_PDF_DB.aspx?I4PnQ0tBagnr3CRo1wnbJhNwQp8k00vK",
-      "publishedAt": "2026-06-23T06:50:08.448336Z",
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "uppsc-hall-tickets",
-      "sourceName": "UPPSC — Hall tickets",
-      "dept": "UPPSC — Hall tickets",
-      "state": "All India",
-      "category": "state",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "f7962cedd1739c91",
-      "title": "NOTICE REGARDING ADVT. NO. A-6/E-1/2025, GOVERNEMENT INTER COLLEGE (PRE.) EXAM",
-      "link": "https://uppsc.up.nic.in/Open_PDF_DB.aspx?I4PnQ0tBagnr3CRo1wnbJjhpTKAzGtMb",
-      "publishedAt": "2026-06-23T06:50:04.384142Z",
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "uppsc-hall-tickets",
-      "sourceName": "UPPSC — Hall tickets",
-      "dept": "UPPSC — Hall tickets",
       "state": "All India",
       "category": "state",
       "fetchMethod": "live-jobs-supplement"
@@ -1230,34 +1083,6 @@
       "fetchMethod": "live-jobs-supplement"
     },
     {
-      "id": "f4987bba9a851442",
-      "title": "22 Jun 2026 NOTICE REGARDING ADVT NO: A-5/E-1/2025, ASSISTANT TEACHER, TRAINED GRADUATE GRADE (M/F) EXAM-2025 (ENGLISH)",
-      "link": "https://uppsc.up.nic.in/Open_PDF.aspx?I4PnQ0tBagl4kdhULj6CxMUT+a/NhheH",
-      "publishedAt": "2026-06-22T00:00:00Z",
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "uppsc-hall-tickets",
-      "sourceName": "UPPSC — Hall tickets",
-      "dept": "UPPSC — Hall tickets",
-      "state": "All India",
-      "category": "state",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "618c198f3402239c",
-      "title": "22 Jun 2026 LIST OF SELECTED CANDIDATES IN ASSISTANT TEACHER (TRAINED GRADUATE MEN/WOMEN BRANCH) EXAM - 2018 (OVERAGE)",
-      "link": "https://uppsc.up.nic.in/Open_PDF.aspx?I4PnQ0tBaglkFvRfMi9Svvwp0VybHSqM",
-      "publishedAt": "2026-06-22T00:00:00Z",
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "uppsc-hall-tickets",
-      "sourceName": "UPPSC — Hall tickets",
-      "dept": "UPPSC — Hall tickets",
-      "state": "All India",
-      "category": "state",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
       "id": "e1cdfb634a2ec054",
       "title": "19-06-2026 TAMIL NADU TEACHER ELIGIBILITY TEST FOR WORKING TEACHERS - 2026 - RELEASE OF HALLTICKET",
       "link": "https://trb.tn.gov.in/more_notification_details.php?id=MN-1037&language=LG-1",
@@ -1296,20 +1121,6 @@
       "fetchMethod": "live-jobs-supplement"
     },
     {
-      "id": "4299efa0380c1d11",
-      "title": "16/06/2026 Download Admit Card for JK Combined Competitive (Mains) Examination, 2025",
-      "link": "http://jkpsc.nic.in/result/KASMAINS_ADMITCARD_2025.html",
-      "publishedAt": "2026-06-16T00:00:00Z",
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-jk",
-      "sourceName": "Jammu & Kashmir PSC (JKPSC)",
-      "dept": "Jammu & Kashmir PSC (JKPSC)",
-      "state": "All India",
-      "category": "state",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
       "id": "61572ed96004c393",
       "title": "Announcement dated 12.06.2026 regarding downloading Main Examination admit card for the posts of HCS (Ex. Br.) & Other Allied Services - 2025, for the exam to be held from 27.06.2026 to 29.06.2026",
       "link": "https://hpsc.gov.in/Portals/0/Ann_Admitcard_HCS_Mains_12_06_2026.pdf",
@@ -1321,20 +1132,6 @@
       "sourceId": "psc-hr-notifications",
       "sourceName": "HPSC — Recruitment",
       "dept": "HPSC — Recruitment",
-      "state": "All India",
-      "category": "state",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "f4dc78c867d60ac9",
-      "title": "11/06/2026 Download Marks Card for Civil Services (Judicial) Competitive Examination, 2025",
-      "link": "http://jkpsc.nic.in/RESULT/KCSJ_MARKS_CARD_2025.HTML",
-      "publishedAt": "2026-06-11T00:00:00Z",
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-jk",
-      "sourceName": "Jammu & Kashmir PSC (JKPSC)",
-      "dept": "Jammu & Kashmir PSC (JKPSC)",
       "state": "All India",
       "category": "state",
       "fetchMethod": "live-jobs-supplement"
@@ -1367,20 +1164,6 @@
       "dept": "Uppbpb",
       "state": "All India",
       "category": "police",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "5d904412163e6c44",
-      "title": "04/06/2026 Download Marks Card for Combined Competitive Examination, 2024",
-      "link": "http://jkpsc.nic.in/result/KASM_MARKS_CARD_2025.html",
-      "publishedAt": "2026-06-04T00:00:00Z",
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-jk",
-      "sourceName": "Jammu & Kashmir PSC (JKPSC)",
-      "dept": "Jammu & Kashmir PSC (JKPSC)",
-      "state": "All India",
-      "category": "state",
       "fetchMethod": "live-jobs-supplement"
     },
     {
@@ -1432,36 +1215,6 @@
       "fetchMethod": "live-jobs-supplement"
     },
     {
-      "id": "01dd1a07ccadb21c",
-      "title": "26/05/2026 Download Admit Card for SATC Departmental Examination, 2026",
-      "link": "http://jkpsc.nic.in/RESULT/AC_SATC_2026.html",
-      "publishedAt": "2026-05-26T00:00:00Z",
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-jk",
-      "sourceName": "Jammu & Kashmir PSC (JKPSC)",
-      "dept": "Jammu & Kashmir PSC (JKPSC)",
-      "state": "All India",
-      "category": "state",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "22143ab863af0a09",
-      "title": "26/05/2026 Download Admit Card for SAC Departmental Examination, 2026",
-      "link": "http://jkpsc.nic.in/PDF/AC_SAC.pdf",
-      "publishedAt": "2026-05-26T00:00:00Z",
-      "summary": null,
-      "pdfUrls": [
-        "http://jkpsc.nic.in/PDF/AC_SAC.pdf"
-      ],
-      "sourceId": "psc-jk",
-      "sourceName": "Jammu & Kashmir PSC (JKPSC)",
-      "dept": "Jammu & Kashmir PSC (JKPSC)",
-      "state": "All India",
-      "category": "state",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
       "id": "583080ee2e24e894",
       "title": "19-05-2026Food Safety Officer-- Written Examination and Interview( syllabus )",
       "link": "https://psc.uk.gov.in/candidate-corner/syllabus",
@@ -1473,68 +1226,6 @@
       "dept": "Psc Uk",
       "state": "All India",
       "category": "state",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "686e8d5b26f137a9",
-      "title": "Planning Department Research Assistant Recruitment – Examination ScheduleUpdated: 08/05/2026",
-      "link": "https://mpscmanipur.gov.in/files/Research_Asst_notification_Admit_card.pdf",
-      "publishedAt": "2026-05-08T00:00:00Z",
-      "summary": null,
-      "pdfUrls": [
-        "https://mpscmanipur.gov.in/files/Research_Asst_notification_Admit_card.pdf"
-      ],
-      "sourceId": "psc-mn",
-      "sourceName": "Mpscmanipur",
-      "dept": "Mpscmanipur",
-      "state": "All India",
-      "category": "state",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "2cb6ef6de1513685",
-      "title": "Under Secretary (Law) and Law Officer Recruitment – Examination ScheduleUpdated: 08/05/2026",
-      "link": "https://mpscmanipur.gov.in/files/Notification_Under_Secy_Law_Officer_Admit_card.pdf",
-      "publishedAt": "2026-05-08T00:00:00Z",
-      "summary": null,
-      "pdfUrls": [
-        "https://mpscmanipur.gov.in/files/Notification_Under_Secy_Law_Officer_Admit_card.pdf"
-      ],
-      "sourceId": "psc-mn",
-      "sourceName": "Mpscmanipur",
-      "dept": "Mpscmanipur",
-      "state": "All India",
-      "category": "state",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "ec303e191a0d4b56",
-      "title": "06/05/2026 Download Marks Card for Assistant Director (ES) Competitive Examination- 2023/24",
-      "link": "http://jkpsc.nic.in/resulT/MAARKSCARD_ADSTS_23_24.html",
-      "publishedAt": "2026-05-06T00:00:00Z",
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-jk",
-      "sourceName": "Jammu & Kashmir PSC (JKPSC)",
-      "dept": "Jammu & Kashmir PSC (JKPSC)",
-      "state": "All India",
-      "category": "state",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "1907c47beb18293c",
-      "title": "City%20intimation%20Slip%20Notice%20CEN%2007-2025",
-      "link": "https://www.rrbguwahati.gov.in/documents/City%20intimation%20Slip%20Notice%20CEN%2007-2025.pdf",
-      "publishedAt": "2026-04-27T00:00:00Z",
-      "summary": "GOVERNMENT OF INDIA MINISTRY OF RAILWAYS RAILWAY RECRUITMENT BOARDS Notice Regarding City Intimation Slip & Helpdesk Link for CBT-I of CEN No. 07/2025 NTPC (Under Graduate) 1. The Link for viewing the Exam City & Date and downloading of Travel Authority for SC/ST candidates is live on the official websites of all RRBs. Candidates can view their exam city 10 days before the exam date which is sched…",
-      "pdfUrls": [
-        "https://www.rrbguwahati.gov.in/documents/City%20intimation%20Slip%20Notice%20CEN%2007-2025.pdf"
-      ],
-      "sourceId": "rrb-guwahati",
-      "sourceName": "Railway Recruitment Board (RRB) — Guwahati",
-      "dept": "Railway Recruitment Board (RRB) — Guwahati",
-      "state": "All India",
-      "category": "railways",
       "fetchMethod": "live-jobs-supplement"
     },
     {
@@ -1583,22 +1274,6 @@
       "dept": "Rrbthiruvananthapuram",
       "state": "All India",
       "category": "railways",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "a8a27fe730d98f9c",
-      "title": "Orders of Hon'ble Supreme Court of India dated 17.05.2024 in SLP(C) No.7906/2024",
-      "link": "https://www.tnpsc.gov.in/static_pdf/MVI_G3_03_2018/Supreme%20Court%20Stay%20order.pdf",
-      "publishedAt": "2024-05-17T00:00:00Z",
-      "summary": null,
-      "pdfUrls": [
-        "https://www.tnpsc.gov.in/static_pdf/MVI_G3_03_2018/Supreme%20Court%20Stay%20order.pdf"
-      ],
-      "sourceId": "tnpsc-hall-tickets",
-      "sourceName": "TNPSC — Hall tickets",
-      "dept": "TNPSC — Hall tickets",
-      "state": "All India",
-      "category": "state",
       "fetchMethod": "live-jobs-supplement"
     },
     {
@@ -1984,38 +1659,6 @@
       "fetchMethod": "live-jobs-supplement"
     },
     {
-      "id": "b101927674f4f0fa",
-      "title": "26/05/2026 Download Admit Card for Foundation Course Departmental Examination, 2026 (Rollno 01 to 100)",
-      "link": "http://jkpsc.nic.in/PDF/AC_FC_1_100.pdf",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [
-        "http://jkpsc.nic.in/PDF/AC_FC_1_100.pdf"
-      ],
-      "sourceId": "psc-jk",
-      "sourceName": "Jammu & Kashmir PSC (JKPSC)",
-      "dept": "Jammu & Kashmir PSC (JKPSC)",
-      "state": "All India",
-      "category": "state",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "29ca1b7dee287a0d",
-      "title": "26/05/2026 Download Admit Card for Foundation Course Departmental Examination, 2026 (Rollno 101 to 176)",
-      "link": "http://jkpsc.nic.in/PDF/AC_FC_101_176.pdf",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [
-        "http://jkpsc.nic.in/PDF/AC_FC_101_176.pdf"
-      ],
-      "sourceId": "psc-jk",
-      "sourceName": "Jammu & Kashmir PSC (JKPSC)",
-      "dept": "Jammu & Kashmir PSC (JKPSC)",
-      "state": "All India",
-      "category": "state",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
       "id": "c33ecee801e8bcae",
       "title": "Notification - Admit Card Download 2 of 2026-27",
       "link": "https://mpsc.mizoram.gov.in/post/notification-admit-card-download-2-of-2026-27",
@@ -2115,23 +1758,6 @@
       "fetchMethod": "html"
     },
     {
-      "id": "0157354131476c03",
-      "title": "Intimation to Stock Exchange(s)",
-      "link": "https://ongcindia.com/web/eng/investors/intimation-to-stock-exchange",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "ongc",
-      "sourceName": "ONGC — Careers",
-      "dept": "ONGC — Careers",
-      "state": "All India",
-      "category": "psu",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
       "id": "97a06d61ec80c264",
       "title": "Conference call/analyst meet with Investors",
       "link": "https://ntpc.co.in/index.php/investors/confrence-call-analyst-meet-investors/conference-call-analysts-investors",
@@ -2158,40 +1784,6 @@
       "sourceId": "ntpc",
       "sourceName": "NTPC — Careers",
       "dept": "NTPC — Careers",
-      "state": "All India",
-      "category": "psu",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "2b909d8e996d4c94",
-      "title": "Conference call/analyst meet with Investors",
-      "link": "https://ntpc.co.in/investors/confrence-call-analyst-meet-investors/conference-call-analysts-investors",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "ntpc",
-      "sourceName": "NTPC — Careers",
-      "dept": "NTPC — Careers",
-      "state": "All India",
-      "category": "psu",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "eea0763a5451a158",
-      "title": "Presentations & Conference Calls",
-      "link": "https://www.bhel.com/presentations-conference-calls",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "bhel",
-      "sourceName": "BHEL — Careers",
-      "dept": "BHEL — Careers",
       "state": "All India",
       "category": "psu",
       "stateIds": [
