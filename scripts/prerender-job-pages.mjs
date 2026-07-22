@@ -156,8 +156,10 @@ function parseMoneyToken(raw) {
 
 function parseJobBaseSalary(salary) {
   const raw = String(salary ?? "").replace(/\s+/g, " ").trim();
-  if (!raw || raw === "—" || raw.length > 120) return null;
-  if (/not specified|see (official|notification)|pay matrix|level[- ]?\d/i.test(raw)) return null;
+  if (!raw || raw === "—" || raw.length > 160) return null;
+  if (/not specified|see (official|notification)/i.test(raw) && !/(?:rs\.?|inr|₹)\s*[\d,]/i.test(raw)) {
+    return null;
+  }
   const unitText = /\b(per\s*month|p\.?\s*m\.?|monthly|\/\s*month)\b/i.test(raw)
     ? "MONTH"
     : /\b(per\s*annum|per\s*year|p\.?\s*a\.?|yearly|annually|\/\s*year)\b/i.test(raw)
@@ -191,6 +193,58 @@ function parseJobBaseSalary(salary) {
   return null;
 }
 
+const GOOGLE_CREDENTIAL_CATEGORIES = [
+  "high school",
+  "associate degree",
+  "bachelor degree",
+  "professional certificate",
+  "postgraduate degree",
+];
+
+/** Map Indian qual text → Google credentialCategory (or omit). */
+function mapEducationRequirements(qualification) {
+  const raw = String(qualification ?? "").replace(/\s+/g, " ").trim();
+  if (!raw || raw === "—" || /^see\b/i.test(raw)) return null;
+  const lower = raw.toLowerCase();
+  if (
+    /\b(no (educational )?requirement|not required|any (person|candidate)|8th\s*pass|literate only)\b/i.test(
+      lower
+    )
+  ) {
+    return "no requirements";
+  }
+  const categories = new Set();
+  const isPostgrad =
+    /\b(ph\.?\s*d|doctorate|post[\s-]?grad(?:uate)?|p\.?\s*g\.?\b|masters?|m\.?\s*a\.?\b|m\.?\s*sc|m\.?\s*com|m\.?\s*tech|m\.?\s*e\.?\b|mba|llm|md\b)\b/i.test(
+      lower
+    );
+  const isBachelor =
+    /\b(bachelor|b\.?\s*a\.?\b|b\.?\s*sc|b\.?\s*com|b\.?\s*tech|b\.?\s*e\.?\b|b\.?\s*pharm|llb|mbbs|ug\b)\b/i.test(
+      lower
+    ) ||
+    (/\b(graduate|graduation|degree)\b/i.test(lower) && !isPostgrad);
+  if (isPostgrad) categories.add("postgraduate degree");
+  if (isBachelor) categories.add("bachelor degree");
+  if (/\b(diploma|polytechnic|iti|certificate|ncvt|apprentice)\b/i.test(lower)) {
+    categories.add("professional certificate");
+  }
+  if (/\b(associate)\b/i.test(lower)) categories.add("associate degree");
+  if (
+    /\b(10th|12th|matric|hsc|ssc|intermediate|\+2|senior secondary|higher secondary|class\s*(?:10|12)|xth|xiith)\b/i.test(
+      lower
+    )
+  ) {
+    categories.add("high school");
+  }
+  if (categories.size === 0) return null;
+  const ordered = GOOGLE_CREDENTIAL_CATEGORIES.filter((c) => categories.has(c));
+  const credentials = ordered.map((credentialCategory) => ({
+    "@type": "EducationalOccupationalCredential",
+    credentialCategory,
+  }));
+  return credentials.length === 1 ? credentials[0] : credentials;
+}
+
 function buildJobPostingJsonLd(job, canonical) {
   const address = resolveJobPostalAddress(job);
   const slug = job.slug || job.id;
@@ -213,10 +267,34 @@ function buildJobPostingJsonLd(job, canonical) {
   };
   const detail = job.detail && typeof job.detail === "object" ? job.detail : {};
   const street = String(
-    job.streetAddress || job.street_address || detail.streetAddress || detail.street_address || detail.address || ""
+    job.streetAddress ||
+      job.street_address ||
+      detail.streetAddress ||
+      detail.street_address ||
+      detail.office_address ||
+      detail.address ||
+      detail.hq_address ||
+      ""
   ).trim();
-  const pin = String(job.postalCode || job.postal_code || job.pincode || detail.postalCode || detail.pincode || "").trim();
-  if (street.length >= 5 && street.length <= 200) postalAddress.streetAddress = street;
+  let pin = String(
+    job.postalCode || job.postal_code || job.pincode || detail.postalCode || detail.pincode || detail.pin || ""
+  ).trim();
+  if (!/^\d{6}$/.test(pin)) {
+    const pinMatch = `${street} ${pin}`.match(/\b(\d{6})\b/);
+    if (pinMatch) pin = pinMatch[1];
+  }
+  const hasStreetHint =
+    /\b(road|rd\.?|street|st\.?|lane|marg|nagar|complex|bhawan|bhavan|sector|plot|floor|building|office|hq|headquarters|block|hill)\b/i.test(
+      street
+    );
+  const looksLikeStreet =
+    street.length >= 8 &&
+    street.length <= 200 &&
+    !/^(all[\s-]?india|india|nationwide|pan[\s-]?india)$/i.test(street) &&
+    (!/^[A-Za-z\s]+$/.test(street) || hasStreetHint);
+  if (street && (looksLikeStreet || hasStreetHint) && street.length >= 5) {
+    postalAddress.streetAddress = street.replace(/\b\d{6}\b/, "").replace(/[,\s]+$/g, "").trim() || street;
+  }
   if (/^\d{6}$/.test(pin)) postalAddress.postalCode = pin;
 
   const jsonLd = {
@@ -245,10 +323,8 @@ function buildJobPostingJsonLd(job, canonical) {
   if (Number(job.vacancies) > 0) jsonLd.totalJobOpenings = Number(job.vacancies);
   const baseSalary = parseJobBaseSalary(job.salary);
   if (baseSalary) jsonLd.baseSalary = baseSalary;
-  const qual = String(job.qualification || job.qual || "").trim();
-  if (qual && qual !== "—" && qual.toLowerCase() !== "see notification") {
-    jsonLd.educationRequirements = qual;
-  }
+  const education = mapEducationRequirements(job.qualification || job.qual);
+  if (education) jsonLd.educationRequirements = education;
   return jsonLd;
 }
 

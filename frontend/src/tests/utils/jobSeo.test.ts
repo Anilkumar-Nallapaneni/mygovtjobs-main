@@ -87,9 +87,17 @@ describe("parseJobBaseSalary", () => {
     });
   });
 
-  it("skips pay-matrix / free-text salaries", () => {
+  it("skips free-text salaries without INR figures", () => {
     expect(parseJobBaseSalary("Level-10 in the Pay Matrix")).toBeNull();
     expect(parseJobBaseSalary("Not specified in the notification")).toBeNull();
+  });
+
+  it("parses pay-matrix strings that include INR ranges", () => {
+    expect(parseJobBaseSalary("Pay Matrix Level-6 (Rs. 35400 - 112400)")).toEqual({
+      "@type": "MonetaryAmount",
+      currency: "INR",
+      value: { "@type": "QuantitativeValue", minValue: 35400, maxValue: 112400, unitText: "MONTH" },
+    });
   });
 });
 
@@ -194,12 +202,52 @@ describe("buildJobPostingJsonLd", () => {
       name: "Live Govt Jobs",
       value: "job-42",
     });
-    expect(jsonLd?.educationRequirements).toBe("Graduate");
+    expect(jsonLd?.educationRequirements).toEqual({
+      "@type": "EducationalOccupationalCredential",
+      credentialCategory: "bachelor degree",
+    });
     expect(jsonLd?.baseSalary).toEqual({
       "@type": "MonetaryAmount",
       currency: "INR",
       value: { "@type": "QuantitativeValue", value: 25000, unitText: "MONTH" },
     });
+  });
+
+  it("maps 10th and PG qualifications to Google credentialCategory enums", () => {
+    const tenth = buildJobPostingJsonLd({
+      id: "e1",
+      slug: "tenth",
+      title: "Peon Recruitment",
+      qual: "10th Pass",
+      published_at: "2026-01-01",
+    });
+    expect(tenth?.educationRequirements).toEqual({
+      "@type": "EducationalOccupationalCredential",
+      credentialCategory: "high school",
+    });
+
+    const pg = buildJobPostingJsonLd({
+      id: "e2",
+      slug: "pg",
+      title: "Officer Recruitment",
+      qual: "Post Graduate / MBA",
+      published_at: "2026-01-01",
+    });
+    expect(pg?.educationRequirements).toEqual({
+      "@type": "EducationalOccupationalCredential",
+      credentialCategory: "postgraduate degree",
+    });
+  });
+
+  it("omits educationRequirements when qualification cannot be mapped", () => {
+    const jsonLd = buildJobPostingJsonLd({
+      id: "e3",
+      slug: "unknown-qual",
+      title: "Specialist",
+      qual: "As per notification annexure",
+      published_at: "2026-01-01",
+    });
+    expect(jsonLd?.educationRequirements).toBeUndefined();
   });
 
   it("includes streetAddress and postalCode only when real values exist", () => {
@@ -215,5 +263,30 @@ describe("buildJobPostingJsonLd", () => {
     const address = (jsonLd?.jobLocation as { address: Record<string, string> }).address;
     expect(address.streetAddress).toBe("CGO Complex, Lodhi Road");
     expect(address.postalCode).toBe("110003");
+  });
+
+  it("extracts PIN from address text and skips bare city as streetAddress", () => {
+    const withPin = buildJobPostingJsonLd({
+      id: "addr-2",
+      slug: "pin-in-address",
+      title: "HQ Posting",
+      state: "Delhi",
+      streetAddress: "North Block, Raisina Hill, New Delhi 110001",
+      published_at: "2026-01-01",
+    });
+    const a1 = (withPin?.jobLocation as { address: Record<string, string> }).address;
+    expect(a1.postalCode).toBe("110001");
+    expect(a1.streetAddress).toMatch(/North Block/i);
+
+    const cityOnly = buildJobPostingJsonLd({
+      id: "addr-3",
+      slug: "city-only",
+      title: "City Job",
+      state: "Delhi",
+      streetAddress: "New Delhi",
+      published_at: "2026-01-01",
+    });
+    const a2 = (cityOnly?.jobLocation as { address: Record<string, string> }).address;
+    expect(a2.streetAddress).toBeUndefined();
   });
 });

@@ -148,12 +148,15 @@ function parseMoneyToken(raw: string): number | undefined {
 
 /**
  * Parse Indian salary strings into schema.org MonetaryAmount when confident.
- * Returns null for pay-matrix / free-text that is not a clear INR figure.
+ * Accepts ranges even when "pay matrix" / "level" text is present, as long as
+ * clear INR figures exist. Returns null when no parseable amount is found.
  */
 export function parseJobBaseSalary(salary: unknown): Record<string, unknown> | null {
   const raw = String(salary ?? "").replace(/\s+/g, " ").trim();
-  if (!raw || raw === "—" || raw.length > 120) return null;
-  if (/not specified|see (official|notification)|pay matrix|level[- ]?\d/i.test(raw)) return null;
+  if (!raw || raw === "—" || raw.length > 160) return null;
+  if (/not specified|see (official|notification)/i.test(raw) && !/(?:rs\.?|inr|₹)\s*[\d,]/i.test(raw)) {
+    return null;
+  }
 
   const unitText = /\b(per\s*month|p\.?\s*m\.?|monthly|\/\s*month)\b/i.test(raw)
     ? "MONTH"
@@ -191,6 +194,76 @@ export function parseJobBaseSalary(salary: unknown): Record<string, unknown> | n
   return null;
 }
 
+const GOOGLE_CREDENTIAL_CATEGORIES = [
+  "high school",
+  "associate degree",
+  "bachelor degree",
+  "professional certificate",
+  "postgraduate degree",
+] as const;
+
+type GoogleCredentialCategory = (typeof GOOGLE_CREDENTIAL_CATEGORIES)[number];
+
+/**
+ * Map Indian govt qualification text → Google JobPosting educationRequirements.
+ * Free-form strings like "Graduate" trigger GSC "Invalid enum value"; emit
+ * EducationalOccupationalCredential with an allowed credentialCategory, or
+ * "no requirements", or omit (null) when we cannot map confidently.
+ */
+export function mapEducationRequirements(
+  qualification: unknown
+): Record<string, unknown> | Record<string, unknown>[] | "no requirements" | null {
+  const raw = String(qualification ?? "").replace(/\s+/g, " ").trim();
+  if (!raw || raw === "—" || /^see\b/i.test(raw)) return null;
+
+  const lower = raw.toLowerCase();
+  if (
+    /\b(no (educational )?requirement|not required|any (person|candidate)|8th\s*pass|literate only)\b/i.test(
+      lower
+    )
+  ) {
+    return "no requirements";
+  }
+
+  const categories = new Set<GoogleCredentialCategory>();
+
+  const isPostgrad =
+    /\b(ph\.?\s*d|doctorate|post[\s-]?grad(?:uate)?|p\.?\s*g\.?\b|masters?|m\.?\s*a\.?\b|m\.?\s*sc|m\.?\s*com|m\.?\s*tech|m\.?\s*e\.?\b|mba|llm|md\b)\b/i.test(
+      lower
+    );
+  // Avoid matching the "graduate" inside "post graduate"
+  const isBachelor =
+    /\b(bachelor|b\.?\s*a\.?\b|b\.?\s*sc|b\.?\s*com|b\.?\s*tech|b\.?\s*e\.?\b|b\.?\s*pharm|llb|mbbs|ug\b)\b/i.test(
+      lower
+    ) ||
+    (/\b(graduate|graduation|degree)\b/i.test(lower) && !isPostgrad);
+
+  if (isPostgrad) categories.add("postgraduate degree");
+  if (isBachelor) categories.add("bachelor degree");
+  if (/\b(diploma|polytechnic|iti|certificate|ncvt|apprentice)\b/i.test(lower)) {
+    categories.add("professional certificate");
+  }
+  if (/\b(associate)\b/i.test(lower)) {
+    categories.add("associate degree");
+  }
+  if (
+    /\b(10th|12th|matric|hsc|ssc|intermediate|\+2|senior secondary|higher secondary|class\s*(?:10|12)|xth|xiith)\b/i.test(
+      lower
+    )
+  ) {
+    categories.add("high school");
+  }
+
+  if (categories.size === 0) return null;
+
+  const ordered = GOOGLE_CREDENTIAL_CATEGORIES.filter((c) => categories.has(c));
+  const credentials = ordered.map((credentialCategory) => ({
+    "@type": "EducationalOccupationalCredential",
+    credentialCategory,
+  }));
+  return credentials.length === 1 ? credentials[0] : credentials;
+}
+
 /** Only emit street/PIN when the job record actually has them — never invent. */
 function resolveOptionalStreetFields(job: JobRecord): {
   streetAddress?: string;
@@ -199,15 +272,35 @@ function resolveOptionalStreetFields(job: JobRecord): {
   const streetAddress = String(
     job.streetAddress ||
       job.street_address ||
-      detailString(job, ["streetAddress", "street_address", "address", "office_address"])
+      detailString(job, ["streetAddress", "street_address", "office_address", "address", "hq_address"])
   ).trim();
-  const postalCode = String(
-    job.postalCode || job.postal_code || job.pincode || detailString(job, ["postalCode", "postal_code", "pincode", "pin"])
+  let postalCode = String(
+    job.postalCode ||
+      job.postal_code ||
+      job.pincode ||
+      detailString(job, ["postalCode", "postal_code", "pincode", "pin"])
   ).trim();
 
+  // Pull a 6-digit PIN out of a longer address string when present.
+  if (!/^\d{6}$/.test(postalCode)) {
+    const pinMatch = `${streetAddress} ${postalCode}`.match(/\b(\d{6})\b/);
+    if (pinMatch) postalCode = pinMatch[1];
+  }
+
   const out: { streetAddress?: string; postalCode?: string } = {};
-  if (streetAddress && streetAddress.length >= 5 && streetAddress.length <= 200) {
-    out.streetAddress = streetAddress;
+  const hasStreetHint =
+    /\b(road|rd\.?|street|st\.?|lane|marg|nagar|complex|bhawan|bhavan|sector|plot|floor|building|office|hq|headquarters|block|hill)\b/i.test(
+      streetAddress
+    );
+  const looksLikeStreet =
+    streetAddress.length >= 8 &&
+    streetAddress.length <= 200 &&
+    !NATIONWIDE_RE.test(streetAddress) &&
+    (!/^[A-Za-z\s]+$/.test(streetAddress) || hasStreetHint);
+
+  if (streetAddress && (looksLikeStreet || hasStreetHint) && streetAddress.length >= 5) {
+    const cleaned = streetAddress.replace(/\b\d{6}\b/, "").replace(/[,\s]+$/g, "").trim();
+    out.streetAddress = cleaned || streetAddress;
   }
   if (/^\d{6}$/.test(postalCode)) out.postalCode = postalCode;
   return out;
@@ -272,10 +365,8 @@ export function buildJobPostingJsonLd(job: JobRecord): Record<string, unknown> |
   const baseSalary = parseJobBaseSalary(job.salary);
   if (baseSalary) posting.baseSalary = baseSalary;
 
-  const qual = String(job.qual || job.qualification || "").trim();
-  if (qual && qual !== "—" && qual.toLowerCase() !== "see notification") {
-    posting.educationRequirements = qual;
-  }
+  const education = mapEducationRequirements(job.qual || job.qualification);
+  if (education) posting.educationRequirements = education;
 
   return posting;
 }
