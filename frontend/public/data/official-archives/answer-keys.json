@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-22T00:39:16.103Z",
+  "generatedAt": "2026-07-22T04:01:24.255Z",
   "count": 38,
   "items": [
     {
@@ -16,10 +16,7 @@
       "dept": "Food Safety and Standards Authority (FSSAI)",
       "state": "All India",
       "category": "health",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
+      "fetchMethod": "live-jobs-supplement"
     },
     {
       "id": "65b953b91c3e8ca2",
@@ -33,10 +30,7 @@
       "dept": "CBSE — CTET",
       "state": "All India",
       "category": "teaching",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
+      "fetchMethod": "live-jobs-supplement"
     },
     {
       "id": "46991f7a78b8ef78",
@@ -50,12 +44,9 @@
       "sourceId": "psc-jk",
       "sourceName": "Jammu & Kashmir PSC (JKPSC)",
       "dept": "Jammu & Kashmir PSC (JKPSC)",
-      "state": "Jammu & Kashmir",
+      "state": "All India",
       "category": "state",
-      "stateIds": [
-        "jk"
-      ],
-      "fetchMethod": "html"
+      "fetchMethod": "live-jobs-supplement"
     },
     {
       "id": "46c0fc4afe374382",
@@ -67,12 +58,9 @@
       "sourceId": "psc-jk",
       "sourceName": "Jammu & Kashmir PSC (JKPSC)",
       "dept": "Jammu & Kashmir PSC (JKPSC)",
-      "state": "Jammu & Kashmir",
+      "state": "All India",
       "category": "state",
-      "stateIds": [
-        "jk"
-      ],
-      "fetchMethod": "html"
+      "fetchMethod": "live-jobs-supplement"
     },
     {
       "id": "89d50f8878d2bd55",
@@ -84,12 +72,9 @@
       "sourceId": "psc-jk",
       "sourceName": "Jammu & Kashmir PSC (JKPSC)",
       "dept": "Jammu & Kashmir PSC (JKPSC)",
-      "state": "Jammu & Kashmir",
+      "state": "All India",
       "category": "state",
-      "stateIds": [
-        "jk"
-      ],
-      "fetchMethod": "html"
+      "fetchMethod": "live-jobs-supplement"
     },
     {
       "id": "37c45556314fa75d",
@@ -101,12 +86,9 @@
       "sourceId": "psc-kl",
       "sourceName": "Kerala PSC",
       "dept": "Kerala PSC",
-      "state": "Kerala",
+      "state": "All India",
       "category": "state",
-      "stateIds": [
-        "kl"
-      ],
-      "fetchMethod": "html"
+      "fetchMethod": "live-jobs-supplement"
     },
     {
       "id": "274a1d8e868c2d27",
@@ -118,12 +100,9 @@
       "sourceId": "psc-kl",
       "sourceName": "Kerala PSC",
       "dept": "Kerala PSC",
-      "state": "Kerala",
+      "state": "All India",
       "category": "state",
-      "stateIds": [
-        "kl"
-      ],
-      "fetchMethod": "html"
+      "fetchMethod": "live-jobs-supplement"
     },
     {
       "id": "b0408e9076d75cad",
@@ -135,12 +114,9 @@
       "sourceId": "psc-kl",
       "sourceName": "Kerala PSC",
       "dept": "Kerala PSC",
-      "state": "Kerala",
+      "state": "All India",
       "category": "state",
-      "stateIds": [
-        "kl"
-      ],
-      "fetchMethod": "html"
+      "fetchMethod": "live-jobs-supplement"
     },
     {
       "id": "bfc1c395481cde09",
@@ -152,12 +128,9 @@
       "sourceId": "psc-kl",
       "sourceName": "Kerala PSC",
       "dept": "Kerala PSC",
-      "state": "Kerala",
+      "state": "All India",
       "category": "state",
-      "stateIds": [
-        "kl"
-      ],
-      "fetchMethod": "html"
+      "fetchMethod": "live-jobs-supplement"
     },
     {
       "id": "b425e02f785eba75",
@@ -171,12 +144,9 @@
       "sourceId": "psc-mp",
       "sourceName": "Madhya Pradesh PSC (MPPSC)",
       "dept": "Madhya Pradesh PSC (MPPSC)",
-      "state": "Madhya Pradesh",
+      "state": "All India",
       "category": "state",
-      "stateIds": [
-        "mp"
-      ],
-      "fetchMethod": "html"
+      "fetchMethod": "live-jobs-supplement"
     },
     {
       "id": "cc09d44023c47d00",
@@ -190,12 +160,9 @@
       "sourceId": "psc-mn",
       "sourceName": "Manipur PSC",
       "dept": "Manipur PSC",
-      "state": "NE States",
+      "state": "All India",
       "category": "state",
-      "stateIds": [
-        "ne"
-      ],
-      "fetchMethod": "html"
+      "fetchMethod": "live-jobs-supplement"
     },
     {
       "id": "30504e63b8603f42",

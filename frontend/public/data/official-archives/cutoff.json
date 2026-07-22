@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-22T00:39:16.103Z",
+  "generatedAt": "2026-07-22T04:01:24.255Z",
   "count": 112,
   "items": [
     {
@@ -16,10 +16,7 @@
       "dept": "Railway Recruitment Board (RRB) — Ajmer",
       "state": "All India",
       "category": "railways",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
+      "fetchMethod": "live-jobs-supplement"
     },
     {
       "id": "c70f8b20c685365f",
@@ -33,10 +30,7 @@
       "dept": "Railway Recruitment Board (RRB) — Bhubaneswar",
       "state": "All India",
       "category": "railways",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
+      "fetchMethod": "live-jobs-supplement"
     },
     {
       "id": "a145835aa3e3662e",
@@ -50,10 +44,7 @@
       "dept": "Railway Recruitment Board (RRB) — Bhubaneswar",
       "state": "All India",
       "category": "railways",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
+      "fetchMethod": "live-jobs-supplement"
     },
     {
       "id": "42e4535f46025e24",
@@ -67,10 +58,7 @@
       "dept": "Railway Recruitment Board (RRB) — Bhubaneswar",
       "state": "All India",
       "category": "railways",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
+      "fetchMethod": "live-jobs-supplement"
     },
     {
       "id": "9542dbf7478f976f",
@@ -84,10 +72,7 @@
       "dept": "Railway Recruitment Board (RRB) — Bhubaneswar",
       "state": "All India",
       "category": "railways",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
+      "fetchMethod": "live-jobs-supplement"
     },
     {
       "id": "4630c5cfdb60d443",
@@ -101,10 +86,7 @@
       "dept": "Railway Recruitment Board (RRB) — Bhubaneswar",
       "state": "All India",
       "category": "railways",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
+      "fetchMethod": "live-jobs-supplement"
     },
     {
       "id": "0d099f682edb16f0",
@@ -118,10 +100,7 @@
       "dept": "Railway Recruitment Board (RRB) — Bhubaneswar",
       "state": "All India",
       "category": "railways",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
+      "fetchMethod": "live-jobs-supplement"
     },
     {
       "id": "8a44e75373a031ad",
@@ -135,10 +114,7 @@
       "dept": "Railway Recruitment Board (RRB) — Bhubaneswar",
       "state": "All India",
       "category": "railways",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
+      "fetchMethod": "live-jobs-supplement"
     },
     {
       "id": "0dcfb39857e6ff5b",
@@ -152,10 +128,7 @@
       "dept": "Railway Recruitment Board (RRB) — Bhubaneswar",
       "state": "All India",
       "category": "railways",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
+      "fetchMethod": "live-jobs-supplement"
     },
     {
       "id": "f79eeab230ea33ee",
@@ -171,10 +144,7 @@
       "dept": "Railway Recruitment Board (RRB) — Guwahati",
       "state": "All India",
       "category": "railways",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
+      "fetchMethod": "live-jobs-supplement"
     },
     {
       "id": "0b0e155c2600adec",
@@ -190,10 +160,7 @@
       "dept": "Railway Recruitment Board (RRB) — Guwahati",
       "state": "All India",
       "category": "railways",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
+      "fetchMethod": "live-jobs-supplement"
     },
     {
       "id": "3e31cb0d1211e99e",
@@ -209,10 +176,7 @@
       "dept": "Railway Recruitment Board (RRB) — Guwahati",
       "state": "All India",
       "category": "railways",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
+      "fetchMethod": "live-jobs-supplement"
     },
     {
       "id": "bfafb7f135d523b5",
@@ -228,10 +192,7 @@
       "dept": "Railway Recruitment Board (RRB) — Guwahati",
       "state": "All India",
       "category": "railways",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
+      "fetchMethod": "live-jobs-supplement"
     },
     {
       "id": "950adc952395e3bb",
@@ -247,10 +208,7 @@
       "dept": "Food Safety and Standards Authority (FSSAI)",
       "state": "All India",
       "category": "health",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
+      "fetchMethod": "live-jobs-supplement"
     },
     {
       "id": "c9189f55ccd79cdc",
@@ -262,12 +220,9 @@
       "sourceId": "psc-mn",
       "sourceName": "Manipur PSC",
       "dept": "Manipur PSC",
-      "state": "NE States",
+      "state": "All India",
       "category": "state",
-      "stateIds": [
-        "ne"
-      ],
-      "fetchMethod": "html"
+      "fetchMethod": "live-jobs-supplement"
     },
     {
       "id": "12f8dc6d2e647164",

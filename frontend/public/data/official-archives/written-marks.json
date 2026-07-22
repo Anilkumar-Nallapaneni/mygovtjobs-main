@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-22T00:39:16.103Z",
+  "generatedAt": "2026-07-22T04:01:24.255Z",
   "count": 26,
   "items": [
     {
@@ -14,10 +14,7 @@
       "dept": "Railway Recruitment Board (RRB) — Bhubaneswar",
       "state": "All India",
       "category": "railways",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
+      "fetchMethod": "live-jobs-supplement"
     },
     {
       "id": "40ed83132aef7de3",
@@ -31,12 +28,9 @@
       "sourceId": "psc-mn",
       "sourceName": "Manipur PSC",
       "dept": "Manipur PSC",
-      "state": "NE States",
+      "state": "All India",
       "category": "state",
-      "stateIds": [
-        "ne"
-      ],
-      "fetchMethod": "html"
+      "fetchMethod": "live-jobs-supplement"
     },
     {
       "id": "8aec6bdf579bbad2",

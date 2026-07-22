@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-22T00:39:16.103Z",
+  "generatedAt": "2026-07-22T04:01:24.255Z",
   "count": 26,
   "items": [
     {
@@ -14,10 +14,7 @@
       "dept": "CBSE — CTET",
       "state": "All India",
       "category": "teaching",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
+      "fetchMethod": "live-jobs-supplement"
     },
     {
       "id": "9648f37fbcc24a63",
@@ -31,10 +28,7 @@
       "dept": "CBSE — CTET",
       "state": "All India",
       "category": "teaching",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
+      "fetchMethod": "live-jobs-supplement"
     },
     {
       "id": "37bb004e7173a041",
@@ -48,10 +42,7 @@
       "dept": "CBSE — CTET",
       "state": "All India",
       "category": "teaching",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
+      "fetchMethod": "live-jobs-supplement"
     },
     {
       "id": "a2a20f52a44526a3",
@@ -65,10 +56,7 @@
       "dept": "CBSE — CTET",
       "state": "All India",
       "category": "teaching",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
+      "fetchMethod": "live-jobs-supplement"
     },
     {
       "id": "42e01381e3f78247",
@@ -82,10 +70,7 @@
       "dept": "CBSE — CTET",
       "state": "All India",
       "category": "teaching",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
+      "fetchMethod": "live-jobs-supplement"
     },
     {
       "id": "6f9005cc94a30f46",
@@ -99,10 +84,7 @@
       "dept": "CBSE — CTET",
       "state": "All India",
       "category": "teaching",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
+      "fetchMethod": "live-jobs-supplement"
     },
     {
       "id": "0f39f3826e2d3288",
@@ -116,10 +98,7 @@
       "dept": "CBSE — CTET",
       "state": "All India",
       "category": "teaching",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
+      "fetchMethod": "live-jobs-supplement"
     },
     {
       "id": "df287d83d780ca36",
@@ -133,10 +112,7 @@
       "dept": "CBSE — CTET",
       "state": "All India",
       "category": "teaching",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
+      "fetchMethod": "live-jobs-supplement"
     },
     {
       "id": "fc75223f98370f2a",
@@ -150,10 +126,7 @@
       "dept": "CBSE — CTET",
       "state": "All India",
       "category": "teaching",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
+      "fetchMethod": "live-jobs-supplement"
     },
     {
       "id": "3713cdf6f37525b7",
@@ -167,10 +140,7 @@
       "dept": "CBSE — CTET",
       "state": "All India",
       "category": "teaching",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
+      "fetchMethod": "live-jobs-supplement"
     },
     {
       "id": "7cbab592497df9bc",
@@ -184,10 +154,7 @@
       "dept": "CBSE — CTET",
       "state": "All India",
       "category": "teaching",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
+      "fetchMethod": "live-jobs-supplement"
     },
     {
       "id": "e89d8cfee71410b4",
@@ -199,12 +166,9 @@
       "sourceId": "psc-kl",
       "sourceName": "Kerala PSC",
       "dept": "Kerala PSC",
-      "state": "Kerala",
+      "state": "All India",
       "category": "state",
-      "stateIds": [
-        "kl"
-      ],
-      "fetchMethod": "html"
+      "fetchMethod": "live-jobs-supplement"
     },
     {
       "id": "b2abd6cc6348e1c6",
@@ -216,12 +180,9 @@
       "sourceId": "psc-kl",
       "sourceName": "Kerala PSC",
       "dept": "Kerala PSC",
-      "state": "Kerala",
+      "state": "All India",
       "category": "state",
-      "stateIds": [
-        "kl"
-      ],
-      "fetchMethod": "html"
+      "fetchMethod": "live-jobs-supplement"
     },
     {
       "id": "c4f57dea207a1fb4",
@@ -233,12 +194,9 @@
       "sourceId": "psc-kl",
       "sourceName": "Kerala PSC",
       "dept": "Kerala PSC",
-      "state": "Kerala",
+      "state": "All India",
       "category": "state",
-      "stateIds": [
-        "kl"
-      ],
-      "fetchMethod": "html"
+      "fetchMethod": "live-jobs-supplement"
     },
     {
       "id": "088efab9a9c009c1",
@@ -250,12 +208,9 @@
       "sourceId": "psc-mp",
       "sourceName": "Madhya Pradesh PSC (MPPSC)",
       "dept": "Madhya Pradesh PSC (MPPSC)",
-      "state": "Madhya Pradesh",
+      "state": "All India",
       "category": "state",
-      "stateIds": [
-        "mp"
-      ],
-      "fetchMethod": "html"
+      "fetchMethod": "live-jobs-supplement"
     },
     {
       "id": "288eb14d7e699a2a",
@@ -267,12 +222,9 @@
       "sourceId": "psc-od",
       "sourceName": "Odisha PSC (OPSC)",
       "dept": "Odisha PSC (OPSC)",
-      "state": "Odisha",
+      "state": "All India",
       "category": "state",
-      "stateIds": [
-        "od"
-      ],
-      "fetchMethod": "html"
+      "fetchMethod": "live-jobs-supplement"
     },
     {
       "id": "1f26c2bbb725585e",
@@ -284,12 +236,9 @@
       "sourceId": "psc-mn",
       "sourceName": "Manipur PSC",
       "dept": "Manipur PSC",
-      "state": "NE States",
+      "state": "All India",
       "category": "state",
-      "stateIds": [
-        "ne"
-      ],
-      "fetchMethod": "html"
+      "fetchMethod": "live-jobs-supplement"
     },
     {
       "id": "ba6df61f0df29b66",

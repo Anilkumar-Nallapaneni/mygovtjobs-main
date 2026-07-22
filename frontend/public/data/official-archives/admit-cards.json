@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-22T00:39:16.103Z",
+  "generatedAt": "2026-07-22T04:01:24.255Z",
   "count": 120,
   "items": [
     {
@@ -50,10 +50,261 @@
       "dept": "Railway Recruitment Board (RRB) — Guwahati",
       "state": "All India",
       "category": "railways",
-      "stateIds": [
-        "all"
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "22143ab863af0a09",
+      "title": "26/05/2026 Download Admit Card for SAC Departmental Examination, 2026",
+      "link": "http://jkpsc.nic.in/PDF/AC_SAC.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "http://jkpsc.nic.in/PDF/AC_SAC.pdf"
       ],
-      "fetchMethod": "html"
+      "sourceId": "psc-jk",
+      "sourceName": "Jammu & Kashmir PSC (JKPSC)",
+      "dept": "Jammu & Kashmir PSC (JKPSC)",
+      "state": "All India",
+      "category": "state",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "b101927674f4f0fa",
+      "title": "26/05/2026 Download Admit Card for Foundation Course Departmental Examination, 2026 (Rollno 01 to 100)",
+      "link": "http://jkpsc.nic.in/PDF/AC_FC_1_100.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "http://jkpsc.nic.in/PDF/AC_FC_1_100.pdf"
+      ],
+      "sourceId": "psc-jk",
+      "sourceName": "Jammu & Kashmir PSC (JKPSC)",
+      "dept": "Jammu & Kashmir PSC (JKPSC)",
+      "state": "All India",
+      "category": "state",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "29ca1b7dee287a0d",
+      "title": "26/05/2026 Download Admit Card for Foundation Course Departmental Examination, 2026 (Rollno 101 to 176)",
+      "link": "http://jkpsc.nic.in/PDF/AC_FC_101_176.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "http://jkpsc.nic.in/PDF/AC_FC_101_176.pdf"
+      ],
+      "sourceId": "psc-jk",
+      "sourceName": "Jammu & Kashmir PSC (JKPSC)",
+      "dept": "Jammu & Kashmir PSC (JKPSC)",
+      "state": "All India",
+      "category": "state",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "8a9ba85648648a8d",
+      "title": "08/07/2026 Download Admit Card for Prosecuting Officer (G)(Mains) Examination, 2025",
+      "link": "http://jkpsc.nic.in/result/POMAINS_ADMITCARD_2025.html",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-jk",
+      "sourceName": "Jammu & Kashmir PSC (JKPSC)",
+      "dept": "Jammu & Kashmir PSC (JKPSC)",
+      "state": "All India",
+      "category": "state",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "f4dc78c867d60ac9",
+      "title": "11/06/2026 Download Marks Card for Civil Services (Judicial) Competitive Examination, 2025",
+      "link": "http://jkpsc.nic.in/RESULT/KCSJ_MARKS_CARD_2025.HTML",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-jk",
+      "sourceName": "Jammu & Kashmir PSC (JKPSC)",
+      "dept": "Jammu & Kashmir PSC (JKPSC)",
+      "state": "All India",
+      "category": "state",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "5d904412163e6c44",
+      "title": "04/06/2026 Download Marks Card for Combined Competitive Examination, 2024",
+      "link": "http://jkpsc.nic.in/result/KASM_MARKS_CARD_2025.html",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-jk",
+      "sourceName": "Jammu & Kashmir PSC (JKPSC)",
+      "dept": "Jammu & Kashmir PSC (JKPSC)",
+      "state": "All India",
+      "category": "state",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "ec303e191a0d4b56",
+      "title": "06/05/2026 Download Marks Card for Assistant Director (ES) Competitive Examination- 2023/24",
+      "link": "http://jkpsc.nic.in/resulT/MAARKSCARD_ADSTS_23_24.html",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-jk",
+      "sourceName": "Jammu & Kashmir PSC (JKPSC)",
+      "dept": "Jammu & Kashmir PSC (JKPSC)",
+      "state": "All India",
+      "category": "state",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "4299efa0380c1d11",
+      "title": "16/06/2026 Download Admit Card for JK Combined Competitive (Mains) Examination, 2025",
+      "link": "http://jkpsc.nic.in/result/KASMAINS_ADMITCARD_2025.html",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-jk",
+      "sourceName": "Jammu & Kashmir PSC (JKPSC)",
+      "dept": "Jammu & Kashmir PSC (JKPSC)",
+      "state": "All India",
+      "category": "state",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "01dd1a07ccadb21c",
+      "title": "26/05/2026 Download Admit Card for SATC Departmental Examination, 2026",
+      "link": "http://jkpsc.nic.in/RESULT/AC_SATC_2026.html",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-jk",
+      "sourceName": "Jammu & Kashmir PSC (JKPSC)",
+      "dept": "Jammu & Kashmir PSC (JKPSC)",
+      "state": "All India",
+      "category": "state",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "2cb6ef6de1513685",
+      "title": "Under Secretary (Law) and Law Officer Recruitment – Examination Schedule Updated: 08/05/2026",
+      "link": "https://mpscmanipur.gov.in/files/Notification_Under_Secy_Law_Officer_Admit_card.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://mpscmanipur.gov.in/files/Notification_Under_Secy_Law_Officer_Admit_card.pdf"
+      ],
+      "sourceId": "psc-mn",
+      "sourceName": "Manipur PSC",
+      "dept": "Manipur PSC",
+      "state": "All India",
+      "category": "state",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "686e8d5b26f137a9",
+      "title": "Planning Department Research Assistant Recruitment – Examination Schedule Updated: 08/05/2026",
+      "link": "https://mpscmanipur.gov.in/files/Research_Asst_notification_Admit_card.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://mpscmanipur.gov.in/files/Research_Asst_notification_Admit_card.pdf"
+      ],
+      "sourceId": "psc-mn",
+      "sourceName": "Manipur PSC",
+      "dept": "Manipur PSC",
+      "state": "All India",
+      "category": "state",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "56de02281a84cf5b",
+      "title": "Admit Cards",
+      "link": "https://empsconline.gov.in/downloadadmitcardv2.aspx",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-mn",
+      "sourceName": "Manipur PSC",
+      "dept": "Manipur PSC",
+      "state": "All India",
+      "category": "state",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "20b56c13b7d29dbc",
+      "title": "उत्तर प्रदेश होमगार्ड्स के पदों पर एनरोलमेंट-2025 जनपद-सहारनपुर, शामली, मुजफ्फरनगर, मेरठ, गाजियाबाद, बुलन्दशहर, हापुड़, गौतमबुद्धनगर व बागपत में निर्धारित अभिलेखों की संवीक्षा एवं शारीरिक मानक परीक्षा (डीवी/पीएसटी) की तिथियों (दिनांक 04-08-2026, 05-08-2026 व 06-08-2026) में परिवर्तन हेतु महत्वपूर्ण सूचना एवं संशोधित प्रवेश पत्र डाउनलोड किये जाने विषयक ।",
+      "link": "https://uppbpb.gov.in/FilesUploaded/Notice/img20260713_170704299779d63a-5d71-4b27-8b1a-cdf96f7616ff.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://uppbpb.gov.in/FilesUploaded/Notice/img20260713_170704299779d63a-5d71-4b27-8b1a-cdf96f7616ff.pdf"
+      ],
+      "sourceId": "police-up",
+      "sourceName": "UP Police Recruitment Board (UPPRPB)",
+      "dept": "UP Police Recruitment Board (UPPRPB)",
+      "state": "All India",
+      "category": "police",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "8c7104cb7aea4338",
+      "title": "Admit Cards",
+      "link": "http://rsmssb.rajasthan.gov.in/page?menuName=/ur7491nQtP/eTfIoLmSTQ==",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "ssb-rj",
+      "sourceName": "Rajasthan Staff Selection Board (RSSB)",
+      "dept": "Rajasthan Staff Selection Board (RSSB)",
+      "state": "All India",
+      "category": "state",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "a11c8ece90f5c6bb",
+      "title": "Admit Card",
+      "link": "http://rsmssb.rajasthan.gov.in/page?menuName=/ur7491nQtP6K0BefutjEQ==",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "ssb-rj",
+      "sourceName": "Rajasthan Staff Selection Board (RSSB)",
+      "dept": "Rajasthan Staff Selection Board (RSSB)",
+      "state": "All India",
+      "category": "state",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "a735c78dc83b6ec4",
+      "title": "Download",
+      "link": "https://delhi.gov.in/sites/default/files/documents/Conduction%20of%20AAO%20Examination%2C%20downloading%20of%20admit%20card.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://delhi.gov.in/sites/default/files/documents/Conduction%20of%20AAO%20Examination%2C%20downloading%20of%20admit%20card.pdf"
+      ],
+      "sourceId": "delhi-portal",
+      "sourceName": "Delhi Govt — Job Notifications",
+      "dept": "Delhi Govt — Job Notifications",
+      "state": "All India",
+      "category": "state",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "a89250f5430ced9a",
+      "title": "Conduction of AAO Examination, downloading of admit card",
+      "link": "https://delhi.gov.in/sites/default/files/news-documents/scan0027.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://delhi.gov.in/sites/default/files/news-documents/scan0027.pdf"
+      ],
+      "sourceId": "delhi-portal",
+      "sourceName": "Delhi Govt — Job Notifications",
+      "dept": "Delhi Govt — Job Notifications",
+      "state": "All India",
+      "category": "state",
+      "fetchMethod": "live-jobs-supplement"
     },
     {
       "id": "0157354131476c03",
@@ -124,239 +375,6 @@
       "fetchMethod": "html"
     },
     {
-      "id": "22143ab863af0a09",
-      "title": "26/05/2026 Download Admit Card for SAC Departmental Examination, 2026",
-      "link": "http://jkpsc.nic.in/PDF/AC_SAC.pdf",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [
-        "http://jkpsc.nic.in/PDF/AC_SAC.pdf"
-      ],
-      "sourceId": "psc-jk",
-      "sourceName": "Jammu & Kashmir PSC (JKPSC)",
-      "dept": "Jammu & Kashmir PSC (JKPSC)",
-      "state": "Jammu & Kashmir",
-      "category": "state",
-      "stateIds": [
-        "jk"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "b101927674f4f0fa",
-      "title": "26/05/2026 Download Admit Card for Foundation Course Departmental Examination, 2026 (Rollno 01 to 100)",
-      "link": "http://jkpsc.nic.in/PDF/AC_FC_1_100.pdf",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [
-        "http://jkpsc.nic.in/PDF/AC_FC_1_100.pdf"
-      ],
-      "sourceId": "psc-jk",
-      "sourceName": "Jammu & Kashmir PSC (JKPSC)",
-      "dept": "Jammu & Kashmir PSC (JKPSC)",
-      "state": "Jammu & Kashmir",
-      "category": "state",
-      "stateIds": [
-        "jk"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "29ca1b7dee287a0d",
-      "title": "26/05/2026 Download Admit Card for Foundation Course Departmental Examination, 2026 (Rollno 101 to 176)",
-      "link": "http://jkpsc.nic.in/PDF/AC_FC_101_176.pdf",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [
-        "http://jkpsc.nic.in/PDF/AC_FC_101_176.pdf"
-      ],
-      "sourceId": "psc-jk",
-      "sourceName": "Jammu & Kashmir PSC (JKPSC)",
-      "dept": "Jammu & Kashmir PSC (JKPSC)",
-      "state": "Jammu & Kashmir",
-      "category": "state",
-      "stateIds": [
-        "jk"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "8a9ba85648648a8d",
-      "title": "08/07/2026 Download Admit Card for Prosecuting Officer (G)(Mains) Examination, 2025",
-      "link": "http://jkpsc.nic.in/result/POMAINS_ADMITCARD_2025.html",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-jk",
-      "sourceName": "Jammu & Kashmir PSC (JKPSC)",
-      "dept": "Jammu & Kashmir PSC (JKPSC)",
-      "state": "Jammu & Kashmir",
-      "category": "state",
-      "stateIds": [
-        "jk"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "f4dc78c867d60ac9",
-      "title": "11/06/2026 Download Marks Card for Civil Services (Judicial) Competitive Examination, 2025",
-      "link": "http://jkpsc.nic.in/RESULT/KCSJ_MARKS_CARD_2025.HTML",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-jk",
-      "sourceName": "Jammu & Kashmir PSC (JKPSC)",
-      "dept": "Jammu & Kashmir PSC (JKPSC)",
-      "state": "Jammu & Kashmir",
-      "category": "state",
-      "stateIds": [
-        "jk"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "5d904412163e6c44",
-      "title": "04/06/2026 Download Marks Card for Combined Competitive Examination, 2024",
-      "link": "http://jkpsc.nic.in/result/KASM_MARKS_CARD_2025.html",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-jk",
-      "sourceName": "Jammu & Kashmir PSC (JKPSC)",
-      "dept": "Jammu & Kashmir PSC (JKPSC)",
-      "state": "Jammu & Kashmir",
-      "category": "state",
-      "stateIds": [
-        "jk"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "ec303e191a0d4b56",
-      "title": "06/05/2026 Download Marks Card for Assistant Director (ES) Competitive Examination- 2023/24",
-      "link": "http://jkpsc.nic.in/resulT/MAARKSCARD_ADSTS_23_24.html",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-jk",
-      "sourceName": "Jammu & Kashmir PSC (JKPSC)",
-      "dept": "Jammu & Kashmir PSC (JKPSC)",
-      "state": "Jammu & Kashmir",
-      "category": "state",
-      "stateIds": [
-        "jk"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "4299efa0380c1d11",
-      "title": "16/06/2026 Download Admit Card for JK Combined Competitive (Mains) Examination, 2025",
-      "link": "http://jkpsc.nic.in/result/KASMAINS_ADMITCARD_2025.html",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-jk",
-      "sourceName": "Jammu & Kashmir PSC (JKPSC)",
-      "dept": "Jammu & Kashmir PSC (JKPSC)",
-      "state": "Jammu & Kashmir",
-      "category": "state",
-      "stateIds": [
-        "jk"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "01dd1a07ccadb21c",
-      "title": "26/05/2026 Download Admit Card for SATC Departmental Examination, 2026",
-      "link": "http://jkpsc.nic.in/RESULT/AC_SATC_2026.html",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-jk",
-      "sourceName": "Jammu & Kashmir PSC (JKPSC)",
-      "dept": "Jammu & Kashmir PSC (JKPSC)",
-      "state": "Jammu & Kashmir",
-      "category": "state",
-      "stateIds": [
-        "jk"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "2cb6ef6de1513685",
-      "title": "Under Secretary (Law) and Law Officer Recruitment – Examination Schedule Updated: 08/05/2026",
-      "link": "https://mpscmanipur.gov.in/files/Notification_Under_Secy_Law_Officer_Admit_card.pdf",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [
-        "https://mpscmanipur.gov.in/files/Notification_Under_Secy_Law_Officer_Admit_card.pdf"
-      ],
-      "sourceId": "psc-mn",
-      "sourceName": "Manipur PSC",
-      "dept": "Manipur PSC",
-      "state": "NE States",
-      "category": "state",
-      "stateIds": [
-        "ne"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "686e8d5b26f137a9",
-      "title": "Planning Department Research Assistant Recruitment – Examination Schedule Updated: 08/05/2026",
-      "link": "https://mpscmanipur.gov.in/files/Research_Asst_notification_Admit_card.pdf",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [
-        "https://mpscmanipur.gov.in/files/Research_Asst_notification_Admit_card.pdf"
-      ],
-      "sourceId": "psc-mn",
-      "sourceName": "Manipur PSC",
-      "dept": "Manipur PSC",
-      "state": "NE States",
-      "category": "state",
-      "stateIds": [
-        "ne"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "56de02281a84cf5b",
-      "title": "Admit Cards",
-      "link": "https://empsconline.gov.in/downloadadmitcardv2.aspx",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-mn",
-      "sourceName": "Manipur PSC",
-      "dept": "Manipur PSC",
-      "state": "NE States",
-      "category": "state",
-      "stateIds": [
-        "ne"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "20b56c13b7d29dbc",
-      "title": "उत्तर प्रदेश होमगार्ड्स के पदों पर एनरोलमेंट-2025 जनपद-सहारनपुर, शामली, मुजफ्फरनगर, मेरठ, गाजियाबाद, बुलन्दशहर, हापुड़, गौतमबुद्धनगर व बागपत में निर्धारित अभिलेखों की संवीक्षा एवं शारीरिक मानक परीक्षा (डीवी/पीएसटी) की तिथियों (दिनांक 04-08-2026, 05-08-2026 व 06-08-2026) में परिवर्तन हेतु महत्वपूर्ण सूचना एवं संशोधित प्रवेश पत्र डाउनलोड किये जाने विषयक ।",
-      "link": "https://uppbpb.gov.in/FilesUploaded/Notice/img20260713_170704299779d63a-5d71-4b27-8b1a-cdf96f7616ff.pdf",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [
-        "https://uppbpb.gov.in/FilesUploaded/Notice/img20260713_170704299779d63a-5d71-4b27-8b1a-cdf96f7616ff.pdf"
-      ],
-      "sourceId": "police-up",
-      "sourceName": "UP Police Recruitment Board (UPPRPB)",
-      "dept": "UP Police Recruitment Board (UPPRPB)",
-      "state": "Uttar Pradesh",
-      "category": "police",
-      "stateIds": [
-        "up"
-      ],
-      "fetchMethod": "html"
-    },
-    {
       "id": "acbcfc629871cb05",
       "title": "उत्तर प्रदेश होमगार्ड के पदों पर एनरोलमेंट-2025 के अन्तर्गत अभिलेखों की संवीक्षा एवं शारीरिक मानक परीक्षा (डीवी / पीएसटी) हेतु प्रवेश पत्र डाउनलोड किये जाने हेतु लिंक |",
       "link": "https://www.hgupexam2025.com/hg25DVPSTAdmitcard/loginpage.aspx",
@@ -370,78 +388,6 @@
       "category": "police",
       "stateIds": [
         "up"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "8c7104cb7aea4338",
-      "title": "Admit Cards",
-      "link": "http://rsmssb.rajasthan.gov.in/page?menuName=/ur7491nQtP/eTfIoLmSTQ==",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "ssb-rj",
-      "sourceName": "Rajasthan Staff Selection Board (RSSB)",
-      "dept": "Rajasthan Staff Selection Board (RSSB)",
-      "state": "Rajasthan",
-      "category": "state",
-      "stateIds": [
-        "rj"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "a11c8ece90f5c6bb",
-      "title": "Admit Card",
-      "link": "http://rsmssb.rajasthan.gov.in/page?menuName=/ur7491nQtP6K0BefutjEQ==",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "ssb-rj",
-      "sourceName": "Rajasthan Staff Selection Board (RSSB)",
-      "dept": "Rajasthan Staff Selection Board (RSSB)",
-      "state": "Rajasthan",
-      "category": "state",
-      "stateIds": [
-        "rj"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "a735c78dc83b6ec4",
-      "title": "Download",
-      "link": "https://delhi.gov.in/sites/default/files/documents/Conduction%20of%20AAO%20Examination%2C%20downloading%20of%20admit%20card.pdf",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [
-        "https://delhi.gov.in/sites/default/files/documents/Conduction%20of%20AAO%20Examination%2C%20downloading%20of%20admit%20card.pdf"
-      ],
-      "sourceId": "delhi-portal",
-      "sourceName": "Delhi Govt — Job Notifications",
-      "dept": "Delhi Govt — Job Notifications",
-      "state": "Delhi",
-      "category": "state",
-      "stateIds": [
-        "dl"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "a89250f5430ced9a",
-      "title": "Conduction of AAO Examination, downloading of admit card",
-      "link": "https://delhi.gov.in/sites/default/files/news-documents/scan0027.pdf",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [
-        "https://delhi.gov.in/sites/default/files/news-documents/scan0027.pdf"
-      ],
-      "sourceId": "delhi-portal",
-      "sourceName": "Delhi Govt — Job Notifications",
-      "dept": "Delhi Govt — Job Notifications",
-      "state": "Delhi",
-      "category": "state",
-      "stateIds": [
-        "dl"
       ],
       "fetchMethod": "html"
     },
