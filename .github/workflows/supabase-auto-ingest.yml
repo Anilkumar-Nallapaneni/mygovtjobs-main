@@ -152,12 +152,15 @@ jobs:
           echo "=== $(date -u +%H:%M:%S) commit ==="
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          # Stage only paths that exist. official-feed-items.json is gitignored and committed by fetch-official-feeds.
+          # Stage live-job snapshot only. official-archives / official-feed-items are owned by
+          # fetch-official-feeds.yml — committing them here races the 4h RSS workflow and causes
+          # rebase conflicts that drop the day's snapshot push.
           for path in \
             frontend/public/data/live-jobs.json \
             frontend/public/data/live-jobs-list.json \
             frontend/public/data/live-jobs-bootstrap.json \
             frontend/public/data/daily-sync-state.json \
+            frontend/public/data/org-index.json \
             frontend/public/sitemap.xml \
             frontend/public/sitemaps/; do
             if [ -e "$path" ]; then
@@ -166,19 +169,27 @@ jobs:
               echo "Skip missing: $path"
             fi
           done
-          if [ -d frontend/public/data/official-archives ]; then
-            git add frontend/public/data/official-archives/
-          fi
           if git diff --staged --quiet; then
             echo "No static data changes to commit."
             exit 0
+          fi
+          # Guard: never push a zero-vacancy snapshot (breaks Vercel strict build).
+          if ! node scripts/verify-live-jobs-snapshot.mjs --strict; then
+            echo "::error::Refusing to commit broken live-jobs snapshot (0 vacancies or other strict failure)"
+            exit 1
           fi
           git commit -m "chore: daily job sync [skip ci]"
           git fetch origin "${BRANCH}"
           if ! git push origin "HEAD:${BRANCH}"; then
             echo "Push rejected — rebasing on remote and retrying..."
             git stash push -u -m "ingest-leftovers" || true
-            git rebase "origin/${BRANCH}"
+            # Prefer our snapshot files if RSS commits touched unrelated paths.
+            git rebase -X ours "origin/${BRANCH}" || {
+              echo "::error::Rebase failed after push rejection"
+              git rebase --abort || true
+              git stash pop || true
+              exit 1
+            }
             git push origin "HEAD:${BRANCH}"
             git stash drop || true
           fi

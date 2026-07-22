@@ -86,8 +86,15 @@ jobs:
           if git diff --staged --quiet; then
             echo "No changes to commit."
           else
-            git commit -m "chore(data): refresh official RSS snapshot"
-            git push
+            # [skip ci] avoids GitHub CI; ignoreBuildStep in vercel.json skips Vercel
+            # when only RSS/archives change (prevents redeploying a stale/broken snapshot).
+            git commit -m "chore(data): refresh official RSS snapshot [skip ci]"
+            git fetch origin
+            if ! git push; then
+              echo "Push rejected — rebasing on remote and retrying..."
+              git pull --rebase -X theirs origin "${GITHUB_REF_NAME}" || git pull --rebase -X theirs
+              git push
+            fi
           fi
 
   notify-failure:
