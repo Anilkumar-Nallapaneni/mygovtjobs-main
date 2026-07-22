@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-22T14:38:28.235Z",
+  "generatedAt": "2026-07-22T17:53:50.074Z",
   "sourceReports": [
     {
       "id": "pib-press-reg3",
@@ -3021,6 +3021,23 @@
       "fetchMethod": "html-listing"
     },
     {
+      "id": "8ca82442e1ee4b30",
+      "title": "22 Aug 2026 LIST OF CANDIDATES PROVISIONALLY QUALIFIED FOR MAINS IN ADVT. NO. A-6/E-1/2025, LECT. (M./F.) GOVT. INTER COLLEGE EXAM.-2025,ECONOMICS, CIVICS,PHYSIC.....",
+      "link": "https://uppsc.up.nic.in/Open_PDF.aspx?I4PnQ0tBaglP18XMjN55aGzNOu+FZ7AS",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "uppsc-hall-tickets",
+      "sourceName": "UPPSC — Hall tickets",
+      "dept": "Uttar Pradesh PSC",
+      "state": "Uttar Pradesh",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
       "id": "7e15b7df2ff140b3",
       "title": "20 Aug 2026 LIST OF CANDIDATES PROVISIONALLY QUALIFIED FOR MAINS IN ADVT. NO. A-6/E-1/2025, LECT. (M./F.) GOVT. INTER COLLEGE EXAM.-2025, SOCIOLOGY, GEOGRAPHY",
       "link": "https://uppsc.up.nic.in/Open_PDF.aspx?I4PnQ0tBaglP18XMjN55aBoFGbe89Wuk",
@@ -3058,23 +3075,6 @@
       "id": "26931ebe902f0df0",
       "title": "15 Aug 2026 RESULT OF CANDIDATE SELECTED IN ADVT. NO D-4/E-1/2025, DEPT. S-10/02, UPPSC SYSTEM ANALYST",
       "link": "https://uppsc.up.nic.in/Open_PDF.aspx?I4PnQ0tBagkKFmHgqmmkW6sZX/ReYjvj",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "uppsc-hall-tickets",
-      "sourceName": "UPPSC — Hall tickets",
-      "dept": "Uttar Pradesh PSC",
-      "state": "Uttar Pradesh",
-      "category": "state",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "5a1ddb365b9f109d",
-      "title": "02 Aug 2026 LIST OF SELECTED CANDIDATES IN ADVT. NO. A-7/E-1/2021, U.P. TECHNICAL EDUCATION (TEACHING) SERVICE EXAMINATION-2021, LECT. INT.DSG.DECO.,FOOTWEAR,INS.....",
-      "link": "https://uppsc.up.nic.in/Open_PDF.aspx?I4PnQ0tBagkz0o52o77EYfBBw0BmR5fX",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
