@@ -1,58 +1,7 @@
 {
-  "generatedAt": "2026-07-23T03:58:04.343Z",
-  "count": 161,
+  "generatedAt": "2026-07-23T06:51:06.750Z",
+  "count": 163,
   "items": [
-    {
-      "id": "dab406e23a6537a1",
-      "title": "E-Admit Cards for various Recruitment Posts",
-      "link": "https://upsconline.gov.in/oraadmitcard/",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "upsc-e-admit-hub",
-      "sourceName": "UPSC — e-Admit cards",
-      "dept": "Union Public Service Commission",
-      "state": "All India",
-      "category": "upsc",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "99c9f94d8e7c5a15",
-      "title": "e-Admit Cards For Computer Based Skill Test For Various Recruitment Posts (ORA)",
-      "link": "https://upsconline.gov.in/eadmitcard/admitcard_steno_2024/",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "upsc-e-admit-hub",
-      "sourceName": "UPSC — e-Admit cards",
-      "dept": "Union Public Service Commission",
-      "state": "All India",
-      "category": "upsc",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "7749ebd16d22dad7",
-      "title": "E- Admit Cards",
-      "link": "https://www.upsc.gov.in/e-admit-cards",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "upsc-e-admit-hub",
-      "sourceName": "UPSC — e-Admit cards",
-      "dept": "Union Public Service Commission",
-      "state": "All India",
-      "category": "upsc",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
     {
       "id": "206ead0ac32afa2e",
       "title": "NOTICE REGARDING ADMIT CARD FOR ADVT. NO. A-1/E-1/2025, ASSISTANT CONSERVATOR OF..",
@@ -269,6 +218,62 @@
       "dept": "UPPSC — Hall tickets",
       "state": "All India",
       "category": "state",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "99c9f94d8e7c5a15",
+      "title": "e-Admit Cards For Computer Based Skill Test For Various Recruitment Posts (ORA)",
+      "link": "https://upsconline.gov.in/eadmitcard/admitcard_steno_2024/",
+      "publishedAt": "2026-07-14T03:47:44.011022Z",
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "upsc-e-admit-hub",
+      "sourceName": "UPSC — e-Admit cards",
+      "dept": "UPSC — e-Admit cards",
+      "state": "All India",
+      "category": "upsc",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "dab406e23a6537a1",
+      "title": "E-Admit Cards for various Recruitment Posts",
+      "link": "https://upsconline.gov.in/oraadmitcard/",
+      "publishedAt": "2026-07-14T03:47:39.555386Z",
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "upsc-e-admit-hub",
+      "sourceName": "UPSC — e-Admit cards",
+      "dept": "UPSC — e-Admit cards",
+      "state": "All India",
+      "category": "upsc",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "6db5c4ba16d574a6",
+      "title": "Recruitment cases kept on hold on account of Pending Litigations",
+      "link": "https://www.upsc.gov.in/recruitment/recruitment-cases-kept-hold-account-pending-litigations",
+      "publishedAt": "2026-07-14T03:41:10.481723Z",
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "upsc-e-admit-hub",
+      "sourceName": "UPSC — e-Admit cards",
+      "dept": "UPSC — e-Admit cards",
+      "state": "All India",
+      "category": "upsc",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "2359d8c2c97ce9ef",
+      "title": "status recruitment cases advertisementwise",
+      "link": "https://www.upsc.gov.in/recruitment/status-recruitment-cases-advertisementwise",
+      "publishedAt": "2026-07-14T03:40:27.235989Z",
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "upsc-e-admit-hub",
+      "sourceName": "UPSC — e-Admit cards",
+      "dept": "UPSC — e-Admit cards",
+      "state": "All India",
+      "category": "upsc",
       "fetchMethod": "live-jobs-supplement"
     },
     {
@@ -1630,6 +1635,23 @@
       "state": "All India",
       "category": "railways",
       "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "7749ebd16d22dad7",
+      "title": "E- Admit Cards",
+      "link": "https://www.upsc.gov.in/e-admit-cards",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "upsc-e-admit-hub",
+      "sourceName": "UPSC — e-Admit cards",
+      "dept": "Union Public Service Commission",
+      "state": "All India",
+      "category": "upsc",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
     },
     {
       "id": "b101927674f4f0fa",
