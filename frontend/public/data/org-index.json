@@ -24,6 +24,12 @@
     "vacancies": 21
   },
   {
+    "dept": "UPPSC — Hall tickets",
+    "slug": "uppsc-hall-tickets",
+    "count": 59,
+    "vacancies": 0
+  },
+  {
     "dept": "Food Safety and Standards Authority (FSSAI)",
     "slug": "food-safety-and-standards-authority-fssai",
     "count": 58,
@@ -33,12 +39,6 @@
     "dept": "Press Information Bureau (PIB)",
     "slug": "press-information-bureau-pib",
     "count": 57,
-    "vacancies": 0
-  },
-  {
-    "dept": "UPPSC — Hall tickets",
-    "slug": "uppsc-hall-tickets",
-    "count": 55,
     "vacancies": 0
   },
   {
@@ -56,7 +56,7 @@
   {
     "dept": "NSUT",
     "slug": "nsut",
-    "count": 49,
+    "count": 48,
     "vacancies": 122
   },
   {
@@ -92,8 +92,8 @@
   {
     "dept": "Rrbajmer",
     "slug": "rrbajmer",
-    "count": 42,
-    "vacancies": 596
+    "count": 43,
+    "vacancies": 656
   },
   {
     "dept": "Jpsc",
@@ -189,7 +189,7 @@
     "dept": "Haryana PSC (HPSC)",
     "slug": "haryana-psc-hpsc",
     "count": 27,
-    "vacancies": 775
+    "vacancies": 776
   },
   {
     "dept": "Recruitment Py",
@@ -210,6 +210,12 @@
     "vacancies": 468
   },
   {
+    "dept": "Sainik School Goalpara",
+    "slug": "sainik-school-goalpara",
+    "count": 25,
+    "vacancies": 83
+  },
+  {
     "dept": "MP Police Headquarters — Recruitment",
     "slug": "mp-police-headquarters-recruitment",
     "count": 24,
@@ -222,12 +228,6 @@
     "vacancies": 12180
   },
   {
-    "dept": "Sainik School Goalpara",
-    "slug": "sainik-school-goalpara",
-    "count": 24,
-    "vacancies": 80
-  },
-  {
     "dept": "Railway Recruitment Board (RRB) — Guwahati",
     "slug": "railway-recruitment-board-rrb-guwahati",
     "count": 23,
@@ -237,7 +237,7 @@
     "dept": "Sainikschoolgoalpara Org",
     "slug": "sainikschoolgoalpara-org",
     "count": 23,
-    "vacancies": 36372
+    "vacancies": 36369
   },
   {
     "dept": "Canarabank Com",
@@ -306,12 +306,6 @@
     "vacancies": 0
   },
   {
-    "dept": "APEDA / BEDF — Recruitments",
-    "slug": "apeda-bedf-recruitments",
-    "count": 16,
-    "vacancies": 81
-  },
-  {
     "dept": "Central Reserve Police Force (CRPF)",
     "slug": "central-reserve-police-force-crpf",
     "count": 16,
@@ -336,12 +330,6 @@
     "vacancies": 203
   },
   {
-    "dept": "Fssai",
-    "slug": "fssai",
-    "count": 16,
-    "vacancies": 0
-  },
-  {
     "dept": "Sainikschoolbhubaneswar Edu In",
     "slug": "sainikschoolbhubaneswar-edu-in",
     "count": 16,
@@ -360,10 +348,22 @@
     "vacancies": 67
   },
   {
+    "dept": "APEDA / BEDF — Recruitments",
+    "slug": "apeda-bedf-recruitments",
+    "count": 15,
+    "vacancies": 81
+  },
+  {
     "dept": "Mahapolice",
     "slug": "mahapolice",
     "count": 15,
     "vacancies": 6
+  },
+  {
+    "dept": "Fssai",
+    "slug": "fssai",
+    "count": 14,
+    "vacancies": 0
   },
   {
     "dept": "India Post — Gramin Dak Sevak / GDS",
@@ -564,6 +564,12 @@
     "vacancies": 24
   },
   {
+    "dept": "Railway Recruitment Board (RRB) — Bhubaneswar",
+    "slug": "railway-recruitment-board-rrb-bhubaneswar",
+    "count": 8,
+    "vacancies": 0
+  },
+  {
     "dept": "Rrbpatna",
     "slug": "rrbpatna",
     "count": 8,
@@ -598,12 +604,6 @@
     "slug": "ongc-careers",
     "count": 7,
     "vacancies": 72
-  },
-  {
-    "dept": "Railway Recruitment Board (RRB) — Bhubaneswar",
-    "slug": "railway-recruitment-board-rrb-bhubaneswar",
-    "count": 7,
-    "vacancies": 0
   },
   {
     "dept": "Recruitment Itbpolice",
@@ -816,12 +816,6 @@
     "vacancies": 15
   },
   {
-    "dept": "BITS Pilani",
-    "slug": "bits-pilani",
-    "count": 3,
-    "vacancies": 31
-  },
-  {
     "dept": "CBSE — CTET",
     "slug": "cbse-ctet",
     "count": 3,
@@ -930,6 +924,12 @@
     "vacancies": 0
   },
   {
+    "dept": "SGPGIMS",
+    "slug": "sgpgims",
+    "count": 3,
+    "vacancies": 3
+  },
+  {
     "dept": "SSC",
     "slug": "ssc",
     "count": 3,
@@ -946,5 +946,11 @@
     "slug": "upsssc",
     "count": 3,
     "vacancies": 2074
+  },
+  {
+    "dept": "WBSETCL",
+    "slug": "wbsetcl",
+    "count": 3,
+    "vacancies": 133
   }
 ]
