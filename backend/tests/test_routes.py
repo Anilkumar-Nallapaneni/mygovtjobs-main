@@ -90,7 +90,7 @@ def test_meta_states_returns_static_list():
 
 
 def test_list_jobs_returns_payload():
-    from app.schemas.job import JobListResponse, JobOut
+    from app.schemas.job import JobOut
 
     mock_item = JobOut(
         id="1",
@@ -120,6 +120,16 @@ def test_list_jobs_returns_payload():
     body = res.json()
     assert body["total"] == 1
     assert body["items"][0]["slug"] == "test-job"
+    assert res.headers.get("etag") in ('"jobs-1"', "jobs-1")
+
+
+def test_list_jobs_304_when_etag_matches():
+    with patch("app.routes.jobs.service.list_jobs_etag", new_callable=AsyncMock, return_value="jobs-stable"):
+        with patch("app.routes.jobs.service.list_jobs", new_callable=AsyncMock) as mock_list:
+            res = client.get("/api/jobs?limit=5", headers={"If-None-Match": '"jobs-stable"'})
+    assert res.status_code == 304
+    assert res.headers.get("etag") in ('"jobs-stable"', "jobs-stable")
+    mock_list.assert_not_called()
 
 
 def test_subscribe_validation_422():

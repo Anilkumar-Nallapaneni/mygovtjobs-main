@@ -3,7 +3,8 @@
 import hashlib
 import logging
 
-from sqlalchemy import func, or_, select
+from sqlalchemy import Text, func, literal, or_, select
+from sqlalchemy.dialects.postgresql import ARRAY
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from app.database.session import SessionLocal
@@ -92,7 +93,15 @@ def _base_list_stmt(*, state=None, category=None, q=None):
     if category:
         stmt = stmt.where(Job.category == category)
     if state:
-        stmt = stmt.where(or_(Job.state_codes.contains([state]), Job.state_codes == []))
+        # Cast to TEXT[] so Postgres @> matches jobs.state_codes (TEXT[]), not VARCHAR[]
+        code = (state or "").strip().lower()
+        if code:
+            stmt = stmt.where(
+                or_(
+                    Job.state_codes.contains(literal([code], type_=ARRAY(Text))),
+                    Job.state_codes == literal([], type_=ARRAY(Text)),
+                )
+            )
     stmt, _ts_query = _apply_search_filter(stmt, q)
     return apply_recruitment_filters(stmt)
 

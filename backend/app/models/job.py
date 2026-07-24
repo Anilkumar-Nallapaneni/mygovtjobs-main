@@ -44,7 +44,8 @@ class Job(Base):
     title: Mapped[str] = mapped_column(Text, nullable=False)
     dept: Mapped[str | None] = mapped_column(String(255))
     category: Mapped[str | None] = mapped_column(String(64))
-    state_codes: Mapped[list[str] | None] = mapped_column(ARRAY(String(8)))
+    # DB column is TEXT[] (see supabase_setup.sql) — must match or @> filters fail
+    state_codes: Mapped[list[str] | None] = mapped_column(ARRAY(Text))
     vacancies: Mapped[int] = mapped_column(Integer, default=0)
     qualification: Mapped[str | None] = mapped_column(Text)
     salary: Mapped[str | None] = mapped_column(String(128))

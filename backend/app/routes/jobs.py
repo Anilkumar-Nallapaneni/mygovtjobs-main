@@ -9,9 +9,22 @@ service = JobService()
 _LIST_CACHE_SECONDS = 60
 
 
+def _normalize_etag(value: str | None) -> str | None:
+    """Strip weak markers and quotes so If-None-Match matches our ETag."""
+    if not value:
+        return None
+    v = value.strip()
+    if v.startswith("W/"):
+        v = v[2:].strip()
+    if len(v) >= 2 and v[0] == '"' and v[-1] == '"':
+        v = v[1:-1]
+    return v
+
+
 def _list_cache_headers(etag: str) -> dict[str, str]:
+    quoted = etag if etag.startswith('"') else f'"{etag}"'
     return {
-        "ETag": etag,
+        "ETag": quoted,
         "Cache-Control": f"public, max-age={_LIST_CACHE_SECONDS}",
     }
 
@@ -36,7 +49,7 @@ async def list_jobs(
             limit=limit,
             offset=effective_offset,
         )
-        if request.headers.get("if-none-match") == etag:
+        if _normalize_etag(request.headers.get("if-none-match")) == _normalize_etag(etag):
             return Response(status_code=304, headers=_list_cache_headers(etag))
         items, total = await service.list_jobs(
             state=state, category=category, q=q, limit=limit, offset=effective_offset
@@ -45,8 +58,8 @@ async def list_jobs(
         raise HTTPException(status_code=503, detail="Job database temporarily unavailable")
 
     total_pages = max(1, (total + limit - 1) // limit) if limit else 1
-    response.headers["Cache-Control"] = f"public, max-age={_LIST_CACHE_SECONDS}"
-    response.headers["ETag"] = etag
+    for key, value in _list_cache_headers(etag).items():
+        response.headers[key] = value
     return JobListResponse(
         items=items,
         total=total,
