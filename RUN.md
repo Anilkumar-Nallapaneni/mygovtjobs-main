@@ -1,6 +1,20 @@
 # RUN.md — Simple command guide
 
-Copy-paste commands for My Govt Jobs. Run everything from **repo root**.
+Copy-paste commands for **Live Govt Jobs**. Run everything from **repo root**.
+
+---
+
+## Operator commands (use these)
+
+| Goal | Command |
+|------|---------|
+| **Dev (frontend)** | `npm run dev` → http://localhost:2222 |
+| **Validate** | `npm run validate` (type-check + lint + tests) |
+| **Sync jobs** | `npm run sync:jobs` (production ingest; currently frozen in CI until `ALLOW_AUTO_INGEST=true`) |
+| **Build** | `npm run build` |
+| **Deploy check** | `npm run deploy:check` |
+
+Other scripts below remain for agents and recovery. Prefer the five commands above for normal operation.
 
 ---
 
@@ -26,8 +40,10 @@ GitHub Actions and local production use **three public commands** only:
 | Command | When | What it does |
 |---------|------|----------------|
 | **`npm run sync:quick`** | Every 4 hours (CI) | RSS feeds + official archives — no DB scrape |
-| **`npm run sync:production`** | Daily ~8 AM IST (CI) | Full scrape, export `live-jobs.json`, feeds, sitemap |
+| **`npm run sync:production`** / **`sync:jobs`** | Daily ~8 AM IST (CI) | Full scrape, export `live-jobs.json`, feeds, sitemap |
 | **`npm run verify:production`** | After deploy / manual | Env, DB, Supabase audit, job quality, snapshot verify |
+
+**CI freeze (fresh restart):** scheduled auto-ingest / weekly enrich / scheduled RSS commits are gated on repository variable `ALLOW_AUTO_INGEST=true`. Ingest always sets `AUTO_PUBLISH_VERIFIED=0` so new rows stay `draft` until verified.
 
 **CI workflows:** `fetch-official-feeds.yml` → `sync:quick` · `supabase-auto-ingest.yml` → `sync:production`
 

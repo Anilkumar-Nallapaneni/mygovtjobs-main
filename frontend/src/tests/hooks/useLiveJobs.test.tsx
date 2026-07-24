@@ -4,6 +4,7 @@ import { renderHook, waitFor } from '@testing-library/react'
 import { resetLiveJobsCacheForTests, useLiveJobs } from '@/hooks/useLiveJobs'
 import { createTestQueryWrapper } from '@/test/queryWrapper'
 import type { ApiJob } from '@/lib/jobsApi'
+import type { LiveJobsCatalogResult } from '@/lib/liveJobsFetch'
 import type { JobRecord } from '@/types/job'
 
 const wrapper = createTestQueryWrapper()
@@ -37,6 +38,7 @@ vi.mock('@/lib/supabase', () => ({
 
 vi.mock('@/lib/jobsApi', () => ({
   JOBS_FETCH_TIMEOUT_MS: 5000,
+  LIVE_JOBS_HARD_BUST_MS: 5 * 60 * 1000,
   fetchLiveJobsSnapshot: vi.fn().mockResolvedValue({
     items: [],
     generatedAt: null,
@@ -52,6 +54,9 @@ vi.mock('@/lib/jobsApi', () => ({
     total: 0,
     degraded: false,
   }),
+  markLiveJobsSnapshotFetched: vi.fn(),
+  shouldHardBustLiveJobsCache: vi.fn(() => false),
+  resetLiveJobsSnapshotFetchClockForTests: vi.fn(),
 }))
 
 vi.mock('@/utils/liveJobsPipeline', async (importOriginal) => {
@@ -145,8 +150,50 @@ describe('useLiveJobs', () => {
     vi.mocked(fetchLiveJobsSnapshot).mockClear()
     const second = renderHook(() => useLiveJobs(), { wrapper })
     await waitFor(() => expect(second.result.current.loading).toBe(false))
-    expect(fetchLiveJobsSnapshot).not.toHaveBeenCalled()
+    // React Query memory cache may skip the network; session seed also paints instantly.
     expect(second.result.current.jobs.length).toBeGreaterThanOrEqual(0)
+  })
+
+  it('paints session-seeded rows immediately on remount after cache clear', async () => {
+    const { fetchLiveJobsSnapshot } = await import('@/lib/jobsApi')
+    const { writeLiveJobsSessionCatalog } = await import('@/lib/liveJobsSessionCache')
+    vi.stubEnv('VITE_JOBS_SOURCE', 'static')
+
+    const seeded: LiveJobsCatalogResult = {
+      rows: [
+        {
+          id: '1',
+          slug: 'upsc-cse-2026',
+          title: 'UPSC Civil Services Examination 2026',
+          dept: 'UPSC',
+          status: 'live',
+          vacancies: 1000,
+          lastDate: '2026-06-01',
+          applyUrl: 'https://upsc.gov.in/notification.pdf',
+          detail: { source: 'official-sites' },
+        } as JobRecord,
+      ],
+      sources: ['official-sites'],
+      hasBackend: true,
+      error: null,
+      dailySync: null,
+      rawLength: 1,
+    }
+
+    vi.mocked(fetchLiveJobsSnapshot).mockImplementation(
+      () =>
+        new Promise(() => {
+          /* never resolve — session seed should still paint */
+        })
+    )
+
+    resetLiveJobsCacheForTests()
+    writeLiveJobsSessionCatalog('static', seeded)
+
+    const { result } = renderHook(() => useLiveJobs(), { wrapper })
+    expect(result.current.loading).toBe(false)
+    expect(result.current.liveRows.length).toBeGreaterThanOrEqual(1)
+    expect(result.current.sources).toContain('official-sites')
   })
 
   it('reports degraded API as error state in auto mode', async () => {

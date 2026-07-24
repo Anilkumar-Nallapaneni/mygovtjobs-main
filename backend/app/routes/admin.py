@@ -6,11 +6,12 @@ from sqlalchemy import func, select, text
 
 from app.database.session import SessionLocal
 from app.middleware.auth import require_admin_key
-from app.models.job import Job, Source
+from app.models.job import Job, Source, SourceHealth
 from app.config import get_settings
 from app.services.daily_sync_service import DailySyncService
 from app.services.ingest_service import IngestService
 from app.services.alert_delivery_service import AlertDeliveryService
+from app.services.job_completeness_service import PUBLISH_MIN_SCORE, calculate_completeness
 from app.services.supabase_audit_service import SupabaseAuditService
 from app.utils.repo_paths import resolve_repo_path
 
@@ -19,6 +20,9 @@ router = APIRouter(dependencies=[Depends(require_admin_key)])
 
 class JobStatusUpdate(BaseModel):
     status: str
+    verification_status: str | None = None
+    published_to_site: bool | None = None
+    document_type: str | None = None
 
 
 @router.get("/stats")
@@ -29,17 +33,108 @@ async def admin_stats():
             live = (await session.execute(select(func.count()).select_from(Job).where(Job.status == "live"))).scalar_one()
             draft = (await session.execute(select(func.count()).select_from(Job).where(Job.status == "draft"))).scalar_one()
             expired = (await session.execute(select(func.count()).select_from(Job).where(Job.status == "expired"))).scalar_one()
-            return {"jobs": {"total": total, "live": live, "draft": draft, "expired": expired}}
+            needs_review = (
+                await session.execute(
+                    select(func.count()).select_from(Job).where(Job.verification_status == "NEEDS_REVIEW")
+                )
+            ).scalar_one()
+            published = (
+                await session.execute(
+                    select(func.count()).select_from(Job).where(Job.published_to_site.is_(True))
+                )
+            ).scalar_one()
+            return {
+                "jobs": {
+                    "total": total,
+                    "live": live,
+                    "draft": draft,
+                    "expired": expired,
+                    "needs_review": needs_review,
+                    "published_to_site": published,
+                }
+            }
         except Exception:
             return {"jobs": {"total": 0, "live": 0, "draft": 0, "expired": 0}}
 
 
+@router.get("/review-queues")
+async def admin_review_queues(limit: int = Query(40, ge=1, le=200)):
+    """Human-review queues for uncertain / weak ingest records."""
+    queues: dict[str, list[dict]] = {
+        "new_discoveries": [],
+        "not_recruitment": [],
+        "pdf_failed": [],
+        "date_conflict": [],
+        "low_completeness": [],
+        "ready_to_publish": [],
+        "published": [],
+    }
+
+    def _item(row: Job) -> dict:
+        return {
+            "id": row.id,
+            "slug": row.slug,
+            "title": row.title,
+            "status": row.status,
+            "document_type": row.document_type,
+            "verification_status": row.verification_status,
+            "completeness_score": getattr(row, "completeness_score", 0),
+            "published_to_site": getattr(row, "published_to_site", False),
+            "primary_pdf_url": getattr(row, "primary_pdf_url", None),
+            "review_reasons": getattr(row, "review_reasons", None) or [],
+            "published_at": row.published_at,
+        }
+
+    async with SessionLocal() as session:
+        try:
+            rows = (
+                await session.execute(select(Job).order_by(Job.updated_at.desc().nullslast()).limit(800))
+            ).scalars().all()
+        except Exception:
+            return {"queues": queues}
+
+    for row in rows:
+        reasons = " ".join(str(r) for r in (getattr(row, "review_reasons", None) or [])).lower()
+        detail = row.detail or {}
+        item = _item(row)
+        if getattr(row, "published_to_site", False) and row.status == "live":
+            if len(queues["published"]) < limit:
+                queues["published"].append(item)
+            continue
+        if row.verification_status == "NEEDS_REVIEW" and row.document_type == "RECRUITMENT":
+            score = int(getattr(row, "completeness_score", 0) or 0)
+            if score >= PUBLISH_MIN_SCORE and len(queues["ready_to_publish"]) < limit:
+                queues["ready_to_publish"].append(item)
+            elif score < PUBLISH_MIN_SCORE and len(queues["low_completeness"]) < limit:
+                queues["low_completeness"].append(item)
+            elif len(queues["new_discoveries"]) < limit:
+                queues["new_discoveries"].append(item)
+        if row.document_type and row.document_type not in ("RECRUITMENT", "UNKNOWN", None):
+            if len(queues["not_recruitment"]) < limit:
+                queues["not_recruitment"].append(item)
+        if "pdf" in reasons or detail.get("extraction_quality_errors") or detail.get("pdf_scores"):
+            if len(queues["pdf_failed"]) < limit:
+                queues["pdf_failed"].append(item)
+        if "date" in reasons or detail.get("date_validation_errors"):
+            if len(queues["date_conflict"]) < limit:
+                queues["date_conflict"].append(item)
+
+    return {"queues": {k: v for k, v in queues.items()}, "limit": limit}
+
+
 @router.get("/jobs")
-async def admin_list_jobs(status: str | None = None, limit: int = 50, offset: int = 0):
+async def admin_list_jobs(
+    status: str | None = None,
+    verification_status: str | None = None,
+    limit: int = 50,
+    offset: int = 0,
+):
     async with SessionLocal() as session:
         stmt = select(Job).order_by(Job.published_at.desc().nullslast()).limit(limit).offset(offset)
         if status:
             stmt = stmt.where(Job.status == status)
+        if verification_status:
+            stmt = stmt.where(Job.verification_status == verification_status)
         rows = (await session.execute(stmt)).scalars().all()
         return {
             "items": [
@@ -51,6 +146,11 @@ async def admin_list_jobs(status: str | None = None, limit: int = 50, offset: in
                     "category": r.category,
                     "state_codes": r.state_codes,
                     "published_at": r.published_at,
+                    "document_type": r.document_type,
+                    "verification_status": r.verification_status,
+                    "completeness_score": getattr(r, "completeness_score", 0),
+                    "published_to_site": getattr(r, "published_to_site", False),
+                    "review_reasons": getattr(r, "review_reasons", None) or [],
                 }
                 for r in rows
             ]
@@ -59,16 +159,83 @@ async def admin_list_jobs(status: str | None = None, limit: int = 50, offset: in
 
 @router.patch("/jobs/{job_id}")
 async def admin_update_job(job_id: str, body: JobStatusUpdate):
-    if body.status not in ("draft", "live", "expired"):
+    if body.status not in ("draft", "pending", "live", "expired"):
         raise HTTPException(status_code=400, detail="Invalid status")
     async with SessionLocal() as session:
         row = (await session.execute(select(Job).where(Job.id == job_id))).scalar_one_or_none()
         if not row:
             raise HTTPException(status_code=404, detail="Job not found")
         row.status = body.status
+        if body.document_type:
+            row.document_type = body.document_type.upper()
+        if body.verification_status:
+            row.verification_status = body.verification_status.upper()
+        if body.published_to_site is not None:
+            row.published_to_site = bool(body.published_to_site)
+
+        if body.status == "live":
+            row.verification_status = body.verification_status.upper() if body.verification_status else "VERIFIED"
+            if not row.document_type:
+                row.document_type = "RECRUITMENT"
+            row.verified_at = datetime.now(timezone.utc)
+            if body.published_to_site is None:
+                score, _ = calculate_completeness(
+                    {
+                        "title": row.title,
+                        "dept": row.dept,
+                        "apply_url": row.apply_url,
+                        "source_url": row.source_url,
+                        "last_date": row.last_date,
+                        "vacancies": row.vacancies,
+                        "qualification": row.qualification,
+                        "salary": row.salary,
+                        "age_limit": row.age_limit,
+                        "detail": row.detail or {},
+                    }
+                )
+                row.completeness_score = score
+                row.published_to_site = score >= PUBLISH_MIN_SCORE
+        elif body.status in ("draft", "pending"):
+            row.verification_status = body.verification_status.upper() if body.verification_status else "NEEDS_REVIEW"
+            if body.published_to_site is None:
+                row.published_to_site = False
         row.updated_at = datetime.now(timezone.utc)
         await session.commit()
-        return {"id": job_id, "status": body.status}
+        return {
+            "id": job_id,
+            "status": body.status,
+            "verification_status": row.verification_status,
+            "published_to_site": row.published_to_site,
+            "completeness_score": row.completeness_score,
+        }
+
+
+@router.get("/source-health")
+async def admin_source_health(limit: int = Query(100, ge=1, le=500)):
+    async with SessionLocal() as session:
+        try:
+            rows = (
+                await session.execute(
+                    select(SourceHealth).order_by(SourceHealth.last_checked_at.desc().nullslast()).limit(limit)
+                )
+            ).scalars().all()
+            return {
+                "items": [
+                    {
+                        "source_code": r.source_code,
+                        "health_status": r.health_status,
+                        "homepage_status": r.homepage_status,
+                        "recruitment_status": r.recruitment_status,
+                        "response_time_ms": r.response_time_ms,
+                        "last_checked_at": r.last_checked_at,
+                        "last_error": r.last_error,
+                        "parser_status": r.parser_status,
+                    }
+                    for r in rows
+                ]
+            }
+        except Exception:
+            return {"items": [], "error": "source_health table unavailable — run migration 024"}
 
 
 @router.get("/dashboard")

@@ -46,6 +46,10 @@ async function billingFetch<T>(
 }
 
 export async function fetchBillingConfig(): Promise<BillingConfig> {
+  // Launch freeze: payments stay off unless explicitly enabled.
+  if (String(import.meta.env.VITE_ENABLE_BILLING ?? '0') !== '1') {
+    return { enabled: false }
+  }
   if (!API_BASE) return { enabled: false }
   try {
     const res = await fetch(`${API_BASE}/api/billing/config`)

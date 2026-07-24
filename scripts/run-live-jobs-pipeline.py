@@ -43,11 +43,10 @@ async def run_agents(
     code = 0
 
     if not skip_ingest:
+        # --force-sync: one forced daily:sync (do not run twice)
         extra = ["--", "--force"] if force_sync else []
-        code = run_npm("daily:sync" if not force_sync else "daily:sync", *extra)
-        if force_sync:
-            code = run_npm("daily:sync", "--", "--force")
-        elif code != 0:
+        code = run_npm("daily:sync", *extra)
+        if code != 0 and not force_sync:
             print("Ingest step returned non-zero; continuing to PDF/details…", flush=True)
 
     if not skip_pdf:

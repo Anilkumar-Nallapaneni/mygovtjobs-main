@@ -64,4 +64,36 @@ def recruitment_sql_filters():
 
 
 def apply_recruitment_filters(stmt):
-    return stmt.where(and_(*recruitment_sql_filters()))
+    # Public surface: recruitment (or legacy NULL/UNKNOWN) that has been published.
+    doc_ok = or_(
+        Job.document_type.is_(None),
+        Job.document_type == "RECRUITMENT",
+        Job.document_type == "UNKNOWN",
+    )
+    # Prefer explicit publish flag; allow verified live rows during rollout.
+    published_ok = or_(
+        Job.published_to_site.is_(True),
+        and_(
+            Job.status.in_(("live", "expired")),
+            Job.verification_status == "VERIFIED",
+        ),
+    )
+    not_rejected = or_(
+        Job.verification_status.is_(None),
+        Job.verification_status != "REJECTED",
+    )
+    completeness_ok = or_(
+        Job.completeness_score.is_(None),
+        Job.completeness_score >= 70,
+        # Pre-scored legacy live rows (score still 0) until backfill/re-export.
+        and_(Job.completeness_score == 0, Job.status.in_(("live", "expired")), Job.published_to_site.is_(True)),
+    )
+    return stmt.where(
+        and_(
+            *recruitment_sql_filters(),
+            doc_ok,
+            published_ok,
+            not_rejected,
+            completeness_ok,
+        )
+    )

@@ -9,13 +9,18 @@ vi.mock("@/lib/supabase", () => ({
 import { getSupabase } from "@/lib/supabase";
 import {
   invalidateLiveJobsSnapshotPrefetch,
+  markLiveJobsSnapshotFetched,
   prefetchLiveJobsSnapshot,
+  resetLiveJobsSnapshotFetchClockForTests,
+  shouldHardBustLiveJobsCache,
+  LIVE_JOBS_HARD_BUST_MS,
   subscribeToAlerts,
 } from "@/lib/jobsApi";
 
 describe("prefetchLiveJobsSnapshot", () => {
   afterEach(() => {
     invalidateLiveJobsSnapshotPrefetch();
+    resetLiveJobsSnapshotFetchClockForTests();
     vi.unstubAllGlobals();
     vi.restoreAllMocks();
   });
@@ -36,6 +41,28 @@ describe("prefetchLiveJobsSnapshot", () => {
 
     expect(snap.items).toHaveLength(1);
     expect(fetchMock).toHaveBeenCalled();
+  });
+});
+
+describe("shouldHardBustLiveJobsCache", () => {
+  afterEach(() => {
+    resetLiveJobsSnapshotFetchClockForTests();
+  });
+
+  it("does not hard-bust before the first successful fetch", () => {
+    expect(shouldHardBustLiveJobsCache()).toBe(false);
+  });
+
+  it("soft-refreshes within the soft window", () => {
+    const t0 = 1_000_000;
+    markLiveJobsSnapshotFetched(t0);
+    expect(shouldHardBustLiveJobsCache(t0 + 60_000)).toBe(false);
+  });
+
+  it("hard-busts after the soft window expires", () => {
+    const t0 = 1_000_000;
+    markLiveJobsSnapshotFetched(t0);
+    expect(shouldHardBustLiveJobsCache(t0 + LIVE_JOBS_HARD_BUST_MS)).toBe(true);
   });
 });
 

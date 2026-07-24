@@ -1,10 +1,10 @@
 {
-  "name": "mygovtjobs",
+  "name": "livegovtjobs",
   "private": true,
   "workspaces": [
     "frontend"
   ],
-  "description": "My Govt Jobs — frontend (Vite) and official-site fetch scripts",
+  "description": "Live Govt Jobs — frontend (Vite) and official-site fetch scripts",
   "engines": {
     "node": ">=24 <25"
   },
@@ -52,6 +52,11 @@
     "data:scrub-expired-noise:apply": "node scripts/run-python.mjs scripts/scrub-expired-noise.py --apply",
     "data:scrub-vacancies": "node scripts/run-python.mjs scripts/scrub-vacancy-counts.py",
     "data:scrub-vacancies:apply": "node scripts/run-python.mjs scripts/scrub-vacancy-counts.py --apply --export",
+    "data:demote-publish-gate": "node scripts/run-python.mjs scripts/demote-publish-gate.py",
+    "data:demote-publish-gate:apply": "node scripts/run-python.mjs scripts/demote-publish-gate.py --apply --export",
+    "validate": "npm run type-check && npm run lint && npm run test",
+    "sync:jobs": "npm run sync:production",
+    "deploy:check": "npm run go-live:check",
     "data:compress-supabase": "node scripts/run-python.mjs scripts/compress-supabase-data.py",
     "data:compress-supabase:apply": "node scripts/run-python.mjs scripts/compress-supabase-data.py --apply --upload-storage",
     "clean:live-jobs": "node scripts/run-python.mjs scripts/clean-live-jobs-json.py && node scripts/build-live-jobs-list.mjs && node scripts/build-live-jobs-bootstrap.mjs",
@@ -115,6 +120,7 @@
     "health:website": "node scripts/website-health-agent.mjs",
     "health:website:code": "node scripts/website-health-agent.mjs --code",
     "health:website:full": "node scripts/website-health-agent.mjs --full",
+    "health:sources": "node scripts/run-python.mjs scripts/run-source-health-agent.py",
     "export:live-jobs": "node scripts/run-python.mjs scripts/export-live-jobs-now.py",
     "everything": "npm run check:frontend && npm run type-check && npm run lint && npm run test && npm run build && npm run env:check && npm run supabase:test && npm run supabase:audit && npm run db:test && npm run jobs:audit && npm run verify",
     "test": "npm run test --prefix frontend && npm run test:backend",

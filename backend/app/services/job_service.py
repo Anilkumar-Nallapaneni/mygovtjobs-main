@@ -32,6 +32,9 @@ logger = logging.getLogger(__name__)
 
 def _is_recruitment_job(row: Job) -> bool:
     """Python safety net for edge cases SQL regex may miss."""
+    doc_type = str(getattr(row, "document_type", None) or "").upper()
+    if doc_type and doc_type not in ("RECRUITMENT", "UNKNOWN"):
+        return False
     title = row.title or ""
     url = row.apply_url or ""
     if is_tender_or_procurement(title, url):
@@ -160,7 +163,7 @@ def _to_job_out(
         dept=row.dept,
         category=row.category,
         state_codes=list(row.state_codes or []),
-        vacancies=row.vacancies or 0,
+        vacancies=row.vacancies if row.vacancies and row.vacancies > 0 else None,
         qualification=row.qualification,
         salary=row.salary,
         age_limit=row.age_limit,
@@ -170,6 +173,11 @@ def _to_job_out(
         status=row.status or "live",
         is_sponsored=bool(getattr(row, "is_sponsored", False)),
         published_at=row.published_at,
+        document_type=getattr(row, "document_type", None),
+        verification_status=getattr(row, "verification_status", None),
+        completeness_score=getattr(row, "completeness_score", None),
+        published_to_site=getattr(row, "published_to_site", None),
+        primary_pdf_url=getattr(row, "primary_pdf_url", None) or pdf_url,
         post_name=post_name or None,
         posts=post_rows,
         important_dates=date_rows,

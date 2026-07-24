@@ -14,8 +14,12 @@ permissions:
 
 jobs:
   enrich:
+    # PRODUCTION FREEZE: set ALLOW_AUTO_INGEST=true to re-enable weekly enrich.
+    if: ${{ github.event_name == 'workflow_dispatch' || vars.ALLOW_AUTO_INGEST == 'true' }}
     runs-on: ubuntu-latest
     timeout-minutes: 240
+    env:
+      AUTO_PUBLISH_VERIFIED: "0"
     steps:
       - uses: actions/checkout@v4
         with:

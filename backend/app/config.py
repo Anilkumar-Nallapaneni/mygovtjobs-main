@@ -47,7 +47,7 @@ class Settings(BaseSettings):
     daily_sync_state_path: str = str(REPO_ROOT / "frontend" / "public" / "data" / "daily-sync-state.json")
     # Alert delivery (email via Resend, Telegram bot)
     resend_api_key: str | None = None
-    alert_from_email: str = "My Govt Jobs <onboarding@resend.dev>"
+    alert_from_email: str = "Live Govt Jobs <onboarding@resend.dev>"
     contact_to_email: str = "contact@livegovtjobs.com"
     telegram_bot_token: str | None = None
     alert_site_url: str = "https://www.livegovtjobs.com"
@@ -66,14 +66,20 @@ class Settings(BaseSettings):
     razorpay_key_secret: str | None = None
     razorpay_webhook_secret: str | None = None
     razorpay_premium_amount_paise: int = 9900  # ₹99
-    razorpay_premium_description: str = "My Govt Jobs Premium — instant alerts & priority support"
-    razorpay_checkout_name: str = "My Govt Jobs"
+    razorpay_premium_description: str = "Live Govt Jobs Premium — instant alerts & priority support"
+    razorpay_checkout_name: str = "Live Govt Jobs"
+    # Production freeze default: ingest saves draft until admin verifies.
+    # Set AUTO_PUBLISH_VERIFIED=1 only after publish gate + data scrub are stable.
+    auto_publish_verified: bool = False
 
     @model_validator(mode="after")
     def _production_defaults(self) -> "Settings":
         # Docker/Railway/Render images omit Tesseract unless explicitly installed.
         if self.app_env.strip().lower() == "production" and not _env_explicit("PDF_OCR_ENABLED"):
             object.__setattr__(self, "pdf_ocr_enabled", False)
+        # Never auto-publish in production unless explicitly enabled.
+        if self.app_env.strip().lower() == "production" and not _env_explicit("AUTO_PUBLISH_VERIFIED"):
+            object.__setattr__(self, "auto_publish_verified", False)
         return self
 
 

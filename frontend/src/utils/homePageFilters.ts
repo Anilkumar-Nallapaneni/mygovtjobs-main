@@ -36,7 +36,7 @@ export function jobMatchesHeroStatFilter(job: JobRecord, statKey: string) {
 
 function sortJobs(j: JobRecord[], sort: HomeSortKey) {
   if (sort === 'vacancies') {
-    j.sort((a, b) => b.vacancies - a.vacancies)
+    j.sort((a, b) => (Number(b.vacancies) || 0) - (Number(a.vacancies) || 0))
     return
   }
   if (sort === 'expiringSoon') {

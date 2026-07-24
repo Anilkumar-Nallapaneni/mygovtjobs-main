@@ -154,7 +154,10 @@ class PdfReaderAgent:
                             full_detail = result.full_detail or {}
                             sections = full_detail.get("content_sections") or []
                             summary = str(full_detail.get("summary") or (job.detail or {}).get("summary") or "").strip()
-                            if changed and (sections or len(summary) >= 40):
+                            memorized_ok = bool(full_detail.get("memorized_at")) and (
+                                sections or len(summary) >= 200
+                            )
+                            if changed and memorized_ok:
                                 async with stats_lock:
                                     stats["memorized"] += 1
                                     if write_static and job.slug:
@@ -173,6 +176,12 @@ class PdfReaderAgent:
                                 )
                                 if memorized % _MEMORY_INDEX_FLUSH_EVERY == 0:
                                     self._write_memory_index(stats)
+                            elif changed:
+                                print(
+                                    f"[{i}/{total}] weak PDF extract for {title} "
+                                    f"(summary={len(summary)} chars) — needs review",
+                                    flush=True,
+                                )
                             else:
                                 print(f"[{i}/{total}] no PDF text for {title}", flush=True)
                             await session.commit()

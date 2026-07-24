@@ -42,6 +42,25 @@ describe('isUsefulLiveRow', () => {
     expect(isUsefulLiveRow({ title: 'SSC CGL 2026 Notification', status: 'draft' })).toBe(false)
   })
 
+  it('rejects unpublished / needs-review publish-gate rows', () => {
+    expect(
+      isUsefulLiveRow({
+        title: 'SSC CGL Recruitment 2026',
+        status: 'live',
+        apply_url: 'https://ssc.gov.in/apply',
+        published_to_site: false,
+      })
+    ).toBe(false)
+    expect(
+      isUsefulLiveRow({
+        title: 'SSC CGL Recruitment 2026',
+        status: 'live',
+        apply_url: 'https://ssc.gov.in/apply',
+        verification_status: 'NEEDS_REVIEW',
+      })
+    ).toBe(false)
+  })
+
   it('accepts recruitment-like official rows', () => {
     expect(
       isUsefulLiveRow({

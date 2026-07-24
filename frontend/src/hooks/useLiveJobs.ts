@@ -13,8 +13,14 @@ import {
   needsSupabaseBackgroundRefresh,
   refreshSupabaseCatalog,
   scheduleAfterFirstPaint,
+  shouldBustLiveJobsCacheOnRefresh,
   type LiveJobsCatalogResult,
 } from '@/lib/liveJobsFetch'
+import {
+  clearLiveJobsSessionCatalog,
+  readLiveJobsSessionCatalog,
+  writeLiveJobsSessionCatalog,
+} from '@/lib/liveJobsSessionCache'
 import { queryClient } from '@/lib/queryClient'
 import { filterDisplayJobs } from '@/utils/jobFilters'
 import { statsFromRows, type CatalogStats } from '@/utils/liveJobsPipeline'
@@ -28,21 +34,53 @@ const EMPTY_CATALOG: LiveJobsCatalogResult = {
   rawLength: 0,
 }
 
-/** Reset React Query cache between Vitest cases. */
+/** Reset React Query + session catalog between Vitest cases. */
 export function resetLiveJobsCacheForTests() {
   queryClient.clear()
+  clearLiveJobsSessionCatalog()
+}
+
+function seedSessionCatalog(source = getJobsSourceMode()) {
+  const key = liveJobsQueryKey(source, 0)
+  if (queryClient.getQueryData(key)) return
+  const cached = readLiveJobsSessionCatalog(source)
+  if (cached?.rows.length) {
+    queryClient.setQueryData<LiveJobsCatalogResult>(key, cached)
+  }
 }
 
 /** Start catalog load before React mounts (shared with useLiveJobs). */
 export function warmLiveJobsCache(bustCache = false) {
   const source = getJobsSourceMode()
   const key = liveJobsQueryKey(source, 0)
-  if (queryClient.getQueryData(key) && !bustCache) return
+  seedSessionCatalog(source)
+
+  const existing = queryClient.getQueryData<LiveJobsCatalogResult>(key)
+  if (existing?.rows.length && !bustCache) {
+    // Session/memory seed paints instantly; still revalidate in the background.
+    void queryClient.prefetchQuery({
+      queryKey: key,
+      queryFn: () =>
+        fetchLiveJobsCatalog(false, (partial) => {
+          queryClient.setQueryData<LiveJobsCatalogResult>(key, partial)
+          writeLiveJobsSessionCatalog(source, partial)
+        }).then((result) => {
+          writeLiveJobsSessionCatalog(source, result)
+          return result
+        }),
+    })
+    return
+  }
+
   void queryClient.prefetchQuery({
     queryKey: key,
     queryFn: () =>
       fetchLiveJobsCatalog(bustCache, (partial) => {
         queryClient.setQueryData<LiveJobsCatalogResult>(key, partial)
+        writeLiveJobsSessionCatalog(source, partial)
+      }).then((result) => {
+        writeLiveJobsSessionCatalog(source, result)
+        return result
       }),
   })
 }
@@ -51,8 +89,12 @@ export function useLiveJobs() {
   const qc = useQueryClient()
   const jobsSource = getJobsSourceMode()
   const [refetchGeneration, setRefetchGeneration] = useState(0)
+  const [hardBust, setHardBust] = useState(false)
   const [syncStatus, setSyncStatus] = useState<SyncStatusResponse | null>(null)
   const [dailySyncMeta, setDailySyncMeta] = useState<DailySyncMeta | null>(null)
+
+  // One-time session seed for instant F5 / mobile reload paint.
+  const [sessionSeed] = useState(() => readLiveJobsSessionCatalog(jobsSource))
 
   const dailySyncOnly = import.meta.env.VITE_DAILY_SYNC_ONLY === '1'
   const queryKey = liveJobsQueryKey(jobsSource, refetchGeneration)
@@ -61,15 +103,23 @@ export function useLiveJobs() {
     queryKey,
     queryFn: () =>
       fetchLiveJobsCatalog(
-        refetchGeneration > 0,
+        hardBust,
         (partial) => {
           qc.setQueryData<LiveJobsCatalogResult>(queryKey, partial)
+          writeLiveJobsSessionCatalog(jobsSource, partial)
         },
         dailySyncMeta
-      ),
+      ).then((result) => {
+        writeLiveJobsSessionCatalog(jobsSource, result)
+        return result
+      }),
     staleTime: Number.POSITIVE_INFINITY,
     gcTime: 30 * 60 * 1000,
-    placeholderData: (prev) => prev,
+    // Session seed paints instantly; updatedAt=0 keeps it stale so queryFn still revalidates.
+    placeholderData: (prev) =>
+      prev ?? (refetchGeneration === 0 ? sessionSeed ?? undefined : undefined),
+    initialData: refetchGeneration === 0 ? sessionSeed ?? undefined : undefined,
+    initialDataUpdatedAt: refetchGeneration === 0 && sessionSeed ? 0 : undefined,
   })
 
   const catalog = catalogQuery.data ?? EMPTY_CATALOG
@@ -85,6 +135,12 @@ export function useLiveJobs() {
       setDailySyncMeta(catalog.dailySync)
     }
   }, [catalog.dailySync, dailySyncMeta])
+
+  useEffect(() => {
+    if (catalog.rows.length) {
+      writeLiveJobsSessionCatalog(jobsSource, catalog)
+    }
+  }, [catalog, jobsSource])
 
   useEffect(() => {
     let cancelled = false
@@ -130,6 +186,7 @@ export function useLiveJobs() {
       void refreshSupabaseCatalog(dailySyncMeta).then((next) => {
         if (cancelled || !next) return
         qc.setQueryData<LiveJobsCatalogResult>(queryKey, next)
+        writeLiveJobsSessionCatalog(jobsSource, next)
       })
     })
 
@@ -149,8 +206,9 @@ export function useLiveJobs() {
 
   const refresh = useCallback(() => {
     if (dailySyncOnly) return
+    setHardBust(shouldBustLiveJobsCacheOnRefresh())
     setRefetchGeneration((g) => g + 1)
-  }, [dailySyncOnly, setRefetchGeneration])
+  }, [dailySyncOnly])
 
   const displayJobs = useMemo(() => filterDisplayJobs(liveRows), [liveRows])
   const catalogStats = useMemo<CatalogStats>(() => statsFromRows(displayJobs), [displayJobs])

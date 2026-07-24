@@ -36,6 +36,30 @@ export const JOBS_FETCH_TIMEOUT_MS = 12_000
 /** Static live-jobs-list.json can be ~3 MB on slow mobile networks. */
 export const LIVE_JOBS_SNAPSHOT_TIMEOUT_MS = 20_000
 
+/** Soft refresh reuses HTTP cache unless the last successful fetch is older than this. */
+export const LIVE_JOBS_HARD_BUST_MS = 5 * 60 * 1000
+
+let lastLiveJobsSnapshotFetchAt = 0
+
+/** Record a successful catalog/snapshot fetch for soft-refresh heuristics. */
+export function markLiveJobsSnapshotFetched(at = Date.now()): void {
+  lastLiveJobsSnapshotFetchAt = at
+}
+
+/** Reset fetch timestamp (tests). */
+export function resetLiveJobsSnapshotFetchClockForTests(): void {
+  lastLiveJobsSnapshotFetchAt = 0
+}
+
+/**
+ * True when a user refresh should bypass HTTP cache (`no-store` + timestamp).
+ * Fresh fetches within the soft window reuse deploy-versioned URLs + `cache: default`.
+ */
+export function shouldHardBustLiveJobsCache(now = Date.now()): boolean {
+  if (!lastLiveJobsSnapshotFetchAt) return false
+  return now - lastLiveJobsSnapshotFetchAt >= LIVE_JOBS_HARD_BUST_MS
+}
+
 async function fetchWithTimeout(
   input: RequestInfo | URL,
   init?: RequestInit & { timeoutMs?: number }
@@ -190,17 +214,20 @@ function parseLiveJobsSnapshot(json: unknown): LiveJobsSnapshot {
 }
 
 async function fetchSnapshotUrl(url: string, bustCache: boolean): Promise<LiveJobsSnapshot> {
-  const requestUrl = bustCache ? `${dataJsonUrl(url)}&t=${Date.now()}` : dataJsonUrl(url)
+  const hardBust = bustCache && shouldHardBustLiveJobsCache()
+  const requestUrl = hardBust ? `${dataJsonUrl(url)}&t=${Date.now()}` : dataJsonUrl(url)
   try {
     const res = await fetchWithTimeout(requestUrl, {
-      cache: bustCache ? 'no-store' : 'default',
+      cache: hardBust ? 'no-store' : 'default',
       timeoutMs: LIVE_JOBS_SNAPSHOT_TIMEOUT_MS,
     })
     if (!res.ok) return { items: [] }
     const contentType = res.headers.get('content-type') || ''
     if (!contentType.includes('json')) return { items: [] }
     const json = await res.json()
-    return parseLiveJobsSnapshot(json)
+    const snap = parseLiveJobsSnapshot(json)
+    if (snap.items.length) markLiveJobsSnapshotFetched()
+    return snap
   } catch {
     return { items: [] }
   }
@@ -208,7 +235,11 @@ async function fetchSnapshotUrl(url: string, bustCache: boolean): Promise<LiveJo
 
 async function fetchLiveJobsSnapshotFromNetwork(bustCache: boolean): Promise<LiveJobsSnapshot> {
   const bootstrap = await fetchSnapshotUrl(LIVE_JOBS_BOOTSTRAP_URL, bustCache)
-  if (bootstrap.items.length) return bootstrap
+  if (bootstrap.items.length) {
+    // Overlap list download with bootstrap paint / React process.
+    void fetchFullLiveJobsSnapshot(bustCache)
+    return bootstrap
+  }
   const listSnap = await fetchSnapshotUrl(LIVE_JOBS_LIST_URL, bustCache)
   if (listSnap.items.length) return listSnap
   return fetchSnapshotUrl(LIVE_JOBS_FULL_URL, bustCache)
@@ -365,6 +396,7 @@ export async function fetchJobBySlug(slug: string): Promise<ApiJob | null> {
             .select('*')
             .eq('slug', slug)
             .in('status', ['live', 'expired'])
+            .or('published_to_site.eq.true,published_to_site.is.null')
             .maybeSingle(),
           JOBS_FETCH_TIMEOUT_MS,
           'Supabase job detail'

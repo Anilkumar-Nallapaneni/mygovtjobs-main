@@ -9,6 +9,7 @@ from pypdf import PdfReader
 
 from app.scrapers.http_client import create_async_client
 from app.services.noise_filter import strip_postgres_control_chars
+from app.services.pdf_candidate import is_real_pdf
 from app.utils.url_safety import assert_safe_url
 
 logger = logging.getLogger(__name__)
@@ -128,11 +129,14 @@ async def fetch_pdf_bytes(url: str, *, timeout: float = 30) -> bytes:
                     raise ValueError("PDF too large")
                 buf.write(chunk)
             data = buf.getvalue()
-            if not _is_pdf_bytes(data):
-                if "pdf" not in content_type and "octet-stream" not in content_type:
-                    raise ValueError("Response is not a PDF")
-                if data[:1] == b"<" or b"<!DOCTYPE" in data[:256].upper():
-                    raise ValueError("Response is HTML, not a PDF")
+            if not is_real_pdf(data, content_type, min_bytes=2_000):
+                if not _is_pdf_bytes(data):
+                    if "pdf" not in content_type and "octet-stream" not in content_type:
+                        raise ValueError("Response is not a PDF")
+                    if data[:1] == b"<" or b"<!DOCTYPE" in data[:256].upper():
+                        raise ValueError("Response is HTML, not a PDF")
+                elif len(data) < 2_000:
+                    raise ValueError("PDF too small to be a notification")
             return data
 
 

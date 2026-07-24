@@ -31,12 +31,10 @@ const LIST_JOB_KEYS = new Set([
   'post_name',
 ])
 
+/** List/card detail only — no summary/published/pdfUrls (detail pages hydrate separately). */
 const LIST_DETAIL_KEYS = new Set([
   'source',
-  'summary',
   'pdf_urls',
-  'pdfUrls',
-  'published',
   'apply_url',
   'official_url',
   'notification_url',
@@ -46,21 +44,18 @@ const LIST_DETAIL_KEYS = new Set([
   'posts',
 ])
 
-const SUMMARY_MAX = 120
-
 function slimDetail(detail) {
   if (!detail || typeof detail !== 'object') return undefined
   const slim = {}
   for (const key of LIST_DETAIL_KEYS) {
     if (detail[key] != null) slim[key] = detail[key]
   }
-  if (typeof slim.summary === 'string' && slim.summary.length > SUMMARY_MAX) {
-    slim.summary = `${slim.summary.slice(0, SUMMARY_MAX)}…`
+  // Prefer snake_case; accept camelCase pdfUrls as fallback only.
+  if (!slim.pdf_urls && Array.isArray(detail.pdfUrls)) {
+    slim.pdf_urls = detail.pdfUrls
   }
-  for (const pdfKey of ['pdf_urls', 'pdfUrls']) {
-    if (Array.isArray(slim[pdfKey]) && slim[pdfKey].length > 2) {
-      slim[pdfKey] = slim[pdfKey].slice(0, 2)
-    }
+  if (Array.isArray(slim.pdf_urls) && slim.pdf_urls.length > 2) {
+    slim.pdf_urls = slim.pdf_urls.slice(0, 2)
   }
   if (Array.isArray(slim.posts) && slim.posts.length > 3) {
     slim.posts = slim.posts.slice(0, 3)

@@ -14,12 +14,19 @@ from app.parsers.pdf_enrich import merge_pdf_fields
 from app.scrapers.pdf_discover import ensure_pdf_urls
 from app.scrapers.rss_feed import RssFeedScraper
 from app.services.dedupe_service import content_hash
+from app.services.document_classifier import classify_document
 from app.services.job_persist_service import JobPersistService, _resolve_state_codes
+from app.services.pdf_candidate import select_primary_pdf
 from app.services.raw_ingest_service import RawIngestService
 from app.services.source_sync_service import SourceSyncService
 from app.services.validation_service import ValidationService
 
 logger = logging.getLogger(__name__)
+
+
+class UnsupportedScraperError(ValueError):
+    """Registry entry has no supported scraper module — do not invent RSS."""
+
 
 def _resolve_registry_path() -> Path:
     """Monorepo dev (repo/scripts) and Docker (/app/scripts)."""
@@ -50,7 +57,18 @@ class IngestAgent:
         if not entry or not entry.get("enabled"):
             return {"source": source_code, "fetched": 0, "saved": 0, "skipped": True}
 
-        scraper = self._scraper_for(entry)
+        try:
+            scraper = self._scraper_for(entry)
+        except UnsupportedScraperError as exc:
+            logger.error("unsupported scraper: %s", exc)
+            return {
+                "source": source_code,
+                "fetched": 0,
+                "saved": 0,
+                "rejected": 0,
+                "errors": 1,
+                "error": str(exc),
+            }
         rows = await scraper.fetch()
         saved = 0
         errors = 0
@@ -132,14 +150,69 @@ class IngestAgent:
         raw = {**raw, "source": source_code}
         if entry.get("sourceName"):
             raw["sourceName"] = entry["sourceName"]
+
+        title = str(raw.get("title") or "")
+        body = str(raw.get("summary") or raw.get("description") or "")
+        link = str(raw.get("link") or raw.get("applyUrl") or "")
+        classification = classify_document(title, body, url=link, dept=str(entry.get("sourceName") or ""))
+
+        # Gate before PDF discovery/parse — non-recruitment never enters PDF pipeline.
+        if classification.content_type != "RECRUITMENT":
+            logger.info(
+                "ingest classified non-recruitment source=%s type=%s title=%r reasons=%s",
+                source_code,
+                classification.content_type,
+                title[:80],
+                classification.reasons[:5],
+            )
+            # Persist as reviewable draft when confidence says possible recruitment.
+            if classification.content_type not in ("POSSIBLE_RECRUITMENT",):
+                return None
+            # Weak signal: continue without PDF enrichment; mark for review.
+            apply_link = raw.get("link") or raw.get("applyUrl")
+            normalized = self.parser.parse(raw, pdf_fields={}, source_code=source_code)
+            normalized["category"] = normalized.get("category") or entry.get("category")
+            normalized["document_type"] = classification.document_type
+            normalized["verification_status"] = "NEEDS_REVIEW"
+            normalized["review_reasons"] = classification.reasons
+            st = entry.get("state")
+            if st and str(st).lower() not in ("all", "all india"):
+                normalized["state"] = str(st).lower()[:8]
+            else:
+                normalized["state"] = "All India"
+            normalized["state_codes"] = _resolve_state_codes(normalized)
+            valid, reasons = self.validator.validate(normalized)
+            if not valid:
+                return None
+            return normalized
+
         apply_link = raw.get("link") or raw.get("applyUrl")
         pdf_urls = await ensure_pdf_urls(raw.get("pdfUrls") or raw.get("pdf_urls") or [], apply_link)
+        primary, score, _ = select_primary_pdf(pdf_urls, min_score=0)
+        if primary and score >= 0:
+            # Prefer primary notification PDF first for enrichment.
+            pdf_urls = [primary] + [u for u in pdf_urls if u != primary]
+        elif pdf_urls and score < 0:
+            logger.info(
+                "ingest PDF candidates look non-recruitment source=%s score=%s title=%r",
+                source_code,
+                score,
+                title[:80],
+            )
+            pdf_urls = []
         raw["pdfUrls"] = pdf_urls
 
         pdf_fields = await merge_pdf_fields(pdf_urls) if pdf_urls else {}
 
         normalized = self.parser.parse(raw, pdf_fields=pdf_fields, source_code=source_code)
         normalized["category"] = normalized.get("category") or entry.get("category")
+        normalized["document_type"] = "RECRUITMENT"
+        normalized["review_reasons"] = classification.reasons
+        if primary:
+            detail = dict(normalized.get("detail") or {})
+            detail["primary_pdf_url"] = primary
+            detail["pdf_url"] = detail.get("pdf_url") or primary
+            normalized["detail"] = detail
 
         st = entry.get("state")
         if st and str(st).lower() not in ("all", "all india"):
@@ -210,6 +283,7 @@ class IngestAgent:
         lookback = int(entry.get("lookbackDays") or settings.ingest_lookback_days)
         max_items = int(entry.get("maxItems") or settings.ingest_max_items_per_source)
         module = entry.get("module")
+        code = entry.get("code", "unknown")
 
         if module == "rss_feed":
             return RssFeedScraper(
@@ -228,7 +302,10 @@ class IngestAgent:
                 lookback_days=lookback,
             )
 
-        return RssFeedScraper(lookback_days=lookback, max_items=max_items)
+        raise UnsupportedScraperError(
+            f"No supported scraper for {code} (module={module!r}); "
+            "refusing silent RSS fallback"
+        )
 
     def _export_fallback_json(self, rows: list, entry: dict, source_code: str) -> None:
         """Write validated rows only — never publish unvalidated scrape output."""
@@ -268,7 +345,8 @@ class IngestAgent:
                 if last and str(last) < date.today().isoformat():
                     row_status = "expired"
                 else:
-                    row_status = "live"
+                    # Never auto-publish via fallback JSON — review queue only.
+                    row_status = "draft"
 
                 items.append(
                     {
@@ -278,9 +356,11 @@ class IngestAgent:
                         "category": normalized.get("category"),
                         "apply_url": normalized.get("apply_url"),
                         "state_codes": normalized.get("state_codes") or [],
-                        "vacancies": int(normalized.get("vacancies") or 0),
+                        "vacancies": int(normalized.get("vacancies") or 0) or None,
                         "last_date": normalized.get("last_date"),
                         "status": row_status,
+                        "published_to_site": False,
+                        "verification_status": "NEEDS_REVIEW",
                         "detail": {
                             "source": source_code,
                             "fallback": True,

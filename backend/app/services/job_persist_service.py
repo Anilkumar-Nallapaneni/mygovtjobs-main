@@ -4,6 +4,7 @@ import json
 import re
 from datetime import date, datetime, timezone
 from pathlib import Path
+from urllib.parse import urlparse
 
 from sqlalchemy.dialects.postgresql import insert
 from sqlalchemy.ext.asyncio import AsyncSession
@@ -12,7 +13,11 @@ from app.config import get_settings
 from app.models.job import Job
 from app.scrapers.date_utils import parse_published
 from app.services.dedupe_service import content_hash, title_fingerprint
+from app.services.document_classifier import classify_document, classify_from_normalized
+from app.services.job_completeness_service import calculate_completeness
 from app.services.noise_filter import clean_job_title, sanitize_json_for_postgres, strip_postgres_control_chars
+from app.services.pdf_candidate import select_primary_pdf
+from app.services.publish_gate import resolve_persist_status
 from app.utils.catalog_job_count import count_catalog_display_jobs
 from app.utils.slim_detail import slim_detail_for_db
 from app.utils.live_jobs_export import slim_job_for_json_export, slim_job_for_list_json_export
@@ -20,8 +25,18 @@ from app.utils.live_jobs_export import slim_job_for_json_export, slim_job_for_li
 _slug_re = re.compile(r"[^a-z0-9]+")
 
 
-def slugify(title: str, digest: str) -> str:
-    base = _slug_re.sub("-", (title or "job").lower()).strip("-")[:80] or "job"
+def slugify(
+    title: str,
+    digest: str,
+    *,
+    dept: str | None = None,
+    published_year: int | str | None = None,
+    source_url: str | None = None,
+) -> str:
+    """Build a stable slug from org + title + year + source identity."""
+    parts = [dept or "", title or "job", str(published_year or ""), source_url or ""]
+    identity = "-".join(p for p in parts if p)
+    base = _slug_re.sub("-", identity.lower()).strip("-")[:80] or "job"
     return f"{base}-{digest[:8]}"
 
 
@@ -70,40 +85,148 @@ def _upsert_published_at(normalized: dict) -> datetime:
     return _resolve_published_at(normalized) or datetime.now(timezone.utc)
 
 
+def _resolve_vacancies(normalized: dict) -> int | None:
+    raw = normalized.get("vacancies")
+    if raw is None or raw == "":
+        return None
+    try:
+        n = int(raw)
+    except (TypeError, ValueError):
+        return None
+    return n if n > 0 else None
+
+
+def _resolve_source_url(normalized: dict, apply_url: str | None) -> str | None:
+    detail = normalized.get("detail") if isinstance(normalized.get("detail"), dict) else {}
+    candidates = [
+        normalized.get("source_url"),
+        detail.get("source_url"),
+        apply_url,
+        detail.get("notification_url"),
+    ]
+    for c in candidates:
+        if isinstance(c, str) and c.strip():
+            return strip_postgres_control_chars(c.strip())
+    return None
+
+
+def _source_domain(url: str | None) -> str | None:
+    if not url:
+        return None
+    try:
+        host = (urlparse(url).hostname or "").lower()
+        return host or None
+    except Exception:
+        return None
+
+
 class JobPersistService:
     async def upsert_normalized(self, session: AsyncSession, normalized: dict, *, commit: bool = True) -> Job | None:
         title = clean_job_title(normalized.get("title"))
         if not title:
             return None
 
+        settings = get_settings()
         apply_url = strip_postgres_control_chars(normalized.get("apply_url")) or None
         last_date = _parse_date(normalized.get("last_date"))
         digest = normalized.get("content_hash") or content_hash(
             title=title, apply_url=apply_url, last_date=str(last_date or "")
         )
-        slug = normalized.get("slug") or slugify(title, digest)
+        dept = strip_postgres_control_chars(normalized.get("dept")) or None
+        published_at = _upsert_published_at(normalized)
+        source_url = _resolve_source_url(normalized, apply_url)
+        slug = normalized.get("slug") or slugify(
+            title,
+            digest,
+            dept=dept,
+            published_year=published_at.year if published_at else None,
+            source_url=source_url,
+        )
         state_codes = _resolve_state_codes(normalized)
 
-        today = date.today()
-        if last_date and last_date < today:
-            job_status = "expired"
-        else:
-            job_status = normalized.get("status") or "live"
+        document_type = (
+            str(normalized.get("document_type") or "").strip().upper()
+            or classify_from_normalized({**normalized, "title": title, "apply_url": apply_url, "dept": dept})
+        )
+        explicit_verification = str(normalized.get("verification_status") or "").strip().upper() or None
 
-        published_at = _upsert_published_at(normalized)
+        classification = classify_document(
+            title,
+            str((normalized.get("detail") or {}).get("summary") or ""),
+            url=str(apply_url or source_url or ""),
+            dept=str(dept or ""),
+        )
+        if not document_type or document_type == "UNKNOWN":
+            document_type = classification.document_type
+
+        completeness_score, missing_fields = calculate_completeness(
+            {
+                **normalized,
+                "title": title,
+                "dept": dept,
+                "apply_url": apply_url,
+                "source_url": source_url,
+                "last_date": last_date,
+                "vacancies": _resolve_vacancies(normalized),
+            }
+        )
+        review_reasons = list(normalized.get("review_reasons") or [])
+        if classification.reasons:
+            review_reasons.extend(classification.reasons)
+        if missing_fields:
+            review_reasons.append(f"Missing fields: {', '.join(missing_fields[:8])}")
+        if classification.content_type != "RECRUITMENT":
+            review_reasons.append(f"Classifier: {classification.content_type}")
+
+        detail_for_pdf = normalized.get("detail") if isinstance(normalized.get("detail"), dict) else {}
+        pdf_candidates = (
+            list(detail_for_pdf.get("pdf_urls") or detail_for_pdf.get("pdfUrls") or [])
+            + ([apply_url] if apply_url and ".pdf" in apply_url.lower() else [])
+        )
+        primary_pdf, pdf_score, _ = select_primary_pdf(pdf_candidates, min_score=0)
+        if pdf_score < 0:
+            review_reasons.append(f"No positive primary PDF (best score={pdf_score})")
+            primary_pdf = None
+
+        job_status, verification_status, published_to_site, _gate_errors = resolve_persist_status(
+            last_date=last_date,
+            document_type=document_type,
+            verification_status=explicit_verification or "UNVERIFIED",
+            normalized={**normalized, "title": title, "dept": dept, "apply_url": apply_url, "source_url": source_url},
+            auto_publish_verified=bool(settings.auto_publish_verified),
+            completeness_score=completeness_score,
+        )
+        # Allow explicit status override only for expired (deadline) already handled;
+        # never force live when auto-publish is off.
+        if normalized.get("status") == "expired":
+            job_status = "expired"
+            published_to_site = False
 
         detail_blob = dict(normalized.get("detail") or {})
         post_name = strip_postgres_control_chars(normalized.get("post_name")) or None
         if post_name:
             detail_blob["post_name"] = post_name
+        detail_blob["document_type"] = document_type
+        detail_blob["verification_status"] = verification_status
+        detail_blob["completeness_score"] = completeness_score
+        detail_blob["classification"] = {
+            "content_type": classification.content_type,
+            "confidence": classification.confidence,
+            "reasons": classification.reasons,
+        }
+        if primary_pdf:
+            detail_blob["primary_pdf_url"] = primary_pdf
+            detail_blob["pdf_url"] = detail_blob.get("pdf_url") or primary_pdf
+
+        vacancies = _resolve_vacancies(normalized)
 
         row = {
             "slug": slug,
             "title": title,
-            "dept": strip_postgres_control_chars(normalized.get("dept")) or None,
+            "dept": dept,
             "category": strip_postgres_control_chars(normalized.get("category")) or None,
             "state_codes": state_codes,
-            "vacancies": int(normalized.get("vacancies") or 0),
+            "vacancies": vacancies,
             "qualification": strip_postgres_control_chars(normalized.get("qualification")) or None,
             "salary": strip_postgres_control_chars(normalized.get("salary")) or None,
             "age_limit": strip_postgres_control_chars(normalized.get("age_limit")) or None,
@@ -115,6 +238,20 @@ class JobPersistService:
             "content_hash": digest,
             "title_fingerprint": title_fingerprint(title),
             "detail": sanitize_json_for_postgres(slim_detail_for_db(detail_blob, status=job_status)),
+            "document_type": document_type,
+            "verification_status": verification_status,
+            "completeness_score": completeness_score,
+            "published_to_site": published_to_site,
+            "primary_pdf_url": primary_pdf,
+            "source_evidence": sanitize_json_for_postgres(
+                normalized.get("source_evidence")
+                if isinstance(normalized.get("source_evidence"), dict)
+                else {}
+            ),
+            "review_reasons": sanitize_json_for_postgres(review_reasons[:40]),
+            "source_url": source_url,
+            "source_domain": _source_domain(source_url),
+            "confidence_score": classification.confidence,
         }
 
         stmt = (
@@ -135,6 +272,16 @@ class JobPersistService:
                     "detail": row["detail"],
                     "status": row["status"],
                     "title_fingerprint": row["title_fingerprint"],
+                    "document_type": row["document_type"],
+                    "verification_status": row["verification_status"],
+                    "completeness_score": row["completeness_score"],
+                    "published_to_site": row["published_to_site"],
+                    "primary_pdf_url": row["primary_pdf_url"],
+                    "source_evidence": row["source_evidence"],
+                    "review_reasons": row["review_reasons"],
+                    "source_url": row["source_url"],
+                    "source_domain": row["source_domain"],
+                    "confidence_score": row["confidence_score"],
                 },
             )
             .returning(Job)

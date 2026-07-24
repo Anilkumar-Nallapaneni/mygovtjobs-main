@@ -8,6 +8,7 @@ import {
 } from '@/data/professions'
 import { getQualificationBySlug } from '@/data/qualifications'
 import { getResultTopicByKey } from '@/data/resultTopics'
+import { STATES } from '@/data/states'
 import type { BrowseStateCore } from '@/hooks/browse/useBrowseStateCore'
 
 export function useBrowseLandingMeta(core: BrowseStateCore) {
@@ -18,6 +19,7 @@ export function useBrowseLandingMeta(core: BrowseStateCore) {
     activeCat,
     headlinesTopicKey,
     allIndiaBrowse,
+    selectedState,
   } = core
 
   const orgEntry = getOrgBySlug(orgSlug)
@@ -25,6 +27,7 @@ export function useBrowseLandingMeta(core: BrowseStateCore) {
   const professionEntry = getProfessionBySlug(professionSlug)
   const categoryEntry = activeCat ? CATS.find((c) => c.id === activeCat) : null
   const resultTopicEntry = getResultTopicByKey(headlinesTopicKey)
+  const stateEntry = selectedState ? STATES.find((s) => s.id === selectedState) : null
 
   const browseLandingTitle = useMemo(
     () =>
@@ -32,8 +35,9 @@ export function useBrowseLandingMeta(core: BrowseStateCore) {
       qualificationEntry?.title ??
       (orgEntry ? `${orgEntry.dept} Recruitment 2026` : null) ??
       (categoryEntry ? `${categoryEntry.name} Government Jobs 2026` : null) ??
+      (stateEntry ? `${stateEntry.n} Government Jobs 2026` : null) ??
       (allIndiaBrowse ? 'All India Government Jobs 2026' : null),
-    [professionEntry, qualificationEntry, orgEntry, categoryEntry, allIndiaBrowse]
+    [professionEntry, qualificationEntry, orgEntry, categoryEntry, stateEntry, allIndiaBrowse]
   )
 
   const browseLandingDescription = useMemo(
@@ -44,10 +48,12 @@ export function useBrowseLandingMeta(core: BrowseStateCore) {
         ? `Live recruitment notifications from ${orgEntry.dept}. Official apply links and PDF notifications only.`
         : categoryEntry
           ? `Live ${categoryEntry.name} recruitment notifications from official government sources.`
-          : allIndiaBrowse
-            ? 'Central government and nationwide recruitment notifications open to candidates across all states.'
-            : null),
-    [professionEntry, qualificationEntry, orgEntry, categoryEntry, allIndiaBrowse]
+          : stateEntry
+            ? `Verified government job notifications for ${stateEntry.n}. Official sources only.`
+            : allIndiaBrowse
+              ? 'Central government and nationwide recruitment notifications open to candidates across all states.'
+              : null),
+    [professionEntry, qualificationEntry, orgEntry, categoryEntry, stateEntry, allIndiaBrowse]
   )
 
   return {

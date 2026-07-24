@@ -46,7 +46,19 @@ export function isUsefulLiveRow(row: Record<string, unknown>) {
   if (!isAllowedOfficialJob(row)) return false
   if (/^\{\{.*\}\}$/.test(title)) return false
   if (/translate\s*\}\}/i.test(title)) return false
-  if (String(row?.status || '').toLowerCase() === 'draft') return false
+  const status = String(row?.status || '').toLowerCase()
+  if (status === 'draft' || status === 'pending') return false
+
+  // Publish gate (when fields are present on the row / export).
+  const publishedFlag = row?.published_to_site ?? row?.publishedToSite
+  if (publishedFlag === false) return false
+  const verification = String(row?.verification_status || row?.verificationStatus || '').toUpperCase()
+  if (verification === 'REJECTED' || verification === 'NEEDS_REVIEW') return false
+  const docType = String(row?.document_type || row?.documentType || '').toUpperCase()
+  if (docType && !['RECRUITMENT', 'UNKNOWN', ''].includes(docType)) return false
+  const completeness = row?.completeness_score ?? row?.completenessScore
+  if (typeof completeness === 'number' && completeness > 0 && completeness < 70) return false
+
   if (vacancyCount(row) > 0) return true
   if (RECRUIT_RE.test(title) || RECRUIT_RE.test(String(row?.dept || ''))) return true
   // Official portal rows with apply link + deadline often omit "recruitment" in the title.

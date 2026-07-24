@@ -22,7 +22,7 @@ class JobOut(BaseModel):
     dept: str | None = None
     category: str | None = None
     state_codes: list[str] = Field(default_factory=list)
-    vacancies: int = 0
+    vacancies: int | None = None
     qualification: str | None = None
     salary: str | None = None
     age_limit: str | None = None
@@ -32,6 +32,11 @@ class JobOut(BaseModel):
     status: str = "live"
     is_sponsored: bool = False
     published_at: datetime | None = None
+    document_type: str | None = None
+    verification_status: str | None = None
+    completeness_score: int | None = None
+    published_to_site: bool | None = None
+    primary_pdf_url: str | None = None
     post_name: str | None = None
     posts: list[JobPostOut] = Field(default_factory=list)
     important_dates: list[JobDateOut] = Field(default_factory=list)

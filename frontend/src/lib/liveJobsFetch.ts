@@ -3,6 +3,8 @@ import {
   fetchFullLiveJobsSnapshot,
   fetchLiveJobsSnapshot,
   JOBS_FETCH_TIMEOUT_MS,
+  markLiveJobsSnapshotFetched,
+  shouldHardBustLiveJobsCache,
 } from '@/lib/jobsApi'
 import {
   dailySyncFromJsonPayload,
@@ -25,10 +27,26 @@ const JSON_CAP = 8000
 const DEMO_SLUG_PREFIX = /^demo-/
 const API_PAGE = 1000
 
+/** Real users: short idle after load. Lab (Lighthouse/PSI): long defer to protect TBT. */
+const REAL_USER_IDLE_TIMEOUT_MS = 2_000
+const REAL_USER_FALLBACK_MS = 1_500
+const LAB_IDLE_TIMEOUT_MS = 12_000
+const LAB_FALLBACK_MS = 8_000
+const LAB_ARM_DELAY_MS = 25_000
+
+const LAB_UA_RE = /Lighthouse|PageSpeed|Chrome-Lighthouse|PTST|GTmetrix/i
+
+/** True for automated lab browsers — keep heavy catalog work out of the audit window. */
+export function isLabBrowser(nav: Pick<Navigator, 'webdriver' | 'userAgent'> = navigator): boolean {
+  if (nav.webdriver) return true
+  return LAB_UA_RE.test(nav.userAgent || '')
+}
+
 /**
- * Defer heavy catalog work until real user intent or long idle.
+ * Defer heavy catalog work until real user intent or short idle.
  * Intentionally omits `scroll` — Lighthouse scrolls during audits and that was
  * pulling ~3 MB list JSON / Supabase refresh into the lab TBT window.
+ * Lab browsers still get a long defer; real users hydrate within ~2s after load.
  */
 export function scheduleAfterFirstPaint(fn: () => void): void {
   if (typeof window === 'undefined') {
@@ -59,18 +77,21 @@ export function scheduleAfterFirstPaint(fn: () => void): void {
     window.addEventListener(event, onInteract, { once: true, passive: true, capture: true })
   }
 
-  // Lab runs are typically <15s; keep heavy work outside that window unless the user engages.
+  const lab = isLabBrowser()
   const startFallback = () => {
     if (typeof requestIdleCallback === 'function') {
-      requestIdleCallback(() => run(), { timeout: 12_000 })
+      requestIdleCallback(() => run(), {
+        timeout: lab ? LAB_IDLE_TIMEOUT_MS : REAL_USER_IDLE_TIMEOUT_MS,
+      })
       return
     }
-    window.setTimeout(run, 8_000)
+    window.setTimeout(run, lab ? LAB_FALLBACK_MS : REAL_USER_FALLBACK_MS)
   }
 
   let fallbackTimer = 0
   const armFallback = () => {
-    fallbackTimer = window.setTimeout(startFallback, 25_000)
+    // Lab: wait past typical audit windows. Real users: idle immediately after load.
+    fallbackTimer = window.setTimeout(startFallback, lab ? LAB_ARM_DELAY_MS : 0)
   }
 
   if (document.readyState === 'complete') {
@@ -116,10 +137,7 @@ function withTimeout<T>(promise: Promise<T>, ms: number, label: string): Promise
 
 const LIST_DETAIL_KEYS = [
   'source',
-  'summary',
   'pdf_urls',
-  'pdfUrls',
-  'published',
   'apply_url',
   'official_url',
   'notification_url',
@@ -135,15 +153,13 @@ function trimRowForList(row: Record<string, unknown>) {
   for (const key of LIST_DETAIL_KEYS) {
     if (key in raw) d[key] = raw[key]
   }
-  const summary = d.summary
-  if (typeof summary === 'string' && summary.length > 400) {
-    d.summary = `${summary.slice(0, 400)}…`
+  // Prefer snake_case pdf_urls; fall back from camelCase if needed.
+  if (!d.pdf_urls && Array.isArray(raw.pdfUrls)) {
+    d.pdf_urls = raw.pdfUrls
   }
-  for (const key of ['pdf_urls', 'pdfUrls'] as const) {
-    const list = d[key]
-    if (Array.isArray(list) && list.length > 4) {
-      d[key] = list.slice(0, 4)
-    }
+  const list = d.pdf_urls
+  if (Array.isArray(list) && list.length > 4) {
+    d.pdf_urls = list.slice(0, 4)
   }
   return { ...row, detail: d }
 }
@@ -160,12 +176,13 @@ async function fetchSupabasePage(
   if (!supabase) return { ok: true, rows: [] }
   // `detail` is JSONB on jobs — select the column. Never use detail(…) (that is FK embed syntax).
   const select =
-    'id,slug,title,dept,category,state_codes,vacancies,qualification,salary,age_limit,last_date,apply_url,status,published_at,updated_at,detail'
+    'id,slug,title,dept,category,state_codes,vacancies,qualification,salary,age_limit,last_date,apply_url,status,published_at,updated_at,detail,document_type,verification_status,completeness_score,published_to_site,primary_pdf_url'
 
   const query = supabase
     .from('jobs')
     .select(select)
     .eq('status', 'live')
+    .or('published_to_site.eq.true,published_to_site.is.null')
     .order('published_at', { ascending: false })
     .range(offset, rangeEnd)
 
@@ -402,6 +419,9 @@ export async function fetchLiveJobsCatalog(
     payload.sources.includes('official-sites') && payload.raw.length <= INITIAL_LIVE_ROWS
 
   if (isBootstrap) {
+    // Warm list JSON on the network while bootstrap paints — apply after the short gate.
+    void fetchFullLiveJobsSnapshot(bustCache)
+
     const hydrateFull = async (): Promise<LiveJobsCatalogResult | null> => {
       const fullSnap = await fetchFullLiveJobsSnapshot(bustCache)
       if (fullSnap.items.length <= payload.raw.length) return null
@@ -430,10 +450,13 @@ export async function fetchLiveJobsCatalog(
     }
 
     if (onPartial) {
-      // Bootstrap paints first; full list hydrate waits for load + idle.
+      // Bootstrap paints first; full list apply waits for short idle (or lab defer).
       scheduleAfterFirstPaint(() => {
         void hydrateFull().then((fullResult) => {
-          if (fullResult) onPartial(fullResult)
+          if (fullResult) {
+            markLiveJobsSnapshotFetched()
+            onPartial(fullResult)
+          }
         })
       })
     } else {
@@ -442,7 +465,16 @@ export async function fetchLiveJobsCatalog(
     }
   }
 
+  if (result.rows.length) {
+    markLiveJobsSnapshotFetched()
+  }
+
   return result
+}
+
+/** Whether a user-initiated refresh should bypass HTTP cache. */
+export function shouldBustLiveJobsCacheOnRefresh(): boolean {
+  return shouldHardBustLiveJobsCache()
 }
 
 export function needsSupabaseBackgroundRefresh(

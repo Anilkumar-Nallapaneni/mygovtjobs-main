@@ -25,14 +25,16 @@ LIST_JOB_KEYS = (
     "published_at",
     "updated_at",
     "post_name",
+    "document_type",
+    "verification_status",
+    "completeness_score",
+    "published_to_site",
+    "primary_pdf_url",
 )
 
 LIST_DETAIL_KEYS = (
     "source",
-    "summary",
     "pdf_urls",
-    "pdfUrls",
-    "published",
     "apply_url",
     "official_url",
     "notification_url",
@@ -46,8 +48,6 @@ LIST_DETAIL_KEYS = (
     "postal_code",
     "pincode",
 )
-
-SUMMARY_MAX_LIST_JSON = 120
 
 
 def slim_job_for_json_export(job: JobOut) -> dict[str, Any]:
@@ -80,14 +80,15 @@ def slim_job_for_list_json_export(job: JobOut) -> dict[str, Any]:
         if key in detail and detail[key] is not None:
             slim_d[key] = detail[key]
 
-    summary = slim_d.get("summary")
-    if isinstance(summary, str) and len(summary) > SUMMARY_MAX_LIST_JSON:
-        slim_d["summary"] = f"{summary[:SUMMARY_MAX_LIST_JSON]}…"
+    # Prefer snake_case pdf_urls; accept camelCase as fallback only (no duplicate keys).
+    if "pdf_urls" not in slim_d:
+        camel = detail.get("pdfUrls")
+        if isinstance(camel, list) and camel:
+            slim_d["pdf_urls"] = camel
 
-    for pdf_key in ("pdf_urls", "pdfUrls"):
-        pdfs = slim_d.get(pdf_key)
-        if isinstance(pdfs, list) and len(pdfs) > 2:
-            slim_d[pdf_key] = pdfs[:2]
+    pdfs = slim_d.get("pdf_urls")
+    if isinstance(pdfs, list) and len(pdfs) > 2:
+        slim_d["pdf_urls"] = pdfs[:2]
 
     posts = slim_d.get("posts")
     if isinstance(posts, list) and len(posts) > 3:

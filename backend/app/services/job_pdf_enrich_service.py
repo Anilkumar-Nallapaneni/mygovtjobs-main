@@ -14,8 +14,14 @@ from app.parsers.pdf_enrich import merge_pdf_fields
 from app.parsers.pdf_sections import text_to_content_sections
 from app.scrapers.pdf_discover import ensure_pdf_urls
 from app.services.job_child_service import sync_job_children
+from app.services.job_completeness_service import calculate_completeness
 from app.services.job_persist_service import _parse_date
 from app.services.noise_filter import sanitize_json_for_postgres, strip_postgres_control_chars
+from app.services.pdf_candidate import (
+    enrichment_meets_quality,
+    select_primary_pdf,
+    validate_extracted_dates,
+)
 from app.utils.job_details_storage import upload_job_detail_json
 from app.utils.official_hosts import looks_like_notification_document, pick_best_official_url
 from app.parsers.pdf_parser import is_weak_field
@@ -29,6 +35,7 @@ def job_row_for_pdf_prep(job: Job) -> dict[str, Any]:
         "title": job.title,
         "apply_url": job.apply_url,
         "detail": dict(job.detail or {}),
+        "primary_pdf_url": getattr(job, "primary_pdf_url", None),
     }
 
 
@@ -45,15 +52,29 @@ class PdfEnrichmentResult:
 
 
 def _sections_from_summary(summary: str, *, pdf_url: str | None = None) -> list[dict[str, Any]]:
+    """Only build sections from summaries that already look like recruitment notices."""
     text = str(summary or "").strip()
-    if len(text) < 40:
+    if len(text) < 300:
+        return []
+    lowered = text.lower()
+    signals = (
+        "qualification",
+        "vacancy",
+        "last date",
+        "age limit",
+        "salary",
+        "application fee",
+        "selection process",
+        "how to apply",
+    )
+    if sum(1 for s in signals if s in lowered) < 3:
         return []
     sections = text_to_content_sections(text, pdf_url=pdf_url)
     if sections:
         return sections
     return [
         {
-            "heading": "Notification",
+            "heading": "Overview",
             "paragraphs": [text[:12_000]],
             "tables": [],
             "lists": [],
@@ -80,17 +101,34 @@ async def prepare_pdf_enrichment(row: dict[str, Any], parser: NotificationParser
     apply_url = row.get("apply_url")
     if apply_url and ".pdf" in str(apply_url).lower():
         pdf_urls.insert(0, apply_url)
+    primary_hint = row.get("primary_pdf_url") or detail.get("primary_pdf_url")
+    if primary_hint:
+        pdf_urls.insert(0, str(primary_hint))
 
     pdf_urls = await ensure_pdf_urls(
         pdf_urls,
         apply_url if apply_url and ".pdf" not in str(apply_url).lower() else None,
     )
-    pdf_fields = await merge_pdf_fields(pdf_urls) if pdf_urls else {}
+    primary, score, scored = select_primary_pdf(pdf_urls, min_score=0)
+    if score < 0 or not primary:
+        # Do not read result/admit-card/tender PDFs.
+        return PdfEnrichmentPrep(
+            pdf_fields={
+                "review_reasons": [f"No usable primary PDF (best_score={score})"],
+                "pdf_scores": scored[:8],
+            },
+            norm={"detail": detail},
+        )
+
+    ordered = [primary] + [u for u in pdf_urls if u != primary]
+    pdf_fields = await merge_pdf_fields(ordered[:3]) if ordered else {}
+    pdf_fields["primary_pdf_url"] = primary
+    pdf_fields["pdf_score"] = score
     norm = parser.parse(
         {
             "title": row.get("title"),
             "link": apply_url,
-            "pdfUrls": pdf_urls,
+            "pdfUrls": ordered,
             "source": detail.get("source"),
         },
         pdf_fields=pdf_fields,
@@ -112,6 +150,17 @@ async def apply_pdf_enrichment(
     norm = prep.norm
     detail = dict(job.detail or {})
     changed = False
+
+    if pdf_fields.get("review_reasons") and not pdf_fields.get("summary") and not pdf_fields.get("content_sections"):
+        reasons = list(getattr(job, "review_reasons", None) or [])
+        reasons.extend(list(pdf_fields.get("review_reasons") or []))
+        job.review_reasons = reasons[:40]
+        job.verification_status = "NEEDS_REVIEW"
+        detail["pdf_scores"] = pdf_fields.get("pdf_scores")
+        detail["extraction_quality_errors"] = pdf_fields.get("review_reasons")
+        job.detail = sanitize_json_for_postgres(slim_detail_for_db(detail, status=str(job.status or "draft")))
+        return PdfEnrichmentResult(changed=True, full_detail=detail)
+
     nd = norm.get("detail") or {}
     new_vac = int(norm.get("vacancies") or 0)
     old_vac = int(job.vacancies or 0)
@@ -188,9 +237,86 @@ async def apply_pdf_enrichment(
         detail["content_sections"] = pdf_fields["content_sections"]
         detail["memorized_at"] = datetime.now(timezone.utc).isoformat()
         changed = True
-    elif pdf_fields.get("summary") and len(str(pdf_fields.get("summary") or "").strip()) >= 40:
-        detail["memorized_at"] = datetime.now(timezone.utc).isoformat()
+
+    # Date plausibility — conflicting dates go to review, not live authority.
+    pub_date = job.published_at.date() if job.published_at else None
+    date_errors = validate_extracted_dates(pub_date, job.last_date)
+    if date_errors:
+        detail["date_validation_errors"] = date_errors
+        job.verification_status = "NEEDS_REVIEW"
+        job.published_to_site = False
+        if job.status == "live":
+            job.status = "draft"
+        reasons = list(getattr(job, "review_reasons", None) or detail.get("review_reasons") or [])
+        reasons.extend(date_errors)
+        job.review_reasons = reasons[:40]
         changed = True
+
+    quality_ok, quality_reasons = enrichment_meets_quality(
+        summary=str(detail.get("summary") or pdf_fields.get("summary") or ""),
+        sections=detail.get("content_sections") or pdf_fields.get("content_sections") or [],
+        fields={
+            "vacancies": job.vacancies or pdf_fields.get("vacancies"),
+            "qualification": job.qualification or pdf_fields.get("qualification"),
+            "salary": job.salary or pdf_fields.get("salary"),
+            "age_limit": job.age_limit or pdf_fields.get("age_limit"),
+            "last_date": job.last_date or pdf_fields.get("last_date"),
+            "application_fee": pdf_fields.get("application_fee") or detail.get("application_fee"),
+            "selection_process": pdf_fields.get("selection_process") or detail.get("selection_process"),
+        },
+    )
+    if changed and not quality_ok:
+        # Do not mark memorized for weak extractions.
+        detail.pop("memorized_at", None)
+        detail["extraction_quality_errors"] = quality_reasons
+        job.verification_status = "NEEDS_REVIEW"
+        reasons = list(getattr(job, "review_reasons", None) or [])
+        reasons.extend(quality_reasons)
+        if pdf_fields.get("review_reasons"):
+            reasons.extend(list(pdf_fields["review_reasons"]))
+        job.review_reasons = reasons[:40]
+        return PdfEnrichmentResult(changed=True, full_detail=detail)
+
+    if quality_ok and (detail.get("content_sections") or len(str(detail.get("summary") or "")) >= 200):
+        detail["memorized_at"] = detail.get("memorized_at") or datetime.now(timezone.utc).isoformat()
+        detail["detail_source"] = "pdf"
+        if pdf_fields.get("primary_pdf_url"):
+            detail["primary_pdf_url"] = pdf_fields["primary_pdf_url"]
+            job.primary_pdf_url = str(pdf_fields["primary_pdf_url"])
+            _ensure_pdf_list(detail, job.primary_pdf_url)
+        # Evidence blob for key fields
+        evidence = dict(getattr(job, "source_evidence", None) or detail.get("source_evidence") or {})
+        for field_key in ("last_date", "vacancies", "qualification", "salary", "age_limit"):
+            value = getattr(job, field_key, None) if hasattr(job, field_key) else detail.get(field_key)
+            if value:
+                evidence[field_key] = {
+                    "value": str(value),
+                    "type": "pdf",
+                    "source": job.primary_pdf_url or detail.get("pdf_url"),
+                    "confidence": 0.85 if quality_ok else 0.4,
+                }
+        job.source_evidence = evidence
+        detail["source_evidence"] = evidence
+        changed = True
+
+        score, missing = calculate_completeness(
+            {
+                "title": job.title,
+                "dept": job.dept,
+                "apply_url": job.apply_url,
+                "source_url": job.source_url,
+                "last_date": job.last_date,
+                "vacancies": job.vacancies,
+                "qualification": job.qualification,
+                "salary": job.salary,
+                "age_limit": job.age_limit,
+                "detail": detail,
+            }
+        )
+        job.completeness_score = score
+        detail["completeness_score"] = score
+        detail["missing_fields"] = missing
+
     if pdf_fields.get("apply_urls"):
         detail["apply_urls"] = pdf_fields["apply_urls"]
         changed = True
@@ -217,16 +343,15 @@ async def apply_pdf_enrichment(
     if changed:
         if not detail.get("content_sections"):
             summary = str(detail.get("summary") or "").strip()
-            if len(summary) >= 40:
-                built = _sections_from_summary(
-                    summary,
-                    pdf_url=str(detail.get("pdf_url") or "") or None,
-                )
-                if built:
-                    detail["content_sections"] = built
+            built = _sections_from_summary(
+                summary,
+                pdf_url=str(detail.get("pdf_url") or job.primary_pdf_url or "") or None,
+            )
+            if built:
+                detail["content_sections"] = built
 
         full_detail = dict(detail)
-        if job.slug and (full_detail.get("content_sections") or full_detail.get("summary")):
+        if job.slug and (full_detail.get("content_sections") or len(str(full_detail.get("summary") or "")) >= 200):
             payload = job_to_detail_payload(job, full_detail)
             if upload_storage:
                 upload_job_detail_json(str(job.slug), payload)

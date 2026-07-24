@@ -1,0 +1,165 @@
+"""Tests for document classifier and publication gate."""
+
+from datetime import date, timedelta
+
+from app.services.document_classifier import classify_document, classify_document_type
+from app.services.job_completeness_service import calculate_completeness, publication_tier
+from app.services.pdf_candidate import (
+    enrichment_meets_quality,
+    is_real_pdf,
+    score_pdf_candidate,
+    select_primary_pdf,
+    validate_extracted_dates,
+)
+from app.services.publish_gate import can_publish_job, resolve_persist_status
+
+
+def test_classify_recruitment():
+    assert (
+        classify_document_type("SSC CGL 2026 Recruitment — Apply Online", "https://ssc.gov.in/x")
+        == "RECRUITMENT"
+    )
+    result = classify_document("SSC CGL 2026 Recruitment — Apply Online", "Applications are invited")
+    assert result.content_type == "RECRUITMENT"
+    assert result.confidence >= 0.85
+
+
+def test_classify_result_and_form():
+    assert classify_document_type("Final Result for Assistant Director") == "RESULT"
+    assert classify_document_type("OBC Declaration Form PDF") == "FORM"
+    assert classify_document_type("E-Tender for Office Furniture", "https://x.gov.in/tenders") == "TENDER"
+    blocked = classify_document("Final Result Notice", "Marks and cut-off released")
+    assert blocked.content_type == "OTHER_NOTICE"
+
+
+def test_can_publish_requires_verified_recruitment():
+    today = date(2026, 7, 24)
+    ok, errors = can_publish_job(
+        {
+            "title": "UPSC CDS Recruitment 2026",
+            "dept": "UPSC",
+            "apply_url": "https://upsc.gov.in/apply",
+            "document_type": "RECRUITMENT",
+            "verification_status": "VERIFIED",
+            "published_at": today - timedelta(days=5),
+            "last_date": today + timedelta(days=30),
+            "qualification": "Graduate",
+            "vacancies": 100,
+            "age_limit": "21-30",
+            "salary": "Level-7",
+            "completeness_score": 80,
+        },
+        today=today,
+    )
+    assert ok
+    assert errors == []
+
+
+def test_can_publish_rejects_old_dates_and_forms():
+    today = date(2026, 7, 24)
+    ok, errors = can_publish_job(
+        {
+            "title": "OBC Form",
+            "dept": "Board",
+            "apply_url": "https://example.gov.in/form.pdf",
+            "document_type": "FORM",
+            "verification_status": "VERIFIED",
+            "published_at": date(1995, 1, 1),
+            "completeness_score": 90,
+        },
+        today=today,
+    )
+    assert not ok
+    assert any("recruitment" in e.lower() for e in errors)
+
+
+def test_resolve_persist_status_freeze_defaults_to_draft():
+    today = date(2026, 7, 24)
+    status, verification, published, _ = resolve_persist_status(
+        last_date=today + timedelta(days=20),
+        document_type="RECRUITMENT",
+        verification_status="UNVERIFIED",
+        normalized={
+            "title": "Bank PO Recruitment 2026",
+            "dept": "IBPS",
+            "apply_url": "https://ibps.in/apply",
+            "published_at": today,
+            "qualification": "Graduate",
+            "vacancies": 50,
+            "age_limit": "20-30",
+            "salary": "Scale I",
+        },
+        auto_publish_verified=False,
+        today=today,
+        completeness_score=80,
+    )
+    assert status == "draft"
+    assert verification == "NEEDS_REVIEW"
+    assert published is False
+
+
+def test_resolve_persist_status_auto_publish_goes_live():
+    today = date(2026, 7, 24)
+    status, verification, published, _ = resolve_persist_status(
+        last_date=today + timedelta(days=20),
+        document_type="RECRUITMENT",
+        verification_status="UNVERIFIED",
+        normalized={
+            "title": "Bank PO Recruitment 2026",
+            "dept": "IBPS",
+            "apply_url": "https://ibps.in/apply",
+            "published_at": today,
+            "qualification": "Graduate",
+            "vacancies": 50,
+            "age_limit": "20-30",
+            "salary": "Scale I",
+        },
+        auto_publish_verified=True,
+        today=today,
+        completeness_score=80,
+    )
+    assert status == "live"
+    assert verification == "VERIFIED"
+    assert published is True
+
+
+def test_pdf_candidate_scoring():
+    assert score_pdf_candidate("https://upsc.gov.in/recruitment-notification.pdf") > 0
+    assert score_pdf_candidate("https://ssc.gov.in/final-result.pdf") < 0
+    best, score, _ = select_primary_pdf(
+        [
+            "https://x.gov.in/result.pdf",
+            "https://x.gov.in/detailed-advertisement.pdf",
+        ]
+    )
+    assert best and "advertisement" in best
+    assert score > 0
+
+
+def test_is_real_pdf_and_dates():
+    assert is_real_pdf(b"%PDF-1.4" + b"0" * 12_000, "application/pdf")
+    assert not is_real_pdf(b"<html>error</html>", "text/html")
+    today = date(2026, 7, 24)
+    errs = validate_extracted_dates(today + timedelta(days=5), today, today=today)
+    assert errs
+    ok, reasons = enrichment_meets_quality(summary="short", sections=[], fields={})
+    assert not ok
+    assert reasons
+
+
+def test_completeness_scoring():
+    score, missing = calculate_completeness(
+        {
+            "title": "Recruitment",
+            "dept": "UPSC",
+            "apply_url": "https://upsc.gov.in",
+            "last_date": "2026-08-01",
+            "qualification": "Graduate",
+            "vacancies": 10,
+            "age_limit": "21-30",
+            "salary": "Level-10",
+        }
+    )
+    assert score >= 70
+    assert publication_tier(score) == "publish"
+    assert publication_tier(50) == "hold"

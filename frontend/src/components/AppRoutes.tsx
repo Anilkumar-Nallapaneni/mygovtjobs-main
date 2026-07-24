@@ -1,5 +1,6 @@
 import { lazy, Suspense, type ComponentProps, type ReactNode } from "react";
 import { Route, Routes } from "react-router-dom";
+import AdminRouteGuard from "@/components/AdminRouteGuard";
 import RouteErrorBoundary from "@/components/RouteErrorBoundary";
 import RoutePageFallback from "@/components/RoutePageFallback";
 import type StaticPage from "@/pages/StaticPage";
@@ -56,6 +57,7 @@ const ExploreHubPage = lazy(() => import("@/pages/ExploreHubPage"));
 const AlertsPage = lazy(() => import("@/pages/AlertsPage"));
 const ExamsIndexPage = lazy(() => import("@/pages/ExamsIndexPage"));
 const ExamLandingPage = lazy(() => import("@/pages/ExamLandingPage"));
+const BrowseJobsLandingPage = lazy(() => import("@/pages/BrowseJobsLandingPage"));
 const ExamCalendarPage = lazy(() => import("@/pages/ExamCalendarPage"));
 const FaqPage = lazy(() => import("@/pages/FaqPage"));
 const ContactPage = lazy(() => import("@/pages/ContactPage"));
@@ -101,9 +103,48 @@ export default function AppRoutes({
       <Route path="/" element={homePageElement} />
       <Route path="/jobs" element={homePageElement} />
       <Route path={ALL_INDIA_JOBS_PATH} element={homePageElement} />
-      <Route path="/qualification/:slug" element={homePageElement} />
-      <Route path="/profession/:slug" element={homePageElement} />
-      <Route path="/org/:slug" element={homePageElement} />
+      <Route
+        path="/qualification/:slug"
+        element={
+          <LazyRoute>
+            <BrowseJobsLandingPage
+              kind="qualification"
+              jobs={jobs}
+              jobsLoading={jobsLoading}
+              onJobClick={onJobClick}
+              onFooterLink={onFooterLink}
+            />
+          </LazyRoute>
+        }
+      />
+      <Route
+        path="/profession/:slug"
+        element={
+          <LazyRoute>
+            <BrowseJobsLandingPage
+              kind="profession"
+              jobs={jobs}
+              jobsLoading={jobsLoading}
+              onJobClick={onJobClick}
+              onFooterLink={onFooterLink}
+            />
+          </LazyRoute>
+        }
+      />
+      <Route
+        path="/org/:slug"
+        element={
+          <LazyRoute>
+            <BrowseJobsLandingPage
+              kind="org"
+              jobs={jobs}
+              jobsLoading={jobsLoading}
+              onJobClick={onJobClick}
+              onFooterLink={onFooterLink}
+            />
+          </LazyRoute>
+        }
+      />
       <Route
         path={EXPLORE_HUB_PATH}
         element={
@@ -168,8 +209,34 @@ export default function AppRoutes({
           </LazyRoute>
         }
       />
-      <Route path="/state/:stateId" element={homePageElement} />
-      <Route path="/category/:categoryId" element={homePageElement} />
+      <Route
+        path="/state/:stateId"
+        element={
+          <LazyRoute>
+            <BrowseJobsLandingPage
+              kind="state"
+              jobs={jobs}
+              jobsLoading={jobsLoading}
+              onJobClick={onJobClick}
+              onFooterLink={onFooterLink}
+            />
+          </LazyRoute>
+        }
+      />
+      <Route
+        path="/category/:categoryId"
+        element={
+          <LazyRoute>
+            <BrowseJobsLandingPage
+              kind="category"
+              jobs={jobs}
+              jobsLoading={jobsLoading}
+              onJobClick={onJobClick}
+              onFooterLink={onFooterLink}
+            />
+          </LazyRoute>
+        }
+      />
       <Route
         path={RESULTS_TOPICS_INDEX_PATH}
         element={
@@ -307,7 +374,9 @@ export default function AppRoutes({
         path="/admin"
         element={
           <LazyRoute>
-            <AdminDashboardPage onFooterLink={onFooterLink} />
+            <AdminRouteGuard>
+              <AdminDashboardPage onFooterLink={onFooterLink} />
+            </AdminRouteGuard>
           </LazyRoute>
         }
       />

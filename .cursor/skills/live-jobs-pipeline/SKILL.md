@@ -11,16 +11,22 @@ description: >-
 
 ```mermaid
 flowchart LR
-  A1[Agent 1 IngestAgent] --> A2[Agent 2 PdfReaderAgent]
-  A2 --> A3[Agent 3 JobDetailAgent]
-  A3 --> UI[Job Detail Page]
+  A1[Agent 1 Ingest + classify] --> Gate[Publish gate]
+  Gate --> A2[Agent 2 PDF read + evidence]
+  A2 --> A3[Agent 3 Detail + completeness]
+  A3 --> Pub[published_to_site only]
+  Pub --> UI[Job Detail Page]
 ```
 
 | Agent | Code | Role |
 |-------|------|------|
-| **1 — Live jobs** | `backend/app/agents/ingest_agent.py` | Scrape official sites → new live jobs in Supabase + `live-jobs.json` |
-| **2 — PDF reader** | `backend/app/agents/pdf_reader_agent.py` | Download PDFs → `summary`, vacancies, dates → DB |
-| **3 — Job details** | `backend/app/agents/job_detail_agent.py` | Build UI detail (sections, static JSON, Storage) |
+| **1 — Live jobs** | `backend/app/agents/ingest_agent.py` | Scrape → **classify recruitment** → draft unless verified |
+| **2 — PDF reader** | `backend/app/agents/pdf_reader_agent.py` | Primary PDF score → extract → quality gate |
+| **3 — Job details** | `backend/app/agents/job_detail_agent.py` | Completeness ≥70 to publish; no weak-summary pages |
+| **Gate** | `publish_gate.py` + `document_classifier.py` | `verification_status`, `published_to_site`, `completeness_score` |
+| **Source health** | `source_health_agent.py` | Probe registry portals (`npm run health:sources`) |
+
+**Default:** `AUTO_PUBLISH_VERIFIED=0` — new ingest stays `draft` / `NEEDS_REVIEW` until admin publish.
 
 **Detail priority:** PDF memorized > official notification > live listing scrape.
 
@@ -59,6 +65,7 @@ Skill: `.cursor/skills/website-health-agent/`
 
 ## What's not automatic yet
 
-- **OCR** for scanned image PDFs (needs Tesseract on Windows)
-- **228 jobs** without any PDF URL — run `npm run pdf:backfill`
-- **Daily sync** uses `--skip-enrich` by default — use `pipeline:live:full` or `daily:sync:full` for PDF in one step
+- **OCR** for scanned PDFs still needs Tesseract locally (`PDF_OCR_ENABLED=1`)
+- **Custom parsers** for top boards (UPSC/SSC/…) beyond `rss_feed` / `state_portal_html`
+- **Full admin UI** for review queues (API ready: `GET /api/admin/review-queues`)
+- Re-export static `live-jobs.json` after scrubbing so CDN snapshot matches the gate

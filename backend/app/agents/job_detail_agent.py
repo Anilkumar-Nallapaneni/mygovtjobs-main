@@ -16,6 +16,7 @@ from app.database.session import SessionLocal
 from app.models.job import Job
 from app.parsers.pdf_sections import text_to_content_sections
 from app.services.job_child_service import sync_job_children
+from app.services.job_completeness_service import PUBLISH_MIN_SCORE, calculate_completeness, publication_tier
 from app.services.job_persist_service import JobPersistService
 from app.services.job_pdf_enrich_service import job_to_detail_payload
 from app.services.noise_filter import sanitize_json_for_postgres
@@ -23,6 +24,23 @@ from app.utils.job_details_storage import upload_job_detail_json
 from app.utils.slim_detail import slim_detail_for_db
 
 logger = logging.getLogger(__name__)
+
+STANDARD_SECTION_ORDER = (
+    "Overview",
+    "Important Dates",
+    "Vacancy Details",
+    "Eligibility and Qualification",
+    "Age Limit",
+    "Salary or Pay Scale",
+    "Application Fee",
+    "Selection Process",
+    "How to Apply",
+    "Important Links",
+    "Official Source",
+    "Verification Information",
+)
+
+_NOT_SPECIFIED = "Not specified in the available official notice"
 
 
 def _resolve_repo_root() -> Path:
@@ -44,22 +62,154 @@ def _infer_detail_source(detail: dict[str, Any]) -> str:
     return "listing"
 
 
+def _summary_has_job_signals(summary: str) -> bool:
+    text = summary.lower()
+    signals = (
+        "qualification",
+        "vacancy",
+        "last date",
+        "age limit",
+        "salary",
+        "application fee",
+        "selection process",
+        "how to apply",
+    )
+    return sum(signal in text for signal in signals) >= 3
+
+
 def _sections_from_summary(summary: str, *, pdf_url: str | None = None) -> list[dict[str, Any]]:
     text = str(summary or "").strip()
-    if len(text) < 40:
+    if len(text) < 300 or not _summary_has_job_signals(text):
         return []
     sections = text_to_content_sections(text, pdf_url=pdf_url)
     if sections:
         return sections
     return [
         {
-            "heading": "Notification",
+            "heading": "Overview",
             "paragraphs": [text[:12_000]],
             "tables": [],
             "lists": [],
             "links": [],
         }
     ]
+
+
+def _pending_verification_sections() -> list[dict[str, Any]]:
+    return [
+        {
+            "heading": "Overview",
+            "paragraphs": [
+                "Full details are being verified.",
+                "Please read the official notification.",
+            ],
+            "tables": [],
+            "lists": [],
+            "links": [],
+        },
+        {
+            "heading": "Verification Information",
+            "paragraphs": [
+                "Verification status: Partial",
+                "Some details are not available in the source document.",
+            ],
+            "tables": [],
+            "lists": [],
+            "links": [],
+        },
+    ]
+
+
+def _normalize_section_heading(heading: str) -> str:
+    h = (heading or "").strip().lower()
+    mapping = {
+        "overview": "Overview",
+        "important dates": "Important Dates",
+        "dates": "Important Dates",
+        "vacancy": "Vacancy Details",
+        "vacancy details": "Vacancy Details",
+        "vacancies": "Vacancy Details",
+        "eligibility": "Eligibility and Qualification",
+        "qualification": "Eligibility and Qualification",
+        "eligibility and qualification": "Eligibility and Qualification",
+        "age limit": "Age Limit",
+        "age": "Age Limit",
+        "salary": "Salary or Pay Scale",
+        "pay scale": "Salary or Pay Scale",
+        "salary or pay scale": "Salary or Pay Scale",
+        "application fee": "Application Fee",
+        "fee": "Application Fee",
+        "selection": "Selection Process",
+        "selection process": "Selection Process",
+        "how to apply": "How to Apply",
+        "apply": "How to Apply",
+        "important links": "Important Links",
+        "links": "Important Links",
+        "official source": "Official Source",
+        "source": "Official Source",
+        "verification": "Verification Information",
+        "verification information": "Verification Information",
+        "notification": "Overview",
+    }
+    return mapping.get(h, heading.strip() or "Overview")
+
+
+def _normalize_sections(sections: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    by_heading: dict[str, dict[str, Any]] = {}
+    for section in sections:
+        if not isinstance(section, dict):
+            continue
+        heading = _normalize_section_heading(str(section.get("heading") or "Overview"))
+        existing = by_heading.get(heading)
+        if not existing:
+            by_heading[heading] = {
+                "heading": heading,
+                "paragraphs": list(section.get("paragraphs") or []),
+                "tables": list(section.get("tables") or []),
+                "lists": list(section.get("lists") or []),
+                "links": list(section.get("links") or []),
+            }
+            continue
+        existing["paragraphs"].extend(section.get("paragraphs") or [])
+        existing["tables"].extend(section.get("tables") or [])
+        existing["lists"].extend(section.get("lists") or [])
+        existing["links"].extend(section.get("links") or [])
+
+    ordered: list[dict[str, Any]] = []
+    for name in STANDARD_SECTION_ORDER:
+        if name in by_heading:
+            ordered.append(by_heading.pop(name))
+    ordered.extend(by_heading.values())
+    return ordered
+
+
+def _attach_verification_section(detail: dict[str, Any], job: Job, score: int, missing: list[str]) -> None:
+    source_type = "Official recruitment notification PDF" if detail.get("detail_source") == "pdf" else "Official notice"
+    status = str(getattr(job, "verification_status", None) or "UNVERIFIED")
+    paragraphs = [
+        f"Source type: {source_type}",
+        f"Source organisation: {job.dept or _NOT_SPECIFIED}",
+        f"Last verified: {detail.get('detail_updated_at') or datetime.now(timezone.utc).isoformat()}",
+        f"Verification status: {status}",
+        f"Completeness score: {score}/100",
+    ]
+    if missing:
+        paragraphs.append(f"Pending fields: {', '.join(missing[:8])}")
+    if score < PUBLISH_MIN_SCORE:
+        paragraphs.append("Some details are not available in the source document.")
+
+    sections = list(detail.get("content_sections") or [])
+    sections = [s for s in sections if str(s.get("heading") or "") != "Verification Information"]
+    sections.append(
+        {
+            "heading": "Verification Information",
+            "paragraphs": paragraphs,
+            "tables": [],
+            "lists": [],
+            "links": [],
+        }
+    )
+    detail["content_sections"] = _normalize_sections(sections)
 
 
 class JobDetailAgent:
@@ -85,12 +235,13 @@ class JobDetailAgent:
         export_live_json: bool = True,
         write_static: bool = True,
     ) -> dict[str, Any]:
-        statuses = ("live",) if live_only else ("live", "expired")
+        statuses = ("live",) if live_only else ("live", "expired", "draft", "pending")
         sem = asyncio.Semaphore(max(1, concurrency))
         stats: dict[str, Any] = {
             "scanned": 0,
             "updated": 0,
             "skipped": 0,
+            "held": 0,
             "failed": 0,
             "by_source": {"pdf": 0, "notification": 0, "listing": 0},
         }
@@ -142,10 +293,10 @@ class JobDetailAgent:
                             title = (job.title or "untitled")[:56]
                             detail = dict(job.detail or {})
                             summary = str(detail.get("summary") or "").strip()
-                            pdf_url = detail.get("pdf_url")
+                            pdf_url = detail.get("pdf_url") or getattr(job, "primary_pdf_url", None)
                             sections = list(detail.get("content_sections") or [])
 
-                            if not sections and len(summary) >= 40:
+                            if not sections and len(summary) >= 300 and _summary_has_job_signals(summary):
                                 built = _sections_from_summary(
                                     summary, pdf_url=str(pdf_url) if pdf_url else None
                                 )
@@ -153,9 +304,10 @@ class JobDetailAgent:
                                     detail["content_sections"] = built
                                     sections = built
 
-                            if not sections and not summary:
-                                print(f"[{i}/{total}] skip {title} (no content)", flush=True)
-                                return
+                            if not sections:
+                                detail["content_sections"] = _pending_verification_sections()
+                                sections = detail["content_sections"]
+                                detail["details_pending_verification"] = True
 
                             source = _infer_detail_source(detail)
                             detail["detail_source"] = source
@@ -163,7 +315,43 @@ class JobDetailAgent:
                             if source == "pdf" and not detail.get("memorized_at"):
                                 detail["memorized_at"] = detail["detail_updated_at"]
 
-                            # Full detail for children sync + storage (sections stay in JSON files)
+                            score, missing = calculate_completeness(
+                                {
+                                    "title": job.title,
+                                    "dept": job.dept,
+                                    "apply_url": job.apply_url,
+                                    "source_url": job.source_url,
+                                    "last_date": job.last_date,
+                                    "vacancies": job.vacancies,
+                                    "qualification": job.qualification,
+                                    "salary": job.salary,
+                                    "age_limit": job.age_limit,
+                                    "detail": detail,
+                                }
+                            )
+                            job.completeness_score = score
+                            detail["completeness_score"] = score
+                            detail["missing_fields"] = missing
+                            tier = publication_tier(score)
+                            _attach_verification_section(detail, job, score, missing)
+
+                            if tier == "hold":
+                                if not bool(getattr(job, "published_to_site", False)):
+                                    job.published_to_site = False
+                                    if job.status == "live":
+                                        job.status = "draft"
+                                    job.verification_status = "NEEDS_REVIEW"
+                                    stats["held"] += 1
+                                else:
+                                    # Already on the site — flag partial instead of unpublishing.
+                                    detail["details_pending_verification"] = True
+                                    if job.verification_status == "VERIFIED":
+                                        job.verification_status = "PARTIALLY_VERIFIED"
+                            elif tier == "partial":
+                                detail["details_pending_verification"] = True
+                                if job.verification_status == "VERIFIED":
+                                    job.verification_status = "PARTIALLY_VERIFIED"
+
                             job.detail = sanitize_json_for_postgres(detail)
                             await sync_job_children(inner, job)
 
@@ -172,7 +360,7 @@ class JobDetailAgent:
                                     str(job.slug), job_to_detail_payload(job, detail)
                                 )
 
-                            if write_static and job.slug:
+                            if write_static and job.slug and tier != "hold":
                                 self._write_static(job, detail)
 
                             job.detail = sanitize_json_for_postgres(
@@ -181,6 +369,8 @@ class JobDetailAgent:
                                     "detail_source": source,
                                     "memorized_at": detail.get("memorized_at"),
                                     "detail_updated_at": detail["detail_updated_at"],
+                                    "completeness_score": score,
+                                    "details_pending_verification": detail.get("details_pending_verification"),
                                 }
                             )
                             await inner.commit()
@@ -189,7 +379,7 @@ class JobDetailAgent:
                             stats["by_source"][source] = stats["by_source"].get(source, 0) + 1
                             print(
                                 f"[{i}/{total}] detail={source} {title} "
-                                f"({len(sections)} sections)",
+                                f"({len(sections)} sections, score={score}, tier={tier})",
                                 flush=True,
                             )
                             return
@@ -204,10 +394,10 @@ class JobDetailAgent:
                                 max_attempts,
                                 exc,
                             )
-                            await asyncio.sleep(0.75 * attempt)
+                            await asyncio.sleep(0.5 * attempt)
                             continue
                         stats["failed"] += 1
-                        print(f"[{i}/{total}] failed {title}: {exc}", flush=True)
+                        logger.exception("[%s/%s] detail failed for %s: %s", i, total, title, exc)
                         return
 
         await asyncio.gather(*(process_one(i, jid) for i, jid in enumerate(job_ids, 1)))
@@ -224,5 +414,7 @@ class JobDetailAgent:
     def _write_static(self, job: Job, detail: dict[str, Any]) -> None:
         self.detail_dir.mkdir(parents=True, exist_ok=True)
         path = self.detail_dir / f"{job.slug}.json"
-        payload = job_to_detail_payload(job, detail)
-        path.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
+        path.write_text(
+            json.dumps(job_to_detail_payload(job, detail), ensure_ascii=False, indent=2),
+            encoding="utf-8",
+        )
