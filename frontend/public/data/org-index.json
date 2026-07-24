@@ -18,10 +18,22 @@
     "vacancies": 0
   },
   {
+    "dept": "Mha",
+    "slug": "mha",
+    "count": 62,
+    "vacancies": 42758
+  },
+  {
     "dept": "Madhya Pradesh PSC (MPPSC)",
     "slug": "madhya-pradesh-psc-mppsc",
     "count": 59,
     "vacancies": 21
+  },
+  {
+    "dept": "UPPSC — Hall tickets",
+    "slug": "uppsc-hall-tickets",
+    "count": 59,
+    "vacancies": 0
   },
   {
     "dept": "Food Safety and Standards Authority (FSSAI)",
@@ -33,12 +45,6 @@
     "dept": "Press Information Bureau (PIB)",
     "slug": "press-information-bureau-pib",
     "count": 57,
-    "vacancies": 0
-  },
-  {
-    "dept": "UPPSC — Hall tickets",
-    "slug": "uppsc-hall-tickets",
-    "count": 55,
     "vacancies": 0
   },
   {
@@ -70,12 +76,6 @@
     "slug": "sainik-school-jhansi",
     "count": 46,
     "vacancies": 8
-  },
-  {
-    "dept": "Mha",
-    "slug": "mha",
-    "count": 45,
-    "vacancies": 28527
   },
   {
     "dept": "Indo-Tibetan Border Police (ITBP)",
@@ -146,7 +146,7 @@
   {
     "dept": "Uppbpb",
     "slug": "uppbpb",
-    "count": 32,
+    "count": 31,
     "vacancies": 0
   },
   {
@@ -186,16 +186,22 @@
     "vacancies": 11
   },
   {
-    "dept": "Haryana PSC (HPSC)",
-    "slug": "haryana-psc-hpsc",
-    "count": 27,
-    "vacancies": 775
-  },
-  {
     "dept": "Recruitment Py",
     "slug": "recruitment-py",
     "count": 27,
     "vacancies": 0
+  },
+  {
+    "dept": "Haryana PSC (HPSC)",
+    "slug": "haryana-psc-hpsc",
+    "count": 26,
+    "vacancies": 775
+  },
+  {
+    "dept": "Ppsc",
+    "slug": "ppsc",
+    "count": 26,
+    "vacancies": 494
   },
   {
     "dept": "Rrbguwahati",
@@ -204,10 +210,10 @@
     "vacancies": 0
   },
   {
-    "dept": "Ppsc",
-    "slug": "ppsc",
+    "dept": "Sainik School Goalpara",
+    "slug": "sainik-school-goalpara",
     "count": 25,
-    "vacancies": 468
+    "vacancies": 83
   },
   {
     "dept": "MP Police Headquarters — Recruitment",
@@ -222,22 +228,16 @@
     "vacancies": 12180
   },
   {
-    "dept": "Sainik School Goalpara",
-    "slug": "sainik-school-goalpara",
+    "dept": "Sainikschoolgoalpara Org",
+    "slug": "sainikschoolgoalpara-org",
     "count": 24,
-    "vacancies": 80
+    "vacancies": 36375
   },
   {
     "dept": "Railway Recruitment Board (RRB) — Guwahati",
     "slug": "railway-recruitment-board-rrb-guwahati",
     "count": 23,
     "vacancies": 0
-  },
-  {
-    "dept": "Sainikschoolgoalpara Org",
-    "slug": "sainikschoolgoalpara-org",
-    "count": 23,
-    "vacancies": 36372
   },
   {
     "dept": "Canarabank Com",
@@ -306,12 +306,6 @@
     "vacancies": 0
   },
   {
-    "dept": "APEDA / BEDF — Recruitments",
-    "slug": "apeda-bedf-recruitments",
-    "count": 16,
-    "vacancies": 81
-  },
-  {
     "dept": "Central Reserve Police Force (CRPF)",
     "slug": "central-reserve-police-force-crpf",
     "count": 16,
@@ -336,12 +330,6 @@
     "vacancies": 203
   },
   {
-    "dept": "Fssai",
-    "slug": "fssai",
-    "count": 16,
-    "vacancies": 0
-  },
-  {
     "dept": "Sainikschoolbhubaneswar Edu In",
     "slug": "sainikschoolbhubaneswar-edu-in",
     "count": 16,
@@ -358,6 +346,18 @@
     "slug": "apeda",
     "count": 15,
     "vacancies": 67
+  },
+  {
+    "dept": "APEDA / BEDF — Recruitments",
+    "slug": "apeda-bedf-recruitments",
+    "count": 15,
+    "vacancies": 81
+  },
+  {
+    "dept": "Fssai",
+    "slug": "fssai",
+    "count": 15,
+    "vacancies": 0
   },
   {
     "dept": "Mahapolice",
@@ -708,6 +708,12 @@
     "vacancies": 1
   },
   {
+    "dept": "Sainik School Gopalganj",
+    "slug": "sainik-school-gopalganj",
+    "count": 5,
+    "vacancies": 4
+  },
+  {
     "dept": "Tnpsc",
     "slug": "tnpsc",
     "count": 5,
@@ -792,12 +798,6 @@
     "vacancies": 0
   },
   {
-    "dept": "Sainik School Gopalganj",
-    "slug": "sainik-school-gopalganj",
-    "count": 4,
-    "vacancies": 2
-  },
-  {
     "dept": "Ujjain Dcourts",
     "slug": "ujjain-dcourts",
     "count": 4,
@@ -814,12 +814,6 @@
     "slug": "bedf",
     "count": 3,
     "vacancies": 15
-  },
-  {
-    "dept": "BITS Pilani",
-    "slug": "bits-pilani",
-    "count": 3,
-    "vacancies": 31
   },
   {
     "dept": "CBSE — CTET",
@@ -870,12 +864,6 @@
     "vacancies": 3
   },
   {
-    "dept": "IIT Gandhinagar",
-    "slug": "iit-gandhinagar",
-    "count": 3,
-    "vacancies": 3
-  },
-  {
     "dept": "Kerala PSC",
     "slug": "kerala-psc",
     "count": 3,
@@ -918,16 +906,16 @@
     "vacancies": 0
   },
   {
-    "dept": "RRI",
-    "slug": "rri",
-    "count": 3,
-    "vacancies": 136
-  },
-  {
     "dept": "Sebi",
     "slug": "sebi",
     "count": 3,
     "vacancies": 0
+  },
+  {
+    "dept": "SGPGIMS",
+    "slug": "sgpgims",
+    "count": 3,
+    "vacancies": 3
   },
   {
     "dept": "SSC",
