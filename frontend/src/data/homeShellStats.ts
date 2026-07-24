@@ -3,8 +3,8 @@ import type { HeadlineStats } from '@/utils/headlineStats'
 
 /** Last-known production totals — paints headline stats before Supabase responds. */
 export const HOME_SHELL_HEADLINE_STATS: HeadlineStats = {
-  notifications: 874,
-  vacancies: 55_597,
+  notifications: 1624,
+  vacancies: 8249,
   orgs: 75,
 }
 
@@ -13,17 +13,17 @@ export const HOME_SHELL_ORG_COUNT = 79
 export const HOME_SHELL_OFFICIAL_SOURCE_COUNT = 153
 
 export const HOME_SHELL_CATALOG_STATS: CatalogStats = {
-  totalNotices: 874,
-  liveNotices: 874,
-  vacancies: 55_597,
-  noticesWithVacancies: 420,
+  totalNotices: 1624,
+  liveNotices: 1624,
+  vacancies: 8249,
+  noticesWithVacancies: 172,
 }
 
 export const HOME_SHELL_HERO_STATS = {
-  posts: 55_597,
-  withPostCount: 420,
+  posts: 8249,
+  withPostCount: 172,
   hotNew: 86,
   states: 28,
   stateListings: 812,
-  live: 874,
+  live: 1624,
 }

@@ -68,9 +68,12 @@ function scoreLiveRow(row: Record<string, unknown>) {
 }
 
 function vacancyCount(row: Record<string, unknown>) {
-  const v = Number(row?.vacancies) || 0
-  const raw = Number((row as { rawVacancies?: number }).rawVacancies) || 0
-  return v > 0 ? v : raw
+  // Use sanitized `vacancies` only — never fall back to rawVacancies (result/cutoff
+  // PDFs often store candidate counts that enrichment correctly zeros).
+  if (row?.vacancies !== undefined && row?.vacancies !== null) {
+    return Number(row.vacancies) || 0
+  }
+  return Number((row as { rawVacancies?: number }).rawVacancies) || 0
 }
 
 export function dedupeLiveRows(rows: unknown[]) {

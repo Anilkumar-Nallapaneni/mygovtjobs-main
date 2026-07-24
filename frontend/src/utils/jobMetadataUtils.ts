@@ -5,6 +5,9 @@ const VACANCY_PATTERNS = [
   /\b([\d,]+)\s+(?:posts?|vacanc(?:ies|y)|positions?|seats?)\b/i,
   /\b([\d,]+)\s*posts?\b/i,
   /\b([\d,]+)\s*vacancies?\b/i,
+  // "Apply Online for 12,256 Group B & C Vacancies" (words between count and vacanc*)
+  /\b([\d,]+)\s+group\s+[a-z0-9][\s\S]{0,40}?vacanc/i,
+  /apply\s+online\s+for\s+([\d,]+)\b/i,
   /(?:for|of)\s+([\d,]+)\s+(?:posts?|vacanc(?:ies|y))\b/i,
   /(?:total|maximum|max|upto|up\s+to)\s*[:-]?\s*([\d,]+)\s*(?:posts?|vacanc(?:ies|y)|positions?)?\b/i,
   /no\.?\s*of\s*(?:posts?|vacanc(?:ies|y))\s*[:-]?\s*([\d,]+)\b/i,
@@ -54,25 +57,55 @@ function parseIntVacancy(raw) {
   return Number.isFinite(n) && n > 0 ? n : 0;
 }
 
-/** Reject 4-digit years mistaken for post counts (e.g. Advt 2022). */
-/** Prefer enriched vacancies (title/PDF resolved); fall back to DB raw value. */
+/** Decode %20-style titles so result/cutoff tokens still match. */
+function vacancyContextBlob(title = '', context = '') {
+  const raw = `${title || ''} ${context || ''}`
+  try {
+    return decodeURIComponent(raw.replace(/\+/g, ' '))
+  } catch {
+    return raw
+  }
+}
+
+/**
+ * Result / cutoff / shortlist / admission docs often embed huge candidate counts
+ * that scrapers mistake for vacancies. Never treat those as open posts.
+ * Keep "vacancy circular" — that phrase is a real recruitment format.
+ */
+export function isNonVacancyDocument(title = '', context = '') {
+  const blob = vacancyContextBlob(title, context)
+  if (/\bvacancy\s+circular\b/i.test(blob)) return false
+  return /\b(?:exam\s*schedule|tentative\s*exam|admit\s*card|hall\s*ticket|merit\s*list|cut[\s-]?off|result(?:\s*(?:notice|against|for|of))?|answer\s*key|corrigendum|hackathon|publish[_\s-]?report|shortlist(?:ing|ed)?|provisionally\s*(?:in-?)?eligible|list\s+of\s+candidates|candidates?\s+(?:admitted|shortlisted|selected|qualified)|seating\s*plan|press\s*(?:note|release)|waiting\s*list|score\s*card|rejection\s*list|document\s*verification|circular\s*:)\b/i.test(
+    blob
+  )
+}
+
+/** Prefer enriched/sanitized vacancies. Do not revive raw DB junk when vacancies is 0. */
 export function effectiveVacancyCount(
   job: { vacancies?: number; rawVacancies?: number } | null | undefined
 ): number {
-  return Number(job?.vacancies) || Number(job?.rawVacancies) || 0
+  if (job == null) return 0
+  if (job.vacancies !== undefined && job.vacancies !== null) {
+    return Number(job.vacancies) || 0
+  }
+  return Number(job.rawVacancies) || 0
 }
 
 export function sanitizeVacancyCount(count, title = '', context = '') {
   const n = Number(count) || 0
   if (n <= 0) return 0
   if (n > 250_000) return 0
-  const ctx = `${title || ''} ${context || ''}`
-  if (n >= 1900 && n <= 2035 && ctx.includes(String(n))) {
+  if (isNonVacancyDocument(title, context)) return 0
+  const ctx = vacancyContextBlob(title, context)
+  if (n >= 1900 && n <= 2035) {
+    if (isProbableYear(n, ctx)) return 0
     const s = String(n)
-    const usedAsPosts =
-      new RegExp(`${s}\\s*(?:posts?|vacanc|positions?|seats?)`, 'i').test(ctx) ||
-      new RegExp(`(?:posts?|vacanc|positions?|seats?)\\s*(?:of\\s*)?${s}\\b`, 'i').test(ctx)
-    if (!usedAsPosts) return 0
+    if (ctx.includes(s)) {
+      const usedAsPosts =
+        new RegExp(`${s}\\s*(?:posts?|vacanc|positions?|seats?)`, 'i').test(ctx) ||
+        new RegExp(`(?:posts?|vacanc|positions?|seats?)\\s*(?:of\\s*)?${s}\\b`, 'i').test(ctx)
+      if (!usedAsPosts) return 0
+    }
   }
   return n
 }
@@ -82,12 +115,41 @@ export function isProbableYear(n, context = '') {
   const num = Number(n) || 0
   if (num < 1900 || num > 2035) return false
   const ctx = String(context || '')
-  if (!ctx.includes(String(num))) return true
   const s = String(num)
+  if (!ctx.includes(s)) return true
+  if (new RegExp(`\\d{1,2}[./-]\\d{1,2}[./-]${s}\\s+vacancy\\s+circular\\b`, 'i').test(ctx)) {
+    return true
+  }
+  if (new RegExp(`\\b${s}\\s+vacancy\\s+circular\\b`, 'i').test(ctx)) {
+    return true
+  }
   const usedAsPosts =
     new RegExp(`${s}\\s*(?:posts?|vacanc|positions?|seats?)`, 'i').test(ctx) ||
     new RegExp(`(?:posts?|vacanc|positions?|seats?)\\s*(?:of\\s*)?${s}\\b`, 'i').test(ctx)
-  return !usedAsPosts
+  if (usedAsPosts) {
+    if (
+      new RegExp(`${s}\\s+vacancy\\s+circular\\b`, 'i').test(ctx) &&
+      !new RegExp(`${s}\\s*(?:posts?|vacancies|vacancy|positions?|seats?)\\b(?!\\s+circular)`, 'i').test(
+        ctx
+      )
+    ) {
+      return true
+    }
+    return false
+  }
+  return true
+}
+
+function isProbableDateYearVacancyFalsePositive(match, blob) {
+  const n = parseIntVacancy(match[1])
+  if (n < 1900 || n > 2035) return false
+  const start = Math.max(0, match.index - 16)
+  const end = Math.min(blob.length, match.index + match[0].length + 24)
+  const window = blob.slice(start, end)
+  return (
+    new RegExp(`\\d{1,2}[./-]\\d{1,2}[./-]${n}\\s+vacancy\\s+circular\\b`, 'i').test(window) ||
+    new RegExp(`\\b${n}\\s+vacancy\\s+circular\\b`, 'i').test(window)
+  )
 }
 
 /** Prefer title/PDF-derived counts; posts breakdown is the floor when present. */
@@ -166,6 +228,7 @@ function isPlausibleVacancy(n, context, match = null, blob = '') {
   if (match && blob) {
     if (isProbablePincodePostsFalsePositive(match, blob)) return false;
     if (isProbableSalaryFalsePositive(match, blob)) return false;
+    if (isProbableDateYearVacancyFalsePositive(match, blob)) return false;
   }
   return sanitizeVacancyCount(n, context) > 0;
 }
@@ -268,8 +331,17 @@ export function enrichJobMetadata(job) {
   } else if (!vacancies && postsSum > 0) {
     vacancies = postsSum;
   }
-  if (vacancies > 5000 && titleOnlyPosts(title) === 0) {
+  // Huge counts with no title/posts anchor are usually result-list noise — but keep
+  // real recruitments that only store the total in the DB field.
+  const recruitHint =
+    /\b(?:recruit(?:ment|ing)?|notification|apply\s*online|vacanc|bharti|posts?\s+of|walk-?in|engagement)\b/i.test(
+      title
+    )
+  if (vacancies > 5000 && titleOnlyPosts(title) === 0 && !recruitHint) {
     vacancies = postsSum > 0 ? postsSum : 0;
+  }
+  if (isNonVacancyDocument(title, summary)) {
+    vacancies = 0;
   }
   vacancies = resolveVacancyCount(vacancies, title, summary, about, postsSum);
 

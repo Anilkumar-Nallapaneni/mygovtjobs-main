@@ -13,6 +13,9 @@ _VACANCY_PATTERNS: list[re.Pattern[str]] = [
     re.compile(r"\b([\d,]+)\s+(?:posts?|vacancies|vacancy|positions?|seats?)\b", re.I),
     re.compile(r"\b([\d,]+)\s*posts?\b", re.I),
     re.compile(r"\b([\d,]+)\s*vacancies?\b", re.I),
+    # "Apply Online for 12,256 Group B & C Vacancies"
+    re.compile(r"\b([\d,]+)\s+group\s+[a-z0-9].{0,40}?vacanc", re.I | re.S),
+    re.compile(r"apply\s+online\s+for\s+([\d,]+)\b", re.I),
     re.compile(r"(?:for|of)\s+([\d,]+)\s+(?:posts?|vacancies|vacancy)\b", re.I),
     re.compile(
         r"(?:total|maximum|max|upto|up\s+to)\s*[:\-]?\s*([\d,]+)\s*(?:posts?|vacancies|vacancy|positions?)?\b",
@@ -48,6 +51,11 @@ def is_probable_year(n: int, context: str) -> bool:
     s = str(n)
     if s not in ctx:
         return False
+    # "03.06.2026 VACANCY CIRCULAR" — calendar date, not a post count
+    if re.search(rf"\d{{1,2}}[./-]\d{{1,2}}[./-]{s}\s+vacancy\s+circular\b", ctx, re.I):
+        return True
+    if re.search(rf"\b{s}\s+vacancy\s+circular\b", ctx, re.I):
+        return True
     # e.g. "05 Posts" — year-sized number used as a real post count
     if re.search(
         rf"(?:{s}\s*(?:posts?|vacancies|vacancy|positions?|seats?)"
@@ -55,8 +63,30 @@ def is_probable_year(n: int, context: str) -> bool:
         ctx,
         re.I,
     ):
+        # Still a year when the only "vacancy" hit is the circular header
+        if re.search(rf"{s}\s+vacancy\s+circular\b", ctx, re.I) and not re.search(
+            rf"{s}\s*(?:posts?|vacancies|vacancy|positions?|seats?)\b(?!\s+circular)",
+            ctx,
+            re.I,
+        ):
+            return True
         return False
     return True
+
+
+def is_probable_date_year_vacancy_false_positive(match: re.Match[str], blob: str) -> bool:
+    """Reject '03.06.2026 VACANCY CIRCULAR' style date+header hits."""
+    n = _parse_num(match.group(1))
+    if not (1900 <= n <= 2035):
+        return False
+    start = max(0, match.start() - 16)
+    end = min(len(blob), match.end() + 24)
+    window = blob[start:end]
+    if re.search(rf"\d{{1,2}}[./-]\d{{1,2}}[./-]{n}\s+vacancy\s+circular\b", window, re.I):
+        return True
+    if re.search(rf"\b{n}\s+vacancy\s+circular\b", window, re.I):
+        return True
+    return False
 
 
 def is_probable_salary_false_positive(match: re.Match[str], blob: str) -> bool:
@@ -84,6 +114,8 @@ def _plausible(n: int, context: str, *, match: re.Match[str] | None = None, blob
         if is_probable_pincode_posts_false_positive(match, blob):
             return False
         if is_probable_salary_false_positive(match, blob):
+            return False
+        if is_probable_date_year_vacancy_false_positive(match, blob):
             return False
     return 1 <= n <= 250_000 and not is_probable_year(n, context)
 
@@ -138,9 +170,45 @@ def extract_vacancies(*chunks: str | None, title: str = "") -> int:
     return max(found)
 
 
+def _vacancy_context_blob(title: str = "", context: str = "") -> str:
+    raw = " ".join(filter(None, [title, context])).strip()
+    try:
+        from urllib.parse import unquote
+
+        return unquote(raw.replace("+", " "))
+    except Exception:
+        return raw
+
+
+# Result/cutoff/shortlist docs embed candidate counts — not open vacancies.
+# "Vacancy circular" is a real recruitment format and must stay countable.
+_NON_VACANCY_DOC = re.compile(
+    r"\b(?:"
+    r"exam\s*schedule|tentative\s*exam|admit\s*card|hall\s*ticket|merit\s*list|"
+    r"cut[\s-]?off|result(?:\s*(?:notice|against|for|of))?|answer\s*key|corrigendum|"
+    r"hackathon|publish[_\s-]?report|shortlist(?:ing|ed)?|"
+    r"provisionally\s*(?:in-?)?eligible|list\s+of\s+candidates|"
+    r"candidates?\s+(?:admitted|shortlisted|selected|qualified)|"
+    r"seating\s*plan|press\s*(?:note|release)|waiting\s*list|score\s*card|"
+    r"rejection\s*list|document\s*verification|circular\s*:"
+    r")\b",
+    re.I,
+)
+_VACANCY_CIRCULAR = re.compile(r"\bvacancy\s+circular\b", re.I)
+
+
+def is_non_vacancy_document(title: str = "", context: str = "") -> bool:
+    blob = _vacancy_context_blob(title, context)
+    if _VACANCY_CIRCULAR.search(blob):
+        return False
+    return bool(_NON_VACANCY_DOC.search(blob))
+
+
 def sanitize_vacancies(count: int, title: str = "", context: str = "") -> int:
     n = int(count) if count else 0
-    ctx = " ".join(filter(None, [title, context])).strip() or title
+    if is_non_vacancy_document(title, context):
+        return 0
+    ctx = _vacancy_context_blob(title, context) or title
     if not _plausible(n, ctx):
         return 0
     return n

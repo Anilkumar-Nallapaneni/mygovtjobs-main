@@ -51,6 +51,7 @@
     "data:scrub-expired-noise": "node scripts/run-python.mjs scripts/scrub-expired-noise.py",
     "data:scrub-expired-noise:apply": "node scripts/run-python.mjs scripts/scrub-expired-noise.py --apply",
     "data:scrub-vacancies": "node scripts/run-python.mjs scripts/scrub-vacancy-counts.py",
+    "data:scrub-vacancies:apply": "node scripts/run-python.mjs scripts/scrub-vacancy-counts.py --apply --export",
     "data:compress-supabase": "node scripts/run-python.mjs scripts/compress-supabase-data.py",
     "data:compress-supabase:apply": "node scripts/run-python.mjs scripts/compress-supabase-data.py --apply --upload-storage",
     "clean:live-jobs": "node scripts/run-python.mjs scripts/clean-live-jobs-json.py && node scripts/build-live-jobs-list.mjs && node scripts/build-live-jobs-bootstrap.mjs",

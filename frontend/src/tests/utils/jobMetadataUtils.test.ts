@@ -1,5 +1,11 @@
 import { describe, expect, it } from 'vitest'
-import { enrichJobMetadata, isSameCalendarDay } from '@/utils/jobMetadataUtils'
+import {
+  effectiveVacancyCount,
+  enrichJobMetadata,
+  isNonVacancyDocument,
+  isSameCalendarDay,
+  sanitizeVacancyCount,
+} from '@/utils/jobMetadataUtils'
 
 describe('isSameCalendarDay', () => {
   it('matches ISO date and datetime on the same day', () => {
@@ -17,6 +23,36 @@ describe('enrichJobMetadata published date', () => {
 
     expect(enriched.lastDate).toBe('2026-06-21')
     expect(enriched.publishedDate).toBe('2026-06-01')
+  })
+})
+
+describe('sanitizeVacancyCount non-recruitment docs', () => {
+  it('zeros result / shortlist / publish-report candidate counts', () => {
+    expect(isNonVacancyDocument('Cat 29 Result against CEN 07-2024')).toBe(true)
+    expect(sanitizeVacancyCount(190902, 'Cat 29 Result against CEN 07-2024')).toBe(0)
+    expect(
+      sanitizeVacancyCount(
+        188204,
+        'CEN No. 07/2024 - POST AND CATEGORY WISE LIST OF CANDIDATES SHORTLISTED FOR DOCUMENT VERIFICATION'
+      )
+    ).toBe(0)
+    expect(sanitizeVacancyCount(104903, 'C1Exam Group 05 - Level 7-RRB-20-Publish_Report')).toBe(0)
+    expect(
+      sanitizeVacancyCount(190902, 'Cat%2029%20Result%20against%20%20CEN%2007-2024')
+    ).toBe(0)
+    expect(sanitizeVacancyCount(7, '7 Vacancy circular for posts of Deputy Director')).toBe(7)
+    expect(sanitizeVacancyCount(12256, 'SSC CGL 2026 Notification — Apply Online for 12,256 posts')).toBe(
+      12256
+    )
+    expect(effectiveVacancyCount({ vacancies: 0, rawVacancies: 190902 })).toBe(0)
+    expect(effectiveVacancyCount({ vacancies: 120, rawVacancies: 0 })).toBe(120)
+    expect(
+      sanitizeVacancyCount(
+        2026,
+        'Engagement of Legal Consultants',
+        'Dated: 03.06.2026 VACANCY CIRCULAR Subject: Engagement'
+      )
+    ).toBe(0)
   })
 })
 

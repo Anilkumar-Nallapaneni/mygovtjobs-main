@@ -172,4 +172,17 @@ describe('statsFromRows', () => {
     expect(stats.vacancies).toBe(9)
     expect(stats.noticesWithVacancies).toBe(1)
   })
+
+  it('does not revive rawVacancies when sanitized vacancies is zero', () => {
+    const stats = statsFromRows([
+      {
+        status: 'live',
+        vacancies: 0,
+        rawVacancies: 190902,
+        lastDate: '2099-01-01',
+      },
+    ] as never[])
+    expect(stats.vacancies).toBe(0)
+    expect(stats.noticesWithVacancies).toBe(0)
+  })
 })

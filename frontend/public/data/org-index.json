@@ -18,6 +18,12 @@
     "vacancies": 0
   },
   {
+    "dept": "Mha",
+    "slug": "mha",
+    "count": 62,
+    "vacancies": 42758
+  },
+  {
     "dept": "Madhya Pradesh PSC (MPPSC)",
     "slug": "madhya-pradesh-psc-mppsc",
     "count": 59,
@@ -38,7 +44,7 @@
   {
     "dept": "UPPSC — Hall tickets",
     "slug": "uppsc-hall-tickets",
-    "count": 55,
+    "count": 56,
     "vacancies": 0
   },
   {
@@ -56,8 +62,8 @@
   {
     "dept": "NSUT",
     "slug": "nsut",
-    "count": 49,
-    "vacancies": 122
+    "count": 50,
+    "vacancies": 183
   },
   {
     "dept": "ESIC — Employees' State Insurance Corporation",
@@ -70,12 +76,6 @@
     "slug": "sainik-school-jhansi",
     "count": 46,
     "vacancies": 8
-  },
-  {
-    "dept": "Mha",
-    "slug": "mha",
-    "count": 45,
-    "vacancies": 28527
   },
   {
     "dept": "Indo-Tibetan Border Police (ITBP)",
@@ -92,7 +92,7 @@
   {
     "dept": "Rrbajmer",
     "slug": "rrbajmer",
-    "count": 42,
+    "count": 44,
     "vacancies": 596
   },
   {
@@ -108,16 +108,16 @@
     "vacancies": 14
   },
   {
-    "dept": "Rrbbbs",
-    "slug": "rrbbbs",
-    "count": 39,
-    "vacancies": 4
-  },
-  {
     "dept": "Staff Selection Commission (SSC)",
     "slug": "staff-selection-commission-ssc",
     "count": 39,
     "vacancies": 1
+  },
+  {
+    "dept": "Rrbbbs",
+    "slug": "rrbbbs",
+    "count": 38,
+    "vacancies": 4
   },
   {
     "dept": "Puducherry Recruitment Portal",
@@ -128,7 +128,7 @@
   {
     "dept": "Institute of Banking Personnel Selection (IBPS)",
     "slug": "institute-of-banking-personnel-selection-ibps",
-    "count": 33,
+    "count": 36,
     "vacancies": 500
   },
   {
@@ -186,16 +186,22 @@
     "vacancies": 11
   },
   {
-    "dept": "Haryana PSC (HPSC)",
-    "slug": "haryana-psc-hpsc",
-    "count": 27,
-    "vacancies": 775
-  },
-  {
     "dept": "Recruitment Py",
     "slug": "recruitment-py",
     "count": 27,
     "vacancies": 0
+  },
+  {
+    "dept": "Haryana PSC (HPSC)",
+    "slug": "haryana-psc-hpsc",
+    "count": 26,
+    "vacancies": 775
+  },
+  {
+    "dept": "Ppsc",
+    "slug": "ppsc",
+    "count": 26,
+    "vacancies": 494
   },
   {
     "dept": "Rrbguwahati",
@@ -204,10 +210,10 @@
     "vacancies": 0
   },
   {
-    "dept": "Ppsc",
-    "slug": "ppsc",
+    "dept": "Sainik School Goalpara",
+    "slug": "sainik-school-goalpara",
     "count": 25,
-    "vacancies": 468
+    "vacancies": 83
   },
   {
     "dept": "MP Police Headquarters — Recruitment",
@@ -220,12 +226,6 @@
     "slug": "railway-recruitment-board-rrb-mumbai",
     "count": 24,
     "vacancies": 12180
-  },
-  {
-    "dept": "Sainik School Goalpara",
-    "slug": "sainik-school-goalpara",
-    "count": 24,
-    "vacancies": 80
   },
   {
     "dept": "Railway Recruitment Board (RRB) — Guwahati",
@@ -336,12 +336,6 @@
     "vacancies": 203
   },
   {
-    "dept": "Fssai",
-    "slug": "fssai",
-    "count": 16,
-    "vacancies": 0
-  },
-  {
     "dept": "Sainikschoolbhubaneswar Edu In",
     "slug": "sainikschoolbhubaneswar-edu-in",
     "count": 16,
@@ -358,6 +352,12 @@
     "slug": "apeda",
     "count": 15,
     "vacancies": 67
+  },
+  {
+    "dept": "Fssai",
+    "slug": "fssai",
+    "count": 15,
+    "vacancies": 0
   },
   {
     "dept": "Mahapolice",
@@ -708,6 +708,12 @@
     "vacancies": 1
   },
   {
+    "dept": "DLSA Sitapur",
+    "slug": "dlsa-sitapur",
+    "count": 5,
+    "vacancies": 3
+  },
+  {
     "dept": "Tnpsc",
     "slug": "tnpsc",
     "count": 5,
@@ -750,12 +756,6 @@
     "vacancies": 0
   },
   {
-    "dept": "DLSA Sitapur",
-    "slug": "dlsa-sitapur",
-    "count": 4,
-    "vacancies": 2
-  },
-  {
     "dept": "Employees' Provident Fund Organisation",
     "slug": "employees-provident-fund-organisation",
     "count": 4,
@@ -792,12 +792,6 @@
     "vacancies": 0
   },
   {
-    "dept": "Sainik School Gopalganj",
-    "slug": "sainik-school-gopalganj",
-    "count": 4,
-    "vacancies": 2
-  },
-  {
     "dept": "Ujjain Dcourts",
     "slug": "ujjain-dcourts",
     "count": 4,
@@ -814,12 +808,6 @@
     "slug": "bedf",
     "count": 3,
     "vacancies": 15
-  },
-  {
-    "dept": "BITS Pilani",
-    "slug": "bits-pilani",
-    "count": 3,
-    "vacancies": 31
   },
   {
     "dept": "CBSE — CTET",
@@ -850,6 +838,12 @@
     "slug": "district-sessions-judge-ujjain",
     "count": 3,
     "vacancies": 0
+  },
+  {
+    "dept": "DLSA Hathras",
+    "slug": "dlsa-hathras",
+    "count": 3,
+    "vacancies": 6
   },
   {
     "dept": "Dsssbonline",
@@ -888,6 +882,12 @@
     "vacancies": 0
   },
   {
+    "dept": "NIT Warangal",
+    "slug": "nit-warangal",
+    "count": 3,
+    "vacancies": 6
+  },
+  {
     "dept": "Npcil",
     "slug": "npcil",
     "count": 3,
@@ -921,13 +921,25 @@
     "dept": "RRI",
     "slug": "rri",
     "count": 3,
-    "vacancies": 136
+    "vacancies": 258
+  },
+  {
+    "dept": "Sainik School Gopalganj",
+    "slug": "sainik-school-gopalganj",
+    "count": 3,
+    "vacancies": 0
   },
   {
     "dept": "Sebi",
     "slug": "sebi",
     "count": 3,
     "vacancies": 0
+  },
+  {
+    "dept": "Sikkim PSC",
+    "slug": "sikkim-psc",
+    "count": 3,
+    "vacancies": 141
   },
   {
     "dept": "SSC",
@@ -946,5 +958,11 @@
     "slug": "upsssc",
     "count": 3,
     "vacancies": 2074
+  },
+  {
+    "dept": "WBSETCL",
+    "slug": "wbsetcl",
+    "count": 3,
+    "vacancies": 133
   }
 ]

@@ -1,6 +1,35 @@
 """Vacancy count resolution — years must not inflate totals."""
 
-from app.utils.vacancy_extract import extract_vacancies, is_probable_year, resolve_vacancies
+from app.utils.vacancy_extract import (
+    extract_vacancies,
+    is_non_vacancy_document,
+    is_probable_year,
+    resolve_vacancies,
+    sanitize_vacancies,
+)
+
+
+def test_non_vacancy_docs_zeroed():
+    assert is_non_vacancy_document("Cat 29 Result against CEN 07-2024")
+    assert sanitize_vacancies(190902, "Cat 29 Result against CEN 07-2024") == 0
+    assert (
+        sanitize_vacancies(
+            188204,
+            "LIST OF CANDIDATES SHORTLISTED FOR DOCUMENT VERIFICATION",
+        )
+        == 0
+    )
+    assert sanitize_vacancies(104903, "C1Exam Group 05 - Level 7-RRB-20-Publish_Report") == 0
+    assert sanitize_vacancies(7, "7 Vacancy circular for posts of Deputy Director") == 7
+    assert resolve_vacancies(190902, "Cat%2029%20Result%20against%20CEN", "") == 0
+
+
+def test_vacancy_circular_date_not_counted():
+    title = "Engagement of Legal Consultants on Contract Basis"
+    summary = "Cf Dated: 03.06.2026 VACANCY CIRCULAR Subject: Engagement of Legal Consultants"
+    assert extract_vacancies(summary, title=title) == 0
+    assert resolve_vacancies(2026, title, summary) == 0
+    assert sanitize_vacancies(2026, title, summary) == 0
 
 
 def test_year_in_advertisement_not_counted():

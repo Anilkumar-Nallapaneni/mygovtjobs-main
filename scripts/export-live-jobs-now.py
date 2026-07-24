@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import asyncio
+import subprocess
 import sys
 from pathlib import Path
 
@@ -26,6 +27,14 @@ async def main() -> int:
     block = DailySyncService().daily_sync_json_block(job_count=count, sources_scraped=scraped)
     persist.patch_live_jobs_daily_sync(block)
     print(f"Exported {count} jobs to live-jobs.json", flush=True)
+    # Keep hero vacancy totals honest after every export (result/cutoff noise).
+    scrub = subprocess.run(
+        [sys.executable, str(ROOT / "scripts" / "scrub-vacancy-counts.py")],
+        cwd=str(ROOT),
+        check=False,
+    )
+    if scrub.returncode != 0:
+        print("warn: vacancy scrub after export failed", flush=True)
     return 0
 
 
