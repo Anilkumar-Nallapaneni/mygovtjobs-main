@@ -18,6 +18,7 @@ from app.services.job_persist_service import _parse_date
 from app.services.noise_filter import sanitize_json_for_postgres, strip_postgres_control_chars
 from app.utils.job_details_storage import upload_job_detail_json
 from app.utils.official_hosts import looks_like_notification_document, pick_best_official_url
+from app.parsers.pdf_parser import is_weak_field
 from app.utils.slim_detail import slim_detail_for_db
 from app.utils.vacancy_extract import sanitize_vacancies
 
@@ -144,15 +145,32 @@ async def apply_pdf_enrichment(
             detail["published"] = nd["published"]
             changed = True
 
-    if norm.get("qualification") and not job.qualification:
+    # Fill gaps only — never invent; overwrite placeholders with real PDF values.
+    if norm.get("qualification") and is_weak_field(job.qualification):
         job.qualification = strip_postgres_control_chars(norm["qualification"]) or None
         changed = True
-    if pdf_fields.get("salary") and not job.salary:
+    if pdf_fields.get("salary") and is_weak_field(job.salary):
         job.salary = strip_postgres_control_chars(pdf_fields["salary"]) or None
         changed = True
-    if pdf_fields.get("age_limit") and not job.age_limit:
+    if pdf_fields.get("age_limit") and is_weak_field(job.age_limit):
         job.age_limit = strip_postgres_control_chars(pdf_fields["age_limit"]) or None
         changed = True
+
+    for key in ("street_address", "streetAddress", "postal_code", "postalCode", "pincode"):
+        value = pdf_fields.get(key)
+        if value and is_weak_field(detail.get(key)):
+            detail[key] = strip_postgres_control_chars(str(value))
+            changed = True
+    # Normalize aliases for frontend JobPosting schema.
+    street = detail.get("streetAddress") or detail.get("street_address")
+    pin = detail.get("postalCode") or detail.get("postal_code") or detail.get("pincode")
+    if street:
+        detail["streetAddress"] = street
+        detail["street_address"] = street
+    if pin:
+        detail["postalCode"] = pin
+        detail["postal_code"] = pin
+        detail["pincode"] = pin
 
     if nd.get("pdf_url") and not detail.get("pdf_url"):
         detail["pdf_url"] = nd["pdf_url"]
@@ -262,5 +280,7 @@ def job_to_detail_payload(job: Job, detail: dict | None = None) -> dict:
         "apply_url": job.apply_url,
         "status": job.status,
         "published_at": job.published_at.isoformat() if job.published_at else None,
+        "streetAddress": d.get("streetAddress") or d.get("street_address"),
+        "postalCode": d.get("postalCode") or d.get("postal_code") or d.get("pincode"),
         "detail": d,
     }

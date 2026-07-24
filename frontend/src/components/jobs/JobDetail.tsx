@@ -151,6 +151,16 @@ export default function JobDetail({
     showField(view.syllabus) ? { label: t("jobDetail.syllabus", { defaultValue: "Syllabus" }), value: displayValue(view.syllabus) } : null,
     showField(view.helpdesk) ? { label: t("jobDetail.helpdesk", { defaultValue: "Helpdesk" }), value: displayValue(view.helpdesk) } : null,
     showField(view.email) ? { label: t("jobDetail.email", { defaultValue: "Email" }), value: displayValue(view.email) } : null,
+    showField(view.streetAddress || view.street_address)
+      ? {
+          label: t("jobDetail.officeAddress", { defaultValue: "Office address" }),
+          value: displayValue(
+            [view.streetAddress || view.street_address, view.postalCode || view.postal_code || view.pincode]
+              .filter(Boolean)
+              .join(" — ")
+          ),
+        }
+      : null,
     ...(structured?.ageLimit || []).map((value) => ({
       label: t("jobDetail.ageLimit", { defaultValue: "Age limit" }),
       value,

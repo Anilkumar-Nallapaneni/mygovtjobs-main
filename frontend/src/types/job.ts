@@ -33,6 +33,11 @@ export type JobDetailBlob = {
   post_name?: string
   posts?: JobPostRow[]
   content_sections?: JobContentSection[]
+  streetAddress?: string
+  street_address?: string
+  postalCode?: string
+  postal_code?: string
+  pincode?: string
 }
 
 export type JobRecord = {

@@ -92,12 +92,21 @@ export function adaptLiveJob(row, index = 0) {
   const title = cleanJobTitle(row.title) || 'Government recruitment'
   const rawVacancies = Number(row.vacancies) || 0
   const vacancies = sanitizeVacancyCount(rawVacancies, title)
+  const detail = row.detail || {}
+  const streetAddress =
+    row.streetAddress ||
+    row.street_address ||
+    detail.streetAddress ||
+    detail.street_address ||
+    null
+  const postalCode =
+    row.postalCode || row.postal_code || detail.postalCode || detail.postal_code || detail.pincode || null
 
   return enrichJobMetadata({
     id: row.id || `live-${index}`,
     slug: row.slug || `live-job-${index}`,
     title,
-    dept: cleanDept(row.dept, row.detail?.source),
+    dept: cleanDept(row.dept, detail?.source),
     state: stateName,
     stateIds,
     category,
@@ -106,7 +115,7 @@ export function adaptLiveJob(row, index = 0) {
     qual: qualResolved.label || 'See notification',
     eduFilterKey: qualResolved.key,
     lastDate,
-    published_at: row.published_at || row.detail?.published || null,
+    published_at: row.published_at || detail?.published || null,
     updated_at: row.updated_at || null,
     salary: row.salary || '—',
     age: row.age_limit || '—',
@@ -118,17 +127,22 @@ export function adaptLiveJob(row, index = 0) {
     pdfUrl: urls.pdfUrl || resolvePdfUrl(row),
     pdf_url: row.pdf_url || row.pdfUrl || urls.pdfUrl || resolvePdfUrl(row),
     pdfUrls: urls.pdfUrls?.length ? urls.pdfUrls : collectPdfUrls(row),
-    about: row.detail?.summary || '',
-    detail: sanitizeDetailForUi(row.detail || {}),
+    about: detail?.summary || '',
+    detail: sanitizeDetailForUi(detail),
     qualification: row.qualification,
     age_limit: row.age_limit,
-    dates: row.detail?.dates || {},
-    fee: row.fee || row.detail?.fee || {},
-    post_name: row.post_name || row.detail?.post_name || null,
-    posts: row.posts || row.detail?.posts || [],
-    important_dates: row.important_dates || row.detail?.important_dates || [],
-    selection: row.selection || row.detail?.selection_process || row.detail?.selection || [],
-    howApply: row.howApply || row.detail?.howApply || [],
+    streetAddress: streetAddress || undefined,
+    street_address: streetAddress || undefined,
+    postalCode: postalCode || undefined,
+    postal_code: postalCode || undefined,
+    pincode: postalCode || undefined,
+    dates: detail?.dates || {},
+    fee: row.fee || detail?.fee || {},
+    post_name: row.post_name || detail?.post_name || null,
+    posts: row.posts || detail?.posts || [],
+    important_dates: row.important_dates || detail?.important_dates || [],
+    selection: row.selection || detail?.selection_process || detail?.selection || [],
+    howApply: row.howApply || detail?.howApply || [],
     isLive: true,
     _fromLive: true,
     is_sponsored: Boolean(row.is_sponsored),

@@ -40,6 +40,11 @@ LIST_DETAIL_KEYS = (
     "source_url",
     "post_name",
     "posts",
+    "streetAddress",
+    "street_address",
+    "postalCode",
+    "postal_code",
+    "pincode",
 )
 
 SUMMARY_MAX_LIST_JSON = 120

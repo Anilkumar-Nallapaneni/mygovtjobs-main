@@ -33,6 +33,11 @@ _DB_SLIM_KEYS = frozenset(
         "memorized_at",
         "detail_source",
         "detail_updated_at",
+        "streetAddress",
+        "street_address",
+        "postalCode",
+        "postal_code",
+        "pincode",
     }
 )
 

@@ -83,6 +83,7 @@
     "pdf:read:live": "node scripts/run-python.mjs scripts/run-pdf-reader-agent.py --limit 0 --only-missing",
     "pdf:read:all": "node scripts/run-python.mjs scripts/run-pdf-reader-agent.py --limit 0 --include-expired --force",
     "pdf:backfill": "node scripts/run-python.mjs scripts/backfill-job-pdfs.py",
+    "pdf:backfill-fields": "node scripts/run-python.mjs scripts/backfill-fields-from-summary.py",
     "job:details": "node scripts/run-python.mjs scripts/run-job-detail-agent.py",
     "job:details:all": "node scripts/run-python.mjs scripts/run-job-detail-agent.py --force",
     "pipeline:live": "node scripts/run-python.mjs scripts/run-live-jobs-pipeline.py --skip-ingest",

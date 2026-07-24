@@ -89,9 +89,20 @@ class PdfReaderAgent:
 
             candidates: list[Job] = []
             for job in rows:
-                if only_missing and (job.detail or {}).get("content_sections"):
-                    stats["skipped_existing"] += 1
-                    continue
+                detail = job.detail or {}
+                already = bool(detail.get("content_sections") or detail.get("memorized_at"))
+                if only_missing and already:
+                    # Still re-read when core notice fields are missing/placeholder.
+                    from app.parsers.pdf_parser import is_weak_field
+
+                    needs_fields = (
+                        is_weak_field(job.qualification)
+                        or is_weak_field(job.salary)
+                        or (not job.vacancies)
+                    )
+                    if not needs_fields:
+                        stats["skipped_existing"] += 1
+                        continue
                 if not collect_pdf_urls(job):
                     stats["skipped_no_pdf"] += 1
                     continue
