@@ -148,6 +148,11 @@ jobs:
       - name: Commit daily data (live-jobs only — not 1900+ detail files)
         env:
           BRANCH: ${{ github.ref_name }}
+          DATABASE_URL: ${{ env.DATABASE_URL }}
+          SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+          VITE_SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL }}
+          VITE_SUPABASE_ANON_KEY: ${{ secrets.VITE_SUPABASE_ANON_KEY }}
         run: |
           echo "=== $(date -u +%H:%M:%S) commit ==="
           git config user.name "github-actions[bot]"
@@ -174,9 +179,18 @@ jobs:
             exit 0
           fi
           # Guard: never push a zero-vacancy snapshot (breaks Vercel strict build).
+          # If the sync export somehow wiped vacancies, re-export from DB once and retry.
           if ! node scripts/verify-live-jobs-snapshot.mjs --strict; then
-            echo "::error::Refusing to commit broken live-jobs snapshot (0 vacancies or other strict failure)"
-            exit 1
+            echo "::warning::Snapshot failed strict verify — re-exporting from Supabase and retrying"
+            npm run export:live-jobs
+            npm run clean:live-jobs
+            git add frontend/public/data/live-jobs.json \
+              frontend/public/data/live-jobs-list.json \
+              frontend/public/data/live-jobs-bootstrap.json || true
+            if ! node scripts/verify-live-jobs-snapshot.mjs --strict; then
+              echo "::error::Refusing to commit broken live-jobs snapshot (0 vacancies or other strict failure)"
+              exit 1
+            fi
           fi
           git commit -m "chore: daily job sync [skip ci]"
           git fetch origin "${BRANCH}"
