@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-24T06:51:00.038Z",
+  "generatedAt": "2026-07-24T10:38:02.276Z",
   "count": 224,
   "items": [
     {
@@ -22,7 +22,7 @@
       "id": "a0c781809b2cbecc",
       "title": "Press Release-Revision of Vacancies & Extension of Online Application Submission Date – A&N Police Recruitment 2026",
       "link": "https://erecruitment.andamannicobar.gov.in/Notice/111_875d5de8-1f35-44bf-b52a-851014ec79fe.pdf",
-      "publishedAt": "2026-07-22T02:59:18.752767Z",
+      "publishedAt": "2026-07-24T03:00:25.063572Z",
       "summary": null,
       "pdfUrls": [
         "https://erecruitment.andamannicobar.gov.in/Notice/111_875d5de8-1f35-44bf-b52a-851014ec79fe.pdf"
@@ -129,22 +129,6 @@
       "fetchMethod": "live-jobs-supplement"
     },
     {
-      "id": "df83228738a3f635",
-      "title": "Extension of Last Date for Submission of Online Applications for Matric and Higher Secondary Level Posts",
-      "link": "https://erecruitment.andamannicobar.gov.in/Notice/114_4be28db3-a235-45d0-83ae-1618688696b4.pdf",
-      "publishedAt": "2026-07-20T00:00:00Z",
-      "summary": null,
-      "pdfUrls": [
-        "https://erecruitment.andamannicobar.gov.in/Notice/114_4be28db3-a235-45d0-83ae-1618688696b4.pdf"
-      ],
-      "sourceId": "an-rec",
-      "sourceName": "Erecruitment Andamannicobar",
-      "dept": "Erecruitment Andamannicobar",
-      "state": "All India",
-      "category": "state",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
       "id": "699381fe534f55ae",
       "title": "IIPS Recruitment 2026 - Walkin for Chief Research Officer, Senior Project Officer and More Posts",
       "link": "https://www.iipsindia.ac.in",
@@ -156,6 +140,22 @@
       "sourceId": "structured-import",
       "sourceName": "IIPS",
       "dept": "IIPS",
+      "state": "All India",
+      "category": "state",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "df83228738a3f635",
+      "title": "Extension of Last Date for Submission of Online Applications for Matric and Higher Secondary Level Posts",
+      "link": "https://erecruitment.andamannicobar.gov.in/Notice/114_4be28db3-a235-45d0-83ae-1618688696b4.pdf",
+      "publishedAt": "2026-07-20T00:00:00Z",
+      "summary": null,
+      "pdfUrls": [
+        "https://erecruitment.andamannicobar.gov.in/Notice/114_4be28db3-a235-45d0-83ae-1618688696b4.pdf"
+      ],
+      "sourceId": "an-rec",
+      "sourceName": "Erecruitment Andamannicobar",
+      "dept": "Erecruitment Andamannicobar",
       "state": "All India",
       "category": "state",
       "fetchMethod": "live-jobs-supplement"
@@ -279,7 +279,7 @@
       "title": "Application window for AVR MR (Musician) 02/26 batch extended till 30 Apr 26. (Closed)",
       "link": "https://www.joinindiannavy.gov.in/en/event/online-application-window-for-agniveer-mr-musician-02-26-entry-will-be-live-from-11-apr-26-apr-26.html",
       "publishedAt": "2026-07-07T09:38:13.227660Z",
-      "summary": "CALENDAR COMBAT READY COHESIVE ATMANIRBHAR ;q¼ rRij lqxfBr vkRefuHkZj Visit : www.joinindiannavy.gov.in SAFEGUARDING SEAS FOR A VIKSIT SAMRIDDHA BHARAT SAFEGUARDING SEAS FOR A VIKSIT SAMRIDDHA BHARAT Visit : www.joinindiannavy.gov.in Journey YEARS OVER THE COMBAT READY COHESIVE ATMANIRBHAR ;q¼ rRij lqxfBr vkRefuHkZj SAFEGUARDING SEAS FOR A VIKSIT SAMRIDDHA BHARAT SAFEGUARDING SEAS FOR A VIKSIT SAM…",
+      "summary": "16. Naval Pension Regulations/ Gratuity. Agniveers will not be governed by provisions contained in the Naval Pension Regulations/ Rules (as amended from time to time). Additionally, Agniveers will not be entitled to gratuity for engagement period. 17. Release at Own Request. Agniveers will not be permitted to get released at own request prior to completion of engagement period. However, in most ex…",
       "pdfUrls": [
         "https://www.joinindiannavy.gov.in/images/OFFICIAL_IN_CALENDAR_2026_DMPR.pdf",
         "https://www.joinindiannavy.gov.in/files/Advt-Agniveer-MR-MUS-02-26-English.pdf",
@@ -501,22 +501,6 @@
       "fetchMethod": "live-jobs-supplement"
     },
     {
-      "id": "bc229f1363bec2e5",
-      "title": "Meghalaya PSC Recruitment 2026 - Apply Online for 13 Fishery Officer and Junior Football Coach Posts",
-      "link": "https://rpa.meghalaya.gov.in/rpaonline/",
-      "publishedAt": "2026-06-25T00:00:00Z",
-      "summary": "Meghalaya Public Service Commission (Meghalaya PSC) Recruitment 2026 for 13 posts of Fishery Officer and Junior Football Coach. Candidates with B.F.Sc. or B.Sc, Diploma, Any Graduate Can Apply Online. The last date to apply online is 25-06-2026. The candidate shall apply online through Meghalaya PSC official website mpsc.meghalaya.gov.in.",
-      "pdfUrls": [
-        "http://www.mpsc.meghalaya.gov.in/advt/Advt25May2026.pdf"
-      ],
-      "sourceId": "structured-import",
-      "sourceName": "Meghalaya PSC",
-      "dept": "Meghalaya PSC",
-      "state": "All India",
-      "category": "state",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
       "id": "6ba4fa2414631751",
       "title": "DLSA Sitapur Para Legal Volunteer Recruitment 2026 - Apply Offline",
       "link": "http://www.district.ecourts.gov.in/sitapur",
@@ -533,17 +517,17 @@
       "fetchMethod": "live-jobs-supplement"
     },
     {
-      "id": "6b423d3c130466a9",
-      "title": "MPPHSCL Recruitment 2026 Notification OUT, Apply Online for 34 Vacancies @mpphscl.in, Check Eligibility, Salary, Last Date",
-      "link": "https://iforms.mponline.gov.in/Profile/Login",
-      "publishedAt": "2026-06-24T00:00:00Z",
-      "summary": "User Manual for Profiling & Application Step 1: Candidate has to login through below Page (Registered candidate) https://iforms.mponline.gov.in/Profile/Login Candidate has to make registration through below Page by creating id & password (Only for new Registration). Screen will be looked as below: https://iforms.mponline.gov.in/Profile/Registration Below Screen will be appeared after successfully …",
+      "id": "bc229f1363bec2e5",
+      "title": "Meghalaya PSC Recruitment 2026 - Apply Online for 13 Fishery Officer and Junior Football Coach Posts",
+      "link": "https://rpa.meghalaya.gov.in/rpaonline/",
+      "publishedAt": "2026-06-25T00:00:00Z",
+      "summary": "Meghalaya Public Service Commission (Meghalaya PSC) Recruitment 2026 for 13 posts of Fishery Officer and Junior Football Coach. Candidates with B.F.Sc. or B.Sc, Diploma, Any Graduate Can Apply Online. The last date to apply online is 25-06-2026. The candidate shall apply online through Meghalaya PSC official website mpsc.meghalaya.gov.in.",
       "pdfUrls": [
-        "https://mpphscl.mp.gov.in/Files/PDF/6365f6af-1e5a-4e3d-ac91-8852f98b9a8f_0_Final%20Rule%20Book%20-%202026%20%20ToR.pdf"
+        "http://www.mpsc.meghalaya.gov.in/advt/Advt25May2026.pdf"
       ],
       "sourceId": "structured-import",
-      "sourceName": "MPPHSCL",
-      "dept": "MPPHSCL",
+      "sourceName": "Meghalaya PSC",
+      "dept": "Meghalaya PSC",
       "state": "All India",
       "category": "state",
       "fetchMethod": "live-jobs-supplement"
@@ -560,6 +544,22 @@
       "sourceId": "structured-import",
       "sourceName": "NIT Rourkela",
       "dept": "NIT Rourkela",
+      "state": "All India",
+      "category": "state",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "6b423d3c130466a9",
+      "title": "MPPHSCL Recruitment 2026 Notification OUT, Apply Online for 34 Vacancies @mpphscl.in, Check Eligibility, Salary, Last Date",
+      "link": "https://iforms.mponline.gov.in/Profile/Login",
+      "publishedAt": "2026-06-24T00:00:00Z",
+      "summary": "User Manual for Profiling & Application Step 1: Candidate has to login through below Page (Registered candidate) https://iforms.mponline.gov.in/Profile/Login Candidate has to make registration through below Page by creating id & password (Only for new Registration). Screen will be looked as below: https://iforms.mponline.gov.in/Profile/Registration Below Screen will be appeared after successfully …",
+      "pdfUrls": [
+        "https://mpphscl.mp.gov.in/Files/PDF/6365f6af-1e5a-4e3d-ac91-8852f98b9a8f_0_Final%20Rule%20Book%20-%202026%20%20ToR.pdf"
+      ],
+      "sourceId": "structured-import",
+      "sourceName": "MPPHSCL",
+      "dept": "MPPHSCL",
       "state": "All India",
       "category": "state",
       "fetchMethod": "live-jobs-supplement"
@@ -786,22 +786,6 @@
       "fetchMethod": "live-jobs-supplement"
     },
     {
-      "id": "135ab213e454f5cd",
-      "title": "Press release for Extension of Online Application Submission Date – A&N Police Recruitment 2026",
-      "link": "https://erecruitment.andamannicobar.gov.in/Notice/105_36255c39-9bd3-49ab-b8cc-670d20d363dd.pdf",
-      "publishedAt": "2026-05-26T00:00:00Z",
-      "summary": null,
-      "pdfUrls": [
-        "https://erecruitment.andamannicobar.gov.in/Notice/105_36255c39-9bd3-49ab-b8cc-670d20d363dd.pdf"
-      ],
-      "sourceId": "an-rec",
-      "sourceName": "Erecruitment Andamannicobar",
-      "dept": "Erecruitment Andamannicobar",
-      "state": "All India",
-      "category": "police",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
       "id": "4792f891eee4a0b0",
       "title": "BITS Pilani Institute Research Fellow Recruitment 2026 - Apply Online",
       "link": "https://www.bits-pilani.ac.in/wp-content/uploads/PhD-Advertisement-CDRF-PRoposal.pdf",
@@ -815,6 +799,22 @@
       "dept": "BITS Pilani",
       "state": "All India",
       "category": "state",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "135ab213e454f5cd",
+      "title": "Press release for Extension of Online Application Submission Date – A&N Police Recruitment 2026",
+      "link": "https://erecruitment.andamannicobar.gov.in/Notice/105_36255c39-9bd3-49ab-b8cc-670d20d363dd.pdf",
+      "publishedAt": "2026-05-26T00:00:00Z",
+      "summary": null,
+      "pdfUrls": [
+        "https://erecruitment.andamannicobar.gov.in/Notice/105_36255c39-9bd3-49ab-b8cc-670d20d363dd.pdf"
+      ],
+      "sourceId": "an-rec",
+      "sourceName": "Erecruitment Andamannicobar",
+      "dept": "Erecruitment Andamannicobar",
+      "state": "All India",
+      "category": "police",
       "fetchMethod": "live-jobs-supplement"
     },
     {
