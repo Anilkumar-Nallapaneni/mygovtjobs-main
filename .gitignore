@@ -86,3 +86,6 @@ android-twa/app-release-*/
 # Play Store / mobile review artifacts
 play-store-assets.zip
 .cursor-mobile-review/
+
+.vercel
+.env*
