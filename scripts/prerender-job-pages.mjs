@@ -245,7 +245,25 @@ function mapEducationRequirements(qualification) {
   return credentials.length === 1 ? credentials[0] : credentials;
 }
 
+function isRecruitmentJobPosting(job) {
+  const title = String(job.title || "").toLowerCase();
+  const slug = String(job.slug || "").toLowerCase();
+  const blob = `${title} ${slug}`;
+  if (
+    /\b(exam\s*schedule|tentative\s*exam|admit\s*card|hall\s*ticket|merit\s*list|cutoff|cut[\s-]?off|result\s*notice|answer\s*key|circular\s*order|corrigendum|hackathon|teams?\s*selected|seating\s*plan|press\s*(?:note|release)|shortlist(?:ing|ed)?\s*for\s*medical|provisionally\s*(?:in-?)?eligible|travel\s*allowance\s*form)\b/i.test(
+      blob
+    )
+  ) {
+    return false;
+  }
+  if (Number(job.vacancies) > 0) return true;
+  return /\b(recruit(?:ment|ing)?|vacanc(?:y|ies)|apply\s*(?:online|offline)|walk[\s-]?in|notification\s*for\s*(?:the\s*)?post|posts?\s+of|engagement\s+of|hiring)\b/i.test(
+    blob
+  );
+}
+
 function buildJobPostingJsonLd(job, canonical) {
+  if (!isRecruitmentJobPosting(job)) return null;
   const address = resolveJobPostalAddress(job);
   const slug = job.slug || job.id;
   const orgName = job.dept || "Government of India recruitment";
@@ -363,14 +381,21 @@ function buildHtml(job, spaHtml) {
   html = replaceMeta(html, "twitter:description", desc, "name");
   html = replaceMeta(html, "twitter:image", ogImage, "name");
 
-  const jsonLdTag = `<script type="application/ld+json" id="job-posting-jsonld">${JSON.stringify(jsonLd)}</script>`;
-  if (html.includes('id="job-posting-jsonld"')) {
+  if (jsonLd) {
+    const jsonLdTag = `<script type="application/ld+json" id="job-posting-jsonld">${JSON.stringify(jsonLd)}</script>`;
+    if (html.includes('id="job-posting-jsonld"')) {
+      html = html.replace(
+        /<script type="application\/ld\+json" id="job-posting-jsonld">[\s\S]*?<\/script>/i,
+        jsonLdTag
+      );
+    } else {
+      html = html.replace("</head>", `  ${jsonLdTag}\n  </head>`);
+    }
+  } else if (html.includes('id="job-posting-jsonld"')) {
     html = html.replace(
-      /<script type="application\/ld\+json" id="job-posting-jsonld">[\s\S]*?<\/script>/i,
-      jsonLdTag
+      /<script type="application\/ld\+json" id="job-posting-jsonld">[\s\S]*?<\/script>\s*/i,
+      ""
     );
-  } else {
-    html = html.replace("</head>", `  ${jsonLdTag}\n  </head>`);
   }
 
   return html;

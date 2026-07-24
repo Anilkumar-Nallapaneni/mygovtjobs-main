@@ -306,8 +306,32 @@ function resolveOptionalStreetFields(job: JobRecord): {
   return out;
 }
 
+/** True when the listing is a real recruitment (not schedule/merit/circular/hackathon). */
+export function isRecruitmentJobPosting(job: JobRecord): boolean {
+  const title = String(job.title || "").toLowerCase();
+  const slug = String(job.slug || "").toLowerCase();
+  const blob = `${title} ${slug}`;
+
+  const nonJob =
+    /\b(exam\s*schedule|tentative\s*exam|admit\s*card|hall\s*ticket|merit\s*list|cutoff|cut[\s-]?off|result\s*notice|answer\s*key|circular\s*order|corrigendum|hackathon|teams?\s*selected|seating\s*plan|press\s*(?:note|release)|shortlist(?:ing|ed)?\s*for\s*medical|provisionally\s*(?:in-?)?eligible|travel\s*allowance\s*form)\b/i.test(
+      blob
+    );
+  if (nonJob) return false;
+
+  const vacancies = Number(job.vacancies) || 0;
+  if (vacancies > 0) return true;
+
+  return /\b(recruit(?:ment|ing)?|vacanc(?:y|ies)|apply\s*(?:online|offline)|walk[\s-]?in|notification\s*for\s*(?:the\s*)?post|posts?\s+of|engagement\s+of|hiring)\b/i.test(
+    blob
+  );
+}
+
 export function buildJobPostingJsonLd(job: JobRecord): Record<string, unknown> | null {
   if (!job.title) return null;
+  // Only emit JobPosting for real recruitments. Notices like exam schedules,
+  // merit lists, circulars, and hackathons are still browsable pages — but
+  // marking them as JobPosting makes Google expect baseSalary/street forever.
+  if (!isRecruitmentJobPosting(job)) return null;
   const url = jobDetailUrl(job);
   const datePosted = resolveDatePosted(job);
   const validThrough = resolveValidThrough(job, datePosted);

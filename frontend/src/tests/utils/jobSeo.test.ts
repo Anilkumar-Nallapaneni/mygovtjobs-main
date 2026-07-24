@@ -2,6 +2,7 @@ import { describe, expect, it } from "vitest";
 
 import {
   buildJobPostingJsonLd,
+  isRecruitmentJobPosting,
   parseJobBaseSalary,
   resolveJobPostalAddress,
   resolveValidThrough,
@@ -112,6 +113,28 @@ describe("resolveValidThrough", () => {
 });
 
 describe("buildJobPostingJsonLd", () => {
+  it("omits JobPosting for exam schedules, merit lists, and circulars", () => {
+    expect(
+      buildJobPostingJsonLd({
+        id: "n1",
+        slug: "tentative-exam-schedule",
+        title: "Tentative Exam Schedule for CEN 01-2025",
+        published_at: "2026-01-01",
+      })
+    ).toBeNull();
+    expect(
+      isRecruitmentJobPosting({
+        title: "AISSAC 2026 Offline Admission Merit List No 2",
+      })
+    ).toBe(false);
+    expect(
+      isRecruitmentJobPosting({
+        title: "SSC CGL 2026 Recruitment",
+        vacancies: 100,
+      })
+    ).toBe(true);
+  });
+
   it("builds schema.org JobPosting from a job row", () => {
     const jsonLd = buildJobPostingJsonLd({
       id: "1",
@@ -269,10 +292,11 @@ describe("buildJobPostingJsonLd", () => {
     const withPin = buildJobPostingJsonLd({
       id: "addr-2",
       slug: "pin-in-address",
-      title: "HQ Posting",
+      title: "HQ Posting Recruitment",
       state: "Delhi",
       streetAddress: "North Block, Raisina Hill, New Delhi 110001",
       published_at: "2026-01-01",
+      vacancies: 1,
     });
     const a1 = (withPin?.jobLocation as { address: Record<string, string> }).address;
     expect(a1.postalCode).toBe("110001");
@@ -281,10 +305,11 @@ describe("buildJobPostingJsonLd", () => {
     const cityOnly = buildJobPostingJsonLd({
       id: "addr-3",
       slug: "city-only",
-      title: "City Job",
+      title: "City Job Recruitment",
       state: "Delhi",
       streetAddress: "New Delhi",
       published_at: "2026-01-01",
+      vacancies: 1,
     });
     const a2 = (cityOnly?.jobLocation as { address: Record<string, string> }).address;
     expect(a2.streetAddress).toBeUndefined();
