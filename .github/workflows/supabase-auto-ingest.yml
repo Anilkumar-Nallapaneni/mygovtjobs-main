@@ -26,7 +26,10 @@ jobs:
     # full scrape/export over failing early; tighten later only if runs hang.
     timeout-minutes: 360
     env:
-      AUTO_PUBLISH_VERIFIED: "0"
+      # Re-enabled 2026-07-26: freeze demoted all rows to draft and blocked export.
+      # Keep publish gate (RECRUITMENT + completeness + URLs) — only verified-quality rows go live.
+      AUTO_PUBLISH_VERIFIED: "1"
+      APP_ENV: production
     steps:
       - name: Start
         run: echo "=== Daily ingest started at $(date -u +%Y-%m-%dT%H:%M:%SZ) ==="
