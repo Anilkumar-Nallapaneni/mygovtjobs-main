@@ -20,7 +20,7 @@ jobs:
     # Manual runs scrape 53 admit/result portals; scheduled runs are RSS-only.
     timeout-minutes: ${{ github.event_name == 'workflow_dispatch' && 180 || 60 }}
     env:
-      AUTO_PUBLISH_VERIFIED: "0"
+      AUTO_PUBLISH_VERIFIED: "1"
 
     steps:
       - uses: actions/checkout@v4
