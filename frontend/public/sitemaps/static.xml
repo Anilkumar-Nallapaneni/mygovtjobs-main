@@ -706,12 +706,12 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.livegovtjobs.com/org/sainik-school-jhansi</loc>
+    <loc>https://www.livegovtjobs.com/org/mppolice</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.livegovtjobs.com/org/mppolice</loc>
+    <loc>https://www.livegovtjobs.com/org/sainik-school-jhansi</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -722,11 +722,6 @@
   </url>
   <url>
     <loc>https://www.livegovtjobs.com/org/indo-tibetan-border-police-itbp</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.livegovtjobs.com/org/esic-employees-state-insurance-corporation</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -751,12 +746,17 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.livegovtjobs.com/org/nsut</loc>
+    <loc>https://www.livegovtjobs.com/org/esic-employees-state-insurance-corporation</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.livegovtjobs.com/org/puducherry-recruitment-portal</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.livegovtjobs.com/org/nsut</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -801,11 +801,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.livegovtjobs.com/org/upsc-what-s-new</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://www.livegovtjobs.com/org/university-grants-commission-ugc</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -816,7 +811,7 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.livegovtjobs.com/org/ppsc</loc>
+    <loc>https://www.livegovtjobs.com/org/upsc-what-s-new</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -826,12 +821,17 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.livegovtjobs.com/org/sainik-school-goalpara</loc>
+    <loc>https://www.livegovtjobs.com/org/ppsc</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.livegovtjobs.com/org/railway-recruitment-board-rrb-guwahati</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.livegovtjobs.com/org/sainik-school-goalpara</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -866,11 +866,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.livegovtjobs.com/org/andaman-nicobar-administration</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://www.livegovtjobs.com/org/ncert</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -886,12 +881,7 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.livegovtjobs.com/org/andaman-nicobar-e-recruitment</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.livegovtjobs.com/org/ludhiana-dcourts</loc>
+    <loc>https://www.livegovtjobs.com/org/andaman-nicobar-administration</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -911,6 +901,11 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://www.livegovtjobs.com/org/ludhiana-dcourts</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.livegovtjobs.com/org/sainikschoolbhubaneswar-edu-in</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -921,17 +916,22 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://www.livegovtjobs.com/org/apeda-bedf-recruitments</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.livegovtjobs.com/org/wii</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.livegovtjobs.com/org/apeda</loc>
+    <loc>https://www.livegovtjobs.com/org/andaman-nicobar-e-recruitment</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.livegovtjobs.com/org/apeda-bedf-recruitments</loc>
+    <loc>https://www.livegovtjobs.com/org/apeda</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -956,27 +956,7 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.livegovtjobs.com/org/mahapolice</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.livegovtjobs.com/org/railway-recruitment-board-rrb-mumbai</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.livegovtjobs.com/org/india-post-gramin-dak-sevak-gds</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://www.livegovtjobs.com/org/railway-recruitment-board</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.livegovtjobs.com/org/bhabha-atomic-research-centre-barc</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -1001,6 +981,16 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://www.livegovtjobs.com/org/india-post-gramin-dak-sevak-gds</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.livegovtjobs.com/org/mahapolice</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.livegovtjobs.com/org/mpscmanipur</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -1011,17 +1001,7 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.livegovtjobs.com/org/drdo</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://www.livegovtjobs.com/org/kullu-dcourts</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.livegovtjobs.com/org/mizoram-psc</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -1031,12 +1011,17 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.livegovtjobs.com/org/rrbthiruvananthapuram</loc>
+    <loc>https://www.livegovtjobs.com/org/bhabha-atomic-research-centre-barc</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.livegovtjobs.com/org/district-sessions-judge-howrah</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.livegovtjobs.com/org/drdo</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -1056,17 +1041,12 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.livegovtjobs.com/org/railway-recruitment-board-rrb-chandigarh</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://www.livegovtjobs.com/org/rajasthan-psc-rpsc</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.livegovtjobs.com/org/rrbgkp</loc>
+    <loc>https://www.livegovtjobs.com/org/rrbthiruvananthapuram</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -1081,7 +1061,17 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://www.livegovtjobs.com/org/mizoram-psc</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.livegovtjobs.com/org/psc-uk</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.livegovtjobs.com/org/rrbgkp</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -1101,6 +1091,16 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://www.livegovtjobs.com/org/railway-recruitment-board-rrb-chandigarh</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.livegovtjobs.com/org/railway-recruitment-board-rrb-mumbai</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.livegovtjobs.com/org/rrbpatna</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -1112,11 +1112,6 @@
   </url>
   <url>
     <loc>https://www.livegovtjobs.com/org/district-sessions-judge-rayagada</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.livegovtjobs.com/org/isro-indian-space-research-organisation</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -1141,11 +1136,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.livegovtjobs.com/org/coochbehar-dcourts</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://www.livegovtjobs.com/org/district-sessions-judge-ludhiana</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -1166,22 +1156,17 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.livegovtjobs.com/org/howrah-dcourts</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://www.livegovtjobs.com/org/indore-dcourts</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.livegovtjobs.com/org/intelligence-bureau-ib-mha</loc>
+    <loc>https://www.livegovtjobs.com/org/ircon-org</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.livegovtjobs.com/org/ircon-org</loc>
+    <loc>https://www.livegovtjobs.com/org/isro-indian-space-research-organisation</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -1211,17 +1196,12 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.livegovtjobs.com/org/rrbranchi</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.livegovtjobs.com/org/sitapur-dcourts</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://www.livegovtjobs.com/org/yamunanagar-dcourts</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.livegovtjobs.com/org/coochbehar-dcourts</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -1231,7 +1211,12 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.livegovtjobs.com/org/district-sessions-judge-puri</loc>
+    <loc>https://www.livegovtjobs.com/org/howrah-dcourts</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.livegovtjobs.com/org/intelligence-bureau-ib-mha</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -1241,27 +1226,12 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.livegovtjobs.com/org/tnpsc</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://www.livegovtjobs.com/org/uttarakhand-psc-ukpsc</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.livegovtjobs.com/org/wildlife-institute-of-india-wii</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://www.livegovtjobs.com/org/bhojpur-dcourts</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.livegovtjobs.com/org/delhi</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -1276,6 +1246,11 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://www.livegovtjobs.com/org/district-sessions-judge-puri</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.livegovtjobs.com/org/employees-provident-fund-organisation</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -1286,17 +1261,17 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.livegovtjobs.com/org/jagatsinghpur-dcourts</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://www.livegovtjobs.com/org/jharsuguda-dcourts</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.livegovtjobs.com/org/sainik-school-gopalganj</loc>
+    <loc>https://www.livegovtjobs.com/org/rrbranchi</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.livegovtjobs.com/org/tnpsc</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -1316,27 +1291,12 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.livegovtjobs.com/org/bedf</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.livegovtjobs.com/org/bits-pilani</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.livegovtjobs.com/org/ctet</loc>
+    <loc>https://www.livegovtjobs.com/org/wildlife-institute-of-india-wii</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.livegovtjobs.com/org/district-sessions-judge-ujjain</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.livegovtjobs.com/org/dlsa-sitapur</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -1351,12 +1311,7 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.livegovtjobs.com/org/iit-dharwad</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.livegovtjobs.com/org/iit-gandhinagar</loc>
+    <loc>https://www.livegovtjobs.com/org/jagatsinghpur-dcourts</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -1371,27 +1326,12 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.livegovtjobs.com/org/nit-rourkela</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://www.livegovtjobs.com/org/npcil</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.livegovtjobs.com/org/panjab-university</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.livegovtjobs.com/org/railway-recruitment-board-rrb-ranchi</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.livegovtjobs.com/org/rri</loc>
+    <loc>https://www.livegovtjobs.com/org/sainik-school-gopalganj</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -1401,7 +1341,7 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.livegovtjobs.com/org/ssc</loc>
+    <loc>https://www.livegovtjobs.com/org/sitapur-dcourts</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
