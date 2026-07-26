@@ -12,6 +12,7 @@ const r = spawnSync(process.execPath, ['scripts/push-vercel-env.mjs'], {
     ...process.env,
     GO_LIVE: '1',
     VERCEL_SITE_URL: process.env.VERCEL_SITE_URL || 'https://www.livegovtjobs.com',
+    VERCEL_DAILY_SYNC_ONLY: '0',
   },
 })
 process.exit(r.status ?? 1)
