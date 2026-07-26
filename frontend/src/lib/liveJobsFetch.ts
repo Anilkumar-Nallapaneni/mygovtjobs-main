@@ -418,7 +418,9 @@ export async function fetchLiveJobsCatalog(
   const isBootstrap =
     payload.sources.includes('official-sites') && payload.raw.length <= INITIAL_LIVE_ROWS
 
-  if (isBootstrap) {
+  // Explicit Supabase mode paints the CDN bootstrap for first paint, then replaces it from
+  // the DB. Expanding the full static list here races the live hydrate and overwrites it.
+  if (isBootstrap && jobsSource !== 'supabase') {
     // Warm list JSON on the network while bootstrap paints — apply after the short gate.
     void fetchFullLiveJobsSnapshot(bustCache)
 

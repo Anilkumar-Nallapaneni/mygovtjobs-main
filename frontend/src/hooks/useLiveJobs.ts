@@ -105,11 +105,26 @@ export function useLiveJobs() {
       fetchLiveJobsCatalog(
         hardBust,
         (partial) => {
+          // Never let a late CDN/full-list partial downgrade a live Supabase catalog.
+          const current = qc.getQueryData<LiveJobsCatalogResult>(queryKey)
+          if (
+            current?.sources.includes('supabase') &&
+            !partial.sources.includes('supabase')
+          ) {
+            return
+          }
           qc.setQueryData<LiveJobsCatalogResult>(queryKey, partial)
           writeLiveJobsSessionCatalog(jobsSource, partial)
         },
         dailySyncMeta
       ).then((result) => {
+        const current = qc.getQueryData<LiveJobsCatalogResult>(queryKey)
+        if (
+          current?.sources.includes('supabase') &&
+          !result.sources.includes('supabase')
+        ) {
+          return current
+        }
         writeLiveJobsSessionCatalog(jobsSource, result)
         return result
       }),
