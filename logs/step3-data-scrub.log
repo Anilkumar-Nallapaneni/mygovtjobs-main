@@ -1,7 +1,0 @@
-
-> data:scrub
-> node scripts/run-python.mjs scripts/scrub-aggregator-from-db.py
-
-DB: deleted_aggregator=40 fixed_apply=0
-live-jobs.json: dropped=0
-Re-exported 1911 jobs -> D:\My Projects\mygovtjobs-main\frontend\public\data\live-jobs.json
