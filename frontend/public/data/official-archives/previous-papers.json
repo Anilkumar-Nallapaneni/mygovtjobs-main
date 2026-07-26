@@ -1,7 +1,92 @@
 {
-  "generatedAt": "2026-07-24T10:38:02.276Z",
+  "generatedAt": "2026-07-26T14:49:02.772Z",
   "count": 26,
   "items": [
+    {
+      "id": "e89d8cfee71410b4",
+      "title": "Question paper for Descriptive Examinations",
+      "link": "https://www.keralapsc.gov.in/question-paper-descriptive-exam",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-kl",
+      "sourceName": "Kerala PSC",
+      "dept": "Kerala PSC",
+      "state": "Kerala",
+      "category": "state",
+      "stateIds": [
+        "kl"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "b2abd6cc6348e1c6",
+      "title": "Previous Question Papers",
+      "link": "https://www.keralapsc.gov.in/previous-question-papers",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-kl",
+      "sourceName": "Kerala PSC",
+      "dept": "Kerala PSC",
+      "state": "Kerala",
+      "category": "state",
+      "stateIds": [
+        "kl"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "c4f57dea207a1fb4",
+      "title": "Question paper for Descriptive Examinations",
+      "link": "https://www.keralapsc.gov.in/index.php/question-paper-descriptive-exam",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-kl",
+      "sourceName": "Kerala PSC",
+      "dept": "Kerala PSC",
+      "state": "Kerala",
+      "category": "state",
+      "stateIds": [
+        "kl"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "088efab9a9c009c1",
+      "title": "Previous Year Question Papers",
+      "link": "https://mppsc.mp.gov.in/Oldquestionpaper",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-mp",
+      "sourceName": "Madhya Pradesh PSC (MPPSC)",
+      "dept": "Madhya Pradesh PSC (MPPSC)",
+      "state": "Madhya Pradesh",
+      "category": "state",
+      "stateIds": [
+        "mp"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "288eb14d7e699a2a",
+      "title": "Previous Question Papers",
+      "link": "https://opsc.gov.in/Public/Pages/View_Content.aspx?id=p/5qRxj7CZtpXYhZHF7BXQ==",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-od",
+      "sourceName": "Odisha PSC (OPSC)",
+      "dept": "Odisha PSC (OPSC)",
+      "state": "Odisha",
+      "category": "state",
+      "stateIds": [
+        "od"
+      ],
+      "fetchMethod": "html"
+    },
     {
       "id": "ba6df61f0df29b66",
       "title": "Representation on Question Paper for ESEM-26, IES-ISS-26 and Combined Geo-Scientist (Main) Examination, 2026",
@@ -237,76 +322,6 @@
       "dept": "CBSE — CTET",
       "state": "All India",
       "category": "teaching",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "e89d8cfee71410b4",
-      "title": "Question paper for Descriptive Examinations",
-      "link": "https://www.keralapsc.gov.in/question-paper-descriptive-exam",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-kl",
-      "sourceName": "Kerala PSC",
-      "dept": "Kerala PSC",
-      "state": "All India",
-      "category": "state",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "b2abd6cc6348e1c6",
-      "title": "Previous Question Papers",
-      "link": "https://www.keralapsc.gov.in/previous-question-papers",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-kl",
-      "sourceName": "Kerala PSC",
-      "dept": "Kerala PSC",
-      "state": "All India",
-      "category": "state",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "c4f57dea207a1fb4",
-      "title": "Question paper for Descriptive Examinations",
-      "link": "https://www.keralapsc.gov.in/index.php/question-paper-descriptive-exam",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-kl",
-      "sourceName": "Kerala PSC",
-      "dept": "Kerala PSC",
-      "state": "All India",
-      "category": "state",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "088efab9a9c009c1",
-      "title": "Previous Year Question Papers",
-      "link": "https://mppsc.mp.gov.in/Oldquestionpaper",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-mp",
-      "sourceName": "Madhya Pradesh PSC (MPPSC)",
-      "dept": "Madhya Pradesh PSC (MPPSC)",
-      "state": "All India",
-      "category": "state",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "288eb14d7e699a2a",
-      "title": "Previous Question Papers",
-      "link": "https://opsc.gov.in/Public/Pages/View_Content.aspx?id=p/5qRxj7CZtpXYhZHF7BXQ==",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-od",
-      "sourceName": "Odisha PSC (OPSC)",
-      "dept": "Odisha PSC (OPSC)",
-      "state": "All India",
-      "category": "state",
       "fetchMethod": "live-jobs-supplement"
     },
     {

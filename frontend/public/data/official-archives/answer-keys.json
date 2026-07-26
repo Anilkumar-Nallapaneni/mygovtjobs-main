@@ -1,7 +1,94 @@
 {
-  "generatedAt": "2026-07-24T10:38:02.276Z",
+  "generatedAt": "2026-07-26T14:49:02.772Z",
   "count": 38,
   "items": [
+    {
+      "id": "37c45556314fa75d",
+      "title": "Answer Key-OMR Exams",
+      "link": "https://www.keralapsc.gov.in/answerkey_omrexams",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-kl",
+      "sourceName": "Kerala PSC",
+      "dept": "Kerala PSC",
+      "state": "Kerala",
+      "category": "state",
+      "stateIds": [
+        "kl"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "274a1d8e868c2d27",
+      "title": "Answer key-Online Exam",
+      "link": "https://www.keralapsc.gov.in/answerkey_onlineexams",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-kl",
+      "sourceName": "Kerala PSC",
+      "dept": "Kerala PSC",
+      "state": "Kerala",
+      "category": "state",
+      "stateIds": [
+        "kl"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "b0408e9076d75cad",
+      "title": "Answer Key-OMR Exams",
+      "link": "https://www.keralapsc.gov.in/index.php/answerkey_omrexams",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-kl",
+      "sourceName": "Kerala PSC",
+      "dept": "Kerala PSC",
+      "state": "Kerala",
+      "category": "state",
+      "stateIds": [
+        "kl"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "bfc1c395481cde09",
+      "title": "Answer key-Online Exam",
+      "link": "https://www.keralapsc.gov.in/index.php/answerkey_onlineexams",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-kl",
+      "sourceName": "Kerala PSC",
+      "dept": "Kerala PSC",
+      "state": "Kerala",
+      "category": "state",
+      "stateIds": [
+        "kl"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "b425e02f785eba75",
+      "title": "Provisional Answer Key - Assistant Professor 06 Sub. (Sanskrit, Geography, Psychology, Law, Geology, Yogic Science) Exam 2025, Dated 15/07/2026",
+      "link": "https://mppsc.mp.gov.in/uploads/files/Provisional_Answer_Key_Assistant_Professor_06_Sub__Exam_2025_Dated_15_07_2026.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://mppsc.mp.gov.in/uploads/files/Provisional_Answer_Key_Assistant_Professor_06_Sub__Exam_2025_Dated_15_07_2026.pdf"
+      ],
+      "sourceId": "psc-mp",
+      "sourceName": "Madhya Pradesh PSC (MPPSC)",
+      "dept": "Madhya Pradesh PSC (MPPSC)",
+      "state": "Madhya Pradesh",
+      "category": "state",
+      "stateIds": [
+        "mp"
+      ],
+      "fetchMethod": "html"
+    },
     {
       "id": "30504e63b8603f42",
       "title": "Important Provisional Key (Prelim) - 89/2025-26 (Concerned Subject ) (Assistant Professor, Geography in Government Arts",
@@ -120,78 +207,6 @@
       "sourceId": "psc-jk",
       "sourceName": "Jammu & Kashmir PSC (JKPSC)",
       "dept": "Jammu & Kashmir PSC (JKPSC)",
-      "state": "All India",
-      "category": "state",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "37c45556314fa75d",
-      "title": "Answer Key-OMR Exams",
-      "link": "https://www.keralapsc.gov.in/answerkey_omrexams",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-kl",
-      "sourceName": "Kerala PSC",
-      "dept": "Kerala PSC",
-      "state": "All India",
-      "category": "state",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "274a1d8e868c2d27",
-      "title": "Answer key-Online Exam",
-      "link": "https://www.keralapsc.gov.in/answerkey_onlineexams",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-kl",
-      "sourceName": "Kerala PSC",
-      "dept": "Kerala PSC",
-      "state": "All India",
-      "category": "state",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "b0408e9076d75cad",
-      "title": "Answer Key-OMR Exams",
-      "link": "https://www.keralapsc.gov.in/index.php/answerkey_omrexams",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-kl",
-      "sourceName": "Kerala PSC",
-      "dept": "Kerala PSC",
-      "state": "All India",
-      "category": "state",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "bfc1c395481cde09",
-      "title": "Answer key-Online Exam",
-      "link": "https://www.keralapsc.gov.in/index.php/answerkey_onlineexams",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-kl",
-      "sourceName": "Kerala PSC",
-      "dept": "Kerala PSC",
-      "state": "All India",
-      "category": "state",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "b425e02f785eba75",
-      "title": "Provisional Answer Key - Assistant Professor 06 Sub. (Sanskrit, Geography, Psychology, Law, Geology, Yogic Science) Exam 2025, Dated 15/07/2026",
-      "link": "https://mppsc.mp.gov.in/uploads/files/Provisional_Answer_Key_Assistant_Professor_06_Sub__Exam_2025_Dated_15_07_2026.pdf",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [
-        "https://mppsc.mp.gov.in/uploads/files/Provisional_Answer_Key_Assistant_Professor_06_Sub__Exam_2025_Dated_15_07_2026.pdf"
-      ],
-      "sourceId": "psc-mp",
-      "sourceName": "Madhya Pradesh PSC (MPPSC)",
-      "dept": "Madhya Pradesh PSC (MPPSC)",
       "state": "All India",
       "category": "state",
       "fetchMethod": "live-jobs-supplement"

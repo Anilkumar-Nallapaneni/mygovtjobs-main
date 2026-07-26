@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-24T10:38:02.276Z",
+  "generatedAt": "2026-07-26T14:49:02.772Z",
   "count": 162,
   "items": [
     {
@@ -37,48 +37,21 @@
       "fetchMethod": "html-listing"
     },
     {
-      "id": "20b56c13b7d29dbc",
-      "title": "उत्तर प्रदेश होमगार्ड्स के पदों पर एनरोलमेंट-2025 जनपद-सहारनपुर, शामली, मुजफ्फरनगर, मेरठ, गाजियाबाद, बुलन्दशहर, हापुड़, गौतमबुद्धनगर व बागपत में निर्धारित अभिलेखों की संवीक्षा एवं शारीरिक मानक परीक्षा (डीवी/पीएसटी) की तिथियों (दिनांक 04-08-2026, 05-08-2026 व 06-08-2026) में परिवर्तन हेतु महत्वपूर्ण सूचना एवं संशोधित प्रवेश पत्र डाउनलोड किये जाने विषयक ।",
-      "link": "https://uppbpb.gov.in/FilesUploaded/Notice/img20260713_170704299779d63a-5d71-4b27-8b1a-cdf96f7616ff.pdf",
-      "publishedAt": "2026-08-04T00:00:00Z",
+      "id": "158bb00a9699c472",
+      "title": "Admit Cards",
+      "link": "https://mppsc.mp.gov.in/Admitcard",
+      "publishedAt": null,
       "summary": null,
-      "pdfUrls": [
-        "https://uppbpb.gov.in/FilesUploaded/Notice/img20260713_170704299779d63a-5d71-4b27-8b1a-cdf96f7616ff.pdf"
+      "pdfUrls": [],
+      "sourceId": "psc-mp",
+      "sourceName": "Madhya Pradesh PSC (MPPSC)",
+      "dept": "Madhya Pradesh PSC (MPPSC)",
+      "state": "Madhya Pradesh",
+      "category": "state",
+      "stateIds": [
+        "mp"
       ],
-      "sourceId": "police-up",
-      "sourceName": "Uppbpb",
-      "dept": "Uppbpb",
-      "state": "All India",
-      "category": "police",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "5a1ddb365b9f109d",
-      "title": "02 Aug 2026 LIST OF SELECTED CANDIDATES IN ADVT. NO. A-7/E-1/2021, U.P. TECHNICAL EDUCATION (TEACHING) SERVICE EXAMINATION-2021, LECT. INT.DSG.DECO.,FOOTWEAR,INS",
-      "link": "https://uppsc.up.nic.in/Open_PDF.aspx?I4PnQ0tBagkz0o52o77EYfBBw0BmR5fX",
-      "publishedAt": "2026-08-02T00:00:00Z",
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "uppsc-hall-tickets",
-      "sourceName": "UPPSC — Hall tickets",
-      "dept": "UPPSC — Hall tickets",
-      "state": "All India",
-      "category": "state",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "8528fed56389c2ef",
-      "title": "28 Jul 2026 CORRIGENDUM NOTICE REGARDING ADVT. NO. A-5/E-1/2025, ASSISTANT TEACHER, TRAINED GRADUATE GRADE (M/F BRANCH) EXAM-2025",
-      "link": "https://uppsc.up.nic.in/Open_PDF.aspx?I4PnQ0tBagnbSVudLPThSLUMpsH8pUZu",
-      "publishedAt": "2026-07-28T00:00:00Z",
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "uppsc-hall-tickets",
-      "sourceName": "UPPSC — Hall tickets",
-      "dept": "UPPSC — Hall tickets",
-      "state": "All India",
-      "category": "state",
-      "fetchMethod": "live-jobs-supplement"
+      "fetchMethod": "html"
     },
     {
       "id": "d40841a3ad176246",
@@ -90,6 +63,22 @@
       "sourceId": "uppsc-hall-tickets",
       "sourceName": "UPPSC — Hall tickets",
       "dept": "UPPSC — Hall tickets",
+      "state": "All India",
+      "category": "state",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "26e74717a17c51d7",
+      "title": "LDE Notification LDE Notifications 2022-2023 LDE Notifications 2023-2024 LDE Notifications 2024-2025 LDE Notifications 2",
+      "link": "https://mpsc.mizoram.gov.in/page/lde-admit-card",
+      "publishedAt": "2026-07-24T10:47:23.424495Z",
+      "summary": "Sl. No. Name of Post Department 1 Sericulture Extention Officer Sericulture 2 CDPO Social Welfare (Tribal Affairs) 3 Headmaster, Govt. Middle School School Education Limited Departmental Exam (LDE) ADMIT CARD Mizoram Public Service Commission Office, Top floor-ah Passport size photo copy tharlam (2)pahnih kengin ni 20 th September _- 8 th October, 2021 thleng, zing dar 10:00 am - 04:00 pm. chhungi…",
+      "pdfUrls": [
+        "https://mpsc.mizoram.gov.in/uploads/attachments/3d2426968e5aadb855c0316b1851985f/lde-admit-card-issue.pdf"
+      ],
+      "sourceId": "psc-mz",
+      "sourceName": "Mpsc Mizoram",
+      "dept": "Mpsc Mizoram",
       "state": "All India",
       "category": "state",
       "fetchMethod": "live-jobs-supplement"
@@ -127,8 +116,10 @@
       "title": "Recruitment cases kept on hold on account of Pending Litigations",
       "link": "https://www.upsc.gov.in/recruitment/recruitment-cases-kept-hold-account-pending-litigations",
       "publishedAt": "2026-07-23T06:50:30.784109Z",
-      "summary": null,
-      "pdfUrls": [],
+      "summary": "Union Public Service Commission Recruitment Branch *** Recruitment Cases kept on hold on account of pending litigation Sl. No. File No. Subject No. of Posts 1. F.1/70(12)/2021-R.1 Assistant Professor (Unani), IlmulAdvia, Government of NCT of Delhi 01 2. F.1/78(20)/2021-R.1 Assistant Professor (Unani), Qabalatwa Amraze Niswan, Government of NCT of Delhi 02 3. F.1/138(39)/2023-R.1 Professor (Pharmac…",
+      "pdfUrls": [
+        "https://www.upsc.gov.in/sites/default/files/Rectt_PendingLitigation_Eng_171225.pdf"
+      ],
       "sourceId": "upsc-e-admit-hub",
       "sourceName": "UPSC — e-Admit cards",
       "dept": "UPSC — e-Admit cards",
@@ -229,22 +220,6 @@
       "fetchMethod": "live-jobs-supplement"
     },
     {
-      "id": "26e74717a17c51d7",
-      "title": "LDE Notification LDE Notifications 2022-2023 LDE Notifications 2023-2024 LDE Notifications 2024-2025 LDE Notifications 2",
-      "link": "https://mpsc.mizoram.gov.in/page/lde-admit-card",
-      "publishedAt": "2026-07-20T12:10:06.366815Z",
-      "summary": "Sl. No. Name of Post Department 1 Sericulture Extention Officer Sericulture 2 CDPO Social Welfare (Tribal Affairs) 3 Headmaster, Govt. Middle School School Education Limited Departmental Exam (LDE) ADMIT CARD Mizoram Public Service Commission Office, Top floor-ah Passport size photo copy tharlam (2)pahnih kengin ni 20 th September _- 8 th October, 2021 thleng, zing dar 10:00 am - 04:00 pm. chhungi…",
-      "pdfUrls": [
-        "https://mpsc.mizoram.gov.in/uploads/attachments/3d2426968e5aadb855c0316b1851985f/lde-admit-card-issue.pdf"
-      ],
-      "sourceId": "psc-mz",
-      "sourceName": "Mpsc Mizoram",
-      "dept": "Mpsc Mizoram",
-      "state": "All India",
-      "category": "state",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
       "id": "0fe79540a77b8deb",
       "title": "e - Admit Card: Central Armed Police Forces (ACs) Examination, 2026",
       "link": "https://upsc.gov.in/whats-new/Central%20Armed%20Police%20Forces%20%28ACs%29%20Examination%2C%202026/e%20-%20Admit%20Card",
@@ -291,9 +266,9 @@
       "fetchMethod": "live-jobs-supplement"
     },
     {
-      "id": "ecc0078de1c0eba4",
-      "title": "14 Jul 2026 NOTICE REGARDING ADVT. NO. A-2/E-1/2025, U.P. TECHNICAL EDUCATION (TEACHING) SERVICES EXAMINATION-2025 (PRINCIPAL)",
-      "link": "https://uppsc.up.nic.in/Open_PDF.aspx?I4PnQ0tBagloISrijFpWKGk/6BmlRlpB",
+      "id": "24c56d25433472ca",
+      "title": "14 Jul 2026 NOTICE REGARDING ADVT. NO. A-5/E-1/2025, ASSISTANT TEACHER, TRAINED GRADUATE GRADE (M/F BRANCH) (MAINS) EXAM-2025 (COMPUTER)",
+      "link": "https://uppsc.up.nic.in/Open_PDF.aspx?I4PnQ0tBagloISrijFpWKBMXr2M2qn91",
       "publishedAt": "2026-07-14T00:00:00Z",
       "summary": null,
       "pdfUrls": [],
@@ -305,9 +280,9 @@
       "fetchMethod": "live-jobs-supplement"
     },
     {
-      "id": "24c56d25433472ca",
-      "title": "14 Jul 2026 NOTICE REGARDING ADVT. NO. A-5/E-1/2025, ASSISTANT TEACHER, TRAINED GRADUATE GRADE (M/F BRANCH) (MAINS) EXAM-2025 (COMPUTER)",
-      "link": "https://uppsc.up.nic.in/Open_PDF.aspx?I4PnQ0tBagloISrijFpWKBMXr2M2qn91",
+      "id": "ecc0078de1c0eba4",
+      "title": "14 Jul 2026 NOTICE REGARDING ADVT. NO. A-2/E-1/2025, U.P. TECHNICAL EDUCATION (TEACHING) SERVICES EXAMINATION-2025 (PRINCIPAL)",
+      "link": "https://uppsc.up.nic.in/Open_PDF.aspx?I4PnQ0tBagloISrijFpWKGk/6BmlRlpB",
       "publishedAt": "2026-07-14T00:00:00Z",
       "summary": null,
       "pdfUrls": [],
@@ -333,9 +308,9 @@
       "fetchMethod": "live-jobs-supplement"
     },
     {
-      "id": "35911c39786631dc",
-      "title": "11 Jul 2026 NOTICE REGARDING ADVT. NO. A-5/E-1/2025, ASSISTANT TEACHER, TRAINED GRADUATE GRADE (M/F BRANCH) MAINS EXAM-2025, SUBJECT-MUSIC",
-      "link": "https://uppsc.up.nic.in/Open_PDF.aspx?I4PnQ0tBaglAQaJlk9zBXsPCh4jrOQ50",
+      "id": "d18260da694aeedc",
+      "title": "11 Jul 2026 NOTICE REGARDING ADVT. NO. A-5/E-1/2025, ASSISTANT TEACHER, TRAINED GRADUATE GRADE (M/F BRANCH) (MAINS.)EXAM-2025 (HINDI, SOCIAL SCIENCE, PHYSICAL ED",
+      "link": "https://uppsc.up.nic.in/Open_PDF.aspx?I4PnQ0tBagktt06NhTTxwvHFJTvTuEgu",
       "publishedAt": "2026-07-11T00:00:00Z",
       "summary": null,
       "pdfUrls": [],
@@ -350,6 +325,20 @@
       "id": "b15afb44ab9c397f",
       "title": "11 Jul 2026 NOTICE REGARDING ADVT. NO. A-5/E-1/2025, ASSISTANT TEACHER, TRAINED GRADUATE GRADE (M/F BRANCH) MAINS EXAM-2025, SUBJECT-SOCIAL SCIENCE",
       "link": "https://uppsc.up.nic.in/Open_PDF.aspx?I4PnQ0tBagkz0o52o77EYU1Scw20fSeX",
+      "publishedAt": "2026-07-11T00:00:00Z",
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "uppsc-hall-tickets",
+      "sourceName": "UPPSC — Hall tickets",
+      "dept": "UPPSC — Hall tickets",
+      "state": "All India",
+      "category": "state",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "35911c39786631dc",
+      "title": "11 Jul 2026 NOTICE REGARDING ADVT. NO. A-5/E-1/2025, ASSISTANT TEACHER, TRAINED GRADUATE GRADE (M/F BRANCH) MAINS EXAM-2025, SUBJECT-MUSIC",
+      "link": "https://uppsc.up.nic.in/Open_PDF.aspx?I4PnQ0tBaglAQaJlk9zBXsPCh4jrOQ50",
       "publishedAt": "2026-07-11T00:00:00Z",
       "summary": null,
       "pdfUrls": [],
@@ -378,20 +367,6 @@
       "id": "e59a6123a577856c",
       "title": "11 Jul 2026 NOTICE REGARDING ADMIT CARD FOR ADVT. NO. A-5/E-1/2025, ASSISTANT TEACHER, TRAINED GRADUATE GRADE (MALE / FEMALE BRANCH) (MAINS) EXAM - 2025 (MUSIC)",
       "link": "https://uppsc.up.nic.in/Open_PDF.aspx?I4PnQ0tBaglAQaJlk9zBXvikcfA3fKqC",
-      "publishedAt": "2026-07-11T00:00:00Z",
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "uppsc-hall-tickets",
-      "sourceName": "UPPSC — Hall tickets",
-      "dept": "UPPSC — Hall tickets",
-      "state": "All India",
-      "category": "state",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "d18260da694aeedc",
-      "title": "11 Jul 2026 NOTICE REGARDING ADVT. NO. A-5/E-1/2025, ASSISTANT TEACHER, TRAINED GRADUATE GRADE (M/F BRANCH) (MAINS.)EXAM-2025 (HINDI, SOCIAL SCIENCE, PHYSICAL ED",
-      "link": "https://uppsc.up.nic.in/Open_PDF.aspx?I4PnQ0tBagktt06NhTTxwvHFJTvTuEgu",
       "publishedAt": "2026-07-11T00:00:00Z",
       "summary": null,
       "pdfUrls": [],
@@ -517,20 +492,6 @@
       "fetchMethod": "live-jobs-supplement"
     },
     {
-      "id": "8d58c744169b648e",
-      "title": "06 Jul 2026 CORRIGENDUM NOTICE REGARDING ADVT. NO. A-5/E-1/2025, ASSISTANT TEACHER, TRAINED GRADUATE GRADE (M/F BRANCH) MAINS EXAM-2025, SUBJECT-PHYSICAL EDUCATI",
-      "link": "https://uppsc.up.nic.in/Open_PDF.aspx?I4PnQ0tBaglAQaJlk9zBXgIn6zbFJmHq",
-      "publishedAt": "2026-07-06T00:00:00Z",
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "uppsc-hall-tickets",
-      "sourceName": "UPPSC — Hall tickets",
-      "dept": "UPPSC — Hall tickets",
-      "state": "All India",
-      "category": "state",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
       "id": "90d5f45ecbbf13bc",
       "title": "06 Jul 2026 NOTICE REGARDING ADVT. NO. A-5/E-1/2025, ASSISTANT TEACHER, TRAINED GRADUATE GRADE (M/F BRANCH) MAINS EXAM-2025, SUBJECT-PHYSICAL EDUCATION",
       "link": "https://uppsc.up.nic.in/Open_PDF.aspx?I4PnQ0tBagkz0o52o77EYYrQ4pzCaoHr",
@@ -545,15 +506,15 @@
       "fetchMethod": "live-jobs-supplement"
     },
     {
-      "id": "0e4239436ef1f658",
-      "title": "06-07-2026Personal Assistant (Establishment, Hon. High Court) Exam-2025- Notification and Link for Download Admit Card( Admit Card )",
-      "link": "https://psc.uk.gov.in/candidate-corner/admitcards",
+      "id": "8d58c744169b648e",
+      "title": "06 Jul 2026 CORRIGENDUM NOTICE REGARDING ADVT. NO. A-5/E-1/2025, ASSISTANT TEACHER, TRAINED GRADUATE GRADE (M/F BRANCH) MAINS EXAM-2025, SUBJECT-PHYSICAL EDUCATI",
+      "link": "https://uppsc.up.nic.in/Open_PDF.aspx?I4PnQ0tBaglAQaJlk9zBXgIn6zbFJmHq",
       "publishedAt": "2026-07-06T00:00:00Z",
       "summary": null,
       "pdfUrls": [],
-      "sourceId": "psc-uk",
-      "sourceName": "Psc Uk",
-      "dept": "Psc Uk",
+      "sourceId": "uppsc-hall-tickets",
+      "sourceName": "UPPSC — Hall tickets",
+      "dept": "UPPSC — Hall tickets",
       "state": "All India",
       "category": "state",
       "fetchMethod": "live-jobs-supplement"
@@ -580,6 +541,20 @@
       "fetchMethod": "live-jobs-supplement"
     },
     {
+      "id": "0e4239436ef1f658",
+      "title": "06-07-2026Personal Assistant (Establishment, Hon. High Court) Exam-2025- Notification and Link for Download Admit Card( Admit Card )",
+      "link": "https://psc.uk.gov.in/candidate-corner/admitcards",
+      "publishedAt": "2026-07-06T00:00:00Z",
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-uk",
+      "sourceName": "Psc Uk",
+      "dept": "Psc Uk",
+      "state": "All India",
+      "category": "state",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
       "id": "46ab29192155a242",
       "title": "उत्तर प्रदेश होमगार्ड के पदों पर एनरोलमेंट-2025 के अन्तर्गत अभिलेखों की संवीक्षा एवं शारीरिक मानक परीक्षा (डीवी / पीएसटी) हेतु प्रवेश पत्र डाउनलोड किये जाने विषयक",
       "link": "https://uppbpb.gov.in/FilesUploaded/Notice/Scanca58556c-b19a-416d-8b7a-31935fd803db.pdf",
@@ -600,6 +575,48 @@
       "title": "02 Jul 2026 NOTICE REGARDING ADVT. NO. A-5/E-1/2023, ADDITIONAL PRIVATE SECRETARY EXAM-2023",
       "link": "https://uppsc.up.nic.in/Open_PDF.aspx?I4PnQ0tBaglkFvRfMi9SvtjgU/8fGQj5",
       "publishedAt": "2026-07-02T00:00:00Z",
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "uppsc-hall-tickets",
+      "sourceName": "UPPSC — Hall tickets",
+      "dept": "UPPSC — Hall tickets",
+      "state": "All India",
+      "category": "state",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "d0a220bca5a286ad",
+      "title": "30 Jun 2026 NOTICE REGARDING ADMIT CARD FOR ADVT. NO.A-8/E-1/2025-ASSISTANT PROSECUTION OFFICER (MAINS) EXAM.-2025",
+      "link": "https://uppsc.up.nic.in/Open_PDF.aspx?I4PnQ0tBagnr3CRo1wnbJnT6GtkqBL2r",
+      "publishedAt": "2026-06-30T00:00:00Z",
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "uppsc-hall-tickets",
+      "sourceName": "UPPSC — Hall tickets",
+      "dept": "UPPSC — Hall tickets",
+      "state": "All India",
+      "category": "state",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "42fa3ce5bf439d6e",
+      "title": "30 Jun 2026 NOTICE REGARDING ADVT. NO.A-8/E-1/2025-ASSISTANT PROSECUTION OFFICER (MAINS) EXAM.-2025",
+      "link": "https://uppsc.up.nic.in/Open_PDF.aspx?I4PnQ0tBagnr3CRo1wnbJin6Q/tSLthp",
+      "publishedAt": "2026-06-30T00:00:00Z",
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "uppsc-hall-tickets",
+      "sourceName": "UPPSC — Hall tickets",
+      "dept": "UPPSC — Hall tickets",
+      "state": "All India",
+      "category": "state",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "c5fe1df0474fb722",
+      "title": "30 Jun 2026 NOTICE REGARDING ADVT. NO. A-8/E-1/2025, ASSISTANT PROSECUTION OFFICER (MAINS) EXAM-2025",
+      "link": "https://uppsc.up.nic.in/Open_PDF.aspx?I4PnQ0tBagnbSVudLPThSAelINPNCNGK",
+      "publishedAt": "2026-06-30T00:00:00Z",
       "summary": null,
       "pdfUrls": [],
       "sourceId": "uppsc-hall-tickets",
@@ -1080,22 +1097,6 @@
       "fetchMethod": "live-jobs-supplement"
     },
     {
-      "id": "5ae821b52c426b42",
-      "title": "Announcement dated 23.06.2026 regarding downloading Common Screening Test admit card for the posts of (i) Assistant District Attorney in Prosecution Department, Haryana (Advt. No. 18/2025) (ii) Superintendent (Legal) in Law and Legislative Department, Haryana (Advt. No. 01/2025), for the exam to be held on 05.07.2026",
-      "link": "https://hpsc.gov.in/Portals/0/Ann_Admitcard_ADA_Supdtlegal_23_06_2026.pdf",
-      "publishedAt": "2026-06-23T00:00:00Z",
-      "summary": null,
-      "pdfUrls": [
-        "https://hpsc.gov.in/Portals/0/Ann_Admitcard_ADA_Supdtlegal_23_06_2026.pdf"
-      ],
-      "sourceId": "psc-hr-notifications",
-      "sourceName": "HPSC — Recruitment",
-      "dept": "HPSC — Recruitment",
-      "state": "All India",
-      "category": "state",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
       "id": "8bef1b5fe5e5a24b",
       "title": "उप निरीक्षक नागरिक पुलिस एवं समकक्ष पदों पर सीधी भर्ती-2025 के अन्तर्गत शारीरिक दक्षता परीक्षण (पीईटी-PET) की कार्यवाई के प्रवेश पत्र डाउनलोड किये जाने हेतु महत्वपूर्ण सूचना का प्रकाशन ।",
       "link": "https://uppbpb.gov.in/FilesUploaded/Notice/vig_230620261b8e8e67-13a3-4c3b-89fc-2d1f041cee0e.pdf",
@@ -1109,6 +1110,22 @@
       "dept": "Uppbpb",
       "state": "All India",
       "category": "police",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "5ae821b52c426b42",
+      "title": "Announcement dated 23.06.2026 regarding downloading Common Screening Test admit card for the posts of (i) Assistant District Attorney in Prosecution Department, Haryana (Advt. No. 18/2025) (ii) Superintendent (Legal) in Law and Legislative Department, Haryana (Advt. No. 01/2025), for the exam to be held on 05.07.2026",
+      "link": "https://hpsc.gov.in/Portals/0/Ann_Admitcard_ADA_Supdtlegal_23_06_2026.pdf",
+      "publishedAt": "2026-06-23T00:00:00Z",
+      "summary": null,
+      "pdfUrls": [
+        "https://hpsc.gov.in/Portals/0/Ann_Admitcard_ADA_Supdtlegal_23_06_2026.pdf"
+      ],
+      "sourceId": "psc-hr-notifications",
+      "sourceName": "HPSC — Recruitment",
+      "dept": "HPSC — Recruitment",
+      "state": "All India",
+      "category": "state",
       "fetchMethod": "live-jobs-supplement"
     },
     {
@@ -1216,9 +1233,9 @@
       "fetchMethod": "live-jobs-supplement"
     },
     {
-      "id": "f4987bba9a851442",
-      "title": "22 Jun 2026 NOTICE REGARDING ADVT NO: A-5/E-1/2025, ASSISTANT TEACHER, TRAINED GRADUATE GRADE (M/F) EXAM-2025 (ENGLISH)",
-      "link": "https://uppsc.up.nic.in/Open_PDF.aspx?I4PnQ0tBagl4kdhULj6CxMUT+a/NhheH",
+      "id": "618c198f3402239c",
+      "title": "22 Jun 2026 LIST OF SELECTED CANDIDATES IN ASSISTANT TEACHER (TRAINED GRADUATE MEN/WOMEN BRANCH) EXAM - 2018 (OVERAGE)",
+      "link": "https://uppsc.up.nic.in/Open_PDF.aspx?I4PnQ0tBaglkFvRfMi9Svvwp0VybHSqM",
       "publishedAt": "2026-06-22T00:00:00Z",
       "summary": null,
       "pdfUrls": [],
@@ -1230,9 +1247,9 @@
       "fetchMethod": "live-jobs-supplement"
     },
     {
-      "id": "618c198f3402239c",
-      "title": "22 Jun 2026 LIST OF SELECTED CANDIDATES IN ASSISTANT TEACHER (TRAINED GRADUATE MEN/WOMEN BRANCH) EXAM - 2018 (OVERAGE)",
-      "link": "https://uppsc.up.nic.in/Open_PDF.aspx?I4PnQ0tBaglkFvRfMi9Svvwp0VybHSqM",
+      "id": "f4987bba9a851442",
+      "title": "22 Jun 2026 NOTICE REGARDING ADVT NO: A-5/E-1/2025, ASSISTANT TEACHER, TRAINED GRADUATE GRADE (M/F) EXAM-2025 (ENGLISH)",
+      "link": "https://uppsc.up.nic.in/Open_PDF.aspx?I4PnQ0tBagl4kdhULj6CxMUT+a/NhheH",
       "publishedAt": "2026-06-22T00:00:00Z",
       "summary": null,
       "pdfUrls": [],
@@ -1296,22 +1313,6 @@
       "fetchMethod": "live-jobs-supplement"
     },
     {
-      "id": "61572ed96004c393",
-      "title": "Announcement dated 12.06.2026 regarding downloading Main Examination admit card for the posts of HCS (Ex. Br.) & Other Allied Services - 2025, for the exam to be held from 27.06.2026 to 29.06.2026",
-      "link": "https://hpsc.gov.in/Portals/0/Ann_Admitcard_HCS_Mains_12_06_2026.pdf",
-      "publishedAt": "2026-06-12T00:00:00Z",
-      "summary": null,
-      "pdfUrls": [
-        "https://hpsc.gov.in/Portals/0/Ann_Admitcard_HCS_Mains_12_06_2026.pdf"
-      ],
-      "sourceId": "psc-hr-notifications",
-      "sourceName": "HPSC — Recruitment",
-      "dept": "HPSC — Recruitment",
-      "state": "All India",
-      "category": "state",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
       "id": "f4dc78c867d60ac9",
       "title": "11/06/2026 Download Marks Card for Civil Services (Judicial) Competitive Examination, 2025",
       "link": "http://jkpsc.nic.in/RESULT/KCSJ_MARKS_CARD_2025.HTML",
@@ -1370,9 +1371,9 @@
       "fetchMethod": "live-jobs-supplement"
     },
     {
-      "id": "867d9268509f2d32",
+      "id": "a888847b920206cb",
       "title": "Subordinate Courts Nilgiris District Law Officer Recruitment 2026 - Apply Offline",
-      "link": "https://cdn.s3waas.gov.in/s339461a19e9eddfb385ea76b26521ea48/uploads/2026/06/17805806774173.pdf",
+      "link": "https://nilgiris.nic.in/",
       "publishedAt": "2026-06-03T00:00:00Z",
       "summary": "Rc.No.C2/14257029/2026 Collector's Office, The Nilgiris, Udhagamandalam. Dated : 03.06.2026. NOTIFICATION The Government have called for a panel of Advocates for filling up the posts of Law Officers in the Subordinate Courts in The Nilgiris District. The law officers will be appointed on tenure basis. Section 18(3), (4) and (5) of the Bharatiya Nagarik Suraksha Sanhita, 2023 stipulates that an Adv…",
       "pdfUrls": [
@@ -1386,9 +1387,9 @@
       "fetchMethod": "live-jobs-supplement"
     },
     {
-      "id": "a888847b920206cb",
+      "id": "867d9268509f2d32",
       "title": "Subordinate Courts Nilgiris District Law Officer Recruitment 2026 - Apply Offline",
-      "link": "https://nilgiris.nic.in/",
+      "link": "https://cdn.s3waas.gov.in/s339461a19e9eddfb385ea76b26521ea48/uploads/2026/06/17805806774173.pdf",
       "publishedAt": "2026-06-03T00:00:00Z",
       "summary": "Rc.No.C2/14257029/2026 Collector's Office, The Nilgiris, Udhagamandalam. Dated : 03.06.2026. NOTIFICATION The Government have called for a panel of Advocates for filling up the posts of Law Officers in the Subordinate Courts in The Nilgiris District. The law officers will be appointed on tenure basis. Section 18(3), (4) and (5) of the Bharatiya Nagarik Suraksha Sanhita, 2023 stipulates that an Adv…",
       "pdfUrls": [
@@ -1449,14 +1450,14 @@
     },
     {
       "id": "583080ee2e24e894",
-      "title": "19-05-2026Food Safety Officer-- Written Examination and Interview( syllabus )",
+      "title": "19-05-2026 Food Safety Officer-- Written Examination and Interview ( syllabus )",
       "link": "https://psc.uk.gov.in/candidate-corner/syllabus",
       "publishedAt": "2026-05-19T00:00:00Z",
       "summary": null,
       "pdfUrls": [],
       "sourceId": "psc-uk",
-      "sourceName": "Psc Uk",
-      "dept": "Psc Uk",
+      "sourceName": "Uttarakhand PSC (UKPSC)",
+      "dept": "Uttarakhand PSC (UKPSC)",
       "state": "All India",
       "category": "state",
       "fetchMethod": "live-jobs-supplement"
@@ -1524,22 +1525,6 @@
       "fetchMethod": "live-jobs-supplement"
     },
     {
-      "id": "b05869f1f68adaa4",
-      "title": "Notice regarding revised schedule, city intimation slip & helpdesk link of Computer Based Test (CBT-I) for various posts",
-      "link": "https://www.rrbthiruvananthapuram.gov.in/assets/pdf/Exam_Notice_CEN_5_2025_JE_CBTI_City_Intimation_Eng.pdf",
-      "publishedAt": "2026-02-10T00:00:00Z",
-      "summary": "GOVERNMENT OF INDIA MINISTRY OF RAILWAYS RAILWAY RECRUITMENT BOARDS CEN 05/2025 Recruitment for various posts of JE/DMS/CMA Notice Regarding Revised Schedule, City Intimation Slip & Helpdesk Link of Computer Based Test (CBT-I) for various posts of JE/DMS/CMA 1) The Revised Exam Schedule for 1st Stage Computer Based Test (CBT-I) against above CEN is as under : Sl.No. CEN Post Name Exam Date 1 CEN N…",
-      "pdfUrls": [
-        "https://www.rrbthiruvananthapuram.gov.in/assets/pdf/Exam_Notice_CEN_5_2025_JE_CBTI_City_Intimation_Eng.pdf"
-      ],
-      "sourceId": "rrb-tvm",
-      "sourceName": "Rrbthiruvananthapuram",
-      "dept": "Rrbthiruvananthapuram",
-      "state": "All India",
-      "category": "railways",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
       "id": "d804693dffe3d54d",
       "title": "Notice: Notice Regarding Revised Schedule, City Intimation Slip & Helpdesk Link of Computer Based Test (CBT-I) for CEN No 05/2025 (JE/DMS/CMA)",
       "link": "https://www.rrbpatna.gov.in/pdf/Exam%20Notice%20CEN%205_2025%20JE_CBT-I_City%20Intimation_Eng.pdf",
@@ -1551,6 +1536,22 @@
       "sourceId": "rrb-patna",
       "sourceName": "Railway Recruitment Board (RRB) — Patna",
       "dept": "Railway Recruitment Board (RRB) — Patna",
+      "state": "All India",
+      "category": "railways",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "b05869f1f68adaa4",
+      "title": "Notice regarding revised schedule, city intimation slip & helpdesk link of Computer Based Test (CBT-I) for various posts",
+      "link": "https://www.rrbthiruvananthapuram.gov.in/assets/pdf/Exam_Notice_CEN_5_2025_JE_CBTI_City_Intimation_Eng.pdf",
+      "publishedAt": "2026-02-10T00:00:00Z",
+      "summary": "GOVERNMENT OF INDIA MINISTRY OF RAILWAYS RAILWAY RECRUITMENT BOARDS CEN 05/2025 Recruitment for various posts of JE/DMS/CMA Notice Regarding Revised Schedule, City Intimation Slip & Helpdesk Link of Computer Based Test (CBT-I) for various posts of JE/DMS/CMA 1) The Revised Exam Schedule for 1st Stage Computer Based Test (CBT-I) against above CEN is as under : Sl.No. CEN Post Name Exam Date 1 CEN N…",
+      "pdfUrls": [
+        "https://www.rrbthiruvananthapuram.gov.in/assets/pdf/Exam_Notice_CEN_5_2025_JE_CBTI_City_Intimation_Eng.pdf"
+      ],
+      "sourceId": "rrb-tvm",
+      "sourceName": "Rrbthiruvananthapuram",
+      "dept": "Rrbthiruvananthapuram",
       "state": "All India",
       "category": "railways",
       "fetchMethod": "live-jobs-supplement"
@@ -1588,6 +1589,38 @@
       "fetchMethod": "live-jobs-supplement"
     },
     {
+      "id": "20b56c13b7d29dbc",
+      "title": "उत्तर प्रदेश होमगार्ड्स के पदों पर एनरोलमेंट-2025 जनपद-सहारनपुर, शामली, मुजफ्फरनगर, मेरठ, गाजियाबाद, बुलन्दशहर, हापुड़, गौतमबुद्धनगर व बागपत में निर्धारित अभिलेखों की संवीक्षा एवं शारीरिक मानक परीक्षा (डीवी/पीएसटी) की तिथियों (दिनांक 04-08-2026, 05-08-2026 व 06-08-2026) में परिवर्तन हेतु महत्वपूर्ण सूचना एवं संशोधित प्रवेश पत्र डाउनलोड किये जाने विषयक ।",
+      "link": "https://uppbpb.gov.in/FilesUploaded/Notice/img20260713_170704299779d63a-5d71-4b27-8b1a-cdf96f7616ff.pdf",
+      "publishedAt": "2026-08-04T00:00:00Z",
+      "summary": null,
+      "pdfUrls": [
+        "https://uppbpb.gov.in/FilesUploaded/Notice/img20260713_170704299779d63a-5d71-4b27-8b1a-cdf96f7616ff.pdf"
+      ],
+      "sourceId": "police-up",
+      "sourceName": "Uppbpb",
+      "dept": "Uppbpb",
+      "state": "All India",
+      "category": "police",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "61572ed96004c393",
+      "title": "Announcement dated 12.06.2026 regarding downloading Main Examination admit card for the posts of HCS (Ex. Br.) & Other Allied Services - 2025, for the exam to be held from 27.06.2026 to 29.06.2026",
+      "link": "https://hpsc.gov.in/Portals/0/Ann_Admitcard_HCS_Mains_12_06_2026.pdf",
+      "publishedAt": "2026-06-12T00:00:00Z",
+      "summary": null,
+      "pdfUrls": [
+        "https://hpsc.gov.in/Portals/0/Ann_Admitcard_HCS_Mains_12_06_2026.pdf"
+      ],
+      "sourceId": "psc-hr-notifications",
+      "sourceName": "HPSC — Recruitment",
+      "dept": "HPSC — Recruitment",
+      "state": "All India",
+      "category": "state",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
       "id": "62b6b5a43f9c62d0",
       "title": "CEN -02/2019 -- PARAMEDICAL CATEGORY POSTS Click to know Update",
       "link": "https://rrbmumbai.gov.in/paramedical.php",
@@ -1606,20 +1639,6 @@
       "dept": "Railway Recruitment Board (RRB) — Mumbai",
       "state": "All India",
       "category": "railways",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "d0a220bca5a286ad",
-      "title": "30 Jun 2026 NOTICE REGARDING ADMIT CARD FOR ADVT. NO.A-8/E-1/2025-ASSISTANT PROSECUTION OFFICER (MAINS) EXAM.-2025",
-      "link": "https://uppsc.up.nic.in/Open_PDF.aspx?I4PnQ0tBagnr3CRo1wnbJnT6GtkqBL2r",
-      "publishedAt": "2026-06-30T00:00:00Z",
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "uppsc-hall-tickets",
-      "sourceName": "UPPSC — Hall tickets",
-      "dept": "UPPSC — Hall tickets",
-      "state": "All India",
-      "category": "state",
       "fetchMethod": "live-jobs-supplement"
     },
     {
@@ -2176,20 +2195,6 @@
       "sourceId": "psc-ap",
       "sourceName": "Andhra Pradesh PSC (APPSC)",
       "dept": "Andhra Pradesh PSC (APPSC)",
-      "state": "All India",
-      "category": "state",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "158bb00a9699c472",
-      "title": "Admit Cards",
-      "link": "https://mppsc.mp.gov.in/Admitcard",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-mp",
-      "sourceName": "Madhya Pradesh PSC (MPPSC)",
-      "dept": "Madhya Pradesh PSC (MPPSC)",
       "state": "All India",
       "category": "state",
       "fetchMethod": "live-jobs-supplement"

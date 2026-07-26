@@ -1,7 +1,41 @@
 {
-  "generatedAt": "2026-07-24T10:38:02.276Z",
+  "generatedAt": "2026-07-26T14:49:02.772Z",
   "count": 39,
   "items": [
+    {
+      "id": "85b1767449295db8",
+      "title": "Postwise Syllabus",
+      "link": "https://www.keralapsc.gov.in/syllabus1",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-kl",
+      "sourceName": "Kerala PSC",
+      "dept": "Kerala PSC",
+      "state": "Kerala",
+      "category": "state",
+      "stateIds": [
+        "kl"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "22dd56168d2566c0",
+      "title": "Syllabus and Scheme",
+      "link": "https://mppsc.mp.gov.in/Syllabus",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-mp",
+      "sourceName": "Madhya Pradesh PSC (MPPSC)",
+      "dept": "Madhya Pradesh PSC (MPPSC)",
+      "state": "Madhya Pradesh",
+      "category": "state",
+      "stateIds": [
+        "mp"
+      ],
+      "fetchMethod": "html"
+    },
     {
       "id": "9423bfb2f1b6b8da",
       "title": "Examination Advertisement (Direct Recruitment) Departmental Examination Forthcoming Examinations Syllabus and Schemes On",
@@ -265,14 +299,14 @@
     },
     {
       "id": "583080ee2e24e894",
-      "title": "19-05-2026Food Safety Officer-- Written Examination and Interview( syllabus )",
+      "title": "19-05-2026 Food Safety Officer-- Written Examination and Interview ( syllabus )",
       "link": "https://psc.uk.gov.in/candidate-corner/syllabus",
       "publishedAt": "2026-05-19T00:00:00Z",
       "summary": null,
       "pdfUrls": [],
       "sourceId": "psc-uk",
-      "sourceName": "Psc Uk",
-      "dept": "Psc Uk",
+      "sourceName": "Uttarakhand PSC (UKPSC)",
+      "dept": "Uttarakhand PSC (UKPSC)",
       "state": "All India",
       "category": "state",
       "fetchMethod": "live-jobs-supplement"
@@ -362,34 +396,6 @@
       "sourceId": "psc-jk",
       "sourceName": "Jammu & Kashmir PSC (JKPSC)",
       "dept": "Jammu & Kashmir PSC (JKPSC)",
-      "state": "All India",
-      "category": "state",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "85b1767449295db8",
-      "title": "Postwise Syllabus",
-      "link": "https://www.keralapsc.gov.in/syllabus1",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-kl",
-      "sourceName": "Kerala PSC",
-      "dept": "Kerala PSC",
-      "state": "All India",
-      "category": "state",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "22dd56168d2566c0",
-      "title": "Syllabus and Scheme",
-      "link": "https://mppsc.mp.gov.in/Syllabus",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-mp",
-      "sourceName": "Madhya Pradesh PSC (MPPSC)",
-      "dept": "Madhya Pradesh PSC (MPPSC)",
       "state": "All India",
       "category": "state",
       "fetchMethod": "live-jobs-supplement"
