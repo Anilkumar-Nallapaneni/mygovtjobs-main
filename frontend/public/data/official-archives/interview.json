@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-26T14:49:02.772Z",
+  "generatedAt": "2026-07-26T17:36:59.607Z",
   "count": 213,
   "items": [
     {
@@ -69,108 +69,6 @@
         "all"
       ],
       "fetchMethod": "html-listing"
-    },
-    {
-      "id": "1709d751f92d2140",
-      "title": "Procedure for Interview Date Change Requests",
-      "link": "https://www.keralapsc.gov.in/procedure-interview-date-change-requests",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-kl",
-      "sourceName": "Kerala PSC",
-      "dept": "Kerala PSC",
-      "state": "Kerala",
-      "category": "state",
-      "stateIds": [
-        "kl"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "39e61c0337589778",
-      "title": "Interview Schedule",
-      "link": "https://www.keralapsc.gov.in/interviews",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-kl",
-      "sourceName": "Kerala PSC",
-      "dept": "Kerala PSC",
-      "state": "Kerala",
-      "category": "state",
-      "stateIds": [
-        "kl"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "0c8b608876f8adbe",
-      "title": "examination-interview",
-      "link": "https://www.keralapsc.gov.in/examination-interview",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-kl",
-      "sourceName": "Kerala PSC",
-      "dept": "Kerala PSC",
-      "state": "Kerala",
-      "category": "state",
-      "stateIds": [
-        "kl"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "c019d0c423cf10b5",
-      "title": "Procedure for Interview Date Change Requests",
-      "link": "https://www.keralapsc.gov.in/index.php/procedure-interview-date-change-requests",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-kl",
-      "sourceName": "Kerala PSC",
-      "dept": "Kerala PSC",
-      "state": "Kerala",
-      "category": "state",
-      "stateIds": [
-        "kl"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "91558011355dca9d",
-      "title": "Recent Examinations/Interview",
-      "link": "https://jpsc.gov.in/Examination-Links.php",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-jh",
-      "sourceName": "Jharkhand PSC (JPSC)",
-      "dept": "Jharkhand PSC (JPSC)",
-      "state": "Jharkhand",
-      "category": "state",
-      "stateIds": [
-        "jh"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "265f0e4bb421f373",
-      "title": "LIST OF CANDIDATES PROVISIONALLY QUALIFIED FOR INTERVIEW IN ADVT. NO. A-7/E-1/20..",
-      "link": "https://uppsc.up.nic.in/Open_PDF_DB.aspx?I4PnQ0tBagkKFmHgqmmkW0Ob0NWHlv6s",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-up",
-      "sourceName": "Uttar Pradesh PSC (UPPSC)",
-      "dept": "Uttar Pradesh PSC (UPPSC)",
-      "state": "Uttar Pradesh",
-      "category": "state",
-      "stateIds": [
-        "up"
-      ],
-      "fetchMethod": "html"
     },
     {
       "id": "ae8b78974a160bc4",
@@ -439,6 +337,846 @@
       "dept": "Coochbehar Dcourts",
       "state": "All India",
       "category": "state",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "d4d373c8accad125",
+      "title": "Recruitment of Professors in all universities of Jharkhand, Advt No.-40/2016",
+      "link": "https://jpsc.gov.in/exam_files.php?id=39",
+      "publishedAt": "2026-07-02T12:23:28.988651Z",
+      "summary": "JPSC JHARKHAND PUBLIC SERVICE COMMISSION TENTATIVE DATES FOR UPCOMING EXAMS -2026 1 OF 1 SL. No. Name of Examination Nature of Examination Tentative Date for P.T./Main/Document Verification/Interview Duration 1 Recruitment of Child Development Project Officer,Advt.No.-21/2023 INTERVIEW 07th, 08th and 09th January 2026 03 Days 2 Recruitment of 6th limited Deputy Collector, Advt. No.11/2018 WRITTEN …",
+      "pdfUrls": [
+        "https://jpsc.gov.in/data/Exam_Calendar_2026_dtd_06_01_2026.pdf",
+        "https://jpsc.gov.in/data/Press_Release_and_Instructions_dated_28_04_2026.pdf",
+        "https://jpsc.gov.in/data/Press_Release_15_23_dated_08_12_2025.pdf",
+        "https://jpsc.gov.in/data/Press_Release_05_26_dated_09_05_2026.pdf",
+        "https://jpsc.gov.in/data/Press_Release_dated_18_12_2025.pdf",
+        "https://jpsc.gov.in/data/RTI_Policy.pdf"
+      ],
+      "sourceId": "psc-jh",
+      "sourceName": "Jpsc",
+      "dept": "Jpsc",
+      "state": "All India",
+      "category": "teaching",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "a81495548a50b8e2",
+      "title": "Recruitment of Associate Professors in all universities of Jharkhand, Advt No.-41/2016",
+      "link": "https://jpsc.gov.in/exam_files.php?id=40",
+      "publishedAt": "2026-07-02T12:23:26.966760Z",
+      "summary": "JPSC JHARKHAND PUBLIC SERVICE COMMISSION TENTATIVE DATES FOR UPCOMING EXAMS -2026 1 OF 1 SL. No. Name of Examination Nature of Examination Tentative Date for P.T./Main/Document Verification/Interview Duration 1 Recruitment of Child Development Project Officer,Advt.No.-21/2023 INTERVIEW 07th, 08th and 09th January 2026 03 Days 2 Recruitment of 6th limited Deputy Collector, Advt. No.11/2018 WRITTEN …",
+      "pdfUrls": [
+        "https://jpsc.gov.in/data/Exam_Calendar_2026_dtd_06_01_2026.pdf",
+        "https://jpsc.gov.in/data/Press_Release_and_Instructions_dated_28_04_2026.pdf",
+        "https://jpsc.gov.in/data/Press_Release_15_23_dated_08_12_2025.pdf",
+        "https://jpsc.gov.in/data/Press_Release_05_26_dated_09_05_2026.pdf",
+        "https://jpsc.gov.in/data/Press_Release_dated_18_12_2025.pdf",
+        "https://jpsc.gov.in/data/RTI_Policy.pdf"
+      ],
+      "sourceId": "psc-jh",
+      "sourceName": "Jpsc",
+      "dept": "Jpsc",
+      "state": "All India",
+      "category": "teaching",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "a88a2a8890548ed2",
+      "title": "Recruitment of University Professor-Cum-Chief Scientist in Ranchi Veterinary College Under Birsa Agricultural University, Advt. No. 08/2017",
+      "link": "https://jpsc.gov.in/exam_files.php?id=51",
+      "publishedAt": "2026-07-02T12:23:24.571138Z",
+      "summary": "JPSC JHARKHAND PUBLIC SERVICE COMMISSION TENTATIVE DATES FOR UPCOMING EXAMS -2026 1 OF 1 SL. No. Name of Examination Nature of Examination Tentative Date for P.T./Main/Document Verification/Interview Duration 1 Recruitment of Child Development Project Officer,Advt.No.-21/2023 INTERVIEW 07th, 08th and 09th January 2026 03 Days 2 Recruitment of 6th limited Deputy Collector, Advt. No.11/2018 WRITTEN …",
+      "pdfUrls": [
+        "https://jpsc.gov.in/data/Exam_Calendar_2026_dtd_06_01_2026.pdf",
+        "https://jpsc.gov.in/data/Press_Release_and_Instructions_dated_28_04_2026.pdf",
+        "https://jpsc.gov.in/data/Press_Release_15_23_dated_08_12_2025.pdf",
+        "https://jpsc.gov.in/data/Press_Release_05_26_dated_09_05_2026.pdf",
+        "https://jpsc.gov.in/data/Press_Release_dated_18_12_2025.pdf",
+        "https://jpsc.gov.in/data/Advt_No-_08-2017.pdf"
+      ],
+      "sourceId": "psc-jh",
+      "sourceName": "Jpsc",
+      "dept": "Jpsc",
+      "state": "All India",
+      "category": "teaching",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "1758e6ae54678717",
+      "title": "Recruitment of Dean in Ranchi Agriculture College Under Birsa Agricultural University, Advt. No. 18/2017",
+      "link": "https://jpsc.gov.in/exam_files.php?id=61",
+      "publishedAt": "2026-07-02T12:23:21.137721Z",
+      "summary": "JPSC JHARKHAND PUBLIC SERVICE COMMISSION TENTATIVE DATES FOR UPCOMING EXAMS -2026 1 OF 1 SL. No. Name of Examination Nature of Examination Tentative Date for P.T./Main/Document Verification/Interview Duration 1 Recruitment of Child Development Project Officer,Advt.No.-21/2023 INTERVIEW 07th, 08th and 09th January 2026 03 Days 2 Recruitment of 6th limited Deputy Collector, Advt. No.11/2018 WRITTEN …",
+      "pdfUrls": [
+        "https://jpsc.gov.in/data/Exam_Calendar_2026_dtd_06_01_2026.pdf",
+        "https://jpsc.gov.in/data/Press_Release_and_Instructions_dated_28_04_2026.pdf",
+        "https://jpsc.gov.in/data/Press_Release_15_23_dated_08_12_2025.pdf",
+        "https://jpsc.gov.in/data/Press_Release_05_26_dated_09_05_2026.pdf",
+        "https://jpsc.gov.in/data/Press_Release_dated_18_12_2025.pdf",
+        "https://jpsc.gov.in/data/ADVT._NO_18-2017.pdf"
+      ],
+      "sourceId": "psc-jh",
+      "sourceName": "Jpsc",
+      "dept": "Jpsc",
+      "state": "All India",
+      "category": "state",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "be2f4b3b897aec08",
+      "title": "Recruitment of Associate Professor cum Senior Scientist in Ranchi Agriculture College Under Birsa Agricultural University, Advt. No. 19/2017",
+      "link": "https://jpsc.gov.in/exam_files.php?id=62",
+      "publishedAt": "2026-07-02T12:23:19.075556Z",
+      "summary": "JPSC JHARKHAND PUBLIC SERVICE COMMISSION TENTATIVE DATES FOR UPCOMING EXAMS -2026 1 OF 1 SL. No. Name of Examination Nature of Examination Tentative Date for P.T./Main/Document Verification/Interview Duration 1 Recruitment of Child Development Project Officer,Advt.No.-21/2023 INTERVIEW 07th, 08th and 09th January 2026 03 Days 2 Recruitment of 6th limited Deputy Collector, Advt. No.11/2018 WRITTEN …",
+      "pdfUrls": [
+        "https://jpsc.gov.in/data/Exam_Calendar_2026_dtd_06_01_2026.pdf",
+        "https://jpsc.gov.in/data/Press_Release_and_Instructions_dated_28_04_2026.pdf",
+        "https://jpsc.gov.in/data/Press_Release_15_23_dated_08_12_2025.pdf",
+        "https://jpsc.gov.in/data/Press_Release_05_26_dated_09_05_2026.pdf",
+        "https://jpsc.gov.in/data/Press_Release_dated_18_12_2025.pdf",
+        "https://jpsc.gov.in/data/Advt._No._19_2017-1.pdf"
+      ],
+      "sourceId": "psc-jh",
+      "sourceName": "Jpsc",
+      "dept": "Jpsc",
+      "state": "All India",
+      "category": "teaching",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "6b01526ee1835580",
+      "title": "Recruitment of Associate Professor-Cum-Senior Scientist in Ranchi Veterinary College Under Birsa Agricultural University, Advt. No.23/2017",
+      "link": "https://jpsc.gov.in/exam_files.php?id=66",
+      "publishedAt": "2026-07-02T12:23:16.510283Z",
+      "summary": "JPSC JHARKHAND PUBLIC SERVICE COMMISSION TENTATIVE DATES FOR UPCOMING EXAMS -2026 1 OF 1 SL. No. Name of Examination Nature of Examination Tentative Date for P.T./Main/Document Verification/Interview Duration 1 Recruitment of Child Development Project Officer,Advt.No.-21/2023 INTERVIEW 07th, 08th and 09th January 2026 03 Days 2 Recruitment of 6th limited Deputy Collector, Advt. No.11/2018 WRITTEN …",
+      "pdfUrls": [
+        "https://jpsc.gov.in/data/Exam_Calendar_2026_dtd_06_01_2026.pdf",
+        "https://jpsc.gov.in/data/Press_Release_and_Instructions_dated_28_04_2026.pdf",
+        "https://jpsc.gov.in/data/Press_Release_15_23_dated_08_12_2025.pdf",
+        "https://jpsc.gov.in/data/Press_Release_05_26_dated_09_05_2026.pdf",
+        "https://jpsc.gov.in/data/Press_Release_dated_18_12_2025.pdf",
+        "https://jpsc.gov.in/data/ADVT._NO_23-2017-1.pdf"
+      ],
+      "sourceId": "psc-jh",
+      "sourceName": "Jpsc",
+      "dept": "Jpsc",
+      "state": "All India",
+      "category": "teaching",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "ae4e56f160079169",
+      "title": "Recruitment of Assistant Professors (Regular) in Universities of Jharkhand Advt.No. 04/2018",
+      "link": "https://jpsc.gov.in/exam_files.php?id=75",
+      "publishedAt": "2026-07-02T12:23:13.827033Z",
+      "summary": "JPSC JHARKHAND PUBLIC SERVICE COMMISSION TENTATIVE DATES FOR UPCOMING EXAMS -2026 1 OF 1 SL. No. Name of Examination Nature of Examination Tentative Date for P.T./Main/Document Verification/Interview Duration 1 Recruitment of Child Development Project Officer,Advt.No.-21/2023 INTERVIEW 07th, 08th and 09th January 2026 03 Days 2 Recruitment of 6th limited Deputy Collector, Advt. No.11/2018 WRITTEN …",
+      "pdfUrls": [
+        "https://jpsc.gov.in/data/Exam_Calendar_2026_dtd_06_01_2026.pdf",
+        "https://jpsc.gov.in/data/Press_Release_and_Instructions_dated_28_04_2026.pdf",
+        "https://jpsc.gov.in/data/Press_Release_15_23_dated_08_12_2025.pdf",
+        "https://jpsc.gov.in/data/Press_Release_05_26_dated_09_05_2026.pdf",
+        "https://jpsc.gov.in/data/Press_Release_dated_18_12_2025.pdf",
+        "https://jpsc.gov.in/data/Advt._No_04-2018.pdf"
+      ],
+      "sourceId": "psc-jh",
+      "sourceName": "Jpsc",
+      "dept": "Jpsc",
+      "state": "All India",
+      "category": "teaching",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "76d1c034e32d1094",
+      "title": "Recruitment of Assistant Professors (Backlog) in Universities of Jharkhand Advt.No. 05/2018",
+      "link": "https://jpsc.gov.in/exam_files.php?id=76",
+      "publishedAt": "2026-07-02T12:23:06.056374Z",
+      "summary": "JPSC JHARKHAND PUBLIC SERVICE COMMISSION TENTATIVE DATES FOR UPCOMING EXAMS -2026 1 OF 1 SL. No. Name of Examination Nature of Examination Tentative Date for P.T./Main/Document Verification/Interview Duration 1 Recruitment of Child Development Project Officer,Advt.No.-21/2023 INTERVIEW 07th, 08th and 09th January 2026 03 Days 2 Recruitment of 6th limited Deputy Collector, Advt. No.11/2018 WRITTEN …",
+      "pdfUrls": [
+        "https://jpsc.gov.in/data/Exam_Calendar_2026_dtd_06_01_2026.pdf",
+        "https://jpsc.gov.in/data/Press_Release_and_Instructions_dated_28_04_2026.pdf",
+        "https://jpsc.gov.in/data/Press_Release_15_23_dated_08_12_2025.pdf",
+        "https://jpsc.gov.in/data/Press_Release_05_26_dated_09_05_2026.pdf",
+        "https://jpsc.gov.in/data/Press_Release_dated_18_12_2025.pdf",
+        "https://jpsc.gov.in/data/advt_no_05_18-1.pdf"
+      ],
+      "sourceId": "psc-jh",
+      "sourceName": "Jpsc",
+      "dept": "Jpsc",
+      "state": "All India",
+      "category": "teaching",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "f895484667fe1a47",
+      "title": "Recruitment of 6th limited Deputy Collector, Advt. No.11/2018",
+      "link": "https://jpsc.gov.in/exam_files.php?id=82",
+      "publishedAt": "2026-07-02T12:22:59.233597Z",
+      "summary": "JPSC JHARKHAND PUBLIC SERVICE COMMISSION TENTATIVE DATES FOR UPCOMING EXAMS -2026 1 OF 1 SL. No. Name of Examination Nature of Examination Tentative Date for P.T./Main/Document Verification/Interview Duration 1 Recruitment of Child Development Project Officer,Advt.No.-21/2023 INTERVIEW 07th, 08th and 09th January 2026 03 Days 2 Recruitment of 6th limited Deputy Collector, Advt. No.11/2018 WRITTEN …",
+      "pdfUrls": [
+        "https://jpsc.gov.in/data/Exam_Calendar_2026_dtd_06_01_2026.pdf",
+        "https://jpsc.gov.in/data/Press_Release_and_Instructions_dated_28_04_2026.pdf",
+        "https://jpsc.gov.in/data/Press_Release_15_23_dated_08_12_2025.pdf",
+        "https://jpsc.gov.in/data/Press_Release_05_26_dated_09_05_2026.pdf",
+        "https://jpsc.gov.in/data/Press_Release_dated_18_12_2025.pdf",
+        "https://jpsc.gov.in/data/Advt._No._11_2018.pdf"
+      ],
+      "sourceId": "psc-jh",
+      "sourceName": "Jpsc",
+      "dept": "Jpsc",
+      "state": "All India",
+      "category": "state",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "b2ff7cbef178f233",
+      "title": "Recruitment of Professor, Associate Professor, Assistant Professor and Assistant Librarian in Jharkhand Raksha Shakti University, Ranchi, Advt. No. 02/2021",
+      "link": "https://jpsc.gov.in/exam_files.php?id=99",
+      "publishedAt": "2026-07-02T12:22:55.420717Z",
+      "summary": "JPSC JHARKHAND PUBLIC SERVICE COMMISSION TENTATIVE DATES FOR UPCOMING EXAMS -2026 1 OF 1 SL. No. Name of Examination Nature of Examination Tentative Date for P.T./Main/Document Verification/Interview Duration 1 Recruitment of Child Development Project Officer,Advt.No.-21/2023 INTERVIEW 07th, 08th and 09th January 2026 03 Days 2 Recruitment of 6th limited Deputy Collector, Advt. No.11/2018 WRITTEN …",
+      "pdfUrls": [
+        "https://jpsc.gov.in/data/Exam_Calendar_2026_dtd_06_01_2026.pdf",
+        "https://jpsc.gov.in/data/Press_Release_and_Instructions_dated_28_04_2026.pdf",
+        "https://jpsc.gov.in/data/Press_Release_15_23_dated_08_12_2025.pdf",
+        "https://jpsc.gov.in/data/Press_Release_05_26_dated_09_05_2026.pdf",
+        "https://jpsc.gov.in/data/Press_Release_dated_18_12_2025.pdf",
+        "https://jpsc.gov.in/data/Advertisement_02_2021.pdf"
+      ],
+      "sourceId": "psc-jh",
+      "sourceName": "Jpsc",
+      "dept": "Jpsc",
+      "state": "All India",
+      "category": "teaching",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "a4e0a64eeaa61132",
+      "title": "Recruitment of Ayurvedic Medical Officer (Regular),Advt.No.-09/2022",
+      "link": "https://jpsc.gov.in/exam_files.php?id=118",
+      "publishedAt": "2026-07-02T12:22:52.996527Z",
+      "summary": "JPSC JHARKHAND PUBLIC SERVICE COMMISSION TENTATIVE DATES FOR UPCOMING EXAMS -2026 1 OF 1 SL. No. Name of Examination Nature of Examination Tentative Date for P.T./Main/Document Verification/Interview Duration 1 Recruitment of Child Development Project Officer,Advt.No.-21/2023 INTERVIEW 07th, 08th and 09th January 2026 03 Days 2 Recruitment of 6th limited Deputy Collector, Advt. No.11/2018 WRITTEN …",
+      "pdfUrls": [
+        "https://jpsc.gov.in/data/Exam_Calendar_2026_dtd_06_01_2026.pdf",
+        "https://jpsc.gov.in/data/Press_Release_and_Instructions_dated_28_04_2026.pdf",
+        "https://jpsc.gov.in/data/Press_Release_15_23_dated_08_12_2025.pdf",
+        "https://jpsc.gov.in/data/Press_Release_05_26_dated_09_05_2026.pdf",
+        "https://jpsc.gov.in/data/Press_Release_dated_18_12_2025.pdf",
+        "https://jpsc.gov.in/data/Advertisement_09_22_dated_22_01_22.pdf"
+      ],
+      "sourceId": "psc-jh",
+      "sourceName": "Jpsc",
+      "dept": "Jpsc",
+      "state": "All India",
+      "category": "health",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "f65c855d51826435",
+      "title": "Recruitment of Homeopathic Medical Officer (Regular),Advt.No.-10/2022",
+      "link": "https://jpsc.gov.in/exam_files.php?id=119",
+      "publishedAt": "2026-07-02T12:22:50.903473Z",
+      "summary": "JPSC JHARKHAND PUBLIC SERVICE COMMISSION TENTATIVE DATES FOR UPCOMING EXAMS -2026 1 OF 1 SL. No. Name of Examination Nature of Examination Tentative Date for P.T./Main/Document Verification/Interview Duration 1 Recruitment of Child Development Project Officer,Advt.No.-21/2023 INTERVIEW 07th, 08th and 09th January 2026 03 Days 2 Recruitment of 6th limited Deputy Collector, Advt. No.11/2018 WRITTEN …",
+      "pdfUrls": [
+        "https://jpsc.gov.in/data/Exam_Calendar_2026_dtd_06_01_2026.pdf",
+        "https://jpsc.gov.in/data/Press_Release_and_Instructions_dated_28_04_2026.pdf",
+        "https://jpsc.gov.in/data/Press_Release_15_23_dated_08_12_2025.pdf",
+        "https://jpsc.gov.in/data/Press_Release_05_26_dated_09_05_2026.pdf",
+        "https://jpsc.gov.in/data/Press_Release_dated_18_12_2025.pdf",
+        "https://jpsc.gov.in/data/Advertisement_10_22_dated_22_01_2022.pdf"
+      ],
+      "sourceId": "psc-jh",
+      "sourceName": "Jpsc",
+      "dept": "Jpsc",
+      "state": "All India",
+      "category": "health",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "f201712867cc17fd",
+      "title": "Recruitment of Unani Medical Officer (Regular),Advt.No.-11/2022",
+      "link": "https://jpsc.gov.in/exam_files.php?id=120",
+      "publishedAt": "2026-07-02T12:22:43.723622Z",
+      "summary": "JPSC JHARKHAND PUBLIC SERVICE COMMISSION TENTATIVE DATES FOR UPCOMING EXAMS -2026 1 OF 1 SL. No. Name of Examination Nature of Examination Tentative Date for P.T./Main/Document Verification/Interview Duration 1 Recruitment of Child Development Project Officer,Advt.No.-21/2023 INTERVIEW 07th, 08th and 09th January 2026 03 Days 2 Recruitment of 6th limited Deputy Collector, Advt. No.11/2018 WRITTEN …",
+      "pdfUrls": [
+        "https://jpsc.gov.in/data/Exam_Calendar_2026_dtd_06_01_2026.pdf",
+        "https://jpsc.gov.in/data/Press_Release_and_Instructions_dated_28_04_2026.pdf",
+        "https://jpsc.gov.in/data/Press_Release_15_23_dated_08_12_2025.pdf",
+        "https://jpsc.gov.in/data/Press_Release_05_26_dated_09_05_2026.pdf",
+        "https://jpsc.gov.in/data/Press_Release_dated_18_12_2025.pdf",
+        "https://jpsc.gov.in/data/Advertisement_11_22_dated_22_01_22.pdf"
+      ],
+      "sourceId": "psc-jh",
+      "sourceName": "Jpsc",
+      "dept": "Jpsc",
+      "state": "All India",
+      "category": "health",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "4646844c8cbaf179",
+      "title": "Recruitment of university Professor-cum-chief Scientist (Regular),Advt.No.-10/2023",
+      "link": "https://jpsc.gov.in/exam_files.php?id=133",
+      "publishedAt": "2026-07-02T12:22:39.858335Z",
+      "summary": "JPSC JHARKHAND PUBLIC SERVICE COMMISSION TENTATIVE DATES FOR UPCOMING EXAMS -2026 1 OF 1 SL. No. Name of Examination Nature of Examination Tentative Date for P.T./Main/Document Verification/Interview Duration 1 Recruitment of Child Development Project Officer,Advt.No.-21/2023 INTERVIEW 07th, 08th and 09th January 2026 03 Days 2 Recruitment of 6th limited Deputy Collector, Advt. No.11/2018 WRITTEN …",
+      "pdfUrls": [
+        "https://jpsc.gov.in/data/Exam_Calendar_2026_dtd_06_01_2026.pdf",
+        "https://jpsc.gov.in/data/Press_Release_and_Instructions_dated_28_04_2026.pdf",
+        "https://jpsc.gov.in/data/Press_Release_15_23_dated_08_12_2025.pdf",
+        "https://jpsc.gov.in/data/Press_Release_05_26_dated_09_05_2026.pdf",
+        "https://jpsc.gov.in/data/Press_Release_dated_18_12_2025.pdf",
+        "https://jpsc.gov.in/data/Advertisement_10_23_dated_15_04_2023.pdf"
+      ],
+      "sourceId": "psc-jh",
+      "sourceName": "Jpsc",
+      "dept": "Jpsc",
+      "state": "All India",
+      "category": "teaching",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "8811c025dcfa1b74",
+      "title": "Recruitment of Associate Professor-cum-Senior Scientist (Regular),Advt.No.-11/2023",
+      "link": "https://jpsc.gov.in/exam_files.php?id=134",
+      "publishedAt": "2026-07-02T12:22:37.581251Z",
+      "summary": "JPSC JHARKHAND PUBLIC SERVICE COMMISSION TENTATIVE DATES FOR UPCOMING EXAMS -2026 1 OF 1 SL. No. Name of Examination Nature of Examination Tentative Date for P.T./Main/Document Verification/Interview Duration 1 Recruitment of Child Development Project Officer,Advt.No.-21/2023 INTERVIEW 07th, 08th and 09th January 2026 03 Days 2 Recruitment of 6th limited Deputy Collector, Advt. No.11/2018 WRITTEN …",
+      "pdfUrls": [
+        "https://jpsc.gov.in/data/Exam_Calendar_2026_dtd_06_01_2026.pdf",
+        "https://jpsc.gov.in/data/Press_Release_and_Instructions_dated_28_04_2026.pdf",
+        "https://jpsc.gov.in/data/Press_Release_15_23_dated_08_12_2025.pdf",
+        "https://jpsc.gov.in/data/Press_Release_05_26_dated_09_05_2026.pdf",
+        "https://jpsc.gov.in/data/Press_Release_dated_18_12_2025.pdf",
+        "https://jpsc.gov.in/data/Advertisement_11_23_dated_15_04_2023.pdf"
+      ],
+      "sourceId": "psc-jh",
+      "sourceName": "Jpsc",
+      "dept": "Jpsc",
+      "state": "All India",
+      "category": "teaching",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "b8cfaac67fcdde48",
+      "title": "Recruitment of Assistant Professor-cum-Junior Scientist (Regular),Advt.No.-12/2023",
+      "link": "https://jpsc.gov.in/exam_files.php?id=135",
+      "publishedAt": "2026-07-02T12:22:35.431622Z",
+      "summary": "JPSC JHARKHAND PUBLIC SERVICE COMMISSION TENTATIVE DATES FOR UPCOMING EXAMS -2026 1 OF 1 SL. No. Name of Examination Nature of Examination Tentative Date for P.T./Main/Document Verification/Interview Duration 1 Recruitment of Child Development Project Officer,Advt.No.-21/2023 INTERVIEW 07th, 08th and 09th January 2026 03 Days 2 Recruitment of 6th limited Deputy Collector, Advt. No.11/2018 WRITTEN …",
+      "pdfUrls": [
+        "https://jpsc.gov.in/data/Exam_Calendar_2026_dtd_06_01_2026.pdf",
+        "https://jpsc.gov.in/data/Press_Release_and_Instructions_dated_28_04_2026.pdf",
+        "https://jpsc.gov.in/data/Press_Release_15_23_dated_08_12_2025.pdf",
+        "https://jpsc.gov.in/data/Press_Release_05_26_dated_09_05_2026.pdf",
+        "https://jpsc.gov.in/data/Press_Release_dated_18_12_2025.pdf",
+        "https://jpsc.gov.in/data/advertisement_12_23_dated_15_04_2023.pdf"
+      ],
+      "sourceId": "psc-jh",
+      "sourceName": "Jpsc",
+      "dept": "Jpsc",
+      "state": "All India",
+      "category": "teaching",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "3f7a1b0af688f8d2",
+      "title": "Recruitment of Associate Professor-cum-Senior Scientist (Regular),Advt.No.-17/2023",
+      "link": "https://jpsc.gov.in/exam_files.php?id=140",
+      "publishedAt": "2026-07-02T12:22:32.546182Z",
+      "summary": "JPSC JHARKHAND PUBLIC SERVICE COMMISSION TENTATIVE DATES FOR UPCOMING EXAMS -2026 1 OF 1 SL. No. Name of Examination Nature of Examination Tentative Date for P.T./Main/Document Verification/Interview Duration 1 Recruitment of Child Development Project Officer,Advt.No.-21/2023 INTERVIEW 07th, 08th and 09th January 2026 03 Days 2 Recruitment of 6th limited Deputy Collector, Advt. No.11/2018 WRITTEN …",
+      "pdfUrls": [
+        "https://jpsc.gov.in/data/Exam_Calendar_2026_dtd_06_01_2026.pdf",
+        "https://jpsc.gov.in/data/Press_Release_and_Instructions_dated_28_04_2026.pdf",
+        "https://jpsc.gov.in/data/Press_Release_15_23_dated_08_12_2025.pdf",
+        "https://jpsc.gov.in/data/Press_Release_05_26_dated_09_05_2026.pdf",
+        "https://jpsc.gov.in/data/Press_Release_dated_18_12_2025.pdf",
+        "https://jpsc.gov.in/data/Advertisement-3.pdf"
+      ],
+      "sourceId": "psc-jh",
+      "sourceName": "Jpsc",
+      "dept": "Jpsc",
+      "state": "All India",
+      "category": "teaching",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "87dc0c1d44c858b9",
+      "title": "Recruitment of Civil Judge (Junior Division),Advt.No.-22/2023",
+      "link": "https://jpsc.gov.in/exam_files.php?id=13020",
+      "publishedAt": "2026-07-02T12:22:29.526685Z",
+      "summary": "JPSC JHARKHAND PUBLIC SERVICE COMMISSION TENTATIVE DATES FOR UPCOMING EXAMS -2026 1 OF 1 SL. No. Name of Examination Nature of Examination Tentative Date for P.T./Main/Document Verification/Interview Duration 1 Recruitment of Child Development Project Officer,Advt.No.-21/2023 INTERVIEW 07th, 08th and 09th January 2026 03 Days 2 Recruitment of 6th limited Deputy Collector, Advt. No.11/2018 WRITTEN …",
+      "pdfUrls": [
+        "https://jpsc.gov.in/data/Exam_Calendar_2026_dtd_06_01_2026.pdf",
+        "https://jpsc.gov.in/data/Press_Release_and_Instructions_dated_28_04_2026.pdf",
+        "https://jpsc.gov.in/data/Press_Release_15_23_dated_08_12_2025.pdf",
+        "https://jpsc.gov.in/data/Press_Release_05_26_dated_09_05_2026.pdf",
+        "https://jpsc.gov.in/data/Press_Release_dated_18_12_2025.pdf",
+        "https://jpsc.gov.in/data/Advertisement_22_23_dated_14_08_2023.pdf"
+      ],
+      "sourceId": "psc-jh",
+      "sourceName": "Jpsc",
+      "dept": "Jpsc",
+      "state": "All India",
+      "category": "state",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "188918e2c7afbf6e",
+      "title": "Recruitment for Non-Teaching Posts in Universities of Jharkhand, Advt. No.23/2023",
+      "link": "https://jpsc.gov.in/exam_files.php?id=13021",
+      "publishedAt": "2026-07-02T12:22:26.947478Z",
+      "summary": "JPSC JHARKHAND PUBLIC SERVICE COMMISSION TENTATIVE DATES FOR UPCOMING EXAMS -2026 1 OF 1 SL. No. Name of Examination Nature of Examination Tentative Date for P.T./Main/Document Verification/Interview Duration 1 Recruitment of Child Development Project Officer,Advt.No.-21/2023 INTERVIEW 07th, 08th and 09th January 2026 03 Days 2 Recruitment of 6th limited Deputy Collector, Advt. No.11/2018 WRITTEN …",
+      "pdfUrls": [
+        "https://jpsc.gov.in/data/Exam_Calendar_2026_dtd_06_01_2026.pdf",
+        "https://jpsc.gov.in/data/Press_Release_and_Instructions_dated_28_04_2026.pdf",
+        "https://jpsc.gov.in/data/Press_Release_15_23_dated_08_12_2025.pdf",
+        "https://jpsc.gov.in/data/Press_Release_05_26_dated_09_05_2026.pdf",
+        "https://jpsc.gov.in/data/Press_Release_dated_18_12_2025.pdf",
+        "https://jpsc.gov.in/data/Advertisement_23-2023.pdf"
+      ],
+      "sourceId": "psc-jh",
+      "sourceName": "Jpsc",
+      "dept": "Jpsc",
+      "state": "All India",
+      "category": "state",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "0b69b6df3ffad42e",
+      "title": "Recruitment of Assistant Conservator of Forest,Advt.No.-03/2024",
+      "link": "https://jpsc.gov.in/exam_files.php?id=13024",
+      "publishedAt": "2026-07-02T12:22:23.910157Z",
+      "summary": "JPSC JHARKHAND PUBLIC SERVICE COMMISSION TENTATIVE DATES FOR UPCOMING EXAMS -2026 1 OF 1 SL. No. Name of Examination Nature of Examination Tentative Date for P.T./Main/Document Verification/Interview Duration 1 Recruitment of Child Development Project Officer,Advt.No.-21/2023 INTERVIEW 07th, 08th and 09th January 2026 03 Days 2 Recruitment of 6th limited Deputy Collector, Advt. No.11/2018 WRITTEN …",
+      "pdfUrls": [
+        "https://jpsc.gov.in/data/Exam_Calendar_2026_dtd_06_01_2026.pdf",
+        "https://jpsc.gov.in/data/Press_Release_and_Instructions_dated_28_04_2026.pdf",
+        "https://jpsc.gov.in/data/Press_Release_15_23_dated_08_12_2025.pdf",
+        "https://jpsc.gov.in/data/Press_Release_05_26_dated_09_05_2026.pdf",
+        "https://jpsc.gov.in/data/Press_Release_dated_18_12_2025.pdf",
+        "https://jpsc.gov.in/data/Advertisement_03_24_dated_25_07_2024.pdf"
+      ],
+      "sourceId": "psc-jh",
+      "sourceName": "Jpsc",
+      "dept": "Jpsc",
+      "state": "All India",
+      "category": "state",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "fe2d91ee79ef3603",
+      "title": "Recruitment of Forest Range Officer,Advt.No.-04/2024",
+      "link": "https://jpsc.gov.in/exam_files.php?id=13025",
+      "publishedAt": "2026-07-02T12:22:21.254044Z",
+      "summary": "JPSC JHARKHAND PUBLIC SERVICE COMMISSION TENTATIVE DATES FOR UPCOMING EXAMS -2026 1 OF 1 SL. No. Name of Examination Nature of Examination Tentative Date for P.T./Main/Document Verification/Interview Duration 1 Recruitment of Child Development Project Officer,Advt.No.-21/2023 INTERVIEW 07th, 08th and 09th January 2026 03 Days 2 Recruitment of 6th limited Deputy Collector, Advt. No.11/2018 WRITTEN …",
+      "pdfUrls": [
+        "https://jpsc.gov.in/data/Exam_Calendar_2026_dtd_06_01_2026.pdf",
+        "https://jpsc.gov.in/data/Press_Release_and_Instructions_dated_28_04_2026.pdf",
+        "https://jpsc.gov.in/data/Press_Release_15_23_dated_08_12_2025.pdf",
+        "https://jpsc.gov.in/data/Press_Release_05_26_dated_09_05_2026.pdf",
+        "https://jpsc.gov.in/data/Press_Release_dated_18_12_2025.pdf",
+        "https://jpsc.gov.in/data/Advertisement_04_24_dated_25_07_2024.pdf"
+      ],
+      "sourceId": "psc-jh",
+      "sourceName": "Jpsc",
+      "dept": "Jpsc",
+      "state": "All India",
+      "category": "state",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "9d5e4be91cd46b22",
+      "title": "Recruitment of Food Analyst,Advt. No.-05/2024",
+      "link": "https://jpsc.gov.in/exam_files.php?id=13026",
+      "publishedAt": "2026-07-02T12:22:17.991158Z",
+      "summary": "JPSC JHARKHAND PUBLIC SERVICE COMMISSION TENTATIVE DATES FOR UPCOMING EXAMS -2026 1 OF 1 SL. No. Name of Examination Nature of Examination Tentative Date for P.T./Main/Document Verification/Interview Duration 1 Recruitment of Child Development Project Officer,Advt.No.-21/2023 INTERVIEW 07th, 08th and 09th January 2026 03 Days 2 Recruitment of 6th limited Deputy Collector, Advt. No.11/2018 WRITTEN …",
+      "pdfUrls": [
+        "https://jpsc.gov.in/data/Exam_Calendar_2026_dtd_06_01_2026.pdf",
+        "https://jpsc.gov.in/data/Press_Release_and_Instructions_dated_28_04_2026.pdf",
+        "https://jpsc.gov.in/data/Press_Release_15_23_dated_08_12_2025.pdf",
+        "https://jpsc.gov.in/data/Press_Release_05_26_dated_09_05_2026.pdf",
+        "https://jpsc.gov.in/data/Press_Release_dated_18_12_2025.pdf",
+        "https://jpsc.gov.in/data/Advertisement_05_24_dated_12_09_2024.pdf"
+      ],
+      "sourceId": "psc-jh",
+      "sourceName": "Jpsc",
+      "dept": "Jpsc",
+      "state": "All India",
+      "category": "state",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "53f8216d68ef86c5",
+      "title": "Recruitment of Project Manager and equivalent,advt.No.-04/2025",
+      "link": "https://jpsc.gov.in/exam_files.php?id=13028",
+      "publishedAt": "2026-07-02T12:22:14.382291Z",
+      "summary": "JPSC JHARKHAND PUBLIC SERVICE COMMISSION TENTATIVE DATES FOR UPCOMING EXAMS -2026 1 OF 1 SL. No. Name of Examination Nature of Examination Tentative Date for P.T./Main/Document Verification/Interview Duration 1 Recruitment of Child Development Project Officer,Advt.No.-21/2023 INTERVIEW 07th, 08th and 09th January 2026 03 Days 2 Recruitment of 6th limited Deputy Collector, Advt. No.11/2018 WRITTEN …",
+      "pdfUrls": [
+        "https://jpsc.gov.in/data/Exam_Calendar_2026_dtd_06_01_2026.pdf",
+        "https://jpsc.gov.in/data/Press_Release_and_Instructions_dated_28_04_2026.pdf",
+        "https://jpsc.gov.in/data/Press_Release_15_23_dated_08_12_2025.pdf",
+        "https://jpsc.gov.in/data/Press_Release_05_26_dated_09_05_2026.pdf",
+        "https://jpsc.gov.in/data/Press_Release_dated_18_12_2025.pdf",
+        "https://jpsc.gov.in/data/Advertisement_04_25_dated_17_06_2025.pdf"
+      ],
+      "sourceId": "psc-jh",
+      "sourceName": "Jpsc",
+      "dept": "Jpsc",
+      "state": "All India",
+      "category": "state",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "be1b88a8d4c35f45",
+      "title": "Recruitment of Assistant Public Prosecutor (Backlog),Advt.No.-05/2025",
+      "link": "https://jpsc.gov.in/exam_files.php?id=13029",
+      "publishedAt": "2026-07-02T12:22:11.384549Z",
+      "summary": "JPSC JHARKHAND PUBLIC SERVICE COMMISSION TENTATIVE DATES FOR UPCOMING EXAMS -2026 1 OF 1 SL. No. Name of Examination Nature of Examination Tentative Date for P.T./Main/Document Verification/Interview Duration 1 Recruitment of Child Development Project Officer,Advt.No.-21/2023 INTERVIEW 07th, 08th and 09th January 2026 03 Days 2 Recruitment of 6th limited Deputy Collector, Advt. No.11/2018 WRITTEN …",
+      "pdfUrls": [
+        "https://jpsc.gov.in/data/Exam_Calendar_2026_dtd_06_01_2026.pdf",
+        "https://jpsc.gov.in/data/Press_Release_and_Instructions_dated_28_04_2026.pdf",
+        "https://jpsc.gov.in/data/Press_Release_15_23_dated_08_12_2025.pdf",
+        "https://jpsc.gov.in/data/Press_Release_05_26_dated_09_05_2026.pdf",
+        "https://jpsc.gov.in/data/Press_Release_dated_18_12_2025.pdf",
+        "https://jpsc.gov.in/data/Advertisement_05_25_dated_17_06_2025.pdf"
+      ],
+      "sourceId": "psc-jh",
+      "sourceName": "Jpsc",
+      "dept": "Jpsc",
+      "state": "All India",
+      "category": "state",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "6db764333612cee7",
+      "title": "Recruitment of Assistant Public Prosecutor (Regular),Advt.No.-06/2025",
+      "link": "https://jpsc.gov.in/exam_files.php?id=13030",
+      "publishedAt": "2026-07-02T12:22:07.455831Z",
+      "summary": "JPSC JHARKHAND PUBLIC SERVICE COMMISSION TENTATIVE DATES FOR UPCOMING EXAMS -2026 1 OF 1 SL. No. Name of Examination Nature of Examination Tentative Date for P.T./Main/Document Verification/Interview Duration 1 Recruitment of Child Development Project Officer,Advt.No.-21/2023 INTERVIEW 07th, 08th and 09th January 2026 03 Days 2 Recruitment of 6th limited Deputy Collector, Advt. No.11/2018 WRITTEN …",
+      "pdfUrls": [
+        "https://jpsc.gov.in/data/Exam_Calendar_2026_dtd_06_01_2026.pdf",
+        "https://jpsc.gov.in/data/Press_Release_and_Instructions_dated_28_04_2026.pdf",
+        "https://jpsc.gov.in/data/Press_Release_15_23_dated_08_12_2025.pdf",
+        "https://jpsc.gov.in/data/Press_Release_05_26_dated_09_05_2026.pdf",
+        "https://jpsc.gov.in/data/Press_Release_dated_18_12_2025.pdf",
+        "https://jpsc.gov.in/data/Advertisement_06_25_dated_19_06_2025.pdf"
+      ],
+      "sourceId": "psc-jh",
+      "sourceName": "Jpsc",
+      "dept": "Jpsc",
+      "state": "All India",
+      "category": "state",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "1876a91096ca1ebd",
+      "title": "Recruitment of Inspector of Factories Advt.No.-01/2025",
+      "link": "https://jpsc.gov.in/exam_files.php?id=13031",
+      "publishedAt": "2026-07-02T12:22:03.435327Z",
+      "summary": "JPSC JHARKHAND PUBLIC SERVICE COMMISSION TENTATIVE DATES FOR UPCOMING EXAMS -2026 1 OF 1 SL. No. Name of Examination Nature of Examination Tentative Date for P.T./Main/Document Verification/Interview Duration 1 Recruitment of Child Development Project Officer,Advt.No.-21/2023 INTERVIEW 07th, 08th and 09th January 2026 03 Days 2 Recruitment of 6th limited Deputy Collector, Advt. No.11/2018 WRITTEN …",
+      "pdfUrls": [
+        "https://jpsc.gov.in/data/Exam_Calendar_2026_dtd_06_01_2026.pdf",
+        "https://jpsc.gov.in/data/Press_Release_and_Instructions_dated_28_04_2026.pdf",
+        "https://jpsc.gov.in/data/Press_Release_15_23_dated_08_12_2025.pdf",
+        "https://jpsc.gov.in/data/Press_Release_05_26_dated_09_05_2026.pdf",
+        "https://jpsc.gov.in/data/Press_Release_dated_18_12_2025.pdf",
+        "https://jpsc.gov.in/data/Advertisement_01_25_dated_02_07_2025.pdf"
+      ],
+      "sourceId": "psc-jh",
+      "sourceName": "Jpsc",
+      "dept": "Jpsc",
+      "state": "All India",
+      "category": "state",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "426010f8fda87e83",
+      "title": "Recruitment of Boiler Inspector Advt.No.-02/2025",
+      "link": "https://jpsc.gov.in/exam_files.php?id=13032",
+      "publishedAt": "2026-07-02T12:21:55.266442Z",
+      "summary": "JPSC JHARKHAND PUBLIC SERVICE COMMISSION TENTATIVE DATES FOR UPCOMING EXAMS -2026 1 OF 1 SL. No. Name of Examination Nature of Examination Tentative Date for P.T./Main/Document Verification/Interview Duration 1 Recruitment of Child Development Project Officer,Advt.No.-21/2023 INTERVIEW 07th, 08th and 09th January 2026 03 Days 2 Recruitment of 6th limited Deputy Collector, Advt. No.11/2018 WRITTEN …",
+      "pdfUrls": [
+        "https://jpsc.gov.in/data/Exam_Calendar_2026_dtd_06_01_2026.pdf",
+        "https://jpsc.gov.in/data/Press_Release_and_Instructions_dated_28_04_2026.pdf",
+        "https://jpsc.gov.in/data/Press_Release_15_23_dated_08_12_2025.pdf",
+        "https://jpsc.gov.in/data/Press_Release_05_26_dated_09_05_2026.pdf",
+        "https://jpsc.gov.in/data/Press_Release_dated_18_12_2025.pdf",
+        "https://jpsc.gov.in/data/Advertisement_02_25_dated_02_07_2025.pdf"
+      ],
+      "sourceId": "psc-jh",
+      "sourceName": "Jpsc",
+      "dept": "Jpsc",
+      "state": "All India",
+      "category": "state",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "cd06b3f4da2451ff",
+      "title": "Recruitment of Director Advt.No.-07/2025",
+      "link": "https://jpsc.gov.in/exam_files.php?id=13033",
+      "publishedAt": "2026-07-02T12:21:49.281827Z",
+      "summary": "JPSC JHARKHAND PUBLIC SERVICE COMMISSION TENTATIVE DATES FOR UPCOMING EXAMS -2026 1 OF 1 SL. No. Name of Examination Nature of Examination Tentative Date for P.T./Main/Document Verification/Interview Duration 1 Recruitment of Child Development Project Officer,Advt.No.-21/2023 INTERVIEW 07th, 08th and 09th January 2026 03 Days 2 Recruitment of 6th limited Deputy Collector, Advt. No.11/2018 WRITTEN …",
+      "pdfUrls": [
+        "https://jpsc.gov.in/data/Exam_Calendar_2026_dtd_06_01_2026.pdf",
+        "https://jpsc.gov.in/data/Press_Release_and_Instructions_dated_28_04_2026.pdf",
+        "https://jpsc.gov.in/data/Press_Release_15_23_dated_08_12_2025.pdf",
+        "https://jpsc.gov.in/data/Press_Release_05_26_dated_09_05_2026.pdf",
+        "https://jpsc.gov.in/data/Press_Release_dated_18_12_2025.pdf",
+        "https://jpsc.gov.in/data/Advertisement_07_25_dated_02_09_2025.pdf"
+      ],
+      "sourceId": "psc-jh",
+      "sourceName": "Jpsc",
+      "dept": "Jpsc",
+      "state": "All India",
+      "category": "state",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "a988231b8c484874",
+      "title": "Jharkhand Eligibility Test 2024 Advt.No.-08/2025",
+      "link": "https://jpsc.gov.in/exam_files.php?id=13034",
+      "publishedAt": "2026-07-02T12:21:45.451314Z",
+      "summary": "JPSC JHARKHAND PUBLIC SERVICE COMMISSION TENTATIVE DATES FOR UPCOMING EXAMS -2026 1 OF 1 SL. No. Name of Examination Nature of Examination Tentative Date for P.T./Main/Document Verification/Interview Duration 1 Recruitment of Child Development Project Officer,Advt.No.-21/2023 INTERVIEW 07th, 08th and 09th January 2026 03 Days 2 Recruitment of 6th limited Deputy Collector, Advt. No.11/2018 WRITTEN …",
+      "pdfUrls": [
+        "https://jpsc.gov.in/data/Exam_Calendar_2026_dtd_06_01_2026.pdf",
+        "https://jpsc.gov.in/data/Press_Release_and_Instructions_dated_28_04_2026.pdf",
+        "https://jpsc.gov.in/data/Press_Release_15_23_dated_08_12_2025.pdf",
+        "https://jpsc.gov.in/data/Press_Release_05_26_dated_09_05_2026.pdf",
+        "https://jpsc.gov.in/data/Press_Release_dated_18_12_2025.pdf",
+        "https://jpsc.gov.in/data/Advertisement_08_25_dated_09_09_2025.pdf"
+      ],
+      "sourceId": "psc-jh",
+      "sourceName": "Jpsc",
+      "dept": "Jpsc",
+      "state": "All India",
+      "category": "state",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "e99507c584c723ba",
+      "title": "Recruitment of Non-Teaching Posts in Universities of Jharkhand. Advt. No. 09/2025",
+      "link": "https://jpsc.gov.in/exam_files.php?id=13035",
+      "publishedAt": "2026-07-02T12:21:37.912996Z",
+      "summary": "JPSC JHARKHAND PUBLIC SERVICE COMMISSION TENTATIVE DATES FOR UPCOMING EXAMS -2026 1 OF 1 SL. No. Name of Examination Nature of Examination Tentative Date for P.T./Main/Document Verification/Interview Duration 1 Recruitment of Child Development Project Officer,Advt.No.-21/2023 INTERVIEW 07th, 08th and 09th January 2026 03 Days 2 Recruitment of 6th limited Deputy Collector, Advt. No.11/2018 WRITTEN …",
+      "pdfUrls": [
+        "https://jpsc.gov.in/data/Exam_Calendar_2026_dtd_06_01_2026.pdf",
+        "https://jpsc.gov.in/data/Press_Release_and_Instructions_dated_28_04_2026.pdf",
+        "https://jpsc.gov.in/data/Press_Release_15_23_dated_08_12_2025.pdf",
+        "https://jpsc.gov.in/data/Press_Release_05_26_dated_09_05_2026.pdf",
+        "https://jpsc.gov.in/data/Press_Release_dated_18_12_2025.pdf",
+        "https://jpsc.gov.in/data/Advt._09-2025_12_09_2025.pdf"
+      ],
+      "sourceId": "psc-jh",
+      "sourceName": "Jpsc",
+      "dept": "Jpsc",
+      "state": "All India",
+      "category": "state",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "cf99deca86252b4c",
+      "title": "Recruitment of Assistant Director/Senior Scientific Officer (Backlog), Advt. No. 10/2025",
+      "link": "https://jpsc.gov.in/exam_files.php?id=13036",
+      "publishedAt": "2026-07-02T12:21:34.377641Z",
+      "summary": "JPSC JHARKHAND PUBLIC SERVICE COMMISSION TENTATIVE DATES FOR UPCOMING EXAMS -2026 1 OF 1 SL. No. Name of Examination Nature of Examination Tentative Date for P.T./Main/Document Verification/Interview Duration 1 Recruitment of Child Development Project Officer,Advt.No.-21/2023 INTERVIEW 07th, 08th and 09th January 2026 03 Days 2 Recruitment of 6th limited Deputy Collector, Advt. No.11/2018 WRITTEN …",
+      "pdfUrls": [
+        "https://jpsc.gov.in/data/Exam_Calendar_2026_dtd_06_01_2026.pdf",
+        "https://jpsc.gov.in/data/Press_Release_and_Instructions_dated_28_04_2026.pdf",
+        "https://jpsc.gov.in/data/Press_Release_15_23_dated_08_12_2025.pdf",
+        "https://jpsc.gov.in/data/Press_Release_05_26_dated_09_05_2026.pdf",
+        "https://jpsc.gov.in/data/Press_Release_dated_18_12_2025.pdf",
+        "https://jpsc.gov.in/data/Advertisement_10_25_dated_19_09_2025.pdf"
+      ],
+      "sourceId": "psc-jh",
+      "sourceName": "Jpsc",
+      "dept": "Jpsc",
+      "state": "All India",
+      "category": "state",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "e880f70cb111d4e5",
+      "title": "Recruitment of Assistant Director/Senior Scientific Officer (Regular), Advt. No. 11/2025",
+      "link": "https://jpsc.gov.in/exam_files.php?id=13037",
+      "publishedAt": "2026-07-02T12:21:31.014960Z",
+      "summary": "JPSC JHARKHAND PUBLIC SERVICE COMMISSION TENTATIVE DATES FOR UPCOMING EXAMS -2026 1 OF 1 SL. No. Name of Examination Nature of Examination Tentative Date for P.T./Main/Document Verification/Interview Duration 1 Recruitment of Child Development Project Officer,Advt.No.-21/2023 INTERVIEW 07th, 08th and 09th January 2026 03 Days 2 Recruitment of 6th limited Deputy Collector, Advt. No.11/2018 WRITTEN …",
+      "pdfUrls": [
+        "https://jpsc.gov.in/data/Exam_Calendar_2026_dtd_06_01_2026.pdf",
+        "https://jpsc.gov.in/data/Press_Release_and_Instructions_dated_28_04_2026.pdf",
+        "https://jpsc.gov.in/data/Press_Release_15_23_dated_08_12_2025.pdf",
+        "https://jpsc.gov.in/data/Press_Release_05_26_dated_09_05_2026.pdf",
+        "https://jpsc.gov.in/data/Press_Release_dated_18_12_2025.pdf",
+        "https://jpsc.gov.in/data/Advertisement_11_25_dated_19_09_2025.pdf"
+      ],
+      "sourceId": "psc-jh",
+      "sourceName": "Jpsc",
+      "dept": "Jpsc",
+      "state": "All India",
+      "category": "state",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "4ed505d06d36bd93",
+      "title": "Recruitment of Drug Inspector Advt.No.-12/2025",
+      "link": "https://jpsc.gov.in/exam_files.php?id=13038",
+      "publishedAt": "2026-07-02T12:21:27.369385Z",
+      "summary": "JPSC JHARKHAND PUBLIC SERVICE COMMISSION TENTATIVE DATES FOR UPCOMING EXAMS -2026 1 OF 1 SL. No. Name of Examination Nature of Examination Tentative Date for P.T./Main/Document Verification/Interview Duration 1 Recruitment of Child Development Project Officer,Advt.No.-21/2023 INTERVIEW 07th, 08th and 09th January 2026 03 Days 2 Recruitment of 6th limited Deputy Collector, Advt. No.11/2018 WRITTEN …",
+      "pdfUrls": [
+        "https://jpsc.gov.in/data/Exam_Calendar_2026_dtd_06_01_2026.pdf",
+        "https://jpsc.gov.in/data/Press_Release_and_Instructions_dated_28_04_2026.pdf",
+        "https://jpsc.gov.in/data/Press_Release_15_23_dated_08_12_2025.pdf",
+        "https://jpsc.gov.in/data/Press_Release_05_26_dated_09_05_2026.pdf",
+        "https://jpsc.gov.in/data/Press_Release_dated_18_12_2025.pdf",
+        "https://jpsc.gov.in/data/Advertisement_12_25_dated_28_01_2026.pdf"
+      ],
+      "sourceId": "psc-jh",
+      "sourceName": "Jpsc",
+      "dept": "Jpsc",
+      "state": "All India",
+      "category": "state",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "04dcdb130f13d3ea",
+      "title": "Recruitment of Jharkhand Combined Civil Services Examination-2025 Advt.No.-01/2026",
+      "link": "https://jpsc.gov.in/exam_files.php?id=13039",
+      "publishedAt": "2026-07-02T12:21:22.930274Z",
+      "summary": "JPSC JHARKHAND PUBLIC SERVICE COMMISSION TENTATIVE DATES FOR UPCOMING EXAMS -2026 1 OF 1 SL. No. Name of Examination Nature of Examination Tentative Date for P.T./Main/Document Verification/Interview Duration 1 Recruitment of Child Development Project Officer,Advt.No.-21/2023 INTERVIEW 07th, 08th and 09th January 2026 03 Days 2 Recruitment of 6th limited Deputy Collector, Advt. No.11/2018 WRITTEN …",
+      "pdfUrls": [
+        "https://jpsc.gov.in/data/Exam_Calendar_2026_dtd_06_01_2026.pdf",
+        "https://jpsc.gov.in/data/Press_Release_and_Instructions_dated_28_04_2026.pdf",
+        "https://jpsc.gov.in/data/Press_Release_15_23_dated_08_12_2025.pdf",
+        "https://jpsc.gov.in/data/Press_Release_05_26_dated_09_05_2026.pdf",
+        "https://jpsc.gov.in/data/Press_Release_dated_18_12_2025.pdf",
+        "https://jpsc.gov.in/data/Advertisement_01_26_dated_29_01_2026-1.pdf"
+      ],
+      "sourceId": "psc-jh",
+      "sourceName": "Jpsc",
+      "dept": "Jpsc",
+      "state": "All India",
+      "category": "state",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "b25af94417cf6d12",
+      "title": "Recruitment of Assistant Professor in Government Engineering colleges (Backlog),Advt.No.-02/2026",
+      "link": "https://jpsc.gov.in/exam_files.php?id=13040",
+      "publishedAt": "2026-07-02T12:21:18.616316Z",
+      "summary": "JPSC JHARKHAND PUBLIC SERVICE COMMISSION TENTATIVE DATES FOR UPCOMING EXAMS -2026 1 OF 1 SL. No. Name of Examination Nature of Examination Tentative Date for P.T./Main/Document Verification/Interview Duration 1 Recruitment of Child Development Project Officer,Advt.No.-21/2023 INTERVIEW 07th, 08th and 09th January 2026 03 Days 2 Recruitment of 6th limited Deputy Collector, Advt. No.11/2018 WRITTEN …",
+      "pdfUrls": [
+        "https://jpsc.gov.in/data/Exam_Calendar_2026_dtd_06_01_2026.pdf",
+        "https://jpsc.gov.in/data/Press_Release_and_Instructions_dated_28_04_2026.pdf",
+        "https://jpsc.gov.in/data/Press_Release_15_23_dated_08_12_2025.pdf",
+        "https://jpsc.gov.in/data/Press_Release_05_26_dated_09_05_2026.pdf",
+        "https://jpsc.gov.in/data/Press_Release_dated_18_12_2025.pdf",
+        "https://jpsc.gov.in/data/Advertisement_02_26_dated_13_02_2026.pdf"
+      ],
+      "sourceId": "psc-jh",
+      "sourceName": "Jpsc",
+      "dept": "Jpsc",
+      "state": "All India",
+      "category": "teaching",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "a68af0c709786923",
+      "title": "Recruitment of Lecturer in Govt. Polytechnic/Govt. Women's Polytechnic(Backlog),Advt.No.-03/2026",
+      "link": "https://jpsc.gov.in/exam_files.php?id=13041",
+      "publishedAt": "2026-07-02T12:21:14.523652Z",
+      "summary": "JPSC JHARKHAND PUBLIC SERVICE COMMISSION TENTATIVE DATES FOR UPCOMING EXAMS -2026 1 OF 1 SL. No. Name of Examination Nature of Examination Tentative Date for P.T./Main/Document Verification/Interview Duration 1 Recruitment of Child Development Project Officer,Advt.No.-21/2023 INTERVIEW 07th, 08th and 09th January 2026 03 Days 2 Recruitment of 6th limited Deputy Collector, Advt. No.11/2018 WRITTEN …",
+      "pdfUrls": [
+        "https://jpsc.gov.in/data/Exam_Calendar_2026_dtd_06_01_2026.pdf",
+        "https://jpsc.gov.in/data/Press_Release_and_Instructions_dated_28_04_2026.pdf",
+        "https://jpsc.gov.in/data/Press_Release_15_23_dated_08_12_2025.pdf",
+        "https://jpsc.gov.in/data/Press_Release_05_26_dated_09_05_2026.pdf",
+        "https://jpsc.gov.in/data/Press_Release_dated_18_12_2025.pdf",
+        "https://jpsc.gov.in/data/Advertisement_03_26_dated_13_02_2026.pdf"
+      ],
+      "sourceId": "psc-jh",
+      "sourceName": "Jpsc",
+      "dept": "Jpsc",
+      "state": "All India",
+      "category": "teaching",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "088741e1a15861a1",
+      "title": "Recruitment of Lecturer in Govt. Polytechnic/Govt. Women's Polytechnic(Regular), Advt.No.-04/2026",
+      "link": "https://jpsc.gov.in/exam_files.php?id=13042",
+      "publishedAt": "2026-07-02T12:21:11.057314Z",
+      "summary": "JPSC JHARKHAND PUBLIC SERVICE COMMISSION TENTATIVE DATES FOR UPCOMING EXAMS -2026 1 OF 1 SL. No. Name of Examination Nature of Examination Tentative Date for P.T./Main/Document Verification/Interview Duration 1 Recruitment of Child Development Project Officer,Advt.No.-21/2023 INTERVIEW 07th, 08th and 09th January 2026 03 Days 2 Recruitment of 6th limited Deputy Collector, Advt. No.11/2018 WRITTEN …",
+      "pdfUrls": [
+        "https://jpsc.gov.in/data/Exam_Calendar_2026_dtd_06_01_2026.pdf",
+        "https://jpsc.gov.in/data/Press_Release_and_Instructions_dated_28_04_2026.pdf",
+        "https://jpsc.gov.in/data/Press_Release_15_23_dated_08_12_2025.pdf",
+        "https://jpsc.gov.in/data/Press_Release_05_26_dated_09_05_2026.pdf",
+        "https://jpsc.gov.in/data/Press_Release_dated_18_12_2025.pdf",
+        "https://jpsc.gov.in/data/Advertisement_04_26_dated_13_02_2026.pdf"
+      ],
+      "sourceId": "psc-jh",
+      "sourceName": "Jpsc",
+      "dept": "Jpsc",
+      "state": "All India",
+      "category": "teaching",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "55bdf109ab82000c",
+      "title": "Recruitment of Jharkhand Combined Civil Services Examination (Backlog)-2025 Advt.No.-05/2026",
+      "link": "https://jpsc.gov.in/exam_files.php?id=13043",
+      "publishedAt": "2026-07-02T12:21:06.225379Z",
+      "summary": "JPSC JHARKHAND PUBLIC SERVICE COMMISSION TENTATIVE DATES FOR UPCOMING EXAMS -2026 1 OF 1 SL. No. Name of Examination Nature of Examination Tentative Date for P.T./Main/Document Verification/Interview Duration 1 Recruitment of Child Development Project Officer,Advt.No.-21/2023 INTERVIEW 07th, 08th and 09th January 2026 03 Days 2 Recruitment of 6th limited Deputy Collector, Advt. No.11/2018 WRITTEN …",
+      "pdfUrls": [
+        "https://jpsc.gov.in/data/Exam_Calendar_2026_dtd_06_01_2026.pdf",
+        "https://jpsc.gov.in/data/Press_Release_and_Instructions_dated_28_04_2026.pdf",
+        "https://jpsc.gov.in/data/Press_Release_15_23_dated_08_12_2025.pdf",
+        "https://jpsc.gov.in/data/Press_Release_05_26_dated_09_05_2026.pdf",
+        "https://jpsc.gov.in/data/Press_Release_dated_18_12_2025.pdf",
+        "https://jpsc.gov.in/data/Advertisement_05_26_dated_18_03_2026.pdf"
+      ],
+      "sourceId": "psc-jh",
+      "sourceName": "Jpsc",
+      "dept": "Jpsc",
+      "state": "All India",
+      "category": "state",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "69a97bd5567cffd6",
+      "title": "Recruitment of Jharkhand Combined Civil Services Examination (Backlog)-2023 Advt.No.-06/2026",
+      "link": "https://jpsc.gov.in/exam_files.php?id=13044",
+      "publishedAt": "2026-07-02T12:21:02.046973Z",
+      "summary": "JPSC JHARKHAND PUBLIC SERVICE COMMISSION TENTATIVE DATES FOR UPCOMING EXAMS -2026 1 OF 1 SL. No. Name of Examination Nature of Examination Tentative Date for P.T./Main/Document Verification/Interview Duration 1 Recruitment of Child Development Project Officer,Advt.No.-21/2023 INTERVIEW 07th, 08th and 09th January 2026 03 Days 2 Recruitment of 6th limited Deputy Collector, Advt. No.11/2018 WRITTEN …",
+      "pdfUrls": [
+        "https://jpsc.gov.in/data/Exam_Calendar_2026_dtd_06_01_2026.pdf",
+        "https://jpsc.gov.in/data/Press_Release_and_Instructions_dated_28_04_2026.pdf",
+        "https://jpsc.gov.in/data/Press_Release_15_23_dated_08_12_2025.pdf",
+        "https://jpsc.gov.in/data/Press_Release_05_26_dated_09_05_2026.pdf",
+        "https://jpsc.gov.in/data/Press_Release_dated_18_12_2025.pdf",
+        "https://jpsc.gov.in/data/Advertisement_06_26_dated_18_03_2026.pdf"
+      ],
+      "sourceId": "psc-jh",
+      "sourceName": "Jpsc",
+      "dept": "Jpsc",
+      "state": "All India",
+      "category": "state",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "5151aedc1e3767c3",
+      "title": "Recruitment of Assistant Professor in Medical Colleges(Super Specialist)Department Advt.No.-07/2026",
+      "link": "https://jpsc.gov.in/exam_files.php?id=13045",
+      "publishedAt": "2026-07-02T12:20:59.395184Z",
+      "summary": "JPSC JHARKHAND PUBLIC SERVICE COMMISSION TENTATIVE DATES FOR UPCOMING EXAMS -2026 1 OF 1 SL. No. Name of Examination Nature of Examination Tentative Date for P.T./Main/Document Verification/Interview Duration 1 Recruitment of Child Development Project Officer,Advt.No.-21/2023 INTERVIEW 07th, 08th and 09th January 2026 03 Days 2 Recruitment of 6th limited Deputy Collector, Advt. No.11/2018 WRITTEN …",
+      "pdfUrls": [
+        "https://jpsc.gov.in/data/Exam_Calendar_2026_dtd_06_01_2026.pdf",
+        "https://jpsc.gov.in/data/Press_Release_and_Instructions_dated_28_04_2026.pdf",
+        "https://jpsc.gov.in/data/Press_Release_15_23_dated_08_12_2025.pdf",
+        "https://jpsc.gov.in/data/Press_Release_05_26_dated_09_05_2026.pdf",
+        "https://jpsc.gov.in/data/Press_Release_dated_18_12_2025.pdf",
+        "https://jpsc.gov.in/data/Advertisement_07_26_dated_15_04_2026.pdf"
+      ],
+      "sourceId": "psc-jh",
+      "sourceName": "Jpsc",
+      "dept": "Jpsc",
+      "state": "All India",
+      "category": "teaching",
       "fetchMethod": "live-jobs-supplement"
     },
     {
@@ -1978,6 +2716,108 @@
       "fetchMethod": "live-jobs-supplement"
     },
     {
+      "id": "1709d751f92d2140",
+      "title": "Procedure for Interview Date Change Requests",
+      "link": "https://www.keralapsc.gov.in/procedure-interview-date-change-requests",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-kl",
+      "sourceName": "Kerala PSC",
+      "dept": "Kerala PSC",
+      "state": "Kerala",
+      "category": "state",
+      "stateIds": [
+        "kl"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "39e61c0337589778",
+      "title": "Interview Schedule",
+      "link": "https://www.keralapsc.gov.in/interviews",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-kl",
+      "sourceName": "Kerala PSC",
+      "dept": "Kerala PSC",
+      "state": "Kerala",
+      "category": "state",
+      "stateIds": [
+        "kl"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "0c8b608876f8adbe",
+      "title": "examination-interview",
+      "link": "https://www.keralapsc.gov.in/examination-interview",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-kl",
+      "sourceName": "Kerala PSC",
+      "dept": "Kerala PSC",
+      "state": "Kerala",
+      "category": "state",
+      "stateIds": [
+        "kl"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "c019d0c423cf10b5",
+      "title": "Procedure for Interview Date Change Requests",
+      "link": "https://www.keralapsc.gov.in/index.php/procedure-interview-date-change-requests",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-kl",
+      "sourceName": "Kerala PSC",
+      "dept": "Kerala PSC",
+      "state": "Kerala",
+      "category": "state",
+      "stateIds": [
+        "kl"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "91558011355dca9d",
+      "title": "Recent Examinations/Interview",
+      "link": "https://jpsc.gov.in/Examination-Links.php",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-jh",
+      "sourceName": "Jharkhand PSC (JPSC)",
+      "dept": "Jharkhand PSC (JPSC)",
+      "state": "Jharkhand",
+      "category": "state",
+      "stateIds": [
+        "jh"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "265f0e4bb421f373",
+      "title": "LIST OF CANDIDATES PROVISIONALLY QUALIFIED FOR INTERVIEW IN ADVT. NO. A-7/E-1/20..",
+      "link": "https://uppsc.up.nic.in/Open_PDF_DB.aspx?I4PnQ0tBagkKFmHgqmmkW0Ob0NWHlv6s",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-up",
+      "sourceName": "Uttar Pradesh PSC (UPPSC)",
+      "dept": "Uttar Pradesh PSC (UPPSC)",
+      "state": "Uttar Pradesh",
+      "category": "state",
+      "stateIds": [
+        "up"
+      ],
+      "fetchMethod": "html"
+    },
+    {
       "id": "c0fecc36771b791f",
       "title": "Public Notice regarding interview schedule_for the post of Peon_adhoc Public Notice regarding interview schedule_for the",
       "link": "https://cdnbbsr.s3waas.gov.in/s3ec03a4d92e2cd541fca87e4620aba658/uploads/2026/07/2026071532.pdf",
@@ -2053,846 +2893,6 @@
       "dept": "Drdo",
       "state": "All India",
       "category": "defence",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "d4d373c8accad125",
-      "title": "Recruitment of Professors in all universities of Jharkhand, Advt No.-40/2016",
-      "link": "https://jpsc.gov.in/exam_files.php?id=39",
-      "publishedAt": "2026-07-02T12:23:28.988651Z",
-      "summary": "JPSC JHARKHAND PUBLIC SERVICE COMMISSION TENTATIVE DATES FOR UPCOMING EXAMS -2026 1 OF 1 SL. No. Name of Examination Nature of Examination Tentative Date for P.T./Main/Document Verification/Interview Duration 1 Recruitment of Child Development Project Officer,Advt.No.-21/2023 INTERVIEW 07th, 08th and 09th January 2026 03 Days 2 Recruitment of 6th limited Deputy Collector, Advt. No.11/2018 WRITTEN …",
-      "pdfUrls": [
-        "https://jpsc.gov.in/data/Exam_Calendar_2026_dtd_06_01_2026.pdf",
-        "https://jpsc.gov.in/data/Press_Release_and_Instructions_dated_28_04_2026.pdf",
-        "https://jpsc.gov.in/data/Press_Release_15_23_dated_08_12_2025.pdf",
-        "https://jpsc.gov.in/data/Press_Release_05_26_dated_09_05_2026.pdf",
-        "https://jpsc.gov.in/data/Press_Release_dated_18_12_2025.pdf",
-        "https://jpsc.gov.in/data/RTI_Policy.pdf"
-      ],
-      "sourceId": "psc-jh",
-      "sourceName": "Jpsc",
-      "dept": "Jpsc",
-      "state": "All India",
-      "category": "teaching",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "a81495548a50b8e2",
-      "title": "Recruitment of Associate Professors in all universities of Jharkhand, Advt No.-41/2016",
-      "link": "https://jpsc.gov.in/exam_files.php?id=40",
-      "publishedAt": "2026-07-02T12:23:26.966760Z",
-      "summary": "JPSC JHARKHAND PUBLIC SERVICE COMMISSION TENTATIVE DATES FOR UPCOMING EXAMS -2026 1 OF 1 SL. No. Name of Examination Nature of Examination Tentative Date for P.T./Main/Document Verification/Interview Duration 1 Recruitment of Child Development Project Officer,Advt.No.-21/2023 INTERVIEW 07th, 08th and 09th January 2026 03 Days 2 Recruitment of 6th limited Deputy Collector, Advt. No.11/2018 WRITTEN …",
-      "pdfUrls": [
-        "https://jpsc.gov.in/data/Exam_Calendar_2026_dtd_06_01_2026.pdf",
-        "https://jpsc.gov.in/data/Press_Release_and_Instructions_dated_28_04_2026.pdf",
-        "https://jpsc.gov.in/data/Press_Release_15_23_dated_08_12_2025.pdf",
-        "https://jpsc.gov.in/data/Press_Release_05_26_dated_09_05_2026.pdf",
-        "https://jpsc.gov.in/data/Press_Release_dated_18_12_2025.pdf",
-        "https://jpsc.gov.in/data/RTI_Policy.pdf"
-      ],
-      "sourceId": "psc-jh",
-      "sourceName": "Jpsc",
-      "dept": "Jpsc",
-      "state": "All India",
-      "category": "teaching",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "a88a2a8890548ed2",
-      "title": "Recruitment of University Professor-Cum-Chief Scientist in Ranchi Veterinary College Under Birsa Agricultural University, Advt. No. 08/2017",
-      "link": "https://jpsc.gov.in/exam_files.php?id=51",
-      "publishedAt": "2026-07-02T12:23:24.571138Z",
-      "summary": "JPSC JHARKHAND PUBLIC SERVICE COMMISSION TENTATIVE DATES FOR UPCOMING EXAMS -2026 1 OF 1 SL. No. Name of Examination Nature of Examination Tentative Date for P.T./Main/Document Verification/Interview Duration 1 Recruitment of Child Development Project Officer,Advt.No.-21/2023 INTERVIEW 07th, 08th and 09th January 2026 03 Days 2 Recruitment of 6th limited Deputy Collector, Advt. No.11/2018 WRITTEN …",
-      "pdfUrls": [
-        "https://jpsc.gov.in/data/Exam_Calendar_2026_dtd_06_01_2026.pdf",
-        "https://jpsc.gov.in/data/Press_Release_and_Instructions_dated_28_04_2026.pdf",
-        "https://jpsc.gov.in/data/Press_Release_15_23_dated_08_12_2025.pdf",
-        "https://jpsc.gov.in/data/Press_Release_05_26_dated_09_05_2026.pdf",
-        "https://jpsc.gov.in/data/Press_Release_dated_18_12_2025.pdf",
-        "https://jpsc.gov.in/data/Advt_No-_08-2017.pdf"
-      ],
-      "sourceId": "psc-jh",
-      "sourceName": "Jpsc",
-      "dept": "Jpsc",
-      "state": "All India",
-      "category": "teaching",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "1758e6ae54678717",
-      "title": "Recruitment of Dean in Ranchi Agriculture College Under Birsa Agricultural University, Advt. No. 18/2017",
-      "link": "https://jpsc.gov.in/exam_files.php?id=61",
-      "publishedAt": "2026-07-02T12:23:21.137721Z",
-      "summary": "JPSC JHARKHAND PUBLIC SERVICE COMMISSION TENTATIVE DATES FOR UPCOMING EXAMS -2026 1 OF 1 SL. No. Name of Examination Nature of Examination Tentative Date for P.T./Main/Document Verification/Interview Duration 1 Recruitment of Child Development Project Officer,Advt.No.-21/2023 INTERVIEW 07th, 08th and 09th January 2026 03 Days 2 Recruitment of 6th limited Deputy Collector, Advt. No.11/2018 WRITTEN …",
-      "pdfUrls": [
-        "https://jpsc.gov.in/data/Exam_Calendar_2026_dtd_06_01_2026.pdf",
-        "https://jpsc.gov.in/data/Press_Release_and_Instructions_dated_28_04_2026.pdf",
-        "https://jpsc.gov.in/data/Press_Release_15_23_dated_08_12_2025.pdf",
-        "https://jpsc.gov.in/data/Press_Release_05_26_dated_09_05_2026.pdf",
-        "https://jpsc.gov.in/data/Press_Release_dated_18_12_2025.pdf",
-        "https://jpsc.gov.in/data/ADVT._NO_18-2017.pdf"
-      ],
-      "sourceId": "psc-jh",
-      "sourceName": "Jpsc",
-      "dept": "Jpsc",
-      "state": "All India",
-      "category": "state",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "be2f4b3b897aec08",
-      "title": "Recruitment of Associate Professor cum Senior Scientist in Ranchi Agriculture College Under Birsa Agricultural University, Advt. No. 19/2017",
-      "link": "https://jpsc.gov.in/exam_files.php?id=62",
-      "publishedAt": "2026-07-02T12:23:19.075556Z",
-      "summary": "JPSC JHARKHAND PUBLIC SERVICE COMMISSION TENTATIVE DATES FOR UPCOMING EXAMS -2026 1 OF 1 SL. No. Name of Examination Nature of Examination Tentative Date for P.T./Main/Document Verification/Interview Duration 1 Recruitment of Child Development Project Officer,Advt.No.-21/2023 INTERVIEW 07th, 08th and 09th January 2026 03 Days 2 Recruitment of 6th limited Deputy Collector, Advt. No.11/2018 WRITTEN …",
-      "pdfUrls": [
-        "https://jpsc.gov.in/data/Exam_Calendar_2026_dtd_06_01_2026.pdf",
-        "https://jpsc.gov.in/data/Press_Release_and_Instructions_dated_28_04_2026.pdf",
-        "https://jpsc.gov.in/data/Press_Release_15_23_dated_08_12_2025.pdf",
-        "https://jpsc.gov.in/data/Press_Release_05_26_dated_09_05_2026.pdf",
-        "https://jpsc.gov.in/data/Press_Release_dated_18_12_2025.pdf",
-        "https://jpsc.gov.in/data/Advt._No._19_2017-1.pdf"
-      ],
-      "sourceId": "psc-jh",
-      "sourceName": "Jpsc",
-      "dept": "Jpsc",
-      "state": "All India",
-      "category": "teaching",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "6b01526ee1835580",
-      "title": "Recruitment of Associate Professor-Cum-Senior Scientist in Ranchi Veterinary College Under Birsa Agricultural University, Advt. No.23/2017",
-      "link": "https://jpsc.gov.in/exam_files.php?id=66",
-      "publishedAt": "2026-07-02T12:23:16.510283Z",
-      "summary": "JPSC JHARKHAND PUBLIC SERVICE COMMISSION TENTATIVE DATES FOR UPCOMING EXAMS -2026 1 OF 1 SL. No. Name of Examination Nature of Examination Tentative Date for P.T./Main/Document Verification/Interview Duration 1 Recruitment of Child Development Project Officer,Advt.No.-21/2023 INTERVIEW 07th, 08th and 09th January 2026 03 Days 2 Recruitment of 6th limited Deputy Collector, Advt. No.11/2018 WRITTEN …",
-      "pdfUrls": [
-        "https://jpsc.gov.in/data/Exam_Calendar_2026_dtd_06_01_2026.pdf",
-        "https://jpsc.gov.in/data/Press_Release_and_Instructions_dated_28_04_2026.pdf",
-        "https://jpsc.gov.in/data/Press_Release_15_23_dated_08_12_2025.pdf",
-        "https://jpsc.gov.in/data/Press_Release_05_26_dated_09_05_2026.pdf",
-        "https://jpsc.gov.in/data/Press_Release_dated_18_12_2025.pdf",
-        "https://jpsc.gov.in/data/ADVT._NO_23-2017-1.pdf"
-      ],
-      "sourceId": "psc-jh",
-      "sourceName": "Jpsc",
-      "dept": "Jpsc",
-      "state": "All India",
-      "category": "teaching",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "ae4e56f160079169",
-      "title": "Recruitment of Assistant Professors (Regular) in Universities of Jharkhand Advt.No. 04/2018",
-      "link": "https://jpsc.gov.in/exam_files.php?id=75",
-      "publishedAt": "2026-07-02T12:23:13.827033Z",
-      "summary": "JPSC JHARKHAND PUBLIC SERVICE COMMISSION TENTATIVE DATES FOR UPCOMING EXAMS -2026 1 OF 1 SL. No. Name of Examination Nature of Examination Tentative Date for P.T./Main/Document Verification/Interview Duration 1 Recruitment of Child Development Project Officer,Advt.No.-21/2023 INTERVIEW 07th, 08th and 09th January 2026 03 Days 2 Recruitment of 6th limited Deputy Collector, Advt. No.11/2018 WRITTEN …",
-      "pdfUrls": [
-        "https://jpsc.gov.in/data/Exam_Calendar_2026_dtd_06_01_2026.pdf",
-        "https://jpsc.gov.in/data/Press_Release_and_Instructions_dated_28_04_2026.pdf",
-        "https://jpsc.gov.in/data/Press_Release_15_23_dated_08_12_2025.pdf",
-        "https://jpsc.gov.in/data/Press_Release_05_26_dated_09_05_2026.pdf",
-        "https://jpsc.gov.in/data/Press_Release_dated_18_12_2025.pdf",
-        "https://jpsc.gov.in/data/Advt._No_04-2018.pdf"
-      ],
-      "sourceId": "psc-jh",
-      "sourceName": "Jpsc",
-      "dept": "Jpsc",
-      "state": "All India",
-      "category": "teaching",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "76d1c034e32d1094",
-      "title": "Recruitment of Assistant Professors (Backlog) in Universities of Jharkhand Advt.No. 05/2018",
-      "link": "https://jpsc.gov.in/exam_files.php?id=76",
-      "publishedAt": "2026-07-02T12:23:06.056374Z",
-      "summary": "JPSC JHARKHAND PUBLIC SERVICE COMMISSION TENTATIVE DATES FOR UPCOMING EXAMS -2026 1 OF 1 SL. No. Name of Examination Nature of Examination Tentative Date for P.T./Main/Document Verification/Interview Duration 1 Recruitment of Child Development Project Officer,Advt.No.-21/2023 INTERVIEW 07th, 08th and 09th January 2026 03 Days 2 Recruitment of 6th limited Deputy Collector, Advt. No.11/2018 WRITTEN …",
-      "pdfUrls": [
-        "https://jpsc.gov.in/data/Exam_Calendar_2026_dtd_06_01_2026.pdf",
-        "https://jpsc.gov.in/data/Press_Release_and_Instructions_dated_28_04_2026.pdf",
-        "https://jpsc.gov.in/data/Press_Release_15_23_dated_08_12_2025.pdf",
-        "https://jpsc.gov.in/data/Press_Release_05_26_dated_09_05_2026.pdf",
-        "https://jpsc.gov.in/data/Press_Release_dated_18_12_2025.pdf",
-        "https://jpsc.gov.in/data/advt_no_05_18-1.pdf"
-      ],
-      "sourceId": "psc-jh",
-      "sourceName": "Jpsc",
-      "dept": "Jpsc",
-      "state": "All India",
-      "category": "teaching",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "f895484667fe1a47",
-      "title": "Recruitment of 6th limited Deputy Collector, Advt. No.11/2018",
-      "link": "https://jpsc.gov.in/exam_files.php?id=82",
-      "publishedAt": "2026-07-02T12:22:59.233597Z",
-      "summary": "JPSC JHARKHAND PUBLIC SERVICE COMMISSION TENTATIVE DATES FOR UPCOMING EXAMS -2026 1 OF 1 SL. No. Name of Examination Nature of Examination Tentative Date for P.T./Main/Document Verification/Interview Duration 1 Recruitment of Child Development Project Officer,Advt.No.-21/2023 INTERVIEW 07th, 08th and 09th January 2026 03 Days 2 Recruitment of 6th limited Deputy Collector, Advt. No.11/2018 WRITTEN …",
-      "pdfUrls": [
-        "https://jpsc.gov.in/data/Exam_Calendar_2026_dtd_06_01_2026.pdf",
-        "https://jpsc.gov.in/data/Press_Release_and_Instructions_dated_28_04_2026.pdf",
-        "https://jpsc.gov.in/data/Press_Release_15_23_dated_08_12_2025.pdf",
-        "https://jpsc.gov.in/data/Press_Release_05_26_dated_09_05_2026.pdf",
-        "https://jpsc.gov.in/data/Press_Release_dated_18_12_2025.pdf",
-        "https://jpsc.gov.in/data/Advt._No._11_2018.pdf"
-      ],
-      "sourceId": "psc-jh",
-      "sourceName": "Jpsc",
-      "dept": "Jpsc",
-      "state": "All India",
-      "category": "state",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "b2ff7cbef178f233",
-      "title": "Recruitment of Professor, Associate Professor, Assistant Professor and Assistant Librarian in Jharkhand Raksha Shakti University, Ranchi, Advt. No. 02/2021",
-      "link": "https://jpsc.gov.in/exam_files.php?id=99",
-      "publishedAt": "2026-07-02T12:22:55.420717Z",
-      "summary": "JPSC JHARKHAND PUBLIC SERVICE COMMISSION TENTATIVE DATES FOR UPCOMING EXAMS -2026 1 OF 1 SL. No. Name of Examination Nature of Examination Tentative Date for P.T./Main/Document Verification/Interview Duration 1 Recruitment of Child Development Project Officer,Advt.No.-21/2023 INTERVIEW 07th, 08th and 09th January 2026 03 Days 2 Recruitment of 6th limited Deputy Collector, Advt. No.11/2018 WRITTEN …",
-      "pdfUrls": [
-        "https://jpsc.gov.in/data/Exam_Calendar_2026_dtd_06_01_2026.pdf",
-        "https://jpsc.gov.in/data/Press_Release_and_Instructions_dated_28_04_2026.pdf",
-        "https://jpsc.gov.in/data/Press_Release_15_23_dated_08_12_2025.pdf",
-        "https://jpsc.gov.in/data/Press_Release_05_26_dated_09_05_2026.pdf",
-        "https://jpsc.gov.in/data/Press_Release_dated_18_12_2025.pdf",
-        "https://jpsc.gov.in/data/Advertisement_02_2021.pdf"
-      ],
-      "sourceId": "psc-jh",
-      "sourceName": "Jpsc",
-      "dept": "Jpsc",
-      "state": "All India",
-      "category": "teaching",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "a4e0a64eeaa61132",
-      "title": "Recruitment of Ayurvedic Medical Officer (Regular),Advt.No.-09/2022",
-      "link": "https://jpsc.gov.in/exam_files.php?id=118",
-      "publishedAt": "2026-07-02T12:22:52.996527Z",
-      "summary": "JPSC JHARKHAND PUBLIC SERVICE COMMISSION TENTATIVE DATES FOR UPCOMING EXAMS -2026 1 OF 1 SL. No. Name of Examination Nature of Examination Tentative Date for P.T./Main/Document Verification/Interview Duration 1 Recruitment of Child Development Project Officer,Advt.No.-21/2023 INTERVIEW 07th, 08th and 09th January 2026 03 Days 2 Recruitment of 6th limited Deputy Collector, Advt. No.11/2018 WRITTEN …",
-      "pdfUrls": [
-        "https://jpsc.gov.in/data/Exam_Calendar_2026_dtd_06_01_2026.pdf",
-        "https://jpsc.gov.in/data/Press_Release_and_Instructions_dated_28_04_2026.pdf",
-        "https://jpsc.gov.in/data/Press_Release_15_23_dated_08_12_2025.pdf",
-        "https://jpsc.gov.in/data/Press_Release_05_26_dated_09_05_2026.pdf",
-        "https://jpsc.gov.in/data/Press_Release_dated_18_12_2025.pdf",
-        "https://jpsc.gov.in/data/Advertisement_09_22_dated_22_01_22.pdf"
-      ],
-      "sourceId": "psc-jh",
-      "sourceName": "Jpsc",
-      "dept": "Jpsc",
-      "state": "All India",
-      "category": "health",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "f65c855d51826435",
-      "title": "Recruitment of Homeopathic Medical Officer (Regular),Advt.No.-10/2022",
-      "link": "https://jpsc.gov.in/exam_files.php?id=119",
-      "publishedAt": "2026-07-02T12:22:50.903473Z",
-      "summary": "JPSC JHARKHAND PUBLIC SERVICE COMMISSION TENTATIVE DATES FOR UPCOMING EXAMS -2026 1 OF 1 SL. No. Name of Examination Nature of Examination Tentative Date for P.T./Main/Document Verification/Interview Duration 1 Recruitment of Child Development Project Officer,Advt.No.-21/2023 INTERVIEW 07th, 08th and 09th January 2026 03 Days 2 Recruitment of 6th limited Deputy Collector, Advt. No.11/2018 WRITTEN …",
-      "pdfUrls": [
-        "https://jpsc.gov.in/data/Exam_Calendar_2026_dtd_06_01_2026.pdf",
-        "https://jpsc.gov.in/data/Press_Release_and_Instructions_dated_28_04_2026.pdf",
-        "https://jpsc.gov.in/data/Press_Release_15_23_dated_08_12_2025.pdf",
-        "https://jpsc.gov.in/data/Press_Release_05_26_dated_09_05_2026.pdf",
-        "https://jpsc.gov.in/data/Press_Release_dated_18_12_2025.pdf",
-        "https://jpsc.gov.in/data/Advertisement_10_22_dated_22_01_2022.pdf"
-      ],
-      "sourceId": "psc-jh",
-      "sourceName": "Jpsc",
-      "dept": "Jpsc",
-      "state": "All India",
-      "category": "health",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "f201712867cc17fd",
-      "title": "Recruitment of Unani Medical Officer (Regular),Advt.No.-11/2022",
-      "link": "https://jpsc.gov.in/exam_files.php?id=120",
-      "publishedAt": "2026-07-02T12:22:43.723622Z",
-      "summary": "JPSC JHARKHAND PUBLIC SERVICE COMMISSION TENTATIVE DATES FOR UPCOMING EXAMS -2026 1 OF 1 SL. No. Name of Examination Nature of Examination Tentative Date for P.T./Main/Document Verification/Interview Duration 1 Recruitment of Child Development Project Officer,Advt.No.-21/2023 INTERVIEW 07th, 08th and 09th January 2026 03 Days 2 Recruitment of 6th limited Deputy Collector, Advt. No.11/2018 WRITTEN …",
-      "pdfUrls": [
-        "https://jpsc.gov.in/data/Exam_Calendar_2026_dtd_06_01_2026.pdf",
-        "https://jpsc.gov.in/data/Press_Release_and_Instructions_dated_28_04_2026.pdf",
-        "https://jpsc.gov.in/data/Press_Release_15_23_dated_08_12_2025.pdf",
-        "https://jpsc.gov.in/data/Press_Release_05_26_dated_09_05_2026.pdf",
-        "https://jpsc.gov.in/data/Press_Release_dated_18_12_2025.pdf",
-        "https://jpsc.gov.in/data/Advertisement_11_22_dated_22_01_22.pdf"
-      ],
-      "sourceId": "psc-jh",
-      "sourceName": "Jpsc",
-      "dept": "Jpsc",
-      "state": "All India",
-      "category": "health",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "4646844c8cbaf179",
-      "title": "Recruitment of university Professor-cum-chief Scientist (Regular),Advt.No.-10/2023",
-      "link": "https://jpsc.gov.in/exam_files.php?id=133",
-      "publishedAt": "2026-07-02T12:22:39.858335Z",
-      "summary": "JPSC JHARKHAND PUBLIC SERVICE COMMISSION TENTATIVE DATES FOR UPCOMING EXAMS -2026 1 OF 1 SL. No. Name of Examination Nature of Examination Tentative Date for P.T./Main/Document Verification/Interview Duration 1 Recruitment of Child Development Project Officer,Advt.No.-21/2023 INTERVIEW 07th, 08th and 09th January 2026 03 Days 2 Recruitment of 6th limited Deputy Collector, Advt. No.11/2018 WRITTEN …",
-      "pdfUrls": [
-        "https://jpsc.gov.in/data/Exam_Calendar_2026_dtd_06_01_2026.pdf",
-        "https://jpsc.gov.in/data/Press_Release_and_Instructions_dated_28_04_2026.pdf",
-        "https://jpsc.gov.in/data/Press_Release_15_23_dated_08_12_2025.pdf",
-        "https://jpsc.gov.in/data/Press_Release_05_26_dated_09_05_2026.pdf",
-        "https://jpsc.gov.in/data/Press_Release_dated_18_12_2025.pdf",
-        "https://jpsc.gov.in/data/Advertisement_10_23_dated_15_04_2023.pdf"
-      ],
-      "sourceId": "psc-jh",
-      "sourceName": "Jpsc",
-      "dept": "Jpsc",
-      "state": "All India",
-      "category": "teaching",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "8811c025dcfa1b74",
-      "title": "Recruitment of Associate Professor-cum-Senior Scientist (Regular),Advt.No.-11/2023",
-      "link": "https://jpsc.gov.in/exam_files.php?id=134",
-      "publishedAt": "2026-07-02T12:22:37.581251Z",
-      "summary": "JPSC JHARKHAND PUBLIC SERVICE COMMISSION TENTATIVE DATES FOR UPCOMING EXAMS -2026 1 OF 1 SL. No. Name of Examination Nature of Examination Tentative Date for P.T./Main/Document Verification/Interview Duration 1 Recruitment of Child Development Project Officer,Advt.No.-21/2023 INTERVIEW 07th, 08th and 09th January 2026 03 Days 2 Recruitment of 6th limited Deputy Collector, Advt. No.11/2018 WRITTEN …",
-      "pdfUrls": [
-        "https://jpsc.gov.in/data/Exam_Calendar_2026_dtd_06_01_2026.pdf",
-        "https://jpsc.gov.in/data/Press_Release_and_Instructions_dated_28_04_2026.pdf",
-        "https://jpsc.gov.in/data/Press_Release_15_23_dated_08_12_2025.pdf",
-        "https://jpsc.gov.in/data/Press_Release_05_26_dated_09_05_2026.pdf",
-        "https://jpsc.gov.in/data/Press_Release_dated_18_12_2025.pdf",
-        "https://jpsc.gov.in/data/Advertisement_11_23_dated_15_04_2023.pdf"
-      ],
-      "sourceId": "psc-jh",
-      "sourceName": "Jpsc",
-      "dept": "Jpsc",
-      "state": "All India",
-      "category": "teaching",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "b8cfaac67fcdde48",
-      "title": "Recruitment of Assistant Professor-cum-Junior Scientist (Regular),Advt.No.-12/2023",
-      "link": "https://jpsc.gov.in/exam_files.php?id=135",
-      "publishedAt": "2026-07-02T12:22:35.431622Z",
-      "summary": "JPSC JHARKHAND PUBLIC SERVICE COMMISSION TENTATIVE DATES FOR UPCOMING EXAMS -2026 1 OF 1 SL. No. Name of Examination Nature of Examination Tentative Date for P.T./Main/Document Verification/Interview Duration 1 Recruitment of Child Development Project Officer,Advt.No.-21/2023 INTERVIEW 07th, 08th and 09th January 2026 03 Days 2 Recruitment of 6th limited Deputy Collector, Advt. No.11/2018 WRITTEN …",
-      "pdfUrls": [
-        "https://jpsc.gov.in/data/Exam_Calendar_2026_dtd_06_01_2026.pdf",
-        "https://jpsc.gov.in/data/Press_Release_and_Instructions_dated_28_04_2026.pdf",
-        "https://jpsc.gov.in/data/Press_Release_15_23_dated_08_12_2025.pdf",
-        "https://jpsc.gov.in/data/Press_Release_05_26_dated_09_05_2026.pdf",
-        "https://jpsc.gov.in/data/Press_Release_dated_18_12_2025.pdf",
-        "https://jpsc.gov.in/data/advertisement_12_23_dated_15_04_2023.pdf"
-      ],
-      "sourceId": "psc-jh",
-      "sourceName": "Jpsc",
-      "dept": "Jpsc",
-      "state": "All India",
-      "category": "teaching",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "3f7a1b0af688f8d2",
-      "title": "Recruitment of Associate Professor-cum-Senior Scientist (Regular),Advt.No.-17/2023",
-      "link": "https://jpsc.gov.in/exam_files.php?id=140",
-      "publishedAt": "2026-07-02T12:22:32.546182Z",
-      "summary": "JPSC JHARKHAND PUBLIC SERVICE COMMISSION TENTATIVE DATES FOR UPCOMING EXAMS -2026 1 OF 1 SL. No. Name of Examination Nature of Examination Tentative Date for P.T./Main/Document Verification/Interview Duration 1 Recruitment of Child Development Project Officer,Advt.No.-21/2023 INTERVIEW 07th, 08th and 09th January 2026 03 Days 2 Recruitment of 6th limited Deputy Collector, Advt. No.11/2018 WRITTEN …",
-      "pdfUrls": [
-        "https://jpsc.gov.in/data/Exam_Calendar_2026_dtd_06_01_2026.pdf",
-        "https://jpsc.gov.in/data/Press_Release_and_Instructions_dated_28_04_2026.pdf",
-        "https://jpsc.gov.in/data/Press_Release_15_23_dated_08_12_2025.pdf",
-        "https://jpsc.gov.in/data/Press_Release_05_26_dated_09_05_2026.pdf",
-        "https://jpsc.gov.in/data/Press_Release_dated_18_12_2025.pdf",
-        "https://jpsc.gov.in/data/Advertisement-3.pdf"
-      ],
-      "sourceId": "psc-jh",
-      "sourceName": "Jpsc",
-      "dept": "Jpsc",
-      "state": "All India",
-      "category": "teaching",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "87dc0c1d44c858b9",
-      "title": "Recruitment of Civil Judge (Junior Division),Advt.No.-22/2023",
-      "link": "https://jpsc.gov.in/exam_files.php?id=13020",
-      "publishedAt": "2026-07-02T12:22:29.526685Z",
-      "summary": "JPSC JHARKHAND PUBLIC SERVICE COMMISSION TENTATIVE DATES FOR UPCOMING EXAMS -2026 1 OF 1 SL. No. Name of Examination Nature of Examination Tentative Date for P.T./Main/Document Verification/Interview Duration 1 Recruitment of Child Development Project Officer,Advt.No.-21/2023 INTERVIEW 07th, 08th and 09th January 2026 03 Days 2 Recruitment of 6th limited Deputy Collector, Advt. No.11/2018 WRITTEN …",
-      "pdfUrls": [
-        "https://jpsc.gov.in/data/Exam_Calendar_2026_dtd_06_01_2026.pdf",
-        "https://jpsc.gov.in/data/Press_Release_and_Instructions_dated_28_04_2026.pdf",
-        "https://jpsc.gov.in/data/Press_Release_15_23_dated_08_12_2025.pdf",
-        "https://jpsc.gov.in/data/Press_Release_05_26_dated_09_05_2026.pdf",
-        "https://jpsc.gov.in/data/Press_Release_dated_18_12_2025.pdf",
-        "https://jpsc.gov.in/data/Advertisement_22_23_dated_14_08_2023.pdf"
-      ],
-      "sourceId": "psc-jh",
-      "sourceName": "Jpsc",
-      "dept": "Jpsc",
-      "state": "All India",
-      "category": "state",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "188918e2c7afbf6e",
-      "title": "Recruitment for Non-Teaching Posts in Universities of Jharkhand, Advt. No.23/2023",
-      "link": "https://jpsc.gov.in/exam_files.php?id=13021",
-      "publishedAt": "2026-07-02T12:22:26.947478Z",
-      "summary": "JPSC JHARKHAND PUBLIC SERVICE COMMISSION TENTATIVE DATES FOR UPCOMING EXAMS -2026 1 OF 1 SL. No. Name of Examination Nature of Examination Tentative Date for P.T./Main/Document Verification/Interview Duration 1 Recruitment of Child Development Project Officer,Advt.No.-21/2023 INTERVIEW 07th, 08th and 09th January 2026 03 Days 2 Recruitment of 6th limited Deputy Collector, Advt. No.11/2018 WRITTEN …",
-      "pdfUrls": [
-        "https://jpsc.gov.in/data/Exam_Calendar_2026_dtd_06_01_2026.pdf",
-        "https://jpsc.gov.in/data/Press_Release_and_Instructions_dated_28_04_2026.pdf",
-        "https://jpsc.gov.in/data/Press_Release_15_23_dated_08_12_2025.pdf",
-        "https://jpsc.gov.in/data/Press_Release_05_26_dated_09_05_2026.pdf",
-        "https://jpsc.gov.in/data/Press_Release_dated_18_12_2025.pdf",
-        "https://jpsc.gov.in/data/Advertisement_23-2023.pdf"
-      ],
-      "sourceId": "psc-jh",
-      "sourceName": "Jpsc",
-      "dept": "Jpsc",
-      "state": "All India",
-      "category": "state",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "0b69b6df3ffad42e",
-      "title": "Recruitment of Assistant Conservator of Forest,Advt.No.-03/2024",
-      "link": "https://jpsc.gov.in/exam_files.php?id=13024",
-      "publishedAt": "2026-07-02T12:22:23.910157Z",
-      "summary": "JPSC JHARKHAND PUBLIC SERVICE COMMISSION TENTATIVE DATES FOR UPCOMING EXAMS -2026 1 OF 1 SL. No. Name of Examination Nature of Examination Tentative Date for P.T./Main/Document Verification/Interview Duration 1 Recruitment of Child Development Project Officer,Advt.No.-21/2023 INTERVIEW 07th, 08th and 09th January 2026 03 Days 2 Recruitment of 6th limited Deputy Collector, Advt. No.11/2018 WRITTEN …",
-      "pdfUrls": [
-        "https://jpsc.gov.in/data/Exam_Calendar_2026_dtd_06_01_2026.pdf",
-        "https://jpsc.gov.in/data/Press_Release_and_Instructions_dated_28_04_2026.pdf",
-        "https://jpsc.gov.in/data/Press_Release_15_23_dated_08_12_2025.pdf",
-        "https://jpsc.gov.in/data/Press_Release_05_26_dated_09_05_2026.pdf",
-        "https://jpsc.gov.in/data/Press_Release_dated_18_12_2025.pdf",
-        "https://jpsc.gov.in/data/Advertisement_03_24_dated_25_07_2024.pdf"
-      ],
-      "sourceId": "psc-jh",
-      "sourceName": "Jpsc",
-      "dept": "Jpsc",
-      "state": "All India",
-      "category": "state",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "fe2d91ee79ef3603",
-      "title": "Recruitment of Forest Range Officer,Advt.No.-04/2024",
-      "link": "https://jpsc.gov.in/exam_files.php?id=13025",
-      "publishedAt": "2026-07-02T12:22:21.254044Z",
-      "summary": "JPSC JHARKHAND PUBLIC SERVICE COMMISSION TENTATIVE DATES FOR UPCOMING EXAMS -2026 1 OF 1 SL. No. Name of Examination Nature of Examination Tentative Date for P.T./Main/Document Verification/Interview Duration 1 Recruitment of Child Development Project Officer,Advt.No.-21/2023 INTERVIEW 07th, 08th and 09th January 2026 03 Days 2 Recruitment of 6th limited Deputy Collector, Advt. No.11/2018 WRITTEN …",
-      "pdfUrls": [
-        "https://jpsc.gov.in/data/Exam_Calendar_2026_dtd_06_01_2026.pdf",
-        "https://jpsc.gov.in/data/Press_Release_and_Instructions_dated_28_04_2026.pdf",
-        "https://jpsc.gov.in/data/Press_Release_15_23_dated_08_12_2025.pdf",
-        "https://jpsc.gov.in/data/Press_Release_05_26_dated_09_05_2026.pdf",
-        "https://jpsc.gov.in/data/Press_Release_dated_18_12_2025.pdf",
-        "https://jpsc.gov.in/data/Advertisement_04_24_dated_25_07_2024.pdf"
-      ],
-      "sourceId": "psc-jh",
-      "sourceName": "Jpsc",
-      "dept": "Jpsc",
-      "state": "All India",
-      "category": "state",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "9d5e4be91cd46b22",
-      "title": "Recruitment of Food Analyst,Advt. No.-05/2024",
-      "link": "https://jpsc.gov.in/exam_files.php?id=13026",
-      "publishedAt": "2026-07-02T12:22:17.991158Z",
-      "summary": "JPSC JHARKHAND PUBLIC SERVICE COMMISSION TENTATIVE DATES FOR UPCOMING EXAMS -2026 1 OF 1 SL. No. Name of Examination Nature of Examination Tentative Date for P.T./Main/Document Verification/Interview Duration 1 Recruitment of Child Development Project Officer,Advt.No.-21/2023 INTERVIEW 07th, 08th and 09th January 2026 03 Days 2 Recruitment of 6th limited Deputy Collector, Advt. No.11/2018 WRITTEN …",
-      "pdfUrls": [
-        "https://jpsc.gov.in/data/Exam_Calendar_2026_dtd_06_01_2026.pdf",
-        "https://jpsc.gov.in/data/Press_Release_and_Instructions_dated_28_04_2026.pdf",
-        "https://jpsc.gov.in/data/Press_Release_15_23_dated_08_12_2025.pdf",
-        "https://jpsc.gov.in/data/Press_Release_05_26_dated_09_05_2026.pdf",
-        "https://jpsc.gov.in/data/Press_Release_dated_18_12_2025.pdf",
-        "https://jpsc.gov.in/data/Advertisement_05_24_dated_12_09_2024.pdf"
-      ],
-      "sourceId": "psc-jh",
-      "sourceName": "Jpsc",
-      "dept": "Jpsc",
-      "state": "All India",
-      "category": "state",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "53f8216d68ef86c5",
-      "title": "Recruitment of Project Manager and equivalent,advt.No.-04/2025",
-      "link": "https://jpsc.gov.in/exam_files.php?id=13028",
-      "publishedAt": "2026-07-02T12:22:14.382291Z",
-      "summary": "JPSC JHARKHAND PUBLIC SERVICE COMMISSION TENTATIVE DATES FOR UPCOMING EXAMS -2026 1 OF 1 SL. No. Name of Examination Nature of Examination Tentative Date for P.T./Main/Document Verification/Interview Duration 1 Recruitment of Child Development Project Officer,Advt.No.-21/2023 INTERVIEW 07th, 08th and 09th January 2026 03 Days 2 Recruitment of 6th limited Deputy Collector, Advt. No.11/2018 WRITTEN …",
-      "pdfUrls": [
-        "https://jpsc.gov.in/data/Exam_Calendar_2026_dtd_06_01_2026.pdf",
-        "https://jpsc.gov.in/data/Press_Release_and_Instructions_dated_28_04_2026.pdf",
-        "https://jpsc.gov.in/data/Press_Release_15_23_dated_08_12_2025.pdf",
-        "https://jpsc.gov.in/data/Press_Release_05_26_dated_09_05_2026.pdf",
-        "https://jpsc.gov.in/data/Press_Release_dated_18_12_2025.pdf",
-        "https://jpsc.gov.in/data/Advertisement_04_25_dated_17_06_2025.pdf"
-      ],
-      "sourceId": "psc-jh",
-      "sourceName": "Jpsc",
-      "dept": "Jpsc",
-      "state": "All India",
-      "category": "state",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "be1b88a8d4c35f45",
-      "title": "Recruitment of Assistant Public Prosecutor (Backlog),Advt.No.-05/2025",
-      "link": "https://jpsc.gov.in/exam_files.php?id=13029",
-      "publishedAt": "2026-07-02T12:22:11.384549Z",
-      "summary": "JPSC JHARKHAND PUBLIC SERVICE COMMISSION TENTATIVE DATES FOR UPCOMING EXAMS -2026 1 OF 1 SL. No. Name of Examination Nature of Examination Tentative Date for P.T./Main/Document Verification/Interview Duration 1 Recruitment of Child Development Project Officer,Advt.No.-21/2023 INTERVIEW 07th, 08th and 09th January 2026 03 Days 2 Recruitment of 6th limited Deputy Collector, Advt. No.11/2018 WRITTEN …",
-      "pdfUrls": [
-        "https://jpsc.gov.in/data/Exam_Calendar_2026_dtd_06_01_2026.pdf",
-        "https://jpsc.gov.in/data/Press_Release_and_Instructions_dated_28_04_2026.pdf",
-        "https://jpsc.gov.in/data/Press_Release_15_23_dated_08_12_2025.pdf",
-        "https://jpsc.gov.in/data/Press_Release_05_26_dated_09_05_2026.pdf",
-        "https://jpsc.gov.in/data/Press_Release_dated_18_12_2025.pdf",
-        "https://jpsc.gov.in/data/Advertisement_05_25_dated_17_06_2025.pdf"
-      ],
-      "sourceId": "psc-jh",
-      "sourceName": "Jpsc",
-      "dept": "Jpsc",
-      "state": "All India",
-      "category": "state",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "6db764333612cee7",
-      "title": "Recruitment of Assistant Public Prosecutor (Regular),Advt.No.-06/2025",
-      "link": "https://jpsc.gov.in/exam_files.php?id=13030",
-      "publishedAt": "2026-07-02T12:22:07.455831Z",
-      "summary": "JPSC JHARKHAND PUBLIC SERVICE COMMISSION TENTATIVE DATES FOR UPCOMING EXAMS -2026 1 OF 1 SL. No. Name of Examination Nature of Examination Tentative Date for P.T./Main/Document Verification/Interview Duration 1 Recruitment of Child Development Project Officer,Advt.No.-21/2023 INTERVIEW 07th, 08th and 09th January 2026 03 Days 2 Recruitment of 6th limited Deputy Collector, Advt. No.11/2018 WRITTEN …",
-      "pdfUrls": [
-        "https://jpsc.gov.in/data/Exam_Calendar_2026_dtd_06_01_2026.pdf",
-        "https://jpsc.gov.in/data/Press_Release_and_Instructions_dated_28_04_2026.pdf",
-        "https://jpsc.gov.in/data/Press_Release_15_23_dated_08_12_2025.pdf",
-        "https://jpsc.gov.in/data/Press_Release_05_26_dated_09_05_2026.pdf",
-        "https://jpsc.gov.in/data/Press_Release_dated_18_12_2025.pdf",
-        "https://jpsc.gov.in/data/Advertisement_06_25_dated_19_06_2025.pdf"
-      ],
-      "sourceId": "psc-jh",
-      "sourceName": "Jpsc",
-      "dept": "Jpsc",
-      "state": "All India",
-      "category": "state",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "1876a91096ca1ebd",
-      "title": "Recruitment of Inspector of Factories Advt.No.-01/2025",
-      "link": "https://jpsc.gov.in/exam_files.php?id=13031",
-      "publishedAt": "2026-07-02T12:22:03.435327Z",
-      "summary": "JPSC JHARKHAND PUBLIC SERVICE COMMISSION TENTATIVE DATES FOR UPCOMING EXAMS -2026 1 OF 1 SL. No. Name of Examination Nature of Examination Tentative Date for P.T./Main/Document Verification/Interview Duration 1 Recruitment of Child Development Project Officer,Advt.No.-21/2023 INTERVIEW 07th, 08th and 09th January 2026 03 Days 2 Recruitment of 6th limited Deputy Collector, Advt. No.11/2018 WRITTEN …",
-      "pdfUrls": [
-        "https://jpsc.gov.in/data/Exam_Calendar_2026_dtd_06_01_2026.pdf",
-        "https://jpsc.gov.in/data/Press_Release_and_Instructions_dated_28_04_2026.pdf",
-        "https://jpsc.gov.in/data/Press_Release_15_23_dated_08_12_2025.pdf",
-        "https://jpsc.gov.in/data/Press_Release_05_26_dated_09_05_2026.pdf",
-        "https://jpsc.gov.in/data/Press_Release_dated_18_12_2025.pdf",
-        "https://jpsc.gov.in/data/Advertisement_01_25_dated_02_07_2025.pdf"
-      ],
-      "sourceId": "psc-jh",
-      "sourceName": "Jpsc",
-      "dept": "Jpsc",
-      "state": "All India",
-      "category": "state",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "426010f8fda87e83",
-      "title": "Recruitment of Boiler Inspector Advt.No.-02/2025",
-      "link": "https://jpsc.gov.in/exam_files.php?id=13032",
-      "publishedAt": "2026-07-02T12:21:55.266442Z",
-      "summary": "JPSC JHARKHAND PUBLIC SERVICE COMMISSION TENTATIVE DATES FOR UPCOMING EXAMS -2026 1 OF 1 SL. No. Name of Examination Nature of Examination Tentative Date for P.T./Main/Document Verification/Interview Duration 1 Recruitment of Child Development Project Officer,Advt.No.-21/2023 INTERVIEW 07th, 08th and 09th January 2026 03 Days 2 Recruitment of 6th limited Deputy Collector, Advt. No.11/2018 WRITTEN …",
-      "pdfUrls": [
-        "https://jpsc.gov.in/data/Exam_Calendar_2026_dtd_06_01_2026.pdf",
-        "https://jpsc.gov.in/data/Press_Release_and_Instructions_dated_28_04_2026.pdf",
-        "https://jpsc.gov.in/data/Press_Release_15_23_dated_08_12_2025.pdf",
-        "https://jpsc.gov.in/data/Press_Release_05_26_dated_09_05_2026.pdf",
-        "https://jpsc.gov.in/data/Press_Release_dated_18_12_2025.pdf",
-        "https://jpsc.gov.in/data/Advertisement_02_25_dated_02_07_2025.pdf"
-      ],
-      "sourceId": "psc-jh",
-      "sourceName": "Jpsc",
-      "dept": "Jpsc",
-      "state": "All India",
-      "category": "state",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "cd06b3f4da2451ff",
-      "title": "Recruitment of Director Advt.No.-07/2025",
-      "link": "https://jpsc.gov.in/exam_files.php?id=13033",
-      "publishedAt": "2026-07-02T12:21:49.281827Z",
-      "summary": "JPSC JHARKHAND PUBLIC SERVICE COMMISSION TENTATIVE DATES FOR UPCOMING EXAMS -2026 1 OF 1 SL. No. Name of Examination Nature of Examination Tentative Date for P.T./Main/Document Verification/Interview Duration 1 Recruitment of Child Development Project Officer,Advt.No.-21/2023 INTERVIEW 07th, 08th and 09th January 2026 03 Days 2 Recruitment of 6th limited Deputy Collector, Advt. No.11/2018 WRITTEN …",
-      "pdfUrls": [
-        "https://jpsc.gov.in/data/Exam_Calendar_2026_dtd_06_01_2026.pdf",
-        "https://jpsc.gov.in/data/Press_Release_and_Instructions_dated_28_04_2026.pdf",
-        "https://jpsc.gov.in/data/Press_Release_15_23_dated_08_12_2025.pdf",
-        "https://jpsc.gov.in/data/Press_Release_05_26_dated_09_05_2026.pdf",
-        "https://jpsc.gov.in/data/Press_Release_dated_18_12_2025.pdf",
-        "https://jpsc.gov.in/data/Advertisement_07_25_dated_02_09_2025.pdf"
-      ],
-      "sourceId": "psc-jh",
-      "sourceName": "Jpsc",
-      "dept": "Jpsc",
-      "state": "All India",
-      "category": "state",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "a988231b8c484874",
-      "title": "Jharkhand Eligibility Test 2024 Advt.No.-08/2025",
-      "link": "https://jpsc.gov.in/exam_files.php?id=13034",
-      "publishedAt": "2026-07-02T12:21:45.451314Z",
-      "summary": "JPSC JHARKHAND PUBLIC SERVICE COMMISSION TENTATIVE DATES FOR UPCOMING EXAMS -2026 1 OF 1 SL. No. Name of Examination Nature of Examination Tentative Date for P.T./Main/Document Verification/Interview Duration 1 Recruitment of Child Development Project Officer,Advt.No.-21/2023 INTERVIEW 07th, 08th and 09th January 2026 03 Days 2 Recruitment of 6th limited Deputy Collector, Advt. No.11/2018 WRITTEN …",
-      "pdfUrls": [
-        "https://jpsc.gov.in/data/Exam_Calendar_2026_dtd_06_01_2026.pdf",
-        "https://jpsc.gov.in/data/Press_Release_and_Instructions_dated_28_04_2026.pdf",
-        "https://jpsc.gov.in/data/Press_Release_15_23_dated_08_12_2025.pdf",
-        "https://jpsc.gov.in/data/Press_Release_05_26_dated_09_05_2026.pdf",
-        "https://jpsc.gov.in/data/Press_Release_dated_18_12_2025.pdf",
-        "https://jpsc.gov.in/data/Advertisement_08_25_dated_09_09_2025.pdf"
-      ],
-      "sourceId": "psc-jh",
-      "sourceName": "Jpsc",
-      "dept": "Jpsc",
-      "state": "All India",
-      "category": "state",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "e99507c584c723ba",
-      "title": "Recruitment of Non-Teaching Posts in Universities of Jharkhand. Advt. No. 09/2025",
-      "link": "https://jpsc.gov.in/exam_files.php?id=13035",
-      "publishedAt": "2026-07-02T12:21:37.912996Z",
-      "summary": "JPSC JHARKHAND PUBLIC SERVICE COMMISSION TENTATIVE DATES FOR UPCOMING EXAMS -2026 1 OF 1 SL. No. Name of Examination Nature of Examination Tentative Date for P.T./Main/Document Verification/Interview Duration 1 Recruitment of Child Development Project Officer,Advt.No.-21/2023 INTERVIEW 07th, 08th and 09th January 2026 03 Days 2 Recruitment of 6th limited Deputy Collector, Advt. No.11/2018 WRITTEN …",
-      "pdfUrls": [
-        "https://jpsc.gov.in/data/Exam_Calendar_2026_dtd_06_01_2026.pdf",
-        "https://jpsc.gov.in/data/Press_Release_and_Instructions_dated_28_04_2026.pdf",
-        "https://jpsc.gov.in/data/Press_Release_15_23_dated_08_12_2025.pdf",
-        "https://jpsc.gov.in/data/Press_Release_05_26_dated_09_05_2026.pdf",
-        "https://jpsc.gov.in/data/Press_Release_dated_18_12_2025.pdf",
-        "https://jpsc.gov.in/data/Advt._09-2025_12_09_2025.pdf"
-      ],
-      "sourceId": "psc-jh",
-      "sourceName": "Jpsc",
-      "dept": "Jpsc",
-      "state": "All India",
-      "category": "state",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "cf99deca86252b4c",
-      "title": "Recruitment of Assistant Director/Senior Scientific Officer (Backlog), Advt. No. 10/2025",
-      "link": "https://jpsc.gov.in/exam_files.php?id=13036",
-      "publishedAt": "2026-07-02T12:21:34.377641Z",
-      "summary": "JPSC JHARKHAND PUBLIC SERVICE COMMISSION TENTATIVE DATES FOR UPCOMING EXAMS -2026 1 OF 1 SL. No. Name of Examination Nature of Examination Tentative Date for P.T./Main/Document Verification/Interview Duration 1 Recruitment of Child Development Project Officer,Advt.No.-21/2023 INTERVIEW 07th, 08th and 09th January 2026 03 Days 2 Recruitment of 6th limited Deputy Collector, Advt. No.11/2018 WRITTEN …",
-      "pdfUrls": [
-        "https://jpsc.gov.in/data/Exam_Calendar_2026_dtd_06_01_2026.pdf",
-        "https://jpsc.gov.in/data/Press_Release_and_Instructions_dated_28_04_2026.pdf",
-        "https://jpsc.gov.in/data/Press_Release_15_23_dated_08_12_2025.pdf",
-        "https://jpsc.gov.in/data/Press_Release_05_26_dated_09_05_2026.pdf",
-        "https://jpsc.gov.in/data/Press_Release_dated_18_12_2025.pdf",
-        "https://jpsc.gov.in/data/Advertisement_10_25_dated_19_09_2025.pdf"
-      ],
-      "sourceId": "psc-jh",
-      "sourceName": "Jpsc",
-      "dept": "Jpsc",
-      "state": "All India",
-      "category": "state",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "e880f70cb111d4e5",
-      "title": "Recruitment of Assistant Director/Senior Scientific Officer (Regular), Advt. No. 11/2025",
-      "link": "https://jpsc.gov.in/exam_files.php?id=13037",
-      "publishedAt": "2026-07-02T12:21:31.014960Z",
-      "summary": "JPSC JHARKHAND PUBLIC SERVICE COMMISSION TENTATIVE DATES FOR UPCOMING EXAMS -2026 1 OF 1 SL. No. Name of Examination Nature of Examination Tentative Date for P.T./Main/Document Verification/Interview Duration 1 Recruitment of Child Development Project Officer,Advt.No.-21/2023 INTERVIEW 07th, 08th and 09th January 2026 03 Days 2 Recruitment of 6th limited Deputy Collector, Advt. No.11/2018 WRITTEN …",
-      "pdfUrls": [
-        "https://jpsc.gov.in/data/Exam_Calendar_2026_dtd_06_01_2026.pdf",
-        "https://jpsc.gov.in/data/Press_Release_and_Instructions_dated_28_04_2026.pdf",
-        "https://jpsc.gov.in/data/Press_Release_15_23_dated_08_12_2025.pdf",
-        "https://jpsc.gov.in/data/Press_Release_05_26_dated_09_05_2026.pdf",
-        "https://jpsc.gov.in/data/Press_Release_dated_18_12_2025.pdf",
-        "https://jpsc.gov.in/data/Advertisement_11_25_dated_19_09_2025.pdf"
-      ],
-      "sourceId": "psc-jh",
-      "sourceName": "Jpsc",
-      "dept": "Jpsc",
-      "state": "All India",
-      "category": "state",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "4ed505d06d36bd93",
-      "title": "Recruitment of Drug Inspector Advt.No.-12/2025",
-      "link": "https://jpsc.gov.in/exam_files.php?id=13038",
-      "publishedAt": "2026-07-02T12:21:27.369385Z",
-      "summary": "JPSC JHARKHAND PUBLIC SERVICE COMMISSION TENTATIVE DATES FOR UPCOMING EXAMS -2026 1 OF 1 SL. No. Name of Examination Nature of Examination Tentative Date for P.T./Main/Document Verification/Interview Duration 1 Recruitment of Child Development Project Officer,Advt.No.-21/2023 INTERVIEW 07th, 08th and 09th January 2026 03 Days 2 Recruitment of 6th limited Deputy Collector, Advt. No.11/2018 WRITTEN …",
-      "pdfUrls": [
-        "https://jpsc.gov.in/data/Exam_Calendar_2026_dtd_06_01_2026.pdf",
-        "https://jpsc.gov.in/data/Press_Release_and_Instructions_dated_28_04_2026.pdf",
-        "https://jpsc.gov.in/data/Press_Release_15_23_dated_08_12_2025.pdf",
-        "https://jpsc.gov.in/data/Press_Release_05_26_dated_09_05_2026.pdf",
-        "https://jpsc.gov.in/data/Press_Release_dated_18_12_2025.pdf",
-        "https://jpsc.gov.in/data/Advertisement_12_25_dated_28_01_2026.pdf"
-      ],
-      "sourceId": "psc-jh",
-      "sourceName": "Jpsc",
-      "dept": "Jpsc",
-      "state": "All India",
-      "category": "state",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "04dcdb130f13d3ea",
-      "title": "Recruitment of Jharkhand Combined Civil Services Examination-2025 Advt.No.-01/2026",
-      "link": "https://jpsc.gov.in/exam_files.php?id=13039",
-      "publishedAt": "2026-07-02T12:21:22.930274Z",
-      "summary": "JPSC JHARKHAND PUBLIC SERVICE COMMISSION TENTATIVE DATES FOR UPCOMING EXAMS -2026 1 OF 1 SL. No. Name of Examination Nature of Examination Tentative Date for P.T./Main/Document Verification/Interview Duration 1 Recruitment of Child Development Project Officer,Advt.No.-21/2023 INTERVIEW 07th, 08th and 09th January 2026 03 Days 2 Recruitment of 6th limited Deputy Collector, Advt. No.11/2018 WRITTEN …",
-      "pdfUrls": [
-        "https://jpsc.gov.in/data/Exam_Calendar_2026_dtd_06_01_2026.pdf",
-        "https://jpsc.gov.in/data/Press_Release_and_Instructions_dated_28_04_2026.pdf",
-        "https://jpsc.gov.in/data/Press_Release_15_23_dated_08_12_2025.pdf",
-        "https://jpsc.gov.in/data/Press_Release_05_26_dated_09_05_2026.pdf",
-        "https://jpsc.gov.in/data/Press_Release_dated_18_12_2025.pdf",
-        "https://jpsc.gov.in/data/Advertisement_01_26_dated_29_01_2026-1.pdf"
-      ],
-      "sourceId": "psc-jh",
-      "sourceName": "Jpsc",
-      "dept": "Jpsc",
-      "state": "All India",
-      "category": "state",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "b25af94417cf6d12",
-      "title": "Recruitment of Assistant Professor in Government Engineering colleges (Backlog),Advt.No.-02/2026",
-      "link": "https://jpsc.gov.in/exam_files.php?id=13040",
-      "publishedAt": "2026-07-02T12:21:18.616316Z",
-      "summary": "JPSC JHARKHAND PUBLIC SERVICE COMMISSION TENTATIVE DATES FOR UPCOMING EXAMS -2026 1 OF 1 SL. No. Name of Examination Nature of Examination Tentative Date for P.T./Main/Document Verification/Interview Duration 1 Recruitment of Child Development Project Officer,Advt.No.-21/2023 INTERVIEW 07th, 08th and 09th January 2026 03 Days 2 Recruitment of 6th limited Deputy Collector, Advt. No.11/2018 WRITTEN …",
-      "pdfUrls": [
-        "https://jpsc.gov.in/data/Exam_Calendar_2026_dtd_06_01_2026.pdf",
-        "https://jpsc.gov.in/data/Press_Release_and_Instructions_dated_28_04_2026.pdf",
-        "https://jpsc.gov.in/data/Press_Release_15_23_dated_08_12_2025.pdf",
-        "https://jpsc.gov.in/data/Press_Release_05_26_dated_09_05_2026.pdf",
-        "https://jpsc.gov.in/data/Press_Release_dated_18_12_2025.pdf",
-        "https://jpsc.gov.in/data/Advertisement_02_26_dated_13_02_2026.pdf"
-      ],
-      "sourceId": "psc-jh",
-      "sourceName": "Jpsc",
-      "dept": "Jpsc",
-      "state": "All India",
-      "category": "teaching",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "a68af0c709786923",
-      "title": "Recruitment of Lecturer in Govt. Polytechnic/Govt. Women's Polytechnic(Backlog),Advt.No.-03/2026",
-      "link": "https://jpsc.gov.in/exam_files.php?id=13041",
-      "publishedAt": "2026-07-02T12:21:14.523652Z",
-      "summary": "JPSC JHARKHAND PUBLIC SERVICE COMMISSION TENTATIVE DATES FOR UPCOMING EXAMS -2026 1 OF 1 SL. No. Name of Examination Nature of Examination Tentative Date for P.T./Main/Document Verification/Interview Duration 1 Recruitment of Child Development Project Officer,Advt.No.-21/2023 INTERVIEW 07th, 08th and 09th January 2026 03 Days 2 Recruitment of 6th limited Deputy Collector, Advt. No.11/2018 WRITTEN …",
-      "pdfUrls": [
-        "https://jpsc.gov.in/data/Exam_Calendar_2026_dtd_06_01_2026.pdf",
-        "https://jpsc.gov.in/data/Press_Release_and_Instructions_dated_28_04_2026.pdf",
-        "https://jpsc.gov.in/data/Press_Release_15_23_dated_08_12_2025.pdf",
-        "https://jpsc.gov.in/data/Press_Release_05_26_dated_09_05_2026.pdf",
-        "https://jpsc.gov.in/data/Press_Release_dated_18_12_2025.pdf",
-        "https://jpsc.gov.in/data/Advertisement_03_26_dated_13_02_2026.pdf"
-      ],
-      "sourceId": "psc-jh",
-      "sourceName": "Jpsc",
-      "dept": "Jpsc",
-      "state": "All India",
-      "category": "teaching",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "088741e1a15861a1",
-      "title": "Recruitment of Lecturer in Govt. Polytechnic/Govt. Women's Polytechnic(Regular), Advt.No.-04/2026",
-      "link": "https://jpsc.gov.in/exam_files.php?id=13042",
-      "publishedAt": "2026-07-02T12:21:11.057314Z",
-      "summary": "JPSC JHARKHAND PUBLIC SERVICE COMMISSION TENTATIVE DATES FOR UPCOMING EXAMS -2026 1 OF 1 SL. No. Name of Examination Nature of Examination Tentative Date for P.T./Main/Document Verification/Interview Duration 1 Recruitment of Child Development Project Officer,Advt.No.-21/2023 INTERVIEW 07th, 08th and 09th January 2026 03 Days 2 Recruitment of 6th limited Deputy Collector, Advt. No.11/2018 WRITTEN …",
-      "pdfUrls": [
-        "https://jpsc.gov.in/data/Exam_Calendar_2026_dtd_06_01_2026.pdf",
-        "https://jpsc.gov.in/data/Press_Release_and_Instructions_dated_28_04_2026.pdf",
-        "https://jpsc.gov.in/data/Press_Release_15_23_dated_08_12_2025.pdf",
-        "https://jpsc.gov.in/data/Press_Release_05_26_dated_09_05_2026.pdf",
-        "https://jpsc.gov.in/data/Press_Release_dated_18_12_2025.pdf",
-        "https://jpsc.gov.in/data/Advertisement_04_26_dated_13_02_2026.pdf"
-      ],
-      "sourceId": "psc-jh",
-      "sourceName": "Jpsc",
-      "dept": "Jpsc",
-      "state": "All India",
-      "category": "teaching",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "55bdf109ab82000c",
-      "title": "Recruitment of Jharkhand Combined Civil Services Examination (Backlog)-2025 Advt.No.-05/2026",
-      "link": "https://jpsc.gov.in/exam_files.php?id=13043",
-      "publishedAt": "2026-07-02T12:21:06.225379Z",
-      "summary": "JPSC JHARKHAND PUBLIC SERVICE COMMISSION TENTATIVE DATES FOR UPCOMING EXAMS -2026 1 OF 1 SL. No. Name of Examination Nature of Examination Tentative Date for P.T./Main/Document Verification/Interview Duration 1 Recruitment of Child Development Project Officer,Advt.No.-21/2023 INTERVIEW 07th, 08th and 09th January 2026 03 Days 2 Recruitment of 6th limited Deputy Collector, Advt. No.11/2018 WRITTEN …",
-      "pdfUrls": [
-        "https://jpsc.gov.in/data/Exam_Calendar_2026_dtd_06_01_2026.pdf",
-        "https://jpsc.gov.in/data/Press_Release_and_Instructions_dated_28_04_2026.pdf",
-        "https://jpsc.gov.in/data/Press_Release_15_23_dated_08_12_2025.pdf",
-        "https://jpsc.gov.in/data/Press_Release_05_26_dated_09_05_2026.pdf",
-        "https://jpsc.gov.in/data/Press_Release_dated_18_12_2025.pdf",
-        "https://jpsc.gov.in/data/Advertisement_05_26_dated_18_03_2026.pdf"
-      ],
-      "sourceId": "psc-jh",
-      "sourceName": "Jpsc",
-      "dept": "Jpsc",
-      "state": "All India",
-      "category": "state",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "69a97bd5567cffd6",
-      "title": "Recruitment of Jharkhand Combined Civil Services Examination (Backlog)-2023 Advt.No.-06/2026",
-      "link": "https://jpsc.gov.in/exam_files.php?id=13044",
-      "publishedAt": "2026-07-02T12:21:02.046973Z",
-      "summary": "JPSC JHARKHAND PUBLIC SERVICE COMMISSION TENTATIVE DATES FOR UPCOMING EXAMS -2026 1 OF 1 SL. No. Name of Examination Nature of Examination Tentative Date for P.T./Main/Document Verification/Interview Duration 1 Recruitment of Child Development Project Officer,Advt.No.-21/2023 INTERVIEW 07th, 08th and 09th January 2026 03 Days 2 Recruitment of 6th limited Deputy Collector, Advt. No.11/2018 WRITTEN …",
-      "pdfUrls": [
-        "https://jpsc.gov.in/data/Exam_Calendar_2026_dtd_06_01_2026.pdf",
-        "https://jpsc.gov.in/data/Press_Release_and_Instructions_dated_28_04_2026.pdf",
-        "https://jpsc.gov.in/data/Press_Release_15_23_dated_08_12_2025.pdf",
-        "https://jpsc.gov.in/data/Press_Release_05_26_dated_09_05_2026.pdf",
-        "https://jpsc.gov.in/data/Press_Release_dated_18_12_2025.pdf",
-        "https://jpsc.gov.in/data/Advertisement_06_26_dated_18_03_2026.pdf"
-      ],
-      "sourceId": "psc-jh",
-      "sourceName": "Jpsc",
-      "dept": "Jpsc",
-      "state": "All India",
-      "category": "state",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "5151aedc1e3767c3",
-      "title": "Recruitment of Assistant Professor in Medical Colleges(Super Specialist)Department Advt.No.-07/2026",
-      "link": "https://jpsc.gov.in/exam_files.php?id=13045",
-      "publishedAt": "2026-07-02T12:20:59.395184Z",
-      "summary": "JPSC JHARKHAND PUBLIC SERVICE COMMISSION TENTATIVE DATES FOR UPCOMING EXAMS -2026 1 OF 1 SL. No. Name of Examination Nature of Examination Tentative Date for P.T./Main/Document Verification/Interview Duration 1 Recruitment of Child Development Project Officer,Advt.No.-21/2023 INTERVIEW 07th, 08th and 09th January 2026 03 Days 2 Recruitment of 6th limited Deputy Collector, Advt. No.11/2018 WRITTEN …",
-      "pdfUrls": [
-        "https://jpsc.gov.in/data/Exam_Calendar_2026_dtd_06_01_2026.pdf",
-        "https://jpsc.gov.in/data/Press_Release_and_Instructions_dated_28_04_2026.pdf",
-        "https://jpsc.gov.in/data/Press_Release_15_23_dated_08_12_2025.pdf",
-        "https://jpsc.gov.in/data/Press_Release_05_26_dated_09_05_2026.pdf",
-        "https://jpsc.gov.in/data/Press_Release_dated_18_12_2025.pdf",
-        "https://jpsc.gov.in/data/Advertisement_07_26_dated_15_04_2026.pdf"
-      ],
-      "sourceId": "psc-jh",
-      "sourceName": "Jpsc",
-      "dept": "Jpsc",
-      "state": "All India",
-      "category": "teaching",
       "fetchMethod": "live-jobs-supplement"
     },
     {

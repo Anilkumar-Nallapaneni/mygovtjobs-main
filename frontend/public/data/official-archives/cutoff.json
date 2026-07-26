@@ -1,237 +1,23 @@
 {
-  "generatedAt": "2026-07-26T14:49:02.772Z",
+  "generatedAt": "2026-07-26T17:36:59.607Z",
   "count": 112,
   "items": [
     {
-      "id": "c70f8b20c685365f",
-      "title": "Results & Cutoffs",
-      "link": "https://www.rrbbbs.gov.in/results.php",
+      "id": "246cf795a95a5a9f",
+      "title": "Cut-off Marks",
+      "link": "https://www.upsc.gov.in/examinations/cutoff-marks--",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
-      "sourceId": "rrb-bbs",
-      "sourceName": "Railway Recruitment Board (RRB) — Bhubaneswar",
-      "dept": "Railway Recruitment Board (RRB) — Bhubaneswar",
+      "sourceId": "upsc-e-admit-hub",
+      "sourceName": "UPSC — e-Admit cards",
+      "dept": "Union Public Service Commission",
       "state": "All India",
-      "category": "railways",
+      "category": "upsc",
       "stateIds": [
         "all"
       ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "a145835aa3e3662e",
-      "title": "Result and cut off marks of candidates shortlisted for Document Verification and Medical Examination.",
-      "link": "https://www.rrbbbs.gov.in/documentexplorer.php?prmt=TVRrd09RPT0=",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "rrb-bbs",
-      "sourceName": "Railway Recruitment Board (RRB) — Bhubaneswar",
-      "dept": "Railway Recruitment Board (RRB) — Bhubaneswar",
-      "state": "All India",
-      "category": "railways",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "42e4535f46025e24",
-      "title": "Result, cut off marks and list of shortlisted candidates for Document Verification and Medical Examination for Cat. No. 1.",
-      "link": "https://www.rrbbbs.gov.in/documentexplorer.php?prmt=TVRnM09BPT0=",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "rrb-bbs",
-      "sourceName": "Railway Recruitment Board (RRB) — Bhubaneswar",
-      "dept": "Railway Recruitment Board (RRB) — Bhubaneswar",
-      "state": "All India",
-      "category": "railways",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "9542dbf7478f976f",
-      "title": "Result & cut off marks of CBT and list of candidates shortlisted for Document Verification & Medical Examination for various posts of Technicians Grade III.",
-      "link": "https://www.rrbbbs.gov.in/documentexplorer.php?prmt=TVRnM01nPT0=",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "rrb-bbs",
-      "sourceName": "Railway Recruitment Board (RRB) — Bhubaneswar",
-      "dept": "Railway Recruitment Board (RRB) — Bhubaneswar",
-      "state": "All India",
-      "category": "railways",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "4630c5cfdb60d443",
-      "title": "Result & cut off marks of CBT and list of candidates shortlisted for Document Verification & Medical Examination for various posts of Paramedical category.",
-      "link": "https://www.rrbbbs.gov.in/documentexplorer.php?prmt=TVRnMk9RPT0=",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "rrb-bbs",
-      "sourceName": "Railway Recruitment Board (RRB) — Bhubaneswar",
-      "dept": "Railway Recruitment Board (RRB) — Bhubaneswar",
-      "state": "All India",
-      "category": "railways",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "0d099f682edb16f0",
-      "title": "Result & cut off marks of CBT and list of candidates shortlisted for Document Verification & Medical Examination for the post of Technician Gr. I (Signal).",
-      "link": "https://www.rrbbbs.gov.in/documentexplorer.php?prmt=TVRnMk1nPT0=",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "rrb-bbs",
-      "sourceName": "Railway Recruitment Board (RRB) — Bhubaneswar",
-      "dept": "Railway Recruitment Board (RRB) — Bhubaneswar",
-      "state": "All India",
-      "category": "railways",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "8a44e75373a031ad",
-      "title": "Result and cut off marks of CBT-1 and shortlisting of candidates for CBT 2.",
-      "link": "https://www.rrbbbs.gov.in/documentexplorer.php?prmt=TVRnMU5BPT0=",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "rrb-bbs",
-      "sourceName": "Railway Recruitment Board (RRB) — Bhubaneswar",
-      "dept": "Railway Recruitment Board (RRB) — Bhubaneswar",
-      "state": "All India",
-      "category": "railways",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "0dcfb39857e6ff5b",
-      "title": "Result & cut-off marks of CBT and shortlisting of candidates for CBAT.",
-      "link": "https://www.rrbbbs.gov.in/documentexplorer.php?prmt=TVRnME9BPT0=",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "rrb-bbs",
-      "sourceName": "Railway Recruitment Board (RRB) — Bhubaneswar",
-      "dept": "Railway Recruitment Board (RRB) — Bhubaneswar",
-      "state": "All India",
-      "category": "railways",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "244ec13845dcbb28",
-      "title": "Cut-Off",
-      "link": "https://www.rrbajmer.gov.in/Upload_PDF/Publishing_Report_Consolidated_Cut_Off-639192987467706998.pdf",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [
-        "https://www.rrbajmer.gov.in/Upload_PDF/Publishing_Report_Consolidated_Cut_Off-639192987467706998.pdf"
-      ],
-      "sourceId": "rrb-ajmer",
-      "sourceName": "Railway Recruitment Board (RRB) — Ajmer",
-      "dept": "Railway Recruitment Board (RRB) — Ajmer",
-      "state": "All India",
-      "category": "railways",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "f79eeab230ea33ee",
-      "title": "Cut-Off%20Cat%2029%20Result%20against%20%20CEN%2007-2024%20(M&Iso).pdf",
-      "link": "https://www.rrbguwahati.gov.in/documents/Cut-Off%20Cat%2029%20Result%20against%20%20CEN%2007-2024%20(M&Iso).pdf",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [
-        "https://www.rrbguwahati.gov.in/documents/Cut-Off%20Cat%2029%20Result%20against%20%20CEN%2007-2024%20(M&Iso).pdf"
-      ],
-      "sourceId": "rrb-guwahati",
-      "sourceName": "Railway Recruitment Board (RRB) — Guwahati",
-      "dept": "Railway Recruitment Board (RRB) — Guwahati",
-      "state": "All India",
-      "category": "railways",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "0b0e155c2600adec",
-      "title": "Cut-Off%20Cat%2058%20Result%20against%20%20CEN%2007-2024%20(M&Iso).pdf",
-      "link": "https://www.rrbguwahati.gov.in/documents/Cut-Off%20Cat%2058%20Result%20against%20%20CEN%2007-2024%20(M&Iso).pdf",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [
-        "https://www.rrbguwahati.gov.in/documents/Cut-Off%20Cat%2058%20Result%20against%20%20CEN%2007-2024%20(M&Iso).pdf"
-      ],
-      "sourceId": "rrb-guwahati",
-      "sourceName": "Railway Recruitment Board (RRB) — Guwahati",
-      "dept": "Railway Recruitment Board (RRB) — Guwahati",
-      "state": "All India",
-      "category": "railways",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "3e31cb0d1211e99e",
-      "title": "A2Exam%20Group%2001%20-%20Level%208&7-RRB-20-Publish_Report%20cutoff.pdf",
-      "link": "https://www.rrbguwahati.gov.in/documents/A2Exam%20Group%2001%20-%20Level%208&7-RRB-20-Publish_Report%20cutoff.pdf",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [
-        "https://www.rrbguwahati.gov.in/documents/A2Exam%20Group%2001%20-%20Level%208&7-RRB-20-Publish_Report%20cutoff.pdf"
-      ],
-      "sourceId": "rrb-guwahati",
-      "sourceName": "Railway Recruitment Board (RRB) — Guwahati",
-      "dept": "Railway Recruitment Board (RRB) — Guwahati",
-      "state": "All India",
-      "category": "railways",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "bfafb7f135d523b5",
-      "title": "E2Exam%20Group%2012%20-%20Level%206-RRB-20-Publish_Report%20%20cutoff.pdf",
-      "link": "https://www.rrbguwahati.gov.in/documents/E2Exam%20Group%2012%20-%20Level%206-RRB-20-Publish_Report%20%20cutoff.pdf",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [
-        "https://www.rrbguwahati.gov.in/documents/E2Exam%20Group%2012%20-%20Level%206-RRB-20-Publish_Report%20%20cutoff.pdf"
-      ],
-      "sourceId": "rrb-guwahati",
-      "sourceName": "Railway Recruitment Board (RRB) — Guwahati",
-      "dept": "Railway Recruitment Board (RRB) — Guwahati",
-      "state": "All India",
-      "category": "railways",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
+      "fetchMethod": "html-listing"
     },
     {
       "id": "12f8dc6d2e647164",
@@ -325,6 +111,70 @@
       "dept": "Mpscmanipur",
       "state": "All India",
       "category": "state",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "bfafb7f135d523b5",
+      "title": "E2Exam%20Group%2012%20-%20Level%206-RRB-20-Publish_Report%20%20cutoff",
+      "link": "https://www.rrbguwahati.gov.in/documents/E2Exam%20Group%2012%20-%20Level%206-RRB-20-Publish_Report%20%20cutoff.pdf",
+      "publishedAt": "2026-07-07T13:55:28.810170Z",
+      "summary": "CAT_NO Railway_Unit UR SC ST OBC EWS ESM R-VI R-HI R-LD R-OD R-MD B-VI B-HI B-LD B-OD B-MD 60 NFR 79.12458 75.42088 68.01346 76.43098 75.42088 44.44444 60.94276 67.00336 61 NFR 82.15488 76.43098 70.03367 81.48148 62 NFR 80.80808 78.78788 78.78788 64 NFR 52.52525 65 NFR 79.79798 74.74747 79.46128 76.43098 61.27946 Date: 08/Dec/2025 RAILWAY RECRUITMENT BOARD / GUWAHATI शिक्षण कौिल परीक्षा के शलए चुन…",
+      "pdfUrls": [
+        "https://www.rrbguwahati.gov.in/documents/E2Exam%20Group%2012%20-%20Level%206-RRB-20-Publish_Report%20%20cutoff.pdf"
+      ],
+      "sourceId": "rrb-guwahati",
+      "sourceName": "Railway Recruitment Board (RRB) — Guwahati",
+      "dept": "Railway Recruitment Board (RRB) — Guwahati",
+      "state": "All India",
+      "category": "railways",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "3e31cb0d1211e99e",
+      "title": "A2Exam%20Group%2001%20-%20Level%208&7-RRB-20-Publish_Report%20cutoff",
+      "link": "https://www.rrbguwahati.gov.in/documents/A2Exam%20Group%2001%20-%20Level%208&7-RRB-20-Publish_Report%20cutoff.pdf",
+      "publishedAt": "2026-07-07T13:55:19.842103Z",
+      "summary": "CAT_NO Railway_Unit UR SC ST OBC EWS ESM R-VI R-HI R-LD R-OD R-MD B-VI B-HI B-LD B-OD B-MD 26 NFR 59.93266 54.20876 39 NFR 62.28957 56.56566 50 NFR 71.71717 65.31987 57.57576 69.36027 Date: 08/Dec/2025 RAILWAY RECRUITMENT BOARD / GUWAHATI प्रदर्शन परीक्षण के लिए चुने गए उम्मीदवार Candidates shortlisted for Performance Test रेिवे भर्ती बोर्श - गुवाहाटी RAILWAY RECRUITMENT BOARD - GUWAHATI सीईएन संख…",
+      "pdfUrls": [
+        "https://www.rrbguwahati.gov.in/documents/A2Exam%20Group%2001%20-%20Level%208&7-RRB-20-Publish_Report%20cutoff.pdf"
+      ],
+      "sourceId": "rrb-guwahati",
+      "sourceName": "Railway Recruitment Board (RRB) — Guwahati",
+      "dept": "Railway Recruitment Board (RRB) — Guwahati",
+      "state": "All India",
+      "category": "railways",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "0b0e155c2600adec",
+      "title": "Cut-Off%20Cat%2058%20Result%20against%20%20CEN%2007-2024%20(M&Iso)",
+      "link": "https://www.rrbguwahati.gov.in/documents/Cut-Off%20Cat%2058%20Result%20against%20%20CEN%2007-2024%20(M&Iso).pdf",
+      "publishedAt": "2026-07-07T13:55:05.951187Z",
+      "summary": "CAT_NO Railway_Unit UR SC ST OBC EWS ESM R-VI R-HI R-LD R-OD R-MD B-VI B-HI B-LD B-OD B-MD 58 NFR 66.66667 Date: 14/MAY/2026 RAILWAY RECRUITMENT BOARD / GUWAHATI शिक्षण कौिल परीक्षा के शलए चुने गए उम्मीदवार Candidates shortlisted for Teaching skill Test रेलवे भर्ती बोर्ड - गुवाहाटी RAILWAY RECRUITMENT BOARD - GUWAHATI सीईएन संख्या 07/2024 CEN NO 07/2024 (शमननस्टीरीयल एवं आइसोलेटेर् कोटटयााँ/ Minis…",
+      "pdfUrls": [
+        "https://www.rrbguwahati.gov.in/documents/Cut-Off%20Cat%2058%20Result%20against%20%20CEN%2007-2024%20(M&Iso).pdf"
+      ],
+      "sourceId": "rrb-guwahati",
+      "sourceName": "Railway Recruitment Board (RRB) — Guwahati",
+      "dept": "Railway Recruitment Board (RRB) — Guwahati",
+      "state": "All India",
+      "category": "railways",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "f79eeab230ea33ee",
+      "title": "Cut-Off%20Cat%2029%20Result%20against%20%20CEN%2007-2024%20(M&Iso)",
+      "link": "https://www.rrbguwahati.gov.in/documents/Cut-Off%20Cat%2029%20Result%20against%20%20CEN%2007-2024%20(M&Iso).pdf",
+      "publishedAt": "2026-07-07T13:55:02.934582Z",
+      "summary": "CAT_NO Railway_Unit UR SC ST OBC EWS ESM R-VI R-HI R-LD R-OD R-MD B-VI B-HI B-LD B-OD B-MD 29 NFR 81.81818 69.36027 64.64646 77.77778 73.73737 59.25926 Date: 14/May/2026 RAILWAY RECRUITMENT BOARD / GUWAHATI शिक्षण कौिल परीक्षा के शलए चुने गए उम्मीदवार Candidates shortlisted for Teaching skill Test रेलवे भर्ती बोर्ड - गुवाहाटी RAILWAY RECRUITMENT BOARD - GUWAHATI सीईएन संख्या 07/2024 CEN NO 07/2024…",
+      "pdfUrls": [
+        "https://www.rrbguwahati.gov.in/documents/Cut-Off%20Cat%2029%20Result%20against%20%20CEN%2007-2024%20(M&Iso).pdf"
+      ],
+      "sourceId": "rrb-guwahati",
+      "sourceName": "Railway Recruitment Board (RRB) — Guwahati",
+      "dept": "Railway Recruitment Board (RRB) — Guwahati",
+      "state": "All India",
+      "category": "railways",
       "fetchMethod": "live-jobs-supplement"
     },
     {
@@ -536,6 +386,22 @@
       "fetchMethod": "live-jobs-supplement"
     },
     {
+      "id": "cd47006e6d0887bc",
+      "title": "Standardization procedure for Degree Level Common Preliminary Examinations, 2025",
+      "link": "https://www.keralapsc.gov.in/sites/default/files/inline-files/standardisation_report_degree_prelims_2025_0.pdf",
+      "publishedAt": "2026-06-23T13:12:09.850537Z",
+      "summary": "Report of the Committee of the Statisticians, constituted by Kerala Public Service Commission, to study the standardization procedure for Degree Level Common Preliminary Examinations, 2025 The Kerala Public Service Commission constituted the committee to standardize the marks obtained by candidates in preliminary examinations to short list candidates who secured marks above a cut-off mark for the …",
+      "pdfUrls": [
+        "https://www.keralapsc.gov.in/sites/default/files/inline-files/standardisation_report_degree_prelims_2025_0.pdf"
+      ],
+      "sourceId": "psc-kl",
+      "sourceName": "Kerala PSC",
+      "dept": "Kerala PSC",
+      "state": "All India",
+      "category": "state",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
       "id": "d8980b7a971c14ad",
       "title": "Important Final Stage - 152/2024-25 (Industries Officer (MSME), Class-2, Industries & Mines Department) Click here to s",
       "link": "https://gpsc.gujarat.gov.in/Documents/AdvertismentDocument/FR-_152_24-25.pdf",
@@ -696,20 +562,159 @@
       "fetchMethod": "live-jobs-supplement"
     },
     {
-      "id": "cd47006e6d0887bc",
-      "title": "Standardization procedure for Degree Level Common Preliminary Examinations, 2025",
-      "link": "https://www.keralapsc.gov.in/sites/default/files/inline-files/standardisation_report_degree_prelims_2025_0.pdf",
-      "publishedAt": "2026-06-23T13:12:09.850537Z",
-      "summary": "Report of the Committee of the Statisticians, constituted by Kerala Public Service Commission, to study the standardization procedure for Degree Level Common Preliminary Examinations, 2025 The Kerala Public Service Commission constituted the committee to standardize the marks obtained by candidates in preliminary examinations to short list candidates who secured marks above a cut-off mark for the …",
-      "pdfUrls": [
-        "https://www.keralapsc.gov.in/sites/default/files/inline-files/standardisation_report_degree_prelims_2025_0.pdf"
-      ],
-      "sourceId": "psc-kl",
-      "sourceName": "Kerala PSC",
-      "dept": "Kerala PSC",
+      "id": "c70f8b20c685365f",
+      "title": "Results & Cutoffs",
+      "link": "https://www.rrbbbs.gov.in/results.php",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "rrb-bbs",
+      "sourceName": "Railway Recruitment Board (RRB) — Bhubaneswar",
+      "dept": "Railway Recruitment Board (RRB) — Bhubaneswar",
       "state": "All India",
-      "category": "state",
-      "fetchMethod": "live-jobs-supplement"
+      "category": "railways",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "a145835aa3e3662e",
+      "title": "Result and cut off marks of candidates shortlisted for Document Verification and Medical Examination.",
+      "link": "https://www.rrbbbs.gov.in/documentexplorer.php?prmt=TVRrd09RPT0=",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "rrb-bbs",
+      "sourceName": "Railway Recruitment Board (RRB) — Bhubaneswar",
+      "dept": "Railway Recruitment Board (RRB) — Bhubaneswar",
+      "state": "All India",
+      "category": "railways",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "42e4535f46025e24",
+      "title": "Result, cut off marks and list of shortlisted candidates for Document Verification and Medical Examination for Cat. No. 1.",
+      "link": "https://www.rrbbbs.gov.in/documentexplorer.php?prmt=TVRnM09BPT0=",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "rrb-bbs",
+      "sourceName": "Railway Recruitment Board (RRB) — Bhubaneswar",
+      "dept": "Railway Recruitment Board (RRB) — Bhubaneswar",
+      "state": "All India",
+      "category": "railways",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "9542dbf7478f976f",
+      "title": "Result & cut off marks of CBT and list of candidates shortlisted for Document Verification & Medical Examination for various posts of Technicians Grade III.",
+      "link": "https://www.rrbbbs.gov.in/documentexplorer.php?prmt=TVRnM01nPT0=",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "rrb-bbs",
+      "sourceName": "Railway Recruitment Board (RRB) — Bhubaneswar",
+      "dept": "Railway Recruitment Board (RRB) — Bhubaneswar",
+      "state": "All India",
+      "category": "railways",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "4630c5cfdb60d443",
+      "title": "Result & cut off marks of CBT and list of candidates shortlisted for Document Verification & Medical Examination for various posts of Paramedical category.",
+      "link": "https://www.rrbbbs.gov.in/documentexplorer.php?prmt=TVRnMk9RPT0=",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "rrb-bbs",
+      "sourceName": "Railway Recruitment Board (RRB) — Bhubaneswar",
+      "dept": "Railway Recruitment Board (RRB) — Bhubaneswar",
+      "state": "All India",
+      "category": "railways",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "0d099f682edb16f0",
+      "title": "Result & cut off marks of CBT and list of candidates shortlisted for Document Verification & Medical Examination for the post of Technician Gr. I (Signal).",
+      "link": "https://www.rrbbbs.gov.in/documentexplorer.php?prmt=TVRnMk1nPT0=",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "rrb-bbs",
+      "sourceName": "Railway Recruitment Board (RRB) — Bhubaneswar",
+      "dept": "Railway Recruitment Board (RRB) — Bhubaneswar",
+      "state": "All India",
+      "category": "railways",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "8a44e75373a031ad",
+      "title": "Result and cut off marks of CBT-1 and shortlisting of candidates for CBT 2.",
+      "link": "https://www.rrbbbs.gov.in/documentexplorer.php?prmt=TVRnMU5BPT0=",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "rrb-bbs",
+      "sourceName": "Railway Recruitment Board (RRB) — Bhubaneswar",
+      "dept": "Railway Recruitment Board (RRB) — Bhubaneswar",
+      "state": "All India",
+      "category": "railways",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "0dcfb39857e6ff5b",
+      "title": "Result & cut-off marks of CBT and shortlisting of candidates for CBAT.",
+      "link": "https://www.rrbbbs.gov.in/documentexplorer.php?prmt=TVRnME9BPT0=",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "rrb-bbs",
+      "sourceName": "Railway Recruitment Board (RRB) — Bhubaneswar",
+      "dept": "Railway Recruitment Board (RRB) — Bhubaneswar",
+      "state": "All India",
+      "category": "railways",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "244ec13845dcbb28",
+      "title": "Cut-Off",
+      "link": "https://www.rrbajmer.gov.in/Upload_PDF/Publishing_Report_Consolidated_Cut_Off-639192987467706998.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://www.rrbajmer.gov.in/Upload_PDF/Publishing_Report_Consolidated_Cut_Off-639192987467706998.pdf"
+      ],
+      "sourceId": "rrb-ajmer",
+      "sourceName": "Railway Recruitment Board (RRB) — Ajmer",
+      "dept": "Railway Recruitment Board (RRB) — Ajmer",
+      "state": "All India",
+      "category": "railways",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
     },
     {
       "id": "8d0c4e0adf87f525",
@@ -726,23 +731,6 @@
       "state": "All India",
       "category": "railways",
       "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "246cf795a95a5a9f",
-      "title": "Cut-off Marks",
-      "link": "https://www.upsc.gov.in/examinations/cutoff-marks--",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "upsc-e-admit-hub",
-      "sourceName": "UPSC — e-Admit cards",
-      "dept": "Union Public Service Commission",
-      "state": "All India",
-      "category": "upsc",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
     },
     {
       "id": "950adc952395e3bb",

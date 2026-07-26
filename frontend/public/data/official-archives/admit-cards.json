@@ -1,7 +1,58 @@
 {
-  "generatedAt": "2026-07-26T14:49:02.772Z",
-  "count": 162,
+  "generatedAt": "2026-07-26T17:36:59.607Z",
+  "count": 160,
   "items": [
+    {
+      "id": "dab406e23a6537a1",
+      "title": "E-Admit Cards for various Recruitment Posts",
+      "link": "https://upsconline.gov.in/oraadmitcard/",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "upsc-e-admit-hub",
+      "sourceName": "UPSC — e-Admit cards",
+      "dept": "Union Public Service Commission",
+      "state": "All India",
+      "category": "upsc",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "99c9f94d8e7c5a15",
+      "title": "e-Admit Cards For Computer Based Skill Test For Various Recruitment Posts (ORA)",
+      "link": "https://upsconline.gov.in/eadmitcard/admitcard_steno_2024/",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "upsc-e-admit-hub",
+      "sourceName": "UPSC — e-Admit cards",
+      "dept": "Union Public Service Commission",
+      "state": "All India",
+      "category": "upsc",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "7749ebd16d22dad7",
+      "title": "E- Admit Cards",
+      "link": "https://www.upsc.gov.in/e-admit-cards",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "upsc-e-admit-hub",
+      "sourceName": "UPSC — e-Admit cards",
+      "dept": "Union Public Service Commission",
+      "state": "All India",
+      "category": "upsc",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
     {
       "id": "206ead0ac32afa2e",
       "title": "NOTICE REGARDING ADMIT CARD FOR ADVT. NO. A-1/E-1/2025, ASSISTANT CONSERVATOR OF..",
@@ -37,23 +88,6 @@
       "fetchMethod": "html-listing"
     },
     {
-      "id": "158bb00a9699c472",
-      "title": "Admit Cards",
-      "link": "https://mppsc.mp.gov.in/Admitcard",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-mp",
-      "sourceName": "Madhya Pradesh PSC (MPPSC)",
-      "dept": "Madhya Pradesh PSC (MPPSC)",
-      "state": "Madhya Pradesh",
-      "category": "state",
-      "stateIds": [
-        "mp"
-      ],
-      "fetchMethod": "html"
-    },
-    {
       "id": "d40841a3ad176246",
       "title": "25 Jul 2026 LIST OF SELECTED CANDIDATES IN ADVT. NO. A-7/E-1/2021, U.P. TECHNICAL EDUCATION (TEACHING) SERVICE EXAMINATION-2021, LECT. ARCHITECTURE, PHARMACY, TE",
       "link": "https://uppsc.up.nic.in/Open_PDF.aspx?I4PnQ0tBagloISrijFpWKFd9gEzGHmbY",
@@ -81,64 +115,6 @@
       "dept": "Mpsc Mizoram",
       "state": "All India",
       "category": "state",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "99c9f94d8e7c5a15",
-      "title": "e-Admit Cards For Computer Based Skill Test For Various Recruitment Posts (ORA)",
-      "link": "https://upsconline.gov.in/eadmitcard/admitcard_steno_2024/",
-      "publishedAt": "2026-07-23T06:56:47.754379Z",
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "upsc-e-admit-hub",
-      "sourceName": "UPSC — e-Admit cards",
-      "dept": "UPSC — e-Admit cards",
-      "state": "All India",
-      "category": "upsc",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "dab406e23a6537a1",
-      "title": "E-Admit Cards for various Recruitment Posts",
-      "link": "https://upsconline.gov.in/oraadmitcard/",
-      "publishedAt": "2026-07-23T06:56:42.336901Z",
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "upsc-e-admit-hub",
-      "sourceName": "UPSC — e-Admit cards",
-      "dept": "UPSC — e-Admit cards",
-      "state": "All India",
-      "category": "upsc",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "6db5c4ba16d574a6",
-      "title": "Recruitment cases kept on hold on account of Pending Litigations",
-      "link": "https://www.upsc.gov.in/recruitment/recruitment-cases-kept-hold-account-pending-litigations",
-      "publishedAt": "2026-07-23T06:50:30.784109Z",
-      "summary": "Union Public Service Commission Recruitment Branch *** Recruitment Cases kept on hold on account of pending litigation Sl. No. File No. Subject No. of Posts 1. F.1/70(12)/2021-R.1 Assistant Professor (Unani), IlmulAdvia, Government of NCT of Delhi 01 2. F.1/78(20)/2021-R.1 Assistant Professor (Unani), Qabalatwa Amraze Niswan, Government of NCT of Delhi 02 3. F.1/138(39)/2023-R.1 Professor (Pharmac…",
-      "pdfUrls": [
-        "https://www.upsc.gov.in/sites/default/files/Rectt_PendingLitigation_Eng_171225.pdf"
-      ],
-      "sourceId": "upsc-e-admit-hub",
-      "sourceName": "UPSC — e-Admit cards",
-      "dept": "UPSC — e-Admit cards",
-      "state": "All India",
-      "category": "upsc",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "2359d8c2c97ce9ef",
-      "title": "status recruitment cases advertisementwise",
-      "link": "https://www.upsc.gov.in/recruitment/status-recruitment-cases-advertisementwise",
-      "publishedAt": "2026-07-23T06:49:47.575820Z",
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "upsc-e-admit-hub",
-      "sourceName": "UPSC — e-Admit cards",
-      "dept": "UPSC — e-Admit cards",
-      "state": "All India",
-      "category": "upsc",
       "fetchMethod": "live-jobs-supplement"
     },
     {
@@ -1589,6 +1565,23 @@
       "fetchMethod": "live-jobs-supplement"
     },
     {
+      "id": "158bb00a9699c472",
+      "title": "Admit Cards",
+      "link": "https://mppsc.mp.gov.in/Admitcard",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-mp",
+      "sourceName": "Madhya Pradesh PSC (MPPSC)",
+      "dept": "Madhya Pradesh PSC (MPPSC)",
+      "state": "Madhya Pradesh",
+      "category": "state",
+      "stateIds": [
+        "mp"
+      ],
+      "fetchMethod": "html"
+    },
+    {
       "id": "20b56c13b7d29dbc",
       "title": "उत्तर प्रदेश होमगार्ड्स के पदों पर एनरोलमेंट-2025 जनपद-सहारनपुर, शामली, मुजफ्फरनगर, मेरठ, गाजियाबाद, बुलन्दशहर, हापुड़, गौतमबुद्धनगर व बागपत में निर्धारित अभिलेखों की संवीक्षा एवं शारीरिक मानक परीक्षा (डीवी/पीएसटी) की तिथियों (दिनांक 04-08-2026, 05-08-2026 व 06-08-2026) में परिवर्तन हेतु महत्वपूर्ण सूचना एवं संशोधित प्रवेश पत्र डाउनलोड किये जाने विषयक ।",
       "link": "https://uppbpb.gov.in/FilesUploaded/Notice/img20260713_170704299779d63a-5d71-4b27-8b1a-cdf96f7616ff.pdf",
@@ -1640,23 +1633,6 @@
       "state": "All India",
       "category": "railways",
       "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "7749ebd16d22dad7",
-      "title": "E- Admit Cards",
-      "link": "https://www.upsc.gov.in/e-admit-cards",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "upsc-e-admit-hub",
-      "sourceName": "UPSC — e-Admit cards",
-      "dept": "Union Public Service Commission",
-      "state": "All India",
-      "category": "upsc",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
     },
     {
       "id": "b101927674f4f0fa",

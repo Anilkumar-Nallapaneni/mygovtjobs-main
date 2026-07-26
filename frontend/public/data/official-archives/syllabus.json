@@ -1,40 +1,23 @@
 {
-  "generatedAt": "2026-07-26T14:49:02.772Z",
+  "generatedAt": "2026-07-26T17:36:59.607Z",
   "count": 39,
   "items": [
     {
-      "id": "85b1767449295db8",
-      "title": "Postwise Syllabus",
-      "link": "https://www.keralapsc.gov.in/syllabus1",
+      "id": "19df6addea51f1a1",
+      "title": "Revised Syllabus and Scheme",
+      "link": "https://www.upsc.gov.in/examinations/revised-syllabus-scheme",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
-      "sourceId": "psc-kl",
-      "sourceName": "Kerala PSC",
-      "dept": "Kerala PSC",
-      "state": "Kerala",
-      "category": "state",
+      "sourceId": "upsc-e-admit-hub",
+      "sourceName": "UPSC — e-Admit cards",
+      "dept": "Union Public Service Commission",
+      "state": "All India",
+      "category": "upsc",
       "stateIds": [
-        "kl"
+        "all"
       ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "22dd56168d2566c0",
-      "title": "Syllabus and Scheme",
-      "link": "https://mppsc.mp.gov.in/Syllabus",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-mp",
-      "sourceName": "Madhya Pradesh PSC (MPPSC)",
-      "dept": "Madhya Pradesh PSC (MPPSC)",
-      "state": "Madhya Pradesh",
-      "category": "state",
-      "stateIds": [
-        "mp"
-      ],
-      "fetchMethod": "html"
+      "fetchMethod": "html-listing"
     },
     {
       "id": "9423bfb2f1b6b8da",
@@ -312,21 +295,38 @@
       "fetchMethod": "live-jobs-supplement"
     },
     {
-      "id": "19df6addea51f1a1",
-      "title": "Revised Syllabus and Scheme",
-      "link": "https://www.upsc.gov.in/examinations/revised-syllabus-scheme",
+      "id": "85b1767449295db8",
+      "title": "Postwise Syllabus",
+      "link": "https://www.keralapsc.gov.in/syllabus1",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
-      "sourceId": "upsc-e-admit-hub",
-      "sourceName": "UPSC — e-Admit cards",
-      "dept": "Union Public Service Commission",
-      "state": "All India",
-      "category": "upsc",
+      "sourceId": "psc-kl",
+      "sourceName": "Kerala PSC",
+      "dept": "Kerala PSC",
+      "state": "Kerala",
+      "category": "state",
       "stateIds": [
-        "all"
+        "kl"
       ],
-      "fetchMethod": "html-listing"
+      "fetchMethod": "html"
+    },
+    {
+      "id": "22dd56168d2566c0",
+      "title": "Syllabus and Scheme",
+      "link": "https://mppsc.mp.gov.in/Syllabus",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-mp",
+      "sourceName": "Madhya Pradesh PSC (MPPSC)",
+      "dept": "Madhya Pradesh PSC (MPPSC)",
+      "state": "Madhya Pradesh",
+      "category": "state",
+      "stateIds": [
+        "mp"
+      ],
+      "fetchMethod": "html"
     },
     {
       "id": "2f1159565433b630",

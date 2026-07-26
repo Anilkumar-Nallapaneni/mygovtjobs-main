@@ -1,24 +1,7 @@
 {
-  "generatedAt": "2026-07-26T14:49:02.772Z",
+  "generatedAt": "2026-07-26T17:36:59.607Z",
   "count": 26,
   "items": [
-    {
-      "id": "a145835aa3e3662e",
-      "title": "Result and cut off marks of candidates shortlisted for Document Verification and Medical Examination.",
-      "link": "https://www.rrbbbs.gov.in/documentexplorer.php?prmt=TVRrd09RPT0=",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "rrb-bbs",
-      "sourceName": "Railway Recruitment Board (RRB) — Bhubaneswar",
-      "dept": "Railway Recruitment Board (RRB) — Bhubaneswar",
-      "state": "All India",
-      "category": "railways",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
     {
       "id": "8aec6bdf579bbad2",
       "title": "Cut-off Marks of Candidates shortlisted for SCIENTIFIC SUPERVISOR /ERGONOMICS and TRAINING under CEN No. 07/2024",
@@ -194,6 +177,23 @@
       "state": "All India",
       "category": "railways",
       "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "a145835aa3e3662e",
+      "title": "Result and cut off marks of candidates shortlisted for Document Verification and Medical Examination.",
+      "link": "https://www.rrbbbs.gov.in/documentexplorer.php?prmt=TVRrd09RPT0=",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "rrb-bbs",
+      "sourceName": "Railway Recruitment Board (RRB) — Bhubaneswar",
+      "dept": "Railway Recruitment Board (RRB) — Bhubaneswar",
+      "state": "All India",
+      "category": "railways",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
     },
     {
       "id": "40ed83132aef7de3",
