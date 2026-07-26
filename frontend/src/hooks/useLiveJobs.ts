@@ -169,30 +169,33 @@ export function useLiveJobs() {
   }, [])
 
   // One deferred hydrate per query generation — keep full Supabase pull out of PSI TBT.
+  // Do not cancel on catalog churn: bootstrap → full-list partials re-run this effect and a
+  // cancelled flag would kill the first schedule while the gate blocked any retry.
   const supabaseRefreshKey = useRef<string | null>(null)
   useEffect(() => {
-    if (dailySyncOnly) return undefined
+    if (dailySyncOnly) return
     if (!catalogQuery.isSuccess || !needsSupabaseBackgroundRefresh(catalog, jobsSource)) {
-      return undefined
+      return
     }
 
     const gate = `${refetchGeneration}:${jobsSource}`
-    if (supabaseRefreshKey.current === gate) return undefined
+    if (supabaseRefreshKey.current === gate) return
     supabaseRefreshKey.current = gate
 
-    let cancelled = false
     scheduleAfterFirstPaint(() => {
-      if (cancelled) return
+      // Superseded by a newer refresh generation / source mode.
+      if (supabaseRefreshKey.current !== gate) return
       void refreshSupabaseCatalog(dailySyncMeta).then((next) => {
-        if (cancelled || !next) return
+        if (supabaseRefreshKey.current !== gate) return
+        if (!next) {
+          // Allow a later catalog tick to retry after a soft failure.
+          supabaseRefreshKey.current = null
+          return
+        }
         qc.setQueryData<LiveJobsCatalogResult>(queryKey, next)
         writeLiveJobsSessionCatalog(jobsSource, next)
       })
     })
-
-    return () => {
-      cancelled = true
-    }
   }, [
     catalog,
     catalogQuery.isSuccess,
