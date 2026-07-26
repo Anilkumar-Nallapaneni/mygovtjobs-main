@@ -1,6 +1,35 @@
 /** @vitest-environment happy-dom */
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
-import { isLabBrowser, scheduleAfterFirstPaint } from '@/lib/liveJobsFetch'
+
+vi.mock('@/lib/supabase', () => ({
+  getSupabase: vi.fn(),
+  isSupabaseConfigured: () => true,
+}))
+
+import {
+  isLabBrowser,
+  needsSupabaseBackgroundRefresh,
+  scheduleAfterFirstPaint,
+} from '@/lib/liveJobsFetch'
+
+describe('needsSupabaseBackgroundRefresh', () => {
+  it('refreshes a large static snapshot when Supabase is explicitly selected', () => {
+    vi.stubEnv('VITE_DAILY_SYNC_ONLY', '0')
+    const shouldRefresh = needsSupabaseBackgroundRefresh(
+      {
+        rows: [],
+        sources: ['official-sites'],
+        hasBackend: true,
+        error: null,
+        dailySync: null,
+        rawLength: 2_696,
+      },
+      'supabase'
+    )
+    vi.unstubAllEnvs()
+    expect(shouldRefresh).toBe(true)
+  })
+})
 
 describe('isLabBrowser', () => {
   it('detects webdriver', () => {
@@ -37,6 +66,7 @@ describe('scheduleAfterFirstPaint', () => {
 
   afterEach(() => {
     vi.useRealTimers()
+    vi.unstubAllEnvs()
     vi.unstubAllGlobals()
     vi.restoreAllMocks()
   })

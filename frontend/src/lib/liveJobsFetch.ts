@@ -485,6 +485,9 @@ export function needsSupabaseBackgroundRefresh(
   // Snapshot-only mode: never pull the full live catalog on the homepage critical path.
   if (import.meta.env.VITE_DAILY_SYNC_ONLY === '1') return false
   if (jobsSource === 'static' || jobsSource === 'api') return false
+  // Explicit Supabase mode may still paint the CDN snapshot first. Always replace it
+  // with the live DB catalog, even when the snapshot is larger than the refresh cap.
+  if (jobsSource === 'supabase' && data.sources.includes('official-sites')) return true
   // Already have a large catalog — skip redundant full refresh.
   if (data.rawLength > INITIAL_LIVE_ROWS * 2) return false
   // CDN/static first paint — hydrate from live DB once in the background (deferred by caller).
