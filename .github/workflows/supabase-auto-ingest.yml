@@ -15,7 +15,7 @@ permissions:
 # Serialize with other workflows that push to main (fetch-official-feeds) to
 # avoid the auto-commit race documented in the sync:production rebase step.
 concurrency:
-  group: repo-write-main
+  group: live-jobs-publication
   cancel-in-progress: false
 
 jobs:
@@ -157,6 +157,15 @@ jobs:
             "$VITE_SUPABASE_URL" "$VITE_SUPABASE_ANON_KEY" > frontend/.env.local
           npm run supabase:audit
           npm run jobs:audit:strict
+          npm run audit:live-jobs -- --skip-links
+
+      - name: Upload live-job audit
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: live-jobs-audit-${{ github.run_id }}
+          path: docs/audits/live-jobs-audit.csv
+          if-no-files-found: warn
 
       - name: Commit daily data (live-jobs only — not 1900+ detail files)
         env:

@@ -12,6 +12,10 @@ env:
 permissions:
   contents: read
 
+concurrency:
+  group: live-jobs-publication
+  cancel-in-progress: false
+
 jobs:
   enrich:
     # PRODUCTION FREEZE: set ALLOW_AUTO_INGEST=true to re-enable weekly enrich.

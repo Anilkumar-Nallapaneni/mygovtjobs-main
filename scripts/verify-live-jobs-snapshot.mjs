@@ -44,6 +44,50 @@ function indiaDateIso() {
 }
 
 const HTML_TAG_RE = /<\/?[a-z][^>]*>/i
+const ISO_DATE_RE = /^\d{4}-\d{2}-\d{2}$/
+
+function normalizedTitleFingerprint(row) {
+  return String(row?.title || '')
+    .normalize('NFKD')
+    .toLowerCase()
+    .replace(/[^\p{L}\p{N}_\s]/gu, ' ')
+    .replace(/\s+/g, ' ')
+    .trim()
+}
+
+function hasOfficialSource(row) {
+  const detail = row?.detail && typeof row.detail === 'object' ? row.detail : {}
+  const candidates = [
+    row?.source_url,
+    row?.apply_url,
+    row?.pdf_url,
+    row?.primary_pdf_url,
+    detail.source_url,
+    detail.notification_url,
+    detail.official_url,
+    detail.pdf_url,
+  ]
+  return candidates.some((value) => {
+    try {
+      const url = new URL(String(value || ''))
+      return ['http:', 'https:'].includes(url.protocol) && Boolean(url.hostname)
+    } catch {
+      return false
+    }
+  })
+}
+
+function duplicateValues(items, valueOf) {
+  const seen = new Set()
+  const duplicates = new Set()
+  for (const row of items) {
+    const value = valueOf(row)
+    if (!value) continue
+    if (seen.has(value)) duplicates.add(value)
+    seen.add(value)
+  }
+  return duplicates
+}
 
 export function verifyLiveJobsSnapshot({ strict = false } = {}) {
   const issues = []
@@ -74,6 +118,26 @@ export function verifyLiveJobsSnapshot({ strict = false } = {}) {
     (row) => String(row?.status || 'live').toLowerCase() === 'live'
       && !String(row?.last_date || '').trim()
   )
+  const invalidDeadlines = fullItems.filter((row) => {
+    const raw = String(row?.last_date || '').slice(0, 10)
+    if (!ISO_DATE_RE.test(raw)) return true
+    const parsed = new Date(`${raw}T00:00:00Z`)
+    return Number.isNaN(parsed.getTime()) || parsed.toISOString().slice(0, 10) !== raw
+  })
+  const nonLiveRows = fullItems.filter((row) => String(row?.status || '').toLowerCase() !== 'live')
+  const unapprovedRows = fullItems.filter((row) => row?.published_to_site !== true)
+  const wrongDocumentType = fullItems.filter(
+    (row) => String(row?.document_type || '').toUpperCase() !== 'RECRUITMENT'
+  )
+  const unverifiedRows = fullItems.filter(
+    (row) => !['VERIFIED', 'PARTIALLY_VERIFIED'].includes(String(row?.verification_status || '').toUpperCase())
+  )
+  const incompleteRows = fullItems.filter((row) => Number(row?.completeness_score) < 70)
+  const lowConfidenceRows = fullItems.filter((row) => Number(row?.publication_confidence) < 90)
+  const missingSourceRows = fullItems.filter((row) => !hasOfficialSource(row))
+  const duplicateIds = duplicateValues(fullItems, (row) => String(row?.id || '').trim())
+  const duplicateSlugs = duplicateValues(fullItems, (row) => String(row?.slug || '').trim())
+  const duplicateFingerprints = duplicateValues(fullItems, normalizedTitleFingerprint)
 
   if (htmlTitles.length) {
     issues.push(`${htmlTitles.length} title(s) contain raw HTML`)
@@ -83,6 +147,35 @@ export function verifyLiveJobsSnapshot({ strict = false } = {}) {
   }
   if (liveWithoutDeadline.length) {
     issues.push(`${liveWithoutDeadline.length} live job(s) have no normalized deadline`)
+  }
+  if (invalidDeadlines.length) {
+    issues.push(`${invalidDeadlines.length} public job(s) have an invalid ISO closing date`)
+  }
+  if (nonLiveRows.length) {
+    issues.push(`${nonLiveRows.length} non-active row(s) are present in the live snapshot`)
+  }
+  if (unapprovedRows.length) {
+    issues.push(`${unapprovedRows.length} public row(s) are not explicitly approved`)
+  }
+  if (wrongDocumentType.length) {
+    issues.push(`${wrongDocumentType.length} public row(s) are not recruitment documents`)
+  }
+  if (unverifiedRows.length) {
+    issues.push(`${unverifiedRows.length} public row(s) are not verified`)
+  }
+  if (incompleteRows.length) {
+    issues.push(`${incompleteRows.length} public row(s) have completeness below 70`)
+  }
+  if (lowConfidenceRows.length) {
+    issues.push(`${lowConfidenceRows.length} public row(s) have publication confidence below 90`)
+  }
+  if (missingSourceRows.length) {
+    issues.push(`${missingSourceRows.length} public row(s) have no valid source/notification URL`)
+  }
+  if (duplicateIds.size || duplicateSlugs.size || duplicateFingerprints.size) {
+    issues.push(
+      `duplicate public records detected (ids=${duplicateIds.size}, slugs=${duplicateSlugs.size}, title fingerprints=${duplicateFingerprints.size})`
+    )
   }
 
   if (fullVac.withVac === 0) {

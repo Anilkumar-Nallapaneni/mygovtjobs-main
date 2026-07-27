@@ -16,9 +16,30 @@ def test_clean_job_title_strips_nul_before_chrome_cleanup():
     assert "\x00" not in clean_job_title("DRDO\x00 Recruitment 2026 Read More")
 
 
+def test_clean_job_title_removes_trailing_portal_call_to_action():
+    assert (
+        clean_job_title("BARC Group B Recruitment 2026 Click Here to Apply Online")
+        == "BARC Group B Recruitment 2026"
+    )
+
+
 def test_clean_plain_text_removes_source_html():
     value = '<b>BARC</b><br><font color="blue"><a href="/apply">Apply Online</a></font>'
     assert clean_plain_text(value) == "BARC Apply Online"
+
+
+def test_clean_plain_text_decodes_entities_and_normalizes_spaces():
+    assert clean_plain_text("SSC&nbsp;&amp;&nbsp;UPSC   Recruitment") == "SSC & UPSC Recruitment"
+
+
+def test_clean_plain_text_removes_script_and_style_content():
+    value = "<style>.hidden{display:none}</style><b>DRDO</b><script>alert('x')</script> Recruitment"
+    assert clean_plain_text(value) == "DRDO Recruitment"
+
+
+def test_clean_plain_text_handles_empty_values():
+    assert clean_plain_text(None) == ""
+    assert clean_plain_text("   ") == ""
 
 
 def test_sanitize_source_text_fields_preserves_urls_and_cleans_nested_content():

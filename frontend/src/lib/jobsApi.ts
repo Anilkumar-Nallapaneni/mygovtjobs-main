@@ -22,6 +22,9 @@ export type ApiJob = {
   apply_url?: string | null
   pdf_url?: string | null
   status?: string
+  verified_at?: string | null
+  updated_at?: string | null
+  publication_confidence?: number | null
   post_name?: string | null
   posts?: Array<{ post_name: string; vacancies?: number; pay_level?: string | null }>
   important_dates?: Array<{ event_key: string; event_date: string }>
@@ -395,7 +398,8 @@ export async function fetchJobBySlug(slug: string): Promise<ApiJob | null> {
             .select('*')
             .eq('slug', slug)
             .in('status', ['live', 'expired'])
-            .or('published_to_site.eq.true,published_to_site.is.null')
+            .eq('published_to_site', true)
+            .gte('publication_confidence', 90)
             .maybeSingle(),
           JOBS_FETCH_TIMEOUT_MS,
           'Supabase job detail'

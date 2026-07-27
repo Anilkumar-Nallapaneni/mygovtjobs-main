@@ -1456,6 +1456,35 @@
   word-break: break-word;
 }
 
+.job-detail-verification-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 24px;
+  margin: 0;
+  padding: 12px 0;
+  border-block: 1px solid var(--ds-border);
+}
+
+.job-detail-verification-meta > div {
+  min-width: 150px;
+}
+
+.job-detail-verification-meta dt {
+  margin: 0 0 3px;
+  color: var(--ds-muted);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.job-detail-verification-meta dd {
+  margin: 0;
+  color: var(--ds-text-body, var(--ds-white));
+  font-size: 13px;
+  font-weight: 700;
+}
+
 .job-detail-keyfacts__trust {
   margin: 0;
   padding: 10px 16px 12px;
@@ -1909,4 +1938,3 @@
     font-size: 18px;
   }
 }
-

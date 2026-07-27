@@ -4,6 +4,9 @@
     <loc>https://www.livegovtjobs.com/sitemaps/static.xml</loc>
   </sitemap>
   <sitemap>
-    <loc>https://www.livegovtjobs.com/sitemaps/jobs-1.xml</loc>
+    <loc>https://www.livegovtjobs.com/sitemaps/jobs-active.xml</loc>
+  </sitemap>
+  <sitemap>
+    <loc>https://www.livegovtjobs.com/sitemaps/jobs-archive.xml</loc>
   </sitemap>
 </sitemapindex>

@@ -27,7 +27,7 @@ from app.services.noise_filter import (
     strip_postgres_control_chars,
 )
 from app.services.pdf_candidate import select_primary_pdf
-from app.services.publish_gate import resolve_persist_status
+from app.services.publish_gate import ValidationResult, resolve_persist_status, validate_job_for_publication
 from app.utils.catalog_job_count import count_catalog_display_jobs
 from app.utils.slim_detail import slim_detail_for_db
 from app.utils.live_jobs_export import slim_job_for_json_export, slim_job_for_list_json_export
@@ -132,9 +132,25 @@ def _source_domain(url: str | None) -> str | None:
 
 class JobPersistService:
     async def upsert_normalized(self, session: AsyncSession, normalized: dict, *, commit: bool = True) -> Job | None:
+        raw_payload = sanitize_json_for_postgres(dict(normalized))
         normalized = sanitize_source_text_fields(normalized)
         title = clean_job_title(normalized.get("title"))
         if not title:
+            from app.services.job_review_service import JobReviewService
+
+            await JobReviewService().enqueue(
+                session,
+                raw_payload=raw_payload,
+                normalized_payload=normalized,
+                validation=ValidationResult(
+                    valid=False,
+                    errors=["Missing title after sanitization"],
+                    confidence=0,
+                ),
+                source_url=_resolve_source_url(normalized, normalized.get("apply_url")),
+            )
+            if commit:
+                await session.commit()
             return None
 
         settings = get_settings()
@@ -199,13 +215,31 @@ class JobPersistService:
             review_reasons.append(f"No positive primary PDF (best score={pdf_score})")
             primary_pdf = None
 
-        job_status, verification_status, published_to_site, _gate_errors = resolve_persist_status(
+        gate_normalized = {
+            **normalized,
+            "title": title,
+            "dept": dept,
+            "apply_url": apply_url,
+            "source_url": source_url,
+            "state_codes": state_codes,
+            "vacancies": _resolve_vacancies(normalized),
+        }
+        job_status, verification_status, published_to_site, gate_errors = resolve_persist_status(
             last_date=last_date,
             document_type=document_type,
             verification_status=explicit_verification or "UNVERIFIED",
-            normalized={**normalized, "title": title, "dept": dept, "apply_url": apply_url, "source_url": source_url},
+            normalized=gate_normalized,
             auto_publish_verified=bool(settings.auto_publish_verified),
             completeness_score=completeness_score,
+        )
+        validation = validate_job_for_publication(
+            {
+                **gate_normalized,
+                "last_date": last_date,
+                "document_type": document_type,
+                "verification_status": "VERIFIED" if settings.auto_publish_verified else verification_status,
+                "completeness_score": completeness_score,
+            }
         )
         # Allow explicit status override only for expired (deadline) already handled;
         # never force live when auto-publish is off.
@@ -263,6 +297,7 @@ class JobPersistService:
             "source_url": source_url,
             "source_domain": _source_domain(source_url),
             "confidence_score": classification.confidence,
+            "publication_confidence": validation.confidence,
         }
 
         stmt = (
@@ -293,11 +328,29 @@ class JobPersistService:
                     "source_url": row["source_url"],
                     "source_domain": row["source_domain"],
                     "confidence_score": row["confidence_score"],
+                    "publication_confidence": row["publication_confidence"],
                 },
             )
             .returning(Job)
         )
         result = await session.execute(stmt)
+        if not published_to_site:
+            from app.services.job_review_service import JobReviewService
+
+            quarantine_errors = list(dict.fromkeys([*gate_errors, *validation.errors]))
+            await JobReviewService().enqueue(
+                session,
+                raw_payload=raw_payload,
+                normalized_payload={**normalized, **row},
+                validation=ValidationResult(
+                    valid=False,
+                    errors=quarantine_errors or ["Manual approval required"],
+                    warnings=validation.warnings,
+                    confidence=validation.confidence,
+                ),
+                source_url=source_url,
+                fingerprint=digest,
+            )
         if commit:
             await session.commit()
         return result.scalar_one_or_none()

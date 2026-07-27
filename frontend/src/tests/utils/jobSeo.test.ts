@@ -1,12 +1,27 @@
 import { describe, expect, it } from "vitest";
 
 import {
-  buildJobPostingJsonLd,
+  buildJobPostingJsonLd as buildRawJobPostingJsonLd,
+  isApprovedActiveJobPosting,
   isRecruitmentJobPosting,
   parseJobBaseSalary,
   resolveJobPostalAddress,
   resolveValidThrough,
 } from "@/utils/jobSeo";
+import type { JobRecord } from "@/types/job";
+
+function buildJobPostingJsonLd(job: JobRecord): Record<string, unknown> | null {
+  return buildRawJobPostingJsonLd({
+    status: "live",
+    published_to_site: true,
+    document_type: "RECRUITMENT",
+    verification_status: "VERIFIED",
+    completeness_score: 90,
+    publication_confidence: 90,
+    lastDate: "2099-12-31",
+    ...job,
+  });
+}
 
 describe("resolveJobPostalAddress", () => {
   it("uses explicit city when present", () => {
@@ -104,11 +119,13 @@ describe("parseJobBaseSalary", () => {
 
 describe("resolveValidThrough", () => {
   it("uses lastDate when present", () => {
-    expect(resolveValidThrough({ lastDate: "2026-08-15" }, "2026-01-01")).toBe("2026-08-15");
+    expect(resolveValidThrough({ lastDate: "2026-08-15" }, "2026-01-01")).toBe(
+      "2026-08-15T23:59:59+05:30"
+    );
   });
 
   it("falls back to datePosted + 180 days", () => {
-    expect(resolveValidThrough({}, "2026-01-01")).toBe("2026-06-30");
+    expect(resolveValidThrough({}, "2026-01-01")).toBe("2026-06-30T23:59:59+05:30");
   });
 });
 
@@ -150,7 +167,7 @@ describe("buildJobPostingJsonLd", () => {
 
     expect(jsonLd?.["@type"]).toBe("JobPosting");
     expect(jsonLd?.title).toBe("SSC CGL 2026 Recruitment");
-    expect(jsonLd?.validThrough).toBe("2026-08-15");
+    expect(jsonLd?.validThrough).toBe("2026-08-15T23:59:59+05:30");
     expect(jsonLd?.datePosted).toBe("2026-06-01");
     expect(jsonLd?.totalJobOpenings).toBe(7500);
 
@@ -286,6 +303,26 @@ describe("buildJobPostingJsonLd", () => {
     const address = (jsonLd?.jobLocation as { address: Record<string, string> }).address;
     expect(address.streetAddress).toBe("CGO Complex, Lodhi Road");
     expect(address.postalCode).toBe("110003");
+  });
+
+  it("omits JobPosting when publication approval or the active deadline is missing", () => {
+    const base = {
+      title: "SSC CGL Recruitment",
+      status: "live",
+      document_type: "RECRUITMENT",
+      verification_status: "VERIFIED",
+      completeness_score: 90,
+      publication_confidence: 90,
+      lastDate: "2099-12-31",
+    } satisfies JobRecord;
+
+    expect(buildRawJobPostingJsonLd(base)).toBeNull();
+    expect(
+      isApprovedActiveJobPosting(
+        { ...base, published_to_site: true, lastDate: "2026-07-27" },
+        "2026-07-28"
+      )
+    ).toBe(false);
   });
 
   it("extracts PIN from address text and skips bare city as streetAddress", () => {

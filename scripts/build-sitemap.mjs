@@ -5,7 +5,7 @@
  *
  *   npm run build:sitemap
  */
-import { readFileSync, writeFileSync, existsSync, mkdirSync } from "fs";
+import { readFileSync, writeFileSync, existsSync, mkdirSync, readdirSync, unlinkSync } from "fs";
 import { join, dirname } from "path";
 import { fileURLToPath } from "url";
 
@@ -92,6 +92,45 @@ function loadJobsFromJson() {
   return Array.isArray(payload.items) ? payload.items : [];
 }
 
+function indiaDateIso() {
+  const parts = new Intl.DateTimeFormat("en-CA", {
+    timeZone: "Asia/Kolkata",
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+  }).formatToParts(new Date());
+  const value = Object.fromEntries(parts.map(({ type, value: part }) => [type, part]));
+  return `${value.year}-${value.month}-${value.day}`;
+}
+
+function isApprovedActiveJob(job, today = indiaDateIso()) {
+  return (
+    String(job?.status || "").toLowerCase() === "live" &&
+    job?.published_to_site === true &&
+    String(job?.document_type || "").toUpperCase() === "RECRUITMENT" &&
+    ["VERIFIED", "PARTIALLY_VERIFIED"].includes(
+      String(job?.verification_status || "").toUpperCase()
+    ) &&
+    Number(job?.completeness_score) >= 70 &&
+    Number(job?.publication_confidence) >= 90 &&
+    /^\d{4}-\d{2}-\d{2}$/.test(String(job?.last_date || "")) &&
+    String(job.last_date).slice(0, 10) >= today
+  );
+}
+
+function isApprovedArchiveJob(job) {
+  return (
+    String(job?.status || "").toLowerCase() === "expired" &&
+    job?.published_to_site === true &&
+    String(job?.document_type || "").toUpperCase() === "RECRUITMENT" &&
+    ["VERIFIED", "PARTIALLY_VERIFIED"].includes(
+      String(job?.verification_status || "").toUpperCase()
+    ) &&
+    Number(job?.completeness_score) >= 70 &&
+    Number(job?.publication_confidence) >= 90
+  );
+}
+
 async function loadJobsFromSupabase() {
   const fe = loadEnv(join(root, "frontend/.env.local"));
   const url = (fe.VITE_SUPABASE_URL || process.env.VITE_SUPABASE_URL || "").replace(/\/$/, "");
@@ -109,7 +148,7 @@ async function loadJobsFromSupabase() {
 
   while (true) {
     const res = await fetch(
-      `${url}/rest/v1/jobs?select=slug,updated_at,published_at&status=in.(live,expired)&order=published_at.desc&limit=${pageSize}&offset=${offset}`,
+      `${url}/rest/v1/jobs?select=slug,updated_at,published_at,status,last_date,published_to_site,document_type,verification_status,completeness_score,publication_confidence&status=in.(live,expired)&published_to_site=eq.true&document_type=eq.RECRUITMENT&verification_status=in.(VERIFIED,PARTIALLY_VERIFIED)&completeness_score=gte.70&publication_confidence=gte.90&order=published_at.desc&limit=${pageSize}&offset=${offset}`,
       { headers }
     );
     if (!res.ok) {
@@ -168,7 +207,8 @@ async function main() {
   const jobs = supabaseJobs ?? loadJobsFromJson();
 
   const staticEntries = [];
-  const jobEntries = [];
+  const activeJobEntries = [];
+  const archiveJobEntries = [];
 
   for (const page of STATIC_PATHS) {
     staticEntries.push(urlEntry(`${siteUrl}${page.loc}`, page.changefreq, page.priority));
@@ -211,15 +251,20 @@ async function main() {
   }
 
   const seen = new Set();
+  const todayIndia = indiaDateIso();
   for (const job of jobs) {
     const slug = job.slug || job.id;
     if (!slug || seen.has(slug)) continue;
+    const active = isApprovedActiveJob(job, todayIndia);
+    const archive = isApprovedArchiveJob(job);
+    if (!active && !archive) continue;
     seen.add(slug);
-    jobEntries.push(
+    const target = active ? activeJobEntries : archiveJobEntries;
+    target.push(
       urlEntry(
         `${siteUrl}/jobs/${encodeURIComponent(String(slug))}`,
-        "weekly",
-        "0.6",
+        active ? "daily" : "monthly",
+        active ? "0.7" : "0.4",
         toLastmod(job)
       )
     );
@@ -230,28 +275,25 @@ async function main() {
   const staticXml = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${staticEntries.join("\n")}\n</urlset>\n`;
   writeFileSync(join(sitemapDir, "static.xml"), staticXml, "utf8");
 
-  const chunkSize = 1000;
-  const jobChunks = [];
-  for (let i = 0; i < jobEntries.length; i += chunkSize) {
-    const chunk = jobEntries.slice(i, i + chunkSize);
-    const name = `jobs-${Math.floor(i / chunkSize) + 1}.xml`;
-    jobChunks.push(name);
-    const xml = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${chunk.join("\n")}\n</urlset>\n`;
-    writeFileSync(join(sitemapDir, name), xml, "utf8");
+  for (const name of readdirSync(sitemapDir)) {
+    if (/^jobs-\d+\.xml$/.test(name)) unlinkSync(join(sitemapDir, name));
   }
+
+  const activeXml = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${activeJobEntries.join("\n")}\n</urlset>\n`;
+  const archiveXml = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${archiveJobEntries.join("\n")}\n</urlset>\n`;
+  writeFileSync(join(sitemapDir, "jobs-active.xml"), activeXml, "utf8");
+  writeFileSync(join(sitemapDir, "jobs-archive.xml"), archiveXml, "utf8");
 
   const indexEntries = [
     `  <sitemap>\n    <loc>${xmlEscape(`${siteUrl}/sitemaps/static.xml`)}</loc>\n  </sitemap>`,
-    ...jobChunks.map(
-      (name) =>
-        `  <sitemap>\n    <loc>${xmlEscape(`${siteUrl}/sitemaps/${name}`)}</loc>\n  </sitemap>`
-    ),
+    `  <sitemap>\n    <loc>${xmlEscape(`${siteUrl}/sitemaps/jobs-active.xml`)}</loc>\n  </sitemap>`,
+    `  <sitemap>\n    <loc>${xmlEscape(`${siteUrl}/sitemaps/jobs-archive.xml`)}</loc>\n  </sitemap>`,
   ];
   const indexXml = `<?xml version="1.0" encoding="UTF-8"?>\n<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${indexEntries.join("\n")}\n</sitemapindex>\n`;
   writeFileSync(indexPath, indexXml, "utf8");
 
   console.log(
-    `Wrote ${indexPath} — index with ${staticEntries.length} static + ${seen.size} jobs in ${jobChunks.length} chunk(s)`
+    `Wrote ${indexPath} — ${staticEntries.length} static, ${activeJobEntries.length} active jobs, ${archiveJobEntries.length} archive jobs`
   );
 }
 

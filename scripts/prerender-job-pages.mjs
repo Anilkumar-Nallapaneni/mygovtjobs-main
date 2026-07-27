@@ -121,6 +121,17 @@ function parseIsoDate(value) {
   return d.toISOString().slice(0, 10);
 }
 
+function indiaDateIso() {
+  const parts = new Intl.DateTimeFormat("en-CA", {
+    timeZone: "Asia/Kolkata",
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+  }).formatToParts(new Date());
+  const values = Object.fromEntries(parts.map(({ type, value }) => [type, value]));
+  return `${values.year}-${values.month}-${values.day}`;
+}
+
 /** Google JobPosting requires datePosted — never omit it. */
 function resolveDatePosted(job) {
   return (
@@ -136,15 +147,15 @@ function resolveDatePosted(job) {
 
 function resolveValidThrough(job, datePosted) {
   const fromLast = parseIsoDate(job.last_date || job.lastDate);
-  if (fromLast) return fromLast;
+  if (fromLast) return `${fromLast}T23:59:59+05:30`;
   const base = new Date(`${datePosted}T00:00:00Z`);
   if (Number.isNaN(base.getTime())) {
     const fallback = new Date();
     fallback.setUTCDate(fallback.getUTCDate() + 180);
-    return fallback.toISOString().slice(0, 10);
+    return `${fallback.toISOString().slice(0, 10)}T23:59:59+05:30`;
   }
   base.setUTCDate(base.getUTCDate() + 180);
-  return base.toISOString().slice(0, 10);
+  return `${base.toISOString().slice(0, 10)}T23:59:59+05:30`;
 }
 
 function parseMoneyToken(raw) {
@@ -262,8 +273,24 @@ function isRecruitmentJobPosting(job) {
   );
 }
 
+function isApprovedActiveJobPosting(job, today = indiaDateIso()) {
+  const lastDate = parseIsoDate(job.last_date || job.lastDate);
+  return (
+    String(job.status || "").toLowerCase() === "live" &&
+    job.published_to_site === true &&
+    String(job.document_type || "").toUpperCase() === "RECRUITMENT" &&
+    ["VERIFIED", "PARTIALLY_VERIFIED"].includes(
+      String(job.verification_status || "").toUpperCase()
+    ) &&
+    Number(job.completeness_score) >= 70 &&
+    Number(job.publication_confidence) >= 90 &&
+    Boolean(lastDate && lastDate >= today) &&
+    isRecruitmentJobPosting(job)
+  );
+}
+
 function buildJobPostingJsonLd(job, canonical) {
-  if (!isRecruitmentJobPosting(job)) return null;
+  if (!isApprovedActiveJobPosting(job)) return null;
   const address = resolveJobPostalAddress(job);
   const slug = job.slug || job.id;
   const orgName = job.dept || "Government of India recruitment";

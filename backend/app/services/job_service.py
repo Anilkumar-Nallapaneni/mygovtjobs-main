@@ -91,8 +91,9 @@ def _list_cache_fingerprint(
     return digest
 
 
-def _base_list_stmt(*, state=None, category=None, q=None):
-    stmt = select(Job).where(Job.status.in_(("live", "expired")))
+def _base_list_stmt(*, state=None, category=None, q=None, include_expired: bool = False):
+    public_statuses = ("live", "expired") if include_expired else ("live",)
+    stmt = select(Job).where(Job.status.in_(public_statuses))
     if category:
         stmt = stmt.where(Job.category == category)
     if state:
@@ -173,9 +174,12 @@ def _to_job_out(
         status=row.status or "live",
         is_sponsored=bool(getattr(row, "is_sponsored", False)),
         published_at=row.published_at,
+        verified_at=getattr(row, "verified_at", None),
+        updated_at=getattr(row, "updated_at", None),
         document_type=getattr(row, "document_type", None),
         verification_status=getattr(row, "verification_status", None),
         completeness_score=getattr(row, "completeness_score", None),
+        publication_confidence=float(getattr(row, "publication_confidence", 0) or 0),
         published_to_site=getattr(row, "published_to_site", None),
         primary_pdf_url=getattr(row, "primary_pdf_url", None) or pdf_url,
         post_name=post_name or None,
@@ -283,7 +287,7 @@ class JobService:
         try:
             row = (
                 await session.execute(
-                    select(Job).where(Job.slug == slug, Job.status.in_(("live", "expired")))
+                    _base_list_stmt(include_expired=True).where(Job.slug == slug)
                 )
             ).scalar_one_or_none()
             if not row or not _is_recruitment_job(row):

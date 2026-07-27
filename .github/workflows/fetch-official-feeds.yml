@@ -15,7 +15,7 @@ permissions:
 # Share the write-lock with supabase-auto-ingest so the two workflows never
 # push to main concurrently.
 concurrency:
-  group: repo-write-main
+  group: live-jobs-publication
   cancel-in-progress: false
 
 jobs:

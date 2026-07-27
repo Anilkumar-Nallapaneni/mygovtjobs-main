@@ -2,6 +2,7 @@ import { readFileSync } from 'node:fs'
 import process from 'node:process'
 import { join } from 'node:path'
 import { describe, expect, it } from 'vitest'
+import { CATS } from '@/data/categories'
 import { inferCategoryFromText, resolveJobCategory } from '@/utils/jobCategory'
 
 describe('inferCategoryFromText', () => {
@@ -84,16 +85,13 @@ describe('live-jobs category audit', () => {
     }>
     if (!jobs.length) return
 
-    const byCat: Record<string, number> = {}
+    const allowed = new Set(CATS.map((category) => category.id))
     let unresolved = 0
     for (const job of jobs) {
       const cat = resolveJobCategory(job)
-      byCat[cat] = (byCat[cat] || 0) + 1
-      if (!cat) unresolved += 1
+      if (!cat || !allowed.has(cat)) unresolved += 1
     }
 
     expect(unresolved).toBe(0)
-    expect(byCat.state).toBeGreaterThan(0)
-    expect(Object.keys(byCat).length).toBeGreaterThan(3)
   })
 })

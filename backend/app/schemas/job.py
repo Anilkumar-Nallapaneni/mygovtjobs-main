@@ -32,9 +32,12 @@ class JobOut(BaseModel):
     status: str = "live"
     is_sponsored: bool = False
     published_at: datetime | None = None
+    verified_at: datetime | None = None
+    updated_at: datetime | None = None
     document_type: str | None = None
     verification_status: str | None = None
     completeness_score: int | None = None
+    publication_confidence: float | None = None
     published_to_site: bool | None = None
     primary_pdf_url: str | None = None
     post_name: str | None = None
