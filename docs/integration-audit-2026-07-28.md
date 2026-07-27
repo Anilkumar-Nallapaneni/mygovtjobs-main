@@ -85,8 +85,17 @@ would break runtime features.
 
 - Python `pip check`: clean
 - Production npm audit: two moderate React Router advisories
+- Full development/build audit: 14 transitive findings (11 high, 2 moderate,
+  1 low). The high findings are the same `brace-expansion` denial-of-service
+  advisory repeated through ESLint and Workbox dependency paths; the low
+  finding is the Vite development-server `esbuild` advisory.
+- GitHub currently groups the default-branch findings into five Dependabot
+  alerts (1 high, 3 moderate, and 1 low).
 - The available npm fix requires the breaking React Router 7 upgrade. A tested
   clean upstream upgrade is not available in the current dependency set.
+- The remaining development-tool fixes also require breaking ESLint/PWA
+  dependency changes. `npm audit fix` was tested and removed because it left
+  the findings in place while creating unrelated lockfile churn.
 - GitHub Actions permits all actions and does not require SHA pinning. Pinning
   should be introduced as a separate workflow-hardening change after testing.
 
