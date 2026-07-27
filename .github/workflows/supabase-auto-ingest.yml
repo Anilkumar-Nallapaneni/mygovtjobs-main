@@ -12,9 +12,10 @@ env:
 permissions:
   contents: write
 
-# One ingest at a time — do not cancel an in-flight run when a new schedule fires.
+# Serialize with other workflows that push to main (fetch-official-feeds) to
+# avoid the auto-commit race documented in the sync:production rebase step.
 concurrency:
-  group: supabase-auto-ingest
+  group: repo-write-main
   cancel-in-progress: false
 
 jobs:

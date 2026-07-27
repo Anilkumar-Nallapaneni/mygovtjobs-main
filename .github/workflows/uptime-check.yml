@@ -42,12 +42,12 @@ jobs:
               try {
                 const j=JSON.parse(d);
                 const t=j.completedAt||j.completedAtIst;
-                if(!t){ console.log('no timestamp'); process.exit(0); }
+                if(!t){ console.log('no timestamp'); process.exit(1); }
                 const age=(Date.now()-new Date(t).getTime())/3600000;
                 console.log('Age hours:', age.toFixed(1));
                 // Allow one full weekend + buffer; daily ingest should finish within this.
                 if(age>72) process.exit(1);
-              } catch(e) { process.exit(0); }
+              } catch(e) { console.error('freshness parse failed:', e.message); process.exit(1); }
             });
           "
           echo "Freshness check done"

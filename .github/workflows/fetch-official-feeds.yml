@@ -12,6 +12,12 @@ env:
 permissions:
   contents: write
 
+# Share the write-lock with supabase-auto-ingest so the two workflows never
+# push to main concurrently.
+concurrency:
+  group: repo-write-main
+  cancel-in-progress: false
+
 jobs:
   fetch:
     # PRODUCTION FREEZE: set ALLOW_AUTO_INGEST=true to re-enable scheduled RSS commits.
