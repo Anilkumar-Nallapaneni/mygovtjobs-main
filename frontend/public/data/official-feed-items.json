@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-07-27T11:54:31.760Z",
+  "generatedAt": "2026-07-27T15:27:32.943Z",
   "sourceReports": [
     {
       "id": "pib-press-reg3",
       "name": "PIB — recent press releases",
       "feedUrl": "https://www.pib.gov.in/RssMain.aspx?ModId=6&Lang=2&Regid=3&reg=48",
       "listingUrl": null,
-      "ok": true,
-      "error": null,
-      "itemCount": 1,
-      "fetchMethod": "rss-feed"
+      "ok": false,
+      "error": "rss-empty",
+      "itemCount": 0,
+      "fetchMethod": null
     },
     {
       "id": "employment-news",
@@ -236,10 +236,10 @@
       "name": "UPSC — e-Admit cards",
       "feedUrl": null,
       "listingUrl": "https://www.upsc.gov.in/e-admit-cards",
-      "ok": true,
-      "error": null,
-      "itemCount": 2,
-      "fetchMethod": "rss-discovered"
+      "ok": false,
+      "error": "https://www.upsc.gov.in/e-admit-cards: timeout",
+      "itemCount": 0,
+      "fetchMethod": null
     },
     {
       "id": "appsc-hall-tickets",
@@ -295,57 +295,6 @@
   "siteReports": [],
   "items": [
     {
-      "id": "7e897a8a804563d4",
-      "title": "Union Public Service Commission",
-      "link": "https://upsc.gov.in/sites/default/files/AdvtNo-04-2026-Engl-080526.pdf",
-      "publishedAt": "2026-05-08T00:00:00.000Z",
-      "summary": "Advertisement No. 04/2026",
-      "pdfUrls": [],
-      "sourceId": "upsc-e-admit-hub",
-      "sourceName": "UPSC — e-Admit cards",
-      "dept": "Union Public Service Commission",
-      "state": "All India",
-      "category": "upsc",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "rss-feed"
-    },
-    {
-      "id": "eb8779e7959ca657",
-      "title": "Union Public Service Commission",
-      "link": "https://upsc.gov.in/sites/default/files/Advt_03_2026_Eng_24042026.pdf",
-      "publishedAt": "2026-04-24T00:00:00.000Z",
-      "summary": "Advertisement No. 03/2026",
-      "pdfUrls": [],
-      "sourceId": "upsc-e-admit-hub",
-      "sourceName": "UPSC — e-Admit cards",
-      "dept": "Union Public Service Commission",
-      "state": "All India",
-      "category": "upsc",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "rss-feed"
-    },
-    {
-      "id": "ec21edf1c6f205f8",
-      "title": "सांख्यिकी एवं कार्यक्रम कार्यान्वयन मंत्रालय ने अर्थव्यवस्था के गैर-निगमित क्षेत्र का आकलन करने के लिए गैर-निगमित क्षेत्र के उद्यमों का वार्षिक सर्वेक्षण किया और त्रैमासिक तथा वार्षिक परिणाम प्रकाशित किए",
-      "link": "https://pib.gov.in/PressReleaseIframePage.aspx?PRID=2289904",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "pib-press-reg3",
-      "sourceName": "PIB — recent press releases",
-      "dept": "Press Information Bureau",
-      "state": "All India",
-      "category": "state",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "rss-feed"
-    },
-    {
       "id": "1320428f3dc24d77",
       "title": "Home.aspx",
       "link": "https://employmentnews.gov.in/NewEmp/Home.aspx",
@@ -357,6 +306,40 @@
       "dept": "Ministry of Information & Broadcasting",
       "state": "All India",
       "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "f43d7aa6e0241ca3",
+      "title": "Schedule of Interviews for the post of Scientist/Engineer 'SC' (Mechanical) - BE002 - Phase-II against ICRB Advt. No. ISRO:ICRB:02(EMC):2025 dated 27.05.2025 Read More",
+      "link": "https://www.isro.gov.in/ICRB_Recruitment9.html",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "isro-careers",
+      "sourceName": "ISRO — Careers",
+      "dept": "Indian Space Research Organisation",
+      "state": "All India",
+      "category": "psu",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "5810e5a48e6d1e85",
+      "title": "ADVT. NO. 01/2026 dated 25-07-2026 - Recruitment to the post of Administrative Officer, Accounts Officer, Purchase and Stores Officer Read More",
+      "link": "https://www.isro.gov.in/PRLRecruitment7.html",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "isro-careers",
+      "sourceName": "ISRO — Careers",
+      "dept": "Indian Space Research Organisation",
+      "state": "All India",
+      "category": "psu",
       "stateIds": [
         "all"
       ],
@@ -383,23 +366,6 @@
       "id": "b62d1717ae852663",
       "title": "ADVT. NO.NESAC/RMT-TEMP/WI-02/2026 dated 17.07.2026 - Recruitment for the positions of Research Scientists, Junior Research Fellows and Project Associate - I Read More",
       "link": "https://www.isro.gov.in/NESACRecruitment23.html",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "isro-careers",
-      "sourceName": "ISRO — Careers",
-      "dept": "Indian Space Research Organisation",
-      "state": "All India",
-      "category": "psu",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "f43d7aa6e0241ca3",
-      "title": "Interview Schedule for the post of Scientist/Engineer 'SC' (Mechanical) - BE002 - Phase-I against ICRB Advt. No. ISRO:ICRB:02(EMC):2025 dated 27.05.2025 Read More",
-      "link": "https://www.isro.gov.in/ICRB_Recruitment9.html",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
@@ -1378,23 +1344,6 @@
       "id": "71c210cd748ea180",
       "title": "International Conference on Spacecraft Mission Operations - SMOPS-2026",
       "link": "https://www.isro.gov.in/Spacecraft_Mission_Operations_SMOPS_2026.html",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "isro-careers",
-      "sourceName": "ISRO — Careers",
-      "dept": "Indian Space Research Organisation",
-      "state": "All India",
-      "category": "psu",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "e8d26d831cd54c24",
-      "title": "Indian Space Situational Awareness Report (ISSAR) for 2025 Released",
-      "link": "https://www.isro.gov.in/Indian_Space_Situational_Awareness_Report_2025.html",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
@@ -2902,6 +2851,23 @@
       "fetchMethod": "html-listing"
     },
     {
+      "id": "73c9f70b7072207b",
+      "title": "NOTICE REGARDING LAST DATE EXTENTION OF P.C.S. EXAM-2026",
+      "link": "https://uppsc.up.nic.in/Open_PDF_DB.aspx?I4PnQ0tBaglP18XMjN55aL8ckMULyAqn",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "uppsc-hall-tickets",
+      "sourceName": "UPPSC — Hall tickets",
+      "dept": "Uttar Pradesh PSC",
+      "state": "Uttar Pradesh",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
       "id": "2db2d16ecdc1865a",
       "title": "RESULT OF CANDIDATE SELECTED IN ADVT. NO D-4/E-1/2025, DEPT. S-10/02, UPPSC SYST..",
       "link": "https://uppsc.up.nic.in/Open_PDF_DB.aspx?I4PnQ0tBagkKFmHgqmmkW30lDXcVzR9+",
@@ -3038,6 +3004,23 @@
       "fetchMethod": "html-listing"
     },
     {
+      "id": "a1ce196cfb494713",
+      "title": "27 Aug 2026 LIST OF CANDIDATES PROVISIONALLY QUALIFIED FOR MAINS IN ADVT. NO. A-6/E-1/2025, LECT. (M./F.) GOVT. INTER COLLEGE EXAM.-2025, BIOLOGY, HINDI, URDU, S.....",
+      "link": "https://uppsc.up.nic.in/Open_PDF.aspx?I4PnQ0tBaglP18XMjN55aLZg5NY5v5bc",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "uppsc-hall-tickets",
+      "sourceName": "UPPSC — Hall tickets",
+      "dept": "Uttar Pradesh PSC",
+      "state": "Uttar Pradesh",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
       "id": "d9c810ac2ace49da",
       "title": "24 Aug 2026 LIST OF CANDIDATES PROVISIONALLY QUALIFIED FOR MAINS IN ADVT. NO. A-6/E-1/2025, LECT. (M./F.) GOVT. INTER COLLEGE EXAM.-2025,CHEMISTRY,MATH,ENGLISH,H.....",
       "link": "https://uppsc.up.nic.in/Open_PDF.aspx?I4PnQ0tBaglP18XMjN55aAahoGoQHAaV",
@@ -3089,9 +3072,9 @@
       "fetchMethod": "html-listing"
     },
     {
-      "id": "dae63d6cfc1ec8e0",
-      "title": "17 Aug 2026 LIST OF CANDIDATES PROVISIONALLY QUALIFIED FOR INTERVIEW IN ADVT. NO. A-7/E-1/2021, U.P. TECH. EDU. (TCHNG.) SER. EXAM.-2021, LECT. PAINT TECH, LEATH.....",
-      "link": "https://uppsc.up.nic.in/Open_PDF.aspx?I4PnQ0tBagkKFmHgqmmkW38pQGn0K/SU",
+      "id": "ee12a8dab0ad68f2",
+      "title": "More >>",
+      "link": "https://uppsc.up.nic.in/FooterPages/Results",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
@@ -3106,9 +3089,9 @@
       "fetchMethod": "html-listing"
     },
     {
-      "id": "ee12a8dab0ad68f2",
-      "title": "More >>",
-      "link": "https://uppsc.up.nic.in/FooterPages/Results",
+      "id": "5c43b1307e861bd8",
+      "title": "10 Aug 2026 NOTICE REGARDING LAST DATE EXTENTION OF P.C.S. EXAM-2026",
+      "link": "https://uppsc.up.nic.in/Open_PDF.aspx?I4PnQ0tBaglP18XMjN55aPiFarTmH6Gt",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
@@ -3466,40 +3449,6 @@
       "id": "36be70164e7f2c00",
       "title": "{{'UserMannual_HM' | translate }}",
       "link": "https://uppsc.up.nic.in/OTR_Section/OTR_UserMannual.aspx",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "uppsc-hall-tickets",
-      "sourceName": "UPPSC — Hall tickets",
-      "dept": "Uttar Pradesh PSC",
-      "state": "Uttar Pradesh",
-      "category": "state",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "ab9d718c33d82026",
-      "title": "{{'SampleForm_HM' | translate }}",
-      "link": "https://uppsc.up.nic.in/OTR_Section/Otr_SampleForm.aspx",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "uppsc-hall-tickets",
-      "sourceName": "UPPSC — Hall tickets",
-      "dept": "Uttar Pradesh PSC",
-      "state": "Uttar Pradesh",
-      "category": "state",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "99d9b0e8b8b71d8e",
-      "title": "{{'SimplifiedForm_HM' | translate }}",
-      "link": "https://uppsc.up.nic.in/OTR_Section/Otr_SimplifiedForm.aspx",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
