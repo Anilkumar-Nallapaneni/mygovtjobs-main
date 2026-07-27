@@ -1,10 +1,14 @@
 """Persist normalized ingest rows to Postgres and JSON snapshot for the UI."""
 
 import json
+import logging
+import os
 import re
 from datetime import date, datetime, timezone
 from pathlib import Path
 from urllib.parse import urlparse
+
+logger = logging.getLogger(__name__)
 
 from sqlalchemy.dialects.postgresql import insert
 from sqlalchemy.ext.asyncio import AsyncSession
@@ -309,6 +313,17 @@ class JobPersistService:
         slim_items = [slim_job_for_json_export(item) for item in items]
         list_items = [slim_job_for_list_json_export(item) for item in items]
         catalog_count = count_catalog_display_jobs(slim_items)
+
+        # Guard against overwriting the shipped catalog with an empty payload
+        # (transient DB session issues in the sync path have shipped empty
+        # live-jobs.json to prod before). Set ALLOW_EMPTY_JSON_EXPORT=1 to
+        # bypass in legitimate wipe/reset scenarios.
+        if not slim_items and os.environ.get("ALLOW_EMPTY_JSON_EXPORT") != "1":
+            logger.error(
+                "export_live_jobs_json: refusing to write empty snapshot "
+                "(list_jobs returned 0 rows). Set ALLOW_EMPTY_JSON_EXPORT=1 to override."
+            )
+            return 0
 
         daily_block: dict = {}
         try:
