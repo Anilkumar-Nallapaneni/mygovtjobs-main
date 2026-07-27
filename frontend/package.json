@@ -5,7 +5,7 @@
   "type": "module",
   "engines": {
     "node": ">=24 <25"
-   },
+  },
   "scripts": {
     "dev": "vite",
     "fetch:official": "node ../scripts/fetch-all-official.mjs",
@@ -48,9 +48,7 @@
     "@axe-core/playwright": "^4.11.3",
     "@eslint/js": "^9.39.1",
     "@playwright/test": "^1.60.0",
-    "@testing-library/jest-dom": "^6.9.1",
     "@testing-library/react": "^16.3.0",
-    "@types/eslint": "^9.6.1",
     "@types/node": "^24.10.0",
     "@types/react": "^18.3.26",
     "@types/react-dom": "^18.3.7",
