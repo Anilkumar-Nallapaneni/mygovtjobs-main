@@ -38,13 +38,16 @@ const headers = {
 };
 
 const TABLES = [
-  "sources",
-  "raw_ingest",
-  "jobs",
-  "job_posts",
-  "job_dates",
-  "alert_subscriptions",
-  "alert_deliveries",
+  { name: "sources", publicRead: true },
+  { name: "jobs", publicRead: true },
+  { name: "job_posts", publicRead: true },
+  { name: "job_dates", publicRead: true },
+  { name: "job_updates", publicRead: true },
+  { name: "raw_ingest", publicRead: false },
+  { name: "job_review_queue", publicRead: false },
+  { name: "alert_subscriptions", publicRead: false },
+  { name: "alert_deliveries", publicRead: false },
+  { name: "profiles", publicRead: false },
 ];
 
 async function countTable(table) {
@@ -62,15 +65,22 @@ async function countTable(table) {
 console.log("Supabase project:", url);
 let ok = true;
 for (const table of TABLES) {
-  const row = await countTable(table);
+  const row = await countTable(table.name);
   if (!row.ok) {
+    if (!table.publicRead && (row.status === 401 || row.status === 403)) {
+      console.log(`✓ ${table.name}: private to anonymous users`);
+      continue;
+    }
     ok = false;
-    console.log(`✗ ${table}: HTTP ${row.status} — ${row.error}`);
+    console.log(`✗ ${table.name}: HTTP ${row.status} — ${row.error}`);
     if (row.status === 404) {
       console.log("  → Run database/supabase_setup.sql and database/migrations/002_supabase_rls_and_grants.sql");
     }
+  } else if (!table.publicRead) {
+    ok = false;
+    console.log(`✗ ${table.name}: unexpectedly readable by anonymous users`);
   } else {
-    console.log(`✓ ${table}: ${row.count ?? "?"} rows`);
+    console.log(`✓ ${table.name}: ${row.count ?? "?"} rows`);
   }
 }
 

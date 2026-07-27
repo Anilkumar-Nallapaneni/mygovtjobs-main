@@ -21,6 +21,7 @@ Supabase Postgres schema for My Govt Jobs.
 15. **`migrations/014`–`026`** — source sync, publication gate, completeness, and RLS hardening
 16. **`migrations/027_job_review_queue.sql`** — private failed-record quarantine with service-role-only access
 17. **`migrations/028_publication_confidence.sql`** — persisted 90-point public gate enforced by RLS
+18. **`migrations/029_harden_publication_rls_and_grants.sql`** — child-table publication boundary and least-privilege Data API grants
 
 **Existing Supabase project (safe, idempotent):**
 ```bash
@@ -52,6 +53,7 @@ Or run each file manually in the Supabase SQL Editor.
 ## RLS summary
 
 - `jobs`: approved recruitments only; live rows also require a current India deadline
+- `job_posts`, `job_dates`, `job_updates`: inherit the complete parent job publication gate
 - `job_review_queue`: no anon/authenticated grants or policies
 - `sources`: public `SELECT`
 - `raw_ingest`: no anon policies
