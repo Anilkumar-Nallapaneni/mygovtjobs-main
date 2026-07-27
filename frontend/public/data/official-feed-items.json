@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-07-27T08:06:03.289Z",
+  "generatedAt": "2026-07-27T11:54:31.760Z",
   "sourceReports": [
     {
       "id": "pib-press-reg3",
       "name": "PIB — recent press releases",
       "feedUrl": "https://www.pib.gov.in/RssMain.aspx?ModId=6&Lang=2&Regid=3&reg=48",
       "listingUrl": null,
-      "ok": false,
-      "error": "rss-empty",
-      "itemCount": 0,
-      "fetchMethod": null
+      "ok": true,
+      "error": null,
+      "itemCount": 1,
+      "fetchMethod": "rss-feed"
     },
     {
       "id": "employment-news",
@@ -236,10 +236,10 @@
       "name": "UPSC — e-Admit cards",
       "feedUrl": null,
       "listingUrl": "https://www.upsc.gov.in/e-admit-cards",
-      "ok": false,
-      "error": "https://www.upsc.gov.in/e-admit-cards: timeout",
-      "itemCount": 0,
-      "fetchMethod": null
+      "ok": true,
+      "error": null,
+      "itemCount": 2,
+      "fetchMethod": "rss-discovered"
     },
     {
       "id": "appsc-hall-tickets",
@@ -294,6 +294,57 @@
   ],
   "siteReports": [],
   "items": [
+    {
+      "id": "7e897a8a804563d4",
+      "title": "Union Public Service Commission",
+      "link": "https://upsc.gov.in/sites/default/files/AdvtNo-04-2026-Engl-080526.pdf",
+      "publishedAt": "2026-05-08T00:00:00.000Z",
+      "summary": "Advertisement No. 04/2026",
+      "pdfUrls": [],
+      "sourceId": "upsc-e-admit-hub",
+      "sourceName": "UPSC — e-Admit cards",
+      "dept": "Union Public Service Commission",
+      "state": "All India",
+      "category": "upsc",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "rss-feed"
+    },
+    {
+      "id": "eb8779e7959ca657",
+      "title": "Union Public Service Commission",
+      "link": "https://upsc.gov.in/sites/default/files/Advt_03_2026_Eng_24042026.pdf",
+      "publishedAt": "2026-04-24T00:00:00.000Z",
+      "summary": "Advertisement No. 03/2026",
+      "pdfUrls": [],
+      "sourceId": "upsc-e-admit-hub",
+      "sourceName": "UPSC — e-Admit cards",
+      "dept": "Union Public Service Commission",
+      "state": "All India",
+      "category": "upsc",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "rss-feed"
+    },
+    {
+      "id": "ec21edf1c6f205f8",
+      "title": "सांख्यिकी एवं कार्यक्रम कार्यान्वयन मंत्रालय ने अर्थव्यवस्था के गैर-निगमित क्षेत्र का आकलन करने के लिए गैर-निगमित क्षेत्र के उद्यमों का वार्षिक सर्वेक्षण किया और त्रैमासिक तथा वार्षिक परिणाम प्रकाशित किए",
+      "link": "https://pib.gov.in/PressReleaseIframePage.aspx?PRID=2289904",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "pib-press-reg3",
+      "sourceName": "PIB — recent press releases",
+      "dept": "Press Information Bureau",
+      "state": "All India",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "rss-feed"
+    },
     {
       "id": "1320428f3dc24d77",
       "title": "Home.aspx",
@@ -3072,6 +3123,23 @@
       "fetchMethod": "html-listing"
     },
     {
+      "id": "9d5fa7662ec98a4c",
+      "title": "27 Aug 2026 NOTICE REGARDING ADVT. NO. A-3/E-1/2016, REVIEW OFFICER/ASSTT. REVIEW OFFICER ETC. (GENERAL/SPECIAL RECTT.) EXAMINATION-2016",
+      "link": "https://uppsc.up.nic.in/Open_PDF.aspx?I4PnQ0tBaglP18XMjN55aOopo2gtubx/",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "uppsc-hall-tickets",
+      "sourceName": "UPPSC — Hall tickets",
+      "dept": "Uttar Pradesh PSC",
+      "state": "Uttar Pradesh",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
       "id": "52148a17365131ed",
       "title": "28 Jul 2026 NOTICE REGARDING ADMIT CARD FOR ADVT. NO. A-1/E-1/2025, ASSISTANT CONSERVATOR OF FOREST (A.C.F.) / RANGE FOREST OFFICER (R.F.O.) SERVICES (MAINS) EXA.....",
       "link": "https://uppsc.up.nic.in/Open_PDF.aspx?I4PnQ0tBagkC/gT4ITeNgto2OzZNOra1",
@@ -3432,23 +3500,6 @@
       "id": "99d9b0e8b8b71d8e",
       "title": "{{'SimplifiedForm_HM' | translate }}",
       "link": "https://uppsc.up.nic.in/OTR_Section/Otr_SimplifiedForm.aspx",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "uppsc-hall-tickets",
-      "sourceName": "UPPSC — Hall tickets",
-      "dept": "Uttar Pradesh PSC",
-      "state": "Uttar Pradesh",
-      "category": "state",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "99127beb81da4720",
-      "title": "{{'HelpDesk_Enquiry_HM' | translate }}",
-      "link": "https://uppsc.up.nic.in/PublicPages/Contus.aspx",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
