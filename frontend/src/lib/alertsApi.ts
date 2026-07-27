@@ -45,9 +45,16 @@ export async function unsubscribeAlert(
 ): Promise<{ ok: boolean; error?: string }> {
   if (API_BASE) {
     try {
+      const supabase = await getSupabase()
+      const accessToken = supabase?.auth
+        ? (await supabase.auth.getSession()).data.session?.access_token
+        : undefined
       const res = await fetch(apiUrl('/api/alerts/unsubscribe'), {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: {
+          'Content-Type': 'application/json',
+          ...(accessToken ? { Authorization: `Bearer ${accessToken}` } : {}),
+        },
         body: JSON.stringify({ id: row.id }),
       })
       if (res.ok) return { ok: true }
@@ -72,9 +79,8 @@ export async function unsubscribeAlert(
 }
 
 export async function subscribeWithUser(
-  payload: AlertSubscribePayload,
-  userId?: string
+  payload: AlertSubscribePayload
 ): Promise<{ ok: true; id: string } | { ok: false; error: string }> {
   const { subscribeToAlerts } = await import('@/lib/jobsApi')
-  return subscribeToAlerts({ ...payload, user_id: userId })
+  return subscribeToAlerts(payload)
 }

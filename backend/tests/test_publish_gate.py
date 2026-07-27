@@ -1,6 +1,6 @@
 """Tests for document classifier and publication gate."""
 
-from datetime import date, timedelta
+from datetime import date, datetime, timedelta, timezone
 
 from app.services.document_classifier import classify_document, classify_document_type
 from app.services.job_completeness_service import calculate_completeness, publication_tier
@@ -11,7 +11,7 @@ from app.services.pdf_candidate import (
     select_primary_pdf,
     validate_extracted_dates,
 )
-from app.services.publish_gate import can_publish_job, resolve_persist_status
+from app.services.publish_gate import can_publish_job, india_today, resolve_persist_status
 
 
 def test_classify_recruitment():
@@ -71,6 +71,67 @@ def test_can_publish_rejects_old_dates_and_forms():
     )
     assert not ok
     assert any("recruitment" in e.lower() for e in errors)
+
+
+def _publishable_job(today: date, deadline: object) -> dict:
+    return {
+        "title": "UPSC CDS Recruitment 2026",
+        "dept": "UPSC",
+        "apply_url": "https://upsc.gov.in/apply",
+        "document_type": "RECRUITMENT",
+        "verification_status": "VERIFIED",
+        "published_at": today - timedelta(days=5),
+        "last_date": deadline,
+        "qualification": "Graduate",
+        "vacancies": 100,
+        "age_limit": "21-30",
+        "salary": "Level-7",
+        "completeness_score": 80,
+    }
+
+
+def test_publication_deadline_boundary():
+    today = date(2026, 7, 27)
+    yesterday_ok, yesterday_errors = can_publish_job(
+        _publishable_job(today, today - timedelta(days=1)), today=today
+    )
+    today_ok, _ = can_publish_job(_publishable_job(today, today), today=today)
+    tomorrow_ok, _ = can_publish_job(
+        _publishable_job(today, today + timedelta(days=1)), today=today
+    )
+    assert not yesterday_ok
+    assert "Past deadline" in yesterday_errors
+    assert today_ok
+    assert tomorrow_ok
+
+
+def test_publication_rejects_missing_malformed_deadline_and_html_title():
+    today = date(2026, 7, 27)
+    for deadline in (None, "not-a-date"):
+        ok, errors = can_publish_job(_publishable_job(today, deadline), today=today)
+        assert not ok
+        assert "Missing or malformed deadline" in errors
+
+    ok, errors = can_publish_job(
+        {**_publishable_job(today, today), "title": "<b>UPSC Recruitment</b>"},
+        today=today,
+    )
+    assert not ok
+    assert "Title contains HTML markup" in errors
+
+
+def test_india_today_handles_utc_date_boundary(monkeypatch):
+    import app.services.publish_gate as publish_gate
+
+    real_datetime = datetime
+
+    class BoundaryDatetime:
+        @classmethod
+        def now(cls, tz):
+            return real_datetime(2026, 7, 26, 19, 0, tzinfo=timezone.utc).astimezone(tz)
+
+    monkeypatch.setattr(publish_gate, "datetime", BoundaryDatetime)
+    assert india_today() == date(2026, 7, 27)
 
 
 def test_resolve_persist_status_freeze_defaults_to_draft():

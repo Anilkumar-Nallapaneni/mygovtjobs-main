@@ -19,7 +19,13 @@ from app.scrapers.date_utils import parse_published
 from app.services.dedupe_service import content_hash, title_fingerprint
 from app.services.document_classifier import classify_document, classify_from_normalized
 from app.services.job_completeness_service import calculate_completeness
-from app.services.noise_filter import clean_job_title, sanitize_json_for_postgres, strip_postgres_control_chars
+from app.services.noise_filter import (
+    clean_job_title,
+    clean_plain_text,
+    sanitize_json_for_postgres,
+    sanitize_source_text_fields,
+    strip_postgres_control_chars,
+)
 from app.services.pdf_candidate import select_primary_pdf
 from app.services.publish_gate import resolve_persist_status
 from app.utils.catalog_job_count import count_catalog_display_jobs
@@ -126,6 +132,7 @@ def _source_domain(url: str | None) -> str | None:
 
 class JobPersistService:
     async def upsert_normalized(self, session: AsyncSession, normalized: dict, *, commit: bool = True) -> Job | None:
+        normalized = sanitize_source_text_fields(normalized)
         title = clean_job_title(normalized.get("title"))
         if not title:
             return None
@@ -136,7 +143,7 @@ class JobPersistService:
         digest = normalized.get("content_hash") or content_hash(
             title=title, apply_url=apply_url, last_date=str(last_date or "")
         )
-        dept = strip_postgres_control_chars(normalized.get("dept")) or None
+        dept = clean_plain_text(normalized.get("dept") or normalized.get("organization")) or None
         published_at = _upsert_published_at(normalized)
         source_url = _resolve_source_url(normalized, apply_url)
         slug = normalized.get("slug") or slugify(
@@ -207,7 +214,7 @@ class JobPersistService:
             published_to_site = False
 
         detail_blob = dict(normalized.get("detail") or {})
-        post_name = strip_postgres_control_chars(normalized.get("post_name")) or None
+        post_name = clean_plain_text(normalized.get("post_name")) or None
         if post_name:
             detail_blob["post_name"] = post_name
         detail_blob["document_type"] = document_type
@@ -228,12 +235,12 @@ class JobPersistService:
             "slug": slug,
             "title": title,
             "dept": dept,
-            "category": strip_postgres_control_chars(normalized.get("category")) or None,
+            "category": clean_plain_text(normalized.get("category")) or None,
             "state_codes": state_codes,
             "vacancies": vacancies,
-            "qualification": strip_postgres_control_chars(normalized.get("qualification")) or None,
-            "salary": strip_postgres_control_chars(normalized.get("salary")) or None,
-            "age_limit": strip_postgres_control_chars(normalized.get("age_limit")) or None,
+            "qualification": clean_plain_text(normalized.get("qualification")) or None,
+            "salary": clean_plain_text(normalized.get("salary")) or None,
+            "age_limit": clean_plain_text(normalized.get("age_limit")) or None,
             "last_date": last_date,
             "apply_url": apply_url,
             "status": job_status,

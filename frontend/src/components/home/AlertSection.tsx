@@ -2,7 +2,6 @@ import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import AlertBellIcon from "@/components/layout/AlertBellIcon";
 import TurnstileWidget from "@/components/TurnstileWidget";
-import { useAuth } from "@/hooks/useAuth";
 import { useWebPushToken } from "@/hooks/useWebPushToken";
 import { subscribeWithUser } from "@/lib/alertsApi";
 import { isTurnstileConfigured } from "@/lib/turnstile";
@@ -26,7 +25,6 @@ const PLACEHOLDER_KEYS = {
 
 export default function AlertSection() {
   const { t } = useTranslation();
-  const { user } = useAuth();
   const { token: pushToken, ready: pushReady } = useWebPushToken();
   const [address, setAddress] = useState("");
   const [sub, setSub] = useState(false);
@@ -78,8 +76,7 @@ export default function AlertSection() {
         qualification_tags: [],
         website: honeypot,
         turnstileToken,
-      },
-      user?.id
+      }
     );
     setLoading(false);
     if (result.ok) {

@@ -1,7 +1,10 @@
 """Clean and classify job titles scraped from gov portals."""
 
 import re
+from html import unescape
 from urllib.parse import urlparse
+
+from bs4 import BeautifulSoup
 
 # Portal menu / section links — not job notifications
 _PORTAL_NAV_TITLE = re.compile(
@@ -141,6 +144,57 @@ def strip_postgres_control_chars(text: str | None) -> str:
     return _POSTGRES_CONTROL.sub("", text)
 
 
+_HTML_TAG = re.compile(r"</?[a-z][^>]*>", re.I)
+_NON_TEXT_KEYS = {
+    "apply_url",
+    "href",
+    "notification_url",
+    "pdf_url",
+    "primary_pdf_url",
+    "source_url",
+    "url",
+}
+
+
+def contains_html_markup(value: str | None) -> bool:
+    """Return True when a persisted display value still contains an HTML tag."""
+    return bool(value and _HTML_TAG.search(value))
+
+
+def clean_plain_text(value: str | None) -> str:
+    """Convert scraped display content to normalized plain text."""
+    raw = strip_postgres_control_chars(value).strip()
+    if not raw:
+        return ""
+    text = (
+        BeautifulSoup(raw, "html.parser").get_text(" ", strip=True)
+        if contains_html_markup(raw)
+        else unescape(raw)
+    )
+    return re.sub(r"\s+", " ", text).strip()
+
+
+def sanitize_source_text_fields(value, *, field_name: str | None = None):
+    """Recursively remove source HTML while preserving URL-valued fields."""
+    if isinstance(value, str):
+        if field_name and (
+            field_name.lower() in _NON_TEXT_KEYS
+            or field_name.lower().endswith("_url")
+            or field_name.lower().endswith("_urls")
+            or field_name.lower().endswith("urls")
+        ):
+            return strip_postgres_control_chars(value).strip()
+        return clean_plain_text(value)
+    if isinstance(value, dict):
+        return {
+            key: sanitize_source_text_fields(item, field_name=str(key))
+            for key, item in value.items()
+        }
+    if isinstance(value, list):
+        return [sanitize_source_text_fields(item, field_name=field_name) for item in value]
+    return value
+
+
 def sanitize_json_for_postgres(value):
     """Recursively strip control characters from strings in JSON-bound dicts/lists."""
     if isinstance(value, str):
@@ -154,7 +208,7 @@ def sanitize_json_for_postgres(value):
 
 def clean_job_title(title: str | None) -> str:
     """Strip portal chrome (Read More, PDFsize suffixes, stray punctuation)."""
-    t = strip_postgres_control_chars(title).strip()
+    t = clean_plain_text(title)
     if not t:
         return ""
     t = re.sub(r"\s*Read\s+More\s*$", "", t, flags=re.I)

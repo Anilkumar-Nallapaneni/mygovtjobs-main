@@ -2,7 +2,7 @@
 """Re-validate and clean frontend/public/data/live-jobs.json in place."""
 import json
 import sys
-from datetime import date, datetime, timezone
+from datetime import datetime, timezone
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -10,6 +10,8 @@ sys.path.insert(0, str(ROOT / "backend"))
 
 from app.parsers.notification_parser import NotificationParser  # noqa: E402
 from app.services.validation_service import ValidationService  # noqa: E402
+from app.services.noise_filter import sanitize_source_text_fields  # noqa: E402
+from app.services.publish_gate import india_today  # noqa: E402
 
 LIVE_JSON = ROOT / "frontend" / "public" / "data" / "live-jobs.json"
 
@@ -26,7 +28,9 @@ def main() -> None:
 
     kept = []
     dropped = 0
+    today = india_today()
     for row in items:
+        row = sanitize_source_text_fields(row)
         source = (row.get("detail") or {}).get("source") or ""
         detail = row.get("detail") or {}
         raw = {
@@ -50,7 +54,11 @@ def main() -> None:
             dropped += 1
             continue
         last = normalized.get("last_date")
-        if last and str(last) < date.today().isoformat():
+        original_status = str(row.get("status") or "live").lower()
+        if original_status == "live" and not last:
+            dropped += 1
+            continue
+        if last and str(last) < today.isoformat():
             row_status = "expired"
         else:
             row_status = row.get("status") or "live"

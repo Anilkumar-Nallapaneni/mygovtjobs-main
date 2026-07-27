@@ -1,7 +1,9 @@
 from app.services.noise_filter import (
     clean_job_title,
+    clean_plain_text,
     looks_like_job_notification,
     sanitize_json_for_postgres,
+    sanitize_source_text_fields,
     strip_postgres_control_chars,
 )
 
@@ -12,6 +14,27 @@ def test_strip_postgres_control_chars_removes_nul():
 
 def test_clean_job_title_strips_nul_before_chrome_cleanup():
     assert "\x00" not in clean_job_title("DRDO\x00 Recruitment 2026 Read More")
+
+
+def test_clean_plain_text_removes_source_html():
+    value = '<b>BARC</b><br><font color="blue"><a href="/apply">Apply Online</a></font>'
+    assert clean_plain_text(value) == "BARC Apply Online"
+
+
+def test_sanitize_source_text_fields_preserves_urls_and_cleans_nested_content():
+    payload = {
+        "title": "<b>Clerk Recruitment</b>",
+        "apply_url": "https://example.gov.in/apply?a=1&b=2",
+        "detail": {
+            "summary": "Applications <strong>open</strong> now",
+            "important_dates": [{"label": "<i>Closing date</i>", "date": "2026-08-01"}],
+        },
+    }
+    cleaned = sanitize_source_text_fields(payload)
+    assert cleaned["title"] == "Clerk Recruitment"
+    assert cleaned["apply_url"] == payload["apply_url"]
+    assert cleaned["detail"]["summary"] == "Applications open now"
+    assert cleaned["detail"]["important_dates"][0]["label"] == "Closing date"
 
 
 def test_rejects_gov_admin_noise_titles():

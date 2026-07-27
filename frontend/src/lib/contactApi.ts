@@ -2,6 +2,10 @@ import { turnstileHeaders } from '@/lib/turnstile'
 
 const API_BASE = (import.meta.env.VITE_API_URL || '').replace(/\/$/, '')
 
+export function isContactApiConfigured(): boolean {
+  return Boolean(API_BASE)
+}
+
 export type ContactPayload = {
   name: string
   email: string

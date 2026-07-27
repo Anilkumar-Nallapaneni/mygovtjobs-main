@@ -5,7 +5,7 @@ import { useTranslation } from 'react-i18next'
 
 import Footer from '@/components/layout/Footer'
 import TurnstileWidget from '@/components/TurnstileWidget'
-import { submitContactForm } from '@/lib/contactApi'
+import { isContactApiConfigured, submitContactForm } from '@/lib/contactApi'
 import { isTurnstileConfigured } from '@/lib/turnstile'
 import { applyBrowseSeo } from '@/utils/browseSeo'
 import type { FooterLinkTarget } from '@/hooks/browseStateTypes'
@@ -27,6 +27,7 @@ export default function ContactPage({ onFooterLink }: ContactPageProps) {
   const [loading, setLoading] = useState(false)
   const [status, setStatus] = useState<string | null>(null)
   const [error, setError] = useState<string | null>(null)
+  const canSubmitContactForm = isContactApiConfigured()
 
   useEffect(() => {
     return applyBrowseSeo(CONTACT_PATH)
@@ -88,6 +89,7 @@ export default function ContactPage({ onFooterLink }: ContactPageProps) {
         <p className="static-page__lede">{t('contact.description')}</p>
       </header>
 
+      {canSubmitContactForm ? (
       <form className="contact-page__form" onSubmit={onSubmit} noValidate>
         <label className="contact-page__field">
           <span>{t('contact.name')}</span>
@@ -162,6 +164,12 @@ export default function ContactPage({ onFooterLink }: ContactPageProps) {
           <a href="mailto:contact@livegovtjobs.com">contact@livegovtjobs.com</a>
         </p>
       </form>
+      ) : (
+        <p className="contact-page__fallback">
+          {t('contact.fallback')}{' '}
+          <a href="mailto:contact@livegovtjobs.com">contact@livegovtjobs.com</a>
+        </p>
+      )}
 
       <Footer onFooterLink={onFooterLink} />
     </div>

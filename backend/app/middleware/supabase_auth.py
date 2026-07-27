@@ -41,4 +41,11 @@ async def get_current_user_id(request: Request) -> str:
     return str(user_id)
 
 
+async def get_optional_current_user_id(request: Request) -> str | None:
+    """Resolve an authenticated owner when supplied; allow a truly anonymous request."""
+    if not request.headers.get("Authorization", "").strip():
+        return None
+    return await get_current_user_id(request)
+
+
 CurrentUserId = Depends(get_current_user_id)

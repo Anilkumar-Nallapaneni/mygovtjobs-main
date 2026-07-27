@@ -14,7 +14,7 @@ async def submit_contact(request: Request, body: ContactRequest):
         return {"status": "sent"}
 
     ip = client_ip(request)
-    if not get_subscribe_rate_limiter().allow(f"contact:{ip}"):
+    if not await get_subscribe_rate_limiter().allow(f"contact:{ip}"):
         raise HTTPException(
             status_code=429,
             detail="Too many messages. Please try again in a minute.",

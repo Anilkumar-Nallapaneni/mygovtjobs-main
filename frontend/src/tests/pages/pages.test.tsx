@@ -8,6 +8,7 @@ import i18n from "@/i18n";
 import type { JobRecord } from "@/types/job";
 
 vi.mock("@/lib/contactApi", () => ({
+  isContactApiConfigured: vi.fn(() => true),
   submitContactForm: vi.fn().mockResolvedValue({ ok: true }),
 }));
 

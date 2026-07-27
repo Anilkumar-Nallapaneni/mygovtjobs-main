@@ -1,8 +1,8 @@
 # My Govt Jobs — Product Roadmap
 
 **Site:** [livegovtjobs.com](https://www.livegovtjobs.com)  
-**Last updated:** 22 July 2026 (ops fix + agents)  
-**Quality score:** ~92/100 — local `everything` green; **Vercel production Ready** after vacancy-valid snapshot
+**Last updated:** 27 July 2026 (full trust-boundary audit)
+**Production readiness:** recovery required — code gates pass, but only four jobs meet the strict public standard
 
 This roadmap covers what is **done**, what runs **daily**, what is **broken/pending**, and what to build **next**.
 
@@ -27,40 +27,35 @@ This roadmap covers what is **done**, what runs **daily**, what is **broken/pend
 
 ---
 
-## Audit snapshot (22 Jul 2026)
+## Audit snapshot (27 Jul 2026)
 
-### Verdict: **healthy** (ops fix shipped 22 Jul; Agent 2+3 enrich ran; Agent 1 re-dispatched)
+### Verdict: **code healthy; production data incomplete**
 
 | Check | Result | Notes |
 |-------|--------|-------|
-| `npm run everything` | ✅ Pass | 380 FE + 132 BE tests; build; env; Supabase; DB; jobs audit; verify |
-| Workflow race fix | ✅ Shipped | Ingest no longer commits `official-archives`; RSS uses `[skip ci]` + Vercel `ignoreCommand` |
-| Snapshot on `main` | ✅ | 3093 jobs, **717 with vacancies** — strict verify OK |
-| Vercel production | ✅ Ready | Redeployed after fix commit `40edd89` |
-| Agent 2 PDF (`pdf:read:ci`) | ✅ ~400 | Memorized batch (hung on cleanup; data saved) |
-| Agent 3 details (`job:details:ci`) | ✅ 396 updated | 4 failed |
-| Agent 1 ingest | 🟡 Running | Re-dispatched workflow after race fix |
-| Supabase | ✅ Healthy | ~2885 live / 3093 total |
-| Live `content_sections` column | 🟡 Still low | Details live in detail JSON / Storage; column metric still ~0–1% — follow-up |
-| Open GitHub issues | 0 | — |
+| Trust boundary | Pass | Shared sanitizer, India deadline gate, admin gate, export filter, snapshot checks, and RLS aligned |
+| Public snapshot | Pass | 4 approved jobs; zero raw-HTML titles; zero missing/past live deadlines |
+| Supabase | Pass with data warning | 3,181 total rows; 4 public live rows; 18 unsafe live rows demoted |
+| Alert ownership | Pass | Caller-owned `user_id` removed; anon rows unowned; auth ownership uses `auth.uid()` |
+| Frontend/backend tests | Pass | Full verification commands listed in the audit report |
+| Production inventory | Failing target | 4 live jobs versus the current minimum target of 50 |
 
 ### Local vs production data (audit)
 
 | Metric | Local / DB now | Target | Notes |
 |--------|----------------|--------|-------|
-| Live jobs (DB) | **2885** | 1000+ | ✅ Exceeded |
-| Snapshot jobs | **3027** local | — | Remote main snapshot failing vacancy strict check |
-| Vacancies in snapshot | **710** local | >0 | ❌ Remote build saw 0 |
-| Recruitment-like | **74.6%** | 95%+ | Down from ~87.5% earlier |
-| PDF links | **77.4%** | 90%+ | Near target |
-| `content_sections` (live) | **~0%** | 80%+ | 🔴 Regression — weekly enrich not keeping up |
-| `daily-sync-state.json` | completed **2026-07-20** | today | Stale vs calendar (Jul 21 dispatch succeeded; Jul 22 push failed) |
+| Public live jobs | **4** | 50 minimum, then 500+ | P0 ingest recovery |
+| Invalid live deadlines | **0** | 0 | Gate enforced |
+| Raw HTML titles | **0** | 0 | Sanitizer and snapshot check enforced |
+| Public vacancies | **507 across 3 jobs** | Reliable per notice | Revalidated snapshot |
+| Public API/archive rows | **4 / 0** | Deliberate | Unpublished archive rows are no longer exposed |
+| `content_sections` (live) | Low | 80%+ | Enrichment remains P1 |
 
 ### Root causes to fix (engineering)
 
-1. **RSS ↔ daily ingest race** — both workflows commit `frontend/public/data/official-archives/`; ingest rebase hits content conflicts → push fails → no fresh snapshot on `main`.
-2. **Broken / empty-vacancy `live-jobs.json` on `main`** — Vercel runs `verify-live-jobs-snapshot --strict` during build; RSS-only commits still trigger full builds against a bad snapshot.
-3. **PDF detail coverage collapse** — live `content_sections` ≈ 0%; run / expand weekly enrich.
+1. **Insufficient valid ingest output** — only four rows currently have verified recruitment classification, completeness, publication approval, and a current normalized deadline.
+2. **Backend not deployed** — contact submission and backend alert actions remain unavailable at the configured production hostname.
+3. **PDF detail coverage remains low** — expand enrichment after the active catalog is restored.
 
 ---
 
@@ -68,10 +63,10 @@ This roadmap covers what is **done**, what runs **daily**, what is **broken/pend
 
 | Area | Status | Notes |
 |------|--------|-------|
-| **Frontend on Vercel** | 🟡 Degraded | Site live on last good deploy; **new prod deploys ERROR** until snapshot fixed |
-| **Supabase Postgres** | ✅ Live | ~2,885 live / ~3,093 total (22 Jul 2026) |
-| **Daily GitHub ingest** | 🟡 Flaky | Jul 21 manual OK; Jul 22 schedule failed on archive push conflict |
-| **Sync freshness** | 🟡 | `daily-sync-state.json` still shows 2026-07-20; needs successful commit |
+| **Frontend on Vercel** | Live, data-limited | Browsing works; public snapshot contains four approved jobs |
+| **Supabase Postgres** | Live | 3,181 total records; public RLS exposes four approved jobs |
+| **Daily GitHub ingest** | Recovery required | Must produce deadline-bearing, verified records without weakening the gate |
+| **Sync freshness** | Failing target | Strict production audit remains red below 50 live jobs |
 | **4h RSS refresh** | ✅ | Green; but races with daily ingest archives |
 | **Weekly PDF enrich** | 🟡 | Workflow exists; live section coverage collapsed — verify Sunday run |
 | **Dynamic sitemap** | ✅ | Rebuilt with snapshot (local OK) |
@@ -81,9 +76,9 @@ This roadmap covers what is **done**, what runs **daily**, what is **broken/pend
 | **Google Search Console** | 🟡 | Verification done; **sitemap submit still manual** |
 | **i18n (22+ languages)** | ✅ | UI chrome translated; job body English |
 | **E2E + unit tests** | ✅ | 376 FE + 132 BE (+ 2 skipped); Playwright in CI |
-| **Job quality audit** | ✅ Thresholds | Passes ≥70% recruitment-like; purity still below 95% goal |
+| **Job quality audit** | Red on volume | Accuracy checks pass; live count is below the minimum |
 | **Backend API on cloud** | 🟡 Optional | `api.livegovtjobs.com` down — browse uses Supabase/static |
-| **Email/Telegram alerts** | 🟡 Partial | Resend secrets set; 0 subscriptions yet; Telegram optional |
+| **Email/Telegram alerts** | Partial | Ownership is secured; deployed delivery and signed email unsubscribe still need verification |
 | **Monetization** | ⬜ Not started | Freemium, Razorpay, sponsored listings |
 | **Code clarity cleanup** | ✅ Jul 2026 | COMPONENTS.md, fallbacks, jobDetailUi split, scripts/archive |
 
@@ -124,10 +119,10 @@ Full ops guide: **[RUN.md](../RUN.md)** · **[README.md](../README.md)**
 
 | # | Action | Who |
 |---|--------|-----|
-| 1 | Re-run **Supabase auto ingest** (workflow_dispatch) or `npm run sync:production` so a good `live-jobs.json` lands on `main` | You / agent |
-| 2 | Confirm Vercel production deploy returns **Ready** (vacancies > 0 in snapshot) | You |
-| 3 | Fix ingest push conflicts: either stop daily ingest from committing `official-archives`, or make rebase “ours/theirs” strategy, or skip Vercel builds for `chore(data): refresh official RSS` | Agent (code) |
-| 4 | Restore PDF detail coverage: `npm run weekly:enrich:ci` or `pipeline:live` — live `content_sections` ≈ 0% | You / agent |
+| 1 | Run and repair `sync:production` until at least 50 rows pass the strict publication gate | You / agent |
+| 2 | Investigate source/date extraction for the 18 demoted records; approve only verified corrections | Agent |
+| 3 | Deploy the FastAPI backend or equivalent serverless endpoints for contact and signed unsubscribe | You / agent |
+| 4 | Restore PDF detail coverage after the live inventory is healthy | You / agent |
 
 ### P1 — human-only (dashboard)
 
@@ -338,13 +333,13 @@ See [HUMAN_CHECKLIST.md](./HUMAN_CHECKLIST.md).
 
 | Metric | Current (22 Jul) | Target (top tier) |
 |--------|-----------------|-------------------|
-| CI (`everything`) | **100%** | 100% |
-| Vercel production deploy | **Failing** (bad snapshot) | Ready daily |
-| Strict audit thresholds | Pass | Pass |
-| Recruitment-like titles (DB) | **74.6%** | **95%+** |
-| Live jobs count | **~2885** | **1000+** ✅ |
-| PDF coverage | **77.4%** | **90%+** |
-| `content_sections` coverage (live) | **~0%** | **80%+** |
+| CI (`everything`) | Code gates pass; data volume fails strict production audit | 100% |
+| Vercel production deploy | Verify after merge | Ready daily |
+| Strict audit thresholds | Fails live-count target | Pass |
+| Recruitment-like public jobs | **100% of 4** | **98%+** |
+| Live jobs count | **4** | **50 minimum, then 500+** |
+| HTML titles / invalid live deadlines | **0 / 0** | **0 / 0** |
+| `content_sections` coverage (live) | Low | **80%+** |
 | Lighthouse Performance | TBD | **90+** |
 | GSC indexed pages | TBD | **80%+ of sitemap** |
 

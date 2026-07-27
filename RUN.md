@@ -77,7 +77,7 @@ Use these names — older aliases were removed to reduce duplication.
 | **PR check** | `npm run check:frontend && npm run type-check && npm run test && npm run build` | Lighter than `everything` |
 | **E2E (Playwright)** | `npm run test:e2e` | Builds `dist-e2e/`, starts preview on :4321, runs Playwright (no manual preview) |
 
-**Coverage targets** (`npm run test:coverage`): `src/utils/**` **70%** (enforced); `src/hooks/**` **70%** (enforced); `src/components/**` **40%**.
+**Coverage targets** (`npm run test:coverage`): utilities and hooks enforce 70% line coverage; components enforce 40% lines, 35% branches, 35% statements, and 18% functions. Globs include `.ts` and `.tsx` explicitly.
 
 **Removed aliases** (use canonical name instead): `ingest:official*` → `daily:sync*`; `backfill:pdfs` → `pdf:backfill`; `data:scrub-blocked` → `data:scrub`; `portal:audit` → `audit:official-sites:strict`; `upload:job-details` / `build:job-details:ci` → `weekly:enrich:ci`. `build:job-details` still prints a deprecation message — use `pdf:read:live` + `job:details`.
 

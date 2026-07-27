@@ -22,7 +22,7 @@ ALLOWED_REASONS = {
 @router.post("")
 async def create_job_report(request: Request, body: JobReportCreate):
     ip = client_ip(request)
-    if not get_subscribe_rate_limiter().allow(f"job-report:{ip}"):
+    if not await get_subscribe_rate_limiter().allow(f"job-report:{ip}"):
         raise HTTPException(status_code=429, detail="Too many reports. Please try again later.")
 
     token = request.headers.get("CF-Turnstile-Response") or request.headers.get("X-Turnstile-Token")

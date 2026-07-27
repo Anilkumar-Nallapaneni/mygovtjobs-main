@@ -12,6 +12,7 @@ from app.services.daily_sync_service import DailySyncService
 from app.services.ingest_service import IngestService
 from app.services.alert_delivery_service import AlertDeliveryService
 from app.services.job_completeness_service import PUBLISH_MIN_SCORE, calculate_completeness
+from app.services.publish_gate import can_publish_job
 from app.services.supabase_audit_service import SupabaseAuditService
 from app.utils.repo_paths import resolve_repo_path
 
@@ -195,6 +196,29 @@ async def admin_update_job(job_id: str, body: JobStatusUpdate):
                 )
                 row.completeness_score = score
                 row.published_to_site = score >= PUBLISH_MIN_SCORE
+            gate_ok, gate_errors = can_publish_job(
+                {
+                    "title": row.title,
+                    "dept": row.dept,
+                    "apply_url": row.apply_url,
+                    "source_url": row.source_url,
+                    "last_date": row.last_date,
+                    "published_at": row.published_at,
+                    "vacancies": row.vacancies,
+                    "qualification": row.qualification,
+                    "salary": row.salary,
+                    "age_limit": row.age_limit,
+                    "detail": row.detail or {},
+                    "document_type": row.document_type,
+                    "verification_status": row.verification_status,
+                    "completeness_score": row.completeness_score,
+                }
+            )
+            if not gate_ok:
+                raise HTTPException(
+                    status_code=422,
+                    detail={"message": "Job failed the publication gate", "errors": gate_errors},
+                )
         elif body.status in ("draft", "pending"):
             row.verification_status = body.verification_status.upper() if body.verification_status else "NEEDS_REVIEW"
             if body.published_to_site is None:

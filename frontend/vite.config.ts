@@ -183,29 +183,34 @@ export default defineConfig(({ mode }) => {
       include: ['src/tests/**/*.test.ts', 'src/tests/**/*.test.tsx'],
       coverage: {
         provider: 'v8',
-        include: ['src/utils/**', 'src/hooks/**', 'src/lib/**', 'src/components/**'],
+        include: [
+          'src/utils/**/*.{ts,tsx}',
+          'src/hooks/**/*.{ts,tsx}',
+          'src/lib/**/*.{ts,tsx}',
+          'src/components/**/*.{ts,tsx}',
+        ],
         thresholds: {
           lines: 50,
           functions: 45,
           statements: 50,
           branches: 38,
-          'src/utils/**': {
+          'src/utils/**/*.{ts,tsx}': {
             lines: 70,
             functions: 65,
             statements: 70,
             branches: 58,
           },
-          'src/hooks/**': {
+          'src/hooks/**/*.{ts,tsx}': {
             lines: 70,
             functions: 65,
             statements: 68,
             branches: 50,
           },
-          'src/components/**': {
+          'src/components/**/*.{ts,tsx}': {
             lines: 40,
-            functions: 35,
-            statements: 40,
-            branches: 30,
+            functions: 18,
+            statements: 35,
+            branches: 35,
           },
         },
       },

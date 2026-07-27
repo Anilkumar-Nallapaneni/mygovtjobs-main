@@ -96,4 +96,27 @@ describe("subscribeToAlerts", () => {
       qualification_tags: [],
     });
   });
+
+  it("derives authenticated alert ownership from the Supabase session", async () => {
+    vi.stubEnv("VITE_API_URL", "");
+    const insert = vi.fn().mockResolvedValue({ error: null });
+    vi.mocked(getSupabase).mockResolvedValue({
+      auth: {
+        getSession: vi.fn().mockResolvedValue({
+          data: { session: { user: { id: "user-1" } } },
+        }),
+      },
+      from: vi.fn().mockReturnValue({ insert }),
+    } as never);
+
+    const result = await subscribeToAlerts({
+      channel: "email",
+      channel_address: "owner@example.com",
+    });
+
+    expect(result.ok).toBe(true);
+    expect(insert).toHaveBeenCalledWith(
+      expect.objectContaining({ user_id: "user-1" })
+    );
+  });
 });

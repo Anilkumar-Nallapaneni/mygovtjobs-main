@@ -51,6 +51,7 @@ export function useAuth(): AuthState & {
     }
 
     let cancelled = false
+    let authSubscription: { unsubscribe: () => void } | undefined
 
     const init = async () => {
       const supabase = await getSupabase()
@@ -76,11 +77,12 @@ export function useAuth(): AuthState & {
           setProfile(null)
         }
       })
-      return () => sub.subscription.unsubscribe()
+      authSubscription = sub.subscription
     })
 
     return () => {
       cancelled = true
+      authSubscription?.unsubscribe()
     }
   }, [configured, loadProfile])
 

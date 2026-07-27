@@ -4,8 +4,16 @@ from __future__ import annotations
 
 from datetime import date, datetime, timedelta
 from typing import Any
+from zoneinfo import ZoneInfo
 
 from app.services.job_completeness_service import PUBLISH_MIN_SCORE, calculate_completeness
+from app.services.noise_filter import contains_html_markup
+
+INDIA_TZ = ZoneInfo("Asia/Kolkata")
+
+
+def india_today() -> date:
+    return datetime.now(INDIA_TZ).date()
 
 
 def _as_date(value: Any) -> date | None:
@@ -25,13 +33,19 @@ def _as_date(value: Any) -> date | None:
 def can_publish_job(job: dict[str, Any], *, today: date | None = None) -> tuple[bool, list[str]]:
     """Return (ok, errors). Only RECRUITMENT + VERIFIED jobs with plausible dates may go live."""
     errors: list[str] = []
-    today = today or date.today()
+    today = today or india_today()
 
-    if not str(job.get("title") or "").strip():
+    title = str(job.get("title") or "").strip()
+    if not title:
         errors.append("Missing title")
+    elif contains_html_markup(title):
+        errors.append("Title contains HTML markup")
 
-    if not str(job.get("department") or job.get("dept") or "").strip():
+    organisation = str(job.get("department") or job.get("dept") or "").strip()
+    if not organisation:
         errors.append("Missing organisation")
+    elif contains_html_markup(organisation):
+        errors.append("Organisation contains HTML markup")
 
     detail = job.get("detail") if isinstance(job.get("detail"), dict) else {}
     apply_url = job.get("apply_url")
@@ -66,7 +80,11 @@ def can_publish_job(job: dict[str, Any], *, today: date | None = None) -> tuple[
             errors.append("Publication date is implausibly old")
 
     deadline = _as_date(job.get("last_date") or job.get("deadline"))
-    if deadline:
+    if not deadline:
+        errors.append("Missing or malformed deadline")
+    else:
+        if deadline < today:
+            errors.append("Past deadline")
         if published_at and deadline < published_at:
             errors.append("Deadline occurs before publication date")
         if deadline > today + timedelta(days=365):
@@ -110,7 +128,7 @@ def resolve_persist_status(
 
     Returns (status, verification_status, published_to_site, errors).
     """
-    today = today or date.today()
+    today = today or india_today()
     errors: list[str] = []
 
     if last_date and last_date < today:

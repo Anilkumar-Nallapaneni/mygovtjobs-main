@@ -293,7 +293,6 @@ export type AlertSubscribePayload = {
   state_codes?: string[]
   categories?: string[]
   qualification_tags?: string[]
-  user_id?: string
   /** Honeypot — bots that fill this are silently rejected server-side. */
   website?: string
   /** Cloudflare Turnstile token when VITE_TURNSTILE_SITE_KEY is set. */
@@ -436,6 +435,10 @@ async function subscribeToAlertsViaSupabase(
     return { ok: false, error: 'unavailable' }
   }
 
+  const session = supabase.auth
+    ? (await supabase.auth.getSession()).data.session
+    : null
+
   // No `.select()` here: anonymous visitors can INSERT (RLS `alerts_public_insert`)
   // but have no SELECT policy, so requesting the row back would fail with 42501.
   const { error } = await supabase.from('alert_subscriptions').insert({
@@ -444,7 +447,7 @@ async function subscribeToAlertsViaSupabase(
     state_codes: payload.state_codes ?? [],
     categories: payload.categories ?? [],
     qualification_tags: payload.qualification_tags ?? [],
-    ...(payload.user_id ? { user_id: payload.user_id } : {}),
+    ...(session?.user?.id ? { user_id: session.user.id } : {}),
   })
 
   if (error) {
@@ -464,11 +467,16 @@ export async function subscribeToAlerts(
   try {
     const { turnstileToken, ...body } = payload
     const { turnstileHeaders } = await import('@/lib/turnstile')
+    const supabase = await getSupabase()
+    const accessToken = supabase?.auth
+      ? (await supabase.auth.getSession()).data.session?.access_token
+      : undefined
     const res = await fetch(apiUrl('/api/alerts/subscribe'), {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
         ...turnstileHeaders(turnstileToken),
+        ...(accessToken ? { Authorization: `Bearer ${accessToken}` } : {}),
       },
       body: JSON.stringify(body),
     })

@@ -25,6 +25,7 @@ def test_ingest_agent_run_source_saves_normalized_row():
             patch.object(agent, "_scraper_for", return_value=mock_scraper),
             patch.object(agent, "_normalize_raw", new_callable=AsyncMock, return_value=normalized),
             patch.object(agent.persist, "upsert_normalized", new_callable=AsyncMock) as upsert,
+            patch.object(agent.persist, "export_live_jobs_json", new_callable=AsyncMock, return_value=1),
             patch("app.agents.ingest_agent.SessionLocal") as session_local,
             patch.object(agent, "_record_source_run", new_callable=AsyncMock),
             patch.object(agent.source_sync, "ensure_source", new_callable=AsyncMock, return_value="src-1"),

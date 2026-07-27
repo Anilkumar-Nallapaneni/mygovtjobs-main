@@ -3,22 +3,36 @@
 from app.schemas.alert import AlertSubscribeRequest, AlertUnsubscribeRequest
 
 
-def test_subscribe_request_accepts_user_id():
+def test_subscribe_request_does_not_accept_user_id():
+    import pytest
+    from pydantic import ValidationError
+
+    with pytest.raises(ValidationError):
+        AlertSubscribeRequest(
+            channel="email",
+            channel_address="user@example.com",
+            state_codes=["up"],
+            user_id="00000000-0000-0000-0000-000000000001",
+        )
+
+
+def test_subscribe_request_accepts_filters():
     body = AlertSubscribeRequest(
         channel="email",
         channel_address="user@example.com",
         state_codes=["up"],
-        user_id="00000000-0000-0000-0000-000000000001",
     )
-    assert body.user_id is not None
     assert body.state_codes == ["up"]
 
 
-def test_unsubscribe_request_accepts_id_or_channel():
+def test_unsubscribe_request_requires_id():
+    import pytest
+    from pydantic import ValidationError
+
     by_id = AlertUnsubscribeRequest(id="00000000-0000-0000-0000-000000000001")
-    by_channel = AlertUnsubscribeRequest(channel="email", channel_address="user@example.com")
     assert by_id.id is not None
-    assert by_channel.channel == "email"
+    with pytest.raises(ValidationError):
+        AlertUnsubscribeRequest(channel="email", channel_address="user@example.com")
 
 
 def test_telegram_rejects_username():

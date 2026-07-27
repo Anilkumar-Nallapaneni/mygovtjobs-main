@@ -1,14 +1,16 @@
 from unittest.mock import MagicMock
 
+import asyncio
+
 from app.middleware.rate_limit import RedisSlidingWindowRateLimiter, SlidingWindowRateLimiter, client_ip
 
 
 def test_sliding_window_blocks_after_limit():
     limiter = SlidingWindowRateLimiter(max_requests=2, window_seconds=60)
-    assert limiter.allow("a")
-    assert limiter.allow("a")
-    assert not limiter.allow("a")
-    assert limiter.allow("b")
+    assert asyncio.run(limiter.allow("a"))
+    assert asyncio.run(limiter.allow("a"))
+    assert not asyncio.run(limiter.allow("a"))
+    assert asyncio.run(limiter.allow("b"))
 
 
 def test_client_ip_ignores_forwarded_from_untrusted_peer():
@@ -49,13 +51,33 @@ def test_redis_limiter_uses_pipeline(monkeypatch):
         def expire(self, _key, _ttl):
             return self
 
-        def execute(self):
+        async def execute(self):
             return [calls["count"], True]
 
     fake_redis = MagicMock()
     fake_redis.from_url = lambda *_a, **_k: FakeRedis()
-    monkeypatch.setitem(sys.modules, "redis", fake_redis)
+    fake_module = MagicMock()
+    fake_module.asyncio = fake_redis
+    monkeypatch.setitem(sys.modules, "redis", fake_module)
     limiter = RedisSlidingWindowRateLimiter("redis://localhost:6379/0", max_requests=2)
-    assert limiter.allow("ip-1")
-    assert limiter.allow("ip-1")
-    assert not limiter.allow("ip-1")
+    assert asyncio.run(limiter.allow("ip-1"))
+    assert asyncio.run(limiter.allow("ip-1"))
+    assert not asyncio.run(limiter.allow("ip-1"))
+
+
+def test_redis_limiter_falls_back_when_redis_is_unavailable(monkeypatch):
+    import sys
+
+    class BrokenRedis:
+        def pipeline(self):
+            raise ConnectionError("redis unavailable")
+
+    fake_redis = MagicMock()
+    fake_redis.from_url = lambda *_a, **_k: BrokenRedis()
+    fake_module = MagicMock()
+    fake_module.asyncio = fake_redis
+    monkeypatch.setitem(sys.modules, "redis", fake_module)
+
+    limiter = RedisSlidingWindowRateLimiter("redis://localhost:6379/0", max_requests=1)
+    assert asyncio.run(limiter.allow("ip-1"))
+    assert not asyncio.run(limiter.allow("ip-1"))

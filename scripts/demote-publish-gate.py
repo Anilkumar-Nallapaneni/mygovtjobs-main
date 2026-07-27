@@ -24,7 +24,9 @@ from app.database.session import SessionLocal
 from app.models.job import Job
 from app.services.document_classifier import classify_document_type
 from app.services.job_persist_service import JobPersistService
-from app.services.publish_gate import can_publish_job
+from app.services.dedupe_service import title_fingerprint
+from app.services.noise_filter import clean_job_title, clean_plain_text, sanitize_source_text_fields
+from app.services.publish_gate import can_publish_job, india_today
 
 _NON_RECRUITMENT = {
     "RESULT",
@@ -69,7 +71,7 @@ def _hard_date_errors(job: Job, today: date) -> list[str]:
 
 
 async def main(apply: bool, export: bool, strict: bool) -> int:
-    today = date.today()
+    today = india_today()
     report = {
         "generatedAt": datetime.now(timezone.utc).isoformat(),
         "apply": apply,
@@ -79,6 +81,8 @@ async def main(apply: bool, export: bool, strict: bool) -> int:
         "vacanciesNulled": 0,
         "keptLive": 0,
         "markedRecruitment": 0,
+        "textSanitized": 0,
+        "rowsUpdated": 0,
     }
 
     async with SessionLocal() as session:
@@ -86,9 +90,21 @@ async def main(apply: bool, export: bool, strict: bool) -> int:
             await session.execute(select(Job).where(Job.status.in_(("live", "expired", "draft"))))
         ).scalars().all()
         for job in rows:
-            title = job.title or ""
+            original_title = job.title or ""
+            title = clean_job_title(original_title)
             url = job.apply_url or getattr(job, "source_url", None) or ""
-            detail = job.detail if isinstance(job.detail, dict) else {}
+            original_detail = job.detail if isinstance(job.detail, dict) else {}
+            detail = sanitize_source_text_fields(original_detail)
+            clean_dept = clean_plain_text(job.dept) or None
+            clean_qualification = clean_plain_text(job.qualification) or None
+            text_changed = (
+                title != original_title
+                or detail != original_detail
+                or clean_dept != job.dept
+                or clean_qualification != job.qualification
+            )
+            if text_changed:
+                report["textSanitized"] += 1
             summary = str(detail.get("summary") or "")
             doc_type = (job.document_type or "").upper() or classify_document_type(
                 title=title, url=url or "", text=summary, dept=job.dept or ""
@@ -133,6 +149,11 @@ async def main(apply: bool, export: bool, strict: bool) -> int:
                             "verification_status": "VERIFIED",
                             "published_at": job.published_at,
                             "last_date": job.last_date,
+                            "vacancies": job.vacancies,
+                            "qualification": clean_qualification,
+                            "salary": job.salary,
+                            "age_limit": job.age_limit,
+                            "completeness_score": getattr(job, "completeness_score", 0),
                             "detail": detail,
                         }
                         ok, errors = can_publish_job(payload, today=today)
@@ -164,6 +185,11 @@ async def main(apply: bool, export: bool, strict: bool) -> int:
 
             if apply:
                 values = {
+                    "title": title,
+                    "title_fingerprint": title_fingerprint(title),
+                    "dept": clean_dept,
+                    "qualification": clean_qualification,
+                    "detail": detail,
                     "document_type": new_doc,
                     "verification_status": new_verification,
                     "status": new_status,
@@ -172,7 +198,15 @@ async def main(apply: bool, export: bool, strict: bool) -> int:
                 if null_vacancies:
                     values["vacancies"] = None
                     report["vacanciesNulled"] += 1
-                await session.execute(update(Job).where(Job.id == job.id).values(**values))
+                state_changed = (
+                    new_doc != job.document_type
+                    or new_verification != job.verification_status
+                    or new_status != job.status
+                    or null_vacancies
+                )
+                if text_changed or state_changed:
+                    await session.execute(update(Job).where(Job.id == job.id).values(**values))
+                    report["rowsUpdated"] += 1
             elif null_vacancies:
                 report["vacanciesNulled"] += 1
 
@@ -187,7 +221,8 @@ async def main(apply: bool, export: bool, strict: bool) -> int:
     print(
         f"classified={report['classified']} demoted={len(report['demoted'])} "
         f"keptLive={report['keptLive']} markedRecruitment={report['markedRecruitment']} "
-        f"vacanciesNulled={report['vacanciesNulled']} apply={apply} strict={strict} report={out}"
+        f"textSanitized={report['textSanitized']} vacanciesNulled={report['vacanciesNulled']} "
+        f"rowsUpdated={report['rowsUpdated']} apply={apply} strict={strict} report={out}"
     )
     return 0
 

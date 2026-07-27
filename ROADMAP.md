@@ -16,4 +16,4 @@ Quick links:
 | [docs/GO_LIVE.md](docs/GO_LIVE.md) | Production go-live checklist |
 | [docs/DAILY_8AM_SYNC.md](docs/DAILY_8AM_SYNC.md) | Daily ingest pipeline details |
 
-**Live site:** [livegovtjobs.com](https://www.livegovtjobs.com) · **everything:** green · **Prod:** Ready
+**Live site:** [livegovtjobs.com](https://www.livegovtjobs.com) · **Code gates:** green · **Production data:** recovery required

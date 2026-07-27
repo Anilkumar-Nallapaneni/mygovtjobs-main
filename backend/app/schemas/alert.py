@@ -1,13 +1,14 @@
-from pydantic import BaseModel, Field, ValidationInfo, field_validator
+from pydantic import BaseModel, ConfigDict, Field, ValidationInfo, field_validator
 
 
 class AlertSubscribeRequest(BaseModel):
+    model_config = ConfigDict(extra="forbid")
+
     channel: str = Field(pattern="^(email|whatsapp|telegram|push)$")
     channel_address: str = Field(min_length=3, max_length=320)
     state_codes: list[str] = Field(default_factory=list)
     categories: list[str] = Field(default_factory=list)
     qualification_tags: list[str] = Field(default_factory=list)
-    user_id: str | None = Field(default=None, max_length=36)
     website: str = Field(default="", max_length=200)
 
     @field_validator("channel_address")
@@ -31,6 +32,6 @@ class AlertSubscribeRequest(BaseModel):
 
 
 class AlertUnsubscribeRequest(BaseModel):
-    id: str | None = Field(default=None, max_length=36)
-    channel: str | None = Field(default=None, pattern="^(email|whatsapp|telegram|push)$")
-    channel_address: str | None = Field(default=None, max_length=320)
+    model_config = ConfigDict(extra="forbid")
+
+    id: str = Field(min_length=36, max_length=36)

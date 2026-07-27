@@ -1,12 +1,15 @@
 """Sliding-window rate limiter for public API routes."""
 
 import time
+import logging
 from collections import defaultdict
 
 from fastapi import Request, Response
 from starlette.middleware.base import BaseHTTPMiddleware
 
 from app.config import get_settings
+
+logger = logging.getLogger(__name__)
 
 
 class SlidingWindowRateLimiter:
@@ -17,7 +20,7 @@ class SlidingWindowRateLimiter:
         self.window = window_seconds
         self._hits: dict[str, list[float]] = defaultdict(list)
 
-    def allow(self, key: str) -> bool:
+    async def allow(self, key: str) -> bool:
         now = time.time()
         window_start = now - self.window
         hits = [t for t in self._hits[key] if t > window_start]
@@ -40,19 +43,27 @@ class RedisSlidingWindowRateLimiter:
     """Shared limiter backed by Redis INCR + EXPIRE (fixed window per key)."""
 
     def __init__(self, redis_url: str, *, max_requests: int, window_seconds: int = 60):
-        import redis
+        from redis import asyncio as redis
 
         self._client = redis.from_url(redis_url, decode_responses=True)
         self.max_requests = max_requests
         self.window = window_seconds
+        self._fallback = SlidingWindowRateLimiter(
+            max_requests=max_requests,
+            window_seconds=window_seconds,
+        )
 
-    def allow(self, key: str) -> bool:
+    async def allow(self, key: str) -> bool:
         safe_key = f"rl:{key}"
-        pipe = self._client.pipeline()
-        pipe.incr(safe_key)
-        pipe.expire(safe_key, self.window)
-        count, _ = pipe.execute()
-        return int(count) <= self.max_requests
+        try:
+            pipe = self._client.pipeline()
+            pipe.incr(safe_key)
+            pipe.expire(safe_key, self.window)
+            count, _ = await pipe.execute()
+            return int(count) <= self.max_requests
+        except Exception:
+            logger.exception("Redis rate limiter failed; using process-local fallback")
+            return await self._fallback.allow(key)
 
 
 _rate_limiter: SlidingWindowRateLimiter | RedisSlidingWindowRateLimiter | None = None
@@ -70,7 +81,7 @@ def _build_limiter(*, max_requests: int, window_seconds: int = 60):
                 window_seconds=window_seconds,
             )
         except Exception:
-            pass
+            logger.exception("Redis rate limiter initialization failed; using process-local limiter")
     return SlidingWindowRateLimiter(max_requests=max_requests, window_seconds=window_seconds)
 
 
@@ -120,6 +131,6 @@ class RateLimitMiddleware(BaseHTTPMiddleware):
 
         limiter = get_api_rate_limiter()
         ip = client_ip(request)
-        if not limiter.allow(ip):
+        if not await limiter.allow(ip):
             return Response("Rate limit exceeded", status_code=429)
         return await call_next(request)

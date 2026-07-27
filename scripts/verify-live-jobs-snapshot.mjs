@@ -32,6 +32,19 @@ function vacancySum(items) {
   return { sum, withVac, total: items.length }
 }
 
+function indiaDateIso() {
+  const parts = new Intl.DateTimeFormat('en-CA', {
+    timeZone: 'Asia/Kolkata',
+    year: 'numeric',
+    month: '2-digit',
+    day: '2-digit',
+  }).formatToParts(new Date())
+  const value = Object.fromEntries(parts.map(({ type, value: part }) => [type, part]))
+  return `${value.year}-${value.month}-${value.day}`
+}
+
+const HTML_TAG_RE = /<\/?[a-z][^>]*>/i
+
 export function verifyLiveJobsSnapshot({ strict = false } = {}) {
   const issues = []
   const warnings = []
@@ -50,6 +63,27 @@ export function verifyLiveJobsSnapshot({ strict = false } = {}) {
 
   const fullVac = vacancySum(fullItems)
   const vacRate = fullVac.withVac / fullVac.total
+  const todayIndia = indiaDateIso()
+  const htmlTitles = fullItems.filter((row) => HTML_TAG_RE.test(String(row?.title || '')))
+  const expiredAsLive = fullItems.filter(
+    (row) => String(row?.status || 'live').toLowerCase() === 'live'
+      && String(row?.last_date || '')
+      && String(row.last_date).slice(0, 10) < todayIndia
+  )
+  const liveWithoutDeadline = fullItems.filter(
+    (row) => String(row?.status || 'live').toLowerCase() === 'live'
+      && !String(row?.last_date || '').trim()
+  )
+
+  if (htmlTitles.length) {
+    issues.push(`${htmlTitles.length} title(s) contain raw HTML`)
+  }
+  if (expiredAsLive.length) {
+    issues.push(`${expiredAsLive.length} past-deadline job(s) are still marked live as of ${todayIndia} IST`)
+  }
+  if (liveWithoutDeadline.length) {
+    issues.push(`${liveWithoutDeadline.length} live job(s) have no normalized deadline`)
+  }
 
   if (fullVac.withVac === 0) {
     issues.push(

@@ -9,6 +9,7 @@ const mockSignOut = vi.fn()
 const mockOnAuthStateChange = vi.fn()
 const mockMaybeSingle = vi.fn()
 const mockUpdate = vi.fn()
+const mockUnsubscribe = vi.fn()
 
 vi.mock('@/lib/supabase', () => ({
   isSupabaseConfigured: vi.fn(() => true),
@@ -18,8 +19,7 @@ vi.mock('@/lib/supabase', () => ({
 import { getSupabase, isSupabaseConfigured } from '@/lib/supabase'
 
 function buildSupabase() {
-  const unsub = vi.fn()
-  mockOnAuthStateChange.mockReturnValue({ data: { subscription: { unsubscribe: unsub } } })
+  mockOnAuthStateChange.mockReturnValue({ data: { subscription: { unsubscribe: mockUnsubscribe } } })
   mockMaybeSingle.mockResolvedValue({
     data: {
       id: 'u1',
@@ -154,5 +154,12 @@ describe('useAuth', () => {
       await result.current.reloadProfile()
     })
     expect(result.current.profile?.display_name).toBe('Reloaded')
+  })
+
+  it('unsubscribes the auth listener on unmount', async () => {
+    const { unmount } = renderHook(() => useAuth())
+    await waitFor(() => expect(mockOnAuthStateChange).toHaveBeenCalled())
+    unmount()
+    expect(mockUnsubscribe).toHaveBeenCalledOnce()
   })
 })

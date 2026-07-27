@@ -4,15 +4,15 @@ Audit date: 27 July 2026
 
 ## Verdict
 
-The application is buildable and its automated test suites pass after repairing the
-committed job snapshot. The main architecture is coherent: official-source ingest
-feeds Supabase and static fallbacks, FastAPI owns privileged operations, and the Vite
-SPA can run independently from committed data.
+The application is buildable and its automated test suites pass. Its main architecture
+is coherent: official-source ingest feeds Supabase and static fallbacks, FastAPI owns
+privileged operations, and the Vite SPA can run independently from committed data.
 
-The highest operational risk found was not application code. A merge committed 25
-conflict blocks into `live-jobs.json`, which broke every consumer parsing the file.
-The repository also had two package lockfiles resolving different Supabase clients.
-Both issues are corrected by this audit.
+The publication boundary is now deterministic and shared across ingest, admin review,
+backend export, static-snapshot verification, and Supabase RLS. This correction reduced
+the public catalog to four jobs because 18 of 22 live database records were expired or
+lacked a normalized deadline. Accuracy is restored, but inventory recovery remains the
+primary production blocker.
 
 ## Authoritative Structure
 
@@ -46,7 +46,7 @@ mygovtjobs-main/
 |   `-- workers/                 Background execution
 |-- database/
 |   |-- supabase_setup.sql        Baseline schema
-|   `-- migrations/              Ordered imperative migrations (001-024)
+|   `-- migrations/              Ordered imperative migrations (001-026)
 |-- scripts/                     Ingest, export, audit, deployment, and ops tools
 |-- api/                         Vercel/API adapter surface
 |-- all websites/                Portal discovery catalog
@@ -58,19 +58,30 @@ mygovtjobs-main/
 `-- vercel.json                  Production deployment configuration
 ```
 
-Current scale: 313 frontend TypeScript files, 84 backend Python files, 113 root
-scripts, and 24 database migration files.
+Current scale: 313 frontend TypeScript files, 84 backend Python files, more than 100
+root scripts, and 26 database migration files.
 
 ## Completed In This Audit
 
-- Resolved all merge-conflict blocks in `frontend/public/data/live-jobs.json` using
-  the newer side of the merge; the snapshot contains 282 valid items.
+- Resolved all merge-conflict blocks in `frontend/public/data/live-jobs.json`; the
+  later trust-boundary backfill reduced the public snapshot to four approved items.
 - Regenerated derived job lists, organization index, and sitemaps through the build.
 - Extended `check:frontend` to reject conflict markers and malformed critical JSON.
 - Removed unused `@testing-library/jest-dom` and `@types/eslint` dependencies.
 - Removed `frontend/package-lock.json`; npm workspaces now have one dependency graph.
 - Reconciled the root graph to a current Supabase client and applied non-breaking npm
   audit updates.
+- Added shared recursive plain-text sanitization before job persistence and backfilled
+  205 affected database records.
+- Enforced India-calendar deadlines, recruitment classification, verification,
+  completeness, and `published_to_site` in ingest, admin publishing, exports, snapshots,
+  and RLS.
+- Demoted 18 unsafe live records; production now has four approved live records, zero
+  live records with missing/past deadlines, and zero titles containing HTML.
+- Removed caller-supplied alert ownership and address-based unsubscribe; authenticated
+  ownership is derived from Supabase tokens and enforced by RLS.
+- Fixed leaked frontend auth listeners and moved Redis rate limiting to the async client
+  with an observable process-local fallback.
 
 ## Verification
 
@@ -78,8 +89,8 @@ scripts, and 24 database migration files.
 |---|---|
 | TypeScript | Pass |
 | ESLint (`--max-warnings 0`) | Pass |
-| Frontend unit tests | 398 pass |
-| Backend tests | 152 pass, 1 skip |
+| Frontend unit tests | Pass |
+| Backend tests | Pass |
 | Critical JSON/conflict check | Pass |
 | Production frontend build | Pass |
 
@@ -92,25 +103,29 @@ warnings fatal.
 1. **Dependency advisories.** `npm audit` still reports advisories that require major
    dependency changes, principally React Router 6 to 7 and tooling-only minimatch /
    brace-expansion chains. Do not use `npm audit fix --force`; migrate and test them.
-2. **Live infrastructure verification.** Database RLS, live row quality, Vercel state,
-   and external source health require configured credentials and network access. Run
-   `npm run health:website:full` and `npm run verify:production` in the production
-   operator environment.
+2. **Live inventory.** Only four records pass the strict public gate. Restore source
+   freshness and normalized deadlines before considering production data healthy; do
+   not weaken the gate to satisfy the minimum-count check.
 3. **Test warnings.** Locate the backend `AsyncMock` not being awaited and plan the
    Starlette test-client migration once the supported FastAPI stack is confirmed.
 4. **Large generated diffs.** Job snapshots and sitemaps are merge-conflict prone.
    CI now detects corruption, but generated data should be updated by one serialized
    workflow and never manually merged.
+5. **Backend-dependent user actions.** The production API hostname is not deployed.
+   Contact submission and one-click anonymous alert unsubscribe require a deployed API
+   (with signed unsubscribe tokens) or an equivalent serverless endpoint.
 
 ## Roadmap
 
-### Phase 0: Merge This Repair
+### Phase 0: Trust Boundary and Inventory Recovery
 
-- Review the 282-item snapshot and generated sitemap diff.
+- Keep the four-job approved snapshot as the accuracy baseline.
+- Restore official-source ingest until at least 50 deadline-bearing jobs pass the gate.
+- Add signed email unsubscribe tokens before advertising one-click unsubscribe.
 - Run `npm run everything` with production secrets available.
 - Deploy only after `verify:production` passes.
 
-Exit: clean CI, valid snapshot, healthy production probes.
+Exit: clean CI, at least 50 verified live jobs, valid snapshot, healthy production probes.
 
 ### Phase 1: Security and Dependency Baseline
 
@@ -145,4 +160,3 @@ Exit: warning-free backend tests and reviewed API/RLS authorization coverage.
   script only after workflow and documentation references are zero.
 
 Exit: critical journeys pass in CI and operators have one command per routine task.
-
