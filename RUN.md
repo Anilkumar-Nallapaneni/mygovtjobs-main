@@ -100,7 +100,7 @@ Official portals  →  Agent 1  →  Agent 2  →  Agent 3  →  Website
 | — | **RSS feeds** | Official Wire & Notices (separate from main ingest) | `npm run fetch:official:feeds` |
 
 **Code:** `backend/app/agents/ingest_agent.py`, `pdf_reader_agent.py`, `job_detail_agent.py`  
-**Health skill:** `.cursor/skills/website-health-agent/` · report → `scripts/output/website-health-report.json`
+**Health code:** `scripts/website-health-agent.mjs` · report → `scripts/output/website-health-report.json`
 
 ---
 
@@ -333,9 +333,9 @@ Production needs: `VITE_JOBS_SOURCE=supabase` on Vercel.
 | Doc | Contents |
 |-----|----------|
 | `AGENTS.md` | Developer guide |
-| `docs/all agents and run.md` | Full install, deploy, GitHub Actions |
 | `docs/INSTALLATION_AND_RUN.md` | Step-by-step setup |
 | `docs/DAILY_8AM_SYNC.md` | Daily sync deep dive |
+| `docs/GO_LIVE.md` | Production deployment checklist |
 
 One-command full audit (copy-paste)
 

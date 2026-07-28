@@ -15,7 +15,7 @@ Government job portal monorepo. Read this before editing code or running ingest.
 | Ingest | `scripts/` | — | **Official gov.in scrapers** (primary) |
 | PDF reader | `backend/app/agents/pdf_reader_agent.py` | — | Read & memorize official notification PDFs |
 | Job detail | `backend/app/agents/job_detail_agent.py` | — | Publish detail UI (PDF > notification > listing) |
-| Website health | `.cursor/skills/website-health-agent/` + `scripts/website-health-agent.mjs` | — | Audit/fix code, Supabase, Vercel, GitHub, API, analytics |
+| Website health | `scripts/website-health-agent.mjs` | — | Audit/fix code, Supabase, Vercel, GitHub, API, analytics |
 | All Websites | `all websites/` | — | Discover official + unofficial govt job portals across India |
 
 ## Commands (repo root)
@@ -61,7 +61,7 @@ npm run websites:discover     # catalog all govt job websites → all websites/o
 ## Database
 
 1. Run `database/supabase_setup.sql` in Supabase SQL Editor.
-2. Run migrations in `database/migrations/` in order (001–021).
+2. Run migrations in `database/migrations/` in order (001–029).
 3. Backend connects via **Transaction pooler** (`postgresql+asyncpg://…:6543/…`).
 
 ## File map

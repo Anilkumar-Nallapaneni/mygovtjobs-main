@@ -1,6 +1,6 @@
 # Code Audit and Engineering Roadmap
 
-Audit date: 27 July 2026
+Audit date: 28 July 2026
 
 ## Verdict
 
@@ -9,10 +9,9 @@ is coherent: official-source ingest feeds Supabase and static fallbacks, FastAPI
 privileged operations, and the Vite SPA can run independently from committed data.
 
 The publication boundary is now deterministic and shared across ingest, admin review,
-backend export, static-snapshot verification, and Supabase RLS. This correction reduced
-the public catalog to four jobs because 18 of 22 live database records were expired or
-lacked a normalized deadline. Accuracy is restored, but inventory recovery remains the
-primary production blocker.
+backend export, static-snapshot verification, and Supabase RLS. One database record
+currently passes the complete public gate. Accuracy is preserved, but inventory recovery
+remains the primary production blocker.
 
 ## Authoritative Structure
 
@@ -46,25 +45,28 @@ mygovtjobs-main/
 |   `-- workers/                 Background execution
 |-- database/
 |   |-- supabase_setup.sql        Baseline schema
-|   `-- migrations/              Ordered imperative migrations (001-026)
+|   `-- migrations/              Ordered imperative migrations (001-029)
 |-- scripts/                     Ingest, export, audit, deployment, and ops tools
-|-- api/                         Vercel/API adapter surface
+|-- api/                         Vercel Open Graph serverless function
 |-- all websites/                Portal discovery catalog
 |-- android-twa/                 Android Trusted Web Activity wrapper
+|-- play-store-assets/           Play Store listing images
 |-- .github/workflows/           CI, sync, enrichment, and deployment automation
 |-- docs/                        Operator and engineering documentation
 |-- package.json                 Canonical commands and npm workspace definition
 |-- package-lock.json            Only authoritative JavaScript lockfile
-`-- vercel.json                  Production deployment configuration
+|-- vercel.json                  Frontend production deployment configuration
+|-- render.yaml                  Optional backend deployment configuration
+`-- railway.toml                 Alternative backend deployment configuration
 ```
 
-Current scale: 313 frontend TypeScript files, 84 backend Python files, more than 100
-root scripts, and 26 database migration files.
+Current scale: 313 frontend TypeScript files, 133 backend Python files, 118 tracked
+script files, and 29 database migration files.
 
 ## Completed In This Audit
 
 - Resolved all merge-conflict blocks in `frontend/public/data/live-jobs.json`; the
-  later trust-boundary backfill reduced the public snapshot to four approved items.
+  current trust-boundary export contains one approved item.
 - Regenerated derived job lists, organization index, and sitemaps through the build.
 - Extended `check:frontend` to reject conflict markers and malformed critical JSON.
 - Removed unused `@testing-library/jest-dom` and `@types/eslint` dependencies.
@@ -76,12 +78,15 @@ root scripts, and 26 database migration files.
 - Enforced India-calendar deadlines, recruitment classification, verification,
   completeness, and `published_to_site` in ingest, admin publishing, exports, snapshots,
   and RLS.
-- Demoted 18 unsafe live records; production now has four approved live records, zero
+- Demoted unsafe live records; production now has one approved live record, zero
   live records with missing/past deadlines, and zero titles containing HTML.
 - Removed caller-supplied alert ownership and address-based unsubscribe; authenticated
   ownership is derived from Supabase tokens and enforced by RLS.
 - Fixed leaked frontend auth listeners and moved Redis rate limiting to the async client
   with an observable process-local fallback.
+- Removed repository-local `.agents` and `.cursor` instructions, the duplicate
+  `govtjobs live-data` pipeline, archived one-off scripts, stale reports, and committed
+  build/test artifacts. Generated discovery reports now remain ignored.
 
 ## Verification
 
@@ -89,25 +94,26 @@ root scripts, and 26 database migration files.
 |---|---|
 | TypeScript | Pass |
 | ESLint (`--max-warnings 0`) | Pass |
-| Frontend unit tests | Pass |
-| Backend tests | Pass |
+| Frontend unit tests | Pass (401) |
+| Backend tests | Pass (172, 1 skipped) |
+| Playwright E2E | Pass (15) |
 | Critical JSON/conflict check | Pass |
 | Production frontend build | Pass |
 
-Backend tests still report one Starlette/httpx deprecation warning and one unawaited
-`AsyncMock` runtime warning. These do not fail CI but should be removed before making
-warnings fatal.
+Backend tests report one Starlette/httpx deprecation warning. Playwright reports Node's
+`DEP0190` warning for a shell-based child process. These do not fail CI but should be
+removed before making warnings fatal.
 
 ## Remaining Risks
 
 1. **Dependency advisories.** `npm audit` still reports advisories that require major
    dependency changes, principally React Router 6 to 7 and tooling-only minimatch /
    brace-expansion chains. Do not use `npm audit fix --force`; migrate and test them.
-2. **Live inventory.** Only four records pass the strict public gate. Restore source
+2. **Live inventory.** Only one record passes the strict public gate. Restore source
    freshness and normalized deadlines before considering production data healthy; do
    not weaken the gate to satisfy the minimum-count check.
-3. **Test warnings.** Locate the backend `AsyncMock` not being awaited and plan the
-   Starlette test-client migration once the supported FastAPI stack is confirmed.
+3. **Test warnings.** Plan the Starlette test-client migration once the supported
+   FastAPI stack is confirmed, and remove Playwright's shell-based child-process launch.
 4. **Large generated diffs.** Job snapshots and sitemaps are merge-conflict prone.
    CI now detects corruption, but generated data should be updated by one serialized
    workflow and never manually merged.
@@ -119,7 +125,7 @@ warnings fatal.
 
 ### Phase 0: Trust Boundary and Inventory Recovery
 
-- Keep the four-job approved snapshot as the accuracy baseline.
+- Keep the one-job approved snapshot as the accuracy baseline.
 - Restore official-source ingest until at least 50 deadline-bearing jobs pass the gate.
 - Add signed email unsubscribe tokens before advertising one-click unsubscribe.
 - Run `npm run everything` with production secrets available.
@@ -156,7 +162,7 @@ Exit: warning-free backend tests and reviewed API/RLS authorization coverage.
 - Run Playwright on desktop and mobile for search, browse, job detail, alerts, and auth.
 - Track source freshness, invalid official links, PDF coverage, and detail coverage as
   explicit service-level indicators.
-- Consolidate the 113 scripts behind the canonical commands in `RUN.md`; retire a
-  script only after workflow and documentation references are zero.
+- Consolidate the 118 tracked script files behind the canonical commands in `RUN.md`;
+  retire a script only after workflow and documentation references are zero.
 
 Exit: critical journeys pass in CI and operators have one command per routine task.
