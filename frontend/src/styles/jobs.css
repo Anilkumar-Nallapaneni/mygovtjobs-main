@@ -1207,8 +1207,12 @@
     border-top: 1px solid var(--ds-borderHi);
   }
 
+  .job-detail-sticky-bar > * {
+    min-width: 0;
+  }
+
   .job-detail-sticky-bar__apply {
-    flex: 1 1 auto;
+    flex: 1 1 0;
     min-height: 44px;
     padding: 0 14px;
     border-radius: 10px;
@@ -1225,7 +1229,7 @@
 
   .job-detail-sticky-bar__share,
   .job-detail-sticky-bar__alert {
-    flex: 0 0 auto;
+    flex: 0 1 auto;
     min-height: 44px;
     padding: 0 12px;
     border-radius: 10px;
@@ -1238,6 +1242,8 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    overflow-wrap: anywhere;
+    text-align: center;
   }
 
   .job-detail-stats,
