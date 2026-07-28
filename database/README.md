@@ -18,6 +18,10 @@ Supabase Postgres schema for My Govt Jobs.
 12. **`migrations/011_user_alerts_and_monetization.sql`** — `subscription_tier`, `is_sponsored`, auth-scoped alert policies
 13. **`migrations/012_title_fingerprint.sql`** — near-duplicate title dedupe column + index
 14. **`migrations/013_razorpay_payments.sql`** — `payment_orders` for Premium checkout
+15. **`migrations/014`–`026`** — source sync, publication gate, completeness, and RLS hardening
+16. **`migrations/027_job_review_queue.sql`** — private failed-record quarantine with service-role-only access
+17. **`migrations/028_publication_confidence.sql`** — persisted 90-point public gate enforced by RLS
+18. **`migrations/029_harden_publication_rls_and_grants.sql`** — child-table publication boundary and least-privilege Data API grants
 
 **Existing Supabase project (safe, idempotent):**
 ```bash
@@ -39,6 +43,7 @@ Or run each file manually in the Supabase SQL Editor.
 | `sources` | public read | Scraper registry (111 rows) |
 | `raw_ingest` | service role only | Staging JSON from scrapers |
 | `jobs` | public read live+expired | Main job catalog |
+| `job_review_queue` | service role only | Failed or uncertain normalized job candidates |
 | `job_posts` | public read | Post-level vacancy breakdown |
 | `job_dates` | public read | Important dates per job |
 | `alert_subscriptions` | public insert | User alert signup |
@@ -47,7 +52,9 @@ Or run each file manually in the Supabase SQL Editor.
 
 ## RLS summary
 
-- `jobs`: `SELECT` where `status IN ('live', 'expired')`
+- `jobs`: approved recruitments only; live rows also require a current India deadline
+- `job_posts`, `job_dates`, `job_updates`: inherit the complete parent job publication gate
+- `job_review_queue`: no anon/authenticated grants or policies
 - `sources`: public `SELECT`
 - `raw_ingest`: no anon policies
 - `alert_subscriptions`: public `INSERT`

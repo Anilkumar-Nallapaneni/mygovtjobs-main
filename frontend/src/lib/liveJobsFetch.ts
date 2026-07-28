@@ -182,7 +182,8 @@ async function fetchSupabasePage(
     .from('jobs')
     .select(select)
     .eq('status', 'live')
-    .or('published_to_site.eq.true,published_to_site.is.null')
+    .eq('published_to_site', true)
+    .gte('publication_confidence', 90)
     .order('published_at', { ascending: false })
     .range(offset, rangeEnd)
 

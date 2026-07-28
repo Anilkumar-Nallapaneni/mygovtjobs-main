@@ -2,14 +2,14 @@
 
 Full product roadmap: **[docs/ROADMAP.md](docs/ROADMAP.md)**
 
-**Last code audit:** 27 July 2026. See [docs/CODE_AUDIT_2026-07-27.md](docs/CODE_AUDIT_2026-07-27.md) for the verified structure, completed repairs, remaining risks, and engineering roadmap.
+**Last code audit:** 28 July 2026. See [docs/CODE_AUDIT_2026-07-28.md](docs/CODE_AUDIT_2026-07-28.md) for the verified structure, completed repairs, remaining risks, and engineering roadmap.
 
 Quick links:
 
 | Doc | Purpose |
 |-----|---------|
 | [docs/ROADMAP.md](docs/ROADMAP.md) | Phases 0–6, audit snapshot, 90-day plan, quality targets |
-| [docs/CODE_AUDIT_2026-07-27.md](docs/CODE_AUDIT_2026-07-27.md) | Current code audit, exact structure, and remediation roadmap |
+| [docs/CODE_AUDIT_2026-07-28.md](docs/CODE_AUDIT_2026-07-28.md) | Current code audit, exact structure, and remediation roadmap |
 | [docs/HUMAN_CHECKLIST.md](docs/HUMAN_CHECKLIST.md) | Manual GSC + Supabase items only you can do |
 | [RUN.md](RUN.md) | Daily commands, agents, `npm run everything` |
 | [README.md](README.md) | Installation + ops |

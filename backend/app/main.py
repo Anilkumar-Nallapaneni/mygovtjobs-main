@@ -4,6 +4,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.openapi.utils import get_openapi
 
 from app.config import get_settings
+from app.middleware.admin_audit import AdminAuditMiddleware
 from app.middleware.rate_limit import RateLimitMiddleware
 from app.routes import admin, alerts, billing, contact, health, ingest, job_reports, jobs, meta
 
@@ -49,6 +50,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 app.add_middleware(RateLimitMiddleware, max_requests=_settings.rate_limit_per_minute)
+app.add_middleware(AdminAuditMiddleware)
 
 app.include_router(health.router, tags=["health"])
 app.include_router(jobs.router, prefix="/api/jobs", tags=["jobs"])

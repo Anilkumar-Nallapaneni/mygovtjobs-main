@@ -65,6 +65,9 @@ export type JobRecord = {
   published_at?: string
   updatedDate?: string
   updated_at?: string
+  verified_at?: string
+  link_last_checked_at?: string
+  publication_confidence?: number
   apply_url?: string
   pdfUrl?: string
   pdfUrls?: string[]

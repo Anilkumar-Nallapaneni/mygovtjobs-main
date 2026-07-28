@@ -1,61 +1,19 @@
 {
-  "generatedAt": "2026-07-27T14:29:07.184104Z",
+  "generatedAt": "2026-07-27T19:11:36.731526Z",
   "dailySync": {
-    "completedAt": "2026-07-27T14:29:05.900749+00:00",
-    "completedAtIst": "2026-07-27T19:59:05.900749+05:30",
-    "dateIst": "2026-07-27",
+    "completedAt": "2026-07-27T19:11:34.208467+00:00",
+    "completedAtIst": "2026-07-28T00:41:34.208467+05:30",
+    "dateIst": "2026-07-28",
     "nextRunAtIst": "2026-07-28T08:00:00+05:30",
-    "jobCount": 4,
+    "jobCount": 1,
     "sourcesScraped": 154,
     "scheduledLabel": "8:00 AM IST daily"
   },
   "items": [
     {
-      "id": "4aa931e2-5bc9-4907-9bf9-32477797b792",
-      "slug": "esic-employees-state-insurance-corporation-walk-in-interview-on-27-07-2026-for-s-17ee9c8e",
-      "title": "Walk-in-interview on 27/07/2026 for Senior Resident & on 28/07/2026 for Specialist/Super Specialist, Reporting time 9:00AM to 11:00AM",
-      "dept": "ESIC — Employees' State Insurance Corporation",
-      "category": "health",
-      "state_codes": [],
-      "vacancies": 0,
-      "qualification": "for Senior Resident (Under Residency Scheme)",
-      "salary": "Rs. 67,700",
-      "age_limit": "INTERVIEW:______________________________________",
-      "last_date": "2026-07-28",
-      "apply_url": "https://www.esic.gov.in/attachments/recruitmentfile/Walk_in_interview_on_27_07_2026_for_Senior_Resident_amp_on_28_07_2026_for_Specialist_Super_Specialist_Reporting_time_9_00AM_to_11_00AM_1784795989.pdf",
-      "pdf_url": "https://www.esic.gov.in/attachments/recruitmentfile/Walk_in_interview_on_27_07_2026_for_Senior_Resident_amp_on_28_07_2026_for_Specialist_Super_Specialist_Reporting_time_9_00AM_to_11_00AM_1784795989.pdf",
-      "status": "live",
-      "is_sponsored": false,
-      "published_at": "2026-07-27T00:00:00Z",
-      "document_type": "RECRUITMENT",
-      "verification_status": "VERIFIED",
-      "completeness_score": 73,
-      "published_to_site": true,
-      "primary_pdf_url": "https://www.esic.gov.in/attachments/recruitmentfile/Walk_in_interview_on_27_07_2026_for_Senior_Resident_amp_on_28_07_2026_for_Specialist_Super_Specialist_Reporting_time_9_00AM_to_11_00AM_1784795989.pdf",
-      "post_name": null,
-      "posts": [],
-      "important_dates": [],
-      "detail": {
-        "pdf_urls": [
-          "https://www.esic.gov.in/attachments/recruitmentfile/Walk_in_interview_on_27_07_2026_for_Senior_Resident_amp_on_28_07_2026_for_Specialist_Super_Specialist_Reporting_time_9_00AM_to_11_00AM_1784795989.pdf"
-        ],
-        "pdf_url": "https://www.esic.gov.in/attachments/recruitmentfile/Walk_in_interview_on_27_07_2026_for_Senior_Resident_amp_on_28_07_2026_for_Specialist_Super_Specialist_Reporting_time_9_00AM_to_11_00AM_1784795989.pdf",
-        "notification_url": "https://www.esic.gov.in/attachments/recruitmentfile/Walk_in_interview_on_27_07_2026_for_Senior_Resident_amp_on_28_07_2026_for_Specialist_Super_Specialist_Reporting_time_9_00AM_to_11_00AM_1784795989.pdf",
-        "summary": "F. No. 114-A-11/12/27/2011-OKH Date: 23.07.2026 Walk-in-interview on 27/07/2026 for Senior Resident & on 28/07/2026 for Specialist/Super Specialist, Reporting time 9:00AM to 11:00AM 1. Senior Resident (Under Residency Scheme) for a tenure of 3 Years subject to annual evaluation and term renewed every year based on satisfactory performance. Walk-in-interview for the post of Senior Residents Under R…",
-        "source": "esic",
-        "detail_updated_at": "2026-07-27T06:58:24.399198+00:00",
-        "published": "2026-07-27T00:00:00+00:00",
-        "detail_source": "pdf",
-        "memorized_at": "2026-07-27T06:58:16.488694+00:00",
-        "pdfUrls": [
-          "https://www.esic.gov.in/attachments/recruitmentfile/Walk_in_interview_on_27_07_2026_for_Senior_Resident_amp_on_28_07_2026_for_Specialist_Super_Specialist_Reporting_time_9_00AM_to_11_00AM_1784795989.pdf"
-        ]
-      }
-    },
-    {
       "id": "e74ac05c-5309-40cf-adf3-8daff9e02cd2",
       "slug": "recruitment-online-applications-are-invited-from-eligible-candidates-for-filling-62abc909",
-      "title": "Recruitment : Online applications are invited from eligible candidates for filling up the following Group ‘B’ posts (Para-medical) in Bhabha Atomic Research Centre (BARC), Mumbai and Radiation Medicine Research Centre (RMRC), Kolkata through Direct Recruitment. Click Here to Apply Online",
+      "title": "Recruitment : Online applications are invited from eligible candidates for filling up the following Group ‘B’ posts (Para-medical) in Bhabha Atomic Research Centre (BARC), Mumbai and Radiation Medicine Research Centre (RMRC), Kolkata through Direct Recruitment",
       "dept": "Bhabha Atomic Research Centre (BARC)",
       "category": "defence",
       "state_codes": [],
@@ -69,142 +27,32 @@
       "status": "live",
       "is_sponsored": false,
       "published_at": "2026-07-17T00:00:00Z",
+      "verified_at": "2026-07-27T18:59:02.297720Z",
+      "updated_at": "2026-07-27T18:59:02.297720Z",
       "document_type": "RECRUITMENT",
       "verification_status": "VERIFIED",
       "completeness_score": 73,
+      "publication_confidence": 90.0,
       "published_to_site": true,
       "primary_pdf_url": "http://www.barc.gov.in/careers/vacancy21.pdf",
       "post_name": null,
       "posts": [],
       "important_dates": [],
       "detail": {
+        "detail_updated_at": "2026-07-27T06:58:23.600812+00:00",
         "pdf_urls": [
           "http://www.barc.gov.in/careers/vacancy21.pdf"
         ],
         "pdf_url": "http://www.barc.gov.in/careers/vacancy21.pdf",
-        "notification_url": "http://www.barc.gov.in/careers/vacancy21.pdf",
-        "summary": "Page 1 of 7 Government of India Department of Atomic Energy Bhabha Atomic Research Centre Opening date and time for submission of online application 17.07.2026 (00.00 hrs.) Closing date and time for receipt of online application 18.08.2026 (23.59 hrs.) “GOVERNMENT STRIVES TO HAVE A WORKFORCE WHICH REFLECTS GENDER BALANCE AND WOMEN CANDIDATES ARE ENCOURAGED TO APPLY” ADVERTISEMENT No. 06/2026 (R-I)…",
         "source": "barc",
-        "detail_updated_at": "2026-07-27T06:58:23.600812+00:00",
-        "published": "2026-07-17T00:00:00+00:00",
         "detail_source": "pdf",
         "memorized_at": "2026-07-27T06:58:13.721049+00:00",
         "pdfUrls": [
           "http://www.barc.gov.in/careers/vacancy21.pdf"
-        ]
-      }
-    },
-    {
-      "id": "f9c49a13-098e-4a76-8eb6-b47c8d7112d9",
-      "slug": "empanelment-of-external-concurrent-auditors-2024-25-apply-online-6b2fd89e",
-      "title": "Empanelment of External Concurrent Auditors 2024-25 - Apply Online",
-      "dept": "Canara Bank — Careers",
-      "category": "banking",
-      "state_codes": [],
-      "vacancies": 500,
-      "qualification": "and skill set",
-      "salary": "Rs. 300",
-      "age_limit": null,
-      "last_date": "2027-06-30",
-      "apply_url": "https://csis.canarabank.bank.in/ECA/ECAHome.aspx",
-      "pdf_url": "https://csis.canarabank.bank.in/ECA/Docs/TERMS AND CONDITIONS.pdf",
-      "status": "live",
-      "is_sponsored": false,
-      "published_at": "2026-07-01T00:00:00Z",
-      "document_type": "RECRUITMENT",
-      "verification_status": "VERIFIED",
-      "completeness_score": 73,
-      "published_to_site": true,
-      "primary_pdf_url": "https://csis.canarabank.bank.in/ECA/Docs/TERMS AND CONDITIONS.pdf",
-      "post_name": null,
-      "posts": [],
-      "important_dates": [],
-      "detail": {
-        "pdf_urls": [
-          "https://csis.canarabank.bank.in/ECA/Docs/TERMS AND CONDITIONS.pdf",
-          "https://csis.canarabank.bank.in/ECA/Docs/ANNEXURE26.pdf",
-          "https://csis.canarabank.bank.in/ECA/Docs/Annexure IV.pdf",
-          "https://csis.canarabank.bank.in/ECA/Docs/Instructions.pdf",
-          "https://csis.canarabank.bank.in/ECA/Docs/TERMS%20AND%20CONDITIONS.pdf",
-          "https://csis.canarabank.bank.in/ECA/Docs/FREQUENTLY ASKED QUESTIONS.pdf"
         ],
-        "pdf_url": "https://csis.canarabank.bank.in/ECA/Docs/TERMS AND CONDITIONS.pdf",
-        "notification_url": "https://csis.canarabank.bank.in/ECA/ECAHome.aspx",
-        "summary": "TERMS AND CONDITIONS A. FOR APPOINTMENT OF EXTERNAL CHARTERED ACCOUNTANT FIRMS, B. FOR CONDUCTING CONCURRENT AUDIT / CONTINUOUS AUDIT OF IDENTIFIED BRANCHES AS PER LIST C. REGARDING METHOD OF REPORTING & REVIEW OF PERFORMANCE The following are the terms and conditions for applying for empanelment as Concurrent Auditor in Canara Bank from 1st July 2026 to 30th June 2027: MANDATORY CONDITIONS FOR AP…",
-        "source": "canara",
-        "detail_updated_at": "2026-07-27T06:58:32.536386+00:00",
-        "published": "2026-07-01T00:00:00+00:00",
-        "detail_source": "pdf",
-        "memorized_at": "2026-07-24T08:56:07.579101+00:00",
-        "pdfUrls": [
-          "https://csis.canarabank.bank.in/ECA/Docs/TERMS AND CONDITIONS.pdf",
-          "https://csis.canarabank.bank.in/ECA/Docs/ANNEXURE26.pdf",
-          "https://csis.canarabank.bank.in/ECA/Docs/Annexure IV.pdf",
-          "https://csis.canarabank.bank.in/ECA/Docs/Instructions.pdf",
-          "https://csis.canarabank.bank.in/ECA/Docs/TERMS%20AND%20CONDITIONS.pdf",
-          "https://csis.canarabank.bank.in/ECA/Docs/FREQUENTLY ASKED QUESTIONS.pdf"
-        ]
-      }
-    },
-    {
-      "id": "beba48c4-1fc2-4b1c-bd28-008adfdb319f",
-      "slug": "mgu-short-term-project-assistant-recruitment-2026-apply-online-ba8cbc93",
-      "title": "MGU Short Term Project Assistant Recruitment 2026 - Apply Online",
-      "dept": "MGU",
-      "category": "state",
-      "state_codes": [
-        "kl"
-      ],
-      "vacancies": 1,
-      "qualification": "M.A",
-      "salary": "Rs. 15,000/- Per Month",
-      "age_limit": "shall be 70 years as on 01.01.2026.",
-      "last_date": "2026-07-31",
-      "apply_url": "https://researchonline.mgu.ac.in/",
-      "pdf_url": "https://www.mgu.ac.in/uploads/2026/05/PA_Adv.pdf?x70785",
-      "status": "live",
-      "is_sponsored": false,
-      "published_at": "2026-06-02T00:00:00Z",
-      "document_type": "RECRUITMENT",
-      "verification_status": "VERIFIED",
-      "completeness_score": 80,
-      "published_to_site": true,
-      "primary_pdf_url": "https://www.mgu.ac.in/uploads/2026/05/PA_Adv.pdf?x70785",
-      "post_name": "Short Term Project Assistant",
-      "posts": [],
-      "important_dates": [],
-      "detail": {
-        "pdf_urls": [
-          "https://www.mgu.ac.in/uploads/2026/05/PA_Adv.pdf?x70785"
-        ],
-        "apply_urls": [
-          "https://researchonline.mgu.ac.in/",
-          "https://research.mgu.ac.in/regulations/",
-          "https://research.mgu.ac.in"
-        ],
-        "pdf_url": "https://www.mgu.ac.in/uploads/2026/05/PA_Adv.pdf?x70785",
-        "notification_url": "https://www.mgu.ac.in",
-        "summary": "61884/AC A10-4/2023/AC A 10 27.06.2026 MAHATMA GANDHI UNIVERSITY, KERALA Registration for Ph.D. Programme – 2026 (June Session) NOTIFICATION Applications are invited from the UGC-NET qualified candidates and categories mentioned in Clause 8 of the \"Regulations for the award of the Degree of Doctor of Philosophy by Mahatma Gandhi University, 2025\"(https://research.mgu.ac.in/regulations/), prepared …",
-        "source": "structured-import",
-        "external_id": "3049397",
-        "detail_updated_at": "2026-07-27T06:58:39.388878+00:00",
-        "post_name": "Short Term Project Assistant",
-        "published": "2026-07-01T00:00:00+00:00",
-        "detail_source": "pdf",
-        "memorized_at": "2026-07-13T11:06:26.838288+00:00",
-        "important_dates": [
-          {
-            "date": "12 May 2026",
-            "event": "Notification Date"
-          },
-          {
-            "date": "22 June 2026",
-            "event": "Last Date to Apply"
-          }
-        ],
-        "pdfUrls": [
-          "https://www.mgu.ac.in/uploads/2026/05/PA_Adv.pdf?x70785"
-        ]
+        "published": "2026-07-17T00:00:00+00:00",
+        "notification_url": "http://www.barc.gov.in/careers/vacancy21.pdf",
+        "summary": "Page 1 of 7 Government of India Department of Atomic Energy Bhabha Atomic Research Centre Opening date and time for submission of online application 17.07.2026 (00.00 hrs.) Closing date and time for receipt of online application 18.08.2026 (23.59 hrs.) “GOVERNMENT STRIVES TO HAVE A WORKFORCE WHICH REFLECTS GENDER BALANCE AND WOMEN CANDIDATES ARE ENCOURAGED TO APPLY” ADVERTISEMENT No. 06/2026 (R-I)…"
       }
     }
   ]

@@ -1,8 +1,8 @@
 # My Govt Jobs — Product Roadmap
 
 **Site:** [livegovtjobs.com](https://www.livegovtjobs.com)  
-**Last updated:** 27 July 2026 (full trust-boundary audit)
-**Production readiness:** recovery required — code gates pass, but only four jobs meet the strict public standard
+**Last updated:** 28 July 2026 (full code, data, integration, and folder audit)
+**Production readiness:** recovery required — code gates pass, but only one job meets the strict public standard
 
 This roadmap covers what is **done**, what runs **daily**, what is **broken/pending**, and what to build **next**.
 
@@ -10,7 +10,7 @@ This roadmap covers what is **done**, what runs **daily**, what is **broken/pend
 
 ## Table of contents
 
-1. [Audit snapshot (22 Jul 2026)](#audit-snapshot-22-jul-2026)
+1. [Audit snapshot (28 Jul 2026)](#audit-snapshot-28-jul-2026)
 2. [Current status](#current-status)
 3. [Daily & weekly rhythm](#daily--weekly-rhythm)
 4. [What you need to do now](#what-you-need-to-do-now)
@@ -27,33 +27,33 @@ This roadmap covers what is **done**, what runs **daily**, what is **broken/pend
 
 ---
 
-## Audit snapshot (27 Jul 2026)
+## Audit snapshot (28 Jul 2026)
 
 ### Verdict: **code healthy; production data incomplete**
 
 | Check | Result | Notes |
 |-------|--------|-------|
 | Trust boundary | Pass | Shared sanitizer, India deadline gate, admin gate, export filter, snapshot checks, and RLS aligned |
-| Public snapshot | Pass | 4 approved jobs; zero raw-HTML titles; zero missing/past live deadlines |
-| Supabase | Pass with data warning | 3,181 total rows; 4 public live rows; 18 unsafe live rows demoted |
+| Public snapshot | Pass | 1 approved job; zero raw-HTML titles; zero missing/past live deadlines |
+| Supabase | Pass with data warning | 3,181 total rows; 1 public live row; unsafe rows remain excluded |
 | Alert ownership | Pass | Caller-owned `user_id` removed; anon rows unowned; auth ownership uses `auth.uid()` |
 | Frontend/backend tests | Pass | Full verification commands listed in the audit report |
-| Production inventory | Failing target | 4 live jobs versus the current minimum target of 50 |
+| Production inventory | Failing target | 1 live job versus the current minimum target of 50 |
 
 ### Local vs production data (audit)
 
 | Metric | Local / DB now | Target | Notes |
 |--------|----------------|--------|-------|
-| Public live jobs | **4** | 50 minimum, then 500+ | P0 ingest recovery |
+| Public live jobs | **1** | 50 minimum, then 500+ | P0 ingest recovery |
 | Invalid live deadlines | **0** | 0 | Gate enforced |
 | Raw HTML titles | **0** | 0 | Sanitizer and snapshot check enforced |
-| Public vacancies | **507 across 3 jobs** | Reliable per notice | Revalidated snapshot |
-| Public API/archive rows | **4 / 0** | Deliberate | Unpublished archive rows are no longer exposed |
+| Public vacancies | **6 across 1 job** | Reliable per notice | Revalidated snapshot |
+| Public API/archive rows | **1 / 0** | Deliberate | Unpublished archive rows are no longer exposed |
 | `content_sections` (live) | Low | 80%+ | Enrichment remains P1 |
 
 ### Root causes to fix (engineering)
 
-1. **Insufficient valid ingest output** — only four rows currently have verified recruitment classification, completeness, publication approval, and a current normalized deadline.
+1. **Insufficient valid ingest output** — only one row currently has verified recruitment classification, completeness, publication approval, and a current normalized deadline.
 2. **Backend not deployed** — contact submission and backend alert actions remain unavailable at the configured production hostname.
 3. **PDF detail coverage remains low** — expand enrichment after the active catalog is restored.
 
@@ -63,8 +63,8 @@ This roadmap covers what is **done**, what runs **daily**, what is **broken/pend
 
 | Area | Status | Notes |
 |------|--------|-------|
-| **Frontend on Vercel** | Live, data-limited | Browsing works; public snapshot contains four approved jobs |
-| **Supabase Postgres** | Live | 3,181 total records; public RLS exposes four approved jobs |
+| **Frontend on Vercel** | Live, data-limited | Browsing works; public snapshot contains one approved job |
+| **Supabase Postgres** | Live | 3,181 total records; public RLS exposes one approved job |
 | **Daily GitHub ingest** | Recovery required | Must produce deadline-bearing, verified records without weakening the gate |
 | **Sync freshness** | Failing target | Strict production audit remains red below 50 live jobs |
 | **4h RSS refresh** | ✅ | Green; but races with daily ingest archives |
@@ -75,12 +75,12 @@ This roadmap covers what is **done**, what runs **daily**, what is **broken/pend
 | **Vercel Analytics** | ✅ | `@vercel/analytics` |
 | **Google Search Console** | 🟡 | Verification done; **sitemap submit still manual** |
 | **i18n (22+ languages)** | ✅ | UI chrome translated; job body English |
-| **E2E + unit tests** | ✅ | 376 FE + 132 BE (+ 2 skipped); Playwright in CI |
+| **E2E + unit tests** | ✅ | 404 FE + 174 BE (+ 1 skipped); 16 Playwright checks including mobile |
 | **Job quality audit** | Red on volume | Accuracy checks pass; live count is below the minimum |
 | **Backend API on cloud** | 🟡 Optional | `api.livegovtjobs.com` down — browse uses Supabase/static |
 | **Email/Telegram alerts** | Partial | Ownership is secured; deployed delivery and signed email unsubscribe still need verification |
 | **Monetization** | ⬜ Not started | Freemium, Razorpay, sponsored listings |
-| **Code clarity cleanup** | ✅ Jul 2026 | COMPONENTS.md, fallbacks, jobDetailUi split, scripts/archive |
+| **Code clarity cleanup** | ✅ Jul 2026 | COMPONENTS.md, fallbacks, jobDetailUi split, obsolete scripts removed |
 
 **Manual leftover items:** [HUMAN_CHECKLIST.md](./HUMAN_CHECKLIST.md)
 
@@ -205,7 +205,7 @@ See [HUMAN_CHECKLIST.md](./HUMAN_CHECKLIST.md).
 | 2.5b | Account + alert management | ✅ | `/account` magic link + alerts panel |
 | 2.6 | Account page + Supabase Auth | ✅ | `/account` magic link |
 | 2.7 | Prerender job pages (SEO) | ✅ | `prerender-job-pages.mjs` (~3027 local) |
-| 2.8 | ESLint + unit tests | ✅ | lint + 376 FE / 132 BE |
+| 2.8 | ESLint + unit tests | ✅ | lint + 404 FE / 174 BE |
 
 ### Phase 2 — remaining
 
@@ -355,7 +355,7 @@ See [HUMAN_CHECKLIST.md](./HUMAN_CHECKLIST.md).
 | **Go live** | `docs/GO_LIVE.md` |
 | **Daily ingest** | `docs/DAILY_8AM_SYNC.md` |
 | **Deploy** | `docs/DEPLOY_VERCEL_SUPABASE.md` |
-| **Health agent** | `.cursor/skills/website-health-agent/` · `npm run health:website` |
+| **Health agent** | `scripts/website-health-agent.mjs` · `npm run health:website` |
 | **Schema** | `database/supabase_setup.sql`, `database/migrations/` |
 | **Scrapers** | `scripts/scraper_registry.json`, `backend/app/scrapers/` |
 | **Ingest agent** | `backend/app/agents/ingest_agent.py`, `scripts/run-sync-production.py` |
@@ -371,7 +371,7 @@ See [HUMAN_CHECKLIST.md](./HUMAN_CHECKLIST.md).
 
 ## GitHub issues
 
-Open issues: **0** (as of 22 Jul 2026). Historical tracker: [docs/github-issues/README.md](./github-issues/README.md)
+Track current work in the repository's GitHub Issues and pull requests.
 
 Suggested issues to reopen / file from this audit:
 

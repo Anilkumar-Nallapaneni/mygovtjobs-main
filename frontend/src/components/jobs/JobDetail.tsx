@@ -175,6 +175,26 @@ export default function JobDetail({
     view.publishedDate || String(view.published_at || "").slice(0, 10),
     ""
   );
+  const verifiedAtText = useMemo(() => {
+    const detail = job.detail && typeof job.detail === "object"
+      ? (job.detail as Record<string, unknown>)
+      : {};
+    const raw = String(
+      job.verified_at ||
+      job.link_last_checked_at ||
+      detail.detail_updated_at ||
+      job.updated_at ||
+      ""
+    ).trim();
+    if (!raw) return "";
+    const parsed = new Date(raw);
+    if (Number.isNaN(parsed.getTime())) return "";
+    return new Intl.DateTimeFormat(i18n.language, {
+      timeZone: "Asia/Kolkata",
+      dateStyle: "medium",
+      timeStyle: "short",
+    }).format(parsed);
+  }, [i18n.language, job]);
 
   const glanceFacts = buildGlanceFacts({
     postName,
@@ -267,6 +287,23 @@ export default function JobDetail({
         shareTitle={view.title}
         shareUrl={shareUrl}
       />
+
+      <dl className="job-detail-verification-meta" aria-label="Source verification">
+        <div>
+          <dt>Source</dt>
+          <dd>Official organization website</dd>
+        </div>
+        {verifiedAtText ? (
+          <div>
+            <dt>Last checked</dt>
+            <dd>{verifiedAtText} IST</dd>
+          </div>
+        ) : null}
+        <div>
+          <dt>Status</dt>
+          <dd>{String(job.status || "live").toLowerCase() === "live" ? "Active" : "Expired"}</dd>
+        </div>
+      </dl>
 
       {job.id || job.slug ? (
         <ReportJobButton jobId={String(job.id || job.slug)} jobTitle={view.title} />

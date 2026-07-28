@@ -77,6 +77,7 @@ def apply_recruitment_filters(stmt):
             Job.published_to_site.is_(True),
             Job.verification_status.in_(("VERIFIED", "PARTIALLY_VERIFIED")),
             Job.completeness_score >= 70,
+            Job.publication_confidence >= 90,
             active_or_archive,
         )
     )

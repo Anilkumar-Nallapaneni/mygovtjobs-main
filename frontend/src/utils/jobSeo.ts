@@ -38,6 +38,17 @@ function parseIsoDate(value: unknown): string | undefined {
   return d.toISOString().slice(0, 10);
 }
 
+function indiaDateIso(): string {
+  const parts = new Intl.DateTimeFormat("en-CA", {
+    timeZone: "Asia/Kolkata",
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+  }).formatToParts(new Date());
+  const values = Object.fromEntries(parts.map(({ type, value }) => [type, value]));
+  return `${values.year}-${values.month}-${values.day}`;
+}
+
 /** Google JobPosting requires datePosted — never omit it. */
 function resolveDatePosted(job: JobRecord): string {
   return (
@@ -123,18 +134,18 @@ function resolveApplyUrl(job: JobRecord): string | undefined {
   return undefined;
 }
 
-/** Always emit validThrough — fall back to datePosted + 180 days when last date is missing. */
+/** Emit Google-compatible end-of-day India time. */
 export function resolveValidThrough(job: JobRecord, datePosted: string): string {
   const fromLast = parseIsoDate(job.lastDate ?? job.last_date);
-  if (fromLast) return fromLast;
+  if (fromLast) return `${fromLast}T23:59:59+05:30`;
   const base = new Date(`${datePosted}T00:00:00Z`);
   if (Number.isNaN(base.getTime())) {
     const fallback = new Date();
     fallback.setUTCDate(fallback.getUTCDate() + 180);
-    return fallback.toISOString().slice(0, 10);
+    return `${fallback.toISOString().slice(0, 10)}T23:59:59+05:30`;
   }
   base.setUTCDate(base.getUTCDate() + 180);
-  return base.toISOString().slice(0, 10);
+  return `${base.toISOString().slice(0, 10)}T23:59:59+05:30`;
 }
 
 function parseMoneyToken(raw: string): number | undefined {
@@ -326,12 +337,29 @@ export function isRecruitmentJobPosting(job: JobRecord): boolean {
   );
 }
 
+/** Structured job data is allowed only for the approved, unexpired public state. */
+export function isApprovedActiveJobPosting(job: JobRecord, today = indiaDateIso()): boolean {
+  const lastDate = parseIsoDate(job.lastDate ?? job.last_date);
+  return (
+    String(job.status || "").toLowerCase() === "live" &&
+    job.published_to_site === true &&
+    String(job.document_type || "").toUpperCase() === "RECRUITMENT" &&
+    ["VERIFIED", "PARTIALLY_VERIFIED"].includes(
+      String(job.verification_status || "").toUpperCase()
+    ) &&
+    Number(job.completeness_score) >= 70 &&
+    Number(job.publication_confidence) >= 90 &&
+    Boolean(lastDate && lastDate >= today) &&
+    isRecruitmentJobPosting(job)
+  );
+}
+
 export function buildJobPostingJsonLd(job: JobRecord): Record<string, unknown> | null {
   if (!job.title) return null;
   // Only emit JobPosting for real recruitments. Notices like exam schedules,
   // merit lists, circulars, and hackathons are still browsable pages — but
   // marking them as JobPosting makes Google expect baseSalary/street forever.
-  if (!isRecruitmentJobPosting(job)) return null;
+  if (!isApprovedActiveJobPosting(job)) return null;
   const url = jobDetailUrl(job);
   const datePosted = resolveDatePosted(job);
   const validThrough = resolveValidThrough(job, datePosted);

@@ -11,7 +11,14 @@ from app.services.pdf_candidate import (
     select_primary_pdf,
     validate_extracted_dates,
 )
-from app.services.publish_gate import can_publish_job, india_today, resolve_persist_status
+from app.services.publish_gate import (
+    ValidationResult,
+    calculate_job_status,
+    can_publish_job,
+    india_today,
+    resolve_persist_status,
+    validate_job_for_publication,
+)
 
 
 def test_classify_recruitment():
@@ -103,6 +110,48 @@ def test_publication_deadline_boundary():
     assert "Past deadline" in yesterday_errors
     assert today_ok
     assert tomorrow_ok
+
+
+def test_calculate_job_status_boundaries():
+    today = date(2026, 7, 27)
+    assert calculate_job_status(today - timedelta(days=1), today=today) == "expired"
+    assert calculate_job_status(today, today=today) == "active"
+    assert calculate_job_status(today + timedelta(days=1), today=today) == "active"
+    assert calculate_job_status(None, today=today) == "needs_review"
+    assert calculate_job_status("not-a-date", today=today) == "needs_review"
+    assert calculate_job_status(today + timedelta(days=1), True, today=today) == "expired"
+
+
+def test_validation_result_includes_warnings_and_confidence():
+    today = date(2026, 7, 27)
+    payload = {
+        **_publishable_job(today, today + timedelta(days=10)),
+        "source_url": "https://upsc.gov.in/recruitment/notice",
+        "notification_url": "https://upsc.gov.in/recruitment/notice.pdf",
+        "state_codes": [],
+        "vacancies": None,
+    }
+    result = validate_job_for_publication(payload, today=today)
+    assert isinstance(result, ValidationResult)
+    assert result.valid
+    assert result.confidence == 95
+    assert "Vacancy count is not specified" in result.warnings
+
+
+def test_validation_rejects_unofficial_source_and_duplicate():
+    today = date(2026, 7, 27)
+    result = validate_job_for_publication(
+        {
+            **_publishable_job(today, today + timedelta(days=10)),
+            "source_url": "https://freejobalert.example/jobs/1",
+            "notification_url": "https://freejobalert.example/jobs/1.pdf",
+            "is_duplicate": True,
+        },
+        today=today,
+    )
+    assert not result.valid
+    assert "Source domain is not approved" in result.errors
+    assert "Duplicate record" in result.errors
 
 
 def test_publication_rejects_missing_malformed_deadline_and_html_title():

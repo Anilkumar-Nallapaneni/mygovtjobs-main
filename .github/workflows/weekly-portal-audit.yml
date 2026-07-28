@@ -12,6 +12,10 @@ env:
 permissions:
   contents: read
 
+concurrency:
+  group: live-jobs-publication
+  cancel-in-progress: false
+
 jobs:
   audit:
     runs-on: ubuntu-latest

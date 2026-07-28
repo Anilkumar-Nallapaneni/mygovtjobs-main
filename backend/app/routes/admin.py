@@ -6,13 +6,13 @@ from sqlalchemy import func, select, text
 
 from app.database.session import SessionLocal
 from app.middleware.auth import require_admin_key
-from app.models.job import Job, Source, SourceHealth
+from app.models.job import Job, JobReviewQueue, Source, SourceHealth
 from app.config import get_settings
 from app.services.daily_sync_service import DailySyncService
 from app.services.ingest_service import IngestService
 from app.services.alert_delivery_service import AlertDeliveryService
 from app.services.job_completeness_service import PUBLISH_MIN_SCORE, calculate_completeness
-from app.services.publish_gate import can_publish_job
+from app.services.publish_gate import can_publish_job, validate_job_for_publication
 from app.services.supabase_audit_service import SupabaseAuditService
 from app.utils.repo_paths import resolve_repo_path
 
@@ -24,6 +24,11 @@ class JobStatusUpdate(BaseModel):
     verification_status: str | None = None
     published_to_site: bool | None = None
     document_type: str | None = None
+
+
+class ReviewStatusUpdate(BaseModel):
+    status: str
+    review_notes: str | None = None
 
 
 @router.get("/stats")
@@ -69,6 +74,7 @@ async def admin_review_queues(limit: int = Query(40, ge=1, le=200)):
         "low_completeness": [],
         "ready_to_publish": [],
         "published": [],
+        "quarantine": [],
     }
 
     def _item(row: Job) -> dict:
@@ -91,8 +97,30 @@ async def admin_review_queues(limit: int = Query(40, ge=1, le=200)):
             rows = (
                 await session.execute(select(Job).order_by(Job.updated_at.desc().nullslast()).limit(800))
             ).scalars().all()
+            quarantined = (
+                await session.execute(
+                    select(JobReviewQueue)
+                    .where(JobReviewQueue.status.in_(("pending", "needs_changes")))
+                    .order_by(JobReviewQueue.created_at.desc())
+                    .limit(limit)
+                )
+            ).scalars().all()
         except Exception:
             return {"queues": queues}
+
+    queues["quarantine"] = [
+        {
+            "id": row.id,
+            "title": (row.normalized_payload or row.raw_payload or {}).get("title"),
+            "source_url": row.source_url,
+            "confidence": float(row.confidence or 0),
+            "validation_errors": row.validation_errors or [],
+            "validation_warnings": row.validation_warnings or [],
+            "status": row.status,
+            "created_at": row.created_at,
+        }
+        for row in quarantined
+    ]
 
     for row in rows:
         reasons = " ".join(str(r) for r in (getattr(row, "review_reasons", None) or [])).lower()
@@ -121,6 +149,25 @@ async def admin_review_queues(limit: int = Query(40, ge=1, le=200)):
                 queues["date_conflict"].append(item)
 
     return {"queues": {k: v for k, v in queues.items()}, "limit": limit}
+
+
+@router.patch("/review-queue/{review_id}")
+async def admin_update_review_queue(review_id: str, body: ReviewStatusUpdate):
+    if body.status not in ("pending", "approved", "rejected", "needs_changes"):
+        raise HTTPException(status_code=400, detail="Invalid review status")
+    async with SessionLocal() as session:
+        row = (
+            await session.execute(select(JobReviewQueue).where(JobReviewQueue.id == review_id))
+        ).scalar_one_or_none()
+        if not row:
+            raise HTTPException(status_code=404, detail="Review record not found")
+        row.status = body.status
+        row.review_notes = body.review_notes
+        row.updated_at = datetime.now(timezone.utc)
+        if body.status in ("approved", "rejected"):
+            row.reviewed_at = datetime.now(timezone.utc)
+        await session.commit()
+        return {"id": row.id, "status": row.status, "reviewed_at": row.reviewed_at}
 
 
 @router.get("/jobs")
@@ -202,6 +249,7 @@ async def admin_update_job(job_id: str, body: JobStatusUpdate):
                     "dept": row.dept,
                     "apply_url": row.apply_url,
                     "source_url": row.source_url,
+                    "state_codes": row.state_codes or [],
                     "last_date": row.last_date,
                     "published_at": row.published_at,
                     "vacancies": row.vacancies,
@@ -219,6 +267,25 @@ async def admin_update_job(job_id: str, body: JobStatusUpdate):
                     status_code=422,
                     detail={"message": "Job failed the publication gate", "errors": gate_errors},
                 )
+            row.publication_confidence = validate_job_for_publication(
+                {
+                    "title": row.title,
+                    "dept": row.dept,
+                    "apply_url": row.apply_url,
+                    "source_url": row.source_url,
+                    "state_codes": row.state_codes or [],
+                    "last_date": row.last_date,
+                    "published_at": row.published_at,
+                    "vacancies": row.vacancies,
+                    "qualification": row.qualification,
+                    "salary": row.salary,
+                    "age_limit": row.age_limit,
+                    "detail": row.detail or {},
+                    "document_type": row.document_type,
+                    "verification_status": row.verification_status,
+                    "completeness_score": row.completeness_score,
+                }
+            ).confidence
         elif body.status in ("draft", "pending"):
             row.verification_status = body.verification_status.upper() if body.verification_status else "NEEDS_REVIEW"
             if body.published_to_site is None:

@@ -13,6 +13,7 @@ TABLE_NAMES = (
     "job_dates",
     "alert_subscriptions",
     "alert_deliveries",
+    "job_review_queue",
 )
 
 

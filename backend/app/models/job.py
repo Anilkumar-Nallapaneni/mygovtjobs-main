@@ -77,11 +77,31 @@ class Job(Base):
     last_http_status: Mapped[int | None] = mapped_column(Integer)
     parser_version: Mapped[str | None] = mapped_column(String(64))
     confidence_score: Mapped[float | None] = mapped_column(Float)
+    publication_confidence: Mapped[float] = mapped_column(Numeric(5, 2), default=0)
     link_last_checked_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True))
     link_last_http_status: Mapped[int | None] = mapped_column(Integer)
     link_consecutive_failures: Mapped[int] = mapped_column(Integer, default=0)
     created_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True), server_default=func.now())
     updated_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True), server_default=func.now(), onupdate=func.now())
+
+
+class JobReviewQueue(Base):
+    __tablename__ = "job_review_queue"
+
+    id: Mapped[str] = mapped_column(UUID(as_uuid=False), primary_key=True, default=lambda: str(uuid4()))
+    fingerprint: Mapped[str] = mapped_column(Text, unique=True, nullable=False)
+    source_url: Mapped[str | None] = mapped_column(Text)
+    raw_payload: Mapped[dict] = mapped_column(JSONB, nullable=False)
+    normalized_payload: Mapped[dict | None] = mapped_column(JSONB)
+    validation_errors: Mapped[list] = mapped_column(JSONB, default=list, nullable=False)
+    validation_warnings: Mapped[list] = mapped_column(JSONB, default=list, nullable=False)
+    confidence: Mapped[float] = mapped_column(Numeric(5, 2), default=0, nullable=False)
+    status: Mapped[str] = mapped_column(String(32), default="pending", nullable=False)
+    created_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True), server_default=func.now())
+    updated_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True), server_default=func.now(), onupdate=func.now())
+    reviewed_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True))
+    reviewed_by: Mapped[str | None] = mapped_column(UUID(as_uuid=False))
+    review_notes: Mapped[str | None] = mapped_column(Text)
 
 
 class SourceHealth(Base):

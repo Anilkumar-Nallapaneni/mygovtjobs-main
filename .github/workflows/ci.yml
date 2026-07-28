@@ -39,7 +39,6 @@ jobs:
         if: github.event_name == 'push'
         run: npm run test:coverage --prefix frontend
       - name: Production build
-        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         run: npm run build --prefix frontend
 
   e2e:
@@ -88,7 +87,6 @@ jobs:
   data-quality:
     runs-on: ubuntu-latest
     timeout-minutes: 15
-    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -97,7 +95,10 @@ jobs:
           cache: npm
           cache-dependency-path: package-lock.json
       - run: npm ci
+      - name: Public snapshot publication invariants
+        run: npm run verify:live-jobs
       - name: Job quality audit (strict thresholds)
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         env:
           JOBS_AUDIT_STRICT: "1"
           VITE_SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL }}

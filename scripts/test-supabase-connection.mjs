@@ -61,24 +61,40 @@ console.log(
     : `✗ REST ${health.status}`
 )
 
-const TABLES = ['sources', 'raw_ingest', 'jobs', 'job_posts', 'job_dates', 'alert_subscriptions', 'alert_deliveries']
+const TABLES = [
+  { name: 'sources', publicRead: true },
+  { name: 'jobs', publicRead: true },
+  { name: 'job_posts', publicRead: true },
+  { name: 'job_dates', publicRead: true },
+  { name: 'job_updates', publicRead: true },
+  { name: 'raw_ingest', publicRead: false },
+  { name: 'job_review_queue', publicRead: false },
+  { name: 'alert_subscriptions', publicRead: false },
+  { name: 'alert_deliveries', publicRead: false },
+  { name: 'profiles', publicRead: false },
+]
 let ok = health.ok || health.status === 401
 
 for (const table of TABLES) {
-  const r = await rest(`${table}?select=id&limit=1`)
+  const r = await rest(`${table.name}?select=id&limit=1`)
   if (r.status === 404 || (typeof r.body === 'object' && r.body?.code === 'PGRST205')) {
-    console.log(`✗ Table \`${table}\` missing — run database/supabase_setup.sql`)
+    console.log(`✗ Table \`${table.name}\` missing — run database/supabase_setup.sql`)
     ok = false
   } else if (r.status === 401 && isInvalidApiKey(r.body)) {
-    console.log(`✗ ${table}: invalid Supabase API key — check VITE_SUPABASE_ANON_KEY`)
+    console.log(`✗ ${table.name}: invalid Supabase API key — check VITE_SUPABASE_ANON_KEY`)
     ok = false
+  } else if (!table.publicRead && (r.status === 401 || r.status === 403)) {
+    console.log(`✓ ${table.name} private to anonymous users`)
   } else if (r.status === 401 || r.status === 403) {
-    console.log(`✗ ${table}: ${r.status} (RLS/grants) — run database/migrations/002_supabase_rls_and_grants.sql`)
+    console.log(`✗ ${table.name}: ${r.status} (unexpected RLS/grants denial)`)
+    ok = false
+  } else if (!table.publicRead && r.ok) {
+    console.log(`✗ ${table.name}: unexpectedly readable by anonymous users`)
     ok = false
   } else if (r.ok) {
-    console.log(`✓ ${table}`)
+    console.log(`✓ ${table.name}`)
   } else {
-    console.log(`✗ ${table}: ${r.status}`)
+    console.log(`✗ ${table.name}: ${r.status}`)
     ok = false
   }
 }

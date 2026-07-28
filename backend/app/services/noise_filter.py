@@ -166,11 +166,13 @@ def clean_plain_text(value: str | None) -> str:
     raw = strip_postgres_control_chars(value).strip()
     if not raw:
         return ""
-    text = (
-        BeautifulSoup(raw, "html.parser").get_text(" ", strip=True)
-        if contains_html_markup(raw)
-        else unescape(raw)
-    )
+    if contains_html_markup(raw):
+        soup = BeautifulSoup(raw, "html.parser")
+        for hidden in soup(["script", "style"]):
+            hidden.decompose()
+        text = soup.get_text(" ", strip=True)
+    else:
+        text = unescape(raw)
     return re.sub(r"\s+", " ", text).strip()
 
 
@@ -212,6 +214,12 @@ def clean_job_title(title: str | None) -> str:
     if not t:
         return ""
     t = re.sub(r"\s*Read\s+More\s*$", "", t, flags=re.I)
+    t = re.sub(
+        r"\s+Click\s+Here\s+to\s+(?:Apply\s+Online|Download(?:\s+the)?\s+(?:Form|Notification|Advertisement|PDF)).*$",
+        "",
+        t,
+        flags=re.I,
+    )
     t = _PDF_SIZE_SUFFIX.sub("", t)
     t = re.sub(r"[\s\-–—]*PDF\s*size:\s*\(\)\s*\.?\s*$", "", t, flags=re.I)
     t = re.sub(r"[\s\-–—]*PDF\s*$", "", t, flags=re.I)

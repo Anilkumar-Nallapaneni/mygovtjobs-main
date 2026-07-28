@@ -1,21 +1,12 @@
 const API_BASE = (import.meta.env.VITE_API_URL || '').replace(/\/$/, '')
-const ADMIN_KEY_STORAGE = 'mygovtjobs-admin-key'
+let inMemoryAdminKey = ''
 
 export function getStoredAdminKey(): string {
-  try {
-    return sessionStorage.getItem(ADMIN_KEY_STORAGE) || ''
-  } catch {
-    return ''
-  }
+  return inMemoryAdminKey
 }
 
 export function setStoredAdminKey(key: string): void {
-  try {
-    if (key) sessionStorage.setItem(ADMIN_KEY_STORAGE, key)
-    else sessionStorage.removeItem(ADMIN_KEY_STORAGE)
-  } catch {
-    /* ignore */
-  }
+  inMemoryAdminKey = key
 }
 
 export type AdminDashboard = {

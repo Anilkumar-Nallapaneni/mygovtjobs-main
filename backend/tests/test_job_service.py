@@ -19,3 +19,7 @@ def test_get_by_slug_ignores_draft_status():
     stmt = session.execute.await_args.args[0]
     compiled = str(stmt).lower()
     assert "status" in compiled
+    assert "published_to_site" in compiled
+    assert "publication_confidence" in compiled
+    assert "verification_status" in compiled
+    assert "last_date" in compiled

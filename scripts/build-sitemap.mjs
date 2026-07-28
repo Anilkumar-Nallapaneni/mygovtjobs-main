@@ -1,11 +1,11 @@
 #!/usr/bin/env node
 /**
- * Generate frontend/public/sitemap.xml with static routes + all job slugs.
+ * Generate sitemap indexes and topic-specific child sitemaps.
  * Sources (first match wins): Supabase REST → live-jobs.json
  *
  *   npm run build:sitemap
  */
-import { readFileSync, writeFileSync, existsSync, mkdirSync } from "fs";
+import { readFileSync, writeFileSync, existsSync, mkdirSync, readdirSync, unlinkSync } from "fs";
 import { join, dirname } from "path";
 import { fileURLToPath } from "url";
 
@@ -13,6 +13,7 @@ const root = join(dirname(fileURLToPath(import.meta.url)), "..");
 const publicDir = join(root, "frontend/public");
 const sitemapDir = join(publicDir, "sitemaps");
 const indexPath = join(publicDir, "sitemap.xml");
+const namedIndexPath = join(publicDir, "sitemap-index.xml");
 
 const siteUrl = (process.env.ALERT_SITE_URL || process.env.VITE_SITE_URL || "https://www.livegovtjobs.com").replace(
   /\/$/,
@@ -92,6 +93,45 @@ function loadJobsFromJson() {
   return Array.isArray(payload.items) ? payload.items : [];
 }
 
+function indiaDateIso() {
+  const parts = new Intl.DateTimeFormat("en-CA", {
+    timeZone: "Asia/Kolkata",
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+  }).formatToParts(new Date());
+  const value = Object.fromEntries(parts.map(({ type, value: part }) => [type, part]));
+  return `${value.year}-${value.month}-${value.day}`;
+}
+
+function isApprovedActiveJob(job, today = indiaDateIso()) {
+  return (
+    String(job?.status || "").toLowerCase() === "live" &&
+    job?.published_to_site === true &&
+    String(job?.document_type || "").toUpperCase() === "RECRUITMENT" &&
+    ["VERIFIED", "PARTIALLY_VERIFIED"].includes(
+      String(job?.verification_status || "").toUpperCase()
+    ) &&
+    Number(job?.completeness_score) >= 70 &&
+    Number(job?.publication_confidence) >= 90 &&
+    /^\d{4}-\d{2}-\d{2}$/.test(String(job?.last_date || "")) &&
+    String(job.last_date).slice(0, 10) >= today
+  );
+}
+
+function isApprovedArchiveJob(job) {
+  return (
+    String(job?.status || "").toLowerCase() === "expired" &&
+    job?.published_to_site === true &&
+    String(job?.document_type || "").toUpperCase() === "RECRUITMENT" &&
+    ["VERIFIED", "PARTIALLY_VERIFIED"].includes(
+      String(job?.verification_status || "").toUpperCase()
+    ) &&
+    Number(job?.completeness_score) >= 70 &&
+    Number(job?.publication_confidence) >= 90
+  );
+}
+
 async function loadJobsFromSupabase() {
   const fe = loadEnv(join(root, "frontend/.env.local"));
   const url = (fe.VITE_SUPABASE_URL || process.env.VITE_SUPABASE_URL || "").replace(/\/$/, "");
@@ -109,7 +149,7 @@ async function loadJobsFromSupabase() {
 
   while (true) {
     const res = await fetch(
-      `${url}/rest/v1/jobs?select=slug,updated_at,published_at&status=in.(live,expired)&order=published_at.desc&limit=${pageSize}&offset=${offset}`,
+      `${url}/rest/v1/jobs?select=slug,updated_at,published_at,status,last_date,published_to_site,document_type,verification_status,completeness_score,publication_confidence&status=in.(live,expired)&published_to_site=eq.true&document_type=eq.RECRUITMENT&verification_status=in.(VERIFIED,PARTIALLY_VERIFIED)&completeness_score=gte.70&publication_confidence=gte.90&order=published_at.desc&limit=${pageSize}&offset=${offset}`,
       { headers }
     );
     if (!res.ok) {
@@ -167,36 +207,48 @@ async function main() {
   const supabaseJobs = await loadJobsFromSupabase();
   const jobs = supabaseJobs ?? loadJobsFromJson();
 
-  const staticEntries = [];
-  const jobEntries = [];
+  const staticPageEntries = [];
+  const stateEntries = [];
+  const qualificationEntries = [];
+  const organizationEntries = [];
+  const resultEntries = [];
+  const admitCardEntries = [];
+  const activeJobEntries = [];
+  const archiveJobEntries = [];
 
   for (const page of STATIC_PATHS) {
-    staticEntries.push(urlEntry(`${siteUrl}${page.loc}`, page.changefreq, page.priority));
+    const entry = urlEntry(`${siteUrl}${page.loc}`, page.changefreq, page.priority);
+    if (page.loc === "/states") stateEntries.push(entry);
+    else if (page.loc === "/qualifications") qualificationEntries.push(entry);
+    else if (page.loc === "/organizations") organizationEntries.push(entry);
+    else if (page.loc === "/results/admit-card") admitCardEntries.push(entry);
+    else if (page.loc === "/results" || page.loc === "/results/topics") resultEntries.push(entry);
+    else staticPageEntries.push(entry);
   }
 
   for (const id of STATE_IDS) {
-    staticEntries.push(urlEntry(`${siteUrl}/state/${id}`, "daily", "0.7"));
+    stateEntries.push(urlEntry(`${siteUrl}/state/${id}`, "daily", "0.7"));
   }
 
   for (const id of CATEGORY_IDS) {
-    staticEntries.push(urlEntry(`${siteUrl}/category/${id}`, "daily", "0.7"));
+    staticPageEntries.push(urlEntry(`${siteUrl}/category/${id}`, "daily", "0.7"));
   }
 
   for (const slug of QUALIFICATION_SLUGS) {
-    staticEntries.push(urlEntry(`${siteUrl}/qualification/${slug}`, "weekly", "0.75"));
+    qualificationEntries.push(urlEntry(`${siteUrl}/qualification/${slug}`, "weekly", "0.75"));
   }
 
   for (const slug of PROFESSION_SLUGS) {
-    staticEntries.push(urlEntry(`${siteUrl}/profession/${slug}`, "weekly", "0.75"));
+    staticPageEntries.push(urlEntry(`${siteUrl}/profession/${slug}`, "weekly", "0.75"));
   }
 
   for (const slug of RESULT_TOPIC_SLUGS) {
     if (slug === "admit-card") continue;
-    staticEntries.push(urlEntry(`${siteUrl}/results/${slug}`, "weekly", "0.75"));
+    resultEntries.push(urlEntry(`${siteUrl}/results/${slug}`, "weekly", "0.75"));
   }
 
   for (const slug of loadExamSlugs()) {
-    staticEntries.push(urlEntry(`${siteUrl}/exam/${slug}`, "weekly", "0.8"));
+    staticPageEntries.push(urlEntry(`${siteUrl}/exam/${slug}`, "weekly", "0.8"));
   }
 
   if (existsSync(orgIndexPath)) {
@@ -204,22 +256,27 @@ async function main() {
     if (Array.isArray(orgIndex)) {
       for (const row of orgIndex) {
         if (row?.slug) {
-          staticEntries.push(urlEntry(`${siteUrl}/org/${row.slug}`, "weekly", "0.7"));
+          organizationEntries.push(urlEntry(`${siteUrl}/org/${row.slug}`, "weekly", "0.7"));
         }
       }
     }
   }
 
   const seen = new Set();
+  const todayIndia = indiaDateIso();
   for (const job of jobs) {
     const slug = job.slug || job.id;
     if (!slug || seen.has(slug)) continue;
+    const active = isApprovedActiveJob(job, todayIndia);
+    const archive = isApprovedArchiveJob(job);
+    if (!active && !archive) continue;
     seen.add(slug);
-    jobEntries.push(
+    const target = active ? activeJobEntries : archiveJobEntries;
+    target.push(
       urlEntry(
         `${siteUrl}/jobs/${encodeURIComponent(String(slug))}`,
-        "weekly",
-        "0.6",
+        active ? "daily" : "monthly",
+        active ? "0.7" : "0.4",
         toLastmod(job)
       )
     );
@@ -227,31 +284,37 @@ async function main() {
 
   mkdirSync(sitemapDir, { recursive: true });
 
-  const staticXml = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${staticEntries.join("\n")}\n</urlset>\n`;
-  writeFileSync(join(sitemapDir, "static.xml"), staticXml, "utf8");
+  const groups = new Map([
+    ["static-pages.xml", staticPageEntries],
+    ["states.xml", stateEntries],
+    ["qualifications.xml", qualificationEntries],
+    ["organizations.xml", organizationEntries],
+    ["results.xml", resultEntries],
+    ["admit-cards.xml", admitCardEntries],
+    ["jobs-active.xml", activeJobEntries],
+    ["jobs-archive.xml", archiveJobEntries],
+  ]);
 
-  const chunkSize = 1000;
-  const jobChunks = [];
-  for (let i = 0; i < jobEntries.length; i += chunkSize) {
-    const chunk = jobEntries.slice(i, i + chunkSize);
-    const name = `jobs-${Math.floor(i / chunkSize) + 1}.xml`;
-    jobChunks.push(name);
-    const xml = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${chunk.join("\n")}\n</urlset>\n`;
+  for (const name of readdirSync(sitemapDir)) {
+    if (name === "static.xml" || /^jobs-\d+\.xml$/.test(name)) {
+      unlinkSync(join(sitemapDir, name));
+    }
+  }
+
+  for (const [name, entries] of groups) {
+    const xml = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${entries.join("\n")}\n</urlset>\n`;
     writeFileSync(join(sitemapDir, name), xml, "utf8");
   }
 
-  const indexEntries = [
-    `  <sitemap>\n    <loc>${xmlEscape(`${siteUrl}/sitemaps/static.xml`)}</loc>\n  </sitemap>`,
-    ...jobChunks.map(
-      (name) =>
-        `  <sitemap>\n    <loc>${xmlEscape(`${siteUrl}/sitemaps/${name}`)}</loc>\n  </sitemap>`
-    ),
-  ];
+  const indexEntries = [...groups.keys()].map(
+    (name) => `  <sitemap>\n    <loc>${xmlEscape(`${siteUrl}/sitemaps/${name}`)}</loc>\n  </sitemap>`
+  );
   const indexXml = `<?xml version="1.0" encoding="UTF-8"?>\n<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${indexEntries.join("\n")}\n</sitemapindex>\n`;
   writeFileSync(indexPath, indexXml, "utf8");
+  writeFileSync(namedIndexPath, indexXml, "utf8");
 
   console.log(
-    `Wrote ${indexPath} — index with ${staticEntries.length} static + ${seen.size} jobs in ${jobChunks.length} chunk(s)`
+    `Wrote ${indexPath} — ${groups.size} child sitemaps, ${activeJobEntries.length} active jobs, ${archiveJobEntries.length} archive jobs`
   );
 }
 
