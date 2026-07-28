@@ -75,7 +75,7 @@ This roadmap covers what is **done**, what runs **daily**, what is **broken/pend
 | **Vercel Analytics** | ✅ | `@vercel/analytics` |
 | **Google Search Console** | 🟡 | Verification done; **sitemap submit still manual** |
 | **i18n (22+ languages)** | ✅ | UI chrome translated; job body English |
-| **E2E + unit tests** | ✅ | 401 FE + 172 BE (+ 1 skipped); Playwright in CI |
+| **E2E + unit tests** | ✅ | 404 FE + 174 BE (+ 1 skipped); 16 Playwright checks including mobile |
 | **Job quality audit** | Red on volume | Accuracy checks pass; live count is below the minimum |
 | **Backend API on cloud** | 🟡 Optional | `api.livegovtjobs.com` down — browse uses Supabase/static |
 | **Email/Telegram alerts** | Partial | Ownership is secured; deployed delivery and signed email unsubscribe still need verification |
@@ -205,7 +205,7 @@ See [HUMAN_CHECKLIST.md](./HUMAN_CHECKLIST.md).
 | 2.5b | Account + alert management | ✅ | `/account` magic link + alerts panel |
 | 2.6 | Account page + Supabase Auth | ✅ | `/account` magic link |
 | 2.7 | Prerender job pages (SEO) | ✅ | `prerender-job-pages.mjs` (~3027 local) |
-| 2.8 | ESLint + unit tests | ✅ | lint + 401 FE / 172 BE |
+| 2.8 | ESLint + unit tests | ✅ | lint + 404 FE / 174 BE |
 
 ### Phase 2 — remaining
 

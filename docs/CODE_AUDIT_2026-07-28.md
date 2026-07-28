@@ -60,7 +60,7 @@ mygovtjobs-main/
 `-- railway.toml                 Alternative backend deployment configuration
 ```
 
-Current scale: 313 frontend TypeScript files, 133 backend Python files, 118 tracked
+Current scale: 322 frontend TypeScript files, 135 backend Python files, 118 tracked
 script files, and 29 database migration files.
 
 ## Completed In This Audit
@@ -94,15 +94,16 @@ script files, and 29 database migration files.
 |---|---|
 | TypeScript | Pass |
 | ESLint (`--max-warnings 0`) | Pass |
-| Frontend unit tests | Pass (401) |
-| Backend tests | Pass (172, 1 skipped) |
-| Playwright E2E | Pass (15) |
+| Frontend unit tests | Pass (404) |
+| Backend tests | Pass (174, 1 skipped) |
+| Playwright E2E | Pass (16, including mobile critical path) |
 | Critical JSON/conflict check | Pass |
 | Production frontend build | Pass |
+| Live publication audit | Pass (1 of 1 retained) |
+| Supabase anonymous-access audit | Pass |
 
-Backend tests report one Starlette/httpx deprecation warning. Playwright reports Node's
-`DEP0190` warning for a shell-based child process. These do not fail CI but should be
-removed before making warnings fatal.
+Backend tests report one Starlette/httpx deprecation warning. The Playwright harness
+now launches installed tools directly, without Node's deprecated shell child process.
 
 ## Remaining Risks
 
@@ -113,7 +114,7 @@ removed before making warnings fatal.
    freshness and normalized deadlines before considering production data healthy; do
    not weaken the gate to satisfy the minimum-count check.
 3. **Test warnings.** Plan the Starlette test-client migration once the supported
-   FastAPI stack is confirmed, and remove Playwright's shell-based child-process launch.
+   FastAPI stack is confirmed.
 4. **Large generated diffs.** Job snapshots and sitemaps are merge-conflict prone.
    CI now detects corruption, but generated data should be updated by one serialized
    workflow and never manually merged.
@@ -159,7 +160,8 @@ Exit: warning-free backend tests and reviewed API/RLS authorization coverage.
 
 ### Phase 4: User Journey and Operations
 
-- Run Playwright on desktop and mobile for search, browse, job detail, alerts, and auth.
+- Expand the existing desktop and mobile Playwright coverage to alerts and auth once
+  the deployed backend is provisioned.
 - Track source freshness, invalid official links, PDF coverage, and detail coverage as
   explicit service-level indicators.
 - Consolidate the 118 tracked script files behind the canonical commands in `RUN.md`;

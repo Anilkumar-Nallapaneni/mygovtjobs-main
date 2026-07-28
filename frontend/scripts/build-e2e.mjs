@@ -4,8 +4,11 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
+const repoRoot = path.resolve(root, '..');
 const e2eDist = path.join(root, 'dist-e2e');
 const env = { ...process.env, VITE_JOBS_SOURCE: 'static' };
+const tsc = path.join(repoRoot, 'node_modules', 'typescript', 'bin', 'tsc');
+const vite = path.join(repoRoot, 'node_modules', 'vite', 'bin', 'vite.js');
 
 const dataDir = path.join(root, 'public', 'data');
 const backupDir = path.join(root, '.e2e-data-backup');
@@ -13,7 +16,8 @@ const e2eJobPath = path.join(root, 'e2e', 'fixtures', 'e2e-test-job.json');
 const snapshotFiles = ['live-jobs.json', 'live-jobs-bootstrap.json', 'live-jobs-list.json'];
 
 function run(cmd, args) {
-  const result = spawnSync(cmd, args, { cwd: root, stdio: 'inherit', env, shell: true });
+  const result = spawnSync(cmd, args, { cwd: root, stdio: 'inherit', env });
+  if (result.error) throw result.error;
   if (result.status !== 0) process.exit(result.status ?? 1);
 }
 
@@ -68,8 +72,8 @@ backupDataFiles();
 injectE2eJob();
 
 try {
-  run('npx', ['tsc']);
-  run('npx', ['vite', 'build', '--outDir', 'dist-e2e']);
+  run(process.execPath, [tsc]);
+  run(process.execPath, [vite, 'build', '--outDir', 'dist-e2e']);
 } finally {
   restoreDataFiles();
 }

@@ -63,7 +63,8 @@ owned by `JobPersistService` and the admin approval route.
 | --- | --- | --- |
 | `backend/app/services/job_persist_service.py` | `upsert_normalized` | sole normalized `INSERT ... ON CONFLICT` into `jobs` |
 | `backend/app/routes/admin.py` | admin status update | authenticated manual approval/demotion through the same gate |
-| `database/migrations/026_align_public_job_policy.sql` | `jobs_public_read` RLS policy | anon/auth can read only approved recruitment rows and current live deadlines |
+| `database/migrations/028_publication_confidence.sql` | `jobs_public_read` RLS policy | anon/auth can read only confidence-approved recruitment rows and current live deadlines |
+| `database/migrations/029_harden_publication_rls_and_grants.sql` | child-table policies and grants | child rows inherit the parent publication gate; internal tables remain private |
 | `backend/app/services/job_service.py` | `_base_list_stmt` | API/export uses the same approval, recruitment, completeness, and India-date boundary |
 
 Maintenance scripts such as `demote-publish-gate.py`, `backfill-job-dates.py`,
@@ -102,7 +103,7 @@ Frontend filtering is defense in depth. It is not the publication boundary.
 
 | File | Function | Output |
 | --- | --- | --- |
-| `scripts/build-sitemap.mjs` | reads approved Supabase rows or verified static fallback | sitemap index, static routes, active/archive job sitemaps |
+| `scripts/build-sitemap.mjs` | reads approved Supabase rows or verified static fallback | sitemap indexes plus active, archive, state, qualification, organization, result, admit-card, and static-page sitemaps |
 | `scripts/prerender-job-pages.mjs` | builds job HTML | `JobPosting` only for approved, active recruitment rows |
 | `frontend/src/utils/jobSeo.ts` | client-side structured data | mirrors active recruitment eligibility |
 
@@ -137,4 +138,4 @@ group. Details and overlap decisions are in `docs/workflow-audit.md`.
 matches, `frontend/src/hooks/useLiveJobs.ts`, `frontend/src/lib/jobsApi.ts`,
 `frontend/src/lib/liveJobsFetch.ts`, `frontend/src/utils/liveJobsPipeline.ts`,
 `scripts/build-sitemap.mjs`, `scripts/prerender-job-pages.mjs`, all files under
-`.github/workflows/`, and migrations `023` through `026`.
+`.github/workflows/`, and migrations `023` through `029`.

@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * Generate frontend/public/sitemap.xml with static routes + all job slugs.
+ * Generate sitemap indexes and topic-specific child sitemaps.
  * Sources (first match wins): Supabase REST → live-jobs.json
  *
  *   npm run build:sitemap
@@ -13,6 +13,7 @@ const root = join(dirname(fileURLToPath(import.meta.url)), "..");
 const publicDir = join(root, "frontend/public");
 const sitemapDir = join(publicDir, "sitemaps");
 const indexPath = join(publicDir, "sitemap.xml");
+const namedIndexPath = join(publicDir, "sitemap-index.xml");
 
 const siteUrl = (process.env.ALERT_SITE_URL || process.env.VITE_SITE_URL || "https://www.livegovtjobs.com").replace(
   /\/$/,
@@ -206,37 +207,48 @@ async function main() {
   const supabaseJobs = await loadJobsFromSupabase();
   const jobs = supabaseJobs ?? loadJobsFromJson();
 
-  const staticEntries = [];
+  const staticPageEntries = [];
+  const stateEntries = [];
+  const qualificationEntries = [];
+  const organizationEntries = [];
+  const resultEntries = [];
+  const admitCardEntries = [];
   const activeJobEntries = [];
   const archiveJobEntries = [];
 
   for (const page of STATIC_PATHS) {
-    staticEntries.push(urlEntry(`${siteUrl}${page.loc}`, page.changefreq, page.priority));
+    const entry = urlEntry(`${siteUrl}${page.loc}`, page.changefreq, page.priority);
+    if (page.loc === "/states") stateEntries.push(entry);
+    else if (page.loc === "/qualifications") qualificationEntries.push(entry);
+    else if (page.loc === "/organizations") organizationEntries.push(entry);
+    else if (page.loc === "/results/admit-card") admitCardEntries.push(entry);
+    else if (page.loc === "/results" || page.loc === "/results/topics") resultEntries.push(entry);
+    else staticPageEntries.push(entry);
   }
 
   for (const id of STATE_IDS) {
-    staticEntries.push(urlEntry(`${siteUrl}/state/${id}`, "daily", "0.7"));
+    stateEntries.push(urlEntry(`${siteUrl}/state/${id}`, "daily", "0.7"));
   }
 
   for (const id of CATEGORY_IDS) {
-    staticEntries.push(urlEntry(`${siteUrl}/category/${id}`, "daily", "0.7"));
+    staticPageEntries.push(urlEntry(`${siteUrl}/category/${id}`, "daily", "0.7"));
   }
 
   for (const slug of QUALIFICATION_SLUGS) {
-    staticEntries.push(urlEntry(`${siteUrl}/qualification/${slug}`, "weekly", "0.75"));
+    qualificationEntries.push(urlEntry(`${siteUrl}/qualification/${slug}`, "weekly", "0.75"));
   }
 
   for (const slug of PROFESSION_SLUGS) {
-    staticEntries.push(urlEntry(`${siteUrl}/profession/${slug}`, "weekly", "0.75"));
+    staticPageEntries.push(urlEntry(`${siteUrl}/profession/${slug}`, "weekly", "0.75"));
   }
 
   for (const slug of RESULT_TOPIC_SLUGS) {
     if (slug === "admit-card") continue;
-    staticEntries.push(urlEntry(`${siteUrl}/results/${slug}`, "weekly", "0.75"));
+    resultEntries.push(urlEntry(`${siteUrl}/results/${slug}`, "weekly", "0.75"));
   }
 
   for (const slug of loadExamSlugs()) {
-    staticEntries.push(urlEntry(`${siteUrl}/exam/${slug}`, "weekly", "0.8"));
+    staticPageEntries.push(urlEntry(`${siteUrl}/exam/${slug}`, "weekly", "0.8"));
   }
 
   if (existsSync(orgIndexPath)) {
@@ -244,7 +256,7 @@ async function main() {
     if (Array.isArray(orgIndex)) {
       for (const row of orgIndex) {
         if (row?.slug) {
-          staticEntries.push(urlEntry(`${siteUrl}/org/${row.slug}`, "weekly", "0.7"));
+          organizationEntries.push(urlEntry(`${siteUrl}/org/${row.slug}`, "weekly", "0.7"));
         }
       }
     }
@@ -272,28 +284,37 @@ async function main() {
 
   mkdirSync(sitemapDir, { recursive: true });
 
-  const staticXml = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${staticEntries.join("\n")}\n</urlset>\n`;
-  writeFileSync(join(sitemapDir, "static.xml"), staticXml, "utf8");
+  const groups = new Map([
+    ["static-pages.xml", staticPageEntries],
+    ["states.xml", stateEntries],
+    ["qualifications.xml", qualificationEntries],
+    ["organizations.xml", organizationEntries],
+    ["results.xml", resultEntries],
+    ["admit-cards.xml", admitCardEntries],
+    ["jobs-active.xml", activeJobEntries],
+    ["jobs-archive.xml", archiveJobEntries],
+  ]);
 
   for (const name of readdirSync(sitemapDir)) {
-    if (/^jobs-\d+\.xml$/.test(name)) unlinkSync(join(sitemapDir, name));
+    if (name === "static.xml" || /^jobs-\d+\.xml$/.test(name)) {
+      unlinkSync(join(sitemapDir, name));
+    }
   }
 
-  const activeXml = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${activeJobEntries.join("\n")}\n</urlset>\n`;
-  const archiveXml = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${archiveJobEntries.join("\n")}\n</urlset>\n`;
-  writeFileSync(join(sitemapDir, "jobs-active.xml"), activeXml, "utf8");
-  writeFileSync(join(sitemapDir, "jobs-archive.xml"), archiveXml, "utf8");
+  for (const [name, entries] of groups) {
+    const xml = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${entries.join("\n")}\n</urlset>\n`;
+    writeFileSync(join(sitemapDir, name), xml, "utf8");
+  }
 
-  const indexEntries = [
-    `  <sitemap>\n    <loc>${xmlEscape(`${siteUrl}/sitemaps/static.xml`)}</loc>\n  </sitemap>`,
-    `  <sitemap>\n    <loc>${xmlEscape(`${siteUrl}/sitemaps/jobs-active.xml`)}</loc>\n  </sitemap>`,
-    `  <sitemap>\n    <loc>${xmlEscape(`${siteUrl}/sitemaps/jobs-archive.xml`)}</loc>\n  </sitemap>`,
-  ];
+  const indexEntries = [...groups.keys()].map(
+    (name) => `  <sitemap>\n    <loc>${xmlEscape(`${siteUrl}/sitemaps/${name}`)}</loc>\n  </sitemap>`
+  );
   const indexXml = `<?xml version="1.0" encoding="UTF-8"?>\n<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${indexEntries.join("\n")}\n</sitemapindex>\n`;
   writeFileSync(indexPath, indexXml, "utf8");
+  writeFileSync(namedIndexPath, indexXml, "utf8");
 
   console.log(
-    `Wrote ${indexPath} — ${staticEntries.length} static, ${activeJobEntries.length} active jobs, ${archiveJobEntries.length} archive jobs`
+    `Wrote ${indexPath} — ${groups.size} child sitemaps, ${activeJobEntries.length} active jobs, ${archiveJobEntries.length} archive jobs`
   );
 }
 

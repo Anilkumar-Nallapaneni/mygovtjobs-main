@@ -25,10 +25,33 @@ stable.
 - Public RLS, API lists, detail reads, static export, frontend Supabase queries,
   sitemaps, and `JobPosting` enforce explicit approval.
 - Active and archive job sitemaps are separated.
+- State, qualification, organization, result, admit-card, and static routes are
+  separated into named child sitemaps under both sitemap index entry points.
 - Scheduled writers use one repository-wide concurrency group.
 - Pull-request CI runs type-check, lint, unit tests, backend tests, build, E2E,
   and strict public-snapshot invariants.
 - Frontend secret scan passed; admin keys are no longer persisted in web storage.
+- Privileged admin and ingest requests emit structured audit events with request
+  IDs, outcome, status, duration, and client address without logging credentials.
+
+## Pasted checklist coverage
+
+| Phase | Status | Evidence |
+| --- | --- | --- |
+| Environment and branch | Complete | Node 24.18, Python 3.12.9, root lockfile, backend venv, dedicated audit branch |
+| Publication path map | Complete | `docs/job-publication-map.md`; one normalized creation writer |
+| Sanitization | Complete | shared recursive backend sanitizer, critical-title rejection, focused tests |
+| India dates and expiration | Complete | centralized India date/status functions and boundary tests |
+| Publication gate and quarantine | Complete | deterministic validation, confidence 90 threshold, private review queue |
+| Existing data cleanup | Complete but data-limited | 1 current public row passes; 21 prior rows were demoted without deletion |
+| Agent responsibilities | Complete | extraction/enrichment cannot approve; deterministic code owns publication |
+| Workflow control | Complete | workflow inventory documented; all active writers share one concurrency group |
+| Mandatory quality tests | Complete | static snapshot, publication gate, sitemap, SEO, unit, backend, and E2E checks |
+| Job details | Complete | empty sections hidden; official source, last checked, status, report, related jobs, and distinct outbound actions |
+| Homepage | Existing implementation retained | no redesign or new pages added while inventory is below target |
+| SEO | Complete | active-only `JobPosting`; archive behavior; eight child sitemaps plus index alias |
+| Security | Complete in code | frontend secret scan, RLS/grants, admin key, rate limit, and privileged audit log |
+| Deployment | Preview-ready | production release remains blocked on merge, catalog recovery, and backend provisioning |
 
 ## Release blockers
 
