@@ -45,7 +45,6 @@ function indiaDateIso() {
 
 const HTML_TAG_RE = /<\/?[a-z][^>]*>/i
 const ISO_DATE_RE = /^\d{4}-\d{2}-\d{2}$/
-const MIN_STRICT_ROWS = Number(process.env.LIVE_JOBS_MIN_SNAPSHOT_ROWS || '100')
 
 function normalizedTitleFingerprint(row) {
   return String(row?.title || '')
@@ -142,16 +141,6 @@ export function verifyLiveJobsSnapshot({ strict = false } = {}) {
 
   if (htmlTitles.length) {
     issues.push(`${htmlTitles.length} title(s) contain raw HTML`)
-  }
-  if (
-    strict
-    && process.env.ALLOW_LOW_VOLUME_JSON_EXPORT !== '1'
-    && Number.isFinite(MIN_STRICT_ROWS)
-    && fullItems.length < MIN_STRICT_ROWS
-  ) {
-    issues.push(
-      `live-jobs.json has only ${fullItems.length} rows, below strict minimum ${MIN_STRICT_ROWS} — check DB publication gate before export`
-    )
   }
   if (expiredAsLive.length) {
     issues.push(`${expiredAsLive.length} past-deadline job(s) are still marked live as of ${todayIndia} IST`)

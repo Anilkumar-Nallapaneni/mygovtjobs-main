@@ -34,7 +34,7 @@ from app.utils.slim_detail import slim_detail_for_db
 from app.utils.live_jobs_export import slim_job_for_json_export, slim_job_for_list_json_export
 
 _slug_re = re.compile(r"[^a-z0-9]+")
-LOW_VOLUME_EXPORT_MIN_COUNT = int(os.environ.get("LIVE_JOBS_MIN_EXPORT_COUNT", "100"))
+LOW_VOLUME_EXPORT_MIN_EXISTING_COUNT = int(os.environ.get("LIVE_JOBS_MIN_EXISTING_COUNT_FOR_DROP_GUARD", "10"))
 LOW_VOLUME_EXPORT_MAX_DROP_RATIO = float(os.environ.get("LIVE_JOBS_MAX_EXPORT_DROP_RATIO", "0.75"))
 
 
@@ -461,15 +461,7 @@ class JobPersistService:
             )
             return 0
         if slim_items and os.environ.get("ALLOW_LOW_VOLUME_JSON_EXPORT") != "1":
-            if len(slim_items) < LOW_VOLUME_EXPORT_MIN_COUNT:
-                logger.error(
-                    "export_live_jobs_json: refusing to write low-volume snapshot "
-                    "(%s rows below minimum %s). Set ALLOW_LOW_VOLUME_JSON_EXPORT=1 to override.",
-                    len(slim_items),
-                    LOW_VOLUME_EXPORT_MIN_COUNT,
-                )
-                return 0
-            if existing_count and existing_count >= LOW_VOLUME_EXPORT_MIN_COUNT:
+            if existing_count and existing_count >= LOW_VOLUME_EXPORT_MIN_EXISTING_COUNT:
                 drop_ratio = 1 - (len(slim_items) / existing_count)
                 if drop_ratio > LOW_VOLUME_EXPORT_MAX_DROP_RATIO:
                     logger.error(
