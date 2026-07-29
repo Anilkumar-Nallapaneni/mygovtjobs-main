@@ -10,6 +10,7 @@ from urllib.parse import urlparse
 
 logger = logging.getLogger(__name__)
 
+from sqlalchemy import and_, case
 from sqlalchemy.dialects.postgresql import insert
 from sqlalchemy.ext.asyncio import AsyncSession
 
@@ -33,6 +34,33 @@ from app.utils.slim_detail import slim_detail_for_db
 from app.utils.live_jobs_export import slim_job_for_json_export, slim_job_for_list_json_export
 
 _slug_re = re.compile(r"[^a-z0-9]+")
+LOW_VOLUME_EXPORT_MIN_COUNT = int(os.environ.get("LIVE_JOBS_MIN_EXPORT_COUNT", "100"))
+LOW_VOLUME_EXPORT_MAX_DROP_RATIO = float(os.environ.get("LIVE_JOBS_MAX_EXPORT_DROP_RATIO", "0.75"))
+
+
+def _should_preserve_existing_publication(
+    *,
+    auto_publish_verified: bool,
+    incoming_status: str,
+    incoming_document_type: str,
+    incoming_published_to_site: bool,
+) -> bool:
+    """Keep already-approved jobs public when the production freeze saves new rows as draft."""
+    return (
+        not auto_publish_verified
+        and incoming_status == "draft"
+        and incoming_document_type == "RECRUITMENT"
+        and incoming_published_to_site is False
+    )
+
+
+def _snapshot_item_count(path: Path) -> int | None:
+    try:
+        payload = json.loads(path.read_text(encoding="utf-8"))
+    except Exception:
+        return None
+    items = payload.get("items") if isinstance(payload, dict) else None
+    return len(items) if isinstance(items, list) else None
 
 
 def slugify(
@@ -300,6 +328,52 @@ class JobPersistService:
             "publication_confidence": validation.confidence,
         }
 
+        preserve_existing_publication = _should_preserve_existing_publication(
+            auto_publish_verified=bool(settings.auto_publish_verified),
+            incoming_status=job_status,
+            incoming_document_type=document_type,
+            incoming_published_to_site=published_to_site,
+        )
+        preserve_condition = (
+            and_(
+                Job.status == "live",
+                Job.published_to_site.is_(True),
+                Job.verification_status.in_(("VERIFIED", "PARTIALLY_VERIFIED")),
+            )
+            if preserve_existing_publication
+            else None
+        )
+        status_update = (
+            case((preserve_condition, Job.status), else_=row["status"])
+            if preserve_condition is not None
+            else row["status"]
+        )
+        verification_update = (
+            case((preserve_condition, Job.verification_status), else_=row["verification_status"])
+            if preserve_condition is not None
+            else row["verification_status"]
+        )
+        last_date_update = (
+            case((preserve_condition, Job.last_date), else_=row["last_date"])
+            if preserve_condition is not None and row["last_date"] is None
+            else row["last_date"]
+        )
+        completeness_update = (
+            case((preserve_condition, Job.completeness_score), else_=row["completeness_score"])
+            if preserve_condition is not None and completeness_score < 70
+            else row["completeness_score"]
+        )
+        published_update = (
+            case((preserve_condition, Job.published_to_site), else_=row["published_to_site"])
+            if preserve_condition is not None
+            else row["published_to_site"]
+        )
+        confidence_update = (
+            case((preserve_condition, Job.publication_confidence), else_=row["publication_confidence"])
+            if preserve_condition is not None
+            else row["publication_confidence"]
+        )
+
         stmt = (
             insert(Job)
             .values(**row)
@@ -311,24 +385,24 @@ class JobPersistService:
                     "category": row["category"],
                     "state_codes": row["state_codes"],
                     "vacancies": row["vacancies"],
-                    "last_date": row["last_date"],
+                    "last_date": last_date_update,
                     "apply_url": row["apply_url"],
                     "published_at": row["published_at"],
                     "normalized_at": row["normalized_at"],
                     "detail": row["detail"],
-                    "status": row["status"],
+                    "status": status_update,
                     "title_fingerprint": row["title_fingerprint"],
                     "document_type": row["document_type"],
-                    "verification_status": row["verification_status"],
-                    "completeness_score": row["completeness_score"],
-                    "published_to_site": row["published_to_site"],
+                    "verification_status": verification_update,
+                    "completeness_score": completeness_update,
+                    "published_to_site": published_update,
                     "primary_pdf_url": row["primary_pdf_url"],
                     "source_evidence": row["source_evidence"],
                     "review_reasons": row["review_reasons"],
                     "source_url": row["source_url"],
                     "source_domain": row["source_domain"],
                     "confidence_score": row["confidence_score"],
-                    "publication_confidence": row["publication_confidence"],
+                    "publication_confidence": confidence_update,
                 },
             )
             .returning(Job)
@@ -374,16 +448,39 @@ class JobPersistService:
         list_items = [slim_job_for_list_json_export(item) for item in items]
         catalog_count = count_catalog_display_jobs(slim_items)
 
-        # Guard against overwriting the shipped catalog with an empty payload
-        # (transient DB session issues in the sync path have shipped empty
-        # live-jobs.json to prod before). Set ALLOW_EMPTY_JSON_EXPORT=1 to
-        # bypass in legitimate wipe/reset scenarios.
+        path = Path(get_settings().live_jobs_json_path)
+        existing_count = _snapshot_item_count(path)
+
+        # Guard against overwriting the shipped catalog with an empty or tiny
+        # payload. Transient DB/publication-gate issues have shipped broken
+        # live-jobs.json before. Set an explicit override only for planned wipes.
         if not slim_items and os.environ.get("ALLOW_EMPTY_JSON_EXPORT") != "1":
             logger.error(
                 "export_live_jobs_json: refusing to write empty snapshot "
                 "(list_jobs returned 0 rows). Set ALLOW_EMPTY_JSON_EXPORT=1 to override."
             )
             return 0
+        if slim_items and os.environ.get("ALLOW_LOW_VOLUME_JSON_EXPORT") != "1":
+            if len(slim_items) < LOW_VOLUME_EXPORT_MIN_COUNT:
+                logger.error(
+                    "export_live_jobs_json: refusing to write low-volume snapshot "
+                    "(%s rows below minimum %s). Set ALLOW_LOW_VOLUME_JSON_EXPORT=1 to override.",
+                    len(slim_items),
+                    LOW_VOLUME_EXPORT_MIN_COUNT,
+                )
+                return 0
+            if existing_count and existing_count >= LOW_VOLUME_EXPORT_MIN_COUNT:
+                drop_ratio = 1 - (len(slim_items) / existing_count)
+                if drop_ratio > LOW_VOLUME_EXPORT_MAX_DROP_RATIO:
+                    logger.error(
+                        "export_live_jobs_json: refusing to replace %s-row snapshot with %s rows "
+                        "(drop %.1f%% exceeds %.1f%%). Set ALLOW_LOW_VOLUME_JSON_EXPORT=1 to override.",
+                        existing_count,
+                        len(slim_items),
+                        drop_ratio * 100,
+                        LOW_VOLUME_EXPORT_MAX_DROP_RATIO * 100,
+                    )
+                    return 0
 
         daily_block: dict = {}
         try:
@@ -408,7 +505,6 @@ class JobPersistService:
             "dailySync": daily_block or None,
             "items": slim_items,
         }
-        path = Path(get_settings().live_jobs_json_path)
         path.parent.mkdir(parents=True, exist_ok=True)
         path.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
 
