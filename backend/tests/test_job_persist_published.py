@@ -1,6 +1,11 @@
 from datetime import date, datetime, timezone
 
-from app.services.job_persist_service import _resolve_published_at, _upsert_published_at
+from app.services.job_persist_service import (
+    _is_dramatic_snapshot_drop,
+    _resolve_published_at,
+    _should_preserve_public_gate_on_conflict,
+    _upsert_published_at,
+)
 
 
 def test_resolve_published_at_uses_top_level_datetime():
@@ -29,3 +34,22 @@ def test_upsert_published_at_falls_back_to_now_when_unknown():
 def test_upsert_published_at_uses_resolved_value():
     dt = datetime(2026, 6, 1, 12, 0, tzinfo=timezone.utc)
     assert _upsert_published_at({"published_at": dt}) == dt
+
+
+def test_preserve_public_gate_for_non_expired_unpublished_conflict():
+    assert _should_preserve_public_gate_on_conflict(status="draft", published_to_site=False)
+    assert _should_preserve_public_gate_on_conflict(status="live", published_to_site=False)
+    assert not _should_preserve_public_gate_on_conflict(status="expired", published_to_site=False)
+    assert not _should_preserve_public_gate_on_conflict(status="live", published_to_site=True)
+
+
+def test_dramatic_snapshot_drop_guard_ignores_small_or_moderate_changes():
+    assert not _is_dramatic_snapshot_drop(None, 1)
+    assert not _is_dramatic_snapshot_drop(10, 1)
+    assert not _is_dramatic_snapshot_drop(1000, 600)
+
+
+def test_dramatic_snapshot_drop_guard_flags_large_catalog_collapse():
+    assert _is_dramatic_snapshot_drop(2600, 1)
+    assert _is_dramatic_snapshot_drop(2600, 1299)
+    assert not _is_dramatic_snapshot_drop(2600, 1300)
