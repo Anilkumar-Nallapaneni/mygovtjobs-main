@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-07-27T19:11:36.731526Z",
+  "generatedAt": "2026-08-02T03:21:29.215125+00:00",
   "dailySync": {
-    "completedAt": "2026-07-27T19:11:34.208467+00:00",
-    "completedAtIst": "2026-07-28T00:41:34.208467+05:30",
-    "dateIst": "2026-07-28",
-    "nextRunAtIst": "2026-07-28T08:00:00+05:30",
+    "completedAt": "2026-08-02T03:21:33.684949+00:00",
+    "completedAtIst": "2026-08-02T08:51:33.684988+05:30",
+    "dateIst": "2026-08-02",
+    "nextRunAtIst": "2026-08-03T08:00:00+05:30",
     "jobCount": 1,
     "sourcesScraped": 154,
     "scheduledLabel": "8:00 AM IST daily"
@@ -39,20 +39,20 @@
       "posts": [],
       "important_dates": [],
       "detail": {
+        "detail_source": "pdf",
+        "notification_url": "http://www.barc.gov.in/careers/vacancy21.pdf",
         "detail_updated_at": "2026-07-27T06:58:23.600812+00:00",
+        "pdf_url": "http://www.barc.gov.in/careers/vacancy21.pdf",
+        "summary": "Page 1 of 7 Government of India Department of Atomic Energy Bhabha Atomic Research Centre Opening date and time for submission of online application 17.07.2026 (00.00 hrs.) Closing date and time for receipt of online application 18.08.2026 (23.59 hrs.) “GOVERNMENT STRIVES TO HAVE A WORKFORCE WHICH REFLECTS GENDER BALANCE AND WOMEN CANDIDATES ARE ENCOURAGED TO APPLY” ADVERTISEMENT No. 06/2026 (R-I)…",
         "pdf_urls": [
           "http://www.barc.gov.in/careers/vacancy21.pdf"
         ],
-        "pdf_url": "http://www.barc.gov.in/careers/vacancy21.pdf",
-        "source": "barc",
-        "detail_source": "pdf",
-        "memorized_at": "2026-07-27T06:58:13.721049+00:00",
+        "published": "2026-07-17T00:00:00+00:00",
         "pdfUrls": [
           "http://www.barc.gov.in/careers/vacancy21.pdf"
         ],
-        "published": "2026-07-17T00:00:00+00:00",
-        "notification_url": "http://www.barc.gov.in/careers/vacancy21.pdf",
-        "summary": "Page 1 of 7 Government of India Department of Atomic Energy Bhabha Atomic Research Centre Opening date and time for submission of online application 17.07.2026 (00.00 hrs.) Closing date and time for receipt of online application 18.08.2026 (23.59 hrs.) “GOVERNMENT STRIVES TO HAVE A WORKFORCE WHICH REFLECTS GENDER BALANCE AND WOMEN CANDIDATES ARE ENCOURAGED TO APPLY” ADVERTISEMENT No. 06/2026 (R-I)…"
+        "source": "barc",
+        "memorized_at": "2026-07-27T06:58:13.721049+00:00"
       }
     }
   ]
