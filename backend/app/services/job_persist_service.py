@@ -10,6 +10,7 @@ from urllib.parse import urlparse
 
 logger = logging.getLogger(__name__)
 
+from sqlalchemy import or_, select, update
 from sqlalchemy.dialects.postgresql import insert
 from sqlalchemy.ext.asyncio import AsyncSession
 
@@ -118,6 +119,13 @@ def _resolve_source_url(normalized: dict, apply_url: str | None) -> str | None:
         if isinstance(c, str) and c.strip():
             return strip_postgres_control_chars(c.strip())
     return None
+
+
+def _job_conflict_predicates(digest: str, source_url: str | None):
+    predicates = [Job.content_hash == digest]
+    if source_url and source_url.strip():
+        predicates.append(Job.source_url == source_url.strip())
+    return predicates
 
 
 def _source_domain(url: str | None) -> str | None:
@@ -300,39 +308,49 @@ class JobPersistService:
             "publication_confidence": validation.confidence,
         }
 
-        stmt = (
-            insert(Job)
-            .values(**row)
-            .on_conflict_do_update(
-                index_elements=[Job.content_hash],
-                set_={
-                    "title": row["title"],
-                    "dept": row["dept"],
-                    "category": row["category"],
-                    "state_codes": row["state_codes"],
-                    "vacancies": row["vacancies"],
-                    "last_date": row["last_date"],
-                    "apply_url": row["apply_url"],
-                    "published_at": row["published_at"],
-                    "normalized_at": row["normalized_at"],
-                    "detail": row["detail"],
-                    "status": row["status"],
-                    "title_fingerprint": row["title_fingerprint"],
-                    "document_type": row["document_type"],
-                    "verification_status": row["verification_status"],
-                    "completeness_score": row["completeness_score"],
-                    "published_to_site": row["published_to_site"],
-                    "primary_pdf_url": row["primary_pdf_url"],
-                    "source_evidence": row["source_evidence"],
-                    "review_reasons": row["review_reasons"],
-                    "source_url": row["source_url"],
-                    "source_domain": row["source_domain"],
-                    "confidence_score": row["confidence_score"],
-                    "publication_confidence": row["publication_confidence"],
-                },
-            )
-            .returning(Job)
+        update_values = {
+            "title": row["title"],
+            "dept": row["dept"],
+            "category": row["category"],
+            "state_codes": row["state_codes"],
+            "vacancies": row["vacancies"],
+            "last_date": row["last_date"],
+            "apply_url": row["apply_url"],
+            "published_at": row["published_at"],
+            "normalized_at": row["normalized_at"],
+            "detail": row["detail"],
+            "status": row["status"],
+            "title_fingerprint": row["title_fingerprint"],
+            "document_type": row["document_type"],
+            "verification_status": row["verification_status"],
+            "completeness_score": row["completeness_score"],
+            "published_to_site": row["published_to_site"],
+            "primary_pdf_url": row["primary_pdf_url"],
+            "source_evidence": row["source_evidence"],
+            "review_reasons": row["review_reasons"],
+            "source_url": row["source_url"],
+            "source_domain": row["source_domain"],
+            "confidence_score": row["confidence_score"],
+            "publication_confidence": row["publication_confidence"],
+        }
+
+        existing_id = await session.scalar(
+            select(Job.id)
+            .where(or_(*_job_conflict_predicates(digest, source_url)))
+            .limit(1)
         )
+        if existing_id:
+            stmt = update(Job).where(Job.id == existing_id).values(**update_values).returning(Job)
+        else:
+            stmt = (
+                insert(Job)
+                .values(**row)
+                .on_conflict_do_update(
+                    index_elements=[Job.content_hash],
+                    set_=update_values,
+                )
+                .returning(Job)
+            )
         result = await session.execute(stmt)
         if not published_to_site:
             from app.services.job_review_service import JobReviewService
