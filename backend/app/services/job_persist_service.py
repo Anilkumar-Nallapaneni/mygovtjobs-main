@@ -10,6 +10,7 @@ from urllib.parse import urlparse
 
 logger = logging.getLogger(__name__)
 
+from sqlalchemy import select
 from sqlalchemy.dialects.postgresql import insert
 from sqlalchemy.ext.asyncio import AsyncSession
 
@@ -131,6 +132,21 @@ def _source_domain(url: str | None) -> str | None:
 
 
 class JobPersistService:
+    async def _existing_job_for_identity(
+        self,
+        session: AsyncSession,
+        *,
+        digest: str,
+        source_url: str | None,
+    ) -> Job | None:
+        existing = await session.execute(select(Job).where(Job.content_hash == digest).limit(1))
+        job = existing.scalar_one_or_none()
+        if job or not source_url:
+            return job
+
+        existing = await session.execute(select(Job).where(Job.source_url == source_url).limit(1))
+        return existing.scalar_one_or_none()
+
     async def upsert_normalized(self, session: AsyncSession, normalized: dict, *, commit: bool = True) -> Job | None:
         raw_payload = sanitize_json_for_postgres(dict(normalized))
         normalized = sanitize_source_text_fields(normalized)
@@ -300,40 +316,49 @@ class JobPersistService:
             "publication_confidence": validation.confidence,
         }
 
-        stmt = (
-            insert(Job)
-            .values(**row)
-            .on_conflict_do_update(
-                index_elements=[Job.content_hash],
-                set_={
-                    "title": row["title"],
-                    "dept": row["dept"],
-                    "category": row["category"],
-                    "state_codes": row["state_codes"],
-                    "vacancies": row["vacancies"],
-                    "last_date": row["last_date"],
-                    "apply_url": row["apply_url"],
-                    "published_at": row["published_at"],
-                    "normalized_at": row["normalized_at"],
-                    "detail": row["detail"],
-                    "status": row["status"],
-                    "title_fingerprint": row["title_fingerprint"],
-                    "document_type": row["document_type"],
-                    "verification_status": row["verification_status"],
-                    "completeness_score": row["completeness_score"],
-                    "published_to_site": row["published_to_site"],
-                    "primary_pdf_url": row["primary_pdf_url"],
-                    "source_evidence": row["source_evidence"],
-                    "review_reasons": row["review_reasons"],
-                    "source_url": row["source_url"],
-                    "source_domain": row["source_domain"],
-                    "confidence_score": row["confidence_score"],
-                    "publication_confidence": row["publication_confidence"],
-                },
+        update_values = {
+            "title": row["title"],
+            "dept": row["dept"],
+            "category": row["category"],
+            "state_codes": row["state_codes"],
+            "vacancies": row["vacancies"],
+            "last_date": row["last_date"],
+            "apply_url": row["apply_url"],
+            "published_at": row["published_at"],
+            "normalized_at": row["normalized_at"],
+            "detail": row["detail"],
+            "status": row["status"],
+            "title_fingerprint": row["title_fingerprint"],
+            "document_type": row["document_type"],
+            "verification_status": row["verification_status"],
+            "completeness_score": row["completeness_score"],
+            "published_to_site": row["published_to_site"],
+            "primary_pdf_url": row["primary_pdf_url"],
+            "source_evidence": row["source_evidence"],
+            "review_reasons": row["review_reasons"],
+            "source_url": row["source_url"],
+            "source_domain": row["source_domain"],
+            "confidence_score": row["confidence_score"],
+            "publication_confidence": row["publication_confidence"],
+        }
+
+        persisted_job = await self._existing_job_for_identity(session, digest=digest, source_url=source_url)
+        if persisted_job:
+            for key, value in {**update_values, "slug": row["slug"], "content_hash": row["content_hash"]}.items():
+                setattr(persisted_job, key, value)
+            await session.flush()
+        else:
+            stmt = (
+                insert(Job)
+                .values(**row)
+                .on_conflict_do_update(
+                    index_elements=[Job.content_hash],
+                    set_=update_values,
+                )
+                .returning(Job)
             )
-            .returning(Job)
-        )
-        result = await session.execute(stmt)
+            result = await session.execute(stmt)
+            persisted_job = result.scalar_one_or_none()
         if not published_to_site:
             from app.services.job_review_service import JobReviewService
 
@@ -353,7 +378,7 @@ class JobPersistService:
             )
         if commit:
             await session.commit()
-        return result.scalar_one_or_none()
+        return persisted_job
 
     async def export_live_jobs_json(self, session: AsyncSession) -> int:
         from app.services.job_service import JobService
