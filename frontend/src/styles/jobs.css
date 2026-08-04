@@ -885,7 +885,10 @@
 }
 
 .job-detail-stat-label {
-  font-size: 9.5px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
   color: var(--ds-muted);
   margin-top: 4px;
   font-family: var(--font-sans);
@@ -893,31 +896,29 @@
 
 .job-detail-facts-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
   gap: 10px;
 }
 
 .job-detail-fact-card {
-  background: var(--ds-bg3);
-  border: 1px solid var(--ds-borderHi);
+  background: color-mix(in srgb, var(--ds-bg2) 80%, transparent);
+  border: 1px solid var(--ds-border);
   border-radius: 10px;
-  padding: 10px 12px;
+  padding: 12px 14px;
 }
 
 .job-detail-fact-label {
-  font-size: 10px;
+  font-size: 12px;
   color: var(--ds-muted);
-  font-weight: 700;
-  letter-spacing: 0.5px;
-  text-transform: uppercase;
+  font-weight: 600;
   margin-bottom: 4px;
   font-family: var(--font-sans);
 }
 
 .job-detail-fact-value {
-  font-size: 12px;
-  color: var(--ds-white);
-  line-height: 1.45;
+  font-size: 14px;
+  color: var(--ds-mutedHi);
+  line-height: 1.5;
   font-family: var(--font-sans);
 }
 
@@ -988,23 +989,28 @@
 }
 
 .job-detail-section {
-  background: var(--ds-bg2);
-  border: 1px solid var(--ds-border);
-  border-radius: 14px;
-  padding: 16px 18px;
-  margin-bottom: 12px;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  padding: 4px 0 18px;
+  margin-bottom: 8px;
+  border-bottom: 1px solid var(--ds-border);
+}
+
+.job-detail-section:last-of-type {
+  border-bottom: none;
 }
 
 .job-detail-section-title {
-  font-size: 11px;
+  font-size: 13px;
   font-weight: 700;
-  color: var(--ds-saffron);
-  letter-spacing: 1.5px;
+  color: var(--ds-white);
+  letter-spacing: 0.04em;
   margin: 0 0 12px;
-  padding-bottom: 10px;
-  border-bottom: 1px solid var(--ds-border);
+  padding-bottom: 8px;
+  border-bottom: 2px solid color-mix(in srgb, var(--ds-saffron) 55%, transparent);
   font-family: var(--font-sans);
-  text-transform: uppercase;
+  text-transform: none;
 }
 
 .job-detail-summary {
@@ -1015,6 +1021,11 @@
   font-family: var(--font-sans);
   white-space: pre-wrap;
   overflow-wrap: anywhere;
+}
+
+.job-detail-social-alert--muted {
+  opacity: 0.85;
+  margin-bottom: 8px;
 }
 
 .job-detail-highlights {
@@ -1042,12 +1053,12 @@
 .job-detail-table {
   width: 100%;
   border-collapse: collapse;
-  font-size: 12px;
+  font-size: 14px;
 }
 
 .job-detail-table th,
 .job-detail-table td {
-  padding: 9px 10px;
+  padding: 11px 12px;
   border-bottom: 1px solid var(--ds-border);
   text-align: left;
   vertical-align: top;
@@ -1634,13 +1645,28 @@
 }
 
 .job-detail-section--lead {
-  border-left: 3px solid var(--ds-saffron);
+  border-left: none;
+}
+
+.job-detail-lead {
+  padding: 14px 16px;
+  border-radius: 12px;
+  border: 1px solid color-mix(in srgb, var(--ds-saffron) 28%, var(--ds-border));
+  background:
+    linear-gradient(
+      135deg,
+      color-mix(in srgb, var(--ds-saffron) 12%, transparent),
+      color-mix(in srgb, var(--ds-surface, #121820) 88%, transparent)
+    );
 }
 
 .job-detail-summary--lead {
   font-size: 15px;
-  line-height: 1.8;
+  line-height: 1.7;
   color: var(--ds-text-body, var(--ds-white));
+  margin: 0;
+  white-space: normal;
+  overflow-wrap: break-word;
 }
 
 /* Timeline for important dates */

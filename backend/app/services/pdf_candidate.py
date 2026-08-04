@@ -101,6 +101,7 @@ def validate_extracted_dates(
     last_date: date | None,
     *,
     today: date | None = None,
+    summary: str | None = None,
 ) -> list[str]:
     errors: list[str] = []
     today = today or date.today()
@@ -108,7 +109,8 @@ def validate_extracted_dates(
     if published_at and published_at > today + timedelta(days=1):
         errors.append("Publication date is in the future")
 
-    if published_at and published_at.year < today.year - 2:
+    # Ancient publication dates are almost always OCR / parse failures (e.g. 1995).
+    if published_at and published_at < today - timedelta(days=730):
         errors.append("Publication date is implausibly old")
 
     if last_date and published_at and last_date < published_at:
@@ -116,6 +118,23 @@ def validate_extracted_dates(
 
     if last_date and last_date > today + timedelta(days=365):
         errors.append("Last date is implausibly distant")
+
+    # Soft check: if summary has a nearer apply/walk-in date, flag distant stored last_date.
+    if last_date and summary:
+        from app.parsers.pdf_dates import extract_dates_from_text, prefer_apply_date
+
+        extracted = extract_dates_from_text(summary).get("last_date")
+        preferred = prefer_apply_date(last_date.isoformat(), extracted, today=today)
+        if preferred and preferred != last_date.isoformat():
+            try:
+                pref_d = date.fromisoformat(preferred)
+                if pref_d < last_date and (last_date - pref_d).days >= 30:
+                    errors.append(
+                        f"Stored last_date {last_date.isoformat()} looks like a project end; "
+                        f"notice suggests apply-by {preferred}"
+                    )
+            except ValueError:
+                pass
 
     return errors
 

@@ -70,6 +70,19 @@ def test_is_placeholder_sections_detects_pending_copy():
     )
 
 
+def test_placeholder_sections_not_treated_as_complete():
+    rich = [
+        {
+            "heading": "Eligibility and Qualification",
+            "paragraphs": ["Graduate degree from a recognized university is required."],
+            "tables": [],
+            "lists": [],
+            "links": [],
+        }
+    ]
+    assert not _is_placeholder_sections(rich)
+
+
 def test_job_detail_agent_paths():
     agent = JobDetailAgent()
     assert agent.detail_dir.name == "job-details"

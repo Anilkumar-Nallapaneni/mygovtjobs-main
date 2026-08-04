@@ -122,17 +122,10 @@ export default function JobDetail({
     ? structured.importantDates.map((d) => [d.event, d.date] as [string, string])
     : (Object.entries(view.dates || {}).filter(([, v]) => v && String(v).trim()) as [string, string][]);
 
-  const rawSummary = useStructured ? structured.summary || view.about : view.about;
+  const rawSummary = view.about || "";
   const summaryText = formatSummaryForDisplay(sanitizeParagraphText(rawSummary, actionUrls));
   const bodySections = useStructured ? structured.articleSections : [];
-  const showSummaryLead =
-    Boolean(summaryText) &&
-    !bodySections.some(
-      (section) =>
-        section.paragraphs?.some(
-          (p) => p.length > 60 && summaryText.length > 60 && p.slice(0, 80) === summaryText.slice(0, 80)
-        )
-    );
+  const showSummaryLead = Boolean(summaryText) && summaryText.length >= 40;
 
   const highlights = (view.highlights || []).filter(Boolean);
   const extraDetails = (view.extraDetails || []).map((item: { label: string; value: string }) => ({
@@ -283,7 +276,7 @@ export default function JobDetail({
 
       <SocialAlertBar
         compact
-        className="job-detail-social-alert job-detail-social-alert--desktop"
+        className="job-detail-social-alert job-detail-social-alert--desktop job-detail-social-alert--muted"
         shareTitle={view.title}
         shareUrl={shareUrl}
       />
@@ -327,17 +320,17 @@ export default function JobDetail({
           title={t("jobDetail.aboutRecruitment", { defaultValue: "About this recruitment" })}
           className="job-detail-section--lead"
         >
-          <p className="job-detail-summary job-detail-summary--lead">{summaryText}</p>
+          <div className="job-detail-lead">
+            <p className="job-detail-summary job-detail-summary--lead">{summaryText}</p>
+          </div>
         </Section>
       ) : null}
 
-      {overviewFacts.length > 0 ? (
-        <Section title={t("jobDetail.overview", { defaultValue: "Overview" })}>
-          <FactsGrid
-            items={overviewFacts.map((f) => ({
-              label: translateFactLabel(t, f.label),
-              value: f.value,
-            }))}
+      {dateEntries.length > 0 ? (
+        <Section title={t("jobDetail.importantDates")}>
+          <ImportantDatesTimeline
+            entries={dateEntries}
+            translateEvent={(event) => translateDateKey(t, event)}
           />
         </Section>
       ) : null}
@@ -369,11 +362,13 @@ export default function JobDetail({
         </Section>
       ) : null}
 
-      {dateEntries.length > 0 ? (
-        <Section title={t("jobDetail.importantDates")}>
-          <ImportantDatesTimeline
-            entries={dateEntries}
-            translateEvent={(event) => translateDateKey(t, event)}
+      {overviewFacts.length > 0 ? (
+        <Section title={t("jobDetail.overview", { defaultValue: "Overview" })}>
+          <FactsGrid
+            items={overviewFacts.map((f) => ({
+              label: translateFactLabel(t, f.label),
+              value: f.value,
+            }))}
           />
         </Section>
       ) : null}
@@ -384,9 +379,29 @@ export default function JobDetail({
         </Section>
       ) : null}
 
+      {feeEntries.length > 0 ? (
+        <Section title={t("jobDetail.applicationFee")}>
+          <FeeGrid
+            entries={feeEntries}
+            translateKey={(key) => translateFeeKey(t, key)}
+          />
+        </Section>
+      ) : null}
+
       {useStructured ? (
         <>
-          <ContentSections sections={bodySections} skipDateTables actionUrls={actionUrls} />
+          <ContentSections
+            sections={bodySections.filter(
+              (s) =>
+                !/full details are being verified/i.test((s.paragraphs || []).join(" ")) &&
+                !/verification information/i.test(s.heading || "") &&
+                !(/application\s*fee|exam\s*fee/i.test(s.heading || "") && feeEntries.length > 0) &&
+                !(/important\s*dates/i.test(s.heading || "") && dateEntries.length > 0) &&
+                !(/vacancy/i.test(s.heading || "") && vacancyRows.length > 0)
+            )}
+            skipDateTables
+            actionUrls={actionUrls}
+          />
           {!bodySections.some((s) => /selection/i.test(s.heading || "")) && view.selection?.length > 0 ? (
             <Section title={t("jobDetail.selectionProcess")}>
               <ol className="job-detail-steps">
@@ -449,15 +464,6 @@ export default function JobDetail({
           ) : null}
         </>
       )}
-
-      {feeEntries.length > 0 ? (
-        <Section title={t("jobDetail.applicationFee")}>
-          <FeeGrid
-            entries={feeEntries}
-            translateKey={(key) => translateFeeKey(t, key)}
-          />
-        </Section>
-      ) : null}
 
       {extraDetails.length > 0 ? (
         <Section title={t("jobDetail.additionalInfo", { defaultValue: "Additional information" })}>

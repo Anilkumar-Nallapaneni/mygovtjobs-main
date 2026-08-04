@@ -69,3 +69,11 @@ def test_posts_sum_out_of_range_sanitized():
     title = "Recruitment for 120 posts of Constable"
     assert resolve_vacancies(0, title, "", posts_sum=500_000) == 0
     assert resolve_vacancies(0, "Advt 06/2025 recruitment", "", posts_sum=2025) == 0
+
+
+def test_parenthetical_and_word_post_counts():
+    title = "Filling up of two (02) posts of Upper Division Clerk (UDC) on deputation basis"
+    assert extract_vacancies(title, title=title) == 2
+    assert resolve_vacancies(0, title, "") == 2
+    assert extract_vacancies("Walk-in for twelve posts", title="Walk-in") == 0  # twelve not mapped
+    assert extract_vacancies("Engagement of three posts of Consultant", title="Engagement") == 3

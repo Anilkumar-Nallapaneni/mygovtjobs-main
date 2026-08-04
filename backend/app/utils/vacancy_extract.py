@@ -13,6 +13,13 @@ _VACANCY_PATTERNS: list[re.Pattern[str]] = [
     re.compile(r"\b([\d,]+)\s+(?:posts?|vacancies|vacancy|positions?|seats?)\b", re.I),
     re.compile(r"\b([\d,]+)\s*posts?\b", re.I),
     re.compile(r"\b([\d,]+)\s*vacancies?\b", re.I),
+    # "two (02) posts" / "(02) posts of Upper Division Clerk"
+    re.compile(r"\(\s*0*([1-9]\d{0,5})\s*\)\s*(?:posts?|vacancies|vacancy|positions?)\b", re.I),
+    re.compile(
+        r"filling\s+up\s+of\s+(?:two|three|four|five|six|seven|eight|nine|ten|\d+)\s*"
+        r"(?:\(\s*0*([1-9]\d{0,5})\s*\)\s*)?(?:posts?|vacancies)",
+        re.I,
+    ),
     # "Apply Online for 12,256 Group B & C Vacancies"
     re.compile(r"\b([\d,]+)\s+group\s+[a-z0-9].{0,40}?vacanc", re.I | re.S),
     re.compile(r"apply\s+online\s+for\s+([\d,]+)\b", re.I),
@@ -29,6 +36,24 @@ _VACANCY_PATTERNS: list[re.Pattern[str]] = [
     re.compile(r"\(([\d,]+)\s*(?:posts?|vacancies)\)", re.I),
     re.compile(r"\b([\d,]+)\s*(?:\+\s*)?(?:regular|temporary)?\s*posts?\b", re.I),
 ]
+
+_WORD_COUNTS = {
+    "one": 1,
+    "two": 2,
+    "three": 3,
+    "four": 4,
+    "five": 5,
+    "six": 6,
+    "seven": 7,
+    "eight": 8,
+    "nine": 9,
+    "ten": 10,
+}
+_WORD_POSTS = re.compile(
+    r"\b(one|two|three|four|five|six|seven|eight|nine|ten)\s+"
+    r"(?:\(\s*0*\d+\s*\)\s*)?(?:posts?|vacancies|vacancy|positions?)\b",
+    re.I,
+)
 
 _TOTAL_PATTERN = re.compile(r"total\s*(?:no\.?\s*of\s*)?(?:posts?|vacancies|vacancy)\s*[:\-]?\s*([\d,]+)", re.I)
 
@@ -150,9 +175,15 @@ def extract_vacancies(*chunks: str | None, title: str = "") -> int:
 
     for pat in _VACANCY_PATTERNS:
         for m in pat.finditer(blob_for_scan):
-            n = _parse_num(m.group(1))
+            raw = m.group(1) if m.lastindex else ""
+            n = _parse_num(raw)
             if _plausible(n, title_ctx, match=m, blob=blob_for_scan):
                 found.append(n)
+
+    for m in _WORD_POSTS.finditer(blob_for_scan):
+        n = _WORD_COUNTS.get(m.group(1).lower(), 0)
+        if _plausible(n, title_ctx):
+            found.append(n)
 
     posts_line_sum = 0
     if _PINCODE_BEFORE_POSTS.search(blob_for_scan):

@@ -52,3 +52,26 @@ def test_extract_dfpd_notice_dates():
     out = extract_dates_from_text(text)
     assert out["published_date"] == "2026-05-18"
     assert out["last_date"] == "2026-08-16"
+
+
+def test_extract_walk_in_over_project_end():
+    text = """
+    Walk-in interview on 16-06-2026.
+    Project duration upto 31-03-2027.
+    """
+    out = extract_dates_from_text(text)
+    assert out["last_date"] == "2026-06-16"
+
+
+def test_prefer_apply_date_chooses_nearer():
+    from app.parsers.pdf_dates import prefer_apply_date
+
+    assert prefer_apply_date("2027-03-31", "2026-06-16", today=date(2026, 8, 4)) == "2026-06-16"
+    assert prefer_apply_date("2026-08-20", "2026-08-15", today=date(2026, 8, 4)) == "2026-08-20"
+
+
+def test_validate_rejects_ancient_published():
+    from app.services.pdf_candidate import validate_extracted_dates
+
+    errs = validate_extracted_dates(date(1995, 6, 27), date(2027, 3, 31), today=date(2026, 8, 4))
+    assert any("implausibly old" in e for e in errs)

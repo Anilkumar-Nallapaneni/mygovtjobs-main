@@ -3,13 +3,14 @@
 from __future__ import annotations
 
 from dataclasses import dataclass
-from datetime import datetime, timezone
+from datetime import date, datetime, timedelta, timezone
 from typing import Any
 
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from app.models.job import Job
 from app.parsers.notification_parser import NotificationParser
+from app.parsers.pdf_dates import prefer_apply_date, to_iso_date
 from app.parsers.pdf_enrich import merge_pdf_fields
 from app.parsers.pdf_sections import text_to_content_sections
 from app.scrapers.pdf_discover import ensure_pdf_urls
@@ -167,12 +168,17 @@ async def apply_pdf_enrichment(
     if new_vac and (not old_vac or sanitize_vacancies(old_vac, job.title or "") == 0):
         job.vacancies = new_vac
         changed = True
-    if norm.get("last_date"):
-        parsed_last = _parse_date(norm["last_date"])
+    pdf_last = pdf_fields.get("last_date") or norm.get("last_date")
+    preferred_last = prefer_apply_date(
+        job.last_date.isoformat() if job.last_date else None,
+        to_iso_date(pdf_last),
+    )
+    if preferred_last:
+        parsed_last = _parse_date(preferred_last)
         if parsed_last and parsed_last != job.last_date:
             job.last_date = parsed_last
             changed = True
-    pub = norm.get("published_at")
+    pub = norm.get("published_at") or pdf_fields.get("published_date")
     if pub:
         if isinstance(pub, datetime):
             parsed_pub = pub if pub.tzinfo else pub.replace(tzinfo=timezone.utc)
@@ -184,15 +190,24 @@ async def apply_pdf_enrichment(
                 )
             else:
                 parsed_pub = None
+        # Drop ancient OCR publication dates (e.g. 1995).
+        if parsed_pub and parsed_pub.date() < date.today() - timedelta(days=730):
+            parsed_pub = None
         if parsed_pub and (
             not job.published_at
             or (job.last_date and job.published_at.date() == job.last_date)
+            or (job.published_at and job.published_at.date() < date.today() - timedelta(days=730))
         ):
             job.published_at = parsed_pub
             changed = True
         if parsed_pub and nd.get("published"):
             detail["published"] = nd["published"]
             changed = True
+    # Clear already-stored ancient published_at.
+    if job.published_at and job.published_at.date() < date.today() - timedelta(days=730):
+        job.published_at = None
+        detail.pop("published", None)
+        changed = True
 
     # Fill gaps only — never invent; overwrite placeholders with real PDF values.
     if norm.get("qualification") and is_weak_field(job.qualification):
@@ -258,7 +273,11 @@ async def apply_pdf_enrichment(
 
     # Date plausibility — conflicting dates go to review, not live authority.
     pub_date = job.published_at.date() if job.published_at else None
-    date_errors = validate_extracted_dates(pub_date, job.last_date)
+    date_errors = validate_extracted_dates(
+        pub_date,
+        job.last_date,
+        summary=str(detail.get("summary") or pdf_fields.get("summary") or ""),
+    )
     if date_errors:
         detail["date_validation_errors"] = date_errors
         job.verification_status = "NEEDS_REVIEW"

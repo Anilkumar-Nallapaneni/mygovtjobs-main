@@ -90,6 +90,10 @@ export function formatSummaryForDisplay(text: string): string {
   let s = String(text || "").replace(/\s+/g, " ").trim();
   if (!s) return "";
 
+  if (/^page\s+\d+\s+of\s+\d+/i.test(s)) {
+    s = s.replace(/^page\s+\d+\s+of\s+\d+\s*/i, "").trim();
+  }
+
   if (/manual under right to information/i.test(s)) {
     const useful = s.match(
       /(?:teacher|recruitment|notification|hall\s*ticket|eligibility|examination|apply|release)[^.!?]{12,}[.!?]/i
@@ -97,6 +101,10 @@ export function formatSummaryForDisplay(text: string): string {
     if (useful) s = useful[0];
     else if (/^1\s+manual/i.test(s)) return "";
   }
+
+  // Drop mostly-broken OCR strings.
+  const bad = (s.match(/\uFFFD|[�?]{2,}|\?{3,}/g) || []).join("").length;
+  if (bad >= 8 && bad / Math.max(s.length, 1) > 0.05) return "";
 
   const alpha = s.replace(/[^a-zA-Z]/g, "");
   if (alpha.length > 40 && s === s.toUpperCase()) {

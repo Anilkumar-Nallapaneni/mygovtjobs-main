@@ -17,13 +17,15 @@ from app.database.session import SessionLocal
 from app.models.job import Job
 from app.parsers.pdf_sections import text_to_content_sections
 from app.parsers.pdf_parser import extract_structured_detail_fields
+from app.parsers.pdf_dates import extract_dates_from_text, prefer_apply_date
 from app.services.job_child_service import sync_job_children
 from app.services.job_completeness_service import PUBLISH_MIN_SCORE, calculate_completeness, publication_tier
-from app.services.job_persist_service import JobPersistService
+from app.services.job_persist_service import JobPersistService, _parse_date
 from app.services.job_pdf_enrich_service import job_to_detail_payload
 from app.services.noise_filter import sanitize_json_for_postgres
 from app.utils.job_details_storage import upload_job_detail_json
 from app.utils.slim_detail import slim_detail_for_db
+from app.utils.vacancy_extract import resolve_vacancies
 
 logger = logging.getLogger(__name__)
 
@@ -139,7 +141,21 @@ def _is_placeholder_sections(sections: list[dict[str, Any]]) -> bool:
         if isinstance(s, dict)
         for p in (s.get("paragraphs") or [])
     )
-    return bool(_PENDING_OVERVIEW.search(body)) and _section_body_chars(sections) < 200
+    # Any "Full details are being verified" Overview is a stub — rebuild it.
+    if _PENDING_OVERVIEW.search(body):
+        return True
+    # Only Verification / empty Overview also counts as incomplete.
+    real = [
+        s
+        for s in sections
+        if isinstance(s, dict)
+        and str(s.get("heading") or "").strip().lower()
+        not in ("verification information", "verification", "overview", "notification")
+    ]
+    if real:
+        return False
+    # Overview/Notification alone is fine when it has real body text.
+    return _section_body_chars(sections) < 40
 
 
 def _pending_verification_sections(summary: str = "") -> list[dict[str, Any]]:
@@ -365,11 +381,29 @@ class JobDetailAgent:
             for job in rows:
                 detail = job.detail or {}
                 has_summary = len(str(detail.get("summary") or "").strip()) >= 40
-                has_sections = bool(detail.get("content_sections"))
-                if only_missing_sections and has_sections:
+                db_sections = [s for s in (detail.get("content_sections") or []) if isinstance(s, dict)]
+                existing = _load_existing_static_detail(self.detail_dir, job.slug)
+                static_sections = [
+                    s for s in ((existing or {}).get("content_sections") or []) if isinstance(s, dict)
+                ]
+                if existing and len(str(existing.get("summary") or "").strip()) > len(
+                    str(detail.get("summary") or "").strip()
+                ):
+                    has_summary = True
+
+                has_real_sections = (
+                    (not _is_placeholder_sections(db_sections) and bool(db_sections))
+                    or (not _is_placeholder_sections(static_sections) and bool(static_sections))
+                )
+                has_placeholder_only = (
+                    (_is_placeholder_sections(db_sections) and bool(db_sections))
+                    or (_is_placeholder_sections(static_sections) and bool(static_sections))
+                )
+
+                if only_missing_sections and has_real_sections and not has_placeholder_only:
                     stats["skipped"] += 1
                     continue
-                if not has_summary and not has_sections:
+                if not has_summary and not db_sections and not static_sections:
                     stats["skipped"] += 1
                     continue
                 candidates.append(job)
@@ -448,6 +482,27 @@ class JobDetailAgent:
                             detail["content_sections"] = _normalize_sections(sections)
                             sections = detail["content_sections"]
                             _attach_extracted_fields(detail)
+
+                            # Prefer nearer apply/walk-in dates from summary over project-end last_dates.
+                            extracted_dates = extract_dates_from_text(summary) if summary else {}
+                            preferred_last = prefer_apply_date(
+                                job.last_date.isoformat() if job.last_date else None,
+                                extracted_dates.get("last_date"),
+                            )
+                            if preferred_last:
+                                parsed_last = _parse_date(preferred_last)
+                                if parsed_last and parsed_last != job.last_date:
+                                    job.last_date = parsed_last
+
+                            # Fill zero vacancies from title/summary when PDF text has a clear count.
+                            if not int(job.vacancies or 0):
+                                resolved = resolve_vacancies(
+                                    0,
+                                    job.title or "",
+                                    summary,
+                                )
+                                if resolved:
+                                    job.vacancies = resolved
 
                             source = _infer_detail_source(detail)
                             detail["detail_source"] = source

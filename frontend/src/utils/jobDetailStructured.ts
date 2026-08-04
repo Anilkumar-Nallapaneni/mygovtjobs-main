@@ -82,9 +82,18 @@ function normalizeSectionTables(tables: unknown): Record<string, string>[][] {
     .filter((rows) => rows.length > 0);
 }
 
+function isGarbledParagraph(text: string) {
+  const s = cleanText(text);
+  if (!s) return true;
+  if (/^page\s+\d+\s+of\s+\d+/i.test(s)) return true;
+  const bad = (s.match(/\uFFFD|[�?]{2,}|\?{3,}/g) || []).join("").length;
+  return bad >= 6 && bad / Math.max(s.length, 1) > 0.03;
+}
+
 function isDumpParagraph(text: string) {
   const s = cleanText(text);
   if (!s) return true;
+  if (isGarbledParagraph(s)) return true;
   if (s.length > 180 && /company name|post name|no of posts|qualification|age limit|last date/i.test(s)) {
     return true;
   }
@@ -473,7 +482,7 @@ function buildArticleSections(sections: unknown[], options: ArticleSectionOption
         ? s.paragraphs
             .map((p) => cleanText(p))
             .filter((p) => {
-              if (!p || isPromoParagraph(p)) return false;
+              if (!p || isPromoParagraph(p) || isGarbledParagraph(p)) return false;
               if (!keepDumpParagraphs && isDumpParagraph(p)) return false;
               return true;
             })

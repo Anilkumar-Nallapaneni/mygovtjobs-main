@@ -6,24 +6,6 @@ import { buildStructuredJobDetail } from "@/utils/jobDetailStructured";
 import { resolveJobDept } from "@/utils/resolveJobDept";
 
 const MISSING_DETAIL = "See official notification";
-const RAW_PDF_MARKERS = [
-  /page\s+\d+\s+of\s+\d+/i,
-  /government\s+of\s+india\s+ministry/i,
-  /railway\s+recruitment\s+boards?/i,
-  /\bsl\.?\s*no\.?\b/i,
-  /\broll\s*no\.?\b/i,
-  /\bcen\s+\d{2}\/\d{4}\b/i,
-  /download(?:ing)?\s+of\s+e-?call\s+letter/i,
-];
-
-function trimSummary(text, max = 12_000) {
-  const s = String(text || "")
-    .replace(/\s+/g, " ")
-    .trim();
-  if (!s || s.length < 40) return "";
-  if (/^Sl No\.\s*Roll No/i.test(s)) return "";
-  return s.length > max ? `${s.slice(0, max)}…` : s;
-}
 
 function meaningfulValue(value) {
   const s = String(value || "").trim();
@@ -93,19 +75,35 @@ function buildExtraDetails(job) {
     .slice(0, 8);
 }
 
-function looksLikeRawPdfDump(text) {
-  const s = String(text || "");
-  const markerCount = RAW_PDF_MARKERS.reduce((n, re) => n + (re.test(s) ? 1 : 0), 0);
-  return markerCount >= 2 || (s.length > 550 && markerCount >= 1);
-}
+/**
+ * Short, human-readable intro for the "About this recruitment" card.
+ * Never dumps the raw PDF summary wall of text.
+ */
+export function buildRecruitmentLead(job) {
+  const title = String(job?.title || "").trim() || "This recruitment";
+  const dept = meaningfulValue(job?.dept);
+  const qual = meaningfulValue(job?.qual || job?.qualification);
+  const salary = meaningfulValue(job?.salary);
+  const age = meaningfulValue(job?.age || job?.age_limit);
+  const lastDate = meaningfulValue(job?.lastDate);
+  const vacancies = Number(job?.vacancies) || 0;
 
-function firstUsefulSentence(text) {
-  if (looksLikeRawPdfDump(text)) return "";
-  const sentence = String(text || "")
-    .split(/(?<=[.!?])\s+/)
-    .map((s) => s.trim())
-    .find((s) => s.length >= 60 && s.length <= 280 && !/^page\s+\d+/i.test(s));
-  return sentence || "";
+  const opener = dept && dept.toLowerCase() !== title.toLowerCase()
+    ? `${title} is an official recruitment notice from ${dept}.`
+    : `${title} is an official government recruitment notice.`;
+
+  const facts = [
+    vacancies > 0 ? `About ${vacancies.toLocaleString("en-IN")} post(s) are notified.` : "",
+    lastDate && lastDate !== "—" ? `Last date to apply: ${lastDate}.` : "",
+    qual ? `Qualification: ${qual}.` : "",
+    salary ? `Pay: ${salary}.` : "",
+    age ? `Age limit: ${age}.` : "",
+  ].filter(Boolean);
+
+  const closer =
+    "Key details from the official notification are listed below. Always verify against the official PDF before applying.";
+
+  return [opener, ...facts.slice(0, 4), closer].join(" ");
 }
 
 function extractSalary(text) {
@@ -125,28 +123,8 @@ function extractAge(text) {
 }
 
 function buildAbout(job) {
-  const isPdf =
-    Boolean(job?.detail?.memorized_at) ||
-    String(job?.detail?.detail_source || "").toLowerCase() === "pdf";
-  const rawSummary = trimSummary(job.about || job.detail?.summary, isPdf ? 12_000 : 2_000);
-  const usefulSentence = firstUsefulSentence(rawSummary);
-
-  // Prefer the full PDF/notification text when available.
-  if (isPdf && rawSummary.length >= 200) {
-    return rawSummary;
-  }
-
-  const parts = [
-    `${job.title} is an official recruitment notice${job.dept && job.dept !== job.title ? ` from ${job.dept}` : ""}.`,
-    job.dept && job.dept !== job.title ? `Issued by ${job.dept}.` : "",
-    meaningfulValue(job.qual) ? `Qualification: ${job.qual}.` : "",
-    job.vacancies > 0 ? `Approximately ${job.vacancies.toLocaleString("en-IN")} posts mentioned in the listing.` : "",
-    job.lastDate && job.lastDate !== "—" ? `Last date: ${job.lastDate}.` : "",
-    usefulSentence,
-    "Open the official notification PDF or portal link below for eligibility, fees, and how to apply.",
-  ].filter(Boolean);
-
-  return parts.join(" ");
+  // Always prefer a clean card intro — raw PDF text belongs in sectioned body, not here.
+  return buildRecruitmentLead(job);
 }
 
 function buildHighlights(job) {
@@ -432,9 +410,7 @@ export function buildJobDetailView(job) {
       if (key && val && !dates[key]) dates[key] = String(val);
     }
   }
-  const about = useStructured && structured.summary
-    ? structured.summary
-    : buildAbout({ ...job, vacancies, salary, age });
+  const about = buildAbout({ ...job, vacancies, salary, age, qual, lastDate: job.lastDate });
   const highlights = useStructured ? [] : buildHighlights({ ...job, vacancies, salary, age, qual });
 
   const howApply = useStructured && structured.howToApply.length

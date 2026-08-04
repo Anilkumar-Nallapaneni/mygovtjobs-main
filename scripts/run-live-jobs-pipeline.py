@@ -59,9 +59,16 @@ async def run_agents(
         code = code or c
 
     if not skip_details:
-        detail_args: list[str] = ["--", "--limit", str(detail_limit)] if detail_limit > 0 else ["--"]
+        # Rebuild placeholders / missing sections (treat stub Overview as missing).
+        detail_args: list[str] = ["--", "--force"]
+        if detail_limit > 0:
+            detail_args.extend(["--limit", str(detail_limit)])
         c = run_npm("job:details", *detail_args)
         code = code or c
+
+        # Keep list/bootstrap in sync with full live-jobs.json after detail publish.
+        c2 = run_npm("clean:live-jobs")
+        code = code or c2
 
     print("\n=== Pipeline complete ===", flush=True)
     return code

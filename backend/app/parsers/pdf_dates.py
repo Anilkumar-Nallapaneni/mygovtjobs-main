@@ -50,9 +50,32 @@ _LAST_PATTERNS = (
         r"(\d{1,2}[./-]\d{1,2}[./-]\d{4})",
         re.I,
     ),
+    # Walk-in / interview dates are apply-by for offline notices.
+    re.compile(
+        r"walk[\s\-]?in(?:\s+interview)?(?:\s+(?:date|on|scheduled))?\s*[:\-]?\s*"
+        r"(\d{1,2}[./\s-]\d{1,2}[./\s-]\d{2,4})",
+        re.I,
+    ),
+    re.compile(
+        r"(?:date\s+of\s+(?:walk[\s\-]?in|interview)|interview\s+date)\s*[:\-]?\s*"
+        r"(\d{1,2}[./\s-]\d{1,2}[./\s-]\d{2,4})",
+        re.I,
+    ),
 )
 _RELATIVE_LAST = re.compile(
     r"within\s+(?:a\s+period\s+of\s+)?(\d{1,3})\s+days?\s+from\s+the\s+date\s+of\s+publication",
+    re.I,
+)
+# Project / tenure end dates must not beat real apply-by dates.
+_PROJECT_END_HINT = re.compile(
+    r"(?:project\s+(?:duration|period|tenure)|tenure\s+(?:upto|until|up\s+to)|"
+    r"engagement\s+(?:upto|until|up\s+to)|contract\s+(?:period|upto|until)|"
+    r"valid\s+(?:upto|until|up\s+to)|period\s+of\s+(?:the\s+)?project)",
+    re.I,
+)
+_APPLY_HINT_NEAR = re.compile(
+    r"(?:last\s*date|closing\s*date|apply\s*(?:by|before|till|online)|"
+    r"on\s+or\s+before|walk[\s\-]?in|submission\s*deadline|registration)",
     re.I,
 )
 
@@ -122,21 +145,66 @@ def _find_published(text: str) -> str | None:
 
 
 def _find_last(text: str, published: str | None) -> str | None:
+    candidates: list[tuple[str, int]] = []
     for pat in _LAST_PATTERNS:
-        m = pat.search(text)
-        if m:
+        for m in pat.finditer(text):
             iso = _token_to_iso(m.group(1))
-            if iso:
-                return iso
+            if not iso:
+                continue
+            window = text[max(0, m.start() - 80) : m.end() + 40]
+            # Skip project/tenure end dates when they aren't near apply language.
+            if _PROJECT_END_HINT.search(window) and not _APPLY_HINT_NEAR.search(window):
+                continue
+            priority = 0
+            if _APPLY_HINT_NEAR.search(window):
+                priority += 2
+            if re.search(r"walk[\s\-]?in", window, re.I):
+                priority += 3
+            if re.search(r"last\s*date|closing\s*date|on\s+or\s+before", window, re.I):
+                priority += 4
+            candidates.append((iso, priority))
 
     rel = _RELATIVE_LAST.search(text)
     if rel and published:
         try:
             base = date.fromisoformat(published)
-            return (base + timedelta(days=int(rel.group(1)))).isoformat()
+            candidates.append(((base + timedelta(days=int(rel.group(1)))).isoformat(), 3))
         except ValueError:
             pass
-    return None
+
+    if not candidates:
+        return None
+    # Prefer highest-priority apply language; among equals pick the nearest (soonest) date.
+    candidates.sort(key=lambda item: (-item[1], item[0]))
+    return candidates[0][0]
+
+
+def prefer_apply_date(current: str | None, extracted: str | None, *, today: date | None = None) -> str | None:
+    """
+    Prefer a nearer apply/walk-in date from notice text over a distant stored last_date
+    (often a project end date like 2027-03-31).
+    """
+    today = today or date.today()
+    cur = to_iso_date(current)
+    ext = to_iso_date(extracted)
+    if not ext:
+        return cur
+    if not cur:
+        return ext
+    try:
+        cur_d = date.fromisoformat(cur)
+        ext_d = date.fromisoformat(ext)
+    except ValueError:
+        return cur
+    # Prefer nearer extracted date when stored date is much farther (project end).
+    if (ext_d < cur_d) and (cur_d - ext_d).days >= 30:
+        # Allow recently-past walk-ins (up to 90 days) so wrong project-ends get corrected.
+        if ext_d >= today - timedelta(days=90):
+            return ext
+    # Prefer extracted when current is implausibly far but extracted is within a year of today.
+    if (cur_d - today).days > 180 and abs((ext_d - today).days) <= 180:
+        return ext
+    return cur
 
 
 def extract_dates_from_text(text: str) -> dict[str, str | None]:
@@ -150,6 +218,10 @@ def extract_dates_from_text(text: str) -> dict[str, str | None]:
     for m in _DATE_RANGE.finditer(text):
         start = _token_to_iso(m.group(1))
         end = _token_to_iso(m.group(2))
+        window = text[max(0, m.start() - 80) : m.end() + 40]
+        # Date ranges next to project tenure are not apply windows.
+        if _PROJECT_END_HINT.search(window) and not _APPLY_HINT_NEAR.search(window):
+            continue
         if start and not published:
             published = start
         if end and not last:
@@ -157,8 +229,8 @@ def extract_dates_from_text(text: str) -> dict[str, str | None]:
 
     if not published:
         published = _find_published(text)
-    if not last:
-        last = _find_last(text, published)
+    apply_last = _find_last(text, published)
+    last = prefer_apply_date(last, apply_last)
 
     if published and last and published == last:
         # Prefer keeping last; try harder for a distinct posted date near top of notice.

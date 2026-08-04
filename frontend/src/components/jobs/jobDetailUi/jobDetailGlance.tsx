@@ -1,4 +1,3 @@
-import { isPdfUrl } from "@/utils/officialDomains";
 import { useRevealOnScroll } from "@/hooks/useRevealOnScroll";
 
 function orgInitials(dept: string) {
@@ -38,20 +37,23 @@ export function buildGlanceFacts({
 }): GlanceFact[] {
   return [
     postName
-      ? { id: "post", icon: "📋", label: t("jobDetail.postName"), value: postName }
+      ? { id: "post", icon: "", label: t("jobDetail.postName"), value: postName }
       : null,
-    vacancies > 0
-      ? {
-          id: "vacancies",
-          icon: "👥",
-          label: t("job.posts"),
-          value: `${vacancies.toLocaleString(countLocale)} ${t("job.posts")}`,
-        }
-      : null,
+    {
+      id: "vacancies",
+      icon: "",
+      label: t("job.posts"),
+      value:
+        vacancies > 0
+          ? `${vacancies.toLocaleString(countLocale)} ${t("job.posts")}`
+          : t("jobDetail.vacanciesNotListed", {
+              defaultValue: "Not listed in source",
+            }),
+    },
     qualification && qualification !== "—"
       ? {
           id: "qual",
-          icon: "🎓",
+          icon: "",
           label: t("jobDetail.qualification", { defaultValue: "Qualification" }),
           value: qualification,
         }
@@ -59,7 +61,7 @@ export function buildGlanceFacts({
     salary && salary !== "—" && !/see official/i.test(salary)
       ? {
           id: "salary",
-          icon: "💰",
+          icon: "",
           label: t("jobDetail.salary", { defaultValue: "Salary" }),
           value: salary,
         }
@@ -67,7 +69,7 @@ export function buildGlanceFacts({
     age && age !== "—" && !/see official/i.test(age)
       ? {
           id: "age",
-          icon: "🎂",
+          icon: "",
           label: t("jobDetail.ageLimit", { defaultValue: "Age limit" }),
           value: age,
         }
@@ -75,13 +77,13 @@ export function buildGlanceFacts({
     publishedDate
       ? {
           id: "published",
-          icon: "📰",
+          icon: "",
           label: t("jobDetail.publishedDate", { defaultValue: "Published" }),
           value: publishedDate,
         }
       : null,
     applyMode
-      ? { id: "apply-mode", icon: "🖥️", label: t("jobDetail.applyMode"), value: applyMode }
+      ? { id: "apply-mode", icon: "", label: t("jobDetail.applyMode"), value: applyMode }
       : null,
   ].filter(Boolean) as GlanceFact[];
 }
@@ -140,9 +142,6 @@ export function JobDetailKeyFactsPanel({
             <div
               className={`job-detail-keyfacts__deadline${isUrgent ? " job-detail-keyfacts__deadline--urgent" : ""}`}
             >
-              <span className="job-detail-keyfacts__deadline-icon" aria-hidden>
-                📅
-              </span>
               <div>
                 <span className="job-detail-keyfacts__deadline-label">
                   {t("jobDetail.lastDateLabel")}
@@ -166,9 +165,6 @@ export function JobDetailKeyFactsPanel({
             <dl className="job-detail-keyfacts__grid">
               {facts.map((fact) => (
                 <div key={fact.id} className="job-detail-keyfacts__tile">
-                  <span className="job-detail-keyfacts__tile-icon" aria-hidden>
-                    {fact.icon}
-                  </span>
                   <div className="job-detail-keyfacts__tile-body">
                     <dt>{fact.label}</dt>
                     <dd>{fact.value}</dd>
@@ -300,7 +296,7 @@ export function JobDetailGlancePanel({
                   rel="noopener noreferrer"
                   className="job-detail-glance__link"
                 >
-                  {isPdfUrl(action.url) ? "📄" : "🔗"} {action.label}
+                  {action.label}
                 </a>
               ))}
           </div>
