@@ -1,15 +1,450 @@
 {
-  "generatedAt": "2026-08-04T05:54:41.751662Z",
+  "generatedAt": "2026-08-04T09:54:37.178967Z",
   "dailySync": {
-    "completedAt": "2026-08-04T05:54:40.375146+00:00",
-    "completedAtIst": "2026-08-04T11:24:40.375146+05:30",
+    "completedAt": "2026-08-04T09:54:36.158919+00:00",
+    "completedAtIst": "2026-08-04T15:24:36.158919+05:30",
     "dateIst": "2026-08-04",
     "nextRunAtIst": "2026-08-05T08:00:00+05:30",
-    "jobCount": 13,
+    "jobCount": 24,
     "sourcesScraped": 154,
     "scheduledLabel": "8:00 AM IST daily"
   },
   "items": [
+    {
+      "id": "ccd72781-216f-49c4-897f-39ee1304bba6",
+      "slug": "institute-of-banking-personnel-selection-ibps-nicrecruitment-of-500-assistants18-e80b9bc3",
+      "title": "NIC Recruitment of 500 Assistants",
+      "dept": "Institute of Banking Personnel Selection (IBPS)",
+      "category": "banking",
+      "state_codes": [],
+      "vacancies": 500,
+      "qualification": "As per official notification",
+      "salary": null,
+      "age_limit": null,
+      "last_date": "2026-08-07",
+      "apply_url": "https://ibpsreg.ibps.in/nicljul26/",
+      "pdf_url": null,
+      "status": "live",
+      "is_sponsored": false,
+      "published_at": "2026-08-04T05:30:40.723758Z",
+      "verified_at": null,
+      "updated_at": "2026-08-04T08:23:40.436201Z",
+      "document_type": "RECRUITMENT",
+      "verification_status": "VERIFIED",
+      "completeness_score": 75,
+      "publication_confidence": 90.0,
+      "published_to_site": true,
+      "primary_pdf_url": null,
+      "post_name": "500 Assistants",
+      "posts": [],
+      "important_dates": [],
+      "detail": {
+        "notification_url": "https://ibpsreg.ibps.in/nicljul26/",
+        "source": "ibps"
+      }
+    },
+    {
+      "id": "6c7e79ed-e072-40db-8c94-525ede0da327",
+      "slug": "institute-of-banking-personnel-selection-ibps-pnbrecruitment-of-local-bank-offic-79663677",
+      "title": "PNB Recruitment of Local Bank Officer in JMGS I",
+      "dept": "Institute of Banking Personnel Selection (IBPS)",
+      "category": "banking",
+      "state_codes": [],
+      "vacancies": 0,
+      "qualification": "As per official notification",
+      "salary": null,
+      "age_limit": null,
+      "last_date": "2026-08-09",
+      "apply_url": "https://ibpsreg.ibps.in/pnbjul26/",
+      "pdf_url": null,
+      "status": "live",
+      "is_sponsored": false,
+      "published_at": "2026-08-04T05:30:40.116396Z",
+      "verified_at": null,
+      "updated_at": "2026-08-04T08:23:40.304302Z",
+      "document_type": "RECRUITMENT",
+      "verification_status": "VERIFIED",
+      "completeness_score": 75,
+      "publication_confidence": 90.0,
+      "published_to_site": true,
+      "primary_pdf_url": null,
+      "post_name": "Local Bank Officer",
+      "posts": [],
+      "important_dates": [],
+      "detail": {
+        "notification_url": "https://ibpsreg.ibps.in/pnbjul26/",
+        "source": "ibps"
+      }
+    },
+    {
+      "id": "02e32258-1d68-49a9-a2d4-d3b444914390",
+      "slug": "institute-of-banking-personnel-selection-ibps-ubirecruitment-of-officers21-jul-2-40e1f230",
+      "title": "UBI Recruitment of Officers",
+      "dept": "Institute of Banking Personnel Selection (IBPS)",
+      "category": "banking",
+      "state_codes": [],
+      "vacancies": 0,
+      "qualification": "As per official notification",
+      "salary": null,
+      "age_limit": null,
+      "last_date": "2026-08-10",
+      "apply_url": "https://ibpsreg.ibps.in/ubijul26/",
+      "pdf_url": null,
+      "status": "live",
+      "is_sponsored": false,
+      "published_at": "2026-08-04T05:30:39.380716Z",
+      "verified_at": null,
+      "updated_at": "2026-08-04T08:23:40.186168Z",
+      "document_type": "RECRUITMENT",
+      "verification_status": "VERIFIED",
+      "completeness_score": 75,
+      "publication_confidence": 90.0,
+      "published_to_site": true,
+      "primary_pdf_url": null,
+      "post_name": "Officers",
+      "posts": [],
+      "important_dates": [],
+      "detail": {
+        "notification_url": "https://ibpsreg.ibps.in/ubijul26/",
+        "source": "ibps"
+      }
+    },
+    {
+      "id": "39821b8c-c5cc-4602-a34e-192a3009b248",
+      "slug": "paradip-port-authority-deputy-chief-engineer-recruitment-2026-apply-online-e9637f42",
+      "title": "Paradip Port Authority Deputy Chief Engineer Recruitment 2026 - Apply Online",
+      "dept": "Paradip Port Authority",
+      "category": "state",
+      "state_codes": [],
+      "vacancies": 18,
+      "qualification": "B.Tech/B.E",
+      "salary": "Rs.80,000-2,20,000",
+      "age_limit": null,
+      "last_date": "2026-09-30",
+      "apply_url": "https://paradipport.gov.in",
+      "pdf_url": "https://paradipport.gov.in/Writereaddata/Career/Dy%20CE_18052026.pdf",
+      "status": "live",
+      "is_sponsored": false,
+      "published_at": "2026-08-04T00:00:00Z",
+      "verified_at": null,
+      "updated_at": "2026-08-04T08:53:51.297355Z",
+      "document_type": "RECRUITMENT",
+      "verification_status": "VERIFIED",
+      "completeness_score": 73,
+      "publication_confidence": 90.0,
+      "published_to_site": true,
+      "primary_pdf_url": "https://paradipport.gov.in/Writereaddata/Career/Dy%20CE_18052026.pdf",
+      "post_name": "Dy. Chief Engineer (Civil)",
+      "posts": [],
+      "important_dates": [],
+      "detail": {
+        "important_dates": [
+          {
+            "date": "18 May 2026",
+            "event": "Notification Date"
+          },
+          {
+            "date": "18 June 2026",
+            "event": "Last Date for Receipt of Application"
+          }
+        ],
+        "published": "2026-09-01T00:00:00+00:00",
+        "notification_url": "https://paradipport.gov.in",
+        "post_name": "Dy. Chief Engineer (Civil)",
+        "external_id": "3049705",
+        "summary": "Selection Criteria for Dir PARADIP PORT TRUST rect Recruitment to Class-I, Class-I TRAFFIC DEPARTMENT II & Class-III Posts Selection Criteria for direct recruitment to Class-I Posts under Traffic Department, PPT Sl. No . Name of the post No. of posts Classi ficatio n Scale of pay(Rs. Whether selection or non selection Upper age limit for direct recruit ment(in years) Educational and other Qualific…",
+        "pdf_urls": [
+          "https://paradipport.gov.in/Writereaddata/Career/Dy%20CE_18052026.pdf"
+        ],
+        "pdf_url": "https://paradipport.gov.in/Writereaddata/Career/Dy%20CE_18052026.pdf",
+        "pdfUrls": [
+          "https://paradipport.gov.in/Writereaddata/Career/Dy%20CE_18052026.pdf"
+        ],
+        "source": "structured-import"
+      }
+    },
+    {
+      "id": "6e099dfd-1ddf-46c5-8aa1-66d11e850613",
+      "slug": "nhm-chandigarh-medical-specialists-recruitment-2026-walkin-2d586198",
+      "title": "NHM Chandigarh Medical Specialists Recruitment 2026 - Walkin",
+      "dept": "NHM Chandigarh",
+      "category": "health",
+      "state_codes": [
+        "ch"
+      ],
+      "vacancies": 6,
+      "qualification": "Any Post Graduate, MS/ MD, MBBS, DNB, Diploma",
+      "salary": "Rs. 85000 - 150000 Per Month",
+      "age_limit": "Max: 62 years",
+      "last_date": "2027-03-31",
+      "apply_url": "http://nrhmchd.gov.in/cadmin/uploads/filemanagers/1780486049.pdf",
+      "pdf_url": "http://nrhmchd.gov.in/cadmin/uploads/filemanagers/1780486049.pdf",
+      "status": "live",
+      "is_sponsored": false,
+      "published_at": "2026-08-04T00:00:00Z",
+      "verified_at": null,
+      "updated_at": "2026-08-04T09:10:53.084086Z",
+      "document_type": "RECRUITMENT",
+      "verification_status": "VERIFIED",
+      "completeness_score": 80,
+      "publication_confidence": 90.0,
+      "published_to_site": true,
+      "primary_pdf_url": "http://nrhmchd.gov.in/cadmin/uploads/filemanagers/1780486049.pdf",
+      "post_name": null,
+      "posts": [],
+      "important_dates": [],
+      "detail": {
+        "detail_updated_at": "2026-08-04T09:10:53.198746+00:00",
+        "detail_source": "pdf",
+        "important_dates": [
+          {
+            "date": "11 June 2026",
+            "event": "Walk-in Interview"
+          }
+        ],
+        "published": "1995-06-27T00:00:00+00:00",
+        "notification_url": "http://nrhmchd.gov.in/cadmin/uploads/filemanagers/1780486049.pdf",
+        "memorized_at": "2026-08-04T09:08:44.064319+00:00",
+        "external_id": "3052814",
+        "summary": "Advt No. – NHM-UT/06/2026-27 Date: 04.06.2026___________ PUBLIC NOTICE REQUIRES QUALIFIED CONTRACTUAL STAFF UNDER NATIONAL HEALTH MISSION(NHM) & PRADHAN MANTRI AYUSHMAN BHARAT HEALTH INFRASTRUCTURE MISSION (PMABHIM), U.T, CHANDIGARH Sr. No . Name of the post No. of Posts Category Qualification Consolidat ed Amount In Rs. (per month) Gen SC OBC 1. Radiologist under NHM 01 01 - - Essential:  MBBS D…",
+        "pdf_urls": [
+          "http://nrhmchd.gov.in/cadmin/uploads/filemanagers/1780486049.pdf"
+        ],
+        "pdf_url": "http://nrhmchd.gov.in/cadmin/uploads/filemanagers/1780486049.pdf",
+        "pdfUrls": [
+          "http://nrhmchd.gov.in/cadmin/uploads/filemanagers/1780486049.pdf"
+        ],
+        "source": "structured-import"
+      }
+    },
+    {
+      "id": "74068dda-23fc-4ca6-b240-076cb173036f",
+      "slug": "icar-nipb-research-associate-recruitment-2026-walkin-5e287ef0",
+      "title": "ICAR NIPB Research Associate Recruitment 2026 - Walkin",
+      "dept": "ICAR NIPB",
+      "category": "state",
+      "state_codes": [
+        "dl"
+      ],
+      "vacancies": 1,
+      "qualification": "M.Phil/ Ph.D",
+      "salary": "Rs. 61000 - 67000 Per Month",
+      "age_limit": "Max: 40 years",
+      "last_date": "2026-09-30",
+      "apply_url": "https://iari.res.in/files/jobs/Research_Associate_19052026.pdf",
+      "pdf_url": "https://iari.res.in/files/jobs/Research_Associate_19052026.pdf",
+      "status": "live",
+      "is_sponsored": false,
+      "published_at": "2026-08-04T00:00:00Z",
+      "verified_at": null,
+      "updated_at": "2026-08-04T09:10:52.968907Z",
+      "document_type": "RECRUITMENT",
+      "verification_status": "VERIFIED",
+      "completeness_score": 80,
+      "publication_confidence": 90.0,
+      "published_to_site": true,
+      "primary_pdf_url": "https://iari.res.in/files/jobs/Research_Associate_19052026.pdf",
+      "post_name": null,
+      "posts": [],
+      "important_dates": [],
+      "detail": {
+        "detail_updated_at": "2026-08-04T09:10:51.197339+00:00",
+        "detail_source": "pdf",
+        "important_dates": [
+          {
+            "date": "12 June 2026",
+            "event": "Date of Interview"
+          },
+          {
+            "date": "09:30 am on 12 June 2026",
+            "event": "Walk-in Reporting Time"
+          },
+          {
+            "date": "10 June 2026",
+            "event": "Online Application Deadline (for virtual mode)"
+          }
+        ],
+        "published": "2019-01-30T00:00:00+00:00",
+        "notification_url": "https://iari.res.in/files/jobs/Research_Associate_19052026.pdf",
+        "memorized_at": "2026-08-04T09:08:28.326317+00:00",
+        "external_id": "3050157",
+        "summary": "ICAR-NATIONAL INSTITUTE FOR PLANT BIOTECHNOLOGY Lal Bahadur Shastri Building, Pusa Campus, New Delhi-110012 Advertisement No. TGCP 2001-3001/RA/277244 (Online/Walk-in- Interviews) Applications from Indian nationals are invited for temporary engagement under the following project. Engagement shall be purely on contractual basis. Title of the Project ICAR Network Project on Translational Genomics in…",
+        "pdf_urls": [
+          "https://iari.res.in/files/jobs/Research_Associate_19052026.pdf"
+        ],
+        "pdf_url": "https://iari.res.in/files/jobs/Research_Associate_19052026.pdf",
+        "pdfUrls": [
+          "https://iari.res.in/files/jobs/Research_Associate_19052026.pdf"
+        ],
+        "source": "structured-import"
+      }
+    },
+    {
+      "id": "4f61533b-28c0-4647-a432-a427a2e7965a",
+      "slug": "bobcaps-business-development-manager-recruitment-2026-apply-online-cd153f44",
+      "title": "BOBCAPS Business Development Manager Recruitment 2026 - Apply Online",
+      "dept": "BOBCAPS",
+      "category": "state",
+      "state_codes": [
+        "mh"
+      ],
+      "vacancies": 0,
+      "qualification": "12TH",
+      "salary": "Not specified in the notification",
+      "age_limit": "Not specified in the notification. Candidates may seek details at the time of interview.",
+      "last_date": "2027-01-31",
+      "apply_url": "https://www.bobcaps.in/media/brnj1qpq/opening-for-business-development-manager-role-at-bob-capital-as-off-roll-employee.pdf",
+      "pdf_url": "https://www.bobcaps.in/media/brnj1qpq/opening-for-business-development-manager-role-at-bob-capital-as-off-roll-employee.pdf",
+      "status": "live",
+      "is_sponsored": false,
+      "published_at": "2026-08-04T00:00:00Z",
+      "verified_at": null,
+      "updated_at": "2026-08-04T09:10:53.104079Z",
+      "document_type": "RECRUITMENT",
+      "verification_status": "VERIFIED",
+      "completeness_score": 73,
+      "publication_confidence": 90.0,
+      "published_to_site": true,
+      "primary_pdf_url": "https://www.bobcaps.in/media/brnj1qpq/opening-for-business-development-manager-role-at-bob-capital-as-off-roll-employee.pdf",
+      "post_name": null,
+      "posts": [],
+      "important_dates": [],
+      "detail": {
+        "detail_updated_at": "2026-08-04T09:10:52.557877+00:00",
+        "detail_source": "pdf",
+        "important_dates": [
+          {
+            "date": "31-01-27",
+            "event": "Last Date for Application Submission"
+          },
+          {
+            "date": "To be intimated to shortlisted candidates",
+            "event": "Interview / Interaction Date"
+          }
+        ],
+        "notification_url": "https://www.bobcaps.in/media/brnj1qpq/opening-for-business-development-manager-role-at-bob-capital-as-off-roll-employee.pdf",
+        "memorized_at": "2026-08-04T09:08:25.898817+00:00",
+        "external_id": "3052484",
+        "summary": "Opening for Business Development Manager Role at BOB Capital as Off Roll Employee Role Description: This is a full-time, on-site role for Business Development Manager (Off Roll) for promoting and opening of Demat & Trading (2-in-1) account. The BDM is responsible for selling products, New Client Acquisition, maintaining Client and Bank relationships, and meeting sales target. Qualifications: • Min…",
+        "pdf_urls": [
+          "https://www.bobcaps.in/media/brnj1qpq/opening-for-business-development-manager-role-at-bob-capital-as-off-roll-employee.pdf"
+        ],
+        "pdf_url": "https://www.bobcaps.in/media/brnj1qpq/opening-for-business-development-manager-role-at-bob-capital-as-off-roll-employee.pdf",
+        "pdfUrls": [
+          "https://www.bobcaps.in/media/brnj1qpq/opening-for-business-development-manager-role-at-bob-capital-as-off-roll-employee.pdf"
+        ],
+        "source": "structured-import"
+      }
+    },
+    {
+      "id": "ec69fa1a-c551-484d-9856-f4fd46c0c69e",
+      "slug": "cmho-raigarh-recruitment-2026-apply-offline-for-dresser-pharmacist-and-more-post-419f0814",
+      "title": "CMHO Raigarh Recruitment 2026 - Apply Offline for Dresser, Pharmacist and More Posts",
+      "dept": "CMHO Raigarh",
+      "category": "state",
+      "state_codes": [
+        "cg"
+      ],
+      "vacancies": 0,
+      "qualification": "Other",
+      "salary": "Rs. 19500 - 80500 Per Month",
+      "age_limit": null,
+      "last_date": "2026-08-28",
+      "apply_url": "https://cdn.s3waas.gov.in/s351d92be1c60d1db1d2e5e7a07da55b26/uploads/2026/05/17793514627901.pdf",
+      "pdf_url": "https://cdn.s3waas.gov.in/s351d92be1c60d1db1d2e5e7a07da55b26/uploads/2026/05/17793514627901.pdf",
+      "status": "live",
+      "is_sponsored": false,
+      "published_at": "2026-08-04T00:00:00Z",
+      "verified_at": null,
+      "updated_at": "2026-08-04T09:10:53.054675Z",
+      "document_type": "RECRUITMENT",
+      "verification_status": "VERIFIED",
+      "completeness_score": 73,
+      "publication_confidence": 90.0,
+      "published_to_site": true,
+      "primary_pdf_url": "https://cdn.s3waas.gov.in/s351d92be1c60d1db1d2e5e7a07da55b26/uploads/2026/05/17793514627901.pdf",
+      "post_name": null,
+      "posts": [],
+      "important_dates": [],
+      "detail": {
+        "detail_updated_at": "2026-08-04T09:10:51.954393+00:00",
+        "detail_source": "pdf",
+        "fee": {
+          "Fee": "Nil"
+        },
+        "important_dates": [
+          {
+            "date": "21 May 2026",
+            "event": "Notification Out"
+          },
+          {
+            "date": "28 August 2026",
+            "event": "Last Date to Apply"
+          }
+        ],
+        "notification_url": "https://cdn.s3waas.gov.in/s351d92be1c60d1db1d2e5e7a07da55b26/uploads/2026/05/17793514627901.pdf",
+        "memorized_at": "2026-07-26T12:52:30.508129+00:00",
+        "external_id": "3050231",
+        "summary": "CMHO Raigarh Recruitment 2026 notification has been released for Dresser, Pharmacist and More posts. Candidates can apply offline by submitting the application form before 28-08-2026 through the official website of Chief Medical and Health Office Raigarh.",
+        "pdf_urls": [
+          "https://cdn.s3waas.gov.in/s351d92be1c60d1db1d2e5e7a07da55b26/uploads/2026/05/17793514627901.pdf",
+          "https://cdn.s3waas.gov.in/s351d92be1c60d1db1d2e5e7a07da55b26/uploads/2026/05/17793514482748.pdf",
+          "https://cdn.s3waas.gov.in/s351d92be1c60d1db1d2e5e7a07da55b26/uploads/2026/05/17793514293939.pdf"
+        ],
+        "pdf_url": "https://cdn.s3waas.gov.in/s351d92be1c60d1db1d2e5e7a07da55b26/uploads/2026/05/17793514627901.pdf",
+        "pdfUrls": [
+          "https://cdn.s3waas.gov.in/s351d92be1c60d1db1d2e5e7a07da55b26/uploads/2026/05/17793514627901.pdf",
+          "https://cdn.s3waas.gov.in/s351d92be1c60d1db1d2e5e7a07da55b26/uploads/2026/05/17793514482748.pdf",
+          "https://cdn.s3waas.gov.in/s351d92be1c60d1db1d2e5e7a07da55b26/uploads/2026/05/17793514293939.pdf"
+        ],
+        "source": "structured-import"
+      }
+    },
+    {
+      "id": "db86fb83-215c-402f-bbff-187997386ad5",
+      "slug": "mha-1-filling-up-of-two-02-posts-of-upper-division-clerk-udc-on-deputation-basis-5a525fe4",
+      "title": "1 Filling up of two (02) posts of Upper Division Clerk (UDC) on deputation basis in the Office of the Custodian of Enemy",
+      "dept": "Mha",
+      "category": "police",
+      "state_codes": [],
+      "vacancies": 0,
+      "qualification": "Conditions and Pay Scale",
+      "salary": "Pay Band-1",
+      "age_limit": "The maximum age limit for appointment on deputation shall not exceed 56",
+      "last_date": "2026-08-28",
+      "apply_url": "https://www.mha.gov.in/sites/default/files/VacancyUDC_31072026.PDF",
+      "pdf_url": "https://www.mha.gov.in/sites/default/files/VacancyUDC_31072026.PDF",
+      "status": "live",
+      "is_sponsored": false,
+      "published_at": "2026-08-03T17:08:41.573564Z",
+      "verified_at": null,
+      "updated_at": "2026-08-04T09:10:56.224600Z",
+      "document_type": "RECRUITMENT",
+      "verification_status": "VERIFIED",
+      "completeness_score": 73,
+      "publication_confidence": 90.0,
+      "published_to_site": true,
+      "primary_pdf_url": "https://www.mha.gov.in/sites/default/files/VacancyUDC_31072026.PDF",
+      "post_name": null,
+      "posts": [],
+      "important_dates": [],
+      "detail": {
+        "detail_updated_at": "2026-08-04T09:10:54.464027+00:00",
+        "detail_source": "pdf",
+        "published": "2026-07-21T00:00:00+00:00",
+        "notification_url": "https://www.mha.gov.in/sites/default/files/VacancyUDC_31072026.PDF",
+        "memorized_at": "2026-08-04T09:08:30.146832+00:00",
+        "summary": "1-1kcItNcON, 4104-1A1c1t1 Government of India, Ministry of Home Affairs ct)I q1-117a. Q-1 1.1-11 affi-R-4`ff Office of the Custodian of Enemy Property for India VZ11:19ff (Igiftri) i-13t14-17--4-0414;.-iict+i9-- it-41- nom. First Floor, East Wing, Shivaji Stadium, Connaught Place, New Delhi-110001. F. No. CEPI/DELHI/36/09/2023/ c't6 I Date: 21.07.2026 To, The Section Officer (IT Cell), Administrat…",
+        "pdf_urls": [
+          "https://www.mha.gov.in/sites/default/files/VacancyUDC_31072026.PDF"
+        ],
+        "pdf_url": "https://www.mha.gov.in/sites/default/files/VacancyUDC_31072026.PDF",
+        "pdfUrls": [
+          "https://www.mha.gov.in/sites/default/files/VacancyUDC_31072026.PDF"
+        ],
+        "source": "ib"
+      }
+    },
     {
       "id": "af27d0c6-82bf-45a7-a1c8-849e20d39300",
       "slug": "cen-02-2026-technicians-click-to-know-update-b7d8ad0a",
@@ -28,7 +463,7 @@
       "is_sponsored": false,
       "published_at": "2026-08-01T00:00:00Z",
       "verified_at": null,
-      "updated_at": "2026-08-03T16:54:45.062082Z",
+      "updated_at": "2026-08-04T09:10:56.980613Z",
       "document_type": "RECRUITMENT",
       "verification_status": "VERIFIED",
       "completeness_score": 80,
@@ -39,37 +474,37 @@
       "posts": [],
       "important_dates": [],
       "detail": {
-        "source": "rrb-mumbai",
+        "detail_updated_at": "2026-08-04T09:10:55.188236+00:00",
         "detail_source": "pdf",
-        "apply_urls": [
-          "http://www.ncbc.nic.in”",
-          "http://www.ncbc.nic.in"
-        ],
-        "pdfUrls": [
-          "https://rrbmumbai.gov.in/newpdf/Detailed CEN 02_2026 (2).pdf",
-          "https://rrbmumbai.gov.in/newpdf/HINDI PDF CEN  02 2026.pdf",
-          "https://rrbmumbai.gov.in/newpdf/FAQ HINDI CEN 02_2026.pdf",
-          "https://rrbmumbai.gov.in/newpdf/FAQ CEN 022026.pdf"
-        ],
-        "summary": "1 | P a g e तकनीशियनों की भती ववस्तृत केन्द्रीकृत रोज़गार अधिसूचना के.रो.अधि.02/2026 भारत सरकार रेलवे मंत्रालय, रेलवे भती बोर्ड विषय सूची क्रमांक पैरा नं. ववषय पृष्ठ सं . 1. 1.0 पदों एवं ररक्ततयों का अवलोकन 1 2. 2.0 महत्वपूर्ड ततधियां 1 3. 3.0 महत्वपूर्ड तनदेि 2 4. 4.0 सामान्द्य तनदेि 5 5. 5.0 ररक्ततयां 8 6. 6.0 धचककत्सा योग्यता के मानक 8 7. 7.0 राष्रीयता / नागररकता 10 8. 8.0 आयुसीमा 11 9. 8.1 आयु…",
+        "published": "2026-08-01T00:00:00+00:00",
+        "notification_url": "https://rrbmumbai.gov.in/CEN-02-2026-TECHNICIANS.php",
         "memorized_at": "2026-07-24T11:47:09.830732+00:00",
-        "detail_updated_at": "2026-08-03T16:54:46.255292+00:00",
+        "summary": "1 | P a g e तकनीशियनों की भती ववस्तृत केन्द्रीकृत रोज़गार अधिसूचना के.रो.अधि.02/2026 भारत सरकार रेलवे मंत्रालय, रेलवे भती बोर्ड विषय सूची क्रमांक पैरा नं. ववषय पृष्ठ सं . 1. 1.0 पदों एवं ररक्ततयों का अवलोकन 1 2. 2.0 महत्वपूर्ड ततधियां 1 3. 3.0 महत्वपूर्ड तनदेि 2 4. 4.0 सामान्द्य तनदेि 5 5. 5.0 ररक्ततयां 8 6. 6.0 धचककत्सा योग्यता के मानक 8 7. 7.0 राष्रीयता / नागररकता 10 8. 8.0 आयुसीमा 11 9. 8.1 आयु…",
         "pdf_urls": [
           "https://rrbmumbai.gov.in/newpdf/Detailed CEN 02_2026 (2).pdf",
           "https://rrbmumbai.gov.in/newpdf/HINDI PDF CEN  02 2026.pdf",
           "https://rrbmumbai.gov.in/newpdf/FAQ HINDI CEN 02_2026.pdf",
           "https://rrbmumbai.gov.in/newpdf/FAQ CEN 022026.pdf"
         ],
+        "apply_urls": [
+          "http://www.ncbc.nic.in”",
+          "http://www.ncbc.nic.in"
+        ],
         "pdf_url": "https://rrbmumbai.gov.in/newpdf/Detailed CEN 02_2026 (2).pdf",
-        "published": "2026-08-01T00:00:00+00:00",
-        "notification_url": "https://rrbmumbai.gov.in/CEN-02-2026-TECHNICIANS.php"
+        "pdfUrls": [
+          "https://rrbmumbai.gov.in/newpdf/Detailed CEN 02_2026 (2).pdf",
+          "https://rrbmumbai.gov.in/newpdf/HINDI PDF CEN  02 2026.pdf",
+          "https://rrbmumbai.gov.in/newpdf/FAQ HINDI CEN 02_2026.pdf",
+          "https://rrbmumbai.gov.in/newpdf/FAQ CEN 022026.pdf"
+        ],
+        "source": "rrb-mumbai"
       }
     },
     {
       "id": "593c252d-23c1-4ba1-a1ad-cd1c75feb98f",
       "slug": "isro-indian-space-research-organisation-advt-no-isro-icrb-02-emc-cepo-2026-dated-d96680f7",
       "title": "Advt. No. ISRO:ICRB:02(EMC-CEPO):2026 dated 28-07-2026 Recruitment to the post of Scientist/Engineers 'SC'",
-      "dept": "ISRO — Indian Space Research Organisation",
+      "dept": "ISRO — Careers",
       "category": "psu",
       "state_codes": [],
       "vacancies": 19,
@@ -83,7 +518,7 @@
       "is_sponsored": false,
       "published_at": "2026-07-28T00:00:00Z",
       "verified_at": null,
-      "updated_at": "2026-08-03T16:54:44.916070Z",
+      "updated_at": "2026-08-04T09:10:57.026623Z",
       "document_type": "RECRUITMENT",
       "verification_status": "VERIFIED",
       "completeness_score": 73,
@@ -94,86 +529,207 @@
       "posts": [],
       "important_dates": [],
       "detail": {
-        "source": "isro",
-        "pdfUrls": [
-          "https://www.isro.gov.in/media_isro/pdf/recruitmentNotice/2026/July/GATE_Bilingual_Advertisement_2026_28072026.pdf",
-          "https://www.isro.gov.in/media_isro/pdf/recruitmentNotice/2026/July/FREQUENTLY_ASKED_QUESTIONS(FAQ)_28072026.pdf"
-        ],
+        "detail_updated_at": "2026-08-04T09:10:55.807824+00:00",
+        "detail_source": "pdf",
+        "published": "2026-07-28T00:00:00+00:00",
+        "notification_url": "https://www.isro.gov.in/ICRB_Recruitment12.html",
+        "memorized_at": "2026-08-04T09:08:46.659594+00:00",
         "summary": "Page 1 of 18 अंतįरƗ िवभाग ,भारत सरकार Department of Space, Government of India भारतीय अंतįरƗ अनुसंधान संगठन [इसरो] INDIAN SPACE RESEARCH ORGANISATION [ISRO] इसरो कŐ ūीकृत भतŎ बोडŊ [आई.सी.आर.बी.] ISRO CENTRALISED RECRUITMENT BOARD [ICRB] इले̋ टŌ ॉिनकी, यांिũक, क̱ ɗूटर िवǒान, िसिवल, िवद्युत, Ůशीतन एवं वातानुकूलन तथा वाˑुकला मŐ बी.ई./बी.टेक. या समकƗ िडŤी के साथ वैǒािनक/अिभयंता ‘एस.सी.’ की भतŎ RECRUIT…",
         "pdf_urls": [
           "https://www.isro.gov.in/media_isro/pdf/recruitmentNotice/2026/July/GATE_Bilingual_Advertisement_2026_28072026.pdf",
           "https://www.isro.gov.in/media_isro/pdf/recruitmentNotice/2026/July/FREQUENTLY_ASKED_QUESTIONS(FAQ)_28072026.pdf"
         ],
         "pdf_url": "https://www.isro.gov.in/media_isro/pdf/recruitmentNotice/2026/July/GATE_Bilingual_Advertisement_2026_28072026.pdf",
-        "published": "2026-07-28T00:00:00+00:00",
-        "notification_url": "https://www.isro.gov.in/ICRB_Recruitment12.html"
+        "pdfUrls": [
+          "https://www.isro.gov.in/media_isro/pdf/recruitmentNotice/2026/July/GATE_Bilingual_Advertisement_2026_28072026.pdf",
+          "https://www.isro.gov.in/media_isro/pdf/recruitmentNotice/2026/July/FREQUENTLY_ASKED_QUESTIONS(FAQ)_28072026.pdf"
+        ],
+        "source": "isro-careers"
       }
     },
     {
-      "id": "743c06ed-5e2c-41c7-ab43-36f85a5cc38b",
-      "slug": "dccbapplication-for-the-post-of-manager-staff-assistant24-jul-202607-aug-2026-e122e9d8",
-      "title": "DCCB Application for the Post of Manager/Staff Assistant",
-      "dept": "Institute of Banking Personnel Selection (IBPS)",
-      "category": "banking",
+      "id": "2d6cbe80-3058-4126-9eee-40b020764a8d",
+      "slug": "isro-careers-advt-no-icrb-01-a-jpa-2026-dated-27-07-2026-recruitment-to-the-post-2d095791",
+      "title": "ADVT. NO. ICRB:01(A-JPA):2026 dated 27-07-2026 - Recruitment to the post of Assistants, Junior Personal Assistants, Upper Division Clerk and Stenographers",
+      "dept": "ISRO — Careers",
+      "category": "psu",
       "state_codes": [],
-      "vacancies": 0,
-      "qualification": "As per official notification",
-      "salary": null,
-      "age_limit": null,
-      "last_date": "2026-08-07",
-      "apply_url": "https://ibpsreg.ibps.in/dccbmay26/",
-      "pdf_url": null,
+      "vacancies": 244,
+      "qualification": "Graduation with minimum 60% marks / CGPA 6.32 (and post-specific requirements as per notice)",
+      "salary": "Pay Level-4",
+      "age_limit": "28 years as on 16.08.2026 (relaxation as per notice)",
+      "last_date": "2026-08-16",
+      "apply_url": "https://www.isro.gov.in/ICRB_Recruitment11.html",
+      "pdf_url": "https://www.isro.gov.in/media_isro/pdf/recruitmentNotice/2026/July/Bilingual Advertisement_Asst_JPA_UDC_Steno_ICRB_2026_27072026.pdf",
       "status": "live",
       "is_sponsored": false,
-      "published_at": "2026-07-24T11:41:38.891611Z",
+      "published_at": "2026-07-27T00:00:00Z",
       "verified_at": null,
-      "updated_at": "2026-08-03T17:39:40.182213Z",
+      "updated_at": "2026-08-04T09:54:12.717818Z",
       "document_type": "RECRUITMENT",
       "verification_status": "VERIFIED",
-      "completeness_score": 75,
-      "publication_confidence": 90.0,
+      "completeness_score": 80,
+      "publication_confidence": 100.0,
       "published_to_site": true,
-      "primary_pdf_url": null,
-      "post_name": "Manager/Staff Assistant",
-      "posts": [],
-      "important_dates": [],
-      "detail": {
-        "source": "ibps",
-        "notification_url": "https://ibpsreg.ibps.in/dccbmay26/"
-      }
-    },
-    {
-      "id": "e48ecfe5-416c-440c-be35-f2ffd9d170a3",
-      "slug": "esic-employees-state-insurance-corporation-recruitment-for-the-post-nursing-offi-beaa8e7a",
-      "title": "Recruitment for the post Nursing Officer through AIIMS Nursing Officer Recruitment Common Eligibility Test (NORCET-11) started on 24 july 2026 and will be closed on 13 August 2026 at 5:00 P.M by AIIMS, New Delhi",
-      "dept": "AIIMS — All India Institute of Medical Sciences",
-      "category": "health",
-      "state_codes": [],
-      "vacancies": 2218,
-      "qualification": "B.Sc. (Hons.) Nursing / B.Sc. Nursing / Post-Basic B.Sc. Nursing / GNM with registration as Nurse & Midwife",
-      "salary": "Pay Level-7 (GP ₹4600)",
-      "age_limit": "18–30 years (as on 13 Aug 2026)",
-      "last_date": "2026-08-13",
-      "apply_url": "https://www.aiimsexams.ac.in/advertisement/6a6350f7e5a81c4267f4ff04",
-      "pdf_url": null,
-      "status": "live",
-      "is_sponsored": false,
-      "published_at": "2026-07-24T00:00:00Z",
-      "verified_at": null,
-      "updated_at": "2026-08-03T17:32:03.296201Z",
-      "document_type": "RECRUITMENT",
-      "verification_status": "VERIFIED",
-      "completeness_score": 87,
-      "publication_confidence": 95.0,
-      "published_to_site": true,
-      "primary_pdf_url": null,
+      "primary_pdf_url": "https://www.isro.gov.in/media_isro/pdf/recruitmentNotice/2026/July/Bilingual Advertisement_Asst_JPA_UDC_Steno_ICRB_2026_27072026.pdf",
       "post_name": null,
       "posts": [],
       "important_dates": [],
       "detail": {
-        "source": "esic",
-        "published": "2026-07-24T00:00:00+00:00",
-        "notification_url": "https://www.aiimsexams.ac.in/advertisement/6a6350f7e5a81c4267f4ff04"
+        "detail_source": "pdf",
+        "published": "2026-07-27T00:00:00+00:00",
+        "notification_url": "https://www.isro.gov.in/ICRB_Recruitment11.html",
+        "memorized_at": "2026-08-04T09:16:18.036708+00:00",
+        "summary": "Page 1 of 25 िदनांक 27-07-2026 का िवǒापन सं.: इसरो:आई.सी.आर.बी.:01 (ए.-जे.पी.ए.): 2026 Advt No. ISRO:ICRB:01(A-JPA):2026 dated 27-07-2026 ͪ व£ापन मे Ǒदए गए मानदंड और आवæयकताओ को पूरा करना सुǓनिæचत करने कȧ िजàमेदारȣ अßयथȸ को होगी । अत :आवेदकɉ को सलाह दȣ जाती है ͩ क ऑन-लाइन आवेदन भरने के पहले पूरे ͪ व£ापन और एफ.ए.Èयु. को Úयान से पढे । THE RESPONSIBILITY TO ENSURE THE FULFILLMENT OF ELIGIBILITY CRITE…",
+        "pdf_urls": [
+          "https://www.isro.gov.in/media_isro/pdf/recruitmentNotice/2026/July/Bilingual Advertisement_Asst_JPA_UDC_Steno_ICRB_2026_27072026.pdf",
+          "https://www.isro.gov.in/media_isro/pdf/recruitmentNotice/2026/July/FREQUENTLY_ASKED_QUESTIONS_AND_ANSWERS_A_JPA_27072026.pdf"
+        ],
+        "pdf_url": "https://www.isro.gov.in/media_isro/pdf/recruitmentNotice/2026/July/Bilingual Advertisement_Asst_JPA_UDC_Steno_ICRB_2026_27072026.pdf",
+        "pdfUrls": [
+          "https://www.isro.gov.in/media_isro/pdf/recruitmentNotice/2026/July/Bilingual Advertisement_Asst_JPA_UDC_Steno_ICRB_2026_27072026.pdf",
+          "https://www.isro.gov.in/media_isro/pdf/recruitmentNotice/2026/July/FREQUENTLY_ASKED_QUESTIONS_AND_ANSWERS_A_JPA_27072026.pdf"
+        ],
+        "source": "isro-careers"
+      }
+    },
+    {
+      "id": "cb11616a-272c-4b75-b3d7-b518dac339f4",
+      "slug": "isro-indian-space-research-organisation-advt-no-nrsc-rmt-1-2026-dated-01-08-2026-521d6338",
+      "title": "Advt. No. NRSC/RMT/1/2026 Dated.01.08.2026 Recruitment to the post of Temporary Research Personnel (Research Scientist,Project Associate-I,Project Associate-II,Project Scientist-I,Project Scientist-B,Junior Research Fellow )",
+      "dept": "ISRO — Careers",
+      "category": "psu",
+      "state_codes": [],
+      "vacancies": 48,
+      "qualification": "As per NRSC Advt. No. NRSC/RMT/1/2026 (M.E./M.Tech/M.Sc/B.E. post-wise)",
+      "salary": "As per ISRO/NRSC norms for temporary research personnel",
+      "age_limit": "As on 21.08.2026",
+      "last_date": "2026-08-21",
+      "apply_url": "https://www.isro.gov.in/NRSCRecruitment2026_1.html",
+      "pdf_url": "https://www.isro.gov.in/media_isro/pdf/recruitmentNotice/2026/July/NRSC_RMT_1_2026_dated_31072026.pdf",
+      "status": "live",
+      "is_sponsored": false,
+      "published_at": "2026-07-27T00:00:00Z",
+      "verified_at": null,
+      "updated_at": "2026-08-04T09:54:12.826066Z",
+      "document_type": "RECRUITMENT",
+      "verification_status": "VERIFIED",
+      "completeness_score": 80,
+      "publication_confidence": 100.0,
+      "published_to_site": true,
+      "primary_pdf_url": "https://www.isro.gov.in/media_isro/pdf/recruitmentNotice/2026/July/NRSC_RMT_1_2026_dated_31072026.pdf",
+      "post_name": null,
+      "posts": [],
+      "important_dates": [],
+      "detail": {
+        "detail_source": "pdf",
+        "published": "2026-08-01T00:00:00+00:00",
+        "notification_url": "https://www.isro.gov.in/NRSCRecruitment2026_1.html",
+        "memorized_at": "2026-08-04T09:16:11.208691+00:00",
+        "summary": "Page 1 of 17 भारत सरकार GOVERNMENT OF INDIA अंतररक्ष विभाग DEPARTMENT OF SPACE भारतीय अंतररक्ष अनुसंधान संगठन INDIAN SPACE RESEARCH ORGANISATION राष्ट्रीय सुदूर संिेदन केंद्र NATIONAL REMOTE SENSING CENTRE बालानगर, हैदराबाद BALANAGAR, HYDERABAD-500 037 विज्ञा.सं. एनआरएससी:आरएमटी: Advt. No. NRSC/RMT/1/2026 दिन ांक DT.01.08.2026 A) राष्ट्रीय सुदूर संिेदन केंद्र (एनआरएससी) भारतीय अंतररक्ष अनुसंधान सं…",
+        "pdf_urls": [
+          "https://www.isro.gov.in/media_isro/pdf/recruitmentNotice/2026/July/NRSC_RMT_1_2026_dated_31072026.pdf"
+        ],
+        "pdf_url": "https://www.isro.gov.in/media_isro/pdf/recruitmentNotice/2026/July/NRSC_RMT_1_2026_dated_31072026.pdf",
+        "pdfUrls": [
+          "https://www.isro.gov.in/media_isro/pdf/recruitmentNotice/2026/July/NRSC_RMT_1_2026_dated_31072026.pdf"
+        ],
+        "source": "isro-careers"
+      }
+    },
+    {
+      "id": "c2cbe092-0834-4342-bad4-e42bef6b636c",
+      "slug": "isro-indian-space-research-organisation-advt-no-ursc-03-2026-dated-29-07-2026-in-69b9e3f2",
+      "title": "Advt. No. URSC:03:2026 Dated:29.07.2026 - INVITING ONLINE APPLICATIONS FOR ENGAGEMENT OF CANDIDATES AS GRADUATE AND DIPLOMA APPRENTICES IN DIFFERENT STREAMS AT URSC, BENGALURU. THE LINK FOR RECEIPT OF ONLINE APPLICATIONS WILL BE ACTIVE FROM 29.07.2026 TO 28.08.2026",
+      "dept": "ISRO — Careers",
+      "category": "psu",
+      "state_codes": [],
+      "vacancies": 0,
+      "qualification": "mentioned above can enroll",
+      "salary": null,
+      "age_limit": null,
+      "last_date": "2026-08-28",
+      "apply_url": "https://www.isro.gov.in/URSCRecruitment12.html",
+      "pdf_url": "https://www.isro.gov.in/media_isro/pdf/recruitmentNotice/2026/July/URSC_Advt_for_Apprentice_July_2026_Blingual28072026.pdf",
+      "status": "live",
+      "is_sponsored": false,
+      "published_at": "2026-07-27T00:00:00Z",
+      "verified_at": null,
+      "updated_at": "2026-08-04T09:54:34.082676Z",
+      "document_type": "RECRUITMENT",
+      "verification_status": "VERIFIED",
+      "completeness_score": 80,
+      "publication_confidence": 90.0,
+      "published_to_site": true,
+      "primary_pdf_url": "https://www.isro.gov.in/media_isro/pdf/recruitmentNotice/2026/July/URSC_Advt_for_Apprentice_July_2026_Blingual28072026.pdf",
+      "post_name": null,
+      "posts": [],
+      "important_dates": [],
+      "detail": {
+        "published": "2026-07-29T00:00:00+00:00",
+        "notification_url": "https://www.isro.gov.in/URSCRecruitment12.html",
+        "summary": "Page 1 of 7 भारत सरकार, अंतररक्ष विभाग GOVERNMENT OF INDIA, DEPARTMENT OF SPACE भारतीय अंतररक्ष अनुसंधान संगठन INDIAN SPACE RESEARCH ORGANISATION यू.आर. राि उपग्रह केंद्र, ओल्ड एयरपोर्ट रोड U R RAO SATELLITE CENTRE, OLD AIRPORT ROAD बेंगलूरू BENGALURU – 560 017 विज्ञा. सं./यू.आर.एस.सी.:03:2026 विनांक: 29.07.2026 Advt. No. URSC:03:2026 Date:29.07.2026 िर्ट 2026-27 के वलए स्नातक, तकनीवियन ि िाविज्यि…",
+        "pdf_urls": [
+          "https://www.isro.gov.in/media_isro/pdf/recruitmentNotice/2026/July/URSC_Advt_for_Apprentice_July_2026_Blingual28072026.pdf"
+        ],
+        "apply_urls": [
+          "https://nats.education.gov.in।",
+          "https://nats.education.gov.in",
+          "https://web.umang.gov.in/landing/"
+        ],
+        "pdf_url": "https://www.isro.gov.in/media_isro/pdf/recruitmentNotice/2026/July/URSC_Advt_for_Apprentice_July_2026_Blingual28072026.pdf",
+        "pdfUrls": [
+          "https://www.isro.gov.in/media_isro/pdf/recruitmentNotice/2026/July/URSC_Advt_for_Apprentice_July_2026_Blingual28072026.pdf"
+        ],
+        "source": "isro-careers"
+      }
+    },
+    {
+      "id": "c9c5f62b-4eaa-45de-bf85-0dcdc0ae44a1",
+      "slug": "mppsc-recruitment-2026-apply-online-for-06-iaeo-aao-and-more-posts-9bc6da58",
+      "title": "MPPSC Recruitment 2026 - Apply Online for 06 IAEO, AAO and More Posts",
+      "dept": "MPPSC",
+      "category": "state",
+      "state_codes": [
+        "mp"
+      ],
+      "vacancies": 6,
+      "qualification": "B.Com, M.A, M.Com, M.Sc, PGDCA",
+      "salary": null,
+      "age_limit": null,
+      "last_date": "2026-09-03",
+      "apply_url": "https://www.mponline.gov.in/portal/",
+      "pdf_url": "https://mppsc.mp.gov.in/uploads/advertisement/Advt_AD_Farmers_Welfare_and_Agriculture_Development_Statistics_2026_Dated_10_04_2026.pdf",
+      "status": "live",
+      "is_sponsored": false,
+      "published_at": "2026-07-27T00:00:00Z",
+      "verified_at": null,
+      "updated_at": "2026-08-04T09:54:34.082676Z",
+      "document_type": "RECRUITMENT",
+      "verification_status": "VERIFIED",
+      "completeness_score": 80,
+      "publication_confidence": 90.0,
+      "published_to_site": true,
+      "primary_pdf_url": "https://mppsc.mp.gov.in/uploads/advertisement/Advt_AD_Farmers_Welfare_and_Agriculture_Development_Statistics_2026_Dated_10_04_2026.pdf",
+      "post_name": null,
+      "posts": [],
+      "important_dates": [],
+      "detail": {
+        "notification_url": "https://www.mponline.gov.in/portal/",
+        "external_id": "3045206",
+        "summary": "TTSq\" SI%?T aiPTtn\" Mtffr TTftfTT - Ri^m R^n'i-TST ^nw ti-qwii +^■41 hi W fft R + m (^nfeT^r)[ASSISTANT DIRECTOR, FARMERS WELFARE & AGRICULTURE DEVELOPMENT (STATISTICS)] % ftxF 'jff R?1IMH 2026 ffmr^ 09/2026/10.04.2026 3TRWr^ 3Tf^f^ 03.09.2026 : \"A\" r-w ^snrr ^ ^ 6.09.2026 2. 3. 1. 2. iiEr.G:!E«cc«r^...Hi.iiEfebE,icEEii ^=11 stnrhr etpj 'tm' ?nrr Riiiti f%wr f%¥R cRTT ff^ (^if^=fl)[ASSISTANT DIREC…",
+        "pdf_urls": [
+          "https://mppsc.mp.gov.in/uploads/advertisement/Advt_AD_Farmers_Welfare_and_Agriculture_Development_Statistics_2026_Dated_10_04_2026.pdf",
+          "https://mppsc.mp.gov.in/uploads/advertisement/Advt_Assistant_Accounts_Officer_AD_Farmer_Welfare_2026_Dated_10_04_2026.pdf",
+          "https://mppsc.mp.gov.in/uploads/advertisement/Advt_Internal_Accounts_Examiner_Officer__2026_Dated_10_04_2026.pdf"
+        ],
+        "pdf_url": "https://mppsc.mp.gov.in/uploads/advertisement/Advt_AD_Farmers_Welfare_and_Agriculture_Development_Statistics_2026_Dated_10_04_2026.pdf",
+        "pdfUrls": [
+          "https://mppsc.mp.gov.in/uploads/advertisement/Advt_AD_Farmers_Welfare_and_Agriculture_Development_Statistics_2026_Dated_10_04_2026.pdf",
+          "https://mppsc.mp.gov.in/uploads/advertisement/Advt_Assistant_Accounts_Officer_AD_Farmer_Welfare_2026_Dated_10_04_2026.pdf",
+          "https://mppsc.mp.gov.in/uploads/advertisement/Advt_Internal_Accounts_Examiner_Officer__2026_Dated_10_04_2026.pdf"
+        ],
+        "source": "structured-import"
       }
     },
     {
@@ -194,7 +750,7 @@
       "is_sponsored": false,
       "published_at": "2026-07-17T00:00:00Z",
       "verified_at": "2026-07-27T18:59:02.297720Z",
-      "updated_at": "2026-08-03T16:54:44.932019Z",
+      "updated_at": "2026-08-04T09:10:59.434375Z",
       "document_type": "RECRUITMENT",
       "verification_status": "VERIFIED",
       "completeness_score": 73,
@@ -205,20 +761,20 @@
       "posts": [],
       "important_dates": [],
       "detail": {
-        "source": "barc",
+        "detail_updated_at": "2026-08-04T09:10:57.665961+00:00",
         "detail_source": "pdf",
-        "pdfUrls": [
-          "http://www.barc.gov.in/careers/vacancy21.pdf"
-        ],
+        "published": "2026-07-17T00:00:00+00:00",
+        "notification_url": "http://www.barc.gov.in/careers/vacancy21.pdf",
+        "memorized_at": "2026-08-04T09:08:49.054132+00:00",
         "summary": "Page 1 of 7 Government of India Department of Atomic Energy Bhabha Atomic Research Centre Opening date and time for submission of online application 17.07.2026 (00.00 hrs.) Closing date and time for receipt of online application 18.08.2026 (23.59 hrs.) “GOVERNMENT STRIVES TO HAVE A WORKFORCE WHICH REFLECTS GENDER BALANCE AND WOMEN CANDIDATES ARE ENCOURAGED TO APPLY” ADVERTISEMENT No. 06/2026 (R-I)…",
-        "memorized_at": "2026-08-03T16:52:57.595277+00:00",
-        "detail_updated_at": "2026-08-03T16:54:45.549681+00:00",
         "pdf_urls": [
           "http://www.barc.gov.in/careers/vacancy21.pdf"
         ],
         "pdf_url": "http://www.barc.gov.in/careers/vacancy21.pdf",
-        "published": "2026-07-17T00:00:00+00:00",
-        "notification_url": "http://www.barc.gov.in/careers/vacancy21.pdf"
+        "pdfUrls": [
+          "http://www.barc.gov.in/careers/vacancy21.pdf"
+        ],
+        "source": "barc"
       }
     },
     {
@@ -239,7 +795,7 @@
       "is_sponsored": false,
       "published_at": "2026-07-14T00:00:00Z",
       "verified_at": null,
-      "updated_at": "2026-08-03T16:54:47.884219Z",
+      "updated_at": "2026-08-04T09:11:00.372198Z",
       "document_type": "RECRUITMENT",
       "verification_status": "VERIFIED",
       "completeness_score": 80,
@@ -250,75 +806,20 @@
       "posts": [],
       "important_dates": [],
       "detail": {
-        "source": "rrb-ajmer",
+        "detail_updated_at": "2026-08-04T09:10:58.583084+00:00",
         "detail_source": "pdf",
-        "pdfUrls": [
-          "https://www.rrbajmer.gov.in/Upload_PDF/FINAL%20CEN%2003_2026_SECTION%20CONTROLLER-639196630071828120.pdf"
-        ],
+        "published": "2026-07-14T00:00:00+00:00",
+        "notification_url": "https://www.rrbajmer.gov.in/Upload_PDF/FINAL%20CEN%2003_2026_SECTION%20CONTROLLER-639196630071828120.pdf",
+        "memorized_at": "2026-08-04T08:22:18.554009+00:00",
         "summary": "CENTRALISED EMPLOYMENT NOTIFICATION (CEN) NO. 03/2026 P a g e 1 | 57 TABLE OF CONTENTS Sr. No. Para No. Contents Page No. 1 IMPORTANT DATES IMPORTANT DATES 03 2 IMPORTANT INSTRUCTIONS IMPORTANT INSTRUCTIONS 04 3 IMPORTANT INSTRUCTIONS-EXAMINATION PROCESS 06 3 4 DETAILEDCEN-GENERAL INSTRUCTIONS 07 4 5 VACANCIES 10 5 6 MEDICAL STANDARD FOR THE POST 10 6 7 NATIONALITY/ CITIZENSHIP 11 7 8 AGE LIMIT 11…",
-        "memorized_at": "2026-07-24T12:40:43.664340+00:00",
-        "detail_updated_at": "2026-08-03T16:54:47.860628+00:00",
         "pdf_urls": [
           "https://www.rrbajmer.gov.in/Upload_PDF/FINAL%20CEN%2003_2026_SECTION%20CONTROLLER-639196630071828120.pdf"
         ],
         "pdf_url": "https://www.rrbajmer.gov.in/Upload_PDF/FINAL%20CEN%2003_2026_SECTION%20CONTROLLER-639196630071828120.pdf",
-        "published": "2026-07-14T00:00:00+00:00",
-        "notification_url": "https://www.rrbajmer.gov.in/Upload_PDF/FINAL%20CEN%2003_2026_SECTION%20CONTROLLER-639196630071828120.pdf"
-      }
-    },
-    {
-      "id": "f9c49a13-098e-4a76-8eb6-b47c8d7112d9",
-      "slug": "empanelment-of-external-concurrent-auditors-2024-25-apply-online-6b2fd89e",
-      "title": "Empanelment of External Concurrent Auditors 2024-25 - Apply Online",
-      "dept": "Canara Bank — Careers",
-      "category": "banking",
-      "state_codes": [],
-      "vacancies": 500,
-      "qualification": "and skill set",
-      "salary": "Rs. 300",
-      "age_limit": null,
-      "last_date": "2027-06-30",
-      "apply_url": "https://csis.canarabank.bank.in/ECA/ECAHome.aspx",
-      "pdf_url": "https://csis.canarabank.bank.in/ECA/Docs/TERMS AND CONDITIONS.pdf",
-      "status": "live",
-      "is_sponsored": false,
-      "published_at": "2026-07-01T00:00:00Z",
-      "verified_at": null,
-      "updated_at": "2026-08-03T16:54:47.920677Z",
-      "document_type": "RECRUITMENT",
-      "verification_status": "VERIFIED",
-      "completeness_score": 73,
-      "publication_confidence": 90.0,
-      "published_to_site": true,
-      "primary_pdf_url": "https://csis.canarabank.bank.in/ECA/Docs/TERMS AND CONDITIONS.pdf",
-      "post_name": null,
-      "posts": [],
-      "important_dates": [],
-      "detail": {
-        "source": "canara",
-        "detail_source": "pdf",
         "pdfUrls": [
-          "https://csis.canarabank.bank.in/ECA/Docs/TERMS AND CONDITIONS.pdf",
-          "https://csis.canarabank.bank.in/ECA/Docs/ANNEXURE26.pdf",
-          "https://csis.canarabank.bank.in/ECA/Docs/Annexure IV.pdf",
-          "https://csis.canarabank.bank.in/ECA/Docs/Instructions.pdf",
-          "https://csis.canarabank.bank.in/ECA/Docs/TERMS%20AND%20CONDITIONS.pdf",
-          "https://csis.canarabank.bank.in/ECA/Docs/FREQUENTLY ASKED QUESTIONS.pdf"
+          "https://www.rrbajmer.gov.in/Upload_PDF/FINAL%20CEN%2003_2026_SECTION%20CONTROLLER-639196630071828120.pdf"
         ],
-        "summary": "TERMS AND CONDITIONS A. FOR APPOINTMENT OF EXTERNAL CHARTERED ACCOUNTANT FIRMS, B. FOR CONDUCTING CONCURRENT AUDIT / CONTINUOUS AUDIT OF IDENTIFIED BRANCHES AS PER LIST C. REGARDING METHOD OF REPORTING & REVIEW OF PERFORMANCE The following are the terms and conditions for applying for empanelment as Concurrent Auditor in Canara Bank from 1st July 2026 to 30th June 2027: MANDATORY CONDITIONS FOR AP…",
-        "memorized_at": "2026-07-24T08:56:07.579101+00:00",
-        "detail_updated_at": "2026-08-03T16:54:48.383521+00:00",
-        "pdf_urls": [
-          "https://csis.canarabank.bank.in/ECA/Docs/TERMS AND CONDITIONS.pdf",
-          "https://csis.canarabank.bank.in/ECA/Docs/ANNEXURE26.pdf",
-          "https://csis.canarabank.bank.in/ECA/Docs/Annexure IV.pdf",
-          "https://csis.canarabank.bank.in/ECA/Docs/Instructions.pdf",
-          "https://csis.canarabank.bank.in/ECA/Docs/TERMS%20AND%20CONDITIONS.pdf",
-          "https://csis.canarabank.bank.in/ECA/Docs/FREQUENTLY ASKED QUESTIONS.pdf"
-        ],
-        "pdf_url": "https://csis.canarabank.bank.in/ECA/Docs/TERMS AND CONDITIONS.pdf",
-        "published": "2026-07-01T00:00:00+00:00",
-        "notification_url": "https://csis.canarabank.bank.in/ECA/ECAHome.aspx"
+        "source": "rrb-ajmer"
       }
     },
     {
@@ -341,7 +842,7 @@
       "is_sponsored": false,
       "published_at": "2026-06-15T00:00:00Z",
       "verified_at": null,
-      "updated_at": "2026-08-03T16:54:48.032008Z",
+      "updated_at": "2026-08-04T09:11:00.405145Z",
       "document_type": "RECRUITMENT",
       "verification_status": "VERIFIED",
       "completeness_score": 80,
@@ -352,17 +853,8 @@
       "posts": [],
       "important_dates": [],
       "detail": {
-        "source": "structured-import",
+        "detail_updated_at": "2026-08-04T09:10:59.163546+00:00",
         "detail_source": "pdf",
-        "pdfUrls": [
-          "https://icar-crri.in/wp-content/uploads/2026/06/EAP-245.pdf"
-        ],
-        "summary": "भाकृअनुप-केÛġȣय चावल अनुसंधान संèथान, कटक-753 006)ओͫडशा (, भारत ICAR – CENTRAL RICE RESEARCH INSTITUTE, CUTTACK-753 006 (ODISHA), INDIA Advertisement No. 10/SRF/2026-27 Walk-in-Interview Name of the Project : “National Innovations on Climate Resilient Agriculture” (EAP-245) Name of the Position : Senior Research Fellow (SRF) Number of Position : Two (02) Rate of remuneration : Rs. 37,000/- p.m. +…",
-        "memorized_at": "2026-08-03T16:52:59.919819+00:00",
-        "detail_updated_at": "2026-08-03T16:54:48.960518+00:00",
-        "pdf_urls": [
-          "https://icar-crri.in/wp-content/uploads/2026/06/EAP-245.pdf"
-        ],
         "important_dates": [
           {
             "date": "15 June 2026",
@@ -373,9 +865,18 @@
             "event": "Project Duration"
           }
         ],
+        "notification_url": "https://icar-crri.in/wp-content/uploads/2026/06/EAP-245.pdf",
+        "memorized_at": "2026-08-03T16:52:59.919819+00:00",
         "external_id": "3052461",
+        "summary": "भाकृअनुप-केÛġȣय चावल अनुसंधान संèथान, कटक-753 006)ओͫडशा (, भारत ICAR – CENTRAL RICE RESEARCH INSTITUTE, CUTTACK-753 006 (ODISHA), INDIA Advertisement No. 10/SRF/2026-27 Walk-in-Interview Name of the Project : “National Innovations on Climate Resilient Agriculture” (EAP-245) Name of the Position : Senior Research Fellow (SRF) Number of Position : Two (02) Rate of remuneration : Rs. 37,000/- p.m. +…",
+        "pdf_urls": [
+          "https://icar-crri.in/wp-content/uploads/2026/06/EAP-245.pdf"
+        ],
         "pdf_url": "https://icar-crri.in/wp-content/uploads/2026/06/EAP-245.pdf",
-        "notification_url": "https://icar-crri.in/wp-content/uploads/2026/06/EAP-245.pdf"
+        "pdfUrls": [
+          "https://icar-crri.in/wp-content/uploads/2026/06/EAP-245.pdf"
+        ],
+        "source": "structured-import"
       }
     },
     {
@@ -398,7 +899,7 @@
       "is_sponsored": false,
       "published_at": "2026-06-08T00:00:00Z",
       "verified_at": null,
-      "updated_at": "2026-08-03T16:54:48.568909Z",
+      "updated_at": "2026-08-04T09:11:00.441772Z",
       "document_type": "RECRUITMENT",
       "verification_status": "VERIFIED",
       "completeness_score": 80,
@@ -409,27 +910,80 @@
       "posts": [],
       "important_dates": [],
       "detail": {
-        "source": "structured-import",
+        "detail_updated_at": "2026-08-04T09:10:59.814541+00:00",
         "detail_source": "pdf",
-        "pdfUrls": [
-          "https://www.tezu.ernet.in/ProjectWalkin/20-623Hin-Eng.pdf"
-        ],
-        "summary": "तेजपुर विश्वविद्यालय / TEZPUR UNIVERSITY (संसद के अधिनियम द्वारा स्थापित केंद्रीय विश्वविद्यालय) (A Central University established by an Act of Parliament) संकायाध्यक्ष का कार्याालय, शोध व विकास OFFICE OF THE DEAN, RESEARCH & DEVELOPMENT तेजपुर-784028 :: असम / TEZPUR-784028 तात्कालिक साक्षात्कार / Walk-in-interview मुख्य अनुसंधानकर्ता प्रो. प्रीतम देब, भौतिकी विभाग, तेजपुर विश्वविद्यालय, तेजपुर, न…",
-        "memorized_at": "2026-08-03T16:53:02.505653+00:00",
-        "detail_updated_at": "2026-08-03T16:54:49.455606+00:00",
-        "pdf_urls": [
-          "https://www.tezu.ernet.in/ProjectWalkin/20-623Hin-Eng.pdf"
-        ],
         "important_dates": [
           {
             "date": "01 July 2026",
             "event": "Walk-in Interview"
           }
         ],
-        "external_id": "3053285",
-        "pdf_url": "https://www.tezu.ernet.in/ProjectWalkin/20-623Hin-Eng.pdf",
         "published": "2026-06-08T00:00:00+00:00",
-        "notification_url": "https://www.tezu.ernet.in/ProjectWalkin/20-623Hin-Eng.pdf"
+        "notification_url": "https://www.tezu.ernet.in/ProjectWalkin/20-623Hin-Eng.pdf",
+        "memorized_at": "2026-08-04T08:23:16.688936+00:00",
+        "external_id": "3053285",
+        "summary": "तेजपुर विश्वविद्यालय / TEZPUR UNIVERSITY (संसद के अधिनियम द्वारा स्थापित केंद्रीय विश्वविद्यालय) (A Central University established by an Act of Parliament) संकायाध्यक्ष का कार्याालय, शोध व विकास OFFICE OF THE DEAN, RESEARCH & DEVELOPMENT तेजपुर-784028 :: असम / TEZPUR-784028 तात्कालिक साक्षात्कार / Walk-in-interview मुख्य अनुसंधानकर्ता प्रो. प्रीतम देब, भौतिकी विभाग, तेजपुर विश्वविद्यालय, तेजपुर, न…",
+        "pdf_urls": [
+          "https://www.tezu.ernet.in/ProjectWalkin/20-623Hin-Eng.pdf"
+        ],
+        "pdf_url": "https://www.tezu.ernet.in/ProjectWalkin/20-623Hin-Eng.pdf",
+        "pdfUrls": [
+          "https://www.tezu.ernet.in/ProjectWalkin/20-623Hin-Eng.pdf"
+        ],
+        "source": "structured-import"
+      }
+    },
+    {
+      "id": "5aaff605-8801-4455-bb34-a1ab6b8ef8bd",
+      "slug": "tezpur-university-junior-research-fellow-recruitment-2026-apply-online-96f771fe",
+      "title": "Tezpur University Junior Research Fellow Recruitment 2026 - Apply Online",
+      "dept": "Tezpur University",
+      "category": "state",
+      "state_codes": [
+        "as"
+      ],
+      "vacancies": 1,
+      "qualification": "B.Tech/ B.E, M.Sc",
+      "salary": "Rs. 37,000/- per month plus HRA (if campus accommodation is not provided).",
+      "age_limit": "Maximum 28 years",
+      "last_date": "2027-08-13",
+      "apply_url": "https://www.tezu.ernet.in/ProjectWalkin/20-619Hin-Eng.pdf",
+      "pdf_url": "https://www.tezu.ernet.in/ProjectWalkin/20-619Hin-Eng.pdf",
+      "status": "live",
+      "is_sponsored": false,
+      "published_at": "2026-06-05T00:00:00Z",
+      "verified_at": null,
+      "updated_at": "2026-08-04T09:52:51.800148Z",
+      "document_type": "RECRUITMENT",
+      "verification_status": "VERIFIED",
+      "completeness_score": 80,
+      "publication_confidence": 90.0,
+      "published_to_site": true,
+      "primary_pdf_url": "https://www.tezu.ernet.in/ProjectWalkin/20-619Hin-Eng.pdf",
+      "post_name": null,
+      "posts": [],
+      "important_dates": [],
+      "detail": {
+        "detail_source": "pdf",
+        "important_dates": [
+          {
+            "date": "20 June 2026",
+            "event": "Last date for application submission"
+          }
+        ],
+        "published": "2026-06-05T00:00:00+00:00",
+        "notification_url": "https://www.tezu.ernet.in/ProjectWalkin/20-619Hin-Eng.pdf",
+        "memorized_at": "2026-08-04T09:08:51.404682+00:00",
+        "external_id": "3053041",
+        "summary": "तेजपुर विश्वविद्यालय / TEZPUR UNIVERSITY (संसद के अधिनियम द्वारा स्थापित केंद्रीय विश्वविद्यालय) (A Central University established by an Act of Parliament) संकायाध्यक्ष का कार्यालय, शोध व विकास OFFICE OF THE DEAN, RESEARCH & DEVELOPMENT तेजपुर-784028 :: असम / TEZPUR-784028 परियोजना स्टाफ के लिए विज्ञापन / Advertisement for Project Staff मुख्य अनुसंधानकर्ता प्रो. बृजेश श्रीवास्तव, खाद्य अभियांत्रिक…",
+        "pdf_urls": [
+          "https://www.tezu.ernet.in/ProjectWalkin/20-619Hin-Eng.pdf"
+        ],
+        "pdf_url": "https://www.tezu.ernet.in/ProjectWalkin/20-619Hin-Eng.pdf",
+        "pdfUrls": [
+          "https://www.tezu.ernet.in/ProjectWalkin/20-619Hin-Eng.pdf"
+        ],
+        "source": "structured-import"
       }
     },
     {
@@ -452,7 +1006,7 @@
       "is_sponsored": false,
       "published_at": "2026-06-05T00:00:00Z",
       "verified_at": null,
-      "updated_at": "2026-08-03T16:54:50.453755Z",
+      "updated_at": "2026-08-04T09:11:03.077833Z",
       "document_type": "RECRUITMENT",
       "verification_status": "VERIFIED",
       "completeness_score": 80,
@@ -463,17 +1017,8 @@
       "posts": [],
       "important_dates": [],
       "detail": {
-        "source": "structured-import",
+        "detail_updated_at": "2026-08-04T09:11:01.322471+00:00",
         "detail_source": "pdf",
-        "pdfUrls": [
-          "https://cftri.res.in/ApplicationForm/0_45632200_1780656646.pdf"
-        ],
-        "summary": "Date: 05.06.2026 ADVERTISEMENT NO.PAT 24/2026 Walk-in-Interviews for engagement of Project Staff purely on temporary basis in the following Project will be held on 16/06/2026 and 17/06/2026 in CSIR-CFTRI, Mysuru, Karnataka. Engagement to the position of Project Associate - I CSIR – Central Food Technological Research Institute, Mysuru, a constituent National Laboratory of Council of Scientific & I…",
-        "memorized_at": "2026-08-03T16:53:07.335193+00:00",
-        "detail_updated_at": "2026-08-03T16:54:50.424056+00:00",
-        "pdf_urls": [
-          "https://cftri.res.in/ApplicationForm/0_45632200_1780656646.pdf"
-        ],
         "important_dates": [
           {
             "date": "05 June 2026",
@@ -488,10 +1033,19 @@
             "event": "Walk-in Interview Date"
           }
         ],
-        "external_id": "3053162",
-        "pdf_url": "https://cftri.res.in/ApplicationForm/0_45632200_1780656646.pdf",
         "published": "2026-06-05T00:00:00+00:00",
-        "notification_url": "https://cftri.res.in/ApplicationForm/0_45632200_1780656646.pdf"
+        "notification_url": "https://cftri.res.in/ApplicationForm/0_45632200_1780656646.pdf",
+        "memorized_at": "2026-08-04T08:23:19.644526+00:00",
+        "external_id": "3053162",
+        "summary": "Date: 05.06.2026 ADVERTISEMENT NO.PAT 24/2026 Walk-in-Interviews for engagement of Project Staff purely on temporary basis in the following Project will be held on 16/06/2026 and 17/06/2026 in CSIR-CFTRI, Mysuru, Karnataka. Engagement to the position of Project Associate - I CSIR – Central Food Technological Research Institute, Mysuru, a constituent National Laboratory of Council of Scientific & I…",
+        "pdf_urls": [
+          "https://cftri.res.in/ApplicationForm/0_45632200_1780656646.pdf"
+        ],
+        "pdf_url": "https://cftri.res.in/ApplicationForm/0_45632200_1780656646.pdf",
+        "pdfUrls": [
+          "https://cftri.res.in/ApplicationForm/0_45632200_1780656646.pdf"
+        ],
+        "source": "structured-import"
       }
     },
     {
@@ -514,7 +1068,7 @@
       "is_sponsored": false,
       "published_at": "2026-05-18T00:00:00Z",
       "verified_at": null,
-      "updated_at": "2026-08-03T16:54:50.496737Z",
+      "updated_at": "2026-08-04T09:11:03.207341Z",
       "document_type": "RECRUITMENT",
       "verification_status": "VERIFIED",
       "completeness_score": 80,
@@ -525,17 +1079,8 @@
       "posts": [],
       "important_dates": [],
       "detail": {
-        "source": "structured-import",
+        "detail_updated_at": "2026-08-04T09:11:02.073233+00:00",
         "detail_source": "pdf",
-        "pdfUrls": [
-          "https://dfpd.gov.in/WriteReadData/Notices/842c6b81-77dd-4d4f-ae44-d41ca1d52c48_Image_195.pdf"
-        ],
-        "summary": "No. A-1202513/2023-SA Covernment of India Ministry of Consumer Affairs, Food & Public Distribution Department of Food & Public Distribution Krishi Bhawan, New Delhi Dated: l8 .05.2026 DETAILED VACANCY CIRCULAR Applications are invited tiom the eligible ofilcers fbr filling up the following posts in the Directorate of Sugar & Vegetable Oils (DSVO) - an attached otfice ofthe Department of Food & Pub…",
-        "memorized_at": "2026-08-03T16:53:33.264646+00:00",
-        "detail_updated_at": "2026-08-03T16:54:50.965259+00:00",
-        "pdf_urls": [
-          "https://dfpd.gov.in/WriteReadData/Notices/842c6b81-77dd-4d4f-ae44-d41ca1d52c48_Image_195.pdf"
-        ],
         "important_dates": [
           {
             "date": "Date",
@@ -550,10 +1095,19 @@
             "event": "Last Date to Apply"
           }
         ],
-        "external_id": "3049724",
-        "pdf_url": "https://dfpd.gov.in/WriteReadData/Notices/842c6b81-77dd-4d4f-ae44-d41ca1d52c48_Image_195.pdf",
         "published": "2026-05-18T00:00:00+00:00",
-        "notification_url": "https://dfpd.gov.in"
+        "notification_url": "https://dfpd.gov.in",
+        "memorized_at": "2026-08-04T08:23:24.769988+00:00",
+        "external_id": "3049724",
+        "summary": "No. A-1202513/2023-SA Covernment of India Ministry of Consumer Affairs, Food & Public Distribution Department of Food & Public Distribution Krishi Bhawan, New Delhi Dated: l8 .05.2026 DETAILED VACANCY CIRCULAR Applications are invited tiom the eligible ofilcers fbr filling up the following posts in the Directorate of Sugar & Vegetable Oils (DSVO) - an attached otfice ofthe Department of Food & Pub…",
+        "pdf_urls": [
+          "https://dfpd.gov.in/WriteReadData/Notices/842c6b81-77dd-4d4f-ae44-d41ca1d52c48_Image_195.pdf"
+        ],
+        "pdf_url": "https://dfpd.gov.in/WriteReadData/Notices/842c6b81-77dd-4d4f-ae44-d41ca1d52c48_Image_195.pdf",
+        "pdfUrls": [
+          "https://dfpd.gov.in/WriteReadData/Notices/842c6b81-77dd-4d4f-ae44-d41ca1d52c48_Image_195.pdf"
+        ],
+        "source": "structured-import"
       }
     },
     {
@@ -576,7 +1130,7 @@
       "is_sponsored": false,
       "published_at": "2026-05-03T00:00:00Z",
       "verified_at": null,
-      "updated_at": "2026-08-03T16:54:51.147812Z",
+      "updated_at": "2026-08-04T09:11:03.964156Z",
       "document_type": "RECRUITMENT",
       "verification_status": "VERIFIED",
       "completeness_score": 80,
@@ -587,20 +1141,8 @@
       "posts": [],
       "important_dates": [],
       "detail": {
-        "source": "structured-import",
+        "detail_updated_at": "2026-08-04T09:11:03.294724+00:00",
         "detail_source": "pdf",
-        "apply_urls": [
-          "https://www.iisermohali.ac.in/institute"
-        ],
-        "pdfUrls": [
-          "https://web.iisermohali.ac.in:8080/noticeportal/attachments/article/3096/Detailed%20advertisement.pdf"
-        ],
-        "summary": "भारतीय विज्ञान विक्षा एिं अनुसंधान संस्थान मोहाली (विक्षा मंत्रालय, भारत सरकार) INDIAN INSTITUTE OF SCIENCE EDUCATION AND RESEARCH MOHALI (Ministry of Education, Govt. of India) 1 of 34 आईआईएसईआर मोहाली, नॉलेज वसटी, सेक्टर-81, मोहाली, पंजाब-140306, भारत IISER Mohali, Knowledge City, Sector-81, Mohali, Punjab-140306, India विज्ञापन सं. गै. सं. (03)/वनयवित/2026 विनांक: 03.05.2026 Advt. No. NF (03)/R…",
-        "memorized_at": "2026-08-03T16:53:38.543515+00:00",
-        "detail_updated_at": "2026-08-03T16:54:51.608697+00:00",
-        "pdf_urls": [
-          "https://web.iisermohali.ac.in:8080/noticeportal/attachments/article/3096/Detailed%20advertisement.pdf"
-        ],
         "important_dates": [
           {
             "date": "03/05/2026",
@@ -627,10 +1169,22 @@
             "event": "Written Test / Skill Test / Interview Date"
           }
         ],
-        "external_id": "3047564",
-        "pdf_url": "https://web.iisermohali.ac.in:8080/noticeportal/attachments/article/3096/Detailed%20advertisement.pdf",
         "published": "2026-05-03T00:00:00+00:00",
-        "notification_url": "https://erp.iisermohali.ac.in/OnlineRecruitmentApplicationIISERM.action"
+        "notification_url": "https://erp.iisermohali.ac.in/OnlineRecruitmentApplicationIISERM.action",
+        "memorized_at": "2026-08-04T08:23:29.998614+00:00",
+        "external_id": "3047564",
+        "summary": "भारतीय विज्ञान विक्षा एिं अनुसंधान संस्थान मोहाली (विक्षा मंत्रालय, भारत सरकार) INDIAN INSTITUTE OF SCIENCE EDUCATION AND RESEARCH MOHALI (Ministry of Education, Govt. of India) 1 of 34 आईआईएसईआर मोहाली, नॉलेज वसटी, सेक्टर-81, मोहाली, पंजाब-140306, भारत IISER Mohali, Knowledge City, Sector-81, Mohali, Punjab-140306, India विज्ञापन सं. गै. सं. (03)/वनयवित/2026 विनांक: 03.05.2026 Advt. No. NF (03)/R…",
+        "pdf_urls": [
+          "https://web.iisermohali.ac.in:8080/noticeportal/attachments/article/3096/Detailed%20advertisement.pdf"
+        ],
+        "apply_urls": [
+          "https://www.iisermohali.ac.in/institute"
+        ],
+        "pdf_url": "https://web.iisermohali.ac.in:8080/noticeportal/attachments/article/3096/Detailed%20advertisement.pdf",
+        "pdfUrls": [
+          "https://web.iisermohali.ac.in:8080/noticeportal/attachments/article/3096/Detailed%20advertisement.pdf"
+        ],
+        "source": "structured-import"
       }
     },
     {
@@ -653,7 +1207,7 @@
       "is_sponsored": false,
       "published_at": "2026-02-27T00:00:00Z",
       "verified_at": null,
-      "updated_at": "2026-08-03T16:54:51.788774Z",
+      "updated_at": "2026-08-04T09:11:03.891062Z",
       "document_type": "RECRUITMENT",
       "verification_status": "VERIFIED",
       "completeness_score": 80,
@@ -664,20 +1218,8 @@
       "posts": [],
       "important_dates": [],
       "detail": {
-        "source": "structured-import",
+        "detail_updated_at": "2026-08-04T09:11:02.655389+00:00",
         "detail_source": "pdf",
-        "apply_urls": [
-          "https://facapp.iitm.ac.in"
-        ],
-        "pdfUrls": [
-          "https://facapp.iitm.ac.in/img/Advertisement_RA-2026.pdf"
-        ],
-        "summary": "Page 1 | 6 INDIAN INSTITUTE OF TECHNOLOGY MADRAS CHENNAI – 600 036 Rolling Advertisement No. IITM/R/1/2026 Dated 27.02.2026 IIT Madras invites applications from individuals with an established record of independent, high-quality research and commitment to teaching and research for the faculty position at the level of ASSISTANT PROFESSOR (AP). The requirement is for various departments given below.…",
-        "memorized_at": "2026-08-03T16:53:41.158019+00:00",
-        "detail_updated_at": "2026-08-03T16:54:52.274206+00:00",
-        "pdf_urls": [
-          "https://facapp.iitm.ac.in/img/Advertisement_RA-2026.pdf"
-        ],
         "important_dates": [
           {
             "date": "27 February 2026",
@@ -692,10 +1234,91 @@
             "event": "Last Date to Apply"
           }
         ],
-        "external_id": "3040278",
-        "pdf_url": "https://facapp.iitm.ac.in/img/Advertisement_RA-2026.pdf",
         "published": "2026-02-27T00:00:00+00:00",
-        "notification_url": "https://facapp.iitm.ac.in/img/Advertisement_RA-2026.pdf"
+        "notification_url": "https://facapp.iitm.ac.in/img/Advertisement_RA-2026.pdf",
+        "memorized_at": "2026-08-04T08:23:41.045943+00:00",
+        "external_id": "3040278",
+        "summary": "Page 1 | 6 INDIAN INSTITUTE OF TECHNOLOGY MADRAS CHENNAI – 600 036 Rolling Advertisement No. IITM/R/1/2026 Dated 27.02.2026 IIT Madras invites applications from individuals with an established record of independent, high-quality research and commitment to teaching and research for the faculty position at the level of ASSISTANT PROFESSOR (AP). The requirement is for various departments given below.…",
+        "pdf_urls": [
+          "https://facapp.iitm.ac.in/img/Advertisement_RA-2026.pdf"
+        ],
+        "apply_urls": [
+          "https://facapp.iitm.ac.in",
+          "https://facapp.iitm.in",
+          "https://facapp.iitm.ac.in/2026ra"
+        ],
+        "pdf_url": "https://facapp.iitm.ac.in/img/Advertisement_RA-2026.pdf",
+        "pdfUrls": [
+          "https://facapp.iitm.ac.in/img/Advertisement_RA-2026.pdf"
+        ],
+        "source": "structured-import"
+      }
+    },
+    {
+      "id": "c4e3f1da-208f-4742-9332-a8df4154143a",
+      "slug": "iit-madras-assistant-professor-recruitment-2026-apply-online-for-40-posts-527824e5",
+      "title": "IIT Madras Assistant Professor Recruitment 2026 - Apply Online for 40 Posts",
+      "dept": "IIT Madras",
+      "category": "teaching",
+      "state_codes": [
+        "tn"
+      ],
+      "vacancies": 40,
+      "qualification": "M.Phil/ Ph.D",
+      "salary": "Assistant Professor Grade-II: Pay Level: 10, Minimum Pay: ₹ 70900/-. Assistant Professor Grade-I: Pay Level: 12, Minimum Pay: ₹ 101500/-.",
+      "age_limit": "Not completed 36 years as on 31 Dec 2026. Age relaxation applicable for OBC, SC/ST, PwD and women candidates.",
+      "last_date": "2026-10-15",
+      "apply_url": "https://facapp.iitm.ac.in",
+      "pdf_url": "https://facapp.iitm.ac.in/img/Advertisement_RA-2026.pdf",
+      "status": "live",
+      "is_sponsored": false,
+      "published_at": "2026-02-27T00:00:00Z",
+      "verified_at": null,
+      "updated_at": "2026-08-04T09:11:03.891062Z",
+      "document_type": "RECRUITMENT",
+      "verification_status": "VERIFIED",
+      "completeness_score": 80,
+      "publication_confidence": 90.0,
+      "published_to_site": true,
+      "primary_pdf_url": "https://facapp.iitm.ac.in/img/Advertisement_RA-2026.pdf",
+      "post_name": null,
+      "posts": [],
+      "important_dates": [],
+      "detail": {
+        "detail_updated_at": "2026-08-04T09:11:02.655389+00:00",
+        "detail_source": "pdf",
+        "important_dates": [
+          {
+            "date": "27 February 2026",
+            "event": "Advertisement Date"
+          },
+          {
+            "date": "31 December 2026",
+            "event": "Age Calculation Date"
+          },
+          {
+            "date": "15 October 2026",
+            "event": "Last Date to Apply"
+          }
+        ],
+        "published": "2026-02-27T00:00:00+00:00",
+        "notification_url": "https://facapp.iitm.ac.in/img/Advertisement_RA-2026.pdf",
+        "memorized_at": "2026-08-04T08:23:41.045943+00:00",
+        "external_id": "3040278",
+        "summary": "Page 1 | 6 INDIAN INSTITUTE OF TECHNOLOGY MADRAS CHENNAI – 600 036 Rolling Advertisement No. IITM/R/1/2026 Dated 27.02.2026 IIT Madras invites applications from individuals with an established record of independent, high-quality research and commitment to teaching and research for the faculty position at the level of ASSISTANT PROFESSOR (AP). The requirement is for various departments given below.…",
+        "pdf_urls": [
+          "https://facapp.iitm.ac.in/img/Advertisement_RA-2026.pdf"
+        ],
+        "apply_urls": [
+          "https://facapp.iitm.ac.in",
+          "https://facapp.iitm.in",
+          "https://facapp.iitm.ac.in/2026ra"
+        ],
+        "pdf_url": "https://facapp.iitm.ac.in/img/Advertisement_RA-2026.pdf",
+        "pdfUrls": [
+          "https://facapp.iitm.ac.in/img/Advertisement_RA-2026.pdf"
+        ],
+        "source": "structured-import"
       }
     }
   ]

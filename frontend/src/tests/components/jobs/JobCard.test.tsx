@@ -35,7 +35,8 @@ describe("JobCard dates", () => {
     });
 
     expect(screen.queryByText(/^Posted$/i)).toBeNull();
-    expect(screen.getAllByText(/Last Date to apply/i).length).toBeGreaterThan(0);
+    // Only once — highlight box, not also in the footer.
+    expect(screen.getAllByText(/Last Date to apply/i)).toHaveLength(1);
     expect(screen.getAllByText(/Aug 15, 2026|15 Aug 2026/).length).toBeGreaterThan(0);
   });
 
@@ -55,7 +56,7 @@ describe("JobCard dates", () => {
     });
 
     expect(screen.queryByText(/^Posted$/i)).toBeNull();
-    expect(screen.getAllByText(/Last Date to apply/i).length).toBeGreaterThan(0);
+    expect(screen.getAllByText(/Last Date to apply/i)).toHaveLength(1);
     expect(screen.getAllByText(/Jun 21, 2026|21 Jun/).length).toBeGreaterThan(0);
   });
 });

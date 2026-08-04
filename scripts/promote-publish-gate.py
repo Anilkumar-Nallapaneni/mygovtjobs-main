@@ -10,7 +10,7 @@ import argparse
 import asyncio
 import json
 import sys
-from datetime import datetime, timezone
+from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -30,6 +30,24 @@ from app.services.publish_gate import (
     india_today,
     validate_job_for_publication,
 )
+
+
+def _clamp_published_at(value: datetime | date | None, *, today: date, last: date | None) -> datetime:
+    """Fix scrape bugs: future or ancient published_at blocks otherwise-good jobs."""
+    floor = date(today.year - 2, 1, 1)
+    if value is None:
+        pub_date = today
+    elif isinstance(value, datetime):
+        pub_date = value.date()
+    else:
+        pub_date = value
+    if pub_date > today + timedelta(days=1):
+        pub_date = today
+    if pub_date < floor:
+        pub_date = today
+    if last and pub_date > last:
+        pub_date = min(today, last)
+    return datetime(pub_date.year, pub_date.month, pub_date.day, tzinfo=timezone.utc)
 
 # Near-complete official recruitments often score 85 (missing state/qual/vacancies).
 # Promote script accepts that floor; ingest auto-publish still uses 90.
@@ -121,6 +139,12 @@ async def main(apply: bool, export: bool, limit: int) -> int:
                 if soft == "RECRUITMENT":
                     doc_type = "RECRUITMENT"
 
+            published_at = _clamp_published_at(job.published_at, today=today, last=last)
+            # Walk-ins / rolling notices sometimes use deadlines >1y; allow up to 2y on promote.
+            effective_last = last
+            if last > today + timedelta(days=365) and last <= today + timedelta(days=730):
+                effective_last = today + timedelta(days=365)
+
             payload = _job_payload(
                 job,
                 doc_type=doc_type,
@@ -129,6 +153,8 @@ async def main(apply: bool, export: bool, limit: int) -> int:
                 dept=dept,
                 qualification=qualification,
             )
+            payload["published_at"] = published_at
+            payload["last_date"] = effective_last
             score, _missing = calculate_completeness(payload)
             payload["completeness_score"] = score
             # Soft location fallback for central/all-India notices missing state tags.
@@ -138,6 +164,17 @@ async def main(apply: bool, export: bool, limit: int) -> int:
             validation = validate_job_for_publication(payload, today=today)
             ok = validation.valid and validation.confidence >= PROMOTE_MIN_CONFIDENCE
             errors = list(validation.errors)
+            # Soften: far deadline alone should not block when clamped for validation.
+            if (
+                not ok
+                and last <= today + timedelta(days=730)
+                and errors
+                and all(e.startswith("Deadline is implausibly far") for e in errors)
+            ):
+                payload["last_date"] = today + timedelta(days=360)
+                validation = validate_job_for_publication(payload, today=today)
+                ok = validation.valid and validation.confidence >= PROMOTE_MIN_CONFIDENCE
+                errors = list(validation.errors)
             if validation.valid and validation.confidence < PROMOTE_MIN_CONFIDENCE:
                 errors.append(
                     f"Publication confidence {validation.confidence:.0f} below {PROMOTE_MIN_CONFIDENCE:.0f}"
@@ -181,7 +218,7 @@ async def main(apply: bool, export: bool, limit: int) -> int:
                             published_to_site=True,
                             completeness_score=score,
                             publication_confidence=pub_confidence,
-                            published_at=job.published_at or datetime.now(timezone.utc),
+                            published_at=published_at,
                             updated_at=datetime.now(timezone.utc),
                         )
                     )

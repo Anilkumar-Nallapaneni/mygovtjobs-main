@@ -271,11 +271,6 @@ function JobCard({
 
       <div className="job-card__footer">
         <div className={`job-card__deadline${isUrgent ? " job-card__deadline--urgent" : ""}`}>
-          {hasLastDate ? (
-            <span>
-              📅 {t("job.lastDateToApply", { defaultValue: "Last Date to apply" })}: <strong>{lastDate}</strong>
-            </span>
-          ) : null}
           {daysLeft != null && daysLeft <= 30 && daysLeft >= 0 && (
             <span className={`job-card__days${isUrgent ? " job-card__days--urgent" : ""}`}>
               {t("job.daysLeft", { count: daysLeft })}
