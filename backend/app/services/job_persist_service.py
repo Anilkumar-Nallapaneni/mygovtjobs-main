@@ -10,7 +10,7 @@ from urllib.parse import urlparse
 
 logger = logging.getLogger(__name__)
 
-from sqlalchemy import case
+from sqlalchemy import case, select
 from sqlalchemy.dialects.postgresql import insert
 from sqlalchemy.ext.asyncio import AsyncSession
 
@@ -146,6 +146,29 @@ def _is_dramatic_snapshot_drop(existing_count: int | None, next_count: int) -> b
 
 
 class JobPersistService:
+    async def _existing_job_for_identity(
+        self,
+        session: AsyncSession,
+        *,
+        digest: str,
+        source_url: str | None,
+    ) -> Job | None:
+        existing = await session.execute(select(Job).where(Job.content_hash == digest).limit(1))
+        job = existing.scalar_one_or_none()
+        if job or not source_url:
+            return job
+
+        existing = await session.execute(select(Job).where(Job.source_url == source_url).limit(1))
+        return existing.scalar_one_or_none()
+
+    @staticmethod
+    def _keep_existing_public_gate(job: Job) -> bool:
+        return (
+            getattr(job, "status", None) == "live"
+            and bool(getattr(job, "published_to_site", False))
+            and getattr(job, "verification_status", None) in _PUBLIC_VERIFICATION_STATUSES
+        )
+
     async def upsert_normalized(self, session: AsyncSession, normalized: dict, *, commit: bool = True) -> Job | None:
         raw_payload = sanitize_json_for_postgres(dict(normalized))
         normalized = sanitize_source_text_fields(normalized)
@@ -337,44 +360,79 @@ class JobPersistService:
             else row["last_date"]
         )
 
-        stmt = (
-            insert(Job)
-            .values(**row)
-            .on_conflict_do_update(
-                index_elements=[Job.content_hash],
-                set_={
-                    "title": row["title"],
-                    "dept": row["dept"],
-                    "category": row["category"],
-                    "state_codes": row["state_codes"],
-                    "vacancies": row["vacancies"],
-                    "last_date": last_date_update,
-                    "apply_url": row["apply_url"],
-                    "published_at": row["published_at"],
-                    "normalized_at": row["normalized_at"],
-                    "detail": row["detail"],
-                    "status": preserve_gate_value(row["status"], Job.status),
-                    "title_fingerprint": row["title_fingerprint"],
-                    "document_type": preserve_gate_value(row["document_type"], Job.document_type),
-                    "verification_status": preserve_gate_value(row["verification_status"], Job.verification_status),
-                    "completeness_score": preserve_gate_value(row["completeness_score"], Job.completeness_score),
-                    "published_to_site": preserve_gate_value(row["published_to_site"], Job.published_to_site),
-                    "primary_pdf_url": row["primary_pdf_url"],
-                    "source_evidence": row["source_evidence"],
-                    "review_reasons": row["review_reasons"],
-                    "source_url": row["source_url"],
-                    "source_domain": row["source_domain"],
-                    "confidence_score": row["confidence_score"],
-                    "publication_confidence": preserve_gate_value(
-                        row["publication_confidence"],
-                        Job.publication_confidence,
-                    ),
-                },
-            )
-            .returning(Job)
+        update_values = {
+            "title": row["title"],
+            "dept": row["dept"],
+            "category": row["category"],
+            "state_codes": row["state_codes"],
+            "vacancies": row["vacancies"],
+            "last_date": last_date_update,
+            "apply_url": row["apply_url"],
+            "published_at": row["published_at"],
+            "normalized_at": row["normalized_at"],
+            "detail": row["detail"],
+            "status": preserve_gate_value(row["status"], Job.status),
+            "title_fingerprint": row["title_fingerprint"],
+            "document_type": preserve_gate_value(row["document_type"], Job.document_type),
+            "verification_status": preserve_gate_value(row["verification_status"], Job.verification_status),
+            "completeness_score": preserve_gate_value(row["completeness_score"], Job.completeness_score),
+            "published_to_site": preserve_gate_value(row["published_to_site"], Job.published_to_site),
+            "primary_pdf_url": row["primary_pdf_url"],
+            "source_evidence": row["source_evidence"],
+            "review_reasons": row["review_reasons"],
+            "source_url": row["source_url"],
+            "source_domain": row["source_domain"],
+            "confidence_score": row["confidence_score"],
+            "publication_confidence": preserve_gate_value(
+                row["publication_confidence"],
+                Job.publication_confidence,
+            ),
+        }
+
+        gate_fields = {
+            "status",
+            "document_type",
+            "verification_status",
+            "completeness_score",
+            "published_to_site",
+            "publication_confidence",
+        }
+
+        persisted_job = await self._existing_job_for_identity(
+            session, digest=digest, source_url=source_url
         )
-        result = await session.execute(stmt)
-        persisted_job = result.scalar_one_or_none()
+        if persisted_job:
+            keep_gate = preserve_public_gate is not None and self._keep_existing_public_gate(
+                persisted_job
+            )
+            python_updates = {
+                **{
+                    key: row[key]
+                    for key in update_values
+                    if key not in gate_fields or not keep_gate
+                },
+                "slug": row["slug"],
+                "content_hash": row["content_hash"],
+            }
+            if row["last_date"] is None and keep_gate:
+                python_updates.pop("last_date", None)
+            elif row["last_date"] is not None:
+                python_updates["last_date"] = row["last_date"]
+            for key, value in python_updates.items():
+                setattr(persisted_job, key, value)
+            await session.flush()
+        else:
+            stmt = (
+                insert(Job)
+                .values(**row)
+                .on_conflict_do_update(
+                    index_elements=[Job.content_hash],
+                    set_=update_values,
+                )
+                .returning(Job)
+            )
+            result = await session.execute(stmt)
+            persisted_job = result.scalar_one_or_none()
         if persisted_job is not None and not bool(getattr(persisted_job, "published_to_site", False)):
             from app.services.job_review_service import JobReviewService
 
