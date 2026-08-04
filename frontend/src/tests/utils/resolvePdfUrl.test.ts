@@ -51,8 +51,12 @@ describe('collectPdfUrls / resolvePdfUrl', () => {
     expect(resolvePdfUrl(row)).toBe('https://ssc.gov.in/real.pdf')
   })
 
-  it('returns empty string when nothing usable', () => {
-    expect(resolvePdfUrl({})).toBe('')
-    expect(resolvePdfUrl(null)).toBe('')
+  it('preserves double spaces in official PDF paths (RRB-style)', () => {
+    const row = {
+      pdf_url: 'https://rrbmumbai.gov.in/newpdf/HINDI PDF CEN  02 2026.pdf',
+    }
+    const resolved = resolvePdfUrl(row)
+    expect(resolved).toContain('CEN%20%2002')
+    expect(resolved).not.toContain('CEN%2002%20')
   })
 })

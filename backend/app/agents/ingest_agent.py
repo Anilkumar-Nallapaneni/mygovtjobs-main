@@ -292,6 +292,15 @@ class IngestAgent:
                 max_items=max_items,
             )
 
+        if module == "ssc_api":
+            from app.scrapers.ssc_api import SscApiScraper
+
+            return SscApiScraper(
+                max_items=max_items,
+                lookback_days=lookback,
+                content_type=str(entry.get("contentType") or "notice-boards"),
+            )
+
         if module == "state_portal_html":
             from app.scrapers.state_portal_html import StatePortalHtmlScraper
 

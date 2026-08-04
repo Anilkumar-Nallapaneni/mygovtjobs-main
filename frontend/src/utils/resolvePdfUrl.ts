@@ -34,7 +34,14 @@ export function collectPdfUrls(row: Record<string, unknown> | null | undefined):
   const candidates: string[] = []
 
   const push = (u: unknown) => {
-    if (typeof u === 'string' && u.trim()) candidates.push(u.trim())
+    if (typeof u !== 'string' || !u.trim()) return
+    // Keep internal spaces (RRB paths); encode via URL so hrefs don't 404.
+    try {
+      const parsed = new URL(u.trim())
+      candidates.push(parsed.href)
+    } catch {
+      candidates.push(u.trim())
+    }
   }
 
   push(row?.pdf_url)

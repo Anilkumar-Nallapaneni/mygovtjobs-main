@@ -54,6 +54,8 @@
     "data:scrub-vacancies:apply": "node scripts/run-python.mjs scripts/scrub-vacancy-counts.py --apply --export",
     "data:demote-publish-gate": "node scripts/run-python.mjs scripts/demote-publish-gate.py",
     "data:demote-publish-gate:apply": "node scripts/run-python.mjs scripts/demote-publish-gate.py --apply --export",
+    "data:promote-publish-gate": "node scripts/run-python.mjs scripts/promote-publish-gate.py",
+    "data:promote-publish-gate:apply": "node scripts/run-python.mjs scripts/promote-publish-gate.py --apply --export",
     "validate": "npm run type-check && npm run lint && npm run test",
     "sync:jobs": "npm run sync:production",
     "deploy:check": "npm run go-live:check",
@@ -160,5 +162,9 @@
   },
   "dependencies": {
     "@vercel/analytics": "^2.0.1"
+  },
+  "allowScripts": {
+    "esbuild@0.28.1": true,
+    "esbuild@0.27.7": true
   }
 }

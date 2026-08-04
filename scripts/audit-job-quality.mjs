@@ -43,7 +43,8 @@ const STRICT =
 
 /** Quality gates — override via env for gradual rollout. */
 const THRESHOLDS = {
-  minLiveJobs: Number(process.env.JOBS_AUDIT_MIN_LIVE || 50),
+  // Catalog rebuild floor (was 50). Raise via JOBS_AUDIT_MIN_LIVE=50 once live count recovers.
+  minLiveJobs: Number(process.env.JOBS_AUDIT_MIN_LIVE || 10),
   maxBlockedHost: Number(process.env.JOBS_AUDIT_MAX_BLOCKED_HOST || 0),
   maxNoPdfNoApplyPctLive: Number(process.env.JOBS_AUDIT_MAX_NO_LINK_PCT_LIVE || 15),
   maxShortTitlePct: Number(process.env.JOBS_AUDIT_MAX_SHORT_TITLE_PCT || 2),

@@ -54,23 +54,32 @@ function cleanText(value: unknown) {
   return String(value ?? "").replace(/\s+/g, " ").trim();
 }
 
+/** Trim only — never collapse internal whitespace (gov PDF paths often use double spaces). */
+function trimUrlCandidate(value: unknown): string {
+  return String(value ?? "").trim();
+}
+
 function extractUrlsFromText(value: unknown): string[] {
-  const text = cleanText(value);
-  if (!text) return [];
+  const text = String(value ?? "");
+  if (!text.trim()) return [];
   const found = new Set<string>();
-  for (const url of text.match(URL_IN_TEXT_RE) || []) {
-    found.add(url.replace(/[.,;]+$/, ""));
+  for (const match of text.matchAll(URL_IN_TEXT_RE)) {
+    const raw = String(match[0] || "").replace(/[.,);]+$/g, "");
+    const normalized = normalizeDetailUrl(raw);
+    if (normalized) found.add(normalized);
   }
   for (const match of text.matchAll(BARE_GOV_IN_URL_RE)) {
     const host = match[1];
-    const path = (match[2] || "").replace(/[.,;]+$/, "");
-    found.add(`https://${host}${path}`);
+    const path = (match[2] || "").replace(/[.,;]+$/g, "");
+    const normalized = normalizeDetailUrl(`https://${host}${path}`);
+    if (normalized) found.add(normalized);
   }
   return [...found];
 }
 
 export function normalizeDetailUrl(url: unknown): string | null {
-  const raw = cleanText(url);
+  // Preserve internal whitespace — official PDF paths (esp. RRB) often use double spaces.
+  const raw = trimUrlCandidate(url);
   if (!raw || raw === "#") return null;
   try {
     const parsed = new URL(raw.startsWith("http") ? raw : `https://${raw}`);

@@ -93,17 +93,19 @@
     },
     {
       "code": "ssc",
-      "module": "state_portal_html",
+      "module": "ssc_api",
       "portal_url": "https://ssc.gov.in/home/notice-board",
       "state": "all",
       "category": "ssc",
       "enabled": true,
-      "maxItems": 50
+      "maxItems": 50,
+      "contentType": "notice-boards",
+      "notes": "Angular SPA — scrape JSON /api/general-website/portal/notice-boards"
     },
     {
       "code": "ibps",
       "module": "state_portal_html",
-      "portal_url": "https://www.ibps.in/notification",
+      "portal_url": "https://www.ibps.in/",
       "state": "all",
       "category": "banking",
       "enabled": true,
@@ -256,11 +258,12 @@
     {
       "code": "rrb-ald",
       "module": "state_portal_html",
-      "portal_url": "https://www.rrbald.gov.in",
+      "portal_url": "https://rrbald.gov.in",
       "state": "all",
       "category": "railways",
       "enabled": true,
-      "maxItems": 50
+      "maxItems": 50,
+      "notes": "www.rrbald.gov.in 404s — use apex host"
     },
     {
       "code": "rrb-mumbai",
@@ -277,8 +280,9 @@
       "portal_url": "https://www.rrcb.gov.in",
       "state": "all",
       "category": "railways",
-      "enabled": true,
-      "maxItems": 50
+      "enabled": false,
+      "maxItems": 50,
+      "notes": "Host consistently times out; re-enable when reachable"
     },
     {
       "code": "ircon",
@@ -304,8 +308,9 @@
       "portal_url": "https://www.rrbbhopal.gov.in",
       "state": "all",
       "category": "railways",
-      "enabled": true,
-      "maxItems": 50
+      "enabled": false,
+      "maxItems": 50,
+      "notes": "Host consistently times out; re-enable when reachable"
     },
     {
       "code": "rrb-bbs",
@@ -436,11 +441,12 @@
     {
       "code": "army",
       "module": "state_portal_html",
-      "portal_url": "https://joinindianarmy.nic.in",
+      "portal_url": "https://joinindianarmy.nic.in/writereaddata/Portal/NotificationPDF/",
       "state": "all",
       "category": "defence",
       "enabled": true,
-      "maxItems": 50
+      "maxItems": 50,
+      "notes": "Homepage is auth wall; PDF notification folder is the scrapable surface"
     },
     {
       "code": "navy",
@@ -454,11 +460,12 @@
     {
       "code": "iaf",
       "module": "state_portal_html",
-      "portal_url": "https://careerindianairforce.cdac.in",
+      "portal_url": "https://indianairforce.nic.in/career.aspx",
       "state": "all",
       "category": "defence",
       "enabled": true,
-      "maxItems": 50
+      "maxItems": 50,
+      "notes": "career.aspx listing; CDAC Agniveer portal often CAPTCHA"
     },
     {
       "code": "afcat",

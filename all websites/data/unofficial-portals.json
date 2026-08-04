@@ -2,6 +2,17 @@
   "_info": "Indian government job aggregator / unofficial portals (reference only — not used for apply links in prod).",
   "portals": [
     {
+      "id": "freejobalert",
+      "name": "FreeJobAlert (coverage checklist only — never ingest / never display brand)",
+      "url": "https://www.freejobalert.com/",
+      "listingUrl": "https://www.freejobalert.com/government-jobs/",
+      "scope": "all-india",
+      "states": ["all"],
+      "coverageOnly": true,
+      "ingest": false,
+      "displayBrand": false
+    },
+    {
       "id": "sarkariresult",
       "name": "Sarkari Result",
       "url": "https://sarkariresult.com/",
