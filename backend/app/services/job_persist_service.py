@@ -10,6 +10,7 @@ from urllib.parse import urlparse
 
 logger = logging.getLogger(__name__)
 
+from sqlalchemy import case
 from sqlalchemy.dialects.postgresql import insert
 from sqlalchemy.ext.asyncio import AsyncSession
 
@@ -33,6 +34,9 @@ from app.utils.slim_detail import slim_detail_for_db
 from app.utils.live_jobs_export import slim_job_for_json_export, slim_job_for_list_json_export
 
 _slug_re = re.compile(r"[^a-z0-9]+")
+_PUBLIC_VERIFICATION_STATUSES = ("VERIFIED", "PARTIALLY_VERIFIED")
+_SNAPSHOT_DROP_GUARD_MIN_EXISTING = 100
+_SNAPSHOT_DROP_GUARD_RATIO = 0.5
 
 
 def slugify(
@@ -128,6 +132,17 @@ def _source_domain(url: str | None) -> str | None:
         return host or None
     except Exception:
         return None
+
+
+def _should_preserve_public_gate_on_conflict(*, status: str | None, published_to_site: bool | None) -> bool:
+    """Keep admin/publication decisions when a re-scrape would only send a row back to review."""
+    return status != "expired" and not bool(published_to_site)
+
+
+def _is_dramatic_snapshot_drop(existing_count: int | None, next_count: int) -> bool:
+    if existing_count is None or existing_count < _SNAPSHOT_DROP_GUARD_MIN_EXISTING:
+        return False
+    return next_count < int(existing_count * _SNAPSHOT_DROP_GUARD_RATIO)
 
 
 class JobPersistService:
@@ -300,6 +315,28 @@ class JobPersistService:
             "publication_confidence": validation.confidence,
         }
 
+        preserve_public_gate = None
+        if _should_preserve_public_gate_on_conflict(
+            status=row["status"],
+            published_to_site=row["published_to_site"],
+        ):
+            preserve_public_gate = (
+                (Job.status == "live")
+                & (Job.published_to_site.is_(True))
+                & (Job.verification_status.in_(_PUBLIC_VERIFICATION_STATUSES))
+            )
+
+        def preserve_gate_value(value, existing_column):
+            if preserve_public_gate is None:
+                return value
+            return case((preserve_public_gate, existing_column), else_=value)
+
+        last_date_update = (
+            preserve_gate_value(row["last_date"], Job.last_date)
+            if row["last_date"] is None
+            else row["last_date"]
+        )
+
         stmt = (
             insert(Job)
             .values(**row)
@@ -311,30 +348,34 @@ class JobPersistService:
                     "category": row["category"],
                     "state_codes": row["state_codes"],
                     "vacancies": row["vacancies"],
-                    "last_date": row["last_date"],
+                    "last_date": last_date_update,
                     "apply_url": row["apply_url"],
                     "published_at": row["published_at"],
                     "normalized_at": row["normalized_at"],
                     "detail": row["detail"],
-                    "status": row["status"],
+                    "status": preserve_gate_value(row["status"], Job.status),
                     "title_fingerprint": row["title_fingerprint"],
-                    "document_type": row["document_type"],
-                    "verification_status": row["verification_status"],
-                    "completeness_score": row["completeness_score"],
-                    "published_to_site": row["published_to_site"],
+                    "document_type": preserve_gate_value(row["document_type"], Job.document_type),
+                    "verification_status": preserve_gate_value(row["verification_status"], Job.verification_status),
+                    "completeness_score": preserve_gate_value(row["completeness_score"], Job.completeness_score),
+                    "published_to_site": preserve_gate_value(row["published_to_site"], Job.published_to_site),
                     "primary_pdf_url": row["primary_pdf_url"],
                     "source_evidence": row["source_evidence"],
                     "review_reasons": row["review_reasons"],
                     "source_url": row["source_url"],
                     "source_domain": row["source_domain"],
                     "confidence_score": row["confidence_score"],
-                    "publication_confidence": row["publication_confidence"],
+                    "publication_confidence": preserve_gate_value(
+                        row["publication_confidence"],
+                        Job.publication_confidence,
+                    ),
                 },
             )
             .returning(Job)
         )
         result = await session.execute(stmt)
-        if not published_to_site:
+        persisted_job = result.scalar_one_or_none()
+        if persisted_job is not None and not bool(getattr(persisted_job, "published_to_site", False)):
             from app.services.job_review_service import JobReviewService
 
             quarantine_errors = list(dict.fromkeys([*gate_errors, *validation.errors]))
@@ -353,7 +394,7 @@ class JobPersistService:
             )
         if commit:
             await session.commit()
-        return result.scalar_one_or_none()
+        return persisted_job
 
     async def export_live_jobs_json(self, session: AsyncSession) -> int:
         from app.services.job_service import JobService
@@ -410,6 +451,26 @@ class JobPersistService:
         }
         path = Path(get_settings().live_jobs_json_path)
         path.parent.mkdir(parents=True, exist_ok=True)
+        existing_count: int | None = None
+        if path.exists():
+            try:
+                existing_payload = json.loads(path.read_text(encoding="utf-8"))
+                existing_items = existing_payload.get("items")
+                if isinstance(existing_items, list):
+                    existing_count = len(existing_items)
+            except Exception:
+                existing_count = None
+        if (
+            _is_dramatic_snapshot_drop(existing_count, len(slim_items))
+            and os.environ.get("ALLOW_DRASTIC_JSON_EXPORT") != "1"
+        ):
+            logger.error(
+                "export_live_jobs_json: refusing to replace %s-row snapshot with %s rows. "
+                "Set ALLOW_DRASTIC_JSON_EXPORT=1 to override.",
+                existing_count,
+                len(slim_items),
+            )
+            return existing_count or 0
         path.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
 
         list_path = path.with_name("live-jobs-list.json")
