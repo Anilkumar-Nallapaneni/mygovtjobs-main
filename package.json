@@ -164,7 +164,10 @@
     "purge:catalog-jobs": "node scripts/purge-catalog-jobs.mjs",
     "sanitize:catalog-jobs": "node scripts/sanitize-catalog-jobs.mjs",
     "map:split-states": "node scripts/split-india-map-svg.mjs",
-    "db:test": "node scripts/run-python.mjs scripts/test-backend-db.py"
+    "db:test": "node scripts/run-python.mjs scripts/test-backend-db.py",
+    "pipeline:daily": "node scripts/run-python.mjs scripts/run_pipeline.py --mode daily",
+    "pipeline:weekly": "node scripts/run-python.mjs scripts/run_pipeline.py --mode weekly",
+    "pipeline:verify": "node scripts/run-python.mjs scripts/run_pipeline.py --mode verify"
   },
   "dependencies": {
     "@vercel/analytics": "^2.0.1"

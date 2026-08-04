@@ -79,3 +79,16 @@ export async function runIngest(adminKey: string): Promise<unknown> {
   if (!res.ok) throw new Error(await res.text())
   return res.json()
 }
+
+
+export type AdminOperations = {
+  generated_at: string
+  jobs: { total:number; live:number; published:number; needs_review:number; missing_apply:number; missing_pdf:number; broken_links:number; closing_today:number; closing_3_days:number; closing_7_days:number; latest_job_update?:string|null }
+  review_queue: { pending:number }
+  sources: { total:number; healthy:number; unhealthy:number; stale_24h:number; items:Array<{ source_code:string; health_status:string; last_checked_at:string|null; response_time_ms:number|null; accepted_count:number; rejected_count:number; last_error:string|null }> }
+  last_pipeline: null | { run_type:string; status:string; published_count:number; error_count:number; started_at:string; finished_at:string|null }
+}
+
+export async function fetchAdminOperations(adminKey: string): Promise<AdminOperations> {
+  return adminFetch<AdminOperations>('/api/admin/operations', adminKey)
+}

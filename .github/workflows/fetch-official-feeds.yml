@@ -20,8 +20,9 @@ concurrency:
 
 jobs:
   fetch:
-    # PRODUCTION FREEZE: set ALLOW_AUTO_INGEST=true to re-enable scheduled RSS commits.
-    if: ${{ github.event_name == 'workflow_dispatch' || vars.ALLOW_AUTO_INGEST == 'true' }}
+    # RSS freshness is independent of the daily writer.
+    # Disable with repository variable ALLOW_RSS_REFRESH=false if needed.
+    if: ${{ github.event_name == 'workflow_dispatch' || vars.ALLOW_RSS_REFRESH != 'false' }}
     runs-on: ubuntu-latest
     # Manual runs scrape 53 admit/result portals; scheduled runs are RSS-only.
     timeout-minutes: ${{ github.event_name == 'workflow_dispatch' && 180 || 60 }}

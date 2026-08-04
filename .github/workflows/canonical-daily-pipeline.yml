@@ -1,0 +1,128 @@
+name: Canonical daily pipeline
+
+# Sole authoritative daily writer for live job snapshots + DB sync.
+# Requires repository variable ALLOW_CANONICAL_PIPELINE=true.
+# Do not re-enable supabase-auto-ingest.yml schedule while this is active.
+
+on:
+  schedule:
+    # Daily 02:30 UTC (~8:00 AM IST)
+    - cron: "30 2 * * *"
+  workflow_dispatch:
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
+permissions:
+  contents: write
+
+concurrency:
+  group: live-jobs-publication
+  cancel-in-progress: false
+
+jobs:
+  daily:
+    if: ${{ vars.ALLOW_CANONICAL_PIPELINE == 'true' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    env:
+      APP_ENV: production
+      AUTO_PUBLISH_VERIFIED: "1"
+      DATABASE_URL: ${{ secrets.DATABASE_URL }}
+      SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL }}
+      SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+      RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+      TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+      ALERT_SITE_URL: ${{ secrets.ALERT_SITE_URL }}
+      ALERT_FROM_EMAIL: ${{ secrets.ALERT_FROM_EMAIL }}
+      DAILY_SYNC_ENFORCE_ONCE: "1"
+      ALLOW_FALLBACK_JSON_EXPORT: "0"
+      SYNC_TRIGGER_TYPE: canonical_pipeline
+      SYNC_FORCE: "1"
+      SYNC_CONCURRENCY: "8"
+      SYNC_INGEST_BUDGET_SECONDS: "14400"
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: true
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+          cache: npm
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: |
+          npm ci
+          python -m venv backend/.venv
+          backend/.venv/bin/pip install -r backend/requirements.txt
+
+      - name: Configure DATABASE_URL from secrets
+        env:
+          SECRET_DATABASE_URL: ${{ secrets.DATABASE_URL }}
+          SUPABASE_PROJECT_REF: ${{ secrets.SUPABASE_PROJECT_REF }}
+          SUPABASE_DB_PASSWORD: ${{ secrets.SUPABASE_DB_PASSWORD }}
+          SUPABASE_DB_REGION: ${{ secrets.SUPABASE_DB_REGION }}
+          SUPABASE_POOLER_HOST: ${{ secrets.SUPABASE_POOLER_HOST }}
+        run: |
+          if [ -n "$SUPABASE_DB_PASSWORD" ]; then
+            node scripts/build-database-url-for-actions.mjs
+          elif [ -n "$SECRET_DATABASE_URL" ]; then
+            echo "DATABASE_URL=$SECRET_DATABASE_URL" >> "$GITHUB_ENV"
+          else
+            echo "::error::Set DATABASE_URL or pooler secrets"
+            exit 1
+          fi
+
+      - name: Validate secrets
+        env:
+          DATABASE_URL: ${{ env.DATABASE_URL }}
+          VITE_SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL }}
+          VITE_SUPABASE_ANON_KEY: ${{ secrets.VITE_SUPABASE_ANON_KEY }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+        run: |
+          if [ -z "$DATABASE_URL" ]; then
+            echo "::error::DATABASE_URL missing"
+            exit 1
+          fi
+          node scripts/check-github-actions-secrets.mjs
+
+      - name: Run canonical daily pipeline
+        env:
+          DATABASE_URL: ${{ env.DATABASE_URL }}
+          SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+        run: node scripts/run-python.mjs scripts/run_pipeline.py --mode daily
+
+      - name: Upload audit
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: canonical-daily-${{ github.run_id }}
+          path: docs/audits/pipeline-daily-latest.json
+          if-no-files-found: warn
+
+      - name: Commit verified snapshots
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add frontend/public/data/live-jobs*.json frontend/public/data/daily-sync-state.json frontend/public/sitemap.xml frontend/public/sitemaps docs/audits/pipeline-daily-latest.json || true
+          git diff --staged --quiet && exit 0
+          git commit -m "chore: canonical daily job sync [skip ci]"
+          git pull --rebase origin "${GITHUB_REF_NAME}"
+          git push origin "HEAD:${GITHUB_REF_NAME}"
+
+  notify-failure:
+    needs: daily
+    if: failure()
+    uses: ./.github/workflows/notify-on-failure.yml
+    secrets: inherit
+    permissions:
+      actions: read
+      contents: read
+

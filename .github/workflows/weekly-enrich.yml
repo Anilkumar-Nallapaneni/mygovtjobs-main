@@ -18,8 +18,9 @@ concurrency:
 
 jobs:
   enrich:
-    # PRODUCTION FREEZE: set ALLOW_AUTO_INGEST=true to re-enable weekly enrich.
-    if: ${{ github.event_name == 'workflow_dispatch' || vars.ALLOW_AUTO_INGEST == 'true' }}
+    # Weekly PDF/detail enrichment — keep scheduled; not a competing daily writer.
+    # Disable with ALLOW_WEEKLY_ENRICH=false if needed.
+    if: ${{ github.event_name == 'workflow_dispatch' || vars.ALLOW_WEEKLY_ENRICH != 'false' }}
     runs-on: ubuntu-latest
     timeout-minutes: 240
     env:

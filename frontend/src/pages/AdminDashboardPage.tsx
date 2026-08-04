@@ -1,15 +1,18 @@
 import { FormEvent, useCallback, useEffect, useMemo, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import Footer from '@/components/layout/Footer'
+import OperationsDashboard from '@/components/admin/OperationsDashboard'
 import type { FooterLinkTarget } from '@/hooks/browseStateTypes'
 import {
   fetchAdminDashboard,
   fetchAdminModeration,
+  fetchAdminOperations,
   getStoredAdminKey,
   runIngest,
   setStoredAdminKey,
   type AdminDashboard,
   type AdminModerationQueue,
+  type AdminOperations,
 } from '@/lib/adminApi'
 
 type AdminDashboardPageProps = {
@@ -35,6 +38,7 @@ export default function AdminDashboardPage({ onFooterLink }: AdminDashboardPageP
   const [error, setError] = useState<string | null>(null)
   const [data, setData] = useState<AdminDashboard | null>(null)
   const [moderation, setModeration] = useState<AdminModerationQueue | null>(null)
+  const [operations, setOperations] = useState<AdminOperations | null>(null)
   const [ingestBusy, setIngestBusy] = useState(false)
   const [ingestMsg, setIngestMsg] = useState<string | null>(null)
 
@@ -44,12 +48,14 @@ export default function AdminDashboardPage({ onFooterLink }: AdminDashboardPageP
     setLoading(true)
     setError(null)
     try {
-      const [dash, mod] = await Promise.all([
+      const [dash, mod, ops] = await Promise.all([
         fetchAdminDashboard(key),
         fetchAdminModeration(key),
+        fetchAdminOperations(key),
       ])
       setData(dash)
       setModeration(mod)
+      setOperations(ops)
     } catch (e) {
       setError(e instanceof Error ? e.message : String(e))
     } finally {
@@ -141,6 +147,8 @@ export default function AdminDashboardPage({ onFooterLink }: AdminDashboardPageP
 
       {error && <p className="admin-dashboard__error" role="alert">{error}</p>}
       {ingestMsg && <p className="account-page__status" role="status">{ingestMsg}</p>}
+
+      {operations && <OperationsDashboard data={operations} />}
 
       {data?.jobs && (
         <section className="admin-dashboard__section">

@@ -1,7 +1,8 @@
-name: Scheduled API ingest
+name: Scheduled API ingest (legacy)
 
-# Deprecated — production uses supabase-auto-ingest.yml → npm run sync:production.
-# Manual only when triggering hosted FastAPI /api/admin/ingest/run-all.
+# DEPRECATED — production uses Canonical daily pipeline → npm run pipeline:daily.
+# Manual emergency only: POST hosted FastAPI /api/admin/ingest/run-all.
+# Hard-disabled until secrets MYGOVTJOBS_API_URL + ADMIN_API_KEY are confirmed useful.
 
 on:
   workflow_dispatch:
@@ -12,6 +13,7 @@ concurrency:
 
 jobs:
   ingest:
+    if: false
     runs-on: ubuntu-latest
     steps:
       - name: Trigger backend ingest

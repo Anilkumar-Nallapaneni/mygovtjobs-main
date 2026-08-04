@@ -650,3 +650,10 @@ async def admin_run_ingest(force: bool = Query(False)):
     synced = await IngestService().sync_sources_registry()
     results = await IngestService().run_all_enabled()
     return {"sources_synced": synced, "results": results}
+
+@router.get("/operations")
+async def admin_operations_dashboard():
+    """Single operational view used by the admin control room."""
+    from app.services.operations_dashboard_service import OperationsDashboardService
+    async with SessionLocal() as session:
+        return await OperationsDashboardService.build(session)
