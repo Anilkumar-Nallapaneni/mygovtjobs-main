@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-08-04T18:16:18.303Z",
-  "count": 26,
+  "generatedAt": "2026-08-04T21:52:16.228Z",
+  "count": 27,
   "items": [
     {
       "id": "1bb2282873cb0efd",
@@ -23,6 +23,23 @@
       "id": "3fc1696b18f30fa3",
       "title": "Common mistakes committed by the candidates in Conventional Papers",
       "link": "https://www.upsc.gov.in/examination/common-mistakes-committed-candidates-conventional-papers",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "upsc-e-admit-hub",
+      "sourceName": "UPSC — e-Admit cards",
+      "dept": "Union Public Service Commission",
+      "state": "All India",
+      "category": "upsc",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "47952f717dcedda6",
+      "title": "Representation on Question Papers",
+      "link": "https://www.upsc.gov.in/examinations/representation-question-papers",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],

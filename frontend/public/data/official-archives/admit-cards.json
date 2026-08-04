@@ -1,35 +1,7 @@
 {
-  "generatedAt": "2026-08-04T18:16:18.303Z",
+  "generatedAt": "2026-08-04T21:52:16.228Z",
   "count": 120,
   "items": [
-    {
-      "id": "5742e0d2059a1237",
-      "title": "DEPARTMENTAL EXAMINATIONS - MAY 2026 (Department Hallticket)",
-      "link": "https://www.tnpsc.gov.in/english/Department_Hallticket.aspx",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-tn",
-      "sourceName": "Tnpsc",
-      "dept": "Tnpsc",
-      "state": "All India",
-      "category": "state",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "64a264295326a283",
-      "title": "प्रधान आरक्षक (कम्‍प्‍यूटर) एवं सहायक उप निरीक्षक (कम्‍प्‍यूटर) भर्ती वर्ष 2026 के व्दितीय चरण की शारीरिक दक्षता एवं दस्‍तावेज परीक्षण के प्रवेश पत्र जारी किये जाने की सूचना के संबंध में",
-      "link": "https://mppolice.gov.in/en/paradhaana-arakasaka-kamapayauutara-evan-sahaayaka-upa-nairaikasaka-kamapayauutara-bharatai-varasa",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "police-mp",
-      "sourceName": "Mppolice",
-      "dept": "Mppolice",
-      "state": "All India",
-      "category": "police",
-      "fetchMethod": "live-jobs-supplement"
-    },
     {
       "id": "dab406e23a6537a1",
       "title": "E-Admit Cards for various Recruitment Posts",
@@ -80,6 +52,34 @@
         "all"
       ],
       "fetchMethod": "html-listing"
+    },
+    {
+      "id": "5742e0d2059a1237",
+      "title": "DEPARTMENTAL EXAMINATIONS - MAY 2026 (Department Hallticket)",
+      "link": "https://www.tnpsc.gov.in/english/Department_Hallticket.aspx",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-tn",
+      "sourceName": "Tnpsc",
+      "dept": "Tnpsc",
+      "state": "All India",
+      "category": "state",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "64a264295326a283",
+      "title": "प्रधान आरक्षक (कम्‍प्‍यूटर) एवं सहायक उप निरीक्षक (कम्‍प्‍यूटर) भर्ती वर्ष 2026 के व्दितीय चरण की शारीरिक दक्षता एवं दस्‍तावेज परीक्षण के प्रवेश पत्र जारी किये जाने की सूचना के संबंध में",
+      "link": "https://mppolice.gov.in/en/paradhaana-arakasaka-kamapayauutara-evan-sahaayaka-upa-nairaikasaka-kamapayauutara-bharatai-varasa",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "police-mp",
+      "sourceName": "Mppolice",
+      "dept": "Mppolice",
+      "state": "All India",
+      "category": "police",
+      "fetchMethod": "live-jobs-supplement"
     },
     {
       "id": "206ead0ac32afa2e",
