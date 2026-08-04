@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-04T14:27:19.365Z",
+  "generatedAt": "2026-08-04T15:30:57.213Z",
   "count": 254,
   "items": [
     {
@@ -56,23 +56,6 @@
       "fetchMethod": "html"
     },
     {
-      "id": "91558011355dca9d",
-      "title": "Recent Examinations/Interview",
-      "link": "https://jpsc.gov.in/Examination-Links.php",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-jh",
-      "sourceName": "Jharkhand PSC (JPSC)",
-      "dept": "Jharkhand PSC (JPSC)",
-      "state": "Jharkhand",
-      "category": "state",
-      "stateIds": [
-        "jh"
-      ],
-      "fetchMethod": "html"
-    },
-    {
       "id": "fa359b9114331fc3",
       "title": "Personality Test / Viva-Voce",
       "link": "https://hppsc.hp.gov.in/CommonControls/ViewContinuousLinkPage?qs=mhlKjiXMMIveW0iAADPEiC57R27%2BGya8ay4kbm0dJkcnlKHGzV4U5%2BQlrRl1TG3OQWWkf93oLxROjrnFX90ov6IhjjgH2qZXMgsT6KqPbJM%3D",
@@ -86,6 +69,23 @@
       "category": "state",
       "stateIds": [
         "hp"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "91558011355dca9d",
+      "title": "Recent Examinations/Interview",
+      "link": "https://jpsc.gov.in/Examination-Links.php",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-jh",
+      "sourceName": "Jharkhand PSC (JPSC)",
+      "dept": "Jharkhand PSC (JPSC)",
+      "state": "Jharkhand",
+      "category": "state",
+      "stateIds": [
+        "jh"
       ],
       "fetchMethod": "html"
     },

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-04T14:27:19.365Z",
+  "generatedAt": "2026-08-04T15:30:57.213Z",
   "sourceReports": [
     {
       "id": "pib-press-reg3",
@@ -157,7 +157,7 @@
       "feedUrl": null,
       "listingUrl": "https://psc.uk.gov.in/Recruitment/ViewAll",
       "ok": false,
-      "error": "https://psc.uk.gov.in/Recruitment/ViewAll: timeout; https://psc.uk.gov.in/candidate-corner/admitcards: HTTP 500",
+      "error": "https://psc.uk.gov.in/Recruitment/ViewAll: HTTP 404; https://psc.uk.gov.in/candidate-corner/admitcards: HTTP 500",
       "itemCount": 0,
       "fetchMethod": null
     },
@@ -436,10 +436,10 @@
       "id": "drdo",
       "name": "Defence Research & Development Organisation",
       "url": "https://www.drdo.gov.in/",
-      "ok": true,
+      "ok": false,
       "error": "HTTP 404",
-      "itemCount": 60,
-      "method": "html",
+      "itemCount": 0,
+      "method": null,
       "triedUrls": [
         "https://www.drdo.gov.in/",
         "https://www.drdo.gov.in/drdo/en/career",
@@ -691,14 +691,6 @@
       ]
     },
     {
-      "id": "rrb-guwahati",
-      "name": "Railway Recruitment Board (RRB) — Guwahati",
-      "ok": false,
-      "itemCount": 0,
-      "method": null,
-      "error": "site budget timeout"
-    },
-    {
       "id": "rrb-patna",
       "name": "Railway Recruitment Board (RRB) — Patna",
       "url": "https://www.rrbpatna.gov.in/",
@@ -722,6 +714,14 @@
         "https://www.rrbpatna.gov.in/advertisement",
         "https://www.rrbpatna.gov.in/archive"
       ]
+    },
+    {
+      "id": "rrb-guwahati",
+      "name": "Railway Recruitment Board (RRB) — Guwahati",
+      "ok": false,
+      "itemCount": 0,
+      "method": null,
+      "error": "site budget timeout"
     },
     {
       "id": "rrb-ranchi",
@@ -940,56 +940,6 @@
       ]
     },
     {
-      "id": "psc-cg",
-      "name": "Chhattisgarh PSC (CGPSC)",
-      "url": "https://psc.cg.gov.in/",
-      "ok": true,
-      "error": "HTTP 404",
-      "itemCount": 23,
-      "method": "html",
-      "triedUrls": [
-        "https://psc.cg.gov.in/",
-        "https://psc.cg.gov.in/recruitment",
-        "https://psc.cg.gov.in/recruitments",
-        "https://psc.cg.gov.in/career",
-        "https://psc.cg.gov.in/careers",
-        "https://psc.cg.gov.in/notification",
-        "https://psc.cg.gov.in/notifications",
-        "https://psc.cg.gov.in/notices",
-        "https://psc.cg.gov.in/notice",
-        "https://psc.cg.gov.in/vacancy",
-        "https://psc.cg.gov.in/vacancies",
-        "https://psc.cg.gov.in/whats-new",
-        "https://psc.cg.gov.in/advertisement",
-        "https://psc.cg.gov.in/archive"
-      ]
-    },
-    {
-      "id": "psc-jk",
-      "name": "Jammu & Kashmir PSC (JKPSC)",
-      "url": "https://jkpsc.nic.in/View_Notifications.aspx",
-      "ok": false,
-      "error": "getaddrinfo EAI_AGAIN jkpsc.nic.in",
-      "itemCount": 0,
-      "method": null,
-      "triedUrls": [
-        "https://jkpsc.nic.in/View_Notifications.aspx",
-        "https://jkpsc.nic.in/",
-        "https://jkpsc.nic.in/Notifications.html",
-        "https://jkpsc.nic.in/recruitment",
-        "https://jkpsc.nic.in/recruitments",
-        "https://jkpsc.nic.in/career",
-        "https://jkpsc.nic.in/careers",
-        "https://jkpsc.nic.in/notification",
-        "https://jkpsc.nic.in/notifications",
-        "https://jkpsc.nic.in/notices",
-        "https://jkpsc.nic.in/notice",
-        "https://jkpsc.nic.in/vacancy",
-        "https://jkpsc.nic.in/vacancies",
-        "https://jkpsc.nic.in/whats-new"
-      ]
-    },
-    {
       "id": "psc-ga",
       "name": "Goa PSC",
       "url": "https://gpsc.goa.gov.in/",
@@ -1015,53 +965,36 @@
       ]
     },
     {
-      "id": "psc-jh",
-      "name": "Jharkhand PSC (JPSC)",
-      "url": "https://jpsc.gov.in/",
-      "ok": true,
-      "error": "HTTP 404",
-      "itemCount": 60,
-      "method": "html",
-      "triedUrls": [
-        "https://jpsc.gov.in/",
-        "https://jpsc.gov.in/recruitment",
-        "https://jpsc.gov.in/recruitments",
-        "https://jpsc.gov.in/career",
-        "https://jpsc.gov.in/careers",
-        "https://jpsc.gov.in/notification",
-        "https://jpsc.gov.in/notifications",
-        "https://jpsc.gov.in/notices",
-        "https://jpsc.gov.in/notice",
-        "https://jpsc.gov.in/vacancy",
-        "https://jpsc.gov.in/vacancies",
-        "https://jpsc.gov.in/whats-new",
-        "https://jpsc.gov.in/advertisement",
-        "https://jpsc.gov.in/archive"
-      ]
+      "id": "psc-cg",
+      "name": "Chhattisgarh PSC (CGPSC)",
+      "ok": false,
+      "itemCount": 0,
+      "method": null,
+      "error": "site budget timeout"
     },
     {
-      "id": "psc-ka",
-      "name": "Karnataka PSC (KPSC)",
-      "url": "https://kpsc.kar.nic.in/selectionpostal17/index.html",
+      "id": "psc-jk",
+      "name": "Jammu & Kashmir PSC (JKPSC)",
+      "url": "https://jkpsc.nic.in/View_Notifications.aspx",
       "ok": false,
-      "error": "getaddrinfo EAI_AGAIN kpsc.kar.nic.in",
+      "error": "getaddrinfo EAI_AGAIN jkpsc.nic.in",
       "itemCount": 0,
       "method": null,
       "triedUrls": [
-        "https://kpsc.kar.nic.in/selectionpostal17/index.html",
-        "https://kpsc.kar.nic.in/",
-        "https://kpsc.kar.nic.in/notifications.html",
-        "https://kpsc.kar.nic.in/recruitment",
-        "https://kpsc.kar.nic.in/recruitments",
-        "https://kpsc.kar.nic.in/career",
-        "https://kpsc.kar.nic.in/careers",
-        "https://kpsc.kar.nic.in/notification",
-        "https://kpsc.kar.nic.in/notifications",
-        "https://kpsc.kar.nic.in/notices",
-        "https://kpsc.kar.nic.in/notice",
-        "https://kpsc.kar.nic.in/vacancy",
-        "https://kpsc.kar.nic.in/vacancies",
-        "https://kpsc.kar.nic.in/whats-new"
+        "https://jkpsc.nic.in/View_Notifications.aspx",
+        "https://jkpsc.nic.in/",
+        "https://jkpsc.nic.in/Notifications.html",
+        "https://jkpsc.nic.in/recruitment",
+        "https://jkpsc.nic.in/recruitments",
+        "https://jkpsc.nic.in/career",
+        "https://jkpsc.nic.in/careers",
+        "https://jkpsc.nic.in/notification",
+        "https://jkpsc.nic.in/notifications",
+        "https://jkpsc.nic.in/notices",
+        "https://jkpsc.nic.in/notice",
+        "https://jkpsc.nic.in/vacancy",
+        "https://jkpsc.nic.in/vacancies",
+        "https://jkpsc.nic.in/whats-new"
       ]
     },
     {
@@ -1090,28 +1023,28 @@
       ]
     },
     {
-      "id": "psc-mh",
-      "name": "Maharashtra PSC (MPSC)",
-      "url": "https://mpsc.gov.in/english/notices",
-      "ok": false,
-      "error": "no matching links",
-      "itemCount": 0,
-      "method": null,
+      "id": "psc-jh",
+      "name": "Jharkhand PSC (JPSC)",
+      "url": "https://jpsc.gov.in/",
+      "ok": true,
+      "error": "HTTP 404",
+      "itemCount": 60,
+      "method": "html",
       "triedUrls": [
-        "https://mpsc.gov.in/english/notices",
-        "https://mpsc.gov.in/",
-        "https://mpsc.gov.in/1041/Notifications",
-        "https://mpsc.gov.in/recruitment",
-        "https://mpsc.gov.in/recruitments",
-        "https://mpsc.gov.in/career",
-        "https://mpsc.gov.in/careers",
-        "https://mpsc.gov.in/notification",
-        "https://mpsc.gov.in/notifications",
-        "https://mpsc.gov.in/notices",
-        "https://mpsc.gov.in/notice",
-        "https://mpsc.gov.in/vacancy",
-        "https://mpsc.gov.in/vacancies",
-        "https://mpsc.gov.in/whats-new"
+        "https://jpsc.gov.in/",
+        "https://jpsc.gov.in/recruitment",
+        "https://jpsc.gov.in/recruitments",
+        "https://jpsc.gov.in/career",
+        "https://jpsc.gov.in/careers",
+        "https://jpsc.gov.in/notification",
+        "https://jpsc.gov.in/notifications",
+        "https://jpsc.gov.in/notices",
+        "https://jpsc.gov.in/notice",
+        "https://jpsc.gov.in/vacancy",
+        "https://jpsc.gov.in/vacancies",
+        "https://jpsc.gov.in/whats-new",
+        "https://jpsc.gov.in/advertisement",
+        "https://jpsc.gov.in/archive"
       ]
     },
     {
@@ -1140,6 +1073,31 @@
       ]
     },
     {
+      "id": "psc-mh",
+      "name": "Maharashtra PSC (MPSC)",
+      "url": "https://mpsc.gov.in/english/notices",
+      "ok": false,
+      "error": "no matching links",
+      "itemCount": 0,
+      "method": null,
+      "triedUrls": [
+        "https://mpsc.gov.in/english/notices",
+        "https://mpsc.gov.in/",
+        "https://mpsc.gov.in/1041/Notifications",
+        "https://mpsc.gov.in/recruitment",
+        "https://mpsc.gov.in/recruitments",
+        "https://mpsc.gov.in/career",
+        "https://mpsc.gov.in/careers",
+        "https://mpsc.gov.in/notification",
+        "https://mpsc.gov.in/notifications",
+        "https://mpsc.gov.in/notices",
+        "https://mpsc.gov.in/notice",
+        "https://mpsc.gov.in/vacancy",
+        "https://mpsc.gov.in/vacancies",
+        "https://mpsc.gov.in/whats-new"
+      ]
+    },
+    {
       "id": "psc-mp",
       "name": "Madhya Pradesh PSC (MPPSC)",
       "url": "https://mppsc.mp.gov.in/news.aspx",
@@ -1162,6 +1120,31 @@
         "https://mppsc.mp.gov.in/vacancies",
         "https://mppsc.mp.gov.in/whats-new",
         "https://mppsc.mp.gov.in/advertisement"
+      ]
+    },
+    {
+      "id": "psc-ka",
+      "name": "Karnataka PSC (KPSC)",
+      "url": "https://kpsc.kar.nic.in/selectionpostal17/index.html",
+      "ok": false,
+      "error": "getaddrinfo EAI_AGAIN kpsc.kar.nic.in",
+      "itemCount": 0,
+      "method": null,
+      "triedUrls": [
+        "https://kpsc.kar.nic.in/selectionpostal17/index.html",
+        "https://kpsc.kar.nic.in/",
+        "https://kpsc.kar.nic.in/notifications.html",
+        "https://kpsc.kar.nic.in/recruitment",
+        "https://kpsc.kar.nic.in/recruitments",
+        "https://kpsc.kar.nic.in/career",
+        "https://kpsc.kar.nic.in/careers",
+        "https://kpsc.kar.nic.in/notification",
+        "https://kpsc.kar.nic.in/notifications",
+        "https://kpsc.kar.nic.in/notices",
+        "https://kpsc.kar.nic.in/notice",
+        "https://kpsc.kar.nic.in/vacancy",
+        "https://kpsc.kar.nic.in/vacancies",
+        "https://kpsc.kar.nic.in/whats-new"
       ]
     },
     {
@@ -1253,6 +1236,31 @@
       ]
     },
     {
+      "id": "psc-tn",
+      "name": "Tamil Nadu PSC (TNPSC)",
+      "url": "https://www.tnpsc.gov.in/",
+      "ok": true,
+      "error": "HTTP 404",
+      "itemCount": 60,
+      "method": "html",
+      "triedUrls": [
+        "https://www.tnpsc.gov.in/",
+        "https://www.tnpsc.gov.in/English/latest-notification.html",
+        "https://www.tnpsc.gov.in/notification.aspx",
+        "https://www.tnpsc.gov.in/recruitment",
+        "https://www.tnpsc.gov.in/recruitments",
+        "https://www.tnpsc.gov.in/career",
+        "https://www.tnpsc.gov.in/careers",
+        "https://www.tnpsc.gov.in/notification",
+        "https://www.tnpsc.gov.in/notifications",
+        "https://www.tnpsc.gov.in/notices",
+        "https://www.tnpsc.gov.in/notice",
+        "https://www.tnpsc.gov.in/vacancy",
+        "https://www.tnpsc.gov.in/vacancies",
+        "https://www.tnpsc.gov.in/whats-new"
+      ]
+    },
+    {
       "id": "psc-pb",
       "name": "Punjab PSC (PPSC)",
       "url": "https://ppsc.gov.in/Advertisements.aspx",
@@ -1303,39 +1311,6 @@
       ]
     },
     {
-      "id": "psc-tn",
-      "name": "Tamil Nadu PSC (TNPSC)",
-      "url": "https://www.tnpsc.gov.in/",
-      "ok": true,
-      "error": "HTTP 404",
-      "itemCount": 60,
-      "method": "html",
-      "triedUrls": [
-        "https://www.tnpsc.gov.in/",
-        "https://www.tnpsc.gov.in/English/latest-notification.html",
-        "https://www.tnpsc.gov.in/notification.aspx",
-        "https://www.tnpsc.gov.in/recruitment",
-        "https://www.tnpsc.gov.in/recruitments",
-        "https://www.tnpsc.gov.in/career",
-        "https://www.tnpsc.gov.in/careers",
-        "https://www.tnpsc.gov.in/notification",
-        "https://www.tnpsc.gov.in/notifications",
-        "https://www.tnpsc.gov.in/notices",
-        "https://www.tnpsc.gov.in/notice",
-        "https://www.tnpsc.gov.in/vacancy",
-        "https://www.tnpsc.gov.in/vacancies",
-        "https://www.tnpsc.gov.in/whats-new"
-      ]
-    },
-    {
-      "id": "psc-sk",
-      "name": "Sikkim PSC (SPSC)",
-      "ok": false,
-      "itemCount": 0,
-      "method": null,
-      "error": "site budget timeout"
-    },
-    {
       "id": "psc-up",
       "name": "Uttar Pradesh PSC (UPPSC)",
       "url": "https://uppsc.up.nic.in/View_All_Active_Notifications.aspx",
@@ -1359,6 +1334,14 @@
         "https://uppsc.up.nic.in/vacancies",
         "https://uppsc.up.nic.in/whats-new"
       ]
+    },
+    {
+      "id": "psc-sk",
+      "name": "Sikkim PSC (SPSC)",
+      "ok": false,
+      "itemCount": 0,
+      "method": null,
+      "error": "site budget timeout"
     },
     {
       "id": "psc-tr",
@@ -1411,22 +1394,6 @@
       ]
     },
     {
-      "id": "psc-uk",
-      "name": "Uttarakhand PSC (UKPSC)",
-      "ok": false,
-      "itemCount": 0,
-      "method": null,
-      "error": "site budget timeout"
-    },
-    {
-      "id": "psc-wb",
-      "name": "West Bengal PSC (WBPSC)",
-      "ok": false,
-      "itemCount": 0,
-      "method": null,
-      "error": "site budget timeout"
-    },
-    {
       "id": "psc-mn",
       "name": "Manipur PSC",
       "url": "https://mpscmanipur.gov.in/",
@@ -1475,6 +1442,22 @@
         "https://megpsc.gov.in/whats-new",
         "https://megpsc.gov.in/advertisement"
       ]
+    },
+    {
+      "id": "psc-uk",
+      "name": "Uttarakhand PSC (UKPSC)",
+      "ok": false,
+      "itemCount": 0,
+      "method": null,
+      "error": "site budget timeout"
+    },
+    {
+      "id": "psc-wb",
+      "name": "West Bengal PSC (WBPSC)",
+      "ok": false,
+      "itemCount": 0,
+      "method": null,
+      "error": "site budget timeout"
     }
   ],
   "items": [
@@ -10264,1026 +10247,6 @@
       "dept": "Indian Space Research Organisation (ISRO)",
       "state": "All India",
       "category": "psu",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "8a5e6e3e8166cabb",
-      "title": "डी वाई एस एल- क्यू टी द्वारा इंजीनियरिंग यू जी/पी जी विद्यार्थियो के लिए पेड इंटर्नशिप हेतु आमंत्रण",
-      "link": "https://xn--m1b0a2bb8esed.xn--11b7cb3a6a.xn--h2brj9c/drdo/hi/offerings/vacancies/dai-vaai-esa-ela-kayauu-tai-davaaraa-injainaiyarainga-yauu-jaipai-jai",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "drdo",
-      "sourceName": "Defence Research & Development Organisation",
-      "dept": "Defence Research & Development Organisation",
-      "state": "All India",
-      "category": "defence",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "2212b18ae1ff96f5",
-      "title": "डी जी आर ई, चंडीगढ़ द्वारा जूनियर रिसर्च फेलो (जे आर एफ) के पद के लिए वॉक-इन इंटरव्यू के वास्ते योग्य उम्मीदवारों को आमंत्रण",
-      "link": "https://xn--m1b0a2bb8esed.xn--11b7cb3a6a.xn--h2brj9c/drdo/hi/offerings/vacancies/dai-jai-ara-i-candaigadha-davaaraa-jauunaiyara-raisaraca-phaelao-jae-ara-epha-0",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "drdo",
-      "sourceName": "Defence Research & Development Organisation",
-      "dept": "Defence Research & Development Organisation",
-      "state": "All India",
-      "category": "defence",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "7dda36cd304da252",
-      "title": "एस एस पी एल, दिल्ली द्वारा अप्रेंटिस के लिए आवेदन आमंत्रित",
-      "link": "https://xn--m1b0a2bb8esed.xn--11b7cb3a6a.xn--h2brj9c/drdo/hi/offerings/vacancies/esa-esa-pai-ela-dailalai-davaaraa-aparaentaisa-kae-laie-avaedana-amantaraita",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "drdo",
-      "sourceName": "Defence Research & Development Organisation",
-      "dept": "Defence Research & Development Organisation",
-      "state": "All India",
-      "category": "defence",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "36c3a20fac04baed",
-      "title": "एस एस पी एल, दिल्ली द्वारा पेड इंटर्नशिप (6 महीने) के लिए आवेदन आमंत्रित",
-      "link": "https://xn--m1b0a2bb8esed.xn--11b7cb3a6a.xn--h2brj9c/drdo/hi/offerings/vacancies/esa-esa-pai-ela-dailalai-davaaraa-paeda-intaranasaipa-6-mahainae-kae-laie",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "drdo",
-      "sourceName": "Defence Research & Development Organisation",
-      "dept": "Defence Research & Development Organisation",
-      "state": "All India",
-      "category": "defence",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "90fbd664ccdc51ed",
-      "title": "डी वाई एस एल- ए आई, बेंगलुरु द्वारा जूनियर रिसर्च फ़ेलोशिप (जे आर एफ) पदो के लिए आवेदन आमंत्रित",
-      "link": "https://xn--m1b0a2bb8esed.xn--11b7cb3a6a.xn--h2brj9c/drdo/hi/offerings/vacancies/dai-vaai-esa-ela-e-ai-baengalaurau-davaaraa-jauunaiyara-raisaraca-0",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "drdo",
-      "sourceName": "Defence Research & Development Organisation",
-      "dept": "Defence Research & Development Organisation",
-      "state": "All India",
-      "category": "defence",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "a89f75ed83586260",
-      "title": "एस एस पी एल, दिल्ली जूनियर रिसर्च फेलो (जे आर एफ) और रिसर्च एसोसिएट (आर ए) के पदों के लिए वॉक-इन इंटरव्यू हेतु योग्य उम्मीदवारों को आमंत्रण",
-      "link": "https://xn--m1b0a2bb8esed.xn--11b7cb3a6a.xn--h2brj9c/drdo/hi/offerings/vacancies/esa-esa-pai-ela-dailalai-jauunaiyara-raisaraca-phaelao-jae-ara-epha-aura",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "drdo",
-      "sourceName": "Defence Research & Development Organisation",
-      "dept": "Defence Research & Development Organisation",
-      "state": "All India",
-      "category": "defence",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "d8cce98e9861150f",
-      "title": "ए आर डी ई, पुणे द्वारा जूनियर रिसर्च फेलोशिप के लिए आवेदन आमंत्रित",
-      "link": "https://xn--m1b0a2bb8esed.xn--11b7cb3a6a.xn--h2brj9c/drdo/hi/offerings/vacancies/e-ara-dai-i-paunae-davaaraa-jauunaiyara-raisaraca-phaelaosaipa-kae-laie",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "drdo",
-      "sourceName": "Defence Research & Development Organisation",
-      "dept": "Defence Research & Development Organisation",
-      "state": "All India",
-      "category": "defence",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "d58157cdcff3408c",
-      "title": "एस ए जी, दिल्ली द्वारा जूनियर रिसर्च फेलो (जे आर एफ) के चयन के लिए योग्य उम्मीदवार वॉक-इन इंटरव्यू के लिए आमंत्रित",
-      "link": "https://xn--m1b0a2bb8esed.xn--11b7cb3a6a.xn--h2brj9c/drdo/hi/offerings/vacancies/esa-e-jai-dailalai-davaaraa-jauunaiyara-raisaraca-phaelao-jae-ara-epha-kae",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "drdo",
-      "sourceName": "Defence Research & Development Organisation",
-      "dept": "Defence Research & Development Organisation",
-      "state": "All India",
-      "category": "defence",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "a36fc582893a0da2",
-      "title": "सीफीस, दिल्ली द्वारा जूनियर रिसर्च फेलो (जे आर एफ) के पद के लिए वॉक-इन-इंटरव्यू के लिए उम्मीदवारों को आमंत्रण",
-      "link": "https://xn--m1b0a2bb8esed.xn--11b7cb3a6a.xn--h2brj9c/drdo/hi/offerings/vacancies/saiphaisa-dailalai-davaaraa-jauunaiyara-raisaraca-phaelao-jae-ara-epha-kae-pada",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "drdo",
-      "sourceName": "Defence Research & Development Organisation",
-      "dept": "Defence Research & Development Organisation",
-      "state": "All India",
-      "category": "defence",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "014531cceaa49bb6",
-      "title": "सेप्टेम-11 : एस टी ए -बी और तकनीशियन-ए के पद के लिए विज्ञापन",
-      "link": "https://xn--m1b0a2bb8esed.xn--11b7cb3a6a.xn--h2brj9c/drdo/hi/offerings/vacancies/saepataema-11-esa-tai-e-bai-aura-takanaisaiyana-e-kae-pada-kae-laie",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "drdo",
-      "sourceName": "Defence Research & Development Organisation",
-      "dept": "Defence Research & Development Organisation",
-      "state": "All India",
-      "category": "defence",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "b71c71813e957d07",
-      "title": "रिक्तियां",
-      "link": "https://xn--m1b0a2bb8esed.xn--11b7cb3a6a.xn--h2brj9c/drdo/hi/offerings/vacancies",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "drdo",
-      "sourceName": "Defence Research & Development Organisation",
-      "dept": "Defence Research & Development Organisation",
-      "state": "All India",
-      "category": "defence",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "38da74a34b4855d4",
-      "title": "सभी देखें",
-      "link": "http://xn--m1b0a2bb8esed.xn--11b7cb3a6a.xn--h2brj9c/drdo/hi/offerings/vacancies",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "drdo",
-      "sourceName": "Defence Research & Development Organisation",
-      "dept": "Defence Research & Development Organisation",
-      "state": "All India",
-      "category": "defence",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "fc5e7b1f826a952a",
-      "title": "सभी देखें",
-      "link": "http://xn--m1b0a2bb8esed.xn--11b7cb3a6a.xn--h2brj9c/drdo/hi/message-board",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "drdo",
-      "sourceName": "Defence Research & Development Organisation",
-      "dept": "Defence Research & Development Organisation",
-      "state": "All India",
-      "category": "defence",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "5ac5d5c5d8c2e531",
-      "title": "संग्रह सूची देखें",
-      "link": "http://xn--m1b0a2bb8esed.xn--11b7cb3a6a.xn--h2brj9c/drdo/hi/events-archives",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "drdo",
-      "sourceName": "Defence Research & Development Organisation",
-      "dept": "Defence Research & Development Organisation",
-      "state": "All India",
-      "category": "defence",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "74416c540d47670c",
-      "title": "State Emblem of India The Lion Capital of Ashoka with three lions visible, representing power, courage, and confidence. भारत सरकार रक्षा अनुसंधान एवं विकास संगठन",
-      "link": "https://xn--m1b0a2bb8esed.xn--11b7cb3a6a.xn--h2brj9c/drdo/hi",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "drdo",
-      "sourceName": "Defence Research & Development Organisation",
-      "dept": "Defence Research & Development Organisation",
-      "state": "All India",
-      "category": "defence",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "627632e98f88ad03",
-      "title": "(अनुस्मारक-०1) सेप्टेम विज्ञापन के तहत रिफंड के लिए बैंक खाता विवरण अपडेट करें",
-      "link": "https://xn--m1b0a2bb8esed.xn--11b7cb3a6a.xn--h2brj9c/drdo/hi/announcement/anausamaaraka-01-saepataema-vaijanaapana-kae-tahata-raiphanda-kae-laie-baainka-khaataa",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "drdo",
-      "sourceName": "Defence Research & Development Organisation",
-      "dept": "Defence Research & Development Organisation",
-      "state": "All India",
-      "category": "defence",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "3387c8657cdc865b",
-      "title": "डीआरडीओ के साथ काम करने वाले उद्योग भागीदारों के लिए \"SAMAR\" मूल्यांकन मॉडल 01 मई 2027 से अनिवार्य",
-      "link": "https://xn--m1b0a2bb8esed.xn--11b7cb3a6a.xn--h2brj9c/drdo/hi/announcement/daiaradaio-kae-saatha-kaama-karanae-vaalae-udayaoga-bhaagaidaaraon-kae-laie-samar",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "drdo",
-      "sourceName": "Defence Research & Development Organisation",
-      "dept": "Defence Research & Development Organisation",
-      "state": "All India",
-      "category": "defence",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "02b5078e26738e7b",
-      "title": "वर्ष 2026 में रक्षा प्रौद्योगिकी एवं परीक्षण केन्द्र (डी टी टी सी), लखनऊ में कौशल विकास कार्यक्रम के तहत प्रस्तावित प्रशिक्षण अनुसूची",
-      "link": "https://xn--m1b0a2bb8esed.xn--11b7cb3a6a.xn--h2brj9c/drdo/hi/announcement/varasa-2026-maen-rakasaa-paraaudayaogaikai-evan-paraikasana-kaenadara-dai-tai-tai-sai",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "drdo",
-      "sourceName": "Defence Research & Development Organisation",
-      "dept": "Defence Research & Development Organisation",
-      "state": "All India",
-      "category": "defence",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "3f474b02cd19c39c",
-      "title": "2डी निम्न स्तरीय हल्का भार रडार (एल एल एल आर): भरणी एमके I",
-      "link": "https://xn--m1b0a2bb8esed.xn--11b7cb3a6a.xn--h2brj9c/drdo/hi/offerings/products/2dai-naimana-sataraiya-halakaa-bhaara-radaara-ela-ela-ela-ara-bharanai-emakae-i",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "drdo",
-      "sourceName": "Defence Research & Development Organisation",
-      "dept": "Defence Research & Development Organisation",
-      "state": "All India",
-      "category": "defence",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "52a2bb99e631ceeb",
-      "title": "3डी निम्न स्तरीय हल्के वजन वाला रडार अश्लेषा एमके I",
-      "link": "https://xn--m1b0a2bb8esed.xn--11b7cb3a6a.xn--h2brj9c/drdo/hi/offerings/products/3d-low-level-light-weight-radar-aslesha-mk-i",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "drdo",
-      "sourceName": "Defence Research & Development Organisation",
-      "dept": "Defence Research & Development Organisation",
-      "state": "All India",
-      "category": "defence",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "c0c52bc72788423c",
-      "title": "कम्प्यूटरीकृत पायलट चयन प्रणाली (सी पी एस एस)",
-      "link": "https://xn--m1b0a2bb8esed.xn--11b7cb3a6a.xn--h2brj9c/drdo/hi/offerings/products/kamapayauutaraikarta-paayalata-cayana-paranaalai-sai-pai-esa-esa",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "drdo",
-      "sourceName": "Defence Research & Development Organisation",
-      "dept": "Defence Research & Development Organisation",
-      "state": "All India",
-      "category": "defence",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "82d89b60452c632c",
-      "title": "टॉरपीडो एडवांस्ड लाइट (टी ए एल)",
-      "link": "https://xn--m1b0a2bb8esed.xn--11b7cb3a6a.xn--h2brj9c/drdo/hi/offerings/products/taorapaidao-edavaansada-laaita-tai-e-ela",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "drdo",
-      "sourceName": "Defence Research & Development Organisation",
-      "dept": "Defence Research & Development Organisation",
-      "state": "All India",
-      "category": "defence",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "b6a61bfd2f84ce52",
-      "title": "भारतीय नौसेना के लिए 3डी निगरानी रडार - रेवती",
-      "link": "https://xn--m1b0a2bb8esed.xn--11b7cb3a6a.xn--h2brj9c/drdo/hi/offerings/products/bhaarataiya-naausaenaa-kae-laie-3dai-naigaraanai-radaara-raevatai",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "drdo",
-      "sourceName": "Defence Research & Development Organisation",
-      "dept": "Defence Research & Development Organisation",
-      "state": "All India",
-      "category": "defence",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "fe21cb578f824150",
-      "title": "टी डी एफ स्कीम के तहत कई ड्रोन्स की 'क्लोज़ फ़ॉर्मेशन फ़्लाइंग' विकसित करने के प्रोजेक्ट के लिए आर एफ पी",
-      "link": "https://xn--m1b0a2bb8esed.xn--11b7cb3a6a.xn--h2brj9c/drdo/hi/announcement/tai-dai-epha-sakaima-kae-tahata-kai-daraonasa-kai-kalaoja-phaoramaesana-phalaainga",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "drdo",
-      "sourceName": "Defence Research & Development Organisation",
-      "dept": "Defence Research & Development Organisation",
-      "state": "All India",
-      "category": "defence",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "078524afc9ffb0c4",
-      "title": "टी डी एफ स्कीम के तहत जी एम पी सुविधा में Ca-DTPA और Zn-DTPA फ़ॉर्मूलेशन के विकास प्रोजेक्ट के लिए आर एफ पी",
-      "link": "https://xn--m1b0a2bb8esed.xn--11b7cb3a6a.xn--h2brj9c/drdo/hi/announcement/tai-dai-epha-sakaima-kae-tahata-jai-ema-pai-sauvaidhaa-maen-ca-dtpa-aura-zn-dtpa",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "drdo",
-      "sourceName": "Defence Research & Development Organisation",
-      "dept": "Defence Research & Development Organisation",
-      "state": "All India",
-      "category": "defence",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "b0f4fc6bc493cc03",
-      "title": "डीआरडीओ इन न्यूज़ डीआरडीओ समाचार - 16 से 31 जुलाई 2026",
-      "link": "http://xn--m1b0a2bb8esed.xn--11b7cb3a6a.xn--h2brj9c/drdo/hi/documents/drdo-in-news/daiaradaio-samaacaara-16-sae-31-jaulaai-2026",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "drdo",
-      "sourceName": "Defence Research & Development Organisation",
-      "dept": "Defence Research & Development Organisation",
-      "state": "All India",
-      "category": "defence",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "ec2b0413a861577a",
-      "title": "पेशकशें डीआरडीओ न्यूज़लेटर अगस्त 2026",
-      "link": "http://xn--m1b0a2bb8esed.xn--11b7cb3a6a.xn--h2brj9c/drdo/hi/documents/publications/drdo-newsletter/drdo-newsletter-august-2026",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "drdo",
-      "sourceName": "Defence Research & Development Organisation",
-      "dept": "Defence Research & Development Organisation",
-      "state": "All India",
-      "category": "defence",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "c592121477352987",
-      "title": "डीआरडीओ इन न्यूज़ डीआरडीओ समाचार - 08 से 15 जुलाई 2026",
-      "link": "http://xn--m1b0a2bb8esed.xn--11b7cb3a6a.xn--h2brj9c/drdo/hi/documents/drdo-in-news/daiaradaio-samaacaara-08-sae-15-jaulaai-2026",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "drdo",
-      "sourceName": "Defence Research & Development Organisation",
-      "dept": "Defence Research & Development Organisation",
-      "state": "All India",
-      "category": "defence",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "3da90db0dcedcfe2",
-      "title": "डीआरडीओ इन न्यूज़ डीआरडीओ समाचार - 01 से 07 जुलाई 2026",
-      "link": "http://xn--m1b0a2bb8esed.xn--11b7cb3a6a.xn--h2brj9c/drdo/hi/documents/drdo-in-news/daiaradaio-samaacaara-01-sae-07-jaulaai-2026",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "drdo",
-      "sourceName": "Defence Research & Development Organisation",
-      "dept": "Defence Research & Development Organisation",
-      "state": "All India",
-      "category": "defence",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "0d8a7020fccd956f",
-      "title": "अभिलेखागार",
-      "link": "https://xn--m1b0a2bb8esed.xn--11b7cb3a6a.xn--h2brj9c/drdo/hi/archive",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "drdo",
-      "sourceName": "Defence Research & Development Organisation",
-      "dept": "Defence Research & Development Organisation",
-      "state": "All India",
-      "category": "defence",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "b5cc540e40df61e1",
-      "title": "डीआरडीओ के बारे में",
-      "link": "https://xn--m1b0a2bb8esed.xn--11b7cb3a6a.xn--h2brj9c/drdo/hi/organisation/about-drdo",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "drdo",
-      "sourceName": "Defence Research & Development Organisation",
-      "dept": "Defence Research & Development Organisation",
-      "state": "All India",
-      "category": "defence",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "fd51d965cb0b78f7",
-      "title": "प्रौद्योगिकी समूह",
-      "link": "https://xn--m1b0a2bb8esed.xn--11b7cb3a6a.xn--h2brj9c/drdo/hi/organisation/technology-cluster",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "drdo",
-      "sourceName": "Defence Research & Development Organisation",
-      "dept": "Defence Research & Development Organisation",
-      "state": "All India",
-      "category": "defence",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "a246f78633ab68ab",
-      "title": "योजनाएं और सेवाएँ",
-      "link": "https://xn--m1b0a2bb8esed.xn--11b7cb3a6a.xn--h2brj9c/drdo/hi/offerings/schemes-and-services",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "drdo",
-      "sourceName": "Defence Research & Development Organisation",
-      "dept": "Defence Research & Development Organisation",
-      "state": "All India",
-      "category": "defence",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "bc64393001f0e78f",
-      "title": "प्रतियोगिता और पुरस्कार",
-      "link": "https://xn--m1b0a2bb8esed.xn--11b7cb3a6a.xn--h2brj9c/drdo/hi/offerings/competitions-and-awards",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "drdo",
-      "sourceName": "Defence Research & Development Organisation",
-      "dept": "Defence Research & Development Organisation",
-      "state": "All India",
-      "category": "defence",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "2b35b5b0c13bdae5",
-      "title": "हिमस्खलन वार्निंग बुलेटिन",
-      "link": "https://xn--m1b0a2bb8esed.xn--11b7cb3a6a.xn--h2brj9c/drdo/hi/documents/avalanche-warning-bulletin",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "drdo",
-      "sourceName": "Defence Research & Development Organisation",
-      "dept": "Defence Research & Development Organisation",
-      "state": "All India",
-      "category": "defence",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "ae5e47f65396f9a3",
-      "title": "फॉर्म और मैनुअल",
-      "link": "https://xn--m1b0a2bb8esed.xn--11b7cb3a6a.xn--h2brj9c/drdo/hi/documents/form-and-manual",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "drdo",
-      "sourceName": "Defence Research & Development Organisation",
-      "dept": "Defence Research & Development Organisation",
-      "state": "All India",
-      "category": "defence",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "42d5a89dd3dd8a62",
-      "title": "प्रेस विज्ञप्ति",
-      "link": "https://xn--m1b0a2bb8esed.xn--11b7cb3a6a.xn--h2brj9c/drdo/hi/documents/press-release",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "drdo",
-      "sourceName": "Defence Research & Development Organisation",
-      "dept": "Defence Research & Development Organisation",
-      "state": "All India",
-      "category": "defence",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "190a114f56f93458",
-      "title": "अधिनियम और नीतियाँ",
-      "link": "https://xn--m1b0a2bb8esed.xn--11b7cb3a6a.xn--h2brj9c/drdo/hi/documents/acts-and-policies",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "drdo",
-      "sourceName": "Defence Research & Development Organisation",
-      "dept": "Defence Research & Development Organisation",
-      "state": "All India",
-      "category": "defence",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "d375d3289e8c413e",
-      "title": "पूछे जाने वाले प्रश्न",
-      "link": "https://xn--m1b0a2bb8esed.xn--11b7cb3a6a.xn--h2brj9c/drdo/hi/connect/faqs",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "drdo",
-      "sourceName": "Defence Research & Development Organisation",
-      "dept": "Defence Research & Development Organisation",
-      "state": "All India",
-      "category": "defence",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "b742f3f727846428",
-      "title": "संगठन के बारे में",
-      "link": "https://xn--m1b0a2bb8esed.xn--11b7cb3a6a.xn--h2brj9c/drdo/hi/hi/organisation/about-drdo",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "drdo",
-      "sourceName": "Defence Research & Development Organisation",
-      "dept": "Defence Research & Development Organisation",
-      "state": "All India",
-      "category": "defence",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "34ee548e55d59a94",
-      "title": "प्रौद्योगिकी समूह",
-      "link": "https://xn--m1b0a2bb8esed.xn--11b7cb3a6a.xn--h2brj9c/drdo/hi/hi/organisation/technology-cluster",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "drdo",
-      "sourceName": "Defence Research & Development Organisation",
-      "dept": "Defence Research & Development Organisation",
-      "state": "All India",
-      "category": "defence",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "fc0fd229793589c8",
-      "title": "निर्यात के उत्पाद",
-      "link": "https://xn--m1b0a2bb8esed.xn--11b7cb3a6a.xn--h2brj9c/drdo/hi/quicktabs/nojs/key_offerings/5",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "drdo",
-      "sourceName": "Defence Research & Development Organisation",
-      "dept": "Defence Research & Development Organisation",
-      "state": "All India",
-      "category": "defence",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "8d01fe70b78f11e3",
-      "title": "निर्यात के लिए उत्पाद",
-      "link": "https://xn--m1b0a2bb8esed.xn--11b7cb3a6a.xn--h2brj9c/drdo/hi/offerings/schemes-and-services/nairayaata-kae-laie-utapaada",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "drdo",
-      "sourceName": "Defence Research & Development Organisation",
-      "dept": "Defence Research & Development Organisation",
-      "state": "All India",
-      "category": "defence",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "fae45349e9e84c32",
-      "title": "उद्योग संपर्क समूह",
-      "link": "https://xn--m1b0a2bb8esed.xn--11b7cb3a6a.xn--h2brj9c/drdo/hi/offerings/schemes-and-services/udayaoga-sanparaka-samauuha",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "drdo",
-      "sourceName": "Defence Research & Development Organisation",
-      "dept": "Defence Research & Development Organisation",
-      "state": "All India",
-      "category": "defence",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "47bc3ea34165984a",
-      "title": "परीक्षण सुविधाएं",
-      "link": "https://xn--m1b0a2bb8esed.xn--11b7cb3a6a.xn--h2brj9c/drdo/hi/offerings/schemes-and-services/test-facilities",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "drdo",
-      "sourceName": "Defence Research & Development Organisation",
-      "dept": "Defence Research & Development Organisation",
-      "state": "All India",
-      "category": "defence",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "235de80a1525fa18",
-      "title": "स्टार्टअप सपोर्ट",
-      "link": "https://xn--m1b0a2bb8esed.xn--11b7cb3a6a.xn--h2brj9c/drdo/hi/offerings/schemes-and-services/sataarataapa-sapaorata",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "drdo",
-      "sourceName": "Defence Research & Development Organisation",
-      "dept": "Defence Research & Development Organisation",
-      "state": "All India",
-      "category": "defence",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "ab4cd956f350c73b",
-      "title": "प्रमाणीकरण सेवाएँ",
-      "link": "https://xn--m1b0a2bb8esed.xn--11b7cb3a6a.xn--h2brj9c/drdo/hi/offerings/schemes-and-services/paramaanaikarana-saevaaen",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "drdo",
-      "sourceName": "Defence Research & Development Organisation",
-      "dept": "Defence Research & Development Organisation",
-      "state": "All India",
-      "category": "defence",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "81e5af8b9cc781e4",
-      "title": "स्वायत्त हवाई वाहनों पर 20-21 अगस्त 2026 को ए डी ई-डीआरडीओ और डिजाइन डिवीजन-ए ई एस आई द्वारा संयुक्त रूप से आयोजित अंतर्राष्ट्रीय सम्मेलन (आई सी ए ए वी-2026)",
-      "link": "https://www.ddaesi.in/icaav-2026",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "drdo",
-      "sourceName": "Defence Research & Development Organisation",
-      "dept": "Defence Research & Development Organisation",
-      "state": "All India",
-      "category": "defence",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "8906a1bc2f1d2ab1",
-      "title": "उद्योग भागीदार पंजीकरण (विक्रेता/आपूर्तिकर्ता)",
-      "link": "https://drdo.res.in/industry/iprm",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "drdo",
-      "sourceName": "Defence Research & Development Organisation",
-      "dept": "Defence Research & Development Organisation",
-      "state": "All India",
-      "category": "defence",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "245d60a162c4b429",
-      "title": "डीआरडीओ न्यूज़लेटर अगस्त 2026",
-      "link": "https://xn--m1b0a2bb8esed.xn--11b7cb3a6a.xn--h2brj9c/drdo/hi/documents/publications/drdo-newsletter/drdo-newsletter-august-2026",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "drdo",
-      "sourceName": "Defence Research & Development Organisation",
-      "dept": "Defence Research & Development Organisation",
-      "state": "All India",
-      "category": "defence",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "b9d9ecfca43838e5",
-      "title": "बाह्य अनुसंधान निदेशालय और बौद्धिक संपदा अधिकार (ईआर और आईपीआर), डीआरडीओ के माध्यम से अकादमिक अनुसंधान",
-      "link": "https://academyresearch.drdo.gov.in/",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "drdo",
-      "sourceName": "Defence Research & Development Organisation",
-      "dept": "Defence Research & Development Organisation",
-      "state": "All India",
-      "category": "defence",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "f28ca93941cb98b1",
-      "title": "उन्नत विनिर्माण मूल्यांकन और रेटिंग प्रणाली (एस ए एम ए आर) डी क्यू आर एवं एस",
-      "link": "https://samar.gov.in/",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "drdo",
-      "sourceName": "Defence Research & Development Organisation",
-      "dept": "Defence Research & Development Organisation",
-      "state": "All India",
-      "category": "defence",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "5cb24e744b6d55a0",
-      "title": "सबोर्डिनेट लेजिस्लेशन",
-      "link": "https://xn--m1b0a2bb8esed.xn--11b7cb3a6a.xn--h2brj9c/drdo/en/documents/subordinate-legislation",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "drdo",
-      "sourceName": "Defence Research & Development Organisation",
-      "dept": "Defence Research & Development Organisation",
-      "state": "All India",
-      "category": "defence",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "a8f44fc4d49814bb",
-      "title": "सूचना का अधिकार (आरटीआई)",
-      "link": "https://xn--m1b0a2bb8esed.xn--11b7cb3a6a.xn--h2brj9c/drdo/hi/connect/rticell",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "drdo",
-      "sourceName": "Defence Research & Development Organisation",
-      "dept": "Defence Research & Development Organisation",
-      "state": "All India",
-      "category": "defence",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "8f40848118a92335",
-      "title": "भर्ती एवं मूल्यांकन केन्द्र (रएसी )",
-      "link": "https://rac.gov.in/index.php?lang=en&id=0",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "drdo",
-      "sourceName": "Defence Research & Development Organisation",
-      "dept": "Defence Research & Development Organisation",
-      "state": "All India",
-      "category": "defence",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "b4e1189617216adb",
-      "title": "वेबसाइट नीतियाँ",
-      "link": "https://xn--m1b0a2bb8esed.xn--11b7cb3a6a.xn--h2brj9c/drdo/hi/website-policy",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "drdo",
-      "sourceName": "Defence Research & Development Organisation",
-      "dept": "Defence Research & Development Organisation",
-      "state": "All India",
-      "category": "defence",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "657e12c4205837a4",
-      "title": "अन्य उपयोगी लिंक",
-      "link": "https://xn--m1b0a2bb8esed.xn--11b7cb3a6a.xn--h2brj9c/drdo/hi/useful-links",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "drdo",
-      "sourceName": "Defence Research & Development Organisation",
-      "dept": "Defence Research & Development Organisation",
-      "state": "All India",
-      "category": "defence",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "cb00159fe6dfb470",
-      "title": "बाहरी साइट जो नए टैब में खुलती है",
-      "link": "https://www.youtube.com/channel/UCV9WiohwtfgSwHAar039sNw",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "drdo",
-      "sourceName": "Defence Research & Development Organisation",
-      "dept": "Defence Research & Development Organisation",
-      "state": "All India",
-      "category": "defence",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "7b685a81acd01f0f",
-      "title": "बाहरी साइट जो नए टैब में खुलती है",
-      "link": "https://www.mygov.in/",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "drdo",
-      "sourceName": "Defence Research & Development Organisation",
-      "dept": "Defence Research & Development Organisation",
-      "state": "All India",
-      "category": "defence",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "557c6107eedcacf1",
-      "title": "बाहरी साइट जो नए टैब में खुलती है",
-      "link": "https://www.india.gov.in/",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "drdo",
-      "sourceName": "Defence Research & Development Organisation",
-      "dept": "Defence Research & Development Organisation",
-      "state": "All India",
-      "category": "defence",
       "stateIds": [
         "all"
       ],
@@ -20628,397 +19591,6 @@
       "fetchMethod": "html"
     },
     {
-      "id": "b87188b1717ac890",
-      "title": "छत्तीसगढ़ लोक सेवा आयोगCHHATTISGARH PUBLIC SERVICE COMMISSION",
-      "link": "https://psc.cg.gov.in/Home_Welcome.php",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-cg",
-      "sourceName": "Chhattisgarh PSC (CGPSC)",
-      "dept": "Chhattisgarh PSC (CGPSC)",
-      "state": "Chhattisgarh",
-      "category": "state",
-      "stateIds": [
-        "cg"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "5e6f6853edb19f9c",
-      "title": "Union Public Service Commission",
-      "link": "https://upsc.gov.in/index.php",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-cg",
-      "sourceName": "Chhattisgarh PSC (CGPSC)",
-      "dept": "Chhattisgarh PSC (CGPSC)",
-      "state": "Chhattisgarh",
-      "category": "state",
-      "stateIds": [
-        "cg"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "0d9b0093a1e7661c",
-      "title": "University Grants Commission, External Link that opens in a new window",
-      "link": "https://www.ugc.gov.in/",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-cg",
-      "sourceName": "Chhattisgarh PSC (CGPSC)",
-      "dept": "Chhattisgarh PSC (CGPSC)",
-      "state": "Chhattisgarh",
-      "category": "state",
-      "stateIds": [
-        "cg"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "4427f4d55783ab92",
-      "title": "Election Commission of India, External Link that opens in a new window",
-      "link": "https://eci.gov.in/",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-cg",
-      "sourceName": "Chhattisgarh PSC (CGPSC)",
-      "dept": "Chhattisgarh PSC (CGPSC)",
-      "state": "Chhattisgarh",
-      "category": "state",
-      "stateIds": [
-        "cg"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "495d66cd1465a371",
-      "title": "CGPSC Rules of Procedure & Viniyam.",
-      "link": "https://psc.cg.gov.in/ROP.html",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-cg",
-      "sourceName": "Chhattisgarh PSC (CGPSC)",
-      "dept": "Chhattisgarh PSC (CGPSC)",
-      "state": "Chhattisgarh",
-      "category": "state",
-      "stateIds": [
-        "cg"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "61aeafc5e1762a17",
-      "title": "External Link that opens in a new window",
-      "link": "https://x.com/Official_CGPSC",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-cg",
-      "sourceName": "Chhattisgarh PSC (CGPSC)",
-      "dept": "Chhattisgarh PSC (CGPSC)",
-      "state": "Chhattisgarh",
-      "category": "state",
-      "stateIds": [
-        "cg"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "4671ca02d929289d",
-      "title": "External Link that opens in a new window",
-      "link": "http://www.youtube.com/",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-cg",
-      "sourceName": "Chhattisgarh PSC (CGPSC)",
-      "dept": "Chhattisgarh PSC (CGPSC)",
-      "state": "Chhattisgarh",
-      "category": "state",
-      "stateIds": [
-        "cg"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "ad92c85591b4bee2",
-      "title": "Those Who Served",
-      "link": "https://psc.cg.gov.in/Reminiscences.html",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-cg",
-      "sourceName": "Chhattisgarh PSC (CGPSC)",
-      "dept": "Chhattisgarh PSC (CGPSC)",
-      "state": "Chhattisgarh",
-      "category": "state",
-      "stateIds": [
-        "cg"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "4002d1d36e4d52f0",
-      "title": "Vision and Mission",
-      "link": "https://psc.cg.gov.in/Vision_and_Mission.html",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-cg",
-      "sourceName": "Chhattisgarh PSC (CGPSC)",
-      "dept": "Chhattisgarh PSC (CGPSC)",
-      "state": "Chhattisgarh",
-      "category": "state",
-      "stateIds": [
-        "cg"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "964c90ec68c7a068",
-      "title": "CGPSC Important Judgements",
-      "link": "https://psc.cg.gov.in/judgements.html",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-cg",
-      "sourceName": "Chhattisgarh PSC (CGPSC)",
-      "dept": "Chhattisgarh PSC (CGPSC)",
-      "state": "Chhattisgarh",
-      "category": "state",
-      "stateIds": [
-        "cg"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "d5b25969a32b51fa",
-      "title": "Chhattisgarh egazette, External Link that opens in a new window",
-      "link": "https://egazette.cg.nic.in/",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-cg",
-      "sourceName": "Chhattisgarh PSC (CGPSC)",
-      "dept": "Chhattisgarh PSC (CGPSC)",
-      "state": "Chhattisgarh",
-      "category": "state",
-      "stateIds": [
-        "cg"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "84a0ba3e62f48f80",
-      "title": "Chhattisgarh State Portal, External Link that opens in a new window",
-      "link": "https://cgstate.gov.in/en",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-cg",
-      "sourceName": "Chhattisgarh PSC (CGPSC)",
-      "dept": "Chhattisgarh PSC (CGPSC)",
-      "state": "Chhattisgarh",
-      "category": "state",
-      "stateIds": [
-        "cg"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "58b79510c15af88a",
-      "title": "National Library of India, External Link that opens in a new window",
-      "link": "https://nationallibrary.gov.in/",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-cg",
-      "sourceName": "Chhattisgarh PSC (CGPSC)",
-      "dept": "Chhattisgarh PSC (CGPSC)",
-      "state": "Chhattisgarh",
-      "category": "state",
-      "stateIds": [
-        "cg"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "d661ad377aee1cee",
-      "title": "National Council of Educational Research and Training , External Link that opens in a new window",
-      "link": "https://ncert.nic.in/textbook.php/",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-cg",
-      "sourceName": "Chhattisgarh PSC (CGPSC)",
-      "dept": "Chhattisgarh PSC (CGPSC)",
-      "state": "Chhattisgarh",
-      "category": "state",
-      "stateIds": [
-        "cg"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "b7e7ebbef4309217",
-      "title": "Indira Gandhi National Open University's Study Material, External Link that opens in a new window",
-      "link": "https://www.ignouhelp.in/ignou-study-material/",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-cg",
-      "sourceName": "Chhattisgarh PSC (CGPSC)",
-      "dept": "Chhattisgarh PSC (CGPSC)",
-      "state": "Chhattisgarh",
-      "category": "state",
-      "stateIds": [
-        "cg"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "a5a0fcd07cc9f462",
-      "title": "Swayam Online Study Material, External Link that opens in a new window",
-      "link": "https://swayam.gov.in/",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-cg",
-      "sourceName": "Chhattisgarh PSC (CGPSC)",
-      "dept": "Chhattisgarh PSC (CGPSC)",
-      "state": "Chhattisgarh",
-      "category": "state",
-      "stateIds": [
-        "cg"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "dbf38f94e044db54",
-      "title": "All India Council of Technical Education, External Link that opens in a new window",
-      "link": "https://www.aicte.gov.in/",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-cg",
-      "sourceName": "Chhattisgarh PSC (CGPSC)",
-      "dept": "Chhattisgarh PSC (CGPSC)",
-      "state": "Chhattisgarh",
-      "category": "state",
-      "stateIds": [
-        "cg"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "9996b907489fbc67",
-      "title": "DigiLocker, External Link that opens in a new window",
-      "link": "https://www.digilocker.gov.in/",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-cg",
-      "sourceName": "Chhattisgarh PSC (CGPSC)",
-      "dept": "Chhattisgarh PSC (CGPSC)",
-      "state": "Chhattisgarh",
-      "category": "state",
-      "stateIds": [
-        "cg"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "7aca623e73115088",
-      "title": "Aadhar, External Link that opens in a new window",
-      "link": "https://uidai.gov.in/",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-cg",
-      "sourceName": "Chhattisgarh PSC (CGPSC)",
-      "dept": "Chhattisgarh PSC (CGPSC)",
-      "state": "Chhattisgarh",
-      "category": "state",
-      "stateIds": [
-        "cg"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "00236afff2f0dde5",
-      "title": "eGazette of India, External Link that opens in a new window",
-      "link": "https://egazette.gov.in/",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-cg",
-      "sourceName": "Chhattisgarh PSC (CGPSC)",
-      "dept": "Chhattisgarh PSC (CGPSC)",
-      "state": "Chhattisgarh",
-      "category": "state",
-      "stateIds": [
-        "cg"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "5ec7126210188383",
-      "title": "Digital India, External Link that opens in a new window",
-      "link": "https://digitalindia.gov.in/",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-cg",
-      "sourceName": "Chhattisgarh PSC (CGPSC)",
-      "dept": "Chhattisgarh PSC (CGPSC)",
-      "state": "Chhattisgarh",
-      "category": "state",
-      "stateIds": [
-        "cg"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "41efa7ca903416e5",
-      "title": "Make In India, External Link that opens in a new window",
-      "link": "http://www.makeinindia.com/",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-cg",
-      "sourceName": "Chhattisgarh PSC (CGPSC)",
-      "dept": "Chhattisgarh PSC (CGPSC)",
-      "state": "Chhattisgarh",
-      "category": "state",
-      "stateIds": [
-        "cg"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "bab0e07f7ec5cab4",
-      "title": "Our Previous Website",
-      "link": "https://psc.cg.gov.in/index.htm",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-cg",
-      "sourceName": "Chhattisgarh PSC (CGPSC)",
-      "dept": "Chhattisgarh PSC (CGPSC)",
-      "state": "Chhattisgarh",
-      "category": "state",
-      "stateIds": [
-        "cg"
-      ],
-      "fetchMethod": "html"
-    },
-    {
       "id": "13ab8d9f223f3c77",
       "title": "Scheme of Examinations for all Posts other than Junior Scale Officer/ Dy.S.P.",
       "link": "https://gpsc.goa.gov.in/wp-content/uploads/2025/07/NEWSCHEMEEXAMINATION_2025.pdf",
@@ -21428,6 +20000,261 @@
       "category": "state",
       "stateIds": [
         "ga"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "1347b5d959a27a81",
+      "title": "Himachal Pradesh Public Service Commission",
+      "link": "https://hppsc.hp.gov.in/",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-hp",
+      "sourceName": "Himachal Pradesh PSC (HPPSC)",
+      "dept": "Himachal Pradesh PSC (HPPSC)",
+      "state": "Himachal Pradesh",
+      "category": "state",
+      "stateIds": [
+        "hp"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "cbcb324192303664",
+      "title": "Screening Test and Subject Aptitude Test / Written Exams",
+      "link": "https://hppsc.hp.gov.in/CommonControls/ViewContinuousLinkPage?qs=mhlKjiXMMItVMGhRDsyS0o9BLNYQIjeTEAm3mUehgljI1tOy3DwliQiu5o6Xkc2EtIosyAMOvoYUzjpfBm%2FI4oaHF3IDkic397STjY1nlxs%3D",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-hp",
+      "sourceName": "Himachal Pradesh PSC (HPPSC)",
+      "dept": "Himachal Pradesh PSC (HPPSC)",
+      "state": "Himachal Pradesh",
+      "category": "state",
+      "stateIds": [
+        "hp"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "16040c21feedca9b",
+      "title": "Recruitment Methods",
+      "link": "https://hppsc.hp.gov.in/Home/ContentPage?qs=h%2Fyhm1mKjnC9mpzNJfOfLbqExl%2BQGMz8LQKLbD58%2B03oEJ3cZsscsGl6GRN3BDia",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-hp",
+      "sourceName": "Himachal Pradesh PSC (HPPSC)",
+      "dept": "Himachal Pradesh PSC (HPPSC)",
+      "state": "Himachal Pradesh",
+      "category": "state",
+      "stateIds": [
+        "hp"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "f7458b75bedca9a4",
+      "title": "Historical Background",
+      "link": "https://hppsc.hp.gov.in/Home/ContentPage?qs=h%2Fyhm1mKjnC9mpzNJfOfLdB%2Fp7jeIi%2FvoSpAqxq8flKw7JmnUpWSTaHFVw%2FzBx5S",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-hp",
+      "sourceName": "Himachal Pradesh PSC (HPPSC)",
+      "dept": "Himachal Pradesh PSC (HPPSC)",
+      "state": "Himachal Pradesh",
+      "category": "state",
+      "stateIds": [
+        "hp"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "aed8f2e62784abf0",
+      "title": "Former / Sitting Chairpersons",
+      "link": "https://hppsc.hp.gov.in/Home/ContentPage?qs=h%2Fyhm1mKjnC9mpzNJfOfLeS4O0FrLfjQ2DpND%2FMuwmVkkzaTkiE3KJ0nT6jikxQs",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-hp",
+      "sourceName": "Himachal Pradesh PSC (HPPSC)",
+      "dept": "Himachal Pradesh PSC (HPPSC)",
+      "state": "Himachal Pradesh",
+      "category": "state",
+      "stateIds": [
+        "hp"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "f0e005b5f2734b3e",
+      "title": "Constitutional Provisions",
+      "link": "https://hppsc.hp.gov.in/Home/ContentPage?qs=h%2Fyhm1mKjnC9mpzNJfOfLfh2bdBONCK%2FOOpBjB2FSaPVZkfEYIdss3ZINWzNHchi",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-hp",
+      "sourceName": "Himachal Pradesh PSC (HPPSC)",
+      "dept": "Himachal Pradesh PSC (HPPSC)",
+      "state": "Himachal Pradesh",
+      "category": "state",
+      "stateIds": [
+        "hp"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "04fc589418cdc0aa",
+      "title": "Organization Structure",
+      "link": "https://hppsc.hp.gov.in/Home/ContentPage?qs=h%2Fyhm1mKjnC9mpzNJfOfLcHTtC7gOFakUg6tS6lyf1jXPI1PFXHzUrfiZ2dmNrFH",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-hp",
+      "sourceName": "Himachal Pradesh PSC (HPPSC)",
+      "dept": "Himachal Pradesh PSC (HPPSC)",
+      "state": "Himachal Pradesh",
+      "category": "state",
+      "stateIds": [
+        "hp"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "64c14bdf076d45ab",
+      "title": "Chairman / Members",
+      "link": "https://hppsc.hp.gov.in/Home/ContentPage?qs=h%2Fyhm1mKjnC9mpzNJfOfLTSwbh2gYi%2B21rHgaltzXgxy7l%2F91n5wI6xHUjrCa75A",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-hp",
+      "sourceName": "Himachal Pradesh PSC (HPPSC)",
+      "dept": "Himachal Pradesh PSC (HPPSC)",
+      "state": "Himachal Pradesh",
+      "category": "state",
+      "stateIds": [
+        "hp"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "6df3419a98e4b1b2",
+      "title": "Regulations, Rules & Acts",
+      "link": "https://hppsc.hp.gov.in/Home/TableEntryPage?ms=h%2Fyhm1mKjnC9mpzNJfOfLQgD%2FAopfdtdzWW9S2L42Sv0%2BPATBKT17bZ8Iwzwk2mv",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-hp",
+      "sourceName": "Himachal Pradesh PSC (HPPSC)",
+      "dept": "Himachal Pradesh PSC (HPPSC)",
+      "state": "Himachal Pradesh",
+      "category": "state",
+      "stateIds": [
+        "hp"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "90a67fbadb5ed96e",
+      "title": "Record Retention",
+      "link": "https://hppsc.hp.gov.in/Home/ContentPage?qs=h%2Fyhm1mKjnC9mpzNJfOfLXDl7GbcEvzTMRJ1deOQrajTQzz%2BsYn%2FhT7dwNnCp5fw",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-hp",
+      "sourceName": "Himachal Pradesh PSC (HPPSC)",
+      "dept": "Himachal Pradesh PSC (HPPSC)",
+      "state": "Himachal Pradesh",
+      "category": "state",
+      "stateIds": [
+        "hp"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "53311fd8e3646e82",
+      "title": "Forms & Proforma",
+      "link": "https://hppsc.hp.gov.in/Home/TableEntryPage?ms=h%2Fyhm1mKjnC9mpzNJfOfLdyakxz44BNs1cd%2FxtBhM2MoTCX8ej72hVIA8x5ADClA",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-hp",
+      "sourceName": "Himachal Pradesh PSC (HPPSC)",
+      "dept": "Himachal Pradesh PSC (HPPSC)",
+      "state": "Himachal Pradesh",
+      "category": "state",
+      "stateIds": [
+        "hp"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "c9087454660fe2e7",
+      "title": "Digital Library",
+      "link": "https://hppsc.hp.gov.in/Home/MultilinkPage?ms=h%2Fyhm1mKjnAvYon9U3%2F8ytrXofFUlzDQn5W1BDZPzkWFSFroKpWs9KjFQr1RrsiD",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-hp",
+      "sourceName": "Himachal Pradesh PSC (HPPSC)",
+      "dept": "Himachal Pradesh PSC (HPPSC)",
+      "state": "Himachal Pradesh",
+      "category": "state",
+      "stateIds": [
+        "hp"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "b6d1e5413668b1ed",
+      "title": "Press Note/Notice",
+      "link": "https://hppsc.hp.gov.in/CommonControls/ViewContinuousLinkPage?qs=mhlKjiXMMIs8EEr8lZxERNMoHNx55ZkbIcwiRzGGx7anL%2Fmy725XOVnAneHEkz383luV85qKude70bFLtkm562v5EMUWAP9HistzrAJJYbg%3D",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-hp",
+      "sourceName": "Himachal Pradesh PSC (HPPSC)",
+      "dept": "Himachal Pradesh PSC (HPPSC)",
+      "state": "Himachal Pradesh",
+      "category": "state",
+      "stateIds": [
+        "hp"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "fa359b9114331fc3",
+      "title": "Personality Test / Viva-Voce",
+      "link": "https://hppsc.hp.gov.in/CommonControls/ViewContinuousLinkPage?qs=mhlKjiXMMIveW0iAADPEiC57R27%2BGya8ay4kbm0dJkcnlKHGzV4U5%2BQlrRl1TG3OQWWkf93oLxROjrnFX90ov6IhjjgH2qZXMgsT6KqPbJM%3D",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-hp",
+      "sourceName": "Himachal Pradesh PSC (HPPSC)",
+      "dept": "Himachal Pradesh PSC (HPPSC)",
+      "state": "Himachal Pradesh",
+      "category": "state",
+      "stateIds": [
+        "hp"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "749cf390fbedc568",
+      "title": "Copyright Policy",
+      "link": "https://hppsc.hp.gov.in/Home/BottomMenuContentPage?qs=h%2Fyhm1mKjnA1dPZdI9AvPQ%3D%3D",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-hp",
+      "sourceName": "Himachal Pradesh PSC (HPPSC)",
+      "dept": "Himachal Pradesh PSC (HPPSC)",
+      "state": "Himachal Pradesh",
+      "category": "state",
+      "stateIds": [
+        "hp"
       ],
       "fetchMethod": "html"
     },
@@ -22482,261 +21309,6 @@
       "category": "state",
       "stateIds": [
         "jh"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "1347b5d959a27a81",
-      "title": "Himachal Pradesh Public Service Commission",
-      "link": "https://hppsc.hp.gov.in/",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-hp",
-      "sourceName": "Himachal Pradesh PSC (HPPSC)",
-      "dept": "Himachal Pradesh PSC (HPPSC)",
-      "state": "Himachal Pradesh",
-      "category": "state",
-      "stateIds": [
-        "hp"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "cbcb324192303664",
-      "title": "Screening Test and Subject Aptitude Test / Written Exams",
-      "link": "https://hppsc.hp.gov.in/CommonControls/ViewContinuousLinkPage?qs=mhlKjiXMMItVMGhRDsyS0o9BLNYQIjeTEAm3mUehgljI1tOy3DwliQiu5o6Xkc2EtIosyAMOvoYUzjpfBm%2FI4oaHF3IDkic397STjY1nlxs%3D",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-hp",
-      "sourceName": "Himachal Pradesh PSC (HPPSC)",
-      "dept": "Himachal Pradesh PSC (HPPSC)",
-      "state": "Himachal Pradesh",
-      "category": "state",
-      "stateIds": [
-        "hp"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "16040c21feedca9b",
-      "title": "Recruitment Methods",
-      "link": "https://hppsc.hp.gov.in/Home/ContentPage?qs=h%2Fyhm1mKjnC9mpzNJfOfLbqExl%2BQGMz8LQKLbD58%2B03oEJ3cZsscsGl6GRN3BDia",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-hp",
-      "sourceName": "Himachal Pradesh PSC (HPPSC)",
-      "dept": "Himachal Pradesh PSC (HPPSC)",
-      "state": "Himachal Pradesh",
-      "category": "state",
-      "stateIds": [
-        "hp"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "f7458b75bedca9a4",
-      "title": "Historical Background",
-      "link": "https://hppsc.hp.gov.in/Home/ContentPage?qs=h%2Fyhm1mKjnC9mpzNJfOfLdB%2Fp7jeIi%2FvoSpAqxq8flKw7JmnUpWSTaHFVw%2FzBx5S",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-hp",
-      "sourceName": "Himachal Pradesh PSC (HPPSC)",
-      "dept": "Himachal Pradesh PSC (HPPSC)",
-      "state": "Himachal Pradesh",
-      "category": "state",
-      "stateIds": [
-        "hp"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "aed8f2e62784abf0",
-      "title": "Former / Sitting Chairpersons",
-      "link": "https://hppsc.hp.gov.in/Home/ContentPage?qs=h%2Fyhm1mKjnC9mpzNJfOfLeS4O0FrLfjQ2DpND%2FMuwmVkkzaTkiE3KJ0nT6jikxQs",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-hp",
-      "sourceName": "Himachal Pradesh PSC (HPPSC)",
-      "dept": "Himachal Pradesh PSC (HPPSC)",
-      "state": "Himachal Pradesh",
-      "category": "state",
-      "stateIds": [
-        "hp"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "f0e005b5f2734b3e",
-      "title": "Constitutional Provisions",
-      "link": "https://hppsc.hp.gov.in/Home/ContentPage?qs=h%2Fyhm1mKjnC9mpzNJfOfLfh2bdBONCK%2FOOpBjB2FSaPVZkfEYIdss3ZINWzNHchi",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-hp",
-      "sourceName": "Himachal Pradesh PSC (HPPSC)",
-      "dept": "Himachal Pradesh PSC (HPPSC)",
-      "state": "Himachal Pradesh",
-      "category": "state",
-      "stateIds": [
-        "hp"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "04fc589418cdc0aa",
-      "title": "Organization Structure",
-      "link": "https://hppsc.hp.gov.in/Home/ContentPage?qs=h%2Fyhm1mKjnC9mpzNJfOfLcHTtC7gOFakUg6tS6lyf1jXPI1PFXHzUrfiZ2dmNrFH",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-hp",
-      "sourceName": "Himachal Pradesh PSC (HPPSC)",
-      "dept": "Himachal Pradesh PSC (HPPSC)",
-      "state": "Himachal Pradesh",
-      "category": "state",
-      "stateIds": [
-        "hp"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "64c14bdf076d45ab",
-      "title": "Chairman / Members",
-      "link": "https://hppsc.hp.gov.in/Home/ContentPage?qs=h%2Fyhm1mKjnC9mpzNJfOfLTSwbh2gYi%2B21rHgaltzXgxy7l%2F91n5wI6xHUjrCa75A",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-hp",
-      "sourceName": "Himachal Pradesh PSC (HPPSC)",
-      "dept": "Himachal Pradesh PSC (HPPSC)",
-      "state": "Himachal Pradesh",
-      "category": "state",
-      "stateIds": [
-        "hp"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "6df3419a98e4b1b2",
-      "title": "Regulations, Rules & Acts",
-      "link": "https://hppsc.hp.gov.in/Home/TableEntryPage?ms=h%2Fyhm1mKjnC9mpzNJfOfLQgD%2FAopfdtdzWW9S2L42Sv0%2BPATBKT17bZ8Iwzwk2mv",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-hp",
-      "sourceName": "Himachal Pradesh PSC (HPPSC)",
-      "dept": "Himachal Pradesh PSC (HPPSC)",
-      "state": "Himachal Pradesh",
-      "category": "state",
-      "stateIds": [
-        "hp"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "90a67fbadb5ed96e",
-      "title": "Record Retention",
-      "link": "https://hppsc.hp.gov.in/Home/ContentPage?qs=h%2Fyhm1mKjnC9mpzNJfOfLXDl7GbcEvzTMRJ1deOQrajTQzz%2BsYn%2FhT7dwNnCp5fw",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-hp",
-      "sourceName": "Himachal Pradesh PSC (HPPSC)",
-      "dept": "Himachal Pradesh PSC (HPPSC)",
-      "state": "Himachal Pradesh",
-      "category": "state",
-      "stateIds": [
-        "hp"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "53311fd8e3646e82",
-      "title": "Forms & Proforma",
-      "link": "https://hppsc.hp.gov.in/Home/TableEntryPage?ms=h%2Fyhm1mKjnC9mpzNJfOfLdyakxz44BNs1cd%2FxtBhM2MoTCX8ej72hVIA8x5ADClA",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-hp",
-      "sourceName": "Himachal Pradesh PSC (HPPSC)",
-      "dept": "Himachal Pradesh PSC (HPPSC)",
-      "state": "Himachal Pradesh",
-      "category": "state",
-      "stateIds": [
-        "hp"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "c9087454660fe2e7",
-      "title": "Digital Library",
-      "link": "https://hppsc.hp.gov.in/Home/MultilinkPage?ms=h%2Fyhm1mKjnAvYon9U3%2F8ytrXofFUlzDQn5W1BDZPzkWFSFroKpWs9KjFQr1RrsiD",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-hp",
-      "sourceName": "Himachal Pradesh PSC (HPPSC)",
-      "dept": "Himachal Pradesh PSC (HPPSC)",
-      "state": "Himachal Pradesh",
-      "category": "state",
-      "stateIds": [
-        "hp"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "b6d1e5413668b1ed",
-      "title": "Press Note/Notice",
-      "link": "https://hppsc.hp.gov.in/CommonControls/ViewContinuousLinkPage?qs=mhlKjiXMMIs8EEr8lZxERNMoHNx55ZkbIcwiRzGGx7anL%2Fmy725XOVnAneHEkz383luV85qKude70bFLtkm562v5EMUWAP9HistzrAJJYbg%3D",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-hp",
-      "sourceName": "Himachal Pradesh PSC (HPPSC)",
-      "dept": "Himachal Pradesh PSC (HPPSC)",
-      "state": "Himachal Pradesh",
-      "category": "state",
-      "stateIds": [
-        "hp"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "fa359b9114331fc3",
-      "title": "Personality Test / Viva-Voce",
-      "link": "https://hppsc.hp.gov.in/CommonControls/ViewContinuousLinkPage?qs=mhlKjiXMMIveW0iAADPEiC57R27%2BGya8ay4kbm0dJkcnlKHGzV4U5%2BQlrRl1TG3OQWWkf93oLxROjrnFX90ov6IhjjgH2qZXMgsT6KqPbJM%3D",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-hp",
-      "sourceName": "Himachal Pradesh PSC (HPPSC)",
-      "dept": "Himachal Pradesh PSC (HPPSC)",
-      "state": "Himachal Pradesh",
-      "category": "state",
-      "stateIds": [
-        "hp"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "749cf390fbedc568",
-      "title": "Copyright Policy",
-      "link": "https://hppsc.hp.gov.in/Home/BottomMenuContentPage?qs=h%2Fyhm1mKjnA1dPZdI9AvPQ%3D%3D",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-hp",
-      "sourceName": "Himachal Pradesh PSC (HPPSC)",
-      "dept": "Himachal Pradesh PSC (HPPSC)",
-      "state": "Himachal Pradesh",
-      "category": "state",
-      "stateIds": [
-        "hp"
       ],
       "fetchMethod": "html"
     },

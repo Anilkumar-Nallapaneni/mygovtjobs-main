@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-04T14:27:19.365Z",
+  "generatedAt": "2026-08-04T15:30:57.213Z",
   "count": 764,
   "items": [
     {
@@ -466,40 +466,6 @@
       "dept": "Life Insurance Corporation — Careers",
       "state": "All India",
       "category": "banking",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "d58157cdcff3408c",
-      "title": "एस ए जी, दिल्ली द्वारा जूनियर रिसर्च फेलो (जे आर एफ) के चयन के लिए योग्य उम्मीदवार वॉक-इन इंटरव्यू के लिए आमंत्रित",
-      "link": "https://xn--m1b0a2bb8esed.xn--11b7cb3a6a.xn--h2brj9c/drdo/hi/offerings/vacancies/esa-e-jai-dailalai-davaaraa-jauunaiyara-raisaraca-phaelao-jae-ara-epha-kae",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "drdo",
-      "sourceName": "Defence Research & Development Organisation",
-      "dept": "Defence Research & Development Organisation",
-      "state": "All India",
-      "category": "defence",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "c0c52bc72788423c",
-      "title": "कम्प्यूटरीकृत पायलट चयन प्रणाली (सी पी एस एस)",
-      "link": "https://xn--m1b0a2bb8esed.xn--11b7cb3a6a.xn--h2brj9c/drdo/hi/offerings/products/kamapayauutaraikarta-paayalata-cayana-paranaalai-sai-pai-esa-esa",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "drdo",
-      "sourceName": "Defence Research & Development Organisation",
-      "dept": "Defence Research & Development Organisation",
-      "state": "All India",
-      "category": "defence",
       "stateIds": [
         "all"
       ],
@@ -3680,6 +3646,40 @@
       "category": "state",
       "stateIds": [
         "ne"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "d58157cdcff3408c",
+      "title": "एस ए जी, दिल्ली द्वारा जूनियर रिसर्च फेलो (जे आर एफ) के चयन के लिए योग्य उम्मीदवार वॉक-इन इंटरव्यू के लिए आमंत्रित",
+      "link": "https://xn--m1b0a2bb8esed.xn--11b7cb3a6a.xn--h2brj9c/drdo/hi/offerings/vacancies/esa-e-jai-dailalai-davaaraa-jauunaiyara-raisaraca-phaelao-jae-ara-epha-kae",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "drdo",
+      "sourceName": "Defence Research & Development Organisation",
+      "dept": "Defence Research & Development Organisation",
+      "state": "All India",
+      "category": "defence",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "c0c52bc72788423c",
+      "title": "कम्प्यूटरीकृत पायलट चयन प्रणाली (सी पी एस एस)",
+      "link": "https://xn--m1b0a2bb8esed.xn--11b7cb3a6a.xn--h2brj9c/drdo/hi/offerings/products/kamapayauutaraikarta-paayalata-cayana-paranaalai-sai-pai-esa-esa",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "drdo",
+      "sourceName": "Defence Research & Development Organisation",
+      "dept": "Defence Research & Development Organisation",
+      "state": "All India",
+      "category": "defence",
+      "stateIds": [
+        "all"
       ],
       "fetchMethod": "html"
     },
