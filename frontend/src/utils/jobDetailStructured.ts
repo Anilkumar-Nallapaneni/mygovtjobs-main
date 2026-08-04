@@ -33,17 +33,20 @@ export type StructuredJobDetail = {
 
 const HEADING = {
   overview: /overview/i,
-  vacancy: /vacancy/i,
-  eligibility: /eligibility/i,
-  age: /age\s*limit/i,
-  salary: /salary|stipend|emoluments|pay\s*scale/i,
-  dates: /important\s*dates/i,
-  selection: /selection\s*process/i,
-  howApply: /how\s*to\s*apply/i,
+  vacancy: /vacancy|post\s+details|name\s+of\s+(?:the\s+)?post/i,
+  eligibility: /eligibility|qualification/i,
+  age: /age\s*limit|age\s*criteria|relaxation/i,
+  salary: /salary|stipend|emoluments|pay\s*scale|remuneration/i,
+  dates: /important\s*dates|schedule\s+of\s+activit|date\s+of\s+exam/i,
+  selection: /selection\s*process|mode\s+of\s+selection/i,
+  howApply: /how\s*to\s*apply|application\s+procedure|apply\s+online/i,
   links: /important\s*links/i,
   intro: /^introduction$/i,
   pdf: /notification\s*pdf/i,
-  fee: /application\s*fee|exam\s*fee|registration\s*fee|\bfee\b/i,
+  fee: /application\s*fee|exam\s*fee|registration\s*fee|fee\s+details|\bfee\b/i,
+  documents: /documents?\s+(?:required|to\s+be\s+produced)/i,
+  syllabus: /syllabus|exam(?:ination)?\s+pattern|scheme\s+of\s+exam/i,
+  instructions: /general\s+instructions|instructions?\s+to\s+candidates/i,
 };
 
 function cleanText(value: unknown) {
@@ -316,19 +319,24 @@ export function buildStructuredJobDetail(job: Record<string, unknown>): Structur
     if (kind === "eligibility") eligibility.push(...lists, ...paragraphs);
     if (kind === "age") ageLimit.push(...lists, ...paragraphs);
     if (kind === "salary") salaryInfo.push(...lists, ...paragraphs);
-    if (kind === "selection") selection.push(...lists);
-    if (kind === "howApply") howToApply.push(...lists);
+    if (kind === "selection") selection.push(...lists, ...paragraphs);
+    if (kind === "howApply") howToApply.push(...lists, ...paragraphs);
   }
 
   overviewFacts = dedupeFacts(overviewFacts);
   importantDates = dedupeDates(importantDates);
   officialLinks = dedupeLinks(officialLinks);
+  selection = [...new Set(selection.map((s) => cleanText(s)).filter(Boolean))];
+  howToApply = [...new Set(howToApply.map((s) => cleanText(s)).filter(Boolean))];
 
   const applyModeFact = overviewFacts.find((f) => /apply mode/i.test(f.label));
   applyMode = applyModeFact?.value || "";
 
   if (Array.isArray(detail.selection_process) && detail.selection_process.length) {
     selection = detail.selection_process.map((s) => cleanText(s)).filter(Boolean);
+  }
+  if (Array.isArray(detail.how_to_apply) && detail.how_to_apply.length && !howToApply.length) {
+    howToApply = detail.how_to_apply.map((s) => cleanText(s)).filter(Boolean);
   }
   if (Array.isArray(detail.documents_required) && detail.documents_required.length && !howToApply.length) {
     howToApply = detail.documents_required.map((s) => cleanText(s)).filter(Boolean);
@@ -355,7 +363,28 @@ export function buildStructuredJobDetail(job: Record<string, unknown>): Structur
     detail.fee && typeof detail.fee === "object"
       ? (detail.fee as Record<string, string>)
       : {};
-  const hasExtractedFee = Object.values(extractedFee).some((v) => cleanText(v));
+  let hasExtractedFee = Object.values(extractedFee).some((v) => cleanText(v));
+
+  // When fee lives only in section tables, promote it so FeeGrid can render and article can dedupe.
+  if (!hasExtractedFee) {
+    const fromSections: Record<string, string> = {};
+    for (const section of effectiveSections) {
+      const s = section as Record<string, unknown>;
+      if (!isFeeHeading(String(s.heading || ""))) continue;
+      for (const table of normalizeSectionTables(s.tables)) {
+        for (const row of table) {
+          const fact = normalizeKvRow(row);
+          if (fact && (isFeeLabel(fact.label) || /(?:rs\.?|inr|₹|exempt|nil)/i.test(fact.value))) {
+            fromSections[fact.label] = fact.value;
+          }
+        }
+      }
+    }
+    if (Object.keys(fromSections).length) {
+      Object.assign(extractedFee, fromSections);
+      hasExtractedFee = true;
+    }
+  }
 
   if (hasExtractedFee) {
     overviewFacts = overviewFacts.filter((f) => !isFeeLabel(f.label));

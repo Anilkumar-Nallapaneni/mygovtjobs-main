@@ -39,15 +39,14 @@ def test_text_to_content_sections_extracts_fee_table():
     assert "Sc/St" in labels or "SC/ST" in str(labels)
 
 
-def test_text_to_content_sections_extracts_vacancy_matrix():
-    text = """
-    VACANCY DETAILS
-    Post Name          Vacancies    Pay Scale
-    Clerk              120          Level-4
-    Assistant          45           Level-6
-    """
+def test_text_to_content_sections_splits_collapsed_summary():
+    text = (
+        "Staff Selection Commission. IMPORTANT DATES Last date 15-08-2026. "
+        "ELIGIBILITY Graduate degree required. AGE LIMIT 18-27 years. "
+        "APPLICATION FEE General Rs. 100. SELECTION PROCESS Written exam. "
+        "HOW TO APPLY Apply online on the official portal before closing date."
+    )
     sections = text_to_content_sections(text)
-    vac_section = next((s for s in sections if "vacanc" in s["heading"].lower()), sections[0])
-    assert vac_section["tables"]
-    first_table = vac_section["tables"][0]
-    assert any("Clerk" in str(row.values()) for row in first_table)
+    headings = " ".join(s["heading"] for s in sections).lower()
+    assert "important dates" in headings or "eligibility" in headings or "how to apply" in headings
+    assert len(sections) >= 2

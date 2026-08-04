@@ -2,7 +2,7 @@ import { useTranslation } from "react-i18next";
 import { translateSectionHeading } from "@/utils/jobDetailLabels";
 import { sanitizeParagraphText } from "@/utils/jobDetailLinks";
 import { Section } from "./jobDetailSection";
-import { isDateTable, renderDataTable } from "./jobDetailFacts";
+import { formatSummaryForDisplay, isDateTable, renderDataTable } from "./jobDetailFacts";
 
 export function ContentSections({
   sections,
@@ -29,11 +29,13 @@ export function ContentSections({
     });
 
     const paragraphs = (section.paragraphs || [])
-      .map((p) => sanitizeParagraphText(p, actionUrls))
+      .map((p) => formatSummaryForDisplay(sanitizeParagraphText(p, actionUrls)))
       .filter(Boolean);
     const lists = (section.lists || [])
       .map((list) =>
-        list.map((item) => sanitizeParagraphText(item, actionUrls)).filter(Boolean)
+        list
+          .map((item) => formatSummaryForDisplay(sanitizeParagraphText(item, actionUrls)))
+          .filter(Boolean)
       )
       .filter((list) => list.length > 0);
 

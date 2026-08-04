@@ -1,6 +1,4 @@
-"""Unit tests for PDF field extraction from notification text."""
-
-from app.parsers.pdf_parser import extract_fields, is_weak_field
+from app.parsers.pdf_parser import extract_fields, extract_structured_detail_fields, is_weak_field
 
 
 def test_is_weak_field_placeholders():
@@ -54,3 +52,48 @@ def test_extracts_indian_letterhead_address_and_city_pin():
     assert fields.get("postalCode") == "171005"
     assert "Himfed Bhawan" in (fields.get("streetAddress") or "")
     assert fields.get("salary") == "Rs. 13000 Per Month"
+
+
+def test_extract_fee_selection_and_how_to_apply_from_sections():
+    text = """
+    RECRUITMENT NOTICE
+
+    APPLICATION FEE
+    General: Rs. 500/-
+    SC: Rs. 250/-
+    ST: Rs. 250/-
+
+    SELECTION PROCESS
+    1. Written Examination
+    2. Document Verification
+    3. Interview
+
+    HOW TO APPLY
+    1. Register on the official portal
+    2. Fill the online application form
+    3. Upload required documents
+    4. Pay the fee and submit before last date
+    """
+    fields = extract_fields(text)
+    assert fields.get("fee")
+    assert any("500" in str(v) for v in fields["fee"].values())
+    assert fields.get("selection_process")
+    assert any("Written" in s for s in fields["selection_process"])
+    assert fields.get("how_to_apply")
+    assert any("Register" in s or "portal" in s.lower() for s in fields["how_to_apply"])
+    assert fields.get("application_fee")
+
+
+def test_extract_structured_detail_fields_helper():
+    sections = [
+        {
+            "heading": "Application Fee",
+            "paragraphs": [],
+            "tables": [[{"label": "General", "value": "Rs. 100"}, {"label": "SC", "value": "Rs. 50"}]],
+            "lists": [],
+            "links": [],
+        }
+    ]
+    out = extract_structured_detail_fields(sections)
+    assert out["fee"]["General"] == "Rs. 100"
+    assert "application_fee" in out

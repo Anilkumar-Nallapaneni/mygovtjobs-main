@@ -385,7 +385,39 @@ export default function JobDetail({
       ) : null}
 
       {useStructured ? (
-        <ContentSections sections={bodySections} skipDateTables actionUrls={actionUrls} />
+        <>
+          <ContentSections sections={bodySections} skipDateTables actionUrls={actionUrls} />
+          {!bodySections.some((s) => /selection/i.test(s.heading || "")) && view.selection?.length > 0 ? (
+            <Section title={t("jobDetail.selectionProcess")}>
+              <ol className="job-detail-steps">
+                {view.selection.map((step, i) => (
+                  <li key={i}>{step}</li>
+                ))}
+              </ol>
+            </Section>
+          ) : null}
+          {!bodySections.some((s) => /how\s*to\s*apply|application\s+procedure/i.test(s.heading || "")) &&
+          view.howApply?.length > 0 ? (
+            <Section title={t("jobDetail.howToApply")}>
+              <ol className="job-detail-steps">
+                {view.howApply.map((step, i) => (
+                  <li key={i}>{step}</li>
+                ))}
+              </ol>
+            </Section>
+          ) : null}
+          {Array.isArray(view.documentsRequired) &&
+          view.documentsRequired.length > 0 &&
+          !bodySections.some((s) => /documents?/i.test(s.heading || "")) ? (
+            <Section title={t("jobDetail.documentsRequired", { defaultValue: "Documents required" })}>
+              <ul className="job-detail-bullets">
+                {view.documentsRequired.map((item, i) => (
+                  <li key={i}>{item}</li>
+                ))}
+              </ul>
+            </Section>
+          ) : null}
+        </>
       ) : (
         <>
           {view.selection?.length > 0 ? (
@@ -404,6 +436,15 @@ export default function JobDetail({
                   <li key={i}>{step}</li>
                 ))}
               </ol>
+            </Section>
+          ) : null}
+          {Array.isArray(view.documentsRequired) && view.documentsRequired.length > 0 ? (
+            <Section title={t("jobDetail.documentsRequired", { defaultValue: "Documents required" })}>
+              <ul className="job-detail-bullets">
+                {view.documentsRequired.map((item, i) => (
+                  <li key={i}>{item}</li>
+                ))}
+              </ul>
             </Section>
           ) : null}
         </>

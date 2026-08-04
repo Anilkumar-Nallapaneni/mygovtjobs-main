@@ -230,12 +230,30 @@ async def apply_pdf_enrichment(
     if pdf_fields.get("summary"):
         prev = str(detail.get("summary") or "")
         chunk = str(pdf_fields["summary"]).strip()
-        if chunk and chunk not in prev:
+        if chunk and (chunk not in prev or len(chunk) > len(prev)):
             detail["summary"] = chunk[:12_000]
             changed = True
     if pdf_fields.get("content_sections"):
         detail["content_sections"] = pdf_fields["content_sections"]
         detail["memorized_at"] = datetime.now(timezone.utc).isoformat()
+        changed = True
+
+    for key in ("fee", "application_fee", "selection_process", "how_to_apply", "documents_required"):
+        if pdf_fields.get(key) and not detail.get(key):
+            detail[key] = pdf_fields[key]
+            changed = True
+    # Prefer richer fee / selection blobs from PDF when present.
+    if isinstance(pdf_fields.get("fee"), dict) and pdf_fields["fee"]:
+        detail["fee"] = pdf_fields["fee"]
+        changed = True
+    if isinstance(pdf_fields.get("selection_process"), list) and pdf_fields["selection_process"]:
+        detail["selection_process"] = pdf_fields["selection_process"]
+        changed = True
+    if isinstance(pdf_fields.get("how_to_apply"), list) and pdf_fields["how_to_apply"]:
+        detail["how_to_apply"] = pdf_fields["how_to_apply"]
+        changed = True
+    if isinstance(pdf_fields.get("documents_required"), list) and pdf_fields["documents_required"]:
+        detail["documents_required"] = pdf_fields["documents_required"]
         changed = True
 
     # Date plausibility — conflicting dates go to review, not live authority.

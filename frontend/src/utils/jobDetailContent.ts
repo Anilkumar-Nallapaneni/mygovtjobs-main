@@ -16,7 +16,7 @@ const RAW_PDF_MARKERS = [
   /download(?:ing)?\s+of\s+e-?call\s+letter/i,
 ];
 
-function trimSummary(text, max = 1200) {
+function trimSummary(text, max = 12_000) {
   const s = String(text || "")
     .replace(/\s+/g, " ")
     .trim();
@@ -125,8 +125,16 @@ function extractAge(text) {
 }
 
 function buildAbout(job) {
-  const rawSummary = trimSummary(job.about || job.detail?.summary, 900);
+  const isPdf =
+    Boolean(job?.detail?.memorized_at) ||
+    String(job?.detail?.detail_source || "").toLowerCase() === "pdf";
+  const rawSummary = trimSummary(job.about || job.detail?.summary, isPdf ? 12_000 : 2_000);
   const usefulSentence = firstUsefulSentence(rawSummary);
+
+  // Prefer the full PDF/notification text when available.
+  if (isPdf && rawSummary.length >= 200) {
+    return rawSummary;
+  }
 
   const parts = [
     `${job.title} is an official recruitment notice${job.dept && job.dept !== job.title ? ` from ${job.dept}` : ""}.`,
@@ -182,10 +190,13 @@ function buildDates(job) {
 
 function buildHowApply(job, applyHref) {
   if (Array.isArray(job.howApply) && job.howApply.length) return job.howApply;
+  if (Array.isArray(job.detail?.how_to_apply) && job.detail.how_to_apply.length) {
+    return job.detail.how_to_apply.map((item) => String(item)).filter(Boolean);
+  }
   if (Array.isArray(job.detail?.documents_required) && job.detail.documents_required.length) {
     return [
       "Read the official notification carefully.",
-      ...job.detail.documents_required.slice(0, 4).map((item) => `Keep ready: ${String(item)}`),
+      ...job.detail.documents_required.slice(0, 8).map((item) => `Keep ready: ${String(item)}`),
       "Submit the application on the official portal before the last date.",
     ];
   }
@@ -211,11 +222,49 @@ function buildHowApply(job, applyHref) {
 function buildSelection(job) {
   if (Array.isArray(job.selection) && job.selection.length) return job.selection;
   if (Array.isArray(job.detail?.selection_process) && job.detail.selection_process.length) {
-    return job.detail.selection_process.slice(0, 6).map((item) => String(item));
+    return job.detail.selection_process.slice(0, 12).map((item) => String(item));
   }
   return [
     "Refer to the official notification for the exact selection stages (written exam, interview, skill test, etc.).",
   ];
+}
+
+function extractFeeFromSections(job) {
+  const sections = Array.isArray(job?.detail?.content_sections) ? job.detail.content_sections : [];
+  const fee = {};
+  for (const section of sections) {
+    const heading = String(section?.heading || "");
+    const isFee = /fee|charges|payment/i.test(heading);
+    const tables = Array.isArray(section?.tables) ? section.tables : [];
+    for (const table of tables) {
+      const rows = Array.isArray(table) ? table : [table];
+      for (const row of rows) {
+        if (!row || typeof row !== "object") continue;
+        const label = String(row.label || "").trim();
+        const value = String(row.value || "").trim();
+        if (label && value && (isFee || /fee/i.test(label) || /(?:rs\.?|inr|₹|exempt|nil)/i.test(value))) {
+          fee[label] = value;
+          continue;
+        }
+        if (isFee) {
+          for (const [k, v] of Object.entries(row)) {
+            const key = String(k || "").trim();
+            const val = String(v || "").trim();
+            if (key && val && /(?:rs\.?|inr|₹|exempt|nil)/i.test(val)) fee[key] = val;
+          }
+        }
+      }
+    }
+    if (isFee && Array.isArray(section.lists)) {
+      for (const list of section.lists) {
+        for (const item of list || []) {
+          const m = String(item).match(/^([^:]{2,60}?)\s*:\s*(.+)$/);
+          if (m) fee[m[1].trim()] = m[2].trim();
+        }
+      }
+    }
+  }
+  return fee;
 }
 
 function isMpscLdeMpessJob(job) {
@@ -396,14 +445,19 @@ export function buildJobDetailView(job) {
     ? structured.selection
     : buildSelection(job);
 
+  const documentsRequired = Array.isArray(job.detail?.documents_required)
+    ? job.detail.documents_required.map((item) => String(item)).filter(Boolean)
+    : [];
+
   const extraDetails = useStructured ? [] : buildExtraDetails(job);
 
+  const feeFromSections = extractFeeFromSections(job);
   const fee =
     job.fee && Object.keys(job.fee).length
       ? job.fee
-      : job.detail?.fee && typeof job.detail.fee === "object"
+      : job.detail?.fee && typeof job.detail.fee === "object" && Object.keys(job.detail.fee).length
       ? job.detail.fee
-      : {};
+      : feeFromSections;
   const posts = (() => {
     const raw = Array.isArray(job.posts) && job.posts.length ? job.posts : job.detail?.posts || [];
     return raw
@@ -433,6 +487,7 @@ export function buildJobDetailView(job) {
     posts,
     howApply,
     selection,
+    documentsRequired,
     applyUrl: applyHref || "#",
     pdfUrl: pdfHref,
     pdfUrls,

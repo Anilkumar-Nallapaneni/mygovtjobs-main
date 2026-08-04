@@ -25,8 +25,12 @@ _DB_SLIM_KEYS = frozenset(
         "link",
         "dates",
         "fee",
+        "application_fee",
         "selection",
+        "selection_process",
         "howApply",
+        "how_to_apply",
+        "documents_required",
         "posts",
         "important_dates",
         "apply_urls",
@@ -38,11 +42,14 @@ _DB_SLIM_KEYS = frozenset(
         "postalCode",
         "postal_code",
         "pincode",
+        "completeness_score",
+        "missing_fields",
     }
 )
 
-SUMMARY_MAX_LIVE = 2000
-SUMMARY_MAX_EXPIRED = 400
+# Keep enough of the PDF body that JobDetailAgent can rebuild sections without Storage.
+SUMMARY_MAX_LIVE = 12_000
+SUMMARY_MAX_EXPIRED = 800
 SUMMARY_MAX_LIST = 400
 
 

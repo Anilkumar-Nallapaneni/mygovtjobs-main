@@ -117,6 +117,106 @@ def _extract_salary(text: str) -> str | None:
     return f"Rs. {inline.group(1)}"
 
 
+_FEE_HEADING = re.compile(r"fee|charges|payment", re.I)
+_SELECTION_HEADING = re.compile(r"selection|mode\s+of\s+selection", re.I)
+_HOW_APPLY_HEADING = re.compile(r"how\s+to\s+apply|application\s+procedure|apply\s+online", re.I)
+_DOCUMENTS_HEADING = re.compile(r"documents?\s+(?:required|to\s+be\s+produced)", re.I)
+_FEE_AMOUNT = re.compile(
+    r"(?:rs\.?|inr|₹)\s*[\d,]+(?:\s*/\s*-)?|(?:nil|exempt(?:ed)?|free|no\s+fee)",
+    re.I,
+)
+
+
+def _section_heading(section: dict[str, Any]) -> str:
+    return str(section.get("heading") or "").strip()
+
+
+def _section_text_items(section: dict[str, Any]) -> list[str]:
+    items: list[str] = []
+    for para in section.get("paragraphs") or []:
+        text = re.sub(r"\s+", " ", str(para or "")).strip()
+        if text:
+            items.append(text)
+    for group in section.get("lists") or []:
+        if not isinstance(group, list):
+            continue
+        for item in group:
+            text = re.sub(r"\s+", " ", str(item or "")).strip()
+            if text:
+                items.append(text)
+    return items
+
+
+def _extract_fee_dict(sections: list[dict[str, Any]]) -> dict[str, str]:
+    fee: dict[str, str] = {}
+    for section in sections:
+        heading = _section_heading(section)
+        is_fee = bool(_FEE_HEADING.search(heading))
+        for table in section.get("tables") or []:
+            if not isinstance(table, list):
+                continue
+            for row in table:
+                if not isinstance(row, dict):
+                    continue
+                label = str(row.get("label") or "").strip()
+                value = str(row.get("value") or "").strip()
+                if not label or not value:
+                    # Category column style: {"General": "Rs. 100", ...}
+                    for key, raw in row.items():
+                        key_s = str(key or "").strip()
+                        val_s = str(raw or "").strip()
+                        if key_s and val_s and _FEE_AMOUNT.search(val_s):
+                            fee[key_s[:80]] = val_s[:120]
+                    continue
+                if is_fee or _FEE_HEADING.search(label) or _FEE_AMOUNT.search(value):
+                    fee[label[:80]] = value[:120]
+        if is_fee:
+            for item in _section_text_items(section):
+                m = re.match(r"^([^:]{2,60}?)\s*:\s*(.+)$", item)
+                if m and _FEE_AMOUNT.search(m.group(2)):
+                    fee[m.group(1).strip()[:80]] = m.group(2).strip()[:120]
+    return fee
+
+
+def _extract_list_field(sections: list[dict[str, Any]], heading_re: re.Pattern[str]) -> list[str]:
+    out: list[str] = []
+    seen: set[str] = set()
+    for section in sections:
+        if not heading_re.search(_section_heading(section)):
+            continue
+        for item in _section_text_items(section):
+            key = item.lower()
+            if key in seen or len(item) < 8:
+                continue
+            seen.add(key)
+            out.append(item[:500])
+            if len(out) >= 12:
+                return out
+    return out
+
+
+def extract_structured_detail_fields(sections: list[dict[str, Any]]) -> dict[str, Any]:
+    """Pull fee / selection / how-to-apply / documents from sectionized PDF text."""
+    if not sections:
+        return {}
+    out: dict[str, Any] = {}
+    fee = _extract_fee_dict(sections)
+    if fee:
+        out["fee"] = fee
+        # Compact one-liner for completeness scoring.
+        out["application_fee"] = "; ".join(f"{k}: {v}" for k, v in list(fee.items())[:6])[:400]
+    selection = _extract_list_field(sections, _SELECTION_HEADING)
+    if selection:
+        out["selection_process"] = selection
+    how_apply = _extract_list_field(sections, _HOW_APPLY_HEADING)
+    if how_apply:
+        out["how_to_apply"] = how_apply
+    documents = _extract_list_field(sections, _DOCUMENTS_HEADING)
+    if documents:
+        out["documents_required"] = documents
+    return out
+
+
 def _extract_address_fields(text: str) -> dict[str, str]:
     out: dict[str, str] = {}
     addr = _ADDRESS.search(text)
@@ -238,10 +338,14 @@ def extract_fields(text: str, *, pdf_url: str | None = None) -> dict[str, Any]:
         )
         out["apply_urls"] = [u for u in ranked if _apply_url_score(u) > -50][:8]
 
-    out["summary"] = " ".join(text.split())[:12_000]
+    # Keep paragraph breaks so JobDetailAgent can re-sectionize from summary later.
+    summary = re.sub(r"[ \t]+", " ", text)
+    summary = re.sub(r"\n{3,}", "\n\n", summary).strip()
+    out["summary"] = summary[:12_000]
     sections = text_to_content_sections(text, pdf_url=pdf_url)
     if sections:
         out["content_sections"] = sections
+        out.update(extract_structured_detail_fields(sections))
     return sanitize_json_for_postgres(out)
 
 

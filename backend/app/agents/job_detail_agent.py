@@ -5,6 +5,7 @@ from __future__ import annotations
 import asyncio
 import json
 import logging
+import re
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
@@ -15,6 +16,7 @@ from app.database.retry import is_transient_db_error
 from app.database.session import SessionLocal
 from app.models.job import Job
 from app.parsers.pdf_sections import text_to_content_sections
+from app.parsers.pdf_parser import extract_structured_detail_fields
 from app.services.job_child_service import sync_job_children
 from app.services.job_completeness_service import PUBLISH_MIN_SCORE, calculate_completeness, publication_tier
 from app.services.job_persist_service import JobPersistService
@@ -35,12 +37,18 @@ STANDARD_SECTION_ORDER = (
     "Application Fee",
     "Selection Process",
     "How to Apply",
+    "Documents Required",
+    "Syllabus / Exam Pattern",
+    "General Instructions",
+    "Reservation",
+    "Contact / Helpdesk",
     "Important Links",
     "Official Source",
     "Verification Information",
 )
 
 _NOT_SPECIFIED = "Not specified in the available official notice"
+_PENDING_OVERVIEW = re.compile(r"full details are being verified", re.I)
 
 
 def _resolve_repo_root() -> Path:
@@ -79,23 +87,65 @@ def _summary_has_job_signals(summary: str) -> bool:
 
 def _sections_from_summary(summary: str, *, pdf_url: str | None = None) -> list[dict[str, Any]]:
     text = str(summary or "").strip()
-    if len(text) < 300 or not _summary_has_job_signals(text):
+    if len(text) < 200:
         return []
-    sections = text_to_content_sections(text, pdf_url=pdf_url)
-    if sections:
-        return sections
+    # Prefer heading-split sections when the notice has clear markers.
+    if _summary_has_job_signals(text) or len(text) >= 600:
+        sections = text_to_content_sections(text, pdf_url=pdf_url)
+        if sections and (
+            len(sections) > 1
+            or any(len(str(p)) >= 80 for s in sections for p in (s.get("paragraphs") or []))
+        ):
+            return sections
+    # Always keep the full PDF/notification body visible — never drop it.
+    paragraphs = [p.strip() for p in re.split(r"\n\s*\n+", text) if len(p.strip()) >= 40]
+    if not paragraphs:
+        paragraphs = [text[:12_000]]
     return [
         {
-            "heading": "Overview",
-            "paragraphs": [text[:12_000]],
+            "heading": "Notification",
+            "paragraphs": paragraphs[:40],
             "tables": [],
             "lists": [],
-            "links": [],
+            "links": [{"label": "Download Official Notification PDF", "url": pdf_url}] if pdf_url else [],
         }
     ]
 
 
-def _pending_verification_sections() -> list[dict[str, Any]]:
+def _section_body_chars(sections: list[dict[str, Any]]) -> int:
+    total = 0
+    for section in sections:
+        if not isinstance(section, dict):
+            continue
+        if _PENDING_OVERVIEW.search(" ".join(str(p) for p in (section.get("paragraphs") or []))):
+            continue
+        for para in section.get("paragraphs") or []:
+            total += len(str(para or ""))
+        for group in section.get("lists") or []:
+            if isinstance(group, list):
+                total += sum(len(str(item or "")) for item in group)
+        for table in section.get("tables") or []:
+            if isinstance(table, list):
+                total += 40 * len(table)
+    return total
+
+
+def _is_placeholder_sections(sections: list[dict[str, Any]]) -> bool:
+    if not sections:
+        return True
+    body = " ".join(
+        str(p)
+        for s in sections
+        if isinstance(s, dict)
+        for p in (s.get("paragraphs") or [])
+    )
+    return bool(_PENDING_OVERVIEW.search(body)) and _section_body_chars(sections) < 200
+
+
+def _pending_verification_sections(summary: str = "") -> list[dict[str, Any]]:
+    text = str(summary or "").strip()
+    if len(text) >= 200:
+        return _sections_from_summary(text)
     return [
         {
             "heading": "Overview",
@@ -124,34 +174,78 @@ def _normalize_section_heading(heading: str) -> str:
     h = (heading or "").strip().lower()
     mapping = {
         "overview": "Overview",
+        "introduction": "Overview",
+        "notification": "Overview",
         "important dates": "Important Dates",
         "dates": "Important Dates",
         "vacancy": "Vacancy Details",
         "vacancy details": "Vacancy Details",
         "vacancies": "Vacancy Details",
+        "post details": "Vacancy Details",
         "eligibility": "Eligibility and Qualification",
         "qualification": "Eligibility and Qualification",
+        "educational qualification": "Eligibility and Qualification",
+        "essential qualification": "Eligibility and Qualification",
         "eligibility and qualification": "Eligibility and Qualification",
+        "eligibility criteria": "Eligibility and Qualification",
         "age limit": "Age Limit",
         "age": "Age Limit",
         "salary": "Salary or Pay Scale",
         "pay scale": "Salary or Pay Scale",
         "salary or pay scale": "Salary or Pay Scale",
+        "emoluments": "Salary or Pay Scale",
+        "stipend": "Salary or Pay Scale",
         "application fee": "Application Fee",
+        "exam fee": "Application Fee",
+        "examination fee": "Application Fee",
+        "registration fee": "Application Fee",
         "fee": "Application Fee",
+        "fee details": "Application Fee",
         "selection": "Selection Process",
         "selection process": "Selection Process",
+        "mode of selection": "Selection Process",
         "how to apply": "How to Apply",
+        "application procedure": "How to Apply",
+        "apply online": "How to Apply",
         "apply": "How to Apply",
+        "documents required": "Documents Required",
+        "documents to be produced": "Documents Required",
+        "syllabus": "Syllabus / Exam Pattern",
+        "exam pattern": "Syllabus / Exam Pattern",
+        "examination pattern": "Syllabus / Exam Pattern",
+        "scheme of examination": "Syllabus / Exam Pattern",
+        "general instructions": "General Instructions",
+        "instructions to candidates": "General Instructions",
+        "reservation": "Reservation",
+        "contact details": "Contact / Helpdesk",
+        "helpdesk": "Contact / Helpdesk",
+        "helpline": "Contact / Helpdesk",
         "important links": "Important Links",
         "links": "Important Links",
         "official source": "Official Source",
         "source": "Official Source",
         "verification": "Verification Information",
         "verification information": "Verification Information",
-        "notification": "Overview",
     }
     return mapping.get(h, heading.strip() or "Overview")
+
+
+def _attach_extracted_fields(detail: dict[str, Any]) -> None:
+    """Fill fee / selection / how-to-apply from content_sections when missing."""
+    sections = [s for s in (detail.get("content_sections") or []) if isinstance(s, dict)]
+    extracted = extract_structured_detail_fields(sections)
+    for key, value in extracted.items():
+        existing = detail.get(key)
+        if not existing:
+            detail[key] = value
+            continue
+        if key == "fee" and isinstance(value, dict) and isinstance(existing, dict):
+            merged = {**existing, **value}
+            detail[key] = merged
+        elif key in ("selection_process", "how_to_apply", "documents_required") and isinstance(value, list):
+            if isinstance(existing, list) and len(existing) >= len(value):
+                continue
+            detail[key] = value
 
 
 def _normalize_sections(sections: list[dict[str, Any]]) -> list[dict[str, Any]]:
@@ -181,6 +275,20 @@ def _normalize_sections(sections: list[dict[str, Any]]) -> list[dict[str, Any]]:
             ordered.append(by_heading.pop(name))
     ordered.extend(by_heading.values())
     return ordered
+
+
+def _load_existing_static_detail(detail_dir: Path, slug: str | None) -> dict[str, Any] | None:
+    if not slug:
+        return None
+    path = detail_dir / f"{slug}.json"
+    if not path.is_file():
+        return None
+    try:
+        payload = json.loads(path.read_text(encoding="utf-8"))
+    except Exception:
+        return None
+    detail = payload.get("detail") if isinstance(payload, dict) else None
+    return detail if isinstance(detail, dict) else None
 
 
 def _attach_verification_section(detail: dict[str, Any], job: Job, score: int, missing: list[str]) -> None:
@@ -296,7 +404,35 @@ class JobDetailAgent:
                             pdf_url = detail.get("pdf_url") or getattr(job, "primary_pdf_url", None)
                             sections = list(detail.get("content_sections") or [])
 
-                            if not sections and len(summary) >= 300 and _summary_has_job_signals(summary):
+                            # Prefer previously published rich sections (Storage/static) over slim DB.
+                            existing = _load_existing_static_detail(self.detail_dir, job.slug)
+                            if existing:
+                                existing_sections = [
+                                    s for s in (existing.get("content_sections") or []) if isinstance(s, dict)
+                                ]
+                                if _section_body_chars(existing_sections) > _section_body_chars(sections):
+                                    sections = existing_sections
+                                    detail["content_sections"] = sections
+                                existing_summary = str(existing.get("summary") or "").strip()
+                                if len(existing_summary) > len(summary):
+                                    summary = existing_summary
+                                    detail["summary"] = summary
+                                for key in (
+                                    "fee",
+                                    "application_fee",
+                                    "selection_process",
+                                    "how_to_apply",
+                                    "documents_required",
+                                    "memorized_at",
+                                    "detail_source",
+                                ):
+                                    if existing.get(key) and not detail.get(key):
+                                        detail[key] = existing[key]
+
+                            if _is_placeholder_sections(sections):
+                                sections = []
+
+                            if not sections and len(summary) >= 200:
                                 built = _sections_from_summary(
                                     summary, pdf_url=str(pdf_url) if pdf_url else None
                                 )
@@ -305,9 +441,13 @@ class JobDetailAgent:
                                     sections = built
 
                             if not sections:
-                                detail["content_sections"] = _pending_verification_sections()
+                                detail["content_sections"] = _pending_verification_sections(summary)
                                 sections = detail["content_sections"]
                                 detail["details_pending_verification"] = True
+
+                            detail["content_sections"] = _normalize_sections(sections)
+                            sections = detail["content_sections"]
+                            _attach_extracted_fields(detail)
 
                             source = _infer_detail_source(detail)
                             detail["detail_source"] = source

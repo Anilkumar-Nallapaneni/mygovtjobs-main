@@ -171,4 +171,41 @@ describe("buildStructuredJobDetail", () => {
     expect(structured.articleSections.some((s) => /notification/i.test(s.heading))).toBe(true);
     expect(structured.articleSections[0]?.paragraphs.join(" ")).toContain("Nuclear Power");
   });
+
+  it("includes selection paragraphs from PDF sections", () => {
+    const structured = buildStructuredJobDetail({
+      detail: {
+        memorized_at: "2026-07-15T00:00:00Z",
+        detail_source: "pdf",
+        summary: "Recruitment for clerk posts with written exam.",
+        content_sections: [
+          {
+            heading: "Selection Process",
+            paragraphs: ["Candidates will appear for a computer-based test followed by document verification."],
+            tables: [],
+            lists: [["CBT", "Document Verification"]],
+            links: [],
+          },
+          {
+            heading: "How to Apply",
+            paragraphs: ["Apply online through the official website before the closing date."],
+            tables: [],
+            lists: [],
+            links: [],
+          },
+          {
+            heading: "Application Fee",
+            paragraphs: [],
+            tables: [[{ label: "General", value: "Rs. 100/-" }, { label: "SC/ST", value: "Nil" }]],
+            lists: [],
+            links: [],
+          },
+        ],
+      },
+    });
+    expect(structured.selection.some((s) => /computer-based test/i.test(s))).toBe(true);
+    expect(structured.howToApply.some((s) => /official website/i.test(s))).toBe(true);
+    // Fee section is promoted to FeeGrid and removed from article body.
+    expect(structured.articleSections.some((s) => /application fee/i.test(s.heading))).toBe(false);
+  });
 });

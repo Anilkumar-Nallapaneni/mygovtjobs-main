@@ -27,12 +27,46 @@ _HEADING_RE = re.compile(
 )
 
 _URL_RE = re.compile(r"https?://[^\s<>\"']+", re.I)
-_MAX_PARAGRAPH = 1200
+_MAX_PARAGRAPH = 2400
 _MIN_SECTION_CHARS = 24
 _FEE_HEADING = re.compile(r"fee|charges|payment", re.I)
 _VACANCY_HEADING = re.compile(r"vacanc|post\s+name|name\s+of\s+(?:the\s+)?post|pay\s+scale", re.I)
 _KV_LINE = re.compile(r"^([^:]{2,80}?)\s*:\s*(.+)$")
 _COL_SPLIT = re.compile(r"\s{2,}|\t|\|")
+_INLINE_HEADING_NAMES = (
+    r"IMPORTANT\s+DATES?|DATE\s+OF\s+EXAM(?:INATION)?|SCHEDULE\s+OF\s+ACTIVIT(?:Y|IES)|"
+    r"ELIGIBILITY(?:\s+CRITERIA)?|QUALIFICATION|EDUCATIONAL\s+QUALIFICATION|"
+    r"ESSENTIAL\s+QUALIFICATION|DESIRABLE\s+QUALIFICATION|"
+    r"AGE\s+LIMIT|AGE\s+CRITERIA|RELAXATION(?:\s+IN\s+AGE)?|"
+    r"APPLICATION\s+FEE|EXAM(?:INATION)?\s+FEE|REGISTRATION\s+FEE|FEE\s+DETAILS?|"
+    r"SELECTION\s+PROCESS|MODE\s+OF\s+SELECTION|"
+    r"HOW\s+TO\s+APPLY|APPLICATION\s+PROCEDURE|APPLY\s+ONLINE|"
+    r"VACANCY\s+DETAILS?|POST\s+DETAILS?|NAME\s+OF\s+(?:THE\s+)?POST|"
+    r"PAY\s+SCALE|SALARY|EMOLUMENTS|REMUNERATION|STIPEND|"
+    r"GENERAL\s+INSTRUCTIONS?|INSTRUCTIONS?\s+TO\s+CANDIDATES?|"
+    r"DOCUMENTS?\s+(?:REQUIRED|TO\s+BE\s+PRODUCED)|"
+    r"SYLLABUS|EXAM(?:INATION)?\s+PATTERN|SCHEME\s+OF\s+EXAM(?:INATION)?|"
+    r"RESERVATION|CONTACT\s+DETAILS?|HELP(?:DESK|LINE)?"
+)
+_INLINE_HEADING_BREAK = re.compile(
+    rf"(?<![A-Za-z0-9])({_INLINE_HEADING_NAMES})(?=\s*[:.\-]|\s+[A-Z0-9])",
+    re.I,
+)
+
+
+def _restore_heading_breaks(text: str) -> str:
+    """Insert newlines before known headings when PDF text was collapsed to one line."""
+    body = (text or "").replace("\r", "\n")
+    stripped = body.strip()
+    if not stripped:
+        return body
+    # Already has line structure / headings — don't break vacancy/fee tables.
+    if "\n" in stripped and len(list(_HEADING_RE.finditer(body))) >= 1:
+        return body
+    # Only rewrite truly collapsed walls of text.
+    if stripped.count("\n") <= 1 and len(stripped) >= 120:
+        return _INLINE_HEADING_BREAK.sub(r"\n\n\1\n", body)
+    return body
 
 
 def _clean_line(line: str) -> str:
@@ -222,7 +256,7 @@ def _bullet_lines(text: str) -> list[str]:
 
 def text_to_content_sections(text: str, *, pdf_url: str | None = None) -> list[dict[str, Any]]:
     """Split PDF text into UI sections (heading, paragraphs, lists, links)."""
-    body = (text or "").replace("\r", "\n").strip()
+    body = _restore_heading_breaks(text or "").strip()
     if len(body) < 40:
         return []
 
@@ -264,7 +298,16 @@ def text_to_content_sections(text: str, *, pdf_url: str | None = None) -> list[d
             if len(chunk) < _MIN_SECTION_CHARS:
                 continue
             bullets = _bullet_lines(chunk)
-            paragraphs = _paragraph_chunks(chunk) if not bullets else []
+            paragraphs = _paragraph_chunks(chunk)
+            if bullets:
+                # Drop paragraph lines that were already captured as bullets.
+                bullet_set = {b.lower() for b in bullets}
+                paragraphs = [
+                    p
+                    for p in paragraphs
+                    if p.lower() not in bullet_set
+                    and not re.match(r"^(?:[-•*]|\d+[\.\)])\s+", p)
+                ]
             tables = _extract_tables_from_chunk(chunk, heading)
             if not paragraphs and not bullets and not tables:
                 continue
