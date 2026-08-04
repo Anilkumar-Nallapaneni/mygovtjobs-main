@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-04T11:07:29.251Z",
+  "generatedAt": "2026-08-04T15:03:46.152Z",
   "sourceReports": [
     {
       "id": "pib-press-reg3",
@@ -3174,6 +3174,23 @@
       "fetchMethod": "html-listing"
     },
     {
+      "id": "d3ea040c80752f1a",
+      "title": "10 Aug 2026 NOTICE REGARDING ADVT. NO. A-5/E-1/2025, ASSISTANT TEACHER, TRAINED GRADUATE GRADE (M/F BRANCH) MAINS EXAM-2025, (SUBJECT-COMPUTER)",
+      "link": "https://uppsc.up.nic.in/Open_PDF.aspx?I4PnQ0tBagkKN9rKVhlu7+gJYH7oCJ+4",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "uppsc-hall-tickets",
+      "sourceName": "UPPSC — Hall tickets",
+      "dept": "Uttar Pradesh PSC",
+      "state": "Uttar Pradesh",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
       "id": "3961bda294ffacc4",
       "title": "10 Aug 2026 REVISED NOTICE REGARDING ADVT. NO. A-2/E-1/2020 REGIONAL INSPECTOR (Technical)EXAM-2020",
       "link": "https://uppsc.up.nic.in/Open_PDF.aspx?I4PnQ0tBaglovGFVjGJMaLYHjnVo5Zd7",
@@ -3211,23 +3228,6 @@
       "id": "7075f38ff8730403",
       "title": "07 Aug 2026 NOTICE REGARDING ADVT. NO. A-10/E-1/2023 U.P. KHADI AND VILLAGE INDUSTRIES BOARD,PRASHIKSHAK (LEATHER)",
       "link": "https://uppsc.up.nic.in/Open_PDF.aspx?I4PnQ0tBaglovGFVjGJMaC4G2fj58E9V",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "uppsc-hall-tickets",
-      "sourceName": "UPPSC — Hall tickets",
-      "dept": "Uttar Pradesh PSC",
-      "state": "Uttar Pradesh",
-      "category": "state",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "25d935c1ca268ce4",
-      "title": "07 Aug 2026 NOTICE REGARDING ADVT. NO. A-10/E-1/2023 U.P. KHADI AND VILLAGE INDUSTRIES BOARD, PRASHIKSHAK (BLANKET)",
-      "link": "https://uppsc.up.nic.in/Open_PDF.aspx?I4PnQ0tBaglovGFVjGJMaKyK+7/hHDZ3",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],

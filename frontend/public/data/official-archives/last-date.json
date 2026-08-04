@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-08-04T11:07:29.251Z",
-  "count": 227,
+  "generatedAt": "2026-08-04T15:03:46.152Z",
+  "count": 228,
   "items": [
     {
       "id": "73c9f70b7072207b",
@@ -33,6 +33,20 @@
       "dept": "Bhabha Atomic Research Centre (BARC)",
       "state": "All India",
       "category": "defence",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "f789e8e57c686b79",
+      "title": "*Subhash Chandra Bose Aapda Prabandhan Puraskar 2027 (Last date for filling up of applications is 30.09.2026)",
+      "link": "https://awards.gov.in/",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "an-gov",
+      "sourceName": "Andamannicobar",
+      "dept": "Andamannicobar",
+      "state": "All India",
+      "category": "state",
       "fetchMethod": "live-jobs-supplement"
     },
     {

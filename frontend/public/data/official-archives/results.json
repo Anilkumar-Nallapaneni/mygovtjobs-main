@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-08-04T11:07:29.251Z",
-  "count": 665,
+  "generatedAt": "2026-08-04T15:03:46.152Z",
+  "count": 666,
   "items": [
     {
       "id": "2fcd6ff34f094281",
@@ -247,6 +247,34 @@
         "all"
       ],
       "fetchMethod": "html-listing"
+    },
+    {
+      "id": "cd29420c34e6077c",
+      "title": "DEPARTMENTAL EXAMINATIONS - MAY 2026 (Result)",
+      "link": "https://www.tnpsc.gov.in/english/DResultView.aspx",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-tn",
+      "sourceName": "Tnpsc",
+      "dept": "Tnpsc",
+      "state": "All India",
+      "category": "state",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "c52a67e377e8f903",
+      "title": "सूबेदार/उप निरीक्षक संवर्ग भर्ती वर्ष 2025 अंतर्गत चयनित उम्मीदवारों के दस्तावेज परीक्षण, मेडीकल एवं चरित्र सत्यापन के संबंध में सूचना",
+      "link": "https://mppolice.gov.in/en/sauubaedaaraupa-nairaikasaka-sanvaraga-bharatai-varasa-2025-antaragata-cayanaita-umamaidavaaraon",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "police-mp",
+      "sourceName": "Mppolice",
+      "dept": "Mppolice",
+      "state": "All India",
+      "category": "police",
+      "fetchMethod": "live-jobs-supplement"
     },
     {
       "id": "c4c9266da946f3d2",
@@ -8734,23 +8762,6 @@
       "sourceName": "HPSC — Recruitment",
       "dept": "Haryana PSC",
       "state": "Haryana",
-      "category": "state",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "cd29420c34e6077c",
-      "title": "DEPARTMENTAL EXAMINATION - DECEMBER 2025 (Result)",
-      "link": "https://www.tnpsc.gov.in/english/DResultView.aspx",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "tnpsc-hall-tickets",
-      "sourceName": "TNPSC — Hall tickets",
-      "dept": "Tamil Nadu PSC",
-      "state": "Tamil Nadu",
       "category": "state",
       "stateIds": [
         "all"
