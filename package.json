@@ -10,6 +10,12 @@
   },
   "overrides": {
     "encoding-sniffer": "^1.0.2",
+    "brace-expansion@1.1.16": "1.1.18",
+    "brace-expansion@2.1.2": "2.1.4",
+    "brace-expansion@5.0.8": "5.0.9",
+    "undici": "^7.29.0",
+    "fast-uri": "3.1.5",
+    "esbuild": "^0.28.1",
     "workbox-build": {
       "glob": "^13.0.0",
       "source-map": "^0.7.6"

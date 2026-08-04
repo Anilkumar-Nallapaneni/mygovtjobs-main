@@ -166,12 +166,7 @@ function mountApp(): void {
       <I18nextProvider i18n={i18n}>
         <ErrorBoundary>
           <QueryProvider>
-            <BrowserRouter
-              future={{
-                v7_startTransition: true,
-                v7_relativeSplatPath: true,
-              }}
-            >
+            <BrowserRouter>
               <ScrollToTop />
               <AnalyticsPageTracker />
               <AnalyticsClickTracker />
