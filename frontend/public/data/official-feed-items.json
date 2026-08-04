@@ -1,5 +1,9 @@
 {
+<<<<<<< HEAD
   "generatedAt": "2026-08-03T16:57:41.102Z",
+=======
+  "generatedAt": "2026-08-04T03:52:11.889Z",
+>>>>>>> e96a2cf981f9e967d788f35887279d62f3d9a347
   "sourceReports": [
     {
       "id": "pib-press-reg3",
@@ -236,10 +240,17 @@
       "name": "UPSC — e-Admit cards",
       "feedUrl": null,
       "listingUrl": "https://www.upsc.gov.in/e-admit-cards",
+<<<<<<< HEAD
       "ok": true,
       "error": null,
       "itemCount": 40,
       "fetchMethod": "html-listing"
+=======
+      "ok": false,
+      "error": "https://www.upsc.gov.in/e-admit-cards: timeout",
+      "itemCount": 0,
+      "fetchMethod": null
+>>>>>>> e96a2cf981f9e967d788f35887279d62f3d9a347
     },
     {
       "id": "appsc-hall-tickets",
@@ -4559,6 +4570,7 @@
       "fetchMethod": "html-listing"
     },
     {
+<<<<<<< HEAD
       "id": "c4c9266da946f3d2",
       "title": "Marks of Recommended Candidates",
       "link": "https://www.upsc.gov.in/examinations/marks-recommended-candidates",
@@ -5700,6 +5712,8 @@
       "fetchMethod": "html-listing"
     },
     {
+=======
+>>>>>>> e96a2cf981f9e967d788f35887279d62f3d9a347
       "id": "b4c9d6ecdc9c30a4",
       "title": "Schedule of Interviews for the post of Medical Officer- 'SC' - 03 against Advertisement No. URSC:01:2026 dated 21.03.2026. Read More",
       "link": "https://www.isro.gov.in/URSCRecruitment2026_1.html",
@@ -7917,6 +7931,7 @@
       "fetchMethod": "html-listing"
     },
     {
+<<<<<<< HEAD
       "id": "3945e6ceed70a5b6",
       "title": "827FDB7B07614495B6B57640EB92E41B.pdf",
       "link": "https://rpsc.rajasthan.gov.in/Static/RecruitmentAdvertisements/827FDB7B07614495B6B57640EB92E41B.pdf",
@@ -63744,6 +63759,8 @@
       "fetchMethod": "html"
     },
     {
+=======
+>>>>>>> e96a2cf981f9e967d788f35887279d62f3d9a347
       "id": "7ebf9c63f70aaa86",
       "title": "National Portal of India, External Link that opens in a new window",
       "link": "http://india.gov.in/",
@@ -64050,9 +64067,32 @@
       "fetchMethod": "html"
     },
     {
+<<<<<<< HEAD
       "id": "5d3f7aa761e7dc73",
       "title": "Apply for CET Group D-05/2026",
       "link": "https://onetimeregn.haryana.gov.in/hssc",
+=======
+      "id": "b3c33fffbb0b0748",
+      "title": "CLICK HERE TO DOWNLOAD MARKSHEET & CUT OFF FOR ADVT. NO. D-4-E-1-2025, [S-03-05].",
+      "link": "https://uppsc.up.nic.in/CandidatePages/Advertismentwise_DownloadDocument.aspx?inptprmtr=mc",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "uppsc-hall-tickets",
+      "sourceName": "UPPSC — Hall tickets",
+      "dept": "Uttar Pradesh PSC",
+      "state": "Uttar Pradesh",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "c6b617289860a992",
+      "title": "{{'ExamCal_HM' | translate }}",
+      "link": "https://uppsc.up.nic.in/PublicPages/Examinations_Details.aspx?ID=EC",
+>>>>>>> e96a2cf981f9e967d788f35887279d62f3d9a347
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
@@ -64152,9 +64192,83 @@
       "fetchMethod": "html"
     },
     {
+<<<<<<< HEAD
       "id": "eb3737f7ac18bb11",
       "title": "Instructions to Applicants",
       "link": "https://hssc.gov.in/applicantInstruction",
+=======
+      "id": "0cf627359f6e6487",
+      "title": "RESULT OF ADVT. NO.D-2/E-1/2025, UTTAR PRADESH DAIRY DEVELOPMENT/DEPUTY DAIRY DE..",
+      "link": "https://uppsc.up.nic.in/Open_PDF_DB.aspx?I4PnQ0tBaglovGFVjGJMaEk+muvLsysO",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "uppsc-hall-tickets",
+      "sourceName": "UPPSC — Hall tickets",
+      "dept": "Uttar Pradesh PSC",
+      "state": "Uttar Pradesh",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "ae2cee49fb1794a3",
+      "title": "NOTICE REGARDING ADVT. NO. A-10/E-1/2023 U.P. KHADI AND VILLAGE INDUSTRIES BOARD..",
+      "link": "https://uppsc.up.nic.in/Open_PDF_DB.aspx?I4PnQ0tBaglovGFVjGJMaBV3bKOM5hHf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "uppsc-hall-tickets",
+      "sourceName": "UPPSC — Hall tickets",
+      "dept": "Uttar Pradesh PSC",
+      "state": "Uttar Pradesh",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "b5eeffc98940094a",
+      "title": "NOTICE REGARDING ADVT. NO. A-10/E-1/2023 U.P. KHADI AND VILLAGE INDUSTRIES BOARD..",
+      "link": "https://uppsc.up.nic.in/Open_PDF_DB.aspx?I4PnQ0tBaglovGFVjGJMaJzOgJhSONW7",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "uppsc-hall-tickets",
+      "sourceName": "UPPSC — Hall tickets",
+      "dept": "Uttar Pradesh PSC",
+      "state": "Uttar Pradesh",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "764670d5f41e8f71",
+      "title": "NOTICE REGARDING ADVT. NO. A-10/E-1/2023 U.P. KHADI AND VILLAGE INDUSTRIES BOARD..",
+      "link": "https://uppsc.up.nic.in/Open_PDF_DB.aspx?I4PnQ0tBaglovGFVjGJMaJbn4ORE0sC4",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "uppsc-hall-tickets",
+      "sourceName": "UPPSC — Hall tickets",
+      "dept": "Uttar Pradesh PSC",
+      "state": "Uttar Pradesh",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "73c9f70b7072207b",
+      "title": "NOTICE REGARDING LAST DATE EXTENTION OF P.C.S. EXAM-2026",
+      "link": "https://uppsc.up.nic.in/Open_PDF_DB.aspx?I4PnQ0tBaglP18XMjN55aL8ckMULyAqn",
+>>>>>>> e96a2cf981f9e967d788f35887279d62f3d9a347
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
@@ -64186,6 +64300,7 @@
       "fetchMethod": "html"
     },
     {
+<<<<<<< HEAD
       "id": "a90d51d37c7bdfa5",
       "title": "Citizen Charter",
       "link": "https://hssc.gov.in/citizenCharter",
@@ -64206,6 +64321,11 @@
       "id": "5d2256093b982849",
       "title": "Copyright Policy",
       "link": "https://hssc.gov.in/copyrightPolicy",
+=======
+      "id": "a432d8eed1a0dfed",
+      "title": "CORRIGENDUM NOTICE REGARDING ADVT.NO.D-6/E-1/2025, DIRECTORATE OF HOMOEOPATHY UT..",
+      "link": "https://uppsc.up.nic.in/Open_PDF_DB.aspx?I4PnQ0tBagkz0o52o77EYRiV9UshCHNK",
+>>>>>>> e96a2cf981f9e967d788f35887279d62f3d9a347
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
@@ -64305,9 +64425,49 @@
       "fetchMethod": "html"
     },
     {
+<<<<<<< HEAD
       "id": "bb577527c527b5ad",
       "title": "Download PDF",
       "link": "https://hssc.gov.in/file/ac1f23cd-9d9c-1328-819e-8dc6a16b0043/advertisements",
+=======
+      "id": "20ce2d8c78fdc3f6",
+      "title": "03 Sep 2026 RESULT OF ADVT. NO.D-2/E-1/2025, UTTAR PRADESH DAIRY DEVELOPMENT/DEPUTY DAIRY DEVELOPMENT OFFICER, S-02/03",
+      "link": "https://uppsc.up.nic.in/Open_PDF.aspx?I4PnQ0tBaglovGFVjGJMaNGZVurzAxN3",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "uppsc-hall-tickets",
+      "sourceName": "UPPSC — Hall tickets",
+      "dept": "Uttar Pradesh PSC",
+      "state": "Uttar Pradesh",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "0c9d923f33aeadda",
+      "title": "30 Aug 2026 LIST OF CANDIDATES PROVISIONALLY QUALIFIED FOR MAINS IN ADVT. NO. A-6/E-1/2025, LECT. (M./F.) GOVT. INTER COLLEGE EXAM.-2025, PSYCHOLOGY, CRIMINOLOGY.....",
+      "link": "https://uppsc.up.nic.in/Open_PDF.aspx?I4PnQ0tBaglovGFVjGJMaFhbjPNULoxF",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "uppsc-hall-tickets",
+      "sourceName": "UPPSC — Hall tickets",
+      "dept": "Uttar Pradesh PSC",
+      "state": "Uttar Pradesh",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "a1ce196cfb494713",
+      "title": "27 Aug 2026 LIST OF CANDIDATES PROVISIONALLY QUALIFIED FOR MAINS IN ADVT. NO. A-6/E-1/2025, LECT. (M./F.) GOVT. INTER COLLEGE EXAM.-2025, BIOLOGY, HINDI, URDU, S.....",
+      "link": "https://uppsc.up.nic.in/Open_PDF.aspx?I4PnQ0tBaglP18XMjN55aLZg5NY5v5bc",
+>>>>>>> e96a2cf981f9e967d788f35887279d62f3d9a347
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
@@ -64339,6 +64499,7 @@
       "fetchMethod": "html"
     },
     {
+<<<<<<< HEAD
       "id": "bdd4f92d6a521cae",
       "title": "Download PDF",
       "link": "https://hssc.gov.in/file/ac1f23cd-99c4-13a6-819c-f73b050a006c/advertisements",
@@ -64376,6 +64537,11 @@
       "id": "4d14345248bba8be",
       "title": "Download PDF",
       "link": "https://hssc.gov.in/file/ac1f23cd-99c4-13a6-819c-32aaa1600063/advertisements",
+=======
+      "id": "ee12a8dab0ad68f2",
+      "title": "More >>",
+      "link": "https://uppsc.up.nic.in/FooterPages/Results",
+>>>>>>> e96a2cf981f9e967d788f35887279d62f3d9a347
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
@@ -64390,9 +64556,15 @@
       "fetchMethod": "html"
     },
     {
+<<<<<<< HEAD
       "id": "9e10581d2cd13d61",
       "title": "Download PDF",
       "link": "https://hssc.gov.in/file/ac1f23cd-99c4-13a6-819c-2d8e98c60060/advertisements",
+=======
+      "id": "3961bda294ffacc4",
+      "title": "10 Aug 2026 REVISED NOTICE REGARDING ADVT. NO. A-2/E-1/2020 REGIONAL INSPECTOR (Technical)EXAM-2020",
+      "link": "https://uppsc.up.nic.in/Open_PDF.aspx?I4PnQ0tBaglovGFVjGJMaLYHjnVo5Zd7",
+>>>>>>> e96a2cf981f9e967d788f35887279d62f3d9a347
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
@@ -64407,9 +64579,15 @@
       "fetchMethod": "html"
     },
     {
+<<<<<<< HEAD
       "id": "4d11aeca7ea66b42",
       "title": "Download PDF",
       "link": "https://hssc.gov.in/file/ac1f23cd-99c4-13a6-819c-225da6c8005d/advertisements",
+=======
+      "id": "981830d2584adade",
+      "title": "07 Aug 2026 NOTICE REGARDING ADVT. NO. A-10/E-1/2023 U.P. KHADI AND VILLAGE INDUSTRIES BOARD,PRASHIKSHAK (POTTERY)",
+      "link": "https://uppsc.up.nic.in/Open_PDF.aspx?I4PnQ0tBaglovGFVjGJMaGIgM41wBsE3",
+>>>>>>> e96a2cf981f9e967d788f35887279d62f3d9a347
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
@@ -64424,6 +64602,7 @@
       "fetchMethod": "html"
     },
     {
+<<<<<<< HEAD
       "id": "6da006af5621c117",
       "title": "05-07-2026 TAMILNADU TEACHER ELIGIBILITY TEST FOR WORKING TEACHERS PAPER II EXAMINATION DETAILS– Press News",
       "link": "https://trb.tn.gov.in/admin/pdf/4801622470press%20news%20tet%20paper%20II.pdf",
@@ -64503,6 +64682,28 @@
       "id": "c1eabc8f903cc1c0",
       "title": "15-07-2026 TEACHER ELIGIBILITY TEST FOR WORKING TEACHERS TNTET (2026) - Release of Tentative Key with Objection Tracker",
       "link": "https://trb.tn.gov.in/more_notification_details.php?id=MN-1044&language=LG-1",
+=======
+      "id": "7075f38ff8730403",
+      "title": "07 Aug 2026 NOTICE REGARDING ADVT. NO. A-10/E-1/2023 U.P. KHADI AND VILLAGE INDUSTRIES BOARD,PRASHIKSHAK (LEATHER)",
+      "link": "https://uppsc.up.nic.in/Open_PDF.aspx?I4PnQ0tBaglovGFVjGJMaC4G2fj58E9V",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "uppsc-hall-tickets",
+      "sourceName": "UPPSC — Hall tickets",
+      "dept": "Uttar Pradesh PSC",
+      "state": "Uttar Pradesh",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "25d935c1ca268ce4",
+      "title": "07 Aug 2026 NOTICE REGARDING ADVT. NO. A-10/E-1/2023 U.P. KHADI AND VILLAGE INDUSTRIES BOARD, PRASHIKSHAK (BLANKET)",
+      "link": "https://uppsc.up.nic.in/Open_PDF.aspx?I4PnQ0tBaglovGFVjGJMaKyK+7/hHDZ3",
+>>>>>>> e96a2cf981f9e967d788f35887279d62f3d9a347
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
@@ -64790,6 +64991,7 @@
       "stateIds": [
         "tn"
       ],
+<<<<<<< HEAD
       "fetchMethod": "html"
     },
     {
@@ -98194,6 +98396,9 @@
         "od"
       ],
       "fetchMethod": "html"
+=======
+      "fetchMethod": "html-listing"
+>>>>>>> e96a2cf981f9e967d788f35887279d62f3d9a347
     }
   ]
 }
