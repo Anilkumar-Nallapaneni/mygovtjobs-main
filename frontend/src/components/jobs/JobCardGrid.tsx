@@ -5,9 +5,9 @@ import JobCard from "@/components/jobs/JobCard";
 import { useMediaQuery } from "@/hooks/useMediaQuery";
 
 /** Desktop card height + row gap — must match styles/app.css virtual grid */
-const DESKTOP_CARD_HEIGHT = 252;
+const DESKTOP_CARD_HEIGHT = 210;
 /** Initial mobile row estimate — fixed height avoids virtual-list remeasure jitter on touch */
-const MOBILE_ROW_ESTIMATE = 320;
+const MOBILE_ROW_ESTIMATE = 280;
 const ROW_GAP = 16;
 const MOBILE_ROW_GAP = 12;
 

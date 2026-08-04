@@ -8,10 +8,9 @@ import { DS } from "@/theme/designSystem";
 import { CATS } from "@/data/categories";
 import type { JobRecord } from "@/types/job";
 import { enrichJobMetadata } from "@/utils/jobMetadataUtils";
-import { isPdfUrl, resolveOfficialApplyHref } from "@/utils/officialDomains";
-import { resolveJobApplyHref, resolveTrustedPdfHref } from "@/utils/jobDetailLinks";
+import { resolveOfficialApplyHref } from "@/utils/officialDomains";
+import { resolveJobApplyHref } from "@/utils/jobDetailLinks";
 import { dateTimeLocale, numberLocale } from "@/utils/formatLocale";
-import { resolvePdfUrl } from "@/utils/resolvePdfUrl";
 import { extractPostName } from "@/utils/extractPostName";
 import "@/styles/jobs.css";
 
@@ -94,17 +93,6 @@ function JobCard({
 
   const officialHref =
     resolveJobApplyHref(enriched) || resolveOfficialApplyHref(enriched);
-  const pdfHref = useMemo(() => {
-    const trusted = resolveTrustedPdfHref(enriched);
-    if (trusted) return trusted;
-    const official = resolvePdfUrl(enriched);
-    if (official) return official;
-    const stored = enriched?.pdfUrl || enriched?.pdf_url;
-    if (stored) return stored;
-    const apply = enriched?.applyUrl || enriched?.apply_url;
-    if (apply && isPdfUrl(apply)) return apply;
-    return null;
-  }, [enriched]);
   const postsDisplay =
     vacancies > 0
       ? vacancies.toLocaleString(countLocale)
@@ -135,6 +123,7 @@ function JobCard({
   const enterStyle = {
     "--mgj-enter-index": Math.min(enterIndex, 8),
   } as CSSProperties;
+  const showDaysLeft = daysLeft != null && daysLeft <= 30 && daysLeft >= 0;
 
   return (
     <article
@@ -201,13 +190,23 @@ function JobCard({
           <p className="job-card__dept">{dept}</p>
         </div>
 
-        <div className="job-card__vacancy" title={vacancies > 0 ? undefined : t("job.postsTbaHint", { defaultValue: "See official notification for post count" })}>
-          <div className={`job-card__vacancy-num${vacancies > 0 ? "" : " job-card__vacancy-num--muted"}`}>
-            {postsDisplay}
+        <div className="job-card__side">
+          <div className="job-card__vacancy" title={vacancies > 0 ? undefined : t("job.postsTbaHint", { defaultValue: "See official notification for post count" })}>
+            <div className={`job-card__vacancy-num${vacancies > 0 ? "" : " job-card__vacancy-num--muted"}`}>
+              {postsDisplay}
+            </div>
+            <div className="job-card__vacancy-label">
+              {vacancies > 0 ? t("job.posts") : t("job.notice", { defaultValue: "NOTICE" })}
+            </div>
           </div>
-          <div className="job-card__vacancy-label">
-            {vacancies > 0 ? t("job.posts") : t("job.notice", { defaultValue: "NOTICE" })}
-          </div>
+          {showDaysLeft ? (
+            <span className={`job-card__days${isUrgent ? " job-card__days--urgent" : ""}`}>
+              {t("job.daysLeft", { count: daysLeft })}
+            </span>
+          ) : null}
+          {isExpired ? (
+            <span className="job-card__days job-card__days--expired">{t("job.expired")}</span>
+          ) : null}
         </div>
       </div>
 
@@ -242,6 +241,9 @@ function JobCard({
             </span>
           </div>
         ) : null}
+        <span className="job-card__cta" aria-hidden="true">
+          {t("jobDetail.view", { defaultValue: "View" })} →
+        </span>
       </div>
 
       <div className="job-card__meta">
@@ -267,34 +269,6 @@ function JobCard({
             </Tag>
           );
         })}
-      </div>
-
-      <div className="job-card__footer">
-        <div className={`job-card__deadline${isUrgent ? " job-card__deadline--urgent" : ""}`}>
-          {daysLeft != null && daysLeft <= 30 && daysLeft >= 0 && (
-            <span className={`job-card__days${isUrgent ? " job-card__days--urgent" : ""}`}>
-              {t("job.daysLeft", { count: daysLeft })}
-            </span>
-          )}
-          {isExpired && (
-            <span className="job-card__days job-card__days--expired">{t("job.expired")}</span>
-          )}
-        </div>
-        <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
-          {pdfHref ? (
-            <a
-              href={pdfHref}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="job-card__pdf"
-              onClick={(e) => e.stopPropagation()}
-              title={t("jobDetail.downloadPdf")}
-            >
-              📄 {t("job.pdf", { defaultValue: "PDF" })}
-            </a>
-          ) : null}
-          <span className="job-card__cta">{t("jobDetail.viewDetails")} →</span>
-        </div>
       </div>
       </div>
     </article>

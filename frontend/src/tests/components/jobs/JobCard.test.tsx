@@ -100,25 +100,22 @@ describe("JobCard accessibility", () => {
     expect(onClick).toHaveBeenCalledTimes(1);
   });
 
-  it("PDF link is a separate anchor and does not trigger card click", () => {
-    const onClick = vi.fn();
-    const { container } = renderCard(
-      {
-        id: "1",
-        slug: "test-job",
-        title: "Railway Group D",
-        dept: "RRB",
-        category: "railway",
-        status: "live",
-        pdfUrl: "https://rrb.gov.in/notification.pdf",
-      },
-      { onClick }
-    );
+  it("shows View → inside the last-date box and no PDF link", () => {
+    const { container } = renderCard({
+      id: "1",
+      slug: "test-job",
+      title: "Railway Group D",
+      dept: "RRB",
+      category: "railway",
+      status: "live",
+      lastDate: "2026-08-15",
+      pdfUrl: "https://rrb.gov.in/notification.pdf",
+    });
 
-    const pdfLink = container.querySelector(".job-card__pdf");
-    expect(pdfLink).toBeTruthy();
-    expect(pdfLink?.getAttribute("href")).toMatch(/rrb\.gov\.in/);
-    fireEvent.click(pdfLink!);
-    expect(onClick).not.toHaveBeenCalled();
+    expect(container.querySelector(".job-card__pdf")).toBeNull();
+    const cta = container.querySelector(".job-card__stats .job-card__cta");
+    expect(cta).toBeTruthy();
+    expect(cta?.textContent).toMatch(/View/i);
+    expect(cta?.textContent).toMatch(/→/);
   });
 });

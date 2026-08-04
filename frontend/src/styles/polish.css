@@ -87,7 +87,10 @@
 .job-card__cta {
   display: inline-flex;
   align-items: center;
-  padding: 5px 12px;
+  justify-content: center;
+  gap: 4px;
+  min-height: 28px;
+  padding: 4px 12px;
   border-radius: 999px;
   background: var(--ds-accentSoft);
   border: 1px solid var(--ds-accentBorderLo);
@@ -95,8 +98,9 @@
 }
 
 .job-card:hover .job-card__cta {
-  background: color-mix(in srgb, var(--ds-saffron) 14%, var(--ds-bg1));
-  border-color: var(--ds-accentBorder);
+  background: var(--ds-saffron);
+  border-color: var(--ds-saffron);
+  color: var(--ds-ink, #1a1a1a);
 }
 
 /* ----- Job detail page ----- */
