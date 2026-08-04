@@ -1,7 +1,828 @@
 {
-  "generatedAt": "2026-08-04T11:07:29.251Z",
-  "count": 38,
+  "generatedAt": "2026-08-04T14:27:19.365Z",
+  "count": 77,
   "items": [
+    {
+      "id": "e95ddc7b082ccd13",
+      "title": "Suggestion Sheet for Provisional Answer Key (CBRT)",
+      "link": "http://gpsc.gujarat.gov.in/Documents/AdvertismentDocument/2019-9-4_49.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "http://gpsc.gujarat.gov.in/Documents/AdvertismentDocument/2019-9-4_49.pdf"
+      ],
+      "sourceId": "psc-gj",
+      "sourceName": "Gujarat PSC (GPSC)",
+      "dept": "Gujarat PSC (GPSC)",
+      "state": "Gujarat",
+      "category": "state",
+      "stateIds": [
+        "gj"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "29f318f60d7290e5",
+      "title": "For filing Objections on the Answer Key of MCQ's",
+      "link": "http://hpsc.gov.in/en-us/Examination/For-filing-Objections-on-the-Answer-Key-of-MCQs",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-hr",
+      "sourceName": "Haryana PSC (HPSC)",
+      "dept": "Haryana PSC (HPSC)",
+      "state": "Haryana",
+      "category": "state",
+      "stateIds": [
+        "hr"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "37c45556314fa75d",
+      "title": "Answer Key-OMR Exams",
+      "link": "https://www.keralapsc.gov.in/answerkey_omrexams",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-kl",
+      "sourceName": "Kerala PSC",
+      "dept": "Kerala PSC",
+      "state": "Kerala",
+      "category": "state",
+      "stateIds": [
+        "kl"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "274a1d8e868c2d27",
+      "title": "Answer key-Online Exam",
+      "link": "https://www.keralapsc.gov.in/answerkey_onlineexams",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-kl",
+      "sourceName": "Kerala PSC",
+      "dept": "Kerala PSC",
+      "state": "Kerala",
+      "category": "state",
+      "stateIds": [
+        "kl"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "2da33d39e4780eed",
+      "title": "Provisional Answer Key - Assistant Professor Exam 2025 (Hindi, English, Commerce, Political Science, Economics, Sociology), Dated 04/08/2026",
+      "link": "https://mppsc.mp.gov.in/uploads/files/Provisional_Answer_Key_Assistant_Professor_06_Sub__Exam_2025_Dated_04_08_2026.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://mppsc.mp.gov.in/uploads/files/Provisional_Answer_Key_Assistant_Professor_06_Sub__Exam_2025_Dated_04_08_2026.pdf"
+      ],
+      "sourceId": "psc-mp",
+      "sourceName": "Madhya Pradesh PSC (MPPSC)",
+      "dept": "Madhya Pradesh PSC (MPPSC)",
+      "state": "Madhya Pradesh",
+      "category": "state",
+      "stateIds": [
+        "mp"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "1792621168d0a2c4",
+      "title": "Final Answer Key - Assistant Professor (Geography) Exam 2025, Dated: 02/08/2026",
+      "link": "https://mppsc.mp.gov.in/uploads/files/Final_Answer_key_AP_Geography_2025_Dated_02-08-2026.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://mppsc.mp.gov.in/uploads/files/Final_Answer_key_AP_Geography_2025_Dated_02-08-2026.pdf"
+      ],
+      "sourceId": "psc-mp",
+      "sourceName": "Madhya Pradesh PSC (MPPSC)",
+      "dept": "Madhya Pradesh PSC (MPPSC)",
+      "state": "Madhya Pradesh",
+      "category": "state",
+      "stateIds": [
+        "mp"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "6cd2af25bb3cca3f",
+      "title": "Final Answer key - Assistant Professor Exam 2025 (Sanskrit, Psychology, Law, Geology, Yogic Science), Dated 30/07/2026",
+      "link": "https://mppsc.mp.gov.in/uploads/files/Final_Answer_Key_Assistant_Professor_2025_Dated_30_07_2026.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://mppsc.mp.gov.in/uploads/files/Final_Answer_Key_Assistant_Professor_2025_Dated_30_07_2026.pdf"
+      ],
+      "sourceId": "psc-mp",
+      "sourceName": "Madhya Pradesh PSC (MPPSC)",
+      "dept": "Madhya Pradesh PSC (MPPSC)",
+      "state": "Madhya Pradesh",
+      "category": "state",
+      "stateIds": [
+        "mp"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "a96740cd43bbe861",
+      "title": "Provisional Answer Key of Junior Grade of Mizoram Health Service (Combined) under H&FW Deptt., July 2026",
+      "link": "https://mpsc.mizoram.gov.in/post/provisional-answer-key-of-junior-grade-of-mizoram-health-service-combined-under-hfw-deptt-july-2026",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-mz",
+      "sourceName": "Mizoram PSC",
+      "dept": "Mizoram PSC",
+      "state": "NE States",
+      "category": "state",
+      "stateIds": [
+        "ne"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "b4e4e16dfad554a6",
+      "title": "Public Notice Regarding Objections In The Answer Key For The Recruitment To The Posts Of Senior Assistant Accounts Group B In The Department Of Housing And Urban Development Puda Govt Of Punjab Uploaded On 02-08-2026",
+      "link": "https://ppsc.gov.in/index.aspx?page=2787&tabid=10&tablinkid=6826",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-pb",
+      "sourceName": "Punjab PSC (PPSC)",
+      "dept": "Punjab PSC (PPSC)",
+      "state": "Punjab",
+      "category": "state",
+      "stateIds": [
+        "pb"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "9d6be80a09d900d1",
+      "title": "PUBLIC NOTICE REGARDING OBJECTIONS IN THE ANSWER KEY FOR THE RECRUITMENT TO THE POSTS OF ACCOUNTANT GRADE-2 GROUP B IN THE DEPARTMENT OF LOCAL GOVERNMENT MUNICIPAL CORPORATION AND MUNICIPAL COUNCIL NAGAR PANCHAYATS UPLOADED ON 11-07-2026",
+      "link": "https://ppsc.gov.in/index.aspx?page=2777&tabid=10&tablinkid=6816",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-pb",
+      "sourceName": "Punjab PSC (PPSC)",
+      "dept": "Punjab PSC (PPSC)",
+      "state": "Punjab",
+      "category": "state",
+      "stateIds": [
+        "pb"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "01894b66bc36ab91",
+      "title": "PUBLIC NOTICE REGARDING REVISED ANSWER KEY AND PROVISIONALLY SHORTLISTED CANDIDATES FOR THE JOINT COMPETITIVE EXAMINATION FOR THE VARIOUS POSTS OF SUB DIVISIONAL OFFICER AND SUB DIVISIONAL ENGINEER IN VARIOUS DEPARTMENTS UPLOADED ON 03-07-2026",
+      "link": "https://ppsc.gov.in/index.aspx?page=2769&tabid=10&tablinkid=6808",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-pb",
+      "sourceName": "Punjab PSC (PPSC)",
+      "dept": "Punjab PSC (PPSC)",
+      "state": "Punjab",
+      "category": "state",
+      "stateIds": [
+        "pb"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "c89f3ed5b76ab1de",
+      "title": "PUBLIC NOTICE REGARDING OBJECTIONS IN THE ANSWER KEY FOR THE RECRUITMENT TO 08 POSTS OF ACCOUNTS OFFICER GROUP-B IN THE DEPARTMENT OF LOCAL GOVERNMENT MUNICIPAL CORPORATION UPLOADED ON 13-06-2026",
+      "link": "https://ppsc.gov.in/index.aspx?page=2766&tabid=10&tablinkid=6805",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-pb",
+      "sourceName": "Punjab PSC (PPSC)",
+      "dept": "Punjab PSC (PPSC)",
+      "state": "Punjab",
+      "category": "state",
+      "stateIds": [
+        "pb"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "b4d604d672f87877",
+      "title": "PUBLIC NOTICE REGARDING OBJECTIONS IN THE ANSWER KEY FOR THE RECRUITMENT TO 101 POSTS OF HORTICULTURE DEVELOPMENT OFFICER IN THE DEPARTMENT OF HORTICULTURE GOVERNMENT OF PUNJAB UPLOADED ON 14-03-2026",
+      "link": "https://ppsc.gov.in/index.aspx?page=2729&tabid=10&tablinkid=6768",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-pb",
+      "sourceName": "Punjab PSC (PPSC)",
+      "dept": "Punjab PSC (PPSC)",
+      "state": "Punjab",
+      "category": "state",
+      "stateIds": [
+        "pb"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "511bc0d184c507f6",
+      "title": "PUBLIC NOTICE REGARDING OBJECTIONS IN THE ANSWER KEY FOR THE RECRUITMENT TO 06 POSTS OF DRAFTSMAN ARCHITECT GROUP-B IN THE DEPARTMENT OF HOUSING AND URBAN DEVELOPMENT PUDA GOVERNMENT OF PUNJAB UPLOADED ON 14-03-2026",
+      "link": "https://ppsc.gov.in/index.aspx?page=2728&tabid=10&tablinkid=6767",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-pb",
+      "sourceName": "Punjab PSC (PPSC)",
+      "dept": "Punjab PSC (PPSC)",
+      "state": "Punjab",
+      "category": "state",
+      "stateIds": [
+        "pb"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "fc4957532c9707fe",
+      "title": "Notification regarding Final Answer Key of Preliminary Exam. of Misc. Posts(Advt. No-.-18/2025)",
+      "link": "https://tpsc.tripura.gov.in/sites/default/files/Notif_F_Ans_Misc_200726.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://tpsc.tripura.gov.in/sites/default/files/Notif_F_Ans_Misc_200726.pdf"
+      ],
+      "sourceId": "psc-tr",
+      "sourceName": "Tripura PSC (TPSC)",
+      "dept": "Tripura PSC (TPSC)",
+      "state": "NE States",
+      "category": "state",
+      "stateIds": [
+        "ne"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "faca24dd89661cb6",
+      "title": "Provisional Answer Key of Written Exam. for the post of Senior Computer Assistant (Advt. No.-19/2025)(Series-A,B,C & D)",
+      "link": "https://tpsc.tripura.gov.in/sites/default/files/P_Ans_SCA_290726.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://tpsc.tripura.gov.in/sites/default/files/P_Ans_SCA_290726.pdf"
+      ],
+      "sourceId": "psc-tr",
+      "sourceName": "Tripura PSC (TPSC)",
+      "dept": "Tripura PSC (TPSC)",
+      "state": "NE States",
+      "category": "state",
+      "stateIds": [
+        "ne"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "fadc24f9ec1a2b67",
+      "title": "Provisional Answer Key of Written Exam. for the post of Technical Assistant (Advt. No.-17/2025)(Series-A,B,C & D)",
+      "link": "https://tpsc.tripura.gov.in/sites/default/files/P_Ans_Tech._Asstt_290726.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://tpsc.tripura.gov.in/sites/default/files/P_Ans_Tech._Asstt_290726.pdf"
+      ],
+      "sourceId": "psc-tr",
+      "sourceName": "Tripura PSC (TPSC)",
+      "dept": "Tripura PSC (TPSC)",
+      "state": "NE States",
+      "category": "state",
+      "stateIds": [
+        "ne"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "dd643a9258de8145",
+      "title": "Final Answer Key of Written Exam. for the post of System Analyst (Advt. No. 13/2025)(Series-A,B,C & D)",
+      "link": "https://tpsc.tripura.gov.in/sites/default/files/F_Ans_Sys_An_270726.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://tpsc.tripura.gov.in/sites/default/files/F_Ans_Sys_An_270726.pdf"
+      ],
+      "sourceId": "psc-tr",
+      "sourceName": "Tripura PSC (TPSC)",
+      "dept": "Tripura PSC (TPSC)",
+      "state": "NE States",
+      "category": "state",
+      "stateIds": [
+        "ne"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "3b8bc3165751c81e",
+      "title": "Final Answer Key of Written Exam. for the post of Programmer (Advt. No. 17/2025)(Series-A, B,C & D)",
+      "link": "https://tpsc.tripura.gov.in/sites/default/files/F_Ans_Prog_270726.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://tpsc.tripura.gov.in/sites/default/files/F_Ans_Prog_270726.pdf"
+      ],
+      "sourceId": "psc-tr",
+      "sourceName": "Tripura PSC (TPSC)",
+      "dept": "Tripura PSC (TPSC)",
+      "state": "NE States",
+      "category": "state",
+      "stateIds": [
+        "ne"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "d4292b9b5741a61b",
+      "title": "Provisional Answer Key of Written Exam. for the post of Senior Tech. Asstt.(Advt. No. 14/2025)(Series-A,B,C & D)",
+      "link": "https://tpsc.tripura.gov.in/sites/default/files/P_Ans_Sr.%20Tech_Asstt_130726.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://tpsc.tripura.gov.in/sites/default/files/P_Ans_Sr.%20Tech_Asstt_130726.pdf"
+      ],
+      "sourceId": "psc-tr",
+      "sourceName": "Tripura PSC (TPSC)",
+      "dept": "Tripura PSC (TPSC)",
+      "state": "NE States",
+      "category": "state",
+      "stateIds": [
+        "ne"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "f131d51027f286a1",
+      "title": "Provisional Answer Key of Written Exam. for the post of Bio-Medical Engineer(Advt. No. 16/2025)(Series-A)",
+      "link": "https://tpsc.tripura.gov.in/sites/default/files/P_Ans_Bio_Med_130726.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://tpsc.tripura.gov.in/sites/default/files/P_Ans_Bio_Med_130726.pdf"
+      ],
+      "sourceId": "psc-tr",
+      "sourceName": "Tripura PSC (TPSC)",
+      "dept": "Tripura PSC (TPSC)",
+      "state": "NE States",
+      "category": "state",
+      "stateIds": [
+        "ne"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "b63ee28bd0ee697d",
+      "title": "Provisional Answer Key of Written Exam. for the post of Jr. Forensic Digital Analyst(Advt. No. 09/2025)(Series-A,B,C & D)",
+      "link": "https://tpsc.tripura.gov.in/sites/default/files/P_Ans_Jr_FDA_130726.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://tpsc.tripura.gov.in/sites/default/files/P_Ans_Jr_FDA_130726.pdf"
+      ],
+      "sourceId": "psc-tr",
+      "sourceName": "Tripura PSC (TPSC)",
+      "dept": "Tripura PSC (TPSC)",
+      "state": "NE States",
+      "category": "state",
+      "stateIds": [
+        "ne"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "e79096ec454896fb",
+      "title": "Provisional Answer Key of Written Exam. for the post of Jr. System Engineer (Advt. No. 12/2025)(Series-A,B,C & D)",
+      "link": "https://tpsc.tripura.gov.in/sites/default/files/P_Ans_Jr._Sys_Eng_130726.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://tpsc.tripura.gov.in/sites/default/files/P_Ans_Jr._Sys_Eng_130726.pdf"
+      ],
+      "sourceId": "psc-tr",
+      "sourceName": "Tripura PSC (TPSC)",
+      "dept": "Tripura PSC (TPSC)",
+      "state": "NE States",
+      "category": "state",
+      "stateIds": [
+        "ne"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "0eea42e07e67528d",
+      "title": "Provisional Answer Key of Written Exam. for the post of Lecturer (Fine Arts), DIET (Advt. No. 15/2025)(Series-A,B,C & D)",
+      "link": "https://tpsc.tripura.gov.in/sites/default/files/P_Ans_Fine_Arts_DIET_090726.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://tpsc.tripura.gov.in/sites/default/files/P_Ans_Fine_Arts_DIET_090726.pdf"
+      ],
+      "sourceId": "psc-tr",
+      "sourceName": "Tripura PSC (TPSC)",
+      "dept": "Tripura PSC (TPSC)",
+      "state": "NE States",
+      "category": "state",
+      "stateIds": [
+        "ne"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "6f6e4af267b1c21f",
+      "title": "Provisional Answer Key of Written Exam. for the post of Lecturer (History), DIET (Advt. No. 15/2025)(Series-A,B,C & D)",
+      "link": "https://tpsc.tripura.gov.in/sites/default/files/P_Ans_History_DIET_090726.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://tpsc.tripura.gov.in/sites/default/files/P_Ans_History_DIET_090726.pdf"
+      ],
+      "sourceId": "psc-tr",
+      "sourceName": "Tripura PSC (TPSC)",
+      "dept": "Tripura PSC (TPSC)",
+      "state": "NE States",
+      "category": "state",
+      "stateIds": [
+        "ne"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "2275ca31eb9ec5d8",
+      "title": "Provisional Answer Key of Written Exam. for the post of Lecturer (Physics), DIET (Advt. No. 15/2025)(Series-A,B,C & D)",
+      "link": "https://tpsc.tripura.gov.in/sites/default/files/P_Ans_Physics_DIET_090726.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://tpsc.tripura.gov.in/sites/default/files/P_Ans_Physics_DIET_090726.pdf"
+      ],
+      "sourceId": "psc-tr",
+      "sourceName": "Tripura PSC (TPSC)",
+      "dept": "Tripura PSC (TPSC)",
+      "state": "NE States",
+      "category": "state",
+      "stateIds": [
+        "ne"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "1766543082b0a26d",
+      "title": "Provisional Answer Key of Written Exam. for the post of Lecturer(Phy. Education),DIET (Advt. No. 15/2025)(Series-A,B,C & D)",
+      "link": "https://tpsc.tripura.gov.in/sites/default/files/P_Ans_Phy_Edu_DIET_090726.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://tpsc.tripura.gov.in/sites/default/files/P_Ans_Phy_Edu_DIET_090726.pdf"
+      ],
+      "sourceId": "psc-tr",
+      "sourceName": "Tripura PSC (TPSC)",
+      "dept": "Tripura PSC (TPSC)",
+      "state": "NE States",
+      "category": "state",
+      "stateIds": [
+        "ne"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "a37e1c1c85cd8902",
+      "title": "Provisional Answer Key of Written Exam. for the post of Lecturer (Psychology), DIET (Advt. No. 15/2025)(Series-A,B,C & D)",
+      "link": "https://tpsc.tripura.gov.in/sites/default/files/P_Ans_Psychology_DIET_090726.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://tpsc.tripura.gov.in/sites/default/files/P_Ans_Psychology_DIET_090726.pdf"
+      ],
+      "sourceId": "psc-tr",
+      "sourceName": "Tripura PSC (TPSC)",
+      "dept": "Tripura PSC (TPSC)",
+      "state": "NE States",
+      "category": "state",
+      "stateIds": [
+        "ne"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "2b0649e126666ead",
+      "title": "Provisional Answer Key of Written Exam. for the post of Lecturer (Mathematics),DIET (Advt. No. 15/2025)(Series-A,B,C & D)",
+      "link": "https://tpsc.tripura.gov.in/sites/default/files/P_Ans_Math_DIET_090726.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://tpsc.tripura.gov.in/sites/default/files/P_Ans_Math_DIET_090726.pdf"
+      ],
+      "sourceId": "psc-tr",
+      "sourceName": "Tripura PSC (TPSC)",
+      "dept": "Tripura PSC (TPSC)",
+      "state": "NE States",
+      "category": "state",
+      "stateIds": [
+        "ne"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "cb06e19e45255a18",
+      "title": "Provisional Answer Key of Written Exam. for the post of Lecturer (English),DIET (Advt. No. 15/2025)(Series-A,B,C & D)",
+      "link": "https://tpsc.tripura.gov.in/sites/default/files/P_Ans_English_DIET_090726.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://tpsc.tripura.gov.in/sites/default/files/P_Ans_English_DIET_090726.pdf"
+      ],
+      "sourceId": "psc-tr",
+      "sourceName": "Tripura PSC (TPSC)",
+      "dept": "Tripura PSC (TPSC)",
+      "state": "NE States",
+      "category": "state",
+      "stateIds": [
+        "ne"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "9b18a709767ec8e3",
+      "title": "Provisional Answer Key of Written Exam. for the post of Lecturer (Pol. Science),DIET (Advt. No. 15/2025)(Series-A,B,C & D)",
+      "link": "https://tpsc.tripura.gov.in/sites/default/files/P_Ans_Pol_Sci_DIET_090726.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://tpsc.tripura.gov.in/sites/default/files/P_Ans_Pol_Sci_DIET_090726.pdf"
+      ],
+      "sourceId": "psc-tr",
+      "sourceName": "Tripura PSC (TPSC)",
+      "dept": "Tripura PSC (TPSC)",
+      "state": "NE States",
+      "category": "state",
+      "stateIds": [
+        "ne"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "e9856b9e27cf6370",
+      "title": "Provisional Answer Key of Written Exam. for the post of Lecturer (Bengali), DIET (Advt. No. 15/2025)(Series-A,B,C & D)",
+      "link": "https://tpsc.tripura.gov.in/sites/default/files/P_Ans_Bengali_DIET_090726.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://tpsc.tripura.gov.in/sites/default/files/P_Ans_Bengali_DIET_090726.pdf"
+      ],
+      "sourceId": "psc-tr",
+      "sourceName": "Tripura PSC (TPSC)",
+      "dept": "Tripura PSC (TPSC)",
+      "state": "NE States",
+      "category": "state",
+      "stateIds": [
+        "ne"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "048e6fb5ab4fbbb4",
+      "title": "Provisional Answer Key of Written Exam. for the post of Lecturer (Kokborok), DIET (Advt. No. 15/2025)(Series-A,B,C & D)",
+      "link": "https://tpsc.tripura.gov.in/sites/default/files/P_Ans_Kokborok_DIET_090726.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://tpsc.tripura.gov.in/sites/default/files/P_Ans_Kokborok_DIET_090726.pdf"
+      ],
+      "sourceId": "psc-tr",
+      "sourceName": "Tripura PSC (TPSC)",
+      "dept": "Tripura PSC (TPSC)",
+      "state": "NE States",
+      "category": "state",
+      "stateIds": [
+        "ne"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "25a6c5d2d175dd9b",
+      "title": "Provisional Answer Key of Written Exam. for the post of Lecturer (Basics of Education), DIET (Advt. No. 15/2025)(Series-A,B,C & D)",
+      "link": "https://tpsc.tripura.gov.in/sites/default/files/P_Ans_B_Edu_DIET_090726.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://tpsc.tripura.gov.in/sites/default/files/P_Ans_B_Edu_DIET_090726.pdf"
+      ],
+      "sourceId": "psc-tr",
+      "sourceName": "Tripura PSC (TPSC)",
+      "dept": "Tripura PSC (TPSC)",
+      "state": "NE States",
+      "category": "state",
+      "stateIds": [
+        "ne"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "96d6f65ea254eb15",
+      "title": "Provisional Answer Key of Written Exam. for the post of Lecturer (Music), DIET (Advt. No. 15/2025)(Series-A,B,C & D)",
+      "link": "https://tpsc.tripura.gov.in/sites/default/files/P_Ans_Music_DIET_090726.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://tpsc.tripura.gov.in/sites/default/files/P_Ans_Music_DIET_090726.pdf"
+      ],
+      "sourceId": "psc-tr",
+      "sourceName": "Tripura PSC (TPSC)",
+      "dept": "Tripura PSC (TPSC)",
+      "state": "NE States",
+      "category": "state",
+      "stateIds": [
+        "ne"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "75dbca5493e8c195",
+      "title": "Provisional Answer Key of Written Exam. for the post of Lecturer (Education), DIET (Advt. No. 15/2025)(Series-A,B,C & D)",
+      "link": "https://tpsc.tripura.gov.in/sites/default/files/P_Ans_Edu_DIET_090726.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://tpsc.tripura.gov.in/sites/default/files/P_Ans_Edu_DIET_090726.pdf"
+      ],
+      "sourceId": "psc-tr",
+      "sourceName": "Tripura PSC (TPSC)",
+      "dept": "Tripura PSC (TPSC)",
+      "state": "NE States",
+      "category": "state",
+      "stateIds": [
+        "ne"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "61c26c13d253aa54",
+      "title": "Provisional Answer Key of Written Exam. for the post of Lecturer (Chemistry), DIET (Advt. No. 15/2025)(Series-A,B,C & D)",
+      "link": "https://tpsc.tripura.gov.in/sites/default/files/P_Ans_Chemistry_DIET_090726.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://tpsc.tripura.gov.in/sites/default/files/P_Ans_Chemistry_DIET_090726.pdf"
+      ],
+      "sourceId": "psc-tr",
+      "sourceName": "Tripura PSC (TPSC)",
+      "dept": "Tripura PSC (TPSC)",
+      "state": "NE States",
+      "category": "state",
+      "stateIds": [
+        "ne"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "57e7057d8d53540b",
+      "title": "Provisional Answer Key of Written Exam. for the post of Lecturer (Sociology), DIET (Advt. No. 15/2025)(Series-A,B,C & D)",
+      "link": "https://tpsc.tripura.gov.in/sites/default/files/P_Ans_Sociology_DIET_090726.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://tpsc.tripura.gov.in/sites/default/files/P_Ans_Sociology_DIET_090726.pdf"
+      ],
+      "sourceId": "psc-tr",
+      "sourceName": "Tripura PSC (TPSC)",
+      "dept": "Tripura PSC (TPSC)",
+      "state": "NE States",
+      "category": "state",
+      "stateIds": [
+        "ne"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "3de61d722ad8ea11",
+      "title": "Provisional Answer Key of Written Exam. for the post of Lecturer (Geography), DIET (Advt. No. 15/2025)(Series-A,B,C & D)",
+      "link": "https://tpsc.tripura.gov.in/sites/default/files/P_Ans_Geo_DIET_090726.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://tpsc.tripura.gov.in/sites/default/files/P_Ans_Geo_DIET_090726.pdf"
+      ],
+      "sourceId": "psc-tr",
+      "sourceName": "Tripura PSC (TPSC)",
+      "dept": "Tripura PSC (TPSC)",
+      "state": "NE States",
+      "category": "state",
+      "stateIds": [
+        "ne"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "437ff901ed63ea1b",
+      "title": "Provisional Answer Key of Written Exam. for the post of Lecturer (Biology), DIET (Advt. No. 15/2025)(Series-A,B,C & D)",
+      "link": "https://tpsc.tripura.gov.in/sites/default/files/P_Ans_Biology_DIET_090726.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://tpsc.tripura.gov.in/sites/default/files/P_Ans_Biology_DIET_090726.pdf"
+      ],
+      "sourceId": "psc-tr",
+      "sourceName": "Tripura PSC (TPSC)",
+      "dept": "Tripura PSC (TPSC)",
+      "state": "NE States",
+      "category": "state",
+      "stateIds": [
+        "ne"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "62b3784d58f0b2d0",
+      "title": "Provisional Answer Key challenge for the posts of Jr. Forensic Digital Analyst(Advt. No-09/2025), Bio-Medical Engineer (Advt. No-16/2025), Jr. System Engineer(Advt. No-12/2025) & Sr. Technical Asstt.(Advt. No-14/2025) upto 04.08.2026",
+      "link": "https://tpsc.tripura.gov.in/provisional-answer-key-challenge-posts-jr-forensic-digital-analystadvt-no-092025-bio-medical",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-tr",
+      "sourceName": "Tripura PSC (TPSC)",
+      "dept": "Tripura PSC (TPSC)",
+      "state": "NE States",
+      "category": "state",
+      "stateIds": [
+        "ne"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "cc09d44023c47d00",
+      "title": "Final Answer Key for recruitment of various posts in the Directorate of Handloom & Textiles, Manipur on contractual basis. Updated: 12/05/2026",
+      "link": "https://mpscmanipur.gov.in/files/MPSC_26051212320.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://mpscmanipur.gov.in/files/MPSC_26051212320.pdf"
+      ],
+      "sourceId": "psc-mn",
+      "sourceName": "Manipur PSC",
+      "dept": "Manipur PSC",
+      "state": "NE States",
+      "category": "state",
+      "stateIds": [
+        "ne"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "00e31e8fe10932ac",
+      "title": "Uttarakhand Special Subordinate Education (Lecturer-Group 'C') Services General/Women Branch Exam-2025-- Notification regarding Online Objection on Structure of Questions and Options(Subject-Hindi) ( Answer Key )",
+      "link": "https://psc.uk.gov.in/candidate-corner/answerkey",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-uk",
+      "sourceName": "Uttarakhand PSC (UKPSC)",
+      "dept": "Uttarakhand PSC (UKPSC)",
+      "state": "Uttarakhand",
+      "category": "state",
+      "stateIds": [
+        "uk"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "901decd93c0fa71c",
+      "title": "Download Answer Key Against Post",
+      "link": "https://upsssc.gov.in/Online_App/Syllabus_PostWise.aspx?ID=902",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "ssb-up",
+      "sourceName": "UP Subordinate Services Selection Comm (UPSSSC)",
+      "dept": "UP Subordinate Services Selection Comm (UPSSSC)",
+      "state": "All India",
+      "category": "state",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "6ee84a2264dd1381",
+      "title": "25.06.2026 - APR - 2025 - PUBLICATION OF EXAMINATION RESULTS - FINAL ANSWER KEY - FOR ALL SUBJECTS",
+      "link": "https://trb.tn.gov.in/more_notification_details.php?id=MN-1039&language=LG-1",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "ssb-tn",
+      "sourceName": "TN Teachers Recruitment Board (TRB)",
+      "dept": "TN Teachers Recruitment Board (TRB)",
+      "state": "All India",
+      "category": "teaching",
+      "fetchMethod": "live-jobs-supplement"
+    },
     {
       "id": "30504e63b8603f42",
       "title": "Important Provisional Key (Prelim) - 89/2025-26 (Concerned Subject ) (Assistant Professor, Geography in Government Arts",
@@ -49,40 +870,6 @@
       "state": "All India",
       "category": "state",
       "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "37c45556314fa75d",
-      "title": "Answer Key-OMR Exams",
-      "link": "https://www.keralapsc.gov.in/answerkey_omrexams",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-kl",
-      "sourceName": "Kerala PSC",
-      "dept": "Kerala PSC",
-      "state": "Kerala",
-      "category": "state",
-      "stateIds": [
-        "kl"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "274a1d8e868c2d27",
-      "title": "Answer key-Online Exam",
-      "link": "https://www.keralapsc.gov.in/answerkey_onlineexams",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-kl",
-      "sourceName": "Kerala PSC",
-      "dept": "Kerala PSC",
-      "state": "Kerala",
-      "category": "state",
-      "stateIds": [
-        "kl"
-      ],
-      "fetchMethod": "html"
     },
     {
       "id": "b0408e9076d75cad",
@@ -212,22 +999,6 @@
       "fetchMethod": "live-jobs-supplement"
     },
     {
-      "id": "cc09d44023c47d00",
-      "title": "Final Answer Key for recruitment of various posts in the Directorate of Handloom & Textiles, Manipur on contractual basis. Updated: 12/05/2026",
-      "link": "https://mpscmanipur.gov.in/files/MPSC_26051212320.pdf",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [
-        "https://mpscmanipur.gov.in/files/MPSC_26051212320.pdf"
-      ],
-      "sourceId": "psc-mn",
-      "sourceName": "Manipur PSC",
-      "dept": "Manipur PSC",
-      "state": "All India",
-      "category": "state",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
       "id": "de4493d0b5bcc3ff",
       "title": "Announcements dated 07.07.2026 regarding Filing Objections according to the standard question booklet and Answer key uploaded by the Commission for the posts of Assistant District Attorney in Prosecution Department, Haryana (Advt. No. 18/2025) & Superintendent (Legal) in Law and Legislative Department, Haryana (Advt. No. 01/2025), for the exam held on 05.07.2026",
       "link": "https://hpsc.gov.in/Portals/0/Ann_Obj_ADA_SupdtLegal_07_07_2026.pdf",
@@ -245,23 +1016,6 @@
         "all"
       ],
       "fetchMethod": "html-listing"
-    },
-    {
-      "id": "00e31e8fe10932ac",
-      "title": "Answer Key and Online Objection",
-      "link": "https://psc.uk.gov.in/candidate-corner/answerkey",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-uk",
-      "sourceName": "Uttarakhand PSC (UKPSC)",
-      "dept": "Uttarakhand PSC (UKPSC)",
-      "state": "Uttarakhand",
-      "category": "state",
-      "stateIds": [
-        "uk"
-      ],
-      "fetchMethod": "html"
     },
     {
       "id": "0dad7b500584788c",
@@ -319,36 +1073,6 @@
         "ne"
       ],
       "fetchMethod": "html"
-    },
-    {
-      "id": "e95ddc7b082ccd13",
-      "title": "Suggestion Sheet for Provisional Answer Key (CBRT)",
-      "link": "http://gpsc.gujarat.gov.in/Documents/AdvertismentDocument/2019-9-4_49.pdf",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [
-        "http://gpsc.gujarat.gov.in/Documents/AdvertismentDocument/2019-9-4_49.pdf"
-      ],
-      "sourceId": "psc-gj",
-      "sourceName": "Gujarat PSC (GPSC)",
-      "dept": "Gujarat PSC (GPSC)",
-      "state": "All India",
-      "category": "state",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "29f318f60d7290e5",
-      "title": "For filing Objections on the Answer Key of MCQ's",
-      "link": "http://hpsc.gov.in/en-us/Examination/For-filing-Objections-on-the-Answer-Key-of-MCQs",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-hr",
-      "sourceName": "Haryana PSC (HPSC)",
-      "dept": "Haryana PSC (HPSC)",
-      "state": "All India",
-      "category": "state",
-      "fetchMethod": "live-jobs-supplement"
     },
     {
       "id": "4931d95ad78ffb85",

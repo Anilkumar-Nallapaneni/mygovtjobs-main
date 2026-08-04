@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-08-04T11:07:29.251Z",
-  "count": 214,
+  "generatedAt": "2026-08-04T14:27:19.365Z",
+  "count": 254,
   "items": [
     {
       "id": "98096e0f3c848ae9",
@@ -18,6 +18,1239 @@
         "all"
       ],
       "fetchMethod": "html-listing"
+    },
+    {
+      "id": "1b111830abf7e71e",
+      "title": "Interview Schedule",
+      "link": "http://hpsc.gov.in/en-us/Examination/Interview-Schedule",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-hr",
+      "sourceName": "Haryana PSC (HPSC)",
+      "dept": "Haryana PSC (HPSC)",
+      "state": "Haryana",
+      "category": "state",
+      "stateIds": [
+        "hr"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "54a707db94bb9532",
+      "title": "Announcement dated 04.08.2026 regarding schedule of Interview (In continuation of the announcement dated 17.07.2026) for the posts of Post Graduate Teachers (PGTs) in the subject of Computer Science for ROH Cadre & Mewat Cadre (Advt. No. 23/2026)",
+      "link": "https://hpsc.gov.in/Portals/0/Ann_Int_Sch_PGT_CS_04_08_2026.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://hpsc.gov.in/Portals/0/Ann_Int_Sch_PGT_CS_04_08_2026.pdf"
+      ],
+      "sourceId": "psc-hr",
+      "sourceName": "Haryana PSC (HPSC)",
+      "dept": "Haryana PSC (HPSC)",
+      "state": "Haryana",
+      "category": "state",
+      "stateIds": [
+        "hr"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "91558011355dca9d",
+      "title": "Recent Examinations/Interview",
+      "link": "https://jpsc.gov.in/Examination-Links.php",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-jh",
+      "sourceName": "Jharkhand PSC (JPSC)",
+      "dept": "Jharkhand PSC (JPSC)",
+      "state": "Jharkhand",
+      "category": "state",
+      "stateIds": [
+        "jh"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "fa359b9114331fc3",
+      "title": "Personality Test / Viva-Voce",
+      "link": "https://hppsc.hp.gov.in/CommonControls/ViewContinuousLinkPage?qs=mhlKjiXMMIveW0iAADPEiC57R27%2BGya8ay4kbm0dJkcnlKHGzV4U5%2BQlrRl1TG3OQWWkf93oLxROjrnFX90ov6IhjjgH2qZXMgsT6KqPbJM%3D",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-hp",
+      "sourceName": "Himachal Pradesh PSC (HPPSC)",
+      "dept": "Himachal Pradesh PSC (HPPSC)",
+      "state": "Himachal Pradesh",
+      "category": "state",
+      "stateIds": [
+        "hp"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "1709d751f92d2140",
+      "title": "Procedure for Interview Date Change Requests",
+      "link": "https://www.keralapsc.gov.in/procedure-interview-date-change-requests",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-kl",
+      "sourceName": "Kerala PSC",
+      "dept": "Kerala PSC",
+      "state": "Kerala",
+      "category": "state",
+      "stateIds": [
+        "kl"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "39e61c0337589778",
+      "title": "Interview Schedule",
+      "link": "https://www.keralapsc.gov.in/interviews",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-kl",
+      "sourceName": "Kerala PSC",
+      "dept": "Kerala PSC",
+      "state": "Kerala",
+      "category": "state",
+      "stateIds": [
+        "kl"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "0c8b608876f8adbe",
+      "title": "examination-interview",
+      "link": "https://www.keralapsc.gov.in/examination-interview",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-kl",
+      "sourceName": "Kerala PSC",
+      "dept": "Kerala PSC",
+      "state": "Kerala",
+      "category": "state",
+      "stateIds": [
+        "kl"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "cf2afac1f665a4f2",
+      "title": "04/08/2026 Result Preamble and Cutoff Marks (Qualified for Interview) for Asst. Prof. (College Education) - 2025 (Law)",
+      "link": "https://rpsc.rajasthan.gov.in/Static/Result/82C50C4395314BDC963D3BE22748AB6C.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://rpsc.rajasthan.gov.in/Static/Result/82C50C4395314BDC963D3BE22748AB6C.pdf"
+      ],
+      "sourceId": "psc-rj",
+      "sourceName": "Rajasthan PSC (RPSC)",
+      "dept": "Rajasthan PSC (RPSC)",
+      "state": "Rajasthan",
+      "category": "state",
+      "stateIds": [
+        "rj"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "a63bbf398e93d4d7",
+      "title": "03/08/2026 Result Preamble and Cutoff Marks (Qualified for Interview) for Asst. Prof. (College Education) - 2025 (Botany)",
+      "link": "https://rpsc.rajasthan.gov.in/Static/Result/8F728C0DA42244A79536DB3CA86D7564.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://rpsc.rajasthan.gov.in/Static/Result/8F728C0DA42244A79536DB3CA86D7564.pdf"
+      ],
+      "sourceId": "psc-rj",
+      "sourceName": "Rajasthan PSC (RPSC)",
+      "dept": "Rajasthan PSC (RPSC)",
+      "state": "Rajasthan",
+      "category": "state",
+      "stateIds": [
+        "rj"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "a67d9b0fc4687b1a",
+      "title": "03/08/2026 Result Preamble and Cutoff Marks (Qualified for Interview) for Asst. Professor (Medical Edu.) - 2024 (Urology (SS))",
+      "link": "https://rpsc.rajasthan.gov.in/Static/Result/CD40FE7AAA4E42B0800A44F2DCAD4D2E.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://rpsc.rajasthan.gov.in/Static/Result/CD40FE7AAA4E42B0800A44F2DCAD4D2E.pdf"
+      ],
+      "sourceId": "psc-rj",
+      "sourceName": "Rajasthan PSC (RPSC)",
+      "dept": "Rajasthan PSC (RPSC)",
+      "state": "Rajasthan",
+      "category": "state",
+      "stateIds": [
+        "rj"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "70e9cf0c35e6fcda",
+      "title": "03/08/2026 Result Preamble and Cutoff Marks (Qualified for Interview) for Asst. Professor (Medical Edu.) - 2024 (Surgical Oncology (SS))",
+      "link": "https://rpsc.rajasthan.gov.in/Static/Result/98B8C20F0F454ED598B80288E4D10288.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://rpsc.rajasthan.gov.in/Static/Result/98B8C20F0F454ED598B80288E4D10288.pdf"
+      ],
+      "sourceId": "psc-rj",
+      "sourceName": "Rajasthan PSC (RPSC)",
+      "dept": "Rajasthan PSC (RPSC)",
+      "state": "Rajasthan",
+      "category": "state",
+      "stateIds": [
+        "rj"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "992112e7be033764",
+      "title": "31/07/2026 Interview Result and Cutoff Marks (Main List) for A.R.O. - 2022 (Agriculture Chemistry)",
+      "link": "https://rpsc.rajasthan.gov.in/Static/Result/9CAC7B0F9EC64B1495EABE254407186D.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://rpsc.rajasthan.gov.in/Static/Result/9CAC7B0F9EC64B1495EABE254407186D.pdf"
+      ],
+      "sourceId": "psc-rj",
+      "sourceName": "Rajasthan PSC (RPSC)",
+      "dept": "Rajasthan PSC (RPSC)",
+      "state": "Rajasthan",
+      "category": "state",
+      "stateIds": [
+        "rj"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "42775509421fa1b9",
+      "title": "31/07/2026 Interview Result and Cutoff Marks (Main List) for Asst. Professor (Medical Edu.) - 2021(Renal Transplantation (Urology) (SS))",
+      "link": "https://rpsc.rajasthan.gov.in/Static/Result/A330322C09FB473696663AC1E782D2DF.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://rpsc.rajasthan.gov.in/Static/Result/A330322C09FB473696663AC1E782D2DF.pdf"
+      ],
+      "sourceId": "psc-rj",
+      "sourceName": "Rajasthan PSC (RPSC)",
+      "dept": "Rajasthan PSC (RPSC)",
+      "state": "Rajasthan",
+      "category": "state",
+      "stateIds": [
+        "rj"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "8b69c26962fb7903",
+      "title": "31/07/2026 Additional Result Preamble (Qualified for Interview) for Biochemist - 2024",
+      "link": "https://rpsc.rajasthan.gov.in/Static/Result/EF7B77EC51564042BC435D2FD22333FF.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://rpsc.rajasthan.gov.in/Static/Result/EF7B77EC51564042BC435D2FD22333FF.pdf"
+      ],
+      "sourceId": "psc-rj",
+      "sourceName": "Rajasthan PSC (RPSC)",
+      "dept": "Rajasthan PSC (RPSC)",
+      "state": "Rajasthan",
+      "category": "state",
+      "stateIds": [
+        "rj"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "fc94b6b71b10f922",
+      "title": "31/07/2026 Result Preamble and Cutoff Marks (Qualified for Interview) for Asst. Prof. (College Education) - 2025 (Zoology)",
+      "link": "https://rpsc.rajasthan.gov.in/Static/Result/99122076A41146068772E9C672892B84.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://rpsc.rajasthan.gov.in/Static/Result/99122076A41146068772E9C672892B84.pdf"
+      ],
+      "sourceId": "psc-rj",
+      "sourceName": "Rajasthan PSC (RPSC)",
+      "dept": "Rajasthan PSC (RPSC)",
+      "state": "Rajasthan",
+      "category": "state",
+      "stateIds": [
+        "rj"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "117ce9836989a65a",
+      "title": "30/07/2026 Result Preamble and Cutoff Marks (Qualified for Interview) for Asst. Prof. (College Education) - 2025 (Accounts And Business Statistics (ABST))",
+      "link": "https://rpsc.rajasthan.gov.in/Static/Result/70C8FFAE082F4527860BA01ED68FBE89.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://rpsc.rajasthan.gov.in/Static/Result/70C8FFAE082F4527860BA01ED68FBE89.pdf"
+      ],
+      "sourceId": "psc-rj",
+      "sourceName": "Rajasthan PSC (RPSC)",
+      "dept": "Rajasthan PSC (RPSC)",
+      "state": "Rajasthan",
+      "category": "state",
+      "stateIds": [
+        "rj"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "0100366c644ccc75",
+      "title": "30/07/2026 Result Preamble and Cutoff Marks (Qualified for Interview) for Asst. Prof. (College Education) - 2025 (Hindi)",
+      "link": "https://rpsc.rajasthan.gov.in/Static/Result/8B82D6A2222A4BEB8458C59E253DB48F.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://rpsc.rajasthan.gov.in/Static/Result/8B82D6A2222A4BEB8458C59E253DB48F.pdf"
+      ],
+      "sourceId": "psc-rj",
+      "sourceName": "Rajasthan PSC (RPSC)",
+      "dept": "Rajasthan PSC (RPSC)",
+      "state": "Rajasthan",
+      "category": "state",
+      "stateIds": [
+        "rj"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "450a394b4dda8ae8",
+      "title": "30/07/2026 Result Preamble and Cutoff Marks (Qualified for Interview) for Asst. Prof. (College Education) - 2025 (Economics Administration And Financial Management (EAFM))",
+      "link": "https://rpsc.rajasthan.gov.in/Static/Result/6CDDD9D1845147719DC7F98E21FA5DA1.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://rpsc.rajasthan.gov.in/Static/Result/6CDDD9D1845147719DC7F98E21FA5DA1.pdf"
+      ],
+      "sourceId": "psc-rj",
+      "sourceName": "Rajasthan PSC (RPSC)",
+      "dept": "Rajasthan PSC (RPSC)",
+      "state": "Rajasthan",
+      "category": "state",
+      "stateIds": [
+        "rj"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "a5c82dbf39f7f9e5",
+      "title": "30/07/2026 Result Preamble and Cutoff Marks (Qualified for Interview) for Asst. Professor (Medical Edu.) - 2024 (Surgical Gastroenterology (SS))",
+      "link": "https://rpsc.rajasthan.gov.in/Static/Result/D9CF3713A4244DDA836AAAFAE8B9E331.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://rpsc.rajasthan.gov.in/Static/Result/D9CF3713A4244DDA836AAAFAE8B9E331.pdf"
+      ],
+      "sourceId": "psc-rj",
+      "sourceName": "Rajasthan PSC (RPSC)",
+      "dept": "Rajasthan PSC (RPSC)",
+      "state": "Rajasthan",
+      "category": "state",
+      "stateIds": [
+        "rj"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "aba8d82ac194f696",
+      "title": "Public Notice And Interview Schedule Including Annexure-a For The Recruitment To 04 Posts Of Research Officer Group-a And 16 Posts Of Assistant Research Officer Group-a In The Department Of Water Resources Government Of Punjab Uploaded On 20-07-2026",
+      "link": "https://ppsc.gov.in/index.aspx?page=2781&tabid=10&tablinkid=6820",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-pb",
+      "sourceName": "Punjab PSC (PPSC)",
+      "dept": "Punjab PSC (PPSC)",
+      "state": "Punjab",
+      "category": "state",
+      "stateIds": [
+        "pb"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "52cd60643fc6de66",
+      "title": "public notice and interview reschedule including annexure-a for recruitment to 21 posts of district defence services welfare officer group-a in the department of defence services welfare government of Punjab uploaded on 25-05-2026",
+      "link": "https://ppsc.gov.in/index.aspx?page=2755&tabid=10&tablinkid=6794",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-pb",
+      "sourceName": "Punjab PSC (PPSC)",
+      "dept": "Punjab PSC (PPSC)",
+      "state": "Punjab",
+      "category": "state",
+      "stateIds": [
+        "pb"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "a4b99db581936138",
+      "title": "PUBLIC NOTICE AND INTERVIEW SCHEDULE INCLUDING ANNEXURE-A FOR RECRUITMENT TO 21 POSTS OF DISTRICT DEFENCE SERVICES WELFARE OFFICER GROUP-A IN THE DEPARTMENT OF DEFENCE SERVICES WELFARE GOVERNMENT OF PUNJABUPLOADED ON 14-05-2026",
+      "link": "https://ppsc.gov.in/index.aspx?page=2750&tabid=10&tablinkid=6789",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-pb",
+      "sourceName": "Punjab PSC (PPSC)",
+      "dept": "Punjab PSC (PPSC)",
+      "state": "Punjab",
+      "category": "state",
+      "stateIds": [
+        "pb"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "f92a59334bfba377",
+      "title": "Notification regarding for Interview/Personality Test for recruitment to the post of Assistant Professor (Advt. No-05/2025)(2nd Phase)",
+      "link": "https://tpsc.tripura.gov.in/sites/default/files/Notif_AP_2nd_240726.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://tpsc.tripura.gov.in/sites/default/files/Notif_AP_2nd_240726.pdf"
+      ],
+      "sourceId": "psc-tr",
+      "sourceName": "Tripura PSC (TPSC)",
+      "dept": "Tripura PSC (TPSC)",
+      "state": "NE States",
+      "category": "state",
+      "stateIds": [
+        "ne"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "038fb60d2ccf5409",
+      "title": "Revised Programme for Interview/Personality Test for recruitment to the post of Assistant Professor(Pol. Science) (Advt. No-05/2025)(2nd Phase)",
+      "link": "https://tpsc.tripura.gov.in/sites/default/files/2026-08/Prog_AP_Phy_Edu_2nd_Phase_310726.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://tpsc.tripura.gov.in/sites/default/files/2026-08/Prog_AP_Phy_Edu_2nd_Phase_310726.pdf"
+      ],
+      "sourceId": "psc-tr",
+      "sourceName": "Tripura PSC (TPSC)",
+      "dept": "Tripura PSC (TPSC)",
+      "state": "NE States",
+      "category": "state",
+      "stateIds": [
+        "ne"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "b725e29f7c5afdfe",
+      "title": "Eligible list for Interview/Personality Test for recruitment to the post of Assistant Professor(Education, Bengali & Pol. Science), (Advt. No-05/2025)(2nd Phase)",
+      "link": "https://tpsc.tripura.gov.in/sites/default/files/Eligib_AP_2nd_Phase_2_310726.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://tpsc.tripura.gov.in/sites/default/files/Eligib_AP_2nd_Phase_2_310726.pdf"
+      ],
+      "sourceId": "psc-tr",
+      "sourceName": "Tripura PSC (TPSC)",
+      "dept": "Tripura PSC (TPSC)",
+      "state": "NE States",
+      "category": "state",
+      "stateIds": [
+        "ne"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "8e58cbf18e0e243b",
+      "title": "Eligible list for Interview/Personality Test for recruitment to the post of Assistant Professor (Advt. No-05/2025)(2nd Phase)",
+      "link": "https://tpsc.tripura.gov.in/sites/default/files/Eligib_AP_2nd_Phase_1_310726.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://tpsc.tripura.gov.in/sites/default/files/Eligib_AP_2nd_Phase_1_310726.pdf"
+      ],
+      "sourceId": "psc-tr",
+      "sourceName": "Tripura PSC (TPSC)",
+      "dept": "Tripura PSC (TPSC)",
+      "state": "NE States",
+      "category": "state",
+      "stateIds": [
+        "ne"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "a98d09822131e8b3",
+      "title": "Programme for Interview/Personality Test for recruitment to the post of Assistant Professor(Advt. No-05/2025)(2nd Phase)",
+      "link": "https://tpsc.tripura.gov.in/sites/default/files/2026-07/Prog_Intv_AF_2nd_Phase_300726.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://tpsc.tripura.gov.in/sites/default/files/2026-07/Prog_Intv_AF_2nd_Phase_300726.pdf"
+      ],
+      "sourceId": "psc-tr",
+      "sourceName": "Tripura PSC (TPSC)",
+      "dept": "Tripura PSC (TPSC)",
+      "state": "NE States",
+      "category": "state",
+      "stateIds": [
+        "ne"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "1c082b301642027c",
+      "title": "Notification regarding for Interview/Personality Test for recruitment to the post of Assistant Professor(Advt. No-05/2025)(1st Phase)",
+      "link": "https://tpsc.tripura.gov.in/sites/default/files/Notif_AP_250526.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://tpsc.tripura.gov.in/sites/default/files/Notif_AP_250526.pdf"
+      ],
+      "sourceId": "psc-tr",
+      "sourceName": "Tripura PSC (TPSC)",
+      "dept": "Tripura PSC (TPSC)",
+      "state": "NE States",
+      "category": "state",
+      "stateIds": [
+        "ne"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "09ff44bf2cf34caf",
+      "title": "Notification regarding for Interview/Personality Test for recruitment to the post of Assistant Professor(Advt. No-05/2025)(1st Phase)",
+      "link": "https://tpsc.tripura.gov.in/sites/default/files/Notif_AF_190526.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://tpsc.tripura.gov.in/sites/default/files/Notif_AF_190526.pdf"
+      ],
+      "sourceId": "psc-tr",
+      "sourceName": "Tripura PSC (TPSC)",
+      "dept": "Tripura PSC (TPSC)",
+      "state": "NE States",
+      "category": "state",
+      "stateIds": [
+        "ne"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "573a484febc254f4",
+      "title": "Notification regarding Interview/Personality Test for the post of Agriculture Officer, TAFS, Grade-I (Advt. No-21/2025)",
+      "link": "https://tpsc.tripura.gov.in/sites/default/files/Notis_AGRI_090626.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://tpsc.tripura.gov.in/sites/default/files/Notis_AGRI_090626.pdf"
+      ],
+      "sourceId": "psc-tr",
+      "sourceName": "Tripura PSC (TPSC)",
+      "dept": "Tripura PSC (TPSC)",
+      "state": "NE States",
+      "category": "state",
+      "stateIds": [
+        "ne"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "c5993ec05c502859",
+      "title": "Revised eligible list for Interview/Personality Test for recruitment to the post of Assistant Professor (Advt. No-05/2025)(1st Phase)",
+      "link": "https://tpsc.tripura.gov.in/sites/default/files/Rev_Elg_AP_040626.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://tpsc.tripura.gov.in/sites/default/files/Rev_Elg_AP_040626.pdf"
+      ],
+      "sourceId": "psc-tr",
+      "sourceName": "Tripura PSC (TPSC)",
+      "dept": "Tripura PSC (TPSC)",
+      "state": "NE States",
+      "category": "state",
+      "stateIds": [
+        "ne"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "4ac64be59afb579a",
+      "title": "Schedule of Interview for Recruitment to Various Posts under the Directorate of Handloom & Textiles, Manipur. Updated: 27/05/2026",
+      "link": "https://mpscmanipur.gov.in/files/MPSC_26052719480.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://mpscmanipur.gov.in/files/MPSC_26052719480.pdf"
+      ],
+      "sourceId": "psc-mn",
+      "sourceName": "Manipur PSC",
+      "dept": "Manipur PSC",
+      "state": "NE States",
+      "category": "state",
+      "stateIds": [
+        "ne"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "3f7663453dcd756c",
+      "title": "Notification for postponement of interview for direct recruitment of various posts in the Directorate of Handloom & Textiles, Manipur. Updated: 20/05/2026",
+      "link": "https://mpscmanipur.gov.in/files/MPSC_26052016560.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://mpscmanipur.gov.in/files/MPSC_26052016560.pdf"
+      ],
+      "sourceId": "psc-mn",
+      "sourceName": "Manipur PSC",
+      "dept": "Manipur PSC",
+      "state": "NE States",
+      "category": "state",
+      "stateIds": [
+        "ne"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "b5773e5c8e75d0e3",
+      "title": "Interview Schedule for recruitment to various posts in the Directorate of Handloom & Textiles, Manipur on contractual basis. Updated: 13/05/2026",
+      "link": "https://mpscmanipur.gov.in/files/MPSC_26051320250.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://mpscmanipur.gov.in/files/MPSC_26051320250.pdf"
+      ],
+      "sourceId": "psc-mn",
+      "sourceName": "Manipur PSC",
+      "dept": "Manipur PSC",
+      "state": "NE States",
+      "category": "state",
+      "stateIds": [
+        "ne"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "57f58bad0712ac0d",
+      "title": "Uttarakhand Combined State Civil Lower Subordinate Services Examination-2024- Notification, Interview Memo, Interview Programme & Medical Format ( Results )",
+      "link": "https://psc.uk.gov.in/candidate-corner/interview",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-uk",
+      "sourceName": "Uttarakhand PSC (UKPSC)",
+      "dept": "Uttarakhand PSC (UKPSC)",
+      "state": "Uttarakhand",
+      "category": "state",
+      "stateIds": [
+        "uk"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "47b63350ad7e31a5",
+      "title": "Results: Result of walk-in-interview for the post of Locum Medical Officer Dental and GDMO",
+      "link": "http://www.barc.gov.in/careers/result17.pdf",
+      "publishedAt": null,
+      "summary": "Result of walk-in-interview for the post of Locum Medical Officer Dental and GDMO",
+      "pdfUrls": [],
+      "sourceId": "barc",
+      "sourceName": "Bhabha Atomic Research Centre (BARC)",
+      "dept": "Bhabha Atomic Research Centre (BARC)",
+      "state": "All India",
+      "category": "defence",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "9ae3992d7dba996b",
+      "title": "Results: Result of the Walk-in-Interview of Part time consultants posts conducted on 3rd and 4th June 2026",
+      "link": "http://www.barc.gov.in/careers/result15.pdf",
+      "publishedAt": null,
+      "summary": "Result of the Walk-in-Interview of Part time consultants posts conducted on 3rd and 4th June 2026",
+      "pdfUrls": [],
+      "sourceId": "barc",
+      "sourceName": "Bhabha Atomic Research Centre (BARC)",
+      "dept": "Bhabha Atomic Research Centre (BARC)",
+      "state": "All India",
+      "category": "defence",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "8f54cd7c3b4692c6",
+      "title": "Interview Schedule: CISF AC(EXE) LDCE-2026",
+      "link": "https://www.upsc.gov.in/whats-new/CISF%20AC%28EXE%29%20LDCE-2026/Interview%20Schedule",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "upsc-notifications",
+      "sourceName": "UPSC — What's New",
+      "dept": "UPSC — What's New",
+      "state": "All India",
+      "category": "upsc",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "1ac3fd88e323d1d0",
+      "title": "Walk in interview to engage specialists , senior residents & Jr/ Sr on contract basis in ESIC Hospital Bikaner Rajasthan.- PDF size:(1,014.07 KB) .",
+      "link": "https://esic.gov.in/attachments/recruitmentfile/Walk_in_interview_to_engage_specialists_senior_residents_amp_Jr_Sr_on_contract_basis_in_ESIC_Hospital_Bikaner_Rajasthan_1785823558.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://esic.gov.in/attachments/recruitmentfile/Walk_in_interview_to_engage_specialists_senior_residents_amp_Jr_Sr_on_contract_basis_in_ESIC_Hospital_Bikaner_Rajasthan_1785823558.pdf"
+      ],
+      "sourceId": "esic",
+      "sourceName": "Employees' State Insurance Corporation",
+      "dept": "Employees' State Insurance Corporation",
+      "state": "All India",
+      "category": "health",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "84a1e60b23a7734a",
+      "title": "Result for walk-in-interview held on 29-07-2026 at ESIC Hospital, Gwalior, Madhya Pradesh for the engagement of Senior Residents under 3 years & 1 year contract, and Full/Part time Specialists (contract)- PDF size:(269.43 KB) .",
+      "link": "https://esic.gov.in/attachments/recruitmentfile/Result_for_walk_in_interview_held_on_29_07_2026_at_ESIC_Hospital_Gwalior_Madhya_Pradesh_for_the_engagement_of_Senior_Residents_under_3_years_amp_1_year_contract_and_Full_Part_time_Specialists_contract_1785761641.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://esic.gov.in/attachments/recruitmentfile/Result_for_walk_in_interview_held_on_29_07_2026_at_ESIC_Hospital_Gwalior_Madhya_Pradesh_for_the_engagement_of_Senior_Residents_under_3_years_amp_1_year_contract_and_Full_Part_time_Specialists_contract_1785761641.pdf"
+      ],
+      "sourceId": "esic",
+      "sourceName": "Employees' State Insurance Corporation",
+      "dept": "Employees' State Insurance Corporation",
+      "state": "All India",
+      "category": "health",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "4e99f8db2044df5e",
+      "title": "Walk in interview for recruitment of Teaching Faculty and Senior Residents on Contract basis.- PDF size:(310.45 KB) .",
+      "link": "https://esic.gov.in/attachments/recruitmentfile/Walk_in_interview_for_recruitment_of_Teaching_Faculty_and_Senior_Residents_on_Contract_basis_1785742551.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://esic.gov.in/attachments/recruitmentfile/Walk_in_interview_for_recruitment_of_Teaching_Faculty_and_Senior_Residents_on_Contract_basis_1785742551.pdf"
+      ],
+      "sourceId": "esic",
+      "sourceName": "Employees' State Insurance Corporation",
+      "dept": "Employees' State Insurance Corporation",
+      "state": "All India",
+      "category": "health",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "0ff3f1c1c95a81a7",
+      "title": "RESULT OF INTERVIEW FOR THE POST- SENIOR RESIDENT HELD ON 23-07-2026 AGAINST SHORT NOTICE NO.3 OF ADVT. NO. 01 OF 2026- PDF size:(209.48 KB) .",
+      "link": "https://esic.gov.in/attachments/recruitmentfile/RESULT_OF_INTERVIEW_FOR_THE_POST_SENIOR_RESIDENT_HELD_ON_23_07_2026_AGAINST_SHORT_NOTICE_NO_3_OF_ADVT_NO_01_OF_2026_1785738654.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://esic.gov.in/attachments/recruitmentfile/RESULT_OF_INTERVIEW_FOR_THE_POST_SENIOR_RESIDENT_HELD_ON_23_07_2026_AGAINST_SHORT_NOTICE_NO_3_OF_ADVT_NO_01_OF_2026_1785738654.pdf"
+      ],
+      "sourceId": "esic",
+      "sourceName": "Employees' State Insurance Corporation",
+      "dept": "Employees' State Insurance Corporation",
+      "state": "All India",
+      "category": "health",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "a2c5fe09dad658e8",
+      "title": "4th August 2026 Result of Online Interview Advt. No. WII/ADVT. 1/RP-CELL/June, 2026",
+      "link": "https://www.wii.gov.in/news/result_online_interview_advtno_wii_advt1_rpcell_june2026",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "wii",
+      "sourceName": "Wildlife Institute of India (WII)",
+      "dept": "Wildlife Institute of India (WII)",
+      "state": "All India",
+      "category": "psu",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "d621836276eedaa1",
+      "title": "31st July 2026 Result of Online Interview Advt. No. WII/ADVT. 3/RP-CELL/May, 2026",
+      "link": "https://www.wii.gov.in/news/result_advtno_wii_advt3_rp_cell_may2026",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "wii",
+      "sourceName": "Wildlife Institute of India (WII)",
+      "dept": "Wildlife Institute of India (WII)",
+      "state": "All India",
+      "category": "psu",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "a1bc7ecbd075f319",
+      "title": "Various Results, Interview & Test Calls at Bhabha Atomic Research Centre",
+      "link": "https://www.barc.gov.in/careers/result.html",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "barc",
+      "sourceName": "Bhabha Atomic Research Centre (BARC)",
+      "dept": "Bhabha Atomic Research Centre (BARC)",
+      "state": "All India",
+      "category": "defence",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "d9a860bb1a963707",
+      "title": "30/07/2026 Result Preamble and Cutoff Marks (Qualified for Interview) for Asst. Professor (Medical Edu.) - 2024 (Radiodiagnosis (BS))",
+      "link": "https://rpsc.rajasthan.gov.in/Static/Result/9F80BF349CBA479B87A8F642B5FB9680.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://rpsc.rajasthan.gov.in/Static/Result/9F80BF349CBA479B87A8F642B5FB9680.pdf"
+      ],
+      "sourceId": "psc-rj",
+      "sourceName": "Rajasthan PSC (RPSC)",
+      "dept": "Rajasthan PSC (RPSC)",
+      "state": "All India",
+      "category": "state",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "a089ff7443d4401e",
+      "title": "Download Interview Letters: Direct Recruitment",
+      "link": "https://upsssc.gov.in/Online_App/Post_Wise_ID_ECF.aspx?ID=IDF",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "ssb-up",
+      "sourceName": "UP Subordinate Services Selection Comm (UPSSSC)",
+      "dept": "UP Subordinate Services Selection Comm (UPSSSC)",
+      "state": "All India",
+      "category": "state",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "ee3ec867eb5188cc",
+      "title": "List of additional candidates eligible for Viva-Voce as per orders of the Hon'ble High Court of Madras in W.P.Nos. 11855 and 13950 of 2024 and WMP. Nos. 12949 and 15147 & 15149 of 2024 dated 21.06.2024",
+      "link": "https://tnusrb.tn.gov.in/pdfs/JR_23_Addl_Cand_elgbl_Viva_Voce.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://tnusrb.tn.gov.in/pdfs/JR_23_Addl_Cand_elgbl_Viva_Voce.pdf"
+      ],
+      "sourceId": "police-tn",
+      "sourceName": "Tamil Nadu Uniformed Services (TNUSRB)",
+      "dept": "Tamil Nadu Uniformed Services (TNUSRB)",
+      "state": "All India",
+      "category": "police",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "ae6685da59e2a2fc",
+      "title": "Marks and status of the candidates who were found eligible for viva-voce",
+      "link": "https://tnusrb.tn.gov.in/pdfs/JR_23_FINAL_MARKS.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://tnusrb.tn.gov.in/pdfs/JR_23_FINAL_MARKS.pdf"
+      ],
+      "sourceId": "police-tn",
+      "sourceName": "Tamil Nadu Uniformed Services (TNUSRB)",
+      "dept": "Tamil Nadu Uniformed Services (TNUSRB)",
+      "state": "All India",
+      "category": "police",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "4a36bf2c5e8f37b0",
+      "title": "CORRIGENDUM interview is now re-scheduled as under",
+      "link": "https://delhi.gov.in/sites/default/files/news-documents/adobe-scan-23-mar-2023-4.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://delhi.gov.in/sites/default/files/news-documents/adobe-scan-23-mar-2023-4.pdf"
+      ],
+      "sourceId": "delhi-portal",
+      "sourceName": "Delhi Govt — Job Notifications",
+      "dept": "Delhi Govt — Job Notifications",
+      "state": "All India",
+      "category": "state",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "2da56591cf462100",
+      "title": "CANDIDATES SELECTED FOR INTERVIEW",
+      "link": "https://delhi.gov.in/sites/default/files/news-documents/docscanner-13-mar-2023-18-0713.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://delhi.gov.in/sites/default/files/news-documents/docscanner-13-mar-2023-18-0713.pdf"
+      ],
+      "sourceId": "delhi-portal",
+      "sourceName": "Delhi Govt — Job Notifications",
+      "dept": "Delhi Govt — Job Notifications",
+      "state": "All India",
+      "category": "state",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "481473008e181ee4",
+      "title": "Press note regarding the personal interview for the Post of Assistant Engineer MGNREGA, C.D Block Little Andaman under South Andaman District",
+      "link": "https://erecruitment.andamannicobar.gov.in/Notice/64_fbe80dee-4dc3-4385-9622-d2f8e1ad2f29.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://erecruitment.andamannicobar.gov.in/Notice/64_fbe80dee-4dc3-4385-9622-d2f8e1ad2f29.pdf"
+      ],
+      "sourceId": "an-rec",
+      "sourceName": "Andaman & Nicobar e-Recruitment",
+      "dept": "Andaman & Nicobar e-Recruitment",
+      "state": "All India",
+      "category": "state",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "75e0954e7d6ca4d7",
+      "title": "RESULT: Following Candidates are selected for the viva-voce test scheduled to be held on 14.03.2026 for the post of Jr. Clerk-cum-Copyist, Stenographer & Jr. Typist",
+      "link": "https://cdnbbsr.s3waas.gov.in/s3ec038ce5d989374d216a867cdc887148/uploads/2026/03/2026030136.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://cdnbbsr.s3waas.gov.in/s3ec038ce5d989374d216a867cdc887148/uploads/2026/03/2026030136.pdf"
+      ],
+      "sourceId": "dcourt-angul",
+      "sourceName": "District & Sessions Judge, Angul",
+      "dept": "District & Sessions Judge, Angul",
+      "state": "All India",
+      "category": "state",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "22627a1f0ff1b482",
+      "title": "Following Candidates are eligible to appear the walk-in-interview for the post of Chief Legal Aid Defense Counsel, Deputy Legal Aid Defense Counsel, Assistant Legal Aid Defense Counsel Under ” LADCS”",
+      "link": "https://cdnbbsr.s3waas.gov.in/s3ec038ce5d989374d216a867cdc887148/uploads/2025/06/2025061279.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://cdnbbsr.s3waas.gov.in/s3ec038ce5d989374d216a867cdc887148/uploads/2025/06/2025061279.pdf"
+      ],
+      "sourceId": "dcourt-angul",
+      "sourceName": "District & Sessions Judge, Angul",
+      "dept": "District & Sessions Judge, Angul",
+      "state": "All India",
+      "category": "state",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "419b67610872238a",
+      "title": "Intimation Letters issued in favour of the candidates bearing serial no. 01 to 25 to appear in the Computer Science Test (Practical) followed by Viva-Voce-Test for the post of Junior Clerk-cum-Copyist",
+      "link": "https://cdnbbsr.s3waas.gov.in/s3ec03bdd8817990ef209f0fb6b049f2d2/uploads/2026/03/2026030520.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://cdnbbsr.s3waas.gov.in/s3ec03bdd8817990ef209f0fb6b049f2d2/uploads/2026/03/2026030520.pdf"
+      ],
+      "sourceId": "dcourt-balangir",
+      "sourceName": "District & Sessions Judge, Balangir",
+      "dept": "District & Sessions Judge, Balangir",
+      "state": "All India",
+      "category": "state",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "936d3fc14f0d2947",
+      "title": "Intimation Letters issued in favour of the candidates bearing serial no. 26 to 51 to appear in the Computer Science Test (Practical) followed by Viva-Voce-Test for the post of Junior Clerk-cum-Copyist",
+      "link": "https://cdnbbsr.s3waas.gov.in/s3ec03bdd8817990ef209f0fb6b049f2d2/uploads/2026/03/2026030524.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://cdnbbsr.s3waas.gov.in/s3ec03bdd8817990ef209f0fb6b049f2d2/uploads/2026/03/2026030524.pdf"
+      ],
+      "sourceId": "dcourt-balangir",
+      "sourceName": "District & Sessions Judge, Balangir",
+      "dept": "District & Sessions Judge, Balangir",
+      "state": "All India",
+      "category": "state",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "f09852a59ecd3bd1",
+      "title": "Intimation letters issued in favour of the following candidates (Sl No 52-58) to appear in the Short-Hand and Typewriting test followed by Computer Science Test (Practical) followed by Viva-Voce Test",
+      "link": "https://cdnbbsr.s3waas.gov.in/s3ec03bdd8817990ef209f0fb6b049f2d2/uploads/2026/03/2026030541.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://cdnbbsr.s3waas.gov.in/s3ec03bdd8817990ef209f0fb6b049f2d2/uploads/2026/03/2026030541.pdf"
+      ],
+      "sourceId": "dcourt-balangir",
+      "sourceName": "District & Sessions Judge, Balangir",
+      "dept": "District & Sessions Judge, Balangir",
+      "state": "All India",
+      "category": "state",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "ff4f782b7d3e7f62",
+      "title": "Advertisement for walk-in-interview from the retired ministerial staff for the Fast Track Special Courts, Jagatsinghpur",
+      "link": "https://cdnbbsr.s3waas.gov.in/s3ec03f7cfdde9db36af8e0d9a6d123d5c/uploads/2025/07/2025070143.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://cdnbbsr.s3waas.gov.in/s3ec03f7cfdde9db36af8e0d9a6d123d5c/uploads/2025/07/2025070143.pdf"
+      ],
+      "sourceId": "dcourt-jagatsinghpur",
+      "sourceName": "District & Sessions Judge, Jagatsinghpur",
+      "dept": "District & Sessions Judge, Jagatsinghpur",
+      "state": "All India",
+      "category": "state",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "6d41670337399f5e",
+      "title": "Notice regarding to walk-in-interview for engagement of daily wage peon, is to be held on 31.08.2024.",
+      "link": "https://cdnbbsr.s3waas.gov.in/s3ec03f7cfdde9db36af8e0d9a6d123d5c/uploads/2024/08/2024082342.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://cdnbbsr.s3waas.gov.in/s3ec03f7cfdde9db36af8e0d9a6d123d5c/uploads/2024/08/2024082342.pdf"
+      ],
+      "sourceId": "dcourt-jagatsinghpur",
+      "sourceName": "District & Sessions Judge, Jagatsinghpur",
+      "dept": "District & Sessions Judge, Jagatsinghpur",
+      "state": "All India",
+      "category": "state",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "46027456159c0f67",
+      "title": "List of candidates qualified in Computer Science test practical and selected to appear the Viva-voce test today.",
+      "link": "https://jagatsinghpur.dcourts.gov.in/list-of-candidates-qualified-in-computer-science-test-practical-and-selected-to-appear-the-viva-voce-test-today/",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "dcourt-jagatsinghpur",
+      "sourceName": "District & Sessions Judge, Jagatsinghpur",
+      "dept": "District & Sessions Judge, Jagatsinghpur",
+      "state": "All India",
+      "category": "state",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "1ba1dfff02452bb6",
+      "title": "Detailed Programme of the Technical knowledge in Survey and Settlement(Practical),Shorthand and Typewriting Test,Computer Science Test(Practical),Document Verification & Viva Voce Test on 09.03.20",
+      "link": "https://cdnbbsr.s3waas.gov.in/s3ec033cfbdf468f0a03187f6cee51a25e/uploads/2025/02/2025022537.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://cdnbbsr.s3waas.gov.in/s3ec033cfbdf468f0a03187f6cee51a25e/uploads/2025/02/2025022537.pdf"
+      ],
+      "sourceId": "dcourt-puri",
+      "sourceName": "District & Sessions Judge, Puri",
+      "dept": "District & Sessions Judge, Puri",
+      "state": "All India",
+      "category": "state",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "51b8ae93f6270a62",
+      "title": "Detailed Programme of the Technical knowledge in Survey and Settlement(Practical),Shorthand and Typewriting Test,Computer Science Test(Practical),Document Verification & Viva Voce Test on 22-02-20",
+      "link": "https://cdnbbsr.s3waas.gov.in/s3ec033cfbdf468f0a03187f6cee51a25e/uploads/2026/02/2026020419.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://cdnbbsr.s3waas.gov.in/s3ec033cfbdf468f0a03187f6cee51a25e/uploads/2026/02/2026020419.pdf"
+      ],
+      "sourceId": "dcourt-puri",
+      "sourceName": "District & Sessions Judge, Puri",
+      "dept": "District & Sessions Judge, Puri",
+      "state": "All India",
+      "category": "state",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "e274ed29cbe21f35",
+      "title": "DETAILED SCHEDULE FOR SHORTHAND AND TYPE WRITING TEST,TYPE WRITING TEST,COMPUTER SCIENCE TEST(PRACTICAL) AND VIVAVOCE TEST FOR THE POSTS OF JR.CLERK-CUM-COPYIST,STENOGRAPHER GRADE-III AND JR.TYPIST",
+      "link": "https://cdnbbsr.s3waas.gov.in/s3ec029aeade7beada35c83d3b344fbafe/uploads/2026/02/2026020932.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://cdnbbsr.s3waas.gov.in/s3ec029aeade7beada35c83d3b344fbafe/uploads/2026/02/2026020932.pdf"
+      ],
+      "sourceId": "dcourt-dhenkanal",
+      "sourceName": "District & Sessions Judge, Dhenkanal",
+      "dept": "District & Sessions Judge, Dhenkanal",
+      "state": "All India",
+      "category": "state",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "49d7269bb5aa6f6c",
+      "title": "DETAILED SCHEDULE FOR SHORTHAND AND TYPE WRITING TEST,TYPE WRITING TEST,COMPUTER SCIENCE TEST(PRACTICAL) AND VIVAVOCE TEST FOR THE POSTS OF JR.CLERK-CUM-COPYIST,STENOGRAPHER GRADE-III AND JR.TYPIST",
+      "link": "https://dhenkanal.dcourts.gov.in/notice/detailed-schedule-for-shorthand-and-type-writing-testtype-writing-testcomputer-science-testpractical-and-vivavoce-test-for-the-posts-of-jr-clerk-cum-copyiststenographer-grade-iii-and-jr-typist/",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "dcourt-dhenkanal",
+      "sourceName": "District & Sessions Judge, Dhenkanal",
+      "dept": "District & Sessions Judge, Dhenkanal",
+      "state": "All India",
+      "category": "state",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "0322c577a6354d28",
+      "title": "Selected candidates for Jr. Clerk-cum-Copyist, Jr. Typist, Stenographer Gr.-III and Salaried Amin shall appear for Skill Test/CS Practical/Viva-Voce on 08.02.2026 at District Court Complex, Nuapada.",
+      "link": "https://cdnbbsr.s3waas.gov.in/s3ec019a96a2c73c0d477ff2a6da3bf538/uploads/2026/01/2026012873.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://cdnbbsr.s3waas.gov.in/s3ec019a96a2c73c0d477ff2a6da3bf538/uploads/2026/01/2026012873.pdf"
+      ],
+      "sourceId": "dcourt-nuapada",
+      "sourceName": "District & Sessions Judge, Nuapada",
+      "dept": "District & Sessions Judge, Nuapada",
+      "state": "All India",
+      "category": "state",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "80d2c1cdd832397c",
+      "title": "Public Notice regarding interview schedule_for the post of Peon_adhoc",
+      "link": "https://cdnbbsr.s3waas.gov.in/s3ec03a4d92e2cd541fca87e4620aba658/uploads/2026/07/2026071574.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://cdnbbsr.s3waas.gov.in/s3ec03a4d92e2cd541fca87e4620aba658/uploads/2026/07/2026071574.pdf"
+      ],
+      "sourceId": "dcourt-yamunanagar",
+      "sourceName": "District & Sessions Judge, Yamunanagar",
+      "dept": "District & Sessions Judge, Yamunanagar",
+      "state": "All India",
+      "category": "state",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "313b12d78a17deec",
+      "title": "Public Notice regarding interview schedule_for the post of Peon_adhoc",
+      "link": "https://yamunanagar.dcourts.gov.in/notice/public-notice-regarding-interview-schedule_for-the-post-of-peon_adhoc/",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "dcourt-yamunanagar",
+      "sourceName": "District & Sessions Judge, Yamunanagar",
+      "dept": "District & Sessions Judge, Yamunanagar",
+      "state": "All India",
+      "category": "state",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "404fd417a7c6c318",
+      "title": "Advertisement Notification No. 3/2025 inviting walk-in interview for contractual engagement as Support Engineer in the office of the SLSA, W.B.",
+      "link": "https://cdnbbsr.s3waas.gov.in/s3ec0587ae6fb631f7c8a627e8e28785d9/uploads/2025/08/2025081977.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://cdnbbsr.s3waas.gov.in/s3ec0587ae6fb631f7c8a627e8e28785d9/uploads/2025/08/2025081977.pdf"
+      ],
+      "sourceId": "dcourt-howrah",
+      "sourceName": "District & Sessions Judge, Howrah",
+      "dept": "District & Sessions Judge, Howrah",
+      "state": "All India",
+      "category": "state",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "050b742458caa532",
+      "title": "Advertisement Notification No. 02/2025 regarding Walk-In Interview for Contractual Engagement as Accountant in The Office of The State Legal Services Authority, West Bengal.",
+      "link": "https://cdnbbsr.s3waas.gov.in/s3ec0587ae6fb631f7c8a627e8e28785d9/uploads/2025/07/2025072145.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://cdnbbsr.s3waas.gov.in/s3ec0587ae6fb631f7c8a627e8e28785d9/uploads/2025/07/2025072145.pdf"
+      ],
+      "sourceId": "dcourt-howrah",
+      "sourceName": "District & Sessions Judge, Howrah",
+      "dept": "District & Sessions Judge, Howrah",
+      "state": "All India",
+      "category": "state",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "77e70f41a130fbb1",
+      "title": "Publication of Shortlisted Candidates for Interview for engagement as Para-Legal Volunteer (Adhikar Mitra)",
+      "link": "https://cdnbbsr.s3waas.gov.in/s3ec0587ae6fb631f7c8a627e8e28785d9/uploads/2025/08/2025082292.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://cdnbbsr.s3waas.gov.in/s3ec0587ae6fb631f7c8a627e8e28785d9/uploads/2025/08/2025082292.pdf"
+      ],
+      "sourceId": "dcourt-howrah",
+      "sourceName": "District & Sessions Judge, Howrah",
+      "dept": "District & Sessions Judge, Howrah",
+      "state": "All India",
+      "category": "state",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "7c7d50bc2cbc6794",
+      "title": "Interview/ Viva-Voce for the eligible candidates for the post of “Karmabandhu” as per Employment notification no 01 dated 03-06-2026",
+      "link": "https://cdnbbsr.s3waas.gov.in/s3ec05781397bc0630d47ab531ea850bdd/uploads/2026/06/2026062386.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://cdnbbsr.s3waas.gov.in/s3ec05781397bc0630d47ab531ea850bdd/uploads/2026/06/2026062386.pdf"
+      ],
+      "sourceId": "dcourt-coochbehar",
+      "sourceName": "District & Sessions Judge, Cooch Behar",
+      "dept": "District & Sessions Judge, Cooch Behar",
+      "state": "All India",
+      "category": "state",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "16ca826720f1bf6f",
+      "title": "Urgent notice regarding PLV interview",
+      "link": "https://cdnbbsr.s3waas.gov.in/s3ec046c91724b896cdcf48285039ab05b/uploads/2026/06/2026062920.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://cdnbbsr.s3waas.gov.in/s3ec046c91724b896cdcf48285039ab05b/uploads/2026/06/2026062920.pdf"
+      ],
+      "sourceId": "dcourt-begusarai",
+      "sourceName": "District & Sessions Judge, Begusarai",
+      "dept": "District & Sessions Judge, Begusarai",
+      "state": "All India",
+      "category": "state",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "19c70aa12761f18b",
+      "title": "Urgent notice regarding PLV Interview",
+      "link": "https://cdnbbsr.s3waas.gov.in/s3ec046c91724b896cdcf48285039ab05b/uploads/2026/06/2026062635.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://cdnbbsr.s3waas.gov.in/s3ec046c91724b896cdcf48285039ab05b/uploads/2026/06/2026062635.pdf"
+      ],
+      "sourceId": "dcourt-begusarai",
+      "sourceName": "District & Sessions Judge, Begusarai",
+      "dept": "District & Sessions Judge, Begusarai",
+      "state": "All India",
+      "category": "state",
+      "fetchMethod": "live-jobs-supplement"
     },
     {
       "id": "12ca81e8e0617c5b",
@@ -353,22 +1586,6 @@
       "fetchMethod": "html-listing"
     },
     {
-      "id": "481473008e181ee4",
-      "title": "Press note regarding the personal interview for the Post of Assistant Engineer MGNREGA, C.D Block Little Andaman under South Andaman District",
-      "link": "https://erecruitment.andamannicobar.gov.in/Notice/64_fbe80dee-4dc3-4385-9622-d2f8e1ad2f29.pdf",
-      "publishedAt": "2026-07-21T06:18:13.169325Z",
-      "summary": null,
-      "pdfUrls": [
-        "https://erecruitment.andamannicobar.gov.in/Notice/64_fbe80dee-4dc3-4385-9622-d2f8e1ad2f29.pdf"
-      ],
-      "sourceId": "an-rec",
-      "sourceName": "Erecruitment Andamannicobar",
-      "dept": "Erecruitment Andamannicobar",
-      "state": "All India",
-      "category": "engineering",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
       "id": "6352a29291a0a625",
       "title": "16th July 2026Result of project serial No. 04(4) for Project Scientist-I position under IDWH project (Advertisement No. WII/ADVT. 2/RP-CELL/ April, 2026)",
       "link": "https://www.wii.gov.in/news/result_advt2_april2026_proj_04",
@@ -382,20 +1599,6 @@
       "dept": "Wii",
       "state": "All India",
       "category": "psu",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "aba8d82ac194f696",
-      "title": "Public Notice And Interview Schedule Including Annexure-a For The Recruitment To 04 Posts Of Research Officer Group-a And 16 Posts Of Assistant Research Officer Group-a In The Department Of Water Resources Government Of Punjab Uploaded On 20-07-2026",
-      "link": "https://ppsc.gov.in/index.aspx?page=2781&tabid=10&tablinkid=6820",
-      "publishedAt": "2026-07-20T00:00:00Z",
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-pb",
-      "sourceName": "Ppsc",
-      "dept": "Ppsc",
-      "state": "All India",
-      "category": "state",
       "fetchMethod": "live-jobs-supplement"
     },
     {
@@ -516,22 +1719,6 @@
       "sourceId": "dcourt-ujjain",
       "sourceName": "Ujjain Dcourts",
       "dept": "Ujjain Dcourts",
-      "state": "All India",
-      "category": "state",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "7c7d50bc2cbc6794",
-      "title": "Interview/ Viva-Voce for the eligible candidates for the post of “Karmabandhu” as per Employment notification no 01 date",
-      "link": "https://cdnbbsr.s3waas.gov.in/s3ec05781397bc0630d47ab531ea850bdd/uploads/2026/06/2026062386.pdf",
-      "publishedAt": "2026-07-02T12:31:09.951914Z",
-      "summary": null,
-      "pdfUrls": [
-        "https://cdnbbsr.s3waas.gov.in/s3ec05781397bc0630d47ab531ea850bdd/uploads/2026/06/2026062386.pdf"
-      ],
-      "sourceId": "dcourt-coochbehar",
-      "sourceName": "Coochbehar Dcourts",
-      "dept": "Coochbehar Dcourts",
       "state": "All India",
       "category": "state",
       "fetchMethod": "live-jobs-supplement"
@@ -1558,22 +2745,6 @@
       "fetchMethod": "live-jobs-supplement"
     },
     {
-      "id": "c5993ec05c502859",
-      "title": "Revised eligible list for Interview/Personality Test for recruitment to the post of Assistant Professor (Advt. No-05/2025)(1st Phase)",
-      "link": "https://tpsc.tripura.gov.in/sites/default/files/Rev_Elg_AP_040626.pdf",
-      "publishedAt": "2026-06-27T02:56:10.643362Z",
-      "summary": null,
-      "pdfUrls": [
-        "https://tpsc.tripura.gov.in/sites/default/files/Rev_Elg_AP_040626.pdf"
-      ],
-      "sourceId": "psc-tr",
-      "sourceName": "Tpsc Tripura",
-      "dept": "Tpsc Tripura",
-      "state": "All India",
-      "category": "teaching",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
       "id": "0cee7879cc8c4682",
       "title": "Programme of Interview/Personality Test for recruitment to the post of Agriculture Officer, TAFS,Gr-I(Advt. No.-21/2025)",
       "link": "https://tpsc.tripura.gov.in/sites/default/files/2026-06/Prog_Intv_Agri_220626.pdf",
@@ -1684,54 +2855,6 @@
       "fetchMethod": "live-jobs-supplement"
     },
     {
-      "id": "77e70f41a130fbb1",
-      "title": "Publication of Shortlisted Candidates for Interview for engagement as Para-Legal Volunteer (Adhikar Mitra)",
-      "link": "https://cdnbbsr.s3waas.gov.in/s3ec0587ae6fb631f7c8a627e8e28785d9/uploads/2025/08/2025082292.pdf",
-      "publishedAt": "2026-06-23T15:25:13.054223Z",
-      "summary": null,
-      "pdfUrls": [
-        "https://cdnbbsr.s3waas.gov.in/s3ec0587ae6fb631f7c8a627e8e28785d9/uploads/2025/08/2025082292.pdf"
-      ],
-      "sourceId": "dcourt-howrah",
-      "sourceName": "District & Sessions Judge, Howrah",
-      "dept": "District & Sessions Judge, Howrah",
-      "state": "All India",
-      "category": "state",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "49d7269bb5aa6f6c",
-      "title": "DETAILED SCHEDULE FOR SHORTHAND AND TYPE WRITING TEST,TYPE WRITING TEST,COMPUTER SCIENCE TEST(PRACTICAL) AND VIVAVOCE TEST FOR THE POSTS OF JR.CLERK-CUM-COPYIST,STENOGRAPHER GRADE-III AND JR.TYPIST",
-      "link": "https://dhenkanal.dcourts.gov.in/notice/detailed-schedule-for-shorthand-and-type-writing-testtype-writing-testcomputer-science-testpractical-and-vivavoce-test-for-the-posts-of-jr-clerk-cum-copyiststenographer-grade-iii-and-jr-typist/",
-      "publishedAt": "2026-06-23T15:19:27.162524Z",
-      "summary": "OFFICE OF THE DISTRICT JUDGE, DHENKANAL DETAILED SCHEDULE FOR SHORTHAND & TYPE WRITING TEST, TYPE WRITING TEST, COMPUTER SCIENCE TEST (PRACTICAL) AND VIVA VOCE TEST FOR THE POSTS OF JR.CLERK-CUM-COPYIST, STENOGRAPHERGRADE-III AND JR.TYPIST EXAMINATION CENTRE :CIVIL COURTS, DHENKANAL Date of Test for the post of Jr. Clerk-cum-Copyist : 22-02-2026 Reporting Time : 11:30 AM SI. No. SI. No. 2 3 Date o…",
-      "pdfUrls": [
-        "https://cdnbbsr.s3waas.gov.in/s3ec029aeade7beada35c83d3b344fbafe/uploads/2026/02/2026020919-1.pdf"
-      ],
-      "sourceId": "dcourt-dhenkanal",
-      "sourceName": "District & Sessions Judge, Dhenkanal",
-      "dept": "District & Sessions Judge, Dhenkanal",
-      "state": "All India",
-      "category": "state",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "e274ed29cbe21f35",
-      "title": "DETAILED SCHEDULE FOR SHORTHAND AND TYPE WRITING TEST,TYPE WRITING TEST,COMPUTER SCIENCE TEST(PRACTICAL) AND VIVAVOCE TEST FOR THE POSTS OF JR.CLERK-CUM-COPYIST,STENOGRAPHER GRADE-III AND JR.TYPIST",
-      "link": "https://cdnbbsr.s3waas.gov.in/s3ec029aeade7beada35c83d3b344fbafe/uploads/2026/02/2026020932.pdf",
-      "publishedAt": "2026-06-23T15:19:21.544480Z",
-      "summary": "OFFICE OF THE DISTRICT JUDGE, DHENKANAL DETAILED SCHEDULE FOR SHORTHAND & TYPE WRITING TEST, TYPE WRITING TEST, COMPUTER SCIENCE TEST (PRACTICAL) AND VIVA VOCE TEST FOR THE POSTS OF JR.CLERK-CUM-COPYIST, STENOGRAPHERGRADE-III AND JR.TYPIST EXAMINATION CENTRE :CIVIL COURTS, DHENKANAL Date of Test for the post of Jr. Clerk-cum-Copyist : 22-02-2026 Reporting Time : 11:30 AM SI. No. SI. No. 2 3 Date o…",
-      "pdfUrls": [
-        "https://cdnbbsr.s3waas.gov.in/s3ec029aeade7beada35c83d3b344fbafe/uploads/2026/02/2026020932.pdf"
-      ],
-      "sourceId": "dcourt-dhenkanal",
-      "sourceName": "District & Sessions Judge, Dhenkanal",
-      "dept": "District & Sessions Judge, Dhenkanal",
-      "state": "All India",
-      "category": "state",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
       "id": "53f505ae9b3e3f70",
       "title": "The following applicants have been selected for viva-voce test for the post of Chief Legal Aid Defense Counsel, Deputy Chief Legal Aid Defense Counsels and Assistant Legal Aid Defense Counsels New",
       "link": "https://jharsuguda.dcourts.gov.in/notice/the-following-applicants-have-been-selected-for-viva-voce-test-for-the-post-of-chief-legal-aid-defense-counsel-deputy-chief-legal-aid-defense-counsels-and-assistant-legal-aid-defense-counsels/",
@@ -1775,70 +2898,6 @@
       "sourceId": "dcourt-balangir",
       "sourceName": "District & Sessions Judge, Balangir",
       "dept": "District & Sessions Judge, Balangir",
-      "state": "All India",
-      "category": "state",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "f09852a59ecd3bd1",
-      "title": "Intimation letters issued in favour of the following candidates (Sl No 52-58) to appear in the Short-Hand and Typewriting test followed by Computer Science Test (Practical) followed by Viva-Voce Test",
-      "link": "https://cdnbbsr.s3waas.gov.in/s3ec03bdd8817990ef209f0fb6b049f2d2/uploads/2026/03/2026030541.pdf",
-      "publishedAt": "2026-06-23T15:08:55.077553Z",
-      "summary": null,
-      "pdfUrls": [
-        "https://cdnbbsr.s3waas.gov.in/s3ec03bdd8817990ef209f0fb6b049f2d2/uploads/2026/03/2026030541.pdf"
-      ],
-      "sourceId": "dcourt-balangir",
-      "sourceName": "District & Sessions Judge, Balangir",
-      "dept": "District & Sessions Judge, Balangir",
-      "state": "All India",
-      "category": "state",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "936d3fc14f0d2947",
-      "title": "Intimation Letters issued in favour of the candidates bearing serial no. 26 to 51 to appear in the Computer Science Test (Practical) followed by Viva-Voce-Test for the post of Junior Clerk-cum-Copyist",
-      "link": "https://cdnbbsr.s3waas.gov.in/s3ec03bdd8817990ef209f0fb6b049f2d2/uploads/2026/03/2026030524.pdf",
-      "publishedAt": "2026-06-23T15:08:53.782682Z",
-      "summary": null,
-      "pdfUrls": [
-        "https://cdnbbsr.s3waas.gov.in/s3ec03bdd8817990ef209f0fb6b049f2d2/uploads/2026/03/2026030524.pdf"
-      ],
-      "sourceId": "dcourt-balangir",
-      "sourceName": "District & Sessions Judge, Balangir",
-      "dept": "District & Sessions Judge, Balangir",
-      "state": "All India",
-      "category": "state",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "419b67610872238a",
-      "title": "Intimation Letters issued in favour of the candidates bearing serial no. 01 to 25 to appear in the Computer Science Test (Practical) followed by Viva-Voce-Test for the post of Junior Clerk-cum-Copyist",
-      "link": "https://cdnbbsr.s3waas.gov.in/s3ec03bdd8817990ef209f0fb6b049f2d2/uploads/2026/03/2026030520.pdf",
-      "publishedAt": "2026-06-23T15:08:52.161202Z",
-      "summary": null,
-      "pdfUrls": [
-        "https://cdnbbsr.s3waas.gov.in/s3ec03bdd8817990ef209f0fb6b049f2d2/uploads/2026/03/2026030520.pdf"
-      ],
-      "sourceId": "dcourt-balangir",
-      "sourceName": "District & Sessions Judge, Balangir",
-      "dept": "District & Sessions Judge, Balangir",
-      "state": "All India",
-      "category": "state",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "22627a1f0ff1b482",
-      "title": "Following Candidates are eligible to appear the walk-in-interview for the post of Chief Legal Aid Defense Counsel, Deputy Legal Aid Defense Counsel, Assistant Legal Aid Defense Counsel Under ” LADCS”",
-      "link": "https://cdnbbsr.s3waas.gov.in/s3ec038ce5d989374d216a867cdc887148/uploads/2025/06/2025061279.pdf",
-      "publishedAt": "2026-06-23T15:08:05.341320Z",
-      "summary": null,
-      "pdfUrls": [
-        "https://cdnbbsr.s3waas.gov.in/s3ec038ce5d989374d216a867cdc887148/uploads/2025/06/2025061279.pdf"
-      ],
-      "sourceId": "dcourt-angul",
-      "sourceName": "District & Sessions Judge, Angul",
-      "dept": "District & Sessions Judge, Angul",
       "state": "All India",
       "category": "state",
       "fetchMethod": "live-jobs-supplement"
@@ -1984,20 +3043,6 @@
       "dept": "UPSC — What's New",
       "state": "All India",
       "category": "upsc",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "57f58bad0712ac0d",
-      "title": "Superintendent (Woman Welfare Department) Selection-2025-- Interview Memo, Interview Programme, Notification, Checklist, Format 02,03 and 04 ( Interview )",
-      "link": "https://psc.uk.gov.in/candidate-corner/interview",
-      "publishedAt": "2026-06-22T19:52:58.743008Z",
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-uk",
-      "sourceName": "Uttarakhand PSC (UKPSC)",
-      "dept": "Uttarakhand PSC (UKPSC)",
-      "state": "All India",
-      "category": "state",
       "fetchMethod": "live-jobs-supplement"
     },
     {
@@ -2482,36 +3527,6 @@
       "fetchMethod": "live-jobs-supplement"
     },
     {
-      "id": "4ac64be59afb579a",
-      "title": "Schedule of Interview for Recruitment to Various Posts under the Directorate of Handloom & Textiles, Manipur.Updated: 27/05/2026",
-      "link": "https://mpscmanipur.gov.in/files/MPSC_26052719480.pdf",
-      "publishedAt": "2026-05-27T00:00:00Z",
-      "summary": null,
-      "pdfUrls": [
-        "https://mpscmanipur.gov.in/files/MPSC_26052719480.pdf"
-      ],
-      "sourceId": "psc-mn",
-      "sourceName": "Mpscmanipur",
-      "dept": "Mpscmanipur",
-      "state": "All India",
-      "category": "state",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "52cd60643fc6de66",
-      "title": "public notice and interview reschedule including annexure-a for recruitment to 21 posts of district defence services welfare officer group-a in the department of defence services welfare government of Punjab uploaded on 25-05-2026",
-      "link": "https://ppsc.gov.in/index.aspx?page=2755&tabid=10&tablinkid=6794",
-      "publishedAt": "2026-05-25T00:00:00Z",
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-pb",
-      "sourceName": "Ppsc",
-      "dept": "Ppsc",
-      "state": "All India",
-      "category": "defence",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
       "id": "552f20a275f377ed",
       "title": "SELECTION LIST OF PRINCIPAL-CUM-PROFESSOR & VICE PRINCIPAL-CUM-PROFESSR ON CONTRACTUAL BASIS OF INTERVIEW HELD ON 25.05.2026 FOR ESIC NURSING COLLEGE, JOKA",
       "link": "https://www.esic.gov.in/attachments/recruitmentfile/SELECTION_LIST_OF_PRINCIPAL_CUM_PROFESSOR_amp_VICE_PRINCIPAL_CUM_PROFESSR_ON_CONTRACTUAL_BASIS_OF_INTERVIEW_HELD_ON_25_05_2026_FOR_ESIC_NURSING_COLLEGE_JOKA_1781256709.pdf",
@@ -2542,20 +3557,6 @@
       "fetchMethod": "live-jobs-supplement"
     },
     {
-      "id": "a4b99db581936138",
-      "title": "PUBLIC NOTICE AND INTERVIEW SCHEDULE INCLUDING ANNEXURE-A FOR RECRUITMENT TO 21 POSTS OF DISTRICT DEFENCE SERVICES WELFARE OFFICER GROUP-A IN THE DEPARTMENT OF DEFENCE SERVICES WELFARE GOVERNMENT OF PUNJABUPLOADED ON 14-05-2026",
-      "link": "https://ppsc.gov.in/index.aspx?page=2750&tabid=10&tablinkid=6789",
-      "publishedAt": "2026-05-14T00:00:00Z",
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-pb",
-      "sourceName": "Ppsc",
-      "dept": "Ppsc",
-      "state": "All India",
-      "category": "defence",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
       "id": "c12cb675c65976d7",
       "title": "HCAT Jammu Order dated 14.05.2026, in case titled Arti Katoch Vs Public Service Commission, Interview notice for the post of Lecturer English thereof",
       "link": "https://jkpsc.nic.in/Pdf/Downloader1.ashx?nid=17872&type=n",
@@ -2583,22 +3584,6 @@
       "sourceId": "dcourt-ujjain",
       "sourceName": "Ujjain Dcourts",
       "dept": "Ujjain Dcourts",
-      "state": "All India",
-      "category": "state",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "b5773e5c8e75d0e3",
-      "title": "Interview Schedule for recruitment to various posts in the Directorate of Handloom & Textiles, Manipur on contractual basis.Updated: 13/05/2026",
-      "link": "https://mpscmanipur.gov.in/files/MPSC_26051320250.pdf",
-      "publishedAt": "2026-05-13T00:00:00Z",
-      "summary": null,
-      "pdfUrls": [
-        "https://mpscmanipur.gov.in/files/MPSC_26051320250.pdf"
-      ],
-      "sourceId": "psc-mn",
-      "sourceName": "Mpscmanipur",
-      "dept": "Mpscmanipur",
       "state": "All India",
       "category": "state",
       "fetchMethod": "live-jobs-supplement"
@@ -2689,22 +3674,6 @@
       "fetchMethod": "live-jobs-supplement"
     },
     {
-      "id": "0322c577a6354d28",
-      "title": "Selected candidates for Jr. Clerk-cum-Copyist, Jr. Typist, Stenographer Gr.-III and Salaried Amin shall appear for Skill Test/CS Practical/Viva-Voce on 08.02.2026 at District Court Complex, Nuapada",
-      "link": "https://cdnbbsr.s3waas.gov.in/s3ec019a96a2c73c0d477ff2a6da3bf538/uploads/2026/01/2026012873.pdf",
-      "publishedAt": "2026-02-08T00:00:00Z",
-      "summary": null,
-      "pdfUrls": [
-        "https://cdnbbsr.s3waas.gov.in/s3ec019a96a2c73c0d477ff2a6da3bf538/uploads/2026/01/2026012873.pdf"
-      ],
-      "sourceId": "dcourt-nuapada",
-      "sourceName": "District & Sessions Judge, Nuapada",
-      "dept": "District & Sessions Judge, Nuapada",
-      "state": "All India",
-      "category": "state",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
       "id": "5ef8270d28b56c55",
       "title": "SELECTED CANDIDATES FOR JR. CLERK-CUM-COPYIST, JR. TYPIST, STENOGRAPHER GR.-III AND SALARIED AMIN SHALL APPEAR FOR SKILL TEST/CS PRACTICAL/VIVA-VOCE ON 08.02.2026 AT DISTRICT COURT COMPLEX, NUAPADA",
       "link": "https://nuapada.dcourts.gov.in/selected-candidates-for-jr-clerk-cum-copyist-jr-typist-stenographer-gr-iii-and-salaried-amin-shall-appear-for-skill-test-cs-practical-viva-voce-on-08-02-2026-at-district-court-complex-nuapada/",
@@ -2737,73 +3706,6 @@
       "fetchMethod": "live-jobs-supplement"
     },
     {
-      "id": "6d41670337399f5e",
-      "title": "Notice regarding to walk-in-interview for engagement of daily wage peon, is to be held on 31.08.2024",
-      "link": "https://cdnbbsr.s3waas.gov.in/s3ec03f7cfdde9db36af8e0d9a6d123d5c/uploads/2024/08/2024082342.pdf",
-      "publishedAt": "2024-08-31T00:00:00Z",
-      "summary": "OFFICE OF THE DISTRICT JUDGE, JAGATSINGHPUR NOTICE Date: 23.08.2024 Interview Date, Time and Place: INTERVIEW DATE: 31^ August, 2024 (SATURDAY), TIME: 09:30 A.M I3y order of the Chairman, Selection Committee, Jagatsinghpur. Pursuant to this office Advertisement dtd. 03.08.2024, the Walk-in-interview for engagement of persons on daily wage (purely temporary basis) to meet required services of Group…",
-      "pdfUrls": [
-        "https://cdnbbsr.s3waas.gov.in/s3ec03f7cfdde9db36af8e0d9a6d123d5c/uploads/2024/08/2024082342.pdf"
-      ],
-      "sourceId": "dcourt-jagatsinghpur",
-      "sourceName": "District & Sessions Judge, Jagatsinghpur",
-      "dept": "District & Sessions Judge, Jagatsinghpur",
-      "state": "All India",
-      "category": "state",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "1709d751f92d2140",
-      "title": "Procedure for Interview Date Change Requests",
-      "link": "https://www.keralapsc.gov.in/procedure-interview-date-change-requests",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-kl",
-      "sourceName": "Kerala PSC",
-      "dept": "Kerala PSC",
-      "state": "Kerala",
-      "category": "state",
-      "stateIds": [
-        "kl"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "39e61c0337589778",
-      "title": "Interview Schedule",
-      "link": "https://www.keralapsc.gov.in/interviews",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-kl",
-      "sourceName": "Kerala PSC",
-      "dept": "Kerala PSC",
-      "state": "Kerala",
-      "category": "state",
-      "stateIds": [
-        "kl"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "0c8b608876f8adbe",
-      "title": "examination-interview",
-      "link": "https://www.keralapsc.gov.in/examination-interview",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-kl",
-      "sourceName": "Kerala PSC",
-      "dept": "Kerala PSC",
-      "state": "Kerala",
-      "category": "state",
-      "stateIds": [
-        "kl"
-      ],
-      "fetchMethod": "html"
-    },
-    {
       "id": "c019d0c423cf10b5",
       "title": "Procedure for Interview Date Change Requests",
       "link": "https://www.keralapsc.gov.in/index.php/procedure-interview-date-change-requests",
@@ -2817,23 +3719,6 @@
       "category": "state",
       "stateIds": [
         "kl"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "91558011355dca9d",
-      "title": "Recent Examinations/Interview",
-      "link": "https://jpsc.gov.in/Examination-Links.php",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-jh",
-      "sourceName": "Jharkhand PSC (JPSC)",
-      "dept": "Jharkhand PSC (JPSC)",
-      "state": "Jharkhand",
-      "category": "state",
-      "stateIds": [
-        "jh"
       ],
       "fetchMethod": "html"
     },
@@ -2933,22 +3818,6 @@
       "fetchMethod": "live-jobs-supplement"
     },
     {
-      "id": "19c70aa12761f18b",
-      "title": "Urgent notice regarding PLV Interview and Accepted Application PLV Accepted Application 26/06/2026 06/07/2026 View (617",
-      "link": "https://cdnbbsr.s3waas.gov.in/s3ec046c91724b896cdcf48285039ab05b/uploads/2026/06/2026062635.pdf",
-      "publishedAt": "2026-06-26T00:00:00Z",
-      "summary": null,
-      "pdfUrls": [
-        "https://cdnbbsr.s3waas.gov.in/s3ec046c91724b896cdcf48285039ab05b/uploads/2026/06/2026062635.pdf"
-      ],
-      "sourceId": "dcourt-begusarai",
-      "sourceName": "Begusarai Dcourts",
-      "dept": "Begusarai Dcourts",
-      "state": "All India",
-      "category": "state",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
       "id": "b12b12f78085b6bb",
       "title": "Recruitments Title Description Start Date End Date File Public Notice regarding interview schedule_for the post of Peon_",
       "link": "https://yamunanagar.dcourts.gov.in/past-notices/recruitments",
@@ -3018,48 +3887,6 @@
       "fetchMethod": "live-jobs-supplement"
     },
     {
-      "id": "47b63350ad7e31a5",
-      "title": "Results: Result of walk-in-interview for the post of Locum Medical Officer Dental and GDMO",
-      "link": "http://www.barc.gov.in/careers/result17.pdf",
-      "publishedAt": null,
-      "summary": "Result of walk-in-interview for the post of Locum Medical Officer Dental and GDMO",
-      "pdfUrls": [],
-      "sourceId": "barc",
-      "sourceName": "Bhabha Atomic Research Centre (BARC)",
-      "dept": "Bhabha Atomic Research Centre (BARC)",
-      "state": "All India",
-      "category": "defence",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "9ae3992d7dba996b",
-      "title": "Results: Result of the Walk-in-Interview of Part time consultants posts conducted on 3rd and 4th June 2026",
-      "link": "http://www.barc.gov.in/careers/result15.pdf",
-      "publishedAt": null,
-      "summary": "Result of the Walk-in-Interview of Part time consultants posts conducted on 3rd and 4th June 2026",
-      "pdfUrls": [],
-      "sourceId": "barc",
-      "sourceName": "Bhabha Atomic Research Centre (BARC)",
-      "dept": "Bhabha Atomic Research Centre (BARC)",
-      "state": "All India",
-      "category": "defence",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "a1bc7ecbd075f319",
-      "title": "Various Results, Interview & Test Calls at Bhabha Atomic Research Centre",
-      "link": "https://www.barc.gov.in/careers/result.html",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "barc",
-      "sourceName": "Bhabha Atomic Research Centre (BARC)",
-      "dept": "Bhabha Atomic Research Centre (BARC)",
-      "state": "All India",
-      "category": "defence",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
       "id": "885cf499b0cbcb44",
       "title": "Interview notice for the post of Assistant Architect in Housing and urban Development Department",
       "link": "https://jkpsc.nic.in/Pdf/Downloader1.ashx?nid=17997&type=n",
@@ -3111,54 +3938,6 @@
       "sourceId": "psc-jk",
       "sourceName": "Jammu & Kashmir PSC (JKPSC)",
       "dept": "Jammu & Kashmir PSC (JKPSC)",
-      "state": "All India",
-      "category": "state",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "3f7663453dcd756c",
-      "title": "Notification for postponement of interview for direct recruitment of various posts in the Directorate of Handloom & Textiles, Manipur. Updated: 20/05/2026",
-      "link": "https://mpscmanipur.gov.in/files/MPSC_26052016560.pdf",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [
-        "https://mpscmanipur.gov.in/files/MPSC_26052016560.pdf"
-      ],
-      "sourceId": "psc-mn",
-      "sourceName": "Manipur PSC",
-      "dept": "Manipur PSC",
-      "state": "All India",
-      "category": "state",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "4a36bf2c5e8f37b0",
-      "title": "CORRIGENDUM interview is now re-scheduled as under",
-      "link": "https://delhi.gov.in/sites/default/files/news-documents/adobe-scan-23-mar-2023-4.pdf",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [
-        "https://delhi.gov.in/sites/default/files/news-documents/adobe-scan-23-mar-2023-4.pdf"
-      ],
-      "sourceId": "delhi-portal",
-      "sourceName": "Delhi Govt — Job Notifications",
-      "dept": "Delhi Govt — Job Notifications",
-      "state": "All India",
-      "category": "state",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "2da56591cf462100",
-      "title": "CANDIDATES SELECTED FOR INTERVIEW",
-      "link": "https://delhi.gov.in/sites/default/files/news-documents/docscanner-13-mar-2023-18-0713.pdf",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [
-        "https://delhi.gov.in/sites/default/files/news-documents/docscanner-13-mar-2023-18-0713.pdf"
-      ],
-      "sourceId": "delhi-portal",
-      "sourceName": "Delhi Govt — Job Notifications",
-      "dept": "Delhi Govt — Job Notifications",
       "state": "All India",
       "category": "state",
       "fetchMethod": "live-jobs-supplement"
@@ -3576,63 +4355,6 @@
       "fetchMethod": "html"
     },
     {
-      "id": "573a484febc254f4",
-      "title": "Notification regarding Interview/Personality Test for the post of Agriculture Officer, TAFS, Grade-I (Advt. No-21/2025)",
-      "link": "https://tpsc.tripura.gov.in/sites/default/files/Notis_AGRI_090626.pdf",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [
-        "https://tpsc.tripura.gov.in/sites/default/files/Notis_AGRI_090626.pdf"
-      ],
-      "sourceId": "psc-tr",
-      "sourceName": "Tripura PSC (TPSC)",
-      "dept": "Tripura PSC (TPSC)",
-      "state": "NE States",
-      "category": "state",
-      "stateIds": [
-        "ne"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "1c082b301642027c",
-      "title": "Notification regarding for Interview/Personality Test for recruitment to the post of Assistant Professor(Advt. No-05/2025)(1st Phase)",
-      "link": "https://tpsc.tripura.gov.in/sites/default/files/Notif_AP_250526.pdf",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [
-        "https://tpsc.tripura.gov.in/sites/default/files/Notif_AP_250526.pdf"
-      ],
-      "sourceId": "psc-tr",
-      "sourceName": "Tripura PSC (TPSC)",
-      "dept": "Tripura PSC (TPSC)",
-      "state": "NE States",
-      "category": "state",
-      "stateIds": [
-        "ne"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "09ff44bf2cf34caf",
-      "title": "Notification regarding for Interview/Personality Test for recruitment to the post of Assistant Professor(Advt. No-05/2025)(1st Phase)",
-      "link": "https://tpsc.tripura.gov.in/sites/default/files/Notif_AF_190526.pdf",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [
-        "https://tpsc.tripura.gov.in/sites/default/files/Notif_AF_190526.pdf"
-      ],
-      "sourceId": "psc-tr",
-      "sourceName": "Tripura PSC (TPSC)",
-      "dept": "Tripura PSC (TPSC)",
-      "state": "NE States",
-      "category": "state",
-      "stateIds": [
-        "ne"
-      ],
-      "fetchMethod": "html"
-    },
-    {
       "id": "44b25fb342f01a59",
       "title": "Notification regarding for the Interview/Personality Test for recruitment to the post of Assistant Professor(Advt. No-05/2025)",
       "link": "https://tpsc.tripura.gov.in/sites/default/files/Intv_Astt._Prof_170426.pdf",
@@ -3663,20 +4385,6 @@
       "dept": "Indo-Tibetan Border Police (ITBP)",
       "state": "All India",
       "category": "police",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "1b111830abf7e71e",
-      "title": "Interview Schedule",
-      "link": "http://hpsc.gov.in/en-us/Examination/Interview-Schedule",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-hr",
-      "sourceName": "Haryana PSC (HPSC)",
-      "dept": "Haryana PSC (HPSC)",
-      "state": "All India",
-      "category": "state",
       "fetchMethod": "live-jobs-supplement"
     },
     {

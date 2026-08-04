@@ -1,0 +1,38 @@
+{
+  "mode": "verify",
+  "started_at_epoch": 1785856408,
+  "steps": [
+    {
+      "name": "environment",
+      "required": true,
+      "returncode": 0,
+      "duration_seconds": 0.31
+    },
+    {
+      "name": "database",
+      "required": true,
+      "returncode": 0,
+      "duration_seconds": 3.55
+    },
+    {
+      "name": "Supabase connection",
+      "required": true,
+      "returncode": 0,
+      "duration_seconds": 1.55
+    },
+    {
+      "name": "job quality",
+      "required": true,
+      "returncode": 0,
+      "duration_seconds": 0.53
+    },
+    {
+      "name": "snapshot",
+      "required": true,
+      "returncode": 0,
+      "duration_seconds": 0.25
+    }
+  ],
+  "finished_at_epoch": 1785856414,
+  "status": "succeeded"
+}

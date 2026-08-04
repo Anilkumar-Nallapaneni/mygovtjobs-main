@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-08-04T11:07:29.251Z",
-  "count": 39,
+  "generatedAt": "2026-08-04T14:27:19.365Z",
+  "count": 42,
   "items": [
     {
       "id": "19df6addea51f1a1",
@@ -9,15 +9,172 @@
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
-      "sourceId": "upsc-e-admit-hub",
-      "sourceName": "UPSC — e-Admit cards",
-      "dept": "Union Public Service Commission",
+      "sourceId": "upsc",
+      "sourceName": "Union Public Service Commission (UPSC)",
+      "dept": "Union Public Service Commission (UPSC)",
       "state": "All India",
       "category": "upsc",
       "stateIds": [
         "all"
       ],
-      "fetchMethod": "html-listing"
+      "fetchMethod": "rss-config"
+    },
+    {
+      "id": "3019953999ede974",
+      "title": "Syllabus",
+      "link": "http://hpsc.gov.in/en-us/Examination/Syllabus",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-hr",
+      "sourceName": "Haryana PSC (HPSC)",
+      "dept": "Haryana PSC (HPSC)",
+      "state": "Haryana",
+      "category": "state",
+      "stateIds": [
+        "hr"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "85b1767449295db8",
+      "title": "Postwise Syllabus",
+      "link": "https://www.keralapsc.gov.in/syllabus1",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-kl",
+      "sourceName": "Kerala PSC",
+      "dept": "Kerala PSC",
+      "state": "Kerala",
+      "category": "state",
+      "stateIds": [
+        "kl"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "22dd56168d2566c0",
+      "title": "Syllabus and Scheme",
+      "link": "https://mppsc.mp.gov.in/Syllabus",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-mp",
+      "sourceName": "Madhya Pradesh PSC (MPPSC)",
+      "dept": "Madhya Pradesh PSC (MPPSC)",
+      "state": "Madhya Pradesh",
+      "category": "state",
+      "stateIds": [
+        "mp"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "8940f38f3507d4c1",
+      "title": "Download Syllabus Against Post",
+      "link": "https://upsssc.gov.in/Online_App/Syllabus_PostWise.aspx?ID=901",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "ssb-up",
+      "sourceName": "UP Subordinate Services Selection Comm (UPSSSC)",
+      "dept": "UP Subordinate Services Selection Comm (UPSSSC)",
+      "state": "All India",
+      "category": "state",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "948506b4a8ef4abf",
+      "title": "Syllabus",
+      "link": "https://hssc.gov.in/examsyllabus",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "ssb-hr",
+      "sourceName": "Haryana Staff Selection Commission (HSSC)",
+      "dept": "Haryana Staff Selection Commission (HSSC)",
+      "state": "All India",
+      "category": "state",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "d80061781828ad4a",
+      "title": "Training Syllabus",
+      "link": "https://uppolice.gov.in/pages/en/topmenu/police-units/training-directorate/en-training-syllabus-page",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "police-up",
+      "sourceName": "UP Police Recruitment Board (UPPRPB)",
+      "dept": "UP Police Recruitment Board (UPPRPB)",
+      "state": "All India",
+      "category": "police",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "3ee84f33beb7fbe3",
+      "title": "Syllabus",
+      "link": "https://tnusrb.tn.gov.in/pdfs/Syllabus_CR2025.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://tnusrb.tn.gov.in/pdfs/Syllabus_CR2025.pdf"
+      ],
+      "sourceId": "police-tn",
+      "sourceName": "Tamil Nadu Uniformed Services (TNUSRB)",
+      "dept": "Tamil Nadu Uniformed Services (TNUSRB)",
+      "state": "All India",
+      "category": "police",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "cb666951142bf69a",
+      "title": "Syllabus",
+      "link": "https://tnusrb.tn.gov.in/pdfs/SI_2025_Syllabus.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://tnusrb.tn.gov.in/pdfs/SI_2025_Syllabus.pdf"
+      ],
+      "sourceId": "police-tn",
+      "sourceName": "Tamil Nadu Uniformed Services (TNUSRB)",
+      "dept": "Tamil Nadu Uniformed Services (TNUSRB)",
+      "state": "All India",
+      "category": "police",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "0ee075bd9e923a90",
+      "title": "Syllabus for the the post of food safety officer, A & N Adminstration",
+      "link": "https://erecruitment.andamannicobar.gov.in/Notice/81_a4a9f192-a736-4760-a0ad-14f7a90395cd.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://erecruitment.andamannicobar.gov.in/Notice/81_a4a9f192-a736-4760-a0ad-14f7a90395cd.pdf"
+      ],
+      "sourceId": "an-rec",
+      "sourceName": "Andaman & Nicobar e-Recruitment",
+      "dept": "Andaman & Nicobar e-Recruitment",
+      "state": "All India",
+      "category": "state",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "ab7f1718b0ab109e",
+      "title": "Syllabus for recruitment to various Group ‘B’ (Non-Gazetted) and Group ‘C’ posts under the Common Graduate Level (CGL) Examination",
+      "link": "https://erecruitment.andamannicobar.gov.in/Notice/67_f0581b64-b355-4fa9-8b20-3d4776112e35.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://erecruitment.andamannicobar.gov.in/Notice/67_f0581b64-b355-4fa9-8b20-3d4776112e35.pdf"
+      ],
+      "sourceId": "an-rec",
+      "sourceName": "Andaman & Nicobar e-Recruitment",
+      "dept": "Andaman & Nicobar e-Recruitment",
+      "state": "All India",
+      "category": "state",
+      "fetchMethod": "live-jobs-supplement"
     },
     {
       "id": "9423bfb2f1b6b8da",
@@ -295,40 +452,6 @@
       "fetchMethod": "live-jobs-supplement"
     },
     {
-      "id": "85b1767449295db8",
-      "title": "Postwise Syllabus",
-      "link": "https://www.keralapsc.gov.in/syllabus1",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-kl",
-      "sourceName": "Kerala PSC",
-      "dept": "Kerala PSC",
-      "state": "Kerala",
-      "category": "state",
-      "stateIds": [
-        "kl"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "22dd56168d2566c0",
-      "title": "Syllabus and Scheme",
-      "link": "https://mppsc.mp.gov.in/Syllabus",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-mp",
-      "sourceName": "Madhya Pradesh PSC (MPPSC)",
-      "dept": "Madhya Pradesh PSC (MPPSC)",
-      "state": "Madhya Pradesh",
-      "category": "state",
-      "stateIds": [
-        "mp"
-      ],
-      "fetchMethod": "html"
-    },
-    {
       "id": "2f1159565433b630",
       "title": "SRO 103-Syllabus for CCE(Main),2018",
       "link": "https://jkpsc.nic.in/pdf/SRO_103_CCE_2018.pdf",
@@ -401,34 +524,6 @@
       "fetchMethod": "live-jobs-supplement"
     },
     {
-      "id": "948506b4a8ef4abf",
-      "title": "Syllabus",
-      "link": "https://hssc.gov.in/examsyllabus",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "ssb-hr",
-      "sourceName": "Haryana Staff Selection Commission (HSSC)",
-      "dept": "Haryana Staff Selection Commission (HSSC)",
-      "state": "All India",
-      "category": "state",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "d80061781828ad4a",
-      "title": "Training Syllabus",
-      "link": "https://uppolice.gov.in/pages/en/topmenu/police-units/training-directorate/en-training-syllabus-page",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "police-up",
-      "sourceName": "UP Police Recruitment Board (UPPRPB)",
-      "dept": "UP Police Recruitment Board (UPPRPB)",
-      "state": "All India",
-      "category": "police",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
       "id": "4245ad8cea4e9fc4",
       "title": "Syllabus and Schemes",
       "link": "https://tpsc.tripura.gov.in/syllabus-and-schemes",
@@ -459,20 +554,6 @@
       "dept": "NCERT",
       "state": "All India",
       "category": "teaching",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "3019953999ede974",
-      "title": "Syllabus",
-      "link": "http://hpsc.gov.in/en-us/Examination/Syllabus",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-hr",
-      "sourceName": "Haryana PSC (HPSC)",
-      "dept": "Haryana PSC (HPSC)",
-      "state": "All India",
-      "category": "state",
       "fetchMethod": "live-jobs-supplement"
     },
     {
@@ -543,44 +624,6 @@
       "category": "state",
       "stateIds": [
         "uk"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "0ee075bd9e923a90",
-      "title": "Syllabus for the the post of food safety officer, A & N Adminstration",
-      "link": "https://erecruitment.andamannicobar.gov.in/Notice/81_a4a9f192-a736-4760-a0ad-14f7a90395cd.pdf",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [
-        "https://erecruitment.andamannicobar.gov.in/Notice/81_a4a9f192-a736-4760-a0ad-14f7a90395cd.pdf"
-      ],
-      "sourceId": "an-rec",
-      "sourceName": "Andaman & Nicobar e-Recruitment",
-      "dept": "Andaman & Nicobar e-Recruitment",
-      "state": "Andaman & Nicobar",
-      "category": "state",
-      "stateIds": [
-        "an"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "ab7f1718b0ab109e",
-      "title": "Syllabus for recruitment to various Group ‘B’ (Non-Gazetted) and Group ‘C’ posts under the Common Graduate Level (CGL) Examination",
-      "link": "https://erecruitment.andamannicobar.gov.in/Notice/67_f0581b64-b355-4fa9-8b20-3d4776112e35.pdf",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [
-        "https://erecruitment.andamannicobar.gov.in/Notice/67_f0581b64-b355-4fa9-8b20-3d4776112e35.pdf"
-      ],
-      "sourceId": "an-rec",
-      "sourceName": "Andaman & Nicobar e-Recruitment",
-      "dept": "Andaman & Nicobar e-Recruitment",
-      "state": "Andaman & Nicobar",
-      "category": "state",
-      "stateIds": [
-        "an"
       ],
       "fetchMethod": "html"
     },

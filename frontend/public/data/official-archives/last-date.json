@@ -1,23 +1,417 @@
 {
-  "generatedAt": "2026-08-04T11:07:29.251Z",
-  "count": 227,
+  "generatedAt": "2026-08-04T14:27:19.365Z",
+  "count": 247,
   "items": [
     {
-      "id": "73c9f70b7072207b",
-      "title": "NOTICE REGARDING LAST DATE EXTENTION OF P.C.S. EXAM-2026",
-      "link": "https://uppsc.up.nic.in/Open_PDF_DB.aspx?I4PnQ0tBaglP18XMjN55aL8ckMULyAqn",
+      "id": "ab1c1a47609d6c04",
+      "title": "Application window for AVR MR (Musician) 02/26 batch extended till 30 Apr 26. (Closed)",
+      "link": "https://www.joinindiannavy.gov.in/en/event/online-application-window-for-agniveer-mr-musician-02-26-entry-will-be-live-from-11-apr-26-apr-26.html",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
-      "sourceId": "uppsc-hall-tickets",
-      "sourceName": "UPPSC — Hall tickets",
-      "dept": "Uttar Pradesh PSC",
-      "state": "Uttar Pradesh",
+      "sourceId": "navy-careers",
+      "sourceName": "Indian Navy — Notifications",
+      "dept": "Indian Navy",
+      "state": "All India",
+      "category": "defence",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "4c0bbc4b947db8eb",
+      "title": "Advertisement No. 6 of 2016 for the posts of HCS (Judicial Branch) Pre Exam - 2017 (Closing date for Online Submission: 24.04.2017",
+      "link": "http://hpsc.gov.in/en-us/Recruitment/Advertisement-Corrigendum/Advertisement-No-6-of-2016-for-the-posts-of-HCS-Judicial-Branch-Pre-Exam-2017",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-hr-notifications",
+      "sourceName": "HPSC — Recruitment",
+      "dept": "Haryana PSC",
+      "state": "Haryana",
       "category": "state",
       "stateIds": [
         "all"
       ],
       "fetchMethod": "html-listing"
+    },
+    {
+      "id": "e67e2dc2111b4127",
+      "title": "Submission of returns under Section 31 of the Banking Regulation Act, 1949 (AACS) – Extension of time",
+      "link": "https://www.rbi.org.in/Scripts/NotificationUser.aspx?Id=11953&Mode=0",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "rbi",
+      "sourceName": "Reserve Bank of India — Careers",
+      "dept": "Reserve Bank of India — Careers",
+      "state": "All India",
+      "category": "banking",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "23e4a6d9e85d7acb",
+      "title": "Interest Subvention (IS) and Prompt Repayment Incentive (PRI) for Short Term Loans for Agriculture including Animal Husbandry, Dairy and Fisheries for extended period on account of Covid-19",
+      "link": "https://www.rbi.org.in/Scripts/NotificationUser.aspx?Id=11909&Mode=0",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "rbi",
+      "sourceName": "Reserve Bank of India — Careers",
+      "dept": "Reserve Bank of India — Careers",
+      "state": "All India",
+      "category": "banking",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "d4ad5e2758ced788",
+      "title": "Pre-shipment and Post-shipment Export Credit – Extension of Period of Advance",
+      "link": "https://www.rbi.org.in/Scripts/NotificationUser.aspx?Id=11904&Mode=0",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "rbi",
+      "sourceName": "Reserve Bank of India — Careers",
+      "dept": "Reserve Bank of India — Careers",
+      "state": "All India",
+      "category": "banking",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "e7202edec7d7d25e",
+      "title": "Import of goods and services- Extension of time limits for Settlement of import payment",
+      "link": "https://www.rbi.org.in/Scripts/NotificationUser.aspx?Id=11900&Mode=0",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "rbi",
+      "sourceName": "Reserve Bank of India — Careers",
+      "dept": "Reserve Bank of India — Careers",
+      "state": "All India",
+      "category": "banking",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "59c8f345e6f99fc6",
+      "title": "Submission of regulatory returns - Extension of timelines",
+      "link": "https://www.rbi.org.in/Scripts/NotificationUser.aspx?Id=11882&Mode=0",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "rbi",
+      "sourceName": "Reserve Bank of India — Careers",
+      "dept": "Reserve Bank of India — Careers",
+      "state": "All India",
+      "category": "banking",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "3a7860c67c7c9b1d",
+      "title": "Interest Subvention (IS) and Prompt Repayment Incentive (PRI) for Short Term Crop Loans during the years 2018-19 and 2019-20: Extended Period on account of Covid-19",
+      "link": "https://www.rbi.org.in/Scripts/NotificationUser.aspx?Id=11877&Mode=0",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "rbi",
+      "sourceName": "Reserve Bank of India — Careers",
+      "dept": "Reserve Bank of India — Careers",
+      "state": "All India",
+      "category": "banking",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "c6df1b9011e13970",
+      "title": "Annual Closing of Government Accounts – Transactions of Central / State Governments – Special Measures for the Current Financial Year (2019-20)",
+      "link": "https://www.rbi.org.in/Scripts/NotificationUser.aspx?Id=11842&Mode=0",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "rbi",
+      "sourceName": "Reserve Bank of India — Careers",
+      "dept": "Reserve Bank of India — Careers",
+      "state": "All India",
+      "category": "banking",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "04c041294f868c37",
+      "title": "Legal Entity Identifier: Extension of deadline",
+      "link": "https://www.rbi.org.in/Scripts/NotificationUser.aspx?Id=11834&Mode=0",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "rbi",
+      "sourceName": "Reserve Bank of India — Careers",
+      "dept": "Reserve Bank of India — Careers",
+      "state": "All India",
+      "category": "banking",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "2e4cbfd6ff174c1e",
+      "title": "Advertisement No. 1/2018 - for Various posts (Closing date for Online Submission: 20.08.2018",
+      "link": "https://hpsc.gov.in/Portals/0/Advt_%20No_%2001%20of%202018_1.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://hpsc.gov.in/Portals/0/Advt_%20No_%2001%20of%202018_1.pdf"
+      ],
+      "sourceId": "psc-hr",
+      "sourceName": "Haryana PSC (HPSC)",
+      "dept": "Haryana PSC (HPSC)",
+      "state": "Haryana",
+      "category": "state",
+      "stateIds": [
+        "hr"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "66248b9f1bc802ca",
+      "title": "Advertisement No. 3/2017 - for Various posts (Closing date for Online Submission: 08.01.2018",
+      "link": "https://hpsc.gov.in/Portals/0/Advt_%20No_%2003%20of%202017_1.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://hpsc.gov.in/Portals/0/Advt_%20No_%2003%20of%202017_1.pdf"
+      ],
+      "sourceId": "psc-hr",
+      "sourceName": "Haryana PSC (HPSC)",
+      "dept": "Haryana PSC (HPSC)",
+      "state": "Haryana",
+      "category": "state",
+      "stateIds": [
+        "hr"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "c7b6da75811c34e0",
+      "title": "Advertisement No. 2/2019 - for Various posts (Closing date for Online Submission: 24.06.2019",
+      "link": "https://hpsc.gov.in/Portals/0/Advt_2_2019_Deputy_Director_1.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://hpsc.gov.in/Portals/0/Advt_2_2019_Deputy_Director_1.pdf"
+      ],
+      "sourceId": "psc-hr",
+      "sourceName": "Haryana PSC (HPSC)",
+      "dept": "Haryana PSC (HPSC)",
+      "state": "Haryana",
+      "category": "state",
+      "stateIds": [
+        "hr"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "b0d28f5a9974b0e0",
+      "title": "Advertisement No. 3/2019 - for Various posts (Closing date for Online Submission: 28.06.2019",
+      "link": "https://hpsc.gov.in/Portals/0/Advt_3_2019_DyDire_Ststs_29_05_19_1.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://hpsc.gov.in/Portals/0/Advt_3_2019_DyDire_Ststs_29_05_19_1.pdf"
+      ],
+      "sourceId": "psc-hr",
+      "sourceName": "Haryana PSC (HPSC)",
+      "dept": "Haryana PSC (HPSC)",
+      "state": "Haryana",
+      "category": "state",
+      "stateIds": [
+        "hr"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "0dfd3cfe7d7c2c7c",
+      "title": "Advertisement No. 5/2019 - for Various posts (Closing date for Online Submission: 05.08.2019",
+      "link": "https://hpsc.gov.in/Portals/0/Advt_5_2019.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://hpsc.gov.in/Portals/0/Advt_5_2019.pdf"
+      ],
+      "sourceId": "psc-hr",
+      "sourceName": "Haryana PSC (HPSC)",
+      "dept": "Haryana PSC (HPSC)",
+      "state": "Haryana",
+      "category": "state",
+      "stateIds": [
+        "hr"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "f0a793f13b9e1fce",
+      "title": "Advertisement for Assistant District Attorney Advt No. 02 of 2017 (Closing date for Online Submission: 08.06.2017 Candidates are advised not to send the hard copy of the application form",
+      "link": "https://hpsc.gov.in/Portals/0/Advt_%20No_%2002%20of%202017.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://hpsc.gov.in/Portals/0/Advt_%20No_%2002%20of%202017.pdf"
+      ],
+      "sourceId": "psc-hr",
+      "sourceName": "Haryana PSC (HPSC)",
+      "dept": "Haryana PSC (HPSC)",
+      "state": "Haryana",
+      "category": "state",
+      "stateIds": [
+        "hr"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "af9776398203808f",
+      "title": "Advertisement for Dental Surgeon and Veterinary Surgen Advt No. 01 of 2017 (Closing date for Online Submission: 01.06.2017 Candidates are advised not to send the hard copy of the application form",
+      "link": "https://hpsc.gov.in/Portals/0/Advt_%20No_%2001%20of%202017.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://hpsc.gov.in/Portals/0/Advt_%20No_%2001%20of%202017.pdf"
+      ],
+      "sourceId": "psc-hr",
+      "sourceName": "Haryana PSC (HPSC)",
+      "dept": "Haryana PSC (HPSC)",
+      "state": "Haryana",
+      "category": "state",
+      "stateIds": [
+        "hr"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "0ada2fbed6adf488",
+      "title": "Advertisement No. 4 of 2016 for Various posts (Closing date for Online Submission: 13.01.2017 Last Date for Submission printed Application form (Hard Copy) : 23.01.2017(30.01.2017 for Remote area)",
+      "link": "http://hpsc.gov.in/en-us/Recruitment/Advertisement-Corrigendum/Advertisement-No-4-of-2016-for-Various-posts",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-hr",
+      "sourceName": "Haryana PSC (HPSC)",
+      "dept": "Haryana PSC (HPSC)",
+      "state": "Haryana",
+      "category": "state",
+      "stateIds": [
+        "hr"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "e4c395e795490d84",
+      "title": "Recruitment Advertisement for Assistant Director, Farmer Welfare and Agriculture Development Department (Field and Extension) 2025 (Advt. No. 35/2025), Dated 31/12/2025",
+      "link": "https://mppsc.mp.gov.in/uploads/advertisement/Advt_AD_Farmer_Welfare_Agri_Dev_Dept_Field_Extension_Exam_2025_Dated_31_12_2025.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://mppsc.mp.gov.in/uploads/advertisement/Advt_AD_Farmer_Welfare_Agri_Dev_Dept_Field_Extension_Exam_2025_Dated_31_12_2025.pdf"
+      ],
+      "sourceId": "psc-mp",
+      "sourceName": "Madhya Pradesh PSC (MPPSC)",
+      "dept": "Madhya Pradesh PSC (MPPSC)",
+      "state": "Madhya Pradesh",
+      "category": "state",
+      "stateIds": [
+        "mp"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "b679aea6aa4ff8f7",
+      "title": "Recruitment Advertisement for Assistant Director /Veterinary Assistant Surgeon/Veterinary Extension Officer 2026 (Adv No./04/2026), Dated 10/03/2026",
+      "link": "https://mppsc.mp.gov.in/uploads/advertisement/Advt_AD_Veterinary_Assistant_Surgeon_VEO_2026_Dated_10_03_2026.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://mppsc.mp.gov.in/uploads/advertisement/Advt_AD_Veterinary_Assistant_Surgeon_VEO_2026_Dated_10_03_2026.pdf"
+      ],
+      "sourceId": "psc-mp",
+      "sourceName": "Madhya Pradesh PSC (MPPSC)",
+      "dept": "Madhya Pradesh PSC (MPPSC)",
+      "state": "Madhya Pradesh",
+      "category": "state",
+      "stateIds": [
+        "mp"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "48ceb62aaa3233ec",
+      "title": "Public Notice Regarding Extension Of Last Date For Submission Of Pscscce-2025 Mains Exam Online Application Form Uploaded On 18-03-2026",
+      "link": "https://ppsc.gov.in/index.aspx?page=2730&tabid=10&tablinkid=6769",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-pb",
+      "sourceName": "Punjab PSC (PPSC)",
+      "dept": "Punjab PSC (PPSC)",
+      "state": "Punjab",
+      "category": "state",
+      "stateIds": [
+        "pb"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "5ab135187aa71f6b",
+      "title": "PUBLIC NOTICE REGARDING EXTENSION OF LAST DATE FOR SUBMISSION OF PUNJAB STATE CIVIL SERVICES COMBINED COMPETITIVE EXAMINATION 2025 MAINS EXAM ONLINE APPLICATION FORM UPLOADED ON 09-03-2026",
+      "link": "https://ppsc.gov.in/index.aspx?page=2724&tabid=10&tablinkid=6763",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-pb",
+      "sourceName": "Punjab PSC (PPSC)",
+      "dept": "Punjab PSC (PPSC)",
+      "state": "Punjab",
+      "category": "state",
+      "stateIds": [
+        "pb"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "1d228f8841a40377",
+      "title": "Notification regarding extension of period for submission of online application form for the post of Junior Engineer, Grade-I & Grade-II, Electrical Engineering(Advt. No-03/2026)",
+      "link": "https://tpsc.tripura.gov.in/sites/default/files/Ext_Engg_120626.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://tpsc.tripura.gov.in/sites/default/files/Ext_Engg_120626.pdf"
+      ],
+      "sourceId": "psc-tr",
+      "sourceName": "Tripura PSC (TPSC)",
+      "dept": "Tripura PSC (TPSC)",
+      "state": "NE States",
+      "category": "state",
+      "stateIds": [
+        "ne"
+      ],
+      "fetchMethod": "html"
     },
     {
       "id": "a19ab3ba3a62376f",
@@ -34,6 +428,657 @@
       "state": "All India",
       "category": "defence",
       "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "dd5c12b275240ef2",
+      "title": "Tender No. BARC(T)/NRB/RWM/PM/26/OPA-996/NIT-1026[e-Tender]",
+      "link": "http://www.barc.gov.in/tenders/tender216.pdf",
+      "publishedAt": null,
+      "summary": "Supply of material, fabrication and installation of Gantry Girder for OHT Crane in RUSF Facility at BARC Tarapur site Last date: 03-Sep-2026",
+      "pdfUrls": [],
+      "sourceId": "barc",
+      "sourceName": "Bhabha Atomic Research Centre (BARC)",
+      "dept": "Bhabha Atomic Research Centre (BARC)",
+      "state": "All India",
+      "category": "defence",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "be70b88e9073f965",
+      "title": "Tender No. BARC(T)/NRB/GSO/EMC(C)/CMT-219/2026/03[e-Tender]",
+      "link": "http://www.barc.gov.in/tenders/tender217.pdf",
+      "publishedAt": null,
+      "summary": "Resurfacing of Asphalt road in BARC Staff Colony, Tarapur Last date: 01-Sep-2026",
+      "pdfUrls": [],
+      "sourceId": "barc",
+      "sourceName": "Bhabha Atomic Research Centre (BARC)",
+      "dept": "Bhabha Atomic Research Centre (BARC)",
+      "state": "All India",
+      "category": "defence",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "9e6ea31dc108f9d0",
+      "title": "Tender No. BARC(T)/NRB/ INRPC/ELE–66/2026/1387[e-Tender]",
+      "link": "http://www.barc.gov.in/tenders/tender215.pdf",
+      "publishedAt": null,
+      "summary": "Electrification works of Block 109 at INRP Site Tarapur Last date: 11-Aug-2026",
+      "pdfUrls": [],
+      "sourceId": "barc",
+      "sourceName": "Bhabha Atomic Research Centre (BARC)",
+      "dept": "Bhabha Atomic Research Centre (BARC)",
+      "state": "All India",
+      "category": "defence",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "46d83c02a681d35d",
+      "title": "Tender No. BARC(T)/NRB/GSO/EMC/EMT-200/2026/334 [e-Tender]",
+      "link": "http://www.barc.gov.in/tenders/tender201.pdf",
+      "publishedAt": null,
+      "summary": "Electrical and Mechanical maintenance jobs in BARC Staff Colony, Tarapur Last date: 10-Aug-2026",
+      "pdfUrls": [],
+      "sourceId": "barc",
+      "sourceName": "Bhabha Atomic Research Centre (BARC)",
+      "dept": "Bhabha Atomic Research Centre (BARC)",
+      "state": "All India",
+      "category": "defence",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "44c966596021b751",
+      "title": "Tender No. BARC/TDD/ET/1/2026-2027 [e-Tender]",
+      "link": "http://www.barc.gov.in/tenders/tender214.pdf",
+      "publishedAt": null,
+      "summary": "Fabrication, supply, installation, testing and commissioning of 415 V Electrical Power Control Centre Panels and associated electrical works for alpha waste management for NRG Last date: 09-Oct-2026",
+      "pdfUrls": [],
+      "sourceId": "barc",
+      "sourceName": "Bhabha Atomic Research Centre (BARC)",
+      "dept": "Bhabha Atomic Research Centre (BARC)",
+      "state": "All India",
+      "category": "defence",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "9f6b42f6f9f0fe75",
+      "title": "Tender No. BARC/CSD/ET/11/2026-2027[e-Tender]",
+      "link": "http://www.barc.gov.in/tenders/tender213.pdf",
+      "publishedAt": null,
+      "summary": "Refurbishment of Civil, Electrical & Mechanical works for entrance lobby of Old & Annex building of BARC Hospital, Anushaktinagar, Mumbai Last date: 31-Aug-2026",
+      "pdfUrls": [],
+      "sourceId": "barc",
+      "sourceName": "Bhabha Atomic Research Centre (BARC)",
+      "dept": "Bhabha Atomic Research Centre (BARC)",
+      "state": "All India",
+      "category": "defence",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "92fd2803a941d9bd",
+      "title": "Tender No. BARC/TSD/ET/17/⁠2026-⁠27[e-Tender]",
+      "link": "http://www.barc.gov.in/tenders/tender212.pdf",
+      "publishedAt": null,
+      "summary": "Supply, Installation,Testing and Commissioning of 145KV Disconnector Switch/Isolator and associated works at BARC, Trombay Last date: 20-Aug-2026",
+      "pdfUrls": [],
+      "sourceId": "barc",
+      "sourceName": "Bhabha Atomic Research Centre (BARC)",
+      "dept": "Bhabha Atomic Research Centre (BARC)",
+      "state": "All India",
+      "category": "defence",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "366d4d13a5efe50a",
+      "title": "Tender No. BARC/⁠NRB(T)/⁠INRPC/PTC-⁠146/⁠2026/⁠1343[e-Tender]",
+      "link": "http://www.barc.gov.in/tenders/tender211.pdf",
+      "publishedAt": null,
+      "summary": "Miscellaneous civil works at INRPC NRB BARC Tarapur for year 2026-27 Last date: 11-Aug-2026",
+      "pdfUrls": [],
+      "sourceId": "barc",
+      "sourceName": "Bhabha Atomic Research Centre (BARC)",
+      "dept": "Bhabha Atomic Research Centre (BARC)",
+      "state": "All India",
+      "category": "defence",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "d469c908115ea745",
+      "title": "Tender No. BARC(T)/NRB/ INPRC/MPT–563/2026/1324[e-Tender]",
+      "link": "http://www.barc.gov.in/tenders/tender210.pdf",
+      "publishedAt": null,
+      "summary": "Equipment handling, transfer and installation at dyke area of block-122, INRP, BARC, Tarapur Last date: 06-Aug-2026",
+      "pdfUrls": [],
+      "sourceId": "barc",
+      "sourceName": "Bhabha Atomic Research Centre (BARC)",
+      "dept": "Bhabha Atomic Research Centre (BARC)",
+      "state": "All India",
+      "category": "defence",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "b493f5fa4bed29ae",
+      "title": "Tender No. BARC/⁠TSD/ET/13/⁠2026-⁠27[e-Tender]",
+      "link": "http://www.barc.gov.in/tenders/tender209.pdf",
+      "publishedAt": null,
+      "summary": "Upgradation of 11KV Switchgear Panel set & other associated electrical works at 22KV Main Sub-Station in BARC, Trombay, Mumbai-400085 Last date: 21-Aug-2026",
+      "pdfUrls": [],
+      "sourceId": "barc",
+      "sourceName": "Bhabha Atomic Research Centre (BARC)",
+      "dept": "Bhabha Atomic Research Centre (BARC)",
+      "state": "All India",
+      "category": "defence",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "d1dc6a47363358d1",
+      "title": "Tender No. BARC/CED/ET/31/2026-2027[e-Tender]",
+      "link": "http://www.barc.gov.in/tenders/tender208.pdf",
+      "publishedAt": null,
+      "summary": "Re-surfacing of Road inside plant area and various locations inside BARC premises,Trombay, Mumbai Last date: 24-Aug-2026",
+      "pdfUrls": [],
+      "sourceId": "barc",
+      "sourceName": "Bhabha Atomic Research Centre (BARC)",
+      "dept": "Bhabha Atomic Research Centre (BARC)",
+      "state": "All India",
+      "category": "defence",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "52488588424a9c29",
+      "title": "Tender No. BARC/TSD/ET/16/⁠2026-⁠27[e-Tender]",
+      "link": "http://www.barc.gov.in/tenders/tender207.pdf",
+      "publishedAt": null,
+      "summary": "Supply, installation, testing and commissioning of 125KVA, DG Set and associate works at Mod-Labs Building, BARC, Trombay, Mumbai-400085 Last date: 18-Aug-2026",
+      "pdfUrls": [],
+      "sourceId": "barc",
+      "sourceName": "Bhabha Atomic Research Centre (BARC)",
+      "dept": "Bhabha Atomic Research Centre (BARC)",
+      "state": "All India",
+      "category": "defence",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "510d22f0c87c18da",
+      "title": "Tender No. BARC/NRB(T)/ INRPC/ MPT–562/2026/1231[e-Tender]",
+      "link": "http://www.barc.gov.in/tenders/tender206.pdf",
+      "publishedAt": null,
+      "summary": "Supply, fabrication and installation of various MS structures at INRPC site, NRB, BARC Tarapur Last date: 10-Aug-2026",
+      "pdfUrls": [],
+      "sourceId": "barc",
+      "sourceName": "Bhabha Atomic Research Centre (BARC)",
+      "dept": "Bhabha Atomic Research Centre (BARC)",
+      "state": "All India",
+      "category": "defence",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "e2a61fb8cdfd7f2e",
+      "title": "Tender No. BARC/RRSD/ET/1/2026-2027[e-Tender]",
+      "link": "http://www.barc.gov.in/tenders/tender205.pdf",
+      "publishedAt": null,
+      "summary": "Refurbishment of Cirus Lecture Hall including Civil, Furniture, Electrical and Air Conditioning works at BARC, Trombay, Mumbai Last date: 21-Aug-2026",
+      "pdfUrls": [],
+      "sourceId": "barc",
+      "sourceName": "Bhabha Atomic Research Centre (BARC)",
+      "dept": "Bhabha Atomic Research Centre (BARC)",
+      "state": "All India",
+      "category": "defence",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "c3074a143f0ed21a",
+      "title": "Tender No. BARC/HLUD/ET/09/2026-2027[e-Tender]",
+      "link": "http://www.barc.gov.in/tenders/tender204.pdf",
+      "publishedAt": null,
+      "summary": "Renovation of emergency water storage pond and carrying out allied civil works at RLG Building, BARC, Trombay, Mumbai-85 Last date: 17-Aug-2026",
+      "pdfUrls": [],
+      "sourceId": "barc",
+      "sourceName": "Bhabha Atomic Research Centre (BARC)",
+      "dept": "Bhabha Atomic Research Centre (BARC)",
+      "state": "All India",
+      "category": "defence",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "ee6c00a4a2b2d232",
+      "title": "Tender No. BARC (V)/TQS (M)/Chilled Water Pipe/22[e-Tender]",
+      "link": "http://www.barc.gov.in/tenders/tender203.pdf",
+      "publishedAt": null,
+      "summary": "Supply laying installation testing of underground chilled water supply line alongside of C- road towards western side of main site, BARC (V), Atchutapuram, near Visakhapatnam Last date: 27-Aug-2026",
+      "pdfUrls": [],
+      "sourceId": "barc",
+      "sourceName": "Bhabha Atomic Research Centre (BARC)",
+      "dept": "Bhabha Atomic Research Centre (BARC)",
+      "state": "All India",
+      "category": "defence",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "eb5ebea19de096de",
+      "title": "Tender No. BARC (V)/CES/BTRoadsPhase2/223[e-Tender]",
+      "link": "http://www.barc.gov.in/tenders/tender202.pdf",
+      "publishedAt": null,
+      "summary": "Preparation of Subgrade and formation of BT Roads (Phase II) with associated infrastructure works viz., RCC Cable trenches, drains, footpaths, Street lighting works etc. in BARC main campus, Atchuthapuram, near Visakhapatnam, A.P Last date: 24-Aug-2026",
+      "pdfUrls": [],
+      "sourceId": "barc",
+      "sourceName": "Bhabha Atomic Research Centre (BARC)",
+      "dept": "Bhabha Atomic Research Centre (BARC)",
+      "state": "All India",
+      "category": "defence",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "90525ed8796c70c1",
+      "title": "Tender No. BARC/⁠CSD/ET/10/⁠2026-⁠27[e-Tender]",
+      "link": "http://www.barc.gov.in/tenders/tender200.pdf",
+      "publishedAt": null,
+      "summary": "Providing mechanical and electrical works for kitchen at Postgraduate Hostel, Anushaktinagar, Mumbai-94 Last date: 10-Aug-2026",
+      "pdfUrls": [],
+      "sourceId": "barc",
+      "sourceName": "Bhabha Atomic Research Centre (BARC)",
+      "dept": "Bhabha Atomic Research Centre (BARC)",
+      "state": "All India",
+      "category": "defence",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "eb9866b370ca6032",
+      "title": "Tender No. BARC/⁠TSD/ET/14/⁠2026-⁠27 [e-Tender]",
+      "link": "http://www.barc.gov.in/tenders/tender198.pdf",
+      "publishedAt": null,
+      "summary": "Electrification of Security watch Tower, SITC of High mast pole at Gadkari road and up-gradation of street lighting at Trombay Hill in BARC, Mumbai -85 Last date: 17-Aug-2026",
+      "pdfUrls": [],
+      "sourceId": "barc",
+      "sourceName": "Bhabha Atomic Research Centre (BARC)",
+      "dept": "Bhabha Atomic Research Centre (BARC)",
+      "state": "All India",
+      "category": "defence",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "ffaa633618764607",
+      "title": "Tender No. BARC/RRMD/ET/3/2026-2027 [e-Tender]",
+      "link": "http://www.barc.gov.in/tenders/tender199.pdf",
+      "publishedAt": null,
+      "summary": "Supply, Installation, Testing and Commissioning of PLC based Local Instrumentation Panel with Remote Input/output modules and SCADA workstation at Service building Area of Research Reactor in Trombay, BARC Last date: 17-Aug-2026",
+      "pdfUrls": [],
+      "sourceId": "barc",
+      "sourceName": "Bhabha Atomic Research Centre (BARC)",
+      "dept": "Bhabha Atomic Research Centre (BARC)",
+      "state": "All India",
+      "category": "defence",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "5e3cfa350e34ae94",
+      "title": "Tender No. BARC/CED/ET/30/2026-2027[e-Tender]",
+      "link": "http://www.barc.gov.in/tenders/tender197.pdf",
+      "publishedAt": null,
+      "summary": "External painting and Waterproofing work at DEF building, DEED complex and at other Sea side buildings BARC,Trombay, Mumbai Last date: 05-Aug-2026",
+      "pdfUrls": [],
+      "sourceId": "barc",
+      "sourceName": "Bhabha Atomic Research Centre (BARC)",
+      "dept": "Bhabha Atomic Research Centre (BARC)",
+      "state": "All India",
+      "category": "defence",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "42349bbe804c5222",
+      "title": "Tender No. BARC/TSD/ET/12/2026-2027[e-Tender]",
+      "link": "http://www.barc.gov.in/tenders/tender195.pdf",
+      "publishedAt": null,
+      "summary": "Design, supply, installation (laying), testing and commissioning of 22KV(E), 3Cx400Sqmm, XLPE, Armoured, FRLS cables from 110kV RSS to DHRUVA SS at BARC, Trombay, Mumbai-400085 Last date: 05-Aug-2026",
+      "pdfUrls": [],
+      "sourceId": "barc",
+      "sourceName": "Bhabha Atomic Research Centre (BARC)",
+      "dept": "Bhabha Atomic Research Centre (BARC)",
+      "state": "All India",
+      "category": "defence",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "df294e4e77b00bb3",
+      "title": "Tender No. BARC/CED/ET/29/2026-2027[e-Tender]",
+      "link": "http://www.barc.gov.in/tenders/tender193.pdf",
+      "publishedAt": null,
+      "summary": "Civil works for parking shed & Other Miscellaneous works at Old fire station, North site, BARC, Trombay, Mumbai Last date: 05-Aug-2026",
+      "pdfUrls": [],
+      "sourceId": "barc",
+      "sourceName": "Bhabha Atomic Research Centre (BARC)",
+      "dept": "Bhabha Atomic Research Centre (BARC)",
+      "state": "All India",
+      "category": "defence",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "6f6820469a2c8377",
+      "title": "Tender No. BARC-V/ESS-V/2026/07[e-Tender]",
+      "link": "http://www.barc.gov.in/tenders/tender194.pdf",
+      "publishedAt": null,
+      "summary": "Design, supply, installation, testing and commissioning of the Construction power supply network for the upcoming facilities in Zone-III, in BARC Campus, Atchutapuram near Visakhapatnam, Andhra Pradesh Last date: 05-Aug-2026",
+      "pdfUrls": [],
+      "sourceId": "barc",
+      "sourceName": "Bhabha Atomic Research Centre (BARC)",
+      "dept": "Bhabha Atomic Research Centre (BARC)",
+      "state": "All India",
+      "category": "defence",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "4d776097247b02d0",
+      "title": "Tender No. BARC(T)/NRB/INRPC/MPT-561/2026/1153A[e-Tender]",
+      "link": "http://www.barc.gov.in/tenders/tender192.pdf",
+      "publishedAt": null,
+      "summary": "Incell Piping and Equipment installation for Front Blocks at INRP, NRB Tarapur Last date: 03-Aug-2026",
+      "pdfUrls": [],
+      "sourceId": "barc",
+      "sourceName": "Bhabha Atomic Research Centre (BARC)",
+      "dept": "Bhabha Atomic Research Centre (BARC)",
+      "state": "All India",
+      "category": "defence",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "dfe57d0c45d20fd8",
+      "title": "Tender No. BARC/⁠HLUD/⁠ET/⁠8/⁠2026-⁠27[e-Tender]",
+      "link": "http://www.barc.gov.in/tenders/tender191.pdf",
+      "publishedAt": null,
+      "summary": "Civil renovation and modification works phase -II at Shed S60, South Site, BARC, Trombay, Mumbai 400085 Last date: 03-Aug-2026",
+      "pdfUrls": [],
+      "sourceId": "barc",
+      "sourceName": "Bhabha Atomic Research Centre (BARC)",
+      "dept": "Bhabha Atomic Research Centre (BARC)",
+      "state": "All India",
+      "category": "defence",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "acced1b1d33a29bc",
+      "title": "Tender No. BARC/R&WM/ET/1/2026-2027[e-Tender]",
+      "link": "http://www.barc.gov.in/tenders/tender190.pdf",
+      "publishedAt": null,
+      "summary": "Providing maintenance platform and Crab unit cabin to gantry crane at SWMF, NRB, BARC Tarapur Last date: 03-Aug-2026",
+      "pdfUrls": [],
+      "sourceId": "barc",
+      "sourceName": "Bhabha Atomic Research Centre (BARC)",
+      "dept": "Bhabha Atomic Research Centre (BARC)",
+      "state": "All India",
+      "category": "defence",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "006443c31832f865",
+      "title": "Tender No. BARC/⁠TSD/ET/5/⁠2026-⁠27[e-Tender]",
+      "link": "http://www.barc.gov.in/tenders/tender185.pdf",
+      "publishedAt": null,
+      "summary": "Supply, Installation, testing & commissioning of 4.5 MLD water treatment along with RO plant near Helipad BARC, Trombay, Mumbai- 85 Last date: 03-Aug-2026",
+      "pdfUrls": [],
+      "sourceId": "barc",
+      "sourceName": "Bhabha Atomic Research Centre (BARC)",
+      "dept": "Bhabha Atomic Research Centre (BARC)",
+      "state": "All India",
+      "category": "defence",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "b0b1ec137bfe2136",
+      "title": "Extension of timeline for enrolment with PaRRVA as specified in SEBI Circular No. HO/38/14/(4)2026-MIRSD-POD/I/10557/2026 dated April 29, 2026",
+      "link": "https://www.sebi.gov.in/legal/circulars/aug-2026/extension-of-timeline-for-enrolment-with-parrva-as-specified-in-sebi-circular-no-ho-38-14-4-2026-mirsd-pod-i-10557-2026-dated-april-29-2026_103314.html",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "sebi",
+      "sourceName": "Securities and Exchange Board of India",
+      "dept": "Securities and Exchange Board of India",
+      "state": "All India",
+      "category": "banking",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "cf7727ab821fe25c",
+      "title": "Research, Recruitment, & Extension",
+      "link": "https://www.wii.gov.in/research-recruitment-and-extension",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "wii",
+      "sourceName": "Wildlife Institute of India (WII)",
+      "dept": "Wildlife Institute of India (WII)",
+      "state": "All India",
+      "category": "psu",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "ec7b727cf7b025f2",
+      "title": "Advt. No. WII/ADVT. 1/RP–CELL/ July, 2026 to engage 20 different categories of positions for various research projects at WII (extended close date until 07 August, 2026)",
+      "link": "https://www.wii.gov.in/recruitments/advtno_wii_advt1_rpcell_july2026",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "wii",
+      "sourceName": "Wildlife Institute of India (WII)",
+      "dept": "Wildlife Institute of India (WII)",
+      "state": "All India",
+      "category": "psu",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "91fb9aee663b1513",
+      "title": "Extension of last date of Applications for Section Officer on deputation (Advt. No. WII/ADM/2023/29/23)",
+      "link": "https://www.wii.gov.in/recruitments/extension-of-last-date-of-applications-for-section-officer-on-deputation",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "wii",
+      "sourceName": "Wildlife Institute of India (WII)",
+      "dept": "Wildlife Institute of India (WII)",
+      "state": "All India",
+      "category": "psu",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "105bd114f3fb2235",
+      "title": "Application window for AVR MR (Musician) 02/26 batch extended till 30 Apr 26. (Closed)",
+      "link": "http://www.joinindiannavy.gov.in/en/event/online-application-window-for-agniveer-mr-musician-02-26-entry-will-be-live-from-11-apr-26-apr-26.html",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "navy",
+      "sourceName": "Indian Navy — Join Indian Navy",
+      "dept": "Indian Navy — Join Indian Navy",
+      "state": "All India",
+      "category": "defence",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "e81d880338a2220e",
+      "title": "UGC Public Notice regarding: The last date for uploading credit data on the ABC portal is 30th June, 2026.",
+      "link": "https://www.ugc.gov.in/pdfnews/4999118_Advisory-for-credit-data-uploading.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://www.ugc.gov.in/pdfnews/4999118_Advisory-for-credit-data-uploading.pdf"
+      ],
+      "sourceId": "ugc",
+      "sourceName": "University Grants Commission (UGC)",
+      "dept": "University Grants Commission (UGC)",
+      "state": "All India",
+      "category": "teaching",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "9cfeb51e5c2da05f",
+      "title": "Advertisement / Application - The last date for the submission of application has been extended upto 29.06.2026",
+      "link": "https://py.gov.in/sites/default/files/fsl03062026advt-appln.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://py.gov.in/sites/default/files/fsl03062026advt-appln.pdf"
+      ],
+      "sourceId": "py-psc",
+      "sourceName": "Puducherry PSC",
+      "dept": "Puducherry PSC",
+      "state": "All India",
+      "category": "state",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "f7255121cb13108f",
+      "title": "Notification - Extension of time for receipt of applications",
+      "link": "https://py.gov.in/sites/default/files/pdl20012026extnot.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://py.gov.in/sites/default/files/pdl20012026extnot.pdf"
+      ],
+      "sourceId": "py-psc",
+      "sourceName": "Puducherry PSC",
+      "dept": "Puducherry PSC",
+      "state": "All India",
+      "category": "state",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "5a9d470b45ea6062",
+      "title": "Notice - Extension of last date for receipt of the applications",
+      "link": "https://py.gov.in/sites/default/files/pbcwwb18062026ext.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://py.gov.in/sites/default/files/pbcwwb18062026ext.pdf"
+      ],
+      "sourceId": "py-psc",
+      "sourceName": "Puducherry PSC",
+      "dept": "Puducherry PSC",
+      "state": "All India",
+      "category": "state",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "df83228738a3f635",
+      "title": "Extension of Last Date for Submission of Online Applications for Matric and Higher Secondary Level Posts",
+      "link": "https://erecruitment.andamannicobar.gov.in/Notice/114_4be28db3-a235-45d0-83ae-1618688696b4.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://erecruitment.andamannicobar.gov.in/Notice/114_4be28db3-a235-45d0-83ae-1618688696b4.pdf"
+      ],
+      "sourceId": "an-rec",
+      "sourceName": "Andaman & Nicobar e-Recruitment",
+      "dept": "Andaman & Nicobar e-Recruitment",
+      "state": "All India",
+      "category": "state",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "a0c781809b2cbecc",
+      "title": "Press Release-Revision of Vacancies & Extension of Online Application Submission Date – A&N Police Recruitment 2026",
+      "link": "https://erecruitment.andamannicobar.gov.in/Notice/111_875d5de8-1f35-44bf-b52a-851014ec79fe.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://erecruitment.andamannicobar.gov.in/Notice/111_875d5de8-1f35-44bf-b52a-851014ec79fe.pdf"
+      ],
+      "sourceId": "an-rec",
+      "sourceName": "Andaman & Nicobar e-Recruitment",
+      "dept": "Andaman & Nicobar e-Recruitment",
+      "state": "All India",
+      "category": "state",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "c7161c324161ad0f",
+      "title": "Press release for Extension of Online Application Submission Date – A&N Police Recruitment 2026",
+      "link": "https://erecruitment.andamannicobar.gov.in/Notice/110_b2f74ce7-b6b7-42d3-8283-f544c348582d.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://erecruitment.andamannicobar.gov.in/Notice/110_b2f74ce7-b6b7-42d3-8283-f544c348582d.pdf"
+      ],
+      "sourceId": "an-rec",
+      "sourceName": "Andaman & Nicobar e-Recruitment",
+      "dept": "Andaman & Nicobar e-Recruitment",
+      "state": "All India",
+      "category": "state",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "135ab213e454f5cd",
+      "title": "Press release for Extension of Online Application Submission Date – A&N Police Recruitment 2026",
+      "link": "https://erecruitment.andamannicobar.gov.in/Notice/105_36255c39-9bd3-49ab-b8cc-670d20d363dd.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://erecruitment.andamannicobar.gov.in/Notice/105_36255c39-9bd3-49ab-b8cc-670d20d363dd.pdf"
+      ],
+      "sourceId": "an-rec",
+      "sourceName": "Andaman & Nicobar e-Recruitment",
+      "dept": "Andaman & Nicobar e-Recruitment",
+      "state": "All India",
+      "category": "state",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "c09680708614d2ce",
+      "title": "Press release for Extension of Online Application Submission Date – A&N Police Recruitment 2026",
+      "link": "https://erecruitment.andamannicobar.gov.in/Notice/104_de45fb41-b311-40a8-a9f1-7bf6eda3f55e.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://erecruitment.andamannicobar.gov.in/Notice/104_de45fb41-b311-40a8-a9f1-7bf6eda3f55e.pdf"
+      ],
+      "sourceId": "an-rec",
+      "sourceName": "Andaman & Nicobar e-Recruitment",
+      "dept": "Andaman & Nicobar e-Recruitment",
+      "state": "All India",
+      "category": "state",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "c4c4d0cdc095f220",
+      "title": "Deadline for rollout of the eCourts Services Mobile App Version 4.0 has been extended up to 13.05.2026.",
+      "link": "https://kullu.dcourts.gov.in/deadline-for-rollout-of-the-ecourts-services-mobile-app-version-4-0-has-been-extended-up-to-13-05-2026/",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "dcourt-kullu",
+      "sourceName": "District & Sessions Judge, Kullu",
+      "dept": "District & Sessions Judge, Kullu",
+      "state": "All India",
+      "category": "state",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "b019edc8ef0bf524",
+      "title": "Mandatory Data Backup – Rollout of eCourts Services Mobile App Version 4.0 (Extended Deadline)",
+      "link": "https://siddipet.dcourts.gov.in/mandatory-data-backup-rollout-of-ecourts-services-mobile-app-version-4-0-extended-deadline/",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "dcourt-siddipet",
+      "sourceName": "District & Sessions Judge, Siddipet",
+      "dept": "District & Sessions Judge, Siddipet",
+      "state": "All India",
+      "category": "state",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "73c9f70b7072207b",
+      "title": "NOTICE REGARDING LAST DATE EXTENTION OF P.C.S. EXAM-2026",
+      "link": "https://uppsc.up.nic.in/Open_PDF_DB.aspx?I4PnQ0tBaglP18XMjN55aL8ckMULyAqn",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "uppsc-hall-tickets",
+      "sourceName": "UPPSC — Hall tickets",
+      "dept": "Uttar Pradesh PSC",
+      "state": "Uttar Pradesh",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
     },
     {
       "id": "5c43b1307e861bd8",
@@ -343,22 +1388,6 @@
       "fetchMethod": "live-jobs-supplement"
     },
     {
-      "id": "c09680708614d2ce",
-      "title": "Press release for Extension of Online Application Submission Date – A&N Police Recruitment 2026",
-      "link": "https://erecruitment.andamannicobar.gov.in/Notice/104_de45fb41-b311-40a8-a9f1-7bf6eda3f55e.pdf",
-      "publishedAt": "2026-04-24T00:00:00Z",
-      "summary": "PRESS NOTE EXTENSION OF ONLINE APPLICATION SUBMISSION DATE - A&N POLICE RECRUITMENT 2026 In continuation of the press release vide No. A-12024/1/2024- RECRUITMENTCELLPHQ-POLICE_AN/285 dated 24.04.2026, it is hereby informed to all candidates and the general public that the last date for submission of online applications for recruitment to various Group ‘B’ (Non-Gazetted) and Group ‘C’ posts in And…",
-      "pdfUrls": [
-        "https://erecruitment.andamannicobar.gov.in/Notice/104_de45fb41-b311-40a8-a9f1-7bf6eda3f55e.pdf"
-      ],
-      "sourceId": "an-rec",
-      "sourceName": "Erecruitment Andamannicobar",
-      "dept": "Erecruitment Andamannicobar",
-      "state": "All India",
-      "category": "police",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
       "id": "6806fa5868179490",
       "title": "VACANCY NOTICE / ADVERTISEMENT NO. 03/2025 COMMON EXAMINATION FOR THE POSTS OF Court Attendant, Court Attendant (S), Cou",
       "link": "https://dsssbonline.nic.in",
@@ -421,22 +1450,6 @@
       "fetchMethod": "live-jobs-supplement"
     },
     {
-      "id": "a0c781809b2cbecc",
-      "title": "Press Release-Revision of Vacancies & Extension of Online Application Submission Date – A&N Police Recruitment 2026",
-      "link": "https://erecruitment.andamannicobar.gov.in/Notice/111_875d5de8-1f35-44bf-b52a-851014ec79fe.pdf",
-      "publishedAt": "2026-07-24T03:00:25.063572Z",
-      "summary": null,
-      "pdfUrls": [
-        "https://erecruitment.andamannicobar.gov.in/Notice/111_875d5de8-1f35-44bf-b52a-851014ec79fe.pdf"
-      ],
-      "sourceId": "an-rec",
-      "sourceName": "Erecruitment Andamannicobar",
-      "dept": "Erecruitment Andamannicobar",
-      "state": "All India",
-      "category": "police",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
       "id": "811b27ee713398a0",
       "title": "Corrigendum l: EoI for the study titled \"Export Preparedness Index (EPI)- 5th Edition (2025)\"",
       "link": "https://www.niti.gov.in/sites/default/files/2026-07/Export-Preparedness-Index-EPI-5th-Edition-2025.pdf",
@@ -450,22 +1463,6 @@
       "dept": "NITI Aayog",
       "state": "All India",
       "category": "psu",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "df83228738a3f635",
-      "title": "Extension of Last Date for Submission of Online Applications for Matric and Higher Secondary Level Posts",
-      "link": "https://erecruitment.andamannicobar.gov.in/Notice/114_4be28db3-a235-45d0-83ae-1618688696b4.pdf",
-      "publishedAt": "2026-07-20T00:00:00Z",
-      "summary": null,
-      "pdfUrls": [
-        "https://erecruitment.andamannicobar.gov.in/Notice/114_4be28db3-a235-45d0-83ae-1618688696b4.pdf"
-      ],
-      "sourceId": "an-rec",
-      "sourceName": "Erecruitment Andamannicobar",
-      "dept": "Erecruitment Andamannicobar",
-      "state": "All India",
-      "category": "state",
       "fetchMethod": "live-jobs-supplement"
     },
     {
@@ -542,24 +1539,6 @@
       "pdfUrls": [
         "https://www.joinindiannavy.gov.in/files/job_instructions/1764916242_62652.pdf",
         "https://www.joinindiannavy.gov.in/images/OFFICIAL_IN_CALENDAR_2026_DMPR.pdf"
-      ],
-      "sourceId": "navy-careers",
-      "sourceName": "Indian Navy — Notifications",
-      "dept": "Indian Navy — Notifications",
-      "state": "All India",
-      "category": "defence",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "ab1c1a47609d6c04",
-      "title": "Application window for AVR MR (Musician) 02/26 batch extended till 30 Apr 26. (Closed)",
-      "link": "https://www.joinindiannavy.gov.in/en/event/online-application-window-for-agniveer-mr-musician-02-26-entry-will-be-live-from-11-apr-26-apr-26.html",
-      "publishedAt": "2026-07-07T09:38:13.227660Z",
-      "summary": "16. Naval Pension Regulations/ Gratuity. Agniveers will not be governed by provisions contained in the Naval Pension Regulations/ Rules (as amended from time to time). Additionally, Agniveers will not be entitled to gratuity for engagement period. 17. Release at Own Request. Agniveers will not be permitted to get released at own request prior to completion of engagement period. However, in most ex…",
-      "pdfUrls": [
-        "https://www.joinindiannavy.gov.in/images/OFFICIAL_IN_CALENDAR_2026_DMPR.pdf",
-        "https://www.joinindiannavy.gov.in/files/Advt-Agniveer-MR-MUS-02-26-English.pdf",
-        "https://www.joinindiannavy.gov.in/files/Advt-Agniveer-MR-MUS-02-26-Hindi.pdf"
       ],
       "sourceId": "navy-careers",
       "sourceName": "Indian Navy — Notifications",
@@ -648,20 +1627,6 @@
       "dept": "Gpsc Gujarat",
       "state": "All India",
       "category": "teaching",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "b019edc8ef0bf524",
-      "title": "Mandatory Data Backup – Rollout of eCourts Services Mobile App Version 4.0 (Extended Deadline)",
-      "link": "https://siddipet.dcourts.gov.in/mandatory-data-backup-rollout-of-ecourts-services-mobile-app-version-4-0-extended-deadline/",
-      "publishedAt": "2026-06-23T15:27:41.519897Z",
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "dcourt-siddipet",
-      "sourceName": "District & Sessions Judge, Siddipet",
-      "dept": "District & Sessions Judge, Siddipet",
-      "state": "All India",
-      "category": "state",
       "fetchMethod": "live-jobs-supplement"
     },
     {
@@ -789,38 +1754,6 @@
       "fetchMethod": "live-jobs-supplement"
     },
     {
-      "id": "c7161c324161ad0f",
-      "title": "Press release for Extension of Online Application Submission Date – A&N Police Recruitment 2026",
-      "link": "https://erecruitment.andamannicobar.gov.in/Notice/110_b2f74ce7-b6b7-42d3-8283-f544c348582d.pdf",
-      "publishedAt": "2026-06-09T00:00:00Z",
-      "summary": null,
-      "pdfUrls": [
-        "https://erecruitment.andamannicobar.gov.in/Notice/110_b2f74ce7-b6b7-42d3-8283-f544c348582d.pdf"
-      ],
-      "sourceId": "an-rec",
-      "sourceName": "Erecruitment Andamannicobar",
-      "dept": "Erecruitment Andamannicobar",
-      "state": "All India",
-      "category": "police",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "135ab213e454f5cd",
-      "title": "Press release for Extension of Online Application Submission Date – A&N Police Recruitment 2026",
-      "link": "https://erecruitment.andamannicobar.gov.in/Notice/105_36255c39-9bd3-49ab-b8cc-670d20d363dd.pdf",
-      "publishedAt": "2026-05-26T00:00:00Z",
-      "summary": null,
-      "pdfUrls": [
-        "https://erecruitment.andamannicobar.gov.in/Notice/105_36255c39-9bd3-49ab-b8cc-670d20d363dd.pdf"
-      ],
-      "sourceId": "an-rec",
-      "sourceName": "Erecruitment Andamannicobar",
-      "dept": "Erecruitment Andamannicobar",
-      "state": "All India",
-      "category": "police",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
       "id": "409f8e5bd1e3ece0",
       "title": "Extension of Advertisment Notice:-OFFICE OF THE EXECUTIVE OFFICER MUNICIPAL COMMITTEE, LEH",
       "link": "https://ladakh.gov.in/notice/extension-of-advertisment-notice-office-of-the-executive-officer-municipal-committee-leh/",
@@ -853,22 +1786,6 @@
       "fetchMethod": "live-jobs-supplement"
     },
     {
-      "id": "e4c395e795490d84",
-      "title": "Recruitment Advertisement for Assistant Director, Farmer Welfare and Agriculture Development Department (Field and Extension) 2025 (Advt. No. 35/2025), Dated 31/12/2025",
-      "link": "https://mppsc.mp.gov.in/uploads/advertisement/Advt_AD_Farmer_Welfare_Agri_Dev_Dept_Field_Extension_Exam_2025_Dated_31_12_2025.pdf",
-      "publishedAt": "2025-12-31T00:00:00Z",
-      "summary": "TOT arraW V ^ O ^ . /V ♦ ^ ^'diS'di ysH*\\\\ - ^T^T^Ri\" «t>*»^l\"l H^IT f^^TRT X7^ 1^<-c1K) (ASSISTANT DIRECTOR, FARMER WELFARE & AGRICULTURE DEVELOPMENT DEPARTMENT(FIELD & EXTENSION)) ^ ft iff f^irm 2025 g^TT^ 35/2025 31.12.2025 irftw : 22.11.2026 3iMoil^H 3TTto' ft 4*0^101 ^ ^ ^it^r qg-3TO5«mr : 12.11.2026 srf^ 24.05.2026 12:00 Hgi) f^3TTT smr - \"A\" 2. 3. Jity y^r ?fra» airaW ff^TR +e^iui cWr f^grR…",
-      "pdfUrls": [
-        "https://mppsc.mp.gov.in/uploads/advertisement/Advt_AD_Farmer_Welfare_Agri_Dev_Dept_Field_Extension_Exam_2025_Dated_31_12_2025.pdf"
-      ],
-      "sourceId": "psc-mp",
-      "sourceName": "Madhya Pradesh PSC (MPPSC)",
-      "dept": "Madhya Pradesh PSC (MPPSC)",
-      "state": "All India",
-      "category": "state",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
       "id": "df991416d24ca8bd",
       "title": "Notice%20on%20Updation%20of%20Qualifications_CEN_07_2024",
       "link": "https://www.rrbguwahati.gov.in/documents/Notice%20on%20Updation%20of%20Qualifications_CEN_07_2024.pdf",
@@ -885,177 +1802,6 @@
       "fetchMethod": "live-jobs-supplement"
     },
     {
-      "id": "e81d880338a2220e",
-      "title": "UGC Public Notice regarding: The last date for uploading credit data on the ABC portal is 30th June, 2026",
-      "link": "https://www.ugc.gov.in/pdfnews/4999118_Advisory-for-credit-data-uploading.pdf",
-      "publishedAt": "2024-11-07T00:00:00Z",
-      "summary": "lla tsrn Fgni fr. eqnr rq {tdd Prof. Shyama Rath Secretary qr.rlo -,rqi 7r.ry= 3IT-Sl(lEl ^ 3r[d qdrfl4 ffiqrcq qaa wrftr Univerity Gronts Commission (fulrr iardq, qrrd Fr6R) (Minislry of Educotion, Govt. of lndio) D.O. No. F.1 -s0/2021 (ABC/NAD)/Pt.file-1 05 June,2025/ 15 dE, 1948 srffi+- sqar The NEP 2020 envisions flexib[e curricu[ar structures promoting a credit-based system that encourages ft…",
-      "pdfUrls": [
-        "https://www.ugc.gov.in/pdfnews/4999118_Advisory-for-credit-data-uploading.pdf"
-      ],
-      "sourceId": "ugc",
-      "sourceName": "University Grants Commission (UGC)",
-      "dept": "University Grants Commission (UGC)",
-      "state": "All India",
-      "category": "teaching",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "e67e2dc2111b4127",
-      "title": "Submission of returns under Section 31 of the Banking Regulation Act, 1949 (AACS) – Extension of time",
-      "link": "https://www.rbi.org.in/Scripts/NotificationUser.aspx?Id=11953&Mode=0",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "rbi",
-      "sourceName": "Reserve Bank of India — Careers",
-      "dept": "Reserve Bank of India — Careers",
-      "state": "All India",
-      "category": "banking",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "23e4a6d9e85d7acb",
-      "title": "Interest Subvention (IS) and Prompt Repayment Incentive (PRI) for Short Term Loans for Agriculture including Animal Husbandry, Dairy and Fisheries for extended period on account of Covid-19",
-      "link": "https://www.rbi.org.in/Scripts/NotificationUser.aspx?Id=11909&Mode=0",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "rbi",
-      "sourceName": "Reserve Bank of India — Careers",
-      "dept": "Reserve Bank of India — Careers",
-      "state": "All India",
-      "category": "banking",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "d4ad5e2758ced788",
-      "title": "Pre-shipment and Post-shipment Export Credit – Extension of Period of Advance",
-      "link": "https://www.rbi.org.in/Scripts/NotificationUser.aspx?Id=11904&Mode=0",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "rbi",
-      "sourceName": "Reserve Bank of India — Careers",
-      "dept": "Reserve Bank of India — Careers",
-      "state": "All India",
-      "category": "banking",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "e7202edec7d7d25e",
-      "title": "Import of goods and services- Extension of time limits for Settlement of import payment",
-      "link": "https://www.rbi.org.in/Scripts/NotificationUser.aspx?Id=11900&Mode=0",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "rbi",
-      "sourceName": "Reserve Bank of India — Careers",
-      "dept": "Reserve Bank of India — Careers",
-      "state": "All India",
-      "category": "banking",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "59c8f345e6f99fc6",
-      "title": "Submission of regulatory returns - Extension of timelines",
-      "link": "https://www.rbi.org.in/Scripts/NotificationUser.aspx?Id=11882&Mode=0",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "rbi",
-      "sourceName": "Reserve Bank of India — Careers",
-      "dept": "Reserve Bank of India — Careers",
-      "state": "All India",
-      "category": "banking",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "3a7860c67c7c9b1d",
-      "title": "Interest Subvention (IS) and Prompt Repayment Incentive (PRI) for Short Term Crop Loans during the years 2018-19 and 2019-20: Extended Period on account of Covid-19",
-      "link": "https://www.rbi.org.in/Scripts/NotificationUser.aspx?Id=11877&Mode=0",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "rbi",
-      "sourceName": "Reserve Bank of India — Careers",
-      "dept": "Reserve Bank of India — Careers",
-      "state": "All India",
-      "category": "banking",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "c6df1b9011e13970",
-      "title": "Annual Closing of Government Accounts – Transactions of Central / State Governments – Special Measures for the Current Financial Year (2019-20)",
-      "link": "https://www.rbi.org.in/Scripts/NotificationUser.aspx?Id=11842&Mode=0",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "rbi",
-      "sourceName": "Reserve Bank of India — Careers",
-      "dept": "Reserve Bank of India — Careers",
-      "state": "All India",
-      "category": "banking",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "04c041294f868c37",
-      "title": "Legal Entity Identifier: Extension of deadline",
-      "link": "https://www.rbi.org.in/Scripts/NotificationUser.aspx?Id=11834&Mode=0",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "rbi",
-      "sourceName": "Reserve Bank of India — Careers",
-      "dept": "Reserve Bank of India — Careers",
-      "state": "All India",
-      "category": "banking",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "b679aea6aa4ff8f7",
-      "title": "Recruitment Advertisement for Assistant Director /Veterinary Assistant Surgeon/Veterinary Extension Officer 2026 (Adv No./04/2026), Dated 10/03/2026",
-      "link": "https://mppsc.mp.gov.in/uploads/advertisement/Advt_AD_Veterinary_Assistant_Surgeon_VEO_2026_Dated_10_03_2026.pdf",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [
-        "https://mppsc.mp.gov.in/uploads/advertisement/Advt_AD_Veterinary_Assistant_Surgeon_VEO_2026_Dated_10_03_2026.pdf"
-      ],
-      "sourceId": "psc-mp",
-      "sourceName": "Madhya Pradesh PSC (MPPSC)",
-      "dept": "Madhya Pradesh PSC (MPPSC)",
-      "state": "Madhya Pradesh",
-      "category": "state",
-      "stateIds": [
-        "mp"
-      ],
-      "fetchMethod": "html"
-    },
-    {
       "id": "c92837a7ea14b603",
       "title": "UPSSSC Sugarcane Supervisor Recruitment 2026 Notification Out - Apply Online for 1182 Posts",
       "link": "http://upsssc.gov.in",
@@ -1069,22 +1815,6 @@
       "dept": "UPSSSC",
       "state": "All India",
       "category": "state",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "91fb9aee663b1513",
-      "title": "Extension of last date of Applications for Section Officer on deputation (Advt. No. WII/ADM/2023/29/23)",
-      "link": "https://www.wii.gov.in/recruitments/extension-of-last-date-of-applications-for-section-officer-on-deputation",
-      "publishedAt": "2026-07-21T10:09:32.619842Z",
-      "summary": null,
-      "pdfUrls": [
-        "http://wii.gov.in/uploads/media/pdf/recruitment/extension-section-officer-june-2026.pdf"
-      ],
-      "sourceId": "wii",
-      "sourceName": "Wildlife Institute of India (WII)",
-      "dept": "Wildlife Institute of India (WII)",
-      "state": "All India",
-      "category": "psu",
       "fetchMethod": "live-jobs-supplement"
     },
     {
@@ -1267,221 +1997,11 @@
       "fetchMethod": "live-jobs-supplement"
     },
     {
-      "id": "510d22f0c87c18da",
-      "title": "Tender No. BARC/NRB(T)/ INRPC/ MPT–562/2026/1231[e-Tender]",
-      "link": "http://www.barc.gov.in/tenders/tender206.pdf",
-      "publishedAt": null,
-      "summary": "Supply, fabrication and installation of various MS structures at INRPC site, NRB, BARC Tarapur Last date: 10-Aug-2026",
-      "pdfUrls": [],
-      "sourceId": "barc",
-      "sourceName": "Bhabha Atomic Research Centre (BARC)",
-      "dept": "Bhabha Atomic Research Centre (BARC)",
-      "state": "All India",
-      "category": "defence",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "e2a61fb8cdfd7f2e",
-      "title": "Tender No. BARC/RRSD/ET/1/2026-2027[e-Tender]",
-      "link": "http://www.barc.gov.in/tenders/tender205.pdf",
-      "publishedAt": null,
-      "summary": "Refurbishment of Cirus Lecture Hall including Civil, Furniture, Electrical and Air Conditioning works at BARC, Trombay, Mumbai Last date: 21-Aug-2026",
-      "pdfUrls": [],
-      "sourceId": "barc",
-      "sourceName": "Bhabha Atomic Research Centre (BARC)",
-      "dept": "Bhabha Atomic Research Centre (BARC)",
-      "state": "All India",
-      "category": "defence",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "c3074a143f0ed21a",
-      "title": "Tender No. BARC/HLUD/ET/09/2026-2027[e-Tender]",
-      "link": "http://www.barc.gov.in/tenders/tender204.pdf",
-      "publishedAt": null,
-      "summary": "Renovation of emergency water storage pond and carrying out allied civil works at RLG Building, BARC, Trombay, Mumbai-85 Last date: 17-Aug-2026",
-      "pdfUrls": [],
-      "sourceId": "barc",
-      "sourceName": "Bhabha Atomic Research Centre (BARC)",
-      "dept": "Bhabha Atomic Research Centre (BARC)",
-      "state": "All India",
-      "category": "defence",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "ee6c00a4a2b2d232",
-      "title": "Tender No. BARC (V)/TQS (M)/Chilled Water Pipe/22[e-Tender]",
-      "link": "http://www.barc.gov.in/tenders/tender203.pdf",
-      "publishedAt": null,
-      "summary": "Supply laying installation testing of underground chilled water supply line alongside of C- road towards western side of main site, BARC (V), Atchutapuram, near Visakhapatnam Last date: 27-Aug-2026",
-      "pdfUrls": [],
-      "sourceId": "barc",
-      "sourceName": "Bhabha Atomic Research Centre (BARC)",
-      "dept": "Bhabha Atomic Research Centre (BARC)",
-      "state": "All India",
-      "category": "defence",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "eb5ebea19de096de",
-      "title": "Tender No. BARC (V)/CES/BTRoadsPhase2/223[e-Tender]",
-      "link": "http://www.barc.gov.in/tenders/tender202.pdf",
-      "publishedAt": null,
-      "summary": "Preparation of Subgrade and formation of BT Roads (Phase II) with associated infrastructure works viz., RCC Cable trenches, drains, footpaths, Street lighting works etc. in BARC main campus, Atchuthapuram, near Visakhapatnam, A.P Last date: 24-Aug-2026",
-      "pdfUrls": [],
-      "sourceId": "barc",
-      "sourceName": "Bhabha Atomic Research Centre (BARC)",
-      "dept": "Bhabha Atomic Research Centre (BARC)",
-      "state": "All India",
-      "category": "defence",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "46d83c02a681d35d",
-      "title": "Tender No. BARC(T)/NRB/GSO/EMC/EMT-200/2026/334 [e-Tender]",
-      "link": "http://www.barc.gov.in/tenders/tender201.pdf",
-      "publishedAt": null,
-      "summary": "Electrical and Mechanical maintenance jobs in BARC Staff Colony, Tarapur Last date: 28-Jul-2026",
-      "pdfUrls": [],
-      "sourceId": "barc",
-      "sourceName": "Bhabha Atomic Research Centre (BARC)",
-      "dept": "Bhabha Atomic Research Centre (BARC)",
-      "state": "All India",
-      "category": "defence",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "90525ed8796c70c1",
-      "title": "Tender No. BARC/⁠CSD/ET/10/⁠2026-⁠27[e-Tender]",
-      "link": "http://www.barc.gov.in/tenders/tender200.pdf",
-      "publishedAt": null,
-      "summary": "Providing mechanical and electrical works for kitchen at Postgraduate Hostel, Anushaktinagar, Mumbai-94 Last date: 10-Aug-2026",
-      "pdfUrls": [],
-      "sourceId": "barc",
-      "sourceName": "Bhabha Atomic Research Centre (BARC)",
-      "dept": "Bhabha Atomic Research Centre (BARC)",
-      "state": "All India",
-      "category": "defence",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "eb9866b370ca6032",
-      "title": "Tender No. BARC/⁠TSD/ET/14/⁠2026-⁠27 [e-Tender]",
-      "link": "http://www.barc.gov.in/tenders/tender198.pdf",
-      "publishedAt": null,
-      "summary": "Electrification of Security watch Tower, SITC of High mast pole at Gadkari road and up-gradation of street lighting at Trombay Hill in BARC, Mumbai -85 Last date: 17-Aug-2026",
-      "pdfUrls": [],
-      "sourceId": "barc",
-      "sourceName": "Bhabha Atomic Research Centre (BARC)",
-      "dept": "Bhabha Atomic Research Centre (BARC)",
-      "state": "All India",
-      "category": "defence",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "ffaa633618764607",
-      "title": "Tender No. BARC/RRMD/ET/3/2026-2027 [e-Tender]",
-      "link": "http://www.barc.gov.in/tenders/tender199.pdf",
-      "publishedAt": null,
-      "summary": "Supply, Installation, Testing and Commissioning of PLC based Local Instrumentation Panel with Remote Input/output modules and SCADA workstation at Service building Area of Research Reactor in Trombay, BARC Last date: 17-Aug-2026",
-      "pdfUrls": [],
-      "sourceId": "barc",
-      "sourceName": "Bhabha Atomic Research Centre (BARC)",
-      "dept": "Bhabha Atomic Research Centre (BARC)",
-      "state": "All India",
-      "category": "defence",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "5e3cfa350e34ae94",
-      "title": "Tender No. BARC/CED/ET/30/2026-2027[e-Tender]",
-      "link": "http://www.barc.gov.in/tenders/tender197.pdf",
-      "publishedAt": null,
-      "summary": "External painting and Waterproofing work at DEF building, DEED complex and at other Sea side buildings BARC,Trombay, Mumbai Last date: 05-Aug-2026",
-      "pdfUrls": [],
-      "sourceId": "barc",
-      "sourceName": "Bhabha Atomic Research Centre (BARC)",
-      "dept": "Bhabha Atomic Research Centre (BARC)",
-      "state": "All India",
-      "category": "defence",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
       "id": "ab4a099a7fe27e1e",
       "title": "Tender No. BARC/⁠CSD/ET/9/⁠2026-⁠27[e-Tender]",
       "link": "http://www.barc.gov.in/tenders/tender196.pdf",
       "publishedAt": null,
       "summary": "Augmentation of electrical distribution system and maintenance of electrical system at BARC Hospital and CT&CRS building, Anushaktinagar, Mumbai Last date: 30-Jul-2026",
-      "pdfUrls": [],
-      "sourceId": "barc",
-      "sourceName": "Bhabha Atomic Research Centre (BARC)",
-      "dept": "Bhabha Atomic Research Centre (BARC)",
-      "state": "All India",
-      "category": "defence",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "42349bbe804c5222",
-      "title": "Tender No. BARC/TSD/ET/12/2026-2027[e-Tender]",
-      "link": "http://www.barc.gov.in/tenders/tender195.pdf",
-      "publishedAt": null,
-      "summary": "Design, supply, installation (laying), testing and commissioning of 22KV(E), 3Cx400Sqmm, XLPE, Armoured, FRLS cables from 110kV RSS to DHRUVA SS at BARC, Trombay, Mumbai-400085 Last date: 05-Aug-2026",
-      "pdfUrls": [],
-      "sourceId": "barc",
-      "sourceName": "Bhabha Atomic Research Centre (BARC)",
-      "dept": "Bhabha Atomic Research Centre (BARC)",
-      "state": "All India",
-      "category": "defence",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "df294e4e77b00bb3",
-      "title": "Tender No. BARC/CED/ET/29/2026-2027[e-Tender]",
-      "link": "http://www.barc.gov.in/tenders/tender193.pdf",
-      "publishedAt": null,
-      "summary": "Civil works for parking shed & Other Miscellaneous works at Old fire station, North site, BARC, Trombay, Mumbai Last date: 05-Aug-2026",
-      "pdfUrls": [],
-      "sourceId": "barc",
-      "sourceName": "Bhabha Atomic Research Centre (BARC)",
-      "dept": "Bhabha Atomic Research Centre (BARC)",
-      "state": "All India",
-      "category": "defence",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "6f6820469a2c8377",
-      "title": "Tender No. BARC-V/ESS-V/2026/07[e-Tender]",
-      "link": "http://www.barc.gov.in/tenders/tender194.pdf",
-      "publishedAt": null,
-      "summary": "Design, supply, installation, testing and commissioning of the Construction power supply network for the upcoming facilities in Zone-III, in BARC Campus, Atchutapuram near Visakhapatnam, Andhra Pradesh Last date: 05-Aug-2026",
-      "pdfUrls": [],
-      "sourceId": "barc",
-      "sourceName": "Bhabha Atomic Research Centre (BARC)",
-      "dept": "Bhabha Atomic Research Centre (BARC)",
-      "state": "All India",
-      "category": "defence",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "4d776097247b02d0",
-      "title": "Tender No. BARC(T)/NRB/INRPC/MPT-561/2026/1153A[e-Tender]",
-      "link": "http://www.barc.gov.in/tenders/tender192.pdf",
-      "publishedAt": null,
-      "summary": "Incell Piping and Equipment installation for Front Blocks at INRP, NRB Tarapur Last date: 03-Aug-2026",
-      "pdfUrls": [],
-      "sourceId": "barc",
-      "sourceName": "Bhabha Atomic Research Centre (BARC)",
-      "dept": "Bhabha Atomic Research Centre (BARC)",
-      "state": "All India",
-      "category": "defence",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "dfe57d0c45d20fd8",
-      "title": "Tender No. BARC/⁠HLUD/⁠ET/⁠8/⁠2026-⁠27[e-Tender]",
-      "link": "http://www.barc.gov.in/tenders/tender191.pdf",
-      "publishedAt": null,
-      "summary": "Civil renovation and modification works phase -II at Shed S60, South Site, BARC, Trombay, Mumbai 400085 Last date: 03-Aug-2026",
       "pdfUrls": [],
       "sourceId": "barc",
       "sourceName": "Bhabha Atomic Research Centre (BARC)",
@@ -1533,39 +2053,11 @@
       "fetchMethod": "live-jobs-supplement"
     },
     {
-      "id": "acced1b1d33a29bc",
-      "title": "Tender No. BARC/R&WM/ET/1/2026-2027[e-Tender]",
-      "link": "http://www.barc.gov.in/tenders/tender190.pdf",
-      "publishedAt": null,
-      "summary": "Providing maintenance platform and Crab unit cabin to gantry crane at SWMF, NRB, BARC Tarapur Last date: 03-Aug-2026",
-      "pdfUrls": [],
-      "sourceId": "barc",
-      "sourceName": "Bhabha Atomic Research Centre (BARC)",
-      "dept": "Bhabha Atomic Research Centre (BARC)",
-      "state": "All India",
-      "category": "defence",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
       "id": "e7d85fdc54c1a800",
       "title": "Tender No. BARC/⁠TSD/ET/11/⁠2026-⁠27[e-Tender]",
       "link": "http://www.barc.gov.in/tenders/tender186.pdf",
       "publishedAt": null,
       "summary": "Supply, Installation, Testing and Commissioning of Ultra-Pure Water Plant and Chemical Scrubber along with associated miscellaneous work for Clean Room Facility at H-9, NPD, BARC, Mumbai-85 Last date: 30-Jul-2026",
-      "pdfUrls": [],
-      "sourceId": "barc",
-      "sourceName": "Bhabha Atomic Research Centre (BARC)",
-      "dept": "Bhabha Atomic Research Centre (BARC)",
-      "state": "All India",
-      "category": "defence",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "006443c31832f865",
-      "title": "Tender No. BARC/⁠TSD/ET/5/⁠2026-⁠27[e-Tender]",
-      "link": "http://www.barc.gov.in/tenders/tender185.pdf",
-      "publishedAt": null,
-      "summary": "Supply, Installation, testing & commissioning of 4.5 MLD water treatment along with RO plant near Helipad BARC, Trombay, Mumbai- 85 Last date: 03-Aug-2026",
       "pdfUrls": [],
       "sourceId": "barc",
       "sourceName": "Bhabha Atomic Research Centre (BARC)",
@@ -1642,20 +2134,6 @@
       "dept": "Bhabha Atomic Research Centre (BARC)",
       "state": "All India",
       "category": "defence",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "cf7727ab821fe25c",
-      "title": "Research, Recruitment, & Extension",
-      "link": "https://www.wii.gov.in/research-recruitment-and-extension",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "wii",
-      "sourceName": "Wildlife Institute of India (WII)",
-      "dept": "Wildlife Institute of India (WII)",
-      "state": "All India",
-      "category": "psu",
       "fetchMethod": "live-jobs-supplement"
     },
     {
@@ -1831,25 +2309,6 @@
         "all"
       ],
       "fetchMethod": "html-listing"
-    },
-    {
-      "id": "1d228f8841a40377",
-      "title": "Notification regarding extension of period for submission of online application form for the post of Junior Engineer, Grade-I & Grade-II, Electrical Engineering(Advt. No-03/2026)",
-      "link": "https://tpsc.tripura.gov.in/sites/default/files/Ext_Engg_120626.pdf",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [
-        "https://tpsc.tripura.gov.in/sites/default/files/Ext_Engg_120626.pdf"
-      ],
-      "sourceId": "psc-tr",
-      "sourceName": "Tripura PSC (TPSC)",
-      "dept": "Tripura PSC (TPSC)",
-      "state": "NE States",
-      "category": "state",
-      "stateIds": [
-        "ne"
-      ],
-      "fetchMethod": "html"
     },
     {
       "id": "95e01ff96d5fc34d",
@@ -2193,20 +2652,6 @@
       "fetchMethod": "live-jobs-supplement"
     },
     {
-      "id": "4c0bbc4b947db8eb",
-      "title": "Advertisement No. 6 of 2016 for the posts of HCS (Judicial Branch) Pre Exam - 2017 (Closing date for Online Submission: 24.04.2017",
-      "link": "http://hpsc.gov.in/en-us/Recruitment/Advertisement-Corrigendum/Advertisement-No-6-of-2016-for-the-posts-of-HCS-Judicial-Branch-Pre-Exam-2017",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-hr-notifications",
-      "sourceName": "HPSC — Recruitment",
-      "dept": "HPSC — Recruitment",
-      "state": "All India",
-      "category": "state",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
       "id": "3be69f9a500dbca1",
       "title": "Extension on Bid Submission Date for NDAP",
       "link": "https://www.niti.gov.in/whats-new/extension-bid-submission-date-ndap",
@@ -2234,118 +2679,6 @@
       "dept": "NCERT",
       "state": "All India",
       "category": "teaching",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "2e4cbfd6ff174c1e",
-      "title": "Advertisement No. 1/2018 - for Various posts (Closing date for Online Submission: 20.08.2018",
-      "link": "https://hpsc.gov.in/Portals/0/Advt_%20No_%2001%20of%202018_1.pdf",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [
-        "https://hpsc.gov.in/Portals/0/Advt_%20No_%2001%20of%202018_1.pdf"
-      ],
-      "sourceId": "psc-hr",
-      "sourceName": "Haryana PSC (HPSC)",
-      "dept": "Haryana PSC (HPSC)",
-      "state": "All India",
-      "category": "state",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "66248b9f1bc802ca",
-      "title": "Advertisement No. 3/2017 - for Various posts (Closing date for Online Submission: 08.01.2018",
-      "link": "https://hpsc.gov.in/Portals/0/Advt_%20No_%2003%20of%202017_1.pdf",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [
-        "https://hpsc.gov.in/Portals/0/Advt_%20No_%2003%20of%202017_1.pdf"
-      ],
-      "sourceId": "psc-hr",
-      "sourceName": "Haryana PSC (HPSC)",
-      "dept": "Haryana PSC (HPSC)",
-      "state": "All India",
-      "category": "state",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "c7b6da75811c34e0",
-      "title": "Advertisement No. 2/2019 - for Various posts (Closing date for Online Submission: 24.06.2019",
-      "link": "https://hpsc.gov.in/Portals/0/Advt_2_2019_Deputy_Director_1.pdf",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [
-        "https://hpsc.gov.in/Portals/0/Advt_2_2019_Deputy_Director_1.pdf"
-      ],
-      "sourceId": "psc-hr",
-      "sourceName": "Haryana PSC (HPSC)",
-      "dept": "Haryana PSC (HPSC)",
-      "state": "All India",
-      "category": "state",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "b0d28f5a9974b0e0",
-      "title": "Advertisement No. 3/2019 - for Various posts (Closing date for Online Submission: 28.06.2019",
-      "link": "https://hpsc.gov.in/Portals/0/Advt_3_2019_DyDire_Ststs_29_05_19_1.pdf",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [
-        "https://hpsc.gov.in/Portals/0/Advt_3_2019_DyDire_Ststs_29_05_19_1.pdf"
-      ],
-      "sourceId": "psc-hr",
-      "sourceName": "Haryana PSC (HPSC)",
-      "dept": "Haryana PSC (HPSC)",
-      "state": "All India",
-      "category": "state",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "0dfd3cfe7d7c2c7c",
-      "title": "Advertisement No. 5/2019 - for Various posts (Closing date for Online Submission: 05.08.2019",
-      "link": "https://hpsc.gov.in/Portals/0/Advt_5_2019.pdf",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [
-        "https://hpsc.gov.in/Portals/0/Advt_5_2019.pdf"
-      ],
-      "sourceId": "psc-hr",
-      "sourceName": "Haryana PSC (HPSC)",
-      "dept": "Haryana PSC (HPSC)",
-      "state": "All India",
-      "category": "state",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "f0a793f13b9e1fce",
-      "title": "Advertisement for Assistant District Attorney Advt No. 02 of 2017 (Closing date for Online Submission: 08.06.2017 Candidates are advised not to send the hard copy of the application form",
-      "link": "https://hpsc.gov.in/Portals/0/Advt_%20No_%2002%20of%202017.pdf",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [
-        "https://hpsc.gov.in/Portals/0/Advt_%20No_%2002%20of%202017.pdf"
-      ],
-      "sourceId": "psc-hr",
-      "sourceName": "Haryana PSC (HPSC)",
-      "dept": "Haryana PSC (HPSC)",
-      "state": "All India",
-      "category": "state",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "af9776398203808f",
-      "title": "Advertisement for Dental Surgeon and Veterinary Surgen Advt No. 01 of 2017 (Closing date for Online Submission: 01.06.2017 Candidates are advised not to send the hard copy of the application form",
-      "link": "https://hpsc.gov.in/Portals/0/Advt_%20No_%2001%20of%202017.pdf",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [
-        "https://hpsc.gov.in/Portals/0/Advt_%20No_%2001%20of%202017.pdf"
-      ],
-      "sourceId": "psc-hr",
-      "sourceName": "Haryana PSC (HPSC)",
-      "dept": "Haryana PSC (HPSC)",
-      "state": "All India",
-      "category": "state",
       "fetchMethod": "live-jobs-supplement"
     },
     {
@@ -2803,23 +3136,6 @@
       "pdfUrls": [
         "https://cdnbbsr.s3waas.gov.in/s3ec03d5d7f5bba709f5cbbe1f74977096/uploads/2026/05/2026051192.pdf"
       ],
-      "sourceId": "dcourt-kullu",
-      "sourceName": "District & Sessions Judge, Kullu",
-      "dept": "District & Sessions Judge, Kullu",
-      "state": "Himachal Pradesh",
-      "category": "state",
-      "stateIds": [
-        "hp"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "c4c4d0cdc095f220",
-      "title": "Deadline for rollout of the eCourts Services Mobile App Version 4.0 has been extended up to 13.05.2026.",
-      "link": "https://kullu.dcourts.gov.in/deadline-for-rollout-of-the-ecourts-services-mobile-app-version-4-0-has-been-extended-up-to-13-05-2026/",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
       "sourceId": "dcourt-kullu",
       "sourceName": "District & Sessions Judge, Kullu",
       "dept": "District & Sessions Judge, Kullu",

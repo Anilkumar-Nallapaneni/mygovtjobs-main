@@ -1,16 +1,16 @@
 {
-  "generatedAt": "2026-08-04T11:07:29.251Z",
-  "count": 26,
+  "generatedAt": "2026-08-04T14:27:19.365Z",
+  "count": 30,
   "items": [
     {
-      "id": "1bb2282873cb0efd",
-      "title": "Specimen Question Cum Answer Booklet (QCAB)",
-      "link": "https://www.upsc.gov.in/examination/model-question-and-answer-booklets",
+      "id": "3fc1696b18f30fa3",
+      "title": "Common mistakes committed by the candidates in Conventional Papers",
+      "link": "https://www.upsc.gov.in/examination/common-mistakes-committed-candidates-conventional-papers",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
-      "sourceId": "upsc-e-admit-hub",
-      "sourceName": "UPSC — e-Admit cards",
+      "sourceId": "upsc-notifications",
+      "sourceName": "UPSC — What's New",
       "dept": "Union Public Service Commission",
       "state": "All India",
       "category": "upsc",
@@ -20,14 +20,14 @@
       "fetchMethod": "html-listing"
     },
     {
-      "id": "3fc1696b18f30fa3",
-      "title": "Common mistakes committed by the candidates in Conventional Papers",
-      "link": "https://www.upsc.gov.in/examination/common-mistakes-committed-candidates-conventional-papers",
+      "id": "47952f717dcedda6",
+      "title": "Representation on Question Papers",
+      "link": "https://www.upsc.gov.in/examinations/representation-question-papers",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
-      "sourceId": "upsc-e-admit-hub",
-      "sourceName": "UPSC — e-Admit cards",
+      "sourceId": "upsc-notifications",
+      "sourceName": "UPSC — What's New",
       "dept": "Union Public Service Commission",
       "state": "All India",
       "category": "upsc",
@@ -43,8 +43,8 @@
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
-      "sourceId": "upsc-e-admit-hub",
-      "sourceName": "UPSC — e-Admit cards",
+      "sourceId": "upsc-notifications",
+      "sourceName": "UPSC — What's New",
       "dept": "Union Public Service Commission",
       "state": "All India",
       "category": "upsc",
@@ -54,36 +54,55 @@
       "fetchMethod": "html-listing"
     },
     {
-      "id": "ba6df61f0df29b66",
-      "title": "Representation on Question Paper for ESEM-26, IES-ISS-26 and Combined Geo-Scientist (Main) Examination, 2026",
-      "link": "https://upsc.gov.in/content/representation-question-paper-esem-26-ies-iss-26-and-combined-geo-scientist-main-examination",
-      "publishedAt": "2026-06-29T08:16:36.532239Z",
-      "summary": "COMMON MISTAKES DONE WHILE FILLING OMR SHEET/SCANNABLE ATTENDANCE LIST OMR SHEET ERROR : Candidate encoded ‘C’ instead of ‘A’ MISTAKES IN OMR SHEET (1) ENCODING BOOKLET SERIES BY CANDIDATE (Series ‘A’ served to candidate) ERROR : Encoding not done by candidate MISTAKES IN OMR SHEET (1) ENCODING BOOKLET SERIES BY CANDIDATE contd. (Series ‘A’ served to candidate) ERROR : Wrong encoding of Subject Co…",
-      "pdfUrls": [
-        "https://www.upsc.gov.in/sites/default/files/Common_Mistake_OMR_SAL.pdf"
-      ],
-      "sourceId": "upsc",
-      "sourceName": "Union Public Service Commission (UPSC)",
-      "dept": "Union Public Service Commission (UPSC)",
+      "id": "1bb2282873cb0efd",
+      "title": "Specimen Question Cum Answer Booklet (QCAB)",
+      "link": "https://www.upsc.gov.in/examination/model-question-and-answer-booklets",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "upsc-previous-papers",
+      "sourceName": "UPSC — Previous Question Papers",
+      "dept": "Union Public Service Commission",
       "state": "All India",
       "category": "upsc",
-      "fetchMethod": "live-jobs-supplement"
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
     },
     {
-      "id": "9308d07d9fa7ec3a",
-      "title": "Representation on Question Paper for ESEM-26, IES-ISS-26 and Combined Geo-Scientist (Main) Examination, 2026",
-      "link": "https://www.upsc.gov.in/content/representation-question-paper-esem-26-ies-iss-26-and-combined-geo-scientist-main-examination",
-      "publishedAt": "2026-06-27T08:52:09.034216Z",
-      "summary": "The Window for submitting representations on the questions asked in the Engineering Services (Main) Examination - 2026, Indian Economic Service Examination - 2026, Indian Statistical Service Examination – 2026 and Combined Geo-Scientist (Main) Examination, 2026 will be opened from 27.06.2026. However, you can send your representation, if any, to the email ids mentioned below from today i.e. 25.06.…",
-      "pdfUrls": [
-        "https://www.upsc.gov.in/sites/default/files/QPRepExamNotice-Engl-25062026.pdf"
+      "id": "97f4f4f9ed7f43f4",
+      "title": "Objective Type (With Answer Keys) / Previous year Question papers",
+      "link": "https://www.tnpsc.gov.in/English/answerkeys.aspx",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "tnpsc-hall-tickets",
+      "sourceName": "TNPSC — Hall tickets",
+      "dept": "Tamil Nadu PSC",
+      "state": "Tamil Nadu",
+      "category": "state",
+      "stateIds": [
+        "all"
       ],
-      "sourceId": "upsc-notifications",
-      "sourceName": "UPSC — What's New",
-      "dept": "UPSC — What's New",
-      "state": "All India",
-      "category": "upsc",
-      "fetchMethod": "live-jobs-supplement"
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "fc551922154f2775",
+      "title": "Previous Year Question Papers",
+      "link": "https://www.tnpsc.gov.in/English/AISO-questions.html",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "tnpsc-hall-tickets",
+      "sourceName": "TNPSC — Hall tickets",
+      "dept": "Tamil Nadu PSC",
+      "state": "Tamil Nadu",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
     },
     {
       "id": "e89d8cfee71410b4",
@@ -106,23 +125,6 @@
       "id": "b2abd6cc6348e1c6",
       "title": "Previous Question Papers",
       "link": "https://www.keralapsc.gov.in/previous-question-papers",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-kl",
-      "sourceName": "Kerala PSC",
-      "dept": "Kerala PSC",
-      "state": "Kerala",
-      "category": "state",
-      "stateIds": [
-        "kl"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "c4f57dea207a1fb4",
-      "title": "Question paper for Descriptive Examinations",
-      "link": "https://www.keralapsc.gov.in/index.php/question-paper-descriptive-exam",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
@@ -167,6 +169,114 @@
       "category": "state",
       "stateIds": [
         "od"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "1f26c2bbb725585e",
+      "title": "Previous Year Question Papers",
+      "link": "https://mpscmanipur.gov.in/question.html",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-mn",
+      "sourceName": "Manipur PSC",
+      "dept": "Manipur PSC",
+      "state": "NE States",
+      "category": "state",
+      "stateIds": [
+        "ne"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "c1af6cf4cbc9ba85",
+      "title": "विज्ञापन संख्या-13-परीक्षा/2024, आशुलिपिक मुख्य परीक्षा (प्रा०अ०प०-2023)/13..",
+      "link": "https://upsssc.gov.in/ViewPdf.aspx?flObFIXulCKYLnQVhYjRsApYqfljOa0zLtQVkE5IO8k=",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "ssb-up",
+      "sourceName": "UP Subordinate Services Selection Comm (UPSSSC)",
+      "dept": "UP Subordinate Services Selection Comm (UPSSSC)",
+      "state": "All India",
+      "category": "state",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "8b86605915bd2486",
+      "title": "Model Question Papers",
+      "link": "https://trb.tn.gov.in/model-paper.php?language=LG-1&status=Active",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "ssb-tn",
+      "sourceName": "TN Teachers Recruitment Board (TRB)",
+      "dept": "TN Teachers Recruitment Board (TRB)",
+      "state": "All India",
+      "category": "teaching",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "5bd49e8cfac42247",
+      "title": "Previous Question Papers",
+      "link": "https://tnusrb.tn.gov.in/archivesquestionpapers-tnusrb.php",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "police-tn",
+      "sourceName": "Tamil Nadu Uniformed Services (TNUSRB)",
+      "dept": "Tamil Nadu Uniformed Services (TNUSRB)",
+      "state": "All India",
+      "category": "police",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "ba6df61f0df29b66",
+      "title": "Representation on Question Paper for ESEM-26, IES-ISS-26 and Combined Geo-Scientist (Main) Examination, 2026",
+      "link": "https://upsc.gov.in/content/representation-question-paper-esem-26-ies-iss-26-and-combined-geo-scientist-main-examination",
+      "publishedAt": "2026-06-29T08:16:36.532239Z",
+      "summary": "COMMON MISTAKES DONE WHILE FILLING OMR SHEET/SCANNABLE ATTENDANCE LIST OMR SHEET ERROR : Candidate encoded ‘C’ instead of ‘A’ MISTAKES IN OMR SHEET (1) ENCODING BOOKLET SERIES BY CANDIDATE (Series ‘A’ served to candidate) ERROR : Encoding not done by candidate MISTAKES IN OMR SHEET (1) ENCODING BOOKLET SERIES BY CANDIDATE contd. (Series ‘A’ served to candidate) ERROR : Wrong encoding of Subject Co…",
+      "pdfUrls": [
+        "https://www.upsc.gov.in/sites/default/files/Common_Mistake_OMR_SAL.pdf"
+      ],
+      "sourceId": "upsc",
+      "sourceName": "Union Public Service Commission (UPSC)",
+      "dept": "Union Public Service Commission (UPSC)",
+      "state": "All India",
+      "category": "upsc",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "9308d07d9fa7ec3a",
+      "title": "Representation on Question Paper for ESEM-26, IES-ISS-26 and Combined Geo-Scientist (Main) Examination, 2026",
+      "link": "https://www.upsc.gov.in/content/representation-question-paper-esem-26-ies-iss-26-and-combined-geo-scientist-main-examination",
+      "publishedAt": "2026-06-27T08:52:09.034216Z",
+      "summary": "The Window for submitting representations on the questions asked in the Engineering Services (Main) Examination - 2026, Indian Economic Service Examination - 2026, Indian Statistical Service Examination – 2026 and Combined Geo-Scientist (Main) Examination, 2026 will be opened from 27.06.2026. However, you can send your representation, if any, to the email ids mentioned below from today i.e. 25.06.…",
+      "pdfUrls": [
+        "https://www.upsc.gov.in/sites/default/files/QPRepExamNotice-Engl-25062026.pdf"
+      ],
+      "sourceId": "upsc-notifications",
+      "sourceName": "UPSC — What's New",
+      "dept": "UPSC — What's New",
+      "state": "All India",
+      "category": "upsc",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "c4f57dea207a1fb4",
+      "title": "Question paper for Descriptive Examinations",
+      "link": "https://www.keralapsc.gov.in/index.php/question-paper-descriptive-exam",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-kl",
+      "sourceName": "Kerala PSC",
+      "dept": "Kerala PSC",
+      "state": "Kerala",
+      "category": "state",
+      "stateIds": [
+        "kl"
       ],
       "fetchMethod": "html"
     },
@@ -325,20 +435,6 @@
       "fetchMethod": "live-jobs-supplement"
     },
     {
-      "id": "1f26c2bbb725585e",
-      "title": "Previous Year Question Papers",
-      "link": "https://mpscmanipur.gov.in/question.html",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-mn",
-      "sourceName": "Manipur PSC",
-      "dept": "Manipur PSC",
-      "state": "All India",
-      "category": "state",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
       "id": "d8e4b595dfe40717",
       "title": "Old Question Paper",
       "link": "https://tpsc.tripura.gov.in/old-question-paper",
@@ -354,40 +450,6 @@
         "ne"
       ],
       "fetchMethod": "html"
-    },
-    {
-      "id": "97f4f4f9ed7f43f4",
-      "title": "Objective Type (With Answer Keys) / Previous year Question papers",
-      "link": "https://www.tnpsc.gov.in/English/answerkeys.aspx",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "tnpsc-hall-tickets",
-      "sourceName": "TNPSC — Hall tickets",
-      "dept": "Tamil Nadu PSC",
-      "state": "Tamil Nadu",
-      "category": "state",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "fc551922154f2775",
-      "title": "Previous Year Question Papers",
-      "link": "https://www.tnpsc.gov.in/English/AISO-questions.html",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "tnpsc-hall-tickets",
-      "sourceName": "TNPSC — Hall tickets",
-      "dept": "Tamil Nadu PSC",
-      "state": "Tamil Nadu",
-      "category": "state",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
     },
     {
       "id": "f9b5a924f72ec798",
