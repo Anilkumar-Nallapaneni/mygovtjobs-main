@@ -1,7 +1,24 @@
 {
-  "generatedAt": "2026-08-05T07:36:14.049Z",
-  "count": 666,
+  "generatedAt": "2026-08-05T11:03:23.400Z",
+  "count": 667,
   "items": [
+    {
+      "id": "f8544a1fcd6d2c55",
+      "title": "बिहार और पूरे देश में सीसीटीएनएस का उपयोग और परिणाम",
+      "link": "https://pib.gov.in/PressReleaseIframePage.aspx?PRID=2294826",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "pib-press-reg3",
+      "sourceName": "PIB — recent press releases",
+      "dept": "Press Information Bureau",
+      "state": "All India",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "rss-feed"
+    },
     {
       "id": "2fcd6ff34f094281",
       "title": "The 2nd selection list for YUVIKA-2026",
