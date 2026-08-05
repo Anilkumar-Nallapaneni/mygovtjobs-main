@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-05T03:48:13.129Z",
+  "generatedAt": "2026-08-05T07:36:14.049Z",
   "sourceReports": [
     {
       "id": "pib-press-reg3",
@@ -236,10 +236,10 @@
       "name": "UPSC — e-Admit cards",
       "feedUrl": null,
       "listingUrl": "https://www.upsc.gov.in/e-admit-cards",
-      "ok": true,
-      "error": null,
-      "itemCount": 2,
-      "fetchMethod": "rss-discovered"
+      "ok": false,
+      "error": "https://www.upsc.gov.in/e-admit-cards: timeout",
+      "itemCount": 0,
+      "fetchMethod": null
     },
     {
       "id": "appsc-hall-tickets",
@@ -294,40 +294,6 @@
   ],
   "siteReports": [],
   "items": [
-    {
-      "id": "7e897a8a804563d4",
-      "title": "Union Public Service Commission",
-      "link": "https://upsc.gov.in/sites/default/files/AdvtNo-04-2026-Engl-080526.pdf",
-      "publishedAt": "2026-05-08T00:00:00.000Z",
-      "summary": "Advertisement No. 04/2026",
-      "pdfUrls": [],
-      "sourceId": "upsc-e-admit-hub",
-      "sourceName": "UPSC — e-Admit cards",
-      "dept": "Union Public Service Commission",
-      "state": "All India",
-      "category": "upsc",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "rss-feed"
-    },
-    {
-      "id": "eb8779e7959ca657",
-      "title": "Union Public Service Commission",
-      "link": "https://upsc.gov.in/sites/default/files/Advt_03_2026_Eng_24042026.pdf",
-      "publishedAt": "2026-04-24T00:00:00.000Z",
-      "summary": "Advertisement No. 03/2026",
-      "pdfUrls": [],
-      "sourceId": "upsc-e-admit-hub",
-      "sourceName": "UPSC — e-Admit cards",
-      "dept": "Union Public Service Commission",
-      "state": "All India",
-      "category": "upsc",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "rss-feed"
-    },
     {
       "id": "1320428f3dc24d77",
       "title": "Home.aspx",
