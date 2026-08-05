@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-08-05T11:03:23.400Z",
+  "generatedAt": "2026-08-05T14:50:25.647Z",
   "sourceReports": [
     {
       "id": "pib-press-reg3",
       "name": "PIB — recent press releases",
       "feedUrl": "https://www.pib.gov.in/RssMain.aspx?ModId=6&Lang=2&Regid=3&reg=48",
       "listingUrl": null,
-      "ok": true,
-      "error": null,
-      "itemCount": 1,
-      "fetchMethod": "rss-feed"
+      "ok": false,
+      "error": "rss-empty",
+      "itemCount": 0,
+      "fetchMethod": null
     },
     {
       "id": "employment-news",
@@ -294,23 +294,6 @@
   ],
   "siteReports": [],
   "items": [
-    {
-      "id": "f8544a1fcd6d2c55",
-      "title": "बिहार और पूरे देश में सीसीटीएनएस का उपयोग और परिणाम",
-      "link": "https://pib.gov.in/PressReleaseIframePage.aspx?PRID=2294826",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "pib-press-reg3",
-      "sourceName": "PIB — recent press releases",
-      "dept": "Press Information Bureau",
-      "state": "All India",
-      "category": "state",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "rss-feed"
-    },
     {
       "id": "1320428f3dc24d77",
       "title": "Home.aspx",
@@ -2885,6 +2868,40 @@
       "fetchMethod": "html-listing"
     },
     {
+      "id": "4b02ab0f27e053f3",
+      "title": "RESULT OF ADVT. NO. D-5/E-1/2025, UTTAR PRADESH STATE ARCHAEOLOGICAL DIRECTORATE..",
+      "link": "https://uppsc.up.nic.in/Open_PDF_DB.aspx?I4PnQ0tBagkKN9rKVhlu76/9na81EE1P",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "uppsc-hall-tickets",
+      "sourceName": "UPPSC — Hall tickets",
+      "dept": "Uttar Pradesh PSC",
+      "state": "Uttar Pradesh",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "05c25c9ea9a91126",
+      "title": "NOTICE REGARDING ADVT. NO.A-4/E-1/2025 U.P. PUBLIC SERVICE COMMISSION,COMPUTER A..",
+      "link": "https://uppsc.up.nic.in/Open_PDF_DB.aspx?I4PnQ0tBagkKN9rKVhlu7wEGC/BZy5+i",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "uppsc-hall-tickets",
+      "sourceName": "UPPSC — Hall tickets",
+      "dept": "Uttar Pradesh PSC",
+      "state": "Uttar Pradesh",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
       "id": "ed19314ac2e0415d",
       "title": "RESULT OF ADVT. NO.2/2019-2020, U. P. AYUSH (UNANI) DEPTT./PRINCIPAL, S-11/02",
       "link": "https://uppsc.up.nic.in/Open_PDF_DB.aspx?I4PnQ0tBaglovGFVjGJMaNLk/ffKn7jL",
@@ -3106,6 +3123,23 @@
       "fetchMethod": "html-listing"
     },
     {
+      "id": "f4e69ecdb2e37d68",
+      "title": "05 Sep 2026 RESULT OF ADVT. NO. D-5/E-1/2025, UTTAR PRADESH STATE ARCHAEOLOGICAL DIRECTORATE, ASSISTANT ARCHAEOLOGICAL OFFICER, S-03/06",
+      "link": "https://uppsc.up.nic.in/Open_PDF.aspx?I4PnQ0tBagkKN9rKVhlu72hN7PveuZya",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "uppsc-hall-tickets",
+      "sourceName": "UPPSC — Hall tickets",
+      "dept": "Uttar Pradesh PSC",
+      "state": "Uttar Pradesh",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
       "id": "f1fd1a8e8a3319b2",
       "title": "04 Sep 2026 RESULT OF ADVT. NO.2/2019-2020, U. P. AYUSH (UNANI) DEPTT./PRINCIPAL, S-11/02",
       "link": "https://uppsc.up.nic.in/Open_PDF.aspx?I4PnQ0tBaglovGFVjGJMaBjSXnbpvM2q",
@@ -3157,9 +3191,9 @@
       "fetchMethod": "html-listing"
     },
     {
-      "id": "a1ce196cfb494713",
-      "title": "27 Aug 2026 LIST OF CANDIDATES PROVISIONALLY QUALIFIED FOR MAINS IN ADVT. NO. A-6/E-1/2025, LECT. (M./F.) GOVT. INTER COLLEGE EXAM.-2025, BIOLOGY, HINDI, URDU, S.....",
-      "link": "https://uppsc.up.nic.in/Open_PDF.aspx?I4PnQ0tBaglP18XMjN55aLZg5NY5v5bc",
+      "id": "ee12a8dab0ad68f2",
+      "title": "More >>",
+      "link": "https://uppsc.up.nic.in/FooterPages/Results",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
@@ -3174,9 +3208,9 @@
       "fetchMethod": "html-listing"
     },
     {
-      "id": "ee12a8dab0ad68f2",
-      "title": "More >>",
-      "link": "https://uppsc.up.nic.in/FooterPages/Results",
+      "id": "cfb1ad3e0eb31302",
+      "title": "12 Aug 2026 NOTICE REGARDING ADVT. NO.A-4/E-1/2025 U.P. PUBLIC SERVICE COMMISSION,COMPUTER ASSISTANT",
+      "link": "https://uppsc.up.nic.in/Open_PDF.aspx?I4PnQ0tBagkKN9rKVhlu78isuQpzP6jj",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
@@ -3211,40 +3245,6 @@
       "id": "3961bda294ffacc4",
       "title": "10 Aug 2026 REVISED NOTICE REGARDING ADVT. NO. A-2/E-1/2020 REGIONAL INSPECTOR (Technical)EXAM-2020",
       "link": "https://uppsc.up.nic.in/Open_PDF.aspx?I4PnQ0tBaglovGFVjGJMaLYHjnVo5Zd7",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "uppsc-hall-tickets",
-      "sourceName": "UPPSC — Hall tickets",
-      "dept": "Uttar Pradesh PSC",
-      "state": "Uttar Pradesh",
-      "category": "state",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "981830d2584adade",
-      "title": "07 Aug 2026 NOTICE REGARDING ADVT. NO. A-10/E-1/2023 U.P. KHADI AND VILLAGE INDUSTRIES BOARD,PRASHIKSHAK (POTTERY)",
-      "link": "https://uppsc.up.nic.in/Open_PDF.aspx?I4PnQ0tBaglovGFVjGJMaGIgM41wBsE3",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "uppsc-hall-tickets",
-      "sourceName": "UPPSC — Hall tickets",
-      "dept": "Uttar Pradesh PSC",
-      "state": "Uttar Pradesh",
-      "category": "state",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "7075f38ff8730403",
-      "title": "07 Aug 2026 NOTICE REGARDING ADVT. NO. A-10/E-1/2023 U.P. KHADI AND VILLAGE INDUSTRIES BOARD,PRASHIKSHAK (LEATHER)",
-      "link": "https://uppsc.up.nic.in/Open_PDF.aspx?I4PnQ0tBaglovGFVjGJMaC4G2fj58E9V",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
@@ -3449,23 +3449,6 @@
       "id": "de838a08989288b7",
       "title": "{{'DwldEligibilityFormDirect_HM' | translate }}",
       "link": "https://uppsc.up.nic.in/CandidatePages/ElgbtChkg/DownloadForm_EligibilityChecking_New.aspx",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "uppsc-hall-tickets",
-      "sourceName": "UPPSC — Hall tickets",
-      "dept": "Uttar Pradesh PSC",
-      "state": "Uttar Pradesh",
-      "category": "state",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "ab085f65068c7817",
-      "title": "{{'DwldPreYearQuesPpr_HM' | translate }}",
-      "link": "https://uppsc.up.nic.in/OuterPages/PreQuesPapers.aspx?ID=PrevQues",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
