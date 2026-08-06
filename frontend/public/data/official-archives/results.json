@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-05T21:47:53.082Z",
+  "generatedAt": "2026-08-06T03:54:16.233Z",
   "count": 670,
   "items": [
     {
@@ -90,57 +90,6 @@
       "dept": "Indian Space Research Organisation",
       "state": "All India",
       "category": "psu",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "d96438c8a45ec102",
-      "title": "तुलनात्मक परिणाम विश्लेषण-कक्षा बारहवीं",
-      "link": "https://kvsangathan.nic.in/%e0%a4%a4%e0%a5%81%e0%a4%b2%e0%a4%a8%e0%a4%be%e0%a4%a4%e0%a5%8d%e0%a4%ae%e0%a4%95-%e0%a4%aa%e0%a4%b0%e0%a4%bf%e0%a4%a3%e0%a4%be%e0%a4%ae-%e0%a4%b5%e0%a4%bf%e0%a4%b6%e0%a5%8d%e0%a4%b2%e0%a5%87-3/",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "kvs-recruitment",
-      "sourceName": "KVS — Recruitment notices",
-      "dept": "Kendriya Vidyalaya Sangathan",
-      "state": "All India",
-      "category": "teaching",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "b92e662ae3705475",
-      "title": "तुलनात्मक परिणाम विश्लेषण-कक्षा दसवीं",
-      "link": "https://kvsangathan.nic.in/%e0%a4%a4%e0%a5%81%e0%a4%b2%e0%a4%a8%e0%a4%be%e0%a4%a4%e0%a5%8d%e0%a4%ae%e0%a4%95-%e0%a4%aa%e0%a4%b0%e0%a4%bf%e0%a4%a3%e0%a4%be%e0%a4%ae-%e0%a4%b5%e0%a4%bf%e0%a4%b6%e0%a5%8d%e0%a4%b2%e0%a5%87%e0%a4%b7/",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "kvs-recruitment",
-      "sourceName": "KVS — Recruitment notices",
-      "dept": "Kendriya Vidyalaya Sangathan",
-      "state": "All India",
-      "category": "teaching",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "ddef950428ea8bef",
-      "title": "परिणाम/विविध/उत्तर कुंजी",
-      "link": "https://kvsangathan.nic.in/%e0%a4%aa%e0%a4%b0%e0%a4%bf%e0%a4%a3%e0%a4%be%e0%a4%ae-%e0%a4%b5%e0%a4%bf%e0%a4%b5%e0%a4%bf%e0%a4%a7-%e0%a4%89%e0%a4%a4%e0%a5%8d%e0%a4%a4%e0%a4%b0-%e0%a4%95%e0%a5%81%e0%a4%82%e0%a4%9c%e0%a5%80/",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "kvs-recruitment",
-      "sourceName": "KVS — Recruitment notices",
-      "dept": "Kendriya Vidyalaya Sangathan",
-      "state": "All India",
-      "category": "teaching",
       "stateIds": [
         "all"
       ],
@@ -294,6 +243,57 @@
       "dept": "Uttar Pradesh PSC",
       "state": "Uttar Pradesh",
       "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "d96438c8a45ec102",
+      "title": "तुलनात्मक परिणाम विश्लेषण-कक्षा बारहवीं",
+      "link": "https://kvsangathan.nic.in/%e0%a4%a4%e0%a5%81%e0%a4%b2%e0%a4%a8%e0%a4%be%e0%a4%a4%e0%a5%8d%e0%a4%ae%e0%a4%95-%e0%a4%aa%e0%a4%b0%e0%a4%bf%e0%a4%a3%e0%a4%be%e0%a4%ae-%e0%a4%b5%e0%a4%bf%e0%a4%b6%e0%a5%8d%e0%a4%b2%e0%a5%87-3/",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "kvs-recruitment",
+      "sourceName": "KVS — Recruitment notices",
+      "dept": "Kendriya Vidyalaya Sangathan",
+      "state": "All India",
+      "category": "teaching",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "b92e662ae3705475",
+      "title": "तुलनात्मक परिणाम विश्लेषण-कक्षा दसवीं",
+      "link": "https://kvsangathan.nic.in/%e0%a4%a4%e0%a5%81%e0%a4%b2%e0%a4%a8%e0%a4%be%e0%a4%a4%e0%a5%8d%e0%a4%ae%e0%a4%95-%e0%a4%aa%e0%a4%b0%e0%a4%bf%e0%a4%a3%e0%a4%be%e0%a4%ae-%e0%a4%b5%e0%a4%bf%e0%a4%b6%e0%a5%8d%e0%a4%b2%e0%a5%87%e0%a4%b7/",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "kvs-recruitment",
+      "sourceName": "KVS — Recruitment notices",
+      "dept": "Kendriya Vidyalaya Sangathan",
+      "state": "All India",
+      "category": "teaching",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "ddef950428ea8bef",
+      "title": "परिणाम/विविध/उत्तर कुंजी",
+      "link": "https://kvsangathan.nic.in/%e0%a4%aa%e0%a4%b0%e0%a4%bf%e0%a4%a3%e0%a4%be%e0%a4%ae-%e0%a4%b5%e0%a4%bf%e0%a4%b5%e0%a4%bf%e0%a4%a7-%e0%a4%89%e0%a4%a4%e0%a5%8d%e0%a4%a4%e0%a4%b0-%e0%a4%95%e0%a5%81%e0%a4%82%e0%a4%9c%e0%a5%80/",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "kvs-recruitment",
+      "sourceName": "KVS — Recruitment notices",
+      "dept": "Kendriya Vidyalaya Sangathan",
+      "state": "All India",
+      "category": "teaching",
       "stateIds": [
         "all"
       ],
