@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-08-06T07:29:52.098Z",
+  "generatedAt": "2026-08-06T11:05:02.106Z",
   "sourceReports": [
     {
       "id": "pib-press-reg3",
       "name": "PIB — recent press releases",
       "feedUrl": "https://www.pib.gov.in/RssMain.aspx?ModId=6&Lang=2&Regid=3&reg=48",
       "listingUrl": null,
-      "ok": false,
-      "error": "rss-empty",
-      "itemCount": 0,
-      "fetchMethod": null
+      "ok": true,
+      "error": null,
+      "itemCount": 1,
+      "fetchMethod": "rss-feed"
     },
     {
       "id": "employment-news",
@@ -294,6 +294,23 @@
   ],
   "siteReports": [],
   "items": [
+    {
+      "id": "91984c98c3cd2d13",
+      "title": "ईएमआरएस के शैक्षणिक परिणाम",
+      "link": "https://pib.gov.in/PressReleaseIframePage.aspx?PRID=2295436",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "pib-press-reg3",
+      "sourceName": "PIB — recent press releases",
+      "dept": "Press Information Bureau",
+      "state": "All India",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "rss-feed"
+    },
     {
       "id": "1320428f3dc24d77",
       "title": "Home.aspx",
