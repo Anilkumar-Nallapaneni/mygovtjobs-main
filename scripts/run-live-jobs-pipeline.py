@@ -39,6 +39,8 @@ async def run_agents(
     force_sync: bool,
     pdf_limit: int,
     detail_limit: int,
+    run_employees: bool,
+    employees_apply: bool,
 ) -> int:
     code = 0
 
@@ -70,6 +72,14 @@ async def run_agents(
         c2 = run_npm("clean:live-jobs")
         code = code or c2
 
+    if run_employees:
+        # AI employees: QA by state bucket → promote → watchdog
+        if employees_apply:
+            c3 = run_npm("ai:employees:apply")
+        else:
+            c3 = run_npm("ai:employees")
+        code = code or c3
+
     print("\n=== Pipeline complete ===", flush=True)
     return code
 
@@ -82,6 +92,16 @@ def main() -> int:
     parser.add_argument("--force-sync", action="store_true", help="Force daily sync even if ran today")
     parser.add_argument("--pdf-limit", type=int, default=0)
     parser.add_argument("--detail-limit", type=int, default=0)
+    parser.add_argument(
+        "--employees",
+        action="store_true",
+        help="Run AI employees (QA → publish → watchdog) after details",
+    )
+    parser.add_argument(
+        "--employees-apply",
+        action="store_true",
+        help="Write AI employee changes (implies --employees)",
+    )
     args = parser.parse_args()
 
     return asyncio.run(
@@ -92,6 +112,8 @@ def main() -> int:
             force_sync=args.force_sync,
             pdf_limit=args.pdf_limit,
             detail_limit=args.detail_limit,
+            run_employees=args.employees or args.employees_apply,
+            employees_apply=args.employees_apply,
         )
     )
 

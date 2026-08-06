@@ -208,4 +208,73 @@ describe("buildStructuredJobDetail", () => {
     // Fee section is promoted to FeeGrid and removed from article body.
     expect(structured.articleSections.some((s) => /application fee/i.test(s.heading))).toBe(false);
   });
+
+  it("drops ISRO FAQ Answer cards, Paper Code splits, and junk fee", () => {
+    const structured = buildStructuredJobDetail({
+      title: "ISRO Scientist/Engineer SC",
+      detail: {
+        memorized_at: "2026-08-04T00:00:00Z",
+        detail_source: "pdf",
+        summary:
+          "Centres/Units of Indian Space Research Organization are engaged in Research and Development. " +
+          "Online applications are invited for Scientist/Engineer SC posts.",
+        fee: {
+          Answer: "All Women candidates (General/SC/ST/OBC/PWBD) are exempted from",
+        },
+        content_sections: [
+          {
+            heading: "Overview",
+            paragraphs: [
+              "RECRUITMENT OF SCIENTIST/ENGINEER SC FREQUENTLY ASKED QUESTIONS AND ANSWERS 1. I wish to apply? Answer: Link is available.",
+            ],
+            tables: [
+              [
+                { label: "Advt No. ISRO", value: "ICRB:02(EMC-CEPO):2026 dated 28-07-2026" },
+                { label: "Answer", value: "There is no written test for the current advertisement. Shortlisting of the" },
+                { label: "Answer", value: "You may select other Universities option available in the drop down menu." },
+                { label: "Technology [Paper Code", value: "CS]" },
+                { label: "GATE Qualification : Valid GATE score in Electronics [Paper Code", value: "EC]" },
+              ],
+            ],
+            lists: [],
+            links: [],
+          },
+          {
+            heading: "Eligibility and Qualification",
+            paragraphs: ["BE/B.Tech or equivalent in Electronics & Communication Engineering."],
+            tables: [[{ label: "NOTE", value: "Graduation should have been completed within the stipulated duration of the course as" }]],
+            lists: [],
+            links: [],
+          },
+        ],
+      },
+    });
+
+    expect(structured.overviewFacts.some((f) => /^answer$/i.test(f.label))).toBe(false);
+    expect(structured.overviewFacts.some((f) => /paper\s*code/i.test(f.label))).toBe(false);
+    expect(structured.overviewFacts.some((f) => /Advt No/i.test(f.label))).toBe(true);
+    // FAQ dump paragraph should not remain as overview body when facts exist
+    const overviewArticle = structured.articleSections.find((s) => /overview/i.test(s.heading));
+    if (overviewArticle) {
+      expect(overviewArticle.paragraphs.some((p) => /frequently\s+asked/i.test(p))).toBe(false);
+    }
+  });
+
+  it("filters Answer/fee junk from regenerated ISRO job-details JSON", async () => {
+    const { readFileSync } = await import("node:fs");
+    const { resolve } = await import("node:path");
+    const path = resolve(
+      process.cwd(),
+      "public/data/job-details/isro-careers-advt-no-isro-icrb-02-emc-cepo-2026-dated-28-07-2026-recruitment-to--d96680f7.json"
+    );
+    const job = JSON.parse(readFileSync(path, "utf8"));
+    const structured = buildStructuredJobDetail(job);
+    expect(structured.overviewFacts.some((f) => /^answer$/i.test(f.label))).toBe(false);
+    expect(structured.overviewFacts.some((f) => /paper\s*code/i.test(f.label))).toBe(false);
+    // No FAQ Answer fee promotion
+    const fee = job.detail?.fee;
+    if (fee && typeof fee === "object") {
+      expect(Object.keys(fee).some((k) => /^answer$/i.test(k))).toBe(false);
+    }
+  });
 });

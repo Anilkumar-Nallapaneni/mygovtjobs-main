@@ -16,7 +16,7 @@ Vercel CDN (frontend/dist)
 
 ```
 Terminal 1: npm run api:dev     →  http://localhost:8000
-Terminal 2: npm run dev         →  http://localhost:2222
+Terminal 2: npm run dev         →  http://localhost:3689
                                       └─ /api/* proxied to :8000
 ```
 

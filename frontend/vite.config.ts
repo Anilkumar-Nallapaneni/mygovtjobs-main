@@ -257,8 +257,8 @@ export default defineConfig(({ mode }) => {
       alias: [{ find: '@', replacement: resolve(__dirname, 'src') }],
     },
     server: {
-      port: 2222,
-      strictPort: false,
+      port: 3689,
+      strictPort: true,
       open: true,
       proxy: {
         '/api': {
@@ -268,7 +268,7 @@ export default defineConfig(({ mode }) => {
       },
     },
     preview: {
-      port: 2222,
+      port: 3689,
       strictPort: true,
     },
   }

@@ -46,9 +46,9 @@ export function FeeGrid({
 }) {
   if (!entries.length) return null;
   return (
-    <div className="job-detail-fee-grid">
+    <div className="job-detail-fee-grid" role="list">
       {entries.map(([key, value]) => (
-        <div key={key} className="job-detail-fee-card">
+        <div key={key} className="job-detail-fee-card" role="listitem">
           <div className="job-detail-fee-card__label">{translateKey(key)}</div>
           <div className="job-detail-fee-card__value">{String(value)}</div>
         </div>
@@ -60,14 +60,14 @@ export function FeeGrid({
 export function ExtraDetailsGrid({ items }: { items: Array<{ label: string; value: string }> }) {
   if (!items.length) return null;
   return (
-    <div className="job-detail-extra-grid">
+    <dl className="job-detail-facts-list">
       {items.map((item) => (
-        <div key={`${item.label}-${item.value}`} className="job-detail-extra-card">
-          <div className="job-detail-extra-label">{item.label}</div>
-          <div className="job-detail-extra-value">{item.value}</div>
+        <div key={`${item.label}-${item.value}`} className="job-detail-facts-list__row">
+          <dt className="job-detail-facts-list__label">{item.label}</dt>
+          <dd className="job-detail-facts-list__value">{item.value}</dd>
         </div>
       ))}
-    </div>
+    </dl>
   );
 }
 
@@ -79,26 +79,25 @@ export function EligibilityBlock({
   rows: Array<{ label: string; value: string }>;
 }) {
   const hasList = items.length > 0;
-  const hasRows = rows.some((r) => r.value && r.value !== "—");
+  const cleanRows = rows.filter((r) => r.value && r.value !== "—");
+  const hasRows = cleanRows.length > 0;
   if (!hasList && !hasRows) return null;
 
   return (
     <div className="job-detail-eligibility">
       {hasRows ? (
-        <dl className="job-detail-eligibility-grid">
-          {rows
-            .filter((r) => r.value && r.value !== "—")
-            .map((row) => (
-              <div key={row.label} className="job-detail-eligibility-grid__row">
-                <dt>{row.label}</dt>
-                <dd>{row.value}</dd>
-              </div>
-            ))}
+        <dl className="job-detail-facts-list job-detail-facts-list--eligibility">
+          {cleanRows.map((row) => (
+            <div key={row.label} className="job-detail-facts-list__row">
+              <dt className="job-detail-facts-list__label">{row.label}</dt>
+              <dd className="job-detail-facts-list__value">{row.value}</dd>
+            </div>
+          ))}
         </dl>
       ) : null}
       {hasList ? (
         <ul className="job-detail-eligibility-list">
-          {items.map((item, i) => (
+          {items.slice(0, 12).map((item, i) => (
             <li key={i} className="job-detail-eligibility-list__item">
               {item}
             </li>

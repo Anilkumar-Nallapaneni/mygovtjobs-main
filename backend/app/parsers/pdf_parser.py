@@ -121,10 +121,15 @@ _FEE_HEADING = re.compile(r"fee|charges|payment", re.I)
 _SELECTION_HEADING = re.compile(r"selection|mode\s+of\s+selection", re.I)
 _HOW_APPLY_HEADING = re.compile(r"how\s+to\s+apply|application\s+procedure|apply\s+online", re.I)
 _DOCUMENTS_HEADING = re.compile(r"documents?\s+(?:required|to\s+be\s+produced)", re.I)
-_FEE_AMOUNT = re.compile(
-    r"(?:rs\.?|inr|₹)\s*[\d,]+(?:\s*/\s*-)?|(?:nil|exempt(?:ed)?|free|no\s+fee)",
+_FEE_AMOUNT = re.compile(r"(?:rs\.?|inr|₹)\s*[\d,]+(?:\s*/\s*-)?", re.I)
+_FEE_NIL = re.compile(r"^(?:nil|n\/?a|exempt(?:ed)?|free|no\s+fee|zero|0(?:\.0+)?|-|—)$", re.I)
+_FEE_CATEGORY = re.compile(
+    r"^(?:general|ur|obc|sc|st|ews|female|women|pwd|pwbd|ex[\-\s]?servicemen|ph|others?"
+    r"|all\s+categories|application\s+fee|exam(?:ination)?\s+fee|registration\s+fee)"
+    r"(?:\s*/\s*(?:sc|st|obc|ews|pwd|pwbd|ur|general|female|women))?$",
     re.I,
 )
+_JUNK_FEE_LABEL = re.compile(r"^(?:answer|question|ans\.?|q\.?\s*\d+|note|age\s+limit)$", re.I)
 
 
 def _section_heading(section: dict[str, Any]) -> str:
@@ -147,6 +152,28 @@ def _section_text_items(section: dict[str, Any]) -> list[str]:
     return items
 
 
+def _is_real_fee_entry(label: str, value: str, *, in_fee_section: bool) -> bool:
+    lab = label.strip()
+    val = value.strip()
+    if not lab or not val:
+        return False
+    if _JUNK_FEE_LABEL.match(lab):
+        return False
+    if _FEE_AMOUNT.search(val):
+        return True
+    # Bare exempt/nil only when label looks like a fee category or we are in a fee section.
+    if _FEE_NIL.match(val) or re.search(r"\b(?:nil|exempt(?:ed)?|free|no\s+fee)\b", val, re.I):
+        if _FEE_CATEGORY.match(lab) or (in_fee_section and _FEE_HEADING.search(lab)):
+            return True
+        if in_fee_section and len(lab) <= 40 and not re.search(r"\banswer\b", lab, re.I):
+            # Category-ish short labels inside a dedicated fee section.
+            if re.match(r"^[A-Za-z0-9][A-Za-z0-9\s/&\-]{1,38}$", lab):
+                return _FEE_CATEGORY.match(lab) is not None
+    if _FEE_HEADING.search(lab) and (_FEE_AMOUNT.search(val) or _FEE_NIL.match(val)):
+        return True
+    return False
+
+
 def _extract_fee_dict(sections: list[dict[str, Any]]) -> dict[str, str]:
     fee: dict[str, str] = {}
     for section in sections:
@@ -165,15 +192,15 @@ def _extract_fee_dict(sections: list[dict[str, Any]]) -> dict[str, str]:
                     for key, raw in row.items():
                         key_s = str(key or "").strip()
                         val_s = str(raw or "").strip()
-                        if key_s and val_s and _FEE_AMOUNT.search(val_s):
+                        if key_s and val_s and _is_real_fee_entry(key_s, val_s, in_fee_section=is_fee):
                             fee[key_s[:80]] = val_s[:120]
                     continue
-                if is_fee or _FEE_HEADING.search(label) or _FEE_AMOUNT.search(value):
+                if _is_real_fee_entry(label, value, in_fee_section=is_fee or bool(_FEE_HEADING.search(label))):
                     fee[label[:80]] = value[:120]
         if is_fee:
             for item in _section_text_items(section):
                 m = re.match(r"^([^:]{2,60}?)\s*:\s*(.+)$", item)
-                if m and _FEE_AMOUNT.search(m.group(2)):
+                if m and _is_real_fee_entry(m.group(1).strip(), m.group(2).strip(), in_fee_section=True):
                     fee[m.group(1).strip()[:80]] = m.group(2).strip()[:120]
     return fee
 

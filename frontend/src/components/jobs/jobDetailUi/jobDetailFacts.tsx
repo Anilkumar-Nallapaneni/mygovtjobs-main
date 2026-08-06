@@ -1,3 +1,5 @@
+import { isJunkKvFact } from "@/utils/jobDetailStructured";
+
 export function displayValue(v: unknown, fallback = "") {
   const s = String(v ?? "").trim();
   if (!s || /^(?:-|—|tba|pending|null|undefined)$/i.test(s)) return fallback;
@@ -26,16 +28,18 @@ export function isDateTable(rows: Record<string, string>[]) {
 }
 
 export function FactsGrid({ items }: { items: Array<{ label: string; value: string }> }) {
-  if (!items.length) return null;
+  const clean = items.filter((item) => item.label && item.value && !isJunkKvFact(item));
+  if (!clean.length) return null;
+  // Prefer a readable definition list over a dense card wall (long PDF values truncate poorly in cards).
   return (
-    <div className="job-detail-facts-grid">
-      {items.map((item) => (
-        <div key={`${item.label}-${item.value}`} className="job-detail-fact-card">
-          <div className="job-detail-fact-label">{item.label}</div>
-          <div className="job-detail-fact-value">{item.value}</div>
+    <dl className="job-detail-facts-list">
+      {clean.map((item) => (
+        <div key={`${item.label}-${item.value}`} className="job-detail-facts-list__row">
+          <dt className="job-detail-facts-list__label">{item.label}</dt>
+          <dd className="job-detail-facts-list__value">{item.value}</dd>
         </div>
       ))}
-    </div>
+    </dl>
   );
 }
 
@@ -102,9 +106,19 @@ export function formatSummaryForDisplay(text: string): string {
     else if (/^1\s+manual/i.test(s)) return "";
   }
 
-  // Drop mostly-broken OCR strings.
+  // Drop mostly-broken OCR / bilingual font strings.
   const bad = (s.match(/\uFFFD|[�?]{2,}|\?{3,}/g) || []).join("").length;
   if (bad >= 8 && bad / Math.max(s.length, 1) > 0.05) return "";
+  const broken = (s.match(/[\u0100-\u024F\u1E00-\u1EFF\u0250-\u02AF]/g) || []).length;
+  if (broken >= 8 && broken / Math.max(s.length, 1) > 0.04) {
+    const parts = s.split(/(?<=[.!?])\s+/).filter((p) => {
+      const b = (p.match(/[\u0100-\u024F\u1E00-\u1EFF\u0250-\u02AF]/g) || []).length;
+      const latin = (p.match(/[A-Za-z]/g) || []).length;
+      return latin >= 24 && b / Math.max(p.length, 1) < 0.02;
+    });
+    if (!parts.length) return "";
+    s = parts.join(" ");
+  }
 
   const alpha = s.replace(/[^a-zA-Z]/g, "");
   if (alpha.length > 40 && s === s.toUpperCase()) {

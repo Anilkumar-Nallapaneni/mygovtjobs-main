@@ -8,7 +8,7 @@ Complete step-by-step setup for **Frontend**, **Backend**, **Supabase**, and **V
 
 | Layer | Technology | Port / URL |
 |-------|------------|------------|
-| **Frontend** | Vite + React + TypeScript | http://localhost:2222 |
+| **Frontend** | Vite + React + TypeScript | http://localhost:3689 |
 | **Backend API** | FastAPI + SQLAlchemy | http://localhost:8000 |
 | **Database** | Supabase (Postgres) | Cloud |
 | **Production site** | Vercel (static frontend) | `https://your-project.vercel.app` |
@@ -182,7 +182,7 @@ ADMIN_API_KEY=<long-random-string>
 ALLOW_INSECURE_ADMIN=0
 APP_ENV=development
 
-CORS_ORIGINS=http://localhost:2222,http://127.0.0.1:2222,https://mygovtjobs.vercel.app
+CORS_ORIGINS=http://localhost:3689,http://127.0.0.1:3689,https://mygovtjobs.vercel.app
 
 SQL_ECHO=0
 INGEST_LOOKBACK_DAYS=60
@@ -357,7 +357,7 @@ From **repo root**:
 npm run dev
 ```
 
-Open: **http://localhost:2222/**
+Open: **http://localhost:3689/**
 
 (Vite proxies `/api/*` → port 8000 when `VITE_API_URL` is empty.)
 
@@ -560,7 +560,7 @@ Ingest still runs against Supabase; Vercel only serves the frontend.
 
 | Command | What it does |
 |---------|----------------|
-| `npm run dev` | Frontend on **:2222** |
+| `npm run dev` | Frontend on **:3689** |
 | `npm run api:dev` | Backend on **:8000** (uses `backend/.venv`) |
 | `npm run build` | Production frontend build |
 | `npm run lint` | ESLint |
@@ -656,7 +656,7 @@ npm run ingest:direct:quick
 
 # 5. Run (two terminals)
 npm run api:dev      # optional if VITE_JOBS_SOURCE=supabase
-npm run dev          # http://localhost:2222
+npm run dev          # http://localhost:3689
 ```
 
 ### Production (Vercel + Supabase only)

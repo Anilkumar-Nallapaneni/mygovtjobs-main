@@ -12,6 +12,7 @@ import {
   translateFeeKey,
 } from "@/utils/jobDetailLabels";
 import { buildJobDetailView } from "@/utils/jobDetailContent";
+import { isJunkKvFact } from "@/utils/jobDetailStructured";
 import { extractPostName } from "@/utils/extractPostName";
 import {
   buildUnifiedDetailActions,
@@ -109,14 +110,18 @@ export default function JobDetail({
   const applyMode = useTranslatedText(rawApplyMode);
   const feeEntries = (Object.entries(view.fee || {}).filter(([, v]) => v && String(v).trim()) as [string, string][]);
 
-  const overviewFacts = (structured?.overviewFacts || []).filter(
-    (f) =>
-      f.label &&
-      f.value &&
-      !/^post name$/i.test(f.label) &&
-      !/^(company name|organization name)$/i.test(f.label) &&
-      !(feeEntries.length > 0 && /\bfee\b/i.test(f.label))
-  );
+  const overviewFacts = (structured?.overviewFacts || [])
+    .filter(
+      (f) =>
+        f.label &&
+        f.value &&
+        !isJunkKvFact(f) &&
+        !/^post name$/i.test(f.label) &&
+        !/^(company name|organization name)$/i.test(f.label) &&
+        !(feeEntries.length > 0 && /\bfee\b/i.test(f.label))
+    )
+    // Keep overview scannable — dump of 40+ PDF rows looks broken.
+    .slice(0, 10);
 
   const dateEntries = useStructured
     ? structured.importantDates.map((d) => [d.event, d.date] as [string, string])
@@ -395,6 +400,8 @@ export default function JobDetail({
               (s) =>
                 !/full details are being verified/i.test((s.paragraphs || []).join(" ")) &&
                 !/verification information/i.test(s.heading || "") &&
+                !/^faqs?$/i.test(s.heading || "") &&
+                !/frequently\s+asked/i.test(s.heading || "") &&
                 !(/application\s*fee|exam\s*fee/i.test(s.heading || "") && feeEntries.length > 0) &&
                 !(/important\s*dates/i.test(s.heading || "") && dateEntries.length > 0) &&
                 !(/vacancy/i.test(s.heading || "") && vacancyRows.length > 0)

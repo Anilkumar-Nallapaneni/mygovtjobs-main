@@ -922,6 +922,61 @@
   font-family: var(--font-sans);
 }
 
+/* Readable key/value rows — replaces dense Overview card walls */
+.job-detail-facts-list {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--ds-borderHi);
+  border-radius: 14px;
+  overflow: hidden;
+  background: var(--ds-bg2);
+}
+
+.job-detail-facts-list__row {
+  display: grid;
+  grid-template-columns: minmax(110px, 34%) minmax(0, 1fr);
+  gap: 12px 18px;
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--ds-border);
+  align-items: start;
+}
+
+.job-detail-facts-list__row:nth-child(even) {
+  background: color-mix(in srgb, var(--ds-bg3) 55%, transparent);
+}
+
+.job-detail-facts-list__row:last-child {
+  border-bottom: none;
+}
+
+.job-detail-facts-list__label {
+  margin: 0;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--ds-muted);
+  font-family: var(--font-sans);
+  line-height: 1.45;
+  padding-top: 2px;
+}
+
+.job-detail-facts-list__value {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--ds-textBody, var(--ds-white));
+  line-height: 1.55;
+  font-family: var(--font-sans);
+  overflow-wrap: anywhere;
+}
+
+.job-detail-facts-list--eligibility {
+  margin-bottom: 12px;
+}
+
 .job-detail-link-bar,
 .job-detail-apply-links-row {
   display: flex;
@@ -989,28 +1044,40 @@
 }
 
 .job-detail-section {
-  background: transparent;
-  border: none;
-  border-radius: 0;
-  padding: 4px 0 18px;
-  margin-bottom: 8px;
-  border-bottom: 1px solid var(--ds-border);
+  background: var(--ds-bg2);
+  border: 1px solid var(--ds-borderHi);
+  border-radius: 16px;
+  padding: 16px 18px 18px;
+  margin-bottom: 14px;
+  box-shadow: var(--ds-shadowCard);
 }
 
 .job-detail-section:last-of-type {
-  border-bottom: none;
+  margin-bottom: 0;
 }
 
 .job-detail-section-title {
-  font-size: 13px;
-  font-weight: 700;
+  font-size: 12px;
+  font-weight: 800;
   color: var(--ds-white);
-  letter-spacing: 0.04em;
-  margin: 0 0 12px;
-  padding-bottom: 8px;
-  border-bottom: 2px solid color-mix(in srgb, var(--ds-saffron) 55%, transparent);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin: 0 0 14px;
+  padding: 0 0 10px;
+  border-bottom: 1px solid var(--ds-border);
   font-family: var(--font-sans);
-  text-transform: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.job-detail-section-title::before {
+  content: "";
+  width: 3px;
+  height: 14px;
+  border-radius: 999px;
+  background: var(--ds-gradientBrand, linear-gradient(180deg, var(--ds-saffron), var(--ds-gold)));
+  flex-shrink: 0;
 }
 
 .job-detail-summary {
@@ -1215,8 +1282,8 @@
 
 .job-detail-fee-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 12px;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 10px;
 }
 
 @media (max-width: 640px) {
@@ -1291,12 +1358,18 @@
     grid-template-columns: repeat(2, 1fr);
   }
 
+  .job-detail-facts-list__row {
+    grid-template-columns: 1fr;
+    gap: 4px;
+    padding: 12px 14px;
+  }
+
   .job-detail-dates {
     grid-template-columns: 1fr;
   }
 
   .job-detail-fee-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
   }
 
   .job-detail-link-bar {
@@ -1645,19 +1718,19 @@
 }
 
 .job-detail-section--lead {
-  border-left: none;
+  border-left: 3px solid var(--ds-saffron);
+  background: linear-gradient(
+    135deg,
+    color-mix(in srgb, var(--ds-saffron) 8%, var(--ds-bg2)),
+    var(--ds-bg2)
+  );
 }
 
 .job-detail-lead {
-  padding: 14px 16px;
-  border-radius: 12px;
-  border: 1px solid color-mix(in srgb, var(--ds-saffron) 28%, var(--ds-border));
-  background:
-    linear-gradient(
-      135deg,
-      color-mix(in srgb, var(--ds-saffron) 12%, transparent),
-      color-mix(in srgb, var(--ds-surface, #121820) 88%, transparent)
-    );
+  padding: 0;
+  border: none;
+  border-radius: 0;
+  background: transparent;
 }
 
 .job-detail-summary--lead {
@@ -1733,10 +1806,18 @@
 
 /* Fee cards */
 .job-detail-fee-card {
-  background: var(--ds-bg3);
-  border: 1px solid var(--ds-borderHi);
-  border-radius: 12px;
-  padding: 12px 14px;
+  background: linear-gradient(
+    160deg,
+    color-mix(in srgb, var(--ds-accentSoft) 70%, var(--ds-bg3)),
+    var(--ds-bg3)
+  );
+  border: 1px solid var(--ds-accentBorderLo, var(--ds-borderHi));
+  border-radius: 14px;
+  padding: 14px 16px;
+  min-height: 84px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .job-detail-fee-card__label {
@@ -1745,14 +1826,15 @@
   letter-spacing: 0.5px;
   text-transform: uppercase;
   color: var(--ds-muted);
-  margin-bottom: 6px;
+  margin-bottom: 8px;
 }
 
 .job-detail-fee-card__value {
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 800;
-  color: var(--ds-text-body, var(--ds-white));
+  color: var(--ds-saffron);
   font-family: var(--font-mono);
+  line-height: 1.3;
 }
 
 /* Eligibility */
@@ -1798,23 +1880,25 @@
 
 .job-detail-eligibility-list__item {
   position: relative;
-  padding: 10px 12px 10px 28px;
-  background: var(--ds-bg3);
+  padding: 12px 14px 12px 34px;
+  background: color-mix(in srgb, var(--ds-greenSoftBg) 40%, var(--ds-bg3));
   border: 1px solid var(--ds-border);
-  border-radius: 10px;
+  border-radius: 12px;
   font-size: 13px;
   line-height: 1.55;
   color: var(--ds-mutedHi);
 }
 
 .job-detail-eligibility-list__item::before {
-  content: "✓";
+  content: "";
   position: absolute;
-  left: 10px;
-  top: 10px;
-  color: var(--ds-green);
-  font-weight: 800;
-  font-size: 12px;
+  left: 12px;
+  top: 15px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--ds-green);
+  box-shadow: 0 0 0 3px var(--ds-greenSoftBg);
 }
 
 /* Glance sidebar */

@@ -97,3 +97,24 @@ def test_extract_structured_detail_fields_helper():
     out = extract_structured_detail_fields(sections)
     assert out["fee"]["General"] == "Rs. 100"
     assert "application_fee" in out
+
+
+def test_faq_answer_exempted_is_not_fee():
+    sections = [
+        {
+            "heading": "Overview",
+            "paragraphs": [],
+            "tables": [
+                [
+                    {
+                        "label": "Answer",
+                        "value": "All Women candidates (General/SC/ST/OBC/PWBD) are exempted from",
+                    }
+                ]
+            ],
+            "lists": [],
+            "links": [],
+        }
+    ]
+    out = extract_structured_detail_fields(sections)
+    assert "fee" not in out or "Answer" not in out.get("fee", {})

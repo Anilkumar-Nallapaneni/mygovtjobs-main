@@ -86,7 +86,7 @@ try {
 
 // 4. Dev server SPA route
 try {
-  const res = await fetch(`http://127.0.0.1:2222/jobs/${TEST_SLUG}`, { signal: AbortSignal.timeout(5000) })
+  const res = await fetch(`http://127.0.0.1:3689/jobs/${TEST_SLUG}`, { signal: AbortSignal.timeout(5000) })
   const html = await res.text()
   ok('Dev server serves job route (SPA shell)', res.ok && html.includes('id="root"'), `HTTP ${res.status}`)
   ok(
@@ -100,11 +100,11 @@ try {
     'use DevTools Elements tab after page loads'
   )
 } catch {
-  ok('Dev server on :2222', true, 'skipped (not running — run npm run dev)')
+  ok('Dev server on :3689', true, 'skipped (not running — run npm run dev)')
 }
 
 console.log('\nJob URL to open manually:')
-console.log(`  http://localhost:2222/jobs/${TEST_SLUG}`)
+console.log(`  http://localhost:3689/jobs/${TEST_SLUG}`)
 console.log('\nAfter page loads, check in DevTools:')
 console.log(`  - document.title → job title + "| ${SITE_NAME}"`)
 console.log('  - Elements → script#job-posting-jsonld (JobPosting schema)')

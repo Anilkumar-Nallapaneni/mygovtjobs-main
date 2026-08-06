@@ -20,8 +20,7 @@ class Settings(BaseSettings):
     sql_echo: bool = False
     live_jobs_json_path: str = str(REPO_ROOT / "frontend" / "public" / "data" / "live-jobs.json")
     cors_origins: str = (
-        "http://localhost:2222,http://localhost:2223,http://127.0.0.1:2222,"
-        "http://127.0.0.1:2223,"
+        "http://localhost:3689,http://127.0.0.1:3689,"
         "https://www.livegovtjobs.com,https://livegovtjobs.com,"
         "https://www.govtjobs.me,https://govtjobs.me"
     )

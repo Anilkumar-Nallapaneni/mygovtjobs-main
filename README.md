@@ -68,7 +68,7 @@ SUPABASE_URL=https://YOUR_REF.supabase.co
 DATABASE_URL=postgresql+asyncpg://postgres.YOUR_REF:PASSWORD@aws-0-REGION.pooler.supabase.com:6543/postgres
 
 ADMIN_API_KEY=long-random-string
-CORS_ORIGINS=http://localhost:2222,http://127.0.0.1:2222
+CORS_ORIGINS=http://localhost:3689,http://127.0.0.1:3689
 APP_ENV=development
 
 # Optional ingest tuning
@@ -210,7 +210,7 @@ npm run api:dev
 
 ```bash
 npm run dev
-# → http://localhost:2222
+# → http://localhost:3689
 ```
 
 **Smoke test**
@@ -302,7 +302,7 @@ npm run ingest:direct:quick        # 20 sources only (quick test)
 | Item | Value |
 |------|-------|
 | Path | `frontend/` |
-| Dev URL | http://localhost:2222 |
+| Dev URL | http://localhost:3689 |
 | Tech | Vite 7, React 18, TypeScript, i18next (22+ languages) |
 | Entry | `frontend/src/main.tsx` → `App.tsx` |
 | Job loading | `hooks/useLiveJobs.ts` |
@@ -336,7 +336,7 @@ frontend/src/
 ### Frontend commands
 
 ```bash
-npm run dev              # :2222
+npm run dev              # :3689
 npm run build            # production build + sitemap + prerender 1000 job pages
 npm run lint
 npm run type-check
@@ -552,7 +552,7 @@ Run from **repo root** unless noted.
 
 | Command | What |
 |---------|------|
-| `npm run dev` | Frontend :2222 |
+| `npm run dev` | Frontend :3689 |
 | `npm run api:dev` | Backend :8000 |
 | `npm run verify` | Quick stack smoke test |
 | `npm run env:check` | Supabase ref alignment |

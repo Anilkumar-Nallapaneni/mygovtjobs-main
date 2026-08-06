@@ -56,7 +56,7 @@ async def main() -> None:
     saved = sum(r.get("saved", 0) for r in results)
     fetched = sum(r.get("fetched", 0) for r in results)
     print(f"\nDone. fetched={fetched} saved={saved} across {len(results)} sources.", flush=True)
-    print("Refresh http://localhost:2222/ to see new live jobs.", flush=True)
+    print("Refresh http://localhost:3689/ to see new live jobs.", flush=True)
 
 
 if __name__ == "__main__":

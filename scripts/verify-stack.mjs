@@ -76,7 +76,7 @@ const frontendDepsPath = existsSync(join(root, 'frontend/node_modules'))
 ok('frontend dependencies installed', Boolean(frontendDepsPath), frontendDepsPath || 'run npm ci from the repo root')
 ok('live-jobs.json valid (static)', staticLiveJobsOk())
 
-const devPort = 2222
+const devPort = 3689
 const devUp = await fetchOk(`http://localhost:${devPort}/`)
 if (devUp) {
   ok(`Frontend http://localhost:${devPort}`, true)

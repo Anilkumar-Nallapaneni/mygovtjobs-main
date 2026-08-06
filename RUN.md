@@ -8,7 +8,7 @@ Copy-paste commands for **Live Govt Jobs**. Run everything from **repo root**.
 
 | Goal | Command |
 |------|---------|
-| **Dev (frontend)** | `npm run dev` → http://localhost:2222 |
+| **Dev (frontend)** | `npm run dev` → http://localhost:3689 |
 | **Validate** | `npm run validate` (type-check + lint + tests) |
 | **Sync jobs** | `npm run sync:jobs` (production ingest; currently frozen in CI until `ALLOW_AUTO_INGEST=true`) |
 | **Build** | `npm run build` |
@@ -22,7 +22,7 @@ Other scripts below remain for agents and recovery. Prefer the five commands abo
 
 | Goal | Run this |
 |------|----------|
-| **Browse jobs locally (no setup)** | `npm run dev` → http://localhost:2222 |
+| **Browse jobs locally (no setup)** | `npm run dev` → http://localhost:3689 |
 | **Daily morning update** | See [Daily routine](#daily-routine) below |
 | **Find / fix website issues** | `npm run health:website` · full: `npm run health:website:full` |
 | **Manual secrets / GSC / API DNS** | [docs/HUMAN_CHECKLIST.md](docs/HUMAN_CHECKLIST.md) |
@@ -59,7 +59,7 @@ Use these names — older aliases were removed to reduce duplication.
 
 | Category | Canonical command | Notes |
 |----------|-------------------|-------|
-| **Dev** | `npm run dev` | Frontend :2222 |
+| **Dev** | `npm run dev` | Frontend :3689 |
 | **API** | `npm run api:dev` | Backend :8000 |
 | **Production sync** | `npm run sync:production` | Daily ingest + export (CI) |
 | **RSS refresh** | `npm run sync:quick` | Feeds only (~4 h in CI) |
@@ -71,6 +71,8 @@ Use these names — older aliases were removed to reduce duplication.
 | **PDF backfill** | `npm run pdf:backfill` | Find missing PDF URLs in DB |
 | **PDF read** | `npm run pdf:read:live` | Agent 2 — all missing PDFs |
 | **Job details** | `npm run job:details` | Agent 3 — publish detail UI |
+| **AI employees** | `npm run ai:employees` | QA + promote + watchdog (dry-run) |
+| **AI employees apply** | `npm run ai:employees:apply` | Write fixes, promote, export |
 | **Weekly CI enrich** | `npm run weekly:enrich:ci` | pdf:read (50) + job:details (50) |
 | **Portal audit** | `npm run audit:official-sites:strict` | Strict official-site checks |
 | **Aggregator scrub** | `npm run data:scrub` | Remove blocked jobs + export |
@@ -96,11 +98,37 @@ Official portals  →  Agent 1  →  Agent 2  →  Agent 3  →  Website
 | **2** | **PdfReaderAgent** | Download notification PDFs → vacancies, dates, sections in DB | `npm run pdf:read:live` |
 | **3** | **JobDetailAgent** | Build job detail pages for the UI | `npm run job:details` |
 | **4** | **WebsiteHealthAgent** | Audit + guide fixes for code, Supabase, Vercel, GitHub, API, analytics, live site | `npm run health:website` / `health:website:full` |
+| **5** | **QaReviewAgent** | AI employee — verify vacancy/date/PDF/state/title by state bucket | `npm run ai:review` / `ai:review:apply` |
+| **6** | **WatchdogAgent** | AI employee — demote bad live jobs | `npm run ai:watchdog` / `ai:watchdog:apply` |
+| **7** | **AI Employees** | QA (all buckets) → promote → watchdog | `npm run ai:employees` / `ai:employees:apply` |
 | — | **All Websites** | Catalog gov job portals across India (discovery only) | `npm run websites:discover` |
 | — | **RSS feeds** | Official Wire & Notices (separate from main ingest) | `npm run fetch:official:feeds` |
 
-**Code:** `backend/app/agents/ingest_agent.py`, `pdf_reader_agent.py`, `job_detail_agent.py`  
+**Code:** `backend/app/agents/ingest_agent.py`, `pdf_reader_agent.py`, `job_detail_agent.py`, `qa_review_agent.py`, `watchdog_agent.py`, `ai_employees.py`  
 **Health code:** `scripts/website-health-agent.mjs` · report → `scripts/output/website-health-report.json`
+
+### AI employees (state-wise)
+
+Dry-run first (no DB writes):
+
+```bash
+npm run ai:employees                 # QA all buckets + promote dry-run + watchdog dry-run
+npm run ai:review -- --bucket north  # one region only
+```
+
+Apply fixes + promote + export:
+
+```bash
+npm run ai:employees:apply
+```
+
+Optional LLM assist (never invents numbers — only confirms text-backed fields):
+
+```bash
+# in backend/.env
+OPENAI_API_KEY=sk-...
+AI_REVIEW_MODEL=gpt-4o-mini
+```
 
 ---
 
@@ -161,7 +189,7 @@ npm run db:test && npm run supabase:test
 npm run dev
 ```
 
-Open **http://localhost:2222**
+Open **http://localhost:3689**
 
 **Terminal 2 — backend (optional):**
 

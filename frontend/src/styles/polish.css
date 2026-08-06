@@ -330,13 +330,16 @@
 .job-detail-page {
   flex: 1;
   width: 100%;
-  background: var(--ds-bg0);
+  background:
+    radial-gradient(1200px 480px at 12% -10%, color-mix(in srgb, var(--ds-saffron) 10%, transparent), transparent 60%),
+    radial-gradient(900px 420px at 88% 0%, color-mix(in srgb, var(--ds-gold) 8%, transparent), transparent 55%),
+    var(--ds-bg0);
 }
 
 .job-detail-page__shell {
-  max-width: min(1120px, var(--layout-max));
+  max-width: min(920px, var(--layout-max));
   margin: 0 auto;
-  padding: 16px 20px 32px;
+  padding: 18px 20px 40px;
   display: flex;
   flex-direction: column;
   min-height: 0;
@@ -356,6 +359,36 @@
 
 .job-detail-page .job-detail-keyfacts__card {
   border-left: 3px solid var(--ds-saffron);
+}
+
+.job-detail-page .job-detail-facts-list {
+  box-shadow: none;
+}
+
+.job-detail-page .job-detail-verification-meta {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 10px;
+  margin: 0 0 14px;
+  padding: 12px 14px;
+  border-radius: 14px;
+  border: 1px solid var(--ds-borderHi);
+  background: color-mix(in srgb, var(--ds-bg2) 90%, transparent);
+}
+
+.job-detail-page .job-detail-verification-meta > div {
+  margin: 0;
+}
+
+.job-detail-page .job-detail-language-note {
+  margin: 0 0 14px;
+  padding: 10px 14px;
+  border-radius: 12px;
+  border: 1px dashed var(--ds-borderHi);
+  color: var(--ds-muted);
+  font-size: 12px;
+  line-height: 1.5;
+  background: color-mix(in srgb, var(--ds-bg2) 70%, transparent);
 }
 
 .job-detail-toolbar {

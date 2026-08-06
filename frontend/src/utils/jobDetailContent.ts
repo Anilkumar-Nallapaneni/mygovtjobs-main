@@ -2,7 +2,7 @@ import { pickOfficialDetailUrl } from "@/utils/officialDomains";
 import { resolveJobApplyHref } from "@/utils/jobDetailLinks";
 import { collectPdfUrls } from "@/utils/resolvePdfUrl";
 import { normalizeIsoDate, resolveVacancyCount } from "@/utils/jobMetadataUtils";
-import { buildStructuredJobDetail } from "@/utils/jobDetailStructured";
+import { buildStructuredJobDetail, isRealFeeEntry, sanitizeFeeDict } from "@/utils/jobDetailStructured";
 import { resolveJobDept } from "@/utils/resolveJobDept";
 
 const MISSING_DETAIL = "See official notification";
@@ -220,7 +220,7 @@ function extractFeeFromSections(job) {
         if (!row || typeof row !== "object") continue;
         const label = String(row.label || "").trim();
         const value = String(row.value || "").trim();
-        if (label && value && (isFee || /fee/i.test(label) || /(?:rs\.?|inr|₹|exempt|nil)/i.test(value))) {
+        if (label && value && isRealFeeEntry(label, value) && (isFee || /fee/i.test(label))) {
           fee[label] = value;
           continue;
         }
@@ -228,7 +228,7 @@ function extractFeeFromSections(job) {
           for (const [k, v] of Object.entries(row)) {
             const key = String(k || "").trim();
             const val = String(v || "").trim();
-            if (key && val && /(?:rs\.?|inr|₹|exempt|nil)/i.test(val)) fee[key] = val;
+            if (key && val && isRealFeeEntry(key, val)) fee[key] = val;
           }
         }
       }
@@ -237,7 +237,9 @@ function extractFeeFromSections(job) {
       for (const list of section.lists) {
         for (const item of list || []) {
           const m = String(item).match(/^([^:]{2,60}?)\s*:\s*(.+)$/);
-          if (m) fee[m[1].trim()] = m[2].trim();
+          if (m && isRealFeeEntry(m[1].trim(), m[2].trim())) {
+            fee[m[1].trim()] = m[2].trim();
+          }
         }
       }
     }
@@ -428,12 +430,13 @@ export function buildJobDetailView(job) {
   const extraDetails = useStructured ? [] : buildExtraDetails(job);
 
   const feeFromSections = extractFeeFromSections(job);
-  const fee =
+  const rawFee =
     job.fee && Object.keys(job.fee).length
       ? job.fee
       : job.detail?.fee && typeof job.detail.fee === "object" && Object.keys(job.detail.fee).length
       ? job.detail.fee
       : feeFromSections;
+  const fee = sanitizeFeeDict(rawFee);
   const posts = (() => {
     const raw = Array.isArray(job.posts) && job.posts.length ? job.posts : job.detail?.posts || [];
     return raw

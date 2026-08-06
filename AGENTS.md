@@ -8,20 +8,23 @@ Government job portal monorepo. Read this before editing code or running ingest.
 
 | Layer | Path | Port | Tech |
 |-------|------|------|------|
-| Frontend | `frontend/` | 2222 | Vite 7, React 18, TypeScript, i18next |
+| Frontend | `frontend/` | 3689 | Vite 7, React 18, TypeScript, i18next |
 | Backend API | `backend/` | 8000 | FastAPI, SQLAlchemy async, asyncpg |
 | Database | Supabase Postgres | — | RLS public read on `jobs`, `sources` |
 | Deploy | repo root `vercel.json` | — | Static SPA + Supabase client |
 | Ingest | `scripts/` | — | **Official gov.in scrapers** (primary) |
 | PDF reader | `backend/app/agents/pdf_reader_agent.py` | — | Read & memorize official notification PDFs |
 | Job detail | `backend/app/agents/job_detail_agent.py` | — | Publish detail UI (PDF > notification > listing) |
+| QA Review (AI employee) | `backend/app/agents/qa_review_agent.py` | — | Verify vacancy/dates/PDF/state by bucket |
+| Watchdog (AI employee) | `backend/app/agents/watchdog_agent.py` | — | Demote bad live jobs |
+| AI Employees | `backend/app/agents/ai_employees.py` | — | QA → promote → watchdog |
 | Website health | `scripts/website-health-agent.mjs` | — | Audit/fix code, Supabase, Vercel, GitHub, API, analytics |
 | All Websites | `all websites/` | — | Discover official + unofficial govt job portals across India |
 
 ## Commands (repo root)
 
 ```bash
-npm run dev              # frontend :2222
+npm run dev              # frontend :3689
 npm run api:dev          # backend :8000
 npm run everything       # full CI-like check
 npm run verify           # quick stack smoke test
@@ -44,7 +47,12 @@ npm run pdf:read:live         # all live jobs missing PDF memory
 npm run pdf:backfill          # discover missing PDF URLs on notice pages
 npm run job:details           # Agent 3: build job detail pages from PDF/notification
 npm run pipeline:live         # Agent 2+3 (PDF read + detail publish)
-npm run pipeline:live:full      # Agent 1+2+3 (daily sync + PDF + details)
+npm run pipeline:live:full    # Agent 1+2+3 (daily sync + PDF + details)
+npm run pipeline:live:employees # Agent 2+3 + AI employees dry-run
+npm run ai:employees          # QA (state buckets) + promote + watchdog (dry-run)
+npm run ai:employees:apply    # Write QA fixes, promote, export
+npm run ai:review             # QA Review Agent only (dry-run)
+npm run ai:watchdog           # Watchdog only (dry-run)
 npm run websites:discover     # catalog all govt job websites → all websites/output/
 ```
 
@@ -106,7 +114,7 @@ npm run check:frontend && npm run type-check && npm run lint && npm run test && 
 Deps are pre-installed by the startup update script (`npm install` for the root + `frontend` workspace, and a Python venv at `backend/.venv` from `backend/requirements.txt`). Standard commands live in the table above and in `docs/INSTALLATION_AND_RUN.md`.
 
 - **`.env.example` templates** are at repo root, `frontend/`, and `backend/` — copy to `.env.local` / `.env` and fill secrets. None are needed to run the frontend on static data.
-- **Frontend runs fully standalone on committed static data** — `frontend/public/data/live-jobs.json` (~1,600 real jobs). Set `frontend/.env.local` to `VITE_JOBS_SOURCE=static` (or rely on the `auto` default), then `npm run dev` (:2222). No Supabase or backend required to browse/search/view job details.
+- **Frontend runs fully standalone on committed static data** — `frontend/public/data/live-jobs.json` (~1,600 real jobs). Set `frontend/.env.local` to `VITE_JOBS_SOURCE=static` (or rely on the `auto` default), then `npm run dev` (:3689). No Supabase or backend required to browse/search/view job details.
 - **Backend boots without a database**, but DB-backed routes (`/api/jobs`, etc.) return `503` and `/health` reports `"degraded"` until `DATABASE_URL` (Supabase **transaction pooler**, port 6543) is set in `backend/.env`. Start it with `ALLOW_INSECURE_ADMIN=1 APP_ENV=development npm run api:dev`. The default `DATABASE_URL` points at `localhost:5432`, so logs show `ConnectionRefusedError` when no DB is configured — expected.
 - Python scripts/tests run through `backend/.venv` via `scripts/run-python.mjs` (`npm run test:backend`, ingest, etc.). After changing `backend/requirements.txt`, reinstall into `backend/.venv` — `api:dev`'s `--reload` does not pick up new packages.
 - `npm run lint` runs on every PR with `--max-warnings 0` (see `.github/workflows/ci.yml`). `npm run type-check`, frontend tests, backend tests, and `npm run build` should pass before push.

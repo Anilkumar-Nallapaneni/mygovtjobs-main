@@ -36,7 +36,7 @@ app = FastAPI(
 _origins = [o.strip() for o in _settings.cors_origins.split(",") if o.strip()]
 if not _origins:
     _origins = (
-        ["http://localhost:2222", "http://127.0.0.1:2222"]
+        ["http://localhost:3689", "http://127.0.0.1:3689"]
         if not _is_production
         else []
     )

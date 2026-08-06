@@ -209,6 +209,15 @@
     box-shadow: 0 0 10px color-mix(in srgb, var(--ds-gold) 50%, transparent);
   }
 
+  .job-detail-page--premium .job-detail-facts-list {
+    border-color: color-mix(in srgb, var(--ds-gold) 14%, var(--ds-border));
+    background: var(--ds-bg2);
+  }
+
+  .job-detail-page--premium .job-detail-facts-list__label {
+    color: color-mix(in srgb, var(--ds-gold) 70%, var(--ds-muted));
+  }
+
   .job-detail-page--premium .job-detail-fact-card {
     border-color: color-mix(in srgb, var(--ds-gold) 14%, var(--ds-border));
     background: var(--ds-bg2);
