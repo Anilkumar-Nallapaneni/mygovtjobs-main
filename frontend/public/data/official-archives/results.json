@@ -1,24 +1,7 @@
 {
-  "generatedAt": "2026-08-06T11:05:02.106Z",
+  "generatedAt": "2026-08-06T14:50:19.631Z",
   "count": 671,
   "items": [
-    {
-      "id": "91984c98c3cd2d13",
-      "title": "ईएमआरएस के शैक्षणिक परिणाम",
-      "link": "https://pib.gov.in/PressReleaseIframePage.aspx?PRID=2295436",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "pib-press-reg3",
-      "sourceName": "PIB — recent press releases",
-      "dept": "Press Information Bureau",
-      "state": "All India",
-      "category": "state",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "rss-feed"
-    },
     {
       "id": "2fcd6ff34f094281",
       "title": "The 2nd selection list for YUVIKA-2026",
@@ -298,6 +281,23 @@
         "all"
       ],
       "fetchMethod": "html-listing"
+    },
+    {
+      "id": "91984c98c3cd2d13",
+      "title": "ईएमआरएस के शैक्षणिक परिणाम",
+      "link": "https://pib.gov.in/PressReleaseIframePage.aspx?PRID=2295436",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "pib-press-reg3",
+      "sourceName": "PIB — recent press releases",
+      "dept": "Press Information Bureau",
+      "state": "All India",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "rss-feed"
     },
     {
       "id": "e53806778f0ddbde",
