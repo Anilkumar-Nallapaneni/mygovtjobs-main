@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-08-04T15:03:46.152Z",
-  "count": 666,
+  "generatedAt": "2026-08-06T14:50:19.631Z",
+  "count": 671,
   "items": [
     {
       "id": "2fcd6ff34f094281",
@@ -147,6 +147,23 @@
       "fetchMethod": "html-listing"
     },
     {
+      "id": "4b02ab0f27e053f3",
+      "title": "RESULT OF ADVT. NO. D-5/E-1/2025, UTTAR PRADESH STATE ARCHAEOLOGICAL DIRECTORATE..",
+      "link": "https://uppsc.up.nic.in/Open_PDF_DB.aspx?I4PnQ0tBagkKN9rKVhlu76/9na81EE1P",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "uppsc-hall-tickets",
+      "sourceName": "UPPSC — Hall tickets",
+      "dept": "Uttar Pradesh PSC",
+      "state": "Uttar Pradesh",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
       "id": "ed19314ac2e0415d",
       "title": "RESULT OF ADVT. NO.2/2019-2020, U. P. AYUSH (UNANI) DEPTT./PRINCIPAL, S-11/02",
       "link": "https://uppsc.up.nic.in/Open_PDF_DB.aspx?I4PnQ0tBaglovGFVjGJMaNLk/ffKn7jL",
@@ -184,6 +201,23 @@
       "id": "2db2d16ecdc1865a",
       "title": "RESULT OF CANDIDATE SELECTED IN ADVT. NO D-4/E-1/2025, DEPT. S-10/02, UPPSC SYST..",
       "link": "https://uppsc.up.nic.in/Open_PDF_DB.aspx?I4PnQ0tBagkKFmHgqmmkW30lDXcVzR9+",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "uppsc-hall-tickets",
+      "sourceName": "UPPSC — Hall tickets",
+      "dept": "Uttar Pradesh PSC",
+      "state": "Uttar Pradesh",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "f4e69ecdb2e37d68",
+      "title": "05 Sep 2026 RESULT OF ADVT. NO. D-5/E-1/2025, UTTAR PRADESH STATE ARCHAEOLOGICAL DIRECTORATE, ASSISTANT ARCHAEOLOGICAL OFFICER, S-03/06",
+      "link": "https://uppsc.up.nic.in/Open_PDF.aspx?I4PnQ0tBagkKN9rKVhlu72hN7PveuZya",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
@@ -249,32 +283,38 @@
       "fetchMethod": "html-listing"
     },
     {
-      "id": "cd29420c34e6077c",
-      "title": "DEPARTMENTAL EXAMINATIONS - MAY 2026 (Result)",
-      "link": "https://www.tnpsc.gov.in/english/DResultView.aspx",
+      "id": "91984c98c3cd2d13",
+      "title": "ईएमआरएस के शैक्षणिक परिणाम",
+      "link": "https://pib.gov.in/PressReleaseIframePage.aspx?PRID=2295436",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
-      "sourceId": "psc-tn",
-      "sourceName": "Tnpsc",
-      "dept": "Tnpsc",
+      "sourceId": "pib-press-reg3",
+      "sourceName": "PIB — recent press releases",
+      "dept": "Press Information Bureau",
       "state": "All India",
       "category": "state",
-      "fetchMethod": "live-jobs-supplement"
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "rss-feed"
     },
     {
-      "id": "c52a67e377e8f903",
-      "title": "सूबेदार/उप निरीक्षक संवर्ग भर्ती वर्ष 2025 अंतर्गत चयनित उम्मीदवारों के दस्तावेज परीक्षण, मेडीकल एवं चरित्र सत्यापन के संबंध में सूचना",
-      "link": "https://mppolice.gov.in/en/sauubaedaaraupa-nairaikasaka-sanvaraga-bharatai-varasa-2025-antaragata-cayanaita-umamaidavaaraon",
+      "id": "e53806778f0ddbde",
+      "title": "केंद्रीय वित्तपोषित संस्थानों का शोध परिणाम",
+      "link": "https://pib.gov.in/PressReleaseIframePage.aspx?PRID=2295208",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
-      "sourceId": "police-mp",
-      "sourceName": "Mppolice",
-      "dept": "Mppolice",
+      "sourceId": "pib-press-reg3",
+      "sourceName": "PIB — recent press releases",
+      "dept": "Press Information Bureau",
       "state": "All India",
-      "category": "police",
-      "fetchMethod": "live-jobs-supplement"
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "rss-feed"
     },
     {
       "id": "c4c9266da946f3d2",
@@ -343,6 +383,51 @@
         "all"
       ],
       "fetchMethod": "html-listing"
+    },
+    {
+      "id": "f8544a1fcd6d2c55",
+      "title": "बिहार और पूरे देश में सीसीटीएनएस का उपयोग और परिणाम",
+      "link": "https://pib.gov.in/PressReleaseIframePage.aspx?PRID=2294826",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "pib-press-reg3",
+      "sourceName": "PIB — recent press releases",
+      "dept": "Press Information Bureau",
+      "state": "All India",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "rss-feed"
+    },
+    {
+      "id": "cd29420c34e6077c",
+      "title": "DEPARTMENTAL EXAMINATIONS - MAY 2026 (Result)",
+      "link": "https://www.tnpsc.gov.in/english/DResultView.aspx",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-tn",
+      "sourceName": "Tnpsc",
+      "dept": "Tnpsc",
+      "state": "All India",
+      "category": "state",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "c52a67e377e8f903",
+      "title": "सूबेदार/उप निरीक्षक संवर्ग भर्ती वर्ष 2025 अंतर्गत चयनित उम्मीदवारों के दस्तावेज परीक्षण, मेडीकल एवं चरित्र सत्यापन के संबंध में सूचना",
+      "link": "https://mppolice.gov.in/en/sauubaedaaraupa-nairaikasaka-sanvaraga-bharatai-varasa-2025-antaragata-cayanaita-umamaidavaaraon",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "police-mp",
+      "sourceName": "Mppolice",
+      "dept": "Mppolice",
+      "state": "All India",
+      "category": "police",
+      "fetchMethod": "live-jobs-supplement"
     },
     {
       "id": "46c44f9761d7d314",
