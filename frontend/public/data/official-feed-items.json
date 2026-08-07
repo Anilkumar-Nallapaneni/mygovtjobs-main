@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-07T17:20:34.582Z",
+  "generatedAt": "2026-08-07T21:13:21.773Z",
   "sourceReports": [
     {
       "id": "pib-press-reg3",
@@ -2919,57 +2919,6 @@
       "fetchMethod": "html-listing"
     },
     {
-      "id": "ae2cee49fb1794a3",
-      "title": "NOTICE REGARDING ADVT. NO. A-10/E-1/2023 U.P. KHADI AND VILLAGE INDUSTRIES BOARD..",
-      "link": "https://uppsc.up.nic.in/Open_PDF_DB.aspx?I4PnQ0tBaglovGFVjGJMaBV3bKOM5hHf",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "uppsc-hall-tickets",
-      "sourceName": "UPPSC — Hall tickets",
-      "dept": "Uttar Pradesh PSC",
-      "state": "Uttar Pradesh",
-      "category": "state",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "b5eeffc98940094a",
-      "title": "NOTICE REGARDING ADVT. NO. A-10/E-1/2023 U.P. KHADI AND VILLAGE INDUSTRIES BOARD..",
-      "link": "https://uppsc.up.nic.in/Open_PDF_DB.aspx?I4PnQ0tBaglovGFVjGJMaJzOgJhSONW7",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "uppsc-hall-tickets",
-      "sourceName": "UPPSC — Hall tickets",
-      "dept": "Uttar Pradesh PSC",
-      "state": "Uttar Pradesh",
-      "category": "state",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "764670d5f41e8f71",
-      "title": "NOTICE REGARDING ADVT. NO. A-10/E-1/2023 U.P. KHADI AND VILLAGE INDUSTRIES BOARD..",
-      "link": "https://uppsc.up.nic.in/Open_PDF_DB.aspx?I4PnQ0tBaglovGFVjGJMaJbn4ORE0sC4",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "uppsc-hall-tickets",
-      "sourceName": "UPPSC — Hall tickets",
-      "dept": "Uttar Pradesh PSC",
-      "state": "Uttar Pradesh",
-      "category": "state",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
       "id": "73c9f70b7072207b",
       "title": "NOTICE REGARDING LAST DATE EXTENTION OF P.C.S. EXAM-2026",
       "link": "https://uppsc.up.nic.in/Open_PDF_DB.aspx?I4PnQ0tBaglP18XMjN55aL8ckMULyAqn",
@@ -3449,6 +3398,57 @@
       "id": "ab085f65068c7817",
       "title": "{{'DwldPreYearQuesPpr_HM' | translate }}",
       "link": "https://uppsc.up.nic.in/OuterPages/PreQuesPapers.aspx?ID=PrevQues",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "uppsc-hall-tickets",
+      "sourceName": "UPPSC — Hall tickets",
+      "dept": "Uttar Pradesh PSC",
+      "state": "Uttar Pradesh",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "f5cf5fab61ad81d6",
+      "title": "{{'DwldSyllabus_HM' | translate }}",
+      "link": "https://uppsc.up.nic.in/CandidatePages/Syllabus/Syllabus_PostWise.aspx?ID=4",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "uppsc-hall-tickets",
+      "sourceName": "UPPSC — Hall tickets",
+      "dept": "Uttar Pradesh PSC",
+      "state": "Uttar Pradesh",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "d601227f4b14319b",
+      "title": "{{'RejectedList_HM' | translate }}",
+      "link": "https://uppsc.up.nic.in/CandidatePages/InputPages/Objected_Candidate_List.aspx",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "uppsc-hall-tickets",
+      "sourceName": "UPPSC — Hall tickets",
+      "dept": "Uttar Pradesh PSC",
+      "state": "Uttar Pradesh",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "61da6071fc941ac7",
+      "title": "{{'ToppersList_HM' | translate }}",
+      "link": "https://uppsc.up.nic.in/PublicPages/ToppersList.aspx?ID=strscs",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
