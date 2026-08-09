@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-09T05:44:04.126Z",
+  "generatedAt": "2026-08-09T09:17:28.430Z",
   "sourceReports": [
     {
       "id": "pib-press-reg3",
@@ -47,7 +47,7 @@
       "feedUrl": null,
       "listingUrl": "https://ssc.gov.in/home/notice-board",
       "ok": false,
-      "error": "no items",
+      "error": "https://ssc.gov.in/home/notice-board: timeout; https://ssc.gov.in/: timeout",
       "itemCount": 0,
       "fetchMethod": null
     },
@@ -97,7 +97,7 @@
       "feedUrl": null,
       "listingUrl": "https://uppsc.up.nic.in/View_All_Active_Notifications.aspx",
       "ok": false,
-      "error": "no items",
+      "error": "https://uppsc.up.nic.in/View_All_Active_Notifications.aspx: timeout; https://uppsc.up.nic.in/Notifications.aspx: timeout",
       "itemCount": 0,
       "fetchMethod": null
     },
@@ -166,10 +166,10 @@
       "name": "KVS — Recruitment notices",
       "feedUrl": null,
       "listingUrl": "https://kvsangathan.nic.in/announcements",
-      "ok": true,
-      "error": null,
-      "itemCount": 50,
-      "fetchMethod": "html-listing"
+      "ok": false,
+      "error": "https://kvsangathan.nic.in/announcements: timeout; https://kvsangathan.nic.in/recruitment-notice: timeout",
+      "itemCount": 0,
+      "fetchMethod": null
     },
     {
       "id": "navy-careers",
@@ -187,7 +187,7 @@
       "feedUrl": null,
       "listingUrl": "https://www.rrbald.gov.in/rrbald/",
       "ok": false,
-      "error": "https://www.rrbald.gov.in/rrbald/: HTTP 404",
+      "error": "https://www.rrbald.gov.in/rrbald/: timeout; https://rrbald.gov.in/: timeout",
       "itemCount": 0,
       "fetchMethod": null
     },
@@ -197,7 +197,7 @@
       "feedUrl": null,
       "listingUrl": "https://opsc.gov.in/?LK=NRA",
       "ok": false,
-      "error": "no items",
+      "error": "https://opsc.gov.in/?LK=NRA: timeout; https://opsc.gov.in/: timeout",
       "itemCount": 0,
       "fetchMethod": null
     },
@@ -238,8 +238,8 @@
       "listingUrl": "https://www.upsc.gov.in/e-admit-cards",
       "ok": true,
       "error": null,
-      "itemCount": 2,
-      "fetchMethod": "rss-discovered"
+      "itemCount": 40,
+      "fetchMethod": "html-listing"
     },
     {
       "id": "appsc-hall-tickets",
@@ -286,48 +286,14 @@
       "name": "UPPSC — Hall tickets",
       "feedUrl": null,
       "listingUrl": "https://uppsc.up.nic.in/CandidateAdmitCard.aspx",
-      "ok": true,
-      "error": null,
-      "itemCount": 60,
-      "fetchMethod": "html-listing"
+      "ok": false,
+      "error": "https://uppsc.up.nic.in/CandidateAdmitCard.aspx: timeout; https://uppsc.up.nic.in/: timeout",
+      "itemCount": 0,
+      "fetchMethod": null
     }
   ],
   "siteReports": [],
   "items": [
-    {
-      "id": "7e897a8a804563d4",
-      "title": "Union Public Service Commission",
-      "link": "https://upsc.gov.in/sites/default/files/AdvtNo-04-2026-Engl-080526.pdf",
-      "publishedAt": "2026-05-08T00:00:00.000Z",
-      "summary": "Advertisement No. 04/2026",
-      "pdfUrls": [],
-      "sourceId": "upsc-e-admit-hub",
-      "sourceName": "UPSC — e-Admit cards",
-      "dept": "Union Public Service Commission",
-      "state": "All India",
-      "category": "upsc",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "rss-feed"
-    },
-    {
-      "id": "eb8779e7959ca657",
-      "title": "Union Public Service Commission",
-      "link": "https://upsc.gov.in/sites/default/files/Advt_03_2026_Eng_24042026.pdf",
-      "publishedAt": "2026-04-24T00:00:00.000Z",
-      "summary": "Advertisement No. 03/2026",
-      "pdfUrls": [],
-      "sourceId": "upsc-e-admit-hub",
-      "sourceName": "UPSC — e-Admit cards",
-      "dept": "Union Public Service Commission",
-      "state": "All India",
-      "category": "upsc",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "rss-feed"
-    },
     {
       "id": "1320428f3dc24d77",
       "title": "Home.aspx",
@@ -1613,1884 +1579,680 @@
       "fetchMethod": "html-listing"
     },
     {
-      "id": "c0fe23a17261e73d",
-      "title": "संगठनात्मक चार्ट",
-      "link": "https://cdnbbsr.s3waas.gov.in/s32d2ca7eedf739ef4c3800713ec482e1a/uploads/2025/05/2025051479.pdf",
+      "id": "c4c9266da946f3d2",
+      "title": "Marks of Recommended Candidates",
+      "link": "https://www.upsc.gov.in/examinations/marks-recommended-candidates",
       "publishedAt": null,
       "summary": null,
-      "pdfUrls": [
-        "https://cdnbbsr.s3waas.gov.in/s32d2ca7eedf739ef4c3800713ec482e1a/uploads/2025/05/2025051479.pdf"
-      ],
-      "sourceId": "kvs-recruitment",
-      "sourceName": "KVS — Recruitment notices",
-      "dept": "Kendriya Vidyalaya Sangathan",
+      "pdfUrls": [],
+      "sourceId": "upsc-e-admit-hub",
+      "sourceName": "UPSC — e-Admit cards",
+      "dept": "Union Public Service Commission",
       "state": "All India",
-      "category": "teaching",
+      "category": "upsc",
       "stateIds": [
         "all"
       ],
       "fetchMethod": "html-listing"
     },
     {
-      "id": "261688d5be6c011f",
-      "title": "स्कूल भवन की विशिष्टताएँ",
-      "link": "https://cdnbbsr.s3waas.gov.in/s32d2ca7eedf739ef4c3800713ec482e1a/uploads/2023/12/2023120857.pdf",
+      "id": "9f46af2ef87ad857",
+      "title": "Marks of Recommended Candidates (Reserve List)",
+      "link": "https://www.upsc.gov.in/examinations/marks-recommended-candidates-reserve-list",
       "publishedAt": null,
       "summary": null,
-      "pdfUrls": [
-        "https://cdnbbsr.s3waas.gov.in/s32d2ca7eedf739ef4c3800713ec482e1a/uploads/2023/12/2023120857.pdf"
-      ],
-      "sourceId": "kvs-recruitment",
-      "sourceName": "KVS — Recruitment notices",
-      "dept": "Kendriya Vidyalaya Sangathan",
+      "pdfUrls": [],
+      "sourceId": "upsc-e-admit-hub",
+      "sourceName": "UPSC — e-Admit cards",
+      "dept": "Union Public Service Commission",
       "state": "All India",
-      "category": "teaching",
+      "category": "upsc",
       "stateIds": [
         "all"
       ],
       "fetchMethod": "html-listing"
     },
     {
-      "id": "653e5961cb9ec75d",
-      "title": "सतत् व्यावसायिक विकास",
-      "link": "https://cdnbbsr.s3waas.gov.in/s32d2ca7eedf739ef4c3800713ec482e1a/uploads/2025/04/2025042811.pdf",
+      "id": "1bb2282873cb0efd",
+      "title": "Specimen Question Cum Answer Booklet (QCAB)",
+      "link": "https://www.upsc.gov.in/examination/model-question-and-answer-booklets",
       "publishedAt": null,
       "summary": null,
-      "pdfUrls": [
-        "https://cdnbbsr.s3waas.gov.in/s32d2ca7eedf739ef4c3800713ec482e1a/uploads/2025/04/2025042811.pdf"
-      ],
-      "sourceId": "kvs-recruitment",
-      "sourceName": "KVS — Recruitment notices",
-      "dept": "Kendriya Vidyalaya Sangathan",
+      "pdfUrls": [],
+      "sourceId": "upsc-e-admit-hub",
+      "sourceName": "UPSC — e-Admit cards",
+      "dept": "Union Public Service Commission",
       "state": "All India",
-      "category": "teaching",
+      "category": "upsc",
       "stateIds": [
         "all"
       ],
       "fetchMethod": "html-listing"
     },
     {
-      "id": "3fa899e5e6a66606",
-      "title": "भर्ती",
-      "link": "https://cdnbbsr.s3waas.gov.in/s32d2ca7eedf739ef4c3800713ec482e1a/uploads/2026/01/2026012368.pdf",
+      "id": "3fc1696b18f30fa3",
+      "title": "Common mistakes committed by the candidates in Conventional Papers",
+      "link": "https://www.upsc.gov.in/examination/common-mistakes-committed-candidates-conventional-papers",
       "publishedAt": null,
       "summary": null,
-      "pdfUrls": [
-        "https://cdnbbsr.s3waas.gov.in/s32d2ca7eedf739ef4c3800713ec482e1a/uploads/2026/01/2026012368.pdf"
-      ],
-      "sourceId": "kvs-recruitment",
-      "sourceName": "KVS — Recruitment notices",
-      "dept": "Kendriya Vidyalaya Sangathan",
+      "pdfUrls": [],
+      "sourceId": "upsc-e-admit-hub",
+      "sourceName": "UPSC — e-Admit cards",
+      "dept": "Union Public Service Commission",
       "state": "All India",
-      "category": "teaching",
+      "category": "upsc",
       "stateIds": [
         "all"
       ],
       "fetchMethod": "html-listing"
     },
     {
-      "id": "1139bae6cba6a12c",
-      "title": "भवन का प्रकार",
-      "link": "https://cdnbbsr.s3waas.gov.in/s32d2ca7eedf739ef4c3800713ec482e1a/uploads/2023/12/2023120838.pdf",
+      "id": "47952f717dcedda6",
+      "title": "Representation on Question Papers",
+      "link": "https://www.upsc.gov.in/examinations/representation-question-papers",
       "publishedAt": null,
       "summary": null,
-      "pdfUrls": [
-        "https://cdnbbsr.s3waas.gov.in/s32d2ca7eedf739ef4c3800713ec482e1a/uploads/2023/12/2023120838.pdf"
-      ],
-      "sourceId": "kvs-recruitment",
-      "sourceName": "KVS — Recruitment notices",
-      "dept": "Kendriya Vidyalaya Sangathan",
+      "pdfUrls": [],
+      "sourceId": "upsc-e-admit-hub",
+      "sourceName": "UPSC — e-Admit cards",
+      "dept": "Union Public Service Commission",
       "state": "All India",
-      "category": "teaching",
+      "category": "upsc",
       "stateIds": [
         "all"
       ],
       "fetchMethod": "html-listing"
     },
     {
-      "id": "fad7c9454e2bee93",
-      "title": "प्रशिक्षण नीति",
-      "link": "https://cdnbbsr.s3waas.gov.in/s32d2ca7eedf739ef4c3800713ec482e1a/uploads/2023/11/2023112463.pdf",
+      "id": "d91b0be9059c32bb",
+      "title": "Status of Lateral Recruitment Cases (Advertisement-wise)",
+      "link": "https://www.upsc.gov.in/recruitment/lateral-recruitments",
       "publishedAt": null,
       "summary": null,
-      "pdfUrls": [
-        "https://cdnbbsr.s3waas.gov.in/s32d2ca7eedf739ef4c3800713ec482e1a/uploads/2023/11/2023112463.pdf"
-      ],
-      "sourceId": "kvs-recruitment",
-      "sourceName": "KVS — Recruitment notices",
-      "dept": "Kendriya Vidyalaya Sangathan",
+      "pdfUrls": [],
+      "sourceId": "upsc-e-admit-hub",
+      "sourceName": "UPSC — e-Admit cards",
+      "dept": "Union Public Service Commission",
       "state": "All India",
-      "category": "teaching",
+      "category": "upsc",
       "stateIds": [
         "all"
       ],
       "fetchMethod": "html-listing"
     },
     {
-      "id": "1a754699e9b7e890",
-      "title": "ई-कैलेंडर",
-      "link": "https://cdnbbsr.s3waas.gov.in/s32d2ca7eedf739ef4c3800713ec482e1a/uploads/2026/01/2026010266.pdf",
+      "id": "2359d8c2c97ce9ef",
+      "title": "Status of Recruitment Cases (Advertisement-wise)",
+      "link": "https://www.upsc.gov.in/recruitment/status-recruitment-cases-advertisementwise",
       "publishedAt": null,
       "summary": null,
-      "pdfUrls": [
-        "https://cdnbbsr.s3waas.gov.in/s32d2ca7eedf739ef4c3800713ec482e1a/uploads/2026/01/2026010266.pdf"
-      ],
-      "sourceId": "kvs-recruitment",
-      "sourceName": "KVS — Recruitment notices",
-      "dept": "Kendriya Vidyalaya Sangathan",
+      "pdfUrls": [],
+      "sourceId": "upsc-e-admit-hub",
+      "sourceName": "UPSC — e-Admit cards",
+      "dept": "Union Public Service Commission",
       "state": "All India",
-      "category": "teaching",
+      "category": "upsc",
       "stateIds": [
         "all"
       ],
       "fetchMethod": "html-listing"
     },
     {
-      "id": "2a61d0d6e9638604",
-      "title": "केन्द्रीय विद्यालय संगठन KENDRIYA VIDYALAYA SANGATHAN शिक्षा मंत्रालय, भारत सरकार के अधीन एक स्वायत्त निकाय AN AUTONOMOUS BODY UNDER MINISTRY OF EDUCATION, GOVERNMENT OF INDIA",
-      "link": "https://kvsangathan.nic.in/",
+      "id": "6db5c4ba16d574a6",
+      "title": "Recruitment cases kept on hold on account of Pending Litigations",
+      "link": "https://www.upsc.gov.in/recruitment/recruitment-cases-kept-hold-account-pending-litigations",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
-      "sourceId": "kvs-recruitment",
-      "sourceName": "KVS — Recruitment notices",
-      "dept": "Kendriya Vidyalaya Sangathan",
+      "sourceId": "upsc-e-admit-hub",
+      "sourceName": "UPSC — e-Admit cards",
+      "dept": "Union Public Service Commission",
       "state": "All India",
-      "category": "teaching",
+      "category": "upsc",
       "stateIds": [
         "all"
       ],
       "fetchMethod": "html-listing"
     },
     {
-      "id": "b3c624302346d5f2",
-      "title": "के. वि. सं. – परिकल्पना एवं उद्देश्य",
-      "link": "https://kvsangathan.nic.in/%e0%a4%95%e0%a5%87-%e0%a4%b5%e0%a4%bf-%e0%a4%b8%e0%a4%82-%e0%a4%aa%e0%a4%b0%e0%a4%bf%e0%a4%95%e0%a4%b2%e0%a5%8d%e0%a4%aa%e0%a4%a8%e0%a4%be-%e0%a4%8f%e0%a4%b5%e0%a4%82-%e0%a4%89%e0%a4%a6%e0%a5%8d/",
+      "id": "4233e072c32a79f1",
+      "title": "Representation on Question Papers",
+      "link": "https://www.upsc.gov.in/recruitment/time-frame-representation",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
-      "sourceId": "kvs-recruitment",
-      "sourceName": "KVS — Recruitment notices",
-      "dept": "Kendriya Vidyalaya Sangathan",
+      "sourceId": "upsc-e-admit-hub",
+      "sourceName": "UPSC — e-Admit cards",
+      "dept": "Union Public Service Commission",
       "state": "All India",
-      "category": "teaching",
+      "category": "upsc",
       "stateIds": [
         "all"
       ],
       "fetchMethod": "html-listing"
     },
     {
-      "id": "519c4914dbd452a8",
-      "title": "दसवीं कक्षा के लिए क्षेत्रवार उत्तीर्ण प्रतिशत",
-      "link": "https://kvsangathan.nic.in/%e0%a4%a6%e0%a4%b8%e0%a4%b5%e0%a5%80%e0%a4%82-%e0%a4%95%e0%a4%95%e0%a5%8d%e0%a4%b7%e0%a4%be-%e0%a4%95%e0%a5%87-%e0%a4%b2%e0%a4%bf%e0%a4%8f-%e0%a4%95%e0%a5%8d%e0%a4%b7%e0%a5%87%e0%a4%a4%e0%a5%8d/",
+      "id": "1e704a4ee163e39b",
+      "title": "Active Examinations",
+      "link": "https://www.upsc.gov.in/examinations/active-exams",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
-      "sourceId": "kvs-recruitment",
-      "sourceName": "KVS — Recruitment notices",
-      "dept": "Kendriya Vidyalaya Sangathan",
+      "sourceId": "upsc-e-admit-hub",
+      "sourceName": "UPSC — e-Admit cards",
+      "dept": "Union Public Service Commission",
       "state": "All India",
-      "category": "teaching",
+      "category": "upsc",
       "stateIds": [
         "all"
       ],
       "fetchMethod": "html-listing"
     },
     {
-      "id": "f743b11858587701",
-      "title": "बारहवीं कक्षा के लिए क्षेत्रवार उत्तीर्ण प्रतिशत",
-      "link": "https://kvsangathan.nic.in/%e0%a4%ac%e0%a4%be%e0%a4%b0%e0%a4%b9%e0%a4%b5%e0%a5%80%e0%a4%82-%e0%a4%95%e0%a4%95%e0%a5%8d%e0%a4%b7%e0%a4%be-%e0%a4%95%e0%a5%87-%e0%a4%b2%e0%a4%bf%e0%a4%8f-%e0%a4%95%e0%a5%8d%e0%a4%b7%e0%a5%87/",
+      "id": "d6c5b3fedeeeee1c",
+      "title": "Forthcoming Examinations",
+      "link": "https://www.upsc.gov.in/examinations/forthcoming-exams",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
-      "sourceId": "kvs-recruitment",
-      "sourceName": "KVS — Recruitment notices",
-      "dept": "Kendriya Vidyalaya Sangathan",
+      "sourceId": "upsc-e-admit-hub",
+      "sourceName": "UPSC — e-Admit cards",
+      "dept": "Union Public Service Commission",
       "state": "All India",
-      "category": "teaching",
+      "category": "upsc",
       "stateIds": [
         "all"
       ],
       "fetchMethod": "html-listing"
     },
     {
-      "id": "8c5b9fc5789f9a22",
-      "title": "सीबीएसई-कक्षा दसवीं (राज्यवार पिछले 5 वर्ष)",
-      "link": "https://kvsangathan.nic.in/%e0%a4%b8%e0%a5%80%e0%a4%ac%e0%a5%80%e0%a4%8f%e0%a4%b8%e0%a4%88-%e0%a4%95%e0%a4%95%e0%a5%8d%e0%a4%b7%e0%a4%be-10-%e0%a4%b0%e0%a4%be%e0%a4%9c%e0%a5%8d%e0%a4%af%e0%a4%b5%e0%a4%be%e0%a4%b0-%e0%a4%aa/",
+      "id": "3ae2d6fce5935dce",
+      "title": "Previous Question Papers",
+      "link": "https://www.upsc.gov.in/examinations/previous-question-papers",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
-      "sourceId": "kvs-recruitment",
-      "sourceName": "KVS — Recruitment notices",
-      "dept": "Kendriya Vidyalaya Sangathan",
+      "sourceId": "upsc-e-admit-hub",
+      "sourceName": "UPSC — e-Admit cards",
+      "dept": "Union Public Service Commission",
       "state": "All India",
-      "category": "teaching",
+      "category": "upsc",
       "stateIds": [
         "all"
       ],
       "fetchMethod": "html-listing"
     },
     {
-      "id": "be9f28b1ff615c74",
-      "title": "सीबीएसई-कक्षा बारहवीं (राज्यवार पिछले 5 वर्ष)",
-      "link": "https://kvsangathan.nic.in/%e0%a4%b8%e0%a5%80%e0%a4%ac%e0%a5%80%e0%a4%8f%e0%a4%b8%e0%a4%88-%e0%a4%95%e0%a4%95%e0%a5%8d%e0%a4%b7%e0%a4%be-%e0%a4%ac%e0%a4%be%e0%a4%b0%e0%a4%b9%e0%a4%b5%e0%a5%80%e0%a4%82-%e0%a4%b0%e0%a4%be/",
+      "id": "19df6addea51f1a1",
+      "title": "Revised Syllabus and Scheme",
+      "link": "https://www.upsc.gov.in/examinations/revised-syllabus-scheme",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
-      "sourceId": "kvs-recruitment",
-      "sourceName": "KVS — Recruitment notices",
-      "dept": "Kendriya Vidyalaya Sangathan",
+      "sourceId": "upsc-e-admit-hub",
+      "sourceName": "UPSC — e-Admit cards",
+      "dept": "Union Public Service Commission",
       "state": "All India",
-      "category": "teaching",
+      "category": "upsc",
       "stateIds": [
         "all"
       ],
       "fetchMethod": "html-listing"
     },
     {
-      "id": "d96438c8a45ec102",
-      "title": "तुलनात्मक परिणाम विश्लेषण-कक्षा बारहवीं",
-      "link": "https://kvsangathan.nic.in/%e0%a4%a4%e0%a5%81%e0%a4%b2%e0%a4%a8%e0%a4%be%e0%a4%a4%e0%a5%8d%e0%a4%ae%e0%a4%95-%e0%a4%aa%e0%a4%b0%e0%a4%bf%e0%a4%a3%e0%a4%be%e0%a4%ae-%e0%a4%b5%e0%a4%bf%e0%a4%b6%e0%a5%8d%e0%a4%b2%e0%a5%87-3/",
+      "id": "1008a27dbd226637",
+      "title": "Forms for Certificates",
+      "link": "https://www.upsc.gov.in/recruitment/recruitment-performas",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
-      "sourceId": "kvs-recruitment",
-      "sourceName": "KVS — Recruitment notices",
-      "dept": "Kendriya Vidyalaya Sangathan",
+      "sourceId": "upsc-e-admit-hub",
+      "sourceName": "UPSC — e-Admit cards",
+      "dept": "Union Public Service Commission",
       "state": "All India",
-      "category": "teaching",
+      "category": "upsc",
       "stateIds": [
         "all"
       ],
       "fetchMethod": "html-listing"
     },
     {
-      "id": "b92e662ae3705475",
-      "title": "तुलनात्मक परिणाम विश्लेषण-कक्षा दसवीं",
-      "link": "https://kvsangathan.nic.in/%e0%a4%a4%e0%a5%81%e0%a4%b2%e0%a4%a8%e0%a4%be%e0%a4%a4%e0%a5%8d%e0%a4%ae%e0%a4%95-%e0%a4%aa%e0%a4%b0%e0%a4%bf%e0%a4%a3%e0%a4%be%e0%a4%ae-%e0%a4%b5%e0%a4%bf%e0%a4%b6%e0%a5%8d%e0%a4%b2%e0%a5%87%e0%a4%b7/",
+      "id": "b1863f90cbfb986d",
+      "title": "Recruitment Tests",
+      "link": "https://www.upsc.gov.in/recruitment/recruitment-test",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
-      "sourceId": "kvs-recruitment",
-      "sourceName": "KVS — Recruitment notices",
-      "dept": "Kendriya Vidyalaya Sangathan",
+      "sourceId": "upsc-e-admit-hub",
+      "sourceName": "UPSC — e-Admit cards",
+      "dept": "Union Public Service Commission",
       "state": "All India",
-      "category": "teaching",
+      "category": "upsc",
       "stateIds": [
         "all"
       ],
       "fetchMethod": "html-listing"
     },
     {
-      "id": "fabba84f802c1ffa",
-      "title": "नए के. वि. खोलने के लिए मानदंड",
-      "link": "https://kvsangathan.nic.in/%e0%a4%a8%e0%a4%8f-%e0%a4%95%e0%a5%87%e0%a4%b5%e0%a5%80-%e0%a4%96%e0%a5%8b%e0%a4%b2%e0%a4%a8%e0%a5%87-%e0%a4%95%e0%a5%87-%e0%a4%b2%e0%a4%bf%e0%a4%8f-%e0%a4%ae%e0%a4%be%e0%a4%a8%e0%a4%a6%e0%a4%82/",
+      "id": "b0e622d5b59f082e",
+      "title": "Recruitment Requisition",
+      "link": "https://www.upsc.gov.in/recruitment/recruitment-requisition",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
-      "sourceId": "kvs-recruitment",
-      "sourceName": "KVS — Recruitment notices",
-      "dept": "Kendriya Vidyalaya Sangathan",
+      "sourceId": "upsc-e-admit-hub",
+      "sourceName": "UPSC — e-Admit cards",
+      "dept": "Union Public Service Commission",
       "state": "All India",
-      "category": "teaching",
+      "category": "upsc",
       "stateIds": [
         "all"
       ],
       "fetchMethod": "html-listing"
     },
     {
-      "id": "155230ae64300310",
-      "title": "संसद के पटल पर वार्षिक लेखों का प्राप्तिकरण",
-      "link": "https://kvsangathan.nic.in/%e0%a4%b8%e0%a4%82%e0%a4%b8%e0%a4%a6-%e0%a4%95%e0%a5%87-%e0%a4%aa%e0%a4%9f%e0%a4%b2-%e0%a4%aa%e0%a4%b0-%e0%a4%b5%e0%a4%be%e0%a4%b0%e0%a5%8d%e0%a4%b7%e0%a4%bf%e0%a4%95-%e0%a4%b2%e0%a5%87%e0%a4%96/",
+      "id": "dab406e23a6537a1",
+      "title": "E-Admit Cards for various Recruitment Posts",
+      "link": "https://upsconline.gov.in/oraadmitcard/",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
-      "sourceId": "kvs-recruitment",
-      "sourceName": "KVS — Recruitment notices",
-      "dept": "Kendriya Vidyalaya Sangathan",
+      "sourceId": "upsc-e-admit-hub",
+      "sourceName": "UPSC — e-Admit cards",
+      "dept": "Union Public Service Commission",
       "state": "All India",
-      "category": "teaching",
+      "category": "upsc",
       "stateIds": [
         "all"
       ],
       "fetchMethod": "html-listing"
     },
     {
-      "id": "1c52d89e8b21bbb6",
-      "title": "सीडब्ल्यूएसएन के लिए उपलब्ध सुविधाएं",
-      "link": "https://kvsangathan.nic.in/%e0%a4%b8%e0%a5%80%e0%a4%a1%e0%a4%ac%e0%a5%8d%e0%a4%b2%e0%a5%8d%e0%a4%af%e0%a5%82%e0%a4%8f%e0%a4%b8%e0%a4%8f%e0%a4%a8-%e0%a4%95%e0%a5%87-%e0%a4%b2%e0%a4%bf%e0%a4%8f-%e0%a4%89%e0%a4%aa%e0%a4%b2-2/",
+      "id": "99c9f94d8e7c5a15",
+      "title": "e-Admit Cards For Computer Based Skill Test For Various Recruitment Posts (ORA)",
+      "link": "https://upsconline.gov.in/eadmitcard/admitcard_steno_2024/",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
-      "sourceId": "kvs-recruitment",
-      "sourceName": "KVS — Recruitment notices",
-      "dept": "Kendriya Vidyalaya Sangathan",
+      "sourceId": "upsc-e-admit-hub",
+      "sourceName": "UPSC — e-Admit cards",
+      "dept": "Union Public Service Commission",
       "state": "All India",
-      "category": "teaching",
+      "category": "upsc",
       "stateIds": [
         "all"
       ],
       "fetchMethod": "html-listing"
     },
     {
-      "id": "eab6ce856a2acaf8",
-      "title": "लघु अवधि के पाठ्यक्रम एवं कार्यशालाएँ",
-      "link": "https://kvsangathan.nic.in/%e0%a4%9b%e0%a5%8b%e0%a4%9f%e0%a5%80-%e0%a4%85%e0%a4%b5%e0%a4%a7%e0%a4%bf-%e0%a4%95%e0%a5%87-%e0%a4%aa%e0%a4%be%e0%a4%a0%e0%a5%8d%e0%a4%af%e0%a4%95%e0%a5%8d%e0%a4%b0%e0%a4%ae/",
+      "id": "ace0c6c7b2467310",
+      "title": "Calendar",
+      "link": "https://www.upsc.gov.in/examinations/exam-calendar",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
-      "sourceId": "kvs-recruitment",
-      "sourceName": "KVS — Recruitment notices",
-      "dept": "Kendriya Vidyalaya Sangathan",
+      "sourceId": "upsc-e-admit-hub",
+      "sourceName": "UPSC — e-Admit cards",
+      "dept": "Union Public Service Commission",
       "state": "All India",
-      "category": "teaching",
+      "category": "upsc",
       "stateIds": [
         "all"
       ],
       "fetchMethod": "html-listing"
     },
     {
-      "id": "36c49e5b5f3888b5",
-      "title": "60वां स्थापना दिवस : कॉफी टेबल बुक",
-      "link": "https://kvsangathan.nic.in/60%e0%a4%b5%e0%a4%be%e0%a4%82-%e0%a4%b8%e0%a5%8d%e0%a4%a5%e0%a4%be%e0%a4%aa%e0%a4%a8%e0%a4%be-%e0%a4%a6%e0%a4%bf%e0%a4%b5%e0%a4%b8-%e0%a4%95%e0%a5%89%e0%a4%ab%e0%a5%80-%e0%a4%9f%e0%a5%87%e0%a4%ac/",
+      "id": "246cf795a95a5a9f",
+      "title": "Cut-off Marks",
+      "link": "https://www.upsc.gov.in/examinations/cutoff-marks--",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
-      "sourceId": "kvs-recruitment",
-      "sourceName": "KVS — Recruitment notices",
-      "dept": "Kendriya Vidyalaya Sangathan",
+      "sourceId": "upsc-e-admit-hub",
+      "sourceName": "UPSC — e-Admit cards",
+      "dept": "Union Public Service Commission",
       "state": "All India",
-      "category": "teaching",
+      "category": "upsc",
       "stateIds": [
         "all"
       ],
       "fetchMethod": "html-listing"
     },
     {
-      "id": "8ace6a9faac547d9",
-      "title": "सूचना के अधिकार के अंतर्गत प्रकटन",
-      "link": "https://kvsangathan.nic.in/%e0%a4%b8%e0%a5%82%e0%a4%9a%e0%a4%a8%e0%a4%be-%e0%a4%95%e0%a5%87-%e0%a4%85%e0%a4%a7%e0%a4%bf%e0%a4%95%e0%a4%be%e0%a4%b0-%e0%a4%95%e0%a5%87-%e0%a4%85%e0%a4%82%e0%a4%a4%e0%a4%b0%e0%a5%8d%e0%a4%97/",
+      "id": "640979453a2d0561",
+      "title": "Answer Keys",
+      "link": "https://www.upsc.gov.in/examinations/answer-key",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
-      "sourceId": "kvs-recruitment",
-      "sourceName": "KVS — Recruitment notices",
-      "dept": "Kendriya Vidyalaya Sangathan",
+      "sourceId": "upsc-e-admit-hub",
+      "sourceName": "UPSC — e-Admit cards",
+      "dept": "Union Public Service Commission",
       "state": "All India",
-      "category": "teaching",
+      "category": "upsc",
       "stateIds": [
         "all"
       ],
       "fetchMethod": "html-listing"
     },
     {
-      "id": "71d3b2323cbf8e1b",
-      "title": "नोडल अधिकारी- श्री विकास गुप्ता, आईएएस,आयुक्त, केवीएस",
-      "link": "https://kvsangathan.nic.in/%e0%a4%a8%e0%a5%8b%e0%a4%a1%e0%a4%b2-%e0%a4%85%e0%a4%a7%e0%a4%bf%e0%a4%95%e0%a4%be%e0%a4%b0%e0%a5%80/",
+      "id": "bf2ab913def084c8",
+      "title": "Marks Information",
+      "link": "https://upsconline.gov.in/marksheet/exam/marksheet_system/",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
-      "sourceId": "kvs-recruitment",
-      "sourceName": "KVS — Recruitment notices",
-      "dept": "Kendriya Vidyalaya Sangathan",
+      "sourceId": "upsc-e-admit-hub",
+      "sourceName": "UPSC — e-Admit cards",
+      "dept": "Union Public Service Commission",
       "state": "All India",
-      "category": "teaching",
+      "category": "upsc",
       "stateIds": [
         "all"
       ],
       "fetchMethod": "html-listing"
     },
     {
-      "id": "fbafad11209a9d9d",
-      "title": "केवीएस (मुख्यालय) के अपीलीय प्राधिकारी",
-      "link": "https://kvsangathan.nic.in/%e0%a4%95%e0%a5%87%e0%a4%b5%e0%a5%80%e0%a4%8f%e0%a4%b8-%e0%a4%ae%e0%a5%81%e0%a4%96%e0%a5%8d%e0%a4%af%e0%a4%be%e0%a4%b2%e0%a4%af-%e0%a4%95%e0%a5%87-%e0%a4%85%e0%a4%aa%e0%a5%80%e0%a4%b2%e0%a5%80/",
+      "id": "e57332e8a9fb9c31",
+      "title": "Demo Files",
+      "link": "https://www.upsc.gov.in/examinations/demo-files-computer-based-combined-medical-service-examination",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
-      "sourceId": "kvs-recruitment",
-      "sourceName": "KVS — Recruitment notices",
-      "dept": "Kendriya Vidyalaya Sangathan",
+      "sourceId": "upsc-e-admit-hub",
+      "sourceName": "UPSC — e-Admit cards",
+      "dept": "Union Public Service Commission",
       "state": "All India",
-      "category": "teaching",
+      "category": "upsc",
       "stateIds": [
         "all"
       ],
       "fetchMethod": "html-listing"
     },
     {
-      "id": "829ca0cc8be02dec",
-      "title": "केवीएस मुख्यालय के केंद्रीय लोक सूचना अधिकारी",
-      "link": "https://kvsangathan.nic.in/%e0%a4%95%e0%a5%87%e0%a4%b5%e0%a5%80%e0%a4%8f%e0%a4%b8-%e0%a4%ae%e0%a5%81%e0%a4%96%e0%a5%8d%e0%a4%af%e0%a4%be%e0%a4%b2%e0%a4%af-%e0%a4%95%e0%a5%87-%e0%a4%95%e0%a5%87%e0%a4%82%e0%a4%a6%e0%a5%8d/",
+      "id": "7749ebd16d22dad7",
+      "title": "E- Admit Cards",
+      "link": "https://www.upsc.gov.in/e-admit-cards",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
-      "sourceId": "kvs-recruitment",
-      "sourceName": "KVS — Recruitment notices",
-      "dept": "Kendriya Vidyalaya Sangathan",
+      "sourceId": "upsc-e-admit-hub",
+      "sourceName": "UPSC — e-Admit cards",
+      "dept": "Union Public Service Commission",
       "state": "All India",
-      "category": "teaching",
+      "category": "upsc",
       "stateIds": [
         "all"
       ],
       "fetchMethod": "html-listing"
     },
     {
-      "id": "fc0ccfc3426534f0",
-      "title": "के. वि. सं. के सीपीआईओ और क्षेत्रीय कार्यालयों के अपीलीय प्राधिकारी",
-      "link": "https://kvsangathan.nic.in/%e0%a4%95%e0%a5%87%e0%a4%b5%e0%a5%80%e0%a4%8f%e0%a4%b8-%e0%a4%95%e0%a5%87-%e0%a4%b8%e0%a5%80%e0%a4%aa%e0%a5%80%e0%a4%86%e0%a4%88%e0%a4%93-%e0%a4%94%e0%a4%b0-%e0%a4%95%e0%a5%8d%e0%a4%b7%e0%a5%87/",
+      "id": "548473395b50b85f",
+      "title": "Online Recruitment Application (ORA)",
+      "link": "https://upsconline.nic.in/ora/",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
-      "sourceId": "kvs-recruitment",
-      "sourceName": "KVS — Recruitment notices",
-      "dept": "Kendriya Vidyalaya Sangathan",
+      "sourceId": "upsc-e-admit-hub",
+      "sourceName": "UPSC — e-Admit cards",
+      "dept": "Union Public Service Commission",
       "state": "All India",
-      "category": "teaching",
+      "category": "upsc",
       "stateIds": [
         "all"
       ],
       "fetchMethod": "html-listing"
     },
     {
-      "id": "5cc87f157d38b84f",
-      "title": "अधिकारियों एवं कर्मचारियों को प्राप्त वेतन",
-      "link": "https://kvsangathan.nic.in/%e0%a4%85%e0%a4%a7%e0%a4%bf%e0%a4%95%e0%a4%be%e0%a4%b0%e0%a4%bf%e0%a4%af%e0%a5%8b%e0%a4%82-%e0%a4%8f%e0%a4%b5%e0%a4%82-%e0%a4%95%e0%a4%b0%e0%a5%8d%e0%a4%ae%e0%a4%9a%e0%a4%be%e0%a4%b0%e0%a4%bf%e0%a4%af/",
+      "id": "dd2edc4deab41ef6",
+      "title": "The Commission",
+      "link": "https://www.upsc.gov.in/about-us/commission-",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
-      "sourceId": "kvs-recruitment",
-      "sourceName": "KVS — Recruitment notices",
-      "dept": "Kendriya Vidyalaya Sangathan",
+      "sourceId": "upsc-e-admit-hub",
+      "sourceName": "UPSC — e-Admit cards",
+      "dept": "Union Public Service Commission",
       "state": "All India",
-      "category": "teaching",
+      "category": "upsc",
       "stateIds": [
         "all"
       ],
       "fetchMethod": "html-listing"
     },
     {
-      "id": "feacde6abcf722fc",
-      "title": "अधिकारियों, कर्मचारियों की शक्तियाँ, कर्तव्य और जवाबदेही",
-      "link": "https://kvsangathan.nic.in/%e0%a4%85%e0%a4%a7%e0%a4%bf%e0%a4%95%e0%a4%be%e0%a4%b0%e0%a4%bf%e0%a4%af%e0%a5%8b%e0%a4%82-%e0%a4%94%e0%a4%b0-%e0%a4%95%e0%a4%b0%e0%a5%8d%e0%a4%ae%e0%a4%9a%e0%a4%be%e0%a4%b0%e0%a4%bf%e0%a4%af%e0%a5%8b/",
+      "id": "f10101879e33b592",
+      "title": "Examination",
+      "link": "https://www.upsc.gov.in/",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
-      "sourceId": "kvs-recruitment",
-      "sourceName": "KVS — Recruitment notices",
-      "dept": "Kendriya Vidyalaya Sangathan",
+      "sourceId": "upsc-e-admit-hub",
+      "sourceName": "UPSC — e-Admit cards",
+      "dept": "Union Public Service Commission",
       "state": "All India",
-      "category": "teaching",
+      "category": "upsc",
       "stateIds": [
         "all"
       ],
       "fetchMethod": "html-listing"
     },
     {
-      "id": "f857a68b0b381cd7",
-      "title": "केवीएस पारदर्शिता ऑडिट रिपोर्ट",
-      "link": "https://kvsangathan.nic.in/%e0%a4%95%e0%a5%87%e0%a4%b5%e0%a5%80%e0%a4%8f%e0%a4%b8-%e0%a4%aa%e0%a4%be%e0%a4%b0%e0%a4%a6%e0%a4%b0%e0%a5%8d%e0%a4%b6%e0%a4%bf%e0%a4%a4%e0%a4%be-%e0%a4%91%e0%a4%a1%e0%a4%bf%e0%a4%9f-%e0%a4%b0/",
+      "id": "1b1359da06b27e90",
+      "title": "Linked In",
+      "link": "https://www.linkedin.com/company/official-union-public-service-commission",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
-      "sourceId": "kvs-recruitment",
-      "sourceName": "KVS — Recruitment notices",
-      "dept": "Kendriya Vidyalaya Sangathan",
+      "sourceId": "upsc-e-admit-hub",
+      "sourceName": "UPSC — e-Admit cards",
+      "dept": "Union Public Service Commission",
       "state": "All India",
-      "category": "teaching",
+      "category": "upsc",
       "stateIds": [
         "all"
       ],
       "fetchMethod": "html-listing"
     },
     {
-      "id": "e0d99fcc690ad42a",
-      "title": "ऑडिट(भुगतान डीए एचआरए सीईए आदि)",
-      "link": "https://kvsangathan.nic.in/%e0%a4%91%e0%a4%a1%e0%a4%bf%e0%a4%9f%e0%a4%ad%e0%a5%81%e0%a4%97%e0%a4%a4%e0%a4%be%e0%a4%a8-%e0%a4%a1%e0%a5%80%e0%a4%8f-%e0%a4%8f%e0%a4%9a%e0%a4%86%e0%a4%b0%e0%a4%8f-%e0%a4%b8%e0%a5%80%e0%a4%88-2/",
+      "id": "5944b9315b8e188c",
+      "title": "Helpline - SC/ST/OBC/EWS/PwBD (1800-118-711)",
+      "link": "https://www.upsc.gov.in/helpline",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
-      "sourceId": "kvs-recruitment",
-      "sourceName": "KVS — Recruitment notices",
-      "dept": "Kendriya Vidyalaya Sangathan",
+      "sourceId": "upsc-e-admit-hub",
+      "sourceName": "UPSC — e-Admit cards",
+      "dept": "Union Public Service Commission",
       "state": "All India",
-      "category": "teaching",
+      "category": "upsc",
       "stateIds": [
         "all"
       ],
       "fetchMethod": "html-listing"
     },
     {
-      "id": "35a983a72f3bb0e9",
-      "title": "आयुक्त का संदेश",
-      "link": "https://kvsangathan.nic.in/%e0%a4%86%e0%a4%af%e0%a5%81%e0%a4%95%e0%a5%8d%e0%a4%a4-%e0%a4%95%e0%a4%be-%e0%a4%b8%e0%a4%82%e0%a4%a6%e0%a5%87%e0%a4%b6/",
+      "id": "be9f31248189c2d7",
+      "title": "Historical Perspective",
+      "link": "https://www.upsc.gov.in/about-us/historical-perspective",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
-      "sourceId": "kvs-recruitment",
-      "sourceName": "KVS — Recruitment notices",
-      "dept": "Kendriya Vidyalaya Sangathan",
+      "sourceId": "upsc-e-admit-hub",
+      "sourceName": "UPSC — e-Admit cards",
+      "dept": "Union Public Service Commission",
       "state": "All India",
-      "category": "teaching",
+      "category": "upsc",
       "stateIds": [
         "all"
       ],
       "fetchMethod": "html-listing"
     },
     {
-      "id": "ece0479b88627f73",
-      "title": "के. वि. सं. के शीर्ष अधिकारी",
-      "link": "https://kvsangathan.nic.in/%e0%a4%b6%e0%a5%80%e0%a4%b0%e0%a5%8d%e0%a4%b7-%e0%a4%85%e0%a4%a7%e0%a4%bf%e0%a4%95%e0%a4%be%e0%a4%b0%e0%a5%80/",
+      "id": "8a63f99e872af771",
+      "title": "Constitutional Provisions",
+      "link": "https://www.upsc.gov.in/about-us/constitutional-provisions",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
-      "sourceId": "kvs-recruitment",
-      "sourceName": "KVS — Recruitment notices",
-      "dept": "Kendriya Vidyalaya Sangathan",
+      "sourceId": "upsc-e-admit-hub",
+      "sourceName": "UPSC — e-Admit cards",
+      "dept": "Union Public Service Commission",
       "state": "All India",
-      "category": "teaching",
+      "category": "upsc",
       "stateIds": [
         "all"
       ],
       "fetchMethod": "html-listing"
     },
     {
-      "id": "7a7954597888b6ca",
-      "title": "के. वि. की निर्देशिका",
-      "link": "https://kvsangathan.nic.in/%e0%a4%95%e0%a5%87-%e0%a4%b5%e0%a4%bf-%e0%a4%95%e0%a5%80-%e0%a4%a8%e0%a4%bf%e0%a4%b0%e0%a5%8d%e0%a4%a6%e0%a5%87%e0%a4%b6%e0%a4%bf%e0%a4%95%e0%a4%be/",
+      "id": "39245fc71f2c8d6f",
+      "title": "Citizen's Charter",
+      "link": "https://www.upsc.gov.in/about-us/citizens-charter",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
-      "sourceId": "kvs-recruitment",
-      "sourceName": "KVS — Recruitment notices",
-      "dept": "Kendriya Vidyalaya Sangathan",
+      "sourceId": "upsc-e-admit-hub",
+      "sourceName": "UPSC — e-Admit cards",
+      "dept": "Union Public Service Commission",
       "state": "All India",
-      "category": "teaching",
+      "category": "upsc",
       "stateIds": [
         "all"
       ],
       "fetchMethod": "html-listing"
     },
     {
-      "id": "e7e18b4e7a3a1fdf",
-      "title": "के. वि. के अध्यक्ष",
-      "link": "https://kvsangathan.nic.in/%e0%a4%95%e0%a5%87-%e0%a4%b5%e0%a4%bf-%e0%a4%95%e0%a5%87-%e0%a4%85%e0%a4%a7%e0%a5%8d%e0%a4%af%e0%a4%95%e0%a5%8d%e0%a4%b7/",
+      "id": "33b5d86bb88ef95f",
+      "title": "EOP for PwD Employees of UPSC",
+      "link": "https://www.upsc.gov.in/about-us/equal-opportunity-policy-pwd-employees-upsc",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
-      "sourceId": "kvs-recruitment",
-      "sourceName": "KVS — Recruitment notices",
-      "dept": "Kendriya Vidyalaya Sangathan",
+      "sourceId": "upsc-e-admit-hub",
+      "sourceName": "UPSC — e-Admit cards",
+      "dept": "Union Public Service Commission",
       "state": "All India",
-      "category": "teaching",
+      "category": "upsc",
       "stateIds": [
         "all"
       ],
       "fetchMethod": "html-listing"
     },
     {
-      "id": "08328bc72f3581ae",
-      "title": "हमसे संपर्क करें",
-      "link": "https://kvsangathan.nic.in/%e0%a4%b9%e0%a4%ae%e0%a4%b8%e0%a5%87-%e0%a4%b8%e0%a4%82%e0%a4%aa%e0%a4%b0%e0%a5%8d%e0%a4%95-%e0%a4%95%e0%a4%b0%e0%a5%87%e0%a4%82/",
+      "id": "86e240feaf47a18f",
+      "title": "Government Users",
+      "link": "https://www.upsc.gov.in/government-user",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
-      "sourceId": "kvs-recruitment",
-      "sourceName": "KVS — Recruitment notices",
-      "dept": "Kendriya Vidyalaya Sangathan",
+      "sourceId": "upsc-e-admit-hub",
+      "sourceName": "UPSC — e-Admit cards",
+      "dept": "Union Public Service Commission",
       "state": "All India",
-      "category": "teaching",
+      "category": "upsc",
       "stateIds": [
         "all"
       ],
       "fetchMethod": "html-listing"
     },
     {
-      "id": "d452d86692d67f0d",
-      "title": "प्राथमिकता वार (राज्य)",
-      "link": "https://kvsangathan.nic.in/%e0%a4%aa%e0%a5%8d%e0%a4%b0%e0%a4%be%e0%a4%a5%e0%a4%ae%e0%a4%bf%e0%a4%95%e0%a4%a4%e0%a4%be-%e0%a4%b6%e0%a5%8d%e0%a4%b0%e0%a5%87%e0%a4%a3%e0%a5%80-%e0%a4%b5%e0%a4%be%e0%a4%b0-%e0%a4%b0%e0%a4%be/",
+      "id": "90aa57c4f07a5acf",
+      "title": "Central Government",
+      "link": "https://www.upsc.gov.in/government-user/central-government",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
-      "sourceId": "kvs-recruitment",
-      "sourceName": "KVS — Recruitment notices",
-      "dept": "Kendriya Vidyalaya Sangathan",
+      "sourceId": "upsc-e-admit-hub",
+      "sourceName": "UPSC — e-Admit cards",
+      "dept": "Union Public Service Commission",
       "state": "All India",
-      "category": "teaching",
+      "category": "upsc",
       "stateIds": [
         "all"
       ],
       "fetchMethod": "html-listing"
     },
     {
-      "id": "6f2ad8cc368b2ab4",
-      "title": "कक्षा वार (राज्य)",
-      "link": "https://kvsangathan.nic.in/%e0%a4%95%e0%a4%95%e0%a5%8d%e0%a4%b7%e0%a4%be-%e0%a4%b5%e0%a4%be%e0%a4%b0-%e0%a4%b0%e0%a4%be%e0%a4%9c%e0%a5%8d%e0%a4%af/",
+      "id": "37d7b7395dec4ecf",
+      "title": "Union Territories Government",
+      "link": "https://www.upsc.gov.in/government-user/state-ut-government",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
-      "sourceId": "kvs-recruitment",
-      "sourceName": "KVS — Recruitment notices",
-      "dept": "Kendriya Vidyalaya Sangathan",
+      "sourceId": "upsc-e-admit-hub",
+      "sourceName": "UPSC — e-Admit cards",
+      "dept": "Union Public Service Commission",
       "state": "All India",
-      "category": "teaching",
+      "category": "upsc",
       "stateIds": [
         "all"
       ],
       "fetchMethod": "html-listing"
     },
     {
-      "id": "39f237d33ac35dfa",
-      "title": "प्राथमिकता वार (संभाग)",
-      "link": "https://kvsangathan.nic.in/%e0%a4%aa%e0%a5%8d%e0%a4%b0%e0%a4%be%e0%a4%a5%e0%a4%ae%e0%a4%bf%e0%a4%95%e0%a4%a4%e0%a4%be-%e0%a4%b6%e0%a5%8d%e0%a4%b0%e0%a5%87%e0%a4%a3%e0%a5%80-%e0%a4%b5%e0%a4%be%e0%a4%b0-%e0%a4%b8%e0%a4%82/",
+      "id": "39b6be8d88861607",
+      "title": "State Government",
+      "link": "https://www.upsc.gov.in/government-user/state-government",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
-      "sourceId": "kvs-recruitment",
-      "sourceName": "KVS — Recruitment notices",
-      "dept": "Kendriya Vidyalaya Sangathan",
+      "sourceId": "upsc-e-admit-hub",
+      "sourceName": "UPSC — e-Admit cards",
+      "dept": "Union Public Service Commission",
       "state": "All India",
-      "category": "teaching",
+      "category": "upsc",
       "stateIds": [
         "all"
       ],
       "fetchMethod": "html-listing"
     },
     {
-      "id": "0cc6b4fb79a4cbf6",
-      "title": "कक्षा वार (संभाग)",
-      "link": "https://kvsangathan.nic.in/%e0%a4%aa%e0%a5%8d%e0%a4%b0%e0%a4%be%e0%a4%a5%e0%a4%ae%e0%a4%bf%e0%a4%95%e0%a4%a4%e0%a4%be-%e0%a4%b6%e0%a5%8d%e0%a4%b0%e0%a5%87%e0%a4%a3%e0%a5%80-%e0%a4%b5%e0%a4%be%e0%a4%b0-%e0%a4%b8%e0%a4%82-2/",
+      "id": "b83d64e1d61f3267",
+      "title": "Forms & Downloads",
+      "link": "https://www.upsc.gov.in/forms-downloads",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
-      "sourceId": "kvs-recruitment",
-      "sourceName": "KVS — Recruitment notices",
-      "dept": "Kendriya Vidyalaya Sangathan",
+      "sourceId": "upsc-e-admit-hub",
+      "sourceName": "UPSC — e-Admit cards",
+      "dept": "Union Public Service Commission",
       "state": "All India",
-      "category": "teaching",
+      "category": "upsc",
       "stateIds": [
         "all"
       ],
       "fetchMethod": "html-listing"
     },
     {
-      "id": "708fae930d7c5800",
-      "title": "के. वि. सं. शुल्क संरचना",
-      "link": "https://kvsangathan.nic.in/%e0%a4%95%e0%a5%87%e0%a4%b5%e0%a5%80%e0%a4%8f%e0%a4%b8-%e0%a4%b6%e0%a5%81%e0%a4%b2%e0%a5%8d%e0%a4%95-%e0%a4%b8%e0%a4%82%e0%a4%b0%e0%a4%9a%e0%a4%a8%e0%a4%be/",
+      "id": "0cce0ffaabb10d49",
+      "title": "Website Policies",
+      "link": "https://www.upsc.gov.in/website-policy",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
-      "sourceId": "kvs-recruitment",
-      "sourceName": "KVS — Recruitment notices",
-      "dept": "Kendriya Vidyalaya Sangathan",
+      "sourceId": "upsc-e-admit-hub",
+      "sourceName": "UPSC — e-Admit cards",
+      "dept": "Union Public Service Commission",
       "state": "All India",
-      "category": "teaching",
+      "category": "upsc",
       "stateIds": [
         "all"
       ],
       "fetchMethod": "html-listing"
     },
     {
-      "id": "f4de5643783af98f",
-      "title": "आईसीटी अवसंरचना",
-      "link": "https://kvsangathan.nic.in/%e0%a4%86%e0%a4%88%e0%a4%b8%e0%a5%80%e0%a4%9f%e0%a5%80-%e0%a4%85%e0%a4%b5%e0%a4%b8%e0%a4%82%e0%a4%b0%e0%a4%9a%e0%a4%a8%e0%a4%be/",
+      "id": "9f6dd31ea0da649e",
+      "title": "Web Information Manager",
+      "link": "https://www.upsc.gov.in/web-information-manager",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
-      "sourceId": "kvs-recruitment",
-      "sourceName": "KVS — Recruitment notices",
-      "dept": "Kendriya Vidyalaya Sangathan",
+      "sourceId": "upsc-e-admit-hub",
+      "sourceName": "UPSC — e-Admit cards",
+      "dept": "Union Public Service Commission",
       "state": "All India",
-      "category": "teaching",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "1f841ffdec181624",
-      "title": "स्थानांतरण आदेश",
-      "link": "https://kvsangathan.nic.in/%e0%a4%b8%e0%a5%8d%e0%a4%a5%e0%a4%be%e0%a4%a8%e0%a4%be%e0%a4%82%e0%a4%a4%e0%a4%b0%e0%a4%a3-%e0%a4%86%e0%a4%a6%e0%a5%87%e0%a4%b6/",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "kvs-recruitment",
-      "sourceName": "KVS — Recruitment notices",
-      "dept": "Kendriya Vidyalaya Sangathan",
-      "state": "All India",
-      "category": "teaching",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "d17483019b6a4dae",
-      "title": "निर्माण गतिविधियाँ",
-      "link": "https://kvsangathan.nic.in/%e0%a4%a8%e0%a4%bf%e0%a4%b0%e0%a5%8d%e0%a4%ae%e0%a4%be%e0%a4%a3-%e0%a4%97%e0%a4%a4%e0%a4%bf%e0%a4%b5%e0%a4%bf%e0%a4%a7%e0%a4%bf%e0%a4%af%e0%a4%be%e0%a4%82/",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "kvs-recruitment",
-      "sourceName": "KVS — Recruitment notices",
-      "dept": "Kendriya Vidyalaya Sangathan",
-      "state": "All India",
-      "category": "teaching",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "f868cf977341f034",
-      "title": "संसाधन व्यक्तियों का समूह",
-      "link": "https://kvsangathan.nic.in/%e0%a4%b8%e0%a5%87%e0%a4%b5%e0%a4%be%e0%a4%95%e0%a4%be%e0%a4%b2%e0%a5%80%e0%a4%a8-%e0%a4%aa%e0%a4%be%e0%a4%a0%e0%a5%8d%e0%a4%af%e0%a4%95%e0%a5%8d%e0%a4%b0%e0%a4%ae/",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "kvs-recruitment",
-      "sourceName": "KVS — Recruitment notices",
-      "dept": "Kendriya Vidyalaya Sangathan",
-      "state": "All India",
-      "category": "teaching",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "77e80a337c363666",
-      "title": "सीमित विभाग परीक्षा",
-      "link": "https://kvsangathan.nic.in/%e0%a4%b8%e0%a5%80%e0%a4%ae%e0%a4%bf%e0%a4%a4-%e0%a4%b5%e0%a4%bf%e0%a4%ad%e0%a4%be%e0%a4%97-%e0%a4%aa%e0%a4%b0%e0%a5%80%e0%a4%95%e0%a5%8d%e0%a4%b7%e0%a4%be/",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "kvs-recruitment",
-      "sourceName": "KVS — Recruitment notices",
-      "dept": "Kendriya Vidyalaya Sangathan",
-      "state": "All India",
-      "category": "teaching",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "ddef950428ea8bef",
-      "title": "परिणाम/विविध/उत्तर कुंजी",
-      "link": "https://kvsangathan.nic.in/%e0%a4%aa%e0%a4%b0%e0%a4%bf%e0%a4%a3%e0%a4%be%e0%a4%ae-%e0%a4%b5%e0%a4%bf%e0%a4%b5%e0%a4%bf%e0%a4%a7-%e0%a4%89%e0%a4%a4%e0%a5%8d%e0%a4%a4%e0%a4%b0-%e0%a4%95%e0%a5%81%e0%a4%82%e0%a4%9c%e0%a5%80/",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "kvs-recruitment",
-      "sourceName": "KVS — Recruitment notices",
-      "dept": "Kendriya Vidyalaya Sangathan",
-      "state": "All India",
-      "category": "teaching",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "02e8e1ae1833b6ed",
-      "title": "वार्षिक रिपोर्ट",
-      "link": "https://kvsangathan.nic.in/%e0%a4%b5%e0%a4%be%e0%a4%b0%e0%a5%8d%e0%a4%b7%e0%a4%bf%e0%a4%95-%e0%a4%b0%e0%a4%bf%e0%a4%aa%e0%a5%8b%e0%a4%b0%e0%a5%8d%e0%a4%9f/",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "kvs-recruitment",
-      "sourceName": "KVS — Recruitment notices",
-      "dept": "Kendriya Vidyalaya Sangathan",
-      "state": "All India",
-      "category": "teaching",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "8c70c31e60aac1d4",
-      "title": "केन्द्रीय विद्यालय क्रॉनिकल",
-      "link": "https://kvsangathan.nic.in/%e0%a4%95%e0%a5%87%e0%a4%a8%e0%a5%8d%e0%a4%a6%e0%a5%8d%e0%a4%b0%e0%a5%80%e0%a4%af-%e0%a4%b5%e0%a4%bf%e0%a4%a6%e0%a5%8d%e0%a4%af%e0%a4%be%e0%a4%b2%e0%a4%af-%e0%a4%95%e0%a5%8d%e0%a4%b0%e0%a5%89%e0%a4%a8/",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "kvs-recruitment",
-      "sourceName": "KVS — Recruitment notices",
-      "dept": "Kendriya Vidyalaya Sangathan",
-      "state": "All India",
-      "category": "teaching",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "3903d5a33c7f629d",
-      "title": "पीएम श्री वीडियो गैलरी",
-      "link": "https://kvsangathan.nic.in/%e0%a4%aa%e0%a5%80%e0%a4%8f%e0%a4%ae-%e0%a4%b6%e0%a5%8d%e0%a4%b0%e0%a5%80-%e0%a4%b5%e0%a5%80%e0%a4%a1%e0%a4%bf%e0%a4%af%e0%a5%8b-%e0%a4%97%e0%a5%88%e0%a4%b2%e0%a4%b0%e0%a5%80/",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "kvs-recruitment",
-      "sourceName": "KVS — Recruitment notices",
-      "dept": "Kendriya Vidyalaya Sangathan",
-      "state": "All India",
-      "category": "teaching",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "b21c7fccd980d928",
-      "title": "प्रकटीकरण का विवरण",
-      "link": "https://kvsangathan.nic.in/%e0%a4%aa%e0%a5%8d%e0%a4%b0%e0%a4%95%e0%a4%9f%e0%a5%80%e0%a4%95%e0%a4%b0%e0%a4%a3-%e0%a4%95%e0%a4%be-%e0%a4%b5%e0%a4%bf%e0%a4%b5%e0%a4%b0%e0%a4%a3/",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "kvs-recruitment",
-      "sourceName": "KVS — Recruitment notices",
-      "dept": "Kendriya Vidyalaya Sangathan",
-      "state": "All India",
-      "category": "teaching",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "98da38ba1fe437a9",
-      "title": "शैक्षणिक सलाहकार समिति",
-      "link": "https://kvsangathan.nic.in/%e0%a4%b6%e0%a5%88%e0%a4%95%e0%a5%8d%e0%a4%b7%e0%a4%a3%e0%a4%bf%e0%a4%95-%e0%a4%b8%e0%a4%b2%e0%a4%be%e0%a4%b9%e0%a4%95%e0%a4%be%e0%a4%b0-%e0%a4%b8%e0%a4%ae%e0%a4%bf%e0%a4%a4%e0%a4%bf/",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "kvs-recruitment",
-      "sourceName": "KVS — Recruitment notices",
-      "dept": "Kendriya Vidyalaya Sangathan",
-      "state": "All India",
-      "category": "teaching",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "7ebf9c63f70aaa86",
-      "title": "भारत सरकार GOVERNMENT OF INDIA",
-      "link": "http://india.gov.in/",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "uppsc-hall-tickets",
-      "sourceName": "UPPSC — Hall tickets",
-      "dept": "Uttar Pradesh PSC",
-      "state": "Uttar Pradesh",
-      "category": "state",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "a9fcc98ed02335af",
-      "title": "Go to Home Page",
-      "link": "https://uppsc.up.nic.in/Default.aspx",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "uppsc-hall-tickets",
-      "sourceName": "UPPSC — Hall tickets",
-      "dept": "Uttar Pradesh PSC",
-      "state": "Uttar Pradesh",
-      "category": "state",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "2519a1e6ab344c0e",
-      "title": "{{'Home_HM' | translate }}",
-      "link": "https://uppsc.up.nic.in/Home",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "uppsc-hall-tickets",
-      "sourceName": "UPPSC — Hall tickets",
-      "dept": "Uttar Pradesh PSC",
-      "state": "Uttar Pradesh",
-      "category": "state",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "0f75dcf763081892",
-      "title": "{{'TNC_HM' | translate }}",
-      "link": "https://uppsc.up.nic.in/FooterPages/tnc.aspx",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "uppsc-hall-tickets",
-      "sourceName": "UPPSC — Hall tickets",
-      "dept": "Uttar Pradesh PSC",
-      "state": "Uttar Pradesh",
-      "category": "state",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "a25f606bedc4cb45",
-      "title": "{{'HLP_HM' | translate }}",
-      "link": "https://uppsc.up.nic.in/FooterPages/hlp.aspx",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "uppsc-hall-tickets",
-      "sourceName": "UPPSC — Hall tickets",
-      "dept": "Uttar Pradesh PSC",
-      "state": "Uttar Pradesh",
-      "category": "state",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "2aaa2e40dcd1090a",
-      "title": "{{'CP_HM' | translate }}",
-      "link": "https://uppsc.up.nic.in/FooterPages/CopyrightPolicy.aspx",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "uppsc-hall-tickets",
-      "sourceName": "UPPSC — Hall tickets",
-      "dept": "Uttar Pradesh PSC",
-      "state": "Uttar Pradesh",
-      "category": "state",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "34570ff59c6c357c",
-      "title": "{{'SCA_HM' | translate }}",
-      "link": "https://uppsc.up.nic.in/FooterPages/ScreenAccess.aspx",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "uppsc-hall-tickets",
-      "sourceName": "UPPSC — Hall tickets",
-      "dept": "Uttar Pradesh PSC",
-      "state": "Uttar Pradesh",
-      "category": "state",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "da6f0da546f1ccb3",
-      "title": "{{'DIS_HM' | translate }}",
-      "link": "https://uppsc.up.nic.in/FooterPages/Disclaimer.aspx",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "uppsc-hall-tickets",
-      "sourceName": "UPPSC — Hall tickets",
-      "dept": "Uttar Pradesh PSC",
-      "state": "Uttar Pradesh",
-      "category": "state",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "3380a1e1786d6dc5",
-      "title": "{{'RTI_HM' | translate }}",
-      "link": "https://uppsc.up.nic.in/FooterPages/RTI.aspx",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "uppsc-hall-tickets",
-      "sourceName": "UPPSC — Hall tickets",
-      "dept": "Uttar Pradesh PSC",
-      "state": "Uttar Pradesh",
-      "category": "state",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "23542436dab53d3a",
-      "title": "{{'ActiveExam_HM' | translate }}",
-      "link": "https://uppsc.up.nic.in/FooterPages/Upcoming-Exams",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "uppsc-hall-tickets",
-      "sourceName": "UPPSC — Hall tickets",
-      "dept": "Uttar Pradesh PSC",
-      "state": "Uttar Pradesh",
-      "category": "state",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "2ca41b3dc963c620",
-      "title": "{{'OnlineNotifications_HM' | translate }}",
-      "link": "https://uppsc.up.nic.in/CandidatePages/Notifications.aspx",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "uppsc-hall-tickets",
-      "sourceName": "UPPSC — Hall tickets",
-      "dept": "Uttar Pradesh PSC",
-      "state": "Uttar Pradesh",
-      "category": "state",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "519936d07334ada1",
-      "title": "{{'InterviewOnly_HM' | translate }}",
-      "link": "https://uppsc.up.nic.in/PublicPages/Recruitment_Details.aspx?ID=IO",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "uppsc-hall-tickets",
-      "sourceName": "UPPSC — Hall tickets",
-      "dept": "Uttar Pradesh PSC",
-      "state": "Uttar Pradesh",
-      "category": "state",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "1b370092b3faa91c",
-      "title": "{{'ScreeningTestInt_HM' | translate }}",
-      "link": "https://uppsc.up.nic.in/PublicPages/Recruitment_Details.aspx?ID=SI",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "uppsc-hall-tickets",
-      "sourceName": "UPPSC — Hall tickets",
-      "dept": "Uttar Pradesh PSC",
-      "state": "Uttar Pradesh",
-      "category": "state",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "2804b706c240ad91",
-      "title": "{{'ExaminationOnly_HM' | translate }}",
-      "link": "https://uppsc.up.nic.in/PublicPages/Recruitment_Details.aspx?ID=EO",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "uppsc-hall-tickets",
-      "sourceName": "UPPSC — Hall tickets",
-      "dept": "Uttar Pradesh PSC",
-      "state": "Uttar Pradesh",
-      "category": "state",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "0cf2394e8bd82b4a",
-      "title": "{{'ExaminationAndInterviewOnly_HM' | translate }}",
-      "link": "https://uppsc.up.nic.in/PublicPages/Recruitment_Details.aspx?ID=EI",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "uppsc-hall-tickets",
-      "sourceName": "UPPSC — Hall tickets",
-      "dept": "Uttar Pradesh PSC",
-      "state": "Uttar Pradesh",
-      "category": "state",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "ef37c34b90d3551d",
-      "title": "{{'PreExamMainExamInt_HM' | translate }}",
-      "link": "https://uppsc.up.nic.in/PublicPages/Recruitment_Details.aspx?ID=EIM",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "uppsc-hall-tickets",
-      "sourceName": "UPPSC — Hall tickets",
-      "dept": "Uttar Pradesh PSC",
-      "state": "Uttar Pradesh",
-      "category": "state",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "a9f87c5eb39a8f07",
-      "title": "{{'DwldAdminCard_HM' | translate }}",
-      "link": "https://uppsc.up.nic.in/CandidatePages/Advertismentwise_DownloadDocument.aspx?inptprmtr=ac",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "uppsc-hall-tickets",
-      "sourceName": "UPPSC — Hall tickets",
-      "dept": "Uttar Pradesh PSC",
-      "state": "Uttar Pradesh",
-      "category": "state",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "1f79f8698e4f7bad",
-      "title": "{{'DwldInterviewLetterDirect_HM' | translate }}",
-      "link": "https://uppsc.up.nic.in/CandidatePages/IntLtr/Interview_DetailsShowByAdvertisement_New.aspx",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "uppsc-hall-tickets",
-      "sourceName": "UPPSC — Hall tickets",
-      "dept": "Uttar Pradesh PSC",
-      "state": "Uttar Pradesh",
-      "category": "state",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "c6b617289860a992",
-      "title": "{{'ExamCal_HM' | translate }}",
-      "link": "https://uppsc.up.nic.in/PublicPages/Examinations_Details.aspx?ID=EC",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "uppsc-hall-tickets",
-      "sourceName": "UPPSC — Hall tickets",
-      "dept": "Uttar Pradesh PSC",
-      "state": "Uttar Pradesh",
-      "category": "state",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "c8061a61f2078df7",
-      "title": "{{'TheCommission_HM' | translate }}",
-      "link": "https://uppsc.up.nic.in/PublicPages/com.aspx?ID=DE",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "uppsc-hall-tickets",
-      "sourceName": "UPPSC — Hall tickets",
-      "dept": "Uttar Pradesh PSC",
-      "state": "Uttar Pradesh",
-      "category": "state",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "94b006c26bff79a5",
-      "title": "{{'SetupofCommission_HM' | translate }}",
-      "link": "https://uppsc.up.nic.in/PublicPages/com.aspx?ID=CC",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "uppsc-hall-tickets",
-      "sourceName": "UPPSC — Hall tickets",
-      "dept": "Uttar Pradesh PSC",
-      "state": "Uttar Pradesh",
-      "category": "state",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "1696b42f0e6f8334",
-      "title": "{{'FunctionCommission_HM' | translate }}",
-      "link": "https://uppsc.up.nic.in/PublicPages/com.aspx?ID=FC",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "uppsc-hall-tickets",
-      "sourceName": "UPPSC — Hall tickets",
-      "dept": "Uttar Pradesh PSC",
-      "state": "Uttar Pradesh",
-      "category": "state",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "dc6edcffd94bad80",
-      "title": "{{'Examinations_HM' | translate }}",
-      "link": "https://uppsc.up.nic.in/#",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "uppsc-hall-tickets",
-      "sourceName": "UPPSC — Hall tickets",
-      "dept": "Uttar Pradesh PSC",
-      "state": "Uttar Pradesh",
-      "category": "state",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "0fdf8bced793a20c",
-      "title": "{{'AppDashBoard_HM' | translate }}",
-      "link": "https://uppsc.up.nic.in/CandidatePages/OTRAppForm/Applicant_OtrAuthentication.aspx?WEqGEem9m0+8Y4tNQqJiNYurmbKsjJR/fgSlThSTh6o=",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "uppsc-hall-tickets",
-      "sourceName": "UPPSC — Hall tickets",
-      "dept": "Uttar Pradesh PSC",
-      "state": "Uttar Pradesh",
-      "category": "state",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "4b02ab0f27e053f3",
-      "title": "RESULT OF ADVT. NO. D-5/E-1/2025, UTTAR PRADESH STATE ARCHAEOLOGICAL DIRECTORATE..",
-      "link": "https://uppsc.up.nic.in/Open_PDF_DB.aspx?I4PnQ0tBagkKN9rKVhlu76/9na81EE1P",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "uppsc-hall-tickets",
-      "sourceName": "UPPSC — Hall tickets",
-      "dept": "Uttar Pradesh PSC",
-      "state": "Uttar Pradesh",
-      "category": "state",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "05c25c9ea9a91126",
-      "title": "NOTICE REGARDING ADVT. NO.A-4/E-1/2025 U.P. PUBLIC SERVICE COMMISSION,COMPUTER A..",
-      "link": "https://uppsc.up.nic.in/Open_PDF_DB.aspx?I4PnQ0tBagkKN9rKVhlu7wEGC/BZy5+i",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "uppsc-hall-tickets",
-      "sourceName": "UPPSC — Hall tickets",
-      "dept": "Uttar Pradesh PSC",
-      "state": "Uttar Pradesh",
-      "category": "state",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "ed19314ac2e0415d",
-      "title": "RESULT OF ADVT. NO.2/2019-2020, U. P. AYUSH (UNANI) DEPTT./PRINCIPAL, S-11/02",
-      "link": "https://uppsc.up.nic.in/Open_PDF_DB.aspx?I4PnQ0tBaglovGFVjGJMaNLk/ffKn7jL",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "uppsc-hall-tickets",
-      "sourceName": "UPPSC — Hall tickets",
-      "dept": "Uttar Pradesh PSC",
-      "state": "Uttar Pradesh",
-      "category": "state",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "0cf627359f6e6487",
-      "title": "RESULT OF ADVT. NO.D-2/E-1/2025, UTTAR PRADESH DAIRY DEVELOPMENT/DEPUTY DAIRY DE..",
-      "link": "https://uppsc.up.nic.in/Open_PDF_DB.aspx?I4PnQ0tBaglovGFVjGJMaEk+muvLsysO",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "uppsc-hall-tickets",
-      "sourceName": "UPPSC — Hall tickets",
-      "dept": "Uttar Pradesh PSC",
-      "state": "Uttar Pradesh",
-      "category": "state",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "73c9f70b7072207b",
-      "title": "NOTICE REGARDING LAST DATE EXTENTION OF P.C.S. EXAM-2026",
-      "link": "https://uppsc.up.nic.in/Open_PDF_DB.aspx?I4PnQ0tBaglP18XMjN55aL8ckMULyAqn",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "uppsc-hall-tickets",
-      "sourceName": "UPPSC — Hall tickets",
-      "dept": "Uttar Pradesh PSC",
-      "state": "Uttar Pradesh",
-      "category": "state",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "2db2d16ecdc1865a",
-      "title": "RESULT OF CANDIDATE SELECTED IN ADVT. NO D-4/E-1/2025, DEPT. S-10/02, UPPSC SYST..",
-      "link": "https://uppsc.up.nic.in/Open_PDF_DB.aspx?I4PnQ0tBagkKFmHgqmmkW30lDXcVzR9+",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "uppsc-hall-tickets",
-      "sourceName": "UPPSC — Hall tickets",
-      "dept": "Uttar Pradesh PSC",
-      "state": "Uttar Pradesh",
-      "category": "state",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "a432d8eed1a0dfed",
-      "title": "CORRIGENDUM NOTICE REGARDING ADVT.NO.D-6/E-1/2025, DIRECTORATE OF HOMOEOPATHY UT..",
-      "link": "https://uppsc.up.nic.in/Open_PDF_DB.aspx?I4PnQ0tBagkz0o52o77EYRiV9UshCHNK",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "uppsc-hall-tickets",
-      "sourceName": "UPPSC — Hall tickets",
-      "dept": "Uttar Pradesh PSC",
-      "state": "Uttar Pradesh",
-      "category": "state",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "4b878c9fa6d0c6b1",
-      "title": "CORRIGENDUM NOTICE REGARDING ADVT.NO.D-6/E-1/2025, DIRECTORATE OF UNANI UTTAR PR..",
-      "link": "https://uppsc.up.nic.in/Open_PDF_DB.aspx?I4PnQ0tBagkz0o52o77EYadVpmKbwEUn",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "uppsc-hall-tickets",
-      "sourceName": "UPPSC — Hall tickets",
-      "dept": "Uttar Pradesh PSC",
-      "state": "Uttar Pradesh",
-      "category": "state",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "a083637aa0a5a45f",
-      "title": "NOTICE REGARDING ADVT. NO. D-6/E-1/2025, DIRECTORATE GENERAL OF FAMILY WELFARE U..",
-      "link": "https://uppsc.up.nic.in/Open_PDF_DB.aspx?I4PnQ0tBagnFvgVqjblDZARklky4+2Ju",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "uppsc-hall-tickets",
-      "sourceName": "UPPSC — Hall tickets",
-      "dept": "Uttar Pradesh PSC",
-      "state": "Uttar Pradesh",
-      "category": "state",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "3e429f5552ac3a81",
-      "title": "20 Aug 2026 NOTICE REGARDING TYPE TEST FOR ADVT. NO. A-4/E-1/2025, COMPUTER ASSISTANT (UPPSC) EXAM-2025",
-      "link": "https://uppsc.up.nic.in/Open_PDF.aspx?I4PnQ0tBaglP18XMjN55aOcwfMGOQ4T+",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "uppsc-hall-tickets",
-      "sourceName": "UPPSC — Hall tickets",
-      "dept": "Uttar Pradesh PSC",
-      "state": "Uttar Pradesh",
-      "category": "state",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "41d7a69fe7e325a5",
-      "title": "24 Oct 2026 CORRIGENDUM NOTICE REGARDING ADVT.NO.D-6/E-1/2025, DIRECTORATE OF HOMOEOPATHY UTTAR PRADESH / HOMOEOPATHIC MEDICAL OFFICER, S-11/32",
-      "link": "https://uppsc.up.nic.in/Open_PDF.aspx?I4PnQ0tBagkz0o52o77EYehACV4lKyrV",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "uppsc-hall-tickets",
-      "sourceName": "UPPSC — Hall tickets",
-      "dept": "Uttar Pradesh PSC",
-      "state": "Uttar Pradesh",
-      "category": "state",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "e69479749b3f0319",
-      "title": "18 Dec 2026 CORRIGENDUM NOTICE REGARDING ADVT.NO.D-6/E-1/2025, DIRECTORATE OF UNANI UTTAR PRADESH / CHIKITSA ADHIKARI (UNANI), S-11/30",
-      "link": "https://uppsc.up.nic.in/Open_PDF.aspx?I4PnQ0tBagkz0o52o77EYd5icBBuNfGC",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "uppsc-hall-tickets",
-      "sourceName": "UPPSC — Hall tickets",
-      "dept": "Uttar Pradesh PSC",
-      "state": "Uttar Pradesh",
-      "category": "state",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "d6d9b7935cbbf877",
-      "title": "07 Sep 2026 LIST OF CANDIDATES PROVISIONALLY QUALIFIED FOR MAINS IN ADVT. NO. A-7/E-1/2025, ASST. PROF., GOVT. DEGREE COLLEGE EXAM-2025, CHEMISTRY, ECONOMICS, GE.....",
-      "link": "https://uppsc.up.nic.in/Open_PDF.aspx?I4PnQ0tBagkKN9rKVhlu7yW69kLJ4IZj",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "uppsc-hall-tickets",
-      "sourceName": "UPPSC — Hall tickets",
-      "dept": "Uttar Pradesh PSC",
-      "state": "Uttar Pradesh",
-      "category": "state",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "f4e69ecdb2e37d68",
-      "title": "05 Sep 2026 RESULT OF ADVT. NO. D-5/E-1/2025, UTTAR PRADESH STATE ARCHAEOLOGICAL DIRECTORATE, ASSISTANT ARCHAEOLOGICAL OFFICER, S-03/06",
-      "link": "https://uppsc.up.nic.in/Open_PDF.aspx?I4PnQ0tBagkKN9rKVhlu72hN7PveuZya",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "uppsc-hall-tickets",
-      "sourceName": "UPPSC — Hall tickets",
-      "dept": "Uttar Pradesh PSC",
-      "state": "Uttar Pradesh",
-      "category": "state",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "f1fd1a8e8a3319b2",
-      "title": "04 Sep 2026 RESULT OF ADVT. NO.2/2019-2020, U. P. AYUSH (UNANI) DEPTT./PRINCIPAL, S-11/02",
-      "link": "https://uppsc.up.nic.in/Open_PDF.aspx?I4PnQ0tBaglovGFVjGJMaBjSXnbpvM2q",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "uppsc-hall-tickets",
-      "sourceName": "UPPSC — Hall tickets",
-      "dept": "Uttar Pradesh PSC",
-      "state": "Uttar Pradesh",
-      "category": "state",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "20ce2d8c78fdc3f6",
-      "title": "03 Sep 2026 RESULT OF ADVT. NO.D-2/E-1/2025, UTTAR PRADESH DAIRY DEVELOPMENT/DEPUTY DAIRY DEVELOPMENT OFFICER, S-02/03",
-      "link": "https://uppsc.up.nic.in/Open_PDF.aspx?I4PnQ0tBaglovGFVjGJMaNGZVurzAxN3",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "uppsc-hall-tickets",
-      "sourceName": "UPPSC — Hall tickets",
-      "dept": "Uttar Pradesh PSC",
-      "state": "Uttar Pradesh",
-      "category": "state",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "ee12a8dab0ad68f2",
-      "title": "More >>",
-      "link": "https://uppsc.up.nic.in/FooterPages/Results",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "uppsc-hall-tickets",
-      "sourceName": "UPPSC — Hall tickets",
-      "dept": "Uttar Pradesh PSC",
-      "state": "Uttar Pradesh",
-      "category": "state",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "cfb1ad3e0eb31302",
-      "title": "12 Aug 2026 NOTICE REGARDING ADVT. NO.A-4/E-1/2025 U.P. PUBLIC SERVICE COMMISSION,COMPUTER ASSISTANT",
-      "link": "https://uppsc.up.nic.in/Open_PDF.aspx?I4PnQ0tBagkKN9rKVhlu78isuQpzP6jj",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "uppsc-hall-tickets",
-      "sourceName": "UPPSC — Hall tickets",
-      "dept": "Uttar Pradesh PSC",
-      "state": "Uttar Pradesh",
-      "category": "state",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "d3ea040c80752f1a",
-      "title": "10 Aug 2026 NOTICE REGARDING ADVT. NO. A-5/E-1/2025, ASSISTANT TEACHER, TRAINED GRADUATE GRADE (M/F BRANCH) MAINS EXAM-2025, (SUBJECT-COMPUTER)",
-      "link": "https://uppsc.up.nic.in/Open_PDF.aspx?I4PnQ0tBagkKN9rKVhlu7+gJYH7oCJ+4",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "uppsc-hall-tickets",
-      "sourceName": "UPPSC — Hall tickets",
-      "dept": "Uttar Pradesh PSC",
-      "state": "Uttar Pradesh",
-      "category": "state",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "3961bda294ffacc4",
-      "title": "10 Aug 2026 REVISED NOTICE REGARDING ADVT. NO. A-2/E-1/2020 REGIONAL INSPECTOR (Technical)EXAM-2020",
-      "link": "https://uppsc.up.nic.in/Open_PDF.aspx?I4PnQ0tBaglovGFVjGJMaLYHjnVo5Zd7",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "uppsc-hall-tickets",
-      "sourceName": "UPPSC — Hall tickets",
-      "dept": "Uttar Pradesh PSC",
-      "state": "Uttar Pradesh",
-      "category": "state",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "12ca81e8e0617c5b",
-      "title": "Click here to view List of Candidates who are not selected in P.C.S. Examination-2022, but Qualified for Interview in P.C.S - 2022 (In Merit Order).",
-      "link": "https://uppsc.up.nic.in/Open_PDF.aspx?I4PnQ0tBagk9q6upnHHyW7Pdh9qfF6wa",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "uppsc-hall-tickets",
-      "sourceName": "UPPSC — Hall tickets",
-      "dept": "Uttar Pradesh PSC",
-      "state": "Uttar Pradesh",
-      "category": "state",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "1925fbed62f4bfd9",
-      "title": "{{'DisplayNoticeE_HM' | translate }}",
-      "link": "https://uppsc.up.nic.in/OuterPages/DisplayOnlineNotice.aspx?ID=1",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "uppsc-hall-tickets",
-      "sourceName": "UPPSC — Hall tickets",
-      "dept": "Uttar Pradesh PSC",
-      "state": "Uttar Pradesh",
-      "category": "state",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "09afeaebe939c4f5",
-      "title": "{{'DisplayNoticeI_HM' | translate }}",
-      "link": "https://uppsc.up.nic.in/OuterPages/DisplayOnlineNotice.aspx?ID=2",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "uppsc-hall-tickets",
-      "sourceName": "UPPSC — Hall tickets",
-      "dept": "Uttar Pradesh PSC",
-      "state": "Uttar Pradesh",
-      "category": "state",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "27905717ab620382",
-      "title": "UPPSC Exam Calendar 2026",
-      "link": "https://uppsc.up.nic.in/Open_PDF_DB.aspx?I4PnQ0tBagmIqec6cDg6BUi0bxHlS/Ba",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "uppsc-hall-tickets",
-      "sourceName": "UPPSC — Hall tickets",
-      "dept": "Uttar Pradesh PSC",
-      "state": "Uttar Pradesh",
-      "category": "state",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "a634b3485bc81255",
-      "title": "{{'ConstitutionalProvisions_HM' | translate }}",
-      "link": "https://uppsc.up.nic.in/PublicPages/com.aspx?ID=CP",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "uppsc-hall-tickets",
-      "sourceName": "UPPSC — Hall tickets",
-      "dept": "Uttar Pradesh PSC",
-      "state": "Uttar Pradesh",
-      "category": "state",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "07698180198a1da2",
-      "title": "{{'OrganisationStructure_HM' | translate }}",
-      "link": "https://uppsc.up.nic.in/PublicPages/com.aspx?ID=OS",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "uppsc-hall-tickets",
-      "sourceName": "UPPSC — Hall tickets",
-      "dept": "Uttar Pradesh PSC",
-      "state": "Uttar Pradesh",
-      "category": "state",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "b90b93067d08357a",
-      "title": "{{'CitizensCharter_HM' | translate }}",
-      "link": "https://uppsc.up.nic.in/PublicPages/com.aspx?ID=CZ",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "uppsc-hall-tickets",
-      "sourceName": "UPPSC — Hall tickets",
-      "dept": "Uttar Pradesh PSC",
-      "state": "Uttar Pradesh",
-      "category": "state",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "130ee61970b2c5f7",
-      "title": "{{'DebardAppList_HM' | translate }}",
-      "link": "https://uppsc.up.nic.in/PublicPages/ReptDebardList.aspx?ID=dcl",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "uppsc-hall-tickets",
-      "sourceName": "UPPSC — Hall tickets",
-      "dept": "Uttar Pradesh PSC",
-      "state": "Uttar Pradesh",
-      "category": "state",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "5604f42a701f8596",
-      "title": "{{'DebardECList_HM' | translate }}",
-      "link": "https://uppsc.up.nic.in/PublicPages/ReptDebardList.aspx?ID=decl",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "uppsc-hall-tickets",
-      "sourceName": "UPPSC — Hall tickets",
-      "dept": "Uttar Pradesh PSC",
-      "state": "Uttar Pradesh",
-      "category": "state",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "b0bffe686b717646",
-      "title": "{{'ExpertForm_HM' | translate }}",
-      "link": "https://uppsc.up.nic.in/ExpertCorner/Frm_ExpertBioData.aspx",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "uppsc-hall-tickets",
-      "sourceName": "UPPSC — Hall tickets",
-      "dept": "Uttar Pradesh PSC",
-      "state": "Uttar Pradesh",
-      "category": "state",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "e4eef873e191a139",
-      "title": "{{'CheckApp_HM' | translate }}",
-      "link": "https://uppsc.up.nic.in/CandidatePages/Status/ViewStatus.aspx",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "uppsc-hall-tickets",
-      "sourceName": "UPPSC — Hall tickets",
-      "dept": "Uttar Pradesh PSC",
-      "state": "Uttar Pradesh",
-      "category": "state",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "de838a08989288b7",
-      "title": "{{'DwldEligibilityFormDirect_HM' | translate }}",
-      "link": "https://uppsc.up.nic.in/CandidatePages/ElgbtChkg/DownloadForm_EligibilityChecking_New.aspx",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "uppsc-hall-tickets",
-      "sourceName": "UPPSC — Hall tickets",
-      "dept": "Uttar Pradesh PSC",
-      "state": "Uttar Pradesh",
-      "category": "state",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "ab085f65068c7817",
-      "title": "{{'DwldPreYearQuesPpr_HM' | translate }}",
-      "link": "https://uppsc.up.nic.in/OuterPages/PreQuesPapers.aspx?ID=PrevQues",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "uppsc-hall-tickets",
-      "sourceName": "UPPSC — Hall tickets",
-      "dept": "Uttar Pradesh PSC",
-      "state": "Uttar Pradesh",
-      "category": "state",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "f5cf5fab61ad81d6",
-      "title": "{{'DwldSyllabus_HM' | translate }}",
-      "link": "https://uppsc.up.nic.in/CandidatePages/Syllabus/Syllabus_PostWise.aspx?ID=4",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "uppsc-hall-tickets",
-      "sourceName": "UPPSC — Hall tickets",
-      "dept": "Uttar Pradesh PSC",
-      "state": "Uttar Pradesh",
-      "category": "state",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "d601227f4b14319b",
-      "title": "{{'RejectedList_HM' | translate }}",
-      "link": "https://uppsc.up.nic.in/CandidatePages/InputPages/Objected_Candidate_List.aspx",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "uppsc-hall-tickets",
-      "sourceName": "UPPSC — Hall tickets",
-      "dept": "Uttar Pradesh PSC",
-      "state": "Uttar Pradesh",
-      "category": "state",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "61da6071fc941ac7",
-      "title": "{{'ToppersList_HM' | translate }}",
-      "link": "https://uppsc.up.nic.in/PublicPages/ToppersList.aspx?ID=strscs",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "uppsc-hall-tickets",
-      "sourceName": "UPPSC — Hall tickets",
-      "dept": "Uttar Pradesh PSC",
-      "state": "Uttar Pradesh",
-      "category": "state",
+      "category": "upsc",
       "stateIds": [
         "all"
       ],
