@@ -1,13 +1,18 @@
 import { expect, test } from '@playwright/test';
 
 const SAMPLE_SLUG = 'e2e-test-job';
+const SUBSCRIBE_DISMISSED_KEY = 'mygovtjobs-subscribe-dismissed';
 
 test.describe('job detail flows', () => {
   test('opens job detail from home card click', async ({ page }) => {
+    await page.addInitScript((key) => {
+      window.localStorage.setItem(key, String(Date.now()));
+    }, SUBSCRIBE_DISMISSED_KEY);
+
     await page.goto('/jobs');
-    const firstCard = page.locator('.job-card').first();
-    await expect(firstCard).toBeVisible({ timeout: 30_000 });
-    await firstCard.click();
+    const firstCardAction = page.locator('article.job-card--clickable .job-card__action').first();
+    await expect(firstCardAction).toBeVisible({ timeout: 30_000 });
+    await firstCardAction.click();
     await expect(page).toHaveURL(/\/jobs\/.+/);
     await expect(page.locator('.job-detail-panel, .job-detail-hero').first()).toBeVisible({
       timeout: 30_000,
