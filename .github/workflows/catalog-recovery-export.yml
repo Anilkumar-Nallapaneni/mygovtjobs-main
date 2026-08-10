@@ -71,6 +71,8 @@ jobs:
           npm run data:demote-publish-gate:apply || true
           # Title/PDF date extractors → drafts get last_date without re-scrape
           node scripts/run-python.mjs scripts/enrich-draft-dates-from-titles.py --apply
+          npm run backfill:dates || true
+          node scripts/run-python.mjs scripts/enrich-and-promote-priority-drafts.py --apply || true
           npm run data:promote-publish-gate:apply
           npm run export:live-jobs
           npm run data:scrub-vacancies

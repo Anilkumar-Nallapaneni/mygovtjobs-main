@@ -87,6 +87,13 @@ def test_rejects_gov_admin_noise_titles():
     )
 
 
+def test_clean_job_title_strips_advt_no_prefix():
+    raw = "Advt. No. HSFC:01:RMT:2026 Dated.10.08.2026 Recruitment of Scientist/Engineer for HSFC"
+    cleaned = clean_job_title(raw)
+    assert cleaned.startswith("Recruitment of Scientist")
+    assert "Advt" not in cleaned
+
+
 def test_sanitize_json_for_postgres_nested():
     payload = {"summary": "fee\x00details", "posts": [{"title": "clerk\x07"}]}
     out = sanitize_json_for_postgres(payload)

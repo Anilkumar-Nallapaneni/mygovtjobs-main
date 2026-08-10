@@ -230,6 +230,15 @@ def clean_job_title(title: str | None) -> str:
     t = _PDF_SIZE_SUFFIX.sub("", t)
     t = re.sub(r"[\s\-–—]*PDF\s*size:\s*\(\)\s*\.?\s*$", "", t, flags=re.I)
     t = re.sub(r"[\s\-–—]*PDF\s*$", "", t, flags=re.I)
+    # "Advt. No. HSFC:01:RMT:2026 Dated.10.08.2026 Recruitment of …" → keep the real title
+    stripped = re.sub(
+        r"^(?:Advt\.?\s*No\.?\s*[:\-]?\s*[A-Za-z0-9:()/_./\-]+\s*)+(?:Dated?\.?\s*[\d./\-]+\s*)?",
+        "",
+        t,
+        flags=re.I,
+    ).strip(" .-–—")
+    if len(stripped) >= 24 and _JOB_HINT.search(stripped):
+        t = stripped
     t = re.sub(r"\s+", " ", t).strip(" .-–—")
     return t
 
