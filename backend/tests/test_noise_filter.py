@@ -82,6 +82,9 @@ def test_rejects_gov_admin_noise_titles():
     assert not looks_like_job_notification("IRNSS-1F successfully completed its mission life of 10 years")
     assert not looks_like_job_notification("Online Registration extended till 15.06.2026")
     assert looks_like_job_notification("SSC CGL 2026 Recruitment Notification for 500 Posts")
+    assert looks_like_job_notification(
+        "SSC CGL 2026 Recruitment Notification — Online Registration extended till 15.08.2026"
+    )
 
 
 def test_sanitize_json_for_postgres_nested():

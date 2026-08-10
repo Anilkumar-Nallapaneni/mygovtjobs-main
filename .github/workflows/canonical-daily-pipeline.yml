@@ -37,6 +37,7 @@ jobs:
       ALERT_FROM_EMAIL: ${{ secrets.ALERT_FROM_EMAIL }}
       DAILY_SYNC_ENFORCE_ONCE: "1"
       ALLOW_FALLBACK_JSON_EXPORT: "0"
+      ALLOW_DRASTIC_JSON_EXPORT: "1"
       SYNC_TRIGGER_TYPE: canonical_pipeline
       SYNC_FORCE: "1"
       SYNC_CONCURRENCY: "8"

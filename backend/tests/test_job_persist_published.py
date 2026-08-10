@@ -64,10 +64,10 @@ def test_ungated_feed_dump_detection():
             for _ in range(20)
         ]
     }
-    gated = {
+    dated_but_unverified = {
         "items": [
             {
-                "title": "Official job",
+                "title": "Feed item",
                 "status": "live",
                 "published_to_site": True,
                 "last_date": "2026-09-01",
@@ -76,5 +76,97 @@ def test_ungated_feed_dump_detection():
             for _ in range(20)
         ]
     }
+    gated = {
+        "items": [
+            {
+                "title": "Official job",
+                "status": "live",
+                "published_to_site": True,
+                "document_type": "RECRUITMENT",
+                "verification_status": "VERIFIED",
+                "last_date": "2026-09-01",
+                "vacancies": 2,
+            }
+            for _ in range(20)
+        ]
+    }
     assert _snapshot_looks_like_ungated_feed_dump(dump)
+    assert _snapshot_looks_like_ungated_feed_dump(dated_but_unverified)
     assert not _snapshot_looks_like_ungated_feed_dump(gated)
+
+
+def test_export_raises_on_dramatic_drop_when_not_allowed(tmp_path, monkeypatch):
+    """Dramatic shrink must raise so npm export:live-jobs exits non-zero."""
+    import asyncio
+    import json
+    from types import SimpleNamespace
+    from unittest.mock import AsyncMock, patch
+
+    from app.schemas.job import JobOut
+    from app.services.job_persist_service import JobPersistService
+
+    snapshot = tmp_path / "live-jobs.json"
+    snapshot.write_text(
+        json.dumps(
+            {
+                "items": [
+                    {
+                        "title": f"Job {i}",
+                        "status": "live",
+                        "published_to_site": True,
+                        "document_type": "RECRUITMENT",
+                        "verification_status": "VERIFIED",
+                        "last_date": "2026-12-01",
+                        "vacancies": 1,
+                    }
+                    for i in range(2600)
+                ]
+            }
+        ),
+        encoding="utf-8",
+    )
+    monkeypatch.delenv("ALLOW_DRASTIC_JSON_EXPORT", raising=False)
+
+    row = JobOut(
+        id="1",
+        slug="tiny",
+        title="Tiny gated set",
+        dept="UPSC",
+        category=None,
+        state_codes=[],
+        vacancies=1,
+        qualification="Graduate",
+        salary="Level-7",
+        age_limit="21-30",
+        last_date=date(2026, 12, 1),
+        apply_url="https://upsc.gov.in/apply",
+        pdf_url=None,
+        status="live",
+        published_at=datetime(2026, 6, 1, tzinfo=timezone.utc),
+        detail={"notification_url": "https://upsc.gov.in/n.pdf"},
+        document_type="RECRUITMENT",
+        verification_status="VERIFIED",
+        completeness_score=80,
+        publication_confidence=95.0,
+        published_to_site=True,
+    )
+
+    async def _run():
+        with (
+            patch(
+                "app.services.job_persist_service.get_settings",
+                return_value=SimpleNamespace(live_jobs_json_path=str(snapshot)),
+            ),
+            patch("app.services.job_service.JobService") as job_service_cls,
+        ):
+            job_service_cls.return_value.list_jobs = AsyncMock(return_value=([row], 1))
+            try:
+                await JobPersistService().export_live_jobs_json(AsyncMock())
+                raised = False
+            except RuntimeError as exc:
+                raised = True
+                assert "refusing to replace" in str(exc)
+            assert raised
+            assert len(json.loads(snapshot.read_text(encoding="utf-8"))["items"]) == 2600
+
+    asyncio.run(_run())

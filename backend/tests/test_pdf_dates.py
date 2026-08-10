@@ -70,6 +70,19 @@ def test_prefer_apply_date_chooses_nearer():
     assert prefer_apply_date("2026-08-20", "2026-08-15", today=date(2026, 8, 4)) == "2026-08-20"
 
 
+def test_extract_month_name_last_dates():
+    text = """
+    Applications are invited for the post of Assistant.
+    Last date for submission of online application: 30th June, 2026
+    """
+    out = extract_dates_from_text(text)
+    assert out["last_date"] == "2026-06-30"
+
+    text2 = "Eligible candidates may apply online on or before 21 August 2026."
+    out2 = extract_dates_from_text(text2)
+    assert out2["last_date"] == "2026-08-21"
+
+
 def test_validate_rejects_ancient_published():
     from app.services.pdf_candidate import validate_extracted_dates
 

@@ -153,13 +153,30 @@ def _snapshot_looks_like_ungated_feed_dump(payload: dict | None) -> bool:
     if not isinstance(items, list) or not items:
         return False
     sample = items[: min(40, len(items))]
+    threshold = max(1, int(len(sample) * 0.5))
     unapproved = sum(1 for row in sample if not isinstance(row, dict) or row.get("published_to_site") is not True)
     no_deadline = sum(
         1
         for row in sample
         if not isinstance(row, dict) or not str(row.get("last_date") or "").strip()
     )
-    return unapproved >= max(1, int(len(sample) * 0.5)) or no_deadline >= max(1, int(len(sample) * 0.5))
+    unverified = sum(
+        1
+        for row in sample
+        if not isinstance(row, dict)
+        or str(row.get("verification_status") or "").upper() not in _PUBLIC_VERIFICATION_STATUSES
+    )
+    wrong_doc = sum(
+        1
+        for row in sample
+        if not isinstance(row, dict) or str(row.get("document_type") or "").upper() != "RECRUITMENT"
+    )
+    return (
+        unapproved >= threshold
+        or no_deadline >= threshold
+        or unverified >= threshold
+        or wrong_doc >= threshold
+    )
 
 
 class JobPersistService:
@@ -544,13 +561,12 @@ class JobPersistService:
             and not allow_drastic
             and not replacing_feed_dump
         ):
-            logger.error(
-                "export_live_jobs_json: refusing to replace %s-row snapshot with %s rows. "
-                "Set ALLOW_DRASTIC_JSON_EXPORT=1 to override.",
-                existing_count,
-                len(slim_items),
+            msg = (
+                f"export_live_jobs_json: refusing to replace {existing_count}-row snapshot "
+                f"with {len(slim_items)} rows. Set ALLOW_DRASTIC_JSON_EXPORT=1 to override."
             )
-            return existing_count or 0
+            logger.error(msg)
+            raise RuntimeError(msg)
         if replacing_feed_dump and existing_count and existing_count != len(slim_items):
             logger.warning(
                 "export_live_jobs_json: replacing ungated feed dump (%s rows) with gated export (%s rows)",

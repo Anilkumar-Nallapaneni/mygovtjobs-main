@@ -66,9 +66,11 @@ jobs:
             exit 1
           fi
 
-      - name: Demote + promote + export gated catalog
+      - name: Demote + enrich dates + promote + export gated catalog
         run: |
           npm run data:demote-publish-gate:apply || true
+          # Title/PDF date extractors → drafts get last_date without re-scrape
+          node scripts/run-python.mjs scripts/enrich-draft-dates-from-titles.py --apply
           npm run data:promote-publish-gate:apply
           npm run export:live-jobs
           npm run data:scrub-vacancies

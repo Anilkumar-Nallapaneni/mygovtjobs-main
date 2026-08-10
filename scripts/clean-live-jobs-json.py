@@ -1,5 +1,10 @@
 #!/usr/bin/env python3
-"""Re-validate and clean frontend/public/data/live-jobs.json in place."""
+"""Re-validate and clean frontend/public/data/live-jobs.json in place.
+
+Drops rows that fail the same gates as verify-live-jobs-snapshot.mjs --strict
+(published_to_site, RECRUITMENT, verified, ISO last_date, status=live only,
+no HTML titles, publish_gate / can_publish_job).
+"""
 import json
 import sys
 from datetime import datetime, timezone
@@ -8,9 +13,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "backend"))
 
-from app.parsers.notification_parser import NotificationParser  # noqa: E402
-from app.services.validation_service import ValidationService  # noqa: E402
-from app.services.noise_filter import sanitize_source_text_fields  # noqa: E402
+from app.services.live_snapshot_clean import filter_live_snapshot_items  # noqa: E402
 from app.services.publish_gate import india_today  # noqa: E402
 
 LIVE_JSON = ROOT / "frontend" / "public" / "data" / "live-jobs.json"
@@ -23,56 +26,11 @@ def main() -> None:
 
     payload = json.loads(LIVE_JSON.read_text(encoding="utf-8"))
     items = payload.get("items") or []
-    parser = NotificationParser()
-    validator = ValidationService()
+    if not isinstance(items, list):
+        print("live-jobs.json items must be a list")
+        sys.exit(1)
 
-    kept = []
-    dropped = 0
-    today = india_today()
-    for row in items:
-        row = sanitize_source_text_fields(row)
-        source = (row.get("detail") or {}).get("source") or ""
-        detail = row.get("detail") or {}
-        raw = {
-            "title": row.get("title"),
-            "link": row.get("apply_url") or detail.get("notification_url"),
-            "applyUrl": row.get("apply_url"),
-            "pdfUrls": [row["pdf_url"]] if row.get("pdf_url") else detail.get("pdf_urls") or [],
-            "dept": row.get("dept"),
-            "state": row.get("state_codes"),
-            "source": source,
-            "sourceName": row.get("dept"),
-            "published": detail.get("published"),
-            "summary": detail.get("summary"),
-            "vacancies": row.get("vacancies"),
-            "last_date": row.get("last_date"),
-            "category": row.get("category"),
-        }
-        normalized = parser.parse(raw, source_code=source or None)
-        valid, reasons = validator.validate(normalized)
-        if not valid:
-            dropped += 1
-            continue
-        last = normalized.get("last_date")
-        original_status = str(row.get("status") or "live").lower()
-        if original_status == "live" and not last:
-            dropped += 1
-            continue
-        if last and str(last) < today.isoformat():
-            row_status = "expired"
-        else:
-            row_status = row.get("status") or "live"
-        new_vac = int(normalized.get("vacancies") or 0)
-        kept.append(
-            {
-                **row,
-                "title": normalized["title"],
-                "dept": normalized["dept"],
-                "vacancies": new_vac,
-                "last_date": last or row.get("last_date"),
-                "status": row_status,
-            }
-        )
+    kept, dropped = filter_live_snapshot_items(items, today=india_today())
 
     payload["generatedAt"] = datetime.now(timezone.utc).isoformat().replace("+00:00", "Z")
     payload["items"] = kept

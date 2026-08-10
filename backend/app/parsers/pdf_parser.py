@@ -4,7 +4,7 @@ import re
 from typing import Any
 
 from app.config import get_settings
-from app.parsers.pdf_dates import extract_dates_from_text
+from app.parsers.pdf_dates import extract_dates_from_text, to_iso_date
 from app.parsers.pdf_fetch import fetch_pdf_text
 from app.parsers.pdf_sections import text_to_content_sections
 from app.services.noise_filter import sanitize_json_for_postgres
@@ -18,7 +18,12 @@ _VACANCY = re.compile(
     re.I,
 )
 _LAST_DATE = re.compile(
-    r"(?:last\s*date|closing\s*date|apply\s*by|अंतिम\s*तिथि)[:\s]+(\d{1,2}[\-/\.]\d{1,2}[\-/\.]\d{2,4})",
+    r"(?:last\s*date|closing\s*date|apply\s*by|अंतिम\s*तिथि)[:\s]+"
+    r"(\d{1,2}[\-/\.]\d{1,2}[\-/\.]\d{2,4}|"
+    r"\d{1,2}(?:st|nd|rd|th)?[\s,\-]+"
+    r"(?:Jan(?:uary)?|Feb(?:ruary)?|Mar(?:ch)?|Apr(?:il)?|May|Jun(?:e)?|"
+    r"Jul(?:y)?|Aug(?:ust)?|Sep(?:t(?:ember)?)?|Oct(?:ober)?|Nov(?:ember)?|Dec(?:ember)?)"
+    r"[\s,\-]+\d{2,4})",
     re.I,
 )
 _QUAL = re.compile(
@@ -330,7 +335,7 @@ def extract_fields(text: str, *, pdf_url: str | None = None) -> dict[str, Any]:
 
     ld = _LAST_DATE.search(text)
     if ld:
-        out["last_date"] = ld.group(1)
+        out["last_date"] = to_iso_date(ld.group(1)) or ld.group(1)
 
     date_fields = extract_dates_from_text(text)
     if date_fields.get("last_date") and not out.get("last_date"):
