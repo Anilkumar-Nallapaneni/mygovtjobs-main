@@ -1,4 +1,5 @@
 import { describe, expect, it } from "vitest";
+import process from "node:process";
 
 import { buildStructuredJobDetail } from "@/utils/jobDetailStructured";
 
