@@ -10,7 +10,7 @@ Copy-paste commands for **Live Govt Jobs**. Run everything from **repo root**.
 |------|---------|
 | **Dev (frontend)** | `npm run dev` → http://localhost:3689 |
 | **Validate** | `npm run validate` (type-check + lint + tests) |
-| **Sync jobs** | `npm run sync:jobs` (production ingest; currently frozen in CI until `ALLOW_AUTO_INGEST=true`) |
+| **Sync jobs** | `npm run sync:jobs` (production ingest; CI uses `ALLOW_CANONICAL_PIPELINE=true`) |
 | **Build** | `npm run build` |
 | **Deploy check** | `npm run deploy:check` |
 
@@ -43,9 +43,9 @@ GitHub Actions and local production use **three public commands** only:
 | **`npm run sync:production`** / **`sync:jobs`** | Daily ~8 AM IST (CI) | Full scrape, export `live-jobs.json`, feeds, sitemap |
 | **`npm run verify:production`** | After deploy / manual | Env, DB, Supabase audit, job quality, snapshot verify |
 
-**CI freeze (fresh restart):** scheduled auto-ingest / weekly enrich / scheduled RSS commits are gated on repository variable `ALLOW_AUTO_INGEST=true`. Ingest always sets `AUTO_PUBLISH_VERIFIED=0` so new rows stay `draft` until verified.
+**CI gate:** scheduled canonical daily pipeline / weekly enrich / RSS refresh use repository variables `ALLOW_CANONICAL_PIPELINE`, `ALLOW_WEEKLY_ENRICH`, and `ALLOW_RSS_REFRESH` (all currently `true`). Prefer gated DB export for `live-jobs.json` — never let raw RSS overwrite the publish-approved catalog.
 
-**CI workflows:** `fetch-official-feeds.yml` → `sync:quick` · `supabase-auto-ingest.yml` → `sync:production`
+**CI workflows:** `fetch-official-feeds.yml` → `sync:quick` · `canonical-daily-pipeline.yml` → `sync:production` · `catalog-recovery-export.yml` → promote/export recovery
 
 Advisory lock `20260710` prevents two syncs at once. Run history is stored in Supabase `sync_runs`.
 

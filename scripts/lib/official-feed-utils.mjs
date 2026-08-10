@@ -79,7 +79,12 @@ export function feedItemToLiveJob(item) {
   };
 }
 
-export function writeOfficialPayload({ items, sourceReports, siteReports = [], feedOnly = false }) {
+/**
+ * Write official-feed-items.json. By default does NOT touch live-jobs.json —
+ * the Python publish gate owns that catalog. Pass feedOnly=false only for
+ * legacy offline demos.
+ */
+export function writeOfficialPayload({ items, sourceReports, siteReports = [], feedOnly = true }) {
   mkdirSync(DATA_DIR, { recursive: true });
   const generatedAt = new Date().toISOString();
   const feedPayload = { generatedAt, sourceReports, siteReports, items };

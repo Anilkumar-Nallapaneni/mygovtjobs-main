@@ -53,3 +53,28 @@ def test_dramatic_snapshot_drop_guard_flags_large_catalog_collapse():
     assert _is_dramatic_snapshot_drop(2600, 1)
     assert _is_dramatic_snapshot_drop(2600, 1299)
     assert not _is_dramatic_snapshot_drop(2600, 1300)
+
+
+def test_ungated_feed_dump_detection():
+    from app.services.job_persist_service import _snapshot_looks_like_ungated_feed_dump
+
+    dump = {
+        "items": [
+            {"title": "Feed item", "status": "live", "vacancies": 0}
+            for _ in range(20)
+        ]
+    }
+    gated = {
+        "items": [
+            {
+                "title": "Official job",
+                "status": "live",
+                "published_to_site": True,
+                "last_date": "2026-09-01",
+                "vacancies": 2,
+            }
+            for _ in range(20)
+        ]
+    }
+    assert _snapshot_looks_like_ungated_feed_dump(dump)
+    assert not _snapshot_looks_like_ungated_feed_dump(gated)

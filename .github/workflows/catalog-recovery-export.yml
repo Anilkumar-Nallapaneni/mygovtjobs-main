@@ -1,0 +1,88 @@
+name: Catalog recovery export
+
+# Fast recovery: demote bad live rows, promote gate-passers, export gated
+# live-jobs.json, verify, commit. Does not re-scrape (use canonical pipeline for that).
+
+on:
+  workflow_dispatch:
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
+permissions:
+  contents: write
+
+concurrency:
+  group: live-jobs-publication
+  cancel-in-progress: false
+
+jobs:
+  recover:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    env:
+      APP_ENV: production
+      AUTO_PUBLISH_VERIFIED: "1"
+      DATABASE_URL: ${{ secrets.DATABASE_URL }}
+      SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL }}
+      SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+      ALLOW_DRASTIC_JSON_EXPORT: "1"
+      ALLOW_FALLBACK_JSON_EXPORT: "0"
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: true
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+          cache: npm
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: |
+          npm ci
+          python -m venv backend/.venv
+          backend/.venv/bin/pip install -r backend/requirements.txt
+
+      - name: Configure DATABASE_URL from secrets
+        env:
+          SECRET_DATABASE_URL: ${{ secrets.DATABASE_URL }}
+          SUPABASE_PROJECT_REF: ${{ secrets.SUPABASE_PROJECT_REF }}
+          SUPABASE_DB_PASSWORD: ${{ secrets.SUPABASE_DB_PASSWORD }}
+          SUPABASE_DB_REGION: ${{ secrets.SUPABASE_DB_REGION }}
+          SUPABASE_POOLER_HOST: ${{ secrets.SUPABASE_POOLER_HOST }}
+        run: |
+          if [ -n "$SUPABASE_DB_PASSWORD" ]; then
+            node scripts/build-database-url-for-actions.mjs
+          elif [ -n "$SECRET_DATABASE_URL" ]; then
+            echo "DATABASE_URL=$SECRET_DATABASE_URL" >> "$GITHUB_ENV"
+          else
+            echo "::error::Set DATABASE_URL or pooler secrets"
+            exit 1
+          fi
+
+      - name: Demote + promote + export gated catalog
+        run: |
+          npm run data:demote-publish-gate:apply || true
+          npm run data:promote-publish-gate:apply
+          npm run export:live-jobs
+          npm run data:scrub-vacancies
+          npm run clean:live-jobs
+          npm run build:sitemap
+          npm run verify:live-jobs
+
+      - name: Commit verified snapshots
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add frontend/public/data/live-jobs*.json frontend/public/data/daily-sync-state.json frontend/public/sitemap.xml frontend/public/sitemaps || true
+          git diff --staged --quiet && exit 0
+          COUNT=$(node -e "const j=require('./frontend/public/data/live-jobs.json'); console.log((j.items||[]).length)")
+          git commit -m "chore(data): recover gated live-jobs snapshot (${COUNT} jobs) [skip ci]"
+          git pull --rebase origin "${GITHUB_REF_NAME}"
+          git push origin "HEAD:${GITHUB_REF_NAME}"

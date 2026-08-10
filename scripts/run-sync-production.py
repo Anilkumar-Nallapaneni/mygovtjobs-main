@@ -162,12 +162,20 @@ async def main() -> int:
     try:
         code = run_daily_nested()
         if code == 0:
+            # Feeds/archives must never own live-jobs.json. Re-export gated catalog after.
             run_npm("fetch:official:feeds")
             run_npm("build:official-archives")
-            run_npm("build:live-jobs-list")
-            run_npm("build:live-jobs-bootstrap")
+            # Promote drafts that pass the gate, then export the publish-approved set.
+            run_npm("data:promote-publish-gate:apply")
+            os.environ["ALLOW_DRASTIC_JSON_EXPORT"] = "1"
+            run_npm("export:live-jobs")
+            run_npm("data:scrub-vacancies")
+            run_npm("clean:live-jobs")
             run_npm("build:sitemap")
-            run_npm("verify:live-jobs")
+            verify_code = run_npm("verify:live-jobs")
+            if verify_code != 0:
+                code = verify_code
+                error_message = f"verify:live-jobs exited with code {verify_code}"
         else:
             error_message = f"daily sync exited with code {code}"
 

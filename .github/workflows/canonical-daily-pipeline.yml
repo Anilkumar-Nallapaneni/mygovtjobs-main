@@ -2,7 +2,7 @@ name: Canonical daily pipeline
 
 # Sole authoritative daily writer for live job snapshots + DB sync.
 # Requires repository variable ALLOW_CANONICAL_PIPELINE=true.
-# Do not re-enable supabase-auto-ingest.yml schedule while this is active.
+# Do not re-enable legacy dual-writer workflows; this file is the sole daily publisher.
 
 on:
   schedule:

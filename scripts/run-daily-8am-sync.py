@@ -278,7 +278,21 @@ async def main() -> int:
         if args.skip_official_import:
             print("\n=== Skipping fetch:official + import ===", flush=True)
         else:
-            run_official_import()
+            # feed-only: never overwrite live-jobs.json with raw RSS rows
+            run_npm("fetch:official", "--", "--feed-only")
+            timeout = _npm_step_timeout()
+            try:
+                subprocess.run(
+                    ["node", "scripts/run-python.mjs", "scripts/import-official-json-to-db.py"],
+                    cwd=ROOT,
+                    check=False,
+                    timeout=timeout,
+                )
+            except subprocess.TimeoutExpired:
+                print(
+                    f"=== import-official-json-to-db: exceeded {timeout}s — killed; continuing ===",
+                    flush=True,
+                )
 
         if args.skip_enrich:
             print("\n=== Skipping pdf:backfill + enrich:jobs (run weekly if needed) ===", flush=True)
