@@ -92,6 +92,12 @@ jobs:
           fi
           node scripts/check-github-actions-secrets.mjs
 
+      - name: Clear leftover sync locks
+        env:
+          DATABASE_URL: ${{ env.DATABASE_URL }}
+          SYNC_FAIL_REASON: "cleared before forced canonical pipeline dispatch"
+        run: node scripts/run-python.mjs scripts/mark-daily-sync-failed.py
+
       - name: Run canonical daily pipeline
         env:
           DATABASE_URL: ${{ env.DATABASE_URL }}
