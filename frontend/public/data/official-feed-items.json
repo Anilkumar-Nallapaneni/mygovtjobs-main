@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-10T13:57:46.239Z",
+  "generatedAt": "2026-08-10T21:16:07.051Z",
   "sourceReports": [
     {
       "id": "pib-press-reg3",
@@ -2936,23 +2936,6 @@
       "fetchMethod": "html-listing"
     },
     {
-      "id": "73c9f70b7072207b",
-      "title": "NOTICE REGARDING LAST DATE EXTENTION OF P.C.S. EXAM-2026",
-      "link": "https://uppsc.up.nic.in/Open_PDF_DB.aspx?I4PnQ0tBaglP18XMjN55aL8ckMULyAqn",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "uppsc-hall-tickets",
-      "sourceName": "UPPSC — Hall tickets",
-      "dept": "Uttar Pradesh PSC",
-      "state": "Uttar Pradesh",
-      "category": "state",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
       "id": "2db2d16ecdc1865a",
       "title": "RESULT OF CANDIDATE SELECTED IN ADVT. NO D-4/E-1/2025, DEPT. S-10/02, UPPSC SYST..",
       "link": "https://uppsc.up.nic.in/Open_PDF_DB.aspx?I4PnQ0tBagkKFmHgqmmkW30lDXcVzR9+",
@@ -3174,26 +3157,9 @@
       "fetchMethod": "html-listing"
     },
     {
-      "id": "d3ea040c80752f1a",
-      "title": "10 Aug 2026 NOTICE REGARDING ADVT. NO. A-5/E-1/2025, ASSISTANT TEACHER, TRAINED GRADUATE GRADE (M/F BRANCH) MAINS EXAM-2025, (SUBJECT-COMPUTER)",
-      "link": "https://uppsc.up.nic.in/Open_PDF.aspx?I4PnQ0tBagkKN9rKVhlu7+gJYH7oCJ+4",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "uppsc-hall-tickets",
-      "sourceName": "UPPSC — Hall tickets",
-      "dept": "Uttar Pradesh PSC",
-      "state": "Uttar Pradesh",
-      "category": "state",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "3961bda294ffacc4",
-      "title": "10 Aug 2026 REVISED NOTICE REGARDING ADVT. NO. A-2/E-1/2020 REGIONAL INSPECTOR (Technical)EXAM-2020",
-      "link": "https://uppsc.up.nic.in/Open_PDF.aspx?I4PnQ0tBaglovGFVjGJMaLYHjnVo5Zd7",
+      "id": "3399da91000464e7",
+      "title": "19 Aug 2026 NOTICE REGARDING ADVT. NO. A-6/E-1/2025, LECTURER (MALE/FEMALE) GOVERNMENT INTER COLLEGE (MAINS) EXAM.-2025",
+      "link": "https://uppsc.up.nic.in/Open_PDF.aspx?I4PnQ0tBaglP18XMjN55aC0yd/NT6FMr",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
@@ -3449,6 +3415,40 @@
       "id": "d601227f4b14319b",
       "title": "{{'RejectedList_HM' | translate }}",
       "link": "https://uppsc.up.nic.in/CandidatePages/InputPages/Objected_Candidate_List.aspx",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "uppsc-hall-tickets",
+      "sourceName": "UPPSC — Hall tickets",
+      "dept": "Uttar Pradesh PSC",
+      "state": "Uttar Pradesh",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "61da6071fc941ac7",
+      "title": "{{'ToppersList_HM' | translate }}",
+      "link": "https://uppsc.up.nic.in/PublicPages/ToppersList.aspx?ID=strscs",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "uppsc-hall-tickets",
+      "sourceName": "UPPSC — Hall tickets",
+      "dept": "Uttar Pradesh PSC",
+      "state": "Uttar Pradesh",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "e3e7e79e4d2f15e7",
+      "title": "{{'MediaSection_HM' | translate }}",
+      "link": "https://uppsc.up.nic.in/PublicPages/MediaSection.aspx",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
