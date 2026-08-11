@@ -7,6 +7,7 @@ should call only this file; legacy scripts remain implementation details.
 from __future__ import annotations
 
 import argparse
+import asyncio
 import json
 import os
 import subprocess
@@ -29,7 +30,7 @@ def node_script(path: str, *args: str) -> list[str]:
 
 
 def plan(mode: str) -> list[Step]:
-    if mode == "daily":
+    if mode in ("daily", "production"):
         return [
             Step("production sync", node_script("scripts/run-sync-production.py")),
             Step("strict snapshot verification", ["node", "scripts/verify-live-jobs-snapshot.mjs", "--strict"]),
@@ -54,6 +55,52 @@ def plan(mode: str) -> list[Step]:
     raise ValueError(f"Unsupported mode: {mode}")
 
 
+async def persist_pipeline_run(summary: dict[str, object], run_id: str | None = None) -> str | None:
+    """Best-effort control-plane record; pipelines still run before migration 030 is applied."""
+    try:
+        sys.path.insert(0, str(ROOT / "backend"))
+        from sqlalchemy import text
+        from app.database.session import SessionLocal
+
+        async with SessionLocal() as session:
+            if run_id is None:
+                value = (await session.execute(text("""
+                    insert into pipeline_runs (run_type, trigger_type, status, metadata)
+                    values (:run_type, :trigger_type, 'running', cast(:metadata as jsonb))
+                    returning id
+                """), {
+                    "run_type": "daily" if summary["mode"] == "production" else summary["mode"],
+                    "trigger_type": os.environ.get("SYNC_TRIGGER_TYPE", "canonical_pipeline"),
+                    "metadata": json.dumps({"steps": []}),
+                })).scalar_one()
+                await session.commit()
+                return str(value)
+            steps = summary.get("steps", [])
+            errors = sum(1 for item in steps if isinstance(item, dict) and item.get("returncode") != 0)
+            await session.execute(text("""
+                update pipeline_runs
+                set status = :status,
+                    finished_at = now(),
+                    duration_seconds = :duration,
+                    error_count = :errors,
+                    metadata = cast(:metadata as jsonb),
+                    error_message = :error_message
+                where id = :id
+            """), {
+                "id": run_id,
+                "status": summary["status"],
+                "duration": int(summary["finished_at_epoch"]) - int(summary["started_at_epoch"]),
+                "errors": errors,
+                "metadata": json.dumps({"steps": steps}),
+                "error_message": None if errors == 0 else f"{errors} pipeline step(s) failed",
+            })
+            await session.commit()
+            return run_id
+    except Exception as exc:
+        print(f"Control-plane record unavailable: {exc}", flush=True)
+        return run_id
+
+
 def run_step(step: Step, env: dict[str, str]) -> dict[str, object]:
     started = time.monotonic()
     print(f"\n=== {step.name} ===", flush=True)
@@ -64,7 +111,7 @@ def run_step(step: Step, env: dict[str, str]) -> dict[str, object]:
 
 def main() -> int:
     parser = argparse.ArgumentParser()
-    parser.add_argument("--mode", choices=("daily", "weekly", "verify"), required=True)
+    parser.add_argument("--mode", choices=("daily", "weekly", "verify", "production"), required=True)
     parser.add_argument("--continue-on-error", action="store_true")
     args = parser.parse_args()
 
@@ -73,6 +120,9 @@ def main() -> int:
     env.setdefault("SYNC_TRIGGER_TYPE", "canonical_pipeline")
 
     summary: dict[str, object] = {"mode": args.mode, "started_at_epoch": int(time.time()), "steps": []}
+    run_id = asyncio.run(persist_pipeline_run(summary))
+    if run_id:
+        summary["run_id"] = run_id
     exit_code = 0
     for step in plan(args.mode):
         item = run_step(step, env)
@@ -84,6 +134,8 @@ def main() -> int:
 
     summary["finished_at_epoch"] = int(time.time())
     summary["status"] = "succeeded" if exit_code == 0 else "failed"
+    if run_id:
+        asyncio.run(persist_pipeline_run(summary, run_id))
     out = ROOT / "docs" / "audits" / f"pipeline-{args.mode}-latest.json"
     out.parent.mkdir(parents=True, exist_ok=True)
     out.write_text(json.dumps(summary, indent=2), encoding="utf-8")

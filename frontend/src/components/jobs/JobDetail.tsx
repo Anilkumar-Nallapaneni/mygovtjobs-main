@@ -21,6 +21,9 @@ import {
 import RelatedJobs from "@/components/jobs/RelatedJobs";
 import JobDetailFaq from "@/components/jobs/JobDetailFaq";
 import ReportJobButton from "@/components/jobs/ReportJobButton";
+import BookmarkButton from "@/components/jobs/BookmarkButton";
+import JobComments from "@/components/jobs/JobComments";
+import AdSlot from "@/components/ads/AdSlot";
 import SocialAlertBar from "@/components/home/SocialAlertBar";
 import "@/styles/jobs.css";
 import {
@@ -304,8 +307,17 @@ export default function JobDetail({
       </dl>
 
       {job.id || job.slug ? (
-        <ReportJobButton jobId={String(job.id || job.slug)} jobTitle={view.title} />
+        <div style={{ display: 'flex', gap: 8, alignItems: 'center', flexWrap: 'wrap' }}>
+          <BookmarkButton
+            jobId={String(job.id || job.slug)}
+            jobSlug={String(job.slug || job.id || '')}
+          />
+          <ReportJobButton jobId={String(job.id || job.slug)} jobTitle={view.title} />
+        </div>
       ) : null}
+
+      <AdSlot slot="job-detail-mid" format="auto" />
+
 
       {translating ? (
         <p className="job-detail-translating" role="status">
@@ -485,6 +497,10 @@ export default function JobDetail({
         qualification={displayValue(view.qual, "—")}
         vacancies={view.vacancies}
       />
+
+      {job?.id && job?.slug ? (
+        <JobComments jobId={String(job.id)} jobSlug={String(job.slug)} />
+      ) : null}
 
       {job ? (
         <RelatedJobs

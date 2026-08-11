@@ -13,7 +13,6 @@ import { prefetchLiveJobsSnapshot, invalidateLiveJobsSnapshotPrefetch } from '@/
 import { warmLiveJobsCache, resetLiveJobsCacheForTests } from '@/hooks/useLiveJobs'
 import { STATES, toSvgStateId } from '@/data/states'
 import { warmStateMapCache } from '@/utils/mapUtils'
-import { resolveJobsSourceMode } from '@/utils/liveJobsPipeline'
 import { checkDeployVersionChanged, clearServiceWorkerDataCaches } from '@/lib/dataCacheBust'
 import { applyColorMode } from './theme/designSystem'
 import { initSentry } from '@/lib/sentry'
@@ -96,17 +95,14 @@ try {
   applyColorMode('bw')
 }
 
-const jobsSourceMode = resolveJobsSourceMode(import.meta.env.VITE_JOBS_SOURCE)
 const deployChanged = checkDeployVersionChanged()
 if (deployChanged) {
   invalidateLiveJobsSnapshotPrefetch()
   resetLiveJobsCacheForTests()
   void clearServiceWorkerDataCaches()
 }
-if (jobsSourceMode !== 'api') {
-  prefetchLiveJobsSnapshot()
-}
-warmLiveJobsCache(deployChanged || jobsSourceMode === 'static')
+prefetchLiveJobsSnapshot()
+warmLiveJobsCache(deployChanged)
 // State SVG warm is off critical path — map panel is below the fold / lazy.
 scheduleDeferredBoot(() => {
   warmStateMapCache(STATES.map((s) => toSvgStateId(s.id)))

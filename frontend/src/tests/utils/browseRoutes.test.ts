@@ -70,12 +70,14 @@ describe("browseRoutes", () => {
     expect(q.professionSlug).toBe("medical");
     expect(q.viewMode).toBe("simple");
     expect(q.showExpiring).toBe(true);
+    expect(q.deadlineWindow).toBe('week');
     expect(q.sort).toBe("expiringSoon");
     expect(buildLatestNotifUrl({ stateId: "up", professionSlug: "medical" })).toBe(
       "/jobs/latest-notifications?state=up&profession=medical"
     );
     expect(parseLatestNotifQuery("?state=tr").stateId).toBe("tr");
     expect(parseLatestNotifQuery("?filter=graduate").quickFilter).toBe("graduate");
+    expect(parseLatestNotifQuery("?section=closing-today").deadlineWindow).toBe("today");
   });
 
   it("detects bare /jobs URLs that should return home on refresh", () => {

@@ -17,7 +17,6 @@ import {
   MAX_LIVE_ROWS,
   processLiveJobPayload,
   processLiveJobPayloadAsync,
-  resolveJobsSourceMode,
   sourceOrder,
   type JobsSourceMode,
 } from '@/utils/liveJobsPipeline'
@@ -27,26 +26,13 @@ const JSON_CAP = 8000
 const DEMO_SLUG_PREFIX = /^demo-/
 const API_PAGE = 1000
 
-/** Real users: short idle after load. Lab (Lighthouse/PSI): long defer to protect TBT. */
-const REAL_USER_IDLE_TIMEOUT_MS = 2_000
-const REAL_USER_FALLBACK_MS = 1_500
-const LAB_IDLE_TIMEOUT_MS = 12_000
-const LAB_FALLBACK_MS = 8_000
-const LAB_ARM_DELAY_MS = 25_000
-
-const LAB_UA_RE = /Lighthouse|PageSpeed|Chrome-Lighthouse|PTST|GTmetrix/i
-
-/** True for automated lab browsers — keep heavy catalog work out of the audit window. */
-export function isLabBrowser(nav: Pick<Navigator, 'webdriver' | 'userAgent'> = navigator): boolean {
-  if (nav.webdriver) return true
-  return LAB_UA_RE.test(nav.userAgent || '')
-}
+const CATALOG_IDLE_TIMEOUT_MS = 2_000
+const CATALOG_FALLBACK_MS = 1_500
 
 /**
  * Defer heavy catalog work until real user intent or short idle.
- * Intentionally omits `scroll` — Lighthouse scrolls during audits and that was
- * pulling ~3 MB list JSON / Supabase refresh into the lab TBT window.
- * Lab browsers still get a long defer; real users hydrate within ~2s after load.
+ * The same behavior is used for real users and automated measurement so performance
+ * reports describe the product users actually receive.
  */
 export function scheduleAfterFirstPaint(fn: () => void): void {
   if (typeof window === 'undefined') {
@@ -77,21 +63,19 @@ export function scheduleAfterFirstPaint(fn: () => void): void {
     window.addEventListener(event, onInteract, { once: true, passive: true, capture: true })
   }
 
-  const lab = isLabBrowser()
   const startFallback = () => {
     if (typeof requestIdleCallback === 'function') {
       requestIdleCallback(() => run(), {
-        timeout: lab ? LAB_IDLE_TIMEOUT_MS : REAL_USER_IDLE_TIMEOUT_MS,
+        timeout: CATALOG_IDLE_TIMEOUT_MS,
       })
       return
     }
-    window.setTimeout(run, lab ? LAB_FALLBACK_MS : REAL_USER_FALLBACK_MS)
+    window.setTimeout(run, CATALOG_FALLBACK_MS)
   }
 
   let fallbackTimer = 0
   const armFallback = () => {
-    // Lab: wait past typical audit windows. Real users: idle immediately after load.
-    fallbackTimer = window.setTimeout(startFallback, lab ? LAB_ARM_DELAY_MS : 0)
+    fallbackTimer = window.setTimeout(startFallback, 0)
   }
 
   if (document.readyState === 'complete') {
@@ -112,7 +96,9 @@ export type LiveJobsCatalogResult = {
 }
 
 export function getJobsSourceMode(): JobsSourceMode {
-  return resolveJobsSourceMode(import.meta.env.VITE_JOBS_SOURCE)
+  // Public browse pages have one canonical source: the versioned CDN snapshot.
+  // API/Supabase remain available for focused search, details, accounts and admin.
+  return 'static'
 }
 
 export function liveJobsQueryKey(source: JobsSourceMode, refetchGeneration = 0) {

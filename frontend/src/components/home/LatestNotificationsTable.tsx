@@ -213,9 +213,10 @@ export default function LatestNotificationsTable({
         categoryId: query.categoryId,
         professionSlug: query.professionSlug,
         quickFilter: query.quickFilter,
-        expiringOnly: query.showExpiring,
+        expiringOnly: query.deadlineWindow !== 'all',
+        expiringWithinDays: query.deadlineWindow === 'today' ? 0 : 7,
       }),
-    [jobs, query.stateId, query.categoryId, query.professionSlug, query.quickFilter, query.showExpiring]
+    [jobs, query.stateId, query.categoryId, query.professionSlug, query.quickFilter, query.deadlineWindow]
   )
 
   const { items, stateGroups, sectorGroups, total, vacancyTotal } = useMemo(
@@ -283,6 +284,23 @@ export default function LatestNotificationsTable({
 
   return (
     <div className="latest-notif">
+      <div className="latest-notif__view-toggle" role="group" aria-label={t('latestNotif.deadlineWindow', { defaultValue: 'Closing date' })}>
+        {(['all', 'today', 'week'] as const).map((window) => (
+          <button
+            key={window}
+            type="button"
+            className={`latest-notif__view-btn${query.deadlineWindow === window ? ' latest-notif__view-btn--active' : ''}`}
+            aria-pressed={query.deadlineWindow === window}
+            onClick={() => onQueryChange({ deadlineWindow: window, showExpiring: window !== 'all' })}
+          >
+            {window === 'all'
+              ? t('latestNotif.allDeadlines', { defaultValue: 'All open jobs' })
+              : window === 'today'
+                ? t('latestNotif.closingToday', { defaultValue: 'Closing Today' })
+                : t('latestNotif.closingWeek', { defaultValue: 'Closing This Week' })}
+          </button>
+        ))}
+      </div>
       {onViewModeChange ? (
         <div className="latest-notif__view-toggle" role="group" aria-label={t('latestNotif.viewMode')}>
           <button
@@ -372,11 +390,11 @@ export default function LatestNotificationsTable({
             <ExpiringSoonPanel rows={expiringRows} locale={locale} onRowClick={handleRowClick} t={t} />
           ) : null}
 
-          {query.showExpiring && items.length > 0 ? (
+          {query.deadlineWindow !== 'all' && items.length > 0 ? (
             <ExpiringSoonPanel rows={items} locale={locale} onRowClick={handleRowClick} t={t} />
           ) : null}
 
-          {!query.showExpiring && filteredStateGroups.length > 0 ? (
+          {query.deadlineWindow === 'all' && filteredStateGroups.length > 0 ? (
             <StateWiseTable
               stateGroups={filteredStateGroups}
               locale={locale}
@@ -385,7 +403,7 @@ export default function LatestNotificationsTable({
             />
           ) : null}
 
-          {!query.showExpiring && filteredSectorGroups.length > 0 ? (
+          {query.deadlineWindow === 'all' && filteredSectorGroups.length > 0 ? (
             <CategoryWiseTable
               sectorGroups={filteredSectorGroups}
               locale={locale}
@@ -394,7 +412,7 @@ export default function LatestNotificationsTable({
             />
           ) : null}
 
-          {!query.showExpiring && total === 0 ? <LatestNotificationsFilteredEmptyState t={t} /> : null}
+          {query.deadlineWindow === 'all' && total === 0 ? <LatestNotificationsFilteredEmptyState t={t} /> : null}
         </>
       )}
 
@@ -418,6 +436,7 @@ export default function LatestNotificationsTable({
               onClick={() =>
                 onQueryChange({
                   showExpiring: !query.showExpiring,
+                  deadlineWindow: query.showExpiring ? 'all' : 'week',
                   stateId: null,
                   categoryId: null,
                   professionSlug: null,

@@ -1,3 +1,4 @@
+@layer jobs {
 /* ========== JobCard ========== */
 /* Job card — equal-height grid tiles with flex layout */
 
@@ -2082,4 +2083,5 @@
   .job-detail-title {
     font-size: 18px;
   }
+}
 }

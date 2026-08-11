@@ -1,3 +1,4 @@
+@layer map {
 /* ========== IndiaMap ========== */
 /* Wrapper: use full width of parent; map scales with container */
 .india-map-container {
@@ -126,4 +127,5 @@
   .india-map-container {
     max-width: 100%;
   }
+}
 }

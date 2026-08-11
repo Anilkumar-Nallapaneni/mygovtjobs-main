@@ -1,3 +1,4 @@
+@layer polish {
 /* Site-wide motion — mobile tap feedback, list entrances, map polish */
 
 /* ----- Keyframes ----- */
@@ -314,4 +315,5 @@ html[data-standalone] .navbar {
   .india-map-container path {
     transition: fill 0.01ms ease;
   }
+}
 }

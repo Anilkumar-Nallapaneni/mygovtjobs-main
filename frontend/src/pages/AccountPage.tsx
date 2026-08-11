@@ -14,7 +14,7 @@ type AccountPageProps = {
 
 export default function AccountPage({ onFooterLink }: AccountPageProps) {
   const { t, i18n } = useTranslation()
-  const { configured, loading, user, profile, session, signInWithEmail, signOut, updateProfile, reloadProfile } = useAuth()
+  const { configured, loading, user, profile, session, signInWithEmail, signInWithGoogle, signOut, updateProfile, reloadProfile } = useAuth()
   const [email, setEmail] = useState('')
   const [status, setStatus] = useState<string | null>(null)
   const [error, setError] = useState<string | null>(null)
@@ -104,6 +104,27 @@ export default function AccountPage({ onFooterLink }: AccountPageProps) {
             {t('account.sendMagicLink', { defaultValue: 'Send magic link' })}
           </button>
         </form>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 12, margin: '16px 0' }}>
+          <div style={{ flex: 1, height: 1, background: 'rgba(0,0,0,0.1)' }} />
+          <span style={{ color: 'var(--ds-muted)', fontSize: 12 }}>
+            {t('account.or', { defaultValue: 'or' })}
+          </span>
+          <div style={{ flex: 1, height: 1, background: 'rgba(0,0,0,0.1)' }} />
+        </div>
+        <button
+          type="button"
+          className="account-form__submit"
+          style={{ background: 'white', color: '#1c1c1e', border: '1px solid rgba(0,0,0,0.15)' }}
+          onClick={async () => {
+            setError(null)
+            const res = await signInWithGoogle()
+            if (!res.ok) {
+              setError(t('account.googleFailed', { defaultValue: 'Google sign-in failed. Ensure Google provider is enabled in Supabase.' }))
+            }
+          }}
+        >
+          {t('account.continueWithGoogle', { defaultValue: 'Continue with Google' })}
+        </button>
         {status && <p className="account-page__status" role="status">{status}</p>}
         {error && <p className="account-page__error" role="alert">{error}</p>}
         <Footer onFooterLink={onFooterLink} />

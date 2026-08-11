@@ -12,6 +12,7 @@ import { resolveOfficialApplyHref } from "@/utils/officialDomains";
 import { resolveJobApplyHref } from "@/utils/jobDetailLinks";
 import { dateTimeLocale, numberLocale } from "@/utils/formatLocale";
 import { extractPostName } from "@/utils/extractPostName";
+import BookmarkButton from "@/components/jobs/BookmarkButton";
 import "@/styles/jobs.css";
 
 const DAY_MS = 1000 * 60 * 60 * 24;
@@ -269,6 +270,13 @@ function JobCard({
             </Tag>
           );
         })}
+        {(job?.id || job?.slug) && (
+          <BookmarkButton
+            jobId={String(job.id || job.slug)}
+            jobSlug={String(job.slug || job.id || '')}
+            compact
+          />
+        )}
       </div>
       </div>
     </article>

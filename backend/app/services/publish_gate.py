@@ -18,6 +18,7 @@ from app.utils.official_hosts import is_official_recruitment_host
 
 INDIA_TZ = ZoneInfo("Asia/Kolkata")
 AUTO_PUBLISH_MIN_CONFIDENCE = 90.0
+PUBLIC_VERIFICATION_STATUSES = ("VERIFIED", "PARTIALLY_VERIFIED")
 
 
 @dataclass(frozen=True)

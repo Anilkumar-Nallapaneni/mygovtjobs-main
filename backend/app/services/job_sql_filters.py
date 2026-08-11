@@ -3,6 +3,8 @@
 from sqlalchemy import Date, and_, cast, func, not_, or_
 
 from app.models.job import Job
+from app.services.job_completeness_service import PUBLISH_MIN_SCORE
+from app.services.publish_gate import AUTO_PUBLISH_MIN_CONFIDENCE, PUBLIC_VERIFICATION_STATUSES
 
 # Postgres ~* case-insensitive regex (subset of noise_filter.py — catches bulk junk in SQL).
 _TENDER_TITLE_RE = r"(e-?tenders?|procurement|quotations?|\brfp\b|bid\s+invit|notice\s+tender|vendor\s+for)"
@@ -75,9 +77,9 @@ def apply_recruitment_filters(stmt):
             *recruitment_sql_filters(),
             Job.document_type == "RECRUITMENT",
             Job.published_to_site.is_(True),
-            Job.verification_status.in_(("VERIFIED", "PARTIALLY_VERIFIED")),
-            Job.completeness_score >= 70,
-            Job.publication_confidence >= 90,
+            Job.verification_status.in_(PUBLIC_VERIFICATION_STATUSES),
+            Job.completeness_score >= PUBLISH_MIN_SCORE,
+            Job.publication_confidence >= AUTO_PUBLISH_MIN_CONFIDENCE,
             active_or_archive,
         )
     )

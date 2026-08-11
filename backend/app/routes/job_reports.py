@@ -64,3 +64,25 @@ async def create_job_report(request: Request, body: JobReportCreate):
         await session.commit()
 
     return {"id": str(row), "status": "open"}
+
+
+@router.get("/{report_id}")
+async def get_job_report_status(report_id: str):
+    """Return only non-sensitive tracking fields for a submitted report."""
+    async with SessionLocal() as session:
+        row = (
+            await session.execute(
+                text(
+                    """
+                    SELECT id, status, created_at
+                    FROM job_reports
+                    WHERE id::text = :report_id
+                    LIMIT 1
+                    """
+                ),
+                {"report_id": report_id},
+            )
+        ).mappings().first()
+    if not row:
+        raise HTTPException(status_code=404, detail="Report not found")
+    return {"id": str(row["id"]), "status": row["status"], "created_at": row["created_at"]}

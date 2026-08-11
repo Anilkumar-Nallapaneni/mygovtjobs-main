@@ -45,7 +45,12 @@ export function useWebPushToken() {
         return
       }
       try {
-        const reg = await navigator.serviceWorker.ready
+        let reg: Awaited<ReturnType<typeof navigator.serviceWorker.register>>
+        try {
+          reg = await navigator.serviceWorker.register('/push-sw.js', { scope: '/push/' })
+        } catch {
+          reg = await navigator.serviceWorker.ready
+        }
         let sub = await reg.pushManager.getSubscription()
         if (!sub) {
           sub = await reg.pushManager.subscribe({

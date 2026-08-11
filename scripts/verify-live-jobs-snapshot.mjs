@@ -4,16 +4,36 @@
  * Used by deploy:verify and frontend build.
  */
 import { existsSync, readFileSync } from 'fs'
+import { execFileSync } from 'child_process'
 import { join, dirname } from 'path'
 import { fileURLToPath } from 'url'
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..')
 const fullPath = join(root, 'frontend/public/data/live-jobs.json')
 const listPath = join(root, 'frontend/public/data/live-jobs-list.json')
+const SNAPSHOT_REPO_PATH = 'frontend/public/data/live-jobs.json'
+const MAX_ROLLING_DROP_RATE = Number(process.env.MAX_CATALOG_DROP_RATE || 0.35)
+// Conservative bootstrap floor; the rolling comparison becomes the stronger guard
+// after the first conflict-free snapshot is committed. Production may raise this via CI.
+const MIN_PUBLIC_CATALOG_ROWS = Number(process.env.MIN_PUBLIC_CATALOG_ROWS || 10)
 
 function readJson(path) {
   try {
     return JSON.parse(readFileSync(path, 'utf8'))
+  } catch {
+    return null
+  }
+}
+
+function previousCommittedCount() {
+  try {
+    const raw = execFileSync('git', ['show', `HEAD^:${SNAPSHOT_REPO_PATH}`], {
+      cwd: root,
+      encoding: 'utf8',
+      stdio: ['ignore', 'pipe', 'ignore'],
+    })
+    const payload = JSON.parse(raw)
+    return Array.isArray(payload?.items) ? payload.items.length : null
   } catch {
     return null
   }
@@ -106,6 +126,19 @@ export function verifyLiveJobsSnapshot({ strict = false } = {}) {
   }
 
   const fullVac = vacancySum(fullItems)
+  const previousCount = previousCommittedCount()
+  if (fullItems.length < MIN_PUBLIC_CATALOG_ROWS) {
+    issues.push(`catalog has ${fullItems.length} rows; minimum release floor is ${MIN_PUBLIC_CATALOG_ROWS}`)
+  }
+  if (previousCount && previousCount >= MIN_PUBLIC_CATALOG_ROWS) {
+    const minimumRollingCount = Math.floor(previousCount * (1 - MAX_ROLLING_DROP_RATE))
+    if (fullItems.length < minimumRollingCount) {
+      issues.push(
+        `catalog dropped ${(100 * (1 - fullItems.length / previousCount)).toFixed(1)}% ` +
+        `(${previousCount} → ${fullItems.length}); allowed rolling drop is ${(MAX_ROLLING_DROP_RATE * 100).toFixed(0)}%`
+      )
+    }
+  }
   const vacRate = fullVac.withVac / fullVac.total
   const todayIndia = indiaDateIso()
   const htmlTitles = fullItems.filter((row) => HTML_TAG_RE.test(String(row?.title || '')))

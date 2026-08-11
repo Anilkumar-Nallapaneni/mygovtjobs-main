@@ -34,30 +34,49 @@ export function jobMatchesHeroStatFilter(job: JobRecord, statKey: string) {
   }
 }
 
+function sponsoredScore(x: JobRecord): number {
+  return (x as { is_sponsored?: boolean; isSponsored?: boolean }).is_sponsored ||
+    (x as { isSponsored?: boolean }).isSponsored
+    ? 0
+    : 1
+}
+
+function withSponsoredBoost(cmp: (a: JobRecord, b: JobRecord) => number) {
+  return (a: JobRecord, b: JobRecord) => {
+    const s = sponsoredScore(a) - sponsoredScore(b)
+    if (s !== 0) return s
+    return cmp(a, b)
+  }
+}
+
 function sortJobs(j: JobRecord[], sort: HomeSortKey) {
   if (sort === 'vacancies') {
-    j.sort((a, b) => (Number(b.vacancies) || 0) - (Number(a.vacancies) || 0))
+    j.sort(withSponsoredBoost((a, b) => (Number(b.vacancies) || 0) - (Number(a.vacancies) || 0)))
     return
   }
   if (sort === 'expiringSoon') {
-    j.sort((a, b) => {
-      const aExpired = a.status === 'expired' ? 1 : 0
-      const bExpired = b.status === 'expired' ? 1 : 0
-      if (aExpired !== bExpired) return aExpired - bExpired
-      const aSoon = isExpiringSoonJob(a) ? 0 : 1
-      const bSoon = isExpiringSoonJob(b) ? 0 : 1
-      if (aSoon !== bSoon) return aSoon - bSoon
-      return new Date(String(a.lastDate)).getTime() - new Date(String(b.lastDate)).getTime()
-    })
+    j.sort(
+      withSponsoredBoost((a, b) => {
+        const aExpired = a.status === 'expired' ? 1 : 0
+        const bExpired = b.status === 'expired' ? 1 : 0
+        if (aExpired !== bExpired) return aExpired - bExpired
+        const aSoon = isExpiringSoonJob(a) ? 0 : 1
+        const bSoon = isExpiringSoonJob(b) ? 0 : 1
+        if (aSoon !== bSoon) return aSoon - bSoon
+        return new Date(String(a.lastDate)).getTime() - new Date(String(b.lastDate)).getTime()
+      })
+    )
     return
   }
   if (sort === 'lastDate') {
-    j.sort((a, b) => {
-      const aExpired = a.status === 'expired' ? 1 : 0
-      const bExpired = b.status === 'expired' ? 1 : 0
-      if (aExpired !== bExpired) return aExpired - bExpired
-      return new Date(String(a.lastDate)).getTime() - new Date(String(b.lastDate)).getTime()
-    })
+    j.sort(
+      withSponsoredBoost((a, b) => {
+        const aExpired = a.status === 'expired' ? 1 : 0
+        const bExpired = b.status === 'expired' ? 1 : 0
+        if (aExpired !== bExpired) return aExpired - bExpired
+        return new Date(String(a.lastDate)).getTime() - new Date(String(b.lastDate)).getTime()
+      })
+    )
   }
 }
 

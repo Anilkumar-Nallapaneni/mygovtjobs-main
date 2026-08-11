@@ -29,8 +29,10 @@ jobs:
           cache: npm
           cache-dependency-path: package-lock.json
       - run: npm ci
+      - run: npm run check:frontend
       - run: npm run env:check
       - run: npm run type-check --prefix frontend
+      - run: npm run type-check:strict --prefix frontend
       - run: npm run lint --prefix frontend
       - name: Unit tests (fast)
         if: github.event_name == 'pull_request'
@@ -40,6 +42,8 @@ jobs:
         run: npm run test:coverage --prefix frontend
       - name: Production build
         run: npm run build --prefix frontend
+      - name: Performance budgets
+        run: npm run check:performance-budgets
 
   e2e:
     runs-on: ubuntu-latest
@@ -96,6 +100,9 @@ jobs:
           cache-dependency-path: package-lock.json
       - run: npm ci
       - name: Public snapshot publication invariants
+        env:
+          MIN_PUBLIC_CATALOG_ROWS: "10"
+          MAX_CATALOG_DROP_RATE: "0.35"
         run: npm run verify:live-jobs
       - name: Job quality audit (strict thresholds)
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'

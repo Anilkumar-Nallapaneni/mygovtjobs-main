@@ -65,6 +65,7 @@ export type LatestNotifQuery = {
   sort: LatestNotifSortKey;
   viewMode: "simple" | "detailed";
   showExpiring: boolean;
+  deadlineWindow: "all" | "today" | "week";
 };
 
 const VALID_HERO = new Set<string>(HERO_STAT_FILTER_KEYS);
@@ -307,7 +308,9 @@ export function parseLatestNotifQuery(search: string): LatestNotifQuery {
     quickFilter: filter?.trim() || null,
     sort: VALID_LATEST_SORT.has(sortRaw || "") ? (sortRaw as LatestNotifSortKey) : "newest",
     viewMode: view === "simple" ? "simple" : "detailed",
-    showExpiring: section === "expiring",
+    showExpiring: section === "expiring" || section === "closing-today" || section === "closing-week",
+    deadlineWindow:
+      section === "closing-today" ? "today" : section === "closing-week" || section === "expiring" ? "week" : "all",
   };
 }
 
@@ -320,7 +323,8 @@ export function buildLatestNotifQuery(opts: Partial<LatestNotifQuery>): string {
   if (opts.quickFilter) params.set("filter", opts.quickFilter);
   if (opts.sort && opts.sort !== "newest") params.set("sort", opts.sort);
   if (opts.viewMode === "simple") params.set("view", "simple");
-  if (opts.showExpiring) params.set("section", "expiring");
+  if (opts.deadlineWindow === "today") params.set("section", "closing-today");
+  else if (opts.deadlineWindow === "week" || opts.showExpiring) params.set("section", "closing-week");
   const qs = params.toString();
   return qs ? `?${qs}` : "";
 }

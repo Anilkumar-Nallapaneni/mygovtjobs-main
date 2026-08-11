@@ -65,9 +65,13 @@ export default function ReportJobButton({ jobId, jobTitle }: ReportJobButtonProp
         console.warn('[jobReport] submit failed', res.status, text.slice(0, 200))
         throw new Error('SUBMIT_FAILED')
       }
+      const result = (await res.json()) as { id?: string; status?: string }
+      const reference = result.id ? result.id.slice(0, 8) : 'pending'
       setMessage(
-        t('jobReport.success', {
-          defaultValue: 'Thank you — we will review this listing.',
+        t('jobReport.successTracked', {
+          status: result.status || 'open',
+          reference,
+          defaultValue: `Report received · Status: ${result.status || 'open'} · Reference: ${reference}`,
         })
       )
       setOpen(false)

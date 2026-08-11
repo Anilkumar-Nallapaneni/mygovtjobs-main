@@ -67,6 +67,7 @@ export type LatestNotifJobFilter = {
   professionSlug?: string | null
   quickFilter?: string | null
   expiringOnly?: boolean
+  expiringWithinDays?: number
 }
 
 export function isExpiringSoonJob(job: JobRecord, withinDays = EXPIRING_SOON_DAYS): boolean {
@@ -85,6 +86,7 @@ export function filterLatestNotificationJobs(
     professionSlug = null,
     quickFilter = null,
     expiringOnly = false,
+    expiringWithinDays = EXPIRING_SOON_DAYS,
   }: LatestNotifJobFilter
 ): JobRecord[] {
   let rows = jobs.filter((job) => !isJobExpired(job))
@@ -112,7 +114,7 @@ export function filterLatestNotificationJobs(
   }
 
   if (expiringOnly) {
-    rows = rows.filter((job) => isExpiringSoonJob(job))
+    rows = rows.filter((job) => isExpiringSoonJob(job, expiringWithinDays))
   }
 
   return rows

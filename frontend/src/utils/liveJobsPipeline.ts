@@ -3,6 +3,7 @@ import { isJobExpired } from '@/utils/jobFilters'
 import { isPortalNoiseJob } from '@/utils/jobNoiseFilter'
 import { isAllowedOfficialJob, rowHasBlockedHost } from '@/utils/officialDomains'
 import type { JobRecord } from '@/types/job'
+import { hasPublicationMetadata, meetsPublicJobPolicy } from '@/utils/publicJobPolicy'
 
 const RECRUIT_RE =
   /recruit|vacanc|notif|advert|exam|bharti|apply|post|constable|group[\s-]*[i1-4]|cgl|ntpc|psc|ssc|upsc|railway|bank|police|teacher|defence|apprentice|walk-?in|selection|appointment|fellowship|intern|project\s+staff|ldc|udc|mts|technician|nurse|medical|faculty|professor|lecturer|manager|staff|opening|hire|engagement|advt|bharti/i
@@ -49,15 +50,7 @@ export function isUsefulLiveRow(row: Record<string, unknown>) {
   const status = String(row?.status || '').toLowerCase()
   if (status === 'draft' || status === 'pending') return false
 
-  // Publish gate (when fields are present on the row / export).
-  const publishedFlag = row?.published_to_site ?? row?.publishedToSite
-  if (publishedFlag === false) return false
-  const verification = String(row?.verification_status || row?.verificationStatus || '').toUpperCase()
-  if (verification === 'REJECTED' || verification === 'NEEDS_REVIEW') return false
-  const docType = String(row?.document_type || row?.documentType || '').toUpperCase()
-  if (docType && !['RECRUITMENT', 'UNKNOWN', ''].includes(docType)) return false
-  const completeness = row?.completeness_score ?? row?.completenessScore
-  if (typeof completeness === 'number' && completeness > 0 && completeness < 70) return false
+  if (hasPublicationMetadata(row) && !meetsPublicJobPolicy(row)) return false
 
   if (vacancyCount(row) > 0) return true
   if (RECRUIT_RE.test(title) || RECRUIT_RE.test(String(row?.dept || ''))) return true

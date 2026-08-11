@@ -20,6 +20,7 @@
     "build:e2e": "node scripts/build-e2e.mjs",
     "serve": "vite preview",
     "type-check": "tsc --noEmit",
+    "type-check:strict": "tsc --noEmit -p tsconfig.strict.json",
     "lint": "eslint src --max-warnings 0",
     "test": "vitest run",
     "test:coverage": "vitest run --coverage",

@@ -44,3 +44,29 @@ services:
         sync: false
       - key: RAZORPAY_WEBHOOK_SECRET
         sync: false
+      - key: RESEND_API_KEY
+        sync: false
+      - key: ALERT_FROM_EMAIL
+        value: alerts@livegovtjobs.com
+      - key: PUSH_WEBHOOK_URL
+        sync: false
+      - key: TWILIO_ACCOUNT_SID
+        sync: false
+      - key: TWILIO_AUTH_TOKEN
+        sync: false
+      - key: TWILIO_WHATSAPP_FROM
+        sync: false
+      - key: TELEGRAM_BOT_TOKEN
+        sync: false
+      - key: TURNSTILE_SECRET_KEY
+        sync: false
+      - key: REDIS_URL
+        sync: false
+      - key: SENTRY_DSN
+        sync: false
+
+  # Optional: managed Redis for rate limiting (uncomment to provision on Render)
+  # - type: keyvalue
+  #   name: mygovtjobs-redis
+  #   plan: free
+  #   ipAllowList: []

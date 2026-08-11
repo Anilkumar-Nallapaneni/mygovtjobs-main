@@ -20,6 +20,7 @@ type AuthState = {
 
 export function useAuth(): AuthState & {
   signInWithEmail: (email: string) => Promise<{ ok: boolean; error?: string }>
+  signInWithGoogle: () => Promise<{ ok: boolean; error?: string }>
   signOut: () => Promise<void>
   updateProfile: (patch: Partial<Pick<UserProfile, 'display_name' | 'preferred_language' | 'favorite_state_codes'>>) => Promise<{ ok: boolean; error?: string }>
   reloadProfile: () => Promise<void>
@@ -105,6 +106,23 @@ export function useAuth(): AuthState & {
     return { ok: true as const }
   }, [])
 
+  const signInWithGoogle = useCallback(async () => {
+    const supabase = await getSupabase()
+    if (!supabase) {
+      console.warn('[useAuth] Google sign-in unavailable — auth not configured')
+      return { ok: false as const, error: 'unavailable' }
+    }
+    const { error } = await supabase.auth.signInWithOAuth({
+      provider: 'google',
+      options: { redirectTo: `${window.location.origin}/account` },
+    })
+    if (error) {
+      console.warn('[useAuth] signInWithOAuth(google) failed', error.message)
+      return { ok: false as const, error: 'failed' }
+    }
+    return { ok: true as const }
+  }, [])
+
   const signOut = useCallback(async () => {
     const supabase = await getSupabase()
     if (!supabase) return
@@ -144,6 +162,7 @@ export function useAuth(): AuthState & {
     loading,
     configured,
     signInWithEmail,
+    signInWithGoogle,
     signOut,
     updateProfile,
     reloadProfile,

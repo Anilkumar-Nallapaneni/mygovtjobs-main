@@ -63,6 +63,13 @@ const FaqPage = lazy(() => import("@/pages/FaqPage"));
 const ContactPage = lazy(() => import("@/pages/ContactPage"));
 const SitemapPage = lazy(() => import("@/pages/SitemapPage"));
 const AccountPage = lazy(() => import("@/pages/AccountPage"));
+const BookmarksPage = lazy(() => import("@/pages/BookmarksPage"));
+const AdmissionHubPage = lazy(() => import("@/pages/AdmissionHubPage"));
+const ScholarshipsHubPage = lazy(() => import("@/pages/ScholarshipsHubPage"));
+const YojanaHubPage = lazy(() => import("@/pages/YojanaHubPage"));
+const ResultsHubPage = lazy(() => import("@/pages/ResultsHubPage"));
+const DesignationLandingPage = lazy(() => import("@/pages/DesignationLandingPage"));
+const DesignationsIndexPage = lazy(() => import("@/pages/DesignationsIndexPage"));
 const AdminDashboardPage = lazy(() => import("@/pages/AdminDashboardPage"));
 const NotFoundPage = lazy(() => import("@/pages/NotFoundPage"));
 
@@ -367,6 +374,116 @@ export default function AppRoutes({
         element={
           <LazyRoute>
             <AccountPage onFooterLink={onFooterLink} />
+          </LazyRoute>
+        }
+      />
+      <Route
+        path="/account/bookmarks"
+        element={
+          <LazyRoute>
+            <BookmarksPage
+              jobs={jobs}
+              jobsLoading={jobsLoading}
+              onJobClick={onJobClick}
+              onFooterLink={onFooterLink}
+            />
+          </LazyRoute>
+        }
+      />
+      <Route
+        path="/admission"
+        element={
+          <LazyRoute>
+            <AdmissionHubPage onFooterLink={onFooterLink} />
+          </LazyRoute>
+        }
+      />
+      <Route
+        path="/scholarships"
+        element={
+          <LazyRoute>
+            <ScholarshipsHubPage onFooterLink={onFooterLink} />
+          </LazyRoute>
+        }
+      />
+      <Route
+        path="/yojana"
+        element={
+          <LazyRoute>
+            <YojanaHubPage onFooterLink={onFooterLink} />
+          </LazyRoute>
+        }
+      />
+      <Route
+        path="/latest-results"
+        element={
+          <LazyRoute>
+            <ResultsHubPage
+              eventType="result"
+              pageTitle="Latest Government Job Results"
+              lead="Auto-detected results across UPSC, SSC, PSC, banks, railways, PSU and state departments."
+              onFooterLink={onFooterLink}
+            />
+          </LazyRoute>
+        }
+      />
+      <Route
+        path="/admit-cards"
+        element={
+          <LazyRoute>
+            <ResultsHubPage
+              eventType="admit_card"
+              pageTitle="Admit Cards & Hall Tickets"
+              lead="Download official admit cards from all major recruitment boards."
+              onFooterLink={onFooterLink}
+            />
+          </LazyRoute>
+        }
+      />
+      <Route
+        path="/answer-keys"
+        element={
+          <LazyRoute>
+            <ResultsHubPage
+              eventType="answer_key"
+              pageTitle="Answer Keys"
+              lead="Official answer keys released after exam."
+              onFooterLink={onFooterLink}
+            />
+          </LazyRoute>
+        }
+      />
+      <Route
+        path="/upcoming-exams"
+        element={
+          <LazyRoute>
+            <ResultsHubPage
+              eventType="exam_date"
+              pageTitle="Upcoming Exam Dates"
+              lead="Announced exam dates across active recruitment cycles."
+              onFooterLink={onFooterLink}
+            />
+          </LazyRoute>
+        }
+      />
+      <Route
+        path="/designations"
+        element={
+          <LazyRoute>
+            <DesignationsIndexPage onFooterLink={onFooterLink} />
+          </LazyRoute>
+        }
+      />
+      <Route
+        path="/designation/:slug"
+        element={
+          <LazyRoute>
+            <DesignationLandingPage
+              jobs={jobs}
+              jobsLoading={jobsLoading}
+              onJobClick={onJobClick}
+              onFooterLink={onFooterLink}
+            />
           </LazyRoute>
         }
       />

@@ -1,3 +1,4 @@
+@layer polish {
 /* Site-wide UI polish — layout, motion, mobile, and page refinements */
 
 /* ----- Global feel ----- */
@@ -544,4 +545,5 @@
   .alerts-page__hero {
     padding: 16px 14px;
   }
+}
 }

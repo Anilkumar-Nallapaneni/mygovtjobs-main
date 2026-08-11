@@ -110,28 +110,18 @@ describe('useLiveJobs', () => {
     expect(() => result.current.refresh()).not.toThrow()
   })
 
-  it('loads jobs from API when VITE_JOBS_SOURCE=api', async () => {
+  it('keeps the public browse catalog on the CDN snapshot regardless of legacy source env', async () => {
+    const { fetchLiveJobsSnapshot, fetchJobsFromApi } = await import('@/lib/jobsApi')
     vi.stubEnv('VITE_JOBS_SOURCE', 'api')
-    vi.resetModules()
-    const jobsApi = await import('@/lib/jobsApi')
-    vi.mocked(jobsApi.fetchJobsFromApi).mockResolvedValue({
+    vi.mocked(fetchLiveJobsSnapshot).mockResolvedValueOnce({
       items: [mockJob],
-      total: 1,
-      degraded: false,
+      generatedAt: '2026-06-11',
+      dailySync: null,
     })
-    const { resetLiveJobsCacheForTests, useLiveJobs } = await import('@/hooks/useLiveJobs')
-    resetLiveJobsCacheForTests()
-
-    const { result, unmount } = renderHook(() => useLiveJobs(), { wrapper })
-
-    await waitFor(() => {
-      expect(result.current.loading).toBe(false)
-    })
-
-    expect(jobsApi.fetchJobsFromApi).toHaveBeenCalled()
-    expect(result.current.sources).toContain('api')
-    unmount()
-    vi.resetModules()
+    const { result } = renderHook(() => useLiveJobs(), { wrapper })
+    await waitFor(() => expect(result.current.loading).toBe(false))
+    expect(result.current.sources).toContain('official-sites')
+    expect(fetchJobsFromApi).not.toHaveBeenCalled()
   })
 
   it('uses cached rows on subsequent mounts', async () => {
@@ -196,34 +186,6 @@ describe('useLiveJobs', () => {
     expect(result.current.sources).toContain('official-sites')
   })
 
-  it('reports degraded API as error state in auto mode', async () => {
-    vi.stubEnv('VITE_JOBS_SOURCE', 'auto')
-    vi.resetModules()
-    const jobsApi = await import('@/lib/jobsApi')
-    vi.mocked(jobsApi.fetchLiveJobsSnapshot).mockResolvedValue({
-      items: [],
-      generatedAt: null,
-      dailySync: null,
-    })
-    vi.mocked(jobsApi.fetchJobsFromApi).mockResolvedValue({
-      items: [],
-      total: 0,
-      degraded: true,
-    })
-    const { resetLiveJobsCacheForTests, useLiveJobs } = await import('@/hooks/useLiveJobs')
-    resetLiveJobsCacheForTests()
-
-    const { result, unmount } = renderHook(() => useLiveJobs(), { wrapper })
-
-    await waitFor(() => {
-      expect(result.current.loading).toBe(false)
-    })
-
-    expect(result.current.hasBackend).toBe(false)
-    expect(String(result.current.error || '')).toMatch(/unavailable/i)
-    unmount()
-    vi.resetModules()
-  })
 
   it('warmLiveJobsCache primes shared payload', async () => {
     const { fetchLiveJobsSnapshot } = await import('@/lib/jobsApi')

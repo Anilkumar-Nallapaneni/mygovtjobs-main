@@ -1,4 +1,6 @@
-/* Critical path only — home/jobs/polish/mobile load with their chunks */
-@import './tokens.css';
-@import './global.css';
-@import './layout.css';
+/* Explicit cascade order keeps route chunks predictable as CSS is decomposed. */
+@layer tokens, base, shell, home, jobs, map, polish, mobile, extensions, overrides;
+@import './tokens.css' layer(tokens);
+@import './global.css' layer(base);
+@import './layout.css' layer(shell);
+@import './extensions.css' layer(extensions);

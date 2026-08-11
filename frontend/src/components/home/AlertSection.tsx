@@ -5,6 +5,8 @@ import TurnstileWidget from "@/components/TurnstileWidget";
 import { useWebPushToken } from "@/hooks/useWebPushToken";
 import { subscribeWithUser } from "@/lib/alertsApi";
 import { isTurnstileConfigured } from "@/lib/turnstile";
+import { STATES } from "@/data/states";
+import { CATS } from "@/data/categories";
 
 const CHANNEL_KEYS = ["email", "whatsapp", "telegram", "push"] as const;
 type AlertChannel = (typeof CHANNEL_KEYS)[number];
@@ -33,6 +35,9 @@ export default function AlertSection() {
   const [error, setError] = useState("");
   const [honeypot, setHoneypot] = useState("");
   const [turnstileToken, setTurnstileToken] = useState<string | null>(null);
+  const [selectedState, setSelectedState] = useState("");
+  const [selectedCategory, setSelectedCategory] = useState("");
+  const [selectedQualification, setSelectedQualification] = useState("");
 
   const validateAddress = () => {
     const v = address.trim();
@@ -71,9 +76,9 @@ export default function AlertSection() {
       {
         channel,
         channel_address: channelAddress,
-        state_codes: [],
-        categories: [],
-        qualification_tags: [],
+        state_codes: selectedState ? [selectedState] : [],
+        categories: selectedCategory ? [selectedCategory] : [],
+        qualification_tags: selectedQualification ? [selectedQualification] : [],
         website: honeypot,
         turnstileToken,
       }
@@ -101,6 +106,42 @@ export default function AlertSection() {
           </div>
           <h2 className="alert-section__title">{t("alert.title")}</h2>
           <p className="alert-section__desc">{t("alert.desc")}</p>
+
+          <fieldset className="alert-section__preferences">
+            <legend>
+              {t("alert.matchingLegend", { defaultValue: "Match alerts to your preferences (optional)" })}
+            </legend>
+            <label>
+              <span>{t("common.state", { defaultValue: "State" })}</span>
+              <select value={selectedState} onChange={(event) => setSelectedState(event.target.value)}>
+                <option value="">{t("common.allIndia", { defaultValue: "All India" })}</option>
+                {STATES.map((state) => (
+                  <option key={state.id} value={state.id}>{state.n}</option>
+                ))}
+              </select>
+            </label>
+            <label>
+              <span>{t("common.category", { defaultValue: "Category" })}</span>
+              <select value={selectedCategory} onChange={(event) => setSelectedCategory(event.target.value)}>
+                <option value="">{t("latestNotif.allCategories", { defaultValue: "All categories" })}</option>
+                {CATS.map((category) => (
+                  <option key={category.id} value={category.id}>{category.name}</option>
+                ))}
+              </select>
+            </label>
+            <label>
+              <span>{t("common.qualification", { defaultValue: "Qualification" })}</span>
+              <select value={selectedQualification} onChange={(event) => setSelectedQualification(event.target.value)}>
+                <option value="">{t("common.any", { defaultValue: "Any qualification" })}</option>
+                <option value="10th">10th</option>
+                <option value="12th">12th</option>
+                <option value="iti">ITI</option>
+                <option value="diploma">Diploma</option>
+                <option value="graduate">Graduate</option>
+                <option value="postgraduate">Postgraduate</option>
+              </select>
+            </label>
+          </fieldset>
 
           <div className="alert-section__channels" role="radiogroup" aria-label={t("alert.title")}>
             {CHANNEL_KEYS.map((key) => {
