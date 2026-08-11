@@ -1,20 +1,61 @@
 {
-  "generatedAt": "2026-08-10T18:04:50.183288Z",
+  "generatedAt": "2026-08-11T03:40:15.548037+00:00",
   "dailySync": {
-    "completedAt": "2026-08-10T18:04:49.272682+00:00",
-    "completedAtIst": "2026-08-10T23:34:49.272716+05:30",
-    "dateIst": "2026-08-10",
-    "nextRunAtIst": "2026-08-11T08:00:00+05:30",
-    "jobCount": 20,
-    "sourcesScraped": 154,
+    "completedAt": "2026-08-11T03:17:53.347855+00:00",
+    "completedAtIst": "2026-08-11T08:47:53.347882+05:30",
+    "dateIst": "2026-08-11",
+    "nextRunAtIst": "2026-08-12T08:00:00+05:30",
+    "jobCount": 18,
+    "sourcesScraped": 152,
     "scheduledLabel": "8:00 AM IST daily"
   },
   "items": [
     {
+      "id": "db86fb83-215c-402f-bbff-187997386ad5",
+      "slug": "mha-5-filling-up-of-two-02-posts-of-upper-division-clerk-udc-on-deputation-basis-ebfb7cc8",
+      "title": "5 Filling up of two (02) posts of Upper Division Clerk (UDC) on deputation basis in the Office of the Custodian of Enemy",
+      "dept": "Mha",
+      "category": "police",
+      "state_codes": [],
+      "vacancies": 2,
+      "qualification": "Conditions and Pay Scale",
+      "salary": "Pay Band-1",
+      "age_limit": "The maximum age limit for appointment on deputation shall not exceed 56",
+      "last_date": "2026-08-28",
+      "apply_url": "https://www.mha.gov.in/sites/default/files/VacancyUDC_31072026.PDF",
+      "pdf_url": "https://www.mha.gov.in/sites/default/files/VacancyUDC_31072026.PDF",
+      "status": "live",
+      "is_sponsored": false,
+      "published_at": "2026-08-11T02:39:27.147128Z",
+      "verified_at": null,
+      "updated_at": "2026-08-11T02:39:23.546569Z",
+      "document_type": "RECRUITMENT",
+      "verification_status": "VERIFIED",
+      "completeness_score": 80,
+      "publication_confidence": 95.0,
+      "published_to_site": true,
+      "primary_pdf_url": "https://www.mha.gov.in/sites/default/files/VacancyUDC_31072026.PDF",
+      "post_name": null,
+      "posts": [],
+      "important_dates": [],
+      "detail": {
+        "pdf_urls": [
+          "https://www.mha.gov.in/sites/default/files/VacancyUDC_31072026.PDF"
+        ],
+        "source": "ib",
+        "completeness_score": 52,
+        "pdfUrls": [
+          "https://www.mha.gov.in/sites/default/files/VacancyUDC_31072026.PDF"
+        ],
+        "notification_url": "https://www.mha.gov.in/sites/default/files/VacancyUDC_31072026.PDF",
+        "pdf_url": "https://www.mha.gov.in/sites/default/files/VacancyUDC_31072026.PDF"
+      }
+    },
+    {
       "id": "d5e921f1-8246-4154-96dd-73331bd27411",
-      "slug": "isro-indian-space-research-organisation-advt-no-hsfc-01-rmt-2026-dated-10-08-202-43357d41",
+      "slug": "isro-careers-recruitment-to-the-post-of-scientist-engineer-sd-2026-https-www-isr-d6dc58c0",
       "title": "Recruitment to the post of Scientist/Engineer - SD",
-      "dept": "ISRO — Indian Space Research Organisation",
+      "dept": "ISRO — Careers",
       "category": "psu",
       "state_codes": [],
       "vacancies": 1,
@@ -28,7 +69,7 @@
       "is_sponsored": false,
       "published_at": "2026-08-10T00:00:00Z",
       "verified_at": null,
-      "updated_at": "2026-08-10T17:55:43.898347Z",
+      "updated_at": "2026-08-11T02:58:08.468532Z",
       "document_type": "RECRUITMENT",
       "verification_status": "VERIFIED",
       "completeness_score": 73,
@@ -39,85 +80,21 @@
       "posts": [],
       "important_dates": [],
       "detail": {
-        "notification_url": "https://www.isro.gov.in/HSFCRecruitment2026_1.html",
-        "pdf_url": "https://www.isro.gov.in/media_isro/pdf/recruitmentNotice/2026/August/PhDLive_Register_Adv_10.08.2026.pdf",
-        "published": "2026-08-10T00:00:00+00:00",
-        "detail_source": "pdf",
-        "pdfUrls": [
-          "https://www.isro.gov.in/media_isro/pdf/recruitmentNotice/2026/August/PhDLive_Register_Adv_10.08.2026.pdf"
-        ],
         "apply_urls": [
           "https://www.isro.gov.in"
         ],
-        "completeness_score": 73,
-        "summary": "Page 1 of 18 भारत सरकार Government of India अंतįरƗ िवभाग Department of Space भारतीय अंतįरƗ अनुसंधान संगठन Indian Space Research Organization समानव अंतįरƗ उडान कŐ ū Human Space Flight Centre बŐगलूŜ Bengaluru – 560037 िवǒापन सं./ ADVERTISEMENT NO.: एच.एस.एफ.सी. HSFC:01:RMT:2026, िदनांक/ Dated 10.08.2026 योƶता की िनणाŊयक तारीख/ CRUCIAL DATE OF ELIGIBILITY 30.08.2026 ऑनलाइन आव…",
-        "memorized_at": "2026-08-10T17:35:21.825548+00:00",
-        "missing_fields": [
-          "salary",
-          "application_fee",
-          "selection_process",
-          "how_to_apply"
-        ],
         "pdf_urls": [
           "https://www.isro.gov.in/media_isro/pdf/recruitmentNotice/2026/August/PhDLive_Register_Adv_10.08.2026.pdf"
         ],
-        "source": "isro"
-      }
-    },
-    {
-      "id": "efbb5a47-8007-47db-95f3-e2dfe97b664e",
-      "slug": "navodaya-notice-for-empanelment-and-engagement-of-hostel-superintendents-female--91661945",
-      "title": "📢 NOTICE FOR EMPANELMENT AND ENGAGEMENT OF HOSTEL SUPERINTENDENTS (FEMALE) ON CONTRACT BASIS IN JNVs UNDER CHANDIGARH REGION FOR THE SESSION 2026-27",
-      "dept": "Navodaya",
-      "category": "teaching",
-      "state_codes": [],
-      "vacancies": 0,
-      "qualification": "for the post",
-      "salary": "Rs. 35,750",
-      "age_limit": "– Minimum Age as on 1st May 2026: 35 years for engagement and maximum age",
-      "last_date": "2026-08-10",
-      "apply_url": "https://navodaya.gov.in/nvs/ro/Chandigarh/en/home/",
-      "pdf_url": "https://navodaya.gov.in/chandigarh_hostel_superintendent_female_2026-27.pdf",
-      "status": "live",
-      "is_sponsored": false,
-      "published_at": "2026-08-04T00:00:00Z",
-      "verified_at": null,
-      "updated_at": "2026-08-10T17:29:48.285623Z",
-      "document_type": "RECRUITMENT",
-      "verification_status": "VERIFIED",
-      "completeness_score": 73,
-      "publication_confidence": 95.0,
-      "published_to_site": true,
-      "primary_pdf_url": "https://navodaya.gov.in/chandigarh_hostel_superintendent_female_2026-27.pdf",
-      "post_name": null,
-      "posts": [],
-      "important_dates": [],
-      "detail": {
-        "notification_url": "https://navodaya.gov.in/chandigarh_hostel_superintendent_female_2026-27.pdf",
-        "pdf_url": "https://navodaya.gov.in/chandigarh_hostel_superintendent_female_2026-27.pdf",
-        "detail_source": "pdf",
-        "pdfUrls": [
-          "https://navodaya.gov.in/chandigarh_hostel_superintendent_female_2026-27.pdf"
-        ],
-        "apply_urls": [
-          "https://navodaya.gov.in/nvs/ro/Chandigarh/en/home/",
-          "https://www.supschooms.in",
-          "https://supschooms.in/",
-          "https://navodaya.gov.in/nvs/ro/Chandigarh/en/home/index.html"
-        ],
+        "summary": "Page 1 of 18 भारत सरकार Government of India अंतįरƗ िवभाग Department of Space भारतीय अंतįरƗ अनुसंधान संगठन Indian Space Research Organization समानव अंतįरƗ उडान कŐ ū Human Space Flight Centre बŐगलूŜ Bengaluru – 560037 िवǒापन सं./ ADVERTISEMENT NO.: एच.एस.एफ.सी. HSFC:01:RMT:2026, िदनांक/ Dated 10.08.2026 योƶता की िनणाŊयक तारीख/ CRUCIAL DATE OF ELIGIBILITY 30.08.2026 ऑनलाइन आवेदन की Ůारंिभक तारीख OPEN…",
+        "source": "isro-careers",
+        "published": "2026-08-10T00:00:00+00:00",
         "completeness_score": 73,
-        "summary": "NAVODAYA VIDYALAYA SAMITI, (MINISTRY OF EDUCATION) DEPT. OF SCHOOL EDUCATION & LITERACY, GOVT.OF INDIA REGIONAL OFFICE, CHANDIGARH Online applications are invited for ENGAGEMENT OF HOSTEL SUPERINTENDENTS (Female) ON CONTRACT BASIS IN JNVs UNDER CHANDIGARH REGION (Punjab, Himachal Pradesh, Jammu & Kashmir (U.T.), Ladakh (U.T.) and Chandigarh (U.T.)) FOR THE YEAR 2026-27. For Detailed Notification, …",
-        "memorized_at": "2026-08-10T17:32:08.572021+00:00",
-        "missing_fields": [
-          "vacancies",
-          "application_fee",
-          "selection_process",
-          "how_to_apply"
+        "pdfUrls": [
+          "https://www.isro.gov.in/media_isro/pdf/recruitmentNotice/2026/August/PhDLive_Register_Adv_10.08.2026.pdf"
         ],
-        "pdf_urls": [
-          "https://navodaya.gov.in/chandigarh_hostel_superintendent_female_2026-27.pdf"
-        ],
-        "source": "nvs"
+        "notification_url": "https://www.isro.gov.in/HSFCRecruitment2026_1.html",
+        "pdf_url": "https://www.isro.gov.in/media_isro/pdf/recruitmentNotice/2026/August/PhDLive_Register_Adv_10.08.2026.pdf"
       }
     },
     {
@@ -151,12 +128,17 @@
       "posts": [],
       "important_dates": [],
       "detail": {
-        "post_name": "Dy. Chief Engineer (Civil)",
-        "notification_url": "https://paradipport.gov.in",
-        "pdf_url": "https://paradipport.gov.in/Writereaddata/Career/Dy%20CE_18052026.pdf",
         "detail_updated_at": "2026-08-10T17:36:42.919623+00:00",
-        "published": "2026-09-01T00:00:00+00:00",
+        "external_id": "3049705",
+        "pdf_urls": [
+          "https://paradipport.gov.in/Writereaddata/Career/Dy%20CE_18052026.pdf"
+        ],
+        "summary": "Selection Criteria for Dir PARADIP PORT TRUST rect Recruitment to Class-I, Class-I TRAFFIC DEPARTMENT II & Class-III Posts Selection Criteria for direct recruitment to Class-I Posts under Traffic Department, PPT Sl. No . Name of the post No. of posts Classi ficatio n Scale of pay(Rs. Whether selection or non selection Upper age limit for direct recruit ment(in years) Educational and other Qualific…",
         "detail_source": "pdf",
+        "source": "structured-import",
+        "post_name": "Dy. Chief Engineer (Civil)",
+        "published": "2026-09-01T00:00:00+00:00",
+        "completeness_score": 73,
         "important_dates": [
           {
             "date": "18 May 2026",
@@ -170,20 +152,15 @@
         "pdfUrls": [
           "https://paradipport.gov.in/Writereaddata/Career/Dy%20CE_18052026.pdf"
         ],
-        "completeness_score": 73,
-        "external_id": "3049705",
-        "summary": "Selection Criteria for Dir PARADIP PORT TRUST rect Recruitment to Class-I, Class-I TRAFFIC DEPARTMENT II & Class-III Posts Selection Criteria for direct recruitment to Class-I Posts under Traffic Department, PPT Sl. No . Name of the post No. of posts Classi ficatio n Scale of pay(Rs. Whether selection or non selection Upper age limit for direct recruit ment(in years) Educational and other Qualific…",
+        "notification_url": "https://paradipport.gov.in",
+        "pdf_url": "https://paradipport.gov.in/Writereaddata/Career/Dy%20CE_18052026.pdf",
         "memorized_at": "2026-08-04T16:57:54.836895+00:00",
         "missing_fields": [
           "age_limit",
           "application_fee",
           "selection_process",
           "how_to_apply"
-        ],
-        "pdf_urls": [
-          "https://paradipport.gov.in/Writereaddata/Career/Dy%20CE_18052026.pdf"
-        ],
-        "source": "structured-import"
+        ]
       }
     },
     {
@@ -193,7 +170,7 @@
       "dept": "ESIC — Employees' State Insurance Corporation",
       "category": "health",
       "state_codes": [],
-      "vacancies": 3,
+      "vacancies": null,
       "qualification": "etc. shall be reckoned as DATE OF INTERVIEW",
       "salary": "of 1,21,048/",
       "age_limit": "is 45 years for 03 years engagement as on the date of interview.",
@@ -215,10 +192,13 @@
       "posts": [],
       "important_dates": [],
       "detail": {
-        "notification_url": "https://www.esic.gov.in/attachments/recruitmentfile/Walk_in_interview_to_engage_specialists_senior_residents_amp_Jr_Sr_on_contract_basis_in_ESIC_Hospital_Bikaner_Rajasthan_1785823558.pdf",
-        "pdf_url": "https://www.esic.gov.in/attachments/recruitmentfile/Walk_in_interview_to_engage_specialists_senior_residents_amp_Jr_Sr_on_contract_basis_in_ESIC_Hospital_Bikaner_Rajasthan_1785823558.pdf",
         "detail_updated_at": "2026-08-05T14:01:52.111421+00:00",
-        "detail_source": "pdf",
+        "apply_urls": [
+          "https://www.esic.nic.in/recruitments"
+        ],
+        "pdf_urls": [
+          "https://www.esic.gov.in/attachments/recruitmentfile/Walk_in_interview_to_engage_specialists_senior_residents_amp_Jr_Sr_on_contract_basis_in_ESIC_Hospital_Bikaner_Rajasthan_1785823558.pdf"
+        ],
         "how_to_apply": [
           "The eligible candidates, along with their application filled properly in prescribed pro-forma (Annexure- A) should appear for a walk-in interview on the appointed date & time. They should also bring two recent passport size photographs along with one set of attested photocopies and originals of testimonials. If any candidate's whose original documents are deposited in a Medical College to complete Bond Period, they must produce certificate in this regard issued from Principal of concerned Medica",
           "Documents to be submitted: 1. Two passport size Photographs. 2. One sets of the following testimonials along with the originals for verification: a) Proof of Date of Birth. b) SSC [Matriculation Certificate or equivalent.] 155/A/ESICH-BKN/REC/ADMN/2023-1 I/4206848/2026",
@@ -233,94 +213,28 @@
           "Resident having post graduate degree in General medicine / accident & emergency will be given preference.",
           "If such candidates are not available then MBBS with experience/or having good clinical knowledge"
         ],
+        "summary": "FL.No:.155/A/ESICH-BKN/REC/ADMN/2023-1 Date:-03-08-2026 Walk-in-interview The Medical Superintendent ESIC Hospital Jaisalmer Road, Bikaner invites applications for the engagements of Specialists (Full time) against the vacant posts of specialists, Senior Resident (for 01 year extendable up to 03 years & Five (5) Senior/Junior resident against the vacant post of GDMO for 1 Year. All the doctors to …",
+        "detail_source": "pdf",
+        "source": "esic",
+        "completeness_score": 80,
         "pdfUrls": [
           "https://www.esic.gov.in/attachments/recruitmentfile/Walk_in_interview_to_engage_specialists_senior_residents_amp_Jr_Sr_on_contract_basis_in_ESIC_Hospital_Bikaner_Rajasthan_1785823558.pdf"
         ],
-        "apply_urls": [
-          "https://www.esic.nic.in/recruitments"
-        ],
-        "completeness_score": 80,
-        "summary": "FL.No:.155/A/ESICH-BKN/REC/ADMN/2023-1 Date:-03-08-2026 Walk-in-interview The Medical Superintendent ESIC Hospital Jaisalmer Road, Bikaner invites applications for the engagements of Specialists (Full time) against the vacant posts of specialists, Senior Resident (for 01 year extendable up to 03 years & Five (5) Senior/Junior resident against the vacant post of GDMO for 1 Year. All the doctors to …",
+        "notification_url": "https://www.esic.gov.in/attachments/recruitmentfile/Walk_in_interview_to_engage_specialists_senior_residents_amp_Jr_Sr_on_contract_basis_in_ESIC_Hospital_Bikaner_Rajasthan_1785823558.pdf",
+        "pdf_url": "https://www.esic.gov.in/attachments/recruitmentfile/Walk_in_interview_to_engage_specialists_senior_residents_amp_Jr_Sr_on_contract_basis_in_ESIC_Hospital_Bikaner_Rajasthan_1785823558.pdf",
         "memorized_at": "2026-08-05T13:58:56.200689+00:00",
         "missing_fields": [
           "vacancies",
           "application_fee",
           "selection_process"
-        ],
-        "pdf_urls": [
-          "https://www.esic.gov.in/attachments/recruitmentfile/Walk_in_interview_to_engage_specialists_senior_residents_amp_Jr_Sr_on_contract_basis_in_ESIC_Hospital_Bikaner_Rajasthan_1785823558.pdf"
-        ],
-        "source": "esic"
-      }
-    },
-    {
-      "id": "af27d0c6-82bf-45a7-a1c8-849e20d39300",
-      "slug": "cen-02-2026-technicians-click-to-know-update-b7d8ad0a",
-      "title": "RRB CEN 02/2026 Technicians Recruitment — Apply Online",
-      "dept": "Railway Recruitment Board (RRB) — Mumbai",
-      "category": "railways",
-      "state_codes": [],
-      "vacancies": 6557,
-      "qualification": "और आयु/जातत/श्रेर्ी आर्द के समिडन में प्रमार् पत्र/दस्तावेज मांगे जाएंगे।",
-      "salary": "29200",
-      "age_limit": "Post",
-      "last_date": "2026-08-10",
-      "apply_url": "https://rrbmumbai.gov.in/CEN-02-2026-TECHNICIANS.php",
-      "pdf_url": "https://rrbmumbai.gov.in/newpdf/Detailed CEN 02_2026 (2).pdf",
-      "status": "live",
-      "is_sponsored": false,
-      "published_at": "2026-08-01T00:00:00Z",
-      "verified_at": null,
-      "updated_at": "2026-08-10T17:36:46.250582Z",
-      "document_type": "RECRUITMENT",
-      "verification_status": "VERIFIED",
-      "completeness_score": 87,
-      "publication_confidence": 100.0,
-      "published_to_site": true,
-      "primary_pdf_url": "https://rrbmumbai.gov.in/newpdf/Detailed CEN 02_2026 (2).pdf",
-      "post_name": null,
-      "posts": [],
-      "important_dates": [],
-      "detail": {
-        "notification_url": "https://rrbmumbai.gov.in/CEN-02-2026-TECHNICIANS.php",
-        "pdf_url": "https://rrbmumbai.gov.in/newpdf/Detailed CEN 02_2026 (2).pdf",
-        "detail_updated_at": "2026-08-10T17:36:47.026341+00:00",
-        "published": "2026-08-01T00:00:00+00:00",
-        "detail_source": "pdf",
-        "how_to_apply": [
-          "20-21 30 17.2 CREATE AN ACCOUNT 20 31 17.3 GENERAL GUIDELINES FOR SUBMISSION OF APPLICATIONS 20-21 32 17.4 LIVE PHOTO CAPTURING OF THE CANDIDATE DURING APPLICATION 21 33 17.5 MANDATORY SCANNED DOCUMENTS 21-22 34 17.6 ASSISTANCE OF SCRIBE 22-23 35 17.7 MODIFICATION OF SUBMITTED APPLICATION DETAILS 24 36 18.0 COMMON SERVICE CENTER SERVICES 24 37 19.0 DETAILS OF VARIOUS RRBs AND THEIR WEBSITES 24 38 20.0 MODIFICATIONS OF APPLICATION 25 39 21.0 INVALID APPLICATIONS/REJECTIONS 25 40 22.0 INSTRUCTIONS"
-        ],
-        "pdfUrls": [
-          "https://rrbmumbai.gov.in/newpdf/Detailed CEN 02_2026 (2).pdf",
-          "https://rrbmumbai.gov.in/newpdf/HINDI PDF CEN  02 2026.pdf",
-          "https://rrbmumbai.gov.in/newpdf/FAQ HINDI CEN 02_2026.pdf",
-          "https://rrbmumbai.gov.in/newpdf/FAQ CEN 022026.pdf"
-        ],
-        "apply_urls": [
-          "http://www.ncbc.nic.in”",
-          "http://www.ncbc.nic.in"
-        ],
-        "completeness_score": 87,
-        "summary": "CEN NO. 02/2026 (TECHNICIAN CATEGORIES) CEN NO. 02/2026 (TECHNICIAN CATEGORIES) TABLE OF CONTENTS Sr. No. Para No. Contents Page No. 1 1.0 OVERVIEW OF POSTS AND VACANCIES 1 2 2.0 IMPORTANT DATES 1 3 3.0 IMPORTANT INSTRUCTIONS 1-3 4 4.0 GENERAL INSTRUCTIONS 3-5 5 5.0 VACANCIES 5 6 6.0 STANDARDS OF MEDICAL FITNESS 5-6 7 7.0 NATIONALITY / CITIZENSHIP 6 8 8.0 AGE LIMIT 6 9 8.1 AGE RELAXATION 6-8 10 8.…",
-        "memorized_at": "2026-07-24T11:47:09.830732+00:00",
-        "missing_fields": [
-          "application_fee",
-          "selection_process"
-        ],
-        "pdf_urls": [
-          "https://rrbmumbai.gov.in/newpdf/Detailed CEN 02_2026 (2).pdf",
-          "https://rrbmumbai.gov.in/newpdf/HINDI PDF CEN  02 2026.pdf",
-          "https://rrbmumbai.gov.in/newpdf/FAQ HINDI CEN 02_2026.pdf",
-          "https://rrbmumbai.gov.in/newpdf/FAQ CEN 022026.pdf"
-        ],
-        "source": "rrb-mumbai"
+        ]
       }
     },
     {
       "id": "cb11616a-272c-4b75-b3d7-b518dac339f4",
-      "slug": "isro-indian-space-research-organisation-advt-no-nrsc-rmt-1-2026-dated-01-08-2026-521d6338",
+      "slug": "isro-careers-recruitment-to-the-post-of-temporary-research-personnel-research-sc-f15e9178",
       "title": "Recruitment to the post of Temporary Research Personnel (Research Scientist,Project Associate-I,Project Associate-II,Project Scientist-I,Project Scientist-B,Junior Research Fellow )",
-      "dept": "ISRO — Indian Space Research Organisation",
+      "dept": "ISRO — Careers",
       "category": "psu",
       "state_codes": [],
       "vacancies": 2,
@@ -334,7 +248,7 @@
       "is_sponsored": false,
       "published_at": "2026-08-01T00:00:00Z",
       "verified_at": null,
-      "updated_at": "2026-08-10T17:38:03.260230Z",
+      "updated_at": "2026-08-11T02:58:19.254040Z",
       "document_type": "RECRUITMENT",
       "verification_status": "VERIFIED",
       "completeness_score": 87,
@@ -345,36 +259,25 @@
       "posts": [],
       "important_dates": [],
       "detail": {
-        "notification_url": "https://www.isro.gov.in/NRSCRecruitment2026_1.html",
-        "pdf_url": "https://www.isro.gov.in/media_isro/pdf/recruitmentNotice/2026/July/NRSC_RMT_1_2026_dated_31072026.pdf",
-        "detail_updated_at": "2026-08-10T17:36:48.366285+00:00",
-        "published": "2026-08-01T00:00:00+00:00",
-        "detail_source": "pdf",
-        "pdfUrls": [
-          "https://www.isro.gov.in/media_isro/pdf/recruitmentNotice/2026/July/NRSC_RMT_1_2026_dated_31072026.pdf"
-        ],
-        "fee": {
-          "व ांछनीय अर्हत Desirable Qualification": "विशेिज्ञता के साथ प्रोग्रावमंग का कायासाधक ज्ञान / Working knowledge of programming with expertise in AI, ML, DL, Python"
-        },
-        "completeness_score": 87,
-        "summary": "Page 1 of 17 भारत सरकार GOVERNMENT OF INDIA अंतररक्ष विभाग DEPARTMENT OF SPACE भारतीय अंतररक्ष अनुसंधान संगठन INDIAN SPACE RESEARCH ORGANISATION राष्ट्रीय सुदूर संिेदन केंद्र NATIONAL REMOTE SENSING CENTRE बालानगर, हैदराबाद BALANAGAR, HYDERABAD-500 037 विज्ञा.सं. एनआरएससी:आरएमटी: Advt. No. NRSC/RMT/1/2026 दिन ांक DT.01.08.2026 A) राष्ट्रीय सुदूर संिेदन केंद्र (एनआरएससी) भारतीय अंतररक्ष अनुसंधान सं…",
-        "memorized_at": "2026-08-10T17:33:22.708370+00:00",
-        "missing_fields": [
-          "selection_process",
-          "how_to_apply"
-        ],
-        "application_fee": "व ांछनीय अर्हत Desirable Qualification: विशेिज्ञता के साथ प्रोग्रावमंग का कायासाधक ज्ञान / Working knowledge of programming with expertise in AI, ML, DL, Python",
         "pdf_urls": [
           "https://www.isro.gov.in/media_isro/pdf/recruitmentNotice/2026/July/NRSC_RMT_1_2026_dated_31072026.pdf"
         ],
-        "source": "isro"
+        "summary": "Page 1 of 17 भारत सरकार GOVERNMENT OF INDIA अंतररक्ष विभाग DEPARTMENT OF SPACE भारतीय अंतररक्ष अनुसंधान संगठन INDIAN SPACE RESEARCH ORGANISATION राष्ट्रीय सुदूर संिेदन केंद्र NATIONAL REMOTE SENSING CENTRE बालानगर, हैदराबाद BALANAGAR, HYDERABAD-500 037 विज्ञा.सं. एनआरएससी:आरएमटी: Advt. No. NRSC/RMT/1/2026 दिन ांक DT.01.08.2026 A) राष्ट्रीय सुदूर संिेदन केंद्र (एनआरएससी) भारतीय अंतररक्ष अनुसंधान सं…",
+        "source": "isro-careers",
+        "published": "2026-08-01T00:00:00+00:00",
+        "completeness_score": 66,
+        "pdfUrls": [
+          "https://www.isro.gov.in/media_isro/pdf/recruitmentNotice/2026/July/NRSC_RMT_1_2026_dated_31072026.pdf"
+        ],
+        "notification_url": "https://www.isro.gov.in/NRSCRecruitment2026_1.html",
+        "pdf_url": "https://www.isro.gov.in/media_isro/pdf/recruitmentNotice/2026/July/NRSC_RMT_1_2026_dated_31072026.pdf"
       }
     },
     {
       "id": "593c252d-23c1-4ba1-a1ad-cd1c75feb98f",
-      "slug": "isro-indian-space-research-organisation-advt-no-isro-icrb-02-emc-cepo-2026-dated-d96680f7",
+      "slug": "isro-careers-recruitment-to-the-post-of-scientist-engineers-sc-2026-https-www-is-fc1e48e8",
       "title": "Recruitment to the post of Scientist/Engineers 'SC'",
-      "dept": "ISRO — Indian Space Research Organisation",
+      "dept": "ISRO — Careers",
       "category": "psu",
       "state_codes": [],
       "vacancies": 19,
@@ -388,7 +291,7 @@
       "is_sponsored": false,
       "published_at": "2026-07-28T00:00:00Z",
       "verified_at": null,
-      "updated_at": "2026-08-10T17:38:03.816538Z",
+      "updated_at": "2026-08-11T02:58:25.923351Z",
       "document_type": "RECRUITMENT",
       "verification_status": "VERIFIED",
       "completeness_score": 73,
@@ -399,35 +302,27 @@
       "posts": [],
       "important_dates": [],
       "detail": {
-        "notification_url": "https://www.isro.gov.in/ICRB_Recruitment12.html",
-        "pdf_url": "https://www.isro.gov.in/media_isro/pdf/recruitmentNotice/2026/July/GATE_Bilingual_Advertisement_2026_28072026.pdf",
-        "published": "2026-07-28T00:00:00+00:00",
-        "detail_source": "pdf",
-        "pdfUrls": [
-          "https://www.isro.gov.in/media_isro/pdf/recruitmentNotice/2026/July/GATE_Bilingual_Advertisement_2026_28072026.pdf",
-          "https://www.isro.gov.in/media_isro/pdf/recruitmentNotice/2026/July/FREQUENTLY_ASKED_QUESTIONS(FAQ)_28072026.pdf"
-        ],
-        "completeness_score": 73,
-        "summary": "Page 1 of 18 अंतįरƗ िवभाग ,भारत सरकार Department of Space, Government of India भारतीय अंतįरƗ अनुसंधान संगठन [इसरो] INDIAN SPACE RESEARCH ORGANISATION [ISRO] इसरो कŐ ūीकृत भतŎ बोडŊ [आई.सी.आर.बी.] ISRO CENTRALISED RECRUITMENT BOARD [ICRB] इले̋ टŌ ॉिनकी, यांिũक, क̱ ɗूटर िवǒान, िसिवल, िवद्युत, Ůशीतन एवं वातानुकूलन तथा वाˑुकला मŐ बी.ई./बी.टेक. या समकƗ िडŤी के साथ वैǒािनक/अिभयंता ‘एस.सी.’ की भतŎ RECRUIT…",
-        "memorized_at": "2026-08-10T17:35:55.078100+00:00",
-        "missing_fields": [
-          "salary",
-          "application_fee",
-          "selection_process",
-          "how_to_apply"
-        ],
         "pdf_urls": [
           "https://www.isro.gov.in/media_isro/pdf/recruitmentNotice/2026/July/GATE_Bilingual_Advertisement_2026_28072026.pdf",
           "https://www.isro.gov.in/media_isro/pdf/recruitmentNotice/2026/July/FREQUENTLY_ASKED_QUESTIONS(FAQ)_28072026.pdf"
         ],
-        "source": "isro"
+        "summary": "Page 1 of 18 अंतįरƗ िवभाग ,भारत सरकार Department of Space, Government of India भारतीय अंतįरƗ अनुसंधान संगठन [इसरो] INDIAN SPACE RESEARCH ORGANISATION [ISRO] इसरो कŐ ūीकृत भतŎ बोडŊ [आई.सी.आर.बी.] ISRO CENTRALISED RECRUITMENT BOARD [ICRB] इले̋ टŌ ॉिनकी, यांिũक, क̱ ɗूटर िवǒान, िसिवल, िवद्युत, Ůशीतन एवं वातानुकूलन तथा वाˑुकला मŐ बी.ई./बी.टेक. या समकƗ िडŤी के साथ वैǒािनक/अिभयंता ‘एस.सी.’ की भतŎ RECRUIT…",
+        "source": "isro-careers",
+        "published": "2026-07-28T00:00:00+00:00",
+        "completeness_score": 73,
+        "pdfUrls": [
+          "https://www.isro.gov.in/media_isro/pdf/recruitmentNotice/2026/July/GATE_Bilingual_Advertisement_2026_28072026.pdf",
+          "https://www.isro.gov.in/media_isro/pdf/recruitmentNotice/2026/July/FREQUENTLY_ASKED_QUESTIONS(FAQ)_28072026.pdf"
+        ],
+        "notification_url": "https://www.isro.gov.in/ICRB_Recruitment12.html",
+        "pdf_url": "https://www.isro.gov.in/media_isro/pdf/recruitmentNotice/2026/July/GATE_Bilingual_Advertisement_2026_28072026.pdf"
       }
     },
     {
       "id": "2d6cbe80-3058-4126-9eee-40b020764a8d",
-      "slug": "isro-indian-space-research-organisation-advt-no-icrb-01-a-jpa-2026-dated-27-07-2-2d095791",
+      "slug": "isro-careers-recruitment-to-the-post-of-assistants-junior-personal-assistants-up-9e569c7b",
       "title": "Recruitment to the post of Assistants, Junior Personal Assistants, Upper Division Clerk and Stenographers",
-      "dept": "ISRO — Indian Space Research Organisation",
+      "dept": "ISRO — Careers",
       "category": "psu",
       "state_codes": [],
       "vacancies": 50,
@@ -441,7 +336,7 @@
       "is_sponsored": false,
       "published_at": "2026-07-27T00:00:00Z",
       "verified_at": null,
-      "updated_at": "2026-08-10T17:38:06.897759Z",
+      "updated_at": "2026-08-11T02:58:38.848335Z",
       "document_type": "RECRUITMENT",
       "verification_status": "VERIFIED",
       "completeness_score": 80,
@@ -452,35 +347,27 @@
       "posts": [],
       "important_dates": [],
       "detail": {
-        "notification_url": "https://www.isro.gov.in/ICRB_Recruitment11.html",
-        "pdf_url": "https://www.isro.gov.in/media_isro/pdf/recruitmentNotice/2026/July/Bilingual Advertisement_Asst_JPA_UDC_Steno_ICRB_2026_27072026.pdf",
-        "detail_updated_at": "2026-08-10T17:36:51.170386+00:00",
-        "published": "2026-07-27T00:00:00+00:00",
-        "detail_source": "pdf",
-        "pdfUrls": [
-          "https://www.isro.gov.in/media_isro/pdf/recruitmentNotice/2026/July/Bilingual Advertisement_Asst_JPA_UDC_Steno_ICRB_2026_27072026.pdf",
-          "https://www.isro.gov.in/media_isro/pdf/recruitmentNotice/2026/July/FREQUENTLY_ASKED_QUESTIONS_AND_ANSWERS_A_JPA_27072026.pdf"
-        ],
-        "completeness_score": 80,
-        "summary": "Page 1 of 25 िदनांक 27-07-2026 का िवǒापन सं.: इसरो:आई.सी.आर.बी.:01 (ए.-जे.पी.ए.): 2026 Advt No. ISRO:ICRB:01(A-JPA):2026 dated 27-07-2026 ͪ व£ापन मे Ǒदए गए मानदंड और आवæयकताओ को पूरा करना सुǓनिæचत करने कȧ िजàमेदारȣ अßयथȸ को होगी । अत :आवेदकɉ को सलाह दȣ जाती है ͩ क ऑन-लाइन आवेदन भरने के पहले पूरे ͪ व£ापन और एफ.ए.Èयु. को Úयान से पढे । THE RESPONSIBILITY TO ENSURE THE FULFILLMENT OF ELIGIBILITY CRITE…",
-        "memorized_at": "2026-08-10T17:33:41.661330+00:00",
-        "missing_fields": [
-          "application_fee",
-          "selection_process",
-          "how_to_apply"
-        ],
         "pdf_urls": [
           "https://www.isro.gov.in/media_isro/pdf/recruitmentNotice/2026/July/Bilingual Advertisement_Asst_JPA_UDC_Steno_ICRB_2026_27072026.pdf",
           "https://www.isro.gov.in/media_isro/pdf/recruitmentNotice/2026/July/FREQUENTLY_ASKED_QUESTIONS_AND_ANSWERS_A_JPA_27072026.pdf"
         ],
-        "source": "isro"
+        "summary": "Page 1 of 25 िदनांक 27-07-2026 का िवǒापन सं.: इसरो:आई.सी.आर.बी.:01 (ए.-जे.पी.ए.): 2026 Advt No. ISRO:ICRB:01(A-JPA):2026 dated 27-07-2026 ͪ व£ापन मे Ǒदए गए मानदंड और आवæयकताओ को पूरा करना सुǓनिæचत करने कȧ िजàमेदारȣ अßयथȸ को होगी । अत :आवेदकɉ को सलाह दȣ जाती है ͩ क ऑन-लाइन आवेदन भरने के पहले पूरे ͪ व£ापन और एफ.ए.Èयु. को Úयान से पढे । THE RESPONSIBILITY TO ENSURE THE FULFILLMENT OF ELIGIBILITY CRITE…",
+        "source": "isro-careers",
+        "published": "2026-07-27T00:00:00+00:00",
+        "completeness_score": 66,
+        "pdfUrls": [
+          "https://www.isro.gov.in/media_isro/pdf/recruitmentNotice/2026/July/Bilingual Advertisement_Asst_JPA_UDC_Steno_ICRB_2026_27072026.pdf",
+          "https://www.isro.gov.in/media_isro/pdf/recruitmentNotice/2026/July/FREQUENTLY_ASKED_QUESTIONS_AND_ANSWERS_A_JPA_27072026.pdf"
+        ],
+        "notification_url": "https://www.isro.gov.in/ICRB_Recruitment11.html",
+        "pdf_url": "https://www.isro.gov.in/media_isro/pdf/recruitmentNotice/2026/July/Bilingual Advertisement_Asst_JPA_UDC_Steno_ICRB_2026_27072026.pdf"
       }
     },
     {
       "id": "9ca5521b-450b-44b0-a359-5cd9f1827594",
-      "slug": "isro-indian-space-research-organisation-advt-no-01-2026-dated-25-07-2026-recruit-4382678f",
+      "slug": "isro-careers-recruitment-to-the-post-of-administrative-officer-accounts-officer--2bcb7348",
       "title": "Recruitment to the post of Administrative Officer, Accounts Officer, Purchase and Stores Officer",
-      "dept": "ISRO — Indian Space Research Organisation",
+      "dept": "ISRO — Careers",
       "category": "psu",
       "state_codes": [],
       "vacancies": 1,
@@ -494,7 +381,7 @@
       "is_sponsored": false,
       "published_at": "2026-07-25T00:00:00Z",
       "verified_at": null,
-      "updated_at": "2026-08-10T17:38:04.187966Z",
+      "updated_at": "2026-08-11T02:58:35.831385Z",
       "document_type": "RECRUITMENT",
       "verification_status": "VERIFIED",
       "completeness_score": 94,
@@ -505,46 +392,22 @@
       "posts": [],
       "important_dates": [],
       "detail": {
-        "notification_url": "https://www.isro.gov.in/PRLRecruitment7.html",
-        "pdf_url": "https://www.isro.gov.in/media_isro/pdf/recruitmentNotice/2026/July/Final_PRL_Bilingual_Advt_Officers_27072026.pdf",
-        "detail_updated_at": "2026-08-10T17:36:52.571507+00:00",
-        "published": "2026-07-25T00:00:00+00:00",
-        "detail_source": "pdf",
-        "pdfUrls": [
-          "https://www.isro.gov.in/media_isro/pdf/recruitmentNotice/2026/July/Final_PRL_Bilingual_Advt_Officers_27072026.pdf"
-        ],
         "apply_urls": [
           "https://www.prl.res.in/prl-",
           "https://www.prl.res.in/prl-eng/job_vacancies"
         ],
-        "selection_process": [
-          "13 प्रशासतनक अचधकारी Administrative Officer 01",
-          "अना. UR - 1 शलखखि परीक्षा Written Test + साक्षािकार Interview",
-          "APPLY NOW 14 लेखा अचधकारी Accounts Officer 02",
-          "आ.क.ि. EWS - 1; अ.वप.ि. OBC - 1",
-          "15 क्रय एिं भंडार अचधकारी Purchase & Stores Officer 02",
-          "अना. UR - 1; अ.जा. SC - 1",
-          "[अना./UR - अनारक्षक्षि/Un-reserved, अ.वप.ि. (एन.सी.एल.)/OBC (NCL) - अन्य वपछडा िगस (नॉन-क्रीमी लेयर) /Other Backward Class (Non Creamy Layer), अ.जा. /SC - अनुसूचचि जाति/Scheduled Caste, आ.क.ि. /EWS - आचिसक रूप से कमजोर िगस /Economically Weaker Section]",
-          "प्रशासतनक अचधकारी, पोथटकोड संख्या 13 के पद के शलए कायासत्मक आिवयकिाएँ हैं: बैठना (S), खडा होना (ST), चलना (W), उंगशलयों से काम करना (MF), पढना और शलखना (RW), देखना (SE), संिाद करना (C)। Functional requirement for the post of Administrative Officer, post code No.13 is SITTING (S), STANDING (ST), WALKING (W), MANIPULATION WITH FINGERS (MF), READING & WRITING (RW), SEEING (SE), COMMUNICATION (C).",
-          "लेखा अचधकारी, पोथटकोड संख्या 14 के पद के शलए कायासत्मक आिवयकिाएँ हैं: बैठना (S), खडा होना (ST), झुकना (BN), उंगशलयों से काम करना (MF), पढना और शलखना (RW), देखना (SE), सुनना (H), संिाद करना (C)। Functional requirement for the post of Accounts Officer, post code No.14 is SITTING (S), STANDING (ST), BENDING (BN), MANIPULATION WITH FINGERS (MF), READING & WRITING (RW), SEEING (SE), HEARING (H), COMMUNICATION (C).",
-          "क्रय एिं भंडार अचधकारी, पोथटकोड संख्या 15 के पद के शलए कायासत्मक आिवयकिाएँ हैं: बैठना (S), खडा होना (ST), चलना (W), पढना और शलखना (RW), देखना (SE), सुनना (H), उंगशलयों से काम करना (MF), संिाद करना (C)। Functional requirement for the post of Purchase & Stores Officer, post code No.15 is SITTING (S), STANDING (ST), WALKING (W), READING & WRITING (RW), SEEING (SE), HEARING (H), MANIPULATION WITH FINGERS (MF), COMMUNICATION (C).",
-          "प्रशासतनक अचधकारी ADMINISTRATIVE OFFICER लेखा अचधकारी ACCOUNTS OFFICER क्रय एिं भंडार अचधकारी PURCHASE & STORES OFFICER एमबीए + सुपरिाइजरी पद पर 1 साल का अनुभि MBA + 1-year experience in supervisory capacity अथवा OR थनािकोत्तर + 3 साल का अनुभि (1 साल सुपरिाइजरी पद पर) Post Graduate + 3 years’ experience (1 year in supervisory capacity) अथवा OR थनािक, 5 साल के अनुभि के साि (2 साल सुपरिाइज़री पद पर)। Graduate with 5 years’ experience (2 years in supervisory capacity).",
-          "अनुभि प्रशासन के क्षेत्रों में होना चादहए। Experience should be in the areas of Administration. एसीए/एफसीए या एआईसीडब्लुए/ एफआईसीडब्लुए या एमबीए + सुपरिाइजरी क्षमिा में 1 साल का अनुभि ACA/FCA or AICWA/FICWA or MBA + 1-year experience in supervisory capacity अथवा OR िाखणज्य में थनािकोत्तर + 3 साल का अनुभि (1 साल सुपरिाइजरी पद पर) M.Com. + 3 years’ experience (1 year in supervisory capacity) अथवा OR िाखणज्य में थनािक/ व्यिसाय प्रबंध में थनािक/ व्यिसाय प्रबंधन में थनािक के साि 5 साल का अनुभि (2 साल"
-        ],
-        "fee": {
-          "ह्प्पणी": "प्रशासतनक अचधकारी के पद के शलए आिेदन करने के शलए MBA डडग्री HR में होनी चादहए; लेखा अचधकारी के पद के शलए वित्त (फाइनेंस)"
-        },
-        "completeness_score": 94,
-        "summary": "Page 1 of 12 Advt. No. 01/2026 dated 25.07.2026 भौतिक अनुसंधान प्रयोगशाला PHYSICAL RESEARCH LABORATORY (भारि सरकार, अंिररक्ष विभाग की यूतनट) (A unit of Department of Space, Govt. of India) निरंगपुरा, अहमदाबाद – 380009, भारि Navrangpura, Ahmedabad – 380009, India प्रशासनिक अधिकारी, लेखा अधिकारी और क्रय एवं भंडार अधिकारी की भर्ती RECRUITMENT OF ADMINISTRATIVE OFFICER, ACCOUNTS OFFICER AND PURCHASE &…",
-        "memorized_at": "2026-08-10T17:33:42.093401+00:00",
-        "missing_fields": [
-          "how_to_apply"
-        ],
-        "application_fee": "ह्प्पणी: प्रशासतनक अचधकारी के पद के शलए आिेदन करने के शलए MBA डडग्री HR में होनी चादहए; लेखा अचधकारी के पद के शलए वित्त (फाइनेंस)",
         "pdf_urls": [
           "https://www.isro.gov.in/media_isro/pdf/recruitmentNotice/2026/July/Final_PRL_Bilingual_Advt_Officers_27072026.pdf"
         ],
-        "source": "isro"
+        "summary": "Page 1 of 12 Advt. No. 01/2026 dated 25.07.2026 भौतिक अनुसंधान प्रयोगशाला PHYSICAL RESEARCH LABORATORY (भारि सरकार, अंिररक्ष विभाग की यूतनट) (A unit of Department of Space, Govt. of India) निरंगपुरा, अहमदाबाद – 380009, भारि Navrangpura, Ahmedabad – 380009, India प्रशासनिक अधिकारी, लेखा अधिकारी और क्रय एवं भंडार अधिकारी की भर्ती RECRUITMENT OF ADMINISTRATIVE OFFICER, ACCOUNTS OFFICER AND PURCHASE &…",
+        "source": "isro-careers",
+        "published": "2026-07-25T00:00:00+00:00",
+        "completeness_score": 73,
+        "pdfUrls": [
+          "https://www.isro.gov.in/media_isro/pdf/recruitmentNotice/2026/July/Final_PRL_Bilingual_Advt_Officers_27072026.pdf"
+        ],
+        "notification_url": "https://www.isro.gov.in/PRLRecruitment7.html",
+        "pdf_url": "https://www.isro.gov.in/media_isro/pdf/recruitmentNotice/2026/July/Final_PRL_Bilingual_Advt_Officers_27072026.pdf"
       }
     },
     {
@@ -556,7 +419,7 @@
       "state_codes": [
         "dl"
       ],
-      "vacancies": 0,
+      "vacancies": null,
       "qualification": "B.Sc. (Hons.) Nursing / B.Sc. Nursing / Post-Basic B.Sc. Nursing / GNM with registration as Nurse & Midwife",
       "salary": "Pay Level-7 (GP ₹4600)",
       "age_limit": "18–30 years (as on 13 Aug 2026)",
@@ -578,61 +441,10 @@
       "posts": [],
       "important_dates": [],
       "detail": {
-        "notification_url": "https://www.aiimsexams.ac.in/advertisement/6a6350f7e5a81c4267f4ff04",
+        "source": "esic",
         "published": "2026-07-24T00:00:00+00:00",
         "completeness_score": 45,
-        "source": "esic"
-      }
-    },
-    {
-      "id": "db86fb83-215c-402f-bbff-187997386ad5",
-      "slug": "mha-5-filling-up-of-two-02-posts-of-upper-division-clerk-udc-on-deputation-basis-ebfb7cc8",
-      "title": "5 Filling up of two (02) posts of Upper Division Clerk (UDC) on deputation basis in the Office of the Custodian of Enemy",
-      "dept": "Mha",
-      "category": "police",
-      "state_codes": [],
-      "vacancies": 2,
-      "qualification": "Conditions and Pay Scale",
-      "salary": "Pay Band-1",
-      "age_limit": "The maximum age limit for appointment on deputation shall not exceed 56",
-      "last_date": "2026-08-28",
-      "apply_url": "https://www.mha.gov.in/sites/default/files/VacancyUDC_31072026.PDF",
-      "pdf_url": "https://www.mha.gov.in/sites/default/files/VacancyUDC_31072026.PDF",
-      "status": "live",
-      "is_sponsored": false,
-      "published_at": "2026-07-21T00:00:00Z",
-      "verified_at": null,
-      "updated_at": "2026-08-10T17:46:53.215280Z",
-      "document_type": "RECRUITMENT",
-      "verification_status": "VERIFIED",
-      "completeness_score": 80,
-      "publication_confidence": 95.0,
-      "published_to_site": true,
-      "primary_pdf_url": "https://www.mha.gov.in/sites/default/files/VacancyUDC_31072026.PDF",
-      "post_name": null,
-      "posts": [],
-      "important_dates": [],
-      "detail": {
-        "notification_url": "https://www.mha.gov.in/sites/default/files/VacancyUDC_31072026.PDF",
-        "pdf_url": "https://www.mha.gov.in/sites/default/files/VacancyUDC_31072026.PDF",
-        "detail_updated_at": "2026-08-10T17:36:38.335505+00:00",
-        "published": "2026-07-21T00:00:00+00:00",
-        "detail_source": "pdf",
-        "pdfUrls": [
-          "https://www.mha.gov.in/sites/default/files/VacancyUDC_31072026.PDF"
-        ],
-        "completeness_score": 80,
-        "summary": "1-1kcItNcON, 4104-1A1c1t1 Government of India, Ministry of Home Affairs ct)I q1-117a. Q-1 1.1-11 affi-R-4`ff Office of the Custodian of Enemy Property for India VZ11:19ff (Igiftri) i-13t14-17--4-0414;.-iict+i9-- it-41- nom. First Floor, East Wing, Shivaji Stadium, Connaught Place, New Delhi-110001. F. No. CEPI/DELHI/36/09/2023/ c't6 I Date: 21.07.2026 To, The Section Officer (IT Cell),…",
-        "memorized_at": "2026-08-10T17:30:44.923908+00:00",
-        "missing_fields": [
-          "application_fee",
-          "selection_process",
-          "how_to_apply"
-        ],
-        "pdf_urls": [
-          "https://www.mha.gov.in/sites/default/files/VacancyUDC_31072026.PDF"
-        ],
-        "source": "ib"
+        "notification_url": "https://www.aiimsexams.ac.in/advertisement/6a6350f7e5a81c4267f4ff04"
       }
     },
     {
@@ -664,27 +476,27 @@
       "posts": [],
       "important_dates": [],
       "detail": {
-        "notification_url": "http://www.barc.gov.in/careers/vacancy21.pdf",
-        "pdf_url": "http://www.barc.gov.in/careers/vacancy21.pdf",
         "detail_updated_at": "2026-08-04T16:52:46.193111+00:00",
-        "published": "2026-07-17T00:00:00+00:00",
+        "pdf_urls": [
+          "http://www.barc.gov.in/careers/vacancy21.pdf"
+        ],
+        "summary": "Page 1 of 7 Government of India Department of Atomic Energy Bhabha Atomic Research Centre Opening date and time for submission of online application 17.07.2026 (00.00 hrs.) Closing date and time for receipt of online application 18.08.2026 (23.59 hrs.) “GOVERNMENT STRIVES TO HAVE A WORKFORCE WHICH REFLECTS GENDER BALANCE AND WOMEN CANDIDATES ARE ENCOURAGED TO APPLY” ADVERTISEMENT No. 06/2026 (R-I)…",
         "detail_source": "pdf",
+        "source": "barc",
+        "published": "2026-07-17T00:00:00+00:00",
+        "completeness_score": 73,
         "pdfUrls": [
           "http://www.barc.gov.in/careers/vacancy21.pdf"
         ],
-        "completeness_score": 73,
-        "summary": "Page 1 of 7 Government of India Department of Atomic Energy Bhabha Atomic Research Centre Opening date and time for submission of online application 17.07.2026 (00.00 hrs.) Closing date and time for receipt of online application 18.08.2026 (23.59 hrs.) “GOVERNMENT STRIVES TO HAVE A WORKFORCE WHICH REFLECTS GENDER BALANCE AND WOMEN CANDIDATES ARE ENCOURAGED TO APPLY” ADVERTISEMENT No. 06/2026 (R-I)…",
+        "notification_url": "http://www.barc.gov.in/careers/vacancy21.pdf",
+        "pdf_url": "http://www.barc.gov.in/careers/vacancy21.pdf",
         "memorized_at": "2026-08-10T17:36:22.615134+00:00",
         "missing_fields": [
           "salary",
           "application_fee",
           "selection_process",
           "how_to_apply"
-        ],
-        "pdf_urls": [
-          "http://www.barc.gov.in/careers/vacancy21.pdf"
-        ],
-        "source": "barc"
+        ]
       }
     },
     {
@@ -716,11 +528,10 @@
       "posts": [],
       "important_dates": [],
       "detail": {
-        "notification_url": "https://www.rrbajmer.gov.in/Upload_PDF/FINAL%20CEN%2003_2026_SECTION%20CONTROLLER-639196630071828120.pdf",
-        "pdf_url": "https://www.rrbajmer.gov.in/Upload_PDF/FINAL%20CEN%2003_2026_SECTION%20CONTROLLER-639196630071828120.pdf",
         "detail_updated_at": "2026-08-10T17:36:55.644625+00:00",
-        "published": "2026-07-14T00:00:00+00:00",
-        "detail_source": "pdf",
+        "pdf_urls": [
+          "https://www.rrbajmer.gov.in/Upload_PDF/FINAL%20CEN%2003_2026_SECTION%20CONTROLLER-639196630071828120.pdf"
+        ],
         "how_to_apply": [
           "27 27 17.2 CREATE AN ACCOUNT 28 28 17.4 GENERAL GUIDELINES FOR SUBMISSION OF APPLICATION 28 29 17.5 CANDIDATE LIVE PHOTO FOR APPLICATION 29 30 17.6 MANDATORY SCANNED DOCUMENTS 29 31 17.9 ASSISTANCE OF SCRIBE 31 32 18 COMMON SERVICE CENTER SERVICES 31 33 19 DETAILS OF VARIOUS RRBS AND THEIR WEBSITES 31 34 20 MODIFICATION OF APPLICATION 32 35 21 INVALID APPLICATIONS /REJECTIONS 32 36 22 INSTRUCTIONS ON E-CALL LETTER 33 37 23 VERIFICATION OF ORIGINAL DOCUMENTS AND FORMAT OF CERTIFICATES 33 38 24 US",
           "CENTRALISED EMPLOYMENT NOTIFICATION (CEN) NO. 03/2026 P a g e 2 | 57",
@@ -735,20 +546,21 @@
           "ANNEXURE-VII DECLARATION TO BE SUBMITTED BY EX-SERVICEMEN CANDIDATES 49",
           "ANNEXURE-VII(A) DECLARATION BY EX-SERVICEMEN REGARDING CIVIL EMPLOYEMNT 50"
         ],
+        "summary": "CENTRALISED EMPLOYMENT NOTIFICATION (CEN) NO. 03/2026 P a g e 1 | 57 TABLE OF CONTENTS Sr. No. Para No. Contents Page No. 1 IMPORTANT DATES IMPORTANT DATES 03 2 IMPORTANT INSTRUCTIONS IMPORTANT INSTRUCTIONS 04 3 IMPORTANT INSTRUCTIONS-EXAMINATION PROCESS 06 3 4 DETAILEDCEN-GENERAL INSTRUCTIONS 07 4 5 VACANCIES 10 5 6 MEDICAL STANDARD FOR THE POST 10 6 7 NATIONALITY/ CITIZENSHIP 11 7 8 AGE LIMIT 11…",
+        "detail_source": "pdf",
+        "source": "rrb-ajmer",
+        "published": "2026-07-14T00:00:00+00:00",
+        "completeness_score": 87,
         "pdfUrls": [
           "https://www.rrbajmer.gov.in/Upload_PDF/FINAL%20CEN%2003_2026_SECTION%20CONTROLLER-639196630071828120.pdf"
         ],
-        "completeness_score": 87,
-        "summary": "CENTRALISED EMPLOYMENT NOTIFICATION (CEN) NO. 03/2026 P a g e 1 | 57 TABLE OF CONTENTS Sr. No. Para No. Contents Page No. 1 IMPORTANT DATES IMPORTANT DATES 03 2 IMPORTANT INSTRUCTIONS IMPORTANT INSTRUCTIONS 04 3 IMPORTANT INSTRUCTIONS-EXAMINATION PROCESS 06 3 4 DETAILEDCEN-GENERAL INSTRUCTIONS 07 4 5 VACANCIES 10 5 6 MEDICAL STANDARD FOR THE POST 10 6 7 NATIONALITY/ CITIZENSHIP 11 7 8 AGE LIMIT 11…",
+        "notification_url": "https://www.rrbajmer.gov.in/Upload_PDF/FINAL%20CEN%2003_2026_SECTION%20CONTROLLER-639196630071828120.pdf",
+        "pdf_url": "https://www.rrbajmer.gov.in/Upload_PDF/FINAL%20CEN%2003_2026_SECTION%20CONTROLLER-639196630071828120.pdf",
         "memorized_at": "2026-08-10T17:33:55.135745+00:00",
         "missing_fields": [
           "application_fee",
           "selection_process"
-        ],
-        "pdf_urls": [
-          "https://www.rrbajmer.gov.in/Upload_PDF/FINAL%20CEN%2003_2026_SECTION%20CONTROLLER-639196630071828120.pdf"
-        ],
-        "source": "rrb-ajmer"
+        ]
       }
     },
     {
@@ -782,10 +594,15 @@
       "posts": [],
       "important_dates": [],
       "detail": {
-        "notification_url": "https://icar-crri.in/wp-content/uploads/2026/06/EAP-245.pdf",
-        "pdf_url": "https://icar-crri.in/wp-content/uploads/2026/06/EAP-245.pdf",
         "detail_updated_at": "2026-08-10T17:36:57.058675+00:00",
+        "external_id": "3052461",
+        "pdf_urls": [
+          "https://icar-crri.in/wp-content/uploads/2026/06/EAP-245.pdf"
+        ],
+        "summary": "भाकृअनुप-केÛġȣय चावल अनुसंधान संèथान, कटक-753 006)ओͫडशा (, भारत ICAR – CENTRAL RICE RESEARCH INSTITUTE, CUTTACK-753 006 (ODISHA), INDIA Advertisement No. 10/SRF/2026-27 Walk-in-Interview Name of the Project : “National Innovations on Climate Resilient Agriculture” (EAP-245) Name of the Position : Senior Research Fellow (SRF) Number of Position : Two (02) Rate of remuneration : Rs. 37,000/- p.m. +…",
         "detail_source": "pdf",
+        "source": "structured-import",
+        "completeness_score": 80,
         "important_dates": [
           {
             "date": "15 June 2026",
@@ -799,19 +616,14 @@
         "pdfUrls": [
           "https://icar-crri.in/wp-content/uploads/2026/06/EAP-245.pdf"
         ],
-        "completeness_score": 80,
-        "external_id": "3052461",
-        "summary": "भाकृअनुप-केÛġȣय चावल अनुसंधान संèथान, कटक-753 006)ओͫडशा (, भारत ICAR – CENTRAL RICE RESEARCH INSTITUTE, CUTTACK-753 006 (ODISHA), INDIA Advertisement No. 10/SRF/2026-27 Walk-in-Interview Name of the Project : “National Innovations on Climate Resilient Agriculture” (EAP-245) Name of the Position : Senior Research Fellow (SRF) Number of Position : Two (02) Rate of remuneration : Rs. 37,000/- p.m. +…",
+        "notification_url": "https://icar-crri.in/wp-content/uploads/2026/06/EAP-245.pdf",
+        "pdf_url": "https://icar-crri.in/wp-content/uploads/2026/06/EAP-245.pdf",
         "memorized_at": "2026-08-03T16:52:59.919819+00:00",
         "missing_fields": [
           "application_fee",
           "selection_process",
           "how_to_apply"
-        ],
-        "pdf_urls": [
-          "https://icar-crri.in/wp-content/uploads/2026/06/EAP-245.pdf"
-        ],
-        "source": "structured-import"
+        ]
       }
     },
     {
@@ -845,11 +657,16 @@
       "posts": [],
       "important_dates": [],
       "detail": {
-        "notification_url": "https://www.tezu.ernet.in/ProjectWalkin/20-623Hin-Eng.pdf",
-        "pdf_url": "https://www.tezu.ernet.in/ProjectWalkin/20-623Hin-Eng.pdf",
         "detail_updated_at": "2026-08-10T17:36:59.776221+00:00",
-        "published": "2026-06-08T00:00:00+00:00",
+        "external_id": "3053285",
+        "pdf_urls": [
+          "https://www.tezu.ernet.in/ProjectWalkin/20-623Hin-Eng.pdf"
+        ],
+        "summary": "तेजपुर विश्वविद्यालय / TEZPUR UNIVERSITY (संसद के अधिनियम द्वारा स्थापित केंद्रीय विश्वविद्यालय) (A Central University established by an Act of Parliament) संकायाध्यक्ष का कार्याालय, शोध व विकास OFFICE OF THE DEAN, RESEARCH & DEVELOPMENT तेजपुर-784028 :: असम / TEZPUR-784028 तात्कालिक साक्षात्कार / Walk-in-interview मुख्य अनुसंधानकर्ता प्रो. प्रीतम देब, भौतिकी विभाग, तेजपुर विश्वविद्यालय, तेजपुर, न…",
         "detail_source": "pdf",
+        "source": "structured-import",
+        "published": "2026-06-08T00:00:00+00:00",
+        "completeness_score": 87,
         "important_dates": [
           {
             "date": "01 July 2026",
@@ -859,23 +676,78 @@
         "pdfUrls": [
           "https://www.tezu.ernet.in/ProjectWalkin/20-623Hin-Eng.pdf"
         ],
+        "notification_url": "https://www.tezu.ernet.in/ProjectWalkin/20-623Hin-Eng.pdf",
+        "pdf_url": "https://www.tezu.ernet.in/ProjectWalkin/20-623Hin-Eng.pdf",
         "fee": {
           "Preference II": "Preference will be given to candidates having hands-on experience in programming, computer networking, cloud computing,",
           "प्राथमिकता II": "उन अभ्यर्थियों को वरीयता दी जाएगी जिनके पास प्रोग्रामिंग, कंप्यूटर नेटवर्किंग, क्लाउड कंप्यूटिंग, साइबर सुरक्षा, डेटा वि"
         },
-        "completeness_score": 87,
-        "external_id": "3053285",
-        "summary": "तेजपुर विश्वविद्यालय / TEZPUR UNIVERSITY (संसद के अधिनियम द्वारा स्थापित केंद्रीय विश्वविद्यालय) (A Central University established by an Act of Parliament) संकायाध्यक्ष का कार्याालय, शोध व विकास OFFICE OF THE DEAN, RESEARCH & DEVELOPMENT तेजपुर-784028 :: असम / TEZPUR-784028 तात्कालिक साक्षात्कार / Walk-in-interview मुख्य अनुसंधानकर्ता प्रो. प्रीतम देब, भौतिकी विभाग, तेजपुर विश्वविद्यालय, तेजपुर, न…",
         "memorized_at": "2026-08-10T17:34:05.258198+00:00",
         "missing_fields": [
           "selection_process",
           "how_to_apply"
         ],
-        "application_fee": "प्राथमिकता II: उन अभ्यर्थियों को वरीयता दी जाएगी जिनके पास प्रोग्रामिंग, कंप्यूटर नेटवर्किंग, क्लाउड कंप्यूटिंग, साइबर सुरक्षा, डेटा वि; Preference II: Preference will be given to candidates having hands-on experience in programming, computer networking, cloud computing,",
+        "application_fee": "प्राथमिकता II: उन अभ्यर्थियों को वरीयता दी जाएगी जिनके पास प्रोग्रामिंग, कंप्यूटर नेटवर्किंग, क्लाउड कंप्यूटिंग, साइबर सुरक्षा, डेटा वि; Preference II: Preference will be given to candidates having hands-on experience in programming, computer networking, cloud computing,"
+      }
+    },
+    {
+      "id": "5aaff605-8801-4455-bb34-a1ab6b8ef8bd",
+      "slug": "tezpur-university-junior-research-fellow-recruitment-2026-apply-online-96f771fe",
+      "title": "Tezpur University Junior Research Fellow Recruitment 2026 - Apply Online",
+      "dept": "Tezpur University",
+      "category": "state",
+      "state_codes": [
+        "as"
+      ],
+      "vacancies": 1,
+      "qualification": "B.Tech/ B.E, M.Sc",
+      "salary": "Rs. 37,000/- per month plus HRA (if campus accommodation is not provided).",
+      "age_limit": "Maximum 28 years",
+      "last_date": "2027-08-13",
+      "apply_url": "https://www.tezu.ernet.in/ProjectWalkin/20-619Hin-Eng.pdf",
+      "pdf_url": "https://www.tezu.ernet.in/ProjectWalkin/20-619Hin-Eng.pdf",
+      "status": "live",
+      "is_sponsored": false,
+      "published_at": "2026-06-05T00:00:00Z",
+      "verified_at": null,
+      "updated_at": "2026-08-10T18:04:35.043586Z",
+      "document_type": "RECRUITMENT",
+      "verification_status": "VERIFIED",
+      "completeness_score": 80,
+      "publication_confidence": 90.0,
+      "published_to_site": true,
+      "primary_pdf_url": "https://www.tezu.ernet.in/ProjectWalkin/20-619Hin-Eng.pdf",
+      "post_name": null,
+      "posts": [],
+      "important_dates": [],
+      "detail": {
+        "detail_updated_at": "2026-08-05T14:01:59.554790+00:00",
+        "external_id": "3053041",
         "pdf_urls": [
-          "https://www.tezu.ernet.in/ProjectWalkin/20-623Hin-Eng.pdf"
+          "https://www.tezu.ernet.in/ProjectWalkin/20-619Hin-Eng.pdf"
         ],
-        "source": "structured-import"
+        "summary": "तेजपुर विश्वविद्यालय / TEZPUR UNIVERSITY (संसद के अधिनियम द्वारा स्थापित केंद्रीय विश्वविद्यालय) (A Central University established by an Act of Parliament) संकायाध्यक्ष का कार्यालय, शोध व विकास OFFICE OF THE DEAN, RESEARCH & DEVELOPMENT तेजपुर-784028 :: असम / TEZPUR-784028 परियोजना स्टाफ के लिए विज्ञापन / Advertisement for Project Staff मुख्य अनुसंधानकर्ता प्रो. बृजेश श्रीवास्तव, खाद्य अभियांत्रिक…",
+        "detail_source": "pdf",
+        "source": "structured-import",
+        "published": "2026-06-05T00:00:00+00:00",
+        "completeness_score": 80,
+        "important_dates": [
+          {
+            "date": "20 June 2026",
+            "event": "Last date for application submission"
+          }
+        ],
+        "pdfUrls": [
+          "https://www.tezu.ernet.in/ProjectWalkin/20-619Hin-Eng.pdf"
+        ],
+        "notification_url": "https://www.tezu.ernet.in/ProjectWalkin/20-619Hin-Eng.pdf",
+        "pdf_url": "https://www.tezu.ernet.in/ProjectWalkin/20-619Hin-Eng.pdf",
+        "memorized_at": "2026-08-10T17:34:08.767638+00:00",
+        "missing_fields": [
+          "application_fee",
+          "selection_process",
+          "how_to_apply"
+        ]
       }
     },
     {
@@ -909,11 +781,16 @@
       "posts": [],
       "important_dates": [],
       "detail": {
-        "notification_url": "http://nrhmchd.gov.in/cadmin/uploads/filemanagers/1780486049.pdf",
-        "pdf_url": "http://nrhmchd.gov.in/cadmin/uploads/filemanagers/1780486049.pdf",
         "detail_updated_at": "2026-08-10T17:37:01.032943+00:00",
-        "published": "1995-06-27T00:00:00+00:00",
+        "external_id": "3052814",
+        "pdf_urls": [
+          "http://nrhmchd.gov.in/cadmin/uploads/filemanagers/1780486049.pdf"
+        ],
+        "summary": "Advt No. – NHM-UT/06/2026-27 Date: 04.06.2026___________ PUBLIC NOTICE REQUIRES QUALIFIED CONTRACTUAL STAFF UNDER NATIONAL HEALTH MISSION(NHM) & PRADHAN MANTRI AYUSHMAN BHARAT HEALTH INFRASTRUCTURE MISSION (PMABHIM), U.T, CHANDIGARH Sr. No . Name of the post No. of Posts Category Qualification Consolidat ed Amount In Rs. (per month) Gen SC OBC 1. Radiologist under NHM 01 01 - - Essential:  MBBS D…",
         "detail_source": "pdf",
+        "source": "structured-import",
+        "published": "1995-06-27T00:00:00+00:00",
+        "completeness_score": 80,
         "important_dates": [
           {
             "date": "11 June 2026",
@@ -923,19 +800,14 @@
         "pdfUrls": [
           "http://nrhmchd.gov.in/cadmin/uploads/filemanagers/1780486049.pdf"
         ],
-        "completeness_score": 80,
-        "external_id": "3052814",
-        "summary": "Advt No. – NHM-UT/06/2026-27 Date: 04.06.2026___________ PUBLIC NOTICE REQUIRES QUALIFIED CONTRACTUAL STAFF UNDER NATIONAL HEALTH MISSION(NHM) & PRADHAN MANTRI AYUSHMAN BHARAT HEALTH INFRASTRUCTURE MISSION (PMABHIM), U.T, CHANDIGARH Sr. No . Name of the post No. of Posts Category Qualification Consolidat ed Amount In Rs. (per month) Gen SC OBC 1. Radiologist under NHM 01 01 - - Essential:  MBBS D…",
+        "notification_url": "http://nrhmchd.gov.in/cadmin/uploads/filemanagers/1780486049.pdf",
+        "pdf_url": "http://nrhmchd.gov.in/cadmin/uploads/filemanagers/1780486049.pdf",
         "memorized_at": "2026-08-04T09:08:44.064319+00:00",
         "missing_fields": [
           "application_fee",
           "selection_process",
           "how_to_apply"
-        ],
-        "pdf_urls": [
-          "http://nrhmchd.gov.in/cadmin/uploads/filemanagers/1780486049.pdf"
-        ],
-        "source": "structured-import"
+        ]
       }
     },
     {
@@ -969,11 +841,16 @@
       "posts": [],
       "important_dates": [],
       "detail": {
-        "notification_url": "https://dfpd.gov.in",
-        "pdf_url": "https://dfpd.gov.in/WriteReadData/Notices/842c6b81-77dd-4d4f-ae44-d41ca1d52c48_Image_195.pdf",
         "detail_updated_at": "2026-08-10T17:37:04.244102+00:00",
-        "published": "2026-05-18T00:00:00+00:00",
+        "external_id": "3049724",
+        "pdf_urls": [
+          "https://dfpd.gov.in/WriteReadData/Notices/842c6b81-77dd-4d4f-ae44-d41ca1d52c48_Image_195.pdf"
+        ],
+        "summary": "No. A-1202513/2023-SA Covernment of India Ministry of Consumer Affairs, Food & Public Distribution Department of Food & Public Distribution Krishi Bhawan, New Delhi Dated: l8 .05.2026 DETAILED VACANCY CIRCULAR Applications are invited tiom the eligible ofilcers fbr filling up the following posts in the Directorate of Sugar & Vegetable Oils (DSVO) - an attached otfice ofthe Department of Food & Pub…",
         "detail_source": "pdf",
+        "source": "structured-import",
+        "published": "2026-05-18T00:00:00+00:00",
+        "completeness_score": 87,
         "important_dates": [
           {
             "date": "Date",
@@ -991,22 +868,17 @@
         "pdfUrls": [
           "https://dfpd.gov.in/WriteReadData/Notices/842c6b81-77dd-4d4f-ae44-d41ca1d52c48_Image_195.pdf"
         ],
+        "notification_url": "https://dfpd.gov.in",
+        "pdf_url": "https://dfpd.gov.in/WriteReadData/Notices/842c6b81-77dd-4d4f-ae44-d41ca1d52c48_Image_195.pdf",
         "fee": {
           "Note l": "The Departmental candidates holding post of Depury Director (General Cadre) with five years' regular service in Level-l"
         },
-        "completeness_score": 87,
-        "external_id": "3049724",
-        "summary": "No. A-1202513/2023-SA Covernment of India Ministry of Consumer Affairs, Food & Public Distribution Department of Food & Public Distribution Krishi Bhawan, New Delhi Dated: l8 .05.2026 DETAILED VACANCY CIRCULAR Applications are invited tiom the eligible ofilcers fbr filling up the following posts in the Directorate of Sugar & Vegetable Oils (DSVO) - an attached otfice ofthe Department of Food & Pub…",
         "memorized_at": "2026-08-10T17:34:44.995480+00:00",
         "missing_fields": [
           "selection_process",
           "how_to_apply"
         ],
-        "application_fee": "Note l: The Departmental candidates holding post of Depury Director (General Cadre) with five years' regular service in Level-l",
-        "pdf_urls": [
-          "https://dfpd.gov.in/WriteReadData/Notices/842c6b81-77dd-4d4f-ae44-d41ca1d52c48_Image_195.pdf"
-        ],
-        "source": "structured-import"
+        "application_fee": "Note l: The Departmental candidates holding post of Depury Director (General Cadre) with five years' regular service in Level-l"
       }
     },
     {
@@ -1040,11 +912,19 @@
       "posts": [],
       "important_dates": [],
       "detail": {
-        "notification_url": "https://erp.iisermohali.ac.in/OnlineRecruitmentApplicationIISERM.action",
-        "pdf_url": "https://web.iisermohali.ac.in:8080/noticeportal/attachments/article/3096/Detailed%20advertisement.pdf",
         "detail_updated_at": "2026-08-10T17:37:05.844757+00:00",
-        "published": "2026-05-03T00:00:00+00:00",
+        "external_id": "3047564",
+        "apply_urls": [
+          "https://www.iisermohali.ac.in/institute"
+        ],
+        "pdf_urls": [
+          "https://web.iisermohali.ac.in:8080/noticeportal/attachments/article/3096/Detailed%20advertisement.pdf"
+        ],
+        "summary": "भारतीय विज्ञान विक्षा एिं अनुसंधान संस्थान मोहाली (विक्षा मंत्रालय, भारत सरकार) INDIAN INSTITUTE OF SCIENCE EDUCATION AND RESEARCH MOHALI (Ministry of Education, Govt. of India) 1 of 34 आईआईएसईआर मोहाली, नॉलेज वसटी, सेक्टर-81, मोहाली, पंजाब-140306, भारत IISER Mohali, Knowledge City, Sector-81, Mohali, Punjab-140306, India विज्ञापन सं. गै. सं. (03)/वनयवित/2026 विनांक: 03.05.2026 Advt. No. NF (03)/R…",
         "detail_source": "pdf",
+        "source": "structured-import",
+        "published": "2026-05-03T00:00:00+00:00",
+        "completeness_score": 80,
         "important_dates": [
           {
             "date": "03/05/2026",
@@ -1074,22 +954,14 @@
         "pdfUrls": [
           "https://web.iisermohali.ac.in:8080/noticeportal/attachments/article/3096/Detailed%20advertisement.pdf"
         ],
-        "apply_urls": [
-          "https://www.iisermohali.ac.in/institute"
-        ],
-        "completeness_score": 80,
-        "external_id": "3047564",
-        "summary": "भारतीय विज्ञान विक्षा एिं अनुसंधान संस्थान मोहाली (विक्षा मंत्रालय, भारत सरकार) INDIAN INSTITUTE OF SCIENCE EDUCATION AND RESEARCH MOHALI (Ministry of Education, Govt. of India) 1 of 34 आईआईएसईआर मोहाली, नॉलेज वसटी, सेक्टर-81, मोहाली, पंजाब-140306, भारत IISER Mohali, Knowledge City, Sector-81, Mohali, Punjab-140306, India विज्ञापन सं. गै. सं. (03)/वनयवित/2026 विनांक: 03.05.2026 Advt. No. NF (03)/R…",
+        "notification_url": "https://erp.iisermohali.ac.in/OnlineRecruitmentApplicationIISERM.action",
+        "pdf_url": "https://web.iisermohali.ac.in:8080/noticeportal/attachments/article/3096/Detailed%20advertisement.pdf",
         "memorized_at": "2026-08-10T17:34:51.128843+00:00",
         "missing_fields": [
           "application_fee",
           "selection_process",
           "how_to_apply"
-        ],
-        "pdf_urls": [
-          "https://web.iisermohali.ac.in:8080/noticeportal/attachments/article/3096/Detailed%20advertisement.pdf"
-        ],
-        "source": "structured-import"
+        ]
       }
     },
     {
@@ -1123,11 +995,21 @@
       "posts": [],
       "important_dates": [],
       "detail": {
-        "notification_url": "https://facapp.iitm.ac.in/img/Advertisement_RA-2026.pdf",
-        "pdf_url": "https://facapp.iitm.ac.in/img/Advertisement_RA-2026.pdf",
         "detail_updated_at": "2026-08-10T17:37:09.519913+00:00",
-        "published": "2026-02-27T00:00:00+00:00",
+        "external_id": "3040278",
+        "apply_urls": [
+          "https://facapp.iitm.ac.in",
+          "https://facapp.iitm.in",
+          "https://facapp.iitm.ac.in/2026ra"
+        ],
+        "pdf_urls": [
+          "https://facapp.iitm.ac.in/img/Advertisement_RA-2026.pdf"
+        ],
+        "summary": "Page 1 | 6 INDIAN INSTITUTE OF TECHNOLOGY MADRAS CHENNAI – 600 036 Rolling Advertisement No. IITM/R/1/2026 Dated 27.02.2026 IIT Madras invites applications from individuals with an established record of independent, high-quality research and commitment to teaching and research for the faculty position at the level of ASSISTANT PROFESSOR (AP). The requirement is for various departments given below.…",
         "detail_source": "pdf",
+        "source": "structured-import",
+        "published": "2026-02-27T00:00:00+00:00",
+        "completeness_score": 87,
         "important_dates": [
           {
             "date": "27 February 2026",
@@ -1145,29 +1027,19 @@
         "pdfUrls": [
           "https://facapp.iitm.ac.in/img/Advertisement_RA-2026.pdf"
         ],
-        "apply_urls": [
-          "https://facapp.iitm.ac.in",
-          "https://facapp.iitm.in",
-          "https://facapp.iitm.ac.in/2026ra"
-        ],
+        "notification_url": "https://facapp.iitm.ac.in/img/Advertisement_RA-2026.pdf",
+        "pdf_url": "https://facapp.iitm.ac.in/img/Advertisement_RA-2026.pdf",
         "fee": {
           "Minimum Pay": "₹ 101500/-",
           "F.2. ASSISTANT PROFESSOR Grade-I": "7th CPC Pay Level 12, Minimum Basic Pay: ₹ 1,01,500/- For direct recruits, minimum starting basic pay to be fixed in Aca",
           "F.1. ASSISTANT PROFESSOR Grade-II": "7th CPC Pay Level 10, Minimum Basic Pay: ₹ 70,900/-"
         },
-        "completeness_score": 87,
-        "external_id": "3040278",
-        "summary": "Page 1 | 6 INDIAN INSTITUTE OF TECHNOLOGY MADRAS CHENNAI – 600 036 Rolling Advertisement No. IITM/R/1/2026 Dated 27.02.2026 IIT Madras invites applications from individuals with an established record of independent, high-quality research and commitment to teaching and research for the faculty position at the level of ASSISTANT PROFESSOR (AP). The requirement is for various departments given below.…",
         "memorized_at": "2026-08-10T17:35:05.272768+00:00",
         "missing_fields": [
           "selection_process",
           "how_to_apply"
         ],
-        "application_fee": "F.1. ASSISTANT PROFESSOR Grade-II: 7th CPC Pay Level 10, Minimum Basic Pay: ₹ 70,900/-; F.2. ASSISTANT PROFESSOR Grade-I: 7th CPC Pay Level 12, Minimum Basic Pay: ₹ 1,01,500/- For direct recruits, minimum starting basic pay to be fixed in Aca; Minimum Pay: ₹ 101500/-",
-        "pdf_urls": [
-          "https://facapp.iitm.ac.in/img/Advertisement_RA-2026.pdf"
-        ],
-        "source": "structured-import"
+        "application_fee": "F.1. ASSISTANT PROFESSOR Grade-II: 7th CPC Pay Level 10, Minimum Basic Pay: ₹ 70,900/-; F.2. ASSISTANT PROFESSOR Grade-I: 7th CPC Pay Level 12, Minimum Basic Pay: ₹ 1,01,500/- For direct recruits, minimum starting basic pay to be fixed in Aca; Minimum Pay: ₹ 101500/-"
       }
     }
   ]
