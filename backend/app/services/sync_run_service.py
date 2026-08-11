@@ -96,7 +96,9 @@ class SyncRunService:
         pipeline_name: str,
         trigger_type: str | None = None,
     ) -> str | None:
-        await self.abandon_stale(session)
+        force = os.environ.get("SYNC_FORCE", "").strip().lower() in ("1", "true", "yes")
+        # Forced runs (CI re-dispatch) must clear leftover "running" rows from cancelled jobs.
+        await self.abandon_stale(session, older_than_hours=0 if force else None)
 
         # Row-based mutex (works on transaction pooler; advisory lock alone does not).
         if await self.has_active_run(session):

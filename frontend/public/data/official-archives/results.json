@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-08-06T14:50:19.631Z",
-  "count": 671,
+  "generatedAt": "2026-08-11T06:01:10.675Z",
+  "count": 673,
   "items": [
     {
       "id": "2fcd6ff34f094281",
@@ -130,9 +130,9 @@
       "fetchMethod": "html-listing"
     },
     {
-      "id": "b3c33fffbb0b0748",
-      "title": "CLICK HERE TO DOWNLOAD MARKSHEET & CUT OFF FOR ADVT. NO. D-4-E-1-2025, [S-03-05].",
-      "link": "https://uppsc.up.nic.in/CandidatePages/Advertismentwise_DownloadDocument.aspx?inptprmtr=mc",
+      "id": "f1112e23f75428db",
+      "title": "RESULT OF ADVT. NO. D-4/E-1/2025, DIRECTORATE GENERAL OF FAMILY WELFARE UTTAR PR..",
+      "link": "https://uppsc.up.nic.in/Open_PDF_DB.aspx?I4PnQ0tBagkKN9rKVhlu7ysKNFjEqVIK",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
@@ -215,6 +215,23 @@
       "fetchMethod": "html-listing"
     },
     {
+      "id": "48d03f107f71d7b1",
+      "title": "10 Sep 2026 RESULT OF ADVT. NO. D-4/E-1/2025, DIRECTORATE GENERAL OF FAMILY WELFARE UTTAR PRADESH LUCKNOW./RESEARCH OFFICER, S-04/01",
+      "link": "https://uppsc.up.nic.in/Open_PDF.aspx?I4PnQ0tBagkKN9rKVhlu74HFEnrPQkNQ",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "uppsc-hall-tickets",
+      "sourceName": "UPPSC — Hall tickets",
+      "dept": "Uttar Pradesh PSC",
+      "state": "Uttar Pradesh",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
       "id": "f4e69ecdb2e37d68",
       "title": "05 Sep 2026 RESULT OF ADVT. NO. D-5/E-1/2025, UTTAR PRADESH STATE ARCHAEOLOGICAL DIRECTORATE, ASSISTANT ARCHAEOLOGICAL OFFICER, S-03/06",
       "link": "https://uppsc.up.nic.in/Open_PDF.aspx?I4PnQ0tBagkKN9rKVhlu72hN7PveuZya",
@@ -249,23 +266,6 @@
       "fetchMethod": "html-listing"
     },
     {
-      "id": "20ce2d8c78fdc3f6",
-      "title": "03 Sep 2026 RESULT OF ADVT. NO.D-2/E-1/2025, UTTAR PRADESH DAIRY DEVELOPMENT/DEPUTY DAIRY DEVELOPMENT OFFICER, S-02/03",
-      "link": "https://uppsc.up.nic.in/Open_PDF.aspx?I4PnQ0tBaglovGFVjGJMaNGZVurzAxN3",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "uppsc-hall-tickets",
-      "sourceName": "UPPSC — Hall tickets",
-      "dept": "Uttar Pradesh PSC",
-      "state": "Uttar Pradesh",
-      "category": "state",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
       "id": "12ca81e8e0617c5b",
       "title": "Click here to view List of Candidates who are not selected in P.C.S. Examination-2022, but Qualified for Interview in P.C.S - 2022 (In Merit Order).",
       "link": "https://uppsc.up.nic.in/Open_PDF.aspx?I4PnQ0tBagk9q6upnHHyW7Pdh9qfF6wa",
@@ -281,40 +281,6 @@
         "all"
       ],
       "fetchMethod": "html-listing"
-    },
-    {
-      "id": "91984c98c3cd2d13",
-      "title": "ईएमआरएस के शैक्षणिक परिणाम",
-      "link": "https://pib.gov.in/PressReleaseIframePage.aspx?PRID=2295436",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "pib-press-reg3",
-      "sourceName": "PIB — recent press releases",
-      "dept": "Press Information Bureau",
-      "state": "All India",
-      "category": "state",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "rss-feed"
-    },
-    {
-      "id": "e53806778f0ddbde",
-      "title": "केंद्रीय वित्तपोषित संस्थानों का शोध परिणाम",
-      "link": "https://pib.gov.in/PressReleaseIframePage.aspx?PRID=2295208",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "pib-press-reg3",
-      "sourceName": "PIB — recent press releases",
-      "dept": "Press Information Bureau",
-      "state": "All India",
-      "category": "state",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "rss-feed"
     },
     {
       "id": "c4c9266da946f3d2",
@@ -383,6 +349,74 @@
         "all"
       ],
       "fetchMethod": "html-listing"
+    },
+    {
+      "id": "20ce2d8c78fdc3f6",
+      "title": "03 Sep 2026 RESULT OF ADVT. NO.D-2/E-1/2025, UTTAR PRADESH DAIRY DEVELOPMENT/DEPUTY DAIRY DEVELOPMENT OFFICER, S-02/03",
+      "link": "https://uppsc.up.nic.in/Open_PDF.aspx?I4PnQ0tBaglovGFVjGJMaNGZVurzAxN3",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "uppsc-hall-tickets",
+      "sourceName": "UPPSC — Hall tickets",
+      "dept": "Uttar Pradesh PSC",
+      "state": "Uttar Pradesh",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "b3c33fffbb0b0748",
+      "title": "CLICK HERE TO DOWNLOAD MARKSHEET & CUT OFF FOR ADVT. NO. D-4-E-1-2025, [S-03-05].",
+      "link": "https://uppsc.up.nic.in/CandidatePages/Advertismentwise_DownloadDocument.aspx?inptprmtr=mc",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "uppsc-hall-tickets",
+      "sourceName": "UPPSC — Hall tickets",
+      "dept": "Uttar Pradesh PSC",
+      "state": "Uttar Pradesh",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "91984c98c3cd2d13",
+      "title": "ईएमआरएस के शैक्षणिक परिणाम",
+      "link": "https://pib.gov.in/PressReleaseIframePage.aspx?PRID=2295436",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "pib-press-reg3",
+      "sourceName": "PIB — recent press releases",
+      "dept": "Press Information Bureau",
+      "state": "All India",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "rss-feed"
+    },
+    {
+      "id": "e53806778f0ddbde",
+      "title": "केंद्रीय वित्तपोषित संस्थानों का शोध परिणाम",
+      "link": "https://pib.gov.in/PressReleaseIframePage.aspx?PRID=2295208",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "pib-press-reg3",
+      "sourceName": "PIB — recent press releases",
+      "dept": "Press Information Bureau",
+      "state": "All India",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "rss-feed"
     },
     {
       "id": "f8544a1fcd6d2c55",

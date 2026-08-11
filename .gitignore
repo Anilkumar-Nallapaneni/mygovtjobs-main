@@ -93,3 +93,12 @@ play-store-assets.zip
 !/all websites/output/.gitkeep
 
 .vercel
+
+# Local portable CLIs / tooling (never commit)
+tools/
+
+# Vercel CLI may create additional env dumps — keep examples tracked
+.env*
+!.env.example
+!frontend/.env.example
+!backend/.env.example

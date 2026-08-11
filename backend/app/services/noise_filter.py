@@ -81,8 +81,15 @@ _GOV_ADMIN_NOISE = re.compile(
     r"\bsea\s+level\s+test\s+of\s+cryogenic\b|"
     r"\bawareness\s+training\s*\(\s*start\b|"
     r"\bpaid\s+internship\b|"
-    r"इंटर्नश|सशुल्क\s+इंटर्नश|"
-    r"\bonline\s+registration\s+extended\s+till\b",
+    r"इंटर्नश|सशुल्क\s+इंटर्नश",
+    re.I,
+)
+
+# Bare portal chrome ("Online Registration extended till …") — not a named recruitment.
+# Keep out of _GOV_ADMIN_NOISE so real titles like "SSC CGL Recruitment — Online
+# Registration extended till …" still pass looks_like_job_notification.
+_BARE_REGISTRATION_EXTENSION = re.compile(
+    r"^online\s+registration\s+extended\s+(?:till|until|upto|up\s+to|to)\b",
     re.I,
 )
 
@@ -223,6 +230,15 @@ def clean_job_title(title: str | None) -> str:
     t = _PDF_SIZE_SUFFIX.sub("", t)
     t = re.sub(r"[\s\-–—]*PDF\s*size:\s*\(\)\s*\.?\s*$", "", t, flags=re.I)
     t = re.sub(r"[\s\-–—]*PDF\s*$", "", t, flags=re.I)
+    # "Advt. No. HSFC:01:RMT:2026 Dated.10.08.2026 Recruitment of …" → keep the real title
+    stripped = re.sub(
+        r"^(?:Advt\.?\s*No\.?\s*[:\-]?\s*[A-Za-z0-9:()/_./\-]+\s*)+(?:Dated?\.?\s*[\d./\-]+\s*)?",
+        "",
+        t,
+        flags=re.I,
+    ).strip(" .-–—")
+    if len(stripped) >= 24 and _JOB_HINT.search(stripped):
+        t = stripped
     t = re.sub(r"\s+", " ", t).strip(" .-–—")
     return t
 
@@ -299,6 +315,9 @@ def looks_like_job_notification(title: str | None, url: str | None = None) -> bo
     """Stricter check — title reads like an actual vacancy/result notice, not a portal page."""
     t = clean_job_title(title)
     if t and _GOV_ADMIN_NOISE.search(t):
+        return False
+    # Digit-only extension headlines match _JOB_HINT via the date; still not a job.
+    if t and _BARE_REGISTRATION_EXTENSION.match(t) and not _STRONG_JOB.search(t):
         return False
     if is_tender_or_procurement(t, url):
         return False

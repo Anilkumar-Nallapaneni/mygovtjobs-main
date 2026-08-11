@@ -10,7 +10,7 @@ Copy-paste commands for **Live Govt Jobs**. Run everything from **repo root**.
 |------|---------|
 | **Dev (frontend)** | `npm run dev` → http://localhost:3689 |
 | **Validate** | `npm run validate` (type-check + lint + tests) |
-| **Sync jobs** | `npm run sync:jobs` (production ingest; currently frozen in CI until `ALLOW_AUTO_INGEST=true`) |
+| **Sync jobs** | `npm run sync:jobs` (production ingest; CI uses `ALLOW_CANONICAL_PIPELINE=true`) |
 | **Build** | `npm run build` |
 | **Deploy check** | `npm run deploy:check` |
 
@@ -39,13 +39,13 @@ GitHub Actions and local production use **three public commands** only:
 
 | Command | When | What it does |
 |---------|------|----------------|
-| **`npm run sync:quick`** | Every 4 hours (CI) | RSS feeds + official archives — no DB scrape |
+| **`npm run sync:quick`** | Manual / inside daily | RSS feeds + official archives — no DB scrape |
 | **`npm run sync:production`** / **`sync:jobs`** | Daily ~8 AM IST (CI) | Full scrape, export `live-jobs.json`, feeds, sitemap |
 | **`npm run verify:production`** | After deploy / manual | Env, DB, Supabase audit, job quality, snapshot verify |
 
-**CI freeze (fresh restart):** scheduled auto-ingest / weekly enrich / scheduled RSS commits are gated on repository variable `ALLOW_AUTO_INGEST=true`. Ingest always sets `AUTO_PUBLISH_VERIFIED=0` so new rows stay `draft` until verified.
+**CI gate:** scheduled canonical daily pipeline / weekly enrich use `ALLOW_CANONICAL_PIPELINE` and `ALLOW_WEEKLY_ENRICH`. Manual RSS workflow is gated by `ALLOW_RSS_REFRESH` (default `false` — daily already imports feeds). Prefer gated DB export for `live-jobs.json` — never let raw RSS overwrite the publish-approved catalog.
 
-**CI workflows:** `fetch-official-feeds.yml` → `sync:quick` · `supabase-auto-ingest.yml` → `sync:production`
+**CI workflows:** `canonical-daily-pipeline.yml` → sole daily writer · `catalog-recovery-export.yml` → promote/export recovery · `fetch-official-feeds.yml` → manual `sync:quick` only
 
 Advisory lock `20260710` prevents two syncs at once. Run history is stored in Supabase `sync_runs`.
 
@@ -62,7 +62,7 @@ Use these names — older aliases were removed to reduce duplication.
 | **Dev** | `npm run dev` | Frontend :3689 |
 | **API** | `npm run api:dev` | Backend :8000 |
 | **Production sync** | `npm run sync:production` | Daily ingest + export (CI) |
-| **RSS refresh** | `npm run sync:quick` | Feeds only (~4 h in CI) |
+| **RSS refresh** | `npm run sync:quick` | Feeds only (manual / part of daily) |
 | **Production verify** | `npm run verify:production` | Full stack validation |
 | **Website health (Agent 4)** | `npm run health:website` | Fast audit; `:code` for tests; `:full` for live probes |
 | **Daily ingest (local)** | `npm run daily:sync` | Agent 1 — scrape + export JSON |

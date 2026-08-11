@@ -1,0 +1,32 @@
+{
+  "mode": "daily",
+  "started_at_epoch": 1786381418,
+  "steps": [
+    {
+      "name": "production sync",
+      "required": true,
+      "returncode": 0,
+      "duration_seconds": 7.24
+    },
+    {
+      "name": "strict snapshot verification",
+      "required": true,
+      "returncode": 0,
+      "duration_seconds": 0.05
+    },
+    {
+      "name": "vacancy totals",
+      "required": true,
+      "returncode": 0,
+      "duration_seconds": 0.03
+    },
+    {
+      "name": "alert delivery",
+      "required": false,
+      "returncode": 0,
+      "duration_seconds": 6.67
+    }
+  ],
+  "finished_at_epoch": 1786381432,
+  "status": "succeeded"
+}

@@ -3,7 +3,13 @@
   "fields": {
     "title": { "selectors": ["h1", ".notification-title", "title"] },
     "vacancies": { "patterns": ["(\\d+)\\s*(?:posts?|vacancies|पद)"] },
-    "last_date": { "patterns": ["last date[:\\s]+([\\d/\\-]+)", "अंतिम तिथि[:\\s]+([\\d/\\-]+)"] },
+    "last_date": {
+      "patterns": [
+        "last date[:\\s]+([\\d/\\-]+|\\d{1,2}(?:st|nd|rd|th)?[\\s,\\-]+(?:Jan(?:uary)?|Feb(?:ruary)?|Mar(?:ch)?|Apr(?:il)?|May|Jun(?:e)?|Jul(?:y)?|Aug(?:ust)?|Sep(?:t(?:ember)?)?|Oct(?:ober)?|Nov(?:ember)?|Dec(?:ember)?)[\\s,\\-]+\\d{2,4})",
+        "closing date[:\\s]+([\\d/\\-]+|\\d{1,2}(?:st|nd|rd|th)?[\\s,\\-]+(?:Jan(?:uary)?|Feb(?:ruary)?|Mar(?:ch)?|Apr(?:il)?|May|Jun(?:e)?|Jul(?:y)?|Aug(?:ust)?|Sep(?:t(?:ember)?)?|Oct(?:ober)?|Nov(?:ember)?|Dec(?:ember)?)[\\s,\\-]+\\d{2,4})",
+        "अंतिम तिथि[:\\s]+([\\d/\\-]+)"
+      ]
+    },
     "qualification": { "sections": ["eligibility", "qualification", "योग्यता"] },
     "apply_url": { "patterns": ["https?://[^\\s]+"] }
   },

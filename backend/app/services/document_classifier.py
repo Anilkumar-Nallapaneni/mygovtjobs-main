@@ -75,7 +75,9 @@ _PATTERNS: list[tuple[str, re.Pattern[str]]] = [
     ("CORRIGENDUM", re.compile(r"\bcorrigendum|addendum\b", re.I)),
     (
         "RECRUITMENT_RULES",
-        re.compile(r"\brecruitment\s+rules?\b|\bservice\s+rules?\b|\bgazette\s+notification\b", re.I),
+        # Do NOT treat bare "gazette notification" as rules — many open recruitments
+        # are published as gazette notifications and must stay RECRUITMENT.
+        re.compile(r"\brecruitment\s+rules?\b|\bservice\s+rules?\b", re.I),
     ),
     (
         "FORM",

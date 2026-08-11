@@ -145,6 +145,40 @@ def _is_dramatic_snapshot_drop(existing_count: int | None, next_count: int) -> b
     return next_count < int(existing_count * _SNAPSHOT_DROP_GUARD_RATIO)
 
 
+def _snapshot_looks_like_ungated_feed_dump(payload: dict | None) -> bool:
+    """RSS/HTML feed dumps lack publish-gate fields; never block replacing them."""
+    if not isinstance(payload, dict):
+        return False
+    items = payload.get("items")
+    if not isinstance(items, list) or not items:
+        return False
+    sample = items[: min(40, len(items))]
+    threshold = max(1, int(len(sample) * 0.5))
+    unapproved = sum(1 for row in sample if not isinstance(row, dict) or row.get("published_to_site") is not True)
+    no_deadline = sum(
+        1
+        for row in sample
+        if not isinstance(row, dict) or not str(row.get("last_date") or "").strip()
+    )
+    unverified = sum(
+        1
+        for row in sample
+        if not isinstance(row, dict)
+        or str(row.get("verification_status") or "").upper() not in _PUBLIC_VERIFICATION_STATUSES
+    )
+    wrong_doc = sum(
+        1
+        for row in sample
+        if not isinstance(row, dict) or str(row.get("document_type") or "").upper() != "RECRUITMENT"
+    )
+    return (
+        unapproved >= threshold
+        or no_deadline >= threshold
+        or unverified >= threshold
+        or wrong_doc >= threshold
+    )
+
+
 class JobPersistService:
     async def _existing_job_for_identity(
         self,
@@ -510,6 +544,7 @@ class JobPersistService:
         path = Path(get_settings().live_jobs_json_path)
         path.parent.mkdir(parents=True, exist_ok=True)
         existing_count: int | None = None
+        existing_payload: dict | None = None
         if path.exists():
             try:
                 existing_payload = json.loads(path.read_text(encoding="utf-8"))
@@ -518,17 +553,26 @@ class JobPersistService:
                     existing_count = len(existing_items)
             except Exception:
                 existing_count = None
+                existing_payload = None
+        allow_drastic = os.environ.get("ALLOW_DRASTIC_JSON_EXPORT") == "1"
+        replacing_feed_dump = _snapshot_looks_like_ungated_feed_dump(existing_payload)
         if (
             _is_dramatic_snapshot_drop(existing_count, len(slim_items))
-            and os.environ.get("ALLOW_DRASTIC_JSON_EXPORT") != "1"
+            and not allow_drastic
+            and not replacing_feed_dump
         ):
-            logger.error(
-                "export_live_jobs_json: refusing to replace %s-row snapshot with %s rows. "
-                "Set ALLOW_DRASTIC_JSON_EXPORT=1 to override.",
+            msg = (
+                f"export_live_jobs_json: refusing to replace {existing_count}-row snapshot "
+                f"with {len(slim_items)} rows. Set ALLOW_DRASTIC_JSON_EXPORT=1 to override."
+            )
+            logger.error(msg)
+            raise RuntimeError(msg)
+        if replacing_feed_dump and existing_count and existing_count != len(slim_items):
+            logger.warning(
+                "export_live_jobs_json: replacing ungated feed dump (%s rows) with gated export (%s rows)",
                 existing_count,
                 len(slim_items),
             )
-            return existing_count or 0
         path.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
 
         list_path = path.with_name("live-jobs-list.json")

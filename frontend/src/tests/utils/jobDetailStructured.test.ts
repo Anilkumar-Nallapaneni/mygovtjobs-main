@@ -259,6 +259,7 @@ describe("buildStructuredJobDetail", () => {
       expect(overviewArticle.paragraphs.some((p) => /frequently\s+asked/i.test(p))).toBe(false);
     }
   });
+<<<<<<< HEAD
 
   it("filters Answer/fee junk from regenerated ISRO job-details JSON", async () => {
     const { readFileSync } = await import("node:fs");
@@ -279,4 +280,6 @@ describe("buildStructuredJobDetail", () => {
       expect(Object.keys(fee).some((k) => /^answer$/i.test(k))).toBe(false);
     }
   });
+=======
+>>>>>>> 614a989ff3fbbe2ea7cd73927980f33076572383
 });

@@ -13,6 +13,10 @@ from app.utils.repo_paths import resolve_repo_path
 from app.utils.vacancy_extract import extract_vacancies, resolve_vacancies
 _ADVT_IN_TITLE = re.compile(r"\b([A-Z]{2,6}/[A-Z0-9/_-]{4,40})\b")
 _DATE_DMY = re.compile(r"\b(\d{1,2})[./\s-](\d{1,2})[./\s-](\d{4})\b")
+_MONTH_NAME = (
+    r"(?:Jan(?:uary)?|Feb(?:ruary)?|Mar(?:ch)?|Apr(?:il)?|May|Jun(?:e)?|"
+    r"Jul(?:y)?|Aug(?:ust)?|Sep(?:t(?:ember)?)?|Oct(?:ober)?|Nov(?:ember)?|Dec(?:ember)?)"
+)
 _DATE_UPTO = re.compile(
     r"(?:extended\s+)?(?:upto|until|up\s+to|by)\s+(\d{1,2})[./-](\d{1,2})[./-](\d{4})",
     re.I,
@@ -22,6 +26,20 @@ _DATE_RANGE_TITLE = re.compile(
     r"(\d{1,2}[./-]\d{1,2}[./-]\d{4})\s*(?:TO|–|—|-)\s*(\d{1,2}[./-]\d{1,2}[./-]\d{4})",
     re.I,
 )
+# Labeled apply-by dates in titles ("Last Date 30-08-2026", "Closing Date: 30 June 2026").
+_LAST_DATE_TITLE = re.compile(
+    rf"(?:last\s*date|closing\s*date|apply\s*(?:by|before|till)|on\s+or\s+before|"
+    rf"registration\s+extended\s+(?:till|until|upto|up\s+to|to))"
+    rf"[:\s]+(?:(\d{{1,2}})[./-](\d{{1,2}})[./-](\d{{4}})|"
+    rf"(\d{{1,2}})(?:st|nd|rd|th)?[\s,\-]+({_MONTH_NAME})[\s,\-]+(\d{{4}}))",
+    re.I,
+)
+_MONTH_LOOKUP = {
+    "jan": 1, "january": 1, "feb": 2, "february": 2, "mar": 3, "march": 3,
+    "apr": 4, "april": 4, "may": 5, "jun": 6, "june": 6, "jul": 7, "july": 7,
+    "aug": 8, "august": 8, "sep": 9, "sept": 9, "september": 9,
+    "oct": 10, "october": 10, "nov": 11, "november": 11, "dec": 12, "december": 12,
+}
 _QUAL_IN_TITLE = re.compile(
     r"\b(Any\s+Graduate|Any\s+Post\s+Graduate|10\+2|12TH|10TH|MBA/?PGDM|B\.?Tech/?B\.?E|MBBS)\b",
     re.I,
@@ -89,6 +107,19 @@ class NotificationParser:
             out["published_date"] = to_iso_date(dr.group(1).replace(".", "-"))
             out["last_date"] = to_iso_date(dr.group(2).replace(".", "-"))
             return out
+
+        if labeled := _LAST_DATE_TITLE.search(title):
+            if labeled.group(1) and labeled.group(2) and labeled.group(3):
+                d, m, y = labeled.group(1), labeled.group(2), labeled.group(3)
+                out["last_date"] = f"{y}-{int(m):02d}-{int(d):02d}"
+                return out
+            if labeled.group(4) and labeled.group(5) and labeled.group(6):
+                day = int(labeled.group(4))
+                month = _MONTH_LOOKUP.get(labeled.group(5).lower())
+                year = int(labeled.group(6))
+                if month:
+                    out["last_date"] = f"{year}-{month:02d}-{day:02d}"
+                    return out
 
         if upto := _DATE_UPTO.search(title):
             d, m, y = upto.groups()

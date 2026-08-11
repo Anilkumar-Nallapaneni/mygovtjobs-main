@@ -37,7 +37,7 @@ Never commit real secrets. Keep these files on your machine only:
 | `vercel.json` | Committed | Root deploy config — **do not** use `frontend/vercel.json` |
 | `database/supabase_setup.sql` | Committed | Run once in Supabase SQL Editor |
 | `database/migrations/*.sql` | Committed | Run in order after setup |
-| `.github/workflows/supabase-auto-ingest.yml` | Committed | Daily 8 AM IST scrape (GitHub secrets required) |
+| `.github/workflows/canonical-daily-pipeline.yml` | Committed | Daily 8 AM IST scrape (GitHub secrets required) |
 
 ### `frontend/.env.local` template
 
@@ -227,7 +227,7 @@ You do **not** need to run these manually if GitHub Actions is configured.
 
 | When | What | Where |
 |------|------|-------|
-| **8:00 AM IST daily** | Scrape 100+ official sources → Supabase → `live-jobs.json` → sitemap commit | `.github/workflows/supabase-auto-ingest.yml` |
+| **8:00 AM IST daily** | Scrape 100+ official sources → Supabase → `live-jobs.json` → sitemap commit | `.github/workflows/canonical-daily-pipeline.yml` |
 | **Sunday 8:30 AM IST** | PDF enrich + static job-detail JSON (50 jobs) | `.github/workflows/weekly-enrich.yml` |
 | **Weekly** | Portal health audit | `.github/workflows/weekly-portal-audit.yml` |
 | **On git push to `main`** | Vercel production deploy | Vercel (auto) |
@@ -490,7 +490,7 @@ Repo: [github.com/Anilkumar-Nallapaneni/mygovtjobs-main/actions](https://github.
 
 | File | Schedule | Purpose |
 |------|----------|---------|
-| `supabase-auto-ingest.yml` | Daily 8 AM IST | Main scrape + export + sitemap |
+| `canonical-daily-pipeline.yml` | Daily 8 AM IST | Main scrape + export + sitemap |
 | `weekly-enrich.yml` | Sunday | PDF enrich + detail JSON files |
 | `weekly-portal-audit.yml` | Weekly | Portal health check |
 | `ci.yml` | On PR/push | Lint, test, build |

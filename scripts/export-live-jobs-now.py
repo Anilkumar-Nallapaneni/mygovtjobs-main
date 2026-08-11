@@ -18,11 +18,15 @@ from app.services.supabase_audit_service import SupabaseAuditService  # noqa: E4
 
 async def main() -> int:
     scraped = int(sys.argv[1]) if len(sys.argv) > 1 else 154
-    async with SessionLocal() as session:
-        count = await JobPersistService().export_live_jobs_json(session)
-        audit = await SupabaseAuditService().table_counts(session)
-        for k, v in audit.items():
-            print(f"  {k}: {v}", flush=True)
+    try:
+        async with SessionLocal() as session:
+            count = await JobPersistService().export_live_jobs_json(session)
+            audit = await SupabaseAuditService().table_counts(session)
+            for k, v in audit.items():
+                print(f"  {k}: {v}", flush=True)
+    except RuntimeError as exc:
+        print(f"FAILED export: {exc}", flush=True)
+        return 1
     persist = JobPersistService()
     block = DailySyncService().daily_sync_json_block(job_count=count, sources_scraped=scraped)
     persist.patch_live_jobs_daily_sync(block)

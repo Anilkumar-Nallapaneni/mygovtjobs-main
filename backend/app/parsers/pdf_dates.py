@@ -11,8 +11,23 @@ from app.services.job_persist_service import _parse_date
 
 _OCR_DAY_TRANS = str.maketrans({"l": "1", "I": "1", "O": "0", "o": "0"})
 
+_MONTH_NAME = (
+    r"(?:Jan(?:uary)?|Feb(?:ruary)?|Mar(?:ch)?|Apr(?:il)?|May|Jun(?:e)?|"
+    r"Jul(?:y)?|Aug(?:ust)?|Sep(?:t(?:ember)?)?|Oct(?:ober)?|Nov(?:ember)?|Dec(?:ember)?)"
+)
+_MONTH_LOOKUP = {
+    "jan": 1, "january": 1, "feb": 2, "february": 2, "mar": 3, "march": 3,
+    "apr": 4, "april": 4, "may": 5, "jun": 6, "june": 6, "jul": 7, "july": 7,
+    "aug": 8, "august": 8, "sep": 9, "sept": 9, "september": 9,
+    "oct": 10, "october": 10, "nov": 11, "november": 11, "dec": 12, "december": 12,
+}
+
 _DATE_TOKEN = re.compile(
     r"([l1I\d]{1,2})[./\s-](\d{1,2})[./\s-](\d{2,4})",
+)
+_DATE_MONTH_TOKEN = re.compile(
+    rf"(\d{{1,2}})(?:st|nd|rd|th)?[\s,\-]+({_MONTH_NAME})[\s,\-]+(\d{{2,4}})",
+    re.I,
 )
 _DATE_RANGE = re.compile(
     r"(\d{1,2}[./-]\d{1,2}[./-]\d{2,4})\s*(?:TO|–|—|-)\s*(\d{1,2}[./-]\d{1,2}[./-]\d{2,4})",
@@ -30,6 +45,13 @@ _PUBLISHED_PATTERNS = (
         r"(\d{1,2}[./\s-]\d{1,2}[./\s-]\d{2,4})",
         re.I,
     ),
+    re.compile(
+        rf"(?:notification\s+date|date\s+of\s+notification|issue\s+date|"
+        rf"published\s+on|advertisement\s+date|advt\.?\s+date|opening\s+date|"
+        rf"start\s+date\s+of\s+(?:online\s+)?application)[:\s]+"
+        rf"(\d{{1,2}}(?:st|nd|rd|th)?[\s,\-]+{_MONTH_NAME}[\s,\-]+\d{{2,4}})",
+        re.I,
+    ),
     re.compile(r"\bdated\s+(\d{1,2})[.\s/-](\d{1,2})[.\s/-](\d{4})\b", re.I),
     _DATED_LINE,
     re.compile(r"Date\s*:\s*(\d{1,2}[./-]\d{1,2}[./-]\d{4})", re.I),
@@ -40,14 +62,31 @@ _LAST_PATTERNS = (
         re.I,
     ),
     re.compile(
-        r"(?:last\s*date(?:\s*for\s*(?:online\s*)?(?:application|registration))?|"
+        rf"apply\s+online[\s\S]{{0,220}}?on\s+or\s+before\s+"
+        rf"(\d{{1,2}}(?:st|nd|rd|th)?[\s,\-]+{_MONTH_NAME}[\s,\-]+\d{{2,4}})",
+        re.I,
+    ),
+    re.compile(
+        r"(?:last\s*date(?:\s*for\s*(?:the\s+)?(?:submission\s+of\s+)?(?:online\s*)?(?:application|registration)s?)?|"
         r"closing\s*date|apply\s*(?:by|before|till)|submission\s*deadline|"
         r"अंतिम\s*तिथि)[:\s]+(\d{1,2}[./\s-]\d{1,2}[./\s-]\d{2,4})",
         re.I,
     ),
     re.compile(
+        rf"(?:last\s*date(?:\s*for\s*(?:the\s+)?(?:submission\s+of\s+)?(?:online\s*)?(?:application|registration)s?)?|"
+        rf"closing\s*date|apply\s*(?:by|before|till)|submission\s*deadline|"
+        rf"अंतिम\s*तिथि)[:\s]+"
+        rf"(\d{{1,2}}(?:st|nd|rd|th)?[\s,\-]+{_MONTH_NAME}[\s,\-]+\d{{2,4}})",
+        re.I,
+    ),
+    re.compile(
         r"(?:extended\s+)?(?:on\s+or\s+before|upto|until|up\s+to)\s+"
         r"(\d{1,2}[./-]\d{1,2}[./-]\d{4})",
+        re.I,
+    ),
+    re.compile(
+        rf"(?:extended\s+)?(?:on\s+or\s+before|upto|until|up\s+to)\s+"
+        rf"(\d{{1,2}}(?:st|nd|rd|th)?[\s,\-]+{_MONTH_NAME}[\s,\-]+\d{{2,4}})",
         re.I,
     ),
     # Walk-in / interview dates are apply-by for offline notices.
@@ -96,6 +135,12 @@ def to_iso_date(value: Any) -> str | None:
         return value.isoformat()
     if isinstance(value, datetime):
         return value.date().isoformat()
+    text = str(value).strip()
+    if not text:
+        return None
+    month_m = _DATE_MONTH_TOKEN.search(text)
+    if month_m:
+        return _month_name_to_iso(month_m.group(1), month_m.group(2), month_m.group(3))
     parsed = _parse_date(value)
     return parsed.isoformat() if parsed else None
 
@@ -115,8 +160,26 @@ def _parts_to_iso(day_raw: str, month_raw: str, year_raw: str) -> str | None:
         return None
 
 
+def _month_name_to_iso(day_raw: str, month_raw: str, year_raw: str) -> str | None:
+    try:
+        day = int(str(day_raw).strip())
+        month = _MONTH_LOOKUP.get(str(month_raw).strip().lower())
+        year = int(str(year_raw).strip())
+        if not month:
+            return None
+        if year < 100:
+            year += 2000
+        return date(year, month, day).isoformat()
+    except ValueError:
+        return None
+
+
 def _token_to_iso(raw: str) -> str | None:
-    text = str(raw or "").strip().translate(_OCR_DAY_TRANS)
+    text = str(raw or "").strip()
+    month_m = _DATE_MONTH_TOKEN.search(text)
+    if month_m:
+        return _month_name_to_iso(month_m.group(1), month_m.group(2), month_m.group(3))
+    text = text.translate(_OCR_DAY_TRANS)
     text = re.sub(r"\s+", "", text.replace(".", "-").replace("/", "-"))
     m = _DATE_TOKEN.search(text)
     if not m:

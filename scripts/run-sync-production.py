@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import asyncio
+import json
 import os
 import socket
 import subprocess
@@ -15,10 +16,12 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "backend"))
 
 from app.database.session import SessionLocal  # noqa: E402
+from app.services.job_persist_service import _snapshot_looks_like_ungated_feed_dump  # noqa: E402
 from app.services.sync_run_service import SyncRunService  # noqa: E402
 
 NPM = "npm.cmd" if sys.platform == "win32" else "npm"
 PYTHON = "node"
+LIVE_JSON = ROOT / "frontend" / "public" / "data" / "live-jobs.json"
 
 
 def _npm_step_timeout() -> int | None:
@@ -36,13 +39,42 @@ def run_npm(script: str, *extra: str) -> int:
     print(f"\n=== npm run {script} {' '.join(extra)} ===", flush=True)
     timeout = _npm_step_timeout()
     try:
-        return subprocess.run(cmd, cwd=ROOT, check=False, timeout=timeout).returncode
+        completed = subprocess.run(cmd, cwd=ROOT, check=False, timeout=timeout)
+        code = completed.returncode
+        if code is None:
+            return 1
+        return int(code)
     except subprocess.TimeoutExpired:
         print(
-            f"=== npm run {script}: exceeded {timeout}s — killed; continuing pipeline ===",
+            f"=== npm run {script}: exceeded {timeout}s — killed ===",
             flush=True,
         )
         return 124
+
+
+def require_npm(script: str, *extra: str) -> None:
+    """Run an npm script and raise if it does not exit 0."""
+    code = run_npm(script, *extra)
+    if code != 0:
+        raise RuntimeError(f"npm run {script} exited with code {code}")
+
+
+def _assert_gated_snapshot_after_export() -> None:
+    """Fail hard when export refused silently or left an ungated feed dump in place."""
+    if not LIVE_JSON.exists():
+        raise RuntimeError(f"missing snapshot after export: {LIVE_JSON}")
+    try:
+        payload = json.loads(LIVE_JSON.read_text(encoding="utf-8"))
+    except Exception as exc:  # noqa: BLE001
+        raise RuntimeError(f"unreadable live-jobs.json after export: {exc}") from exc
+    items = payload.get("items")
+    if not isinstance(items, list) or not items:
+        raise RuntimeError("live-jobs.json has no items after export")
+    if _snapshot_looks_like_ungated_feed_dump(payload):
+        raise RuntimeError(
+            f"live-jobs.json still looks like an ungated feed dump after export "
+            f"({len(items)} rows) — export likely refused or was overwritten"
+        )
 
 
 def _apply_socket_timeout_floor() -> None:
@@ -154,35 +186,47 @@ async def main() -> int:
 
     _install_signal_handlers(run_id)
 
-    code = 0
     inserted = 0
     updated = 0
-    error_message: str | None = None
+    # Allow gated catalog recovery before *any* export (daily nested, promote, export:live-jobs).
+    os.environ["ALLOW_DRASTIC_JSON_EXPORT"] = "1"
 
     try:
         code = run_daily_nested()
-        if code == 0:
-            run_npm("fetch:official:feeds")
-            run_npm("build:official-archives")
-            run_npm("build:live-jobs-list")
-            run_npm("build:live-jobs-bootstrap")
-            run_npm("build:sitemap")
-            run_npm("verify:live-jobs")
-        else:
-            error_message = f"daily sync exited with code {code}"
+        if code is None:
+            code = 1
+        if code != 0:
+            raise RuntimeError(f"daily sync exited with code {code}")
 
-        status = "success" if code == 0 else "failed"
+        # Feeds/archives must never own live-jobs.json. Re-export gated catalog after.
+        # Soft-fail feeds/archives so a flaky RSS step cannot mask a good gated export,
+        # but promote → export → clean → verify must all succeed.
+        feed_code = run_npm("fetch:official:feeds")
+        if feed_code != 0:
+            print(f"warn: fetch:official:feeds exited {feed_code}; continuing", flush=True)
+        archive_code = run_npm("build:official-archives")
+        if archive_code != 0:
+            print(f"warn: build:official-archives exited {archive_code}; continuing", flush=True)
+
+        require_npm("data:promote-publish-gate:apply")
+        require_npm("export:live-jobs")
+        _assert_gated_snapshot_after_export()
+        require_npm("data:scrub-vacancies")
+        require_npm("clean:live-jobs")
+        require_npm("build:sitemap")
+        require_npm("verify:live-jobs")
+
         async with SessionLocal() as session:
             await SyncRunService().finish(
                 session,
                 run_id,
-                status=status,
+                status="success",
                 inserted_count=inserted,
                 updated_count=updated,
-                error_message=error_message,
+                error_message=None,
             )
-        print(f"sync:production {status}", flush=True)
-        return code
+        print("sync:production success", flush=True)
+        return 0
     except Exception as exc:
         detail = f"{type(exc).__name__}: {exc}"
         async with SessionLocal() as session:
@@ -192,6 +236,7 @@ async def main() -> int:
                 status="failed",
                 error_message=detail,
             )
+        print("sync:production failed", flush=True)
         print(f"sync:production FAILED: {detail}", flush=True)
         return 1
 

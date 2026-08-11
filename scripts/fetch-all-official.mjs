@@ -28,7 +28,9 @@ async function main() {
   const limitArg = process.argv.find((a) => a.startsWith("--limit="));
   const cliLimit = limitArg ? Number(limitArg.split("=")[1]) : undefined;
   const lookbackDays = parseDaysArg(process.argv, DEFAULT_LOOKBACK_DAYS);
-  const feedOnly = process.argv.includes("--feed-only");
+  // Default: never overwrite live-jobs.json (publish-gate catalog). Opt-in only.
+  const writeLiveJobs = process.argv.includes("--write-live-jobs");
+  const feedOnly = !writeLiveJobs;
 
   console.log(`=== Notifications from last ${lookbackDays} days ===`);
   console.log("\n=== RSS feeds (official-sources.json) ===");

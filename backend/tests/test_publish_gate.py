@@ -39,6 +39,23 @@ def test_classify_result_and_form():
     assert blocked.content_type == "OTHER_NOTICE"
 
 
+def test_classify_gazette_recruitment_is_recruitment():
+    assert (
+        classify_document_type("Gazette Notification for Recruitment of Assistants")
+        == "RECRUITMENT"
+    )
+    result = classify_document(
+        "Gazette Notification for Recruitment of Assistants 2026",
+        "Applications are invited",
+    )
+    assert result.document_type == "RECRUITMENT"
+    assert result.content_type == "RECRUITMENT"
+
+
+def test_classify_recruitment_rules_still_rules():
+    assert classify_document_type("UPSC Recruitment Rules for Assistant Section Officer") == "RECRUITMENT_RULES"
+
+
 def test_can_publish_requires_verified_recruitment():
     today = date(2026, 7, 24)
     ok, errors = can_publish_job(
