@@ -244,6 +244,11 @@ class StatePortalHtmlScraper(BaseScraper):
                             "sourceName": dept_label,
                             "published": item.get("published"),
                             "publishedAt": item.get("publishedAt"),
+                            # Recruitment tables commonly keep the closing date,
+                            # vacancy count, and advertisement number in sibling
+                            # cells rather than in the link text itself. Preserve
+                            # that official row context for NotificationParser.
+                            "summary": item.get("parentText") or "",
                         }
                     )
                     if len(all_rows) >= self.max_items:

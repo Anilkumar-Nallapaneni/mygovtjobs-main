@@ -965,7 +965,7 @@
     {
       "code": "psc-up",
       "module": "state_portal_html",
-      "portal_url": "https://uppsc.up.nic.in/Notifications.aspx",
+      "portal_url": "https://uppsc.up.nic.in/CandidatePages/Notifications.aspx",
       "state": "up",
       "category": "state",
       "enabled": true,

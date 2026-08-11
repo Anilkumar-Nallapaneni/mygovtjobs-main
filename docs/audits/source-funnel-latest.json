@@ -1,0 +1,724 @@
+{
+  "priority_source_count": 25,
+  "totals": {
+    "stored": 3340,
+    "published": 16,
+    "rejected_or_draft": 3324,
+    "vacancies": 220,
+    "yield_percent": 0.48,
+    "rejection_reasons": {
+      "missing_deadline": 2010,
+      "low_quality": 777,
+      "other": 168,
+      "missing_vacancies": 161,
+      "missing_pdf": 144,
+      "missing_qualification": 58,
+      "non_recruitment": 4,
+      "expired": 2
+    }
+  },
+  "sources": [
+    {
+      "code": "isro",
+      "name": "isro",
+      "domains": [
+        "isro.gov.in"
+      ],
+      "stored": 60,
+      "published": 5,
+      "rejected_or_draft": 55,
+      "vacancies": 73,
+      "yield_percent": 8.33,
+      "rejection_reasons": {
+        "missing_deadline": 45,
+        "missing_vacancies": 4,
+        "other": 3,
+        "missing_qualification": 2,
+        "missing_pdf": 1
+      },
+      "health": {
+        "source_code": "isro",
+        "discovered_count": 32,
+        "accepted_count": 13,
+        "rejected_count": 0,
+        "active_job_count": 0,
+        "parser_success_rate": null,
+        "health_status": "HEALTHY",
+        "last_error": null,
+        "last_checked_at": "2026-08-03 11:07:02.836264+00:00",
+        "last_success_at": null
+      }
+    },
+    {
+      "code": "esic",
+      "name": "esic",
+      "domains": [
+        "esic.gov.in"
+      ],
+      "stored": 76,
+      "published": 0,
+      "rejected_or_draft": 76,
+      "vacancies": 0,
+      "yield_percent": 0.0,
+      "rejection_reasons": {
+        "missing_deadline": 34,
+        "low_quality": 17,
+        "missing_vacancies": 14,
+        "missing_qualification": 6,
+        "missing_pdf": 2,
+        "other": 2,
+        "expired": 1
+      },
+      "health": {
+        "source_code": "esic",
+        "discovered_count": 40,
+        "accepted_count": 14,
+        "rejected_count": 26,
+        "active_job_count": 0,
+        "parser_success_rate": "35.00",
+        "health_status": "HEALTHY",
+        "last_error": null,
+        "last_checked_at": "2026-08-11 14:47:34.206617+00:00",
+        "last_success_at": "2026-08-11 14:47:34.206617+00:00"
+      }
+    },
+    {
+      "code": "upsc",
+      "name": "upsc",
+      "domains": [
+        "upsc.gov.in"
+      ],
+      "stored": 50,
+      "published": 0,
+      "rejected_or_draft": 50,
+      "vacancies": 0,
+      "yield_percent": 0.0,
+      "rejection_reasons": {
+        "missing_deadline": 33,
+        "low_quality": 12,
+        "missing_qualification": 3,
+        "missing_vacancies": 2
+      },
+      "health": {
+        "source_code": "upsc",
+        "discovered_count": 39,
+        "accepted_count": 3,
+        "rejected_count": 36,
+        "active_job_count": 0,
+        "parser_success_rate": "7.69",
+        "health_status": "HEALTHY",
+        "last_error": null,
+        "last_checked_at": "2026-08-11 14:35:21.554237+00:00",
+        "last_success_at": "2026-08-11 14:35:21.554237+00:00"
+      }
+    },
+    {
+      "code": "ibps",
+      "name": "ibps",
+      "domains": [
+        "ibps.in"
+      ],
+      "stored": 47,
+      "published": 0,
+      "rejected_or_draft": 47,
+      "vacancies": 0,
+      "yield_percent": 0.0,
+      "rejection_reasons": {
+        "missing_pdf": 41,
+        "missing_deadline": 2,
+        "other": 2,
+        "missing_qualification": 1,
+        "expired": 1
+      },
+      "health": {
+        "source_code": "ibps",
+        "discovered_count": 24,
+        "accepted_count": 12,
+        "rejected_count": 12,
+        "active_job_count": 0,
+        "parser_success_rate": "50.00",
+        "health_status": "HEALTHY",
+        "last_error": null,
+        "last_checked_at": "2026-08-11 14:48:26.285328+00:00",
+        "last_success_at": "2026-08-11 14:48:26.285328+00:00"
+      }
+    },
+    {
+      "code": "rrb-mumbai",
+      "name": "rrb-mumbai",
+      "domains": [
+        "rrbmumbai.gov.in"
+      ],
+      "stored": 40,
+      "published": 0,
+      "rejected_or_draft": 40,
+      "vacancies": 0,
+      "yield_percent": 0.0,
+      "rejection_reasons": {
+        "other": 16,
+        "low_quality": 15,
+        "missing_deadline": 6,
+        "missing_vacancies": 3
+      },
+      "health": {
+        "source_code": "rrb-mumbai",
+        "discovered_count": 0,
+        "accepted_count": 0,
+        "rejected_count": 0,
+        "active_job_count": 0,
+        "parser_success_rate": null,
+        "health_status": "BROKEN",
+        "last_error": "All connection attempts failed",
+        "last_checked_at": "2026-08-03 11:07:07.294336+00:00",
+        "last_success_at": null
+      }
+    },
+    {
+      "code": "kvs",
+      "name": "kvs",
+      "domains": [
+        "kvsangathan.nic.in"
+      ],
+      "stored": 36,
+      "published": 0,
+      "rejected_or_draft": 36,
+      "vacancies": 0,
+      "yield_percent": 0.0,
+      "rejection_reasons": {
+        "missing_deadline": 35,
+        "missing_pdf": 1
+      },
+      "health": {
+        "source_code": "kvs",
+        "discovered_count": 50,
+        "accepted_count": 1,
+        "rejected_count": 49,
+        "active_job_count": 0,
+        "parser_success_rate": "2.00",
+        "health_status": "HEALTHY",
+        "last_error": null,
+        "last_checked_at": "2026-08-11 14:42:47.244052+00:00",
+        "last_success_at": "2026-08-11 14:42:47.244052+00:00"
+      }
+    },
+    {
+      "code": "psc-up",
+      "name": "psc-up",
+      "domains": [
+        "uppsc.up.nic.in"
+      ],
+      "stored": 33,
+      "published": 0,
+      "rejected_or_draft": 33,
+      "vacancies": 0,
+      "yield_percent": 0.0,
+      "rejection_reasons": {
+        "missing_deadline": 17,
+        "missing_pdf": 16
+      },
+      "health": {
+        "source_code": "psc-up",
+        "discovered_count": 13,
+        "accepted_count": 3,
+        "rejected_count": 10,
+        "active_job_count": 0,
+        "parser_success_rate": "23.08",
+        "health_status": "HEALTHY",
+        "last_error": null,
+        "last_checked_at": "2026-08-11 14:47:58.547754+00:00",
+        "last_success_at": "2026-08-11 14:47:58.547754+00:00"
+      }
+    },
+    {
+      "code": "rbi",
+      "name": "rbi",
+      "domains": [
+        "rbi.org.in"
+      ],
+      "stored": 31,
+      "published": 0,
+      "rejected_or_draft": 31,
+      "vacancies": 0,
+      "yield_percent": 0.0,
+      "rejection_reasons": {
+        "missing_deadline": 27,
+        "low_quality": 4
+      },
+      "health": {
+        "source_code": "rbi",
+        "discovered_count": 19,
+        "accepted_count": 0,
+        "rejected_count": 19,
+        "active_job_count": 0,
+        "parser_success_rate": "0.00",
+        "health_status": "DEGRADED",
+        "last_error": "no rows saved",
+        "last_checked_at": "2026-08-11 14:43:03.279359+00:00",
+        "last_success_at": null
+      }
+    },
+    {
+      "code": "ssc",
+      "name": "ssc",
+      "domains": [
+        "ssc.gov.in"
+      ],
+      "stored": 28,
+      "published": 0,
+      "rejected_or_draft": 28,
+      "vacancies": 0,
+      "yield_percent": 0.0,
+      "rejection_reasons": {
+        "missing_vacancies": 11,
+        "missing_qualification": 9,
+        "missing_pdf": 4,
+        "other": 3,
+        "non_recruitment": 1
+      },
+      "health": {
+        "source_code": "ssc",
+        "discovered_count": 50,
+        "accepted_count": 28,
+        "rejected_count": 22,
+        "active_job_count": 0,
+        "parser_success_rate": "56.00",
+        "health_status": "HEALTHY",
+        "last_error": null,
+        "last_checked_at": "2026-08-11 14:34:57.253690+00:00",
+        "last_success_at": "2026-08-11 14:34:57.253690+00:00"
+      }
+    },
+    {
+      "code": "drdo",
+      "name": "drdo",
+      "domains": [
+        "drdo.gov.in"
+      ],
+      "stored": 24,
+      "published": 0,
+      "rejected_or_draft": 24,
+      "vacancies": 0,
+      "yield_percent": 0.0,
+      "rejection_reasons": {
+        "missing_deadline": 19,
+        "missing_pdf": 2,
+        "missing_vacancies": 2,
+        "low_quality": 1
+      },
+      "health": {
+        "source_code": "drdo",
+        "discovered_count": 30,
+        "accepted_count": 2,
+        "rejected_count": 28,
+        "active_job_count": 0,
+        "parser_success_rate": "6.67",
+        "health_status": "HEALTHY",
+        "last_error": null,
+        "last_checked_at": "2026-08-11 14:47:47.674207+00:00",
+        "last_success_at": "2026-08-11 14:47:47.674207+00:00"
+      }
+    },
+    {
+      "code": "indiapost",
+      "name": "indiapost",
+      "domains": [
+        "indiapost.gov.in"
+      ],
+      "stored": 15,
+      "published": 0,
+      "rejected_or_draft": 15,
+      "vacancies": 0,
+      "yield_percent": 0.0,
+      "rejection_reasons": {
+        "missing_deadline": 12,
+        "low_quality": 2,
+        "other": 1
+      },
+      "health": {
+        "source_code": "indiapost",
+        "discovered_count": 154,
+        "accepted_count": 42,
+        "rejected_count": 0,
+        "active_job_count": 0,
+        "parser_success_rate": null,
+        "health_status": "HEALTHY",
+        "last_error": null,
+        "last_checked_at": "2026-08-03 11:07:21.079652+00:00",
+        "last_success_at": null
+      }
+    },
+    {
+      "code": "psc-br",
+      "name": "psc-br",
+      "domains": [
+        "bpsc.bihar.gov.in"
+      ],
+      "stored": 13,
+      "published": 0,
+      "rejected_or_draft": 13,
+      "vacancies": 0,
+      "yield_percent": 0.0,
+      "rejection_reasons": {
+        "missing_deadline": 11,
+        "missing_qualification": 1,
+        "low_quality": 1
+      },
+      "health": {
+        "source_code": "psc-br",
+        "discovered_count": 141,
+        "accepted_count": 14,
+        "rejected_count": 0,
+        "active_job_count": 0,
+        "parser_success_rate": null,
+        "health_status": "DEGRADED",
+        "last_error": "HTTP 404",
+        "last_checked_at": "2026-08-03 11:08:16.561046+00:00",
+        "last_success_at": null
+      }
+    },
+    {
+      "code": "rrb-cdg",
+      "name": "rrb-cdg",
+      "domains": [
+        "rrbcdg.gov.in"
+      ],
+      "stored": 10,
+      "published": 0,
+      "rejected_or_draft": 10,
+      "vacancies": 0,
+      "yield_percent": 0.0,
+      "rejection_reasons": {
+        "low_quality": 4,
+        "missing_deadline": 4,
+        "missing_vacancies": 1,
+        "other": 1
+      },
+      "health": {
+        "source_code": "rrb-cdg",
+        "discovered_count": 0,
+        "accepted_count": 0,
+        "rejected_count": 0,
+        "active_job_count": 0,
+        "parser_success_rate": null,
+        "health_status": "BROKEN",
+        "last_error": "All connection attempts failed",
+        "last_checked_at": "2026-08-03 11:07:05.524283+00:00",
+        "last_success_at": null
+      }
+    },
+    {
+      "code": "aiims",
+      "name": "aiims",
+      "domains": [
+        "aiimsexams.ac.in"
+      ],
+      "stored": 7,
+      "published": 0,
+      "rejected_or_draft": 7,
+      "vacancies": 0,
+      "yield_percent": 0.0,
+      "rejection_reasons": {
+        "missing_deadline": 6,
+        "missing_pdf": 1
+      },
+      "health": {
+        "source_code": "aiims",
+        "discovered_count": 50,
+        "accepted_count": 9,
+        "rejected_count": 0,
+        "active_job_count": 0,
+        "parser_success_rate": null,
+        "health_status": "HEALTHY",
+        "last_error": null,
+        "last_checked_at": "2026-08-03 11:07:49.517084+00:00",
+        "last_success_at": null
+      }
+    },
+    {
+      "code": "nvs",
+      "name": "nvs",
+      "domains": [
+        "navodaya.gov.in"
+      ],
+      "stored": 5,
+      "published": 0,
+      "rejected_or_draft": 5,
+      "vacancies": 0,
+      "yield_percent": 0.0,
+      "rejection_reasons": {
+        "missing_deadline": 3,
+        "missing_vacancies": 2
+      },
+      "health": {
+        "source_code": "nvs",
+        "discovered_count": 0,
+        "accepted_count": 0,
+        "rejected_count": 0,
+        "active_job_count": 0,
+        "parser_success_rate": null,
+        "health_status": "BROKEN",
+        "last_error": "",
+        "last_checked_at": "2026-08-03 11:07:39.610212+00:00",
+        "last_success_at": null
+      }
+    },
+    {
+      "code": "navy",
+      "name": "navy",
+      "domains": [
+        "joinindiannavy.gov.in"
+      ],
+      "stored": 4,
+      "published": 0,
+      "rejected_or_draft": 4,
+      "vacancies": 0,
+      "yield_percent": 0.0,
+      "rejection_reasons": {
+        "non_recruitment": 3,
+        "missing_deadline": 1
+      },
+      "health": {
+        "source_code": "navy",
+        "discovered_count": 0,
+        "accepted_count": 0,
+        "rejected_count": 0,
+        "active_job_count": 0,
+        "parser_success_rate": null,
+        "health_status": "BROKEN",
+        "last_error": "",
+        "last_checked_at": "2026-08-03 11:07:23.734779+00:00",
+        "last_success_at": null
+      }
+    },
+    {
+      "code": "psc-tn",
+      "name": "psc-tn",
+      "domains": [
+        "tnpsc.gov.in"
+      ],
+      "stored": 4,
+      "published": 0,
+      "rejected_or_draft": 4,
+      "vacancies": 0,
+      "yield_percent": 0.0,
+      "rejection_reasons": {
+        "missing_deadline": 4
+      },
+      "health": {
+        "source_code": "psc-tn",
+        "discovered_count": 0,
+        "accepted_count": 0,
+        "rejected_count": 0,
+        "active_job_count": 0,
+        "parser_success_rate": null,
+        "health_status": "BROKEN",
+        "last_error": "",
+        "last_checked_at": "2026-08-03 11:08:39.197966+00:00",
+        "last_success_at": null
+      }
+    },
+    {
+      "code": "sbi",
+      "name": "sbi",
+      "domains": [
+        "sbi.bank.in"
+      ],
+      "stored": 1,
+      "published": 0,
+      "rejected_or_draft": 1,
+      "vacancies": 0,
+      "yield_percent": 0.0,
+      "rejection_reasons": {
+        "missing_deadline": 1
+      },
+      "health": {
+        "source_code": "sbi",
+        "discovered_count": 623,
+        "accepted_count": 202,
+        "rejected_count": 0,
+        "active_job_count": 0,
+        "parser_success_rate": null,
+        "health_status": "HEALTHY",
+        "last_error": null,
+        "last_checked_at": "2026-08-03 11:07:49.680612+00:00",
+        "last_success_at": null
+      }
+    },
+    {
+      "code": "employment-news",
+      "name": "employment-news",
+      "domains": [
+        "employmentnews.gov.in"
+      ],
+      "stored": 0,
+      "published": 0,
+      "rejected_or_draft": 0,
+      "vacancies": 0,
+      "yield_percent": 0.0,
+      "rejection_reasons": {},
+      "health": {
+        "source_code": "employment-news",
+        "discovered_count": 0,
+        "accepted_count": 0,
+        "rejected_count": 0,
+        "active_job_count": 0,
+        "parser_success_rate": "0.00",
+        "health_status": "BROKEN",
+        "last_error": "no rows saved",
+        "last_checked_at": "2026-08-11 14:46:54.791795+00:00",
+        "last_success_at": null
+      }
+    },
+    {
+      "code": "army",
+      "name": "army",
+      "domains": [
+        "joinindianarmy.nic.in"
+      ],
+      "stored": 0,
+      "published": 0,
+      "rejected_or_draft": 0,
+      "vacancies": 0,
+      "yield_percent": 0.0,
+      "rejection_reasons": {},
+      "health": {
+        "source_code": "army",
+        "discovered_count": 0,
+        "accepted_count": 0,
+        "rejected_count": 0,
+        "active_job_count": 0,
+        "parser_success_rate": "0.00",
+        "health_status": "BROKEN",
+        "last_error": "no rows saved",
+        "last_checked_at": "2026-08-11 14:47:04.284759+00:00",
+        "last_success_at": null
+      }
+    },
+    {
+      "code": "iaf",
+      "name": "iaf",
+      "domains": [
+        "indianairforce.nic.in"
+      ],
+      "stored": 0,
+      "published": 0,
+      "rejected_or_draft": 0,
+      "vacancies": 0,
+      "yield_percent": 0.0,
+      "rejection_reasons": {},
+      "health": {
+        "source_code": "iaf",
+        "discovered_count": 0,
+        "accepted_count": 0,
+        "rejected_count": 0,
+        "active_job_count": 0,
+        "parser_success_rate": null,
+        "health_status": "BROKEN",
+        "last_error": "",
+        "last_checked_at": "2026-08-03 11:07:24.470276+00:00",
+        "last_success_at": null
+      }
+    },
+    {
+      "code": "coast-guard",
+      "name": "coast-guard",
+      "domains": [
+        "joinindiancoastguard.cdac.in"
+      ],
+      "stored": 0,
+      "published": 0,
+      "rejected_or_draft": 0,
+      "vacancies": 0,
+      "yield_percent": 0.0,
+      "rejection_reasons": {},
+      "health": {
+        "source_code": "coast-guard",
+        "discovered_count": 0,
+        "accepted_count": 0,
+        "rejected_count": 0,
+        "active_job_count": 0,
+        "parser_success_rate": null,
+        "health_status": "BROKEN",
+        "last_error": "",
+        "last_checked_at": "2026-08-03 11:07:25.805549+00:00",
+        "last_success_at": null
+      }
+    },
+    {
+      "code": "fci",
+      "name": "fci",
+      "domains": [
+        "fci.gov.in"
+      ],
+      "stored": 0,
+      "published": 0,
+      "rejected_or_draft": 0,
+      "vacancies": 0,
+      "yield_percent": 0.0,
+      "rejection_reasons": {},
+      "health": {
+        "source_code": "fci",
+        "discovered_count": 0,
+        "accepted_count": 0,
+        "rejected_count": 0,
+        "active_job_count": 0,
+        "parser_success_rate": "0.00",
+        "health_status": "BROKEN",
+        "last_error": "no rows saved",
+        "last_checked_at": "2026-08-11 14:46:59.457154+00:00",
+        "last_success_at": null
+      }
+    },
+    {
+      "code": "psc-mh",
+      "name": "psc-mh",
+      "domains": [
+        "mpsc.gov.in"
+      ],
+      "stored": 0,
+      "published": 0,
+      "rejected_or_draft": 0,
+      "vacancies": 0,
+      "yield_percent": 0.0,
+      "rejection_reasons": {},
+      "health": {
+        "source_code": "psc-mh",
+        "discovered_count": 7,
+        "accepted_count": 1,
+        "rejected_count": 0,
+        "active_job_count": 0,
+        "parser_success_rate": null,
+        "health_status": "HEALTHY",
+        "last_error": null,
+        "last_checked_at": "2026-08-03 11:08:35.762690+00:00",
+        "last_success_at": null
+      }
+    },
+    {
+      "code": "psc-wb",
+      "name": "psc-wb",
+      "domains": [
+        "wbpsc.gov.in"
+      ],
+      "stored": 0,
+      "published": 0,
+      "rejected_or_draft": 0,
+      "vacancies": 0,
+      "yield_percent": 0.0,
+      "rejection_reasons": {},
+      "health": {
+        "source_code": "psc-wb",
+        "discovered_count": 0,
+        "accepted_count": 0,
+        "rejected_count": 0,
+        "active_job_count": 0,
+        "parser_success_rate": null,
+        "health_status": "BROKEN",
+        "last_error": "",
+        "last_checked_at": "2026-08-03 11:08:42.816475+00:00",
+        "last_success_at": null
+      }
+    }
+  ],
+  "generated_at": "2026-08-11T14:48:35.628414+00:00"
+}

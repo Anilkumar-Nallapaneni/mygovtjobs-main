@@ -1,6 +1,7 @@
 import asyncio
 import json
 import logging
+from collections import Counter
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -73,6 +74,7 @@ class IngestAgent:
         saved = 0
         errors = 0
         rejected = 0
+        rejection_reasons: Counter[str] = Counter()
         db_error: str | None = None
 
         try:
@@ -89,7 +91,9 @@ class IngestAgent:
                     try:
                         if source_id:
                             await self.raw_ingest.upsert_raw(session, source_id=source_id, raw=raw)
-                        normalized = await self._normalize_raw(raw, entry, source_code)
+                        normalized = await self._normalize_raw(
+                            raw, entry, source_code, rejection_reasons=rejection_reasons
+                        )
                         if normalized is None:
                             rejected += 1
                             continue
@@ -105,8 +109,12 @@ class IngestAgent:
                             saved += 1
                             if saved % 100 == 0:
                                 await session.commit()
+                        else:
+                            rejected += 1
+                            rejection_reasons["persist_rejected"] += 1
                     except Exception as exc:
                         errors += 1
+                        rejection_reasons[f"error:{type(exc).__name__}"] += 1
                         await session.rollback()
                         logger.warning("ingest row failed source=%s: %s", source_code, exc)
 
@@ -125,7 +133,14 @@ class IngestAgent:
                             logger.warning("live jobs json export retry failed: %s", exc2)
 
                 if source_id:
-                    await self._record_source_run(session, source_code, error=None if saved else "no rows saved")
+                    await self._record_source_run(
+                        session,
+                        source_code,
+                        fetched=len(rows),
+                        accepted=saved,
+                        rejected=rejected,
+                        error=None if saved else "no rows saved",
+                    )
         except Exception as exc:
             db_error = str(exc)
             logger.warning("database unavailable for source=%s: %s", source_code, exc)
@@ -143,10 +158,18 @@ class IngestAgent:
             "saved": saved,
             "rejected": rejected,
             "errors": errors,
+            "rejection_reasons": dict(rejection_reasons.most_common()),
             "db_error": db_error,
         }
 
-    async def _normalize_raw(self, raw: dict, entry: dict, source_code: str) -> dict | None:
+    async def _normalize_raw(
+        self,
+        raw: dict,
+        entry: dict,
+        source_code: str,
+        *,
+        rejection_reasons: Counter[str] | None = None,
+    ) -> dict | None:
         raw = {**raw, "source": source_code}
         if entry.get("sourceName"):
             raw["sourceName"] = entry["sourceName"]
@@ -167,6 +190,8 @@ class IngestAgent:
             )
             # Persist as reviewable draft when confidence says possible recruitment.
             if classification.content_type not in ("POSSIBLE_RECRUITMENT",):
+                if rejection_reasons is not None:
+                    rejection_reasons[f"classification:{classification.content_type.lower()}"] += 1
                 return None
             # Weak signal: continue without PDF enrichment; mark for review.
             apply_link = raw.get("link") or raw.get("applyUrl")
@@ -183,6 +208,8 @@ class IngestAgent:
             normalized["state_codes"] = _resolve_state_codes(normalized)
             valid, reasons = self.validator.validate(normalized)
             if not valid:
+                if rejection_reasons is not None:
+                    rejection_reasons.update(reasons or ["validation_failed"])
                 return None
             return normalized
 
@@ -223,6 +250,8 @@ class IngestAgent:
 
         valid, reasons = self.validator.validate(normalized)
         if not valid:
+            if rejection_reasons is not None:
+                rejection_reasons.update(reasons or ["validation_failed"])
             logger.info(
                 "ingest rejected source=%s title=%r reasons=%s",
                 source_code,
@@ -260,6 +289,9 @@ class IngestAgent:
         session,
         source_code: str,
         *,
+        fetched: int = 0,
+        accepted: int = 0,
+        rejected: int = 0,
         error: str | None,
     ) -> None:
         now = datetime.now(timezone.utc)
@@ -271,7 +303,48 @@ class IngestAgent:
             if row:
                 row.last_run_at = now
                 row.last_error = error
-                await session.commit()
+            await session.execute(
+                text(
+                    """
+                    INSERT INTO source_health (
+                      source_code, homepage_url, last_checked_at, discovered_count,
+                      accepted_count, rejected_count, parser_success_rate,
+                      last_success_at, last_notification_found_at, health_status,
+                      last_error, updated_at
+                    ) VALUES (
+                      :code, :homepage, :now, :fetched, :accepted, :rejected, :rate,
+                      :success_at, :notification_at, :health, :error, :now
+                    )
+                    ON CONFLICT (source_code) DO UPDATE SET
+                      last_checked_at = EXCLUDED.last_checked_at,
+                      discovered_count = EXCLUDED.discovered_count,
+                      accepted_count = EXCLUDED.accepted_count,
+                      rejected_count = EXCLUDED.rejected_count,
+                      parser_success_rate = EXCLUDED.parser_success_rate,
+                      last_success_at = COALESCE(EXCLUDED.last_success_at, source_health.last_success_at),
+                      last_notification_found_at = COALESCE(
+                        EXCLUDED.last_notification_found_at, source_health.last_notification_found_at
+                      ),
+                      health_status = EXCLUDED.health_status,
+                      last_error = EXCLUDED.last_error,
+                      updated_at = EXCLUDED.updated_at
+                    """
+                ),
+                {
+                    "code": source_code,
+                    "homepage": "",
+                    "now": now,
+                    "fetched": fetched,
+                    "accepted": accepted,
+                    "rejected": rejected,
+                    "rate": round(accepted / fetched * 100, 2) if fetched else 0,
+                    "success_at": now if accepted else None,
+                    "notification_at": now if fetched else None,
+                    "health": "HEALTHY" if accepted else ("DEGRADED" if fetched else "BROKEN"),
+                    "error": error,
+                },
+            )
+            await session.commit()
         except Exception as exc:
             logger.debug("source run timestamp not updated for %s: %s", source_code, exc)
         finally:

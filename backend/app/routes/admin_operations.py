@@ -7,8 +7,15 @@ from app.database.session import SessionLocal
 from app.middleware.auth import require_admin_key
 from app.models.job import Job
 from app.services.operations_dashboard_service import OperationsDashboardService
+from app.services.source_funnel_service import SourceFunnelService
 
 router = APIRouter(dependencies=[Depends(require_admin_key)])
+
+
+@router.get("/source-funnel")
+async def source_funnel():
+    async with SessionLocal() as session:
+        return await SourceFunnelService().report(session)
 
 
 @router.get("/stats")

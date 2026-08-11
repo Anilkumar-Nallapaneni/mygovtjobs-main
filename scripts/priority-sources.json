@@ -1,0 +1,10 @@
+{
+  "version": 1,
+  "targetActiveJobs": 500,
+  "sources": [
+    "employment-news", "upsc", "ssc", "ibps", "sbi", "rbi", "isro", "drdo",
+    "rrb-cdg", "rrb-mumbai", "army", "navy", "iaf", "coast-guard", "aiims",
+    "esic", "fci", "indiapost", "psc-up", "psc-br", "psc-mh", "psc-tn",
+    "psc-wb", "kvs", "nvs"
+  ]
+}

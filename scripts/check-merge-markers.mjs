@@ -4,7 +4,9 @@ import { extname, join, relative } from 'path'
 import { fileURLToPath } from 'url'
 
 const root = join(fileURLToPath(new URL('.', import.meta.url)), '..')
-const ignored = new Set(['.git', '.venv', 'node_modules', 'dist', '.pytest_cache', 'coverage'])
+const ignored = new Set([
+  '.git', '.venv', 'node_modules', 'dist', '.pytest_cache', '.local-test-tmp', 'coverage',
+])
 const textExtensions = new Set([
   '', '.css', '.html', '.java', '.js', '.json', '.jsx', '.md', '.mjs', '.properties',
   '.ps1', '.py', '.sql', '.svg', '.toml', '.ts', '.tsx', '.txt', '.xml', '.yml', '.yaml',

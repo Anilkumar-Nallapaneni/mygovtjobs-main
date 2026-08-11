@@ -20,6 +20,11 @@ async def main() -> None:
     parser.add_argument("--limit", type=int, default=0, help="Max sources (0 = all enabled)")
     parser.add_argument("--source", action="append", default=[], help="Source code to run (repeatable)")
     parser.add_argument("--source-timeout", type=int, default=240, help="Seconds before skipping a slow source")
+    parser.add_argument(
+        "--inspect-fetch",
+        action="store_true",
+        help="Fetch only and print normalized scraper rows without database writes",
+    )
     args = parser.parse_args()
 
     agent = IngestAgent()
@@ -38,7 +43,13 @@ async def main() -> None:
         code = entry.get("code", "?")
         try:
             print(f"[{i}/{len(enabled)}] start {code}", flush=True)
-            row = await asyncio.wait_for(agent.run_source(code), timeout=args.source_timeout)
+            if args.inspect_fetch:
+                scraper = agent._scraper_for(entry)
+                fetched_rows = await asyncio.wait_for(scraper.fetch(), timeout=args.source_timeout)
+                print(json.dumps(fetched_rows, indent=2, ensure_ascii=False, default=str), flush=True)
+                row = {"source": code, "fetched": len(fetched_rows), "saved": 0, "rejected": 0, "errors": 0}
+            else:
+                row = await asyncio.wait_for(agent.run_source(code), timeout=args.source_timeout)
             results.append(row)
             tag = "ok" if row.get("saved", 0) else "—"
             print(
@@ -46,6 +57,12 @@ async def main() -> None:
                 f"fetched={row.get('fetched', 0)} saved={row.get('saved', 0)} "
                 f"rejected={row.get('rejected', 0)} errors={row.get('errors', 0)}"
             )
+            if row.get("rejection_reasons"):
+                print(
+                    f"[{i}/{len(enabled)}] rejection reasons: "
+                    f"{json.dumps(row['rejection_reasons'], sort_keys=True)}",
+                    flush=True,
+                )
         except Exception as exc:
             if isinstance(exc, asyncio.TimeoutError):
                 print(f"[{i}/{len(enabled)}] TIMEOUT {code}: skipped after {args.source_timeout}s")
