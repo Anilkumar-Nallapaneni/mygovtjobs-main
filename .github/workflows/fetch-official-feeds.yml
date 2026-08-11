@@ -1,10 +1,11 @@
 name: Fetch official RSS
 
+# Manual-only. Canonical daily pipeline already imports RSS/archives.
+# Scheduled 4h runs burned Actions minutes and raced the live-jobs publication lock.
+# Re-enable a schedule only if urgent feed freshness is needed between daily runs.
+
 on:
   workflow_dispatch:
-  schedule:
-    # Lightweight metadata refresh every 4 hours (sync:quick).
-    - cron: "30 */4 * * *"
 
 env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
@@ -12,20 +13,16 @@ env:
 permissions:
   contents: write
 
-# Share the write-lock with supabase-auto-ingest so the two workflows never
-# push to main concurrently.
 concurrency:
   group: live-jobs-publication
   cancel-in-progress: false
 
 jobs:
   fetch:
-    # RSS freshness is independent of the daily writer.
-    # Disable with repository variable ALLOW_RSS_REFRESH=false if needed.
-    if: ${{ github.event_name == 'workflow_dispatch' || vars.ALLOW_RSS_REFRESH != 'false' }}
+    if: ${{ vars.ALLOW_RSS_REFRESH != 'false' }}
     runs-on: ubuntu-latest
-    # Manual runs scrape 53 admit/result portals; scheduled runs are RSS-only.
-    timeout-minutes: ${{ github.event_name == 'workflow_dispatch' && 180 || 60 }}
+    # Manual runs scrape 53 admit/result portals.
+    timeout-minutes: 180
     env:
       AUTO_PUBLISH_VERIFIED: "1"
 
@@ -65,17 +62,12 @@ jobs:
       - name: sync:quick (RSS + archives)
         env:
           DATABASE_URL: ${{ env.DATABASE_URL }}
-          SYNC_TRIGGER_TYPE: github_actions_schedule
-          FEED_FETCH_CONCURRENCY: ${{ github.event_name == 'workflow_dispatch' && '8' || '12' }}
+          SYNC_TRIGGER_TYPE: github_actions_manual
+          FEED_FETCH_CONCURRENCY: "8"
         run: |
-          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
-            echo "Full fetch (RSS + admit/result portals)"
-            node scripts/run-python.mjs scripts/run-sync-quick.py
-          else
-            echo "Scheduled RSS-only fetch (skips 53 portal scrapes)"
-            node scripts/run-python.mjs scripts/run-sync-quick.py --rss-only
-          fi
-        timeout-minutes: ${{ github.event_name == 'workflow_dispatch' && 150 || 45 }}
+          echo "Full fetch (RSS + admit/result portals)"
+          node scripts/run-python.mjs scripts/run-sync-quick.py
+        timeout-minutes: 150
 
       - name: Commit snapshot
         run: |
@@ -103,7 +95,7 @@ jobs:
             git fetch origin
             if ! git push; then
               echo "Push rejected — rebasing on remote and retrying..."
-              git pull --rebase -X theirs origin "${GITHUB_REF_NAME}" || git pull --rebase -X theirs
+              git pull --rebase --autostash -X theirs origin "${GITHUB_REF_NAME}" || git pull --rebase --autostash -X theirs
               git push
             fi
           fi

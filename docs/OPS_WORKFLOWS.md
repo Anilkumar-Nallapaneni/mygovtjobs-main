@@ -1,26 +1,28 @@
 # GitHub Actions + Supabase — keep vs disable
 
-Last audited: 2026-08-04
+Last audited: 2026-08-11
 
 ## Authoritative schedule (after this cleanup)
 
 | Workflow | Frequency | Status | Role |
 |----------|-----------|--------|------|
 | CI | PR + push | **KEEP** | Code quality |
-| Canonical daily pipeline | Daily 08:00 IST | **KEEP** (needs push + `ALLOW_CANONICAL_PIPELINE=true`) | Sole daily DB + snapshot writer |
-| Fetch official RSS | Every 4h | **KEEP** | Urgent notification freshness |
+| Canonical daily pipeline | Daily 08:00 IST | **KEEP** (needs `ALLOW_CANONICAL_PIPELINE=true`) | Sole daily DB + snapshot writer (includes RSS/archives) |
+| Catalog recovery export | Manual | **KEEP** | Promote/export gated snapshot without re-scrape |
 | Weekly PDF enrich | Sunday | **KEEP** | PDF + job-detail backfill |
 | Weekly portal audit | Sunday | **KEEP** | Broken official-link probe |
 | Uptime and freshness | Every 30m | **KEEP** | Production health |
 | Notify on workflow failure | On failure | **KEEP** | Ops alert |
+| Fetch official RSS | Manual only | **KEEP (no cron)** | Optional mid-day feed refresh |
 
 ## Disabled / legacy
 
 | Workflow | Why |
 |----------|-----|
-| Supabase auto ingest | Same cron as canonical; dual writer risk. Hard-disabled (`if: false`, schedule removed). |
-| Supabase ingest (self-hosted PC) | Already `if: false`; no maintained runner. |
-| Scheduled API ingest | Deprecated hosted API trigger; hard-disabled. |
+| Fetch official RSS (schedule) | Removed 2026-08-11 — duplicated work already inside canonical; raced `live-jobs-publication` lock; burned ~30m Actions minutes per run. |
+| Supabase auto ingest | Deleted — same cron as canonical; dual writer risk. |
+| Supabase ingest (self-hosted PC) | Deleted — no maintained runner. |
+| Scheduled API ingest | Deleted — deprecated hosted API trigger. |
 
 ## Repository variables
 
@@ -28,7 +30,7 @@ Last audited: 2026-08-04
 |----------|-------|---------|
 | `ALLOW_CANONICAL_PIPELINE` | `true` | Enables canonical daily writer |
 | `ALLOW_AUTO_INGEST` | `false` | Legacy gate (unused by cleaned workflows) |
-| `ALLOW_RSS_REFRESH` | `true` | Enables 4h RSS schedule |
+| `ALLOW_RSS_REFRESH` | `false` | Blocks manual RSS workflow unless flipped true |
 | `ALLOW_WEEKLY_ENRICH` | `true` | Enables Sunday PDF enrich |
 
 ## Required GitHub secrets
