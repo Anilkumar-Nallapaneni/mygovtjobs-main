@@ -126,7 +126,7 @@ function isDumpParagraph(text: string) {
 /** FAQ / Paper-Code / mojibake KV rows that should never become fact cards. */
 const _JUNK_KV_LABEL = /^(?:answer|question|ans\.?|q\.?\s*\d+|no\.?\s*isro|no\.)$/i;
 const _FEE_CATEGORY_LABEL =
-  /^(?:general|ur|obc|sc|st|ews|female|women|pwd|pwbd|ex[\-\s]?servicemen|ph|others?|all\s+categories|application\s+fee|exam(?:ination)?\s+fee|registration\s+fee)(?:\s*\/\s*(?:sc|st|obc|ews|pwd|pwbd|ur|general|female|women))?$/i;
+  /^(?:general|ur|obc|sc|st|ews|female|women|pwd|pwbd|ex[-\s]?servicemen|ph|others?|all\s+categories|application\s+fee|exam(?:ination)?\s+fee|registration\s+fee)(?:\s*\/\s*(?:sc|st|obc|ews|pwd|pwbd|ur|general|female|women))?$/i;
 const _FEE_AMOUNT_VALUE = /(?:rs\.?|inr|₹)\s*[\d,]+(?:\s*\/\s*-)?/i;
 const _FEE_NIL_VALUE = /^(?:nil|n\/?a|exempt(?:ed)?|free|no\s+fee|zero|0(?:\.0+)?|-|—)$/i;
 

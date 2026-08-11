@@ -263,9 +263,11 @@ describe("buildStructuredJobDetail", () => {
   it("filters Answer/fee junk from regenerated ISRO job-details JSON", async () => {
     const { readFileSync } = await import("node:fs");
     const { resolve } = await import("node:path");
+    const { fileURLToPath } = await import("node:url");
+    const here = fileURLToPath(new URL(".", import.meta.url));
     const path = resolve(
-      process.cwd(),
-      "public/data/job-details/isro-careers-advt-no-isro-icrb-02-emc-cepo-2026-dated-28-07-2026-recruitment-to--d96680f7.json"
+      here,
+      "../../../public/data/job-details/isro-careers-advt-no-isro-icrb-02-emc-cepo-2026-dated-28-07-2026-recruitment-to--d96680f7.json"
     );
     const job = JSON.parse(readFileSync(path, "utf8"));
     const structured = buildStructuredJobDetail(job);
