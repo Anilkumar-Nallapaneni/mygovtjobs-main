@@ -48,4 +48,4 @@ CREATE POLICY job_comments_authenticated_insert
   );
 
 COMMENT ON TABLE public.job_comments IS
-  'User comments on job postings. Anon reads only approved; authenticated inserts land in pending queue.';
+  'User comments on job postings. Anon reads approved entries and authenticated inserts land in pending.';

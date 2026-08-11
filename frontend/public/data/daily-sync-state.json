@@ -1,10 +1,13 @@
 {
-  "status": "completed",
+  "status": "failed",
   "completedAt": "2026-08-11T12:04:19.133353+00:00",
   "completedAtIst": "2026-08-11T17:34:19.133353+05:30",
   "lastCompletedDateIst": "2026-08-11",
   "nextRunAtIst": "2026-08-12T08:00:00+05:30",
   "jobCount": 16,
   "sourcesScraped": 154,
-  "notes": "IngestAgent: official India govt portals + RSS"
+  "notes": "IngestAgent: official India govt portals + RSS",
+  "failedAt": "2026-08-11T12:51:10.752298+00:00",
+  "failedAtIst": "2026-08-11T18:21:10.754329+05:30",
+  "error": "ImportError: cannot import name 'PUBLIC_VERIFICATION_STATUSES' from 'app.services.publish_gate' (D:\\My Projects\\mygovtjobs-main\\backend\\app\\services\\publish_gate.py)"
 }
