@@ -42,4 +42,4 @@ CREATE POLICY bookmarks_owner_delete
   USING (auth.uid() = user_id);
 
 COMMENT ON TABLE public.bookmarks IS
-  'Per-user saved jobs. RLS enforces owner-only read/write; service_role bypasses.';
+  'Per-user saved jobs. RLS enforces owner-only read/write and service_role access.';
