@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-08-12T05:58:37.544Z",
-  "count": 131,
+  "generatedAt": "2026-08-12T15:34:19.968Z",
+  "count": 132,
   "items": [
     {
       "id": "b7886431557419d5",
@@ -111,6 +111,23 @@
       "fetchMethod": "html"
     },
     {
+      "id": "391949a7d8631c76",
+      "title": "Conference call with Analysts/ Investors",
+      "link": "https://iocl.com/pages/conference-call-with-analysts-investors",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "iocl",
+      "sourceName": "Indian Oil Corporation — Careers",
+      "dept": "Indian Oil Corporation — Careers",
+      "state": "All India",
+      "category": "psu",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
       "id": "2b909d8e996d4c94",
       "title": "Conference call/analyst meet with Investors",
       "link": "https://ntpc.co.in/investors/confrence-call-analyst-meet-investors/conference-call-analysts-investors",
@@ -128,26 +145,9 @@
       "fetchMethod": "html"
     },
     {
-      "id": "4e1bcf588af156f0",
+      "id": "4382aefa8fd5c9cb",
       "title": "NTPC Ltd. Q4/12M FY26 Conference Call on May 23, 2026",
-      "link": "https://ntpc.co.in/ntpc-ltd-q412m-fy26-conference-call-may-23-2026",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "ntpc",
-      "sourceName": "NTPC — Careers",
-      "dept": "NTPC — Careers",
-      "state": "All India",
-      "category": "psu",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "97a06d61ec80c264",
-      "title": "Conference call/analyst meet with Investors",
-      "link": "https://ntpc.co.in/index.php/investors/confrence-call-analyst-meet-investors/conference-call-analysts-investors",
+      "link": "https://ntpc.co.in/index.php/ntpc-ltd-q412m-fy26-conference-call-may-23-2026",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
@@ -175,23 +175,6 @@
       "category": "psu",
       "stateIds": [
         "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "e26db8d03d56293b",
-      "title": "04/08/2026 Download Admit Cards for Written Examination (Objective Type) for various Gazetted posts in HME, to be held on 11.08.2026",
-      "link": "http://www.jkpsc.nic.in/result/admit_card_skims_2026.html",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-jk",
-      "sourceName": "Jammu & Kashmir PSC (JKPSC)",
-      "dept": "Jammu & Kashmir PSC (JKPSC)",
-      "state": "Jammu & Kashmir",
-      "category": "state",
-      "stateIds": [
-        "jk"
       ],
       "fetchMethod": "html"
     },
@@ -277,23 +260,6 @@
       "category": "state",
       "stateIds": [
         "jk"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "158bb00a9699c472",
-      "title": "Admit Cards",
-      "link": "https://mppsc.mp.gov.in/Admitcard",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-mp",
-      "sourceName": "Madhya Pradesh PSC (MPPSC)",
-      "dept": "Madhya Pradesh PSC (MPPSC)",
-      "state": "Madhya Pradesh",
-      "category": "state",
-      "stateIds": [
-        "mp"
       ],
       "fetchMethod": "html"
     },
@@ -554,6 +520,74 @@
         "as"
       ],
       "fetchMethod": "rss-discovered"
+    },
+    {
+      "id": "4e1bcf588af156f0",
+      "title": "NTPC Ltd. Q4/12M FY26 Conference Call on May 23, 2026",
+      "link": "https://ntpc.co.in/ntpc-ltd-q412m-fy26-conference-call-may-23-2026",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "ntpc",
+      "sourceName": "NTPC — Careers",
+      "dept": "NTPC — Careers",
+      "state": "All India",
+      "category": "psu",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "97a06d61ec80c264",
+      "title": "Conference call/analyst meet with Investors",
+      "link": "https://ntpc.co.in/index.php/investors/confrence-call-analyst-meet-investors/conference-call-analysts-investors",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "ntpc",
+      "sourceName": "NTPC — Careers",
+      "dept": "NTPC — Careers",
+      "state": "All India",
+      "category": "psu",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "e26db8d03d56293b",
+      "title": "04/08/2026 Download Admit Cards for Written Examination (Objective Type) for various Gazetted posts in HME, to be held on 11.08.2026",
+      "link": "http://www.jkpsc.nic.in/result/admit_card_skims_2026.html",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-jk",
+      "sourceName": "Jammu & Kashmir PSC (JKPSC)",
+      "dept": "Jammu & Kashmir PSC (JKPSC)",
+      "state": "Jammu & Kashmir",
+      "category": "state",
+      "stateIds": [
+        "jk"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "158bb00a9699c472",
+      "title": "Admit Cards",
+      "link": "https://mppsc.mp.gov.in/Admitcard",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-mp",
+      "sourceName": "Madhya Pradesh PSC (MPPSC)",
+      "dept": "Madhya Pradesh PSC (MPPSC)",
+      "state": "Madhya Pradesh",
+      "category": "state",
+      "stateIds": [
+        "mp"
+      ],
+      "fetchMethod": "html"
     },
     {
       "id": "dab406e23a6537a1",
@@ -1954,23 +1988,6 @@
       "dept": "UCO Bank — Careers",
       "state": "All India",
       "category": "banking",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "4382aefa8fd5c9cb",
-      "title": "NTPC Ltd. Q4/12M FY26 Conference Call on May 23, 2026",
-      "link": "https://ntpc.co.in/index.php/ntpc-ltd-q412m-fy26-conference-call-may-23-2026",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "ntpc",
-      "sourceName": "NTPC — Careers",
-      "dept": "NTPC — Careers",
-      "state": "All India",
-      "category": "psu",
       "stateIds": [
         "all"
       ],

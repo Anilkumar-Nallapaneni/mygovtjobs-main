@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-12T05:58:37.544Z",
+  "generatedAt": "2026-08-12T15:34:19.968Z",
   "count": 249,
   "items": [
     {
@@ -709,9 +709,9 @@
       "fetchMethod": "html"
     },
     {
-      "id": "f6e0c2b3096daa6e",
+      "id": "d0cb6df37111adb4",
       "title": "Last date extended upto 12:30 PM of 09.03.2026 for submission of bids for Rupee term loan of up-to ₹ 1000 Crore",
-      "link": "https://ntpc.co.in/last-date-extended-upto-1230-pm-09032026-submission-bids-rupee-term-loan-rs-1000-crore",
+      "link": "https://ntpc.co.in/index.php/last-date-extended-upto-1230-pm-09032026-submission-bids-rupee-term-loan-rs-1000-crore",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
@@ -722,25 +722,6 @@
       "category": "psu",
       "stateIds": [
         "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "1a18db3de916855d",
-      "title": "11/03/2026 The date for filling application forms for CCE (Mains)-2025 has been extended upto 17th March 2026",
-      "link": "http://www.jkpsc.nic.in/pdf/NOTICE_CCME_Extension2026.pdf",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [
-        "http://www.jkpsc.nic.in/pdf/NOTICE_CCME_Extension2026.pdf"
-      ],
-      "sourceId": "psc-jk",
-      "sourceName": "Jammu & Kashmir PSC (JKPSC)",
-      "dept": "Jammu & Kashmir PSC (JKPSC)",
-      "state": "Jammu & Kashmir",
-      "category": "state",
-      "stateIds": [
-        "jk"
       ],
       "fetchMethod": "html"
     },
@@ -984,6 +965,42 @@
       "category": "teaching",
       "stateIds": [
         "od"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "f6e0c2b3096daa6e",
+      "title": "Last date extended upto 12:30 PM of 09.03.2026 for submission of bids for Rupee term loan of up-to ₹ 1000 Crore",
+      "link": "https://ntpc.co.in/last-date-extended-upto-1230-pm-09032026-submission-bids-rupee-term-loan-rs-1000-crore",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "ntpc",
+      "sourceName": "NTPC — Careers",
+      "dept": "NTPC — Careers",
+      "state": "All India",
+      "category": "psu",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "1a18db3de916855d",
+      "title": "11/03/2026 The date for filling application forms for CCE (Mains)-2025 has been extended upto 17th March 2026",
+      "link": "http://www.jkpsc.nic.in/pdf/NOTICE_CCME_Extension2026.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "http://www.jkpsc.nic.in/pdf/NOTICE_CCME_Extension2026.pdf"
+      ],
+      "sourceId": "psc-jk",
+      "sourceName": "Jammu & Kashmir PSC (JKPSC)",
+      "dept": "Jammu & Kashmir PSC (JKPSC)",
+      "state": "Jammu & Kashmir",
+      "category": "state",
+      "stateIds": [
+        "jk"
       ],
       "fetchMethod": "html"
     },
@@ -3207,23 +3224,6 @@
       "sourceId": "ongc",
       "sourceName": "ONGC — Careers",
       "dept": "ONGC — Careers",
-      "state": "All India",
-      "category": "psu",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "d0cb6df37111adb4",
-      "title": "Last date extended upto 12:30 PM of 09.03.2026 for submission of bids for Rupee term loan of up-to ₹ 1000 Crore",
-      "link": "https://ntpc.co.in/index.php/last-date-extended-upto-1230-pm-09032026-submission-bids-rupee-term-loan-rs-1000-crore",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "ntpc",
-      "sourceName": "NTPC — Careers",
-      "dept": "NTPC — Careers",
       "state": "All India",
       "category": "psu",
       "stateIds": [

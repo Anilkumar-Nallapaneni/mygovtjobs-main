@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-12T05:58:37.544Z",
+  "generatedAt": "2026-08-12T15:34:19.968Z",
   "count": 252,
   "items": [
     {
@@ -617,23 +617,6 @@
       "fetchMethod": "html"
     },
     {
-      "id": "fa359b9114331fc3",
-      "title": "Personality Test / Viva-Voce",
-      "link": "https://hppsc.hp.gov.in/CommonControls/ViewContinuousLinkPage?qs=mhlKjiXMMIveW0iAADPEiC57R27%2BGya8ay4kbm0dJkcnlKHGzV4U5%2BQlrRl1TG3OQWWkf93oLxROjrnFX90ov6IhjjgH2qZXMgsT6KqPbJM%3D",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-hp",
-      "sourceName": "Himachal Pradesh PSC (HPPSC)",
-      "dept": "Himachal Pradesh PSC (HPPSC)",
-      "state": "Himachal Pradesh",
-      "category": "state",
-      "stateIds": [
-        "hp"
-      ],
-      "fetchMethod": "html"
-    },
-    {
       "id": "66bff2c416041b99",
       "title": "Interview notice for the post of Professor Cardio Vascular Thoracic Surgery in SKIMS Soura HME Deptt",
       "link": "https://jkpsc.nic.in/Pdf/Downloader1.ashx?nid=18012&type=n",
@@ -903,11 +886,27 @@
       "fetchMethod": "rss-discovered"
     },
     {
+      "id": "099743500c226eef",
+      "title": "1 ESIC Hospital Ankleshwar ADVERTISEMENT 01/2026 OF CONTRACTUAL DOCTORS, PTS/FTS/SR FOR ESICH ANKLESHWAR.(English)",
+      "link": "https://esic.gov.in/recruitments",
+      "publishedAt": "2026-08-12T00:00:00Z",
+      "summary": "Advertisement No. 01/2026 Walk-In-Interview on 13th Aug 2026 and if vacant, 2 nd & 4th Thursday of every month, Time 10.00 AM To 1.00 PM. ESIC Hospital, Ankleshwar, invites eligible candidates for Walk-in- interview on 13th Aug, 2026 and if vacant 2nd & 4th Thursday of every month (Till 06 months or till vacancy complete) for engagement of contractual Full Time Specialist (FTS) / Part Time Special…",
+      "pdfUrls": [
+        "https://www.esic.gov.in/attachments/recruitmentfile/ADVERTISEMENT_01_2026_OF_CONTRACTUAL_DOCTORS_PTS_FTS_SR_FOR_ESICH_ANKLESHWAR_English_1786440912.pdf"
+      ],
+      "sourceId": "esic",
+      "sourceName": "ESIC — Employees' State Insurance Corporation",
+      "dept": "ESIC — Employees' State Insurance Corporation",
+      "state": "All India",
+      "category": "health",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
       "id": "823ca48cb4017ff7",
       "title": "Rolling Advertisement No. 08 of 2026 - Recruitment of Teaching Faculties/SR-3 Years/SR-1 Year in ESIC Hospital Bibvewadi Pune and Medical Officers at DCB Os",
       "link": "https://bibvewadihospital.esic.gov.in",
       "publishedAt": "2026-08-11T00:00:00Z",
-      "summary": "File No - A-12016/19/2025-ADMN Date – 04-08-2026 Rolling Advertisement Advertisement No. 08 of 2026 (In Continuation of Advertisement No. 07/2026 Walk in Interview for Recruitment of Professor, Associate Professor, Assistant Professor, Senior Resident - 3 Year, SR-1 Year and Medical Officers for ESIC DCBOs on contract basis at ESIC Medical College & Hospital, Bibvewadi, Pune, Maharashtra With refe…",
+      "summary": "File No - A-12016/19/2025-ADMN Date – 04-08-2026 \nRolling Advertisement \nAdvertisement No. 08 of 2026 (In Continuation of \nAdvertisement No. 07/2026 \n \nWalk in Interview for Recruitment of Professor, Associate \nProfessor, Assistant Professor, Senior Resident - 3 Year, SR-1 \nYear and Medical Officers for ESIC DCBOs on contract basis at \nESIC Medical College & Hospital, Bibvewadi, Pune, Maharashtra\n…",
       "pdfUrls": [
         "https://www.esic.gov.in/attachments/recruitmentfile/Rolling_Advertisement_No_08_of_2026_Recruitment_of_Teaching_Faculties_SR_3_Years_SR_1_Year_in_ESIC_Hospital_Bibvewadi_Pune_and_Medical_Officers_at_DCBOs_1785840484.pdf"
       ],
@@ -919,21 +918,21 @@
       "fetchMethod": "live-jobs-supplement"
     },
     {
-      "id": "099743500c226eef",
-      "title": "Walk in interview to engage specialists , senior residents & Jr/ Sr on contract basis in ESIC Hospital Bikaner Rajasthan",
-      "link": "https://esic.gov.in/recruitments",
-      "publishedAt": "2026-08-04T00:00:00Z",
-      "summary": "Advertisement No. 01/2026 Walk-In-Interview on 13th Aug 2026 and if vacant, 2 nd & 4th Thursday of every month, Time 10.00 AM To 1.00 PM. ESIC Hospital, Ankleshwar, invites eligible candidates for Walk-in- interview on 13th Aug, 2026 and if vacant 2nd & 4th Thursday of every month (Till 06 months or till vacancy complete) for engagement of contractual Full Time Specialist (FTS) / Part Time Special…",
-      "pdfUrls": [
-        "https://www.esic.gov.in/attachments/recruitmentfile/Walk_in_interview_to_engage_specialists_senior_residents_amp_Jr_Sr_on_contract_basis_in_ESIC_Hospital_Bikaner_Rajasthan_1785823558.pdf",
-        "https://esic.gov.in/attachments/recruitmentfile/ADVERTISEMENT_01_2026_OF_CONTRACTUAL_DOCTORS_PTS_FTS_SR_FOR_ESICH_ANKLESHWAR_English_1786440912.pdf"
+      "id": "fa359b9114331fc3",
+      "title": "Personality Test / Viva-Voce",
+      "link": "https://hppsc.hp.gov.in/CommonControls/ViewContinuousLinkPage?qs=mhlKjiXMMIveW0iAADPEiC57R27%2BGya8ay4kbm0dJkcnlKHGzV4U5%2BQlrRl1TG3OQWWkf93oLxROjrnFX90ov6IhjjgH2qZXMgsT6KqPbJM%3D",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-hp",
+      "sourceName": "Himachal Pradesh PSC (HPPSC)",
+      "dept": "Himachal Pradesh PSC (HPPSC)",
+      "state": "Himachal Pradesh",
+      "category": "state",
+      "stateIds": [
+        "hp"
       ],
-      "sourceId": "esic",
-      "sourceName": "ESIC — Employees' State Insurance Corporation",
-      "dept": "ESIC — Employees' State Insurance Corporation",
-      "state": "All India",
-      "category": "health",
-      "fetchMethod": "live-jobs-supplement"
+      "fetchMethod": "html"
     },
     {
       "id": "0ba2d71e830c5905",

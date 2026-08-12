@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-12T05:58:37.544Z",
+  "generatedAt": "2026-08-12T15:34:19.968Z",
   "count": 42,
   "items": [
     {
@@ -20,45 +20,9 @@
       "fetchMethod": "html"
     },
     {
-      "id": "46991f7a78b8ef78",
-      "title": "31/05/2026 Conduct of Prosecuting Officer (G) Preliminary Examination 2025 Provisional Answer Key(s) thereof",
-      "link": "http://jkpsc.nic.in/PDF/PROV_KEY_PO26.pdf",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [
-        "http://jkpsc.nic.in/PDF/PROV_KEY_PO26.pdf"
-      ],
-      "sourceId": "psc-jk",
-      "sourceName": "Jammu & Kashmir PSC (JKPSC)",
-      "dept": "Jammu & Kashmir PSC (JKPSC)",
-      "state": "Jammu & Kashmir",
-      "category": "state",
-      "stateIds": [
-        "jk"
-      ],
-      "fetchMethod": "html"
-    },
-    {
       "id": "46c0fc4afe374382",
       "title": "Conduct of Preliminary Examination for the posts of Prosecuting Officer (G), 2025 - Issuance of Final Answer Key thereof.",
       "link": "https://jkpsc.nic.in/Pdf/Downloader1.ashx?nid=17920&type=n",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-jk",
-      "sourceName": "Jammu & Kashmir PSC (JKPSC)",
-      "dept": "Jammu & Kashmir PSC (JKPSC)",
-      "state": "Jammu & Kashmir",
-      "category": "state",
-      "stateIds": [
-        "jk"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "89d50f8878d2bd55",
-      "title": "Written Examination for filling up of posts of Assistant Professor/Tutors in various disciplines in SKIMS, Soura - Issuance of Final Answer Key thereof.",
-      "link": "https://jkpsc.nic.in/Pdf/Downloader1.ashx?nid=17922&type=n",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
@@ -198,6 +162,42 @@
       "category": "state",
       "stateIds": [
         "ne"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "46991f7a78b8ef78",
+      "title": "31/05/2026 Conduct of Prosecuting Officer (G) Preliminary Examination 2025 Provisional Answer Key(s) thereof",
+      "link": "http://jkpsc.nic.in/PDF/PROV_KEY_PO26.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "http://jkpsc.nic.in/PDF/PROV_KEY_PO26.pdf"
+      ],
+      "sourceId": "psc-jk",
+      "sourceName": "Jammu & Kashmir PSC (JKPSC)",
+      "dept": "Jammu & Kashmir PSC (JKPSC)",
+      "state": "Jammu & Kashmir",
+      "category": "state",
+      "stateIds": [
+        "jk"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "89d50f8878d2bd55",
+      "title": "Written Examination for filling up of posts of Assistant Professor/Tutors in various disciplines in SKIMS, Soura - Issuance of Final Answer Key thereof.",
+      "link": "https://jkpsc.nic.in/Pdf/Downloader1.ashx?nid=17922&type=n",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-jk",
+      "sourceName": "Jammu & Kashmir PSC (JKPSC)",
+      "dept": "Jammu & Kashmir PSC (JKPSC)",
+      "state": "Jammu & Kashmir",
+      "category": "state",
+      "stateIds": [
+        "jk"
       ],
       "fetchMethod": "html"
     },

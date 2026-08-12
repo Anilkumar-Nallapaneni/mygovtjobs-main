@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-08-12T05:58:37.544Z",
-  "count": 708,
+  "generatedAt": "2026-08-12T15:34:19.968Z",
+  "count": 710,
   "items": [
     {
       "id": "2e7fa8a4ffb7c7be",
@@ -1211,23 +1211,6 @@
       "fetchMethod": "rss-discovered"
     },
     {
-      "id": "24ec8b02915001c9",
-      "title": "Hon’ble Lieutenant Governor of Ladakh Marks ONGC’s Landmark Completion... Read More",
-      "link": "https://ongcindia.com/web/eng/detail?assetEntry=85183744",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "ongc",
-      "sourceName": "ONGC — Careers",
-      "dept": "ONGC — Careers",
-      "state": "All India",
-      "category": "psu",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
       "id": "5248b404d0a4fa81",
       "title": "Financial Result",
       "link": "https://www.canarabank.bank.in/financial-result",
@@ -1245,21 +1228,19 @@
       "fetchMethod": "html"
     },
     {
-      "id": "46991f7a78b8ef78",
-      "title": "31/05/2026 Conduct of Prosecuting Officer (G) Preliminary Examination 2025 Provisional Answer Key(s) thereof",
-      "link": "http://jkpsc.nic.in/PDF/PROV_KEY_PO26.pdf",
+      "id": "24ec8b02915001c9",
+      "title": "Hon’ble Lieutenant Governor of Ladakh Marks ONGC’s Landmark Completion... Read More",
+      "link": "https://ongcindia.com/web/eng/detail?assetEntry=85183744",
       "publishedAt": null,
       "summary": null,
-      "pdfUrls": [
-        "http://jkpsc.nic.in/PDF/PROV_KEY_PO26.pdf"
-      ],
-      "sourceId": "psc-jk",
-      "sourceName": "Jammu & Kashmir PSC (JKPSC)",
-      "dept": "Jammu & Kashmir PSC (JKPSC)",
-      "state": "Jammu & Kashmir",
-      "category": "state",
+      "pdfUrls": [],
+      "sourceId": "ongc",
+      "sourceName": "ONGC — Careers",
+      "dept": "ONGC — Careers",
+      "state": "All India",
+      "category": "psu",
       "stateIds": [
-        "jk"
+        "all"
       ],
       "fetchMethod": "html"
     },
@@ -1400,23 +1381,6 @@
       "fetchMethod": "html"
     },
     {
-      "id": "d8d08845aaf001f2",
-      "title": "Filling up of posts of Assistant Professor/Tutors in various disciplines in SKIMS, Soura - Result of Written Test reg.",
-      "link": "https://jkpsc.nic.in/Pdf/Downloader1.ashx?nid=17923&type=n",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-jk",
-      "sourceName": "Jammu & Kashmir PSC (JKPSC)",
-      "dept": "Jammu & Kashmir PSC (JKPSC)",
-      "state": "Jammu & Kashmir",
-      "category": "state",
-      "stateIds": [
-        "jk"
-      ],
-      "fetchMethod": "html"
-    },
-    {
       "id": "5a98e2b96be13fc9",
       "title": "Provisional Selection list for the Post of Lecturer-II (Non Engineering) Wood Technology in Skill Development Department",
       "link": "https://jkpsc.nic.in/Pdf/Downloader1.ashx?nid=18016&type=n",
@@ -1471,6 +1435,40 @@
       "id": "cc81f19e55946a2d",
       "title": "Provisional Selection list for the post of Assistant Architect in Housing and Urban Development Department",
       "link": "https://jkpsc.nic.in/Pdf/Downloader1.ashx?nid=18009&type=n",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-jk",
+      "sourceName": "Jammu & Kashmir PSC (JKPSC)",
+      "dept": "Jammu & Kashmir PSC (JKPSC)",
+      "state": "Jammu & Kashmir",
+      "category": "state",
+      "stateIds": [
+        "jk"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "7b66936124cf84eb",
+      "title": "Provisional Selection list for the post of Assistant Professor (Fine Arts) in School of Architecture in Higher Education Department",
+      "link": "https://jkpsc.nic.in/Pdf/Downloader1.ashx?nid=18008&type=n",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-jk",
+      "sourceName": "Jammu & Kashmir PSC (JKPSC)",
+      "dept": "Jammu & Kashmir PSC (JKPSC)",
+      "state": "Jammu & Kashmir",
+      "category": "state",
+      "stateIds": [
+        "jk"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "0f2ec16c142b4125",
+      "title": "Provisional Selection list for the post of Assistant Professor (Architecture) in School of Architecture in Higher Education Department",
+      "link": "https://jkpsc.nic.in/Pdf/Downloader1.ashx?nid=18007&type=n",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
@@ -2251,6 +2249,42 @@
       "category": "teaching",
       "stateIds": [
         "br"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "46991f7a78b8ef78",
+      "title": "31/05/2026 Conduct of Prosecuting Officer (G) Preliminary Examination 2025 Provisional Answer Key(s) thereof",
+      "link": "http://jkpsc.nic.in/PDF/PROV_KEY_PO26.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "http://jkpsc.nic.in/PDF/PROV_KEY_PO26.pdf"
+      ],
+      "sourceId": "psc-jk",
+      "sourceName": "Jammu & Kashmir PSC (JKPSC)",
+      "dept": "Jammu & Kashmir PSC (JKPSC)",
+      "state": "Jammu & Kashmir",
+      "category": "state",
+      "stateIds": [
+        "jk"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "d8d08845aaf001f2",
+      "title": "Filling up of posts of Assistant Professor/Tutors in various disciplines in SKIMS, Soura - Result of Written Test reg.",
+      "link": "https://jkpsc.nic.in/Pdf/Downloader1.ashx?nid=17923&type=n",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-jk",
+      "sourceName": "Jammu & Kashmir PSC (JKPSC)",
+      "dept": "Jammu & Kashmir PSC (JKPSC)",
+      "state": "Jammu & Kashmir",
+      "category": "state",
+      "stateIds": [
+        "jk"
       ],
       "fetchMethod": "html"
     },
