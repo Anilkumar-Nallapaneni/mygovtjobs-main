@@ -1,7 +1,151 @@
 {
-  "generatedAt": "2026-08-11T06:01:10.675Z",
+  "generatedAt": "2026-08-12T05:58:37.544Z",
   "count": 39,
   "items": [
+    {
+      "id": "780e165e84997f6a",
+      "title": "S.O. 41 - Syllabus for Prosecuting Officer (G) Examination",
+      "link": "https://jkpsc.nic.in/pdf/SO41of2021.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://jkpsc.nic.in/pdf/SO41of2021.pdf"
+      ],
+      "sourceId": "psc-jk",
+      "sourceName": "Jammu & Kashmir PSC (JKPSC)",
+      "dept": "Jammu & Kashmir PSC (JKPSC)",
+      "state": "Jammu & Kashmir",
+      "category": "state",
+      "stateIds": [
+        "jk"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "2f1159565433b630",
+      "title": "SRO 103-Syllabus for CCE(Main),2018",
+      "link": "https://jkpsc.nic.in/pdf/SRO_103_CCE_2018.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://jkpsc.nic.in/pdf/SRO_103_CCE_2018.pdf"
+      ],
+      "sourceId": "psc-jk",
+      "sourceName": "Jammu & Kashmir PSC (JKPSC)",
+      "dept": "Jammu & Kashmir PSC (JKPSC)",
+      "state": "Jammu & Kashmir",
+      "category": "state",
+      "stateIds": [
+        "jk"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "85b1767449295db8",
+      "title": "Postwise Syllabus",
+      "link": "https://www.keralapsc.gov.in/syllabus1",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-kl",
+      "sourceName": "Kerala PSC",
+      "dept": "Kerala PSC",
+      "state": "Kerala",
+      "category": "state",
+      "stateIds": [
+        "kl"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "22dd56168d2566c0",
+      "title": "Syllabus and Scheme",
+      "link": "https://mppsc.mp.gov.in/Syllabus",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-mp",
+      "sourceName": "Madhya Pradesh PSC (MPPSC)",
+      "dept": "Madhya Pradesh PSC (MPPSC)",
+      "state": "Madhya Pradesh",
+      "category": "state",
+      "stateIds": [
+        "mp"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "948506b4a8ef4abf",
+      "title": "Syllabus",
+      "link": "https://hssc.gov.in/examsyllabus",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "ssb-hr",
+      "sourceName": "Haryana Staff Selection Commission (HSSC)",
+      "dept": "Haryana Staff Selection Commission (HSSC)",
+      "state": "Haryana",
+      "category": "state",
+      "stateIds": [
+        "hr"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "d80061781828ad4a",
+      "title": "Training Syllabus",
+      "link": "https://uppolice.gov.in/pages/en/topmenu/police-units/training-directorate/en-training-syllabus-page",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "police-up",
+      "sourceName": "UP Police Recruitment Board (UPPRPB)",
+      "dept": "UP Police Recruitment Board (UPPRPB)",
+      "state": "Uttar Pradesh",
+      "category": "police",
+      "stateIds": [
+        "up"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "0ee075bd9e923a90",
+      "title": "Syllabus for the the post of food safety officer, A & N Adminstration",
+      "link": "https://erecruitment.andamannicobar.gov.in/Notice/81_a4a9f192-a736-4760-a0ad-14f7a90395cd.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://erecruitment.andamannicobar.gov.in/Notice/81_a4a9f192-a736-4760-a0ad-14f7a90395cd.pdf"
+      ],
+      "sourceId": "an-rec",
+      "sourceName": "Andaman & Nicobar e-Recruitment",
+      "dept": "Andaman & Nicobar e-Recruitment",
+      "state": "Andaman & Nicobar",
+      "category": "state",
+      "stateIds": [
+        "an"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "ab7f1718b0ab109e",
+      "title": "Syllabus for recruitment to various Group ‘B’ (Non-Gazetted) and Group ‘C’ posts under the Common Graduate Level (CGL) Examination",
+      "link": "https://erecruitment.andamannicobar.gov.in/Notice/67_f0581b64-b355-4fa9-8b20-3d4776112e35.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://erecruitment.andamannicobar.gov.in/Notice/67_f0581b64-b355-4fa9-8b20-3d4776112e35.pdf"
+      ],
+      "sourceId": "an-rec",
+      "sourceName": "Andaman & Nicobar e-Recruitment",
+      "dept": "Andaman & Nicobar e-Recruitment",
+      "state": "Andaman & Nicobar",
+      "category": "state",
+      "stateIds": [
+        "an"
+      ],
+      "fetchMethod": "html"
+    },
     {
       "id": "19df6addea51f1a1",
       "title": "Revised Syllabus and Scheme",
@@ -70,22 +214,6 @@
       "dept": "Food Safety and Standards Authority (FSSAI)",
       "state": "All India",
       "category": "health",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "780e165e84997f6a",
-      "title": "S.O. 41 - Syllabus for Prosecuting Officer (G) Examination",
-      "link": "https://jkpsc.nic.in/pdf/SO41of2021.pdf",
-      "publishedAt": "2026-06-23T13:19:29.281430Z",
-      "summary": null,
-      "pdfUrls": [
-        "https://jkpsc.nic.in/pdf/SO41of2021.pdf"
-      ],
-      "sourceId": "psc-jk",
-      "sourceName": "Jammu & Kashmir PSC (JKPSC)",
-      "dept": "Jammu & Kashmir PSC (JKPSC)",
-      "state": "All India",
-      "category": "state",
       "fetchMethod": "live-jobs-supplement"
     },
     {
@@ -295,56 +423,6 @@
       "fetchMethod": "live-jobs-supplement"
     },
     {
-      "id": "85b1767449295db8",
-      "title": "Postwise Syllabus",
-      "link": "https://www.keralapsc.gov.in/syllabus1",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-kl",
-      "sourceName": "Kerala PSC",
-      "dept": "Kerala PSC",
-      "state": "Kerala",
-      "category": "state",
-      "stateIds": [
-        "kl"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "22dd56168d2566c0",
-      "title": "Syllabus and Scheme",
-      "link": "https://mppsc.mp.gov.in/Syllabus",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-mp",
-      "sourceName": "Madhya Pradesh PSC (MPPSC)",
-      "dept": "Madhya Pradesh PSC (MPPSC)",
-      "state": "Madhya Pradesh",
-      "category": "state",
-      "stateIds": [
-        "mp"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "2f1159565433b630",
-      "title": "SRO 103-Syllabus for CCE(Main),2018",
-      "link": "https://jkpsc.nic.in/pdf/SRO_103_CCE_2018.pdf",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [
-        "https://jkpsc.nic.in/pdf/SRO_103_CCE_2018.pdf"
-      ],
-      "sourceId": "psc-jk",
-      "sourceName": "Jammu & Kashmir PSC (JKPSC)",
-      "dept": "Jammu & Kashmir PSC (JKPSC)",
-      "state": "All India",
-      "category": "state",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
       "id": "9d2b764959f99abf",
       "title": "Syllabus for written Test (Objective Type) for various posts of Assistant Professor in Health and Medical Education Department.",
       "link": "https://jkpsc.nic.in/Pdf/Downloader1.ashx?nid=17992&type=n",
@@ -398,34 +476,6 @@
       "dept": "Jammu & Kashmir PSC (JKPSC)",
       "state": "All India",
       "category": "state",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "948506b4a8ef4abf",
-      "title": "Syllabus",
-      "link": "https://hssc.gov.in/examsyllabus",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "ssb-hr",
-      "sourceName": "Haryana Staff Selection Commission (HSSC)",
-      "dept": "Haryana Staff Selection Commission (HSSC)",
-      "state": "All India",
-      "category": "state",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "d80061781828ad4a",
-      "title": "Training Syllabus",
-      "link": "https://uppolice.gov.in/pages/en/topmenu/police-units/training-directorate/en-training-syllabus-page",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "police-up",
-      "sourceName": "UP Police Recruitment Board (UPPRPB)",
-      "dept": "UP Police Recruitment Board (UPPRPB)",
-      "state": "All India",
-      "category": "police",
       "fetchMethod": "live-jobs-supplement"
     },
     {
@@ -543,44 +593,6 @@
       "category": "state",
       "stateIds": [
         "uk"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "0ee075bd9e923a90",
-      "title": "Syllabus for the the post of food safety officer, A & N Adminstration",
-      "link": "https://erecruitment.andamannicobar.gov.in/Notice/81_a4a9f192-a736-4760-a0ad-14f7a90395cd.pdf",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [
-        "https://erecruitment.andamannicobar.gov.in/Notice/81_a4a9f192-a736-4760-a0ad-14f7a90395cd.pdf"
-      ],
-      "sourceId": "an-rec",
-      "sourceName": "Andaman & Nicobar e-Recruitment",
-      "dept": "Andaman & Nicobar e-Recruitment",
-      "state": "Andaman & Nicobar",
-      "category": "state",
-      "stateIds": [
-        "an"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "ab7f1718b0ab109e",
-      "title": "Syllabus for recruitment to various Group ‘B’ (Non-Gazetted) and Group ‘C’ posts under the Common Graduate Level (CGL) Examination",
-      "link": "https://erecruitment.andamannicobar.gov.in/Notice/67_f0581b64-b355-4fa9-8b20-3d4776112e35.pdf",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [
-        "https://erecruitment.andamannicobar.gov.in/Notice/67_f0581b64-b355-4fa9-8b20-3d4776112e35.pdf"
-      ],
-      "sourceId": "an-rec",
-      "sourceName": "Andaman & Nicobar e-Recruitment",
-      "dept": "Andaman & Nicobar e-Recruitment",
-      "state": "Andaman & Nicobar",
-      "category": "state",
-      "stateIds": [
-        "an"
       ],
       "fetchMethod": "html"
     },
