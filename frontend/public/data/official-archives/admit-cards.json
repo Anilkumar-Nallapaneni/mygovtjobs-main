@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-12T15:34:19.968Z",
+  "generatedAt": "2026-08-13T06:05:24.262Z",
   "count": 132,
   "items": [
     {
@@ -94,23 +94,6 @@
       "fetchMethod": "html"
     },
     {
-      "id": "0157354131476c03",
-      "title": "Intimation to Stock Exchange(s)",
-      "link": "https://ongcindia.com/web/eng/investors/intimation-to-stock-exchange",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "ongc",
-      "sourceName": "ONGC — Careers",
-      "dept": "ONGC — Careers",
-      "state": "All India",
-      "category": "psu",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
       "id": "391949a7d8631c76",
       "title": "Conference call with Analysts/ Investors",
       "link": "https://iocl.com/pages/conference-call-with-analysts-investors",
@@ -145,9 +128,9 @@
       "fetchMethod": "html"
     },
     {
-      "id": "4382aefa8fd5c9cb",
+      "id": "4e1bcf588af156f0",
       "title": "NTPC Ltd. Q4/12M FY26 Conference Call on May 23, 2026",
-      "link": "https://ntpc.co.in/index.php/ntpc-ltd-q412m-fy26-conference-call-may-23-2026",
+      "link": "https://ntpc.co.in/ntpc-ltd-q412m-fy26-conference-call-may-23-2026",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
@@ -260,6 +243,23 @@
       "category": "state",
       "stateIds": [
         "jk"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "158bb00a9699c472",
+      "title": "Admit Cards",
+      "link": "https://mppsc.mp.gov.in/Admitcard",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-mp",
+      "sourceName": "Madhya Pradesh PSC (MPPSC)",
+      "dept": "Madhya Pradesh PSC (MPPSC)",
+      "state": "Madhya Pradesh",
+      "category": "state",
+      "stateIds": [
+        "mp"
       ],
       "fetchMethod": "html"
     },
@@ -522,9 +522,26 @@
       "fetchMethod": "rss-discovered"
     },
     {
-      "id": "4e1bcf588af156f0",
+      "id": "0157354131476c03",
+      "title": "Intimation to Stock Exchange(s)",
+      "link": "https://ongcindia.com/web/eng/investors/intimation-to-stock-exchange",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "ongc",
+      "sourceName": "ONGC — Careers",
+      "dept": "ONGC — Careers",
+      "state": "All India",
+      "category": "psu",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "4382aefa8fd5c9cb",
       "title": "NTPC Ltd. Q4/12M FY26 Conference Call on May 23, 2026",
-      "link": "https://ntpc.co.in/ntpc-ltd-q412m-fy26-conference-call-may-23-2026",
+      "link": "https://ntpc.co.in/index.php/ntpc-ltd-q412m-fy26-conference-call-may-23-2026",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
@@ -569,23 +586,6 @@
       "category": "state",
       "stateIds": [
         "jk"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "158bb00a9699c472",
-      "title": "Admit Cards",
-      "link": "https://mppsc.mp.gov.in/Admitcard",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-mp",
-      "sourceName": "Madhya Pradesh PSC (MPPSC)",
-      "dept": "Madhya Pradesh PSC (MPPSC)",
-      "state": "Madhya Pradesh",
-      "category": "state",
-      "stateIds": [
-        "mp"
       ],
       "fetchMethod": "html"
     },

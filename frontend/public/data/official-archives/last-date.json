@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-12T15:34:19.968Z",
+  "generatedAt": "2026-08-13T06:05:24.262Z",
   "count": 249,
   "items": [
     {
@@ -709,9 +709,9 @@
       "fetchMethod": "html"
     },
     {
-      "id": "d0cb6df37111adb4",
+      "id": "f6e0c2b3096daa6e",
       "title": "Last date extended upto 12:30 PM of 09.03.2026 for submission of bids for Rupee term loan of up-to ₹ 1000 Crore",
-      "link": "https://ntpc.co.in/index.php/last-date-extended-upto-1230-pm-09032026-submission-bids-rupee-term-loan-rs-1000-crore",
+      "link": "https://ntpc.co.in/last-date-extended-upto-1230-pm-09032026-submission-bids-rupee-term-loan-rs-1000-crore",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
@@ -789,23 +789,6 @@
       "pdfUrls": [
         "https://mppsc.mp.gov.in/uploads/files/Provisional_Answer_Key_AD_Veterinary_Assistant_Surgeon_VEO_2026_Dated_05_08_2026.pdf"
       ],
-      "sourceId": "psc-mp",
-      "sourceName": "Madhya Pradesh PSC (MPPSC)",
-      "dept": "Madhya Pradesh PSC (MPPSC)",
-      "state": "Madhya Pradesh",
-      "category": "state",
-      "stateIds": [
-        "mp"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "57af669229b0d656",
-      "title": "Objection Link - Assistant Director / Veterinary Assistant Surgeon / Veterinary Extension Officer Examination 2026",
-      "link": "https://mppsc.mponline.gov.in/Portal/Examinations/MPPSC/2026/V26/Objection/FormEntry.aspx",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
       "sourceId": "psc-mp",
       "sourceName": "Madhya Pradesh PSC (MPPSC)",
       "dept": "Madhya Pradesh PSC (MPPSC)",
@@ -969,9 +952,9 @@
       "fetchMethod": "html"
     },
     {
-      "id": "f6e0c2b3096daa6e",
+      "id": "d0cb6df37111adb4",
       "title": "Last date extended upto 12:30 PM of 09.03.2026 for submission of bids for Rupee term loan of up-to ₹ 1000 Crore",
-      "link": "https://ntpc.co.in/last-date-extended-upto-1230-pm-09032026-submission-bids-rupee-term-loan-rs-1000-crore",
+      "link": "https://ntpc.co.in/index.php/last-date-extended-upto-1230-pm-09032026-submission-bids-rupee-term-loan-rs-1000-crore",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
@@ -982,6 +965,23 @@
       "category": "psu",
       "stateIds": [
         "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "57af669229b0d656",
+      "title": "Objection Link - Assistant Director / Veterinary Assistant Surgeon / Veterinary Extension Officer Examination 2026",
+      "link": "https://mppsc.mponline.gov.in/Portal/Examinations/MPPSC/2026/V26/Objection/FormEntry.aspx",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-mp",
+      "sourceName": "Madhya Pradesh PSC (MPPSC)",
+      "dept": "Madhya Pradesh PSC (MPPSC)",
+      "state": "Madhya Pradesh",
+      "category": "state",
+      "stateIds": [
+        "mp"
       ],
       "fetchMethod": "html"
     },
