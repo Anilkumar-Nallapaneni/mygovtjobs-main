@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next'
 import { getProfessionBySlug } from '@/data/professions'
 import { getQualificationBySlug } from '@/data/qualifications'
 import { CATS } from '@/data/categories'
+import { boardRoutePath } from '@/utils/browseRoutes'
 import { useStateLabel } from '@/utils/stateLabels'
 
 type BrowseBreadcrumbsProps = {
@@ -42,7 +43,7 @@ export default function BrowseBreadcrumbs({
           }
         : category != null
           ? {
-              href: `/category/${category.id}`,
+              href: boardRoutePath(category.id),
               label: t('home.categoryJobs', { category: t(`category.${category.id}`) }),
             }
           : stateId

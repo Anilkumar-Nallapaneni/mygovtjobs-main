@@ -187,14 +187,14 @@ describe('useBrowseState', () => {
       result.current.handleCategorySelect('upsc')
     })
 
-    expect(currentPathname).toBe('/category/upsc')
+    expect(currentPathname).toBe('/board/upsc')
     expect(result.current.activeCat).toBe('upsc')
 
     act(() => {
       result.current.setQuickFilter(null)
     })
 
-    expect(currentPathname).toBe('/category/upsc')
+    expect(currentPathname).toBe('/board/upsc')
     expect(result.current.activeCat).toBe('upsc')
   })
 
@@ -225,7 +225,7 @@ describe('useBrowseState', () => {
     act(() => {
       result.current.handleCategorySelect('upsc')
     })
-    expect(currentPathname).toBe('/category/upsc')
+    expect(currentPathname).toBe('/board/upsc')
 
     act(() => {
       result.current.handleNavigate('home')
@@ -235,7 +235,7 @@ describe('useBrowseState', () => {
     act(() => {
       result.current.handleCategorySelect('upsc')
     })
-    expect(currentPathname).toBe('/category/upsc')
+    expect(currentPathname).toBe('/board/upsc')
     expect(result.current.activeCat).toBe('upsc')
   })
 

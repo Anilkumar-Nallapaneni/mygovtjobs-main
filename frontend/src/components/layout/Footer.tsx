@@ -6,6 +6,7 @@ import TrackedLink from "@/components/TrackedLink";
 import { STATES } from "@/data/states";
 import { SITE_LINKS, SOCIAL_LINKS } from "@/data/siteLinks";
 import {
+  boardRoutePath,
   EXAM_CALENDAR_PATH,
   LATEST_NOTIFICATIONS_PATH,
 } from "@/utils/browseRoutes";
@@ -33,13 +34,13 @@ const FOOTER_LINK_HREFS: Record<string, string> = {
   syllabus: "/results/syllabus",
   examCalendar: EXAM_CALENDAR_PATH,
   answerKeys: "/results/answer-key",
-  upsc: "/category/upsc",
-  ssc: "/category/ssc",
-  railways: "/category/railways",
-  banking: "/category/banking",
-  defence: "/category/defence",
-  police: "/category/police",
-  teaching: "/category/teaching",
+  upsc: boardRoutePath("upsc"),
+  ssc: boardRoutePath("ssc"),
+  railways: boardRoutePath("railways"),
+  banking: boardRoutePath("banking"),
+  defence: boardRoutePath("defence"),
+  police: boardRoutePath("police"),
+  teaching: boardRoutePath("teaching"),
   up: "/state/up",
   br: "/state/br",
   rj: "/state/rj",

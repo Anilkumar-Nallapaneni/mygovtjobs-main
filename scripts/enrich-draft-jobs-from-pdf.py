@@ -4,6 +4,7 @@
 Standalone script (does not modify enrich-jobs-metadata.py).
 
   node scripts/run-python.mjs scripts/enrich-draft-jobs-from-pdf.py --limit 600
+  node scripts/run-python.mjs scripts/enrich-draft-jobs-from-pdf.py --source upsc --source ssc --limit 200
 """
 from __future__ import annotations
 
@@ -51,7 +52,19 @@ def _has_pdf(job: Job) -> bool:
 async def main() -> int:
     argp = argparse.ArgumentParser()
     argp.add_argument("--limit", type=int, default=200)
+    argp.add_argument(
+        "--source",
+        action="append",
+        default=[],
+        help="Restrict to detail.source / source_key (repeatable), e.g. --source upsc --source ssc",
+    )
+    argp.add_argument(
+        "--include-unknown-doc",
+        action="store_true",
+        help="Also enrich UNKNOWN document_type drafts (default: RECRUITMENT only)",
+    )
     args = argp.parse_args()
+    wanted = {s.strip().lower() for s in args.source if s.strip()}
 
     parser = NotificationParser()
     updated = 0
@@ -66,10 +79,20 @@ async def main() -> int:
             )
         ).scalars().all()
 
+        def _source_key(job: Job) -> str:
+            detail = job.detail if isinstance(job.detail, dict) else {}
+            return str(detail.get("source") or detail.get("source_key") or "").strip().lower()
+
+        allowed_docs = {"RECRUITMENT"}
+        if args.include_unknown_doc:
+            allowed_docs.add("UNKNOWN")
+
         rows = [
             j
             for j in rows
-            if j.last_date is None and (j.document_type or "").upper() == "RECRUITMENT"
+            if j.last_date is None
+            and (j.document_type or "").upper() in allowed_docs
+            and (not wanted or _source_key(j) in wanted)
         ]
         with_pdf = [j for j in rows if _has_pdf(j)]
         without = [j for j in rows if not _has_pdf(j)]
@@ -77,14 +100,18 @@ async def main() -> int:
 
         cap = args.limit if args.limit else len(rows)
         total = min(len(rows), cap)
-        _log(f"Enriching up to {total} draft recruitment job(s) missing dates…")
+        src_label = ",".join(sorted(wanted)) if wanted else "all"
+        _log(
+            f"Enriching up to {total} draft job(s) missing dates "
+            f"(sources={src_label}, candidates={len(rows)}, with_pdf={len(with_pdf)})…"
+        )
 
         for job in rows:
             if args.limit and scanned >= args.limit:
                 break
             scanned += 1
             title_preview = (job.title or "untitled")[:56]
-            _log(f"[{scanned}/{total}] {title_preview}")
+            _log(f"[{scanned}/{total}] [{_source_key(job) or '?'}] {title_preview}")
             try:
                 if await enrich_job_from_pdfs(session, job, parser):
                     updated += 1

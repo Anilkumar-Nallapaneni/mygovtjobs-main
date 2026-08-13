@@ -7,6 +7,7 @@ import { getQualificationBySlug } from "@/data/qualifications";
 import { getResultTopicByKey } from "@/data/resultTopics";
 import {
   ALL_INDIA_JOBS_PATH,
+  BOARDS_INDEX_PATH,
   CATEGORIES_INDEX_PATH,
   EXAM_CALENDAR_PATH,
   EXAMS_INDEX_PATH,
@@ -195,10 +196,10 @@ export function browseSeoForPath(pathname: string, _search = ""): BrowseSeoMeta 
     };
   }
 
-  if (path === CATEGORIES_INDEX_PATH) {
+  if (path === BOARDS_INDEX_PATH || path === CATEGORIES_INDEX_PATH) {
     return {
-      path,
-      title: `Government Jobs by Category | ${SITE_NAME}`,
+      path: BOARDS_INDEX_PATH,
+      title: `Government Jobs by Board | ${SITE_NAME}`,
       description: "UPSC, SSC, Railways, Banking, Defence, Police, Teaching, PSU, and State PSC listings from official sources.",
     };
   }

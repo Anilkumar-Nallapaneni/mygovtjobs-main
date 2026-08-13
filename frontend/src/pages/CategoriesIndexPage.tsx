@@ -8,7 +8,7 @@ import Footer from '@/components/layout/Footer'
 import TrackedLink from '@/components/TrackedLink'
 import { CATS } from '@/data/categories'
 import { computeJobAggregates } from '@/utils/jobAggregates'
-import { CATEGORIES_INDEX_PATH, EXPLORE_HUB_PATH } from '@/utils/browseRoutes'
+import { BOARDS_INDEX_PATH, EXPLORE_HUB_PATH, boardRoutePath } from '@/utils/browseRoutes'
 import { applyBrowseSeo } from '@/utils/browseSeo'
 import { numberLocale } from '@/utils/formatLocale'
 import type { FooterLinkTarget } from '@/hooks/browseStateTypes'
@@ -25,11 +25,13 @@ export default function CategoriesIndexPage({ jobs, onFooterLink }: CategoriesIn
   const { categoryCounts } = computeJobAggregates(jobs)
 
   useEffect(() => {
-    return applyBrowseSeo(CATEGORIES_INDEX_PATH)
+    return applyBrowseSeo(BOARDS_INDEX_PATH)
   }, [])
 
   useEffect(() => {
-    document.title = pageTitle(t('categories.indexTitle', { defaultValue: 'Government Jobs by Category' }));
+    document.title = pageTitle(
+      t('boards.indexTitle', { defaultValue: 'Government Jobs by Board' })
+    )
   }, [t])
 
   const sorted = [...CATS].sort((a, b) => (categoryCounts[b.id] ?? 0) - (categoryCounts[a.id] ?? 0))
@@ -41,10 +43,10 @@ export default function CategoriesIndexPage({ jobs, onFooterLink }: CategoriesIn
           {t('explore.backToExplore', { defaultValue: 'Explore' })}
         </Link>
         <h1 className="static-page__title">
-          {t('categories.indexTitle', { defaultValue: 'Government Jobs by Category' })}
+          {t('boards.indexTitle', { defaultValue: 'Government Jobs by Board' })}
         </h1>
         <p className="static-page__lede">
-          {t('categories.indexDesc', {
+          {t('boards.indexDesc', {
             defaultValue:
               'UPSC, SSC, Railways, Banking, Defence, Police, Teaching, PSU, Health, and State PSC — official board-wise listings.',
           })}
@@ -57,9 +59,9 @@ export default function CategoriesIndexPage({ jobs, onFooterLink }: CategoriesIn
           return (
             <TrackedLink
               key={cat.id}
-              to={`/category/${cat.id}`}
-              trackId={`category-${cat.id}`}
-              trackSource="categories-index"
+              to={boardRoutePath(cat.id)}
+              trackId={`board-${cat.id}`}
+              trackSource="boards-index"
               trackLabel={cat.name}
               className="browse-index-card browse-index-card--category"
               style={{ '--browse-card-accent': cat.color } as CSSProperties}
@@ -69,7 +71,7 @@ export default function CategoriesIndexPage({ jobs, onFooterLink }: CategoriesIn
               </span>
               <h2 className="browse-index-card__title">{t(`category.${cat.id}`, { defaultValue: cat.name })}</h2>
               <p className="browse-index-card__meta">
-                {t('categories.cardMeta', {
+                {t('boards.cardMeta', {
                   count: count.toLocaleString(locale),
                   defaultValue: '{{count}} live notifications',
                 })}

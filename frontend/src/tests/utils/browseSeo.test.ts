@@ -9,9 +9,15 @@ describe("browseSeoForPath", () => {
     expect(meta.description).toMatch(/official/i);
   });
 
-  it("builds category browse title", () => {
-    const meta = browseSeoForPath("/category/ssc");
+  it("builds board browse title", () => {
+    const meta = browseSeoForPath("/board/ssc");
     expect(meta.title).toContain("SSC");
+    expect(browseSeoForPath("/category/ssc").title).toContain("SSC");
+  });
+
+  it("builds boards index title", () => {
+    const meta = browseSeoForPath("/boards");
+    expect(meta.title).toMatch(/Board/i);
   });
 
   it("builds latest notifications title", () => {

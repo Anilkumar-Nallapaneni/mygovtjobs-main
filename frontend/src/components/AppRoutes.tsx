@@ -6,6 +6,7 @@ import RoutePageFallback from "@/components/RoutePageFallback";
 import type StaticPage from "@/pages/StaticPage";
 import {
   ALL_INDIA_JOBS_PATH,
+  BOARDS_INDEX_PATH,
   CATEGORIES_INDEX_PATH,
   EXAMS_INDEX_PATH,
   EXAM_CALENDAR_PATH,
@@ -193,6 +194,14 @@ export default function AppRoutes({
         }
       />
       <Route
+        path={BOARDS_INDEX_PATH}
+        element={
+          <LazyRoute>
+            <CategoriesIndexPage jobs={jobs} onFooterLink={onFooterLink} />
+          </LazyRoute>
+        }
+      />
+      <Route
         path={CATEGORIES_INDEX_PATH}
         element={
           <LazyRoute>
@@ -222,6 +231,20 @@ export default function AppRoutes({
           <LazyRoute>
             <BrowseJobsLandingPage
               kind="state"
+              jobs={jobs}
+              jobsLoading={jobsLoading}
+              onJobClick={onJobClick}
+              onFooterLink={onFooterLink}
+            />
+          </LazyRoute>
+        }
+      />
+      <Route
+        path="/board/:boardId"
+        element={
+          <LazyRoute>
+            <BrowseJobsLandingPage
+              kind="category"
               jobs={jobs}
               jobsLoading={jobsLoading}
               onJobClick={onJobClick}

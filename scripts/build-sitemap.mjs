@@ -42,7 +42,8 @@ const STATIC_PATHS = [
   { loc: "/jobs/latest-notifications", changefreq: "hourly", priority: "0.85" },
   { loc: "/jobs/all-india", changefreq: "daily", priority: "0.75" },
   { loc: "/states", changefreq: "weekly", priority: "0.8" },
-  { loc: "/categories", changefreq: "weekly", priority: "0.8" },
+  { loc: "/boards", changefreq: "weekly", priority: "0.8" },
+  { loc: "/categories", changefreq: "weekly", priority: "0.6" },
   { loc: "/explore", changefreq: "weekly", priority: "0.8" },
   { loc: "/exams", changefreq: "weekly", priority: "0.85" },
   { loc: "/exam-calendar", changefreq: "daily", priority: "0.8" },
@@ -231,7 +232,7 @@ async function main() {
   }
 
   for (const id of CATEGORY_IDS) {
-    staticPageEntries.push(urlEntry(`${siteUrl}/category/${id}`, "daily", "0.7"));
+    staticPageEntries.push(urlEntry(`${siteUrl}/board/${id}`, "daily", "0.7"));
   }
 
   for (const slug of QUALIFICATION_SLUGS) {

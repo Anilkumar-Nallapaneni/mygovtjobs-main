@@ -1,24 +1,12 @@
 {
-  "generatedAt": "2026-08-11T12:52:10.378602+00:00",
+  "generatedAt": "2026-08-11T15:59:32.671011+00:00",
   "memorized": 1599,
   "lastRun": {
-    "scanned": 13,
-    "memorized": 13,
+    "scanned": 5,
+    "memorized": 5,
     "failed": 0
   },
   "items": [
-    {
-      "slug": "recruitment-online-applications-are-invited-from-eligible-candidates-for-filling-62abc909",
-      "title": "Recruitment : Online applications are invited from eligible candidates for filling up the following Group ‘B’ posts (Para-medical) in Bhabha Atomic Research Centre (BARC), Mumbai and Radiation Medicine Research Centre (RMRC), Kolkata through Direct Recruitment",
-      "status": "live",
-      "vacancies": 6,
-      "pdf_urls": [
-        "http://www.barc.gov.in/careers/vacancy21.pdf"
-      ],
-      "section_count": 5,
-      "memorized_at": "2026-08-11T12:52:05.557680+00:00",
-      "content_digest": "2551dbdffc888e82"
-    },
     {
       "slug": "mppsc-recruitment-2026-apply-online-for-06-iaeo-aao-and-more-posts-9bc6da58",
       "title": "MPPSC Recruitment 2026 - Apply Online for 06 IAEO, AAO and More Posts",
@@ -30,8 +18,57 @@
         "https://mppsc.mp.gov.in/uploads/advertisement/Advt_Internal_Accounts_Examiner_Officer__2026_Dated_10_04_2026.pdf"
       ],
       "section_count": 1,
-      "memorized_at": "2026-08-11T12:51:59.148664+00:00",
+      "memorized_at": "2026-08-11T15:59:30.411072+00:00",
       "content_digest": "b49892fefeb4783d"
+    },
+    {
+      "slug": "isro-careers-recruitment-to-the-post-of-scientist-engineers-sc-2026-https-www-is-fc1e48e8",
+      "title": "Recruitment to the post of Scientist/Engineers 'SC'",
+      "status": "live",
+      "vacancies": 19,
+      "pdf_urls": [
+        "https://www.isro.gov.in/media_isro/pdf/recruitmentNotice/2026/July/GATE_Bilingual_Advertisement_2026_28072026.pdf",
+        "https://www.isro.gov.in/media_isro/pdf/recruitmentNotice/2026/July/FREQUENTLY_ASKED_QUESTIONS(FAQ)_28072026.pdf"
+      ],
+      "section_count": 5,
+      "memorized_at": "2026-08-11T15:59:24.839139+00:00",
+      "content_digest": "60ff83f9fb1c4a8e"
+    },
+    {
+      "slug": "bobcaps-business-development-manager-recruitment-2026-apply-online-cd153f44",
+      "title": "BOBCAPS Business Development Manager Recruitment 2026 - Apply Online",
+      "status": "live",
+      "vacancies": 0,
+      "pdf_urls": [
+        "https://www.bobcaps.in/media/brnj1qpq/opening-for-business-development-manager-role-at-bob-capital-as-off-roll-employee.pdf"
+      ],
+      "section_count": 1,
+      "memorized_at": "2026-08-11T15:59:23.811981+00:00",
+      "content_digest": "f51173da3a70d125"
+    },
+    {
+      "slug": "isro-careers-recruitment-to-the-post-of-scientist-engineer-sd-2026-https-www-isr-d6dc58c0",
+      "title": "Recruitment to the post of Scientist/Engineer - SD",
+      "status": "live",
+      "vacancies": 1,
+      "pdf_urls": [
+        "https://www.isro.gov.in/media_isro/pdf/recruitmentNotice/2026/August/PhDLive_Register_Adv_10.08.2026.pdf"
+      ],
+      "section_count": 4,
+      "memorized_at": "2026-08-11T15:59:19.840360+00:00",
+      "content_digest": "06a4df68ffa66c60"
+    },
+    {
+      "slug": "recruitment-online-applications-are-invited-from-eligible-candidates-for-filling-62abc909",
+      "title": "Recruitment : Online applications are invited from eligible candidates for filling up the following Group ‘B’ posts (Para-medical) in Bhabha Atomic Research Centre (BARC), Mumbai and Radiation Medicine Research Centre (RMRC), Kolkata through Direct Recruitment",
+      "status": "live",
+      "vacancies": 6,
+      "pdf_urls": [
+        "http://www.barc.gov.in/careers/vacancy21.pdf"
+      ],
+      "section_count": 5,
+      "memorized_at": "2026-08-11T12:52:05.557680+00:00",
+      "content_digest": "2551dbdffc888e82"
     },
     {
       "slug": "isro-careers-recruitment-to-the-post-of-administrative-officer-accounts-officer--2bcb7348",
@@ -59,19 +96,6 @@
       "content_digest": "c38b7227faf41670"
     },
     {
-      "slug": "isro-careers-recruitment-to-the-post-of-scientist-engineers-sc-2026-https-www-is-fc1e48e8",
-      "title": "Recruitment to the post of Scientist/Engineers 'SC'",
-      "status": "live",
-      "vacancies": 19,
-      "pdf_urls": [
-        "https://www.isro.gov.in/media_isro/pdf/recruitmentNotice/2026/July/GATE_Bilingual_Advertisement_2026_28072026.pdf",
-        "https://www.isro.gov.in/media_isro/pdf/recruitmentNotice/2026/July/FREQUENTLY_ASKED_QUESTIONS(FAQ)_28072026.pdf"
-      ],
-      "section_count": 5,
-      "memorized_at": "2026-08-11T12:51:46.576404+00:00",
-      "content_digest": "60ff83f9fb1c4a8e"
-    },
-    {
       "slug": "isro-careers-recruitment-to-the-post-of-temporary-research-personnel-research-sc-f15e9178",
       "title": "Recruitment to the post of Temporary Research Personnel (Research Scientist,Project Associate-I,Project Associate-II,Project Scientist-I,Project Scientist-B,Junior Research Fellow )",
       "status": "live",
@@ -82,18 +106,6 @@
       "section_count": 1,
       "memorized_at": "2026-08-11T12:51:45.115141+00:00",
       "content_digest": "551c959f1d00a455"
-    },
-    {
-      "slug": "bobcaps-business-development-manager-recruitment-2026-apply-online-cd153f44",
-      "title": "BOBCAPS Business Development Manager Recruitment 2026 - Apply Online",
-      "status": "live",
-      "vacancies": 0,
-      "pdf_urls": [
-        "https://www.bobcaps.in/media/brnj1qpq/opening-for-business-development-manager-role-at-bob-capital-as-off-roll-employee.pdf"
-      ],
-      "section_count": 1,
-      "memorized_at": "2026-08-11T12:51:41.583157+00:00",
-      "content_digest": "f51173da3a70d125"
     },
     {
       "slug": "esic-employees-state-insurance-corporation-walk-in-interview-to-engage-specialis-4cd797a4",
@@ -119,18 +131,6 @@
       "section_count": 1,
       "memorized_at": "2026-08-11T12:51:28.343546+00:00",
       "content_digest": "80a3a65456d29e01"
-    },
-    {
-      "slug": "isro-careers-recruitment-to-the-post-of-scientist-engineer-sd-2026-https-www-isr-d6dc58c0",
-      "title": "Recruitment to the post of Scientist/Engineer - SD",
-      "status": "live",
-      "vacancies": 1,
-      "pdf_urls": [
-        "https://www.isro.gov.in/media_isro/pdf/recruitmentNotice/2026/August/PhDLive_Register_Adv_10.08.2026.pdf"
-      ],
-      "section_count": 4,
-      "memorized_at": "2026-08-11T12:51:25.834489+00:00",
-      "content_digest": "06a4df68ffa66c60"
     },
     {
       "slug": "mha-5-filling-up-of-two-02-posts-of-upper-division-clerk-udc-on-deputation-basis-ebfb7cc8",

@@ -1,20 +1,19 @@
 {
   "priority_source_count": 25,
   "totals": {
-    "stored": 3340,
-    "published": 16,
+    "stored": 3347,
+    "published": 23,
     "rejected_or_draft": 3324,
-    "vacancies": 220,
-    "yield_percent": 0.48,
+    "vacancies": 304,
+    "yield_percent": 0.69,
     "rejection_reasons": {
-      "missing_deadline": 2010,
-      "low_quality": 777,
-      "other": 168,
-      "missing_vacancies": 161,
-      "missing_pdf": 144,
-      "missing_qualification": 58,
-      "non_recruitment": 4,
-      "expired": 2
+      "missing_deadline": 2066,
+      "low_quality": 780,
+      "other": 162,
+      "missing_vacancies": 142,
+      "missing_pdf": 130,
+      "missing_qualification": 41,
+      "non_recruitment": 3
     }
   },
   "sources": [
@@ -38,15 +37,15 @@
       },
       "health": {
         "source_code": "isro",
-        "discovered_count": 32,
-        "accepted_count": 13,
+        "discovered_count": 9,
+        "accepted_count": 9,
         "rejected_count": 0,
         "active_job_count": 0,
-        "parser_success_rate": null,
+        "parser_success_rate": "100.00",
         "health_status": "HEALTHY",
         "last_error": null,
-        "last_checked_at": "2026-08-03 11:07:02.836264+00:00",
-        "last_success_at": null
+        "last_checked_at": "2026-08-12 04:24:16.177213+00:00",
+        "last_success_at": "2026-08-12 04:24:16.177213+00:00"
       }
     },
     {
@@ -56,29 +55,27 @@
         "esic.gov.in"
       ],
       "stored": 76,
-      "published": 0,
-      "rejected_or_draft": 76,
-      "vacancies": 0,
-      "yield_percent": 0.0,
+      "published": 4,
+      "rejected_or_draft": 72,
+      "vacancies": 69,
+      "yield_percent": 5.26,
       "rejection_reasons": {
-        "missing_deadline": 34,
-        "low_quality": 17,
-        "missing_vacancies": 14,
-        "missing_qualification": 6,
-        "missing_pdf": 2,
+        "missing_deadline": 41,
+        "low_quality": 18,
+        "missing_vacancies": 10,
         "other": 2,
-        "expired": 1
+        "missing_qualification": 1
       },
       "health": {
         "source_code": "esic",
-        "discovered_count": 40,
-        "accepted_count": 14,
-        "rejected_count": 26,
+        "discovered_count": 0,
+        "accepted_count": 0,
+        "rejected_count": 0,
         "active_job_count": 0,
-        "parser_success_rate": "35.00",
-        "health_status": "HEALTHY",
-        "last_error": null,
-        "last_checked_at": "2026-08-11 14:47:34.206617+00:00",
+        "parser_success_rate": "0.00",
+        "health_status": "BROKEN",
+        "last_error": "no rows saved",
+        "last_checked_at": "2026-08-12 04:23:40.028151+00:00",
         "last_success_at": "2026-08-11 14:47:34.206617+00:00"
       }
     },
@@ -88,28 +85,26 @@
       "domains": [
         "upsc.gov.in"
       ],
-      "stored": 50,
+      "stored": 52,
       "published": 0,
-      "rejected_or_draft": 50,
+      "rejected_or_draft": 52,
       "vacancies": 0,
       "yield_percent": 0.0,
       "rejection_reasons": {
-        "missing_deadline": 33,
-        "low_quality": 12,
-        "missing_qualification": 3,
-        "missing_vacancies": 2
+        "missing_deadline": 40,
+        "low_quality": 12
       },
       "health": {
         "source_code": "upsc",
-        "discovered_count": 39,
+        "discovered_count": 41,
         "accepted_count": 3,
-        "rejected_count": 36,
+        "rejected_count": 38,
         "active_job_count": 0,
-        "parser_success_rate": "7.69",
+        "parser_success_rate": "7.32",
         "health_status": "HEALTHY",
         "last_error": null,
-        "last_checked_at": "2026-08-11 14:35:21.554237+00:00",
-        "last_success_at": "2026-08-11 14:35:21.554237+00:00"
+        "last_checked_at": "2026-08-12 12:52:50.473243+00:00",
+        "last_success_at": "2026-08-12 12:52:50.473243+00:00"
       }
     },
     {
@@ -118,29 +113,28 @@
       "domains": [
         "ibps.in"
       ],
-      "stored": 47,
+      "stored": 48,
       "published": 0,
-      "rejected_or_draft": 47,
+      "rejected_or_draft": 48,
       "vacancies": 0,
       "yield_percent": 0.0,
       "rejection_reasons": {
-        "missing_pdf": 41,
-        "missing_deadline": 2,
+        "missing_pdf": 32,
+        "missing_deadline": 13,
         "other": 2,
-        "missing_qualification": 1,
-        "expired": 1
+        "missing_qualification": 1
       },
       "health": {
         "source_code": "ibps",
-        "discovered_count": 24,
+        "discovered_count": 25,
         "accepted_count": 12,
-        "rejected_count": 12,
+        "rejected_count": 13,
         "active_job_count": 0,
-        "parser_success_rate": "50.00",
+        "parser_success_rate": "48.00",
         "health_status": "HEALTHY",
         "last_error": null,
-        "last_checked_at": "2026-08-11 14:48:26.285328+00:00",
-        "last_success_at": "2026-08-11 14:48:26.285328+00:00"
+        "last_checked_at": "2026-08-12 12:54:40.232424+00:00",
+        "last_success_at": "2026-08-12 12:54:40.232424+00:00"
       }
     },
     {
@@ -166,10 +160,10 @@
         "accepted_count": 0,
         "rejected_count": 0,
         "active_job_count": 0,
-        "parser_success_rate": null,
+        "parser_success_rate": "0.00",
         "health_status": "BROKEN",
-        "last_error": "All connection attempts failed",
-        "last_checked_at": "2026-08-03 11:07:07.294336+00:00",
+        "last_error": "no rows saved",
+        "last_checked_at": "2026-08-12 04:24:29.970189+00:00",
         "last_success_at": null
       }
     },
@@ -185,8 +179,7 @@
       "vacancies": 0,
       "yield_percent": 0.0,
       "rejection_reasons": {
-        "missing_deadline": 35,
-        "missing_pdf": 1
+        "missing_deadline": 36
       },
       "health": {
         "source_code": "kvs",
@@ -197,8 +190,8 @@
         "parser_success_rate": "2.00",
         "health_status": "HEALTHY",
         "last_error": null,
-        "last_checked_at": "2026-08-11 14:42:47.244052+00:00",
-        "last_success_at": "2026-08-11 14:42:47.244052+00:00"
+        "last_checked_at": "2026-08-12 04:28:20.027725+00:00",
+        "last_success_at": "2026-08-12 04:28:20.027725+00:00"
       }
     },
     {
@@ -225,8 +218,8 @@
         "parser_success_rate": "23.08",
         "health_status": "HEALTHY",
         "last_error": null,
-        "last_checked_at": "2026-08-11 14:47:58.547754+00:00",
-        "last_success_at": "2026-08-11 14:47:58.547754+00:00"
+        "last_checked_at": "2026-08-12 04:33:40.210946+00:00",
+        "last_success_at": "2026-08-12 04:33:40.210946+00:00"
       }
     },
     {
@@ -253,7 +246,7 @@
         "parser_success_rate": "0.00",
         "health_status": "DEGRADED",
         "last_error": "no rows saved",
-        "last_checked_at": "2026-08-11 14:43:03.279359+00:00",
+        "last_checked_at": "2026-08-12 04:22:32.400941+00:00",
         "last_success_at": null
       }
     },
@@ -269,11 +262,9 @@
       "vacancies": 0,
       "yield_percent": 0.0,
       "rejection_reasons": {
-        "missing_vacancies": 11,
-        "missing_qualification": 9,
-        "missing_pdf": 4,
-        "other": 3,
-        "non_recruitment": 1
+        "missing_deadline": 24,
+        "missing_pdf": 3,
+        "low_quality": 1
       },
       "health": {
         "source_code": "ssc",
@@ -284,8 +275,8 @@
         "parser_success_rate": "56.00",
         "health_status": "HEALTHY",
         "last_error": null,
-        "last_checked_at": "2026-08-11 14:34:57.253690+00:00",
-        "last_success_at": "2026-08-11 14:34:57.253690+00:00"
+        "last_checked_at": "2026-08-12 12:54:17.938632+00:00",
+        "last_success_at": "2026-08-12 12:54:17.938632+00:00"
       }
     },
     {
@@ -294,28 +285,27 @@
       "domains": [
         "drdo.gov.in"
       ],
-      "stored": 24,
+      "stored": 25,
       "published": 0,
-      "rejected_or_draft": 24,
+      "rejected_or_draft": 25,
       "vacancies": 0,
       "yield_percent": 0.0,
       "rejection_reasons": {
-        "missing_deadline": 19,
-        "missing_pdf": 2,
+        "missing_deadline": 22,
         "missing_vacancies": 2,
         "low_quality": 1
       },
       "health": {
         "source_code": "drdo",
         "discovered_count": 30,
-        "accepted_count": 2,
-        "rejected_count": 28,
+        "accepted_count": 3,
+        "rejected_count": 27,
         "active_job_count": 0,
-        "parser_success_rate": "6.67",
+        "parser_success_rate": "10.00",
         "health_status": "HEALTHY",
         "last_error": null,
-        "last_checked_at": "2026-08-11 14:47:47.674207+00:00",
-        "last_success_at": "2026-08-11 14:47:47.674207+00:00"
+        "last_checked_at": "2026-08-12 04:24:19.697727+00:00",
+        "last_success_at": "2026-08-12 04:24:19.697727+00:00"
       }
     },
     {
@@ -336,15 +326,15 @@
       },
       "health": {
         "source_code": "indiapost",
-        "discovered_count": 154,
-        "accepted_count": 42,
-        "rejected_count": 0,
+        "discovered_count": 19,
+        "accepted_count": 1,
+        "rejected_count": 18,
         "active_job_count": 0,
-        "parser_success_rate": null,
+        "parser_success_rate": "5.26",
         "health_status": "HEALTHY",
         "last_error": null,
-        "last_checked_at": "2026-08-03 11:07:21.079652+00:00",
-        "last_success_at": null
+        "last_checked_at": "2026-08-12 04:26:32.630825+00:00",
+        "last_success_at": "2026-08-12 04:26:32.630825+00:00"
       }
     },
     {
@@ -365,15 +355,15 @@
       },
       "health": {
         "source_code": "psc-br",
-        "discovered_count": 141,
-        "accepted_count": 14,
-        "rejected_count": 0,
+        "discovered_count": 13,
+        "accepted_count": 4,
+        "rejected_count": 9,
         "active_job_count": 0,
-        "parser_success_rate": null,
-        "health_status": "DEGRADED",
-        "last_error": "HTTP 404",
-        "last_checked_at": "2026-08-03 11:08:16.561046+00:00",
-        "last_success_at": null
+        "parser_success_rate": "30.77",
+        "health_status": "HEALTHY",
+        "last_error": null,
+        "last_checked_at": "2026-08-12 04:31:21.642493+00:00",
+        "last_success_at": "2026-08-12 04:31:21.642493+00:00"
       }
     },
     {
@@ -399,10 +389,10 @@
         "accepted_count": 0,
         "rejected_count": 0,
         "active_job_count": 0,
-        "parser_success_rate": null,
+        "parser_success_rate": "0.00",
         "health_status": "BROKEN",
-        "last_error": "All connection attempts failed",
-        "last_checked_at": "2026-08-03 11:07:05.524283+00:00",
+        "last_error": "no rows saved",
+        "last_checked_at": "2026-08-12 04:24:15.530399+00:00",
         "last_success_at": null
       }
     },
@@ -418,19 +408,18 @@
       "vacancies": 0,
       "yield_percent": 0.0,
       "rejection_reasons": {
-        "missing_deadline": 6,
-        "missing_pdf": 1
+        "missing_deadline": 7
       },
       "health": {
         "source_code": "aiims",
-        "discovered_count": 50,
-        "accepted_count": 9,
-        "rejected_count": 0,
+        "discovered_count": 4,
+        "accepted_count": 0,
+        "rejected_count": 4,
         "active_job_count": 0,
-        "parser_success_rate": null,
-        "health_status": "HEALTHY",
-        "last_error": null,
-        "last_checked_at": "2026-08-03 11:07:49.517084+00:00",
+        "parser_success_rate": "0.00",
+        "health_status": "DEGRADED",
+        "last_error": "no rows saved",
+        "last_checked_at": "2026-08-12 04:28:33.722136+00:00",
         "last_success_at": null
       }
     },
@@ -455,10 +444,10 @@
         "accepted_count": 0,
         "rejected_count": 0,
         "active_job_count": 0,
-        "parser_success_rate": null,
+        "parser_success_rate": "0.00",
         "health_status": "BROKEN",
-        "last_error": "",
-        "last_checked_at": "2026-08-03 11:07:39.610212+00:00",
+        "last_error": "no rows saved",
+        "last_checked_at": "2026-08-12 02:41:25.558687+00:00",
         "last_success_at": null
       }
     },
@@ -483,10 +472,10 @@
         "accepted_count": 0,
         "rejected_count": 0,
         "active_job_count": 0,
-        "parser_success_rate": null,
+        "parser_success_rate": "0.00",
         "health_status": "BROKEN",
-        "last_error": "",
-        "last_checked_at": "2026-08-03 11:07:23.734779+00:00",
+        "last_error": "no rows saved",
+        "last_checked_at": "2026-08-12 02:39:00.057955+00:00",
         "last_success_at": null
       }
     },
@@ -510,10 +499,10 @@
         "accepted_count": 0,
         "rejected_count": 0,
         "active_job_count": 0,
-        "parser_success_rate": null,
+        "parser_success_rate": "0.00",
         "health_status": "BROKEN",
-        "last_error": "",
-        "last_checked_at": "2026-08-03 11:08:39.197966+00:00",
+        "last_error": "no rows saved",
+        "last_checked_at": "2026-08-12 02:46:34.813485+00:00",
         "last_success_at": null
       }
     },
@@ -533,15 +522,15 @@
       },
       "health": {
         "source_code": "sbi",
-        "discovered_count": 623,
-        "accepted_count": 202,
-        "rejected_count": 0,
+        "discovered_count": 41,
+        "accepted_count": 2,
+        "rejected_count": 39,
         "active_job_count": 0,
-        "parser_success_rate": null,
+        "parser_success_rate": "4.88",
         "health_status": "HEALTHY",
         "last_error": null,
-        "last_checked_at": "2026-08-03 11:07:49.680612+00:00",
-        "last_success_at": null
+        "last_checked_at": "2026-08-12 02:41:31.971995+00:00",
+        "last_success_at": "2026-08-12 02:41:31.971995+00:00"
       }
     },
     {
@@ -565,7 +554,7 @@
         "parser_success_rate": "0.00",
         "health_status": "BROKEN",
         "last_error": "no rows saved",
-        "last_checked_at": "2026-08-11 14:46:54.791795+00:00",
+        "last_checked_at": "2026-08-12 12:52:35.642770+00:00",
         "last_success_at": null
       }
     },
@@ -590,7 +579,7 @@
         "parser_success_rate": "0.00",
         "health_status": "BROKEN",
         "last_error": "no rows saved",
-        "last_checked_at": "2026-08-11 14:47:04.284759+00:00",
+        "last_checked_at": "2026-08-12 12:58:01.684813+00:00",
         "last_success_at": null
       }
     },
@@ -612,10 +601,10 @@
         "accepted_count": 0,
         "rejected_count": 0,
         "active_job_count": 0,
-        "parser_success_rate": null,
+        "parser_success_rate": "0.00",
         "health_status": "BROKEN",
-        "last_error": "",
-        "last_checked_at": "2026-08-03 11:07:24.470276+00:00",
+        "last_error": "no rows saved",
+        "last_checked_at": "2026-08-12 12:58:09.722908+00:00",
         "last_success_at": null
       }
     },
@@ -637,10 +626,10 @@
         "accepted_count": 0,
         "rejected_count": 0,
         "active_job_count": 0,
-        "parser_success_rate": null,
+        "parser_success_rate": "0.00",
         "health_status": "BROKEN",
-        "last_error": "",
-        "last_checked_at": "2026-08-03 11:07:25.805549+00:00",
+        "last_error": "no rows saved",
+        "last_checked_at": "2026-08-12 02:39:30.041306+00:00",
         "last_success_at": null
       }
     },
@@ -665,7 +654,7 @@
         "parser_success_rate": "0.00",
         "health_status": "BROKEN",
         "last_error": "no rows saved",
-        "last_checked_at": "2026-08-11 14:46:59.457154+00:00",
+        "last_checked_at": "2026-08-12 12:57:56.615056+00:00",
         "last_success_at": null
       }
     },
@@ -683,14 +672,14 @@
       "rejection_reasons": {},
       "health": {
         "source_code": "psc-mh",
-        "discovered_count": 7,
-        "accepted_count": 1,
+        "discovered_count": 0,
+        "accepted_count": 0,
         "rejected_count": 0,
         "active_job_count": 0,
-        "parser_success_rate": null,
-        "health_status": "HEALTHY",
-        "last_error": null,
-        "last_checked_at": "2026-08-03 11:08:35.762690+00:00",
+        "parser_success_rate": "0.00",
+        "health_status": "BROKEN",
+        "last_error": "no rows saved",
+        "last_checked_at": "2026-08-12 04:32:52.545037+00:00",
         "last_success_at": null
       }
     },
@@ -712,13 +701,13 @@
         "accepted_count": 0,
         "rejected_count": 0,
         "active_job_count": 0,
-        "parser_success_rate": null,
+        "parser_success_rate": "0.00",
         "health_status": "BROKEN",
-        "last_error": "",
-        "last_checked_at": "2026-08-03 11:08:42.816475+00:00",
+        "last_error": "no rows saved",
+        "last_checked_at": "2026-08-12 02:48:05.848781+00:00",
         "last_success_at": null
       }
     }
   ],
-  "generated_at": "2026-08-11T14:48:35.628414+00:00"
+  "generated_at": "2026-08-12T13:48:54.210349+00:00"
 }

@@ -21,9 +21,14 @@
     <priority>0.75</priority>
   </url>
   <url>
-    <loc>https://www.livegovtjobs.com/categories</loc>
+    <loc>https://www.livegovtjobs.com/boards</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.livegovtjobs.com/categories</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.livegovtjobs.com/explore</loc>
@@ -96,57 +101,57 @@
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://www.livegovtjobs.com/category/upsc</loc>
+    <loc>https://www.livegovtjobs.com/board/upsc</loc>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.livegovtjobs.com/category/ssc</loc>
+    <loc>https://www.livegovtjobs.com/board/ssc</loc>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.livegovtjobs.com/category/railways</loc>
+    <loc>https://www.livegovtjobs.com/board/railways</loc>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.livegovtjobs.com/category/banking</loc>
+    <loc>https://www.livegovtjobs.com/board/banking</loc>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.livegovtjobs.com/category/police</loc>
+    <loc>https://www.livegovtjobs.com/board/police</loc>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.livegovtjobs.com/category/teaching</loc>
+    <loc>https://www.livegovtjobs.com/board/teaching</loc>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.livegovtjobs.com/category/defence</loc>
+    <loc>https://www.livegovtjobs.com/board/defence</loc>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.livegovtjobs.com/category/psu</loc>
+    <loc>https://www.livegovtjobs.com/board/psu</loc>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.livegovtjobs.com/category/health</loc>
+    <loc>https://www.livegovtjobs.com/board/health</loc>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.livegovtjobs.com/category/engineering</loc>
+    <loc>https://www.livegovtjobs.com/board/engineering</loc>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.livegovtjobs.com/category/state</loc>
+    <loc>https://www.livegovtjobs.com/board/state</loc>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
