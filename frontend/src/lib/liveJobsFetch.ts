@@ -98,6 +98,7 @@ export type LiveJobsCatalogResult = {
 export function getJobsSourceMode(): JobsSourceMode {
   // Public browse pages have one canonical source: the versioned CDN snapshot.
   // API/Supabase remain available for focused search, details, accounts and admin.
+  // (VITE_JOBS_SOURCE is ignored for homepage catalog — see useLiveJobs tests.)
   return 'static'
 }
 

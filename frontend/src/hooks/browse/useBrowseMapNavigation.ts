@@ -20,6 +20,7 @@ import {
 import {
   ALL_INDIA_JOBS_PATH,
   applyQualificationToBrowseState,
+  boardRoutePath,
   buildBrowseUrl,
   buildResultsHubUrl,
   isValidStateId,
@@ -120,7 +121,7 @@ export function useBrowseMapNavigation(core: BrowseStateCore, filters: BrowseFil
       startTransition(() => {
         if (activeCat) {
           navigate(
-            buildBrowseUrl(`/category/${encodeURIComponent(activeCat)}`, {
+            buildBrowseUrl(boardRoutePath(activeCat), {
               quickFilter,
               sort,
               heroStatFilter,
@@ -166,7 +167,7 @@ export function useBrowseMapNavigation(core: BrowseStateCore, filters: BrowseFil
           setOrgSlug(null)
           setAllIndiaBrowse(false)
           navigate(
-            buildBrowseUrl(`/category/${encodeURIComponent(catId)}`, {
+            buildBrowseUrl(boardRoutePath(catId), {
               quickFilter: null,
               sort,
               heroStatFilter: null,
@@ -205,7 +206,7 @@ export function useBrowseMapNavigation(core: BrowseStateCore, filters: BrowseFil
       if (
         catId !== null &&
         activeCat === catId &&
-        pathname === `/category/${encodeURIComponent(catId)}`
+        pathname === boardRoutePath(catId)
       ) {
         scrollToMainJobs()
         return

@@ -3,9 +3,10 @@
  * Build frontend/public/data/live-jobs-list.json from live-jobs.json.
  * Mirrors backend slim_job_for_list_json_export — run after sync or clean.
  */
-import { readFileSync, writeFileSync, existsSync } from 'fs'
+import { readFileSync, existsSync } from 'fs'
 import { join, dirname } from 'path'
 import { fileURLToPath } from 'url'
+import { writeFileAtomic } from './write-file-atomic.mjs'
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..')
 const fullPath = join(root, 'frontend/public/data/live-jobs.json')
@@ -73,7 +74,7 @@ function slimRow(row) {
   return out
 }
 
-function main() {
+async function main() {
   if (!existsSync(fullPath)) {
     console.error(`Missing ${fullPath}`)
     process.exit(1)
@@ -87,11 +88,14 @@ function main() {
     items: items.map(slimRow),
   }
 
-  writeFileSync(listPath, JSON.stringify(listPayload), 'utf8')
+  await writeFileAtomic(listPath, JSON.stringify(listPayload))
 
   const fullKb = Math.round(readFileSync(fullPath, 'utf8').length / 1024)
   const listKb = Math.round(readFileSync(listPath, 'utf8').length / 1024)
   console.log(`Wrote ${listPath} — ${listPayload.items.length} rows (${listKb} KB vs ${fullKb} KB full)`)
 }
 
-main()
+main().catch((err) => {
+  console.error(err)
+  process.exit(1)
+})

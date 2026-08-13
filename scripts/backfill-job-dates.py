@@ -5,6 +5,7 @@ From repo root:
   npm run backfill:dates              # first 100 jobs with PDFs
   npm run backfill:dates:all          # all jobs with PDFs
   npm run backfill:dates -- --duplicates-only --limit 50
+  npm run backfill:dates -- --status draft --missing-last-date --quality-only --require-url --limit 750 --no-export
 """
 import argparse
 import asyncio
@@ -38,7 +39,7 @@ from app.parsers.pdf_dates import to_published_datetime
 from app.parsers.pdf_enrich import merge_pdf_fields
 from app.services.job_child_service import sync_job_children
 from app.services.job_persist_service import JobPersistService, _parse_date
-from app.services.noise_filter import sanitize_json_for_postgres
+from app.services.noise_filter import is_junk_job_title, sanitize_json_for_postgres
 from app.scrapers.pdf_discover import ensure_pdf_urls
 
 COMMIT_EVERY = 15
@@ -50,6 +51,21 @@ def _has_pdf(job: Job) -> bool:
     if job.apply_url and ".pdf" in str(job.apply_url).lower():
         return True
     return any(".pdf" in str(u).lower() for u in urls) or bool(detail.get("pdf_url"))
+
+
+def _has_apply_or_pdf(job: Job) -> bool:
+    if job.apply_url:
+        return True
+    return _has_pdf(job)
+
+
+def _is_quality_recruitment(job: Job) -> bool:
+    """Skip portal chrome / tenders; keep real-ish recruitment titles."""
+    title = job.title or ""
+    url = job.apply_url or getattr(job, "source_url", None) or ""
+    if is_junk_job_title(title, url):
+        return False
+    return True
 
 
 def _duplicate_dates(job: Job) -> bool:
@@ -162,15 +178,44 @@ async def main() -> None:
         action="store_true",
         help="Only jobs where published_at date equals last_date",
     )
+    argp.add_argument(
+        "--status",
+        type=str,
+        default="",
+        help="Comma-separated statuses to include (e.g. draft). Empty = all.",
+    )
+    argp.add_argument(
+        "--missing-last-date",
+        action="store_true",
+        help="Only jobs with last_date IS NULL",
+    )
+    argp.add_argument(
+        "--require-url",
+        action="store_true",
+        help="Require apply_url or a PDF URL (still need PDF for date extract)",
+    )
+    argp.add_argument(
+        "--quality-only",
+        action="store_true",
+        help="Skip junk/tender/portal-nav titles",
+    )
+    argp.add_argument(
+        "--allow-discover",
+        action="store_true",
+        help="Include jobs without known PDF (discover via apply page). Default: PDF only.",
+    )
     argp.add_argument("--export", action="store_true", default=True)
     argp.add_argument("--no-export", dest="export", action="store_false")
     args = argp.parse_args()
+
+    statuses = {s.strip().lower() for s in args.status.split(",") if s.strip()}
 
     parser = NotificationParser()
     updated = 0
     date_fixed = 0
     still_dup = 0
     no_dates = 0
+    no_pdf = 0
     scanned = 0
 
     async with SessionLocal() as session:
@@ -181,21 +226,46 @@ async def main() -> None:
         if args.duplicates_only:
             targets = [j for j in rows if _duplicate_dates(j) and _has_pdf(j)]
         else:
-            targets = [j for j in rows if _has_pdf(j)]
+            targets = list(rows)
+            if statuses:
+                targets = [j for j in targets if (j.status or "").lower() in statuses]
+            if args.missing_last_date:
+                targets = [j for j in targets if j.last_date is None]
+            if args.require_url:
+                targets = [j for j in targets if _has_apply_or_pdf(j)]
+            if args.quality_only:
+                targets = [j for j in targets if _is_quality_recruitment(j)]
+            # Prefer known PDFs; optional discover for apply-page-only rows
+            if args.allow_discover:
+                with_pdf = [j for j in targets if _has_pdf(j)]
+                without = [j for j in targets if not _has_pdf(j)]
+                targets = with_pdf + without
+            else:
+                targets = [j for j in targets if _has_pdf(j)]
 
         cap = args.limit if args.limit else len(targets)
-        total = min(len(targets), cap)
-        _log(f"PDF date backfill — targets: {len(targets)}, processing: {total}")
+        target_ids = [str(j.id) for j in targets[:cap]]
+        total = len(target_ids)
+        _log(
+            f"PDF date backfill — targets: {len(targets)}, processing: {total}"
+            f" status={sorted(statuses) or 'all'} missing_last={args.missing_last_date}"
+            f" quality={args.quality_only}"
+        )
 
-        for job in targets:
-            if args.limit and scanned >= args.limit:
-                break
+        for job_id in target_ids:
             scanned += 1
+            job = await session.get(Job, job_id)
+            if not job:
+                _log(f"[{scanned}/{total}] missing id={job_id}")
+                continue
             title = (job.title or "")[:58]
             _log(f"[{scanned}/{total}] {title}")
             try:
                 result = await backfill_one(session, job, parser)
-                if result.get("dates_changed"):
+                if result.get("note") == "no-pdf":
+                    no_pdf += 1
+                    _log("  · no PDF discovered")
+                elif result.get("dates_changed"):
                     date_fixed += 1
                     _log(f"  ✓ posted {result['posted']} | last {result['last']}")
                 elif result.get("note") == "still-duplicate":
@@ -214,10 +284,18 @@ async def main() -> None:
                 _log(f"  skip: {exc}")
 
             if scanned % COMMIT_EVERY == 0:
-                await session.commit()
+                try:
+                    await session.commit()
+                except Exception as exc:
+                    await session.rollback()
+                    _log(f"  commit failed: {exc}")
                 _log(f"  — committed ({date_fixed} date fixes so far)")
 
-        await session.commit()
+        try:
+            await session.commit()
+        except Exception as exc:
+            await session.rollback()
+            _log(f"final commit failed: {exc}")
 
         if args.export:
             count = await JobPersistService().export_live_jobs_json(session)
@@ -225,7 +303,7 @@ async def main() -> None:
 
     _log(
         f"Done: scanned={scanned} date_fixed={date_fixed} still_duplicate={still_dup} "
-        f"pdf_no_dates={no_dates} rows_touched={updated}"
+        f"pdf_no_dates={no_dates} no_pdf={no_pdf} rows_touched={updated}"
     )
 
 

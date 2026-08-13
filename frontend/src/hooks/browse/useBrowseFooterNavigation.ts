@@ -11,6 +11,7 @@ import {
   scrollWindowToTop,
 } from '@/hooks/browse/browseScrollHelpers'
 import {
+  boardRoutePath,
   buildBrowsePath,
   buildBrowseUrl,
   buildResultsHubUrl,
@@ -49,7 +50,7 @@ export function useBrowseFooterNavigation(core: BrowseStateCore) {
 
         if (target.category && isValidCategoryId(target.category)) {
           navigate(
-            buildBrowseUrl(`/category/${encodeURIComponent(target.category)}`, {
+            buildBrowseUrl(boardRoutePath(target.category), {
               quickFilter,
               sort,
               heroStatFilter,

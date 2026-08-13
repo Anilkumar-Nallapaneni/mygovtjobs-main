@@ -10,7 +10,8 @@ import { SITE_LINKS } from '@/data/siteLinks'
 import { applyBrowseSeo } from '@/utils/browseSeo'
 import {
   ALL_INDIA_JOBS_PATH,
-  CATEGORIES_INDEX_PATH,
+  BOARDS_INDEX_PATH,
+  boardRoutePath,
   EXAM_CALENDAR_PATH,
   EXAMS_INDEX_PATH,
   EXPLORE_HUB_PATH,
@@ -54,7 +55,7 @@ export default function SitemapPage({ onFooterLink }: SitemapPageProps) {
     { href: LATEST_NOTIFICATIONS_PATH, label: t('nav.latest') },
     { href: ALL_INDIA_JOBS_PATH, label: t('nav.allIndia', { defaultValue: 'All India jobs' }) },
     { href: STATES_INDEX_PATH, label: t('states.indexTitle') },
-    { href: CATEGORIES_INDEX_PATH, label: t('categories.indexTitle') },
+    { href: BOARDS_INDEX_PATH, label: t('boards.indexTitle', { defaultValue: 'Government Jobs by Board' }) },
     { href: EXAMS_INDEX_PATH, label: t('exams.indexTitle', { defaultValue: 'Popular Government Exams' }) },
     { href: QUALIFICATIONS_INDEX_PATH, label: t('qualification.indexTitle') },
     { href: PROFESSIONS_INDEX_PATH, label: t('profession.indexTitle', { defaultValue: 'Government Jobs by Profession' }) },
@@ -130,7 +131,7 @@ export default function SitemapPage({ onFooterLink }: SitemapPageProps) {
           <ul className="sitemap-page__list">
             {CATS.map((cat) => (
               <li key={cat.id}>
-                <Link to={`/category/${cat.id}`}>{cat.name}</Link>
+                <Link to={boardRoutePath(cat.id)}>{cat.name}</Link>
               </li>
             ))}
           </ul>

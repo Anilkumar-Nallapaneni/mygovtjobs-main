@@ -3,9 +3,10 @@
  * Build frontend/public/data/live-jobs-bootstrap.json — first N rows from live-jobs-list.json.
  * Keeps first paint small on mobile (~80–120 KB gzip). Keep N in sync with INITIAL_LIVE_ROWS.
  */
-import { readFileSync, writeFileSync, existsSync } from 'fs'
+import { readFileSync, existsSync } from 'fs'
 import { join, dirname } from 'path'
 import { fileURLToPath } from 'url'
+import { writeFileAtomic } from './write-file-atomic.mjs'
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..')
 const listPath = join(root, 'frontend/public/data/live-jobs-list.json')
@@ -37,7 +38,7 @@ function ultraSlimRow(row) {
   return out
 }
 
-function main() {
+async function main() {
   if (!existsSync(listPath)) {
     console.error(`Missing ${listPath} — run build-live-jobs-list.mjs first`)
     process.exit(1)
@@ -52,7 +53,7 @@ function main() {
     items: items.slice(0, BOOTSTRAP_ROWS).map(ultraSlimRow),
   }
 
-  writeFileSync(bootstrapPath, JSON.stringify(bootstrapPayload), 'utf8')
+  await writeFileAtomic(bootstrapPath, JSON.stringify(bootstrapPayload))
 
   const listKb = Math.round(readFileSync(listPath, 'utf8').length / 1024)
   const bootKb = Math.round(readFileSync(bootstrapPath, 'utf8').length / 1024)
@@ -61,4 +62,7 @@ function main() {
   )
 }
 
-main()
+main().catch((err) => {
+  console.error(err)
+  process.exit(1)
+})

@@ -4,6 +4,7 @@ import { getQualificationSlugForFilterKey } from '@/data/qualifications'
 import type { HeroStatFilterKey, HomeSortKey } from '@/utils/homePageFilters'
 import {
   ALL_INDIA_JOBS_PATH,
+  boardRoutePath,
   buildBrowseUrl,
   orgRoutePath,
   parseBrowsePath,
@@ -91,7 +92,7 @@ export function useBrowseFilters(core: BrowseStateCore, pushBrowseUrl: PushBrows
             return
           }
           if (categoryId) {
-            pushBrowseUrl(`/category/${encodeURIComponent(categoryId)}`, {
+            pushBrowseUrl(boardRoutePath(categoryId), {
               quickFilter: null,
               heroStatFilter: null,
             })

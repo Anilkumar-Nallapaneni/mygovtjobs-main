@@ -14,11 +14,12 @@ import { pageTitle } from '@/data/siteMeta'
 import type { FooterLinkTarget } from '@/hooks/browseStateTypes'
 import type { JobRecord } from '@/types/job'
 import {
-  CATEGORIES_INDEX_PATH,
+  BOARDS_INDEX_PATH,
   ORGANIZATIONS_INDEX_PATH,
   PROFESSIONS_INDEX_PATH,
   QUALIFICATIONS_INDEX_PATH,
   STATES_INDEX_PATH,
+  boardRoutePath,
   isValidCategoryId,
 } from '@/utils/browseRoutes'
 import { applyBrowseSeo } from '@/utils/browseSeo'
@@ -68,15 +69,15 @@ function resolveLanding(
   }
 
   if (kind === 'category') {
-    const categoryId = (params.categoryId || '').toLowerCase()
+    const categoryId = (params.boardId || params.categoryId || '').toLowerCase()
     const cat = isValidCategoryId(categoryId)
       ? CATS.find((c) => c.id === categoryId)
       : undefined
     return {
       valid: Boolean(cat),
-      path: `/category/${categoryId}`,
-      indexPath: CATEGORIES_INDEX_PATH,
-      backLabel: 'All categories',
+      path: boardRoutePath(categoryId),
+      indexPath: BOARDS_INDEX_PATH,
+      backLabel: 'All boards',
       title: cat ? `${cat.name} Government Jobs 2026` : '',
       description: cat
         ? `Live ${cat.name} recruitment notifications from official government sources.`

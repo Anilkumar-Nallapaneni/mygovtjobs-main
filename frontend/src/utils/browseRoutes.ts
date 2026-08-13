@@ -28,6 +28,8 @@ export const PROFESSIONS_INDEX_PATH = "/professions";
 export const ORGANIZATIONS_INDEX_PATH = "/organizations";
 export const STATES_INDEX_PATH = "/states";
 export const CATEGORIES_INDEX_PATH = "/categories";
+/** Preferred board index (same catalog as /categories). */
+export const BOARDS_INDEX_PATH = "/boards";
 export const EXPLORE_HUB_PATH = "/explore";
 export const EXAM_CALENDAR_PATH = "/exam-calendar";
 export const FAQ_PATH = "/faq";
@@ -100,6 +102,11 @@ export function qualificationRoutePath(slug: string): string {
 
 export function orgRoutePath(slug: string): string {
   return `/org/${encodeURIComponent(slug)}`;
+}
+
+/** Preferred path for recruitment boards (UPSC, SSC, …). `/category/:id` still works. */
+export function boardRoutePath(categoryId: string): string {
+  return `/board/${encodeURIComponent(categoryId)}`;
 }
 
 /** Parse shareable browse paths into navbar + filter state. */
@@ -182,7 +189,7 @@ export function parseBrowsePath(pathname: string): BrowseLocation {
     }
   }
 
-  const categoryMatch = /^\/category\/([^/]+)$/i.exec(path);
+  const categoryMatch = /^\/(?:category|board)\/([^/]+)$/i.exec(path);
   if (categoryMatch) {
     const categoryId = decodeURIComponent(categoryMatch[1]).toLowerCase();
     if (isValidCategoryId(categoryId)) {
@@ -229,7 +236,7 @@ export function buildBrowsePath(opts: {
     return `/state/${encodeURIComponent(opts.stateId)}`;
   }
   if (opts.categoryId && isValidCategoryId(opts.categoryId)) {
-    return `/category/${encodeURIComponent(opts.categoryId)}`;
+    return boardRoutePath(opts.categoryId);
   }
 
   switch (opts.view) {

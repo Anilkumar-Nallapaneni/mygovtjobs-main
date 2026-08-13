@@ -23,6 +23,8 @@ describe("browseRoutes", () => {
     expect(parseBrowsePath("/state/ar").stateId).toBe("ar");
     expect(parseBrowsePath("/state/tr").stateId).toBe("tr");
     expect(parseBrowsePath("/category/banking").categoryId).toBe("banking");
+    expect(parseBrowsePath("/board/upsc").categoryId).toBe("upsc");
+    expect(parseBrowsePath("/board/ssc").categoryId).toBe("ssc");
     expect(parseBrowsePath("/results/admit-card").headlinesTopicKey).toBe("admit-card");
     expect(parseBrowsePath("/results").headlinesTopicKey).toBe("sarkari-result");
     expect(parseBrowsePath("/results/answer-key").headlinesTopicKey).toBe("answer-key");
@@ -38,7 +40,7 @@ describe("browseRoutes", () => {
 
   it("builds shareable paths", () => {
     expect(buildBrowsePath({ stateId: "up" })).toBe("/state/up");
-    expect(buildBrowsePath({ categoryId: "banking" })).toBe("/category/banking");
+    expect(buildBrowsePath({ categoryId: "banking" })).toBe("/board/banking");
     expect(buildBrowsePath({ view: "jobs" })).toBe("/jobs");
     expect(buildBrowsePath({ qualificationSlug: "iti" })).toBe("/qualification/iti");
     expect(buildBrowsePath({ orgSlug: "iit-delhi" })).toBe("/org/iit-delhi");
@@ -50,6 +52,7 @@ describe("browseRoutes", () => {
   it("ignores invalid slugs", () => {
     expect(parseBrowsePath("/state/not-a-state").view).toBe("home");
     expect(parseBrowsePath("/category/unknown").view).toBe("home");
+    expect(parseBrowsePath("/board/unknown").view).toBe("home");
   });
 
   it("parses and builds shareable query params", () => {

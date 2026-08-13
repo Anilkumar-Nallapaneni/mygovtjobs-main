@@ -17,6 +17,7 @@ const BROWSE_ROUTE_PATHS = [
   "/results",
   "/results/admit-card",
   "/state/:stateId",
+  "/board/:boardId",
   "/category/:categoryId",
 ];
 
@@ -30,6 +31,7 @@ export function isBrowseRoutePath(pathname: string): boolean {
     BROWSE_ROUTE_PATHS.some((pattern) => {
       if (!pattern.includes(":")) return pathname === pattern;
       if (pattern.startsWith("/state/")) return /^\/state\/[^/]+$/.test(pathname);
+      if (pattern.startsWith("/board/")) return /^\/board\/[^/]+$/.test(pathname);
       if (pattern.startsWith("/category/")) return /^\/category\/[^/]+$/.test(pathname);
       return false;
     }) || pathname === "/"
