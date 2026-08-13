@@ -2,14 +2,26 @@
   {
     "dept": "ESIC — Employees' State Insurance Corporation",
     "slug": "esic-employees-state-insurance-corporation",
-    "count": 5,
+    "count": 7,
     "vacancies": 69
+  },
+  {
+    "dept": "Madhya Pradesh PSC (MPPSC)",
+    "slug": "madhya-pradesh-psc-mppsc",
+    "count": 7,
+    "vacancies": 7
   },
   {
     "dept": "ISRO — Careers",
     "slug": "isro-careers",
-    "count": 5,
+    "count": 6,
     "vacancies": 23
+  },
+  {
+    "dept": "Institute of Banking Personnel Selection (IBPS)",
+    "slug": "institute-of-banking-personnel-selection-ibps",
+    "count": 3,
+    "vacancies": 0
   },
   {
     "dept": "Union Public Service Commission (UPSC)",

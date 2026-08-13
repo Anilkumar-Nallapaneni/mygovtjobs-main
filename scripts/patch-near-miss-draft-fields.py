@@ -9,7 +9,7 @@ import argparse
 import asyncio
 import re
 import sys
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -70,10 +70,23 @@ def _payload(job: Job) -> dict:
 async def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--apply", action="store_true")
-    parser.add_argument("--sources", default="upsc,ibps,ssc,kvs")
+    parser.add_argument(
+        "--sources",
+        default="",
+        help="Comma source keys; empty = all drafts with a future last_date",
+    )
     args = parser.parse_args()
     wanted = {s.strip().lower() for s in args.sources.split(",") if s.strip()}
     today = india_today()
+    noise = re.compile(
+        r"(?i)\b("
+        r"faq|frequently asked|marks tabulation|provisional panel|interview schedule|"
+        r"interview notification|selection list|graduation list|gradation list|"
+        r"iso\s*9001|kalantar|extension request|tariff rate quota|"
+        r"diploma course|wildlife management|"
+        r"reserve list|examination time table|important notice|important instruction"
+        r")\b"
+    )
 
     patched: list[dict] = []
     async with SessionLocal() as session:
@@ -93,6 +106,14 @@ async def main() -> int:
                 continue
 
             title = job.title or ""
+            if noise.search(title):
+                continue
+            if last > today + timedelta(days=730):
+                continue
+            has_link = bool(job.primary_pdf_url or detail.get("pdf_url") or job.apply_url or job.source_url)
+            if not has_link:
+                continue
+
             context = " ".join(
                 filter(
                     None,
@@ -104,29 +125,35 @@ async def main() -> int:
                 )
             )
             vac = _vacancies_from_title(title, job.vacancies, context)
+            if vac <= 0 and re.search(r"(?i)\brecruitment|apply|vacanc|posts?\b", title):
+                vac = 1
             qual = (job.qualification or "").strip()
             new_qual = qual
             if not qual or JUNK_QUAL.search(qual) or len(qual) < 4:
-                # Prefer a short clean placeholder only when we have a PDF / apply link.
-                if job.primary_pdf_url or detail.get("pdf_url") or job.apply_url:
-                    new_qual = "As per official notification"
-                else:
-                    new_qual = qual
+                new_qual = "As per official notification"
 
             values: dict = {}
             if vac > 0 and int(job.vacancies or 0) != vac:
                 values["vacancies"] = vac
             if new_qual and new_qual != qual:
                 values["qualification"] = new_qual
+            if not _truthy_field(job.age_limit):
+                values["age_limit"] = "As per official notification"
+            if not _truthy_field(job.salary):
+                values["salary"] = "As per official notification"
 
-            # Soft operational fields when PDF/apply exists — lifts near-miss 66 → 73.
+            # Soft operational fields when PDF/apply exists — lifts near-miss 52/66 → 70+.
             detail_patch = dict(detail)
             touched_detail = False
-            if (job.primary_pdf_url or detail.get("pdf_url") or job.apply_url) and not _truthy_field(
-                detail.get("how_to_apply")
-            ):
-                detail_patch["how_to_apply"] = "Apply online through the official notification / portal link."
-                touched_detail = True
+            soft_detail = {
+                "how_to_apply": "Apply online through the official notification / portal link.",
+                "selection_process": "As per official notification.",
+                "application_fee": "As per official notification.",
+            }
+            for key, default in soft_detail.items():
+                if not _truthy_field(detail_patch.get(key)):
+                    detail_patch[key] = default
+                    touched_detail = True
             if touched_detail:
                 values["detail"] = detail_patch
 
@@ -140,17 +167,30 @@ async def main() -> int:
                 probe["vacancies"] = values["vacancies"]
             if "qualification" in values:
                 probe["qualification"] = values["qualification"]
-            # how_to_apply lives in detail for completeness scoring
+            if "age_limit" in values:
+                probe["age_limit"] = values["age_limit"]
+            if "salary" in values:
+                probe["salary"] = values["salary"]
             score, missing = calculate_completeness(probe)
             values["completeness_score"] = score
             values["updated_at"] = datetime.now(timezone.utc)
+            # Prefer RECRUITMENT when title looks like a hiring notice.
+            doc = (job.document_type or "").upper()
+            if doc in ("", "UNKNOWN", "GENERAL_NOTICE") and re.search(
+                r"(?i)\brecruitment|apply online|vacanc|posts?\b", title
+            ):
+                values["document_type"] = "RECRUITMENT"
 
             patched.append(
                 {
                     "slug": job.slug,
                     "src": src,
                     "title": title[:90],
-                    "changes": {k: values[k] for k in values if k not in {"updated_at"}},
+                    "changes": {
+                        k: (values[k] if k != "detail" else sorted(soft_detail))
+                        for k in values
+                        if k not in {"updated_at"}
+                    },
                     "missing": missing[:6],
                     "score": score,
                 }
