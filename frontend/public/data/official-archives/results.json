@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-08-13T06:05:24.262Z",
-  "count": 711,
+  "generatedAt": "2026-08-14T06:01:49.545Z",
+  "count": 716,
   "items": [
     {
       "id": "2e7fa8a4ffb7c7be",
@@ -35,6 +35,23 @@
         "all"
       ],
       "fetchMethod": "rss-discovered"
+    },
+    {
+      "id": "16ed8926c762df4c",
+      "title": "नया कंप्यूटर मॉडल चुंबकीय ऊर्जा के संचय का पता लगाने और परिणामी सीएमई के प्रभाव का पूर्वानुमान लगाने में मददगार",
+      "link": "https://pib.gov.in/PressReleaseIframePage.aspx?PRID=2299092",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "pib-press-reg3",
+      "sourceName": "PIB — recent press releases",
+      "dept": "Press Information Bureau",
+      "state": "All India",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "rss-feed"
     },
     {
       "id": "2fcd6ff34f094281",
@@ -164,6 +181,23 @@
       "fetchMethod": "html-listing"
     },
     {
+      "id": "58856bd7c345d6be",
+      "title": "RESULT OF ADVT. NO. D-4/E-1/2025, U.P. AYUSH (AYURVEDA) PROFESSOR(SPECIALIST) AG..",
+      "link": "https://uppsc.up.nic.in/Open_PDF_DB.aspx?I4PnQ0tBagmtuZKZH/DenzRcUXubicMB",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "uppsc-hall-tickets",
+      "sourceName": "UPPSC — Hall tickets",
+      "dept": "Uttar Pradesh PSC",
+      "state": "Uttar Pradesh",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
       "id": "fdd91644926ff15b",
       "title": "RESULT OF ADVT. NO. D-4/E-1/2025, U.P. AYUSH (AYURVEDA) DEPARTMENT/PROFESSOR(SPE..",
       "link": "https://uppsc.up.nic.in/Open_PDF_DB.aspx?I4PnQ0tBagkKN9rKVhlu7z0vaAs91GKj",
@@ -266,6 +300,23 @@
       "fetchMethod": "html-listing"
     },
     {
+      "id": "fa9d247a33ef3c69",
+      "title": "13 Sep 2026 RESULT OF ADVT. NO. D-4/E-1/2025, U.P. AYUSH (AYURVEDA) PROFESSOR(SPECIALIST) AGAD TANTRA EVAM VIDHI AYURVADA, S-09/01",
+      "link": "https://uppsc.up.nic.in/Open_PDF.aspx?I4PnQ0tBagmtuZKZH/DenzYmB9Cagj1q",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "uppsc-hall-tickets",
+      "sourceName": "UPPSC — Hall tickets",
+      "dept": "Uttar Pradesh PSC",
+      "state": "Uttar Pradesh",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
       "id": "3f23e7f8ff79c32a",
       "title": "11 Sep 2026 RESULT OF ADVT. NO. D-4/E-1/2025, U.P. AYUSH (AYURVEDA) DEPARTMENT/PROFESSOR(SPECIALIST) SWASTHYA VRIT, S-09/02",
       "link": "https://uppsc.up.nic.in/Open_PDF.aspx?I4PnQ0tBagkKN9rKVhlu79HWYANVItEQ",
@@ -317,71 +368,20 @@
       "fetchMethod": "html-listing"
     },
     {
-      "id": "d32cc39c58ad6176",
-      "title": "वर्ष 2026–2030 की अवधि के लिए तीन संचार मित्रों का ITU जेनरेशन कनेक्ट यूथ एनवॉय के रूप में चयन",
-      "link": "https://pib.gov.in/PressReleaseIframePage.aspx?PRID=2298628",
+      "id": "bdc0610f3727e61b",
+      "title": "Notice No. 11/2026 - Direct Recruitment to the post Assistant General Manager (Finance) – Result and Schedule of Interview of the provisionally qualified candidates",
+      "link": "https://apeda.gov.in/sites/default/files/announcements/Notice_No_11_2026.pdf",
       "publishedAt": null,
       "summary": null,
-      "pdfUrls": [],
-      "sourceId": "pib",
-      "sourceName": "Press Information Bureau (PIB)",
-      "dept": "Press Information Bureau (PIB)",
-      "state": "All India",
-      "category": "general",
-      "stateIds": [
-        "all"
+      "pdfUrls": [
+        "https://apeda.gov.in/sites/default/files/announcements/Notice_No_11_2026.pdf"
       ],
-      "fetchMethod": "rss-config"
-    },
-    {
-      "id": "feed6e469ae0aa31",
-      "title": "DISPLAY OF MARKS AND CUT-OFFS AAO (GENERALIST/SPECIALIST/ASSISTANT ENGINEERS)-2025",
-      "link": "https://licindia.in/web/guest/recruitment-of-aao-generalists/-specialists/-assistant-engineers-2025",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "lic",
-      "sourceName": "Life Insurance Corporation — Careers",
-      "dept": "Life Insurance Corporation — Careers",
-      "state": "All India",
-      "category": "banking",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "a2c5fe09dad658e8",
-      "title": "4th August 2026 Result of Online Interview Advt. No. WII/ADVT. 1/RP-CELL/June, 2026",
-      "link": "https://www.wii.gov.in/news/result_online_interview_advtno_wii_advt1_rpcell_june2026",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "wii",
-      "sourceName": "Wildlife Institute of India (WII)",
-      "dept": "Wildlife Institute of India (WII)",
+      "sourceId": "apeda",
+      "sourceName": "APEDA / BEDF — Recruitments",
+      "dept": "APEDA / BEDF — Recruitments",
       "state": "All India",
       "category": "psu",
       "stateIds": [
-        "uk",
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "d621836276eedaa1",
-      "title": "31st July 2026 Result of Online Interview Advt. No. WII/ADVT. 3/RP-CELL/May, 2026",
-      "link": "https://www.wii.gov.in/news/result_advtno_wii_advt3_rp_cell_may2026",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "wii",
-      "sourceName": "Wildlife Institute of India (WII)",
-      "dept": "Wildlife Institute of India (WII)",
-      "state": "All India",
-      "category": "psu",
-      "stateIds": [
-        "uk",
         "all"
       ],
       "fetchMethod": "html"
@@ -706,6 +706,146 @@
       "sourceId": "ctet",
       "sourceName": "CBSE — CTET",
       "dept": "CBSE — CTET",
+      "state": "All India",
+      "category": "teaching",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "86dc09a156fe9120",
+      "title": "CBSE 12th Result 2026: KV और नवोदय का जलवा, 12वीं के नतीजों में इन स्कूलों ने मारी बाजी",
+      "link": "https://ndtv.in/education/cbse-12th-result-2026-school-wise-performance-kv-jnv-pass-percentage-list-11425718",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "kvs",
+      "sourceName": "Kendriya Vidyalaya Sangathan",
+      "dept": "Kendriya Vidyalaya Sangathan",
+      "state": "All India",
+      "category": "teaching",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "ebfc2a9f2cf5cca8",
+      "title": "CBSE 12th Result: संस्थानवार प्रदर्शन में केंद्रीय विद्यालय रहा टॉप पर",
+      "link": "https://www.amarujala.com/education/cbse-class-12-result-2026-kv-secures-top-spot-know-how-different-schools-performed-2026-05-13",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "kvs",
+      "sourceName": "Kendriya Vidyalaya Sangathan",
+      "dept": "Kendriya Vidyalaya Sangathan",
+      "state": "All India",
+      "category": "teaching",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "2b0cf313b821dae3",
+      "title": "CBSE 12th Result 2026: सीबीएसई 12वीं में केंद्रीय विद्यालय का दबदबा, 98.55% छात्रों की सफलता के साथ टॉप पर",
+      "link": "https://www.timesnowhindi.com/education/cbse-12th-result-2026-kvs-vs-jnv-whose-result-is-highest-kendriya-vidyalaya-and-jawahar-navodaya-vidyalaya-12th-pass-percentage-article-154315169",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "kvs",
+      "sourceName": "Kendriya Vidyalaya Sangathan",
+      "dept": "Kendriya Vidyalaya Sangathan",
+      "state": "All India",
+      "category": "teaching",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "641092b088dac1ba",
+      "title": "सीबीएसई कक्षा 10 के परिणाम 2026 घोषित: केवी (99.57%), जेएनवी (99.42%) उत्तीर्ण प्रतिशत में अग्रणी; लड़कियों ने एक बार फिर लड़कों से बेहतर प्रदर्शन किया।",
+      "link": "https://education.economictimes.indiatimes.com/news/school-education/cbse-class-10-results-2026-kv-and-jnv-top-pass-percentage-girls-excel-again/130283515?utm_source=latest_news&utm_medium=homepage",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "kvs",
+      "sourceName": "Kendriya Vidyalaya Sangathan",
+      "dept": "Kendriya Vidyalaya Sangathan",
+      "state": "All India",
+      "category": "teaching",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "27d159b5ec57b10c",
+      "title": "सत्र 2026-27, 2027-28 और 2028-29 के लिए विदेश में स्थित केंद्रीय विद्यालय (काठमांडू / मॉस्को) में पोस्टिंग के लिए अनंतिम रूप से चयनित उम्मीदवारों की सूची। नई",
+      "link": "https://cdnbbsr.s3waas.gov.in/s32d2ca7eedf739ef4c3800713ec482e1a/uploads/2026/08/2026081386.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://cdnbbsr.s3waas.gov.in/s32d2ca7eedf739ef4c3800713ec482e1a/uploads/2026/08/2026081386.pdf"
+      ],
+      "sourceId": "kvs",
+      "sourceName": "Kendriya Vidyalaya Sangathan",
+      "dept": "Kendriya Vidyalaya Sangathan",
+      "state": "All India",
+      "category": "teaching",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "0d8cc75be5023f97",
+      "title": "विज्ञापन संख्या 01/2025 के अंतर्गत टियर II परीक्षा के परिणाम घोषित करने संबंधित प्रेस विज्ञप्ति। नई",
+      "link": "https://cdnbbsr.s3waas.gov.in/s32d2ca7eedf739ef4c3800713ec482e1a/uploads/2026/08/2026080729.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://cdnbbsr.s3waas.gov.in/s32d2ca7eedf739ef4c3800713ec482e1a/uploads/2026/08/2026080729.pdf"
+      ],
+      "sourceId": "kvs",
+      "sourceName": "Kendriya Vidyalaya Sangathan",
+      "dept": "Kendriya Vidyalaya Sangathan",
+      "state": "All India",
+      "category": "teaching",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "08a6fead3943369e",
+      "title": "Comparative Result Analysis – Class X",
+      "link": "https://kvsangathan.nic.in/en/comparative-result-analysis-class-x/",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "kvs",
+      "sourceName": "Kendriya Vidyalaya Sangathan",
+      "dept": "Kendriya Vidyalaya Sangathan",
+      "state": "All India",
+      "category": "teaching",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "a91e35efe906a21a",
+      "title": "Comparative Result Analysis – Class XII",
+      "link": "https://kvsangathan.nic.in/en/comparative-result-analysis-class-xii/",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "kvs",
+      "sourceName": "Kendriya Vidyalaya Sangathan",
+      "dept": "Kendriya Vidyalaya Sangathan",
       "state": "All India",
       "category": "teaching",
       "stateIds": [
@@ -1090,127 +1230,6 @@
       "fetchMethod": "html"
     },
     {
-      "id": "86dc09a156fe9120",
-      "title": "CBSE 12th Result 2026: KV और नवोदय का जलवा, 12वीं के नतीजों में इन स्कूलों ने मारी बाजी",
-      "link": "https://ndtv.in/education/cbse-12th-result-2026-school-wise-performance-kv-jnv-pass-percentage-list-11425718",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "kvs",
-      "sourceName": "Kendriya Vidyalaya Sangathan",
-      "dept": "Kendriya Vidyalaya Sangathan",
-      "state": "All India",
-      "category": "teaching",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "ebfc2a9f2cf5cca8",
-      "title": "CBSE 12th Result: संस्थानवार प्रदर्शन में केंद्रीय विद्यालय रहा टॉप पर",
-      "link": "https://www.amarujala.com/education/cbse-class-12-result-2026-kv-secures-top-spot-know-how-different-schools-performed-2026-05-13",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "kvs",
-      "sourceName": "Kendriya Vidyalaya Sangathan",
-      "dept": "Kendriya Vidyalaya Sangathan",
-      "state": "All India",
-      "category": "teaching",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "2b0cf313b821dae3",
-      "title": "CBSE 12th Result 2026: सीबीएसई 12वीं में केंद्रीय विद्यालय का दबदबा, 98.55% छात्रों की सफलता के साथ टॉप पर",
-      "link": "https://www.timesnowhindi.com/education/cbse-12th-result-2026-kvs-vs-jnv-whose-result-is-highest-kendriya-vidyalaya-and-jawahar-navodaya-vidyalaya-12th-pass-percentage-article-154315169",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "kvs",
-      "sourceName": "Kendriya Vidyalaya Sangathan",
-      "dept": "Kendriya Vidyalaya Sangathan",
-      "state": "All India",
-      "category": "teaching",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "641092b088dac1ba",
-      "title": "सीबीएसई कक्षा 10 के परिणाम 2026 घोषित: केवी (99.57%), जेएनवी (99.42%) उत्तीर्ण प्रतिशत में अग्रणी; लड़कियों ने एक बार फिर लड़कों से बेहतर प्रदर्शन किया।",
-      "link": "https://education.economictimes.indiatimes.com/news/school-education/cbse-class-10-results-2026-kv-and-jnv-top-pass-percentage-girls-excel-again/130283515?utm_source=latest_news&utm_medium=homepage",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "kvs",
-      "sourceName": "Kendriya Vidyalaya Sangathan",
-      "dept": "Kendriya Vidyalaya Sangathan",
-      "state": "All India",
-      "category": "teaching",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "0d8cc75be5023f97",
-      "title": "विज्ञापन संख्या 01/2025 के अंतर्गत टियर II परीक्षा के परिणाम घोषित करने संबंधित प्रेस विज्ञप्ति। नई",
-      "link": "https://cdnbbsr.s3waas.gov.in/s32d2ca7eedf739ef4c3800713ec482e1a/uploads/2026/08/2026080729.pdf",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [
-        "https://cdnbbsr.s3waas.gov.in/s32d2ca7eedf739ef4c3800713ec482e1a/uploads/2026/08/2026080729.pdf"
-      ],
-      "sourceId": "kvs",
-      "sourceName": "Kendriya Vidyalaya Sangathan",
-      "dept": "Kendriya Vidyalaya Sangathan",
-      "state": "All India",
-      "category": "teaching",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "08a6fead3943369e",
-      "title": "Comparative Result Analysis – Class X",
-      "link": "https://kvsangathan.nic.in/en/comparative-result-analysis-class-x/",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "kvs",
-      "sourceName": "Kendriya Vidyalaya Sangathan",
-      "dept": "Kendriya Vidyalaya Sangathan",
-      "state": "All India",
-      "category": "teaching",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "a91e35efe906a21a",
-      "title": "Comparative Result Analysis – Class XII",
-      "link": "https://kvsangathan.nic.in/en/comparative-result-analysis-class-xii/",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "kvs",
-      "sourceName": "Kendriya Vidyalaya Sangathan",
-      "dept": "Kendriya Vidyalaya Sangathan",
-      "state": "All India",
-      "category": "teaching",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
       "id": "3cb3737965d5c83c",
       "title": "Recruitment Result",
       "link": "https://www.aiims.edu/index.php/en/notices/recruitment/archive-recruitment",
@@ -1350,23 +1369,6 @@
       "id": "907e6ad1cba0a2c7",
       "title": "Conduct of Prosecuting Officer (G) (Preliminary) Examination - result of rechecking reg.",
       "link": "https://jkpsc.nic.in/Pdf/Downloader1.ashx?nid=17947&type=n",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-jk",
-      "sourceName": "Jammu & Kashmir PSC (JKPSC)",
-      "dept": "Jammu & Kashmir PSC (JKPSC)",
-      "state": "Jammu & Kashmir",
-      "category": "state",
-      "stateIds": [
-        "jk"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "07c3e50700d78a1d",
-      "title": "Conduct of Prosecuting Officer (G) Preliminary Examination, 2025 - Declaration of result thereof.",
-      "link": "https://jkpsc.nic.in/Pdf/Downloader1.ashx?nid=17921&type=n",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
@@ -2249,6 +2251,93 @@
       "category": "teaching",
       "stateIds": [
         "br"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "d32cc39c58ad6176",
+      "title": "वर्ष 2026–2030 की अवधि के लिए तीन संचार मित्रों का ITU जेनरेशन कनेक्ट यूथ एनवॉय के रूप में चयन",
+      "link": "https://pib.gov.in/PressReleaseIframePage.aspx?PRID=2298628",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "pib",
+      "sourceName": "Press Information Bureau (PIB)",
+      "dept": "Press Information Bureau (PIB)",
+      "state": "All India",
+      "category": "general",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "rss-config"
+    },
+    {
+      "id": "feed6e469ae0aa31",
+      "title": "DISPLAY OF MARKS AND CUT-OFFS AAO (GENERALIST/SPECIALIST/ASSISTANT ENGINEERS)-2025",
+      "link": "https://licindia.in/web/guest/recruitment-of-aao-generalists/-specialists/-assistant-engineers-2025",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "lic",
+      "sourceName": "Life Insurance Corporation — Careers",
+      "dept": "Life Insurance Corporation — Careers",
+      "state": "All India",
+      "category": "banking",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "a2c5fe09dad658e8",
+      "title": "4th August 2026 Result of Online Interview Advt. No. WII/ADVT. 1/RP-CELL/June, 2026",
+      "link": "https://www.wii.gov.in/news/result_online_interview_advtno_wii_advt1_rpcell_june2026",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "wii",
+      "sourceName": "Wildlife Institute of India (WII)",
+      "dept": "Wildlife Institute of India (WII)",
+      "state": "All India",
+      "category": "psu",
+      "stateIds": [
+        "uk",
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "d621836276eedaa1",
+      "title": "31st July 2026 Result of Online Interview Advt. No. WII/ADVT. 3/RP-CELL/May, 2026",
+      "link": "https://www.wii.gov.in/news/result_advtno_wii_advt3_rp_cell_may2026",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "wii",
+      "sourceName": "Wildlife Institute of India (WII)",
+      "dept": "Wildlife Institute of India (WII)",
+      "state": "All India",
+      "category": "psu",
+      "stateIds": [
+        "uk",
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "07c3e50700d78a1d",
+      "title": "Conduct of Prosecuting Officer (G) Preliminary Examination, 2025 - Declaration of result thereof.",
+      "link": "https://jkpsc.nic.in/Pdf/Downloader1.ashx?nid=17921&type=n",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-jk",
+      "sourceName": "Jammu & Kashmir PSC (JKPSC)",
+      "dept": "Jammu & Kashmir PSC (JKPSC)",
+      "state": "Jammu & Kashmir",
+      "category": "state",
+      "stateIds": [
+        "jk"
       ],
       "fetchMethod": "html"
     },

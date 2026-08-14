@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-08-13T06:05:24.262Z",
-  "count": 252,
+  "generatedAt": "2026-08-14T06:01:49.545Z",
+  "count": 254,
   "items": [
     {
       "id": "2e7fa8a4ffb7c7be",
@@ -71,37 +71,20 @@
       "fetchMethod": "html-listing"
     },
     {
-      "id": "a2c5fe09dad658e8",
-      "title": "4th August 2026 Result of Online Interview Advt. No. WII/ADVT. 1/RP-CELL/June, 2026",
-      "link": "https://www.wii.gov.in/news/result_online_interview_advtno_wii_advt1_rpcell_june2026",
+      "id": "bdc0610f3727e61b",
+      "title": "Notice No. 11/2026 - Direct Recruitment to the post Assistant General Manager (Finance) – Result and Schedule of Interview of the provisionally qualified candidates",
+      "link": "https://apeda.gov.in/sites/default/files/announcements/Notice_No_11_2026.pdf",
       "publishedAt": null,
       "summary": null,
-      "pdfUrls": [],
-      "sourceId": "wii",
-      "sourceName": "Wildlife Institute of India (WII)",
-      "dept": "Wildlife Institute of India (WII)",
-      "state": "All India",
-      "category": "psu",
-      "stateIds": [
-        "uk",
-        "all"
+      "pdfUrls": [
+        "https://apeda.gov.in/sites/default/files/announcements/Notice_No_11_2026.pdf"
       ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "d621836276eedaa1",
-      "title": "31st July 2026 Result of Online Interview Advt. No. WII/ADVT. 3/RP-CELL/May, 2026",
-      "link": "https://www.wii.gov.in/news/result_advtno_wii_advt3_rp_cell_may2026",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "wii",
-      "sourceName": "Wildlife Institute of India (WII)",
-      "dept": "Wildlife Institute of India (WII)",
+      "sourceId": "apeda",
+      "sourceName": "APEDA / BEDF — Recruitments",
+      "dept": "APEDA / BEDF — Recruitments",
       "state": "All India",
       "category": "psu",
       "stateIds": [
-        "uk",
         "all"
       ],
       "fetchMethod": "html"
@@ -685,23 +668,6 @@
       "fetchMethod": "html"
     },
     {
-      "id": "91558011355dca9d",
-      "title": "Recent Examinations/Interview",
-      "link": "https://jpsc.gov.in/Examination-Links.php",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-jh",
-      "sourceName": "Jharkhand PSC (JPSC)",
-      "dept": "Jharkhand PSC (JPSC)",
-      "state": "Jharkhand",
-      "category": "state",
-      "stateIds": [
-        "jh"
-      ],
-      "fetchMethod": "html"
-    },
-    {
       "id": "1709d751f92d2140",
       "title": "Procedure for Interview Date Change Requests",
       "link": "https://www.keralapsc.gov.in/procedure-interview-date-change-requests",
@@ -749,6 +715,23 @@
       "category": "state",
       "stateIds": [
         "kl"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "91558011355dca9d",
+      "title": "Recent Examinations/Interview",
+      "link": "https://jpsc.gov.in/Examination-Links.php",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-jh",
+      "sourceName": "Jharkhand PSC (JPSC)",
+      "dept": "Jharkhand PSC (JPSC)",
+      "state": "Jharkhand",
+      "category": "state",
+      "stateIds": [
+        "jh"
       ],
       "fetchMethod": "html"
     },
@@ -886,6 +869,22 @@
       "fetchMethod": "rss-discovered"
     },
     {
+      "id": "ce91b5765c8e9b5e",
+      "title": "Walk in Interview on 18-08-2026 for Full Time Specialist - Part Time Specialist - Senior Resident - Junior Resident at ESIC Hospital Tirunelveli",
+      "link": "https://www.esic.gov.in/attachments/recruitmentfile/Walk_in_Interview_on_18_08_2026_for_Full_Time_Specialist_Part_Time_Specialist_Senior_Resident_Junior_Resident_at_ESIC_Hospital_Tirunelveli_1786341945.pdf",
+      "publishedAt": "2026-08-13T00:00:00Z",
+      "summary": null,
+      "pdfUrls": [
+        "https://www.esic.gov.in/attachments/recruitmentfile/Walk_in_Interview_on_18_08_2026_for_Full_Time_Specialist_Part_Time_Specialist_Senior_Resident_Junior_Resident_at_ESIC_Hospital_Tirunelveli_1786341945.pdf"
+      ],
+      "sourceId": "esic",
+      "sourceName": "ESIC — Employees' State Insurance Corporation",
+      "dept": "ESIC — Employees' State Insurance Corporation",
+      "state": "All India",
+      "category": "health",
+      "fetchMethod": "live-jobs-supplement"
+    },
+    {
       "id": "099743500c226eef",
       "title": "1 ESIC Hospital Ankleshwar ADVERTISEMENT 01/2026 OF CONTRACTUAL DOCTORS, PTS/FTS/SR FOR ESICH ANKLESHWAR.(English)",
       "link": "https://esic.gov.in/recruitments",
@@ -900,6 +899,42 @@
       "state": "All India",
       "category": "health",
       "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "a2c5fe09dad658e8",
+      "title": "4th August 2026 Result of Online Interview Advt. No. WII/ADVT. 1/RP-CELL/June, 2026",
+      "link": "https://www.wii.gov.in/news/result_online_interview_advtno_wii_advt1_rpcell_june2026",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "wii",
+      "sourceName": "Wildlife Institute of India (WII)",
+      "dept": "Wildlife Institute of India (WII)",
+      "state": "All India",
+      "category": "psu",
+      "stateIds": [
+        "uk",
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "d621836276eedaa1",
+      "title": "31st July 2026 Result of Online Interview Advt. No. WII/ADVT. 3/RP-CELL/May, 2026",
+      "link": "https://www.wii.gov.in/news/result_advtno_wii_advt3_rp_cell_may2026",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "wii",
+      "sourceName": "Wildlife Institute of India (WII)",
+      "dept": "Wildlife Institute of India (WII)",
+      "state": "All India",
+      "category": "psu",
+      "stateIds": [
+        "uk",
+        "all"
+      ],
+      "fetchMethod": "html"
     },
     {
       "id": "823ca48cb4017ff7",

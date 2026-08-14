@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-08-13T06:05:24.262Z",
-  "count": 249,
+  "generatedAt": "2026-08-14T06:01:49.545Z",
+  "count": 251,
   "items": [
     {
       "id": "43d58c0a6a98b4a9",
@@ -71,9 +71,9 @@
       "fetchMethod": "rss-discovered"
     },
     {
-      "id": "bfdccf41ec2b2dcb",
+      "id": "ed61e9be047a3432",
       "title": "Procurement of “Portable Ventilators- 40 Nos.” for various departments of Main Hospital, AIIMS, , New Delhi",
-      "link": "https://aiims.edu/index.php/en/133-tender/global-open-tender/24327-gem-2026-b-7872434",
+      "link": "https://mail.aiims.edu/index.php/en/133-tender/global-open-tender/24327-gem-2026-b-7872434",
       "publishedAt": "2026-08-05T06:56:18.000Z",
       "summary": "VIEW TENDER DETAILS Tender No GEM/2026/B/7872434 Title Procurement of “Portable Ventilators- 40 Nos.” for various departments of Main Hospital, AIIMS, , New Delhi Date of Uploading 05/08/2026 Date of Closing 26/08/2026 Document",
       "pdfUrls": [
@@ -209,9 +209,9 @@
       "fetchMethod": "rss-discovered"
     },
     {
-      "id": "8e475ea36f894c3b",
+      "id": "581a1161314c2aa1",
       "title": "Procurement of “Defibrillator- 77 Nos.” for various departments of Main Hospital, AIIMS, , New Delhi",
-      "link": "https://aiims.edu/index.php/en/133-tender/global-open-tender/24248-gem-2026-b-7841091",
+      "link": "https://mail.aiims.edu/index.php/en/133-tender/global-open-tender/24248-gem-2026-b-7841091",
       "publishedAt": "2026-07-28T10:04:39.000Z",
       "summary": "VIEW TENDER DETAILS Tender No GEM/2026/B/7841091 Title Procurement of “Defibrillator- 77 Nos.” for various departments of Main Hospital, AIIMS, , New Delhi Date of Uploading 28/07/2026 Date of Closing 18/08/2026 Document",
       "pdfUrls": [
@@ -950,6 +950,44 @@
         "od"
       ],
       "fetchMethod": "html"
+    },
+    {
+      "id": "bfdccf41ec2b2dcb",
+      "title": "Procurement of “Portable Ventilators- 40 Nos.” for various departments of Main Hospital, AIIMS, , New Delhi",
+      "link": "https://aiims.edu/index.php/en/133-tender/global-open-tender/24327-gem-2026-b-7872434",
+      "publishedAt": "2026-08-05T06:56:18.000Z",
+      "summary": "VIEW TENDER DETAILS Tender No GEM/2026/B/7872434 Title Procurement of “Portable Ventilators- 40 Nos.” for various departments of Main Hospital, AIIMS, , New Delhi Date of Uploading 05/08/2026 Date of Closing 26/08/2026 Document",
+      "pdfUrls": [
+        "https://www.aiims.edu/images/pdf/tender/GeM-Bidding-9704571-2.pdf"
+      ],
+      "sourceId": "aiims",
+      "sourceName": "AIIMS New Delhi — Recruitment",
+      "dept": "AIIMS New Delhi — Recruitment",
+      "state": "All India",
+      "category": "health",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "rss-discovered"
+    },
+    {
+      "id": "8e475ea36f894c3b",
+      "title": "Procurement of “Defibrillator- 77 Nos.” for various departments of Main Hospital, AIIMS, , New Delhi",
+      "link": "https://aiims.edu/index.php/en/133-tender/global-open-tender/24248-gem-2026-b-7841091",
+      "publishedAt": "2026-07-28T10:04:39.000Z",
+      "summary": "VIEW TENDER DETAILS Tender No GEM/2026/B/7841091 Title Procurement of “Defibrillator- 77 Nos.” for various departments of Main Hospital, AIIMS, , New Delhi Date of Uploading 28/07/2026 Date of Closing 18/08/2026 Document",
+      "pdfUrls": [
+        "https://www.aiims.edu/images/pdf/tender/GeM-Bidding-9668799.pdf"
+      ],
+      "sourceId": "aiims",
+      "sourceName": "AIIMS New Delhi — Recruitment",
+      "dept": "AIIMS New Delhi — Recruitment",
+      "state": "All India",
+      "category": "health",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "rss-discovered"
     },
     {
       "id": "d0cb6df37111adb4",
