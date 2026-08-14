@@ -16,9 +16,10 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "backend"))
 
-if hasattr(sys.stdout, "reconfigure"):
+reconfigure = getattr(sys.stdout, "reconfigure", None)
+if callable(reconfigure):
     try:
-        sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+        reconfigure(encoding="utf-8", errors="replace")
     except Exception:
         pass
 
@@ -63,8 +64,15 @@ async def main() -> int:
         action="store_true",
         help="Also enrich UNKNOWN document_type drafts (default: RECRUITMENT only)",
     )
+    argp.add_argument(
+        "--category",
+        action="append",
+        default=[],
+        help="Restrict to jobs.category (repeatable), e.g. --category upsc --category ssc",
+    )
     args = argp.parse_args()
     wanted = {s.strip().lower() for s in args.source if s.strip()}
+    wanted_cats = {c.strip().lower() for c in args.category if c.strip()}
 
     parser = NotificationParser()
     updated = 0
@@ -93,6 +101,7 @@ async def main() -> int:
             if j.last_date is None
             and (j.document_type or "").upper() in allowed_docs
             and (not wanted or _source_key(j) in wanted)
+            and (not wanted_cats or (j.category or "").strip().lower() in wanted_cats)
         ]
         with_pdf = [j for j in rows if _has_pdf(j)]
         without = [j for j in rows if not _has_pdf(j)]
@@ -101,9 +110,10 @@ async def main() -> int:
         cap = args.limit if args.limit else len(rows)
         total = min(len(rows), cap)
         src_label = ",".join(sorted(wanted)) if wanted else "all"
+        cat_label = ",".join(sorted(wanted_cats)) if wanted_cats else "all"
         _log(
             f"Enriching up to {total} draft job(s) missing dates "
-            f"(sources={src_label}, candidates={len(rows)}, with_pdf={len(with_pdf)})…"
+            f"(sources={src_label}, categories={cat_label}, candidates={len(rows)}, with_pdf={len(with_pdf)})…"
         )
 
         for job in rows:

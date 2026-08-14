@@ -39,6 +39,13 @@ async def main() -> int:
     )
     if scrub.returncode != 0:
         print("warn: vacancy scrub after export failed", flush=True)
+    events = subprocess.run(
+        [sys.executable, str(ROOT / "scripts" / "export-recruitment-events.py")],
+        cwd=str(ROOT),
+        check=False,
+    )
+    if events.returncode != 0:
+        print("warn: recruitment-events export failed", flush=True)
     return 0
 
 

@@ -89,7 +89,7 @@ def _job_payload(job: Job, *, doc_type: str, detail: dict, title: str, dept: str
     }
 
 
-async def main(apply: bool, export: bool, limit: int) -> int:
+async def main(apply: bool, export: bool, limit: int, slugs: set[str]) -> int:
     today = india_today()
     report: dict = {
         "generatedAt": datetime.now(timezone.utc).isoformat(),
@@ -115,6 +115,8 @@ async def main(apply: bool, export: bool, limit: int) -> int:
         ).scalars().all()
 
         for job in rows:
+            if slugs and (job.slug or "") not in slugs:
+                continue
             if job.last_date is None:
                 continue
             last = job.last_date.date() if isinstance(job.last_date, datetime) else job.last_date
@@ -133,7 +135,9 @@ async def main(apply: bool, export: bool, limit: int) -> int:
                     }
                 )
                 continue
-            detail = sanitize_source_text_fields(job.detail if isinstance(job.detail, dict) else {})
+            raw_detail = job.detail if isinstance(job.detail, dict) else {}
+            sanitized = sanitize_source_text_fields(raw_detail)
+            detail: dict = sanitized if isinstance(sanitized, dict) else {}
             dept = clean_plain_text(job.dept) or None
             qualification = clean_plain_text(job.qualification) or None
             url = job.apply_url or getattr(job, "source_url", None) or ""
@@ -290,5 +294,14 @@ if __name__ == "__main__":
     parser.add_argument("--apply", action="store_true")
     parser.add_argument("--export", action="store_true")
     parser.add_argument("--limit", type=int, default=0, help="Max promotions (0 = all that pass)")
+    parser.add_argument(
+        "--slug",
+        action="append",
+        default=[],
+        help="Promote only these slugs (repeatable). Empty = all that pass the gate.",
+    )
     args = parser.parse_args()
-    raise SystemExit(asyncio.run(main(apply=args.apply, export=args.export, limit=args.limit)))
+    slugs = {s.strip() for s in args.slug if s.strip()}
+    raise SystemExit(
+        asyncio.run(main(apply=args.apply, export=args.export, limit=args.limit, slugs=slugs))
+    )

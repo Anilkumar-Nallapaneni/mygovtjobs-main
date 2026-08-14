@@ -31,8 +31,35 @@ vi.mock("@/hooks/useAuth", () => ({
   }),
 }));
 
-vi.mock("@/hooks/useOfficialFeed", () => ({
-  useOfficialFeed: () => ({ items: [], loading: false }),
+vi.mock("@/hooks/useRecruitmentEvents", () => ({
+  useRecruitmentEventsByType: () => ({
+    rows: [
+      {
+        id: "rec-1",
+        canonical_slug: "ssc-cgl-2026",
+        organization: "SSC",
+        title: "SSC CGL 2026",
+        state_codes: [],
+        status: "active",
+        primary_job_id: "1",
+        official_url: "https://ssc.gov.in/notice",
+        events: [
+          {
+            id: "ev-1",
+            recruitment_id: "rec-1",
+            event_type: "result",
+            event_date: "2026-08-10",
+            title: "SSC CGL 2026 result",
+            official_url: "https://ssc.gov.in/result",
+            document_url: null,
+            status: "announced",
+          },
+        ],
+      },
+    ],
+    loading: false,
+  }),
+  useUpcomingRecruitmentCalendar: () => ({ rows: [], loading: false }),
 }));
 
 const mockJob: JobRecord = {
@@ -105,6 +132,17 @@ describe("page smoke tests", () => {
     const Page = (await import("@/pages/ResultsTopicsIndexPage")).default;
     renderPage(<Page />);
     expect(screen.getByRole("heading", { level: 1 })).toBeTruthy();
+  });
+
+  it("ResultsHubPage lists snapshot events", async () => {
+    const Page = (await import("@/pages/ResultsHubPage")).default;
+    renderPage(
+      <Page eventType="result" pageTitle="Latest Government Job Results" />,
+      "/latest-results",
+    );
+    expect(screen.getByRole("heading", { level: 1, name: /latest government job results/i })).toBeTruthy();
+    expect(screen.getByText("SSC CGL 2026 result")).toBeTruthy();
+    expect(screen.getByRole("table", { name: /latest government job results/i })).toBeTruthy();
   });
 
   it("ContactPage renders contact form", async () => {

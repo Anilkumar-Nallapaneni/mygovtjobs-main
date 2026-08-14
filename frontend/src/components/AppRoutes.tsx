@@ -275,9 +275,46 @@ export default function AppRoutes({
           </LazyRoute>
         }
       />
-      <Route path="/results/admit-card" element={homePageElement} />
+      <Route
+        path="/results/admit-card"
+        element={
+          <LazyRoute>
+            <ResultsHubPage
+              eventType="admit_card"
+              pageTitle="Admit Cards & Hall Tickets"
+              lead="Download official admit cards from all major recruitment boards."
+              onFooterLink={onFooterLink}
+            />
+          </LazyRoute>
+        }
+      />
+      <Route
+        path="/results/answer-key"
+        element={
+          <LazyRoute>
+            <ResultsHubPage
+              eventType="answer_key"
+              pageTitle="Answer Keys"
+              lead="Official answer keys released after exam."
+              onFooterLink={onFooterLink}
+            />
+          </LazyRoute>
+        }
+      />
       <Route path="/results/:topicSlug" element={homePageElement} />
-      <Route path="/results" element={homePageElement} />
+      <Route
+        path="/results"
+        element={
+          <LazyRoute>
+            <ResultsHubPage
+              eventType="result"
+              pageTitle="Latest Government Job Results"
+              lead="Auto-detected results across UPSC, SSC, PSC, banks, railways, PSU and state departments."
+              onFooterLink={onFooterLink}
+            />
+          </LazyRoute>
+        }
+      />
       <Route
         path="/alerts"
         element={
