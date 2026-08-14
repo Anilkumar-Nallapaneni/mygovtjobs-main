@@ -38,6 +38,10 @@ RECRUITMENT_TERMS = (
     "walk in interview",
     "bharti",
     "advt",
+    "notice of",
+    "re-opening of window",
+    "window for submission of online application",
+    "window for online application",
 )
 
 BLOCKED_TERMS = (
@@ -82,7 +86,7 @@ _PATTERNS: list[tuple[str, re.Pattern[str]]] = [
     (
         "FORM",
         re.compile(
-            r"\b(?:application\s+form|declaration\s+form|obc\s+declaration|"
+            r"\b(?:declaration\s+form|obc\s+declaration|"
             r"caste\s+certificate\s+format|affidavit\s+format)\b",
             re.I,
         ),
@@ -108,7 +112,10 @@ _PATTERNS: list[tuple[str, re.Pattern[str]]] = [
         re.compile(
             r"\b(?:recruitment|vacancy\s+circular|walk[\s-]?in|bharti|"
             r"apply\s+online|advt\.?\s*no|advertisement\s+no|"
-            r"engagement\s+of|invites?\s+applications?)\b",
+            r"engagement\s+of|invites?\s+applications?|"
+            r"notice\s+of\b[\s\S]{0,100}\bexamination\b|"
+            r"re-?opening\s+of\s+window|"
+            r"window\s+for\s+(?:submission\s+of\s+)?(?:online\s+)?application)\b",
             re.I,
         ),
     ),

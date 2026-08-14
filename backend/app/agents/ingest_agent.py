@@ -229,7 +229,17 @@ class IngestAgent:
             pdf_urls = []
         raw["pdfUrls"] = pdf_urls
 
-        pdf_fields = await merge_pdf_fields(pdf_urls) if pdf_urls else {}
+        pdf_fields: dict = {}
+        if pdf_urls:
+            try:
+                pdf_fields = await asyncio.wait_for(merge_pdf_fields(pdf_urls[:2]), timeout=45)
+            except asyncio.TimeoutError:
+                logger.warning(
+                    "ingest PDF enrich timeout source=%s title=%r",
+                    source_code,
+                    title[:80],
+                )
+                pdf_fields = {}
 
         normalized = self.parser.parse(raw, pdf_fields=pdf_fields, source_code=source_code)
         normalized["category"] = normalized.get("category") or entry.get("category")

@@ -37,22 +37,37 @@ def parse_published(value: Any, _depth: int = 0) -> datetime | None:
     except Exception:
         pass
 
-    for fmt in (
-        "%Y-%m-%dT%H:%M:%S%z",
-        "%Y-%m-%dT%H:%M:%SZ",
-        "%Y-%m-%d %H:%M:%S",
-        "%Y-%m-%d",
-        "%d-%m-%Y",
-        "%d/%m/%Y",
-        "%d.%m.%Y",
-        "%d %b %Y",
-        "%d %B %Y",
-    ):
-        try:
-            dt = datetime.strptime(text.replace("Z", "+0000"), fmt)
-            return dt if dt.tzinfo else dt.replace(tzinfo=timezone.utc)
-        except ValueError:
-            continue
+    # fromisoformat handles `2026-05-21T12:51:23.773Z` after normalizing Z.
+    iso_text = text.replace("Z", "+00:00") if text.endswith("Z") else text
+    try:
+        dt = datetime.fromisoformat(iso_text)
+        return dt if dt.tzinfo else dt.replace(tzinfo=timezone.utc)
+    except ValueError:
+        pass
+
+    candidates = [text]
+    if text.endswith("Z"):
+        candidates.append(text[:-1] + "+0000")
+        candidates.append(text[:-1])
+    for candidate in candidates:
+        for fmt in (
+            "%Y-%m-%dT%H:%M:%S.%f%z",
+            "%Y-%m-%dT%H:%M:%S%z",
+            "%Y-%m-%dT%H:%M:%S.%f",
+            "%Y-%m-%dT%H:%M:%S",
+            "%Y-%m-%d %H:%M:%S",
+            "%Y-%m-%d",
+            "%d-%m-%Y",
+            "%d/%m/%Y",
+            "%d.%m.%Y",
+            "%d %b %Y",
+            "%d %B %Y",
+        ):
+            try:
+                dt = datetime.strptime(candidate, fmt)
+                return dt if dt.tzinfo else dt.replace(tzinfo=timezone.utc)
+            except ValueError:
+                continue
 
     m = _DATE_IN_TEXT.search(text)
     if m:

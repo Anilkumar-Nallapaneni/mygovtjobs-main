@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import asyncio
 import logging
 import re
 from typing import Any
@@ -23,16 +24,34 @@ USER_AGENT = (
     "(KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
 )
 
+# Prefer real open-application notices — NOT vacancy tables / result lists.
 _KEEP = re.compile(
-    r"\bnotice of\b|\badvertisement\b|inviting\s+application|online\s+application|"
-    r"re-?opening of window|vacancies of|recruitment of",
+    r"\bnotice of\b|"
+    r"\badvertisement\b|"
+    r"inviting\s+application|"
+    r"online\s+application|"
+    r"re-?opening of window|"
+    r"window for (?:online )?application|"
+    r"\bengagement of\b|"
+    r"\brecruitment of\b|"
+    r"\brecruitment to\b",
     re.I,
 )
 _DROP = re.compile(
     r"\bresult\b|\bmarks\b|answer\s*key|admit\s*card|cutoff|cut-?off|"
     r"shortlist|document verification|\bidentity verification\b|\buploading\b|"
     r"declaration of|final answer|tier-?[i1v]+\s+marks|frta\b|pe and mt|"
-    r"schedule of examinations|postponement of physical",
+    r"schedule of examinations|postponement of physical|"
+    r"tentative vacanc|final vacanc|final selection|"
+    r"cancellation notice|\bcancel+ation\b|"
+    r"^corrigendum\b|^addendum\b|"
+    r"revision of vacancy|revised vacanc|"
+    r"provisional panel|marks tabulation",
+    re.I,
+)
+# Soft exceptions: corrigendum/addendum that re-open application windows.
+_KEEP_DESPITE_DROP = re.compile(
+    r"\bre-?opening of window\b|\bnotice of\b|\bengagement of\b|\badvertisement\b",
     re.I,
 )
 
@@ -48,7 +67,14 @@ def _is_recruitment_headline(title: str) -> bool:
     t = title or ""
     if not t or is_junk_job_title(t):
         return False
-    if _DROP.search(t) and not re.search(r"\bnotice of\b|\badvertisement\b", t, re.I):
+    # Hard drop lifecycle/result noise even when soft keep phrases appear.
+    if re.search(r"(?i)\bfinal selection\b|tentative vacanc|final vacanc|cancellation notice", t):
+        return False
+    if re.search(r"(?i)^(corrigendum|addendum)\b", t) and not re.search(
+        r"(?i)\bre-?opening of window\b|\bwindow for (?:online )?application\b", t
+    ):
+        return False
+    if _DROP.search(t) and not _KEEP_DESPITE_DROP.search(t):
         return False
     if _KEEP.search(t):
         return True
@@ -56,17 +82,32 @@ def _is_recruitment_headline(title: str) -> bool:
     return classification.content_type in ("RECRUITMENT", "POSSIBLE_RECRUITMENT")
 
 
+def _priority(title: str) -> int:
+    """Prefer exam notices / engagements over soft matches."""
+    t = title or ""
+    score = 0
+    if re.search(r"(?i)\bnotice of\b", t):
+        score += 50
+    if re.search(r"(?i)\bre-?opening of window\b|\bwindow for (?:online )?application\b", t):
+        score += 40
+    if re.search(r"(?i)\bengagement of\b|\badvertisement\b", t):
+        score += 30
+    if re.search(r"(?i)20\d{2}", t):
+        score += 5
+    return score
+
+
 class SscApiScraper(BaseScraper):
     def __init__(
         self,
         *,
         max_items: int = 50,
-        lookback_days: int = 120,
+        lookback_days: int = 400,
         content_type: str = "notice-boards",
     ):
         self.max_items = max_items
-        # SSC open-exam notices often sit longer than default 60d lookback.
-        self.lookback_days = max(lookback_days, 120)
+        # SSC exam notices often remain the open apply window for months.
+        self.lookback_days = max(lookback_days, 400)
         self.content_type = content_type
 
     async def _fetch_page(self, client: httpx.AsyncClient, page: int, limit: int) -> list[dict[str, Any]]:
@@ -82,24 +123,44 @@ class SscApiScraper(BaseScraper):
             "attributes": "id,headline,examId,contentType,startDate,endDate,language,createdAt",
         }
         resp = await client.get(SSC_API, params=params)
-        resp.raise_for_status()
-        payload = resp.json()
+        # SSC intermittently returns 203 / empty payloads; treat as soft failure.
+        if resp.status_code not in (200, 203):
+            resp.raise_for_status()
+        try:
+            payload = resp.json()
+        except Exception:
+            return []
         items = payload.get("data") if isinstance(payload, dict) else payload
         return items if isinstance(items, list) else []
+
+    async def _fetch_items_with_retry(self, client: httpx.AsyncClient) -> list[dict[str, Any]]:
+        """Page 1 is often capped/empty; page 2 returns the bulk dump. Retry on empty."""
+        last: list[dict[str, Any]] = []
+        for attempt in range(4):
+            for page in (2, 1, 3):
+                try:
+                    items = await self._fetch_page(client, page=page, limit=100)
+                except Exception as exc:
+                    logger.warning("SSC API page=%s attempt=%s failed: %s", page, attempt, exc)
+                    continue
+                if len(items) >= 20:
+                    return items
+                if len(items) > len(last):
+                    last = items
+            await asyncio.sleep(1.5 * (attempt + 1))
+        return last
 
     async def fetch(self) -> list[dict[str, Any]]:
         headers = {
             "User-Agent": USER_AGENT,
             "Accept": "application/json",
             "Referer": "https://ssc.gov.in/home/notice-board",
+            "Origin": "https://ssc.gov.in",
         }
         async with httpx.AsyncClient(timeout=60.0, follow_redirects=True, headers=headers) as client:
-            # Page 1 is capped oddly at 10; page 2+ returns a larger dump.
-            items = await self._fetch_page(client, page=2, limit=100)
-            if len(items) < 20:
-                items = await self._fetch_page(client, page=1, limit=100)
+            items = await self._fetch_items_with_retry(client)
 
-        out: list[dict[str, Any]] = []
+        candidates: list[dict[str, Any]] = []
         seen: set[str] = set()
         for raw in items:
             if not isinstance(raw, dict):
@@ -113,7 +174,7 @@ class SscApiScraper(BaseScraper):
             seen.add(key)
 
             published = parse_published(raw.get("startDate") or raw.get("createdAt"))
-            if published and not within_lookback(published, self.lookback_days):
+            if published and not within_lookback(published, days=self.lookback_days):
                 continue
 
             attachments = raw.get("attachments") if isinstance(raw.get("attachments"), list) else []
@@ -128,7 +189,7 @@ class SscApiScraper(BaseScraper):
             end = raw.get("endDate")
             link = pdf_urls[0] if pdf_urls else f"https://ssc.gov.in/home/notice-board#{quote(str(raw.get('id') or ''), safe='')}"
 
-            out.append(
+            candidates.append(
                 {
                     "title": title,
                     "link": link,
@@ -141,10 +202,23 @@ class SscApiScraper(BaseScraper):
                     "dept": "Staff Selection Commission (SSC)",
                     "state": "All India",
                     "category": "ssc",
+                    "_priority": _priority(title),
                 }
             )
-            if len(out) >= self.max_items:
-                break
 
-        logger.info("SSC API scraped %s recruitment notices (from %s returned)", len(out), len(items))
+        candidates.sort(
+            key=lambda row: (int(row.get("_priority") or 0), str(row.get("published") or "")),
+            reverse=True,
+        )
+        out: list[dict[str, Any]] = []
+        for row in candidates[: self.max_items]:
+            row.pop("_priority", None)
+            out.append(row)
+
+        logger.info(
+            "SSC API scraped %s recruitment notices (from %s returned, %s candidates)",
+            len(out),
+            len(items),
+            len(candidates),
+        )
         return out

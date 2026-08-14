@@ -282,7 +282,9 @@ _RESULT_ARCHIVE = re.compile(
     r"document\s+verification|dv\s+schedule|answer\s+key|marksheet|"
     r"roll\s*no\.?\s*roll|sl\.?\s*no\.?\s*roll|tentative\s+exam\s+date|"
     r"schedule\s+of\s+(?:document\s+verification|dv)|written\s+examination\s*\(objective\)|"
-    r"final\s+result\s+of|result\s+notification\s+of|list\s+of\s+applications\s+found",
+    r"final\s+result\s+of|result\s+notification\s+of|list\s+of\s+applications\s+found|"
+    r"provisional\s+panel|frequently\s+asked\s+questions|\bfaq\b|"
+    r"cutoff\s+marks|cut-?off\s+marks",
     re.I,
 )
 

@@ -98,9 +98,10 @@
       "state": "all",
       "category": "ssc",
       "enabled": true,
-      "maxItems": 50,
+      "maxItems": 80,
+      "lookbackDays": 400,
       "contentType": "notice-boards",
-      "notes": "Angular SPA — scrape JSON /api/general-website/portal/notice-boards"
+      "notes": "Angular SPA — scrape JSON /api/general-website/portal/notice-boards; prefer Notice of / Engagement, skip vacancy tables"
     },
     {
       "code": "ibps",
