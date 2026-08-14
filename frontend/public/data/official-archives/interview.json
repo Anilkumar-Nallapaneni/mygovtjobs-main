@@ -1,6 +1,6 @@
 {
   "generatedAt": "2026-08-13T06:05:24.262Z",
-  "count": 252,
+  "count": 253,
   "items": [
     {
       "id": "2e7fa8a4ffb7c7be",
@@ -884,6 +884,22 @@
         "as"
       ],
       "fetchMethod": "rss-discovered"
+    },
+    {
+      "id": "ce91b5765c8e9b5e",
+      "title": "Walk in Interview on 18-08-2026 for Full Time Specialist - Part Time Specialist - Senior Resident - Junior Resident at ESIC Hospital Tirunelveli",
+      "link": "https://www.esic.gov.in/attachments/recruitmentfile/Walk_in_Interview_on_18_08_2026_for_Full_Time_Specialist_Part_Time_Specialist_Senior_Resident_Junior_Resident_at_ESIC_Hospital_Tirunelveli_1786341945.pdf",
+      "publishedAt": "2026-08-13T00:00:00Z",
+      "summary": null,
+      "pdfUrls": [
+        "https://www.esic.gov.in/attachments/recruitmentfile/Walk_in_Interview_on_18_08_2026_for_Full_Time_Specialist_Part_Time_Specialist_Senior_Resident_Junior_Resident_at_ESIC_Hospital_Tirunelveli_1786341945.pdf"
+      ],
+      "sourceId": "esic",
+      "sourceName": "ESIC — Employees' State Insurance Corporation",
+      "dept": "ESIC — Employees' State Insurance Corporation",
+      "state": "All India",
+      "category": "health",
+      "fetchMethod": "live-jobs-supplement"
     },
     {
       "id": "099743500c226eef",
