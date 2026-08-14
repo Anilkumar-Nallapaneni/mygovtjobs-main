@@ -24,6 +24,7 @@ import {
 import { queryClient } from '@/lib/queryClient'
 import { filterDisplayJobs } from '@/utils/jobFilters'
 import { statsFromRows, type CatalogStats } from '@/utils/liveJobsPipeline'
+import { useNow } from '@/hooks/useNow'
 
 const EMPTY_CATALOG: LiveJobsCatalogResult = {
   rows: [],
@@ -87,6 +88,7 @@ export function warmLiveJobsCache(bustCache = false) {
 
 export function useLiveJobs() {
   const qc = useQueryClient()
+  const nowMs = useNow()
   const jobsSource = getJobsSourceMode()
   const [refetchGeneration, setRefetchGeneration] = useState(0)
   const [hardBust, setHardBust] = useState(false)
@@ -228,8 +230,8 @@ export function useLiveJobs() {
     setRefetchGeneration((g) => g + 1)
   }, [dailySyncOnly])
 
-  const displayJobs = useMemo(() => filterDisplayJobs(liveRows), [liveRows])
-  const catalogStats = useMemo<CatalogStats>(() => statsFromRows(displayJobs), [displayJobs])
+  const displayJobs = useMemo(() => filterDisplayJobs(liveRows, nowMs), [liveRows, nowMs])
+  const catalogStats = useMemo<CatalogStats>(() => statsFromRows(displayJobs, nowMs), [displayJobs, nowMs])
   const hasCatalog = displayJobs.length > 0
   const refreshing = catalogQuery.isFetching
 

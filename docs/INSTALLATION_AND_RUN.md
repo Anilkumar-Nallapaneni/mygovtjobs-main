@@ -282,24 +282,27 @@ VITE_SUPABASE_ANON_KEY=<anon-public-key>
 # Leave empty in local dev — Vite proxies /api → http://127.0.0.1:8000
 VITE_API_URL=
 
-# Choose how the UI loads jobs (see table below)
-VITE_JOBS_SOURCE=supabase
+# Choose how detail/search fallbacks load jobs (homepage catalog is always live-jobs.json)
+VITE_JOBS_SOURCE=auto
 ```
 
 #### `VITE_JOBS_SOURCE` options
 
+Homepage browse catalog is **always** the static CDN snapshot (`frontend/public/data/live-jobs.json`).
+`VITE_JOBS_SOURCE` only affects job detail / search fallbacks.
+
 | Value | When to use | Loads from |
 |-------|-------------|------------|
-| **`supabase`** | **Vercel production**, or local without backend | Supabase `jobs` table (up to 8000 rows, paginated) |
-| **`api`** | Local dev with backend running | `GET http://localhost:8000/api/jobs` |
-| **`static`** | Offline / demo | `frontend/public/data/live-jobs.json` only |
-| **`auto`** | Legacy default | static → supabase → api |
+| **`static`** | Offline / no secrets | Static JSON only |
+| **`supabase`** | Live detail/search from DB | Supabase `jobs` table |
+| **`api`** | Local full stack | `GET http://localhost:8000/api/jobs` |
+| **`auto`** | Default | static first; Supabase/API for fallbacks |
 
 **Recommendations:**
 
-- **Production (Vercel):** `supabase`
-- **Local full stack:** `api` or `supabase`
-- **Fast UI without backend:** `static` or `auto`
+- **Production (Vercel):** static homepage catalog (committed/exported JSON); optional `supabase` for detail fallbacks
+- **Local UI without backend:** any value — homepage still uses `live-jobs.json`
+- **Local full stack:** `api` or `supabase` for detail routes
 
 ### Step 4.3 — Type-check, lint, build (optional QA)
 
@@ -455,7 +458,7 @@ Browser → Vercel CDN (React app)
          Supabase REST (anon key) → jobs table
 ```
 
-No backend required on Vercel if `VITE_JOBS_SOURCE=supabase`.
+No backend required on Vercel — homepage catalog is always static `live-jobs.json`.
 
 ### Step 7.1 — Install Vercel CLI (optional)
 
@@ -620,14 +623,14 @@ Ingest still runs against Supabase; Vercel only serves the frontend.
 
 | Problem | Fix |
 |---------|-----|
-| **Demo jobs only** | Run ingest; set `VITE_JOBS_SOURCE=supabase` or `api`; restart `npm run dev` |
+| **Demo jobs only** | Run ingest + `npm run export:live-jobs`; restart `npm run dev` |
+| **Vercel: no jobs** | Confirm `frontend/public/data/live-jobs.json` is valid and redeploy |
 | **Many placeholder labels on cards** | Missing vacancy counts in DB — run `npm run enrich:jobs` |
 | **`ModuleNotFoundError: http_client`** | Ensure `backend/app/scrapers/http_client.py` exists |
 | **`db:test` fails** | Fix `DATABASE_URL`, password encoding, run SQL setup |
 | **Supabase 401 on jobs** | Run migration `002`; check anon key; confirm RLS |
 | **`ingest:all` 401** | Set `ADMIN_API_KEY` in `backend/.env`; start API |
 | **Windows: pip not found** | Use `python -m pip install -r requirements.txt` |
-| **Vercel: no jobs** | Set `VITE_JOBS_SOURCE=supabase`; redeploy after env change |
 | **verify fails on frontend** | Run `npm run dev` first |
 | **API 0 jobs, health OK** | Restart `npm run api:dev`; check `health/detailed` |
 

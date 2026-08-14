@@ -70,13 +70,19 @@ export type LatestNotifJobFilter = {
   expiringWithinDays?: number
 }
 
-export function isExpiringSoonJob(job: JobRecord, withinDays = EXPIRING_SOON_DAYS): boolean {
+export function isExpiringSoonJob(
+  job: JobRecord,
+  withinDays = EXPIRING_SOON_DAYS,
+  nowMs: number = Date.now()
+): boolean {
   if (String(job?.status || '').toLowerCase() === 'expired') return false
   const last = parseLastDate(job?.lastDate)
   if (!last) return false
-  const daysLeft = Math.ceil((last.getTime() - Date.now()) / DAY_MS)
+  const daysLeft = Math.ceil((last.getTime() - nowMs) / DAY_MS)
   return daysLeft >= 0 && daysLeft <= withinDays
 }
+
+export type LatestNotifJobFilterWithClock = LatestNotifJobFilter & { nowMs?: number }
 
 export function filterLatestNotificationJobs(
   jobs: JobRecord[],
@@ -87,9 +93,10 @@ export function filterLatestNotificationJobs(
     quickFilter = null,
     expiringOnly = false,
     expiringWithinDays = EXPIRING_SOON_DAYS,
-  }: LatestNotifJobFilter
+    nowMs = Date.now(),
+  }: LatestNotifJobFilterWithClock
 ): JobRecord[] {
-  let rows = jobs.filter((job) => !isJobExpired(job))
+  let rows = jobs.filter((job) => !isJobExpired(job, nowMs))
 
   if (stateId === 'all') {
     rows = rows.filter((job) => jobMatchesNationwideFilter(job))
@@ -114,7 +121,7 @@ export function filterLatestNotificationJobs(
   }
 
   if (expiringOnly) {
-    rows = rows.filter((job) => isExpiringSoonJob(job, expiringWithinDays))
+    rows = rows.filter((job) => isExpiringSoonJob(job, expiringWithinDays, nowMs))
   }
 
   return rows

@@ -7,8 +7,10 @@ User browser
     │
     ▼
 Vercel CDN (frontend/dist)
-    │  VITE_JOBS_SOURCE=supabase | auto
-    ├─► Supabase REST (anon) ──► jobs, sources (RLS)
+    │  Homepage catalog: always /data/live-jobs.json
+    │  VITE_JOBS_SOURCE → detail/search fallbacks only
+    ├─► Static live-jobs.json (CDN)
+    ├─► Supabase REST (anon) ──► job detail / search when configured
     └─► Optional FastAPI (VITE_API_URL) ──► Postgres pooler
 ```
 

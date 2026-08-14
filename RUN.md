@@ -199,7 +199,7 @@ npm run api:dev
 
 API docs: http://localhost:8000/docs
 
-**No Supabase?** Set `VITE_JOBS_SOURCE=static` in `frontend/.env.local` — uses committed JSON (~1,600 jobs).
+**No Supabase?** Homepage already uses committed `live-jobs.json`. Optional: set `VITE_JOBS_SOURCE=static` for detail/search fallbacks.
 
 ---
 
@@ -329,7 +329,7 @@ npm run check:frontend && npm run type-check && npm run test && npm run build
 | `npm run build:sitemap` | Generate sitemap.xml |
 | `npm run deploy:verify` | Check production deploy |
 
-Production needs: `VITE_JOBS_SOURCE=supabase` on Vercel.
+Production: homepage catalog is always static `live-jobs.json`. `VITE_JOBS_SOURCE` only affects detail/search fallbacks.
 
 ---
 
@@ -348,7 +348,7 @@ Production needs: `VITE_JOBS_SOURCE=supabase` on Vercel.
 
 | Problem | Fix |
 |---------|-----|
-| Demo jobs only | Run `npm run daily:sync`; set `VITE_JOBS_SOURCE=supabase` |
+| Demo jobs only | Run `npm run daily:sync` + `export:live-jobs`; confirm snapshot has rows |
 | No PDF details | `npm run pdf:backfill` then `npm run pdf:read:live` |
 | `db:test` fails | Fix `DATABASE_URL` in `backend/.env`; run `npm run db:migrate` |
 | Empty RSS section | `npm run fetch:official:feeds` |

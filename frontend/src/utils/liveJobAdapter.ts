@@ -24,9 +24,10 @@ const DAY_MS = 86400000
 function deriveDisplayStatus(
   row: Record<string, unknown>,
   rawStatus: string,
-  lastDate: string
+  lastDate: string,
+  nowMs: number
 ): 'expired' | 'hot' | 'new' | 'live' {
-  if (rawStatus === 'expired' || isJobExpired({ status: rawStatus, lastDate })) {
+  if (rawStatus === 'expired' || isJobExpired({ status: rawStatus, lastDate }, nowMs)) {
     return 'expired'
   }
   if (rawStatus === 'hot') return 'hot'
@@ -36,7 +37,7 @@ function deriveDisplayStatus(
   if (publishedIso) {
     const publishedMs = new Date(String(publishedIso)).getTime()
     if (!Number.isNaN(publishedMs)) {
-      const ageDays = (Date.now() - publishedMs) / DAY_MS
+      const ageDays = (nowMs - publishedMs) / DAY_MS
       if (ageDays <= 10) return 'new'
       const vac = Number(row.vacancies) || 0
       if (ageDays <= 30 && vac >= 500) return 'hot'
@@ -45,7 +46,7 @@ function deriveDisplayStatus(
 
   const last = parseLastDate(lastDate)
   if (last) {
-    const daysLeft = Math.ceil((last.getTime() - Date.now()) / DAY_MS)
+    const daysLeft = Math.ceil((last.getTime() - nowMs) / DAY_MS)
     if (daysLeft >= 0 && daysLeft <= 7) return 'hot'
     if (daysLeft >= 0 && daysLeft <= 14) return 'new'
   }
@@ -54,20 +55,25 @@ function deriveDisplayStatus(
 }
 
 /** Map API / Supabase job row → shape used by JobCard / HomePage. */
-export function adaptLiveJob(row, index = 0) {
+export function adaptLiveJob(
+  row: Record<string, unknown>,
+  index = 0,
+  nowMs: number = Date.now()
+) {
+  const detail = (row.detail as Record<string, unknown> | undefined) || {}
   const { stateIds, stateName } = resolveStateDisplay(row)
   const qualResolved = resolveJobQualification({
     qual: row.qualification,
     title: row.title,
-    about: row.detail?.summary,
+    about: detail?.summary,
     dept: row.dept,
-    detail: row.detail,
+    detail,
   })
 
   const category = resolveJobCategory(row)
   const rawStatus = String(row.status || 'live').toLowerCase()
-  const lastDate = row.last_date || '—'
-  const displayStatus = deriveDisplayStatus(row, rawStatus, lastDate)
+  const lastDate = String(row.last_date || '—')
+  const displayStatus = deriveDisplayStatus(row, rawStatus, lastDate, nowMs)
 
   const links = collectDetailLinksFromJob(row)
   const apply = resolveJobApplyHref(row)
@@ -91,8 +97,7 @@ export function adaptLiveJob(row, index = 0) {
   }
   const title = cleanJobTitle(row.title) || 'Government recruitment'
   const rawVacancies = Number(row.vacancies) || 0
-  const vacancies = sanitizeVacancyCount(rawVacancies, title)
-  const detail = row.detail || {}
+  const vacancies = sanitizeVacancyCount(rawVacancies, String(title))
   const streetAddress =
     row.streetAddress ||
     row.street_address ||

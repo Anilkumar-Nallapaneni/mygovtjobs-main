@@ -15,11 +15,13 @@ import { isJobExpired } from "@/utils/jobFilters";
 import { useBrowseContext } from "@/context/BrowseContext";
 import type { HomePageProps } from "@/types/homePage";
 import { vacancyCountForStats } from "@/data/homePageConstants";
+import { useNow } from "@/hooks/useNow";
 
 type DerivedInput = Pick<HomePageProps, "jobs" | "catalogStats">;
 
 export function useHomePageDerived({ jobs = [], catalogStats }: DerivedInput) {
   const browse = useBrowseContext();
+  const nowMs = useNow();
   const {
     selectedState,
     activeCat,
@@ -60,6 +62,7 @@ export function useHomePageDerived({ jobs = [], catalogStats }: DerivedInput) {
         orgDept: deferredOrgDept,
         orgSlug: deferredOrgSlug,
         allIndiaOnly: deferredAllIndiaBrowse,
+        nowMs,
       }),
     [
       deferredJobs,
@@ -74,6 +77,7 @@ export function useHomePageDerived({ jobs = [], catalogStats }: DerivedInput) {
       deferredOrgDept,
       deferredOrgSlug,
       deferredAllIndiaBrowse,
+      nowMs,
     ]
   );
 
@@ -86,8 +90,9 @@ export function useHomePageDerived({ jobs = [], catalogStats }: DerivedInput) {
         activeCat,
         quickFilter: deferredQuickFilter,
         sort: deferredSort,
+        nowMs,
       }),
-    [deferredJobs, selectedState, deferredSort, deferredSearch, activeCat, deferredQuickFilter]
+    [deferredJobs, selectedState, deferredSort, deferredSearch, activeCat, deferredQuickFilter, nowMs]
   );
 
   const quickFilterCounts = useMemo(() => {
@@ -103,7 +108,7 @@ export function useHomePageDerived({ jobs = [], catalogStats }: DerivedInput) {
     const statesWithListings = new Set<string>();
     let live = 0;
     for (const job of jobs) {
-      if (isJobExpired(job)) continue
+      if (isJobExpired(job, nowMs)) continue
       const vacancies = vacancyCountForStats(job);
       if (vacancies > 0) withPostCount += 1;
       if (vacancies > 0) posts += vacancies;
@@ -113,7 +118,7 @@ export function useHomePageDerived({ jobs = [], catalogStats }: DerivedInput) {
         stateListings += 1;
         matchedStates.forEach((s) => statesWithListings.add(s.id));
       }
-      if (jobMatchesHeroStatFilter(job, "live")) live += 1;
+      if (jobMatchesHeroStatFilter(job, "live", nowMs)) live += 1;
     }
     const catalogVacancies = Number(catalogStats?.vacancies) || 0;
     const catalogNoticesWithVacancies = Number(catalogStats?.noticesWithVacancies) || 0;
@@ -127,7 +132,7 @@ export function useHomePageDerived({ jobs = [], catalogStats }: DerivedInput) {
       stateListings,
       live: catalogLiveNotices || live,
     };
-  }, [jobs, catalogStats]);
+  }, [jobs, catalogStats, nowMs]);
 
   return {
     filtered,

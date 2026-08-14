@@ -101,12 +101,12 @@ export function dedupeLiveRows(rows: unknown[]) {
 }
 
 /** Aggregate hero/headline numbers from jobs shown in browse UI (live only). */
-export function statsFromRows(rows: JobRecord[]): CatalogStats {
+export function statsFromRows(rows: JobRecord[], nowMs: number = Date.now()): CatalogStats {
   let vacancies = 0
   let noticesWithVacancies = 0
   let liveNotices = 0
   for (const row of rows) {
-    if (isJobExpired(row)) continue
+    if (isJobExpired(row, nowMs)) continue
     liveNotices += 1
     const count = vacancyCount(row as Record<string, unknown>)
     if (count > 0) {
@@ -122,9 +122,9 @@ export function statsFromRows(rows: JobRecord[]): CatalogStats {
   }
 }
 
-export function processLiveJobPayload(raw: unknown[]) {
-  const rows = dedupeLiveRows(raw).map(adaptLiveJob)
-  return { rows, stats: statsFromRows(rows) }
+export function processLiveJobPayload(raw: unknown[], nowMs: number = Date.now()) {
+  const rows = dedupeLiveRows(raw).map((row, i) => adaptLiveJob(row as Record<string, unknown>, i, nowMs))
+  return { rows, stats: statsFromRows(rows, nowMs) }
 }
 
 /** Rows adapted per idle slice — keeps the main thread responsive during large JSON catalogs. */
@@ -143,7 +143,8 @@ export function yieldToMainThread(): Promise<void> {
 
 export async function processLiveJobPayloadAsync(
   raw: unknown[],
-  onProgress?: (rows: JobRecord[]) => void
+  onProgress?: (rows: JobRecord[]) => void,
+  nowMs: number = Date.now()
 ): Promise<{ rows: JobRecord[]; stats: CatalogStats }> {
   const deduped = dedupeLiveRows(raw)
   const rows: JobRecord[] = []
@@ -151,13 +152,12 @@ export async function processLiveJobPayloadAsync(
   for (let i = 0; i < deduped.length; i += LIVE_JOBS_PROCESS_CHUNK) {
     const slice = deduped.slice(i, i + LIVE_JOBS_PROCESS_CHUNK)
     for (let j = 0; j < slice.length; j++) {
-      rows.push(adaptLiveJob(slice[j], i + j))
+      rows.push(adaptLiveJob(slice[j] as Record<string, unknown>, i + j, nowMs))
     }
     if (onProgress && rows.length) onProgress(rows)
     if (i + LIVE_JOBS_PROCESS_CHUNK < deduped.length) {
       await yieldToMainThread()
     }
   }
-
-  return { rows, stats: statsFromRows(rows) }
+  return { rows, stats: statsFromRows(rows, nowMs) }
 }

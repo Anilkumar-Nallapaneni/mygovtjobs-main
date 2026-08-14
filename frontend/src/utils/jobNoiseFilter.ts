@@ -37,7 +37,7 @@ const AGGREGATOR_BRAND_RE = new RegExp(
   'i'
 )
 
-export function cleanJobTitle(title) {
+export function cleanJobTitle(title: unknown): string {
   return String(title || '')
     .replace(/\s*Read\s+More\s*$/i, '')
     .replace(/[\s\-–—]*PDF\s*size:\s*\([^)]*\)\s*\.?\s*$/gi, '')
@@ -48,7 +48,19 @@ export function cleanJobTitle(title) {
     .replace(/^[.\-–—\s]+|[.\-–—\s]+$/g, '')
 }
 
-export function isTenderOrProcurement(row) {
+type NoiseJobLike = {
+  title?: unknown
+  dept?: unknown
+  apply_url?: unknown
+  applyUrl?: unknown
+  officialUrl?: unknown
+  detail?: {
+    notification_url?: unknown
+    link?: unknown
+  } | null
+}
+
+export function isTenderOrProcurement(row: NoiseJobLike | null | undefined): boolean {
   const title = cleanJobTitle(row?.title)
   if (title && TENDER_RE.test(title)) return true
   const urls = [
@@ -64,7 +76,7 @@ export function isTenderOrProcurement(row) {
   return false
 }
 
-export function isPortalNavTitle(title) {
+export function isPortalNavTitle(title: unknown): boolean {
   const t = cleanJobTitle(title)
   if (!t || t.length < 6) return true
   if (PORTAL_NAV_TITLE_RE.test(t)) return true
@@ -75,7 +87,7 @@ export function isPortalNavTitle(title) {
   return false
 }
 
-export function isPortalNoiseJob(row) {
+export function isPortalNoiseJob(row: NoiseJobLike | null | undefined): boolean {
   if (isTenderOrProcurement(row)) return true
   const title = cleanJobTitle(row?.title)
   if (RESULT_OR_LIST_RE.test(title)) return true
@@ -95,12 +107,12 @@ export function isPortalNoiseJob(row) {
     row?.detail?.link ||
     ''
   if (isPortalNavTitle(title)) return true
-  if (url && GENERIC_SECTION_URL_RE.test(url) && title.length < 40 && !JOB_HINT_RE.test(title)) {
+  if (url && GENERIC_SECTION_URL_RE.test(String(url)) && title.length < 40 && !JOB_HINT_RE.test(title)) {
     return true
   }
-  if (/\/recruitmentfile\/?$/i.test(url) && isPortalNavTitle(title)) return true
+  if (/\/recruitmentfile\/?$/i.test(String(url)) && isPortalNavTitle(title)) return true
   try {
-    const path = new URL(url, 'http://local').pathname.replace(/\/$/, '')
+    const path = new URL(String(url), 'http://local').pathname.replace(/\/$/, '')
     if ((path === '' || path === '/') && isPortalNavTitle(title)) return true
   } catch {
     /* ignore bad URLs */
@@ -109,10 +121,10 @@ export function isPortalNoiseJob(row) {
 }
 
 /** Clean department display — hide raw hostnames when possible. */
-export function cleanDept(dept, source) {
+export function cleanDept(dept: unknown, source?: unknown): string {
   const d = String(dept || '').trim()
   if (d && !d.startsWith('www.') && !/\.gov\.in$|\.nic\.in$/i.test(d)) return d
-  const labels = {
+  const labels: Record<string, string> = {
     esic: "ESIC — Employees' State Insurance Corporation",
     isro: 'ISRO — Indian Space Research Organisation',
     'isro-rss': 'ISRO — Indian Space Research Organisation',
@@ -126,3 +138,4 @@ export function cleanDept(dept, source) {
   host = host.replace(/\.(gov|nic|ac|org)\.in$/i, '')
   return host ? host.replace(/[-.]/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase()) : 'Official notification'
 }
+

@@ -18,7 +18,7 @@ export type HomeSortKey = (typeof HOME_SORT_KEYS)[number]
 export const HERO_STAT_FILTER_KEYS = ['vacancies', 'hotNew', 'states', 'live'] as const
 export type HeroStatFilterKey = (typeof HERO_STAT_FILTER_KEYS)[number]
 
-export function jobMatchesHeroStatFilter(job: JobRecord, statKey: string) {
+export function jobMatchesHeroStatFilter(job: JobRecord, statKey: string, nowMs: number = Date.now()) {
   switch (statKey) {
     case 'vacancies':
       return vacancyCountForStats(job) > 0
@@ -28,7 +28,7 @@ export function jobMatchesHeroStatFilter(job: JobRecord, statKey: string) {
       if (isNationwideAllStatesJob(job)) return false
       return STATES.some((s) => jobMatchesStateFilter(job, s.id))
     case 'live':
-      return !isJobExpired(job)
+      return !isJobExpired(job, nowMs)
     default:
       return true
   }
@@ -49,7 +49,7 @@ function withSponsoredBoost(cmp: (a: JobRecord, b: JobRecord) => number) {
   }
 }
 
-function sortJobs(j: JobRecord[], sort: HomeSortKey) {
+function sortJobs(j: JobRecord[], sort: HomeSortKey, nowMs: number) {
   if (sort === 'vacancies') {
     j.sort(withSponsoredBoost((a, b) => (Number(b.vacancies) || 0) - (Number(a.vacancies) || 0)))
     return
@@ -60,8 +60,8 @@ function sortJobs(j: JobRecord[], sort: HomeSortKey) {
         const aExpired = a.status === 'expired' ? 1 : 0
         const bExpired = b.status === 'expired' ? 1 : 0
         if (aExpired !== bExpired) return aExpired - bExpired
-        const aSoon = isExpiringSoonJob(a) ? 0 : 1
-        const bSoon = isExpiringSoonJob(b) ? 0 : 1
+        const aSoon = isExpiringSoonJob(a, undefined, nowMs) ? 0 : 1
+        const bSoon = isExpiringSoonJob(b, undefined, nowMs) ? 0 : 1
         if (aSoon !== bSoon) return aSoon - bSoon
         return new Date(String(a.lastDate)).getTime() - new Date(String(b.lastDate)).getTime()
       })
@@ -93,6 +93,7 @@ export type HomePageFilterInput = {
   orgDept?: string | null
   orgSlug?: string | null
   allIndiaOnly?: boolean
+  nowMs?: number
 }
 
 /** Pure filter + sort used by HomePage job list. */
@@ -109,6 +110,7 @@ export function filterHomePageJobs({
   orgDept = null,
   orgSlug = null,
   allIndiaOnly = false,
+  nowMs = Date.now(),
 }: HomePageFilterInput): JobRecord[] {
   let j = [...jobs]
 
@@ -149,10 +151,10 @@ export function filterHomePageJobs({
   }
 
   if (heroStatFilter) {
-    j = j.filter((x) => jobMatchesHeroStatFilter(x, heroStatFilter))
+    j = j.filter((x) => jobMatchesHeroStatFilter(x, heroStatFilter, nowMs))
   }
 
-  sortJobs(j, sort)
+  sortJobs(j, sort, nowMs)
   return j
 }
 
@@ -164,9 +166,10 @@ export function filterNationwideJobsForState({
   quickFilter = null,
   sort = 'lastDate',
   limit = 16,
+  nowMs = Date.now(),
 }: HomePageFilterInput & { limit?: number }): JobRecord[] {
   if (!selectedState || search.trim() || activeCat || quickFilter) return []
   let j = jobs.filter((x) => jobMatchesNationwideFilter(x))
-  sortJobs(j, sort)
+  sortJobs(j, sort, nowMs)
   return j.slice(0, limit)
 }

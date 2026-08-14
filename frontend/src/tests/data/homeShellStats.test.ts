@@ -1,5 +1,6 @@
 import { readFileSync } from 'node:fs'
 import { join } from 'node:path'
+import process from 'node:process'
 import { describe, expect, it } from 'vitest'
 
 import {
@@ -15,7 +16,8 @@ describe('homeShellStats', () => {
       readFileSync(join(process.cwd(), 'public/data/live-jobs.json'), 'utf8')
     ) as { items?: Array<{ vacancies?: number; dept?: string; organization?: string }> }
     const items = Array.isArray(payload.items) ? payload.items : []
-    const vacancies = items.reduce((sum, row) => sum + (Number(row.vacancies) || 0), 0)
+    const countable = items.filter((row) => Number(row.vacancies) > 0)
+    const vacancies = countable.reduce((sum, row) => sum + (Number(row.vacancies) || 0), 0)
     const orgs = new Set(
       items
         .map((row) => String(row.dept || row.organization || '').trim())
@@ -27,6 +29,7 @@ describe('homeShellStats', () => {
     expect(HOME_SHELL_HEADLINE_STATS.vacancies).toBe(vacancies)
     expect(HOME_SHELL_CATALOG_STATS.liveNotices).toBe(items.length)
     expect(HOME_SHELL_CATALOG_STATS.vacancies).toBe(vacancies)
+    expect(HOME_SHELL_CATALOG_STATS.noticesWithVacancies).toBe(countable.length)
     expect(HOME_SHELL_HERO_STATS.live).toBe(items.length)
     expect(HOME_SHELL_HERO_STATS.posts).toBe(vacancies)
     expect(HOME_SHELL_ORG_COUNT).toBe(Math.max(orgs, 1))

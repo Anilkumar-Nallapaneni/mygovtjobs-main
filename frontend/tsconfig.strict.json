@@ -5,6 +5,10 @@
     "noUncheckedIndexedAccess": true
   },
   "include": [
-    "src/utils/publicJobPolicy.ts"
+    "src/utils/publicJobPolicy.ts",
+    "src/utils/jobFilters.ts",
+    "src/utils/relatedJobs.ts",
+    "src/hooks/useNow.ts",
+    "src/hooks/useJobDetailFocusTrap.ts"
   ]
 }

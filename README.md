@@ -311,12 +311,17 @@ npm run ingest:direct:quick        # 20 sources only (quick test)
 
 ### How jobs load in the browser
 
-| `VITE_JOBS_SOURCE` | Behavior |
-|---------------------|----------|
-| `auto` (local default) | Static `live-jobs.json` first → Supabase background refresh |
-| `supabase` (Vercel prod) | Same pattern; Supabase is source of truth |
+| Surface | Source |
+|---------|--------|
+| **Homepage catalog** | Always CDN/static `public/data/live-jobs.json` (export from DB) |
+| Job detail / search fallbacks | Controlled by `VITE_JOBS_SOURCE` |
+
+| `VITE_JOBS_SOURCE` | Detail / search behavior |
+|---------------------|--------------------------|
+| `auto` (local default) | Prefer static snapshot; may use Supabase/API for detail fallbacks |
+| `supabase` | Supabase REST for detail/search when needed |
 | `api` | Backend `GET /api/jobs` (needs `npm run api:dev`) |
-| `static` | `public/data/live-jobs.json` only |
+| `static` | Static JSON only |
 
 ### Key frontend files
 
@@ -439,7 +444,7 @@ npm run vercel:deploy
 |----------|--------|
 | `VITE_SUPABASE_URL` | `https://YOUR_REF.supabase.co` |
 | `VITE_SUPABASE_ANON_KEY` | Supabase **anon** key |
-| `VITE_JOBS_SOURCE` | `supabase` (forced by push script) |
+| `VITE_JOBS_SOURCE` | Detail/search fallbacks only (`supabase`/`api`/`auto`/`static`) — homepage catalog is always static `live-jobs.json` |
 | `VITE_API_URL` | empty (unless API hosted elsewhere) |
 | `VITE_GA_MEASUREMENT_ID` | `G-XXXXXXXXXX` from GA4 |
 | `VITE_GOOGLE_SITE_VERIFICATION` | Search Console HTML tag token |
@@ -612,7 +617,7 @@ Run from **repo root** unless noted.
 |---------|-----|
 | Site shows old jobs | Check GitHub Actions ingest; run `npm run daily:sync` |
 | Job detail wrong / mismatch | Hard refresh; ensure latest deploy; check `jobs:audit:strict` |
-| 0 jobs on site | `npm run supabase:audit`; run ingest; check `VITE_JOBS_SOURCE` on Vercel |
+| 0 jobs on site | Re-export: `npm run export:live-jobs`; confirm `frontend/public/data/live-jobs.json` is valid |
 | Vercel build fails | `npm run build` locally; fix TypeScript errors |
 | Ingest fails on GitHub | Check `DATABASE_URL` uses **pooler** host port 6543 |
 | No GA data | Set `VITE_GA_MEASUREMENT_ID` → `vercel:env:push:live` → redeploy |
