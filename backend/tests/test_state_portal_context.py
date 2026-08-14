@@ -1,5 +1,5 @@
 from app.parsers.notification_parser import NotificationParser
-from app.scrapers.state_portal_html import _extract_links
+from app.scrapers.state_portal_html import StatePortalHtmlScraper, _extract_links
 
 
 def test_portal_row_context_supplies_deadline_and_vacancies():
@@ -25,3 +25,13 @@ def test_portal_row_context_supplies_deadline_and_vacancies():
 
     assert normalized["last_date"] == "2026-09-30"
     assert normalized["vacancies"] == 125
+
+
+def test_skip_common_paths_stays_on_listing_url():
+    scraper = StatePortalHtmlScraper(
+        "https://www.bharatpetroleum.in/careers/job-openings",
+        "all",
+        skip_common_paths=True,
+    )
+    assert scraper.skip_common_paths is True
+    assert scraper.portal_url.endswith("/careers/job-openings")

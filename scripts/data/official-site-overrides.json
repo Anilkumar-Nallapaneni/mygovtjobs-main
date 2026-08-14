@@ -97,6 +97,10 @@
     "latestUrl": "https://iocl.com/job-openings",
     "altUrls": ["https://iocl.com/job-search", "https://www.iocl.com/"]
   },
+  "bpcl": {
+    "latestUrl": "https://www.bharatpetroleum.in/careers/job-openings",
+    "altUrls": ["https://www.bharatpetroleum.in/careers/careers"]
+  },
   "ntpc": {
     "latestUrl": "https://careers.ntpc.co.in/",
     "altUrls": ["https://www.ntpc.co.in/en/career", "https://www.ntpc.co.in/"]
@@ -119,8 +123,8 @@
     "altUrls": ["https://www.bhel.com/careers", "https://www.bhel.com/"]
   },
   "sail": {
-    "latestUrl": "https://sail.co.in/careers/current-openings",
-    "altUrls": ["https://sail.co.in/en/career/career-opportunities"]
+    "latestUrl": "https://sailcareers.com/",
+    "altUrls": ["https://www.sail.co.in/en", "https://sail.co.in/en/career/career-opportunities"]
   },
   "rrb-ald": {
     "latestUrl": "https://www.rrbald.gov.in/rrbald/",

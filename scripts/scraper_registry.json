@@ -445,9 +445,9 @@
       "portal_url": "https://joinindianarmy.nic.in/writereaddata/Portal/NotificationPDF/",
       "state": "all",
       "category": "defence",
-      "enabled": true,
+      "enabled": false,
       "maxItems": 50,
-      "notes": "Homepage is auth wall; PDF notification folder is the scrapable surface"
+      "notes": "Homepage is an auth wall; NotificationPDF folder now returns an error page; re-enable when a public listing is reachable"
     },
     {
       "code": "navy",
@@ -461,12 +461,12 @@
     {
       "code": "iaf",
       "module": "state_portal_html",
-      "portal_url": "https://indianairforce.nic.in/career.aspx",
+      "portal_url": "https://indianairforce.nic.in",
       "state": "all",
       "category": "defence",
-      "enabled": true,
+      "enabled": false,
       "maxItems": 50,
-      "notes": "career.aspx listing; CDAC Agniveer portal often CAPTCHA"
+      "notes": "Homepage times out for automated clients; career.aspx fails; CDAC Agniveer often CAPTCHA"
     },
     {
       "code": "afcat",
@@ -474,8 +474,9 @@
       "portal_url": "https://afcat.cdac.in",
       "state": "all",
       "category": "defence",
-      "enabled": true,
-      "maxItems": 50
+      "enabled": false,
+      "maxItems": 50,
+      "notes": "Host returns 403 to automated clients; re-enable when a public listing is reachable"
     },
     {
       "code": "coast-guard",
@@ -660,20 +661,22 @@
     {
       "code": "iocl",
       "module": "state_portal_html",
-      "portal_url": "https://iocl.com/job-search",
+      "portal_url": "https://iocl.com/job-openings",
       "state": "all",
       "category": "psu",
       "enabled": true,
-      "maxItems": 50
+      "maxItems": 50,
+      "skipCommonPaths": true
     },
     {
       "code": "bpcl",
       "module": "state_portal_html",
-      "portal_url": "https://bharatpetroleum.in/About-BPCL/Careers/Careers.aspx",
+      "portal_url": "https://www.bharatpetroleum.in/careers/job-openings",
       "state": "all",
       "category": "psu",
       "enabled": true,
-      "maxItems": 50
+      "maxItems": 50,
+      "skipCommonPaths": true
     },
     {
       "code": "hpcl",
@@ -732,11 +735,12 @@
     {
       "code": "sail",
       "module": "state_portal_html",
-      "portal_url": "https://sail.co.in/en/career/career-opportunities",
+      "portal_url": "https://sailcareers.com",
       "state": "all",
       "category": "psu",
       "enabled": true,
-      "maxItems": 50
+      "maxItems": 50,
+      "skipCommonPaths": true
     },
     {
       "code": "ies",

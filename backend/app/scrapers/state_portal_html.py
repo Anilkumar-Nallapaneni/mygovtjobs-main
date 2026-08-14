@@ -171,17 +171,21 @@ class StatePortalHtmlScraper(BaseScraper):
         *,
         max_items: int | None = None,
         lookback_days: int | None = None,
+        skip_common_paths: bool = False,
     ):
         settings = get_settings()
         self.portal_url = portal_url.rstrip("/")
         self.state_code = state_code
         self.max_items = max_items if max_items is not None else settings.ingest_max_items_per_source
         self.lookback_days = lookback_days if lookback_days is not None else settings.ingest_lookback_days
+        self.skip_common_paths = skip_common_paths
 
     async def fetch(self) -> list[dict[str, Any]]:
         parsed = urlparse(self.portal_url)
         base = f"{parsed.scheme}://{parsed.netloc}"
-        urls_to_try = [self.portal_url] + [f"{base}{p}" for p in _COMMON_PATHS]
+        urls_to_try = [self.portal_url]
+        if not self.skip_common_paths:
+            urls_to_try.extend(f"{base}{p}" for p in _COMMON_PATHS)
         seen_pages: set[str] = set()
         all_rows: list[dict[str, Any]] = []
         seen_links: set[str] = set()

@@ -392,6 +392,7 @@ class IngestAgent:
                 entry.get("state", ""),
                 max_items=max_items,
                 lookback_days=lookback,
+                skip_common_paths=bool(entry.get("skipCommonPaths")),
             )
 
         raise UnsupportedScraperError(

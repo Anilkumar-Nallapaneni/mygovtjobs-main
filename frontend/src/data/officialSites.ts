@@ -141,7 +141,7 @@ export const OFFICIAL_SITES = [
   /* ---------- CENTRAL — Defence (uniformed services) ---------- */
   { id: "army",          name: "Indian Army — Join Indian Army",               ...u("https://joinindianarmy.nic.in/", "https://joinindianarmy.nic.in/"),                    scope: "uniform", category: "defence",  stateIds: ["all"] },
   { id: "navy",          name: "Indian Navy — Join Indian Navy",               ...u("https://www.joinindiannavy.gov.in/", "https://www.joinindiannavy.gov.in/"),            scope: "uniform", category: "defence", stateIds: ["all"] },
-  { id: "iaf",           name: "Indian Air Force — Careers",                   ...u("https://indianairforce.nic.in/", "https://careerindianairforce.cdac.in/"),              scope: "uniform", category: "defence",  stateIds: ["all"] },
+  { id: "iaf",           name: "Indian Air Force — Careers",                   ...u("https://indianairforce.nic.in/", "https://indianairforce.nic.in/"),              scope: "uniform", category: "defence",  stateIds: ["all"] },
   { id: "afcat",         name: "AFCAT — IAF officer entry",                    ...u("https://afcat.cdac.in/", "https://afcat.cdac.in/"),                                    scope: "uniform", category: "defence",  stateIds: ["all"] },
   { id: "coast-guard",   name: "Indian Coast Guard — Recruitment",             ...u("https://joinindiancoastguard.cdac.in/", "https://joinindiancoastguard.cdac.in/"),       scope: "uniform", category: "defence",  stateIds: ["all"] },
 
@@ -171,15 +171,15 @@ export const OFFICIAL_SITES = [
 
   /* ---------- CENTRAL — PSUs ---------- */
   { id: "ongc",          name: "ONGC — Careers",                               ...u("https://ongcindia.com/", "https://ongcindia.com/web/eng/career/recruitment-notice"),   scope: "psu",     category: "psu",      stateIds: ["all"] },
-  { id: "iocl",          name: "Indian Oil Corporation — Careers",             ...u("https://iocl.com/", "https://iocl.com/job-search"),                                    scope: "psu",     category: "psu",      stateIds: ["all"] },
-  { id: "bpcl",          name: "Bharat Petroleum — Careers",                   ...u("https://www.bharatpetroleum.in/", "https://bharatpetroleum.in/About-BPCL/Careers/Careers.aspx"), scope: "psu", category: "psu",   stateIds: ["all"] },
+  { id: "iocl",          name: "Indian Oil Corporation — Careers",             ...u("https://iocl.com/", "https://iocl.com/job-openings"),                                    scope: "psu",     category: "psu",      stateIds: ["all"] },
+  { id: "bpcl",          name: "Bharat Petroleum — Careers",                   ...u("https://www.bharatpetroleum.in/", "https://www.bharatpetroleum.in/careers/job-openings"), scope: "psu", category: "psu",   stateIds: ["all"] },
   { id: "hpcl",          name: "Hindustan Petroleum — Careers",                ...u("https://www.hindustanpetroleum.com/", "https://hindustanpetroleum.com/careersopportunities"), scope: "psu", category: "psu",  stateIds: ["all"] },
   { id: "gail",          name: "GAIL India — Careers",                         ...u("https://gailonline.com/", "https://gailonline.com/careers/"),                          scope: "psu",     category: "psu",      stateIds: ["all"] },
   { id: "ntpc",          name: "NTPC — Careers",                               ...u("https://www.ntpc.co.in/", "https://www.ntpc.co.in/en/career"),                        scope: "psu",     category: "psu",      stateIds: ["all"] },
   { id: "bhel",          name: "BHEL — Careers",                               ...u("https://www.bhel.com/", "https://careers.bhel.in/"),                                  scope: "psu",     category: "psu",      stateIds: ["all"] },
   { id: "hal",           name: "Hindustan Aeronautics (HAL)",                  ...u("https://hal-india.co.in/", "https://hal-india.co.in/Careers/M__93"),                   scope: "psu",     category: "defence",  stateIds: ["all"] },
   { id: "bel",           name: "Bharat Electronics (BEL)",                     ...u("https://bel-india.in/", "https://bel-india.in/job-notifications/"),                     scope: "psu",     category: "defence",  stateIds: ["all"] },
-  { id: "sail",          name: "Steel Authority of India (SAIL)",              ...u("https://sail.co.in/", "https://sail.co.in/en/career/career-opportunities"),            scope: "psu",     category: "psu",      stateIds: ["all"] },
+  { id: "sail",          name: "Steel Authority of India (SAIL)",              ...u("https://sail.co.in/", "https://sailcareers.com/"),            scope: "psu",     category: "psu",      stateIds: ["all"] },
 
   /* ---------- CENTRAL — Other ---------- */
   { id: "ies",           name: "Indian Statistical Service / ESE",             ...u("https://upsc.gov.in/", "https://upsc.gov.in/whats-new"),                              scope: "central", category: "upsc",     stateIds: ["all"] },
