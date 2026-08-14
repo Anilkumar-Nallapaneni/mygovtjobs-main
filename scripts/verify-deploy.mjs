@@ -122,6 +122,15 @@ const dataCache = vercelJson?.headers?.some(
 )
 ok('vercel.json /data/ Cache-Control', Boolean(dataCache), 'prevents stale empty JSON cache')
 
+const spaRewrite = vercelJson?.rewrites?.find((r) => r.source === '/(.*)' || r.source === '/:path*')
+ok(
+  'vercel.json SPA fallback destination is /',
+  spaRewrite?.destination === '/',
+  spaRewrite?.destination === '/index.html'
+    ? 'cleanUrls 404s rewrites to /index.html — use destination /'
+    : spaRewrite?.destination || 'missing catch-all rewrite'
+)
+
 const fe = loadEnv(join(root, 'frontend/.env.local'))
 const hasSupabase = fe.VITE_SUPABASE_URL?.startsWith('https://') && fe.VITE_SUPABASE_ANON_KEY?.length > 20
 ok('frontend/.env.local Supabase', hasSupabase, hasSupabase ? 'URL + anon key set' : 'copy frontend/.env.local.example')
@@ -155,6 +164,13 @@ if (deployUrl) {
       const items = Array.isArray(body) ? body : body?.items
       ok('Production JSON has jobs', Array.isArray(items) && items.length > 0, `${items?.length ?? 0} items`)
     }
+    const spaRes = await fetch(`${deployUrl}/results`, { signal: controller.signal })
+    const spaBody = spaRes.ok ? await spaRes.text() : ''
+    ok(
+      `${deployUrl}/results SPA`,
+      spaRes.ok && spaBody.includes('id="root"') && !spaBody.includes('404: NOT_FOUND'),
+      spaRes.ok ? 'SPA shell' : `HTTP ${spaRes.status}`
+    )
   } catch (e) {
     ok(`${deployUrl} reachable`, false, e instanceof Error ? e.message : String(e))
   } finally {

@@ -2,6 +2,8 @@
 /**
  * Post-build: SEO HTML for /jobs/:slug (JSON-LD + meta inside the Vite SPA shell).
  * Writes frontend/dist/jobs/{slug}.html — served at /jobs/{slug} when cleanUrls is on.
+ * Also writes jobs/index.html plus SPA shells for /results and other deep links
+ * so Vercel cleanUrls does not 404 those paths.
  * Missing slugs fall through to SPA rewrite (fetch-by-slug still works).
  */
 import { readFileSync, writeFileSync, existsSync, mkdirSync } from "fs";
@@ -451,6 +453,24 @@ function main() {
     written += 1;
     if (html.includes("addressLocality")) withLocality += 1;
   }
+  // /jobs is a directory after slug HTML is written. Without index.html Vercel
+  // 404s the listing even when the SPA rewrite is correct.
+  writeFileSync(join(jobsDir, "index.html"), spaHtml, "utf8");
+
+  const spaShells = [
+    ["results.html"],
+    ["results", "admit-card.html"],
+    ["results", "answer-key.html"],
+    ["alerts.html"],
+    ["contact.html"],
+    ["about.html"],
+  ];
+  for (const parts of spaShells) {
+    const dest = join(dist, ...parts);
+    mkdirSync(dirname(dest), { recursive: true });
+    writeFileSync(dest, spaHtml, "utf8");
+  }
+
   console.log(
     `Prerendered ${written} job pages under frontend/dist/jobs/*.html (${withLocality} with addressLocality)`
   );

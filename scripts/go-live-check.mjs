@@ -98,9 +98,16 @@ const apiUrl = fe.VITE_API_URL?.replace(/\/$/, '') || 'https://api.livegovtjobs.
 console.log('\n── Live probes (optional) ──')
 const apiHealth = process.env.API_HEALTH_URL || `${apiUrl}/health`
 const sitemapUrl = process.env.SITEMAP_URL || 'https://www.livegovtjobs.com/sitemap.xml'
+const siteUrl = (process.env.SITE_URL || 'https://www.livegovtjobs.com').replace(/\/$/, '')
 const liveApiOk = await probeUrl('API /health', apiHealth, { expectSubstr: '"status"' })
 await probeUrl('Public sitemap index', sitemapUrl, {
   expectSubstr: '<sitemapindex',
+})
+await probeUrl('SPA /results (not Vercel 404)', `${siteUrl}/results`, {
+  expectSubstr: 'id="root"',
+})
+await probeUrl('SPA /results/admit-card', `${siteUrl}/results/admit-card`, {
+  expectSubstr: 'id="root"',
 })
 
 if (be.SENTRY_DSN) {
