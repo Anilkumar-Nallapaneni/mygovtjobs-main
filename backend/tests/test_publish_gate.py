@@ -63,6 +63,8 @@ def test_can_publish_requires_verified_recruitment():
             "title": "UPSC CDS Recruitment 2026",
             "dept": "UPSC",
             "apply_url": "https://upsc.gov.in/apply",
+            "source_url": "https://upsc.gov.in/recruitment",
+            "primary_pdf_url": "https://upsc.gov.in/cds-2026.pdf",
             "document_type": "RECRUITMENT",
             "verification_status": "VERIFIED",
             "published_at": today - timedelta(days=5),
@@ -86,6 +88,7 @@ def test_can_publish_rejects_old_dates_and_forms():
             "title": "OBC Form",
             "dept": "Board",
             "apply_url": "https://example.gov.in/form.pdf",
+            "primary_pdf_url": "https://example.gov.in/form.pdf",
             "document_type": "FORM",
             "verification_status": "VERIFIED",
             "published_at": date(1995, 1, 1),
@@ -102,6 +105,9 @@ def _publishable_job(today: date, deadline: object) -> dict:
         "title": "UPSC CDS Recruitment 2026",
         "dept": "UPSC",
         "apply_url": "https://upsc.gov.in/apply",
+        "source_url": "https://upsc.gov.in/recruitment",
+        "primary_pdf_url": "https://upsc.gov.in/cds-2026.pdf",
+        "notification_url": "https://upsc.gov.in/cds-2026.pdf",
         "document_type": "RECRUITMENT",
         "verification_status": "VERIFIED",
         "published_at": today - timedelta(days=5),
@@ -145,6 +151,7 @@ def test_validation_result_includes_warnings_and_confidence():
         **_publishable_job(today, today + timedelta(days=10)),
         "source_url": "https://upsc.gov.in/recruitment/notice",
         "notification_url": "https://upsc.gov.in/recruitment/notice.pdf",
+        "primary_pdf_url": "https://upsc.gov.in/recruitment/notice.pdf",
         "state_codes": [],
         "vacancies": None,
     }
@@ -153,6 +160,21 @@ def test_validation_result_includes_warnings_and_confidence():
     assert result.valid
     assert result.confidence == 95
     assert "Vacancy count is not specified" in result.warnings
+
+
+def test_validation_rejects_html_only_without_pdf():
+    today = date(2026, 7, 27)
+    payload = {
+        **_publishable_job(today, today + timedelta(days=10)),
+        "primary_pdf_url": None,
+        "notification_url": "https://upsc.gov.in/recruitment/notice",
+        "pdf_urls": [],
+        "detail": {},
+        "apply_url": "https://upsc.gov.in/apply",
+    }
+    result = validate_job_for_publication(payload, today=today)
+    assert not result.valid
+    assert "Missing official notification PDF" in result.errors
 
 
 def test_validation_rejects_unofficial_source_and_duplicate():
@@ -210,6 +232,8 @@ def test_resolve_persist_status_freeze_defaults_to_draft():
             "title": "Bank PO Recruitment 2026",
             "dept": "IBPS",
             "apply_url": "https://ibps.in/apply",
+            "source_url": "https://ibps.in/careers",
+            "primary_pdf_url": "https://ibps.in/po-2026.pdf",
             "published_at": today,
             "qualification": "Graduate",
             "vacancies": 50,
@@ -235,6 +259,8 @@ def test_resolve_persist_status_auto_publish_goes_live():
             "title": "Bank PO Recruitment 2026",
             "dept": "IBPS",
             "apply_url": "https://ibps.in/apply",
+            "source_url": "https://ibps.in/careers",
+            "primary_pdf_url": "https://ibps.in/po-2026.pdf",
             "published_at": today,
             "qualification": "Graduate",
             "vacancies": 50,
@@ -248,6 +274,32 @@ def test_resolve_persist_status_auto_publish_goes_live():
     assert status == "live"
     assert verification == "VERIFIED"
     assert published is True
+
+
+def test_resolve_persist_status_auto_publish_blocks_without_pdf():
+    today = date(2026, 7, 24)
+    status, verification, published, errors = resolve_persist_status(
+        last_date=today + timedelta(days=20),
+        document_type="RECRUITMENT",
+        verification_status="UNVERIFIED",
+        normalized={
+            "title": "Bank PO Recruitment 2026",
+            "dept": "IBPS",
+            "apply_url": "https://ibps.in/apply",
+            "source_url": "https://ibps.in/careers",
+            "published_at": today,
+            "qualification": "Graduate",
+            "vacancies": 50,
+            "age_limit": "20-30",
+            "salary": "Scale I",
+        },
+        auto_publish_verified=True,
+        today=today,
+        completeness_score=80,
+    )
+    assert status == "draft"
+    assert published is False
+    assert any("PDF" in e for e in errors)
 
 
 def test_pdf_candidate_scoring():

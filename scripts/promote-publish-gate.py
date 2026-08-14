@@ -49,12 +49,18 @@ def _clamp_published_at(value: datetime | date | None, *, today: date, last: dat
         pub_date = min(today, last)
     return datetime(pub_date.year, pub_date.month, pub_date.day, tzinfo=timezone.utc)
 
-# Near-complete official recruitments often score 85 (missing state/qual/vacancies).
-# Promote script accepts that floor; ingest auto-publish still uses 90.
+# Near-complete official recruitments must still clear the public confidence floor.
 PROMOTE_MIN_CONFIDENCE = 90.0  # same as public RLS/export floor — no confidence inflation
 
 
 def _job_payload(job: Job, *, doc_type: str, detail: dict, title: str, dept: str | None, qualification: str | None) -> dict:
+    pdf_url = (
+        getattr(job, "primary_pdf_url", None)
+        or detail.get("primary_pdf_url")
+        or detail.get("pdf_url")
+        or detail.get("pdfUrl")
+        or detail.get("notification_url")
+    )
     return {
         "title": title,
         "dept": dept,
@@ -62,7 +68,8 @@ def _job_payload(job: Job, *, doc_type: str, detail: dict, title: str, dept: str
         "organization": dept,
         "apply_url": job.apply_url,
         "source_url": getattr(job, "source_url", None) or detail.get("source_url"),
-        "notification_url": detail.get("notification_url") or detail.get("pdf_url"),
+        "notification_url": detail.get("notification_url") or pdf_url,
+        "primary_pdf_url": getattr(job, "primary_pdf_url", None) or detail.get("primary_pdf_url") or pdf_url,
         "document_type": "RECRUITMENT" if doc_type in ("RECRUITMENT", "UNKNOWN") else doc_type,
         "verification_status": "VERIFIED",
         "published_at": job.published_at,
@@ -73,7 +80,10 @@ def _job_payload(job: Job, *, doc_type: str, detail: dict, title: str, dept: str
         "age_limit": job.age_limit,
         "completeness_score": getattr(job, "completeness_score", 0) or 0,
         "detail": detail,
-        "pdf_urls": detail.get("pdf_urls") or detail.get("pdfUrls") or [],
+        "pdf_urls": detail.get("pdf_urls") or detail.get("pdfUrls") or ([pdf_url] if pdf_url else []),
+        "state_codes": list(getattr(job, "state_codes", None) or detail.get("state_codes") or []),
+        "state": detail.get("state"),
+        "location": detail.get("location"),
     }
 
 
@@ -157,10 +167,6 @@ async def main(apply: bool, export: bool, limit: int) -> int:
             payload["last_date"] = effective_last
             score, _missing = calculate_completeness(payload)
             payload["completeness_score"] = score
-            # Soft location fallback for central/all-India notices missing state tags.
-            if not payload.get("state") and not detail.get("state_codes") and not payload.get("location"):
-                payload["state"] = "India"
-                payload["location"] = "India"
             validation = validate_job_for_publication(payload, today=today)
             ok = validation.valid and validation.confidence >= PROMOTE_MIN_CONFIDENCE
             errors = list(validation.errors)

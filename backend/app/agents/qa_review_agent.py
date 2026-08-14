@@ -352,8 +352,9 @@ class QaReviewAgent:
             "age_limit": job.age_limit,
             "detail": patches.get("detail") or detail,
             "pdf_urls": ([eff_pdf] if eff_pdf else []) or detail.get("pdf_urls") or [],
-            "state": (eff_states[0] if eff_states else "India"),
-            "location": (eff_states[0] if eff_states else "India"),
+            "state": (eff_states[0] if eff_states else None),
+            "location": (eff_states[0] if eff_states else None),
+            "state_codes": list(eff_states or []),
         }
         score, _missing = calculate_completeness(payload)
         payload["completeness_score"] = score
@@ -380,14 +381,11 @@ class QaReviewAgent:
             "non-recruitment" in e.lower() or "tender" in e.lower() for e in validation.errors
         ):
             decision = "reject"
-        elif validation.valid and confidence >= QA_APPROVE_MIN_CONFIDENCE and eff_last:
-            # Approve for publisher when date present and gate mostly happy.
-            # PDF strongly preferred; allow approve without PDF only at higher confidence.
-            if eff_pdf or confidence >= 90.0:
-                decision = "approve"
-            else:
-                decision = "needs_fix"
-                reasons.append("approve blocked until PDF found (or confidence ≥ 90)")
+        elif validation.valid and confidence >= QA_APPROVE_MIN_CONFIDENCE and eff_last and eff_pdf:
+            decision = "approve"
+        elif validation.valid and confidence >= QA_APPROVE_MIN_CONFIDENCE and eff_last and not eff_pdf:
+            decision = "needs_fix"
+            reasons.append("approve blocked until official PDF found")
         elif not validation.valid:
             decision = "needs_fix"
             reasons.extend(validation.errors[:5])

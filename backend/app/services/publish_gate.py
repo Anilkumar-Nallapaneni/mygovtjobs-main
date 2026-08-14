@@ -14,7 +14,7 @@ from app.services.noise_filter import (
     is_junk_job_title,
     is_tender_or_procurement,
 )
-from app.utils.official_hosts import is_official_recruitment_host
+from app.utils.official_hosts import is_official_recruitment_host, looks_like_notification_document
 
 INDIA_TZ = ZoneInfo("Asia/Kolkata")
 AUTO_PUBLISH_MIN_CONFIDENCE = 90.0
@@ -103,6 +103,40 @@ def _publication_urls(job: dict[str, Any]) -> tuple[str | None, str | None, str 
     return source_url, notification_url, apply_url
 
 
+def _official_notification_pdf(job: dict[str, Any]) -> str | None:
+    """Return the first official PDF/document URL suitable for public publish."""
+    detail = _detail(job)
+    candidates: list[str] = []
+    for value in (
+        job.get("primary_pdf_url"),
+        detail.get("primary_pdf_url"),
+        job.get("pdf_url"),
+        detail.get("pdf_url"),
+        detail.get("pdfUrl"),
+        job.get("notification_url"),
+        detail.get("notification_url"),
+        job.get("apply_url"),
+        detail.get("apply_url"),
+    ):
+        if isinstance(value, str) and value.strip():
+            candidates.append(value.strip())
+    for key in ("pdf_urls", "pdfUrls"):
+        raw = job.get(key) or detail.get(key) or []
+        if isinstance(raw, list):
+            for item in raw:
+                if isinstance(item, str) and item.strip():
+                    candidates.append(item.strip())
+
+    for url in candidates:
+        if (
+            _valid_http_url(url)
+            and is_official_recruitment_host(url)
+            and looks_like_notification_document(url)
+        ):
+            return url
+    return None
+
+
 def validate_job_for_publication(
     job: dict[str, Any],
     *,
@@ -138,17 +172,18 @@ def validate_job_for_publication(
     else:
         score += 20
 
-    if notification_url:
-        if _valid_http_url(notification_url) and is_official_recruitment_host(notification_url):
-            score += 10
-        else:
-            errors.append("Notification URL is invalid or unofficial")
-    elif source_url and _valid_http_url(source_url):
-        # An official recruitment page may be the notification when no PDF exists.
+    pdf_url = _official_notification_pdf(job)
+    if pdf_url:
         score += 10
-        warnings.append("No separate notification URL")
     else:
-        errors.append("Missing notification URL")
+        # HTML listing pages are not enough — public jobs need an official PDF/document.
+        errors.append("Missing official notification PDF")
+
+    if notification_url and notification_url != pdf_url:
+        if _valid_http_url(notification_url) and is_official_recruitment_host(notification_url):
+            warnings.append("Separate HTML notification URL present")
+        else:
+            warnings.append("Notification URL is invalid or unofficial")
 
     if apply_url:
         if _valid_http_url(apply_url) and is_official_recruitment_host(apply_url):
