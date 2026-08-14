@@ -77,6 +77,37 @@ def _assert_gated_snapshot_after_export() -> None:
         )
 
 
+def _print_watchdog_summary() -> None:
+    """Surface WatchdogAgent results in CI logs and copy a durable audit artifact."""
+    report_path = ROOT / "scripts" / "watchdog-report.json"
+    if not report_path.exists():
+        print("warn: watchdog-report.json missing after ai:watchdog:apply-db", flush=True)
+        return
+    try:
+        report = json.loads(report_path.read_text(encoding="utf-8"))
+    except Exception as exc:  # noqa: BLE001
+        print(f"warn: unreadable watchdog-report.json: {exc}", flush=True)
+        return
+    demoted = report.get("demoted") or []
+    print(
+        "=== Watchdog summary === "
+        f"scanned={report.get('scanned', 0)} "
+        f"ok={report.get('ok', 0)} "
+        f"demoted={len(demoted)} "
+        f"updated={report.get('rowsUpdated', 0)}",
+        flush=True,
+    )
+    for row in demoted[:12]:
+        slug = row.get("slug") if isinstance(row, dict) else row
+        reasons = row.get("reasons") if isinstance(row, dict) else None
+        print(f"  demoted: {slug} reasons={reasons}", flush=True)
+    audit_dir = ROOT / "docs" / "audits"
+    audit_dir.mkdir(parents=True, exist_ok=True)
+    dest = audit_dir / "watchdog-latest.json"
+    dest.write_text(json.dumps(report, ensure_ascii=False, indent=2, default=str), encoding="utf-8")
+    print(f"Wrote {dest}", flush=True)
+
+
 def _apply_socket_timeout_floor() -> None:
     """Floor every synchronous socket read so no blocking scraper call can freeze the
     process. See run-daily-8am-sync.py for the full rationale. asyncio/asyncpg/aiohttp
@@ -211,6 +242,7 @@ async def main() -> int:
         require_npm("data:promote-publish-gate:apply")
         # Demote bad live rows after promote, before the final gated export.
         require_npm("ai:watchdog:apply-db")
+        _print_watchdog_summary()
         require_npm("export:live-jobs")
         _assert_gated_snapshot_after_export()
         require_npm("data:scrub-vacancies")

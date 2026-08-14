@@ -84,6 +84,8 @@ def _job_payload(job: Job, *, doc_type: str, detail: dict, title: str, dept: str
         "state_codes": list(getattr(job, "state_codes", None) or detail.get("state_codes") or []),
         "state": detail.get("state"),
         "location": detail.get("location"),
+        "source": detail.get("source"),
+        "source_state_code": detail.get("source_state_code") or detail.get("state"),
     }
 
 

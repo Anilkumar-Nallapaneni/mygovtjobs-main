@@ -15,6 +15,7 @@ from app.services.noise_filter import (
     is_tender_or_procurement,
 )
 from app.utils.official_hosts import is_official_recruitment_host, looks_like_notification_document
+from app.utils.state_resolve import normalize_state_codes
 
 INDIA_TZ = ZoneInfo("Asia/Kolkata")
 AUTO_PUBLISH_MIN_CONFIDENCE = 90.0
@@ -247,11 +248,23 @@ def validate_job_for_publication(
     else:
         score += 5
 
-    state_classified = (
-        "state_codes" in job
-        or bool(str(job.get("state") or job.get("location") or "").strip())
+    state_codes = normalize_state_codes(job.get("state_codes"))
+    detail = _detail(job)
+    source_hint = str(job.get("source") or detail.get("source") or "").strip().lower()
+    source_state = str(
+        job.get("source_state_code") or detail.get("source_state_code") or ""
+    ).strip().lower()
+    if not source_state and source_hint.startswith("psc-") and len(source_hint) > 4:
+        source_state = source_hint[4:].split("-", 1)[0][:8]
+    state_label = str(job.get("state") or job.get("location") or "").strip().lower()
+    is_state_scoped = bool(source_state) or (
+        bool(state_label)
+        and state_label not in ("", "india", "all", "all india", "central", "nationwide")
     )
-    if state_classified:
+
+    if is_state_scoped and not state_codes:
+        errors.append("State-scoped recruitment requires state_codes")
+    elif state_codes or state_label:
         score += 5
     else:
         warnings.append("Location or state is not classified")

@@ -158,8 +158,10 @@ def test_validation_result_includes_warnings_and_confidence():
     result = validate_job_for_publication(payload, today=today)
     assert isinstance(result, ValidationResult)
     assert result.valid
-    assert result.confidence == 95
+    # No state_codes / vacancies → lose those +5 bonuses (base publishable path = 90).
+    assert result.confidence == 90
     assert "Vacancy count is not specified" in result.warnings
+    assert "Location or state is not classified" in result.warnings
 
 
 def test_validation_rejects_html_only_without_pdf():
@@ -175,6 +177,23 @@ def test_validation_rejects_html_only_without_pdf():
     result = validate_job_for_publication(payload, today=today)
     assert not result.valid
     assert "Missing official notification PDF" in result.errors
+
+
+def test_state_scoped_source_requires_state_codes():
+    today = date(2026, 7, 27)
+    payload = {
+        **_publishable_job(today, today + timedelta(days=10)),
+        "source": "psc-ap",
+        "state_codes": [],
+        "state": None,
+        "location": None,
+    }
+    result = validate_job_for_publication(payload, today=today)
+    assert not result.valid
+    assert "State-scoped recruitment requires state_codes" in result.errors
+
+    ok_payload = {**payload, "state_codes": ["ap"]}
+    assert validate_job_for_publication(ok_payload, today=today).valid
 
 
 def test_validation_rejects_unofficial_source_and_duplicate():

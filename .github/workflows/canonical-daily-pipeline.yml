@@ -111,14 +111,17 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: canonical-daily-${{ github.run_id }}
-          path: docs/audits/pipeline-daily-latest.json
+          path: |
+            docs/audits/pipeline-daily-latest.json
+            docs/audits/watchdog-latest.json
+            scripts/watchdog-report.json
           if-no-files-found: warn
 
       - name: Commit verified snapshots
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -A -- frontend/public/data frontend/public/sitemap.xml frontend/public/sitemaps docs/audits/pipeline-daily-latest.json || true
+          git add -A -- frontend/public/data frontend/public/sitemap.xml frontend/public/sitemaps docs/audits/pipeline-daily-latest.json docs/audits/watchdog-latest.json || true
           git status --short
           if git diff --staged --quiet; then
             echo "No snapshot changes to commit"
