@@ -123,6 +123,7 @@
     "ai:review:central": "node scripts/run-python.mjs scripts/run-qa-review-agent.py --bucket central",
     "ai:review:all-india": "node scripts/run-python.mjs scripts/run-qa-review-agent.py --bucket all-india",
     "ai:watchdog": "node scripts/run-python.mjs scripts/run-watchdog-agent.py",
+    "ai:watchdog:apply-db": "node scripts/run-python.mjs scripts/run-watchdog-agent.py --apply",
     "ai:watchdog:apply": "node scripts/run-python.mjs scripts/run-watchdog-agent.py --apply --export",
     "ai:employees": "node scripts/run-python.mjs scripts/run-ai-employees.py --publish --watchdog",
     "ai:employees:apply": "node scripts/run-python.mjs scripts/run-ai-employees.py --apply --publish --watchdog --export",

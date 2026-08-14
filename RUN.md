@@ -99,7 +99,7 @@ Official portals  →  Agent 1  →  Agent 2  →  Agent 3  →  Website
 | **3** | **JobDetailAgent** | Build job detail pages for the UI | `npm run job:details` |
 | **4** | **WebsiteHealthAgent** | Audit + guide fixes for code, Supabase, Vercel, GitHub, API, analytics, live site | `npm run health:website` / `health:website:full` |
 | **5** | **QaReviewAgent** | AI employee — verify vacancy/date/PDF/state/title by state bucket | `npm run ai:review` / `ai:review:apply` |
-| **6** | **WatchdogAgent** | AI employee — demote bad live jobs | `npm run ai:watchdog` / `ai:watchdog:apply` |
+| **6** | **WatchdogAgent** | AI employee — demote bad live jobs (also runs in `sync:production` before export) | `npm run ai:watchdog` / `ai:watchdog:apply-db` / `ai:watchdog:apply` |
 | **7** | **AI Employees** | QA (all buckets) → promote → watchdog | `npm run ai:employees` / `ai:employees:apply` |
 | — | **All Websites** | Catalog gov job portals across India (discovery only) | `npm run websites:discover` |
 | — | **RSS feeds** | Official Wire & Notices (separate from main ingest) | `npm run fetch:official:feeds` |

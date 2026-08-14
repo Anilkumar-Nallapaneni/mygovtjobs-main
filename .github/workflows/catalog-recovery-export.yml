@@ -22,7 +22,7 @@ jobs:
     timeout-minutes: 45
     env:
       APP_ENV: production
-      AUTO_PUBLISH_VERIFIED: "1"
+      AUTO_PUBLISH_VERIFIED: "0"
       DATABASE_URL: ${{ secrets.DATABASE_URL }}
       SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL }}
       SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}

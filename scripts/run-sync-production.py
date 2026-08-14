@@ -209,6 +209,8 @@ async def main() -> int:
             print(f"warn: build:official-archives exited {archive_code}; continuing", flush=True)
 
         require_npm("data:promote-publish-gate:apply")
+        # Demote bad live rows after promote, before the final gated export.
+        require_npm("ai:watchdog:apply-db")
         require_npm("export:live-jobs")
         _assert_gated_snapshot_after_export()
         require_npm("data:scrub-vacancies")

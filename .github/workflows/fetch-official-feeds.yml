@@ -24,7 +24,7 @@ jobs:
     # Manual runs scrape 53 admit/result portals.
     timeout-minutes: 180
     env:
-      AUTO_PUBLISH_VERIFIED: "1"
+      AUTO_PUBLISH_VERIFIED: "0"
 
     steps:
       - uses: actions/checkout@v4

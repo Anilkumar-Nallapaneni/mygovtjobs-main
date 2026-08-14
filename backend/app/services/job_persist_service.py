@@ -403,18 +403,15 @@ class JobPersistService:
                 return value
             return case((preserve_public_gate, existing_column), else_=value)
 
-        last_date_update = (
-            preserve_gate_value(row["last_date"], Job.last_date)
-            if row["last_date"] is None
-            else row["last_date"]
-        )
+        last_date_update = preserve_gate_value(row["last_date"], Job.last_date)
+        vacancies_update = preserve_gate_value(row["vacancies"], Job.vacancies)
 
         update_values = {
             "title": row["title"],
             "dept": row["dept"],
             "category": row["category"],
             "state_codes": row["state_codes"],
-            "vacancies": row["vacancies"],
+            "vacancies": vacancies_update,
             "last_date": last_date_update,
             "apply_url": row["apply_url"],
             "published_at": row["published_at"],
@@ -463,10 +460,12 @@ class JobPersistService:
                 "slug": row["slug"],
                 "content_hash": row["content_hash"],
             }
-            if row["last_date"] is None and keep_gate:
+            # Never clobber live dates/vacancies with a scrape that would have demoted the row.
+            if keep_gate:
                 python_updates.pop("last_date", None)
-            elif row["last_date"] is not None:
-                python_updates["last_date"] = row["last_date"]
+                python_updates.pop("vacancies", None)
+            elif row["last_date"] is None:
+                python_updates.pop("last_date", None)
             for key, value in python_updates.items():
                 setattr(persisted_job, key, value)
             await session.flush()

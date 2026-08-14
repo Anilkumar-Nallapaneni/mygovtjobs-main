@@ -24,7 +24,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 240
     env:
-      AUTO_PUBLISH_VERIFIED: "1"
+      AUTO_PUBLISH_VERIFIED: "0"
     steps:
       - uses: actions/checkout@v4
         with:
