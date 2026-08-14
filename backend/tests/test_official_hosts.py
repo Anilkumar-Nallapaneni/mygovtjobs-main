@@ -15,6 +15,21 @@ def test_known_aggregator_still_blocked():
     assert not is_official_recruitment_host(url)
 
 
+def test_commercial_job_boards_blocked():
+    assert is_blocked_aggregator_host("https://www.naukri.com/job")
+    assert is_blocked_aggregator_host("https://in.indeed.com/viewjob")
+    assert not is_official_recruitment_host("https://www.naukri.com/job")
+
+
+def test_shared_catalog_stems_loaded():
+    from app.utils.official_hosts import _catalog
+
+    catalog = _catalog()
+    assert "apeda.gov.in" in catalog["officialStems"]
+    assert "yesbank.in" in catalog["officialStems"]
+    assert "naukri" in catalog["blockedCommercialBoards"]
+
+
 def test_psu_and_aiims_edu_in_hosts():
     assert is_official_recruitment_host("https://www.bsnl.co.in/opencms/bsnl/BSNL/about_us/company/career_opp.html")
     assert is_official_recruitment_host("https://www.ecil.co.in/jobs/Advt_09_2026.pdf")

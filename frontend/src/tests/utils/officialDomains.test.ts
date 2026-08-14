@@ -47,6 +47,16 @@ describe('isOfficialRecruitmentUrl', () => {
     expect(isOfficialRecruitmentUrl('https://www.naukri.com/job')).toBe(false)
   })
 
+  it('rejects commercial boards from shared catalog', () => {
+    expect(isBlockedAggregatorHost('https://www.indeed.com/viewjob')).toBe(true)
+    expect(isOfficialRecruitmentUrl('https://www.monster.com/job')).toBe(false)
+  })
+
+  it('accepts stems present only on one former list', () => {
+    expect(isOfficialRecruitmentUrl('https://apeda.gov.in/careers')).toBe(true)
+    expect(isOfficialRecruitmentUrl('https://www.yesbank.in/careers')).toBe(true)
+  })
+
   it('accepts expanded PSU and AIIMS .edu.in hosts', () => {
     expect(isOfficialRecruitmentUrl('https://www.bsnl.co.in/opencms/bsnl/BSNL/about_us/company/career_opp.html')).toBe(true)
     expect(isOfficialRecruitmentUrl('https://www.ecil.co.in/jobs/Advt_09_2026.pdf')).toBe(true)

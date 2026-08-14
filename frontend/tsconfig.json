@@ -20,11 +20,12 @@
     "typeRoots": ["../node_modules/@types", "./node_modules/@types"],
     "paths": {
       "@/*": ["./src/*"],
+      "@shared/*": ["../shared/*"],
       "@components/*": ["./src/components/*"],
       "@styles/*": ["./src/styles/*"],
       "@utils/*": ["./src/utils/*"],
       "@hooks/*": ["./src/hooks/*"]
     }
   },
-  "include": ["src"]
+  "include": ["src", "../shared/**/*.json"]
 }

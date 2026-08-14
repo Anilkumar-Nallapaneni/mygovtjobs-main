@@ -254,7 +254,10 @@ export default defineConfig(({ mode }) => {
       },
     },
     resolve: {
-      alias: [{ find: '@', replacement: resolve(__dirname, 'src') }],
+      alias: [
+        { find: '@', replacement: resolve(__dirname, 'src') },
+        { find: '@shared', replacement: resolve(__dirname, '../shared') },
+      ],
     },
     server: {
       port: 3689,

@@ -1,6 +1,8 @@
 /**
  * Official recruitment URLs only — block third-party job-aggregator domains.
+ * Host lists live in shared/official-hosts.json (single source of truth).
  */
+import hostsCatalog from '@shared/official-hosts.json'
 import { collectPdfUrls, looksLikeNotificationDocument } from '@/utils/resolvePdfUrl'
 
 const LEGACY_CATALOG_SOURCES = new Set(['structured-import', 'fja-import'])
@@ -17,43 +19,14 @@ function isCatalogImportDetail(detail: unknown): boolean {
   return String(d.data_origin || '').toLowerCase() === 'freejobalert'
 }
 
-const BLOCKED_HOST_RE =
-  new RegExp(
-    `(?:^|\\.)(?:${[
-      `${'free'}${'job'}${'alert'}`,
-      'sarkariresult',
-      'sarkarijob',
-      'sarkarinaukri',
-      'governmentjob',
-      'indgovtjobs',
-      'rojgarresult',
-      'jobriya',
-      'fresherslive',
-      'naukri',
-      'indeed',
-      'shine',
-      'timesjobs',
-      'foundit',
-      'monster',
-    ].join('|')})\\.`,
-    'i'
-  )
+const BLOCKED_HOST_NAMES = [
+  ...hostsCatalog.blockedAggregators,
+  ...hostsCatalog.blockedCommercialBoards,
+]
 
-const BLOCKED_TEXT_RE =
-  new RegExp(
-    [
-      `${'free'}${'job'}${'alert'}`,
-      'sarkariresult',
-      'sarkarijob',
-      'sarkarinaukri',
-      'governmentjob',
-      'indgovtjobs',
-      'rojgarresult',
-      'jobriya',
-      'fresherslive',
-    ].join('|'),
-    'i'
-  )
+const BLOCKED_HOST_RE = new RegExp(`(?:^|\\.)(?:${BLOCKED_HOST_NAMES.map(escapeRegExp).join('|')})\\.`, 'i')
+
+const BLOCKED_TEXT_RE = new RegExp(hostsCatalog.blockedAggregators.map(escapeRegExp).join('|'), 'i')
 
 const OFFICIAL_HOST_RE = /\.(gov|nic|ac|org|res|edu)\.in$/i
 const ERNET_IN_RE = /\.ernet\.in$/i
@@ -63,132 +36,18 @@ const GOOGLE_FILE_RE = /drive\.google\.com\/file\/d\/|docs\.google\.com\/forms\/
 const FORMS_SHORT_RE = /^https?:\/\/(www\.)?forms\.gle\//i
 const SAIL_S3_RE = /aima-web-images\.s3\.ap-south-1\.amazonaws\.com\/sailcareers\.com\//i
 
-const PSU_PREFIX_RE =
-  /^(www\.)?(upsc|ssc|rrb|ibps|isro|drdo|bel|coalindia|ntpc|nhai|esic|aiims|jipmer|nimhans|nielit|npcil|pib|bsnl|ecil|hal|ongc|oil|irctc|nfl|eil)\./i
+const PSU_PREFIX_RE = new RegExp(
+  `^(www\\.)?(${hostsCatalog.psuPrefixes.map(escapeRegExp).join('|')})\\.`,
+  'i'
+)
 
-/** PSU / bank / institute career portals (not always .gov.in). */
-const OFFICIAL_STEMS = [
-  'aaiclas.aero',
-  'afspanchwati.com',
-  'allahabadhighcourt.in',
-  'andrewyule.com',
-  'annauniv.edu',
-  'apprenticeshipindia.gov.in',
-  'apeda.gov.in',
-  'aweil.in',
-  'balmerlawrie.com',
-  'bankofbaroda.co.in',
-  'bankofbaroda.in',
-  'bcclweb.in',
-  'bfuhs.ggsmch.org',
-  'biharsports.org',
-  'bobcaps.in',
-  'braithwaiteindia.com',
-  'bsnl.co.in',
-  'canarabank.com',
-  'careers.cdac.in',
-  'careers.nfl.co.in',
-  'cdac.in',
-  'centralbankofindia.co.in',
-  'cochinshipyard.in',
-  'cswcrtiweb.org',
-  'csu-puri.edu.in',
-  'delhimetrorail.com',
-  'demo-appiness.com',
-  'dicmedia.digitalindiacorporation.in',
-  'dredge-india.com',
-  'dhsgsu.edu.in',
-  'ecil.co.in',
-  'eil.co.in',
-  'employmentnews.gov.in',
-  'fact.co.in',
-  'fddiindia.com',
-  'g03.tcsion.com',
-  'glidersindia.com',
-  'gujaratmetrorail.com',
-  'hal-india.co.in',
-  'hindustancopper.com',
-  'hrrl.in',
-  'hslvizag.in',
-  'hpptcl.com',
-  'ibps.in',
-  'icar-crri.in',
-  'icgeb.org',
-  'icsi.edu',
-  'ilpgt.com',
-  'indianbank.in',
-  'iprcl.in',
-  'irctc.com',
-  'isro.gov.in',
-  'jkicds.com',
-  'kksgovwc.org',
-  'kochimetro.org',
-  'konkanrailway.com',
-  'kribhco.net',
-  'kvafsu.edu.in',
-  'kvk4.in',
-  'licindia.in',
-  'lifecarehll.com',
-  'mahatransco.in',
-  'mahanadicoal.in',
-  'manipurpollution.org',
-  'meconlimited.co.in',
-  'midhani-india.in',
-  'mmrcl.com',
-  'mpmetrorail.com',
-  'nabcons.com',
-  'nabfins.org',
-  'nalcoindia.com',
-  'ncdc.in',
-  'nclcil.in',
-  'ncrtc.co.in',
-  'nhsrcindia.org',
-  'nimhans.edu.in',
-  'nitt.edu',
-  'nplindia.in',
-  'ntpc.co.in',
-  'oil-india.com',
-  'ongcindia.com',
-  'optcl.co.in',
-  'pcbassam.org',
-  'pau.edu',
-  'portals.secl-cil.in',
-  'pnbindia.in',
-  'pspcl.in',
-  'purabi.coop',
-  'punepeoples.bank.in',
-  'rbi.org.in',
-  'railtel.in',
-  'railtelindia.com',
-  'rcfltd.com',
-  'recruitment.ggsmch.org',
-  'recruitment.mmrcl.com',
-  'recruitment.nhsrcindia.org',
-  'recruitment.purabi.coop',
-  'recruitment.thsti.in',
-  'rites.com',
-  'rvnl.org',
-  'sailcareers.com',
-  'sainikschoolgoalpara.org',
-  'sainikschooljhansi.com',
-  'sbi.bank.in',
-  'sbi.co.in',
-  'scdrc.chdadmnrectt.in',
-  'sdclindia.com',
-  'secl-cil.in',
-  'ssgopalganj.in',
-  'stpi.in',
-  'tcsion.com',
-  'tezu.ernet.in',
-  'theacms.in',
-  'udupicsl.com',
-  'unionbankofindia.co.in',
-  'virtualofficeerp.com',
-  'wbsetcl.in',
-  'westerncoal.in',
-]
+const OFFICIAL_STEMS = hostsCatalog.officialStems
 
-export function hostnameOf(url) {
+function escapeRegExp(value: string): string {
+  return value.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
+}
+
+export function hostnameOf(url: string): string {
   try {
     return new URL(url).hostname.toLowerCase()
   } catch {
@@ -196,18 +55,18 @@ export function hostnameOf(url) {
   }
 }
 
-export function containsBlockedBrandText(...parts) {
+export function containsBlockedBrandText(...parts: unknown[]): boolean {
   const hay = parts.filter(Boolean).join(' ')
   return BLOCKED_TEXT_RE.test(hay)
 }
 
-export function isBlockedAggregatorHost(url) {
+export function isBlockedAggregatorHost(url: string): boolean {
   const host = hostnameOf(url)
   if (!host) return false
   return BLOCKED_HOST_RE.test(host) || containsBlockedBrandText(host)
 }
 
-export function isOfficialRecruitmentUrl(url) {
+export function isOfficialRecruitmentUrl(url: string): boolean {
   if (!url || url === '#') return false
   if (isBlockedAggregatorHost(url)) return false
   try {
@@ -236,50 +95,50 @@ export function isOfficialRecruitmentUrl(url) {
   }
 }
 
-function collectSectionLinks(job) {
-  const sections = job?.detail?.content_sections
+function collectSectionLinks(job: Record<string, unknown> | null | undefined): string[] {
+  const detail = job?.detail as { content_sections?: Array<{ links?: Array<{ url?: string }> }> } | undefined
+  const sections = detail?.content_sections
   if (!Array.isArray(sections)) return []
-  return sections.flatMap((section) =>
-    (section?.links || []).map((link) => link?.url).filter(Boolean)
-  )
+  return sections.flatMap((section) => (section?.links || []).map((link) => link?.url).filter(Boolean) as string[])
 }
 
 /** Primary outbound URLs — excludes scraped section promos (Telegram/WhatsApp, etc.). */
-export function collectPrimaryJobUrls(job) {
+export function collectPrimaryJobUrls(job: Record<string, unknown> | null | undefined): string[] {
+  const detail = (job?.detail || {}) as Record<string, unknown>
   return [
     job?.applyUrl,
     job?.officialUrl,
     job?.pdfUrl,
     job?.pdf_url,
     job?.apply_url,
-    job?.detail?.pdf_url,
-    job?.detail?.pdfUrl,
-    job?.detail?.notification_url,
-    job?.detail?.link,
-    job?.detail?.source_url,
-    ...(Array.isArray(job?.detail?.pdf_urls) ? job.detail.pdf_urls : []),
-    ...(Array.isArray(job?.detail?.pdfUrls) ? job.detail.pdfUrls : []),
-  ].filter(Boolean)
+    detail.pdf_url,
+    detail.pdfUrl,
+    detail.notification_url,
+    detail.link,
+    detail.source_url,
+    ...(Array.isArray(detail.pdf_urls) ? detail.pdf_urls : []),
+    ...(Array.isArray(detail.pdfUrls) ? detail.pdfUrls : []),
+  ].filter(Boolean) as string[]
 }
 
-export function collectJobUrls(job) {
+export function collectJobUrls(job: Record<string, unknown> | null | undefined): string[] {
   return [...collectPrimaryJobUrls(job), ...collectSectionLinks(job)]
 }
 
-export function isStructuredCatalogJob(job) {
+export function isStructuredCatalogJob(job: Record<string, unknown> | null | undefined): boolean {
   return isCatalogImportDetail(job?.detail)
 }
 
-export function rowHasBlockedHost(job) {
+export function rowHasBlockedHost(job: Record<string, unknown> | null | undefined): boolean {
   const urls = isStructuredCatalogJob(job) ? collectPrimaryJobUrls(job) : collectJobUrls(job)
   return urls.some((u) => isBlockedAggregatorHost(u))
 }
 
 /** Outbound links restricted to official domains. */
-export function sanitizeOfficialUrls(job) {
+export function sanitizeOfficialUrls(job: Record<string, unknown> | null | undefined) {
   const applyUrl = pickOfficialDetailUrl(job)
   const pdfs = collectPdfUrls(job)
-  let pdfUrl = pdfs[0] || job?.pdfUrl || job?.pdf_url || null
+  let pdfUrl = pdfs[0] || (job?.pdfUrl as string | undefined) || (job?.pdf_url as string | undefined) || null
   if (pdfUrl && !isOfficialRecruitmentUrl(pdfUrl)) pdfUrl = pdfs[0] || null
   if (!pdfUrl && applyUrl && /\.pdf(\?|$)/i.test(applyUrl)) pdfUrl = applyUrl
 
@@ -291,26 +150,26 @@ export function sanitizeOfficialUrls(job) {
   }
 }
 
-export function isPdfUrl(url) {
+export function isPdfUrl(url: string): boolean {
   return looksLikeNotificationDocument(String(url || ''))
 }
 
 /** Prefer an official portal page; fall back to an official notification PDF. */
-export function pickOfficialDetailUrl(job) {
+export function pickOfficialDetailUrl(job: Record<string, unknown> | null | undefined): string | null {
   const official = collectJobUrls(job).filter((u) => isOfficialRecruitmentUrl(u))
   const portal = official.find((u) => !isPdfUrl(u))
   return portal || official[0] || null
 }
 
 /** Single outbound apply link for UI — portal first, then official PDF. */
-export function resolveOfficialApplyHref(job) {
+export function resolveOfficialApplyHref(job: Record<string, unknown> | null | undefined): string | null {
   return pickOfficialDetailUrl(job)
 }
 
 /**
  * Show listing only when it points at an official portal and has no aggregator links.
  */
-export function isAllowedOfficialJob(job) {
+export function isAllowedOfficialJob(job: Record<string, unknown> | null | undefined): boolean {
   if (!job) return false
   if (containsBlockedBrandText(job.title, job.dept, job.about)) return false
   if (rowHasBlockedHost(job)) return false
