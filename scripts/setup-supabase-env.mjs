@@ -208,7 +208,7 @@ writeEnv(
     SQL_ECHO: existingBackend.SQL_ECHO || '0',
     APP_ENV: existingBackend.APP_ENV || 'development',
     DAILY_SYNC_ENFORCE_ONCE: existingBackend.DAILY_SYNC_ENFORCE_ONCE || '1',
-    ALLOW_FALLBACK_JSON_EXPORT: existingBackend.ALLOW_FALLBACK_JSON_EXPORT || '1',
+    ALLOW_FALLBACK_JSON_EXPORT: existingBackend.ALLOW_FALLBACK_JSON_EXPORT || '0',
   },
   BACKEND_ORDER
 )

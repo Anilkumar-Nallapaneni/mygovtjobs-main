@@ -7,6 +7,7 @@ from datetime import datetime, timedelta, timezone
 from uuid import uuid4
 
 from sqlalchemy import text
+from sqlalchemy.exc import IntegrityError
 from sqlalchemy.ext.asyncio import AsyncSession
 
 ADVISORY_LOCK_KEY = 20260710
@@ -109,21 +110,26 @@ class SyncRunService:
 
         run_id = str(uuid4())
         commit_sha = os.environ.get("GITHUB_SHA") or os.environ.get("VERCEL_GIT_COMMIT_SHA")
-        await session.execute(
-            text(
-                """
-                INSERT INTO sync_runs (id, pipeline_name, trigger_type, status, commit_sha)
-                VALUES (:id, :pipeline_name, :trigger_type, 'running', :commit_sha)
-                """
-            ),
-            {
-                "id": run_id,
-                "pipeline_name": pipeline_name,
-                "trigger_type": trigger_type,
-                "commit_sha": commit_sha,
-            },
-        )
-        await session.commit()
+        try:
+            await session.execute(
+                text(
+                    """
+                    INSERT INTO sync_runs (id, pipeline_name, trigger_type, status, commit_sha)
+                    VALUES (:id, :pipeline_name, :trigger_type, 'running', :commit_sha)
+                    """
+                ),
+                {
+                    "id": run_id,
+                    "pipeline_name": pipeline_name,
+                    "trigger_type": trigger_type,
+                    "commit_sha": commit_sha,
+                },
+            )
+            await session.commit()
+        except IntegrityError:
+            await session.rollback()
+            await self.unlock(session)
+            return None
         return run_id
 
     async def finish(

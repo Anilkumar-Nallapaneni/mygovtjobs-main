@@ -22,6 +22,9 @@ Supabase Postgres schema for My Govt Jobs.
 16. **`migrations/027_job_review_queue.sql`** — private failed-record quarantine with service-role-only access
 17. **`migrations/028_publication_confidence.sql`** — persisted 90-point public gate enforced by RLS
 18. **`migrations/029_harden_publication_rls_and_grants.sql`** — child-table publication boundary and least-privilege Data API grants
+19. **`migrations/030`–`033`** — control plane, bookmarks, comments, grants
+20. **`migrations/034_lock_profiles_subscription_tier.sql`** — clients cannot self-set `subscription_tier`
+21. **`migrations/035_sync_runs_one_running.sql`** — at most one `sync_runs` row with `status=running`
 
 **Existing Supabase project (safe, idempotent):**
 ```bash

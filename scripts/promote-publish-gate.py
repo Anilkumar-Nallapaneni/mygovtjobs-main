@@ -51,7 +51,7 @@ def _clamp_published_at(value: datetime | date | None, *, today: date, last: dat
 
 # Near-complete official recruitments often score 85 (missing state/qual/vacancies).
 # Promote script accepts that floor; ingest auto-publish still uses 90.
-PROMOTE_MIN_CONFIDENCE = 85.0
+PROMOTE_MIN_CONFIDENCE = 90.0  # same as public RLS/export floor — no confidence inflation
 
 
 def _job_payload(job: Job, *, doc_type: str, detail: dict, title: str, dept: str | None, qualification: str | None) -> dict:
@@ -202,8 +202,8 @@ async def main(apply: bool, export: bool, limit: int) -> int:
                 if fp:
                     live_fps.add(fp)
                 if apply:
-                    # Admin promote stamps the public confidence floor so RLS/export see the row.
-                    pub_confidence = max(float(validation.confidence), 90.0)
+                    # Store the measured score only (must already be >= public floor of 90).
+                    pub_confidence = float(validation.confidence)
                     await session.execute(
                         update(Job)
                         .where(Job.id == job.id)

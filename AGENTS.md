@@ -32,7 +32,7 @@ npm run health:website   # Agent 4 — code/data/env audit (add :full for live s
 npm run health:website:full # + verify:production + Vercel + live probes
 npm run export:live-jobs # DB → live-jobs.json (+ list/bootstrap via clean:live-jobs)
 npm run env:check        # frontend/backend Supabase ref alignment
-npm run db:migrate       # supabase_setup.sql + migrations 001–021
+npm run db:migrate       # supabase_setup.sql + migrations 001–035
 npm run supabase:audit   # table row counts via REST
 npm run ingest:direct:quick   # test ~20 sources
 npm run ingest:direct:quick   # 20 sources → DB + live-jobs.json
@@ -69,7 +69,7 @@ npm run websites:discover     # catalog all govt job websites → all websites/o
 ## Database
 
 1. Run `database/supabase_setup.sql` in Supabase SQL Editor.
-2. Run migrations in `database/migrations/` in order (001–029).
+2. Run migrations in `database/migrations/` in order (001–035).
 3. Backend connects via **Transaction pooler** (`postgresql+asyncpg://…:6543/…`).
 
 ## File map

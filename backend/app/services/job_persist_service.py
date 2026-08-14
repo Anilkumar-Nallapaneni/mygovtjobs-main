@@ -27,6 +27,7 @@ from app.services.noise_filter import (
     sanitize_source_text_fields,
     strip_postgres_control_chars,
 )
+from app.services.live_snapshot_clean import filter_live_snapshot_items
 from app.services.pdf_candidate import select_primary_pdf
 from app.services.publish_gate import ValidationResult, resolve_persist_status, validate_job_for_publication
 from app.utils.catalog_job_count import count_catalog_display_jobs
@@ -37,6 +38,20 @@ _slug_re = re.compile(r"[^a-z0-9]+")
 _PUBLIC_VERIFICATION_STATUSES = ("VERIFIED", "PARTIALLY_VERIFIED")
 _SNAPSHOT_DROP_GUARD_MIN_EXISTING = 100
 _SNAPSHOT_DROP_GUARD_RATIO = 0.5
+
+
+def _atomic_write_text(path: Path, content: str) -> None:
+    """Write via temp + os.replace so readers never see a truncated snapshot."""
+    tmp = path.with_name(f".{path.name}.{os.getpid()}.tmp")
+    try:
+        tmp.write_text(content, encoding="utf-8")
+        os.replace(tmp, path)
+    finally:
+        if tmp.exists():
+            try:
+                tmp.unlink()
+            except OSError:
+                pass
 
 
 def slugify(
@@ -505,6 +520,16 @@ class JobPersistService:
 
         slim_items = [slim_job_for_json_export(item) for item in items]
         list_items = [slim_job_for_list_json_export(item) for item in items]
+        before_strict = len(slim_items)
+        slim_items, dropped_strict = filter_live_snapshot_items(slim_items)
+        if dropped_strict:
+            logger.warning(
+                "export_live_jobs_json: strict snapshot filter dropped %s/%s rows",
+                dropped_strict,
+                before_strict,
+            )
+            kept_slugs = {str(row.get("slug") or "") for row in slim_items}
+            list_items = [row for row in list_items if str(row.get("slug") or "") in kept_slugs]
         catalog_count = count_catalog_display_jobs(slim_items)
 
         # Guard against overwriting the shipped catalog with an empty payload
@@ -514,7 +539,8 @@ class JobPersistService:
         if not slim_items and os.environ.get("ALLOW_EMPTY_JSON_EXPORT") != "1":
             logger.error(
                 "export_live_jobs_json: refusing to write empty snapshot "
-                "(list_jobs returned 0 rows). Set ALLOW_EMPTY_JSON_EXPORT=1 to override."
+                "(list_jobs returned 0 rows after strict filter). "
+                "Set ALLOW_EMPTY_JSON_EXPORT=1 to override."
             )
             return 0
 
@@ -573,7 +599,7 @@ class JobPersistService:
                 existing_count,
                 len(slim_items),
             )
-        path.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
+        _atomic_write_text(path, json.dumps(payload, ensure_ascii=False, indent=2))
 
         list_path = path.with_name("live-jobs-list.json")
         list_payload = {
@@ -581,9 +607,9 @@ class JobPersistService:
             "dailySync": payload["dailySync"],
             "items": list_items,
         }
-        list_path.write_text(
+        _atomic_write_text(
+            list_path,
             json.dumps(list_payload, ensure_ascii=False, separators=(",", ":")),
-            encoding="utf-8",
         )
         return catalog_count
 
@@ -597,6 +623,6 @@ class JobPersistService:
         try:
             payload = json.loads(path.read_text(encoding="utf-8"))
             payload["dailySync"] = block
-            path.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
+            _atomic_write_text(path, json.dumps(payload, ensure_ascii=False, indent=2))
         except Exception:
-            pass
+            logger.warning("patch_live_jobs_daily_sync failed for %s", path, exc_info=True)

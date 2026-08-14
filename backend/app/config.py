@@ -27,7 +27,7 @@ class Settings(BaseSettings):
     admin_api_key: str | None = None
     allow_insecure_admin: bool = False
     app_env: str = "development"
-    allow_fallback_json_export: bool = True
+    allow_fallback_json_export: bool = False  # never merge drafts into live-jobs.json unless explicitly enabled
     rate_limit_per_minute: int = 120
     alert_subscribe_rate_limit_per_minute: int = 8
     redis_url: str | None = None
