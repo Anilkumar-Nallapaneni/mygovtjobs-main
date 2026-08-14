@@ -25,6 +25,7 @@ Supabase Postgres schema for My Govt Jobs.
 19. **`migrations/030`–`033`** — control plane, bookmarks, comments, grants
 20. **`migrations/034_lock_profiles_subscription_tier.sql`** — clients cannot self-set `subscription_tier`
 21. **`migrations/035_sync_runs_one_running.sql`** — at most one `sync_runs` row with `status=running`
+22. **`migrations/036_alert_update_and_sources_privacy.sql`** — alert UPDATE channel lock + hide `sources.last_error` from public SELECT
 
 **Existing Supabase project (safe, idempotent):**
 ```bash
