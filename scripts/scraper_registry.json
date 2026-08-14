@@ -419,7 +419,9 @@
       "state": "all",
       "category": "psu",
       "enabled": true,
-      "maxItems": 50
+      "maxItems": 50,
+      "skipCommonPaths": true,
+      "notes": "Listing often empty until the next AG-3 / MT window; keep enabled"
     },
     {
       "code": "fssai",
@@ -508,7 +510,7 @@
     {
       "code": "cisf",
       "module": "state_portal_html",
-      "portal_url": "https://www.cisf.gov.in/recruitment",
+      "portal_url": "https://cisf.gov.in/cisfeng/Recruitment",
       "state": "all",
       "category": "police",
       "enabled": true,

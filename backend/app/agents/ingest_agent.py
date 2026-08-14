@@ -16,6 +16,7 @@ from app.scrapers.pdf_discover import ensure_pdf_urls
 from app.scrapers.rss_feed import RssFeedScraper
 from app.services.dedupe_service import content_hash
 from app.services.document_classifier import classify_document
+from app.services.job_persist_helpers import _atomic_write_text
 from app.services.job_persist_service import JobPersistService, _resolve_state_codes
 from app.services.pdf_candidate import select_primary_pdf
 from app.services.raw_ingest_service import RawIngestService
@@ -484,7 +485,8 @@ class IngestAgent:
             if key:
                 merged[key] = row
 
-        path.write_text(
+        _atomic_write_text(
+            path,
             json.dumps(
                 {
                     "generatedAt": datetime.now(timezone.utc).isoformat().replace("+00:00", "Z"),
@@ -492,5 +494,4 @@ class IngestAgent:
                 },
                 indent=2,
             ),
-            encoding="utf-8",
         )

@@ -13,6 +13,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "backend"))
 
+from app.services.job_persist_helpers import _atomic_write_text  # noqa: E402
 from app.services.live_snapshot_clean import filter_live_snapshot_items  # noqa: E402
 from app.services.publish_gate import india_today  # noqa: E402
 
@@ -34,7 +35,10 @@ def main() -> None:
 
     payload["generatedAt"] = datetime.now(timezone.utc).isoformat().replace("+00:00", "Z")
     payload["items"] = kept
-    LIVE_JSON.write_text(json.dumps(payload, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+    _atomic_write_text(
+        LIVE_JSON,
+        json.dumps(payload, indent=2, ensure_ascii=False) + "\n",
+    )
     print(f"Cleaned live-jobs.json: kept={len(kept)} dropped={dropped} (was {len(items)})")
 
 

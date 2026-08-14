@@ -261,14 +261,14 @@ async def promote_ids(ids: list[str], apply: bool, export: bool) -> int:
             score, _ = calculate_completeness(payload)
             payload["completeness_score"] = score
             validation = validate_job_for_publication(payload, today=today)
-            ok = validation.valid and validation.confidence >= 85.0
+            ok = validation.valid and validation.confidence >= 90.0
             if not ok:
                 skipped.append((title[:80], f"gate:{validation.errors[:3]} conf={validation.confidence}"))
                 continue
 
             print(f"  PROMOTE conf={validation.confidence:.0f} | {title[:90]}", flush=True)
             if apply:
-                pub_confidence = max(float(validation.confidence), 90.0)
+                pub_confidence = float(validation.confidence)
                 await session.execute(
                     update(Job)
                     .where(Job.id == job.id)

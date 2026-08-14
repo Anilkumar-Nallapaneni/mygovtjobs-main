@@ -174,3 +174,13 @@ def test_export_raises_on_dramatic_drop_when_not_allowed(tmp_path, monkeypatch):
             assert len(json.loads(snapshot.read_text(encoding="utf-8"))["items"]) == 2600
 
     asyncio.run(_run())
+
+
+def test_atomic_write_replaces_target_and_cleans_temp(tmp_path):
+    from app.services.job_persist_helpers import _atomic_write_text
+
+    path = tmp_path / "live-jobs.json"
+    path.write_text("old", encoding="utf-8")
+    _atomic_write_text(path, '{"ok": true}')
+    assert path.read_text(encoding="utf-8") == '{"ok": true}'
+    assert list(tmp_path.glob(".live-jobs.json.*.tmp")) == []

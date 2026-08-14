@@ -148,7 +148,7 @@ export const OFFICIAL_SITES = [
   /* ---------- CENTRAL — Paramilitary & federal police ---------- */
   { id: "bsf",           name: "Border Security Force (BSF) — Recruitment",    ...u("https://rectt.bsf.gov.in/", "https://rectt.bsf.gov.in/"),                              scope: "uniform", category: "police",   stateIds: ["all"] },
   { id: "crpf",          name: "Central Reserve Police Force (CRPF)",          ...u("https://crpf.gov.in/", "https://crpf.gov.in/recruitment.htm"),                         scope: "uniform", category: "police",   stateIds: ["all"] },
-  { id: "cisf",          name: "Central Industrial Security Force (CISF)",     ...u("https://www.cisf.gov.in/", "https://www.cisf.gov.in/recruitment/"),                    scope: "uniform", category: "police",   stateIds: ["all"] },
+  { id: "cisf",          name: "Central Industrial Security Force (CISF)",     ...u("https://www.cisf.gov.in/", "https://cisf.gov.in/cisfeng/Recruitment"),                    scope: "uniform", category: "police",   stateIds: ["all"] },
   { id: "itbp",          name: "Indo-Tibetan Border Police (ITBP)",            ...u("https://recruitment.itbpolice.nic.in/", "https://recruitment.itbpolice.nic.in/"),       scope: "uniform", category: "police",   stateIds: ["all"] },
   { id: "ssb",           name: "Sashastra Seema Bal (SSB)",                    ...u("https://www.ssb.nic.in/", "https://ssbrectt.gov.in/"),                                  scope: "uniform", category: "police",   stateIds: ["all"] },
   { id: "ib",            name: "Intelligence Bureau (IB) — MHA",               ...u("https://www.mha.gov.in/", "https://www.mha.gov.in/en/notifications/vacancies"),         scope: "uniform", category: "police",   stateIds: ["all"] },
