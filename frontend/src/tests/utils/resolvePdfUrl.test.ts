@@ -59,4 +59,12 @@ describe('collectPdfUrls / resolvePdfUrl', () => {
     expect(resolved).toContain('CEN%20%2002')
     expect(resolved).not.toContain('CEN%2002%20')
   })
+
+  it('returns empty when only non-official PDF candidates exist', () => {
+    const row = {
+      detail: { pdf_url: 'https://evil.example/notice.pdf' },
+    }
+    expect(collectPdfUrls(row)).toEqual([])
+    expect(resolvePdfUrl(row)).toBe('')
+  })
 })

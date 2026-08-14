@@ -60,10 +60,10 @@ npm run websites:discover     # catalog all govt job websites → all websites/o
 
 - **Frontend:** TypeScript only under `frontend/src/` (no `.js`/`.jsx`). See `frontend/FRONTEND_STRUCTURE.md`.
 - **Imports:** `@/` alias → `frontend/src/`.
-- **Jobs data:** `hooks/useLiveJobs.ts` — static JSON → Supabase → API (`VITE_JOBS_SOURCE`).
+- **Jobs data:** Homepage catalog is always `live-jobs.json` (static/CDN). `VITE_JOBS_SOURCE` still affects job detail / search fallbacks (`supabase` \| `api` \| `auto`).
 - **Deadlines:** use `hooks/useNow.ts` in components (never `Date.now()` in render).
-- **PDF links:** `utils/resolvePdfUrl.ts` + `utils/officialDomains.ts` — block aggregators.
-- **Backend auth:** `X-Admin-Key` header for `/api/admin/*` and ingest routes.
+- **PDF links:** `utils/resolvePdfUrl.ts` + `utils/officialDomains.ts` — official hosts only (no non-official fallback).
+- **Backend auth:** `X-Admin-Key` header for `/api/admin/*` and ingest routes. Admin UI off unless `VITE_ENABLE_ADMIN_UI=1`.
 - **Secrets:** `service_role` only in `backend/.env`. Frontend uses `VITE_SUPABASE_ANON_KEY` only.
 
 ## Database

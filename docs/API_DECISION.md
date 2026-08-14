@@ -6,7 +6,7 @@
 
 | Feature | Path |
 |---------|------|
-| Job catalog | `/data/live-jobs.json` + Supabase RLS read (`VITE_JOBS_SOURCE=auto`) |
+| Job catalog | `/data/live-jobs.json` (homepage is always static/CDN; `VITE_JOBS_SOURCE` is for detail/search only) |
 | Job detail | Static JSON fields + optional Supabase row |
 | Client search/filter | Frontend over loaded catalog |
 | Contact / report | Prefer Supabase table writes or mailto until API is healthy |

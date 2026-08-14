@@ -45,3 +45,19 @@ def test_insecure_admin_allowed_in_dev(monkeypatch):
     get_settings.cache_clear()
     client = _client_with_route()
     assert client.get("/protected").status_code == 200
+
+
+def test_insecure_admin_blocked_in_staging(monkeypatch):
+    monkeypatch.setenv("ADMIN_API_KEY", "")
+    monkeypatch.setenv("ALLOW_INSECURE_ADMIN", "1")
+    monkeypatch.setenv("APP_ENV", "staging")
+    get_settings.cache_clear()
+    client = _client_with_route()
+    assert client.get("/protected").status_code == 503
+
+
+def test_admin_key_wrong_length_is_401(monkeypatch):
+    monkeypatch.setenv("ADMIN_API_KEY", "secret-key")
+    get_settings.cache_clear()
+    client = _client_with_route()
+    assert client.get("/protected", headers={"X-Admin-Key": "x"}).status_code == 401

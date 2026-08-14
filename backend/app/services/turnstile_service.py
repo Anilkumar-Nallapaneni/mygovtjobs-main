@@ -1,7 +1,7 @@
 """Cloudflare Turnstile verification.
 
-In development, verification is skipped when TURNSTILE_SECRET_KEY is unset.
-In production, missing secret or missing token fails closed (returns False).
+Missing secret fails open only in local development/test.
+Staging and production fail closed when the secret is unset.
 """
 
 from __future__ import annotations
@@ -10,16 +10,18 @@ import httpx
 
 from app.config import get_settings
 
+_LOCAL_ENVS = frozenset({"development", "dev", "local", "test"})
 
-def _is_production() -> bool:
-    return get_settings().app_env.strip().lower() == "production"
+
+def _is_local_app_env() -> bool:
+    return get_settings().app_env.strip().lower() in _LOCAL_ENVS
 
 
 async def verify_turnstile(token: str | None, *, remote_ip: str | None = None) -> bool:
     secret = get_settings().turnstile_secret_key
     if not secret:
-        # Dev convenience only — never allow open forms in production.
-        return not _is_production()
+        # Dev convenience only — never allow open forms outside local envs.
+        return _is_local_app_env()
     if not token or not token.strip():
         return False
 

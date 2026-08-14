@@ -4,7 +4,8 @@ import type { ReactNode } from 'react'
 import { getStoredAdminKey } from '@/lib/adminApi'
 
 const API_BASE = (import.meta.env.VITE_API_URL || '').replace(/\/$/, '')
-const ADMIN_UI_ENABLED = String(import.meta.env.VITE_ENABLE_ADMIN_UI ?? '1') !== '0'
+const _adminUiFlag = String(import.meta.env.VITE_ENABLE_ADMIN_UI ?? '0').trim().toLowerCase()
+const ADMIN_UI_ENABLED = _adminUiFlag === '1' || _adminUiFlag === 'true'
 
 type AdminRouteGuardProps = {
   children: ReactNode

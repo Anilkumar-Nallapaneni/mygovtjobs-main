@@ -10,6 +10,8 @@ import logging
 import ssl
 import httpx
 
+from app.utils.url_safety import assert_safe_url, host_allows_legacy_tls
+
 logger = logging.getLogger(__name__)
 
 DEFAULT_MAX_RETRIES = 3
@@ -40,18 +42,35 @@ def _legacy_gov_ssl_context() -> ssl.SSLContext:
     return ctx
 
 
+async def _ssrf_request_hook(request: httpx.Request) -> None:
+    """Re-validate every hop (including redirects) before the request is sent."""
+    assert_safe_url(str(request.url))
+
+
 @asynccontextmanager
 async def create_async_client(
     *,
     timeout: float = 30,
     user_agent: str | None = None,
-    allow_legacy_tls: bool = True,
+    allow_legacy_tls: bool = False,
+    url_for_tls_policy: str | None = None,
 ) -> AsyncIterator[httpx.AsyncClient]:
+    """Create an httpx client with SSRF redirect re-checks.
+
+    Legacy TLS (verify off) is off by default. Pass allow_legacy_tls=True only
+    for known broken gov portals, or pass url_for_tls_policy so the host suffix
+    allowlist can enable it automatically.
+    """
+    use_legacy = allow_legacy_tls
+    if url_for_tls_policy and host_allows_legacy_tls(url_for_tls_policy):
+        use_legacy = True
+
     async with httpx.AsyncClient(
         timeout=timeout,
         follow_redirects=True,
         headers=_headers(user_agent),
-        verify=_legacy_gov_ssl_context() if allow_legacy_tls else True,
+        verify=_legacy_gov_ssl_context() if use_legacy else True,
+        event_hooks={"request": [_ssrf_request_hook]},
     ) as client:
         yield client
 
@@ -69,6 +88,8 @@ def _is_retryable_http_error(exc: Exception) -> bool:
     if isinstance(exc, httpx.HTTPStatusError):
         code = exc.response.status_code
         return code == 429 or code >= 500
+    if isinstance(exc, ValueError) and str(exc).startswith("Blocked"):
+        return False
     return False
 
 
@@ -83,7 +104,11 @@ async def get_text(
     last_exc: Exception | None = None
     for attempt in range(max_retries):
         try:
-            async with create_async_client(timeout=timeout, user_agent=user_agent) as client:
+            async with create_async_client(
+                timeout=timeout,
+                user_agent=user_agent,
+                url_for_tls_policy=url,
+            ) as client:
                 res: httpx.Response = await client.get(url)
                 res.raise_for_status()
                 return TextResponse(text=res.text, status_code=res.status_code, url=str(res.url))

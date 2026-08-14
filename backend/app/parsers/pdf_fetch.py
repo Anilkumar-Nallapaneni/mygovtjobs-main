@@ -107,7 +107,7 @@ def extract_text_from_pdf_bytes(
 async def fetch_pdf_bytes(url: str, *, timeout: float = 30) -> bytes:
     """Download PDF using legacy-tolerant SSL (many .gov.in portals)."""
     assert_safe_url(url)
-    async with create_async_client(timeout=timeout, allow_legacy_tls=True) as client:
+    async with create_async_client(timeout=timeout, url_for_tls_policy=url) as client:
         async with client.stream(
             "GET",
             url,

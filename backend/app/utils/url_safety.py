@@ -16,6 +16,17 @@ _BLOCKED_HOSTS = frozenset(
     }
 )
 
+# Hosts allowed to use legacy TLS (CERT_NONE). Prefer verified TLS elsewhere.
+_LEGACY_TLS_SUFFIXES = (
+    ".gov.in",
+    ".nic.in",
+    ".edu.in",
+    ".ac.in",
+    ".res.in",
+    ".ernet.in",
+    ".bank.in",
+)
+
 
 def _ip_blocked(addr: str) -> bool:
     try:
@@ -51,3 +62,13 @@ def assert_safe_url(url: str) -> None:
         sockaddr = info[4]
         if sockaddr and _ip_blocked(sockaddr[0]):
             raise ValueError(f"Blocked private/reserved IP for host: {host}")
+
+
+def host_allows_legacy_tls(url: str) -> bool:
+    """True only for known Indian gov/edu TLDs that often need TLS workarounds."""
+    host = (urlparse(url).hostname or "").strip().lower().rstrip(".")
+    if not host:
+        return False
+    if host in {"gov.in", "nic.in"}:
+        return True
+    return any(host.endswith(suffix) for suffix in _LEGACY_TLS_SUFFIXES)

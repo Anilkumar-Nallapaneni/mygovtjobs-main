@@ -63,22 +63,8 @@ export function collectPdfUrls(row: Record<string, unknown> | null | undefined):
   )
 }
 
-/** Best official PDF link for a live/API job row. */
+/** Best official PDF link for a live/API job row. Never returns non-official URLs. */
 export function resolvePdfUrl(row: Record<string, unknown> | null | undefined): string {
   const official = collectPdfUrls(row)
-  if (official.length) return official[0]
-
-  const detail = (row?.detail || {}) as Record<string, unknown>
-  const fallback = detail.pdf_url || detail.pdfUrl
-  if (typeof fallback === 'string' && fallback.trim() && !isBlockedAggregatorHost(fallback)) {
-    return fallback.trim()
-  }
-
-  const list = detail.pdf_urls || detail.pdfUrls
-  if (Array.isArray(list)) {
-    const hit = list.find((u) => typeof u === 'string' && u.trim() && !isBlockedAggregatorHost(u))
-    if (hit) return String(hit).trim()
-  }
-
-  return ''
+  return official[0] || ''
 }

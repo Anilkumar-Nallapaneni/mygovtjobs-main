@@ -97,7 +97,7 @@ Route component lives under `components/home/` (not `pages/`) — composition ro
 
 | Module | Role |
 |--------|------|
-| `hooks/useLiveJobs.ts` | Loads jobs: static → Supabase → API |
+| `hooks/useLiveJobs.ts` | Homepage catalog from static `live-jobs.json` (CDN); detail/search may use Supabase/API |
 | `hooks/useNow.ts` | Deadline clock (never `Date.now()` in render) |
 | `hooks/useOfficialFeed.ts` | Official headlines JSON |
 | `hooks/useBrowseState.ts` + `hooks/browse/*` | Browse filters, route sync, navigation |

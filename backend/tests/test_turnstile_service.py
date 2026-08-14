@@ -20,6 +20,13 @@ def test_missing_secret_rejects_in_production():
         assert asyncio.run(verify_turnstile("token")) is False
 
 
+def test_missing_secret_rejects_in_staging():
+    with patch("app.services.turnstile_service.get_settings") as gs:
+        gs.return_value = MagicMock(app_env="staging", turnstile_secret_key=None)
+        assert asyncio.run(verify_turnstile(None)) is False
+        assert asyncio.run(verify_turnstile("token")) is False
+
+
 def test_empty_token_rejected_when_secret_set():
     with patch("app.services.turnstile_service.get_settings") as gs:
         gs.return_value = MagicMock(app_env="development", turnstile_secret_key="sec")

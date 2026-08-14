@@ -85,7 +85,9 @@ async def discover_pdf_on_page(page_url: str, *, timeout: float = 20) -> str | N
         return page_url if _is_pdf_url(page_url) else None
     try:
         assert_safe_url(page_url)
-        async with create_async_client(timeout=timeout, user_agent=USER_AGENT) as client:
+        async with create_async_client(
+            timeout=timeout, user_agent=USER_AGENT, url_for_tls_policy=page_url
+        ) as client:
             res = await client.get(page_url)
             if res.status_code >= 400:
                 return None
@@ -108,7 +110,9 @@ async def discover_all_pdfs_on_page(page_url: str, *, timeout: float = 20, limit
         return [page_url] if _is_pdf_url(page_url) else []
     try:
         assert_safe_url(page_url)
-        async with create_async_client(timeout=timeout, user_agent=USER_AGENT) as client:
+        async with create_async_client(
+            timeout=timeout, user_agent=USER_AGENT, url_for_tls_policy=page_url
+        ) as client:
             res = await client.get(page_url)
             if res.status_code >= 400:
                 return []

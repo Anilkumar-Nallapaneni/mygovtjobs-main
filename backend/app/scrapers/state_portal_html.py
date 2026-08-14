@@ -186,7 +186,9 @@ class StatePortalHtmlScraper(BaseScraper):
         all_rows: list[dict[str, Any]] = []
         seen_links: set[str] = set()
 
-        async with create_async_client(timeout=30, user_agent=USER_AGENT) as client:
+        async with create_async_client(
+            timeout=30, user_agent=USER_AGENT, url_for_tls_policy=self.portal_url
+        ) as client:
             for page_url in urls_to_try:
                 if page_url in seen_pages or len(all_rows) >= self.max_items:
                     break
