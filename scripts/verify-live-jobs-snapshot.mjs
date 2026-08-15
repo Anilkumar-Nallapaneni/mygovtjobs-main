@@ -11,6 +11,7 @@ import { fileURLToPath } from 'url'
 const root = join(dirname(fileURLToPath(import.meta.url)), '..')
 const fullPath = join(root, 'frontend/public/data/live-jobs.json')
 const listPath = join(root, 'frontend/public/data/live-jobs-list.json')
+const watchdogAuditPath = join(root, 'docs/audits/watchdog-latest.json')
 const SNAPSHOT_REPO_PATH = 'frontend/public/data/live-jobs.json'
 const MAX_ROLLING_DROP_RATE = Number(process.env.MAX_CATALOG_DROP_RATE || 0.35)
 // Conservative bootstrap floor; the rolling comparison becomes the stronger guard
@@ -37,6 +38,23 @@ function previousCommittedCount() {
   } catch {
     return null
   }
+}
+
+function freshWatchdogDemotions(snapshotGeneratedAt) {
+  const report = readJson(watchdogAuditPath)
+  if (!report?.apply) return 0
+
+  const rowsUpdated = Number(report.rowsUpdated) || 0
+  const demoted = Array.isArray(report.demoted) ? report.demoted.length : 0
+  const allowance = Math.max(rowsUpdated, demoted)
+  if (allowance <= 0) return 0
+
+  const reportTime = Date.parse(String(report.generatedAt || ''))
+  const snapshotTime = Date.parse(String(snapshotGeneratedAt || ''))
+  if (!Number.isFinite(reportTime) || !Number.isFinite(snapshotTime)) return 0
+
+  const maxSkewMs = 24 * 60 * 60 * 1000
+  return Math.abs(snapshotTime - reportTime) <= maxSkewMs ? allowance : 0
 }
 
 function vacancySum(items) {
@@ -127,16 +145,22 @@ export function verifyLiveJobsSnapshot({ strict = false } = {}) {
 
   const fullVac = vacancySum(fullItems)
   const previousCount = previousCommittedCount()
+  const watchdogDemotions = freshWatchdogDemotions(full?.generatedAt)
   if (fullItems.length < MIN_PUBLIC_CATALOG_ROWS) {
     issues.push(`catalog has ${fullItems.length} rows; minimum release floor is ${MIN_PUBLIC_CATALOG_ROWS}`)
   }
   if (previousCount && previousCount >= MIN_PUBLIC_CATALOG_ROWS) {
     const minimumRollingCount = Math.floor(previousCount * (1 - MAX_ROLLING_DROP_RATE))
     if (fullItems.length < minimumRollingCount) {
-      issues.push(
+      const deficit = minimumRollingCount - fullItems.length
+      const message =
         `catalog dropped ${(100 * (1 - fullItems.length / previousCount)).toFixed(1)}% ` +
         `(${previousCount} → ${fullItems.length}); allowed rolling drop is ${(MAX_ROLLING_DROP_RATE * 100).toFixed(0)}%`
-      )
+      if (watchdogDemotions >= deficit) {
+        warnings.push(`${message}; accepted because ${watchdogDemotions} fresh Watchdog demotion(s) explain the deficit`)
+      } else {
+        issues.push(message)
+      }
     }
   }
   const vacRate = fullVac.withVac / fullVac.total
