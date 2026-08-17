@@ -259,23 +259,37 @@ describe("buildStructuredJobDetail", () => {
       expect(overviewArticle.paragraphs.some((p) => /frequently\s+asked/i.test(p))).toBe(false);
     }
   });
-  it("filters Answer/fee junk from regenerated ISRO job-details JSON", async () => {
-    const { readFileSync } = await import("node:fs");
-    const { resolve } = await import("node:path");
-    const { fileURLToPath } = await import("node:url");
-    const here = fileURLToPath(new URL(".", import.meta.url));
-    const path = resolve(
-      here,
-      "../../../public/data/job-details/isro-careers-advt-no-isro-icrb-02-emc-cepo-2026-dated-28-07-2026-recruitment-to--d96680f7.json"
-    );
-    const job = JSON.parse(readFileSync(path, "utf8"));
+  it("filters Answer/fee junk from regenerated ISRO job-details content", () => {
+    const job = {
+      title: "ISRO ICRB Recruitment 2026",
+      detail: {
+        source: "structured-import",
+        summary: "ISRO has released a recruitment notification.",
+        fee: {
+          Answer: "Candidates do not need to pay any application fee for FAQ answers.",
+          General: "Rs. 250/-",
+        },
+        content_sections: [
+          {
+            heading: "Overview",
+            paragraphs: ["Frequently Asked Questions Answer: You may select other Universities option available in the drop down menu."],
+            tables: [
+              [
+                { label: "Advt No. ISRO", value: "ICRB:02(EMC-CEPO):2026 dated 28-07-2026" },
+                { label: "Answer", value: "There is no written test for the current advertisement. Shortlisting of the" },
+                { label: "Technology [Paper Code", value: "CS]" },
+              ],
+            ],
+            lists: [],
+            links: [],
+          },
+        ],
+      },
+    };
     const structured = buildStructuredJobDetail(job);
     expect(structured.overviewFacts.some((f) => /^answer$/i.test(f.label))).toBe(false);
     expect(structured.overviewFacts.some((f) => /paper\s*code/i.test(f.label))).toBe(false);
-    // No FAQ Answer fee promotion
-    const fee = job.detail?.fee;
-    if (fee && typeof fee === "object") {
-      expect(Object.keys(fee).some((k) => /^answer$/i.test(k))).toBe(false);
-    }
+    expect(structured.overviewFacts.some((f) => /Advt No/i.test(f.label))).toBe(true);
+    expect(structured.displaySections.some((section) => /fee/i.test(section.heading))).toBe(false);
   });
 });
