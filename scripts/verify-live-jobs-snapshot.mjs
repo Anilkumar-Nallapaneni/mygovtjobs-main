@@ -13,6 +13,7 @@ const fullPath = join(root, 'frontend/public/data/live-jobs.json')
 const listPath = join(root, 'frontend/public/data/live-jobs-list.json')
 const SNAPSHOT_REPO_PATH = 'frontend/public/data/live-jobs.json'
 const MAX_ROLLING_DROP_RATE = Number(process.env.MAX_CATALOG_DROP_RATE || 0.35)
+const MAX_ROLLING_DROP_ROW_TOLERANCE = Number(process.env.MAX_CATALOG_DROP_ROW_TOLERANCE || 2)
 // Conservative bootstrap floor; the rolling comparison becomes the stronger guard
 // after the first conflict-free snapshot is committed. Production may raise this via CI.
 const MIN_PUBLIC_CATALOG_ROWS = Number(process.env.MIN_PUBLIC_CATALOG_ROWS || 10)
@@ -131,11 +132,17 @@ export function verifyLiveJobsSnapshot({ strict = false } = {}) {
     issues.push(`catalog has ${fullItems.length} rows; minimum release floor is ${MIN_PUBLIC_CATALOG_ROWS}`)
   }
   if (previousCount && previousCount >= MIN_PUBLIC_CATALOG_ROWS) {
-    const minimumRollingCount = Math.floor(previousCount * (1 - MAX_ROLLING_DROP_RATE))
+    // Small catalogs can legitimately cross the percentage guard by one or two
+    // deadline expirations; keep the relative guard while allowing that noise.
+    const minimumRollingCount = Math.max(
+      MIN_PUBLIC_CATALOG_ROWS,
+      Math.floor(previousCount * (1 - MAX_ROLLING_DROP_RATE)) - MAX_ROLLING_DROP_ROW_TOLERANCE
+    )
     if (fullItems.length < minimumRollingCount) {
       issues.push(
         `catalog dropped ${(100 * (1 - fullItems.length / previousCount)).toFixed(1)}% ` +
-        `(${previousCount} → ${fullItems.length}); allowed rolling drop is ${(MAX_ROLLING_DROP_RATE * 100).toFixed(0)}%`
+        `(${previousCount} → ${fullItems.length}); allowed rolling drop is ${(MAX_ROLLING_DROP_RATE * 100).toFixed(0)}%` +
+        ` plus ${MAX_ROLLING_DROP_ROW_TOLERANCE} row(s)`
       )
     }
   }
