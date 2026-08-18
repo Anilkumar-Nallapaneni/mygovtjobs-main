@@ -160,14 +160,20 @@ describe("buildJobPostingJsonLd", () => {
       dept: "Staff Selection Commission",
       state: "All India",
       vacancies: 7500,
-      lastDate: "2026-08-15",
+      lastDate: "2026-12-15",
+      status: "live",
+      published_to_site: true,
+      document_type: "RECRUITMENT",
+      verification_status: "VERIFIED",
+      completeness_score: 95,
+      publication_confidence: 98,
       published_at: "2026-06-01T00:00:00Z",
       detail: { summary: "Official SSC CGL notification for 7500 posts." },
     });
 
     expect(jsonLd?.["@type"]).toBe("JobPosting");
     expect(jsonLd?.title).toBe("SSC CGL 2026 Recruitment");
-    expect(jsonLd?.validThrough).toBe("2026-08-15T23:59:59+05:30");
+    expect(jsonLd?.validThrough).toBe("2026-12-15T23:59:59+05:30");
     expect(jsonLd?.datePosted).toBe("2026-06-01");
     expect(jsonLd?.totalJobOpenings).toBe(7500);
 

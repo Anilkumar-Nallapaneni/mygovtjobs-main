@@ -11,8 +11,10 @@ import { fileURLToPath } from 'url'
 const root = join(dirname(fileURLToPath(import.meta.url)), '..')
 const fullPath = join(root, 'frontend/public/data/live-jobs.json')
 const listPath = join(root, 'frontend/public/data/live-jobs-list.json')
+const watchdogPath = join(root, 'docs/audits/watchdog-latest.json')
 const SNAPSHOT_REPO_PATH = 'frontend/public/data/live-jobs.json'
 const MAX_ROLLING_DROP_RATE = Number(process.env.MAX_CATALOG_DROP_RATE || 0.35)
+const MAX_WATCHDOG_AUDIT_AGE_HOURS = Number(process.env.MAX_WATCHDOG_AUDIT_AGE_HOURS || 36)
 // Conservative bootstrap floor; the rolling comparison becomes the stronger guard
 // after the first conflict-free snapshot is committed. Production may raise this via CI.
 const MIN_PUBLIC_CATALOG_ROWS = Number(process.env.MIN_PUBLIC_CATALOG_ROWS || 10)
@@ -37,6 +39,22 @@ function previousCommittedCount() {
   } catch {
     return null
   }
+}
+
+function freshAppliedWatchdogDemotions() {
+  const report = readJson(watchdogPath)
+  if (!report?.apply) return null
+
+  const generatedAtMs = Date.parse(String(report.generatedAt || ''))
+  if (!Number.isFinite(generatedAtMs)) return null
+
+  const ageHours = (Date.now() - generatedAtMs) / (60 * 60 * 1000)
+  if (ageHours < 0 || ageHours > MAX_WATCHDOG_AUDIT_AGE_HOURS) return null
+
+  const rowsUpdated = Number(report.rowsUpdated) || 0
+  const demoted = Array.isArray(report.demoted) ? report.demoted.length : 0
+  const allowance = Math.max(rowsUpdated, demoted)
+  return allowance > 0 ? { allowance, generatedAt: report.generatedAt } : null
 }
 
 function vacancySum(items) {
@@ -133,10 +151,20 @@ export function verifyLiveJobsSnapshot({ strict = false } = {}) {
   if (previousCount && previousCount >= MIN_PUBLIC_CATALOG_ROWS) {
     const minimumRollingCount = Math.floor(previousCount * (1 - MAX_ROLLING_DROP_RATE))
     if (fullItems.length < minimumRollingCount) {
-      issues.push(
-        `catalog dropped ${(100 * (1 - fullItems.length / previousCount)).toFixed(1)}% ` +
-        `(${previousCount} → ${fullItems.length}); allowed rolling drop is ${(MAX_ROLLING_DROP_RATE * 100).toFixed(0)}%`
-      )
+      const shortfall = minimumRollingCount - fullItems.length
+      const watchdog = freshAppliedWatchdogDemotions()
+      if (watchdog && watchdog.allowance >= shortfall) {
+        warnings.push(
+          `catalog dropped ${(100 * (1 - fullItems.length / previousCount)).toFixed(1)}% ` +
+          `(${previousCount} → ${fullItems.length}); fresh watchdog demotions (${watchdog.allowance}) account for ` +
+          `the ${shortfall}-row rolling-threshold shortfall`
+        )
+      } else {
+        issues.push(
+          `catalog dropped ${(100 * (1 - fullItems.length / previousCount)).toFixed(1)}% ` +
+          `(${previousCount} → ${fullItems.length}); allowed rolling drop is ${(MAX_ROLLING_DROP_RATE * 100).toFixed(0)}%`
+        )
+      }
     }
   }
   const vacRate = fullVac.withVac / fullVac.total

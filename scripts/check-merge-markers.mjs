@@ -18,10 +18,15 @@ function walk(dir) {
   for (const name of readdirSync(dir)) {
     if (ignored.has(name)) continue
     const file = join(dir, name)
-    const info = statSync(file)
+    const info = statSync(file, { throwIfNoEntry: false })
+    if (!info) continue
     if (info.isDirectory()) walk(file)
     else if (info.size <= 10 * 1024 * 1024 && textExtensions.has(extname(name).toLowerCase())) {
-      if (marker.test(readFileSync(file, 'utf8'))) conflicts.push(relative(root, file))
+      try {
+        if (marker.test(readFileSync(file, 'utf8'))) conflicts.push(relative(root, file))
+      } catch (error) {
+        if (error?.code !== 'ENOENT') throw error
+      }
     }
   }
 }

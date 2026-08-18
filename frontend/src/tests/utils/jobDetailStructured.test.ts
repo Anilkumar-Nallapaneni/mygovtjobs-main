@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 
-import { buildStructuredJobDetail } from "@/utils/jobDetailStructured";
+import { buildStructuredJobDetail, sanitizeFeeDict } from "@/utils/jobDetailStructured";
 
 describe("buildStructuredJobDetail", () => {
   it("parses imported content sections into structured fields", () => {
@@ -259,23 +259,43 @@ describe("buildStructuredJobDetail", () => {
       expect(overviewArticle.paragraphs.some((p) => /frequently\s+asked/i.test(p))).toBe(false);
     }
   });
-  it("filters Answer/fee junk from regenerated ISRO job-details JSON", async () => {
-    const { readFileSync } = await import("node:fs");
-    const { resolve } = await import("node:path");
-    const { fileURLToPath } = await import("node:url");
-    const here = fileURLToPath(new URL(".", import.meta.url));
-    const path = resolve(
-      here,
-      "../../../public/data/job-details/isro-careers-advt-no-isro-icrb-02-emc-cepo-2026-dated-28-07-2026-recruitment-to--d96680f7.json"
-    );
-    const job = JSON.parse(readFileSync(path, "utf8"));
+  it("filters regenerated ISRO Answer, paper-code, and fee junk", () => {
+    const job = {
+      detail: {
+        source: "structured-import",
+        fee: {
+          Answer: "There is no written test for the current advertisement.",
+          General: "Rs. 750/-",
+          "Technology [Paper Code": "CS]",
+        },
+        content_sections: [
+          {
+            heading: "Overview",
+            paragraphs: ["Frequently Asked Questions Answer: candidates may choose other universities."],
+            tables: [
+              [
+                { label: "Advt No. ISRO", value: "ICRB:02(EMC-CEPO):2026 dated 28-07-2026" },
+                { label: "Answer", value: "There is no written test for the current advertisement." },
+                { label: "Technology [Paper Code", value: "CS]" },
+                { label: "GATE Qualification : Valid GATE score in Electronics [Paper Code", value: "EC]" },
+              ],
+            ],
+            lists: [],
+            links: [],
+          },
+        ],
+      },
+    };
     const structured = buildStructuredJobDetail(job);
     expect(structured.overviewFacts.some((f) => /^answer$/i.test(f.label))).toBe(false);
     expect(structured.overviewFacts.some((f) => /paper\s*code/i.test(f.label))).toBe(false);
-    // No FAQ Answer fee promotion
-    const fee = job.detail?.fee;
-    if (fee && typeof fee === "object") {
-      expect(Object.keys(fee).some((k) => /^answer$/i.test(k))).toBe(false);
-    }
+    expect(structured.overviewFacts.some((f) => /Advt No/i.test(f.label))).toBe(true);
+    expect(
+      structured.articleSections.some((section) =>
+        section.paragraphs.some((paragraph) => /frequently\s+asked/i.test(paragraph))
+      )
+    ).toBe(false);
+    expect(structured.displaySections.some((section) => section.paragraphs.some((p) => /^Answer/i.test(p)))).toBe(false);
+    expect(sanitizeFeeDict(job.detail.fee)).toEqual({ General: "Rs. 750/-" });
   });
 });
