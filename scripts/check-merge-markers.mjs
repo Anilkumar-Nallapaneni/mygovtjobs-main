@@ -1,11 +1,12 @@
 #!/usr/bin/env node
-import { readdirSync, readFileSync, statSync } from 'fs'
+import { lstatSync, readdirSync, readFileSync } from 'fs'
 import { extname, join, relative } from 'path'
 import { fileURLToPath } from 'url'
 
 const root = join(fileURLToPath(new URL('.', import.meta.url)), '..')
 const ignored = new Set([
-  '.git', '.venv', 'node_modules', 'dist', '.pytest_cache', '.local-test-tmp', 'coverage',
+  '.git', '.venv', 'node_modules', 'dist', '.pytest_cache', '.local-test-tmp',
+  '.stage2-test-tmp', 'coverage',
 ])
 const textExtensions = new Set([
   '', '.css', '.html', '.java', '.js', '.json', '.jsx', '.md', '.mjs', '.properties',
@@ -18,7 +19,14 @@ function walk(dir) {
   for (const name of readdirSync(dir)) {
     if (ignored.has(name)) continue
     const file = join(dir, name)
-    const info = statSync(file)
+    let info
+    try {
+      info = lstatSync(file)
+    } catch (error) {
+      if (error?.code === 'ENOENT') continue
+      throw error
+    }
+    if (info.isSymbolicLink()) continue
     if (info.isDirectory()) walk(file)
     else if (info.size <= 10 * 1024 * 1024 && textExtensions.has(extname(name).toLowerCase())) {
       if (marker.test(readFileSync(file, 'utf8'))) conflicts.push(relative(root, file))
