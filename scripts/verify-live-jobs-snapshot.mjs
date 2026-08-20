@@ -25,15 +25,30 @@ function readJson(path) {
   }
 }
 
-function previousCommittedCount() {
+function isComparablePreviousRow(row, todayIndia) {
+  const raw = String(row?.last_date || '').slice(0, 10)
+  if (!ISO_DATE_RE.test(raw)) {
+    // Be conservative for malformed historical rows: keep them in the baseline.
+    return true
+  }
+  const parsed = new Date(`${raw}T00:00:00Z`)
+  if (Number.isNaN(parsed.getTime()) || parsed.toISOString().slice(0, 10) !== raw) {
+    return true
+  }
+  return raw >= todayIndia
+}
+
+function previousCommittedCount(todayIndia) {
   try {
-    const raw = execFileSync('git', ['show', `HEAD^:${SNAPSHOT_REPO_PATH}`], {
+    const raw = execFileSync('git', ['show', `HEAD:${SNAPSHOT_REPO_PATH}`], {
       cwd: root,
       encoding: 'utf8',
       stdio: ['ignore', 'pipe', 'ignore'],
     })
     const payload = JSON.parse(raw)
-    return Array.isArray(payload?.items) ? payload.items.length : null
+    return Array.isArray(payload?.items)
+      ? payload.items.filter((row) => isComparablePreviousRow(row, todayIndia)).length
+      : null
   } catch {
     return null
   }
@@ -126,7 +141,8 @@ export function verifyLiveJobsSnapshot({ strict = false } = {}) {
   }
 
   const fullVac = vacancySum(fullItems)
-  const previousCount = previousCommittedCount()
+  const todayIndia = indiaDateIso()
+  const previousCount = previousCommittedCount(todayIndia)
   if (fullItems.length < MIN_PUBLIC_CATALOG_ROWS) {
     issues.push(`catalog has ${fullItems.length} rows; minimum release floor is ${MIN_PUBLIC_CATALOG_ROWS}`)
   }
@@ -140,7 +156,6 @@ export function verifyLiveJobsSnapshot({ strict = false } = {}) {
     }
   }
   const vacRate = fullVac.withVac / fullVac.total
-  const todayIndia = indiaDateIso()
   const htmlTitles = fullItems.filter((row) => HTML_TAG_RE.test(String(row?.title || '')))
   const expiredAsLive = fullItems.filter(
     (row) => String(row?.status || 'live').toLowerCase() === 'live'
