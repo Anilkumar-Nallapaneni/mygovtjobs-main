@@ -259,16 +259,32 @@ describe("buildStructuredJobDetail", () => {
       expect(overviewArticle.paragraphs.some((p) => /frequently\s+asked/i.test(p))).toBe(false);
     }
   });
-  it("filters Answer/fee junk from regenerated ISRO job-details JSON", async () => {
-    const { readFileSync } = await import("node:fs");
-    const { resolve } = await import("node:path");
-    const { fileURLToPath } = await import("node:url");
-    const here = fileURLToPath(new URL(".", import.meta.url));
-    const path = resolve(
-      here,
-      "../../../public/data/job-details/isro-careers-advt-no-isro-icrb-02-emc-cepo-2026-dated-28-07-2026-recruitment-to--d96680f7.json"
-    );
-    const job = JSON.parse(readFileSync(path, "utf8"));
+  it("filters Answer/fee junk from regenerated ISRO job-details shape", () => {
+    const job = {
+      title: "ISRO Scientist Engineer Recruitment 2026",
+      detail: {
+        source: "structured-import",
+        summary: "ISRO has released a recruitment notification.",
+        fee: {
+          General: "Rs. 250/-",
+        },
+        content_sections: [
+          {
+            heading: "Overview",
+            paragraphs: ["Frequently Asked Questions Answer fee payment details should not become overview copy."],
+            tables: [
+              [
+                { label: "Advt No. ISRO", value: "ICRB:02(EMC-CEPO):2026 dated 28-07-2026" },
+                { label: "Answer", value: "There is no written test for the current advertisement." },
+                { label: "Technology [Paper Code", value: "CS]" },
+              ],
+            ],
+            lists: [],
+            links: [],
+          },
+        ],
+      },
+    };
     const structured = buildStructuredJobDetail(job);
     expect(structured.overviewFacts.some((f) => /^answer$/i.test(f.label))).toBe(false);
     expect(structured.overviewFacts.some((f) => /paper\s*code/i.test(f.label))).toBe(false);

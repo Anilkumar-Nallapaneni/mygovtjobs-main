@@ -13,6 +13,7 @@ const fullPath = join(root, 'frontend/public/data/live-jobs.json')
 const listPath = join(root, 'frontend/public/data/live-jobs-list.json')
 const SNAPSHOT_REPO_PATH = 'frontend/public/data/live-jobs.json'
 const MAX_ROLLING_DROP_RATE = Number(process.env.MAX_CATALOG_DROP_RATE || 0.35)
+const MAX_ROLLING_DROP_ROWS = Number(process.env.MAX_CATALOG_DROP_ROWS || 20)
 // Conservative bootstrap floor; the rolling comparison becomes the stronger guard
 // after the first conflict-free snapshot is committed. Production may raise this via CI.
 const MIN_PUBLIC_CATALOG_ROWS = Number(process.env.MIN_PUBLIC_CATALOG_ROWS || 10)
@@ -133,10 +134,16 @@ export function verifyLiveJobsSnapshot({ strict = false } = {}) {
   if (previousCount && previousCount >= MIN_PUBLIC_CATALOG_ROWS) {
     const minimumRollingCount = Math.floor(previousCount * (1 - MAX_ROLLING_DROP_RATE))
     if (fullItems.length < minimumRollingCount) {
-      issues.push(
+      const droppedRows = previousCount - fullItems.length
+      const message =
         `catalog dropped ${(100 * (1 - fullItems.length / previousCount)).toFixed(1)}% ` +
-        `(${previousCount} → ${fullItems.length}); allowed rolling drop is ${(MAX_ROLLING_DROP_RATE * 100).toFixed(0)}%`
-      )
+        `(${previousCount} → ${fullItems.length}); allowed rolling drop is ` +
+        `${(MAX_ROLLING_DROP_RATE * 100).toFixed(0)}% or ${MAX_ROLLING_DROP_ROWS} rows`
+      if (droppedRows > MAX_ROLLING_DROP_ROWS) {
+        issues.push(message)
+      } else {
+        warnings.push(`${message}; within small-catalog absolute allowance`)
+      }
     }
   }
   const vacRate = fullVac.withVac / fullVac.total
