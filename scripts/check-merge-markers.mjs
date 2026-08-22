@@ -6,6 +6,7 @@ import { fileURLToPath } from 'url'
 const root = join(fileURLToPath(new URL('.', import.meta.url)), '..')
 const ignored = new Set([
   '.git', '.venv', 'node_modules', 'dist', '.pytest_cache', '.local-test-tmp', 'coverage',
+  '.stage2-test-tmp',
 ])
 const textExtensions = new Set([
   '', '.css', '.html', '.java', '.js', '.json', '.jsx', '.md', '.mjs', '.properties',
