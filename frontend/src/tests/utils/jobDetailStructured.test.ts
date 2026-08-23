@@ -260,15 +260,30 @@ describe("buildStructuredJobDetail", () => {
     }
   });
   it("filters Answer/fee junk from regenerated ISRO job-details JSON", async () => {
-    const { readFileSync } = await import("node:fs");
-    const { resolve } = await import("node:path");
-    const { fileURLToPath } = await import("node:url");
-    const here = fileURLToPath(new URL(".", import.meta.url));
-    const path = resolve(
-      here,
-      "../../../public/data/job-details/isro-careers-advt-no-isro-icrb-02-emc-cepo-2026-dated-28-07-2026-recruitment-to--d96680f7.json"
-    );
-    const job = JSON.parse(readFileSync(path, "utf8"));
+    const job = {
+      detail: {
+        source: "structured-import",
+        summary: "ISRO recruitment to Scientist/Engineer posts.",
+        fee: {
+          General: "Rs. 250/-",
+        },
+        content_sections: [
+          {
+            heading: "Overview",
+            paragraphs: [],
+            tables: [
+              [
+                { label: "Advt No. ISRO", value: "ICRB:02(EMC-CEPO):2026 dated 28-07-2026" },
+                { label: "Answer", value: "You may select other Universities option available in the drop down menu." },
+                { label: "Technology [Paper Code", value: "CS]" },
+              ],
+            ],
+            lists: [],
+            links: [],
+          },
+        ],
+      },
+    };
     const structured = buildStructuredJobDetail(job);
     expect(structured.overviewFacts.some((f) => /^answer$/i.test(f.label))).toBe(false);
     expect(structured.overviewFacts.some((f) => /paper\s*code/i.test(f.label))).toBe(false);
