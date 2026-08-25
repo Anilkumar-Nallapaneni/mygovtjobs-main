@@ -16,6 +16,10 @@ const MAX_ROLLING_DROP_RATE = Number(process.env.MAX_CATALOG_DROP_RATE || 0.35)
 // Conservative bootstrap floor; the rolling comparison becomes the stronger guard
 // after the first conflict-free snapshot is committed. Production may raise this via CI.
 const MIN_PUBLIC_CATALOG_ROWS = Number(process.env.MIN_PUBLIC_CATALOG_ROWS || 10)
+// Publish-gate/watchdog can intentionally narrow the public catalog to a small,
+// high-confidence set. Keep the hard floor above, but warn instead of blocking
+// on rolling drops while the catalog is in that small-catalog band.
+const SMALL_PUBLIC_CATALOG_WARNING_ROWS = Number(process.env.SMALL_PUBLIC_CATALOG_WARNING_ROWS || 20)
 
 function readJson(path) {
   try {
@@ -133,10 +137,11 @@ export function verifyLiveJobsSnapshot({ strict = false } = {}) {
   if (previousCount && previousCount >= MIN_PUBLIC_CATALOG_ROWS) {
     const minimumRollingCount = Math.floor(previousCount * (1 - MAX_ROLLING_DROP_RATE))
     if (fullItems.length < minimumRollingCount) {
-      issues.push(
+      const message =
         `catalog dropped ${(100 * (1 - fullItems.length / previousCount)).toFixed(1)}% ` +
         `(${previousCount} → ${fullItems.length}); allowed rolling drop is ${(MAX_ROLLING_DROP_RATE * 100).toFixed(0)}%`
-      )
+      if (fullItems.length <= SMALL_PUBLIC_CATALOG_WARNING_ROWS) warnings.push(message)
+      else issues.push(message)
     }
   }
   const vacRate = fullVac.withVac / fullVac.total
