@@ -5,7 +5,7 @@ import { fileURLToPath } from 'url'
 
 const root = join(fileURLToPath(new URL('.', import.meta.url)), '..')
 const ignored = new Set([
-  '.git', '.venv', 'node_modules', 'dist', '.pytest_cache', '.local-test-tmp', 'coverage',
+  '.git', '.venv', 'node_modules', 'dist', '.pytest_cache', '.local-test-tmp', '.stage2-test-tmp', 'coverage',
 ])
 const textExtensions = new Set([
   '', '.css', '.html', '.java', '.js', '.json', '.jsx', '.md', '.mjs', '.properties',
@@ -15,10 +15,18 @@ const marker = /^(<<<<<<<(?: .*)?|=======$|>>>>>>>(?: .*)?)$/m
 const conflicts = []
 
 function walk(dir) {
-  for (const name of readdirSync(dir)) {
+  let entries
+  try {
+    entries = readdirSync(dir)
+  } catch (error) {
+    if (error?.code === 'ENOENT') return
+    throw error
+  }
+  for (const name of entries) {
     if (ignored.has(name)) continue
     const file = join(dir, name)
-    const info = statSync(file)
+    const info = statSync(file, { throwIfNoEntry: false })
+    if (!info) continue
     if (info.isDirectory()) walk(file)
     else if (info.size <= 10 * 1024 * 1024 && textExtensions.has(extname(name).toLowerCase())) {
       if (marker.test(readFileSync(file, 'utf8'))) conflicts.push(relative(root, file))
