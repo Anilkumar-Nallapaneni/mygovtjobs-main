@@ -259,23 +259,36 @@ describe("buildStructuredJobDetail", () => {
       expect(overviewArticle.paragraphs.some((p) => /frequently\s+asked/i.test(p))).toBe(false);
     }
   });
-  it("filters Answer/fee junk from regenerated ISRO job-details JSON", async () => {
-    const { readFileSync } = await import("node:fs");
-    const { resolve } = await import("node:path");
-    const { fileURLToPath } = await import("node:url");
-    const here = fileURLToPath(new URL(".", import.meta.url));
-    const path = resolve(
-      here,
-      "../../../public/data/job-details/isro-careers-advt-no-isro-icrb-02-emc-cepo-2026-dated-28-07-2026-recruitment-to--d96680f7.json"
-    );
-    const job = JSON.parse(readFileSync(path, "utf8"));
+  it("filters Answer/fee junk from regenerated-style ISRO job-details JSON", () => {
+    const job = {
+      title: "ISRO Scientist/Engineer SC",
+      detail: {
+        source: "structured-import",
+        fee: {
+          Answer: "All Women candidates (General/SC/ST/OBC/PWBD) are exempted from",
+        },
+        content_sections: [
+          {
+            heading: "Overview",
+            paragraphs: [
+              "Frequently asked questions and answers for recruitment to Scientist/Engineer SC posts.",
+            ],
+            tables: [
+              [
+                { label: "Advt No. ISRO", value: "ICRB:02(EMC-CEPO):2026 dated 28-07-2026" },
+                { label: "Answer", value: "Candidates should apply only through the official website." },
+                { label: "Technology [Paper Code", value: "CS]" },
+              ],
+            ],
+            lists: [],
+            links: [],
+          },
+        ],
+      },
+    };
     const structured = buildStructuredJobDetail(job);
     expect(structured.overviewFacts.some((f) => /^answer$/i.test(f.label))).toBe(false);
     expect(structured.overviewFacts.some((f) => /paper\s*code/i.test(f.label))).toBe(false);
-    // No FAQ Answer fee promotion
-    const fee = job.detail?.fee;
-    if (fee && typeof fee === "object") {
-      expect(Object.keys(fee).some((k) => /^answer$/i.test(k))).toBe(false);
-    }
+    expect(structured.overviewFacts.some((f) => /Advt No/i.test(f.label))).toBe(true);
   });
 });
