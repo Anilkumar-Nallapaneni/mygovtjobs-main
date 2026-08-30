@@ -16,6 +16,7 @@ const MAX_ROLLING_DROP_RATE = Number(process.env.MAX_CATALOG_DROP_RATE || 0.35)
 // Conservative bootstrap floor; the rolling comparison becomes the stronger guard
 // after the first conflict-free snapshot is committed. Production may raise this via CI.
 const MIN_PUBLIC_CATALOG_ROWS = Number(process.env.MIN_PUBLIC_CATALOG_ROWS || 10)
+const SMALL_PUBLIC_CATALOG_WARNING_ROWS = Number(process.env.SMALL_PUBLIC_CATALOG_WARNING_ROWS || 20)
 
 function readJson(path) {
   try {
@@ -50,6 +51,34 @@ function vacancySum(items) {
     }
   }
   return { sum, withVac, total: items.length }
+}
+
+export function assessRollingCatalogDrop({
+  currentCount,
+  previousCount,
+  maxRollingDropRate = MAX_ROLLING_DROP_RATE,
+  minPublicCatalogRows = MIN_PUBLIC_CATALOG_ROWS,
+  smallPublicCatalogWarningRows = SMALL_PUBLIC_CATALOG_WARNING_ROWS,
+}) {
+  if (!previousCount || previousCount < minPublicCatalogRows) return null
+
+  const minimumRollingCount = Math.floor(previousCount * (1 - maxRollingDropRate))
+  if (currentCount >= minimumRollingCount) return null
+
+  const message =
+    `catalog dropped ${(100 * (1 - currentCount / previousCount)).toFixed(1)}% ` +
+    `(${previousCount} → ${currentCount}); allowed rolling drop is ${(maxRollingDropRate * 100).toFixed(0)}%`
+
+  if (currentCount >= minPublicCatalogRows && currentCount <= smallPublicCatalogWarningRows) {
+    return {
+      severity: 'warning',
+      message:
+        `${message}; treating as warning because current catalog is within small-catalog ceiling ` +
+        `${smallPublicCatalogWarningRows}`,
+    }
+  }
+
+  return { severity: 'issue', message }
 }
 
 function indiaDateIso() {
@@ -130,14 +159,14 @@ export function verifyLiveJobsSnapshot({ strict = false } = {}) {
   if (fullItems.length < MIN_PUBLIC_CATALOG_ROWS) {
     issues.push(`catalog has ${fullItems.length} rows; minimum release floor is ${MIN_PUBLIC_CATALOG_ROWS}`)
   }
-  if (previousCount && previousCount >= MIN_PUBLIC_CATALOG_ROWS) {
-    const minimumRollingCount = Math.floor(previousCount * (1 - MAX_ROLLING_DROP_RATE))
-    if (fullItems.length < minimumRollingCount) {
-      issues.push(
-        `catalog dropped ${(100 * (1 - fullItems.length / previousCount)).toFixed(1)}% ` +
-        `(${previousCount} → ${fullItems.length}); allowed rolling drop is ${(MAX_ROLLING_DROP_RATE * 100).toFixed(0)}%`
-      )
-    }
+  const rollingDrop = assessRollingCatalogDrop({
+    currentCount: fullItems.length,
+    previousCount,
+  })
+  if (rollingDrop?.severity === 'warning') {
+    warnings.push(rollingDrop.message)
+  } else if (rollingDrop?.severity === 'issue') {
+    issues.push(rollingDrop.message)
   }
   const vacRate = fullVac.withVac / fullVac.total
   const todayIndia = indiaDateIso()
