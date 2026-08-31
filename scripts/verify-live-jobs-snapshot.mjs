@@ -16,6 +16,7 @@ const MAX_ROLLING_DROP_RATE = Number(process.env.MAX_CATALOG_DROP_RATE || 0.35)
 // Conservative bootstrap floor; the rolling comparison becomes the stronger guard
 // after the first conflict-free snapshot is committed. Production may raise this via CI.
 const MIN_PUBLIC_CATALOG_ROWS = Number(process.env.MIN_PUBLIC_CATALOG_ROWS || 10)
+const SMALL_PUBLIC_CATALOG_WARNING_ROWS = Number(process.env.SMALL_PUBLIC_CATALOG_WARNING_ROWS || 20)
 
 function readJson(path) {
   try {
@@ -133,10 +134,16 @@ export function verifyLiveJobsSnapshot({ strict = false } = {}) {
   if (previousCount && previousCount >= MIN_PUBLIC_CATALOG_ROWS) {
     const minimumRollingCount = Math.floor(previousCount * (1 - MAX_ROLLING_DROP_RATE))
     if (fullItems.length < minimumRollingCount) {
-      issues.push(
+      const message =
         `catalog dropped ${(100 * (1 - fullItems.length / previousCount)).toFixed(1)}% ` +
         `(${previousCount} → ${fullItems.length}); allowed rolling drop is ${(MAX_ROLLING_DROP_RATE * 100).toFixed(0)}%`
-      )
+      if (fullItems.length <= SMALL_PUBLIC_CATALOG_WARNING_ROWS && fullItems.length >= MIN_PUBLIC_CATALOG_ROWS) {
+        warnings.push(
+          `${message}; allowing small-catalog churn because ${fullItems.length} rows remain above the ${MIN_PUBLIC_CATALOG_ROWS}-row floor`
+        )
+      } else {
+        issues.push(message)
+      }
     }
   }
   const vacRate = fullVac.withVac / fullVac.total

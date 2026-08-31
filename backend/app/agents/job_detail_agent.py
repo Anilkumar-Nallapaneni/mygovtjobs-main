@@ -22,6 +22,7 @@ from app.agents.job_detail_sections import (
     _resolve_repo_root,
     _section_body_chars,
     _sections_from_summary,
+    _summary_has_job_signals,
 )
 from app.database.retry import is_transient_db_error
 from app.database.session import SessionLocal

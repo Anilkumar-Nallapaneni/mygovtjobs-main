@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 
-import { buildStructuredJobDetail } from "@/utils/jobDetailStructured";
+import { buildStructuredJobDetail, sanitizeFeeDict } from "@/utils/jobDetailStructured";
 
 describe("buildStructuredJobDetail", () => {
   it("parses imported content sections into structured fields", () => {
@@ -259,23 +259,37 @@ describe("buildStructuredJobDetail", () => {
       expect(overviewArticle.paragraphs.some((p) => /frequently\s+asked/i.test(p))).toBe(false);
     }
   });
-  it("filters Answer/fee junk from regenerated ISRO job-details JSON", async () => {
-    const { readFileSync } = await import("node:fs");
-    const { resolve } = await import("node:path");
-    const { fileURLToPath } = await import("node:url");
-    const here = fileURLToPath(new URL(".", import.meta.url));
-    const path = resolve(
-      here,
-      "../../../public/data/job-details/isro-careers-advt-no-isro-icrb-02-emc-cepo-2026-dated-28-07-2026-recruitment-to--d96680f7.json"
-    );
-    const job = JSON.parse(readFileSync(path, "utf8"));
+  it("filters Answer/fee junk from regenerated ISRO-style job details", () => {
+    const job = {
+      detail: {
+        source: "structured-import",
+        fee: {
+          Answer: "Candidates can select other Universities option available in the drop down menu.",
+          "Application Fee": "Rs. 250/-",
+        },
+        content_sections: [
+          {
+            heading: "Overview",
+            paragraphs: [],
+            tables: [
+              [
+                { label: "Advt No. ISRO", value: "ICRB:02(EMC-CEPO):2026 dated 28-07-2026" },
+                { label: "Answer", value: "There is no written test for the current advertisement." },
+                { label: "Technology [Paper Code", value: "CS]" },
+              ],
+            ],
+            lists: [],
+            links: [],
+          },
+        ],
+      },
+    };
     const structured = buildStructuredJobDetail(job);
     expect(structured.overviewFacts.some((f) => /^answer$/i.test(f.label))).toBe(false);
     expect(structured.overviewFacts.some((f) => /paper\s*code/i.test(f.label))).toBe(false);
     // No FAQ Answer fee promotion
-    const fee = job.detail?.fee;
-    if (fee && typeof fee === "object") {
-      expect(Object.keys(fee).some((k) => /^answer$/i.test(k))).toBe(false);
-    }
+    const fee = sanitizeFeeDict(job.detail.fee);
+    expect(Object.keys(fee).some((k) => /^answer$/i.test(k))).toBe(false);
+    expect(fee["Application Fee"]).toBe("Rs. 250/-");
   });
 });
