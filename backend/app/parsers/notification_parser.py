@@ -26,14 +26,40 @@ _DATE_RANGE_TITLE = re.compile(
     r"(\d{1,2}[./-]\d{1,2}[./-]\d{4})\s*(?:TO|–|—|-)\s*(\d{1,2}[./-]\d{1,2}[./-]\d{4})",
     re.I,
 )
+_DATE_RANGE_MONTH_TITLE = re.compile(
+    rf"(?:from|between|apply(?:ing)?\s+(?:online\s+)?(?:from)?)\s+"
+    rf"(\d{{1,2}}(?:st|nd|rd|th)?[\s,\-]+{_MONTH_NAME}[\s,\-]+\d{{2,4}})"
+    rf"\s*(?:to|–|—|-|and)\s+"
+    rf"(\d{{1,2}}(?:st|nd|rd|th)?[\s,\-]+{_MONTH_NAME}[\s,\-]+\d{{2,4}})",
+    re.I,
+)
 # Labeled apply-by dates in titles ("Last Date 30-08-2026", "Closing Date: 30 June 2026").
 _LAST_DATE_TITLE = re.compile(
-    rf"(?:last\s*date|closing\s*date|apply\s*(?:by|before|till)|on\s+or\s+before|"
+    rf"(?:last\s*date(?:\s+for\s+[A-Za-z\s]{{0,50}}?)?|"
+    rf"closing\s*date|apply\s*(?:by|before|till)|on\s+or\s+before|"
     rf"registration\s+extended\s+(?:till|until|upto|up\s+to|to))"
-    rf"[:\s]+(?:(\d{{1,2}})[./-](\d{{1,2}})[./-](\d{{4}})|"
+    rf"(?:[:\s]+|\s+is\s+)(?:(\d{{1,2}})[./-](\d{{1,2}})[./-](\d{{4}})|"
     rf"(\d{{1,2}})(?:st|nd|rd|th)?[\s,\-]+({_MONTH_NAME})[\s,\-]+(\d{{4}}))",
     re.I,
 )
+_LAST_DATE_ISO_TITLE = re.compile(
+    r"(?:closing\s*date|last\s*date)(?:\s+extension)?\s+(\d{4}-\d{2}-\d{2})",
+    re.I,
+)
+_DATE_DATED_MONTH = re.compile(
+    rf"dated\s+(\d{{1,2}})[.\s/-]+({_MONTH_NAME})[.\s/-]+(\d{{4}})",
+    re.I,
+)
+_REG_FROM_TITLE = re.compile(
+    rf"registration\s*from\s*"
+    rf"(?:(\d{{1,2}})[./-](\d{{1,2}})[./-](\d{{4}})|"
+    rf"(\d{{1,2}})[\s\-]+({_MONTH_NAME})[\s\-]+(\d{{4}}))"
+    rf"(?:\s*(?:to|–|—|-)\s*"
+    rf"(?:(\d{{1,2}})[./-](\d{{1,2}})[./-](\d{{4}})|"
+    rf"(\d{{1,2}})[\s\-]+({_MONTH_NAME})[\s\-]+(\d{{4}})))?",
+    re.I,
+)
+_WALK_IN_TITLE = re.compile(r"walk[\s\-]?in", re.I)
 _MONTH_LOOKUP = {
     "jan": 1, "january": 1, "feb": 2, "february": 2, "mar": 3, "march": 3,
     "apr": 4, "april": 4, "may": 5, "jun": 6, "june": 6, "jul": 7, "july": 7,
@@ -102,41 +128,89 @@ class NotificationParser:
         if not title:
             return out
 
+        def _ymd(day: str, month: str, year: str) -> str:
+            return f"{int(year):04d}-{int(month):02d}-{int(day):02d}"
+
+        def _month_iso(day: str, month_raw: str, year: str) -> str | None:
+            month = _MONTH_LOOKUP.get(str(month_raw).strip().lower())
+            if not month:
+                return None
+            return _ymd(day, str(month), year)
+
         dr = _DATE_RANGE_TITLE.search(title)
         if dr:
             out["published_date"] = to_iso_date(dr.group(1).replace(".", "-"))
             out["last_date"] = to_iso_date(dr.group(2).replace(".", "-"))
             return out
 
+        drm = _DATE_RANGE_MONTH_TITLE.search(title)
+        if drm:
+            start = to_iso_date(drm.group(1))
+            end = to_iso_date(drm.group(2))
+            if start:
+                out["published_date"] = start
+            if end:
+                out["last_date"] = end
+            return out
+
         if labeled := _LAST_DATE_TITLE.search(title):
             if labeled.group(1) and labeled.group(2) and labeled.group(3):
-                d, m, y = labeled.group(1), labeled.group(2), labeled.group(3)
-                out["last_date"] = f"{y}-{int(m):02d}-{int(d):02d}"
+                out["last_date"] = _ymd(labeled.group(1), labeled.group(2), labeled.group(3))
                 return out
             if labeled.group(4) and labeled.group(5) and labeled.group(6):
-                day = int(labeled.group(4))
-                month = _MONTH_LOOKUP.get(labeled.group(5).lower())
-                year = int(labeled.group(6))
-                if month:
-                    out["last_date"] = f"{year}-{month:02d}-{day:02d}"
+                iso = _month_iso(labeled.group(4), labeled.group(5), labeled.group(6))
+                if iso:
+                    out["last_date"] = iso
                     return out
+
+        if iso_close := _LAST_DATE_ISO_TITLE.search(title):
+            out["last_date"] = iso_close.group(1)
+            return out
 
         if upto := _DATE_UPTO.search(title):
             d, m, y = upto.groups()
-            out["last_date"] = f"{y}-{int(m):02d}-{int(d):02d}"
+            out["last_date"] = _ymd(d, m, y)
             return out
+
+        if dated_m := _DATE_DATED_MONTH.search(title):
+            iso = _month_iso(dated_m.group(1), dated_m.group(2), dated_m.group(3))
+            if iso:
+                if _WALK_IN_TITLE.search(title):
+                    out["last_date"] = iso
+                else:
+                    out["published_date"] = iso
+                return out
 
         if dated := _DATE_DATED.search(title):
             d, m, y = dated.groups()
-            out["published_date"] = f"{y}-{int(m):02d}-{int(d):02d}"
+            iso = _ymd(d, m, y)
+            if _WALK_IN_TITLE.search(title):
+                out["last_date"] = iso
+            else:
+                out["published_date"] = iso
+            return out
+
+        if reg := _REG_FROM_TITLE.search(title):
+            if reg.group(1) and reg.group(2) and reg.group(3):
+                out["published_date"] = _ymd(reg.group(1), reg.group(2), reg.group(3))
+            elif reg.group(4) and reg.group(5) and reg.group(6):
+                iso = _month_iso(reg.group(4), reg.group(5), reg.group(6))
+                if iso:
+                    out["published_date"] = iso
+            if reg.group(7) and reg.group(8) and reg.group(9):
+                out["last_date"] = _ymd(reg.group(7), reg.group(8), reg.group(9))
+            elif reg.group(10) and reg.group(11) and reg.group(12):
+                iso = _month_iso(reg.group(10), reg.group(11), reg.group(12))
+                if iso:
+                    out["last_date"] = iso
             return out
 
         dates = list(_DATE_DMY.finditer(title))
         if len(dates) >= 2:
             d, m, y = dates[0].groups()
-            out["published_date"] = f"{y}-{int(m):02d}-{int(d):02d}"
+            out["published_date"] = _ymd(d, m, y)
             d, m, y = dates[-1].groups()
-            out["last_date"] = f"{y}-{int(m):02d}-{int(d):02d}"
+            out["last_date"] = _ymd(d, m, y)
         return out
 
     def _extract_from_title(self, title: str) -> dict[str, Any]:

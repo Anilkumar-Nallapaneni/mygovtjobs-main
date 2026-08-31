@@ -33,6 +33,13 @@ _DATE_RANGE = re.compile(
     r"(\d{1,2}[./-]\d{1,2}[./-]\d{2,4})\s*(?:TO|–|—|-)\s*(\d{1,2}[./-]\d{1,2}[./-]\d{2,4})",
     re.I,
 )
+_DATE_RANGE_MONTH = re.compile(
+    rf"(?:from|between)\s+"
+    rf"(\d{{1,2}}(?:st|nd|rd|th)?[\s,\-]+{_MONTH_NAME}[\s,\-]+\d{{2,4}})"
+    rf"\s*(?:to|–|—|-|and)\s+"
+    rf"(\d{{1,2}}(?:st|nd|rd|th)?[\s,\-]+{_MONTH_NAME}[\s,\-]+\d{{2,4}})",
+    re.I,
+)
 _DATED_LINE = re.compile(
     r"Dated\s*:\s*([l1I\d]{1,2})\s*[.\s/-]+\s*(\d{1,2})\s*[.\s/-]+\s*(\d{4})",
     re.I,
@@ -53,6 +60,10 @@ _PUBLISHED_PATTERNS = (
         re.I,
     ),
     re.compile(r"\bdated\s+(\d{1,2})[.\s/-](\d{1,2})[.\s/-](\d{4})\b", re.I),
+    re.compile(
+        rf"\bdated\s+(\d{{1,2}}(?:st|nd|rd|th)?[\s,\-/]+{_MONTH_NAME}[\s,\-/]+\d{{2,4}})\b",
+        re.I,
+    ),
     _DATED_LINE,
     re.compile(r"Date\s*:\s*(\d{1,2}[./-]\d{1,2}[./-]\d{4})", re.I),
 )
@@ -69,13 +80,13 @@ _LAST_PATTERNS = (
     re.compile(
         r"(?:last\s*date(?:\s*for\s*(?:the\s+)?(?:submission\s+of\s+)?(?:online\s*)?(?:application|registration)s?)?|"
         r"closing\s*date|apply\s*(?:by|before|till)|submission\s*deadline|"
-        r"अंतिम\s*तिथि)[:\s]+(\d{1,2}[./\s-]\d{1,2}[./\s-]\d{2,4})",
+        r"अंतिम\s*तिथि)(?:[:\s]+|\s+is\s+)(\d{1,2}[./\s-]\d{1,2}[./\s-]\d{2,4})",
         re.I,
     ),
     re.compile(
         rf"(?:last\s*date(?:\s*for\s*(?:the\s+)?(?:submission\s+of\s+)?(?:online\s*)?(?:application|registration)s?)?|"
         rf"closing\s*date|apply\s*(?:by|before|till)|submission\s*deadline|"
-        rf"अंतिम\s*तिथि)[:\s]+"
+        rf"अंतिम\s*तिथि)(?:[:\s]+|\s+is\s+)"
         rf"(\d{{1,2}}(?:st|nd|rd|th)?[\s,\-]+{_MONTH_NAME}[\s,\-]+\d{{2,4}})",
         re.I,
     ),
@@ -96,8 +107,18 @@ _LAST_PATTERNS = (
         re.I,
     ),
     re.compile(
+        rf"walk[\s\-]?in[\s\S]{{0,220}}?"
+        rf"(\d{{1,2}}(?:st|nd|rd|th)?[\s,\-]+{_MONTH_NAME}[\s,\-]+\d{{2,4}})",
+        re.I,
+    ),
+    re.compile(
         r"(?:date\s+of\s+(?:walk[\s\-]?in|interview)|interview\s+date)\s*[:\-]?\s*"
         r"(\d{1,2}[./\s-]\d{1,2}[./\s-]\d{2,4})",
+        re.I,
+    ),
+    re.compile(
+        rf"(?:date\s+of\s+(?:walk[\s\-]?in|interview)|interview\s+date)\s*[:\-]?\s*"
+        rf"(\d{{1,2}}(?:st|nd|rd|th)?[\s,\-]+{_MONTH_NAME}[\s,\-]+\d{{2,4}})",
         re.I,
     ),
 )
@@ -278,7 +299,7 @@ def extract_dates_from_text(text: str) -> dict[str, str | None]:
     published: str | None = None
     last: str | None = None
 
-    for m in _DATE_RANGE.finditer(text):
+    for m in (*_DATE_RANGE.finditer(text), *_DATE_RANGE_MONTH.finditer(text)):
         start = _token_to_iso(m.group(1))
         end = _token_to_iso(m.group(2))
         window = text[max(0, m.start() - 80) : m.end() + 40]

@@ -7,6 +7,7 @@ from __future__ import annotations
 
 import argparse
 import asyncio
+import re
 import sys
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
@@ -25,6 +26,13 @@ from app.services.publish_gate import india_today
 
 # Title-parsed dates past this are almost always OCR / range bugs (e.g. 2029–2030).
 MAX_DEADLINE_DAYS = 365
+_SKIP_NON_APPLY_TITLE = re.compile(
+    r"list of candidates|provisionally (?:qualified|eligible|in-?eligible)|"
+    r"short[\s-]?listed|\bresult\b|\badmit card\b|answer key|score ?card|merit list|"
+    r"examination program|postponement|postpone|symposium|bids are invited|"
+    r"call for nominations|certificate course",
+    re.I,
+)
 
 
 async def main() -> int:
@@ -60,6 +68,9 @@ async def main() -> int:
             scanned += 1
             title = job.title or ""
             if is_junk_job_title(title, job.apply_url or job.source_url):
+                skipped_junk += 1
+                continue
+            if _SKIP_NON_APPLY_TITLE.search(title):
                 skipped_junk += 1
                 continue
             fields = parser._extract_dates_from_title(title)

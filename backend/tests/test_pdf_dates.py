@@ -83,6 +83,36 @@ def test_extract_month_name_last_dates():
     assert out2["last_date"] == "2026-08-21"
 
 
+def test_extract_month_name_from_to_window():
+    text = (
+        "Online Applications are invited for Direct Recruitment to various posts "
+        "from 25th July, 2026 to 14th September, 2026."
+    )
+    out = extract_dates_from_text(text)
+    assert out["published_date"] == "2026-07-25"
+    assert out["last_date"] == "2026-09-14"
+
+
+def test_extract_last_date_is_month_name():
+    text = "Last date for submission of online application is 21 September 2026."
+    out = extract_dates_from_text(text)
+    assert out["last_date"] == "2026-09-21"
+
+
+def test_extract_dated_and_walk_in_month_names():
+    text = """
+    SAINIK SCHOOL GOALPARA (ASSAM)
+    Following Vacancies are available in school for the Academic Session 2026 – 27.
+    ADVT NO. SSG/02/2026 DATED 20 MAY 2026
+    Date of Walk-in-Interview
+    Football Coach 02 (Male-1,Female-1)
+    18 Jun 2026
+    """
+    out = extract_dates_from_text(text)
+    assert out["published_date"] == "2026-05-20"
+    assert out["last_date"] == "2026-06-18"
+
+
 def test_validate_rejects_ancient_published():
     from app.services.pdf_candidate import validate_extracted_dates
 

@@ -9,8 +9,9 @@ From repo root:
 """
 import argparse
 import asyncio
+import re
 import sys
-from datetime import datetime, timezone
+from datetime import date, datetime, timezone
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -39,13 +40,21 @@ from app.parsers.pdf_dates import to_published_datetime
 from app.parsers.pdf_enrich import merge_pdf_fields
 from app.services.job_child_service import sync_job_children
 from app.services.job_persist_service import JobPersistService, _parse_date
-from app.services.noise_filter import is_junk_job_title, sanitize_json_for_postgres
+from app.services.pdf_candidate import validate_extracted_dates
+from app.services.noise_filter import (
+    is_junk_job_title,
+    is_result_archive_listing,
+    sanitize_json_for_postgres,
+)
+from app.services.publish_gate import india_today
 from app.scrapers.pdf_discover import ensure_pdf_urls
 
 COMMIT_EVERY = 15
 
 
 def _has_pdf(job: Job) -> bool:
+    if job.primary_pdf_url and ".pdf" in str(job.primary_pdf_url).lower():
+        return True
     detail = job.detail or {}
     urls = list(detail.get("pdf_urls") or [])
     if job.apply_url and ".pdf" in str(job.apply_url).lower():
@@ -59,11 +68,51 @@ def _has_apply_or_pdf(job: Job) -> bool:
     return _has_pdf(job)
 
 
+_SKIP_NON_APPLY_TITLE = re.compile(
+    r"list of candidates|provisionally (?:qualified|eligible|in-?eligible)|"
+    r"short[\s-]?listed|\bresult\b|\badmit card\b|answer key|score ?card|merit list|"
+    r"examination program|postponement|postpone|symposium|bids are invited|"
+    r"call for nominations|certificate course|hackathon|announcement of opportunity|"
+    r"research areas|awards for the year|successful launch|press note|"
+    r"offline admission|ineligible candidates|eligible candidates for the post",
+    re.I,
+)
+_RECRUIT_HINT = re.compile(
+    r"recruit|vacanc|walk[\s\-]?in|apprentice|engagement|notification|"
+    r"advt\.?\s*no|bharti|apply\s+online|\d+\s+posts?",
+    re.I,
+)
+_ONLINE_APPLY_HINT = re.compile(
+    r"apply\s+online|last\s*date|closing\s*date|"
+    r"extension of (?:online\s+)?(?:application|registration|last)|"
+    r"from\s+\d{1,2}.+\s+to\s+\d",
+    re.I,
+)
+_WALKIN_HINT = re.compile(r"walk[\s\-]?in", re.I)
+_SKIP_DOC_TYPES = {
+    "RESULT",
+    "ADMIT_CARD",
+    "FORM",
+    "EXAM_NOTICE",
+    "GENERAL_NOTICE",
+    "RECRUITMENT_RULES",
+}
+
+
 def _is_quality_recruitment(job: Job) -> bool:
-    """Skip portal chrome / tenders; keep real-ish recruitment titles."""
+    """Skip portal chrome / tenders / results; keep real-ish recruitment titles."""
     title = job.title or ""
     url = job.apply_url or getattr(job, "source_url", None) or ""
+    doc = (job.document_type or "").strip().upper()
+    if doc in _SKIP_DOC_TYPES:
+        return False
     if is_junk_job_title(title, url):
+        return False
+    if is_result_archive_listing(title, url):
+        return False
+    if _SKIP_NON_APPLY_TITLE.search(title):
+        return False
+    if not _RECRUIT_HINT.search(title):
         return False
     return True
 
@@ -82,6 +131,8 @@ def _job_pdf_urls(job: Job) -> list[str]:
     pdf_urls = list(detail.get("pdf_urls") or [])
     if detail.get("pdf_url"):
         pdf_urls.insert(0, detail["pdf_url"])
+    if job.primary_pdf_url:
+        pdf_urls.insert(0, job.primary_pdf_url)
     if job.apply_url and ".pdf" in str(job.apply_url).lower():
         pdf_urls.insert(0, job.apply_url)
     return pdf_urls
@@ -117,6 +168,27 @@ async def backfill_one(session, job: Job, parser: NotificationParser) -> dict:
     new_last = _parse_date(pdf_last or norm_last)
     pub_src = pdf_pub or (norm_pub.isoformat() if isinstance(norm_pub, datetime) else norm_pub)
     new_pub = norm_pub if isinstance(norm_pub, datetime) else to_published_datetime(pub_src)
+
+    today = india_today()
+    last_d = new_last.date() if isinstance(new_last, datetime) else new_last
+    pub_d = new_pub.date() if isinstance(new_pub, datetime) else None
+    date_errs = validate_extracted_dates(
+        pub_d,
+        last_d if isinstance(last_d, date) else None,
+        today=today,
+        summary=str(pdf_fields.get("summary") or ""),
+    )
+    err_blob = " ".join(date_errs)
+    if new_pub and ("implausibly old" in err_blob or "in the future" in err_blob):
+        new_pub = None
+        pub_d = None
+    if last_d and (
+        "implausibly distant" in err_blob
+        or "before publication" in err_blob
+        or last_d < today
+    ):
+        new_last = None
+        last_d = None
 
     changed = False
     dates_changed = False
@@ -242,6 +314,14 @@ async def main() -> None:
                 targets = with_pdf + without
             else:
                 targets = [j for j in targets if _has_pdf(j)]
+
+        targets.sort(
+            key=lambda j: (
+                0 if _ONLINE_APPLY_HINT.search(j.title or "") else 1,
+                1 if _WALKIN_HINT.search(j.title or "") else 0,
+                0 if (j.document_type or "").upper() == "RECRUITMENT" else 1,
+            )
+        )
 
         cap = args.limit if args.limit else len(targets)
         target_ids = [str(j.id) for j in targets[:cap]]
