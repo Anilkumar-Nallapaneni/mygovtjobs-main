@@ -23,13 +23,17 @@ jobs:
           test "$code" = "200"
 
       - name: API health (optional)
-        continue-on-error: true
         env:
           API_HEALTH_URL: ${{ secrets.API_HEALTH_URL }}
         run: |
           URL="${API_HEALTH_URL:-https://api.livegovtjobs.com/health}"
-          body=$(curl -sS --max-time 20 "$URL") || exit 1
-          echo "$body" | grep -q '"status"' || exit 1
+          if ! body=$(curl -sS --max-time 20 "$URL"); then
+            echo "::warning::Optional API health endpoint is unavailable: $URL"
+            exit 0
+          fi
+          if ! echo "$body" | grep -q '"status"'; then
+            echo "::warning::Optional API health response has no status field"
+          fi
 
       - name: Job data freshness
         run: |

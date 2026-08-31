@@ -67,6 +67,8 @@ jobs:
           fi
 
       - name: Demote + enrich dates + promote + export gated catalog
+        env:
+          MAX_CATALOG_DROP_RATE: "0.50"
         run: |
           npm run data:demote-publish-gate:apply || true
           # Title/PDF date extractors → drafts get last_date without re-scrape

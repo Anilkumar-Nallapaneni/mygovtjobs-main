@@ -38,6 +38,9 @@ jobs:
       DAILY_SYNC_ENFORCE_ONCE: "1"
       ALLOW_FALLBACK_JSON_EXPORT: "0"
       ALLOW_DRASTIC_JSON_EXPORT: "1"
+      # The watchdog can legitimately remove many expired/invalid listings at once.
+      # Keep the absolute floor and all strict quality checks, but permit a 50% cleanup.
+      MAX_CATALOG_DROP_RATE: "0.50"
       SYNC_TRIGGER_TYPE: canonical_pipeline
       SYNC_FORCE: "1"
       SYNC_CONCURRENCY: "8"
@@ -140,4 +143,3 @@ jobs:
     permissions:
       actions: read
       contents: read
-

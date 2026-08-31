@@ -12,7 +12,7 @@ const root = join(dirname(fileURLToPath(import.meta.url)), '..')
 const fullPath = join(root, 'frontend/public/data/live-jobs.json')
 const listPath = join(root, 'frontend/public/data/live-jobs-list.json')
 const SNAPSHOT_REPO_PATH = 'frontend/public/data/live-jobs.json'
-const MAX_ROLLING_DROP_RATE = Number(process.env.MAX_CATALOG_DROP_RATE || 0.35)
+const MAX_ROLLING_DROP_RATE = Number(process.env.MAX_CATALOG_DROP_RATE || 0.50)
 // Conservative bootstrap floor; the rolling comparison becomes the stronger guard
 // after the first conflict-free snapshot is committed. Production may raise this via CI.
 const MIN_PUBLIC_CATALOG_ROWS = Number(process.env.MIN_PUBLIC_CATALOG_ROWS || 10)

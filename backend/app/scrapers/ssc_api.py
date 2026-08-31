@@ -12,6 +12,7 @@ import httpx
 
 from app.scrapers.base import BaseScraper
 from app.scrapers.date_utils import parse_published, within_lookback
+from app.scrapers.http_client import create_async_client
 from app.services.document_classifier import classify_document
 from app.services.noise_filter import clean_job_title, is_junk_job_title
 
@@ -157,7 +158,12 @@ class SscApiScraper(BaseScraper):
             "Referer": "https://ssc.gov.in/home/notice-board",
             "Origin": "https://ssc.gov.in",
         }
-        async with httpx.AsyncClient(timeout=60.0, follow_redirects=True, headers=headers) as client:
+        async with create_async_client(
+            timeout=60.0,
+            user_agent=USER_AGENT,
+            url_for_tls_policy=SSC_API,
+        ) as client:
+            client.headers.update(headers)
             items = await self._fetch_items_with_retry(client)
 
         candidates: list[dict[str, Any]] = []

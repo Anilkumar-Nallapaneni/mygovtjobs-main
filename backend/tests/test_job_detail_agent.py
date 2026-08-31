@@ -1,7 +1,7 @@
 """Tests for JobDetailAgent."""
 
-from app.agents.job_detail_agent import (
-    JobDetailAgent,
+from app.agents.job_detail_agent import JobDetailAgent
+from app.agents.job_detail_sections import (
     _infer_detail_source,
     _is_placeholder_sections,
     _sections_from_summary,
