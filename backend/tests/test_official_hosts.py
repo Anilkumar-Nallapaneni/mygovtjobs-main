@@ -38,4 +38,6 @@ def test_psu_and_aiims_edu_in_hosts():
     assert is_official_recruitment_host("https://jobs.rnsb.bank.in/careers")
     assert is_official_recruitment_host("https://drive.google.com/file/d/abc123/view")
     assert is_official_recruitment_host("https://www.wbsetcl.in/careers/notice.pdf")
+    assert is_official_recruitment_host("https://iocl.com/latest-job-opening")
+    assert is_official_recruitment_host("https://careers.bhel.in/index.jsp")
     assert not is_official_recruitment_host("https://img2.freejobalert.com/news/2026/05/example.pdf")

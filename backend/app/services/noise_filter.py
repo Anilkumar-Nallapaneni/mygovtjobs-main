@@ -308,7 +308,8 @@ _STRONG_JOB = re.compile(
     r"\d+\s+posts?|recruit(?:ment)?\s+of|direct\s+recruit|apprentice|"
     r"result\s+of\s+.+\s+(?:examination|exam)|written\s+examination|"
     r"interview\s+dated|senior\s+resident|selection\s+panel|postponement\s+of|"
-    r"group[\s-]*[civ\d]+|assistant\s+director|constable|clerk|teacher",
+    r"group[\s-]*[civ\d]+|assistant\s+director|constable|clerk|teacher|"
+    r"\bcen\s+(?:no\.?\s*)?\d{2}/\d{4}|centrali[sz]ed\s+employment\s+notice",
     re.I,
 )
 

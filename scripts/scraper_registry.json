@@ -315,12 +315,14 @@
     },
     {
       "code": "rrb-bbs",
-      "module": "state_portal_html",
-      "portal_url": "https://www.rrbbbs.gov.in",
+      "module": "rrb_cen",
+      "portal_url": "https://www.rrbbbs.gov.in/notifications.php",
       "state": "all",
       "category": "railways",
       "enabled": true,
-      "maxItems": 50
+      "maxItems": 50,
+      "lookbackDays": 400,
+      "notes": "CEN table (onclick → cen.php); JS homepage has no anchors"
     },
     {
       "code": "rrb-bilaspur",
@@ -405,12 +407,14 @@
     },
     {
       "code": "rrb-tvm",
-      "module": "state_portal_html",
-      "portal_url": "https://www.rrbthiruvananthapuram.gov.in",
+      "module": "rrb_open_cen",
+      "portal_url": "https://www.rrbthiruvananthapuram.gov.in/",
       "state": "all",
       "category": "railways",
       "enabled": true,
-      "maxItems": 50
+      "maxItems": 10,
+      "lookbackDays": 400,
+      "notes": "Detailed CEN PDFs (incl. CEN 04/2026 JE). Apply at rrbapply.gov.in"
     },
     {
       "code": "fci",
@@ -491,12 +495,14 @@
     },
     {
       "code": "bsf",
-      "module": "state_portal_html",
-      "portal_url": "https://rectt.bsf.gov.in",
+      "module": "bsf_portal",
+      "portal_url": "https://rectt.bsf.gov.in/",
       "state": "all",
       "category": "police",
       "enabled": true,
-      "maxItems": 50
+      "maxItems": 40,
+      "lookbackDays": 400,
+      "notes": "PDF advertisement buttons on rectt.bsf.gov.in — generic HTML missed live ads"
     },
     {
       "code": "crpf",
@@ -662,13 +668,14 @@
     },
     {
       "code": "iocl",
-      "module": "state_portal_html",
-      "portal_url": "https://iocl.com/job-openings",
+      "module": "iocl_listings",
+      "portal_url": "https://iocl.com/latest-job-opening",
       "state": "all",
       "category": "psu",
       "enabled": true,
-      "maxItems": 50,
-      "skipCommonPaths": true
+      "maxItems": 20,
+      "lookbackDays": 400,
+      "notes": "SPA behind Sucuri; scrape LatestJobOpening advertisement PDFs"
     },
     {
       "code": "bpcl",
@@ -709,21 +716,25 @@
     },
     {
       "code": "bhel",
-      "module": "state_portal_html",
-      "portal_url": "https://careers.bhel.in",
+      "module": "bhel_careers",
+      "portal_url": "https://careers.bhel.in/index.jsp",
       "state": "all",
       "category": "psu",
       "enabled": true,
-      "maxItems": 50
+      "maxItems": 30,
+      "lookbackDays": 400,
+      "notes": "Current openings PDFs on careers.bhel.in/index.jsp"
     },
     {
       "code": "hal",
-      "module": "state_portal_html",
+      "module": "hal_careers",
       "portal_url": "https://hal-india.co.in/Careers/M__93",
       "state": "all",
       "category": "defence",
       "enabled": true,
-      "maxItems": 50
+      "maxItems": 30,
+      "lookbackDays": 400,
+      "notes": "Angular SPA — POST FormData to /today_career on service.hal-india.co.in"
     },
     {
       "code": "bel",

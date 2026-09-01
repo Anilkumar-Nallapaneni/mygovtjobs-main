@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest'
 
-import { filterLatestNotificationJobs, isExpiringSoonJob } from '@/utils/latestNotificationsFilters'
+import { filterLatestNotificationJobs, isExpiringSoonJob, partitionClosingDeadlineJobs } from '@/utils/latestNotificationsFilters'
 
 const baseJob = {
   id: '1',
@@ -51,6 +51,16 @@ describe('latestNotificationsFilters', () => {
     later.setDate(later.getDate() + 30)
     const far = { ...baseJob, lastDate: later.toISOString().slice(0, 10) }
     expect(isExpiringSoonJob(far)).toBe(false)
+  })
+
+  it('partitions closing today vs rest of week', () => {
+    const now = Date.parse('2026-09-01T12:00:00+05:30')
+    const todayJob = { ...baseJob, id: 't', lastDate: '2026-09-01' }
+    const weekJob = { ...baseJob, id: 'w', lastDate: '2026-09-04' }
+    const later = { ...baseJob, id: 'l', lastDate: '2026-10-01' }
+    const { today, week } = partitionClosingDeadlineJobs([todayJob, weekJob, later], now)
+    expect(today.map((j) => j.id)).toEqual(['t'])
+    expect(week.map((j) => j.id)).toEqual(['w'])
   })
 
   it('matches NE umbrella jobs to split state chips via title hints', () => {

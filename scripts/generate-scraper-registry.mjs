@@ -13,6 +13,16 @@ const REGISTRY_PATH = join(__dirname, "scraper_registry.json");
 
 const existing = JSON.parse(readFileSync(REGISTRY_PATH, "utf8"));
 const rssScrapers = (existing.scrapers || []).filter((s) => s.module === "rss_feed");
+const existingByCode = new Map((existing.scrapers || []).map((s) => [s.code, s]));
+const CUSTOM_MODULES = new Set([
+  "iocl_listings",
+  "rrb_cen",
+  "rrb_open_cen",
+  "bsf_portal",
+  "bhel_careers",
+  "hal_careers",
+  "ssc_api",
+]);
 
 const htmlScrapers = [];
 const seen = new Set();
@@ -27,6 +37,12 @@ for (const site of OFFICIAL_SITES) {
 
   const stateId =
     site.stateIds?.length === 1 && site.stateIds[0] !== "all" ? site.stateIds[0] : "all";
+
+  const prev = existingByCode.get(code);
+  if (prev && CUSTOM_MODULES.has(prev.module)) {
+    htmlScrapers.push({ ...prev, category: prev.category || site.category || "state" });
+    continue;
+  }
 
   htmlScrapers.push({
     code,

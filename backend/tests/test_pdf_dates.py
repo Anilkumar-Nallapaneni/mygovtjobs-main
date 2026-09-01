@@ -99,6 +99,34 @@ def test_extract_last_date_is_month_name():
     assert out["last_date"] == "2026-09-21"
 
 
+def test_extract_cen_table_closing_date_with_words_between():
+    text = """
+    GOVERNMENT OF INDIA MINISTRY OF RAILWAYS
+    CENTRALIZED EMPLOYMENT NOTIFICATION CEN NO. 04/2026
+    Date of Indicative Notice in Employment News. 25.07.2026
+    Opening date of Online application. 14.08.2026
+    Closing date for Submission of Online Application.
+    13.09.2026 (23:59 hours)
+    Last Date for Application fee payment for the submitted applications.
+    15.09.2026
+    Dates for Modification window for corrections in application form with payment of
+    modification fee (Please Note: Details filled in Create an Account form and Chosen
+    RRB cannot be modified).
+    16.09.2026 to 25.09.2026
+    """
+    out = extract_dates_from_text(text)
+    assert out["last_date"] == "2026-09-13"
+
+
+def test_extract_iocl_end_date_of_online_application():
+    text = (
+        "The end date of online application for this recruitment is 03.09.2026. "
+        "Candidates must submit the form before the closing time."
+    )
+    out = extract_dates_from_text(text)
+    assert out["last_date"] == "2026-09-03"
+
+
 def test_extract_dated_and_walk_in_month_names():
     text = """
     SAINIK SCHOOL GOALPARA (ASSAM)

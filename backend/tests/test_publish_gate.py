@@ -31,6 +31,21 @@ def test_classify_recruitment():
     assert result.confidence >= 0.85
 
 
+def test_classify_rrb_cen_and_iocl_titles():
+    rrb = classify_document(
+        "RRB Recruitment CEN 04/2026 — Junior Engineer, Depot Material Superintendent and CMA",
+        "Official Centralised Employment Notice CEN 04/2026. Apply online at rrbapply.gov.in.",
+        url="https://www.rrbapply.gov.in/",
+    )
+    assert rrb.content_type == "RECRUITMENT"
+    iocl = classify_document(
+        "IOCL Recruitment of Executives through CBT 2026",
+        "Official IOCL detailed advertisement. Apply online on the IOCL careers portal.",
+        url="https://iocl.com/latest-job-opening",
+    )
+    assert iocl.content_type == "RECRUITMENT"
+
+
 def test_classify_result_and_form():
     assert classify_document_type("Final Result for Assistant Director") == "RESULT"
     assert classify_document_type("OBC Declaration Form PDF") == "FORM"
@@ -50,6 +65,22 @@ def test_classify_gazette_recruitment_is_recruitment():
     )
     assert result.document_type == "RECRUITMENT"
     assert result.content_type == "RECRUITMENT"
+
+
+def test_classify_rrb_cen_and_iocl_cbt():
+    rrb = classify_document(
+        "RRB Recruitment CEN 04/2026 — Junior Engineer, Depot Material Superintendent and CMA",
+        "Official Centralised Employment Notice CEN 04/2026. Apply online at rrbapply.gov.in.",
+        url="https://www.rrbapply.gov.in/",
+    )
+    assert rrb.content_type == "RECRUITMENT"
+    assert rrb.document_type == "RECRUITMENT"
+    iocl = classify_document(
+        "IOCL Recruitment of Executives through CBT 2026",
+        "Official IOCL detailed advertisement. Apply online on the IOCL careers portal.",
+        url="https://iocl.com/latest-job-opening",
+    )
+    assert iocl.content_type == "RECRUITMENT"
 
 
 def test_classify_recruitment_rules_still_rules():

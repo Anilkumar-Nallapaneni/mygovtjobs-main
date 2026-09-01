@@ -9,6 +9,7 @@ import EducationFilterPill from "@/components/home/EducationFilterPill";
 import HomeHeroMarketing from "@/components/home/HomeHeroMarketing";
 import ExploreHubBanner from "@/components/home/ExploreHubBanner";
 import HomeJobsListSection from "@/components/home/HomeJobsListSection";
+import ClosingDeadlinesStrip from "@/components/home/ClosingDeadlinesStrip";
 import ResultsHubFilters from "@/components/home/ResultsHubFilters";
 import { useHomePageDerived } from "@/components/home/useHomePageDerived";
 import HeadlineStatsBar from "@/components/layout/HeadlineStatsBar";
@@ -90,7 +91,7 @@ export default function HomePage({
   const heroColRef = useRef<HTMLDivElement | null>(null);
   const [resultsViewMode, setResultsViewMode] = useState<HeadlinesViewMode>("table");
 
-  const { filtered, nationwideForState, quickFilterCounts, heroStats, quickFilterKeys } =
+  const { filtered, nationwideForState, quickFilterCounts, heroStats, quickFilterKeys, closingToday, closingWeek } =
     useHomePageDerived({ jobs, catalogStats });
 
   const isBrowseLanding =
@@ -383,6 +384,15 @@ export default function HomePage({
             )}
           </div>
         </div>
+        )}
+
+        {!resultsHubMode && !isBrowseLanding && (
+          <ClosingDeadlinesStrip
+            today={closingToday}
+            week={closingWeek}
+            onJobClick={onJobClick}
+            locale={locale}
+          />
         )}
 
         {!resultsHubMode && (

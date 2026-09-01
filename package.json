@@ -75,6 +75,8 @@
     "sync:home-shell-stats": "node scripts/sync-home-shell-stats.mjs",
     "data:populate-recruitment-events": "node scripts/run-python.mjs scripts/populate-recruitment-events-from-feeds.py",
     "data:populate-recruitment-events:apply": "node scripts/run-python.mjs scripts/populate-recruitment-events-from-feeds.py --apply",
+    "sync:lifecycle-events": "node scripts/run-python.mjs scripts/sync-ssc-lifecycle-events.py",
+    "sync:lifecycle-events:apply": "node scripts/run-python.mjs scripts/sync-ssc-lifecycle-events.py --apply",
     "export:recruitment-events": "node scripts/run-python.mjs scripts/export-recruitment-events.py",
     "build:live-jobs-list": "node scripts/build-live-jobs-list.mjs",
     "build:live-jobs-bootstrap": "node scripts/build-live-jobs-bootstrap.mjs",

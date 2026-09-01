@@ -12,6 +12,7 @@ import {
   jobMatchesHeroStatFilter,
 } from "@/utils/homePageFilters";
 import { isJobExpired } from "@/utils/jobFilters";
+import { partitionClosingDeadlineJobs } from "@/utils/latestNotificationsFilters";
 import { useBrowseContext } from "@/context/BrowseContext";
 import type { HomePageProps } from "@/types/homePage";
 import { vacancyCountForStats } from "@/data/homePageConstants";
@@ -134,11 +135,18 @@ export function useHomePageDerived({ jobs = [], catalogStats }: DerivedInput) {
     };
   }, [jobs, catalogStats, nowMs]);
 
+  const closing = useMemo(
+    () => partitionClosingDeadlineJobs(deferredJobs, nowMs),
+    [deferredJobs, nowMs]
+  );
+
   return {
     filtered,
     nationwideForState,
     quickFilterCounts,
     heroStats,
     quickFilterKeys: QUICK_FILTER_KEYS,
+    closingToday: closing.today,
+    closingWeek: closing.week,
   };
 }

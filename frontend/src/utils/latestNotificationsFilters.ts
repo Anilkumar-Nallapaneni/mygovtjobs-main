@@ -82,6 +82,25 @@ export function isExpiringSoonJob(
   return daysLeft >= 0 && daysLeft <= withinDays
 }
 
+export function partitionClosingDeadlineJobs(
+  jobs: JobRecord[],
+  nowMs: number = Date.now()
+): { today: JobRecord[]; week: JobRecord[] } {
+  const open = jobs.filter((job) => !isJobExpired(job, nowMs))
+  const today = open.filter((job) => isExpiringSoonJob(job, 0, nowMs))
+  const week = open.filter((job) => isExpiringSoonJob(job, EXPIRING_SOON_DAYS, nowMs))
+  const restOfWeek = week.filter((job) => !today.some((row) => row.id === job.id))
+  const byDate = (a: JobRecord, b: JobRecord) => {
+    const da = parseLastDate(a.lastDate)?.getTime() ?? 0
+    const db = parseLastDate(b.lastDate)?.getTime() ?? 0
+    return da - db
+  }
+  return {
+    today: [...today].sort(byDate),
+    week: [...restOfWeek].sort(byDate),
+  }
+}
+
 export type LatestNotifJobFilterWithClock = LatestNotifJobFilter & { nowMs?: number }
 
 export function filterLatestNotificationJobs(

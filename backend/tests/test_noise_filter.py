@@ -85,6 +85,14 @@ def test_rejects_gov_admin_noise_titles():
     assert looks_like_job_notification(
         "SSC CGL 2026 Recruitment Notification — Online Registration extended till 15.08.2026"
     )
+    assert looks_like_job_notification(
+        "RRB Recruitment CEN 04/2026 — Junior Engineer, Depot Material Superintendent and CMA"
+    )
+    assert looks_like_job_notification("IOCL Recruitment of Executives through CBT 2026")
+    assert looks_like_job_notification(
+        "RRB Recruitment CEN 04/2026 — Junior Engineer, Depot Material Superintendent and CMA"
+    )
+    assert looks_like_job_notification("IOCL Recruitment of Executives through CBT 2026")
 
 
 def test_clean_job_title_strips_advt_no_prefix():

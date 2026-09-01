@@ -56,6 +56,11 @@ _WORD_POSTS = re.compile(
 )
 
 _TOTAL_PATTERN = re.compile(r"total\s*(?:no\.?\s*of\s*)?(?:posts?|vacancies|vacancy)\s*[:\-]?\s*([\d,]+)", re.I)
+# RRB CEN vacancy tables: "3993 RRB-wise & Railway Zone/PU-wise detailed distribution"
+_RRB_CEN_TOTAL = re.compile(
+    r"(\d{3,5})\s+RRB-wise\s*&?\s*Railway.{0,80}distribution\s+of\s+vacancies",
+    re.I | re.S,
+)
 
 # Address pin glued to a "Posts:" section header (e.g. "Haryana - 122001\nPosts :")
 _PINCODE_BEFORE_POSTS = re.compile(r"[-–—]\s*(\d{6})\s*(?:\n\s*)?Posts\s*:", re.I)
@@ -170,6 +175,12 @@ def extract_vacancies(*chunks: str | None, title: str = "") -> int:
         if _plausible(n, title_ctx, match=m, blob=blob_for_scan):
             totals.append(n)
 
+    for m in _RRB_CEN_TOTAL.finditer(blob_for_scan):
+        n = _parse_num(m.group(1))
+        # Skip salary-window checks: CEN tables sit next to "18-33 years" which contains "rs".
+        if 100 <= n <= 250_000:
+            totals.append(n)
+
     if totals:
         return max(totals)
 
@@ -231,6 +242,11 @@ _VACANCY_CIRCULAR = re.compile(r"\bvacancy\s+circular\b", re.I)
 def is_non_vacancy_document(title: str = "", context: str = "") -> bool:
     blob = _vacancy_context_blob(title, context)
     if _VACANCY_CIRCULAR.search(blob):
+        return False
+    # Open CEN / PSU ads mention "result of CBT" as a later stage; that is not a result notice.
+    if re.search(r"\d{2,5}\s+posts?\s+of", title or "", re.I) and re.search(
+        r"recruitment|\bcen\s+\d", title or "", re.I
+    ):
         return False
     return bool(_NON_VACANCY_DOC.search(blob))
 

@@ -77,3 +77,26 @@ def test_parenthetical_and_word_post_counts():
     assert resolve_vacancies(0, title, "") == 2
     assert extract_vacancies("Walk-in for twelve posts", title="Walk-in") == 0  # twelve not mapped
     assert extract_vacancies("Engagement of three posts of Consultant", title="Engagement") == 3
+
+
+def test_rrb_cen_total_after_pay_level_row():
+    body = """
+    Total Vacancies
+    (All RRBs)
+    Various Posts of Junior Engineer and Depot Material Superintendent
+    Level 6
+    35,400
+    See Annexure-A
+    18-33 years
+    3993
+    RRB-wise & Railway Zone/PU-wise detailed distribution of vacancies is given in Annexure-B.
+    """
+    assert extract_vacancies(body, title="RRB CEN 04/2026") == 3993
+
+
+def test_open_cen_title_keeps_vacancies_despite_result_of_cbt_in_body():
+    title = "RRB Recruitment CEN 04/2026 — 3993 posts of Junior Engineer, DMS and CMA"
+    body = "The result of the CBT will be published on RRB websites. Document verification follows."
+    assert extract_vacancies(title, title=title) == 3993
+    assert resolve_vacancies(3993, title, body) == 3993
+

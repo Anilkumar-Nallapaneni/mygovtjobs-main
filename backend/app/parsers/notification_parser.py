@@ -339,6 +339,9 @@ class NotificationParser:
             detail["apply_urls"] = pdf_apply_urls
         if title_fields.get("advt_no"):
             detail["advt_no"] = title_fields["advt_no"]
+        for key in ("application_fee", "how_to_apply", "selection_process", "fee"):
+            if pdf.get(key):
+                detail[key] = pdf[key]
 
         merged_text = " ".join(
             filter(
@@ -390,6 +393,9 @@ class NotificationParser:
             "qualification": qualification,
             "salary": pdf.get("salary") or raw.get("salary"),
             "age_limit": pdf.get("age_limit") or raw.get("age_limit"),
+            "application_fee": pdf.get("application_fee") or raw.get("application_fee"),
+            "how_to_apply": pdf.get("how_to_apply") or raw.get("how_to_apply"),
+            "selection_process": pdf.get("selection_process") or raw.get("selection_process"),
             "last_date": last_date,
             "published_at": published_dt,
             "detail": detail,

@@ -233,6 +233,94 @@
   padding-top: 4px;
 }
 
+.closing-deadlines {
+  max-width: var(--layout-max);
+  margin: 0 auto 8px;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.closing-deadlines__group {
+  border: 1px solid var(--ds-border);
+  border-radius: 16px;
+  background: var(--ds-bg1);
+  padding: 12px 14px;
+  min-width: 0;
+}
+
+.closing-deadlines__group-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.closing-deadlines__group-title {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--ds-white);
+}
+
+.closing-deadlines__view-all {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--ds-mutedHi);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.closing-deadlines__view-all:hover {
+  color: var(--ds-white);
+}
+
+.closing-deadlines__empty {
+  margin: 0;
+  font-size: 13px;
+  color: var(--ds-muted);
+}
+
+.closing-deadlines__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 6px;
+}
+
+.closing-deadlines__row {
+  display: grid;
+  grid-template-columns: 4.5rem minmax(0, 1fr);
+  gap: 10px;
+  align-items: baseline;
+  text-decoration: none;
+  color: var(--ds-white);
+  font-size: 13px;
+  line-height: 1.35;
+  padding: 4px 0;
+}
+
+.closing-deadlines__date {
+  color: var(--ds-mutedHi);
+  font-variant-numeric: tabular-nums;
+  font-weight: 600;
+}
+
+.closing-deadlines__title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@media (max-width: 800px) {
+  .closing-deadlines {
+    grid-template-columns: 1fr;
+  }
+}
+
 .home-jobs-section__header {
   display: flex;
   align-items: center;

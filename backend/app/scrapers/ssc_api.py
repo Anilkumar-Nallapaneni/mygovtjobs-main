@@ -98,6 +98,20 @@ def _priority(title: str) -> int:
     return score
 
 
+def _is_event_headline(title: str) -> bool:
+    t = title or ""
+    if not t or is_junk_job_title(t):
+        return False
+    return bool(
+        re.search(
+            r"\bresult\b|admit\s*card|hall\s*ticket|answer\s*key|cutoff|cut-?off|"
+            r"marks\s+tabulation|declaration of",
+            t,
+            re.I,
+        )
+    )
+
+
 class SscApiScraper(BaseScraper):
     def __init__(
         self,
@@ -105,11 +119,13 @@ class SscApiScraper(BaseScraper):
         max_items: int = 50,
         lookback_days: int = 400,
         content_type: str = "notice-boards",
+        mode: str = "jobs",
     ):
         self.max_items = max_items
         # SSC exam notices often remain the open apply window for months.
         self.lookback_days = max(lookback_days, 400)
         self.content_type = content_type
+        self.mode = mode if mode in ("jobs", "events") else "jobs"
 
     async def _fetch_page(self, client: httpx.AsyncClient, page: int, limit: int) -> list[dict[str, Any]]:
         params = {
@@ -172,7 +188,8 @@ class SscApiScraper(BaseScraper):
             if not isinstance(raw, dict):
                 continue
             title = clean_job_title(str(raw.get("headline") or "").replace("\r", " ").replace("\n", " "))
-            if not title or not _is_recruitment_headline(title):
+            keep = _is_event_headline if self.mode == "events" else _is_recruitment_headline
+            if not title or not keep(title):
                 continue
             key = title.lower()
             if key in seen:
@@ -222,9 +239,22 @@ class SscApiScraper(BaseScraper):
             out.append(row)
 
         logger.info(
-            "SSC API scraped %s recruitment notices (from %s returned, %s candidates)",
+            "SSC API scraped %s %s notices (from %s returned, %s candidates)",
             len(out),
+            self.mode,
             len(items),
             len(candidates),
         )
         return out
+
+
+class SscEventsScraper(SscApiScraper):
+    """Same SSC JSON API, keeping result / admit / answer-key headlines for hubs."""
+
+    def __init__(self, *, max_items: int = 80, lookback_days: int = 400, content_type: str = "notice-boards"):
+        super().__init__(
+            max_items=max_items,
+            lookback_days=lookback_days,
+            content_type=content_type,
+            mode="events",
+        )

@@ -24,6 +24,10 @@ def _merge_into(target: dict[str, Any], fields: dict[str, Any]) -> None:
         if fields.get(key) and not target.get(key):
             target[key] = fields[key]
 
+    for key in ("application_fee", "how_to_apply", "selection_process", "fee"):
+        if fields.get(key) and not target.get(key):
+            target[key] = fields[key]
+
     if fields.get("vacancies"):
         cur = int(target.get("vacancies") or 0)
         nxt = int(fields["vacancies"])

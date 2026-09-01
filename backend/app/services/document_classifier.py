@@ -42,6 +42,9 @@ RECRUITMENT_TERMS = (
     "re-opening of window",
     "window for submission of online application",
     "window for online application",
+    "centralised employment notice",
+    "centralized employment notice",
+    "cen no",
 )
 
 BLOCKED_TERMS = (
@@ -115,7 +118,9 @@ _PATTERNS: list[tuple[str, re.Pattern[str]]] = [
             r"engagement\s+of|invites?\s+applications?|"
             r"notice\s+of\b[\s\S]{0,100}\bexamination\b|"
             r"re-?opening\s+of\s+window|"
-            r"window\s+for\s+(?:submission\s+of\s+)?(?:online\s+)?application)\b",
+            r"window\s+for\s+(?:submission\s+of\s+)?(?:online\s+)?application|"
+            r"centrali[sz]ed\s+employment\s+notice|"
+            r"\bcen\s+(?:no\.?\s*)?\d{2}/\d{4})\b",
             re.I,
         ),
     ),

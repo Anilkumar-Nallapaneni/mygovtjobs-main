@@ -121,6 +121,13 @@ _LAST_PATTERNS = (
         rf"(\d{{1,2}}(?:st|nd|rd|th)?[\s,\-]+{_MONTH_NAME}[\s,\-]+\d{{2,4}})",
         re.I,
     ),
+    # Official CEN / PSU tables put words between the label and the date.
+    re.compile(
+        r"(?:closing\s+date(?:\s+for)?|end\s+date\s+of\s+online\s+application|"
+        r"last\s+date\s+for\s+(?:the\s+)?(?:submission|online\s+application))"
+        r"[^\d]{0,160}(\d{1,2}[./-]\d{1,2}[./-]20\d{2})",
+        re.I,
+    ),
 )
 _RELATIVE_LAST = re.compile(
     r"within\s+(?:a\s+period\s+of\s+)?(\d{1,3})\s+days?\s+from\s+the\s+date\s+of\s+publication",
@@ -136,6 +143,10 @@ _PROJECT_END_HINT = re.compile(
 _APPLY_HINT_NEAR = re.compile(
     r"(?:last\s*date|closing\s*date|apply\s*(?:by|before|till|online)|"
     r"on\s+or\s+before|walk[\s\-]?in|submission\s*deadline|registration)",
+    re.I,
+)
+_RANGE_NOT_APPLY = re.compile(
+    r"modification|scribe|fee\s+payment|correction\s+window|create\s+an\s+account",
     re.I,
 )
 
@@ -305,6 +316,9 @@ def extract_dates_from_text(text: str) -> dict[str, str | None]:
         window = text[max(0, m.start() - 80) : m.end() + 40]
         # Date ranges next to project tenure are not apply windows.
         if _PROJECT_END_HINT.search(window) and not _APPLY_HINT_NEAR.search(window):
+            continue
+        # CEN tables list modification/scribe windows as ranges; those are not last-apply.
+        if _RANGE_NOT_APPLY.search(window):
             continue
         if start and not published:
             published = start

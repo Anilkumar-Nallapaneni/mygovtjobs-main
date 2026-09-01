@@ -385,6 +385,54 @@ class IngestAgent:
                 content_type=str(entry.get("contentType") or "notice-boards"),
             )
 
+        if module == "iocl_listings":
+            from app.scrapers.portal_listings import IoclListingsScraper
+
+            return IoclListingsScraper(max_items=max_items, lookback_days=lookback)
+
+        if module == "rrb_cen":
+            from app.scrapers.portal_listings import RrbCenScraper
+
+            return RrbCenScraper(
+                entry.get("portal_url", ""),
+                max_items=max_items,
+                lookback_days=lookback,
+                source_code=str(entry.get("code") or "rrb"),
+            )
+
+        if module == "rrb_open_cen":
+            from app.scrapers.portal_listings import RrbOpenCenScraper
+
+            return RrbOpenCenScraper(
+                entry.get("portal_url") or "https://www.rrbthiruvananthapuram.gov.in/",
+                max_items=max_items,
+                lookback_days=lookback,
+                source_code=str(entry.get("code") or "rrb-tvm"),
+            )
+
+        if module == "bsf_portal":
+            from app.scrapers.portal_listings import BsfPortalScraper
+
+            return BsfPortalScraper(
+                entry.get("portal_url") or "https://rectt.bsf.gov.in/",
+                max_items=max_items,
+                lookback_days=lookback,
+            )
+
+        if module == "bhel_careers":
+            from app.scrapers.portal_listings import BhelCareersScraper
+
+            return BhelCareersScraper(
+                entry.get("portal_url") or "https://careers.bhel.in/index.jsp",
+                max_items=max_items,
+                lookback_days=lookback,
+            )
+
+        if module == "hal_careers":
+            from app.scrapers.portal_listings import HalCareersScraper
+
+            return HalCareersScraper(max_items=max_items, lookback_days=lookback)
+
         if module == "state_portal_html":
             from app.scrapers.state_portal_html import StatePortalHtmlScraper
 
