@@ -1,7 +1,24 @@
 {
-  "generatedAt": "2026-08-14T06:01:49.545Z",
-  "count": 254,
+  "generatedAt": "2026-09-01T09:34:48.141Z",
+  "count": 270,
   "items": [
+    {
+      "id": "29e735f6c2245346",
+      "title": "Recruitment : Walk-in-interview for appoinment of Pharmacist on Adhoc/Locum basis",
+      "link": "http://www.barc.gov.in/careers/vacancy22.pdf",
+      "publishedAt": "2026-08-21T06:39:34.000Z",
+      "summary": "Walk-in-interview for appoinment of Pharmacist on Adhoc/Locum basis Last date for application: 27-Aug-2026",
+      "pdfUrls": [],
+      "sourceId": "barc",
+      "sourceName": "Bhabha Atomic Research Centre (BARC)",
+      "dept": "Bhabha Atomic Research Centre (BARC)",
+      "state": "All India",
+      "category": "defence",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "rss-discovered"
+    },
     {
       "id": "2e7fa8a4ffb7c7be",
       "title": "Results: Result of Walk-In-Interview for the post of PGRMO and Non-DNB JRD/SRD held on 09.07.2026 at BARC Hospital, Mumbai",
@@ -37,6 +54,23 @@
       "fetchMethod": "rss-discovered"
     },
     {
+      "id": "f43d7aa6e0241ca3",
+      "title": "Advt No. ISRO:ICRB:02(EMC):2025 dated 27.05.2025 - Schedule of Interview for the post of Scientist/Engineer ‘SC’ [Mechanical] - BE002 - Phase-IV Read More",
+      "link": "https://www.isro.gov.in/ICRB_Recruitment9.html",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "isro-careers",
+      "sourceName": "ISRO — Careers",
+      "dept": "Indian Space Research Organisation",
+      "state": "All India",
+      "category": "psu",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
       "id": "98096e0f3c848ae9",
       "title": "Interview Letter",
       "link": "https://bpsc.bihar.gov.in/interview-letter/",
@@ -47,6 +81,23 @@
       "sourceName": "BPSC — Notices",
       "dept": "Bihar PSC",
       "state": "Bihar",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "f642c56c504a0b6f",
+      "title": "25 Sep 2026 LIST OF CANDIDATES QUALIFIED FOR INTERVIEW IN ADVT. NO. A-7/E-1/2021, U.P. TECH. EDU.(TCHG.) SER. EXAM.-2021, LECT. TEXT. DESIGN, TEXT. DESIGN PRINT,.....",
+      "link": "https://uppsc.up.nic.in/Open_PDF.aspx?I4PnQ0tBagnM8dHr1ViOntNklk6dW/D3",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "uppsc-hall-tickets",
+      "sourceName": "UPPSC — Hall tickets",
+      "dept": "Uttar Pradesh PSC",
+      "state": "Uttar Pradesh",
       "category": "state",
       "stateIds": [
         "all"
@@ -69,25 +120,6 @@
         "all"
       ],
       "fetchMethod": "html-listing"
-    },
-    {
-      "id": "bdc0610f3727e61b",
-      "title": "Notice No. 11/2026 - Direct Recruitment to the post Assistant General Manager (Finance) – Result and Schedule of Interview of the provisionally qualified candidates",
-      "link": "https://apeda.gov.in/sites/default/files/announcements/Notice_No_11_2026.pdf",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [
-        "https://apeda.gov.in/sites/default/files/announcements/Notice_No_11_2026.pdf"
-      ],
-      "sourceId": "apeda",
-      "sourceName": "APEDA / BEDF — Recruitments",
-      "dept": "APEDA / BEDF — Recruitments",
-      "state": "All India",
-      "category": "psu",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
     },
     {
       "id": "a1bc7ecbd075f319",
@@ -583,6 +615,264 @@
       "fetchMethod": "html"
     },
     {
+      "id": "9e7e8810785833f5",
+      "title": "A World Class Sea Survival Centre",
+      "link": "https://ongcindia.com/web/eng/sea-survival-training",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "ongc",
+      "sourceName": "ONGC — Careers",
+      "dept": "ONGC — Careers",
+      "state": "All India",
+      "category": "psu",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "3f5f0150d9a9618d",
+      "title": "Jharkhand Group of Mines: Result of the 'Walk-in-Interview' held on 12/08/2026 for Engagement of Consultants (Doctors in Medical Discipline) against Advertisement No. BSL/R-C/2026-07",
+      "link": "https://aima-web-images.s3.ap-south-1.amazonaws.com/sailcareers.com/Downloads/BSP_News_01092026_121727.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://aima-web-images.s3.ap-south-1.amazonaws.com/sailcareers.com/Downloads/BSP_News_01092026_121727.pdf"
+      ],
+      "sourceId": "sail",
+      "sourceName": "Steel Authority of India (SAIL)",
+      "dept": "Steel Authority of India (SAIL)",
+      "state": "All India",
+      "category": "psu",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "7247a7fb05ee0576",
+      "title": "RSP:INTERVIEW FOR SELECTION OF TRAINEES FOR TRAINING PROGRAMMES IN ISPAT GENERAL HOSPITAL (IGH), ROURKELA ON STIPEND BASIS, vide Advt. No. HR-T&M/2498, dated 31.08.2026",
+      "link": "https://aima-web-images.s3.ap-south-1.amazonaws.com/sailcareers.com/Downloads/RSP_News%20&%20Jobs_31082026_181349.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://aima-web-images.s3.ap-south-1.amazonaws.com/sailcareers.com/Downloads/RSP_News%20&%20Jobs_31082026_181349.pdf"
+      ],
+      "sourceId": "sail",
+      "sourceName": "Steel Authority of India (SAIL)",
+      "dept": "Steel Authority of India (SAIL)",
+      "state": "All India",
+      "category": "psu",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "84cb09f417efc23b",
+      "title": "Rourkela Steel Plant :Result of walk-in Interview held on 05/08/2026 for Engagement of Consultants (Specialist & GDMO) on Contractual basis against Advt. No. 02/2026, dated 14.07.2026",
+      "link": "https://aima-web-images.s3.ap-south-1.amazonaws.com/sailcareers.com/Downloads/RSP_News%20&%20Jobs_24082026_153856.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://aima-web-images.s3.ap-south-1.amazonaws.com/sailcareers.com/Downloads/RSP_News%20&%20Jobs_24082026_153856.pdf"
+      ],
+      "sourceId": "sail",
+      "sourceName": "Steel Authority of India (SAIL)",
+      "dept": "Steel Authority of India (SAIL)",
+      "state": "All India",
+      "category": "psu",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "7a9b0027b83e17f4",
+      "title": "Collieries Division: Result of the 'Walk-in-Interview' held for Engagement of General Duty Medical Officer (GDMO) against Advertisement No. CD/HR/Rectt/26-27/68 Dated: 10.07.2026",
+      "link": "https://aima-web-images.s3.ap-south-1.amazonaws.com/sailcareers.com/Downloads/SAIL_News%20&%20Jobs_21082026_165023.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://aima-web-images.s3.ap-south-1.amazonaws.com/sailcareers.com/Downloads/SAIL_News%20&%20Jobs_21082026_165023.pdf"
+      ],
+      "sourceId": "sail",
+      "sourceName": "Steel Authority of India (SAIL)",
+      "dept": "Steel Authority of India (SAIL)",
+      "state": "All India",
+      "category": "psu",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "29433f19566f8cd4",
+      "title": "Walk-in Interview for Engagement of Consultants (Doctors in Medical Disciplines) for IISCO Steel Plant – advt. dated 18/AUG/2026.",
+      "link": "https://aima-web-images.s3.ap-south-1.amazonaws.com/sailcareers.com/Downloads/IISCO_News%20&%20Jobs_19082026_095439.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://aima-web-images.s3.ap-south-1.amazonaws.com/sailcareers.com/Downloads/IISCO_News%20&%20Jobs_19082026_095439.pdf"
+      ],
+      "sourceId": "sail",
+      "sourceName": "Steel Authority of India (SAIL)",
+      "dept": "Steel Authority of India (SAIL)",
+      "state": "All India",
+      "category": "psu",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "d5d6d7e72e8fce1d",
+      "title": "Result of Personal Interview with reference to Advertisement No. ISP/YP/2026/01 dated 22.05.2026",
+      "link": "https://aima-web-images.s3.ap-south-1.amazonaws.com/sailcareers.com/Downloads/IISCO_News_18082026_190419.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://aima-web-images.s3.ap-south-1.amazonaws.com/sailcareers.com/Downloads/IISCO_News_18082026_190419.pdf"
+      ],
+      "sourceId": "sail",
+      "sourceName": "Steel Authority of India (SAIL)",
+      "dept": "Steel Authority of India (SAIL)",
+      "state": "All India",
+      "category": "psu",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "75e6fc0783705ba3",
+      "title": "Bokaro Steel Plant: Result of the 'Walk-in-Interview' held on 16/07/2026 for Engagement of Consultants (Doctors in Medical Discipline) against Advertisement No. BSL/R-C/2026-06",
+      "link": "https://aima-web-images.s3.ap-south-1.amazonaws.com/sailcareers.com/Downloads/BSP_News_13082026_140856.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://aima-web-images.s3.ap-south-1.amazonaws.com/sailcareers.com/Downloads/BSP_News_13082026_140856.pdf"
+      ],
+      "sourceId": "sail",
+      "sourceName": "Steel Authority of India (SAIL)",
+      "dept": "Steel Authority of India (SAIL)",
+      "state": "All India",
+      "category": "psu",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "50768b5bacd14bfa",
+      "title": "“Bhilai Steel Plant – Walk-in Interview for engagement of Consultants (Doctors in Medical Discipline) at Various Hospitals of BSP”",
+      "link": "https://aima-web-images.s3.ap-south-1.amazonaws.com/sailcareers.com/Downloads/BHILAI_News%20&%20Jobs_03082026_143600.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://aima-web-images.s3.ap-south-1.amazonaws.com/sailcareers.com/Downloads/BHILAI_News%20&%20Jobs_03082026_143600.pdf"
+      ],
+      "sourceId": "sail",
+      "sourceName": "Steel Authority of India (SAIL)",
+      "dept": "Steel Authority of India (SAIL)",
+      "state": "All India",
+      "category": "psu",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "7363b936b2b772f5",
+      "title": "Result of Personal Interview with reference to Advertisement No. ISP/YP/2026/01 dated 22.05.2026",
+      "link": "https://aima-web-images.s3.ap-south-1.amazonaws.com/sailcareers.com/Downloads/IISCO_Jobs_18082026_190340.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://aima-web-images.s3.ap-south-1.amazonaws.com/sailcareers.com/Downloads/IISCO_Jobs_18082026_190340.pdf"
+      ],
+      "sourceId": "sail",
+      "sourceName": "Steel Authority of India (SAIL)",
+      "dept": "Steel Authority of India (SAIL)",
+      "state": "All India",
+      "category": "psu",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "c93c1c3c194d6488",
+      "title": "GD/Interview Schedule for MTT Recruitment",
+      "link": "https://sailcareers.com/sail2025mt/GD_Interview_ScheduleMTT.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://sailcareers.com/sail2025mt/GD_Interview_ScheduleMTT.pdf"
+      ],
+      "sourceId": "sail",
+      "sourceName": "Steel Authority of India (SAIL)",
+      "dept": "Steel Authority of India (SAIL)",
+      "state": "All India",
+      "category": "psu",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "59d89ab2523737c9",
+      "title": "Click here to view the result of Personal Interview for the Advertisement No. ISP/YP/2026/01 dated 22.05.2026",
+      "link": "https://sailcareers.com/sail2026yp/SAIL2026YPInterviewResult.aspx",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "sail",
+      "sourceName": "Steel Authority of India (SAIL)",
+      "dept": "Steel Authority of India (SAIL)",
+      "state": "All India",
+      "category": "psu",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "a2cdc2e2fd87ca8e",
+      "title": "Bio Data Form and Other Relevant documents for GD/Interview shortlisted candidates of MTT Posts",
+      "link": "https://sailcareers.com/SAIL2025MT/DownloadPerformaInterview.htm",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "sail",
+      "sourceName": "Steel Authority of India (SAIL)",
+      "dept": "Steel Authority of India (SAIL)",
+      "state": "All India",
+      "category": "psu",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "80bdf850f99dfdf4",
+      "title": "Click here to download GD / Interview Call Letter for Post of MTT",
+      "link": "https://sailcareers.com/sail2025MT/SAIL2026MTIntCallLetter.aspx",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "sail",
+      "sourceName": "Steel Authority of India (SAIL)",
+      "dept": "Steel Authority of India (SAIL)",
+      "state": "All India",
+      "category": "psu",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
       "id": "fa359b9114331fc3",
       "title": "Personality Test / Viva-Voce",
       "link": "https://hppsc.hp.gov.in/CommonControls/ViewContinuousLinkPage?qs=mhlKjiXMMIveW0iAADPEiC57R27%2BGya8ay4kbm0dJkcnlKHGzV4U5%2BQlrRl1TG3OQWWkf93oLxROjrnFX90ov6IhjjgH2qZXMgsT6KqPbJM%3D",
@@ -702,6 +992,25 @@
       "fetchMethod": "html"
     },
     {
+      "id": "b789b81a3c6161aa",
+      "title": "INTERVIEW - Assistant Professor in Community Medicine & Medical Gastroenterology (I NCA -Dheevara & III NCA - Muslim) - Medical Education (Cat.No.812/2025&895/25)",
+      "link": "https://www.keralapsc.gov.in/sites/default/files/inline-files/inter-812-895-25.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://www.keralapsc.gov.in/sites/default/files/inline-files/inter-812-895-25.pdf"
+      ],
+      "sourceId": "psc-kl",
+      "sourceName": "Kerala PSC",
+      "dept": "Kerala PSC",
+      "state": "Kerala",
+      "category": "state",
+      "stateIds": [
+        "kl"
+      ],
+      "fetchMethod": "html"
+    },
+    {
       "id": "0c8b608876f8adbe",
       "title": "examination-interview",
       "link": "https://www.keralapsc.gov.in/examination-interview",
@@ -732,6 +1041,63 @@
       "category": "state",
       "stateIds": [
         "jh"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "481473008e181ee4",
+      "title": "Press note regarding the personal interview for the Post of Assistant Engineer MGNREGA, C.D Block Little Andaman under South Andaman District",
+      "link": "https://erecruitment.andamannicobar.gov.in/Notice/64_fbe80dee-4dc3-4385-9622-d2f8e1ad2f29.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://erecruitment.andamannicobar.gov.in/Notice/64_fbe80dee-4dc3-4385-9622-d2f8e1ad2f29.pdf"
+      ],
+      "sourceId": "an-rec",
+      "sourceName": "Andaman & Nicobar e-Recruitment",
+      "dept": "Andaman & Nicobar e-Recruitment",
+      "state": "Andaman & Nicobar",
+      "category": "state",
+      "stateIds": [
+        "an"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "125fee0a1f6840d1",
+      "title": "Walk-in-Interview for Coach & Club Teacher Vacancies - Click Here",
+      "link": "https://sainikschoolgoalpara.org/wp-content/uploads/2026/05/Advt_Coach_Club-Teacher_02_2026-1.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://sainikschoolgoalpara.org/wp-content/uploads/2026/05/Advt_Coach_Club-Teacher_02_2026-1.pdf"
+      ],
+      "sourceId": "ss-goalpara",
+      "sourceName": "Sainik School Goalpara",
+      "dept": "Sainik School Goalpara",
+      "state": "Assam",
+      "category": "teaching",
+      "stateIds": [
+        "as"
+      ],
+      "fetchMethod": "rss-discovered"
+    },
+    {
+      "id": "bdc0610f3727e61b",
+      "title": "Notice No. 11/2026 - Direct Recruitment to the post Assistant General Manager (Finance) – Result and Schedule of Interview of the provisionally qualified candidates",
+      "link": "https://apeda.gov.in/sites/default/files/announcements/Notice_No_11_2026.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://apeda.gov.in/sites/default/files/announcements/Notice_No_11_2026.pdf"
+      ],
+      "sourceId": "apeda",
+      "sourceName": "APEDA / BEDF — Recruitments",
+      "dept": "APEDA / BEDF — Recruitments",
+      "state": "All India",
+      "category": "psu",
+      "stateIds": [
+        "all"
       ],
       "fetchMethod": "html"
     },
@@ -831,44 +1197,6 @@
       "fetchMethod": "html"
     },
     {
-      "id": "481473008e181ee4",
-      "title": "Press note regarding the personal interview for the Post of Assistant Engineer MGNREGA, C.D Block Little Andaman under South Andaman District",
-      "link": "https://erecruitment.andamannicobar.gov.in/Notice/64_fbe80dee-4dc3-4385-9622-d2f8e1ad2f29.pdf",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [
-        "https://erecruitment.andamannicobar.gov.in/Notice/64_fbe80dee-4dc3-4385-9622-d2f8e1ad2f29.pdf"
-      ],
-      "sourceId": "an-rec",
-      "sourceName": "Andaman & Nicobar e-Recruitment",
-      "dept": "Andaman & Nicobar e-Recruitment",
-      "state": "Andaman & Nicobar",
-      "category": "state",
-      "stateIds": [
-        "an"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "125fee0a1f6840d1",
-      "title": "Walk-in-Interview for Coach & Club Teacher Vacancies - Click Here",
-      "link": "https://sainikschoolgoalpara.org/wp-content/uploads/2026/05/Advt_Coach_Club-Teacher_02_2026-1.pdf",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [
-        "https://sainikschoolgoalpara.org/wp-content/uploads/2026/05/Advt_Coach_Club-Teacher_02_2026-1.pdf"
-      ],
-      "sourceId": "ss-goalpara",
-      "sourceName": "Sainik School Goalpara",
-      "dept": "Sainik School Goalpara",
-      "state": "Assam",
-      "category": "teaching",
-      "stateIds": [
-        "as"
-      ],
-      "fetchMethod": "rss-discovered"
-    },
-    {
       "id": "ce91b5765c8e9b5e",
       "title": "Walk in Interview on 18-08-2026 for Full Time Specialist - Part Time Specialist - Senior Resident - Junior Resident at ESIC Hospital Tirunelveli",
       "link": "https://www.esic.gov.in/attachments/recruitmentfile/Walk_in_Interview_on_18_08_2026_for_Full_Time_Specialist_Part_Time_Specialist_Senior_Resident_Junior_Resident_at_ESIC_Hospital_Tirunelveli_1786341945.pdf",
@@ -951,23 +1279,6 @@
       "state": "All India",
       "category": "health",
       "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "9e7e8810785833f5",
-      "title": "A World Class Sea Survival Centre",
-      "link": "https://ongcindia.com/web/eng/sea-survival-training",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "ongc",
-      "sourceName": "ONGC — Careers",
-      "dept": "ONGC — Careers",
-      "state": "All India",
-      "category": "psu",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
     },
     {
       "id": "0ba2d71e830c5905",
@@ -1250,23 +1561,6 @@
       "state": "All India",
       "category": "teaching",
       "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "f43d7aa6e0241ca3",
-      "title": "Interview Schedule for the post of Scientist/Engineer 'SC' (Mechanical) - BE002 - Phase-I against ICRB Advt. No. ISRO:ICRB:02(EMC):2025 dated 27.05.2025 Read More",
-      "link": "https://www.isro.gov.in/ICRB_Recruitment9.html",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "isro-careers",
-      "sourceName": "ISRO — Careers",
-      "dept": "Indian Space Research Organisation",
-      "state": "All India",
-      "category": "psu",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
     },
     {
       "id": "dae63d6cfc1ec8e0",

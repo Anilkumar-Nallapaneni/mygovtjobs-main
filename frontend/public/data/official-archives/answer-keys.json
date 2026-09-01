@@ -1,41 +1,7 @@
 {
-  "generatedAt": "2026-08-14T06:01:49.545Z",
-  "count": 42,
+  "generatedAt": "2026-09-01T09:34:48.141Z",
+  "count": 45,
   "items": [
-    {
-      "id": "65b953b91c3e8ca2",
-      "title": "FINAL ANSWER KEY",
-      "link": "https://ctet.nic.in/previous-year-final-answer-key/",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "ctet",
-      "sourceName": "CBSE — CTET",
-      "dept": "CBSE — CTET",
-      "state": "All India",
-      "category": "teaching",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "46c0fc4afe374382",
-      "title": "Conduct of Preliminary Examination for the posts of Prosecuting Officer (G), 2025 - Issuance of Final Answer Key thereof.",
-      "link": "https://jkpsc.nic.in/Pdf/Downloader1.ashx?nid=17920&type=n",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-jk",
-      "sourceName": "Jammu & Kashmir PSC (JKPSC)",
-      "dept": "Jammu & Kashmir PSC (JKPSC)",
-      "state": "Jammu & Kashmir",
-      "category": "state",
-      "stateIds": [
-        "jk"
-      ],
-      "fetchMethod": "html"
-    },
     {
       "id": "37c45556314fa75d",
       "title": "Answer Key-OMR Exams",
@@ -67,6 +33,97 @@
       "category": "state",
       "stateIds": [
         "kl"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "709e8e56b7fa0ba2",
+      "title": "Final Answer Key - Assistant Professor Exam 2025 (06 Subjects - Hindi, English, Commerce, Political Science, Economics, Sociology), Dated 19/08/2026",
+      "link": "https://mppsc.mp.gov.in/uploads/files/Final_Answer_Key_Assistant_Professor_Exam_2025_06_Subjects_Dated_19_08_2026.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://mppsc.mp.gov.in/uploads/files/Final_Answer_Key_Assistant_Professor_Exam_2025_06_Subjects_Dated_19_08_2026.pdf"
+      ],
+      "sourceId": "psc-mp",
+      "sourceName": "Madhya Pradesh PSC (MPPSC)",
+      "dept": "Madhya Pradesh PSC (MPPSC)",
+      "state": "Madhya Pradesh",
+      "category": "state",
+      "stateIds": [
+        "mp"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "4cd92ed82fe8303b",
+      "title": "Revised Final Answer Key - Assistant Professor Exam 2025 (General Studies and Political Science), Dated 25/08/2026",
+      "link": "https://mppsc.mp.gov.in/uploads/files/Amended_Final_Answer_Key_AP-2025_Political_Science.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://mppsc.mp.gov.in/uploads/files/Amended_Final_Answer_Key_AP-2025_Political_Science.pdf"
+      ],
+      "sourceId": "psc-mp",
+      "sourceName": "Madhya Pradesh PSC (MPPSC)",
+      "dept": "Madhya Pradesh PSC (MPPSC)",
+      "state": "Madhya Pradesh",
+      "category": "state",
+      "stateIds": [
+        "mp"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "6175aaff76599d92",
+      "title": "Final Answer Key - Assistant Director / Veterinary Assistant Surgeon / Veterinary Extension Officer Exam 2026, Dated 25/08/2026",
+      "link": "https://mppsc.mp.gov.in/uploads/files/Final_Answer_Key_AD_Veterinary_Assistant_Surgeon_VEO_2026_Dated_25_08_2026.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://mppsc.mp.gov.in/uploads/files/Final_Answer_Key_AD_Veterinary_Assistant_Surgeon_VEO_2026_Dated_25_08_2026.pdf"
+      ],
+      "sourceId": "psc-mp",
+      "sourceName": "Madhya Pradesh PSC (MPPSC)",
+      "dept": "Madhya Pradesh PSC (MPPSC)",
+      "state": "Madhya Pradesh",
+      "category": "state",
+      "stateIds": [
+        "mp"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "65b953b91c3e8ca2",
+      "title": "FINAL ANSWER KEY",
+      "link": "https://ctet.nic.in/previous-year-final-answer-key/",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "ctet",
+      "sourceName": "CBSE — CTET",
+      "dept": "CBSE — CTET",
+      "state": "All India",
+      "category": "teaching",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "46c0fc4afe374382",
+      "title": "Conduct of Preliminary Examination for the posts of Prosecuting Officer (G), 2025 - Issuance of Final Answer Key thereof.",
+      "link": "https://jkpsc.nic.in/Pdf/Downloader1.ashx?nid=17920&type=n",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-jk",
+      "sourceName": "Jammu & Kashmir PSC (JKPSC)",
+      "dept": "Jammu & Kashmir PSC (JKPSC)",
+      "state": "Jammu & Kashmir",
+      "category": "state",
+      "stateIds": [
+        "jk"
       ],
       "fetchMethod": "html"
     },
