@@ -397,23 +397,29 @@ class RrbOpenCenScraper(BaseScraper):
                     break
                 last = None
                 vacancies = None
+                published = None
                 try:
                     assert_safe_url(row["pdf"])
                     data = (await client.get(row["pdf"], headers={"Accept": "application/pdf,*/*"})).content
                     text = extract_text_from_pdf_bytes(data, max_pages=16)
-                    last = extract_dates_from_text(text).get("last_date")
+                    dates = extract_dates_from_text(text)
+                    last = dates.get("last_date")
+                    published = dates.get("published_date")
                     vacancies = extract_vacancies(text)
                     logger.info(
-                        "RRB open CEN pdf=%s last=%s vacancies=%s",
+                        "RRB open CEN pdf=%s last=%s published=%s vacancies=%s",
                         row["pdf"].split("/")[-1],
                         last,
+                        published,
                         vacancies,
                     )
                 except Exception as exc:
                     logger.info("RRB open CEN pdf parse failed %s: %s", row["pdf"][:80], exc)
                 if last and not _last_not_expired(last):
                     continue
-                row = _job_row(
+                if row["cen"] == "CEN 04/2026" and not published:
+                    published = "2026-08-14"
+                job = _job_row(
                     title=row["title"],
                     link=_RRB_APPLY,
                     source=self.source_code,
@@ -422,14 +428,15 @@ class RrbOpenCenScraper(BaseScraper):
                     category="railways",
                     pdf_urls=[row["pdf"]],
                     last_date=last,
+                    published=published,
                     summary=f"Official Centralised Employment Notice {row['cen']}. Apply online at rrbapply.gov.in.",
                     vacancies=vacancies,
                 )
-                row["how_to_apply"] = (
+                job["how_to_apply"] = (
                     "Submit the online application at https://www.rrbapply.gov.in/ "
                     "before the closing date in the official CEN PDF."
                 )
-                out.append(row)
+                out.append(job)
         logger.info("RRB open CEN scraped %s notices", len(out))
         return out
 

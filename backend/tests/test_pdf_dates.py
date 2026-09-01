@@ -116,6 +116,7 @@ def test_extract_cen_table_closing_date_with_words_between():
     """
     out = extract_dates_from_text(text)
     assert out["last_date"] == "2026-09-13"
+    assert out["published_date"] == "2026-08-14"
 
 
 def test_extract_iocl_end_date_of_online_application():

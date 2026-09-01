@@ -5,9 +5,12 @@ from __future__ import annotations
 import re
 from datetime import date
 from typing import Any
+import logging
 
 from app.services.noise_filter import clean_job_title, contains_html_markup, sanitize_source_text_fields
 from app.services.publish_gate import can_publish_job, india_today
+
+logger = logging.getLogger(__name__)
 
 _ISO_DATE_RE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
 _PUBLIC_VERIFICATION = frozenset({"VERIFIED", "PARTIALLY_VERIFIED"})
@@ -108,6 +111,21 @@ def filter_live_snapshot_items(
         prepared = prepare_live_snapshot_row(row, today=today) if isinstance(row, dict) else None
         if prepared is None:
             dropped += 1
+            title = ""
+            slug = ""
+            errors: list[str] = []
+            if isinstance(row, dict):
+                title = str(row.get("title") or "")[:80]
+                slug = str(row.get("slug") or "")[:40]
+                _ok, errors = can_publish_job(row, today=today)
+            logger.warning(
+                "live snapshot dropped slug=%s title=%r pdf=%s conf=%s errors=%s",
+                slug,
+                title,
+                (row.get("pdf_url") or row.get("primary_pdf_url") if isinstance(row, dict) else None),
+                row.get("publication_confidence") if isinstance(row, dict) else None,
+                errors[:6],
+            )
             continue
         kept.append(prepared)
     return kept, dropped

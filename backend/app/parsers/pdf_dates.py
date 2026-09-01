@@ -66,6 +66,11 @@ _PUBLISHED_PATTERNS = (
     ),
     _DATED_LINE,
     re.compile(r"Date\s*:\s*(\d{1,2}[./-]\d{1,2}[./-]\d{4})", re.I),
+    re.compile(
+        r"opening\s+date(?:\s+of\s+online\s+application)?[^\d]{0,160}"
+        r"(\d{1,2}[./-]\d{1,2}[./-]20\d{2})",
+        re.I,
+    ),
 )
 _LAST_PATTERNS = (
     re.compile(
@@ -329,6 +334,10 @@ def extract_dates_from_text(text: str) -> dict[str, str | None]:
         published = _find_published(text)
     apply_last = _find_last(text, published)
     last = prefer_apply_date(last, apply_last)
+
+    floor = date(date.today().year - 2, 1, 1).isoformat()
+    if published and published < floor:
+        published = None
 
     if published and last and published == last:
         # Prefer keeping last; try harder for a distinct posted date near top of notice.
