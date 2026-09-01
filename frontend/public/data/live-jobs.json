@@ -1,15 +1,59 @@
 {
-  "generatedAt": "2026-08-31T11:34:00.114427Z",
+  "generatedAt": "2026-09-01T04:00:15.203407Z",
   "dailySync": {
-    "completedAt": "2026-08-31T11:33:41.550905+00:00",
-    "completedAtIst": "2026-08-31T17:03:41.550905+05:30",
-    "dateIst": "2026-08-31",
-    "nextRunAtIst": "2026-09-01T08:00:00+05:30",
-    "jobCount": 20,
+    "completedAt": "2026-09-01T04:00:09.831536+00:00",
+    "completedAtIst": "2026-09-01T09:30:09.831568+05:30",
+    "dateIst": "2026-09-01",
+    "nextRunAtIst": "2026-09-02T08:00:00+05:30",
+    "jobCount": 16,
     "sourcesScraped": 154,
     "scheduledLabel": "8:00 AM IST daily"
   },
   "items": [
+    {
+      "id": "44a471d7-140a-48a0-9a0d-551738d86bf1",
+      "slug": "uppsc-up-direct-direct-recruitment-general-special-rectt-both-d-1-e-1-2026-18-08-0bdbc9ef",
+      "title": "Direct Direct Recruitment GENERAL-SPECIAL RECTT. BOTH D-1/E-1/2026 , 18/08/2026 18/08/2026 01/09/2026 01/09/2026 08/09/2",
+      "dept": "Uppsc Up",
+      "category": "state",
+      "state_codes": [
+        "up"
+      ],
+      "vacancies": 0,
+      "qualification": "As per official notification",
+      "salary": "As per official notification",
+      "age_limit": "As per official notification",
+      "last_date": "2026-09-01",
+      "apply_url": "https://uppsc.up.nic.in/OuterPages/UserHelp.aspx?ID=559",
+      "pdf_url": "https://uppsc.up.nic.in/SampleCopy/Complete_Sample_Copy5.pdf",
+      "status": "live",
+      "is_sponsored": false,
+      "published_at": "2026-08-18T00:00:00Z",
+      "verified_at": "2026-08-30T10:34:12.297648Z",
+      "updated_at": "2026-09-01T03:59:50.143360Z",
+      "document_type": "RECRUITMENT",
+      "verification_status": "VERIFIED",
+      "completeness_score": 73,
+      "publication_confidence": 95.0,
+      "published_to_site": true,
+      "primary_pdf_url": "https://uppsc.up.nic.in/SampleCopy/Complete_Sample_Copy5.pdf",
+      "post_name": null,
+      "posts": [],
+      "important_dates": [],
+      "detail": {
+        "source": "psc-up",
+        "completeness_score": 52,
+        "notification_url": "https://uppsc.up.nic.in/OuterPages/UserHelp.aspx?ID=559",
+        "pdf_urls": [
+          "https://uppsc.up.nic.in/SampleCopy/Complete_Sample_Copy5.pdf"
+        ],
+        "pdfUrls": [
+          "https://uppsc.up.nic.in/SampleCopy/Complete_Sample_Copy5.pdf"
+        ],
+        "published": "2026-08-18T00:00:00+00:00",
+        "pdf_url": "https://uppsc.up.nic.in/SampleCopy/Complete_Sample_Copy5.pdf"
+      }
+    },
     {
       "id": "be0ea2c8-1871-4b59-ad8a-035cadc7a023",
       "slug": "isro-indian-space-research-organisation-recruitment-to-the-post-of-technical-ass-412bc5db",
@@ -28,7 +72,7 @@
       "is_sponsored": false,
       "published_at": "2026-08-15T00:00:00Z",
       "verified_at": "2026-08-30T10:34:11.727023Z",
-      "updated_at": "2026-08-31T11:25:24.109071Z",
+      "updated_at": "2026-09-01T02:35:06.465090Z",
       "document_type": "RECRUITMENT",
       "verification_status": "VERIFIED",
       "completeness_score": 80,
@@ -39,26 +83,18 @@
       "posts": [],
       "important_dates": [],
       "detail": {
+        "source": "isro",
+        "completeness_score": 80,
+        "summary": "Page 1 of 10 भारत सरकार/Government of India अंतᳯरक िवभाग/Department of Space भारतीय अंतᳯरक अनुसंधान संगठन/Indian Space Research Organisation ᮤ व नोदन ᮧणाली कᱶᮤ /LIQUID PROPULSION SYSTEMS CENTRE विलयमला पी.ओ., ितᱧवनंतपुरम/ VALIAMALA P.O., THIRUVANANTHAPURAM-695 547 िवज्ञा सं. एलपीएससी/02/2026 ᳰदनांक 15.08.2026 Advertisement No. LPSC/02/2026 dated 15.08.2026 ितᱧवनंतपुरम के समीप विलयमला और बᱶगलूᱧ मᱶ …",
         "notification_url": "https://www.isro.gov.in/LPSCRecruitment13.html",
         "pdf_urls": [
           "https://www.isro.gov.in/media_isro/pdf/recruitmentNotice/2026/August/LPSC_02_2026_Detailed_Advt17082026.pdf"
         ],
-        "detail_source": "pdf",
-        "missing_fields": [
-          "application_fee",
-          "selection_process",
-          "how_to_apply"
-        ],
-        "memorized_at": "2026-08-31T11:19:51.463984+00:00",
-        "completeness_score": 80,
         "pdfUrls": [
           "https://www.isro.gov.in/media_isro/pdf/recruitmentNotice/2026/August/LPSC_02_2026_Detailed_Advt17082026.pdf"
         ],
-        "source": "isro",
-        "detail_updated_at": "2026-08-31T11:25:25.610732+00:00",
-        "summary": "Page 1 of 10 भारत सरकार/Government of India अंतᳯरक िवभाग/Department of Space भारतीय अंतᳯरक अनुसंधान संगठन/Indian Space Research Organisation ᮤ व नोदन ᮧणाली कᱶᮤ /LIQUID PROPULSION SYSTEMS CENTRE विलयमला पी.ओ., ितᱧवनंतपुरम/ VALIAMALA P.O., THIRUVANANTHAPURAM-695 547 िवज्ञा सं. एलपीएससी/02/2026 ᳰदनांक 15.08.2026 Advertisement No. LPSC/02/2026 dated 15.08.2026 ितᱧवनंतपुरम के समीप विलयमला…",
-        "pdf_url": "https://www.isro.gov.in/media_isro/pdf/recruitmentNotice/2026/August/LPSC_02_2026_Detailed_Advt17082026.pdf",
-        "published": "2026-08-15T00:00:00+00:00"
+        "published": "2026-08-15T00:00:00+00:00",
+        "pdf_url": "https://www.isro.gov.in/media_isro/pdf/recruitmentNotice/2026/August/LPSC_02_2026_Detailed_Advt17082026.pdf"
       }
     },
     {
@@ -92,25 +128,24 @@
       "posts": [],
       "important_dates": [],
       "detail": {
-        "notification_url": "https://paradipport.gov.in",
-        "pdf_urls": [
-          "https://paradipport.gov.in/Writereaddata/Career/Dy%20CE_18052026.pdf"
-        ],
-        "detail_source": "pdf",
+        "external_id": "3049705",
+        "source": "structured-import",
+        "detail_updated_at": "2026-08-31T11:25:29.469945+00:00",
+        "completeness_score": 73,
         "missing_fields": [
           "age_limit",
           "application_fee",
           "selection_process",
           "how_to_apply"
         ],
-        "memorized_at": "2026-08-04T16:57:54.836895+00:00",
-        "completeness_score": 73,
-        "pdfUrls": [
+        "summary": "Selection Criteria for Dir PARADIP PORT TRUST rect Recruitment to Class-I, Class-I TRAFFIC DEPARTMENT II & Class-III Posts Selection Criteria for direct recruitment to Class-I Posts under Traffic Department, PPT Sl. No . Name of the post No. of posts Classi ficatio n Scale of pay(Rs. Whether selection or non selection Upper age limit for direct recruit ment(in years) Educational and other Qualific…",
+        "notification_url": "https://paradipport.gov.in",
+        "pdf_urls": [
           "https://paradipport.gov.in/Writereaddata/Career/Dy%20CE_18052026.pdf"
         ],
-        "source": "structured-import",
-        "external_id": "3049705",
-        "detail_updated_at": "2026-08-31T11:25:29.469945+00:00",
+        "detail_source": "pdf",
+        "post_name": "Dy. Chief Engineer (Civil)",
+        "memorized_at": "2026-08-04T16:57:54.836895+00:00",
         "important_dates": [
           {
             "date": "18 May 2026",
@@ -121,215 +156,11 @@
             "event": "Last Date for Receipt of Application"
           }
         ],
-        "summary": "Selection Criteria for Dir PARADIP PORT TRUST rect Recruitment to Class-I, Class-I TRAFFIC DEPARTMENT II & Class-III Posts Selection Criteria for direct recruitment to Class-I Posts under Traffic Department, PPT Sl. No . Name of the post No. of posts Classi ficatio n Scale of pay(Rs. Whether selection or non selection Upper age limit for direct recruit ment(in years) Educational and other Qualific…",
-        "pdf_url": "https://paradipport.gov.in/Writereaddata/Career/Dy%20CE_18052026.pdf",
-        "post_name": "Dy. Chief Engineer (Civil)",
-        "published": "2026-09-01T00:00:00+00:00"
-      }
-    },
-    {
-      "id": "d71785ed-38d5-4427-a4ec-6c6e8ddbc0db",
-      "slug": "drdo-recruitment-public-notice-235-76-kb-requirement-of-valid-gate-score-for-dir-83a00c13",
-      "title": "Public Notice 235.76 KB Requirement of Valid GATE Score for Direct Recruitment of Scientist 'B' (Group A Gazetted) post in Defence Research & Development Service (DRDS) cadre of DRDO Published on: 27 Aug, 2025",
-      "dept": "DRDO — Recruitment",
-      "category": "defence",
-      "state_codes": [],
-      "vacancies": 1,
-      "qualification": "As per official notification",
-      "salary": "45 Years",
-      "age_limit": "For Candidates (as on closing date of advertisement)",
-      "last_date": "2026-09-07",
-      "apply_url": "https://rac.gov.in",
-      "pdf_url": "https://rac.gov.in/download/GATEpublicNotice2026.pdf",
-      "status": "live",
-      "is_sponsored": false,
-      "published_at": "2026-08-04T00:00:00Z",
-      "verified_at": null,
-      "updated_at": "2026-08-31T11:25:24.050044Z",
-      "document_type": "RECRUITMENT",
-      "verification_status": "VERIFIED",
-      "completeness_score": 100,
-      "publication_confidence": 95.0,
-      "published_to_site": true,
-      "primary_pdf_url": "https://rac.gov.in/download/advt_158_rac_chairperson_2026.pdf?ver=1",
-      "post_name": "Scientist 'B' (Group A Gazetted) post",
-      "posts": [],
-      "important_dates": [],
-      "detail": {
-        "notification_url": "https://rac.gov.in/download/GATEpublicNotice2026.pdf",
-        "pdf_urls": [
-          "https://rac.gov.in/download/advt_158_rac_chairperson_2026.pdf?ver=1",
-          "https://rac.gov.in/download/GATEpublicNotice2026.pdf"
-        ],
-        "detail_source": "pdf",
-        "memorized_at": "2026-08-14T12:35:42.716776+00:00",
-        "how_to_apply": [
-          "The format of biodata can be downloaded from RAC website and duly filled biodata can be sent to: ‘The Director, Recruitment and Assessment Centre, Lucknow Road, Timarpur, Delhi – 110054’ by Speed Post so as to reach RAC on or before 07 Sep 2026. For details, please visit RAC website: https://rac.gov.in. For any query in this regard, please contact through email at director.rac@gov.in APPOINTMENT OF CHAIRPERSON Recruitment & Assessment Centre (RAC) Defence Research & Development Organisation (DRD"
-        ],
-        "completeness_score": 100,
         "pdfUrls": [
-          "https://rac.gov.in/download/GATEpublicNotice2026.pdf",
-          "https://rac.gov.in/download/advt_158_rac_chairperson_2026.pdf?ver=1"
+          "https://paradipport.gov.in/Writereaddata/Career/Dy%20CE_18052026.pdf"
         ],
-        "application_fee": "As per official notification.",
-        "selection_process": [
-          "The Chairperson will be appointed on re-employment on contract. The Chairperson will be selected through a high-level Search-cum-Selection Committee appointed by the Government of India, in accordance with extant DOP&T instructions, with the approval of Appointments Committee of Cabinet (ACC). The Search-cum-Selection Committee will have the authority to consider any other name(s) for the appointment to the said post apart from considering biodata received against this advertisement. Duration of"
-        ],
-        "source": "drdo-careers",
-        "detail_updated_at": "2026-08-31T11:25:24.580713+00:00",
-        "summary": "Recruitment and Assessment Centre (RAC) is an independent self-accounting unit of DRDO under Min. of Defence engaged in a wide range of selection activities related to recruitment, assessment and training of scientists of DRDO on regular basis. It also extends the similar selection services to Aeronautical Development Agency (ADA) and other allied agencies. RAC was set up on 23 July 1985 after DRD…",
-        "pdf_url": "https://rac.gov.in/download/GATEpublicNotice2026.pdf",
-        "post_name": "Scientist 'B' (Group A Gazetted) post",
-        "apply_urls": [
-          "https://rac.gov.in"
-        ]
-      }
-    },
-    {
-      "id": "d46f5889-507b-46a6-b698-7d0cc8099eb0",
-      "slug": "addendum-notice-32-posts-of-accounts-officer-administration-of-union-territory-o-61662120",
-      "title": "Addendum Notice: 32 Posts of Accounts Officer, Administration of Union Territory of Ladakh",
-      "dept": "Union Public Service Commission (UPSC)",
-      "category": "upsc",
-      "state_codes": [],
-      "vacancies": 32,
-      "qualification": "As per official notification",
-      "salary": "As per official notification",
-      "age_limit": "As per official notification",
-      "last_date": "2026-09-27",
-      "apply_url": "https://www.upsc.gov.in/whats-new/32%20Posts%20of%20Accounts%20Officer,%20Administration%20of%20Union%20Territory%20of%20Ladakh/Addendum%20Notice",
-      "pdf_url": "https://www.upsc.gov.in/sites/default/files/RT-AndmNotice270926-FN-Engl-300426_1.pdf",
-      "status": "live",
-      "is_sponsored": false,
-      "published_at": "2026-07-30T00:00:00Z",
-      "verified_at": null,
-      "updated_at": "2026-08-31T11:25:33.755810Z",
-      "document_type": "RECRUITMENT",
-      "verification_status": "VERIFIED",
-      "completeness_score": 100,
-      "publication_confidence": 95.0,
-      "published_to_site": true,
-      "primary_pdf_url": "https://www.upsc.gov.in/sites/default/files/RT-AndmNotice270926-FN-Engl-300426_1.pdf",
-      "post_name": null,
-      "posts": [],
-      "important_dates": [],
-      "detail": {
-        "notification_url": "https://www.upsc.gov.in/whats-new/32%20Posts%20of%20Accounts%20Officer,%20Administration%20of%20Union%20Territory%20of%20Ladakh/Addendum%20Notice",
-        "pdf_urls": [
-          "https://www.upsc.gov.in/sites/default/files/RT-AndmNotice270926-FN-Engl-300426_1.pdf"
-        ],
-        "detail_source": "pdf",
-        "memorized_at": "2026-08-14T12:35:58.448527+00:00",
-        "how_to_apply": "Apply online through the official notification / portal link.",
-        "completeness_score": 100,
-        "pdfUrls": [
-          "https://www.upsc.gov.in/sites/default/files/RT-AndmNotice270926-FN-Engl-300426_1.pdf"
-        ],
-        "application_fee": "As per official notification.",
-        "selection_process": "As per official notification.",
-        "source": "upsc",
-        "detail_updated_at": "2026-08-31T11:25:35.112714+00:00",
-        "summary": "UNION PUBLIC SERVICE COMMISSION ADDENDUM – NOTICE TO CANDIDATES Subject: Combined Recruitment Test for recruitment to: 1. Recruitment to Eight vacancies for the post of Administrative Officer Grade-I, Naval Headquarters, Directorate of Civilian Personnel, Ministry of Defence. (UR-04, EWS-01, OBC-02, SC-01) .[Advt. No. 08/2025, Vacancy No. 25060803428] 2. Recruitment to Nineteen vacancies for the p…",
-        "pdf_url": "https://www.upsc.gov.in/sites/default/files/RT-AndmNotice270926-FN-Engl-300426_1.pdf",
-        "published": "2026-07-30T00:00:00+00:00"
-      }
-    },
-    {
-      "id": "883e67fc-687d-482b-a915-f36f114b6670",
-      "slug": "addendum-notice-19-posts-of-manager-grade-i-section-officer-ministry-of-defence-67983808",
-      "title": "Addendum Notice: 19 Posts of Manager Grade - I - Section Officer, Ministry of Defence",
-      "dept": "Union Public Service Commission (UPSC)",
-      "category": "upsc",
-      "state_codes": [],
-      "vacancies": 19,
-      "qualification": "As per official notification",
-      "salary": "As per official notification",
-      "age_limit": "As per official notification",
-      "last_date": "2026-09-27",
-      "apply_url": "https://www.upsc.gov.in/whats-new/19%20Posts%20of%20Manager%20Grade%20-%20I%20-%20Section%20Officer,%20Ministry%20of%20Defence/Addendum%20Notice",
-      "pdf_url": "https://www.upsc.gov.in/sites/default/files/RT-AndmNotice270926-FN-Engl-300426_0.pdf",
-      "status": "live",
-      "is_sponsored": false,
-      "published_at": "2026-07-30T00:00:00Z",
-      "verified_at": null,
-      "updated_at": "2026-08-31T11:25:29.188613Z",
-      "document_type": "RECRUITMENT",
-      "verification_status": "VERIFIED",
-      "completeness_score": 100,
-      "publication_confidence": 95.0,
-      "published_to_site": true,
-      "primary_pdf_url": "https://www.upsc.gov.in/sites/default/files/RT-AndmNotice270926-FN-Engl-300426_0.pdf",
-      "post_name": null,
-      "posts": [],
-      "important_dates": [],
-      "detail": {
-        "notification_url": "https://www.upsc.gov.in/whats-new/19%20Posts%20of%20Manager%20Grade%20-%20I%20-%20Section%20Officer,%20Ministry%20of%20Defence/Addendum%20Notice",
-        "pdf_urls": [
-          "https://www.upsc.gov.in/sites/default/files/RT-AndmNotice270926-FN-Engl-300426_0.pdf"
-        ],
-        "detail_source": "pdf",
-        "memorized_at": "2026-08-14T12:35:59.596752+00:00",
-        "how_to_apply": "Apply online through the official notification / portal link.",
-        "completeness_score": 100,
-        "pdfUrls": [
-          "https://www.upsc.gov.in/sites/default/files/RT-AndmNotice270926-FN-Engl-300426_0.pdf"
-        ],
-        "application_fee": "As per official notification.",
-        "selection_process": "As per official notification.",
-        "source": "upsc",
-        "detail_updated_at": "2026-08-31T11:25:30.553613+00:00",
-        "summary": "UNION PUBLIC SERVICE COMMISSION ADDENDUM – NOTICE TO CANDIDATES Subject: Combined Recruitment Test for recruitment to: 1. Recruitment to Eight vacancies for the post of Administrative Officer Grade-I, Naval Headquarters, Directorate of Civilian Personnel, Ministry of Defence. (UR-04, EWS-01, OBC-02, SC-01) .[Advt. No. 08/2025, Vacancy No. 25060803428] 2. Recruitment to Nineteen vacancies for the p…",
-        "pdf_url": "https://www.upsc.gov.in/sites/default/files/RT-AndmNotice270926-FN-Engl-300426_0.pdf",
-        "published": "2026-07-30T00:00:00+00:00"
-      }
-    },
-    {
-      "id": "437549f0-25db-4b07-8ea9-4800b3fc4242",
-      "slug": "addendum-notice-08-posts-of-administrative-officer-grade-i-ministry-of-defence-074b6ac5",
-      "title": "Addendum Notice: 08 Posts of Administrative Officer Grade - I, Ministry of Defence",
-      "dept": "Union Public Service Commission (UPSC)",
-      "category": "upsc",
-      "state_codes": [],
-      "vacancies": 8,
-      "qualification": "As per official notification",
-      "salary": "As per official notification",
-      "age_limit": "As per official notification",
-      "last_date": "2026-09-27",
-      "apply_url": "https://www.upsc.gov.in/whats-new/08%20Posts%20of%20Administrative%20Officer%20Grade%20-%20I,%20Ministry%20of%20Defence/Addendum%20Notice",
-      "pdf_url": "https://www.upsc.gov.in/sites/default/files/RT-AndmNotice270926-FN-Engl-300426.pdf",
-      "status": "live",
-      "is_sponsored": false,
-      "published_at": "2026-07-30T00:00:00Z",
-      "verified_at": null,
-      "updated_at": "2026-08-31T11:25:33.298205Z",
-      "document_type": "RECRUITMENT",
-      "verification_status": "VERIFIED",
-      "completeness_score": 100,
-      "publication_confidence": 95.0,
-      "published_to_site": true,
-      "primary_pdf_url": "https://www.upsc.gov.in/sites/default/files/RT-AndmNotice270926-FN-Engl-300426.pdf",
-      "post_name": null,
-      "posts": [],
-      "important_dates": [],
-      "detail": {
-        "notification_url": "https://www.upsc.gov.in/whats-new/08%20Posts%20of%20Administrative%20Officer%20Grade%20-%20I,%20Ministry%20of%20Defence/Addendum%20Notice",
-        "pdf_urls": [
-          "https://www.upsc.gov.in/sites/default/files/RT-AndmNotice270926-FN-Engl-300426.pdf"
-        ],
-        "detail_source": "pdf",
-        "memorized_at": "2026-08-14T12:36:01.783283+00:00",
-        "how_to_apply": "Apply online through the official notification / portal link.",
-        "completeness_score": 100,
-        "pdfUrls": [
-          "https://www.upsc.gov.in/sites/default/files/RT-AndmNotice270926-FN-Engl-300426.pdf"
-        ],
-        "application_fee": "As per official notification.",
-        "selection_process": "As per official notification.",
-        "source": "upsc",
-        "detail_updated_at": "2026-08-31T11:25:33.830232+00:00",
-        "summary": "UNION PUBLIC SERVICE COMMISSION ADDENDUM – NOTICE TO CANDIDATES Subject: Combined Recruitment Test for recruitment to: 1. Recruitment to Eight vacancies for the post of Administrative Officer Grade-I, Naval Headquarters, Directorate of Civilian Personnel, Ministry of Defence. (UR-04, EWS-01, OBC-02, SC-01) .[Advt. No. 08/2025, Vacancy No. 25060803428] 2. Recruitment to Nineteen vacancies for the p…",
-        "pdf_url": "https://www.upsc.gov.in/sites/default/files/RT-AndmNotice270926-FN-Engl-300426.pdf",
-        "published": "2026-07-30T00:00:00+00:00"
+        "published": "2026-09-01T00:00:00+00:00",
+        "pdf_url": "https://paradipport.gov.in/Writereaddata/Career/Dy%20CE_18052026.pdf"
       }
     },
     {
@@ -363,6 +194,13 @@
       "posts": [],
       "important_dates": [],
       "detail": {
+        "external_id": "3045206",
+        "source": "structured-import",
+        "detail_updated_at": "2026-08-31T11:25:38.267086+00:00",
+        "completeness_score": 100,
+        "application_fee": "As per official notification.",
+        "how_to_apply": "Apply online through the official notification / portal link.",
+        "summary": "TTSq\" SI%?T aiPTtn\" Mtffr TTftfTT - Ri^m R^n'i-TST ^nw ti-qwii +^■41 hi W fft R + m (^nfeT^r)[ASSISTANT DIRECTOR, FARMERS WELFARE & AGRICULTURE DEVELOPMENT (STATISTICS)] % ftxF 'jff R?1IMH 2026 ffmr^ 09/2026/10.04.2026 3TRWr^ 3Tf^f^ 03.09.2026 : \"A\" r-w ^snrr ^ ^ 6.09.2026 2. 3. 1. 2. iiEr.G:!E«cc«r^...Hi.iiEfebE,icEEii ^=11 stnrhr etpj 'tm' ?nrr Riiiti f%wr f%¥R cRTT ff^ (^if^=fl)[ASSISTA…",
         "notification_url": "https://www.mponline.gov.in/portal/",
         "pdf_urls": [
           "https://mppsc.mp.gov.in/uploads/advertisement/Advt_AD_Farmers_Welfare_and_Agriculture_Development_Statistics_2026_Dated_10_04_2026.pdf",
@@ -371,19 +209,12 @@
         ],
         "detail_source": "pdf",
         "memorized_at": "2026-08-31T11:22:43.840339+00:00",
-        "how_to_apply": "Apply online through the official notification / portal link.",
-        "completeness_score": 100,
+        "selection_process": "As per official notification.",
         "pdfUrls": [
           "https://mppsc.mp.gov.in/uploads/advertisement/Advt_AD_Farmers_Welfare_and_Agriculture_Development_Statistics_2026_Dated_10_04_2026.pdf",
           "https://mppsc.mp.gov.in/uploads/advertisement/Advt_Assistant_Accounts_Officer_AD_Farmer_Welfare_2026_Dated_10_04_2026.pdf",
           "https://mppsc.mp.gov.in/uploads/advertisement/Advt_Internal_Accounts_Examiner_Officer__2026_Dated_10_04_2026.pdf"
         ],
-        "application_fee": "As per official notification.",
-        "selection_process": "As per official notification.",
-        "source": "structured-import",
-        "external_id": "3045206",
-        "detail_updated_at": "2026-08-31T11:25:38.267086+00:00",
-        "summary": "TTSq\" SI%?T aiPTtn\" Mtffr TTftfTT - Ri^m R^n'i-TST ^nw ti-qwii +^■41 hi W fft R + m (^nfeT^r)[ASSISTANT DIRECTOR, FARMERS WELFARE & AGRICULTURE DEVELOPMENT (STATISTICS)] % ftxF 'jff R?1IMH 2026 ffmr^ 09/2026/10.04.2026 3TRWr^ 3Tf^f^ 03.09.2026 : \"A\" r-w ^snrr ^ ^ 6.09.2026 2. 3. 1. 2. iiEr.G:!E«cc«r^...Hi.iiEfebE,icEEii ^=11 stnrhr etpj 'tm' ?nrr Riiiti f%wr f%¥R cRTT ff^ (^if^=fl)[ASSISTA…",
         "pdf_url": "https://mppsc.mp.gov.in/uploads/advertisement/Advt_AD_Farmers_Welfare_and_Agriculture_Development_Statistics_2026_Dated_10_04_2026.pdf"
       }
     },
@@ -418,24 +249,22 @@
       "posts": [],
       "important_dates": [],
       "detail": {
-        "notification_url": "https://icar-crri.in/wp-content/uploads/2026/06/EAP-245.pdf",
-        "pdf_urls": [
-          "https://icar-crri.in/wp-content/uploads/2026/06/EAP-245.pdf"
-        ],
-        "detail_source": "pdf",
+        "external_id": "3052461",
+        "source": "structured-import",
+        "detail_updated_at": "2026-08-31T11:25:38.865057+00:00",
+        "completeness_score": 80,
         "missing_fields": [
           "application_fee",
           "selection_process",
           "how_to_apply"
         ],
-        "memorized_at": "2026-08-03T16:52:59.919819+00:00",
-        "completeness_score": 80,
-        "pdfUrls": [
+        "summary": "भाकृअनुप-केÛġȣय चावल अनुसंधान संèथान, कटक-753 006)ओͫडशा (, भारत ICAR – CENTRAL RICE RESEARCH INSTITUTE, CUTTACK-753 006 (ODISHA), INDIA Advertisement No. 10/SRF/2026-27 Walk-in-Interview Name of the Project : “National Innovations on Climate Resilient Agriculture” (EAP-245) Name of the Position : Senior Research Fellow (SRF) Number of Position : Two (02) Rate of remuneration : Rs. 37,000/- p.m. +…",
+        "notification_url": "https://icar-crri.in/wp-content/uploads/2026/06/EAP-245.pdf",
+        "pdf_urls": [
           "https://icar-crri.in/wp-content/uploads/2026/06/EAP-245.pdf"
         ],
-        "source": "structured-import",
-        "external_id": "3052461",
-        "detail_updated_at": "2026-08-31T11:25:38.865057+00:00",
+        "detail_source": "pdf",
+        "memorized_at": "2026-08-03T16:52:59.919819+00:00",
         "important_dates": [
           {
             "date": "15 June 2026",
@@ -446,7 +275,9 @@
             "event": "Project Duration"
           }
         ],
-        "summary": "भाकृअनुप-केÛġȣय चावल अनुसंधान संèथान, कटक-753 006)ओͫडशा (, भारत ICAR – CENTRAL RICE RESEARCH INSTITUTE, CUTTACK-753 006 (ODISHA), INDIA Advertisement No. 10/SRF/2026-27 Walk-in-Interview Name of the Project : “National Innovations on Climate Resilient Agriculture” (EAP-245) Name of the Position : Senior Research Fellow (SRF) Number of Position : Two (02) Rate of remuneration : Rs. 37,000/- p.m. +…",
+        "pdfUrls": [
+          "https://icar-crri.in/wp-content/uploads/2026/06/EAP-245.pdf"
+        ],
         "pdf_url": "https://icar-crri.in/wp-content/uploads/2026/06/EAP-245.pdf"
       }
     },
@@ -481,99 +312,37 @@
       "posts": [],
       "important_dates": [],
       "detail": {
-        "fee": {
-          "Preference II": "Preference will be given to candidates having hands-on experience in programming, computer networking, cloud computing,",
-          "प्राथमिकता II": "उन अभ्यर्थियों को वरीयता दी जाएगी जिनके पास प्रोग्रामिंग, कंप्यूटर नेटवर्किंग, क्लाउड कंप्यूटिंग, साइबर सुरक्षा, डेटा वि"
-        },
-        "notification_url": "https://www.tezu.ernet.in/ProjectWalkin/20-623Hin-Eng.pdf",
-        "pdf_urls": [
-          "https://www.tezu.ernet.in/ProjectWalkin/20-623Hin-Eng.pdf"
-        ],
-        "detail_source": "pdf",
+        "external_id": "3053285",
+        "source": "structured-import",
+        "detail_updated_at": "2026-08-31T11:25:41.905145+00:00",
+        "completeness_score": 87,
+        "application_fee": "प्राथमिकता II: उन अभ्यर्थियों को वरीयता दी जाएगी जिनके पास प्रोग्रामिंग, कंप्यूटर नेटवर्किंग, क्लाउड कंप्यूटिंग, साइबर सुरक्षा, डेटा वि; Preference II: Preference will be given to candidates having hands-on experience in programming, computer networking, cloud computing,",
         "missing_fields": [
           "selection_process",
           "how_to_apply"
         ],
-        "memorized_at": "2026-08-31T11:22:48.728659+00:00",
-        "completeness_score": 87,
-        "pdfUrls": [
+        "summary": "तेजपुर विश्वविद्यालय / TEZPUR UNIVERSITY (संसद के अधिनियम द्वारा स्थापित केंद्रीय विश्वविद्यालय) (A Central University established by an Act of Parliament) संकायाध्यक्ष का कार्याालय, शोध व विकास OFFICE OF THE DEAN, RESEARCH & DEVELOPMENT तेजपुर-784028 :: असम / TEZPUR-784028 तात्कालिक साक्षात्कार / Walk-in-interview मुख्य अनुसंधानकर्ता प्रो. प्रीतम देब, भौतिकी विभाग, तेजपुर विश्वविद्यालय,…",
+        "notification_url": "https://www.tezu.ernet.in/ProjectWalkin/20-623Hin-Eng.pdf",
+        "pdf_urls": [
           "https://www.tezu.ernet.in/ProjectWalkin/20-623Hin-Eng.pdf"
         ],
-        "application_fee": "प्राथमिकता II: उन अभ्यर्थियों को वरीयता दी जाएगी जिनके पास प्रोग्रामिंग, कंप्यूटर नेटवर्किंग, क्लाउड कंप्यूटिंग, साइबर सुरक्षा, डेटा वि; Preference II: Preference will be given to candidates having hands-on experience in programming, computer networking, cloud computing,",
-        "source": "structured-import",
-        "external_id": "3053285",
-        "detail_updated_at": "2026-08-31T11:25:41.905145+00:00",
+        "fee": {
+          "Preference II": "Preference will be given to candidates having hands-on experience in programming, computer networking, cloud computing,",
+          "प्राथमिकता II": "उन अभ्यर्थियों को वरीयता दी जाएगी जिनके पास प्रोग्रामिंग, कंप्यूटर नेटवर्किंग, क्लाउड कंप्यूटिंग, साइबर सुरक्षा, डेटा वि"
+        },
+        "detail_source": "pdf",
+        "memorized_at": "2026-08-31T11:22:48.728659+00:00",
         "important_dates": [
           {
             "date": "01 July 2026",
             "event": "Walk-in Interview"
           }
         ],
-        "summary": "तेजपुर विश्वविद्यालय / TEZPUR UNIVERSITY (संसद के अधिनियम द्वारा स्थापित केंद्रीय विश्वविद्यालय) (A Central University established by an Act of Parliament) संकायाध्यक्ष का कार्याालय, शोध व विकास OFFICE OF THE DEAN, RESEARCH & DEVELOPMENT तेजपुर-784028 :: असम / TEZPUR-784028 तात्कालिक साक्षात्कार / Walk-in-interview मुख्य अनुसंधानकर्ता प्रो. प्रीतम देब, भौतिकी विभाग, तेजपुर विश्वविद्यालय,…",
-        "pdf_url": "https://www.tezu.ernet.in/ProjectWalkin/20-623Hin-Eng.pdf",
-        "published": "2026-06-08T00:00:00+00:00"
-      }
-    },
-    {
-      "id": "5aaff605-8801-4455-bb34-a1ab6b8ef8bd",
-      "slug": "tezpur-university-junior-research-fellow-recruitment-2026-apply-online-96f771fe",
-      "title": "Tezpur University Junior Research Fellow Recruitment 2026 - Apply Online",
-      "dept": "Tezpur University",
-      "category": "state",
-      "state_codes": [
-        "as"
-      ],
-      "vacancies": 1,
-      "qualification": "B.Tech/ B.E, M.Sc",
-      "salary": "Rs. 37,000/- per month plus HRA (if campus accommodation is not provided).",
-      "age_limit": "Maximum 28 years",
-      "last_date": "2027-08-13",
-      "apply_url": "https://www.tezu.ernet.in/ProjectWalkin/20-619Hin-Eng.pdf",
-      "pdf_url": "https://www.tezu.ernet.in/ProjectWalkin/20-619Hin-Eng.pdf",
-      "status": "live",
-      "is_sponsored": false,
-      "published_at": "2026-06-05T00:00:00Z",
-      "verified_at": "2026-08-31T07:50:04.558731Z",
-      "updated_at": "2026-08-31T11:25:41.512902Z",
-      "document_type": "RECRUITMENT",
-      "verification_status": "VERIFIED",
-      "completeness_score": 100,
-      "publication_confidence": 90.0,
-      "published_to_site": true,
-      "primary_pdf_url": "https://www.tezu.ernet.in/ProjectWalkin/20-619Hin-Eng.pdf",
-      "post_name": null,
-      "posts": [],
-      "important_dates": [],
-      "detail": {
-        "fee": {
-          "Emolument": "Rs. 37,000/- (Rupees thirty-seven thousand) only plus HRA as admissible per month. HRA will not be provided if campus ac",
-          "पारिश्रमिक": "₹37,000/- (सैंतीस हजार रुपये) प्रतिमाह के साथ नियमानुसार स्वीकार्य मकान किराया भत्ता। यदि परिसर में आवास उपलब्ध कराया जा"
-        },
-        "notification_url": "https://www.tezu.ernet.in/ProjectWalkin/20-619Hin-Eng.pdf",
-        "pdf_urls": [
-          "https://www.tezu.ernet.in/ProjectWalkin/20-619Hin-Eng.pdf"
-        ],
-        "detail_source": "pdf",
-        "memorized_at": "2026-08-31T11:22:55.055338+00:00",
-        "how_to_apply": "Apply online through the official notification / portal link.",
-        "completeness_score": 100,
         "pdfUrls": [
-          "https://www.tezu.ernet.in/ProjectWalkin/20-619Hin-Eng.pdf"
+          "https://www.tezu.ernet.in/ProjectWalkin/20-623Hin-Eng.pdf"
         ],
-        "application_fee": "As per official notification.",
-        "selection_process": "As per official notification.",
-        "source": "structured-import",
-        "external_id": "3053041",
-        "detail_updated_at": "2026-08-31T11:25:42.307545+00:00",
-        "important_dates": [
-          {
-            "date": "20 June 2026",
-            "event": "Last date for application submission"
-          }
-        ],
-        "summary": "तेजपुर विश्वविद्यालय / TEZPUR UNIVERSITY (संसद के अधिनियम द्वारा स्थापित केंद्रीय विश्वविद्यालय) (A Central University established by an Act of Parliament) संकायाध्यक्ष का कार्यालय, शोध व विकास OFFICE OF THE DEAN, RESEARCH & DEVELOPMENT तेजपुर-784028 :: असम / TEZPUR-784028 परियोजना स्टाफ के लिए विज्ञापन / Advertisement for Project Staff मुख्य अनुसंधानकर्ता प्रो. बृजेश श्रीवास्तव, खाद्य…",
-        "pdf_url": "https://www.tezu.ernet.in/ProjectWalkin/20-619Hin-Eng.pdf",
-        "published": "2026-06-05T00:00:00+00:00"
+        "published": "2026-06-08T00:00:00+00:00",
+        "pdf_url": "https://www.tezu.ernet.in/ProjectWalkin/20-623Hin-Eng.pdf"
       }
     },
     {
@@ -607,33 +376,33 @@
       "posts": [],
       "important_dates": [],
       "detail": {
-        "notification_url": "http://nrhmchd.gov.in/cadmin/uploads/filemanagers/1780486049.pdf",
-        "pdf_urls": [
-          "http://nrhmchd.gov.in/cadmin/uploads/filemanagers/1780486049.pdf"
-        ],
-        "detail_source": "pdf",
+        "external_id": "3052814",
+        "source": "structured-import",
+        "detail_updated_at": "2026-08-31T11:25:45.525357+00:00",
+        "completeness_score": 80,
         "missing_fields": [
           "application_fee",
           "selection_process",
           "how_to_apply"
         ],
-        "memorized_at": "2026-08-04T09:08:44.064319+00:00",
-        "completeness_score": 80,
-        "pdfUrls": [
+        "summary": "Advt No. – NHM-UT/06/2026-27 Date: 04.06.2026___________ PUBLIC NOTICE REQUIRES QUALIFIED CONTRACTUAL STAFF UNDER NATIONAL HEALTH MISSION(NHM) & PRADHAN MANTRI AYUSHMAN BHARAT HEALTH INFRASTRUCTURE MISSION (PMABHIM), U.T, CHANDIGARH Sr. No . Name of the post No. of Posts Category Qualification Consolidat ed Amount In Rs. (per month) Gen SC OBC 1. Radiologist under NHM 01 01 - - Essential:  MBBS D…",
+        "notification_url": "http://nrhmchd.gov.in/cadmin/uploads/filemanagers/1780486049.pdf",
+        "pdf_urls": [
           "http://nrhmchd.gov.in/cadmin/uploads/filemanagers/1780486049.pdf"
         ],
-        "source": "structured-import",
-        "external_id": "3052814",
-        "detail_updated_at": "2026-08-31T11:25:45.525357+00:00",
+        "detail_source": "pdf",
+        "memorized_at": "2026-08-04T09:08:44.064319+00:00",
         "important_dates": [
           {
             "date": "11 June 2026",
             "event": "Walk-in Interview"
           }
         ],
-        "summary": "Advt No. – NHM-UT/06/2026-27 Date: 04.06.2026___________ PUBLIC NOTICE REQUIRES QUALIFIED CONTRACTUAL STAFF UNDER NATIONAL HEALTH MISSION(NHM) & PRADHAN MANTRI AYUSHMAN BHARAT HEALTH INFRASTRUCTURE MISSION (PMABHIM), U.T, CHANDIGARH Sr. No . Name of the post No. of Posts Category Qualification Consolidat ed Amount In Rs. (per month) Gen SC OBC 1. Radiologist under NHM 01 01 - - Essential:  MBBS D…",
-        "pdf_url": "http://nrhmchd.gov.in/cadmin/uploads/filemanagers/1780486049.pdf",
-        "published": "1995-06-27T00:00:00+00:00"
+        "pdfUrls": [
+          "http://nrhmchd.gov.in/cadmin/uploads/filemanagers/1780486049.pdf"
+        ],
+        "published": "1995-06-27T00:00:00+00:00",
+        "pdf_url": "http://nrhmchd.gov.in/cadmin/uploads/filemanagers/1780486049.pdf"
       }
     },
     {
@@ -667,24 +436,22 @@
       "posts": [],
       "important_dates": [],
       "detail": {
-        "notification_url": "https://erp.iisermohali.ac.in/OnlineRecruitmentApplicationIISERM.action",
-        "pdf_urls": [
-          "https://web.iisermohali.ac.in:8080/noticeportal/attachments/article/3096/Detailed%20advertisement.pdf"
-        ],
-        "detail_source": "pdf",
+        "external_id": "3047564",
+        "source": "structured-import",
+        "detail_updated_at": "2026-08-31T11:25:45.961131+00:00",
+        "completeness_score": 80,
         "missing_fields": [
           "application_fee",
           "selection_process",
           "how_to_apply"
         ],
-        "memorized_at": "2026-08-31T11:23:32.450942+00:00",
-        "completeness_score": 80,
-        "pdfUrls": [
+        "summary": "भारतीय विज्ञान विक्षा एिं अनुसंधान संस्थान मोहाली (विक्षा मंत्रालय, भारत सरकार) INDIAN INSTITUTE OF SCIENCE EDUCATION AND RESEARCH MOHALI (Ministry of Education, Govt. of India) 1 of 34 आईआईएसईआर मोहाली, नॉलेज वसटी, सेक्टर-81, मोहाली, पंजाब-140306, भारत IISER Mohali, Knowledge City, Sector-81, Mohali, Punjab-140306, India विज्ञापन सं. गै. सं. (03)/वनयवित/2026 विनांक: 03.05.20…",
+        "notification_url": "https://erp.iisermohali.ac.in/OnlineRecruitmentApplicationIISERM.action",
+        "pdf_urls": [
           "https://web.iisermohali.ac.in:8080/noticeportal/attachments/article/3096/Detailed%20advertisement.pdf"
         ],
-        "source": "structured-import",
-        "external_id": "3047564",
-        "detail_updated_at": "2026-08-31T11:25:45.961131+00:00",
+        "detail_source": "pdf",
+        "memorized_at": "2026-08-31T11:23:32.450942+00:00",
         "important_dates": [
           {
             "date": "03/05/2026",
@@ -711,12 +478,14 @@
             "event": "Written Test / Skill Test / Interview Date"
           }
         ],
-        "summary": "भारतीय विज्ञान विक्षा एिं अनुसंधान संस्थान मोहाली (विक्षा मंत्रालय, भारत सरकार) INDIAN INSTITUTE OF SCIENCE EDUCATION AND RESEARCH MOHALI (Ministry of Education, Govt. of India) 1 of 34 आईआईएसईआर मोहाली, नॉलेज वसटी, सेक्टर-81, मोहाली, पंजाब-140306, भारत IISER Mohali, Knowledge City, Sector-81, Mohali, Punjab-140306, India विज्ञापन सं. गै. सं. (03)/वनयवित/2026 विनांक: 03.05.20…",
+        "pdfUrls": [
+          "https://web.iisermohali.ac.in:8080/noticeportal/attachments/article/3096/Detailed%20advertisement.pdf"
+        ],
+        "published": "2026-05-03T00:00:00+00:00",
         "pdf_url": "https://web.iisermohali.ac.in:8080/noticeportal/attachments/article/3096/Detailed%20advertisement.pdf",
         "apply_urls": [
           "https://www.iisermohali.ac.in/institute"
-        ],
-        "published": "2026-05-03T00:00:00+00:00"
+        ]
       }
     },
     {
@@ -750,24 +519,24 @@
       "posts": [],
       "important_dates": [],
       "detail": {
+        "source": "psc-mp",
+        "detail_updated_at": "2026-08-31T11:25:49.163791+00:00",
+        "completeness_score": 100,
+        "application_fee": "As per official notification.",
+        "how_to_apply": "Apply online through the official notification / portal link.",
+        "summary": "'TSq\" ^ apiW wsTT fR\" 1%^ ttest 3ff&^TTft/^^M+ «^W+ Ri^M + ^n ^ R+i^ R-hmi ^ aif6i=t>i^/ti^M=t» Ritin ^i^qT^r cptt (^wt ^tfrt) % 'jfW ^ 3iR^-^ sptRct ^fi 2. xt^ 3TR^n^ f%TT ;;tTt^",
         "notification_url": "https://mppsc.mp.gov.in/uploads/advertisement/Advt_Assistant_Accounts_Officer_AD_Farmer_Welfare_2026_Dated_10_04_2026.pdf",
         "pdf_urls": [
           "https://mppsc.mp.gov.in/uploads/advertisement/Advt_Assistant_Accounts_Officer_AD_Farmer_Welfare_2026_Dated_10_04_2026.pdf"
         ],
         "detail_source": "pdf",
         "memorized_at": "2026-08-31T11:23:39.840015+00:00",
-        "how_to_apply": "Apply online through the official notification / portal link.",
-        "completeness_score": 100,
+        "selection_process": "As per official notification.",
         "pdfUrls": [
           "https://mppsc.mp.gov.in/uploads/advertisement/Advt_Assistant_Accounts_Officer_AD_Farmer_Welfare_2026_Dated_10_04_2026.pdf"
         ],
-        "application_fee": "As per official notification.",
-        "selection_process": "As per official notification.",
-        "source": "psc-mp",
-        "detail_updated_at": "2026-08-31T11:25:49.163791+00:00",
-        "summary": "'TSq\" ^ apiW wsTT fR\" 1%^ ttest 3ff&^TTft/^^M+ «^W+ Ri^M + ^n ^ R+i^ R-hmi ^ aif6i=t>i^/ti^M=t» Ritin ^i^qT^r cptt (^wt ^tfrt) % 'jfW ^ 3iR^-^ sptRct ^fi 2. xt^ 3TR^n^ f%TT ;;tTt^ <hR<4H 04…",
-        "pdf_url": "https://mppsc.mp.gov.in/uploads/advertisement/Advt_Assistant_Accounts_Officer_AD_Farmer_Welfare_2026_Dated_10_04_2026.pdf",
-        "published": "2026-04-10T00:00:00+00:00"
+        "published": "2026-04-10T00:00:00+00:00",
+        "pdf_url": "https://mppsc.mp.gov.in/uploads/advertisement/Advt_Assistant_Accounts_Officer_AD_Farmer_Welfare_2026_Dated_10_04_2026.pdf"
       }
     },
     {
@@ -801,27 +570,27 @@
       "posts": [],
       "important_dates": [],
       "detail": {
+        "source": "psc-mp",
+        "detail_updated_at": "2026-08-31T11:25:51.526452+00:00",
+        "completeness_score": 100,
+        "application_fee": "As per official notification.",
+        "how_to_apply": "Apply online through the official notification / portal link.",
+        "summary": "^ ^ STpftrr ^5llR+ R^M [scientific officer biology] 2026 07/2026 16.03.2026 : 22.11.2026 : 12.11.2026 wr - \"A\" 3tf^f%^ 20.05.2026 2. Tsq\" 3iN~l^i SKT ^ TTS'T ^ ^5iiR=t> R5111 [scientific officer biology] ^ ^^ 3IT%^ sii+iRci f%T^ f i ^5iiR+ siHr^rrft ^ f%?r7^ [scientific officer biology] % ^ ^ siM^KH 3tt%^ 21.04.2026 ^ Rni* 20.05.2026 ^ www.mppsc.mp.gov.in ^ ^ ^ stvmR^I ^ ^ | f%…",
         "notification_url": "https://mppsc.mp.gov.in/uploads/advertisement/Advt_Scientific_Officer_Biology_2026_Dated_16_03_2026.pdf",
         "pdf_urls": [
           "https://mppsc.mp.gov.in/uploads/advertisement/Advt_Scientific_Officer_Biology_2026_Dated_16_03_2026.pdf"
         ],
         "detail_source": "pdf",
         "memorized_at": "2026-08-31T11:24:04.452067+00:00",
-        "how_to_apply": "Apply online through the official notification / portal link.",
-        "completeness_score": 100,
+        "selection_process": "As per official notification.",
         "pdfUrls": [
           "https://mppsc.mp.gov.in/uploads/advertisement/Advt_Scientific_Officer_Biology_2026_Dated_16_03_2026.pdf"
         ],
-        "application_fee": "As per official notification.",
-        "selection_process": "As per official notification.",
-        "source": "psc-mp",
-        "detail_updated_at": "2026-08-31T11:25:51.526452+00:00",
-        "summary": "^ ^ STpftrr ^5llR+ R^M [scientific officer biology] 2026 07/2026 16.03.2026 : 22.11.2026 : 12.11.2026 wr - \"A\" 3tf^f%^ 20.05.2026 2. Tsq\" 3iN~l^i SKT ^ TTS'T ^ ^5iiR=t> R5111 [scientific officer biology] ^ ^^ 3IT%^ sii+iRci f%T^ f i ^5iiR+ siHr^rrft ^ f%?r7^ [scientific officer biology] % ^ ^ siM^KH 3tt%^ 21.04.2026 ^ Rni* 20.05.2026 ^ www.mppsc.mp.gov.in ^ ^ ^ stvmR^I ^ ^ | f%…",
+        "published": "2026-03-16T00:00:00+00:00",
         "pdf_url": "https://mppsc.mp.gov.in/uploads/advertisement/Advt_Scientific_Officer_Biology_2026_Dated_16_03_2026.pdf",
         "apply_urls": [
           "http://www.mppsc.mp.gov.in/HKUddf^d"
-        ],
-        "published": "2026-03-16T00:00:00+00:00"
+        ]
       }
     },
     {
@@ -855,27 +624,27 @@
       "posts": [],
       "important_dates": [],
       "detail": {
+        "source": "psc-mp",
+        "detail_updated_at": "2026-08-31T11:25:56.242737+00:00",
+        "completeness_score": 100,
+        "application_fee": "As per official notification.",
+        "how_to_apply": "Apply online through the official notification / portal link.",
+        "summary": "srnfhT ^?llPl+ ^fftfMt [scientific officer physics] % ^ ^ f^^rm 2026 05/2026 16.03.2026 : 22.11.2026 ^JiT^^iM-Tjoydl f%f^ : 12.11.2026 ¥rpr-\"A\" 3TT%^ 20.05.2026 lEiEKtiEacBa 'Hm ^ ^ sTpftTT^^f^^fTFT, tte^t ^freR\" A?iiR+ arfit^^rCf [scientific officer physics] ^5iiR+ [scientific officer physics] %^^ 3Tr%^ Rdi+ 21.04.2026 ^ 20.05.2026 www.mppsc.mp.gov.in ^ ^ ^ WTi srr^rfWf ^ srrm # | f…",
         "notification_url": "https://mppsc.mp.gov.in/uploads/advertisement/Advt_Scientific_Officer_Physics_2026_Dated_16_03_2026.pdf",
         "pdf_urls": [
           "https://mppsc.mp.gov.in/uploads/advertisement/Advt_Scientific_Officer_Physics_2026_Dated_16_03_2026.pdf"
         ],
         "detail_source": "pdf",
         "memorized_at": "2026-08-31T11:24:31.103634+00:00",
-        "how_to_apply": "Apply online through the official notification / portal link.",
-        "completeness_score": 100,
+        "selection_process": "As per official notification.",
         "pdfUrls": [
           "https://mppsc.mp.gov.in/uploads/advertisement/Advt_Scientific_Officer_Physics_2026_Dated_16_03_2026.pdf"
         ],
-        "application_fee": "As per official notification.",
-        "selection_process": "As per official notification.",
-        "source": "psc-mp",
-        "detail_updated_at": "2026-08-31T11:25:56.242737+00:00",
-        "summary": "srnfhT ^?llPl+ ^fftfMt [scientific officer physics] % ^ ^ f^^rm 2026 05/2026 16.03.2026 : 22.11.2026 ^JiT^^iM-Tjoydl f%f^ : 12.11.2026 ¥rpr-\"A\" 3TT%^ 20.05.2026 lEiEKtiEacBa 'Hm ^ ^ sTpftTT^^f^^fTFT, tte^t ^freR\" A?iiR+ arfit^^rCf [scientific officer physics] ^5iiR+ [scientific officer physics] %^^ 3Tr%^ Rdi+ 21.04.2026 ^ 20.05.2026 www.mppsc.mp.gov.in ^ ^ ^ WTi srr^rfWf ^ srrm # | f…",
+        "published": "2026-03-16T00:00:00+00:00",
         "pdf_url": "https://mppsc.mp.gov.in/uploads/advertisement/Advt_Scientific_Officer_Physics_2026_Dated_16_03_2026.pdf",
         "apply_urls": [
           "http://www.mppsc.mp.gov.in/^"
-        ],
-        "published": "2026-03-16T00:00:00+00:00"
+        ]
       }
     },
     {
@@ -909,27 +678,27 @@
       "posts": [],
       "important_dates": [],
       "detail": {
+        "source": "psc-mp",
+        "detail_updated_at": "2026-08-31T11:25:53.926175+00:00",
+        "completeness_score": 100,
+        "application_fee": "As per official notification.",
+        "how_to_apply": "Apply online through the official notification / portal link.",
+        "summary": "Tfsq\" strW ' MMrTrRTTT- arf^^rrtt <^l-m [scientific officer chemistry] % ^ R^iim^ 2026 06/2026 16.03.2026 2. 3. : 22.11.2026 : 12.11.2026 ^ - \"A\" sfcTTFT 3Tr%^ # 3Tl%^1%f^ 20.05.2026 sTTTT ^ R^mi, ^ THPRT [scientific officer chemistry] % ^3Tt%^ sii^Rd ^fl ^?||R+ wjtt [scientific officer chemistry] % ^ ^ sfR^TTFT 3TT%^ 21.04.2026 % 20.05.2026 ^ www.mppsc.mp.gov.in ^ ^ ^ ^ 11% stfrt^…",
         "notification_url": "https://mppsc.mp.gov.in/uploads/advertisement/Advt_Scientific_Officer_Chemistry_2026_Dated_16_03_2026.pdf",
         "pdf_urls": [
           "https://mppsc.mp.gov.in/uploads/advertisement/Advt_Scientific_Officer_Chemistry_2026_Dated_16_03_2026.pdf"
         ],
         "detail_source": "pdf",
         "memorized_at": "2026-08-31T11:24:07.746345+00:00",
-        "how_to_apply": "Apply online through the official notification / portal link.",
-        "completeness_score": 100,
+        "selection_process": "As per official notification.",
         "pdfUrls": [
           "https://mppsc.mp.gov.in/uploads/advertisement/Advt_Scientific_Officer_Chemistry_2026_Dated_16_03_2026.pdf"
         ],
-        "application_fee": "As per official notification.",
-        "selection_process": "As per official notification.",
-        "source": "psc-mp",
-        "detail_updated_at": "2026-08-31T11:25:53.926175+00:00",
-        "summary": "Tfsq\" strW ' MMrTrRTTT- arf^^rrtt <^l-m [scientific officer chemistry] % ^ R^iim^ 2026 06/2026 16.03.2026 2. 3. : 22.11.2026 : 12.11.2026 ^ - \"A\" sfcTTFT 3Tr%^ # 3Tl%^1%f^ 20.05.2026 sTTTT ^ R^mi, ^ THPRT [scientific officer chemistry] % ^3Tt%^ sii^Rd ^fl ^?||R+ wjtt [scientific officer chemistry] % ^ ^ sfR^TTFT 3TT%^ 21.04.2026 % 20.05.2026 ^ www.mppsc.mp.gov.in ^ ^ ^ ^ 11% stfrt^…",
+        "published": "2026-03-16T00:00:00+00:00",
         "pdf_url": "https://mppsc.mp.gov.in/uploads/advertisement/Advt_Scientific_Officer_Chemistry_2026_Dated_16_03_2026.pdf",
         "apply_urls": [
           "http://www.mppsc.mp.gov.in/"
-        ],
-        "published": "2026-03-16T00:00:00+00:00"
+        ]
       }
     },
     {
@@ -963,27 +732,27 @@
       "posts": [],
       "important_dates": [],
       "detail": {
+        "source": "psc-mp",
+        "detail_updated_at": "2026-08-31T11:25:57.557663+00:00",
+        "completeness_score": 100,
+        "application_fee": "As per official notification.",
+        "how_to_apply": "Apply online through the official notification / portal link.",
+        "summary": "TTsq\" sTpfhr sff^r^jrtt\" (Assistant District Public Prosecution Officer) 2026 1%WFn\"^iTrRi 03/2026 10.03.2026 : 18.10.2026 ^ ^ftWT : 08.10.2026 08.05.2026 wr - \"A\" STT^^ ^KT ^ f^^TFT, ^fPGR\" Pi<jii (Assistant District Public Prosecution Officer) % ^^ Wsimf^d f%TT^|i f^rar 3Tf^^\"1^d (Assistant District Public Prosecution Officer) ^ Wt# ^^ siH^i^d 3TT%^ Rdi+ 09.04.2026 ^ 08.05.2026 ^ W…",
         "notification_url": "https://mppsc.mp.gov.in/uploads/advertisement/Advt_ADPO_Exam_2026_Dated_10_03_2026.pdf",
         "pdf_urls": [
           "https://mppsc.mp.gov.in/uploads/advertisement/Advt_ADPO_Exam_2026_Dated_10_03_2026.pdf"
         ],
         "detail_source": "pdf",
         "memorized_at": "2026-08-31T11:24:36.274917+00:00",
-        "how_to_apply": "Apply online through the official notification / portal link.",
-        "completeness_score": 100,
+        "selection_process": "As per official notification.",
         "pdfUrls": [
           "https://mppsc.mp.gov.in/uploads/advertisement/Advt_ADPO_Exam_2026_Dated_10_03_2026.pdf"
         ],
-        "application_fee": "As per official notification.",
-        "selection_process": "As per official notification.",
-        "source": "psc-mp",
-        "detail_updated_at": "2026-08-31T11:25:57.557663+00:00",
-        "summary": "TTsq\" sTpfhr sff^r^jrtt\" (Assistant District Public Prosecution Officer) 2026 1%WFn\"^iTrRi 03/2026 10.03.2026 : 18.10.2026 ^ ^ftWT : 08.10.2026 08.05.2026 wr - \"A\" STT^^ ^KT ^ f^^TFT, ^fPGR\" Pi<jii (Assistant District Public Prosecution Officer) % ^^ Wsimf^d f%TT^|i f^rar 3Tf^^\"1^d (Assistant District Public Prosecution Officer) ^ Wt# ^^ siH^i^d 3TT%^ Rdi+ 09.04.2026 ^ 08.05.2026 ^ W…",
+        "published": "2026-03-10T00:00:00+00:00",
         "pdf_url": "https://mppsc.mp.gov.in/uploads/advertisement/Advt_ADPO_Exam_2026_Dated_10_03_2026.pdf",
         "apply_urls": [
           "http://www.mppsc.mp.gov.in/"
-        ],
-        "published": "2026-03-10T00:00:00+00:00"
+        ]
       }
     },
     {
@@ -1017,29 +786,27 @@
       "posts": [],
       "important_dates": [],
       "detail": {
+        "external_id": "3040278",
+        "source": "structured-import",
+        "detail_updated_at": "2026-08-31T11:26:02.266414+00:00",
+        "completeness_score": 87,
+        "application_fee": "F.1. ASSISTANT PROFESSOR Grade-II: 7th CPC Pay Level 10, Minimum Basic Pay: ₹ 70,900/-; F.2. ASSISTANT PROFESSOR Grade-I: 7th CPC Pay Level 12, Minimum Basic Pay: ₹ 1,01,500/- For direct recruits, minimum starting basic pay to be fixed in Aca; Minimum Pay: ₹ 101500/-",
+        "missing_fields": [
+          "selection_process",
+          "how_to_apply"
+        ],
+        "summary": "Page 1 | 6 INDIAN INSTITUTE OF TECHNOLOGY MADRAS CHENNAI – 600 036 Rolling Advertisement No. IITM/R/1/2026 Dated 27.02.2026 IIT Madras invites applications from individuals with an established record of independent, high-quality research and commitment to teaching and research for the faculty position at the level of ASSISTANT PROFESSOR (AP). The requirement is for various dep…",
+        "notification_url": "https://facapp.iitm.ac.in/img/Advertisement_RA-2026.pdf",
+        "pdf_urls": [
+          "https://facapp.iitm.ac.in/img/Advertisement_RA-2026.pdf"
+        ],
         "fee": {
           "Minimum Pay": "₹ 101500/-",
           "F.2. ASSISTANT PROFESSOR Grade-I": "7th CPC Pay Level 12, Minimum Basic Pay: ₹ 1,01,500/- For direct recruits, minimum starting basic pay to be fixed in Aca",
           "F.1. ASSISTANT PROFESSOR Grade-II": "7th CPC Pay Level 10, Minimum Basic Pay: ₹ 70,900/-"
         },
-        "notification_url": "https://facapp.iitm.ac.in/img/Advertisement_RA-2026.pdf",
-        "pdf_urls": [
-          "https://facapp.iitm.ac.in/img/Advertisement_RA-2026.pdf"
-        ],
         "detail_source": "pdf",
-        "missing_fields": [
-          "selection_process",
-          "how_to_apply"
-        ],
         "memorized_at": "2026-08-31T11:24:45.119097+00:00",
-        "completeness_score": 87,
-        "pdfUrls": [
-          "https://facapp.iitm.ac.in/img/Advertisement_RA-2026.pdf"
-        ],
-        "application_fee": "F.1. ASSISTANT PROFESSOR Grade-II: 7th CPC Pay Level 10, Minimum Basic Pay: ₹ 70,900/-; F.2. ASSISTANT PROFESSOR Grade-I: 7th CPC Pay Level 12, Minimum Basic Pay: ₹ 1,01,500/- For direct recruits, minimum starting basic pay to be fixed in Aca; Minimum Pay: ₹ 101500/-",
-        "source": "structured-import",
-        "external_id": "3040278",
-        "detail_updated_at": "2026-08-31T11:26:02.266414+00:00",
         "important_dates": [
           {
             "date": "27 February 2026",
@@ -1054,14 +821,16 @@
             "event": "Last Date to Apply"
           }
         ],
-        "summary": "Page 1 | 6 INDIAN INSTITUTE OF TECHNOLOGY MADRAS CHENNAI – 600 036 Rolling Advertisement No. IITM/R/1/2026 Dated 27.02.2026 IIT Madras invites applications from individuals with an established record of independent, high-quality research and commitment to teaching and research for the faculty position at the level of ASSISTANT PROFESSOR (AP). The requirement is for various dep…",
+        "pdfUrls": [
+          "https://facapp.iitm.ac.in/img/Advertisement_RA-2026.pdf"
+        ],
+        "published": "2026-02-27T00:00:00+00:00",
         "pdf_url": "https://facapp.iitm.ac.in/img/Advertisement_RA-2026.pdf",
         "apply_urls": [
           "https://facapp.iitm.ac.in",
           "https://facapp.iitm.in",
           "https://facapp.iitm.ac.in/2026ra"
-        ],
-        "published": "2026-02-27T00:00:00+00:00"
+        ]
       }
     },
     {
@@ -1095,27 +864,27 @@
       "posts": [],
       "important_dates": [],
       "detail": {
+        "source": "psc-mp",
+        "detail_updated_at": "2026-08-31T11:26:03.111156+00:00",
+        "completeness_score": 100,
+        "application_fee": "As per official notification.",
+        "how_to_apply": "Apply online through the official notification / portal link.",
+        "summary": "Jiw arnfr^r T?ft^ - SPR fi^^oleb (Assistant Town Planner) R?1IH1 2026 I^TTPITr gilri^ 02/2026 02.02.2026 q^tWT tcrf^t : 20.09.2026 f^KPT ^lt9r tra-SqraBSTHT fcrf^r : 10.09.2026 aipr - \"a\" 3imchi$ Rr ^TRra* ^ stjit (Assistant Town Planner) ^ ^ ^ ^ ^ an^tjir ^ ^T^HRT SRT (Assistant Town Planner) ^ ^ ^ ^ ajwdi^d an^c…",
         "notification_url": "https://mppsc.mp.gov.in/uploads/advertisement/Advt_Assistant_Town_Planner_Dated_02_02_2026.pdf",
         "pdf_urls": [
           "https://mppsc.mp.gov.in/uploads/advertisement/Advt_Assistant_Town_Planner_Dated_02_02_2026.pdf"
         ],
         "detail_source": "pdf",
         "memorized_at": "2026-08-31T11:24:47.949881+00:00",
-        "how_to_apply": "Apply online through the official notification / portal link.",
-        "completeness_score": 100,
+        "selection_process": "As per official notification.",
         "pdfUrls": [
           "https://mppsc.mp.gov.in/uploads/advertisement/Advt_Assistant_Town_Planner_Dated_02_02_2026.pdf"
         ],
-        "application_fee": "As per official notification.",
-        "selection_process": "As per official notification.",
-        "source": "psc-mp",
-        "detail_updated_at": "2026-08-31T11:26:03.111156+00:00",
-        "summary": "Jiw arnfr^r T?ft^ - SPR fi^^oleb (Assistant Town Planner) R?1IH1 2026 I^TTPITr gilri^ 02/2026 02.02.2026 q^tWT tcrf^t : 20.09.2026 f^KPT ^lt9r tra-SqraBSTHT fcrf^r : 10.09.2026 aipr - \"a\" 3imchi$ Rr ^TRra* ^ stjit (Assistant Town Planner) ^ ^ ^ ^ ^ an^tjir ^ ^T^HRT SRT (Assistant Town Planner) ^ ^ ^ ^ ajwdi^d an^c…",
+        "published": "2026-02-02T00:00:00+00:00",
         "pdf_url": "https://mppsc.mp.gov.in/uploads/advertisement/Advt_Assistant_Town_Planner_Dated_02_02_2026.pdf",
         "apply_urls": [
           "http://www.mppsc.mp.gov.in/"
-        ],
-        "published": "2026-02-02T00:00:00+00:00"
+        ]
       }
     },
     {
@@ -1149,27 +918,27 @@
       "posts": [],
       "important_dates": [],
       "detail": {
+        "source": "psc-mp",
+        "detail_updated_at": "2026-08-31T11:26:06.086821+00:00",
+        "completeness_score": 100,
+        "application_fee": "As per official notification.",
+        "how_to_apply": "Apply online through the official notification / portal link.",
+        "summary": "TOT arraW V ^ O ^ . /V ♦ ^ ^'diS'di ysH*\\\\ - ^T^T^Ri\" «t>*»^l\"l H^IT f^^TRT X7^ 1^<-c1K) (ASSISTANT DIRECTOR, FARMER WELFARE & AGRICULTURE DEVELOPMENT DEPARTMENT(FIELD & EXTENSION)) ^ ft iff f^irm 2025 g^TT^ 35/2025 31.12.2025 irftw : 22.11.2026 3iMoil^H 3TTto' ft 4*0^101 ^ ^ ^it^r qg-3TO5«mr : 12.11.2026 srf^ 24.05.2026 12:00 Hgi) f^3TTT smr - \"A\" 2. 3. Jity y^r ?fra» airaW ff^…",
         "notification_url": "https://mppsc.mp.gov.in/uploads/advertisement/Advt_AD_Farmer_Welfare_Agri_Dev_Dept_Field_Extension_Exam_2025_Dated_31_12_2025.pdf",
         "pdf_urls": [
           "https://mppsc.mp.gov.in/uploads/advertisement/Advt_AD_Farmer_Welfare_Agri_Dev_Dept_Field_Extension_Exam_2025_Dated_31_12_2025.pdf"
         ],
         "detail_source": "pdf",
         "memorized_at": "2026-08-31T11:24:50.497001+00:00",
-        "how_to_apply": "Apply online through the official notification / portal link.",
-        "completeness_score": 100,
+        "selection_process": "As per official notification.",
         "pdfUrls": [
           "https://mppsc.mp.gov.in/uploads/advertisement/Advt_AD_Farmer_Welfare_Agri_Dev_Dept_Field_Extension_Exam_2025_Dated_31_12_2025.pdf"
         ],
-        "application_fee": "As per official notification.",
-        "selection_process": "As per official notification.",
-        "source": "psc-mp",
-        "detail_updated_at": "2026-08-31T11:26:06.086821+00:00",
-        "summary": "TOT arraW V ^ O ^ . /V ♦ ^ ^'diS'di ysH*\\\\ - ^T^T^Ri\" «t>*»^l\"l H^IT f^^TRT X7^ 1^<-c1K) (ASSISTANT DIRECTOR, FARMER WELFARE & AGRICULTURE DEVELOPMENT DEPARTMENT(FIELD & EXTENSION)) ^ ft iff f^irm 2025 g^TT^ 35/2025 31.12.2025 irftw : 22.11.2026 3iMoil^H 3TTto' ft 4*0^101 ^ ^ ^it^r qg-3TO5«mr : 12.11.2026 srf^ 24.05.2026 12:00 Hgi) f^3TTT smr - \"A\" 2. 3. Jity y^r ?fra» airaW ff^…",
+        "published": "2025-12-31T00:00:00+00:00",
         "pdf_url": "https://mppsc.mp.gov.in/uploads/advertisement/Advt_AD_Farmer_Welfare_Agri_Dev_Dept_Field_Extension_Exam_2025_Dated_31_12_2025.pdf",
         "apply_urls": [
           "http://www.mppsc.mp.gov.ln/"
-        ],
-        "published": "2025-12-31T00:00:00+00:00"
+        ]
       }
     }
   ]
