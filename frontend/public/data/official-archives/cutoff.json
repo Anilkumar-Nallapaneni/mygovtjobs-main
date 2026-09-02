@@ -1,24 +1,7 @@
 {
-  "generatedAt": "2026-09-01T09:34:48.141Z",
+  "generatedAt": "2026-09-02T08:52:25.168Z",
   "count": 114,
   "items": [
-    {
-      "id": "246cf795a95a5a9f",
-      "title": "Cut-off Marks",
-      "link": "https://www.upsc.gov.in/examinations/cutoff-marks--",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "upsc-e-admit-hub",
-      "sourceName": "UPSC — e-Admit cards",
-      "dept": "Union Public Service Commission",
-      "state": "All India",
-      "category": "upsc",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
     {
       "id": "c70f8b20c685365f",
       "title": "Results & Cutoffs",
@@ -140,7 +123,7 @@
     },
     {
       "id": "c9189f55ccd79cdc",
-      "title": "MCSCC (Main) Examination, 2022 – Cutoff Marks New Updated: 15/07/2026",
+      "title": "MCSCC (Main) Examination, 2022 – Cutoff Marks Updated: 15/07/2026",
       "link": "https://mpscmanipur.gov.in/Cutoff.html",
       "publishedAt": null,
       "summary": null,
@@ -154,6 +137,23 @@
         "ne"
       ],
       "fetchMethod": "html"
+    },
+    {
+      "id": "246cf795a95a5a9f",
+      "title": "Cut-off Marks",
+      "link": "https://www.upsc.gov.in/examinations/cutoff-marks--",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "upsc-e-admit-hub",
+      "sourceName": "UPSC — e-Admit cards",
+      "dept": "Union Public Service Commission",
+      "state": "All India",
+      "category": "upsc",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
     },
     {
       "id": "b3c33fffbb0b0748",

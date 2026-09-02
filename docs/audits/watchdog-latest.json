@@ -1,9 +1,17 @@
 {
-  "generatedAt": "2026-09-01T09:51:31.717563+00:00",
+  "generatedAt": "2026-09-02T09:09:25.905594+00:00",
   "apply": true,
-  "scanned": 22,
+  "scanned": 23,
   "ok": 17,
   "demoted": [
+    {
+      "id": "b80f3544-f90b-4e37-8ee5-ca449e8b1fc5",
+      "slug": "indian-oil-corporation-limited-iocl-iocl-recruitment-of-executives-detailedad140-73c0cdb6",
+      "title": "IOCL Recruitment of Executives — Detailed Ad14082026",
+      "reasons": [
+        "non-vacancy document"
+      ]
+    },
     {
       "id": "d71785ed-38d5-4427-a4ec-6c6e8ddbc0db",
       "slug": "drdo-recruitment-public-notice-235-76-kb-requirement-of-valid-gate-score-for-dir-83a00c13",
@@ -45,5 +53,5 @@
       ]
     }
   ],
-  "rowsUpdated": 5
+  "rowsUpdated": 6
 }
