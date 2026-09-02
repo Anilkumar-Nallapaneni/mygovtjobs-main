@@ -99,4 +99,47 @@ def test_open_cen_title_keeps_vacancies_despite_result_of_cbt_in_body():
     body = "The result of the CBT will be published on RRB websites. Document verification follows."
     assert extract_vacancies(title, title=title) == 3993
     assert resolve_vacancies(3993, title, body) == 3993
+    assert is_non_vacancy_document(title, body) is False
+
+
+def test_iocl_recruitment_title_not_non_vacancy_when_body_mentions_dv():
+    title = "IOCL Recruitment of Executives through CBT 2026"
+    body = (
+        "Issuance of Admit card 15.09.2026. Conduct of CBT 24.09.2026. "
+        "Shortlisting of eligible candidates for GD, GT and PI. Document verification "
+        "of original certificates. The result of CBT will be published on iocl.com."
+    )
+    assert is_non_vacancy_document(title, body) is False
+    assert is_non_vacancy_document("Result of IOCL Executives CBT 2026", body) is True
+
+
+def test_iocl_category_vacancy_sheet_sums_discipline_totals():
+    body = """
+    Advt. No.: IOCL/CO-HR/RECTT/2026/01 14th August, 2026
+    RECRUITMENT OF EXECUTIVES IN INDIAN OIL CORPORATION LIMITED THROUGH COMPUTER BASED TEST (CBT) – 2026
+    VACANCIES
+    Discipline UR EWS OBC(NCL) SC ST Total
+    Grade -A
+    Civil 25 6 17 11 3 62
+    Chemical 11 1 2 1 1 16
+    Electrical 32 7 20 11 5 75
+    Electronics & Communication 13 4 8 6 1 32
+    Mechanical 49 12 32 19 6 118
+    Instrumentation 17 3 8 5 2 35
+    Computer Science and IT 11 2 4 3 2 22
+    Law 4 1 2 2 1 10
+    Marketing 17 4 11 7 2 41
+    GRADE – A0
+    Quality Control (Chemistry) 6 0 0 1 2 9
+    GRADE – E0
+    Electrical 8 1 2 1 2 14
+    Mechanical 12 1 4 2 2 21
+    Safety 8 1 2 2 2 15
+    Discipline VI (a) HI (b) LD (c) Others and Multiple Disabilities (d) and (e) Total
+    Grade -A
+    Civil 2 2 1 1 6
+    The total number of vacancies indicated above may increase or decrease at the absolute discretion of the IOCL management.
+    """
+    assert extract_vacancies(body, title="IOCL Recruitment of Executives through CBT 2026") == 470
+    assert resolve_vacancies(0, "IOCL Recruitment of Executives through CBT 2026", body) == 470
 

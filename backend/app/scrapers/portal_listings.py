@@ -131,7 +131,10 @@ class IoclListingsScraper(BaseScraper):
     )
     PROBE_PDFS = (
         "https://iocl.com/admin/img/UploadedFiles/LatestJobOpening/Files/DetailedAd14082026.pdf",
+        "https://iocl.com/admin/img/UploadedFiles/LatestJobOpening/Files/Vacancies14082026.pdf",
     )
+    _VACANCY_PDF = re.compile(r"Vacancies\d{8}\.pdf$", re.I)
+    _DATED_PDF = re.compile(r"(\d{8})\.pdf$", re.I)
 
     def __init__(self, *, max_items: int = 20, lookback_days: int = 400):
         self.max_items = max_items
@@ -161,12 +164,15 @@ class IoclListingsScraper(BaseScraper):
                 if pdf not in found:
                     found.append(pdf)
 
-            out: list[dict[str, Any]] = []
+            ads: list[dict[str, Any]] = []
+            vacancies_by_date: dict[str, int] = {}
+            vacancy_pdf_by_date: dict[str, str] = {}
             seen: set[str] = set()
             for pdf in found:
-                if pdf in seen or len(out) >= self.max_items:
+                if pdf in seen:
                     continue
                 seen.add(pdf)
+                text = ""
                 last = None
                 try:
                     assert_safe_url(pdf)
@@ -185,12 +191,35 @@ class IoclListingsScraper(BaseScraper):
                     logger.info("IOCL pdf bytes=%s text=%s last=%s", len(data or b""), len(text or ""), last)
                 except Exception as exc:
                     logger.info("IOCL pdf parse failed %s: %s", pdf[:80], exc)
+                    continue
+                date_m = self._DATED_PDF.search(pdf)
+                date_key = date_m.group(1) if date_m else ""
+                if self._VACANCY_PDF.search(pdf):
+                    count = extract_vacancies(
+                        text, title="IOCL Recruitment of Executives through CBT 2026"
+                    )
+                    if count and date_key:
+                        vacancies_by_date[date_key] = count
+                        vacancy_pdf_by_date[date_key] = pdf
+                    continue
                 if last and not _last_not_expired(last):
                     continue
+                ads.append({"pdf": pdf, "text": text, "last": last, "date_key": date_key})
+
+            out: list[dict[str, Any]] = []
+            for ad in ads:
+                if len(out) >= self.max_items:
+                    break
+                count = vacancies_by_date.get(ad["date_key"]) or extract_vacancies(
+                    ad["text"], title="IOCL Recruitment of Executives through CBT 2026"
+                )
                 title = "IOCL Recruitment of Executives through CBT 2026"
-                name = pdf.rstrip("/").split("/")[-1]
-                if name and name.lower() != "files":
-                    title = f"IOCL Recruitment of Executives — {name.replace('_', ' ').replace('.pdf', '')}"
+                if count:
+                    title = f"{title} — {count} posts"
+                pdf_urls = [ad["pdf"]]
+                companion = vacancy_pdf_by_date.get(ad["date_key"])
+                if companion and companion not in pdf_urls:
+                    pdf_urls.append(companion)
                 out.append(
                     _job_row(
                         title=clean_job_title(title) or title,
@@ -199,8 +228,9 @@ class IoclListingsScraper(BaseScraper):
                         source_name="Indian Oil Corporation Limited (IOCL)",
                         dept="Indian Oil Corporation Limited (IOCL)",
                         category="psu",
-                        pdf_urls=[pdf],
-                        last_date=last,
+                        pdf_urls=pdf_urls,
+                        last_date=ad["last"],
+                        vacancies=count or None,
                         summary="Official IOCL detailed advertisement. Apply online on the IOCL careers portal.",
                     )
                 )

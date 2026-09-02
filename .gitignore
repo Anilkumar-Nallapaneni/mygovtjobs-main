@@ -30,6 +30,9 @@ __pycache__/
 *$py.class
 *.pyc
 .pytest_cache/
+.local-test-tmp/
+.stage2-test-tmp/
+backend/.local-test-tmp/
 coverage/
 
 # logs & crash dumps

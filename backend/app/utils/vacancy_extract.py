@@ -170,6 +170,10 @@ def extract_vacancies(*chunks: str | None, title: str = "") -> int:
     totals: list[int] = []
     found: list[int] = []
 
+    table_total = _extract_category_reservation_table_total(blob_for_scan)
+    if table_total:
+        totals.append(table_total)
+
     for m in _TOTAL_PATTERN.finditer(blob_for_scan):
         n = _parse_num(m.group(1))
         if _plausible(n, title_ctx, match=m, blob=blob_for_scan):
@@ -237,15 +241,53 @@ _NON_VACANCY_DOC = re.compile(
     re.I,
 )
 _VACANCY_CIRCULAR = re.compile(r"\bvacancy\s+circular\b", re.I)
+# Open advertisements; process-stage words in the PDF body are not a result notice.
+_OPEN_RECRUITMENT_TITLE = re.compile(
+    r"(?:"
+    r"recruitment\s+of|recruitment\s+for|"
+    r"detailed\s+advertisement|"
+    r"centralised\s+employment\s+notice|"
+    r"\bcen\s+\d{1,2}[/-]\d{4}|"
+    r"advt\.?\s*no"
+    r")",
+    re.I,
+)
+# UR / EWS / OBC / SC / ST / Total discipline rows (IOCL Vacancies*.pdf and similar PSU sheets).
+_CATEGORY_VACANCY_ROW = re.compile(
+    r"(?i)(?:[A-Za-z][A-Za-z0-9 &/().+-]{1,48}?)\s+"
+    r"(\d{1,4})\s+(\d{1,4})\s+(\d{1,4})\s+(\d{1,4})\s+(\d{1,4})\s+(\d{1,4})\b"
+)
+
+
+def _extract_category_reservation_table_total(blob: str) -> int:
+    """Sum the Total column of a UR-EWS-OBC-SC-ST vacancy table (not the PwBD table)."""
+    if not re.search(r"\bUR\b.{0,80}\bEWS\b.{0,80}\bSC\b.{0,80}\bST\b", blob, re.I | re.S):
+        return 0
+    region = blob
+    cut = re.search(r"total number of vacancies indicated above", region, re.I)
+    if cut:
+        region = region[: cut.start()]
+    region = re.split(r"\bVI\s*\(\s*a\s*\)|\bPwBD\b", region, maxsplit=1, flags=re.I)[0]
+    totals = [_parse_num(m.group(6)) for m in _CATEGORY_VACANCY_ROW.finditer(region)]
+    totals = [n for n in totals if 1 <= n <= 5000]
+    if len(totals) < 3:
+        return 0
+    summed = sum(totals)
+    if 10 <= summed <= 20_000:
+        return summed
+    return 0
 
 
 def is_non_vacancy_document(title: str = "", context: str = "") -> bool:
     blob = _vacancy_context_blob(title, context)
     if _VACANCY_CIRCULAR.search(blob):
         return False
-    # Open CEN / PSU ads mention "result of CBT" as a later stage; that is not a result notice.
-    if re.search(r"\d{2,5}\s+posts?\s+of", title or "", re.I) and re.search(
-        r"recruitment|\bcen\s+\d", title or "", re.I
+    title_text = title or ""
+    # Open CEN / PSU ads mention CBT results, admit cards, and DV as later stages.
+    if _OPEN_RECRUITMENT_TITLE.search(title_text):
+        return bool(_NON_VACANCY_DOC.search(title_text))
+    if re.search(r"\d{2,5}\s+posts?\s+of", title_text, re.I) and re.search(
+        r"recruitment|\bcen\s+\d", title_text, re.I
     ):
         return False
     return bool(_NON_VACANCY_DOC.search(blob))
