@@ -1,0 +1,33 @@
+{
+  "mode": "production",
+  "started_at_epoch": 1788402751,
+  "steps": [
+    {
+      "name": "production sync",
+      "required": true,
+      "returncode": 0,
+      "duration_seconds": 5211.64
+    },
+    {
+      "name": "strict snapshot verification",
+      "required": true,
+      "returncode": 0,
+      "duration_seconds": 0.04
+    },
+    {
+      "name": "vacancy totals",
+      "required": true,
+      "returncode": 0,
+      "duration_seconds": 0.02
+    },
+    {
+      "name": "alert delivery",
+      "required": false,
+      "returncode": 0,
+      "duration_seconds": 4.5
+    }
+  ],
+  "run_id": "342bad1c-e47e-4812-b175-b3c5aed13b9f",
+  "finished_at_epoch": 1788407972,
+  "status": "succeeded"
+}
