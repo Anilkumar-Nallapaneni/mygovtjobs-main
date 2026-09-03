@@ -1,7 +1,58 @@
 {
-  "generatedAt": "2026-09-02T08:52:25.168Z",
-  "count": 144,
+  "generatedAt": "2026-09-03T08:59:47.104Z",
+  "count": 152,
   "items": [
+    {
+      "id": "dab406e23a6537a1",
+      "title": "E-Admit Cards for various Recruitment Posts",
+      "link": "https://upsconline.gov.in/oraadmitcard/",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "upsc-e-admit-hub",
+      "sourceName": "UPSC — e-Admit cards",
+      "dept": "Union Public Service Commission",
+      "state": "All India",
+      "category": "upsc",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "99c9f94d8e7c5a15",
+      "title": "e-Admit Cards For Computer Based Skill Test For Various Recruitment Posts (ORA)",
+      "link": "https://upsconline.gov.in/eadmitcard/admitcard_steno_2024/",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "upsc-e-admit-hub",
+      "sourceName": "UPSC — e-Admit cards",
+      "dept": "Union Public Service Commission",
+      "state": "All India",
+      "category": "upsc",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "7749ebd16d22dad7",
+      "title": "E- Admit Cards",
+      "link": "https://www.upsc.gov.in/e-admit-cards",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "upsc-e-admit-hub",
+      "sourceName": "UPSC — e-Admit cards",
+      "dept": "Union Public Service Commission",
+      "state": "All India",
+      "category": "upsc",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
     {
       "id": "87967a3b63a7791a",
       "title": "NOTICE REGARDING ADMIT CARD OF ADVT. NO. A-9/E-1/2025, RESEARCH ASSISTANT (ENGI..",
@@ -23,23 +74,6 @@
       "id": "527eb3defc941700",
       "title": "NOTICE REGARDING ADMIT CARD FOR ADVT.NO. A-11/E-1/2025, LECTURER U.P. TECHNICAL ..",
       "link": "https://uppsc.up.nic.in/Open_PDF_DB.aspx?I4PnQ0tBagnM8dHr1ViOnseKfh32h8Kz",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "uppsc-hall-tickets",
-      "sourceName": "UPPSC — Hall tickets",
-      "dept": "Uttar Pradesh PSC",
-      "state": "Uttar Pradesh",
-      "category": "state",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "b650017baf5c99d0",
-      "title": "08 Sep 2026 NOTICE REGARDING ADMIT CARD OF ADVT. NO. A-9/E-1/2025, RESEARCH ASSISTANT (ENGINEERING) EXAMINATION-2025",
-      "link": "https://uppsc.up.nic.in/Open_PDF.aspx?I4PnQ0tBagnM8dHr1ViOnsR0IjXXSoJs",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
@@ -207,23 +241,6 @@
       "sourceId": "sail",
       "sourceName": "Steel Authority of India (SAIL)",
       "dept": "Steel Authority of India (SAIL)",
-      "state": "All India",
-      "category": "psu",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "eea0763a5451a158",
-      "title": "Presentations & Conference Calls",
-      "link": "https://www.bhel.com/presentations-conference-calls",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "bhel",
-      "sourceName": "BHEL — Careers",
-      "dept": "BHEL — Careers",
       "state": "All India",
       "category": "psu",
       "stateIds": [
@@ -571,55 +588,190 @@
       "fetchMethod": "rss-discovered"
     },
     {
-      "id": "dab406e23a6537a1",
-      "title": "E-Admit Cards for various Recruitment Posts",
-      "link": "https://upsconline.gov.in/oraadmitcard/",
+      "id": "f0037206cd249aad",
+      "title": "View Call Letter",
+      "link": "https://www.sainikschoolamaravathinagar.edu.in/assets/pdf/CallLetters/pgt-physics-call-letter.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://www.sainikschoolamaravathinagar.edu.in/assets/pdf/CallLetters/pgt-physics-call-letter.pdf"
+      ],
+      "sourceId": "ss-amaravathi",
+      "sourceName": "Sainik School Amaravathinagar",
+      "dept": "Sainik School Amaravathinagar",
+      "state": "Tamil Nadu",
+      "category": "teaching",
+      "stateIds": [
+        "tn"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "d716cb415c6e97d7",
+      "title": "View Call Letter",
+      "link": "https://www.sainikschoolamaravathinagar.edu.in/assets/pdf/CallLetters/lab-physics-call-letter.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://www.sainikschoolamaravathinagar.edu.in/assets/pdf/CallLetters/lab-physics-call-letter.pdf"
+      ],
+      "sourceId": "ss-amaravathi",
+      "sourceName": "Sainik School Amaravathinagar",
+      "dept": "Sainik School Amaravathinagar",
+      "state": "Tamil Nadu",
+      "category": "teaching",
+      "stateIds": [
+        "tn"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "ba80897f8372720d",
+      "title": "View Call Letter",
+      "link": "https://www.sainikschoolamaravathinagar.edu.in/assets/pdf/CallLetters/pgt-maths-call-letter.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://www.sainikschoolamaravathinagar.edu.in/assets/pdf/CallLetters/pgt-maths-call-letter.pdf"
+      ],
+      "sourceId": "ss-amaravathi",
+      "sourceName": "Sainik School Amaravathinagar",
+      "dept": "Sainik School Amaravathinagar",
+      "state": "Tamil Nadu",
+      "category": "teaching",
+      "stateIds": [
+        "tn"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "c55e96da711ca20a",
+      "title": "View Call Letter",
+      "link": "https://www.sainikschoolamaravathinagar.edu.in/assets/pdf/CallLetters/tgt-maths-call-letter.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://www.sainikschoolamaravathinagar.edu.in/assets/pdf/CallLetters/tgt-maths-call-letter.pdf"
+      ],
+      "sourceId": "ss-amaravathi",
+      "sourceName": "Sainik School Amaravathinagar",
+      "dept": "Sainik School Amaravathinagar",
+      "state": "Tamil Nadu",
+      "category": "teaching",
+      "stateIds": [
+        "tn"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "76e1766ec1296536",
+      "title": "View Call Letter",
+      "link": "https://www.sainikschoolamaravathinagar.edu.in/assets/pdf/CallLetters/pgt-english-call-letter.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://www.sainikschoolamaravathinagar.edu.in/assets/pdf/CallLetters/pgt-english-call-letter.pdf"
+      ],
+      "sourceId": "ss-amaravathi",
+      "sourceName": "Sainik School Amaravathinagar",
+      "dept": "Sainik School Amaravathinagar",
+      "state": "Tamil Nadu",
+      "category": "teaching",
+      "stateIds": [
+        "tn"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "8537d71854a816f7",
+      "title": "View Call Letter",
+      "link": "https://www.sainikschoolamaravathinagar.edu.in/assets/pdf/CallLetters/counsellor-call-letter.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://www.sainikschoolamaravathinagar.edu.in/assets/pdf/CallLetters/counsellor-call-letter.pdf"
+      ],
+      "sourceId": "ss-amaravathi",
+      "sourceName": "Sainik School Amaravathinagar",
+      "dept": "Sainik School Amaravathinagar",
+      "state": "Tamil Nadu",
+      "category": "teaching",
+      "stateIds": [
+        "tn"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "a742bb0ef8a11afb",
+      "title": "View Call Letter",
+      "link": "https://www.sainikschoolamaravathinagar.edu.in/assets/pdf/CallLetters/band-master-call-letter.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://www.sainikschoolamaravathinagar.edu.in/assets/pdf/CallLetters/band-master-call-letter.pdf"
+      ],
+      "sourceId": "ss-amaravathi",
+      "sourceName": "Sainik School Amaravathinagar",
+      "dept": "Sainik School Amaravathinagar",
+      "state": "Tamil Nadu",
+      "category": "teaching",
+      "stateIds": [
+        "tn"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "cf3c821f59b2f225",
+      "title": "View Call Letter",
+      "link": "https://www.sainikschoolamaravathinagar.edu.in/assets/pdf/CallLetters/art-master-call-letter.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://www.sainikschoolamaravathinagar.edu.in/assets/pdf/CallLetters/art-master-call-letter.pdf"
+      ],
+      "sourceId": "ss-amaravathi",
+      "sourceName": "Sainik School Amaravathinagar",
+      "dept": "Sainik School Amaravathinagar",
+      "state": "Tamil Nadu",
+      "category": "teaching",
+      "stateIds": [
+        "tn"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "b650017baf5c99d0",
+      "title": "08 Sep 2026 NOTICE REGARDING ADMIT CARD OF ADVT. NO. A-9/E-1/2025, RESEARCH ASSISTANT (ENGINEERING) EXAMINATION-2025",
+      "link": "https://uppsc.up.nic.in/Open_PDF.aspx?I4PnQ0tBagnM8dHr1ViOnsR0IjXXSoJs",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
-      "sourceId": "upsc-e-admit-hub",
-      "sourceName": "UPSC — e-Admit cards",
-      "dept": "Union Public Service Commission",
-      "state": "All India",
-      "category": "upsc",
+      "sourceId": "uppsc-hall-tickets",
+      "sourceName": "UPPSC — Hall tickets",
+      "dept": "Uttar Pradesh PSC",
+      "state": "Uttar Pradesh",
+      "category": "state",
       "stateIds": [
         "all"
       ],
       "fetchMethod": "html-listing"
     },
     {
-      "id": "99c9f94d8e7c5a15",
-      "title": "e-Admit Cards For Computer Based Skill Test For Various Recruitment Posts (ORA)",
-      "link": "https://upsconline.gov.in/eadmitcard/admitcard_steno_2024/",
+      "id": "eea0763a5451a158",
+      "title": "Presentations & Conference Calls",
+      "link": "https://www.bhel.com/presentations-conference-calls",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
-      "sourceId": "upsc-e-admit-hub",
-      "sourceName": "UPSC — e-Admit cards",
-      "dept": "Union Public Service Commission",
+      "sourceId": "bhel",
+      "sourceName": "BHEL — Careers",
+      "dept": "BHEL — Careers",
       "state": "All India",
-      "category": "upsc",
+      "category": "psu",
       "stateIds": [
         "all"
       ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "7749ebd16d22dad7",
-      "title": "E- Admit Cards",
-      "link": "https://www.upsc.gov.in/e-admit-cards",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "upsc-e-admit-hub",
-      "sourceName": "UPSC — e-Admit cards",
-      "dept": "Union Public Service Commission",
-      "state": "All India",
-      "category": "upsc",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
+      "fetchMethod": "html"
     },
     {
       "id": "0157354131476c03",

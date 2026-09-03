@@ -1,25 +1,9 @@
 {
-  "generatedAt": "2026-09-02T09:09:25.905594+00:00",
+  "generatedAt": "2026-09-03T09:15:39.315072+00:00",
   "apply": true,
   "scanned": 23,
-  "ok": 17,
+  "ok": 19,
   "demoted": [
-    {
-      "id": "b80f3544-f90b-4e37-8ee5-ca449e8b1fc5",
-      "slug": "indian-oil-corporation-limited-iocl-iocl-recruitment-of-executives-detailedad140-73c0cdb6",
-      "title": "IOCL Recruitment of Executives — Detailed Ad14082026",
-      "reasons": [
-        "non-vacancy document"
-      ]
-    },
-    {
-      "id": "d71785ed-38d5-4427-a4ec-6c6e8ddbc0db",
-      "slug": "drdo-recruitment-public-notice-235-76-kb-requirement-of-valid-gate-score-for-dir-83a00c13",
-      "title": "Public Notice 235.76 KB Requirement of Valid GATE Score for Direct Recruitment of Scientist 'B' (Group A Gazetted) post ",
-      "reasons": [
-        "non-vacancy document"
-      ]
-    },
     {
       "id": "883e67fc-687d-482b-a915-f36f114b6670",
       "slug": "addendum-notice-19-posts-of-manager-grade-i-section-officer-ministry-of-defence-67983808",
@@ -53,5 +37,5 @@
       ]
     }
   ],
-  "rowsUpdated": 6
+  "rowsUpdated": 4
 }

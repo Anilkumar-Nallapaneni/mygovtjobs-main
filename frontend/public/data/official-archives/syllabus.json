@@ -1,7 +1,24 @@
 {
-  "generatedAt": "2026-09-02T08:52:25.168Z",
+  "generatedAt": "2026-09-03T08:59:47.104Z",
   "count": 39,
   "items": [
+    {
+      "id": "19df6addea51f1a1",
+      "title": "Revised Syllabus and Scheme",
+      "link": "https://www.upsc.gov.in/examinations/revised-syllabus-scheme",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "upsc-e-admit-hub",
+      "sourceName": "UPSC — e-Admit cards",
+      "dept": "Union Public Service Commission",
+      "state": "All India",
+      "category": "upsc",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
     {
       "id": "780e165e84997f6a",
       "title": "S.O. 41 - Syllabus for Prosecuting Officer (G) Examination",
@@ -145,23 +162,6 @@
         "an"
       ],
       "fetchMethod": "html"
-    },
-    {
-      "id": "19df6addea51f1a1",
-      "title": "Revised Syllabus and Scheme",
-      "link": "https://www.upsc.gov.in/examinations/revised-syllabus-scheme",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "upsc-e-admit-hub",
-      "sourceName": "UPSC — e-Admit cards",
-      "dept": "Union Public Service Commission",
-      "state": "All India",
-      "category": "upsc",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
     },
     {
       "id": "9423bfb2f1b6b8da",

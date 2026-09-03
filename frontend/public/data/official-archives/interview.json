@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-02T08:52:25.168Z",
+  "generatedAt": "2026-09-03T08:59:47.104Z",
   "count": 271,
   "items": [
     {
@@ -81,23 +81,6 @@
       "sourceName": "BPSC — Notices",
       "dept": "Bihar PSC",
       "state": "Bihar",
-      "category": "state",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "f642c56c504a0b6f",
-      "title": "25 Sep 2026 LIST OF CANDIDATES QUALIFIED FOR INTERVIEW IN ADVT. NO. A-7/E-1/2021, U.P. TECH. EDU.(TCHG.) SER. EXAM.-2021, LECT. TEXT. DESIGN, TEXT. DESIGN PRINT,.....",
-      "link": "https://uppsc.up.nic.in/Open_PDF.aspx?I4PnQ0tBagnM8dHr1ViOntNklk6dW/D3",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "uppsc-hall-tickets",
-      "sourceName": "UPPSC — Hall tickets",
-      "dept": "Uttar Pradesh PSC",
-      "state": "Uttar Pradesh",
       "category": "state",
       "stateIds": [
         "all"
@@ -767,25 +750,6 @@
       "fetchMethod": "html"
     },
     {
-      "id": "50768b5bacd14bfa",
-      "title": "“Bhilai Steel Plant – Walk-in Interview for engagement of Consultants (Doctors in Medical Discipline) at Various Hospitals of BSP”",
-      "link": "https://aima-web-images.s3.ap-south-1.amazonaws.com/sailcareers.com/Downloads/BHILAI_News%20&%20Jobs_03082026_143600.pdf",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [
-        "https://aima-web-images.s3.ap-south-1.amazonaws.com/sailcareers.com/Downloads/BHILAI_News%20&%20Jobs_03082026_143600.pdf"
-      ],
-      "sourceId": "sail",
-      "sourceName": "Steel Authority of India (SAIL)",
-      "dept": "Steel Authority of India (SAIL)",
-      "state": "All India",
-      "category": "psu",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
       "id": "7363b936b2b772f5",
       "title": "Result of Personal Interview with reference to Advertisement No. ISP/YP/2026/01 dated 22.05.2026",
       "link": "https://aima-web-images.s3.ap-south-1.amazonaws.com/sailcareers.com/Downloads/IISCO_Jobs_18082026_190340.pdf",
@@ -960,23 +924,6 @@
       "fetchMethod": "html"
     },
     {
-      "id": "91558011355dca9d",
-      "title": "Recent Examinations/Interview",
-      "link": "https://jpsc.gov.in/Examination-Links.php",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-jh",
-      "sourceName": "Jharkhand PSC (JPSC)",
-      "dept": "Jharkhand PSC (JPSC)",
-      "state": "Jharkhand",
-      "category": "state",
-      "stateIds": [
-        "jh"
-      ],
-      "fetchMethod": "html"
-    },
-    {
       "id": "1709d751f92d2140",
       "title": "Procedure for Interview Date Change Requests",
       "link": "https://www.keralapsc.gov.in/procedure-interview-date-change-requests",
@@ -1047,19 +994,19 @@
       "fetchMethod": "html"
     },
     {
-      "id": "c019d0c423cf10b5",
-      "title": "Procedure for Interview Date Change Requests",
-      "link": "https://www.keralapsc.gov.in/index.php/procedure-interview-date-change-requests",
+      "id": "91558011355dca9d",
+      "title": "Recent Examinations/Interview",
+      "link": "https://jpsc.gov.in/Examination-Links.php",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
-      "sourceId": "psc-kl",
-      "sourceName": "Kerala PSC",
-      "dept": "Kerala PSC",
-      "state": "Kerala",
+      "sourceId": "psc-jh",
+      "sourceName": "Jharkhand PSC (JPSC)",
+      "dept": "Jharkhand PSC (JPSC)",
+      "state": "Jharkhand",
       "category": "state",
       "stateIds": [
-        "kl"
+        "jh"
       ],
       "fetchMethod": "html"
     },
@@ -1157,6 +1104,59 @@
         "as"
       ],
       "fetchMethod": "rss-discovered"
+    },
+    {
+      "id": "f642c56c504a0b6f",
+      "title": "25 Sep 2026 LIST OF CANDIDATES QUALIFIED FOR INTERVIEW IN ADVT. NO. A-7/E-1/2021, U.P. TECH. EDU.(TCHG.) SER. EXAM.-2021, LECT. TEXT. DESIGN, TEXT. DESIGN PRINT,.....",
+      "link": "https://uppsc.up.nic.in/Open_PDF.aspx?I4PnQ0tBagnM8dHr1ViOntNklk6dW/D3",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "uppsc-hall-tickets",
+      "sourceName": "UPPSC — Hall tickets",
+      "dept": "Uttar Pradesh PSC",
+      "state": "Uttar Pradesh",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "50768b5bacd14bfa",
+      "title": "“Bhilai Steel Plant – Walk-in Interview for engagement of Consultants (Doctors in Medical Discipline) at Various Hospitals of BSP”",
+      "link": "https://aima-web-images.s3.ap-south-1.amazonaws.com/sailcareers.com/Downloads/BHILAI_News%20&%20Jobs_03082026_143600.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://aima-web-images.s3.ap-south-1.amazonaws.com/sailcareers.com/Downloads/BHILAI_News%20&%20Jobs_03082026_143600.pdf"
+      ],
+      "sourceId": "sail",
+      "sourceName": "Steel Authority of India (SAIL)",
+      "dept": "Steel Authority of India (SAIL)",
+      "state": "All India",
+      "category": "psu",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "c019d0c423cf10b5",
+      "title": "Procedure for Interview Date Change Requests",
+      "link": "https://www.keralapsc.gov.in/index.php/procedure-interview-date-change-requests",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-kl",
+      "sourceName": "Kerala PSC",
+      "dept": "Kerala PSC",
+      "state": "Kerala",
+      "category": "state",
+      "stateIds": [
+        "kl"
+      ],
+      "fetchMethod": "html"
     },
     {
       "id": "9e7e8810785833f5",
