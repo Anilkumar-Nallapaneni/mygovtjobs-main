@@ -7,6 +7,7 @@ import {
   flattenJobItems,
   flattenOrgItems,
   flattenRecruitmentEvents,
+  matchesOrgSlug,
   textMatchesBoard,
 } from "./prerender-hub-islands.mjs";
 
@@ -71,12 +72,6 @@ describe("prerender hub islands", () => {
   });
 
   it("matches event-only org hubs by slugified organisation name", () => {
-    const slugify = (value) =>
-      String(value || "")
-        .toLowerCase()
-        .replace(/[^a-z0-9]+/g, "-")
-        .replace(/^-+|-+$/g, "");
-    const slug = "kerala-psc";
     const rows = flattenEventsMatching(
       {
         byType: {
@@ -86,12 +81,13 @@ describe("prerender hub islands", () => {
           ],
         },
       },
-      (hay) => {
-        const deptSlug = slugify(hay);
-        return deptSlug === slug || deptSlug.includes(slug) || slug.includes(deptSlug);
-      }
+      (_hay, rec) => matchesOrgSlug(rec.organization, "kerala-psc")
     );
     assert.equal(rows.length, 1);
     assert.equal(rows[0].org, "Kerala PSC");
+    assert.equal(matchesOrgSlug("Uttar Pradesh PSC (UPPSC)", "uttar-pradesh-psc-uppsc"), true);
+    assert.equal(matchesOrgSlug("Uttar Pradesh PSC (UPPSC)", "uttar-pradesh-psc"), true);
+    assert.equal(matchesOrgSlug("Kerala PSC", "psc"), false);
+    assert.equal(matchesOrgSlug("Haryana PSC", "kerala-psc"), false);
   });
 });

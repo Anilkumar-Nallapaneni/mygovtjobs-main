@@ -93,6 +93,29 @@ export function textMatchesBoard(text, boardId) {
   }
 }
 
+export function slugifyOrgName(name) {
+  return String(name || "")
+    .toLowerCase()
+    .trim()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "");
+}
+
+/** Exact org slug, or acronym alias (uppsc), never substring leaks like "psc". */
+export function matchesOrgSlug(orgName, slug) {
+  const target = String(slug || "").trim();
+  if (!target || target.length < 4) return false;
+  const full = slugifyOrgName(orgName);
+  if (!full) return false;
+  if (full === target) return true;
+  const base = slugifyOrgName(String(orgName || "").replace(/\([^)]*\)/g, ""));
+  if (base && base === target) return true;
+  const [longer, shorter] = full.length >= target.length ? [full, target] : [target, full];
+  if (!longer.startsWith(`${shorter}-`)) return false;
+  const extra = longer.slice(shorter.length + 1);
+  return /^[a-z]{2,6}$/.test(extra);
+}
+
 export function flattenEventsMatching(payload, predicate, limit = 16) {
   const out = [];
   for (const rows of Object.values(payload?.byType || {})) {

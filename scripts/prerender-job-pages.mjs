@@ -17,6 +17,7 @@ import {
   flattenJobItems,
   flattenOrgItems,
   flattenRecruitmentEvents,
+  matchesOrgSlug,
   textMatchesBoard,
 } from "./lib/prerender-hub-islands.mjs";
 
@@ -721,17 +722,10 @@ function hubIslandForRoute(route, { jobs, events, archives, seoBodies, orgs }) {
   const orgMatch = /^\/org\/([^/]+)$/.exec(path);
   if (orgMatch) {
     const slug = orgMatch[1];
-    const orgSlugOf = (value) =>
-      String(value || "")
-        .toLowerCase()
-        .replace(/[^a-z0-9]+/g, "-")
-        .replace(/^-+|-+$/g, "");
-    const matchesOrg = (value) => {
-      const deptSlug = orgSlugOf(value);
-      return Boolean(deptSlug) && (deptSlug === slug || deptSlug.includes(slug) || slug.includes(deptSlug));
-    };
-    const matched = jobs.filter((job) => matchesOrg(job.dept));
-    const eventItems = flattenEventsMatching(events, (hay) => matchesOrg(hay));
+    const matched = jobs.filter((job) => matchesOrgSlug(job.dept, slug));
+    const eventItems = flattenEventsMatching(events, (_hay, rec) =>
+      matchesOrgSlug(rec.organization || rec.title || "", slug)
+    );
     return buildSeoHubIsland({
       title: route.title,
       lede: route.description,
