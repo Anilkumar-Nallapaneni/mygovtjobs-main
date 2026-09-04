@@ -46,10 +46,16 @@ async def export_archive() -> dict[str, Any]:
                 text(
                     """
                     SELECT
+                      id,
                       slug,
                       title,
                       dept,
+                      category,
+                      vacancies,
+                      qualification,
                       last_date,
+                      apply_url,
+                      pdf_url,
                       updated_at,
                       published_at,
                       status,
@@ -79,10 +85,16 @@ async def export_archive() -> dict[str, Any]:
         last = row["last_date"]
         items.append(
             {
+                "id": str(row["id"] or ""),
                 "slug": slug,
                 "title": str(row["title"] or ""),
                 "dept": str(row["dept"] or ""),
+                "category": str(row["category"] or "") or None,
+                "vacancies": int(row["vacancies"] or 0),
+                "qualification": str(row["qualification"] or "") or None,
                 "last_date": last.isoformat() if hasattr(last, "isoformat") else _iso(last),
+                "apply_url": str(row["apply_url"] or "") or None,
+                "pdf_url": str(row["pdf_url"] or "") or None,
                 "updated_at": _iso(row["updated_at"]),
                 "published_at": _iso(row["published_at"]),
                 "status": "expired",
@@ -118,8 +130,14 @@ async def main() -> int:
     try:
         payload = await export_archive()
     except Exception as exc:
+        if OUT.exists():
+            print(
+                f"warn: archive export failed ({type(exc).__name__}: {exc}); keeping existing {OUT}",
+                flush=True,
+            )
+            return 1
         write_empty(f"{EMPTY_NOTE} Export skipped: {type(exc).__name__}: {exc}")
-        return 0
+        return 1
 
     OUT.parent.mkdir(parents=True, exist_ok=True)
     OUT.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
