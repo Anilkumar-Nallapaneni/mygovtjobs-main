@@ -58,11 +58,23 @@ function formatVacancies(n) {
   return `${v.toLocaleString('en-IN')} posts`
 }
 
+const MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+
+/** Display format matching frontend/src/utils/formatJobDate.ts (`4 Sep 2026`). */
+function formatJobDate(value) {
+  const iso = /^(\d{4})-(\d{2})-(\d{2})/.exec(String(value ?? '').trim())
+  if (!iso) return ''
+  const day = Number(iso[3])
+  const month = MONTHS[Number(iso[2]) - 1]
+  if (!month || day < 1) return ''
+  return `${day} ${month} ${iso[1]}`
+}
+
 function cardHtml(job) {
   const title = escapeHtml(job.title || job.post_name || 'Government recruitment')
   const dept = escapeHtml(job.dept || '')
   const vac = formatVacancies(job.vacancies)
-  const last = job.last_date ? escapeHtml(String(job.last_date).slice(0, 10)) : ''
+  const last = formatJobDate(job.last_date)
   const meta = [vac, last ? `Apply by ${last}` : ''].filter(Boolean).join(' · ')
   return `<article class="static-app-shell__job">
   <h3 class="static-app-shell__job-title">${title}</h3>
@@ -100,14 +112,11 @@ function main() {
   const stats = catalogStats()
   if (stats && stats.notifications > 0) {
     const statsLine = `${stats.vacancies.toLocaleString('en-IN')} vacancies · ${stats.notifications} notifications · ${stats.orgs} orgs`
-    const replaced = html.replace(
-      /(<div class="static-app-shell__stats">)[^<]*(<\/div>)/,
-      `$1${escapeHtml(statsLine)}$2`
-    )
-    if (replaced === html) {
+    const statsRe = /(<div class="static-app-shell__stats">)[^<]*(<\/div>)/
+    if (!statsRe.test(html)) {
       console.warn('prerender-home-shell: stats marker not found')
     } else {
-      html = replaced
+      html = html.replace(statsRe, `$1${escapeHtml(statsLine)}$2`)
       console.log(`prerender-home-shell: stats ${statsLine}`)
     }
   }

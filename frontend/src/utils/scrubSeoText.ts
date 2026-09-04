@@ -16,6 +16,10 @@ const PDF_BOILERPLATE = [
   /\bclick\s+here\s+to\s+(?:download|apply|view)\b/gi,
   /\bplease\s+download\s+(?:the\s+)?(?:official\s+)?(?:notification|advertisement)\s+pdf\b/gi,
   /\bwww\.[a-z0-9.-]+\s+page\b/gi,
+  /\btable\s+of\s+contents\b/gi,
+  /\b(?:para|s\.?\s*n\.?)\s+no\.?\b/gi,
+  /\bcontents\s+page\s+no\.?\b/gi,
+  /\bpage\s+no\.?\b/gi,
 ];
 
 const OCR_NOISE = [/[|]{2,}/g, /_{3,}/g, /(?:^|\s)[^\w\s.,;:'"()\-/]{3,}(?=\s|$)/g];

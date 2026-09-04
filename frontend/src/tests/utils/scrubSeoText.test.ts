@@ -15,6 +15,15 @@ describe("scrubSeoText", () => {
     expect(out).not.toMatch(/camscanner/i);
     expect(out).toMatch(/Staff Selection Commission/i);
   });
+
+  it("strips PDF table-of-contents labels", () => {
+    const out = scrubSeoText(
+      "Railway Recruitment Boards Recruitment for Junior Engineer. Table of Contents S.N. Para No. Contents Page No. Eligibility"
+    );
+    expect(out).not.toMatch(/table of contents/i);
+    expect(out).not.toMatch(/page no/i);
+    expect(out).toMatch(/Junior Engineer/i);
+  });
 });
 
 describe("jobSeoDescription", () => {
