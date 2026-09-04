@@ -84,7 +84,7 @@ they request still goes through `JobPersistService.export_live_jobs_json`.
 | `scripts/clean-live-jobs-json.py` | repair utility | revalidates an existing snapshot; not a source of new jobs |
 | `scripts/populate-recruitment-events-from-feeds.py` | maps official feed rows → `recruitments` / `recruitment_events` | run in daily sync after `fetch:official:feeds` |
 | `scripts/export-recruitment-events.py` | static hub snapshot | `recruitment-events.json` (chained from `export:live-jobs`) |
-| `scripts/export-archive-jobs.py` | approved expired jobs | `jobs-archive.json` for `jobs-archive.xml` (empty until gated rows expire) |
+| `scripts/export-archive-jobs.py` | approved expired jobs | `jobs-archive.json` for `jobs-archive.xml` (currently 1 IST-expired ISRO LPSC row) |
 | `scripts/build-org-index.mjs` | live jobs + event orgs | `org-index.json` (public + bundled src); invoked by `build:sitemap` |
 
 Primary export callers are `IngestAgent`, `PdfReaderAgent`, `JobDetailAgent`,
