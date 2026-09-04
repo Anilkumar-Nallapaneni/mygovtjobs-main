@@ -36,6 +36,8 @@ export const FAQ_PATH = "/faq";
 export const GUIDE_HOW_TO_APPLY_PATH = "/guide/how-to-apply";
 export const GUIDE_EXAM_PREP_PATH = "/guide/exam-preparation";
 export const EXAMS_INDEX_PATH = "/exams";
+export const SARKARI_NAUKRI_PATH = "/sarkari-naukri";
+export const GOVERNMENT_JOBS_PATH = "/government-jobs";
 
 export type BrowseLocation = {
   view: BrowseView;
@@ -125,7 +127,7 @@ export function parseBrowsePath(pathname: string): BrowseLocation {
   if (path === "/") {
     return { view: "home", ...empty };
   }
-  if (path === "/jobs") {
+  if (path === "/jobs" || path === SARKARI_NAUKRI_PATH || path === GOVERNMENT_JOBS_PATH) {
     return { view: "jobs", ...empty };
   }
   if (path === ALL_INDIA_JOBS_PATH) {

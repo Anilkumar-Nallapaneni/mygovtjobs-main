@@ -23,6 +23,7 @@ import {
   isValidCategoryId,
 } from '@/utils/browseRoutes'
 import { applyBrowseSeo } from '@/utils/browseSeo'
+import { boardSeoBody, stateSeoBodyForId } from '@/data/browseLandingSeo'
 import { filterHomePageJobs } from '@/utils/homePageFilters'
 import { numberLocale } from '@/utils/formatLocale'
 import { isJobExpired } from '@/utils/jobFilters'
@@ -44,6 +45,7 @@ type ResolvedLanding = {
   backLabel: string
   title: string
   description: string
+  seoBody: string
   filter: Parameters<typeof filterHomePageJobs>[0]
 }
 
@@ -64,6 +66,7 @@ function resolveLanding(
       description: state
         ? `Verified government job notifications for ${state.n}. Official sources only.`
         : '',
+      seoBody: stateSeoBodyForId(stateId),
       filter: { jobs, selectedState: stateId },
     }
   }
@@ -82,6 +85,7 @@ function resolveLanding(
       description: cat
         ? `Live ${cat.name} recruitment notifications from official government sources.`
         : '',
+      seoBody: boardSeoBody(categoryId),
       filter: { jobs, activeCat: categoryId as CategoryId },
     }
   }
@@ -96,6 +100,7 @@ function resolveLanding(
       backLabel: 'All professions',
       title: profession ? `${profession.title} Government Jobs` : '',
       description: profession?.seoDescription || '',
+      seoBody: profession?.seoBody || '',
       filter: { jobs, professionSlug: slug },
     }
   }
@@ -110,6 +115,7 @@ function resolveLanding(
       backLabel: 'All qualifications',
       title: qualification?.title || '',
       description: qualification?.seoDescription || '',
+      seoBody: '',
       filter: { jobs, qualificationSlug: slug },
     }
   }
@@ -124,6 +130,9 @@ function resolveLanding(
     title: org ? `${org.dept} Recruitment 2026` : '',
     description: org
       ? `Live recruitment notifications from ${org.dept}. Official apply links and PDF notifications only.`
+      : '',
+    seoBody: org
+      ? `${org.dept} recruitment notifications listed here come from official government or employer career pages. Open the job card for the apply URL and PDF — Live Govt Jobs does not collect fees.`
       : '',
     filter: { jobs, orgSlug: slug, orgDept: org?.dept ?? null },
   }
@@ -207,6 +216,8 @@ export default function BrowseJobsLandingPage({
           </div>
         )}
       </section>
+
+      {landing.seoBody ? <p className="exam-landing-page__seo-body">{landing.seoBody}</p> : null}
 
       <Footer onFooterLink={onFooterLink} />
     </div>

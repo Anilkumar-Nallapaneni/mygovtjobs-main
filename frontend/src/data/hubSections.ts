@@ -12,6 +12,7 @@ import {
   PROFESSIONS_INDEX_PATH,
   QUALIFICATIONS_INDEX_PATH,
   RESULTS_TOPICS_INDEX_PATH,
+  SARKARI_NAUKRI_PATH,
   STATES_INDEX_PATH,
 } from '@/utils/browseRoutes'
 import { SITE_LINKS } from '@/data/siteLinks'
@@ -40,6 +41,16 @@ export const HUB_SECTIONS: HubSectionDef[] = [
     titleKey: 'explore.sections.browseJobs',
     titleDefault: 'Browse government jobs',
     cards: [
+      {
+        id: 'hub-sarkari-naukri',
+        href: SARKARI_NAUKRI_PATH,
+        icon: '🇮🇳',
+        titleKey: 'explore.cards.sarkariNaukriTitle',
+        titleDefault: 'Sarkari naukri',
+        descKey: 'explore.cards.sarkariNaukriDesc',
+        descDefault: 'Live official government jobs — UPSC, SSC, railways, banking, PSC, and PSU.',
+        accent: '#FF6B00',
+      },
       {
         id: 'hub-latest',
         href: LATEST_NOTIFICATIONS_PATH,

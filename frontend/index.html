@@ -195,23 +195,24 @@
       body.app-ready #lcp-shell,
       body.app-ready #seo-job,
       body.app-ready #seo-static,
+      body.app-ready #seo-hub,
       body.app-ready #seo-404,
       body.job-detail-ready #seo-job {
         display: none !important;
       }
-      #seo-job, #seo-static, #seo-404 {
+      #seo-job, #seo-static, #seo-hub, #seo-404 {
         max-width: 44rem;
         margin: 1.5rem auto;
         padding: 0 1.25rem 2rem;
         font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
         color: #0f172a;
       }
-      #seo-job h1, #seo-static h1, #seo-404 h1 {
+      #seo-job h1, #seo-static h1, #seo-hub h1, #seo-404 h1 {
         font-size: 1.5rem;
         line-height: 1.3;
         margin: 0 0 0.75rem;
       }
-      #seo-job p, #seo-static p, #seo-404 p {
+      #seo-job p, #seo-static p, #seo-hub p, #seo-404 p {
         margin: 0 0 0.75rem;
         line-height: 1.5;
       }
@@ -219,6 +220,11 @@
         width: 100%;
         border-collapse: collapse;
         font-size: 0.9rem;
+      }
+      .seo-hub-island__list {
+        margin: 0;
+        padding-left: 1.2rem;
+        line-height: 1.55;
       }
       .seo-latest-table th, .seo-latest-table td {
         text-align: left;

@@ -134,6 +134,26 @@ describe("page smoke tests", () => {
     expect(screen.getByRole("heading", { level: 1 })).toBeTruthy();
   });
 
+  it("ResultsTopicPage renders unique syllabus hub content", async () => {
+    const Page = (await import("@/pages/ResultsTopicPage")).default;
+    renderPage(<Page />, "/results/syllabus");
+    expect(screen.getByRole("heading", { level: 1, name: /syllabus/i })).toBeTruthy();
+    expect(document.querySelector(".home-page-main")).toBeNull();
+  });
+
+  it("ResultsTopicPage 404s unknown topic slugs", async () => {
+    const Page = (await import("@/pages/ResultsTopicPage")).default;
+    renderPage(<Page />, "/results/not-a-real-topic");
+    expect(screen.getByRole("heading", { level: 1, name: /not found/i })).toBeTruthy();
+  });
+
+  it("SarkariNaukriPage renders unique title and job list", async () => {
+    const Page = (await import("@/pages/SarkariNaukriPage")).default;
+    renderPage(<Page jobs={[mockJob]} />, "/sarkari-naukri");
+    expect(screen.getByRole("heading", { level: 1, name: /sarkari naukri/i })).toBeTruthy();
+    expect(screen.getByText(/official sarkari naukri/i)).toBeTruthy();
+  });
+
   it("ResultsHubPage lists snapshot events", async () => {
     const Page = (await import("@/pages/ResultsHubPage")).default;
     renderPage(
