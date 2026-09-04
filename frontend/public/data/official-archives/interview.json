@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-03T08:59:47.104Z",
+  "generatedAt": "2026-09-04T09:05:36.313Z",
   "count": 271,
   "items": [
     {
@@ -924,6 +924,23 @@
       "fetchMethod": "html"
     },
     {
+      "id": "91558011355dca9d",
+      "title": "Recent Examinations/Interview",
+      "link": "https://jpsc.gov.in/Examination-Links.php",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-jh",
+      "sourceName": "Jharkhand PSC (JPSC)",
+      "dept": "Jharkhand PSC (JPSC)",
+      "state": "Jharkhand",
+      "category": "state",
+      "stateIds": [
+        "jh"
+      ],
+      "fetchMethod": "html"
+    },
+    {
       "id": "1709d751f92d2140",
       "title": "Procedure for Interview Date Change Requests",
       "link": "https://www.keralapsc.gov.in/procedure-interview-date-change-requests",
@@ -990,23 +1007,6 @@
       "category": "state",
       "stateIds": [
         "kl"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "91558011355dca9d",
-      "title": "Recent Examinations/Interview",
-      "link": "https://jpsc.gov.in/Examination-Links.php",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-jh",
-      "sourceName": "Jharkhand PSC (JPSC)",
-      "dept": "Jharkhand PSC (JPSC)",
-      "state": "Jharkhand",
-      "category": "state",
-      "stateIds": [
-        "jh"
       ],
       "fetchMethod": "html"
     },

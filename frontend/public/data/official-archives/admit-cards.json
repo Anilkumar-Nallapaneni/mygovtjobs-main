@@ -1,58 +1,7 @@
 {
-  "generatedAt": "2026-09-03T08:59:47.104Z",
+  "generatedAt": "2026-09-04T09:05:36.313Z",
   "count": 152,
   "items": [
-    {
-      "id": "dab406e23a6537a1",
-      "title": "E-Admit Cards for various Recruitment Posts",
-      "link": "https://upsconline.gov.in/oraadmitcard/",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "upsc-e-admit-hub",
-      "sourceName": "UPSC — e-Admit cards",
-      "dept": "Union Public Service Commission",
-      "state": "All India",
-      "category": "upsc",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "99c9f94d8e7c5a15",
-      "title": "e-Admit Cards For Computer Based Skill Test For Various Recruitment Posts (ORA)",
-      "link": "https://upsconline.gov.in/eadmitcard/admitcard_steno_2024/",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "upsc-e-admit-hub",
-      "sourceName": "UPSC — e-Admit cards",
-      "dept": "Union Public Service Commission",
-      "state": "All India",
-      "category": "upsc",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "7749ebd16d22dad7",
-      "title": "E- Admit Cards",
-      "link": "https://www.upsc.gov.in/e-admit-cards",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "upsc-e-admit-hub",
-      "sourceName": "UPSC — e-Admit cards",
-      "dept": "Union Public Service Commission",
-      "state": "All India",
-      "category": "upsc",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
     {
       "id": "87967a3b63a7791a",
       "title": "NOTICE REGARDING ADMIT CARD OF ADVT. NO. A-9/E-1/2025, RESEARCH ASSISTANT (ENGI..",
@@ -406,25 +355,6 @@
       "fetchMethod": "html"
     },
     {
-      "id": "d5a102675c741219",
-      "title": "उत्तर प्रदेश पुलिस में आरक्षी नागरिक पुलिस एवं समकक्ष पदों पर सीधी भर्ती-2025 के अन्तर्गत अभिलेखों की संवीक्षा एवं शारीरिक मानक परीक्षण (डी०वी०/पी०एस०टी०) हेतु प्रवेश पत्र एवं आवेदन पत्र के सम्बन्ध में सूचना |",
-      "link": "https://uppbpb.gov.in/FilesUploaded/Notice/DVPST%20ADMIT%20CARD%20AND%20APPLICATION60aad58c-edf4-4631-a106-7f73a21b6321.pdf",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [
-        "https://uppbpb.gov.in/FilesUploaded/Notice/DVPST%20ADMIT%20CARD%20AND%20APPLICATION60aad58c-edf4-4631-a106-7f73a21b6321.pdf"
-      ],
-      "sourceId": "police-up",
-      "sourceName": "UP Police Recruitment Board (UPPRPB)",
-      "dept": "UP Police Recruitment Board (UPPRPB)",
-      "state": "Uttar Pradesh",
-      "category": "police",
-      "stateIds": [
-        "up"
-      ],
-      "fetchMethod": "html"
-    },
-    {
       "id": "8d3f9e5a69106b55",
       "title": "उत्तर प्रदेश होमगार्ड के पदों पर एनरोलमेंट 2025 के अन्तर्गत शारीरिक दक्षता परीक्षा (पीईटी) के प्रवेश पत्र डाउनलोड किये जाने हेतु महत्वपूर्ण सूचना",
       "link": "https://uppbpb.gov.in/FilesUploaded/Notice/Home%20guard%20PET%20Vigyapti_21e47723f-2975-41d8-9bd0-779f339ca8ab.pdf",
@@ -736,6 +666,76 @@
       "category": "teaching",
       "stateIds": [
         "tn"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "dab406e23a6537a1",
+      "title": "E-Admit Cards for various Recruitment Posts",
+      "link": "https://upsconline.gov.in/oraadmitcard/",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "upsc-e-admit-hub",
+      "sourceName": "UPSC — e-Admit cards",
+      "dept": "Union Public Service Commission",
+      "state": "All India",
+      "category": "upsc",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "99c9f94d8e7c5a15",
+      "title": "e-Admit Cards For Computer Based Skill Test For Various Recruitment Posts (ORA)",
+      "link": "https://upsconline.gov.in/eadmitcard/admitcard_steno_2024/",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "upsc-e-admit-hub",
+      "sourceName": "UPSC — e-Admit cards",
+      "dept": "Union Public Service Commission",
+      "state": "All India",
+      "category": "upsc",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "7749ebd16d22dad7",
+      "title": "E- Admit Cards",
+      "link": "https://www.upsc.gov.in/e-admit-cards",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "upsc-e-admit-hub",
+      "sourceName": "UPSC — e-Admit cards",
+      "dept": "Union Public Service Commission",
+      "state": "All India",
+      "category": "upsc",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "d5a102675c741219",
+      "title": "उत्तर प्रदेश पुलिस में आरक्षी नागरिक पुलिस एवं समकक्ष पदों पर सीधी भर्ती-2025 के अन्तर्गत अभिलेखों की संवीक्षा एवं शारीरिक मानक परीक्षण (डी०वी०/पी०एस०टी०) हेतु प्रवेश पत्र एवं आवेदन पत्र के सम्बन्ध में सूचना |",
+      "link": "https://uppbpb.gov.in/FilesUploaded/Notice/DVPST%20ADMIT%20CARD%20AND%20APPLICATION60aad58c-edf4-4631-a106-7f73a21b6321.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://uppbpb.gov.in/FilesUploaded/Notice/DVPST%20ADMIT%20CARD%20AND%20APPLICATION60aad58c-edf4-4631-a106-7f73a21b6321.pdf"
+      ],
+      "sourceId": "police-up",
+      "sourceName": "UP Police Recruitment Board (UPPRPB)",
+      "dept": "UP Police Recruitment Board (UPPRPB)",
+      "state": "Uttar Pradesh",
+      "category": "police",
+      "stateIds": [
+        "up"
       ],
       "fetchMethod": "html"
     },

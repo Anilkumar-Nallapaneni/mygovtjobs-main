@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-09-03T08:59:47.104Z",
-  "count": 753,
+  "generatedAt": "2026-09-04T09:05:36.313Z",
+  "count": 755,
   "items": [
     {
       "id": "2e7fa8a4ffb7c7be",
@@ -164,74 +164,6 @@
       "fetchMethod": "html-listing"
     },
     {
-      "id": "c4c9266da946f3d2",
-      "title": "Marks of Recommended Candidates",
-      "link": "https://www.upsc.gov.in/examinations/marks-recommended-candidates",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "upsc-e-admit-hub",
-      "sourceName": "UPSC — e-Admit cards",
-      "dept": "Union Public Service Commission",
-      "state": "All India",
-      "category": "upsc",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "9f46af2ef87ad857",
-      "title": "Marks of Recommended Candidates (Reserve List)",
-      "link": "https://www.upsc.gov.in/examinations/marks-recommended-candidates-reserve-list",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "upsc-e-admit-hub",
-      "sourceName": "UPSC — e-Admit cards",
-      "dept": "Union Public Service Commission",
-      "state": "All India",
-      "category": "upsc",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "246cf795a95a5a9f",
-      "title": "Cut-off Marks",
-      "link": "https://www.upsc.gov.in/examinations/cutoff-marks--",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "upsc-e-admit-hub",
-      "sourceName": "UPSC — e-Admit cards",
-      "dept": "Union Public Service Commission",
-      "state": "All India",
-      "category": "upsc",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "bf2ab913def084c8",
-      "title": "Marks Information",
-      "link": "https://upsconline.gov.in/marksheet/exam/marksheet_system/",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "upsc-e-admit-hub",
-      "sourceName": "UPSC — e-Admit cards",
-      "dept": "Union Public Service Commission",
-      "state": "All India",
-      "category": "upsc",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
       "id": "58856bd7c345d6be",
       "title": "RESULT OF ADVT. NO. D-4/E-1/2025, U.P. AYUSH (AYURVEDA) PROFESSOR(SPECIALIST) AG..",
       "link": "https://uppsc.up.nic.in/Open_PDF_DB.aspx?I4PnQ0tBagmtuZKZH/DenzRcUXubicMB",
@@ -303,23 +235,6 @@
       "id": "ed19314ac2e0415d",
       "title": "RESULT OF ADVT. NO.2/2019-2020, U. P. AYUSH (UNANI) DEPTT./PRINCIPAL, S-11/02",
       "link": "https://uppsc.up.nic.in/Open_PDF_DB.aspx?I4PnQ0tBaglovGFVjGJMaNLk/ffKn7jL",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "uppsc-hall-tickets",
-      "sourceName": "UPPSC — Hall tickets",
-      "dept": "Uttar Pradesh PSC",
-      "state": "Uttar Pradesh",
-      "category": "state",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "0cf627359f6e6487",
-      "title": "RESULT OF ADVT. NO.D-2/E-1/2025, UTTAR PRADESH DAIRY DEVELOPMENT/DEPUTY DAIRY DE..",
-      "link": "https://uppsc.up.nic.in/Open_PDF_DB.aspx?I4PnQ0tBaglovGFVjGJMaEk+muvLsysO",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
@@ -1036,7 +951,7 @@
       "stateIds": [
         "all"
       ],
-      "fetchMethod": "html"
+      "fetchMethod": "rss-discovered"
     },
     {
       "id": "5248b404d0a4fa81",
@@ -1408,6 +1323,44 @@
       "fetchMethod": "html"
     },
     {
+      "id": "72951590a314de1c",
+      "title": "Caveat Vigyapti on Written Exam Result - Assistant Director/Veterinary Assistant Surgeon/Veterinary Extension Officer 2026, Dated 03/09/2026",
+      "link": "https://mppsc.mp.gov.in/uploads/files/Caveat_Vigyapti_Written_Exam_Result_AD_Veterinary_Assistant_Surgeon_VEO_2026_Dated_03_09_2026.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://mppsc.mp.gov.in/uploads/files/Caveat_Vigyapti_Written_Exam_Result_AD_Veterinary_Assistant_Surgeon_VEO_2026_Dated_03_09_2026.pdf"
+      ],
+      "sourceId": "psc-mp",
+      "sourceName": "Madhya Pradesh PSC (MPPSC)",
+      "dept": "Madhya Pradesh PSC (MPPSC)",
+      "state": "Madhya Pradesh",
+      "category": "state",
+      "stateIds": [
+        "mp"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "be9138a335a42f91",
+      "title": "Written Exam Result - Assistant Director/Veterinary Assistant Surgeon/Veterinary Extension Officer 2026, Dated 03/09/2026",
+      "link": "https://mppsc.mp.gov.in/uploads/files/Written_Exam_Result_AD_Veterinary_Assistant_Surgeon_VEO_2026_Dated_03_09_2026.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://mppsc.mp.gov.in/uploads/files/Written_Exam_Result_AD_Veterinary_Assistant_Surgeon_VEO_2026_Dated_03_09_2026.pdf"
+      ],
+      "sourceId": "psc-mp",
+      "sourceName": "Madhya Pradesh PSC (MPPSC)",
+      "dept": "Madhya Pradesh PSC (MPPSC)",
+      "state": "Madhya Pradesh",
+      "category": "state",
+      "stateIds": [
+        "mp"
+      ],
+      "fetchMethod": "html"
+    },
+    {
       "id": "4c7b1bbc11381e44",
       "title": "Caveat Vigyapti on Selection List of State Engineering Services (Civil) Exam 2025, Dated 31/08/2026",
       "link": "https://mppsc.mp.gov.in/uploads/advertisement/Caveat_Vigyapti_State_Engineering_Services_Civil_Exam_2025_Dated_31_08_2026.pdf",
@@ -1548,44 +1501,6 @@
       "summary": null,
       "pdfUrls": [
         "https://mppsc.mp.gov.in/uploads/files/Selection_List_Sports_Officer_Exam_2024_Dated_22_08_2026.pdf"
-      ],
-      "sourceId": "psc-mp",
-      "sourceName": "Madhya Pradesh PSC (MPPSC)",
-      "dept": "Madhya Pradesh PSC (MPPSC)",
-      "state": "Madhya Pradesh",
-      "category": "state",
-      "stateIds": [
-        "mp"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "2f008ff68f07423d",
-      "title": "Caveat Vigyapti on Selection List of Assistant Manager Exam 2024, Dated 19/08/2026",
-      "link": "https://mppsc.mp.gov.in/uploads/advertisement/Caveat_Vigyapti_Assistant_Manager_Exam_2024_Dated_19_08_2026.pdf",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [
-        "https://mppsc.mp.gov.in/uploads/advertisement/Caveat_Vigyapti_Assistant_Manager_Exam_2024_Dated_19_08_2026.pdf"
-      ],
-      "sourceId": "psc-mp",
-      "sourceName": "Madhya Pradesh PSC (MPPSC)",
-      "dept": "Madhya Pradesh PSC (MPPSC)",
-      "state": "Madhya Pradesh",
-      "category": "state",
-      "stateIds": [
-        "mp"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "c71fd4d913590eb9",
-      "title": "Selection List - Assistant Manager Exam 2024, Dated 19/08/2026",
-      "link": "https://mppsc.mp.gov.in/uploads/files/Selection_List_Assistant_Manager_Exam_2024_Dated_19_08_2026.pdf",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [
-        "https://mppsc.mp.gov.in/uploads/files/Selection_List_Assistant_Manager_Exam_2024_Dated_19_08_2026.pdf"
       ],
       "sourceId": "psc-mp",
       "sourceName": "Madhya Pradesh PSC (MPPSC)",
@@ -1962,6 +1877,116 @@
       "fetchMethod": "html"
     },
     {
+      "id": "0e02fc88b79e38bc",
+      "title": "NOTICE FOR POST RESULT DECLARATION FACILITIES TO THE STUDENTS, CLASS XII SUPPLEMENTARY EXAMINATION 2026 AS ON DATE : 28-08-2026",
+      "link": "https://www.sainikschooljhansi.com/files/newsevents/NEWS_76439c0ed171471975929a97a0fc5016.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://www.sainikschooljhansi.com/files/newsevents/NEWS_76439c0ed171471975929a97a0fc5016.pdf"
+      ],
+      "sourceId": "ss-jhansi",
+      "sourceName": "Sainik School Jhansi",
+      "dept": "Sainik School Jhansi",
+      "state": "Uttar Pradesh",
+      "category": "teaching",
+      "stateIds": [
+        "up"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "9416748e9ee2f8d3",
+      "title": "POST RESULT DECLARATION FACILITIES FOR CLASS X SESSION 2025-26 AS ON DATE : 07-08-2026",
+      "link": "https://www.sainikschooljhansi.com/files/newsevents/NEWS_8291575cc046b2ed82f5be019f85e94d.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://www.sainikschooljhansi.com/files/newsevents/NEWS_8291575cc046b2ed82f5be019f85e94d.pdf"
+      ],
+      "sourceId": "ss-jhansi",
+      "sourceName": "Sainik School Jhansi",
+      "dept": "Sainik School Jhansi",
+      "state": "Uttar Pradesh",
+      "category": "teaching",
+      "stateIds": [
+        "up"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "6377d714bf1cf241",
+      "title": "RESULT: LIST OF CANDIDATES RECOMMENDED FOR APPOINTMENT ON REGULAR, CONTRACTUAL AND TEMPORARY BASIS FOR VARIOUS POSTS AS ON DATE : 23-06-2026",
+      "link": "https://www.sainikschooljhansi.com/recruitment",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "ss-jhansi",
+      "sourceName": "Sainik School Jhansi",
+      "dept": "Sainik School Jhansi",
+      "state": "Uttar Pradesh",
+      "category": "teaching",
+      "stateIds": [
+        "up"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "aabad4e5ffd91186",
+      "title": "AISSEE 2026: CLASS IX MERIT LIST FOR SPOT COUNSELLING AS ON DATE : 06-06-2026",
+      "link": "https://www.sainikschooljhansi.com/files/newsevents/NEWS_172eab3a6c8ae399b56d919b671b82d3.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://www.sainikschooljhansi.com/files/newsevents/NEWS_172eab3a6c8ae399b56d919b671b82d3.pdf"
+      ],
+      "sourceId": "ss-jhansi",
+      "sourceName": "Sainik School Jhansi",
+      "dept": "Sainik School Jhansi",
+      "state": "Uttar Pradesh",
+      "category": "teaching",
+      "stateIds": [
+        "up"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "290a003b69ae0611",
+      "title": "AISSEE 2026: CLASS VI MERIT LIST FOR SPOT COUNSELLING AS ON DATE : 08-06-2026",
+      "link": "https://www.sainikschooljhansi.com/files/newsevents/NEWS_0ad7333c214bd166ee827dc94f43548b.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://www.sainikschooljhansi.com/files/newsevents/NEWS_0ad7333c214bd166ee827dc94f43548b.pdf"
+      ],
+      "sourceId": "ss-jhansi",
+      "sourceName": "Sainik School Jhansi",
+      "dept": "Sainik School Jhansi",
+      "state": "Uttar Pradesh",
+      "category": "teaching",
+      "stateIds": [
+        "up"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "bbf3d96b26af2efc",
+      "title": "ROUND–3 ONLINE COUNSELLING RESULTS: RESULT WILL GO LIVE AND COMMENCE W.E.F. 25 APR 2026 AT 0805 HRS. : 24-04-2026",
+      "link": "https://sainikschoolssociety.bisag-n.gov.in/sainikschoolecounselling/landingpage",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "ss-jhansi",
+      "sourceName": "Sainik School Jhansi",
+      "dept": "Sainik School Jhansi",
+      "state": "Uttar Pradesh",
+      "category": "teaching",
+      "stateIds": [
+        "up"
+      ],
+      "fetchMethod": "html"
+    },
+    {
       "id": "3f9fd794cd4a6dc6",
       "title": "Examination Result",
       "link": "https://www.sainikschoolbhubaneswar.edu.in/examination-result.php",
@@ -2064,6 +2089,129 @@
       "category": "teaching",
       "stateIds": [
         "br"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "c4c9266da946f3d2",
+      "title": "Marks of Recommended Candidates",
+      "link": "https://www.upsc.gov.in/examinations/marks-recommended-candidates",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "upsc-e-admit-hub",
+      "sourceName": "UPSC — e-Admit cards",
+      "dept": "Union Public Service Commission",
+      "state": "All India",
+      "category": "upsc",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "9f46af2ef87ad857",
+      "title": "Marks of Recommended Candidates (Reserve List)",
+      "link": "https://www.upsc.gov.in/examinations/marks-recommended-candidates-reserve-list",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "upsc-e-admit-hub",
+      "sourceName": "UPSC — e-Admit cards",
+      "dept": "Union Public Service Commission",
+      "state": "All India",
+      "category": "upsc",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "246cf795a95a5a9f",
+      "title": "Cut-off Marks",
+      "link": "https://www.upsc.gov.in/examinations/cutoff-marks--",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "upsc-e-admit-hub",
+      "sourceName": "UPSC — e-Admit cards",
+      "dept": "Union Public Service Commission",
+      "state": "All India",
+      "category": "upsc",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "bf2ab913def084c8",
+      "title": "Marks Information",
+      "link": "https://upsconline.gov.in/marksheet/exam/marksheet_system/",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "upsc-e-admit-hub",
+      "sourceName": "UPSC — e-Admit cards",
+      "dept": "Union Public Service Commission",
+      "state": "All India",
+      "category": "upsc",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "0cf627359f6e6487",
+      "title": "RESULT OF ADVT. NO.D-2/E-1/2025, UTTAR PRADESH DAIRY DEVELOPMENT/DEPUTY DAIRY DE..",
+      "link": "https://uppsc.up.nic.in/Open_PDF_DB.aspx?I4PnQ0tBaglovGFVjGJMaEk+muvLsysO",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "uppsc-hall-tickets",
+      "sourceName": "UPPSC — Hall tickets",
+      "dept": "Uttar Pradesh PSC",
+      "state": "Uttar Pradesh",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "2f008ff68f07423d",
+      "title": "Caveat Vigyapti on Selection List of Assistant Manager Exam 2024, Dated 19/08/2026",
+      "link": "https://mppsc.mp.gov.in/uploads/advertisement/Caveat_Vigyapti_Assistant_Manager_Exam_2024_Dated_19_08_2026.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://mppsc.mp.gov.in/uploads/advertisement/Caveat_Vigyapti_Assistant_Manager_Exam_2024_Dated_19_08_2026.pdf"
+      ],
+      "sourceId": "psc-mp",
+      "sourceName": "Madhya Pradesh PSC (MPPSC)",
+      "dept": "Madhya Pradesh PSC (MPPSC)",
+      "state": "Madhya Pradesh",
+      "category": "state",
+      "stateIds": [
+        "mp"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "c71fd4d913590eb9",
+      "title": "Selection List - Assistant Manager Exam 2024, Dated 19/08/2026",
+      "link": "https://mppsc.mp.gov.in/uploads/files/Selection_List_Assistant_Manager_Exam_2024_Dated_19_08_2026.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://mppsc.mp.gov.in/uploads/files/Selection_List_Assistant_Manager_Exam_2024_Dated_19_08_2026.pdf"
+      ],
+      "sourceId": "psc-mp",
+      "sourceName": "Madhya Pradesh PSC (MPPSC)",
+      "dept": "Madhya Pradesh PSC (MPPSC)",
+      "state": "Madhya Pradesh",
+      "category": "state",
+      "stateIds": [
+        "mp"
       ],
       "fetchMethod": "html"
     },
@@ -2339,116 +2487,6 @@
       "category": "state",
       "stateIds": [
         "mp"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "0e02fc88b79e38bc",
-      "title": "NOTICE FOR POST RESULT DECLARATION FACILITIES TO THE STUDENTS, CLASS XII SUPPLEMENTARY EXAMINATION 2026 AS ON DATE : 28-08-2026",
-      "link": "https://www.sainikschooljhansi.com/files/newsevents/NEWS_76439c0ed171471975929a97a0fc5016.pdf",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [
-        "https://www.sainikschooljhansi.com/files/newsevents/NEWS_76439c0ed171471975929a97a0fc5016.pdf"
-      ],
-      "sourceId": "ss-jhansi",
-      "sourceName": "Sainik School Jhansi",
-      "dept": "Sainik School Jhansi",
-      "state": "Uttar Pradesh",
-      "category": "teaching",
-      "stateIds": [
-        "up"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "9416748e9ee2f8d3",
-      "title": "POST RESULT DECLARATION FACILITIES FOR CLASS X SESSION 2025-26 AS ON DATE : 07-08-2026",
-      "link": "https://www.sainikschooljhansi.com/files/newsevents/NEWS_8291575cc046b2ed82f5be019f85e94d.pdf",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [
-        "https://www.sainikschooljhansi.com/files/newsevents/NEWS_8291575cc046b2ed82f5be019f85e94d.pdf"
-      ],
-      "sourceId": "ss-jhansi",
-      "sourceName": "Sainik School Jhansi",
-      "dept": "Sainik School Jhansi",
-      "state": "Uttar Pradesh",
-      "category": "teaching",
-      "stateIds": [
-        "up"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "6377d714bf1cf241",
-      "title": "RESULT: LIST OF CANDIDATES RECOMMENDED FOR APPOINTMENT ON REGULAR, CONTRACTUAL AND TEMPORARY BASIS FOR VARIOUS POSTS AS ON DATE : 23-06-2026",
-      "link": "https://www.sainikschooljhansi.com/recruitment",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "ss-jhansi",
-      "sourceName": "Sainik School Jhansi",
-      "dept": "Sainik School Jhansi",
-      "state": "Uttar Pradesh",
-      "category": "teaching",
-      "stateIds": [
-        "up"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "aabad4e5ffd91186",
-      "title": "AISSEE 2026: CLASS IX MERIT LIST FOR SPOT COUNSELLING AS ON DATE : 06-06-2026",
-      "link": "https://www.sainikschooljhansi.com/files/newsevents/NEWS_172eab3a6c8ae399b56d919b671b82d3.pdf",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [
-        "https://www.sainikschooljhansi.com/files/newsevents/NEWS_172eab3a6c8ae399b56d919b671b82d3.pdf"
-      ],
-      "sourceId": "ss-jhansi",
-      "sourceName": "Sainik School Jhansi",
-      "dept": "Sainik School Jhansi",
-      "state": "Uttar Pradesh",
-      "category": "teaching",
-      "stateIds": [
-        "up"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "290a003b69ae0611",
-      "title": "AISSEE 2026: CLASS VI MERIT LIST FOR SPOT COUNSELLING AS ON DATE : 08-06-2026",
-      "link": "https://www.sainikschooljhansi.com/files/newsevents/NEWS_0ad7333c214bd166ee827dc94f43548b.pdf",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [
-        "https://www.sainikschooljhansi.com/files/newsevents/NEWS_0ad7333c214bd166ee827dc94f43548b.pdf"
-      ],
-      "sourceId": "ss-jhansi",
-      "sourceName": "Sainik School Jhansi",
-      "dept": "Sainik School Jhansi",
-      "state": "Uttar Pradesh",
-      "category": "teaching",
-      "stateIds": [
-        "up"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "bbf3d96b26af2efc",
-      "title": "ROUND–3 ONLINE COUNSELLING RESULTS: RESULT WILL GO LIVE AND COMMENCE W.E.F. 25 APR 2026 AT 0805 HRS. : 24-04-2026",
-      "link": "https://sainikschoolssociety.bisag-n.gov.in/sainikschoolecounselling/landingpage",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "ss-jhansi",
-      "sourceName": "Sainik School Jhansi",
-      "dept": "Sainik School Jhansi",
-      "state": "Uttar Pradesh",
-      "category": "teaching",
-      "stateIds": [
-        "up"
       ],
       "fetchMethod": "html"
     },

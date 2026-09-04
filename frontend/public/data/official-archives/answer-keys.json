@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-03T08:59:47.104Z",
+  "generatedAt": "2026-09-04T09:05:36.313Z",
   "count": 45,
   "items": [
     {
@@ -50,25 +50,6 @@
       "category": "state",
       "stateIds": [
         "kl"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "709e8e56b7fa0ba2",
-      "title": "Final Answer Key - Assistant Professor Exam 2025 (06 Subjects - Hindi, English, Commerce, Political Science, Economics, Sociology), Dated 19/08/2026",
-      "link": "https://mppsc.mp.gov.in/uploads/files/Final_Answer_Key_Assistant_Professor_Exam_2025_06_Subjects_Dated_19_08_2026.pdf",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [
-        "https://mppsc.mp.gov.in/uploads/files/Final_Answer_Key_Assistant_Professor_Exam_2025_06_Subjects_Dated_19_08_2026.pdf"
-      ],
-      "sourceId": "psc-mp",
-      "sourceName": "Madhya Pradesh PSC (MPPSC)",
-      "dept": "Madhya Pradesh PSC (MPPSC)",
-      "state": "Madhya Pradesh",
-      "category": "state",
-      "stateIds": [
-        "mp"
       ],
       "fetchMethod": "html"
     },
@@ -126,6 +107,25 @@
       "category": "state",
       "stateIds": [
         "ne"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "709e8e56b7fa0ba2",
+      "title": "Final Answer Key - Assistant Professor Exam 2025 (06 Subjects - Hindi, English, Commerce, Political Science, Economics, Sociology), Dated 19/08/2026",
+      "link": "https://mppsc.mp.gov.in/uploads/files/Final_Answer_Key_Assistant_Professor_Exam_2025_06_Subjects_Dated_19_08_2026.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://mppsc.mp.gov.in/uploads/files/Final_Answer_Key_Assistant_Professor_Exam_2025_06_Subjects_Dated_19_08_2026.pdf"
+      ],
+      "sourceId": "psc-mp",
+      "sourceName": "Madhya Pradesh PSC (MPPSC)",
+      "dept": "Madhya Pradesh PSC (MPPSC)",
+      "state": "Madhya Pradesh",
+      "category": "state",
+      "stateIds": [
+        "mp"
       ],
       "fetchMethod": "html"
     },
