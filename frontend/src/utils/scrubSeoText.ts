@@ -3,6 +3,8 @@
  * Keep in sync with shared/scrub-seo-text.mjs
  */
 
+// PDF/OCR text can include C0 controls; strip them before meta/JSON-LD.
+// eslint-disable-next-line no-control-regex -- intentional C0 control strip
 const CONTROL_CHARS = /[\u0000-\u0008\u000B\u000C\u000E-\u001F\u007F]/g;
 
 const PDF_BOILERPLATE = [
