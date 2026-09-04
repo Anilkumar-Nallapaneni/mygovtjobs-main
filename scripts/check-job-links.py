@@ -11,12 +11,11 @@ from pathlib import Path
 from urllib.parse import urlparse
 
 import httpx
-from sqlalchemy import text
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "backend"))
 
-from app.database.session import SessionLocal  # noqa: E402
+from app.services.publish_gate import is_corrupt_url  # noqa: E402
 
 URL_KEYS = ("apply_url", "official_url", "notification_pdf", "result_url", "admit_card_url")
 FAIL_THRESHOLD = 2
@@ -38,6 +37,28 @@ def pick_url(row: dict) -> str | None:
     return None
 
 
+def audit_catalog_apply_urls(catalog_path: Path) -> int:
+    """Fail on corrupt apply URLs in the committed live-jobs snapshot (no DB)."""
+    import json
+
+    payload = json.loads(catalog_path.read_text(encoding="utf-8"))
+    items = payload.get("items") if isinstance(payload, dict) else payload
+    if not isinstance(items, list):
+        print("Catalog has no items.", flush=True)
+        return 1
+    bad = []
+    for row in items:
+        apply_url = str((row or {}).get("apply_url") or "").strip()
+        if not apply_url:
+            continue
+        if is_corrupt_url(apply_url):
+            bad.append((row.get("slug"), apply_url))
+    print(f"Checked {len(items)} catalog rows; {len(bad)} corrupt apply URLs.", flush=True)
+    for slug, url in bad[:20]:
+        print(f"  • {slug}: {url}", flush=True)
+    return 1 if bad else 0
+
+
 async def probe(client: httpx.AsyncClient, url: str) -> int:
     try:
         resp = await client.head(url, follow_redirects=True)
@@ -49,6 +70,9 @@ async def probe(client: httpx.AsyncClient, url: str) -> int:
 
 
 async def run(limit: int, concurrency: int) -> int:
+    from sqlalchemy import text
+    from app.database.session import SessionLocal
+
     async with SessionLocal() as session:
         rows = (
             await session.execute(
@@ -83,6 +107,11 @@ async def run(limit: int, concurrency: int) -> int:
             nonlocal checked, broken
             url = pick_url(dict(row))
             if not url:
+                return
+            if is_corrupt_url(url):
+                checked += 1
+                broken += 1
+                print(f"[FAIL] {row.get('slug')} corrupt URL — {url[:80]}", flush=True)
                 return
             async with sem:
                 status = await probe(client, url)
@@ -133,7 +162,16 @@ def main() -> int:
     parser = argparse.ArgumentParser(description="Probe job apply/official URLs")
     parser.add_argument("--limit", type=int, default=100, help="Max jobs to probe")
     parser.add_argument("--concurrency", type=int, default=6, help="Parallel HTTP probes")
+    parser.add_argument(
+        "--catalog",
+        nargs="?",
+        const=str(ROOT / "frontend/public/data/live-jobs.json"),
+        default=None,
+        help="Audit apply URLs in live-jobs.json (no database). Optional path.",
+    )
     args = parser.parse_args()
+    if args.catalog:
+        return audit_catalog_apply_urls(Path(args.catalog))
     return asyncio.run(run(args.limit, args.concurrency))
 
 

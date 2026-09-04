@@ -43,6 +43,13 @@ describe("browseSeoForPath", () => {
     expect(meta.description).toMatch(/Karnataka and SSC/i);
   });
 
+  it("builds unique legal page titles", () => {
+    expect(browseSeoForPath("/privacy").title).toMatch(/Privacy/i);
+    expect(browseSeoForPath("/terms").title).toMatch(/Terms/i);
+    expect(browseSeoForPath("/disclaimer").title).toMatch(/Disclaimer/i);
+    expect(browseSeoForPath("/about").path).toBe("/about");
+  });
+
   it("builds alerts page title", () => {
     const meta = browseSeoForPath("/alerts");
     expect(meta.title).toMatch(/Job Alerts/i);

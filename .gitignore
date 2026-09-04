@@ -46,6 +46,7 @@ yarn-error.log*
 debug.log
 scripts/.last-job-quality-audit.json
 scripts/*-report.json
+scripts/_portal_dumps/
 scripts/.daily-sync-last.log
 scripts/publish-gate-demote-report.json
 terminal.md

@@ -43,7 +43,11 @@ function buildStampPlugin(stamp: string): Plugin {
   }
 }
 
-/** Make built CSS non-render-blocking — static shell already has critical styles. */
+/**
+ * Homepage-only: make built CSS non-render-blocking (inline LCP shell covers first paint).
+ * Prerender copies restore blocking stylesheets on non-home HTML so Latest / legal / job
+ * hard-reloads do not flash unstyled.
+ */
 function deferCssPlugin(): Plugin {
   return {
     name: 'defer-css',

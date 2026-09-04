@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 /**
- * Post-build: enrich dist/index.html LCP shell with real bootstrap jobs.
- * Keeps first paint meaningful without waiting for React hydrate.
+ * Post-build: enrich dist/index.html LCP shell with bootstrap job cards
+ * and catalog-wide stats from homeShellStats / live-jobs.json.
  */
 import { readFileSync, writeFileSync, existsSync } from 'fs'
 import { join, dirname } from 'path'
@@ -10,6 +10,8 @@ import { fileURLToPath } from 'url'
 const root = join(dirname(fileURLToPath(import.meta.url)), '..')
 const distIndex = join(root, 'frontend/dist/index.html')
 const bootstrapPath = join(root, 'frontend/public/data/live-jobs-bootstrap.json')
+const livePath = join(root, 'frontend/public/data/live-jobs.json')
+const statsPath = join(root, 'frontend/src/data/homeShellStats.ts')
 const CARD_COUNT = Number(process.env.HOME_SHELL_CARD_COUNT || 4)
 
 function escapeHtml(s) {
@@ -20,10 +22,34 @@ function escapeHtml(s) {
     .replace(/"/g, '&quot;')
 }
 
-function loadBootstrapJobs() {
-  if (!existsSync(bootstrapPath)) return []
-  const payload = JSON.parse(readFileSync(bootstrapPath, 'utf8'))
-  return Array.isArray(payload.items) ? payload.items : []
+function loadJsonItems(path) {
+  if (!existsSync(path)) return []
+  try {
+    const payload = JSON.parse(readFileSync(path, 'utf8'))
+    return Array.isArray(payload.items) ? payload.items : []
+  } catch {
+    return []
+  }
+}
+
+function catalogStats() {
+  const live = loadJsonItems(livePath)
+  if (live.length) {
+    const countable = live.filter((row) => Number(row?.vacancies) > 0)
+    const vacancies = countable.reduce((sum, row) => sum + (Number(row.vacancies) || 0), 0)
+    const orgs = new Set(
+      live.map((row) => String(row?.dept || row?.organization || '').trim()).filter(Boolean)
+    ).size
+    return { notifications: live.length, vacancies, orgs: Math.max(orgs, 1) }
+  }
+  if (existsSync(statsPath)) {
+    const src = readFileSync(statsPath, 'utf8')
+    const notifications = Number(/notifications:\s*(\d+)/.exec(src)?.[1] || 0)
+    const vacancies = Number(/vacancies:\s*(\d+)/.exec(src)?.[1] || 0)
+    const orgs = Number(/orgs:\s*(\d+)/.exec(src)?.[1] || 1)
+    return { notifications, vacancies, orgs }
+  }
+  return null
 }
 
 function formatVacancies(n) {
@@ -51,7 +77,7 @@ function main() {
     process.exit(1)
   }
 
-  const jobs = loadBootstrapJobs().slice(0, CARD_COUNT)
+  const jobs = loadJsonItems(bootstrapPath).slice(0, CARD_COUNT)
   let html = readFileSync(distIndex, 'utf8')
 
   if (jobs.length) {
@@ -69,17 +95,23 @@ function main() {
       html = next
       console.log(`prerender-home-shell: injected ${jobs.length} job cards into LCP shell`)
     }
+  }
 
-    const live = jobs.filter((j) => !j.status || j.status === 'live').length || jobs.length
-    const vacSum = jobs.reduce((sum, j) => sum + (Number(j.vacancies) || 0), 0)
-    const statsLine = `${vacSum.toLocaleString('en-IN')}+ vacancies · ${live} latest notices · official sources`
-    html = html.replace(
+  const stats = catalogStats()
+  if (stats && stats.notifications > 0) {
+    const statsLine = `${stats.vacancies.toLocaleString('en-IN')} vacancies · ${stats.notifications} notifications · ${stats.orgs} orgs`
+    const replaced = html.replace(
       /(<div class="static-app-shell__stats">)[^<]*(<\/div>)/,
       `$1${escapeHtml(statsLine)}$2`
     )
+    if (replaced === html) {
+      console.warn('prerender-home-shell: stats marker not found')
+    } else {
+      html = replaced
+      console.log(`prerender-home-shell: stats ${statsLine}`)
+    }
   }
 
-  // Ensure shell sits outside #root (islands LCP) if an older build still nested it.
   if (!html.includes('id="lcp-shell"')) {
     console.warn('prerender-home-shell: id="lcp-shell" missing — update index.html')
   }

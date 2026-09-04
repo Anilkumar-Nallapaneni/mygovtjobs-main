@@ -1,21 +1,12 @@
-import { dateTimeLocale } from '@/utils/formatLocale'
+import { formatJobDate } from '@/utils/formatJobDate'
 import type { NotificationRow } from '@/utils/latestNotificationsTable'
 
 export const LATEST_NOTIF_COL_COUNT = 8
 
 type TranslateFn = (key: string, opts?: Record<string, unknown>) => string
 
-export function formatLatestNotifDate(value: string | null | undefined, locale: string) {
-  if (!value) return '—'
-  const d = new Date(value)
-  if (!Number.isNaN(d.getTime())) {
-    return d.toLocaleDateString(dateTimeLocale(locale), {
-      day: '2-digit',
-      month: '2-digit',
-      year: 'numeric',
-    })
-  }
-  return String(value)
+export function formatLatestNotifDate(value: string | null | undefined, _locale?: string) {
+  return formatJobDate(value)
 }
 
 export function formatLatestNotifVacancies(value: number | null | undefined, locale: string) {
