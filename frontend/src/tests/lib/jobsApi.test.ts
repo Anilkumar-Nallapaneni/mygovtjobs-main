@@ -8,6 +8,7 @@ vi.mock("@/lib/supabase", () => ({
 
 import { getSupabase } from "@/lib/supabase";
 import {
+  fetchJobBySlug,
   invalidateLiveJobsSnapshotPrefetch,
   markLiveJobsSnapshotFetched,
   prefetchLiveJobsSnapshot,
@@ -63,6 +64,54 @@ describe("shouldHardBustLiveJobsCache", () => {
     const t0 = 1_000_000;
     markLiveJobsSnapshotFetched(t0);
     expect(shouldHardBustLiveJobsCache(t0 + LIVE_JOBS_HARD_BUST_MS)).toBe(true);
+  });
+});
+
+describe("fetchJobBySlug archive fallback", () => {
+  afterEach(() => {
+    invalidateLiveJobsSnapshotPrefetch();
+    vi.unstubAllEnvs();
+    vi.unstubAllGlobals();
+    vi.restoreAllMocks();
+  });
+
+  it("resolves expired archive slugs from jobs-archive.json in static mode", async () => {
+    vi.stubEnv("VITE_JOBS_SOURCE", "static");
+    const fetchMock = vi.fn(async (url: string) => {
+      const href = String(url);
+      if (href.includes("live-jobs.json")) {
+        return {
+          ok: true,
+          headers: { get: () => "application/json" },
+          json: async () => ({ items: [{ slug: "live-only", title: "Live" }] }),
+        };
+      }
+      if (href.includes("jobs-archive.json")) {
+        return {
+          ok: true,
+          headers: { get: () => "application/json" },
+          json: async () => ({
+            items: [
+              {
+                slug: "isro-careers-recruitment-to-the-post-of-technical-assistant-technician-b-draught-412bc5db",
+                title: "ISRO LPSC",
+                status: "expired",
+                apply_url: "https://www.isro.gov.in/LPSCRecruitment13.html",
+              },
+            ],
+          }),
+        };
+      }
+      return { ok: false, headers: { get: () => "" }, json: async () => ({}) };
+    });
+    vi.stubGlobal("fetch", fetchMock);
+
+    const job = await fetchJobBySlug(
+      "isro-careers-recruitment-to-the-post-of-technical-assistant-technician-b-draught-412bc5db"
+    );
+
+    expect(job?.title).toBe("ISRO LPSC");
+    expect(job?.status).toBe("expired");
   });
 });
 
