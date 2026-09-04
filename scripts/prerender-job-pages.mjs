@@ -226,6 +226,34 @@ function buildSeo404Island() {
 </article>`;
 }
 
+/** First-paint + crawler body for Latest so hard reload is not a blank #root. */
+function buildSeoLatestIsland(jobs) {
+  const rows = (jobs || [])
+    .slice(0, 8)
+    .map((job) => {
+      const title = escapeHtml(job.title || "Government recruitment");
+      const dept = escapeHtml(job.dept || "");
+      const last = formatDisplayDate(job.last_date || job.lastDate);
+      const slug = encodeURIComponent(String(job.slug || job.id || ""));
+      return `<tr><td>${dept}</td><td><a href="/jobs/${slug}">${title}</a></td><td>${last || "—"}</td></tr>`;
+    })
+    .join("\n    ");
+  return `<article id="seo-static" class="seo-static-island">
+  <h1>Latest Government Job Notifications</h1>
+  <p class="seo-static-island__lede">Official recruitment notifications from verified .gov.in sources — board, post, vacancies, and last date.</p>
+  ${
+    rows
+      ? `<table class="seo-latest-table">
+    <thead><tr><th>Board</th><th>Post</th><th>Last date</th></tr></thead>
+    <tbody>
+    ${rows}
+    </tbody>
+  </table>`
+      : ""
+  }
+</article>`;
+}
+
 function parseIsoDate(value) {
   const raw = String(value ?? "").trim();
   if (!raw || raw === "—") return undefined;
@@ -550,7 +578,7 @@ function slugsFromSource(filePath, key = "slug") {
   return [...new Set(out)];
 }
 
-function writeSpaRoute(spaHtml, route) {
+function writeSpaRoute(spaHtml, route, { latestJobs = [] } = {}) {
   const canonical = `${siteUrl}${route.path}`;
   const title = route.title.includes("Live Govt Jobs") ? route.title : `${route.title} | Live Govt Jobs`;
   let html = prepareNonHomeShell(spaHtml);
@@ -560,6 +588,9 @@ function writeSpaRoute(spaHtml, route) {
     canonical,
     noindex: Boolean(route.noindex),
   });
+  if (route.path === "/jobs/latest-notifications") {
+    html = injectIsland(html, buildSeoLatestIsland(latestJobs));
+  }
   writeHtml(join(dist, ...route.file), html);
 }
 
@@ -601,7 +632,7 @@ function main() {
   }
 
   for (const route of SPA_SHELL_ROUTES) {
-    writeSpaRoute(spaHtml, route);
+    writeSpaRoute(spaHtml, route, { latestJobs: jobs });
   }
 
   for (const [id, name] of Object.entries(STATE_NAMES)) {
