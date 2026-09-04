@@ -1,7 +1,94 @@
 {
-  "generatedAt": "2026-09-02T08:52:25.168Z",
-  "count": 144,
+  "generatedAt": "2026-09-02T10:41:15.260Z",
+  "count": 148,
   "items": [
+    {
+      "id": "7749ebd16d22dad7",
+      "title": "Admit Cards",
+      "link": "https://www.upsc.gov.in/e-admit-cards",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "upsc-notifications",
+      "sourceName": "UPSC — What's New",
+      "dept": "Union Public Service Commission",
+      "state": "All India",
+      "category": "upsc",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "acf1b98a336e793f",
+      "title": "Announcement dated 07.08.2026 regarding provisional admit card for the posts of Assistant District Attorney in Prosecution Department, Haryana (Advt. No. 18/2025)",
+      "link": "https://hpsc.gov.in/Portals/0/Ann_Admitcard_SKT_ADA_07_08_2026.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://hpsc.gov.in/Portals/0/Ann_Admitcard_SKT_ADA_07_08_2026.pdf"
+      ],
+      "sourceId": "psc-hr-notifications",
+      "sourceName": "HPSC — Recruitment",
+      "dept": "Haryana PSC",
+      "state": "Haryana",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "923e52cc8e243a22",
+      "title": "Admit card",
+      "link": "http://hpsc.gov.in/en-us/Examination/Admit-card",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-hr-notifications",
+      "sourceName": "HPSC — Recruitment",
+      "dept": "Haryana PSC",
+      "state": "Haryana",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "dab406e23a6537a1",
+      "title": "E-Admit Cards for various Recruitment Posts",
+      "link": "https://upsconline.gov.in/oraadmitcard/",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "upsc-e-admit-hub",
+      "sourceName": "UPSC — e-Admit cards",
+      "dept": "Union Public Service Commission",
+      "state": "All India",
+      "category": "upsc",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "99c9f94d8e7c5a15",
+      "title": "e-Admit Cards For Computer Based Skill Test For Various Recruitment Posts (ORA)",
+      "link": "https://upsconline.gov.in/eadmitcard/admitcard_steno_2024/",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "upsc-e-admit-hub",
+      "sourceName": "UPSC — e-Admit cards",
+      "dept": "Union Public Service Commission",
+      "state": "All India",
+      "category": "upsc",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
     {
       "id": "87967a3b63a7791a",
       "title": "NOTICE REGARDING ADMIT CARD OF ADVT. NO. A-9/E-1/2025, RESEARCH ASSISTANT (ENGI..",
@@ -71,6 +158,23 @@
       "fetchMethod": "html-listing"
     },
     {
+      "id": "eea0763a5451a158",
+      "title": "Presentations & Conference Calls",
+      "link": "https://www.bhel.com/presentations-conference-calls",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "bhel",
+      "sourceName": "BHEL — Careers",
+      "dept": "BHEL — Careers",
+      "state": "All India",
+      "category": "psu",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
       "id": "b05869f1f68adaa4",
       "title": "Click for details",
       "link": "https://www.rrbthiruvananthapuram.gov.in/assets/pdf/Exam_Notice_CEN_5_2025_JE_CBTI_City_Intimation_Eng.pdf",
@@ -109,125 +213,72 @@
       "fetchMethod": "html"
     },
     {
-      "id": "1134e9072dc7886b",
-      "title": "केऔसुब में पैरामेडिकल स्टाफ़ की भर्ती (2026) के लिए पीएसटी और दस्तवेजीकरण में शामिल होने के लिए प्रवेश पत्र केऔसुब की भर्ती वेबसाइट https://cisfrectt.cisf.gov.in/ पर अपलोड कर दिया गया है। उम्मीदवारों को सलाह दी जाती है कि वे भर्ती प्रक्रिया में शामिल होने के लिए ई-एडमिट कार्ड डाउनलोड कर लें",
-      "link": "https://www.cisf.gov.in/assets/pdfs/2026/08/rectt_imp_not_pmsr_hindi.pdf",
+      "id": "b46690c86eda192d",
+      "title": "Download Hallticket",
+      "link": "https://portal-psc.ap.gov.in/Download_HallTickets",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-ap",
+      "sourceName": "Andhra Pradesh PSC (APPSC)",
+      "dept": "Andhra Pradesh PSC (APPSC)",
+      "state": "Andhra Pradesh",
+      "category": "state",
+      "stateIds": [
+        "ap"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "55acc2f9ced6244f",
+      "title": "Admit Cards/Call Letters",
+      "link": "https://apsc.nic.in/admit_cards_2026.php#admit_arch",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-as",
+      "sourceName": "Assam PSC (APSC)",
+      "dept": "Assam PSC (APSC)",
+      "state": "Assam",
+      "category": "state",
+      "stateIds": [
+        "as"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "704d262606758050",
+      "title": "Download Admit Cards for written examination (Conventional & OMR type) for the post of Forest Ranger in the Assam Forest Service under Environment & Forests Department, Assam (Advt. No. 22/2025)",
+      "link": "https://apscrecruitment.in/#/auth/admitcard-by-applicationno",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-as",
+      "sourceName": "Assam PSC (APSC)",
+      "dept": "Assam PSC (APSC)",
+      "state": "Assam",
+      "category": "state",
+      "stateIds": [
+        "as"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "02a19a2483f29c90",
+      "title": "Announcement dated 06.08.2026 regarding Combined Subject Knowledge Test for the posts of Assistant District Attorney in Prosecution Department, Haryana (Advt. No. 18/2025) & Superintendent (Legal) in Law and Legislative Department, Haryana (Advt. No. 01/2025)",
+      "link": "https://hpsc.gov.in/Portals/0/Ann_Admitcard_ADA_06_08_2026.pdf",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [
-        "https://www.cisf.gov.in/assets/pdfs/2026/08/rectt_imp_not_pmsr_hindi.pdf"
+        "https://hpsc.gov.in/Portals/0/Ann_Admitcard_ADA_06_08_2026.pdf"
       ],
-      "sourceId": "cisf",
-      "sourceName": "Central Industrial Security Force (CISF)",
-      "dept": "Central Industrial Security Force (CISF)",
-      "state": "All India",
-      "category": "police",
+      "sourceId": "psc-hr",
+      "sourceName": "Haryana PSC (HPSC)",
+      "dept": "Haryana PSC (HPSC)",
+      "state": "Haryana",
+      "category": "state",
       "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "cf1edc8bbc9c61d9",
-      "title": "केऔसुब में पैरामेडिकल स्टाफ़ की भर्ती (2026) के लिए पीएसटी और दस्तवेजीकरण में शामिल होने के लिए प्रवेश पत्र केऔसुब की भर्ती वेबसाइट https://cisfrectt.cisf.gov.in/ पर अपलोड कर दिया गया है। उम्मीदवारों को सलाह दी जाती है कि वे भर्ती प्रक्रिया में शामिल होने के लिए ई-एडमिट कार्ड डाउनलोड कर लें",
-      "link": "https://cisf.gov.in/assets/pdfs/2026/08/rectt_imp_not_pmsr_hindi.pdf",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [
-        "https://cisf.gov.in/assets/pdfs/2026/08/rectt_imp_not_pmsr_hindi.pdf"
-      ],
-      "sourceId": "cisf",
-      "sourceName": "Central Industrial Security Force (CISF)",
-      "dept": "Central Industrial Security Force (CISF)",
-      "state": "All India",
-      "category": "police",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "2b909d8e996d4c94",
-      "title": "Conference call/analyst meet with Investors",
-      "link": "https://ntpc.co.in/investors/confrence-call-analyst-meet-investors/conference-call-analysts-investors",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "ntpc",
-      "sourceName": "NTPC — Careers",
-      "dept": "NTPC — Careers",
-      "state": "All India",
-      "category": "psu",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "4e1bcf588af156f0",
-      "title": "NTPC Ltd. Q4/12M FY26 Conference Call on May 23, 2026",
-      "link": "https://ntpc.co.in/ntpc-ltd-q412m-fy26-conference-call-may-23-2026",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "ntpc",
-      "sourceName": "NTPC — Careers",
-      "dept": "NTPC — Careers",
-      "state": "All India",
-      "category": "psu",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "80bdf850f99dfdf4",
-      "title": "Click here to download GD / Interview Call Letter for Post of MTT",
-      "link": "https://sailcareers.com/sail2025MT/SAIL2026MTIntCallLetter.aspx",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "sail",
-      "sourceName": "Steel Authority of India (SAIL)",
-      "dept": "Steel Authority of India (SAIL)",
-      "state": "All India",
-      "category": "psu",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "0f946a7c74850690",
-      "title": "Click here to download call letter for PI of Provisionally shortlisted candidates for Engagement of Young Professionals in Rourkela Steel Plant, SAIL vide Advt.No. RSP/R-YP/2026-01 dated 03/07/2026",
-      "link": "https://sailcareers.com/sail2026yprourkela/SAIL2026YPRourkelaInterviewCallLetter.aspx",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "sail",
-      "sourceName": "Steel Authority of India (SAIL)",
-      "dept": "Steel Authority of India (SAIL)",
-      "state": "All India",
-      "category": "psu",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "eea0763a5451a158",
-      "title": "Presentations & Conference Calls",
-      "link": "https://www.bhel.com/presentations-conference-calls",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "bhel",
-      "sourceName": "BHEL — Careers",
-      "dept": "BHEL — Careers",
-      "state": "All India",
-      "category": "psu",
-      "stateIds": [
-        "all"
+        "hr"
       ],
       "fetchMethod": "html"
     },
@@ -334,6 +385,227 @@
       "fetchMethod": "html"
     },
     {
+      "id": "26e74717a17c51d7",
+      "title": "LDE Admit Card",
+      "link": "https://mpsc.mizoram.gov.in/page/lde-admit-card",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-mz",
+      "sourceName": "Mizoram PSC",
+      "dept": "Mizoram PSC",
+      "state": "NE States",
+      "category": "state",
+      "stateIds": [
+        "ne"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "00ed2bbc2db06372",
+      "title": "E-Admit Card",
+      "link": "https://tpsc.tripura.gov.in/e-admit-card",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-tr",
+      "sourceName": "Tripura PSC (TPSC)",
+      "dept": "Tripura PSC (TPSC)",
+      "state": "NE States",
+      "category": "state",
+      "stateIds": [
+        "ne"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "a253d97e389f7da9",
+      "title": "e-Admit CARD",
+      "link": "https://tpsc.tripura.gov.in/",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-tr",
+      "sourceName": "Tripura PSC (TPSC)",
+      "dept": "Tripura PSC (TPSC)",
+      "state": "NE States",
+      "category": "state",
+      "stateIds": [
+        "ne"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "0e4239436ef1f658",
+      "title": "Uttarakhand Special Subordinate Education (Lecturer-Group 'C') Services General/Women Branch Exam-2025-- Notification regarding Admit Card (Subject- Commerce and Geography) and Notification regarding Scribe ( Admit Card )",
+      "link": "https://psc.uk.gov.in/candidate-corner/admitcards",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-uk",
+      "sourceName": "Uttarakhand PSC (UKPSC)",
+      "dept": "Uttarakhand PSC (UKPSC)",
+      "state": "Uttarakhand",
+      "category": "state",
+      "stateIds": [
+        "uk"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "112211388bbc6730",
+      "title": "Veterinary Officers Exam - 2026 -- Notification, Advertisement and Online Application ( Recruitment Notification )",
+      "link": "https://psc.uk.gov.in/candidate-corner/recruitment",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-uk",
+      "sourceName": "Uttarakhand PSC (UKPSC)",
+      "dept": "Uttarakhand PSC (UKPSC)",
+      "state": "Uttarakhand",
+      "category": "state",
+      "stateIds": [
+        "uk"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "4117eb74ee655107",
+      "title": "Assistant Conservator of Forest, Logging Officer and Forest Range Officer Combined Examination-2025-- Notification and Mains (Written) Exam Result ( Results )",
+      "link": "https://psc.uk.gov.in/candidate-corner/results",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-uk",
+      "sourceName": "Uttarakhand PSC (UKPSC)",
+      "dept": "Uttarakhand PSC (UKPSC)",
+      "state": "Uttarakhand",
+      "category": "state",
+      "stateIds": [
+        "uk"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "0d033599f7eb3a6f",
+      "title": "Recruitment GOs",
+      "link": "https://psc.uk.gov.in/candidate-corner/importantrecruitment",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-uk",
+      "sourceName": "Uttarakhand PSC (UKPSC)",
+      "dept": "Uttarakhand PSC (UKPSC)",
+      "state": "Uttarakhand",
+      "category": "state",
+      "stateIds": [
+        "uk"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "00e31e8fe10932ac",
+      "title": "Asst. Review Officer, Asst. Librarian, Translator & Typist in the Establishment of High Court Uttarakhand, Exam-2025-- Notification regarding Online Objection on Structure of Questions and Options and Instructions ( Answer Key )",
+      "link": "https://psc.uk.gov.in/candidate-corner/answerkey",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-uk",
+      "sourceName": "Uttarakhand PSC (UKPSC)",
+      "dept": "Uttarakhand PSC (UKPSC)",
+      "state": "Uttarakhand",
+      "category": "state",
+      "stateIds": [
+        "uk"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "583080ee2e24e894",
+      "title": "Syllabus-- Assistant Engineer under Uttarakhand Combined Engineering Service Examination ( Syllabus )",
+      "link": "https://psc.uk.gov.in/candidate-corner/syllabus",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-uk",
+      "sourceName": "Uttarakhand PSC (UKPSC)",
+      "dept": "Uttarakhand PSC (UKPSC)",
+      "state": "Uttarakhand",
+      "category": "state",
+      "stateIds": [
+        "uk"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "57f58bad0712ac0d",
+      "title": "Uttarakhand Combined State Civil Lower Subordinate Services Examination-2024-- Interview Programme, Disqualified Candidates List, Candidature Cancelled List , Medical Certificate Format , Interview Memo and Notification ( Interview )",
+      "link": "https://psc.uk.gov.in/candidate-corner/interview",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-uk",
+      "sourceName": "Uttarakhand PSC (UKPSC)",
+      "dept": "Uttarakhand PSC (UKPSC)",
+      "state": "Uttarakhand",
+      "category": "state",
+      "stateIds": [
+        "uk"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "c6e40b45cd195a5a",
+      "title": "Form / Formats / Proforma to Download",
+      "link": "https://psc.uk.gov.in/candidate-corner/performadownload",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-uk",
+      "sourceName": "Uttarakhand PSC (UKPSC)",
+      "dept": "Uttarakhand PSC (UKPSC)",
+      "state": "Uttarakhand",
+      "category": "state",
+      "stateIds": [
+        "uk"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "a69a6dd7d4e9a9a7",
+      "title": "Document Verification",
+      "link": "https://psc.uk.gov.in/candidate-corner/verifydocs",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-uk",
+      "sourceName": "Uttarakhand PSC (UKPSC)",
+      "dept": "Uttarakhand PSC (UKPSC)",
+      "state": "Uttarakhand",
+      "category": "state",
+      "stateIds": [
+        "uk"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "9246251793e5ee73",
+      "title": "Old Question Papers",
+      "link": "https://psc.uk.gov.in/candidate-corner/oldquestionpaper",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-uk",
+      "sourceName": "Uttarakhand PSC (UKPSC)",
+      "dept": "Uttarakhand PSC (UKPSC)",
+      "state": "Uttarakhand",
+      "category": "state",
+      "stateIds": [
+        "uk"
+      ],
+      "fetchMethod": "html"
+    },
+    {
       "id": "2cb6ef6de1513685",
       "title": "Under Secretary (Law) and Law Officer Recruitment – Examination Schedule Updated: 08/05/2026",
       "link": "https://mpscmanipur.gov.in/files/Notification_Under_Secy_Law_Officer_Admit_card.pdf",
@@ -385,6 +657,112 @@
       "category": "state",
       "stateIds": [
         "ne"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "1134e9072dc7886b",
+      "title": "केऔसुब में पैरामेडिकल स्टाफ़ की भर्ती (2026) के लिए पीएसटी और दस्तवेजीकरण में शामिल होने के लिए प्रवेश पत्र केऔसुब की भर्ती वेबसाइट https://cisfrectt.cisf.gov.in/ पर अपलोड कर दिया गया है। उम्मीदवारों को सलाह दी जाती है कि वे भर्ती प्रक्रिया में शामिल होने के लिए ई-एडमिट कार्ड डाउनलोड कर लें",
+      "link": "https://www.cisf.gov.in/assets/pdfs/2026/08/rectt_imp_not_pmsr_hindi.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://www.cisf.gov.in/assets/pdfs/2026/08/rectt_imp_not_pmsr_hindi.pdf"
+      ],
+      "sourceId": "cisf",
+      "sourceName": "Central Industrial Security Force (CISF)",
+      "dept": "Central Industrial Security Force (CISF)",
+      "state": "All India",
+      "category": "police",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "cf1edc8bbc9c61d9",
+      "title": "केऔसुब में पैरामेडिकल स्टाफ़ की भर्ती (2026) के लिए पीएसटी और दस्तवेजीकरण में शामिल होने के लिए प्रवेश पत्र केऔसुब की भर्ती वेबसाइट https://cisfrectt.cisf.gov.in/ पर अपलोड कर दिया गया है। उम्मीदवारों को सलाह दी जाती है कि वे भर्ती प्रक्रिया में शामिल होने के लिए ई-एडमिट कार्ड डाउनलोड कर लें",
+      "link": "https://cisf.gov.in/assets/pdfs/2026/08/rectt_imp_not_pmsr_hindi.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://cisf.gov.in/assets/pdfs/2026/08/rectt_imp_not_pmsr_hindi.pdf"
+      ],
+      "sourceId": "cisf",
+      "sourceName": "Central Industrial Security Force (CISF)",
+      "dept": "Central Industrial Security Force (CISF)",
+      "state": "All India",
+      "category": "police",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "2b909d8e996d4c94",
+      "title": "Conference call/analyst meet with Investors",
+      "link": "https://ntpc.co.in/investors/confrence-call-analyst-meet-investors/conference-call-analysts-investors",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "ntpc",
+      "sourceName": "NTPC — Careers",
+      "dept": "NTPC — Careers",
+      "state": "All India",
+      "category": "psu",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "4e1bcf588af156f0",
+      "title": "NTPC Ltd. Q4/12M FY26 Conference Call on May 23, 2026",
+      "link": "https://ntpc.co.in/ntpc-ltd-q412m-fy26-conference-call-may-23-2026",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "ntpc",
+      "sourceName": "NTPC — Careers",
+      "dept": "NTPC — Careers",
+      "state": "All India",
+      "category": "psu",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "80bdf850f99dfdf4",
+      "title": "Click here to download GD / Interview Call Letter for Post of MTT",
+      "link": "https://sailcareers.com/sail2025MT/SAIL2026MTIntCallLetter.aspx",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "sail",
+      "sourceName": "Steel Authority of India (SAIL)",
+      "dept": "Steel Authority of India (SAIL)",
+      "state": "All India",
+      "category": "psu",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "0f946a7c74850690",
+      "title": "Click here to download call letter for PI of Provisionally shortlisted candidates for Engagement of Young Professionals in Rourkela Steel Plant, SAIL vide Advt.No. RSP/R-YP/2026-01 dated 03/07/2026",
+      "link": "https://sailcareers.com/sail2026yprourkela/SAIL2026YPRourkelaInterviewCallLetter.aspx",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "sail",
+      "sourceName": "Steel Authority of India (SAIL)",
+      "dept": "Steel Authority of India (SAIL)",
+      "state": "All India",
+      "category": "psu",
+      "stateIds": [
+        "all"
       ],
       "fetchMethod": "html"
     },
@@ -569,57 +947,6 @@
         "as"
       ],
       "fetchMethod": "rss-discovered"
-    },
-    {
-      "id": "dab406e23a6537a1",
-      "title": "E-Admit Cards for various Recruitment Posts",
-      "link": "https://upsconline.gov.in/oraadmitcard/",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "upsc-e-admit-hub",
-      "sourceName": "UPSC — e-Admit cards",
-      "dept": "Union Public Service Commission",
-      "state": "All India",
-      "category": "upsc",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "99c9f94d8e7c5a15",
-      "title": "e-Admit Cards For Computer Based Skill Test For Various Recruitment Posts (ORA)",
-      "link": "https://upsconline.gov.in/eadmitcard/admitcard_steno_2024/",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "upsc-e-admit-hub",
-      "sourceName": "UPSC — e-Admit cards",
-      "dept": "Union Public Service Commission",
-      "state": "All India",
-      "category": "upsc",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "7749ebd16d22dad7",
-      "title": "E- Admit Cards",
-      "link": "https://www.upsc.gov.in/e-admit-cards",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "upsc-e-admit-hub",
-      "sourceName": "UPSC — e-Admit cards",
-      "dept": "Union Public Service Commission",
-      "state": "All India",
-      "category": "upsc",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
     },
     {
       "id": "0157354131476c03",
@@ -966,22 +1293,6 @@
       "fetchMethod": "live-jobs-supplement"
     },
     {
-      "id": "26e74717a17c51d7",
-      "title": "LDE Notification LDE Notifications 2022-2023 LDE Notifications 2023-2024 LDE Notifications 2024-2025 LDE Notifications 2",
-      "link": "https://mpsc.mizoram.gov.in/page/lde-admit-card",
-      "publishedAt": "2026-07-24T10:47:23.424495Z",
-      "summary": "Sl. No. Name of Post Department 1 Sericulture Extention Officer Sericulture 2 CDPO Social Welfare (Tribal Affairs) 3 Headmaster, Govt. Middle School School Education Limited Departmental Exam (LDE) ADMIT CARD Mizoram Public Service Commission Office, Top floor-ah Passport size photo copy tharlam (2)pahnih kengin ni 20 th September _- 8 th October, 2021 thleng, zing dar 10:00 am - 04:00 pm. chhungi…",
-      "pdfUrls": [
-        "https://mpsc.mizoram.gov.in/uploads/attachments/3d2426968e5aadb855c0316b1851985f/lde-admit-card-issue.pdf"
-      ],
-      "sourceId": "psc-mz",
-      "sourceName": "Mpsc Mizoram",
-      "dept": "Mpsc Mizoram",
-      "state": "All India",
-      "category": "state",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
       "id": "d0324124867abf9e",
       "title": "Public Notice for the Post of Clerk on Adhoc basis Employment Notice No. 2 of 2026, Annexure-BB, Roll Numbers 3001-3591",
       "link": "https://cdnbbsr.s3waas.gov.in/s3ec03cfcce0621b49c983991ead4c3d4d/uploads/2026/07/2026071482.pdf",
@@ -1117,41 +1428,6 @@
       "sourceId": "uppsc-hall-tickets",
       "sourceName": "UPPSC — Hall tickets",
       "dept": "UPPSC — Hall tickets",
-      "state": "All India",
-      "category": "state",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "112211388bbc6730",
-      "title": "06-07-2026Uttarakhand Special Subordinate Education (Lecturer-Group 'C') Services General/Women Branch Exam-2025- Notification regarding Exam Date and Admit Card (Subject-English) & Notification regarding Scribe( Recruitment Notifications )",
-      "link": "https://psc.uk.gov.in/candidate-corner/recruitment",
-      "publishedAt": "2026-07-06T00:00:00Z",
-      "summary": "mÙkjk[k.M yksd lsok vk;ksx gfj}kj la[;k % 154@81@06@Mh0vkj0@¼ek0f”k0½@lsok&1@2025&26 fnukad %% 06 tqykbZ] 2026 foKfIr mÙkjk[k.M fo'ks\"k v/khuLFk f'k{kk ¼çoDrk laoxZ ^lewg&x^½ lsok ¼lkekU; 'kk[kk ,oa efgyk 'kk[kk½ fo’k;okj eq[; fyf[kr ¼oLrqfu’B izdkj½ ijh{kk&2025 fo’k;% vaxzsth ,rn~}kjk lwfpr fd;k tkrk gS fd mÙkjk[k.M fo'ks\"k v/khuLFk f'k{kk ¼çoDrk laoxZ ^lewg&x^½ lsok ¼lkekU; 'kk[kk ,oa efgyk 'kk[…",
-      "pdfUrls": [
-        "https://psc.uk.gov.in/public/uploads/recruitment/1246846777.pdf",
-        "https://psc.uk.gov.in/public/uploads/recruitment/731660845.pdf",
-        "https://psc.uk.gov.in/public/uploads/recruitment/1194000683.pdf",
-        "https://psc.uk.gov.in/public/uploads/recruitment/1011677829.pdf",
-        "https://psc.uk.gov.in/public/uploads/recruitment/1431658462.pdf",
-        "https://psc.uk.gov.in/public/uploads/recruitment/2091758477.pdf"
-      ],
-      "sourceId": "psc-uk",
-      "sourceName": "Psc Uk",
-      "dept": "Psc Uk",
-      "state": "All India",
-      "category": "teaching",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "0e4239436ef1f658",
-      "title": "06-07-2026Personal Assistant (Establishment, Hon. High Court) Exam-2025- Notification and Link for Download Admit Card( Admit Card )",
-      "link": "https://psc.uk.gov.in/candidate-corner/admitcards",
-      "publishedAt": "2026-07-06T00:00:00Z",
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-uk",
-      "sourceName": "Psc Uk",
-      "dept": "Psc Uk",
       "state": "All India",
       "category": "state",
       "fetchMethod": "live-jobs-supplement"
@@ -1419,20 +1695,6 @@
       "fetchMethod": "live-jobs-supplement"
     },
     {
-      "id": "57f58bad0712ac0d",
-      "title": "Superintendent (Woman Welfare Department) Selection-2025-- Interview Memo, Interview Programme, Notification, Checklist, Format 02,03 and 04 ( Interview )",
-      "link": "https://psc.uk.gov.in/candidate-corner/interview",
-      "publishedAt": "2026-06-22T19:52:58.743008Z",
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-uk",
-      "sourceName": "Uttarakhand PSC (UKPSC)",
-      "dept": "Uttarakhand PSC (UKPSC)",
-      "state": "All India",
-      "category": "state",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
       "id": "ae1bfd4d7fed32b5",
       "title": "e - Admit Card: Engineering Services (Main) Examination, 2026",
       "link": "https://www.upsc.gov.in/whats-new/Engineering%20Services%20%28Main%29%20Examination%2C%202026/e%20-%20Admit%20Card",
@@ -1611,20 +1873,6 @@
       "sourceId": "psc-jk",
       "sourceName": "Jammu & Kashmir PSC (JKPSC)",
       "dept": "Jammu & Kashmir PSC (JKPSC)",
-      "state": "All India",
-      "category": "state",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "583080ee2e24e894",
-      "title": "19-05-2026 Food Safety Officer-- Written Examination and Interview ( syllabus )",
-      "link": "https://psc.uk.gov.in/candidate-corner/syllabus",
-      "publishedAt": "2026-05-19T00:00:00Z",
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-uk",
-      "sourceName": "Uttarakhand PSC (UKPSC)",
-      "dept": "Uttarakhand PSC (UKPSC)",
       "state": "All India",
       "category": "state",
       "fetchMethod": "live-jobs-supplement"
@@ -1911,159 +2159,6 @@
       "fetchMethod": "html-listing"
     },
     {
-      "id": "923e52cc8e243a22",
-      "title": "Admit card",
-      "link": "http://hpsc.gov.in/en-us/Examination/Admit-card",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-hr-notifications",
-      "sourceName": "HPSC — Recruitment",
-      "dept": "Haryana PSC",
-      "state": "Haryana",
-      "category": "state",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "4117eb74ee655107",
-      "title": "Uttarakhand Combined State Civil/Upper Subordinate Services Examination-2024-- Notification candidate Marks ( Results )",
-      "link": "https://psc.uk.gov.in/candidate-corner/results",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-uk",
-      "sourceName": "Uttarakhand PSC (UKPSC)",
-      "dept": "Uttarakhand PSC (UKPSC)",
-      "state": "Uttarakhand",
-      "category": "state",
-      "stateIds": [
-        "uk"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "0d033599f7eb3a6f",
-      "title": "Recruitment GOs",
-      "link": "https://psc.uk.gov.in/candidate-corner/importantrecruitment",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-uk",
-      "sourceName": "Uttarakhand PSC (UKPSC)",
-      "dept": "Uttarakhand PSC (UKPSC)",
-      "state": "Uttarakhand",
-      "category": "state",
-      "stateIds": [
-        "uk"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "a69a6dd7d4e9a9a7",
-      "title": "01-06-2026 Uttarakhand Special Subordinate Education (Lecturer-Group 'C') Services General/Women Branch-2020-- Notification, Re-Document Verification Notification for absent candidates, Checklist, Format 02,03,04 ( Document Verification )",
-      "link": "https://psc.uk.gov.in/candidate-corner/verifydocs",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-uk",
-      "sourceName": "Uttarakhand PSC (UKPSC)",
-      "dept": "Uttarakhand PSC (UKPSC)",
-      "state": "Uttarakhand",
-      "category": "state",
-      "stateIds": [
-        "uk"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "00e31e8fe10932ac",
-      "title": "Answer Key and Online Objection",
-      "link": "https://psc.uk.gov.in/candidate-corner/answerkey",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-uk",
-      "sourceName": "Uttarakhand PSC (UKPSC)",
-      "dept": "Uttarakhand PSC (UKPSC)",
-      "state": "Uttarakhand",
-      "category": "state",
-      "stateIds": [
-        "uk"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "c6e40b45cd195a5a",
-      "title": "Form / Formats / Proforma to Download",
-      "link": "https://psc.uk.gov.in/candidate-corner/performadownload",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-uk",
-      "sourceName": "Uttarakhand PSC (UKPSC)",
-      "dept": "Uttarakhand PSC (UKPSC)",
-      "state": "Uttarakhand",
-      "category": "state",
-      "stateIds": [
-        "uk"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "9246251793e5ee73",
-      "title": "Old Question Papers",
-      "link": "https://psc.uk.gov.in/candidate-corner/oldquestionpaper",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-uk",
-      "sourceName": "Uttarakhand PSC (UKPSC)",
-      "dept": "Uttarakhand PSC (UKPSC)",
-      "state": "Uttarakhand",
-      "category": "state",
-      "stateIds": [
-        "uk"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "00ed2bbc2db06372",
-      "title": "E-Admit Card",
-      "link": "https://tpsc.tripura.gov.in/e-admit-card",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-tr",
-      "sourceName": "Tripura PSC (TPSC)",
-      "dept": "Tripura PSC (TPSC)",
-      "state": "NE States",
-      "category": "state",
-      "stateIds": [
-        "ne"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "a253d97e389f7da9",
-      "title": "e-Admit CARD",
-      "link": "https://tpsc.tripura.gov.in/",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-tr",
-      "sourceName": "Tripura PSC (TPSC)",
-      "dept": "Tripura PSC (TPSC)",
-      "state": "NE States",
-      "category": "state",
-      "stateIds": [
-        "ne"
-      ],
-      "fetchMethod": "html"
-    },
-    {
       "id": "ba9266bf733ded46",
       "title": "Advertisement No.01/2025 : Notice Regarding the Admit Card for the post of LDC",
       "link": "https://ncert.nic.in/pdf/announcement/vacancies/nonacademicvacancy/Admitcard_link_LDC_9482.pdf",
@@ -2105,20 +2200,6 @@
       "dept": "Indo-Tibetan Border Police (ITBP)",
       "state": "All India",
       "category": "police",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "b46690c86eda192d",
-      "title": "Download Hallticket",
-      "link": "https://portal-psc.ap.gov.in/Download_HallTickets",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-ap",
-      "sourceName": "Andhra Pradesh PSC (APPSC)",
-      "dept": "Andhra Pradesh PSC (APPSC)",
-      "state": "All India",
-      "category": "state",
       "fetchMethod": "live-jobs-supplement"
     },
     {

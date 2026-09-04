@@ -1,7 +1,24 @@
 {
-  "generatedAt": "2026-09-02T08:52:25.168Z",
-  "count": 114,
+  "generatedAt": "2026-09-02T10:41:15.260Z",
+  "count": 130,
   "items": [
+    {
+      "id": "246cf795a95a5a9f",
+      "title": "Cut-off Marks",
+      "link": "https://www.upsc.gov.in/examinations/cutoff-marks--",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "upsc-notifications",
+      "sourceName": "UPSC — What's New",
+      "dept": "Union Public Service Commission",
+      "state": "All India",
+      "category": "upsc",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
     {
       "id": "c70f8b20c685365f",
       "title": "Results & Cutoffs",
@@ -122,6 +139,310 @@
       "fetchMethod": "html"
     },
     {
+      "id": "2d723268728d6720",
+      "title": "ET  2025 Final Cut-Off",
+      "link": "https://careers.bhel.in/archives/Final%20Cut-Off_ETs.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://careers.bhel.in/archives/Final%20Cut-Off_ETs.pdf"
+      ],
+      "sourceId": "bhel",
+      "sourceName": "BHEL — Careers",
+      "dept": "BHEL — Careers",
+      "state": "All India",
+      "category": "psu",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "d3fb46874b856e0d",
+      "title": "ET  2024 Cut-Off",
+      "link": "https://careers.bhel.in/archives/Cut_Off_ET_2024.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://careers.bhel.in/archives/Cut_Off_ET_2024.pdf"
+      ],
+      "sourceId": "bhel",
+      "sourceName": "BHEL — Careers",
+      "dept": "BHEL — Careers",
+      "state": "All India",
+      "category": "psu",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "159634fbf39ba516",
+      "title": "ET-2019 Cut Off",
+      "link": "https://careers.bhel.in/archives/Cut_Off_ET_2019.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://careers.bhel.in/archives/Cut_Off_ET_2019.pdf"
+      ],
+      "sourceId": "bhel",
+      "sourceName": "BHEL — Careers",
+      "dept": "BHEL — Careers",
+      "state": "All India",
+      "category": "psu",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "1b7c4d3509a7e0a9",
+      "title": "ST  2025 Final Cut Off",
+      "link": "https://careers.bhel.in/archives/ST2025_FInal%20Cut%20Offs.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://careers.bhel.in/archives/ST2025_FInal%20Cut%20Offs.pdf"
+      ],
+      "sourceId": "bhel",
+      "sourceName": "BHEL — Careers",
+      "dept": "BHEL — Careers",
+      "state": "All India",
+      "category": "psu",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "2a786b53150a5691",
+      "title": "ST  2024 Cut-Off",
+      "link": "https://careers.bhel.in/archives/Cut_Off_ST_2024.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://careers.bhel.in/archives/Cut_Off_ST_2024.pdf"
+      ],
+      "sourceId": "bhel",
+      "sourceName": "BHEL — Careers",
+      "dept": "BHEL — Careers",
+      "state": "All India",
+      "category": "psu",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "bbdb21c671148161",
+      "title": "Cut-Off Marks for shortlisting to Document Verification cum Skill Test stage.",
+      "link": "https://careers.bhel.in/ar_2025/Unit%20wise%20Cut%20Off_Artisans%202026.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://careers.bhel.in/ar_2025/Unit%20wise%20Cut%20Off_Artisans%202026.pdf"
+      ],
+      "sourceId": "bhel",
+      "sourceName": "BHEL — Careers",
+      "dept": "BHEL — Careers",
+      "state": "All India",
+      "category": "psu",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "724342e6d2457abf",
+      "title": "Notification - Category wise Cut-off marks and marks secured for Junior Engineer (Civil/Mechanical/Chemical/Electrical) under Public Health Engineering Department [Advt. No. 27/2025, dtd. 11-08-2025]",
+      "link": "https://apsc.nic.in/misc_2026/JE_PHE_Cut_Off_27_2025.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://apsc.nic.in/misc_2026/JE_PHE_Cut_Off_27_2025.pdf"
+      ],
+      "sourceId": "psc-as",
+      "sourceName": "Assam PSC (APSC)",
+      "dept": "Assam PSC (APSC)",
+      "state": "Assam",
+      "category": "state",
+      "stateIds": [
+        "as"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "62ca3945e1d1b6e9",
+      "title": "Notification - Category wise Cut-off marks and marks secured for Assistant Engineer (Civil), Water Resources Department [Advt. No. 13/2025 dtd. 10/04/2025]",
+      "link": "https://apsc.nic.in/misc_2026/Asst._Engg_Civil_WRD_Cut_Off_13_2025.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://apsc.nic.in/misc_2026/Asst._Engg_Civil_WRD_Cut_Off_13_2025.pdf"
+      ],
+      "sourceId": "psc-as",
+      "sourceName": "Assam PSC (APSC)",
+      "dept": "Assam PSC (APSC)",
+      "state": "Assam",
+      "category": "state",
+      "stateIds": [
+        "as"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "3aac918d6309d615",
+      "title": "Notification - Category wise Cut-off marks and marks secured for Assistant Engineer (Mechanical), Water Resources Department [Advt. No. 15/2025 dtd. 11/04/2025]",
+      "link": "https://apsc.nic.in/misc_2026/Asst._Engg_Mech_WRD_Cut_Off_15_2025.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://apsc.nic.in/misc_2026/Asst._Engg_Mech_WRD_Cut_Off_15_2025.pdf"
+      ],
+      "sourceId": "psc-as",
+      "sourceName": "Assam PSC (APSC)",
+      "dept": "Assam PSC (APSC)",
+      "state": "Assam",
+      "category": "state",
+      "stateIds": [
+        "as"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "b68034acc6b70a12",
+      "title": "Notification - Category wise Cut-off marks and marks secured for Junior Engineer (Mechanical), Water Resources Department (Advt. No. 18/2025 dtd. 05/05/2025)",
+      "link": "https://apsc.nic.in/misc_2026/Jr._Engg_Mech_WRD_Cut_Off_18_2025.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://apsc.nic.in/misc_2026/Jr._Engg_Mech_WRD_Cut_Off_18_2025.pdf"
+      ],
+      "sourceId": "psc-as",
+      "sourceName": "Assam PSC (APSC)",
+      "dept": "Assam PSC (APSC)",
+      "state": "Assam",
+      "category": "state",
+      "stateIds": [
+        "as"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "e7cb21944652c80f",
+      "title": "01/09/2026 Result Preamble and Cutoff Marks (Provisional List for Eligibility Checking) for School Lecturer (School Edu.) - 2025 (Sanskrit)",
+      "link": "https://rpsc.rajasthan.gov.in/Static/Result/84C2E841500D4CD3B3CEEBECFA7F811A.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://rpsc.rajasthan.gov.in/Static/Result/84C2E841500D4CD3B3CEEBECFA7F811A.pdf"
+      ],
+      "sourceId": "psc-rj",
+      "sourceName": "Rajasthan PSC (RPSC)",
+      "dept": "Rajasthan PSC (RPSC)",
+      "state": "Rajasthan",
+      "category": "state",
+      "stateIds": [
+        "rj"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "3236aa6764462bca",
+      "title": "01/09/2026 Result Preamble and Cutoff Marks (Provisional List for Eligibility Checking) for School Lecturer (School Edu.) - 2025 (Biology)",
+      "link": "https://rpsc.rajasthan.gov.in/Static/Result/0B0A5CE414584B0393E4F8E4674D3017.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://rpsc.rajasthan.gov.in/Static/Result/0B0A5CE414584B0393E4F8E4674D3017.pdf"
+      ],
+      "sourceId": "psc-rj",
+      "sourceName": "Rajasthan PSC (RPSC)",
+      "dept": "Rajasthan PSC (RPSC)",
+      "state": "Rajasthan",
+      "category": "state",
+      "stateIds": [
+        "rj"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "56443eed521ca0ba",
+      "title": "01/09/2026 Result Preamble and Cutoff Marks (Provisional List for Eligibility Checking) for School Lecturer (School Edu.) - 2025 (Public Administration)",
+      "link": "https://rpsc.rajasthan.gov.in/Static/Result/702137361BC14A5E95B3AF0E8DA63D71.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://rpsc.rajasthan.gov.in/Static/Result/702137361BC14A5E95B3AF0E8DA63D71.pdf"
+      ],
+      "sourceId": "psc-rj",
+      "sourceName": "Rajasthan PSC (RPSC)",
+      "dept": "Rajasthan PSC (RPSC)",
+      "state": "Rajasthan",
+      "category": "state",
+      "stateIds": [
+        "rj"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "b35770b7970316f2",
+      "title": "01/09/2026 Result Preamble and Cutoff Marks (Provisional List for Eligibility Checking) for School Lecturer (School Edu.) - 2025 (Music)",
+      "link": "https://rpsc.rajasthan.gov.in/Static/Result/F75E70BBF5FF4A8A9C738C26161A03C3.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://rpsc.rajasthan.gov.in/Static/Result/F75E70BBF5FF4A8A9C738C26161A03C3.pdf"
+      ],
+      "sourceId": "psc-rj",
+      "sourceName": "Rajasthan PSC (RPSC)",
+      "dept": "Rajasthan PSC (RPSC)",
+      "state": "Rajasthan",
+      "category": "state",
+      "stateIds": [
+        "rj"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "2327bfeca440d6a3",
+      "title": "31/08/2026 Result Preamble and Cutoff Marks (Provisional List for Eligibility Checking) for School Lecturer (School Edu.) - 2025 (Home Science)",
+      "link": "https://rpsc.rajasthan.gov.in/Static/Result/A6B5128F93EB4E7EB5CA4B7B53EF3973.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://rpsc.rajasthan.gov.in/Static/Result/A6B5128F93EB4E7EB5CA4B7B53EF3973.pdf"
+      ],
+      "sourceId": "psc-rj",
+      "sourceName": "Rajasthan PSC (RPSC)",
+      "dept": "Rajasthan PSC (RPSC)",
+      "state": "Rajasthan",
+      "category": "state",
+      "stateIds": [
+        "rj"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "1e0b5ae0ef5c1407",
+      "title": "31/08/2026 Result Preamble and Cutoff Marks (Main List) for Asst. Professor (Medical Edu.) - 2024 (Neuro Surgery (SS))",
+      "link": "https://rpsc.rajasthan.gov.in/Static/Result/7A0820ACDAB8400CBFE4FD0B2CAE2AF9.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://rpsc.rajasthan.gov.in/Static/Result/7A0820ACDAB8400CBFE4FD0B2CAE2AF9.pdf"
+      ],
+      "sourceId": "psc-rj",
+      "sourceName": "Rajasthan PSC (RPSC)",
+      "dept": "Rajasthan PSC (RPSC)",
+      "state": "Rajasthan",
+      "category": "state",
+      "stateIds": [
+        "rj"
+      ],
+      "fetchMethod": "html"
+    },
+    {
       "id": "c9189f55ccd79cdc",
       "title": "MCSCC (Main) Examination, 2022 – Cutoff Marks Updated: 15/07/2026",
       "link": "https://mpscmanipur.gov.in/Cutoff.html",
@@ -137,23 +458,6 @@
         "ne"
       ],
       "fetchMethod": "html"
-    },
-    {
-      "id": "246cf795a95a5a9f",
-      "title": "Cut-off Marks",
-      "link": "https://www.upsc.gov.in/examinations/cutoff-marks--",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "upsc-e-admit-hub",
-      "sourceName": "UPSC — e-Admit cards",
-      "dept": "Union Public Service Commission",
-      "state": "All India",
-      "category": "upsc",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
     },
     {
       "id": "b3c33fffbb0b0748",

@@ -1,7 +1,211 @@
 {
-  "generatedAt": "2026-09-02T08:52:25.168Z",
-  "count": 27,
+  "generatedAt": "2026-09-02T10:41:15.260Z",
+  "count": 28,
   "items": [
+    {
+      "id": "3fc1696b18f30fa3",
+      "title": "Common mistakes committed by the candidates in Conventional Papers",
+      "link": "https://www.upsc.gov.in/examination/common-mistakes-committed-candidates-conventional-papers",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "upsc-notifications",
+      "sourceName": "UPSC — What's New",
+      "dept": "Union Public Service Commission",
+      "state": "All India",
+      "category": "upsc",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "47952f717dcedda6",
+      "title": "Representation on Question Papers",
+      "link": "https://www.upsc.gov.in/examinations/representation-question-papers",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "upsc-notifications",
+      "sourceName": "UPSC — What's New",
+      "dept": "Union Public Service Commission",
+      "state": "All India",
+      "category": "upsc",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "3ae2d6fce5935dce",
+      "title": "Previous Question Papers",
+      "link": "https://www.upsc.gov.in/examinations/previous-question-papers",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "upsc-notifications",
+      "sourceName": "UPSC — What's New",
+      "dept": "Union Public Service Commission",
+      "state": "All India",
+      "category": "upsc",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "1bb2282873cb0efd",
+      "title": "Specimen Question Cum Answer Booklet (QCAB)",
+      "link": "https://www.upsc.gov.in/examination/model-question-and-answer-booklets",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "upsc-previous-papers",
+      "sourceName": "UPSC — Previous Question Papers",
+      "dept": "Union Public Service Commission",
+      "state": "All India",
+      "category": "upsc",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "dbbfd4363bc88661",
+      "title": "Sample Question Cum Answer Booklets",
+      "link": "https://apsc.nic.in/cce.html#cce_main",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-as",
+      "sourceName": "Assam PSC (APSC)",
+      "dept": "Assam PSC (APSC)",
+      "state": "Assam",
+      "category": "state",
+      "stateIds": [
+        "as"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "e89d8cfee71410b4",
+      "title": "Question paper for Descriptive Examinations",
+      "link": "https://www.keralapsc.gov.in/question-paper-descriptive-exam",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-kl",
+      "sourceName": "Kerala PSC",
+      "dept": "Kerala PSC",
+      "state": "Kerala",
+      "category": "state",
+      "stateIds": [
+        "kl"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "b2abd6cc6348e1c6",
+      "title": "Previous Question Papers",
+      "link": "https://www.keralapsc.gov.in/previous-question-papers",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-kl",
+      "sourceName": "Kerala PSC",
+      "dept": "Kerala PSC",
+      "state": "Kerala",
+      "category": "state",
+      "stateIds": [
+        "kl"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "c4f57dea207a1fb4",
+      "title": "Question paper for Descriptive Examinations",
+      "link": "https://www.keralapsc.gov.in/index.php/question-paper-descriptive-exam",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-kl",
+      "sourceName": "Kerala PSC",
+      "dept": "Kerala PSC",
+      "state": "Kerala",
+      "category": "state",
+      "stateIds": [
+        "kl"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "088efab9a9c009c1",
+      "title": "Previous Year Question Papers",
+      "link": "https://mppsc.mp.gov.in/Oldquestionpaper",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-mp",
+      "sourceName": "Madhya Pradesh PSC (MPPSC)",
+      "dept": "Madhya Pradesh PSC (MPPSC)",
+      "state": "Madhya Pradesh",
+      "category": "state",
+      "stateIds": [
+        "mp"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "288eb14d7e699a2a",
+      "title": "Previous Question Papers",
+      "link": "https://opsc.gov.in/Public/Pages/View_Content.aspx?id=p/5qRxj7CZtpXYhZHF7BXQ==",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-od",
+      "sourceName": "Odisha PSC (OPSC)",
+      "dept": "Odisha PSC (OPSC)",
+      "state": "Odisha",
+      "category": "state",
+      "stateIds": [
+        "od"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "d8e4b595dfe40717",
+      "title": "Old Question Paper",
+      "link": "https://tpsc.tripura.gov.in/old-question-paper",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-tr",
+      "sourceName": "Tripura PSC (TPSC)",
+      "dept": "Tripura PSC (TPSC)",
+      "state": "NE States",
+      "category": "state",
+      "stateIds": [
+        "ne"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "1f26c2bbb725585e",
+      "title": "Previous Year Question Papers",
+      "link": "https://mpscmanipur.gov.in/question.html",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-mn",
+      "sourceName": "Manipur PSC",
+      "dept": "Manipur PSC",
+      "state": "NE States",
+      "category": "state",
+      "stateIds": [
+        "ne"
+      ],
+      "fetchMethod": "html"
+    },
     {
       "id": "c5f858985b70fccb",
       "title": "Question Paper Feb 2026",
@@ -190,176 +394,6 @@
       "fetchMethod": "html"
     },
     {
-      "id": "e89d8cfee71410b4",
-      "title": "Question paper for Descriptive Examinations",
-      "link": "https://www.keralapsc.gov.in/question-paper-descriptive-exam",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-kl",
-      "sourceName": "Kerala PSC",
-      "dept": "Kerala PSC",
-      "state": "Kerala",
-      "category": "state",
-      "stateIds": [
-        "kl"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "b2abd6cc6348e1c6",
-      "title": "Previous Question Papers",
-      "link": "https://www.keralapsc.gov.in/previous-question-papers",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-kl",
-      "sourceName": "Kerala PSC",
-      "dept": "Kerala PSC",
-      "state": "Kerala",
-      "category": "state",
-      "stateIds": [
-        "kl"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "c4f57dea207a1fb4",
-      "title": "Question paper for Descriptive Examinations",
-      "link": "https://www.keralapsc.gov.in/index.php/question-paper-descriptive-exam",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-kl",
-      "sourceName": "Kerala PSC",
-      "dept": "Kerala PSC",
-      "state": "Kerala",
-      "category": "state",
-      "stateIds": [
-        "kl"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "088efab9a9c009c1",
-      "title": "Previous Year Question Papers",
-      "link": "https://mppsc.mp.gov.in/Oldquestionpaper",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-mp",
-      "sourceName": "Madhya Pradesh PSC (MPPSC)",
-      "dept": "Madhya Pradesh PSC (MPPSC)",
-      "state": "Madhya Pradesh",
-      "category": "state",
-      "stateIds": [
-        "mp"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "288eb14d7e699a2a",
-      "title": "Previous Question Papers",
-      "link": "https://opsc.gov.in/Public/Pages/View_Content.aspx?id=p/5qRxj7CZtpXYhZHF7BXQ==",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-od",
-      "sourceName": "Odisha PSC (OPSC)",
-      "dept": "Odisha PSC (OPSC)",
-      "state": "Odisha",
-      "category": "state",
-      "stateIds": [
-        "od"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "1f26c2bbb725585e",
-      "title": "Previous Year Question Papers",
-      "link": "https://mpscmanipur.gov.in/question.html",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-mn",
-      "sourceName": "Manipur PSC",
-      "dept": "Manipur PSC",
-      "state": "NE States",
-      "category": "state",
-      "stateIds": [
-        "ne"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "1bb2282873cb0efd",
-      "title": "Specimen Question Cum Answer Booklet (QCAB)",
-      "link": "https://www.upsc.gov.in/examination/model-question-and-answer-booklets",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "upsc-e-admit-hub",
-      "sourceName": "UPSC — e-Admit cards",
-      "dept": "Union Public Service Commission",
-      "state": "All India",
-      "category": "upsc",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "3fc1696b18f30fa3",
-      "title": "Common mistakes committed by the candidates in Conventional Papers",
-      "link": "https://www.upsc.gov.in/examination/common-mistakes-committed-candidates-conventional-papers",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "upsc-e-admit-hub",
-      "sourceName": "UPSC — e-Admit cards",
-      "dept": "Union Public Service Commission",
-      "state": "All India",
-      "category": "upsc",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "47952f717dcedda6",
-      "title": "Representation on Question Papers",
-      "link": "https://www.upsc.gov.in/examinations/representation-question-papers",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "upsc-e-admit-hub",
-      "sourceName": "UPSC — e-Admit cards",
-      "dept": "Union Public Service Commission",
-      "state": "All India",
-      "category": "upsc",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "3ae2d6fce5935dce",
-      "title": "Previous Question Papers",
-      "link": "https://www.upsc.gov.in/examinations/previous-question-papers",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "upsc-e-admit-hub",
-      "sourceName": "UPSC — e-Admit cards",
-      "dept": "Union Public Service Commission",
-      "state": "All India",
-      "category": "upsc",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
       "id": "ba6df61f0df29b66",
       "title": "Representation on Question Paper for ESEM-26, IES-ISS-26 and Combined Geo-Scientist (Main) Examination, 2026",
       "link": "https://upsc.gov.in/content/representation-question-paper-esem-26-ies-iss-26-and-combined-geo-scientist-main-examination",
@@ -390,23 +424,6 @@
       "state": "All India",
       "category": "upsc",
       "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "d8e4b595dfe40717",
-      "title": "Old Question Paper",
-      "link": "https://tpsc.tripura.gov.in/old-question-paper",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-tr",
-      "sourceName": "Tripura PSC (TPSC)",
-      "dept": "Tripura PSC (TPSC)",
-      "state": "NE States",
-      "category": "state",
-      "stateIds": [
-        "ne"
-      ],
-      "fetchMethod": "html"
     },
     {
       "id": "97f4f4f9ed7f43f4",

@@ -1,7 +1,649 @@
 {
-  "generatedAt": "2026-09-02T08:52:25.168Z",
-  "count": 271,
+  "generatedAt": "2026-09-02T10:41:15.260Z",
+  "count": 280,
   "items": [
+    {
+      "id": "f43d7aa6e0241ca3",
+      "title": "Advt No. ISRO:ICRB:02(EMC):2025 dated 27.05.2025 - Schedule of Interview for the post of Scientist/Engineer ‘SC’ [Mechanical] - BE002 - Phase-IV Read More",
+      "link": "https://www.isro.gov.in/ICRB_Recruitment9.html",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "isro-careers",
+      "sourceName": "ISRO — Careers",
+      "dept": "Indian Space Research Organisation",
+      "state": "All India",
+      "category": "psu",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "98096e0f3c848ae9",
+      "title": "Interview Letter",
+      "link": "https://bpsc.bihar.gov.in/interview-letter/",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-br-notifications",
+      "sourceName": "BPSC — Notices",
+      "dept": "Bihar PSC",
+      "state": "Bihar",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "ef1ec3ffdbb56c6b",
+      "title": "NOT REACHED ZONE FOR INTERVIEW",
+      "link": "https://tnpsc.gov.in/English/Checkresult.aspx?key=bafcc5b2-2911-48a5-aabe-927c650e9f47&&id=E413D952-5117-4CF7-921D-4B2754CCA27E",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "tnpsc-hall-tickets",
+      "sourceName": "TNPSC — Hall tickets",
+      "dept": "Tamil Nadu PSC",
+      "state": "Tamil Nadu",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "f642c56c504a0b6f",
+      "title": "25 Sep 2026 LIST OF CANDIDATES QUALIFIED FOR INTERVIEW IN ADVT. NO. A-7/E-1/2021, U.P. TECH. EDU.(TCHG.) SER. EXAM.-2021, LECT. TEXT. DESIGN, TEXT. DESIGN PRINT,.....",
+      "link": "https://uppsc.up.nic.in/Open_PDF.aspx?I4PnQ0tBagnM8dHr1ViOntNklk6dW/D3",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "uppsc-hall-tickets",
+      "sourceName": "UPPSC — Hall tickets",
+      "dept": "Uttar Pradesh PSC",
+      "state": "Uttar Pradesh",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "12ca81e8e0617c5b",
+      "title": "Click here to view List of Candidates who are not selected in P.C.S. Examination-2022, but Qualified for Interview in P.C.S - 2022 (In Merit Order).",
+      "link": "https://uppsc.up.nic.in/Open_PDF.aspx?I4PnQ0tBagk9q6upnHHyW7Pdh9qfF6wa",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "uppsc-hall-tickets",
+      "sourceName": "UPPSC — Hall tickets",
+      "dept": "Uttar Pradesh PSC",
+      "state": "Uttar Pradesh",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "fa359b9114331fc3",
+      "title": "Personality Test / Viva-Voce",
+      "link": "https://hppsc.hp.gov.in/CommonControls/ViewContinuousLinkPage?qs=mhlKjiXMMIveW0iAADPEiC57R27%2BGya8ay4kbm0dJkcnlKHGzV4U5%2BQlrRl1TG3OQWWkf93oLxROjrnFX90ov6IhjjgH2qZXMgsT6KqPbJM%3D",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-hp",
+      "sourceName": "Himachal Pradesh PSC (HPPSC)",
+      "dept": "Himachal Pradesh PSC (HPPSC)",
+      "state": "Himachal Pradesh",
+      "category": "state",
+      "stateIds": [
+        "hp"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "66bff2c416041b99",
+      "title": "Interview notice for the post of Professor Cardio Vascular Thoracic Surgery in SKIMS Soura HME Deptt",
+      "link": "https://jkpsc.nic.in/Pdf/Downloader1.ashx?nid=18012&type=n",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-jk",
+      "sourceName": "Jammu & Kashmir PSC (JKPSC)",
+      "dept": "Jammu & Kashmir PSC (JKPSC)",
+      "state": "Jammu & Kashmir",
+      "category": "state",
+      "stateIds": [
+        "jk"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "f5750572b8e40d65",
+      "title": "Interview notice for the post of Lecturer-II (Non Engineering) Wood Technology in Skill Development Department",
+      "link": "https://jkpsc.nic.in/Pdf/Downloader1.ashx?nid=18010&type=n",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-jk",
+      "sourceName": "Jammu & Kashmir PSC (JKPSC)",
+      "dept": "Jammu & Kashmir PSC (JKPSC)",
+      "state": "Jammu & Kashmir",
+      "category": "state",
+      "stateIds": [
+        "jk"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "1639539b148806d2",
+      "title": "Interview notice for the post of Lecturer-I Computer Engineering in Skill Development Department",
+      "link": "https://jkpsc.nic.in/Pdf/Downloader1.ashx?nid=18005&type=n",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-jk",
+      "sourceName": "Jammu & Kashmir PSC (JKPSC)",
+      "dept": "Jammu & Kashmir PSC (JKPSC)",
+      "state": "Jammu & Kashmir",
+      "category": "state",
+      "stateIds": [
+        "jk"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "2d5cc53e1a3244e6",
+      "title": "Interview notice for the post of Lecturer-II (Non Engineering) Wood Technology in Skill Development Department",
+      "link": "https://jkpsc.nic.in/Pdf/Downloader1.ashx?nid=18006&type=n",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-jk",
+      "sourceName": "Jammu & Kashmir PSC (JKPSC)",
+      "dept": "Jammu & Kashmir PSC (JKPSC)",
+      "state": "Jammu & Kashmir",
+      "category": "state",
+      "stateIds": [
+        "jk"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "91558011355dca9d",
+      "title": "Recent Examinations/Interview",
+      "link": "https://jpsc.gov.in/Examination-Links.php",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-jh",
+      "sourceName": "Jharkhand PSC (JPSC)",
+      "dept": "Jharkhand PSC (JPSC)",
+      "state": "Jharkhand",
+      "category": "state",
+      "stateIds": [
+        "jh"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "1709d751f92d2140",
+      "title": "Procedure for Interview Date Change Requests",
+      "link": "https://www.keralapsc.gov.in/procedure-interview-date-change-requests",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-kl",
+      "sourceName": "Kerala PSC",
+      "dept": "Kerala PSC",
+      "state": "Kerala",
+      "category": "state",
+      "stateIds": [
+        "kl"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "39e61c0337589778",
+      "title": "Interview Schedule",
+      "link": "https://www.keralapsc.gov.in/interviews",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-kl",
+      "sourceName": "Kerala PSC",
+      "dept": "Kerala PSC",
+      "state": "Kerala",
+      "category": "state",
+      "stateIds": [
+        "kl"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "b789b81a3c6161aa",
+      "title": "INTERVIEW - Assistant Professor in Community Medicine & Medical Gastroenterology (I NCA -Dheevara & III NCA - Muslim) - Medical Education (Cat.No.812/2025&895/25)",
+      "link": "https://www.keralapsc.gov.in/sites/default/files/inline-files/inter-812-895-25.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://www.keralapsc.gov.in/sites/default/files/inline-files/inter-812-895-25.pdf"
+      ],
+      "sourceId": "psc-kl",
+      "sourceName": "Kerala PSC",
+      "dept": "Kerala PSC",
+      "state": "Kerala",
+      "category": "state",
+      "stateIds": [
+        "kl"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "0c8b608876f8adbe",
+      "title": "examination-interview",
+      "link": "https://www.keralapsc.gov.in/examination-interview",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-kl",
+      "sourceName": "Kerala PSC",
+      "dept": "Kerala PSC",
+      "state": "Kerala",
+      "category": "state",
+      "stateIds": [
+        "kl"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "c019d0c423cf10b5",
+      "title": "Procedure for Interview Date Change Requests",
+      "link": "https://www.keralapsc.gov.in/index.php/procedure-interview-date-change-requests",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-kl",
+      "sourceName": "Kerala PSC",
+      "dept": "Kerala PSC",
+      "state": "Kerala",
+      "category": "state",
+      "stateIds": [
+        "kl"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "37277d471752171b",
+      "title": "Notification regd. Personal Interview for Ex-Servicemen for AAO(W&T) under Finance Deptt.",
+      "link": "https://mpsc.mizoram.gov.in/post/notification-regd-personal-interview-for-ex-servicemen-for-aaowt-under-finance-deptt",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-mz",
+      "sourceName": "Mizoram PSC",
+      "dept": "Mizoram PSC",
+      "state": "NE States",
+      "category": "state",
+      "stateIds": [
+        "ne"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "26c8a245921e498a",
+      "title": "PUBLIC NOTICE AND INTERVIEW SCHEDULE INCLUDING ANNEXURE-A FOR THE JOINT COMPETITIVE EXAMINATION FOR THE VARIOUS POSTS OF SUB DIVISIONAL OFFICER AND SUB DIVISIONAL ENGINEER IN VARIOUS DEPARTMENTS UPLOADED ON 31-08-2026",
+      "link": "https://ppsc.gov.in/index.aspx?page=2795&tabid=10&tablinkid=6834",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-pb",
+      "sourceName": "Punjab PSC (PPSC)",
+      "dept": "Punjab PSC (PPSC)",
+      "state": "Punjab",
+      "category": "state",
+      "stateIds": [
+        "pb"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "aba8d82ac194f696",
+      "title": "Public Notice And Interview Schedule Including Annexure-a For The Recruitment To 04 Posts Of Research Officer Group-a And 16 Posts Of Assistant Research Officer Group-a In The Department Of Water Resources Government Of Punjab Uploaded On 20-07-2026",
+      "link": "https://ppsc.gov.in/index.aspx?page=2781&tabid=10&tablinkid=6820",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-pb",
+      "sourceName": "Punjab PSC (PPSC)",
+      "dept": "Punjab PSC (PPSC)",
+      "state": "Punjab",
+      "category": "state",
+      "stateIds": [
+        "pb"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "52cd60643fc6de66",
+      "title": "public notice and interview reschedule including annexure-a for recruitment to 21 posts of district defence services welfare officer group-a in the department of defence services welfare government of Punjab uploaded on 25-05-2026",
+      "link": "https://ppsc.gov.in/index.aspx?page=2755&tabid=10&tablinkid=6794",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-pb",
+      "sourceName": "Punjab PSC (PPSC)",
+      "dept": "Punjab PSC (PPSC)",
+      "state": "Punjab",
+      "category": "state",
+      "stateIds": [
+        "pb"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "a4b99db581936138",
+      "title": "PUBLIC NOTICE AND INTERVIEW SCHEDULE INCLUDING ANNEXURE-A FOR RECRUITMENT TO 21 POSTS OF DISTRICT DEFENCE SERVICES WELFARE OFFICER GROUP-A IN THE DEPARTMENT OF DEFENCE SERVICES WELFARE GOVERNMENT OF PUNJABUPLOADED ON 14-05-2026",
+      "link": "https://ppsc.gov.in/index.aspx?page=2750&tabid=10&tablinkid=6789",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-pb",
+      "sourceName": "Punjab PSC (PPSC)",
+      "dept": "Punjab PSC (PPSC)",
+      "state": "Punjab",
+      "category": "state",
+      "stateIds": [
+        "pb"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "f92a59334bfba377",
+      "title": "Notification regarding for Interview/Personality Test for recruitment to the post of Assistant Professor (Advt. No-05/2025)(2nd Phase)",
+      "link": "https://tpsc.tripura.gov.in/sites/default/files/Notif_AP_2nd_240726.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://tpsc.tripura.gov.in/sites/default/files/Notif_AP_2nd_240726.pdf"
+      ],
+      "sourceId": "psc-tr",
+      "sourceName": "Tripura PSC (TPSC)",
+      "dept": "Tripura PSC (TPSC)",
+      "state": "NE States",
+      "category": "state",
+      "stateIds": [
+        "ne"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "d5405d5be89188b6",
+      "title": "Programme for Interview/Personality Test for recruitment to the post of Youth Organizer (Advt. No-01/2025)",
+      "link": "https://tpsc.tripura.gov.in/sites/default/files/2026-08/Prog_Intv_Youth_270826.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://tpsc.tripura.gov.in/sites/default/files/2026-08/Prog_Intv_Youth_270826.pdf"
+      ],
+      "sourceId": "psc-tr",
+      "sourceName": "Tripura PSC (TPSC)",
+      "dept": "Tripura PSC (TPSC)",
+      "state": "NE States",
+      "category": "state",
+      "stateIds": [
+        "ne"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "038fb60d2ccf5409",
+      "title": "Revised Programme for Interview/Personality Test for recruitment to the post of Assistant Professor(Pol. Science) (Advt. No-05/2025)(2nd Phase)",
+      "link": "https://tpsc.tripura.gov.in/sites/default/files/2026-08/Prog_AP_Phy_Edu_2nd_Phase_310726.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://tpsc.tripura.gov.in/sites/default/files/2026-08/Prog_AP_Phy_Edu_2nd_Phase_310726.pdf"
+      ],
+      "sourceId": "psc-tr",
+      "sourceName": "Tripura PSC (TPSC)",
+      "dept": "Tripura PSC (TPSC)",
+      "state": "NE States",
+      "category": "state",
+      "stateIds": [
+        "ne"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "b725e29f7c5afdfe",
+      "title": "Eligible list for Interview/Personality Test for recruitment to the post of Assistant Professor(Education, Bengali & Pol. Science), (Advt. No-05/2025)(2nd Phase)",
+      "link": "https://tpsc.tripura.gov.in/sites/default/files/Eligib_AP_2nd_Phase_2_310726.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://tpsc.tripura.gov.in/sites/default/files/Eligib_AP_2nd_Phase_2_310726.pdf"
+      ],
+      "sourceId": "psc-tr",
+      "sourceName": "Tripura PSC (TPSC)",
+      "dept": "Tripura PSC (TPSC)",
+      "state": "NE States",
+      "category": "state",
+      "stateIds": [
+        "ne"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "8e58cbf18e0e243b",
+      "title": "Eligible list for Interview/Personality Test for recruitment to the post of Assistant Professor (Advt. No-05/2025)(2nd Phase)",
+      "link": "https://tpsc.tripura.gov.in/sites/default/files/Eligib_AP_2nd_Phase_1_310726.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://tpsc.tripura.gov.in/sites/default/files/Eligib_AP_2nd_Phase_1_310726.pdf"
+      ],
+      "sourceId": "psc-tr",
+      "sourceName": "Tripura PSC (TPSC)",
+      "dept": "Tripura PSC (TPSC)",
+      "state": "NE States",
+      "category": "state",
+      "stateIds": [
+        "ne"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "a98d09822131e8b3",
+      "title": "Programme for Interview/Personality Test for recruitment to the post of Assistant Professor(Advt. No-05/2025)(2nd Phase)",
+      "link": "https://tpsc.tripura.gov.in/sites/default/files/2026-07/Prog_Intv_AF_2nd_Phase_300726.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://tpsc.tripura.gov.in/sites/default/files/2026-07/Prog_Intv_AF_2nd_Phase_300726.pdf"
+      ],
+      "sourceId": "psc-tr",
+      "sourceName": "Tripura PSC (TPSC)",
+      "dept": "Tripura PSC (TPSC)",
+      "state": "NE States",
+      "category": "state",
+      "stateIds": [
+        "ne"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "1c082b301642027c",
+      "title": "Notification regarding for Interview/Personality Test for recruitment to the post of Assistant Professor(Advt. No-05/2025)(1st Phase)",
+      "link": "https://tpsc.tripura.gov.in/sites/default/files/Notif_AP_250526.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://tpsc.tripura.gov.in/sites/default/files/Notif_AP_250526.pdf"
+      ],
+      "sourceId": "psc-tr",
+      "sourceName": "Tripura PSC (TPSC)",
+      "dept": "Tripura PSC (TPSC)",
+      "state": "NE States",
+      "category": "state",
+      "stateIds": [
+        "ne"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "09ff44bf2cf34caf",
+      "title": "Notification regarding for Interview/Personality Test for recruitment to the post of Assistant Professor(Advt. No-05/2025)(1st Phase)",
+      "link": "https://tpsc.tripura.gov.in/sites/default/files/Notif_AF_190526.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://tpsc.tripura.gov.in/sites/default/files/Notif_AF_190526.pdf"
+      ],
+      "sourceId": "psc-tr",
+      "sourceName": "Tripura PSC (TPSC)",
+      "dept": "Tripura PSC (TPSC)",
+      "state": "NE States",
+      "category": "state",
+      "stateIds": [
+        "ne"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "573a484febc254f4",
+      "title": "Notification regarding Interview/Personality Test for the post of Agriculture Officer, TAFS, Grade-I (Advt. No-21/2025)",
+      "link": "https://tpsc.tripura.gov.in/sites/default/files/Notis_AGRI_090626.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://tpsc.tripura.gov.in/sites/default/files/Notis_AGRI_090626.pdf"
+      ],
+      "sourceId": "psc-tr",
+      "sourceName": "Tripura PSC (TPSC)",
+      "dept": "Tripura PSC (TPSC)",
+      "state": "NE States",
+      "category": "state",
+      "stateIds": [
+        "ne"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "c5993ec05c502859",
+      "title": "Revised eligible list for Interview/Personality Test for recruitment to the post of Assistant Professor (Advt. No-05/2025)(1st Phase)",
+      "link": "https://tpsc.tripura.gov.in/sites/default/files/Rev_Elg_AP_040626.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://tpsc.tripura.gov.in/sites/default/files/Rev_Elg_AP_040626.pdf"
+      ],
+      "sourceId": "psc-tr",
+      "sourceName": "Tripura PSC (TPSC)",
+      "dept": "Tripura PSC (TPSC)",
+      "state": "NE States",
+      "category": "state",
+      "stateIds": [
+        "ne"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "60ef47b60e47190d",
+      "title": "Eligible list for Interview/Personality Test for recruitment to the post of Assistant Professor (Advt. No-05/2025)(1st Phase)",
+      "link": "https://tpsc.tripura.gov.in/sites/default/files/Eligible_Asstt._Prof_1st_phase_160526.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://tpsc.tripura.gov.in/sites/default/files/Eligible_Asstt._Prof_1st_phase_160526.pdf"
+      ],
+      "sourceId": "psc-tr",
+      "sourceName": "Tripura PSC (TPSC)",
+      "dept": "Tripura PSC (TPSC)",
+      "state": "NE States",
+      "category": "state",
+      "stateIds": [
+        "ne"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "57f58bad0712ac0d",
+      "title": "Uttarakhand Combined State Civil Lower Subordinate Services Examination-2024-- Interview Programme, Disqualified Candidates List, Candidature Cancelled List , Medical Certificate Format , Interview Memo and Notification ( Interview )",
+      "link": "https://psc.uk.gov.in/candidate-corner/interview",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-uk",
+      "sourceName": "Uttarakhand PSC (UKPSC)",
+      "dept": "Uttarakhand PSC (UKPSC)",
+      "state": "Uttarakhand",
+      "category": "state",
+      "stateIds": [
+        "uk"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "4ac64be59afb579a",
+      "title": "Schedule of Interview for Recruitment to Various Posts under the Directorate of Handloom & Textiles, Manipur. Updated: 27/05/2026",
+      "link": "https://mpscmanipur.gov.in/files/MPSC_26052719480.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://mpscmanipur.gov.in/files/MPSC_26052719480.pdf"
+      ],
+      "sourceId": "psc-mn",
+      "sourceName": "Manipur PSC",
+      "dept": "Manipur PSC",
+      "state": "NE States",
+      "category": "state",
+      "stateIds": [
+        "ne"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "3f7663453dcd756c",
+      "title": "Notification for postponement of interview for direct recruitment of various posts in the Directorate of Handloom & Textiles, Manipur. Updated: 20/05/2026",
+      "link": "https://mpscmanipur.gov.in/files/MPSC_26052016560.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://mpscmanipur.gov.in/files/MPSC_26052016560.pdf"
+      ],
+      "sourceId": "psc-mn",
+      "sourceName": "Manipur PSC",
+      "dept": "Manipur PSC",
+      "state": "NE States",
+      "category": "state",
+      "stateIds": [
+        "ne"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "b5773e5c8e75d0e3",
+      "title": "Interview Schedule for recruitment to various posts in the Directorate of Handloom & Textiles, Manipur on contractual basis. Updated: 13/05/2026",
+      "link": "https://mpscmanipur.gov.in/files/MPSC_26051320250.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://mpscmanipur.gov.in/files/MPSC_26051320250.pdf"
+      ],
+      "sourceId": "psc-mn",
+      "sourceName": "Manipur PSC",
+      "dept": "Manipur PSC",
+      "state": "NE States",
+      "category": "state",
+      "stateIds": [
+        "ne"
+      ],
+      "fetchMethod": "html"
+    },
     {
       "id": "29e735f6c2245346",
       "title": "Recruitment : Walk-in-interview for appoinment of Pharmacist on Adhoc/Locum basis",
@@ -52,74 +694,6 @@
         "all"
       ],
       "fetchMethod": "rss-discovered"
-    },
-    {
-      "id": "f43d7aa6e0241ca3",
-      "title": "Advt No. ISRO:ICRB:02(EMC):2025 dated 27.05.2025 - Schedule of Interview for the post of Scientist/Engineer ‘SC’ [Mechanical] - BE002 - Phase-IV Read More",
-      "link": "https://www.isro.gov.in/ICRB_Recruitment9.html",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "isro-careers",
-      "sourceName": "ISRO — Careers",
-      "dept": "Indian Space Research Organisation",
-      "state": "All India",
-      "category": "psu",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "98096e0f3c848ae9",
-      "title": "Interview Letter",
-      "link": "https://bpsc.bihar.gov.in/interview-letter/",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-br-notifications",
-      "sourceName": "BPSC — Notices",
-      "dept": "Bihar PSC",
-      "state": "Bihar",
-      "category": "state",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "f642c56c504a0b6f",
-      "title": "25 Sep 2026 LIST OF CANDIDATES QUALIFIED FOR INTERVIEW IN ADVT. NO. A-7/E-1/2021, U.P. TECH. EDU.(TCHG.) SER. EXAM.-2021, LECT. TEXT. DESIGN, TEXT. DESIGN PRINT,.....",
-      "link": "https://uppsc.up.nic.in/Open_PDF.aspx?I4PnQ0tBagnM8dHr1ViOntNklk6dW/D3",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "uppsc-hall-tickets",
-      "sourceName": "UPPSC — Hall tickets",
-      "dept": "Uttar Pradesh PSC",
-      "state": "Uttar Pradesh",
-      "category": "state",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "12ca81e8e0617c5b",
-      "title": "Click here to view List of Candidates who are not selected in P.C.S. Examination-2022, but Qualified for Interview in P.C.S - 2022 (In Merit Order).",
-      "link": "https://uppsc.up.nic.in/Open_PDF.aspx?I4PnQ0tBagk9q6upnHHyW7Pdh9qfF6wa",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "uppsc-hall-tickets",
-      "sourceName": "UPPSC — Hall tickets",
-      "dept": "Uttar Pradesh PSC",
-      "state": "Uttar Pradesh",
-      "category": "state",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
     },
     {
       "id": "a1bc7ecbd075f319",
@@ -875,252 +1449,6 @@
       "fetchMethod": "html"
     },
     {
-      "id": "fa359b9114331fc3",
-      "title": "Personality Test / Viva-Voce",
-      "link": "https://hppsc.hp.gov.in/CommonControls/ViewContinuousLinkPage?qs=mhlKjiXMMIveW0iAADPEiC57R27%2BGya8ay4kbm0dJkcnlKHGzV4U5%2BQlrRl1TG3OQWWkf93oLxROjrnFX90ov6IhjjgH2qZXMgsT6KqPbJM%3D",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-hp",
-      "sourceName": "Himachal Pradesh PSC (HPPSC)",
-      "dept": "Himachal Pradesh PSC (HPPSC)",
-      "state": "Himachal Pradesh",
-      "category": "state",
-      "stateIds": [
-        "hp"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "66bff2c416041b99",
-      "title": "Interview notice for the post of Professor Cardio Vascular Thoracic Surgery in SKIMS Soura HME Deptt",
-      "link": "https://jkpsc.nic.in/Pdf/Downloader1.ashx?nid=18012&type=n",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-jk",
-      "sourceName": "Jammu & Kashmir PSC (JKPSC)",
-      "dept": "Jammu & Kashmir PSC (JKPSC)",
-      "state": "Jammu & Kashmir",
-      "category": "state",
-      "stateIds": [
-        "jk"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "f5750572b8e40d65",
-      "title": "Interview notice for the post of Lecturer-II (Non Engineering) Wood Technology in Skill Development Department",
-      "link": "https://jkpsc.nic.in/Pdf/Downloader1.ashx?nid=18010&type=n",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-jk",
-      "sourceName": "Jammu & Kashmir PSC (JKPSC)",
-      "dept": "Jammu & Kashmir PSC (JKPSC)",
-      "state": "Jammu & Kashmir",
-      "category": "state",
-      "stateIds": [
-        "jk"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "1639539b148806d2",
-      "title": "Interview notice for the post of Lecturer-I Computer Engineering in Skill Development Department",
-      "link": "https://jkpsc.nic.in/Pdf/Downloader1.ashx?nid=18005&type=n",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-jk",
-      "sourceName": "Jammu & Kashmir PSC (JKPSC)",
-      "dept": "Jammu & Kashmir PSC (JKPSC)",
-      "state": "Jammu & Kashmir",
-      "category": "state",
-      "stateIds": [
-        "jk"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "2d5cc53e1a3244e6",
-      "title": "Interview notice for the post of Lecturer-II (Non Engineering) Wood Technology in Skill Development Department",
-      "link": "https://jkpsc.nic.in/Pdf/Downloader1.ashx?nid=18006&type=n",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-jk",
-      "sourceName": "Jammu & Kashmir PSC (JKPSC)",
-      "dept": "Jammu & Kashmir PSC (JKPSC)",
-      "state": "Jammu & Kashmir",
-      "category": "state",
-      "stateIds": [
-        "jk"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "91558011355dca9d",
-      "title": "Recent Examinations/Interview",
-      "link": "https://jpsc.gov.in/Examination-Links.php",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-jh",
-      "sourceName": "Jharkhand PSC (JPSC)",
-      "dept": "Jharkhand PSC (JPSC)",
-      "state": "Jharkhand",
-      "category": "state",
-      "stateIds": [
-        "jh"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "1709d751f92d2140",
-      "title": "Procedure for Interview Date Change Requests",
-      "link": "https://www.keralapsc.gov.in/procedure-interview-date-change-requests",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-kl",
-      "sourceName": "Kerala PSC",
-      "dept": "Kerala PSC",
-      "state": "Kerala",
-      "category": "state",
-      "stateIds": [
-        "kl"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "39e61c0337589778",
-      "title": "Interview Schedule",
-      "link": "https://www.keralapsc.gov.in/interviews",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-kl",
-      "sourceName": "Kerala PSC",
-      "dept": "Kerala PSC",
-      "state": "Kerala",
-      "category": "state",
-      "stateIds": [
-        "kl"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "b789b81a3c6161aa",
-      "title": "INTERVIEW - Assistant Professor in Community Medicine & Medical Gastroenterology (I NCA -Dheevara & III NCA - Muslim) - Medical Education (Cat.No.812/2025&895/25)",
-      "link": "https://www.keralapsc.gov.in/sites/default/files/inline-files/inter-812-895-25.pdf",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [
-        "https://www.keralapsc.gov.in/sites/default/files/inline-files/inter-812-895-25.pdf"
-      ],
-      "sourceId": "psc-kl",
-      "sourceName": "Kerala PSC",
-      "dept": "Kerala PSC",
-      "state": "Kerala",
-      "category": "state",
-      "stateIds": [
-        "kl"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "0c8b608876f8adbe",
-      "title": "examination-interview",
-      "link": "https://www.keralapsc.gov.in/examination-interview",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-kl",
-      "sourceName": "Kerala PSC",
-      "dept": "Kerala PSC",
-      "state": "Kerala",
-      "category": "state",
-      "stateIds": [
-        "kl"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "c019d0c423cf10b5",
-      "title": "Procedure for Interview Date Change Requests",
-      "link": "https://www.keralapsc.gov.in/index.php/procedure-interview-date-change-requests",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-kl",
-      "sourceName": "Kerala PSC",
-      "dept": "Kerala PSC",
-      "state": "Kerala",
-      "category": "state",
-      "stateIds": [
-        "kl"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "4ac64be59afb579a",
-      "title": "Schedule of Interview for Recruitment to Various Posts under the Directorate of Handloom & Textiles, Manipur. Updated: 27/05/2026",
-      "link": "https://mpscmanipur.gov.in/files/MPSC_26052719480.pdf",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [
-        "https://mpscmanipur.gov.in/files/MPSC_26052719480.pdf"
-      ],
-      "sourceId": "psc-mn",
-      "sourceName": "Manipur PSC",
-      "dept": "Manipur PSC",
-      "state": "NE States",
-      "category": "state",
-      "stateIds": [
-        "ne"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "3f7663453dcd756c",
-      "title": "Notification for postponement of interview for direct recruitment of various posts in the Directorate of Handloom & Textiles, Manipur. Updated: 20/05/2026",
-      "link": "https://mpscmanipur.gov.in/files/MPSC_26052016560.pdf",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [
-        "https://mpscmanipur.gov.in/files/MPSC_26052016560.pdf"
-      ],
-      "sourceId": "psc-mn",
-      "sourceName": "Manipur PSC",
-      "dept": "Manipur PSC",
-      "state": "NE States",
-      "category": "state",
-      "stateIds": [
-        "ne"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "b5773e5c8e75d0e3",
-      "title": "Interview Schedule for recruitment to various posts in the Directorate of Handloom & Textiles, Manipur on contractual basis. Updated: 13/05/2026",
-      "link": "https://mpscmanipur.gov.in/files/MPSC_26051320250.pdf",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [
-        "https://mpscmanipur.gov.in/files/MPSC_26051320250.pdf"
-      ],
-      "sourceId": "psc-mn",
-      "sourceName": "Manipur PSC",
-      "dept": "Manipur PSC",
-      "state": "NE States",
-      "category": "state",
-      "stateIds": [
-        "ne"
-      ],
-      "fetchMethod": "html"
-    },
-    {
       "id": "481473008e181ee4",
       "title": "Press note regarding the personal interview for the Post of Assistant Engineer MGNREGA, C.D Block Little Andaman under South Andaman District",
       "link": "https://erecruitment.andamannicobar.gov.in/Notice/64_fbe80dee-4dc3-4385-9622-d2f8e1ad2f29.pdf",
@@ -1629,20 +1957,6 @@
       "dept": "Wii",
       "state": "All India",
       "category": "psu",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "aba8d82ac194f696",
-      "title": "Public Notice And Interview Schedule Including Annexure-a For The Recruitment To 04 Posts Of Research Officer Group-a And 16 Posts Of Assistant Research Officer Group-a In The Department Of Water Resources Government Of Punjab Uploaded On 20-07-2026",
-      "link": "https://ppsc.gov.in/index.aspx?page=2781&tabid=10&tablinkid=6820",
-      "publishedAt": "2026-07-20T00:00:00Z",
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-pb",
-      "sourceName": "Ppsc",
-      "dept": "Ppsc",
-      "state": "All India",
-      "category": "state",
       "fetchMethod": "live-jobs-supplement"
     },
     {
@@ -2773,22 +3087,6 @@
       "fetchMethod": "live-jobs-supplement"
     },
     {
-      "id": "60ef47b60e47190d",
-      "title": "Eligible list for Interview/Personality Test for recruitment to the post of Assistant Professor (Advt. No-05/2025)(1st Phase)",
-      "link": "https://tpsc.tripura.gov.in/sites/default/files/Eligible_Asstt._Prof_1st_phase_160526.pdf",
-      "publishedAt": "2026-06-27T02:56:15.572355Z",
-      "summary": null,
-      "pdfUrls": [
-        "https://tpsc.tripura.gov.in/sites/default/files/Eligible_Asstt._Prof_1st_phase_160526.pdf"
-      ],
-      "sourceId": "psc-tr",
-      "sourceName": "Tpsc Tripura",
-      "dept": "Tpsc Tripura",
-      "state": "All India",
-      "category": "teaching",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
       "id": "e744f1c0dd064af7",
       "title": "Programme for Interview/Personality Test for recruitment to the post of Assistant Professor(Advt. No-05/2025)(1st Phase)",
       "link": "https://tpsc.tripura.gov.in/sites/default/files/2026-05/Prog_Intv_AF_1st_Phase_160526.pdf",
@@ -2796,22 +3094,6 @@
       "summary": null,
       "pdfUrls": [
         "https://tpsc.tripura.gov.in/sites/default/files/2026-05/Prog_Intv_AF_1st_Phase_160526.pdf"
-      ],
-      "sourceId": "psc-tr",
-      "sourceName": "Tpsc Tripura",
-      "dept": "Tpsc Tripura",
-      "state": "All India",
-      "category": "teaching",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "c5993ec05c502859",
-      "title": "Revised eligible list for Interview/Personality Test for recruitment to the post of Assistant Professor (Advt. No-05/2025)(1st Phase)",
-      "link": "https://tpsc.tripura.gov.in/sites/default/files/Rev_Elg_AP_040626.pdf",
-      "publishedAt": "2026-06-27T02:56:10.643362Z",
-      "summary": null,
-      "pdfUrls": [
-        "https://tpsc.tripura.gov.in/sites/default/files/Rev_Elg_AP_040626.pdf"
       ],
       "sourceId": "psc-tr",
       "sourceName": "Tpsc Tripura",
@@ -3231,20 +3513,6 @@
       "dept": "UPSC — What's New",
       "state": "All India",
       "category": "upsc",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "57f58bad0712ac0d",
-      "title": "Superintendent (Woman Welfare Department) Selection-2025-- Interview Memo, Interview Programme, Notification, Checklist, Format 02,03 and 04 ( Interview )",
-      "link": "https://psc.uk.gov.in/candidate-corner/interview",
-      "publishedAt": "2026-06-22T19:52:58.743008Z",
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-uk",
-      "sourceName": "Uttarakhand PSC (UKPSC)",
-      "dept": "Uttarakhand PSC (UKPSC)",
-      "state": "All India",
-      "category": "state",
       "fetchMethod": "live-jobs-supplement"
     },
     {
@@ -3729,20 +3997,6 @@
       "fetchMethod": "live-jobs-supplement"
     },
     {
-      "id": "52cd60643fc6de66",
-      "title": "public notice and interview reschedule including annexure-a for recruitment to 21 posts of district defence services welfare officer group-a in the department of defence services welfare government of Punjab uploaded on 25-05-2026",
-      "link": "https://ppsc.gov.in/index.aspx?page=2755&tabid=10&tablinkid=6794",
-      "publishedAt": "2026-05-25T00:00:00Z",
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-pb",
-      "sourceName": "Ppsc",
-      "dept": "Ppsc",
-      "state": "All India",
-      "category": "defence",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
       "id": "552f20a275f377ed",
       "title": "SELECTION LIST OF PRINCIPAL-CUM-PROFESSOR & VICE PRINCIPAL-CUM-PROFESSR ON CONTRACTUAL BASIS OF INTERVIEW HELD ON 25.05.2026 FOR ESIC NURSING COLLEGE, JOKA",
       "link": "https://www.esic.gov.in/attachments/recruitmentfile/SELECTION_LIST_OF_PRINCIPAL_CUM_PROFESSOR_amp_VICE_PRINCIPAL_CUM_PROFESSR_ON_CONTRACTUAL_BASIS_OF_INTERVIEW_HELD_ON_25_05_2026_FOR_ESIC_NURSING_COLLEGE_JOKA_1781256709.pdf",
@@ -3770,20 +4024,6 @@
       "dept": "Uttarakhand PSC (UKPSC)",
       "state": "All India",
       "category": "state",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "a4b99db581936138",
-      "title": "PUBLIC NOTICE AND INTERVIEW SCHEDULE INCLUDING ANNEXURE-A FOR RECRUITMENT TO 21 POSTS OF DISTRICT DEFENCE SERVICES WELFARE OFFICER GROUP-A IN THE DEPARTMENT OF DEFENCE SERVICES WELFARE GOVERNMENT OF PUNJABUPLOADED ON 14-05-2026",
-      "link": "https://ppsc.gov.in/index.aspx?page=2750&tabid=10&tablinkid=6789",
-      "publishedAt": "2026-05-14T00:00:00Z",
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-pb",
-      "sourceName": "Ppsc",
-      "dept": "Ppsc",
-      "state": "All India",
-      "category": "defence",
       "fetchMethod": "live-jobs-supplement"
     },
     {
@@ -4590,63 +4830,6 @@
       "category": "state",
       "stateIds": [
         "rj"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "573a484febc254f4",
-      "title": "Notification regarding Interview/Personality Test for the post of Agriculture Officer, TAFS, Grade-I (Advt. No-21/2025)",
-      "link": "https://tpsc.tripura.gov.in/sites/default/files/Notis_AGRI_090626.pdf",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [
-        "https://tpsc.tripura.gov.in/sites/default/files/Notis_AGRI_090626.pdf"
-      ],
-      "sourceId": "psc-tr",
-      "sourceName": "Tripura PSC (TPSC)",
-      "dept": "Tripura PSC (TPSC)",
-      "state": "NE States",
-      "category": "state",
-      "stateIds": [
-        "ne"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "1c082b301642027c",
-      "title": "Notification regarding for Interview/Personality Test for recruitment to the post of Assistant Professor(Advt. No-05/2025)(1st Phase)",
-      "link": "https://tpsc.tripura.gov.in/sites/default/files/Notif_AP_250526.pdf",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [
-        "https://tpsc.tripura.gov.in/sites/default/files/Notif_AP_250526.pdf"
-      ],
-      "sourceId": "psc-tr",
-      "sourceName": "Tripura PSC (TPSC)",
-      "dept": "Tripura PSC (TPSC)",
-      "state": "NE States",
-      "category": "state",
-      "stateIds": [
-        "ne"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "09ff44bf2cf34caf",
-      "title": "Notification regarding for Interview/Personality Test for recruitment to the post of Assistant Professor(Advt. No-05/2025)(1st Phase)",
-      "link": "https://tpsc.tripura.gov.in/sites/default/files/Notif_AF_190526.pdf",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [
-        "https://tpsc.tripura.gov.in/sites/default/files/Notif_AF_190526.pdf"
-      ],
-      "sourceId": "psc-tr",
-      "sourceName": "Tripura PSC (TPSC)",
-      "dept": "Tripura PSC (TPSC)",
-      "state": "NE States",
-      "category": "state",
-      "stateIds": [
-        "ne"
       ],
       "fetchMethod": "html"
     },

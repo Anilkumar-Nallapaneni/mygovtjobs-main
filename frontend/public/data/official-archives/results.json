@@ -1,40 +1,295 @@
 {
-  "generatedAt": "2026-09-02T08:52:25.168Z",
-  "count": 753,
+  "generatedAt": "2026-09-02T10:41:15.260Z",
+  "count": 818,
   "items": [
     {
-      "id": "2e7fa8a4ffb7c7be",
-      "title": "Results: Result of Walk-In-Interview for the post of PGRMO and Non-DNB JRD/SRD held on 09.07.2026 at BARC Hospital, Mumbai",
-      "link": "http://www.barc.gov.in/careers/result19.pdf",
-      "publishedAt": "2026-08-11T10:22:00.000Z",
-      "summary": "Result of Walk-In-Interview for the post of PGRMO and Non-DNB JRD/SRD held on 09.07.2026 at BARC Hospital, Mumbai",
+      "id": "c4c9266da946f3d2",
+      "title": "Marks of Recommended Candidates",
+      "link": "https://www.upsc.gov.in/examinations/marks-recommended-candidates",
+      "publishedAt": null,
+      "summary": null,
       "pdfUrls": [],
-      "sourceId": "barc",
-      "sourceName": "Bhabha Atomic Research Centre (BARC)",
-      "dept": "Bhabha Atomic Research Centre (BARC)",
+      "sourceId": "upsc-notifications",
+      "sourceName": "UPSC — What's New",
+      "dept": "Union Public Service Commission",
       "state": "All India",
-      "category": "defence",
+      "category": "upsc",
       "stateIds": [
         "all"
       ],
-      "fetchMethod": "rss-discovered"
+      "fetchMethod": "html-listing"
     },
     {
-      "id": "47b63350ad7e31a5",
-      "title": "Results: Result of walk-in-interview for the post of Locum Medical Officer Dental and GDMO",
-      "link": "http://www.barc.gov.in/careers/result17.pdf",
-      "publishedAt": "2026-07-17T05:47:07.000Z",
-      "summary": "Result of walk-in-interview for the post of Locum Medical Officer Dental and GDMO",
+      "id": "9f46af2ef87ad857",
+      "title": "Marks of Recommended Candidates (Reserve List)",
+      "link": "https://www.upsc.gov.in/examinations/marks-recommended-candidates-reserve-list",
+      "publishedAt": null,
+      "summary": null,
       "pdfUrls": [],
-      "sourceId": "barc",
-      "sourceName": "Bhabha Atomic Research Centre (BARC)",
-      "dept": "Bhabha Atomic Research Centre (BARC)",
+      "sourceId": "upsc-notifications",
+      "sourceName": "UPSC — What's New",
+      "dept": "Union Public Service Commission",
       "state": "All India",
-      "category": "defence",
+      "category": "upsc",
       "stateIds": [
         "all"
       ],
-      "fetchMethod": "rss-discovered"
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "1ddcc850f235d00b",
+      "title": "Written Result (with name): Combined Medical Services Examination, 2026",
+      "link": "https://www.upsc.gov.in/whats-new/Combined%20Medical%20Services%20Examination%2C%202026/Written%20Result%20%28with%20name%29",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "upsc-notifications",
+      "sourceName": "UPSC — What's New",
+      "dept": "Union Public Service Commission",
+      "state": "All India",
+      "category": "upsc",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "77ab69d34db22cd9",
+      "title": "Written Result: Combined Medical Services Examination, 2026",
+      "link": "https://www.upsc.gov.in/whats-new/Combined%20Medical%20Services%20Examination%2C%202026/Written%20Result",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "upsc-notifications",
+      "sourceName": "UPSC — What's New",
+      "dept": "Union Public Service Commission",
+      "state": "All India",
+      "category": "upsc",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "386f2131ccd5eb1d",
+      "title": "Marks of Recommended Candidates (Reserve List): Central Armed Police Forces (ACs) Examination, 2024",
+      "link": "https://www.upsc.gov.in/whats-new/Central%20Armed%20Police%20Forces%20%28ACs%29%20Examination%2C%202024/Marks%20of%20Recommended%20Candidates%20%28Reserve%20List%29",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "upsc-notifications",
+      "sourceName": "UPSC — What's New",
+      "dept": "Union Public Service Commission",
+      "state": "All India",
+      "category": "upsc",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "446f2ed29e34e67b",
+      "title": "Written Result: Central Armed Police Forces (ACs) Examination, 2026",
+      "link": "https://www.upsc.gov.in/whats-new/Central%20Armed%20Police%20Forces%20%28ACs%29%20Examination%2C%202026/Written%20Result",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "upsc-notifications",
+      "sourceName": "UPSC — What's New",
+      "dept": "Union Public Service Commission",
+      "state": "All India",
+      "category": "upsc",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "347e38c1028c38a8",
+      "title": "Marks of Recommended Candidates: Combined Defence Services Examination (II), 2025",
+      "link": "https://www.upsc.gov.in/whats-new/Combined%20Defence%20Services%20Examination%20%28II%29%2C%202025/Marks%20of%20Recommended%20Candidates",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "upsc-notifications",
+      "sourceName": "UPSC — What's New",
+      "dept": "Union Public Service Commission",
+      "state": "All India",
+      "category": "upsc",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "9291ceb581726939",
+      "title": "Final Result: 20 Posts of Drugs Inspector (Medical Devices), Ministry of Health and Family Welfare",
+      "link": "https://www.upsc.gov.in/whats-new/20%20Posts%20of%20Drugs%20Inspector%20(Medical%20Devices),%20Ministry%20of%20Health%20and%20Family%20Welfare/Final%20Result",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "upsc-notifications",
+      "sourceName": "UPSC — What's New",
+      "dept": "Union Public Service Commission",
+      "state": "All India",
+      "category": "upsc",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "4de0eb242ced21f6",
+      "title": "Final Result: 25 Posts of Public Prosecutor in CBI",
+      "link": "https://www.upsc.gov.in/whats-new/25%20Posts%20of%20Public%20Prosecutor%20in%20CBI/Final%20Result",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "upsc-notifications",
+      "sourceName": "UPSC — What's New",
+      "dept": "Union Public Service Commission",
+      "state": "All India",
+      "category": "upsc",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "50a46f6e30575ca1",
+      "title": "Marks of Recommended Candidates: Central Armed Police Forces (ACs) Examination, 2025",
+      "link": "https://www.upsc.gov.in/whats-new/Central%20Armed%20Police%20Forces%20%28ACs%29%20Examination%2C%202025/Marks%20of%20Recommended%20Candidates",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "upsc-notifications",
+      "sourceName": "UPSC — What's New",
+      "dept": "Union Public Service Commission",
+      "state": "All India",
+      "category": "upsc",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "fe85a7814b80b34b",
+      "title": "Final Result: 03 Posts of Assistant Director (Corporate Law), Ministry of Corporate Affairs",
+      "link": "https://www.upsc.gov.in/whats-new/03%20Posts%20of%20Assistant%20Director%20(Corporate%20Law),%20Ministry%20of%20Corporate%20Affairs/Final%20Result",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "upsc-notifications",
+      "sourceName": "UPSC — What's New",
+      "dept": "Union Public Service Commission",
+      "state": "All India",
+      "category": "upsc",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "d6c5601701cf3e40",
+      "title": "Final Result: Central Armed Police Forces (ACs) Examination, 2025",
+      "link": "https://www.upsc.gov.in/whats-new/Central%20Armed%20Police%20Forces%20%28ACs%29%20Examination%2C%202025/Final%20Result",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "upsc-notifications",
+      "sourceName": "UPSC — What's New",
+      "dept": "Union Public Service Commission",
+      "state": "All India",
+      "category": "upsc",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "155ad6183a5bf7f7",
+      "title": "Final Result: Combined Defence Services Examination (II), 2025 (OTA)",
+      "link": "https://www.upsc.gov.in/whats-new/Combined%20Defence%20Services%20Examination%20%28II%29%2C%202025%20%28OTA%29/Final%20Result",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "upsc-notifications",
+      "sourceName": "UPSC — What's New",
+      "dept": "Union Public Service Commission",
+      "state": "All India",
+      "category": "upsc",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "fd83986b4b47746b",
+      "title": "Written Result (with name): Indian Economic Service - Indian Statistical Service Examination, 2026",
+      "link": "https://www.upsc.gov.in/whats-new/Indian%20Economic%20Service%20-%20Indian%20Statistical%20Service%20Examination%2C%202026/Written%20Result%20%28with%20name%29",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "upsc-notifications",
+      "sourceName": "UPSC — What's New",
+      "dept": "Union Public Service Commission",
+      "state": "All India",
+      "category": "upsc",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "ea780120c83ff79e",
+      "title": "Written Result: Indian Economic Service - Indian Statistical Service Examination, 2026",
+      "link": "https://www.upsc.gov.in/whats-new/Indian%20Economic%20Service%20-%20Indian%20Statistical%20Service%20Examination%2C%202026/Written%20Result",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "upsc-notifications",
+      "sourceName": "UPSC — What's New",
+      "dept": "Union Public Service Commission",
+      "state": "All India",
+      "category": "upsc",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "246cf795a95a5a9f",
+      "title": "Cut-off Marks",
+      "link": "https://www.upsc.gov.in/examinations/cutoff-marks--",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "upsc-notifications",
+      "sourceName": "UPSC — What's New",
+      "dept": "Union Public Service Commission",
+      "state": "All India",
+      "category": "upsc",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "bf2ab913def084c8",
+      "title": "Marks Information",
+      "link": "https://upsconline.gov.in/marksheet/exam/marksheet_system/",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "upsc-notifications",
+      "sourceName": "UPSC — What's New",
+      "dept": "Union Public Service Commission",
+      "state": "All India",
+      "category": "upsc",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
     },
     {
       "id": "2fcd6ff34f094281",
@@ -164,6 +419,209 @@
       "fetchMethod": "html-listing"
     },
     {
+      "id": "59a29a3729e13121",
+      "title": "Result-II dated 02.09.2026 (In continuation of result dated 28.11.2025) for the posts of Assistant Professor (College Cadre) in the subject of Computer Science (Advt. No. 45/2024) in Higher Education Department, Haryana",
+      "link": "https://hpsc.gov.in/Portals/0/Result_II_AP_CS_02_09_2026.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://hpsc.gov.in/Portals/0/Result_II_AP_CS_02_09_2026.pdf"
+      ],
+      "sourceId": "psc-hr-notifications",
+      "sourceName": "HPSC — Recruitment",
+      "dept": "Haryana PSC",
+      "state": "Haryana",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "7ca5cc9647cb0100",
+      "title": "Result-II dated 01.09.2026 (In continuation of result dated 03.03.2026) for the posts of Post Graduate Teacher (PGT) in the subject of Computer Science for ROH cadre & Mewat cadre (Advt. No. 26/2023 & 36/2023)",
+      "link": "https://hpsc.gov.in/Portals/0/Result_II_PGT_CS_Advt_26_2023_01_09_2026.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://hpsc.gov.in/Portals/0/Result_II_PGT_CS_Advt_26_2023_01_09_2026.pdf"
+      ],
+      "sourceId": "psc-hr-notifications",
+      "sourceName": "HPSC — Recruitment",
+      "dept": "Haryana PSC",
+      "state": "Haryana",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "6dff6d92482a4f03",
+      "title": "Subject Knowledge Test Result dated 25.08.2026 for the posts of Lecturer in Textile Technology (Advt. No. 83/2024), Lecturer in Library Science (Advt. No. 86/2024), Lecturer in Business Management (Advt. No. 11(XXIII)/2021) & Lecturer in Fashion Design (Advt. No. 11(VIII)/2021)",
+      "link": "https://hpsc.gov.in/Portals/0/Result_SKT_Lect_Text_LibSci_Buss_Fas_25_08_2026.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://hpsc.gov.in/Portals/0/Result_SKT_Lect_Text_LibSci_Buss_Fas_25_08_2026.pdf"
+      ],
+      "sourceId": "psc-hr-notifications",
+      "sourceName": "HPSC — Recruitment",
+      "dept": "Haryana PSC",
+      "state": "Haryana",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "2f2c8174cf4550da",
+      "title": "Subject Knowledge Test Result dated 25.08.2026 for the posts of Assistant Professor (College Cadre) in the subject of Environmental Science in Higher Education Department (Advt. No. 49/2024)",
+      "link": "https://hpsc.gov.in/Portals/0/Result_SKT_AP_EVS_25_08_2026.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://hpsc.gov.in/Portals/0/Result_SKT_AP_EVS_25_08_2026.pdf"
+      ],
+      "sourceId": "psc-hr-notifications",
+      "sourceName": "HPSC — Recruitment",
+      "dept": "Haryana PSC",
+      "state": "Haryana",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "867e3400da022831",
+      "title": "Result-II dated 21.08.2026 (In continuation of result dated 12.08.2026) for the posts of Post Graduate Teacher (PGT) in the subject of Computer Science for ROH cadre & Mewat cadre (Advt. No. 23/2026)",
+      "link": "https://hpsc.gov.in/Portals/0/Final_result_PGT_CS_II_21_08_2026.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://hpsc.gov.in/Portals/0/Final_result_PGT_CS_II_21_08_2026.pdf"
+      ],
+      "sourceId": "psc-hr-notifications",
+      "sourceName": "HPSC — Recruitment",
+      "dept": "Haryana PSC",
+      "state": "Haryana",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "e1a83bfe94f54576",
+      "title": "Final Result dated 12.08.2026 for the posts of Post Graduate Teacher (PGT) in the subject of Computer Science for ROH cadre & Mewat cadre (Advt. No. 23/2026)",
+      "link": "https://hpsc.gov.in/Portals/0/Final_Result_PGT_CS_12_08_2026.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://hpsc.gov.in/Portals/0/Final_Result_PGT_CS_12_08_2026.pdf"
+      ],
+      "sourceId": "psc-hr-notifications",
+      "sourceName": "HPSC — Recruitment",
+      "dept": "Haryana PSC",
+      "state": "Haryana",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "acf1b98a336e793f",
+      "title": "Announcement dated 07.08.2026 regarding provisional admit card for the posts of Assistant District Attorney in Prosecution Department, Haryana (Advt. No. 18/2025)",
+      "link": "https://hpsc.gov.in/Portals/0/Ann_Admitcard_SKT_ADA_07_08_2026.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://hpsc.gov.in/Portals/0/Ann_Admitcard_SKT_ADA_07_08_2026.pdf"
+      ],
+      "sourceId": "psc-hr-notifications",
+      "sourceName": "HPSC — Recruitment",
+      "dept": "Haryana PSC",
+      "state": "Haryana",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "86b865539e361b0d",
+      "title": "Marks of all Interviewed Candidates",
+      "link": "http://hpsc.gov.in/en-us/Examination/Marks-of-all-Interviewed-Candidates",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-hr-notifications",
+      "sourceName": "HPSC — Recruitment",
+      "dept": "Haryana PSC",
+      "state": "Haryana",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "10bf12b53e6cd695",
+      "title": "Marks of Subject Knowledge Test for all candidates",
+      "link": "http://hpsc.gov.in/en-us/Examination/Marks-of-Subject-Knowledge-Test-for-all-candidates",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-hr-notifications",
+      "sourceName": "HPSC — Recruitment",
+      "dept": "Haryana PSC",
+      "state": "Haryana",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "e755e00dec84fed1",
+      "title": "Roll No. wise marks dated 01.08.2026 of all interviewed candidates for the posts of Post Graduate Teachers (PGTs) in the subject of Computer Science for ROH Cadre & Mewat Cadre (Advt. No. 23/2026)",
+      "link": "https://hpsc.gov.in/Portals/0/Rollwise_Int_Marks_PGT_CS_01_08_2026.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://hpsc.gov.in/Portals/0/Rollwise_Int_Marks_PGT_CS_01_08_2026.pdf"
+      ],
+      "sourceId": "psc-hr-notifications",
+      "sourceName": "HPSC — Recruitment",
+      "dept": "Haryana PSC",
+      "state": "Haryana",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "7606dfea71c92c42",
+      "title": "Marks of the Screening Test",
+      "link": "http://hpsc.gov.in/en-us/Marks",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-hr-notifications",
+      "sourceName": "HPSC — Recruitment",
+      "dept": "Haryana PSC",
+      "state": "Haryana",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
       "id": "58856bd7c345d6be",
       "title": "RESULT OF ADVT. NO. D-4/E-1/2025, U.P. AYUSH (AYURVEDA) PROFESSOR(SPECIALIST) AG..",
       "link": "https://uppsc.up.nic.in/Open_PDF_DB.aspx?I4PnQ0tBagmtuZKZH/DenzRcUXubicMB",
@@ -281,42 +739,6 @@
         "all"
       ],
       "fetchMethod": "html-listing"
-    },
-    {
-      "id": "a1e96cd5509bf99d",
-      "title": "Notice No. 13/2026 - Result for the Posts of Assistant General Manager (Finance)",
-      "link": "https://apeda.gov.in/sites/default/files/announcements/Notice_No_13_2026.pdf",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [
-        "https://apeda.gov.in/sites/default/files/announcements/Notice_No_13_2026.pdf"
-      ],
-      "sourceId": "apeda",
-      "sourceName": "APEDA / BEDF — Recruitments",
-      "dept": "APEDA / BEDF — Recruitments",
-      "state": "All India",
-      "category": "psu",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "f5ec72f5d069bbdc",
-      "title": "परिणाम",
-      "link": "https://www.npcil.nic.in/content/Hindi/401_1_Results.aspx",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "npcil",
-      "sourceName": "Nuclear Power Corporation of India (NPCIL)",
-      "dept": "Nuclear Power Corporation of India (NPCIL)",
-      "state": "All India",
-      "category": "psu",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
     },
     {
       "id": "00ee42b2c7426451",
@@ -500,61 +922,6 @@
       "dept": "Railway Recruitment Board (RRB) — Bhubaneswar",
       "state": "All India",
       "category": "railways",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "17b00e8647b4e2e1",
-      "title": "21 Jul 2026 संविदा के आधार पर चयनित करने के संबंध मे विज्ञापन",
-      "link": "https://crpf.gov.in/hi/Media-Centre/Latest-News/3291",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "crpf",
-      "sourceName": "Central Reserve Police Force (CRPF)",
-      "dept": "Central Reserve Police Force (CRPF)",
-      "state": "All India",
-      "category": "police",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "4019af35bb956aee",
-      "title": "Result under Hungaricum Stipendium Programme for the year 2026-27.",
-      "link": "https://www.ugc.gov.in/pdfnews/6824339_Result-of-Stipendium-Hungaricum-Scholarship-2026-27.pdf",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [
-        "https://www.ugc.gov.in/pdfnews/6824339_Result-of-Stipendium-Hungaricum-Scholarship-2026-27.pdf"
-      ],
-      "sourceId": "ugc",
-      "sourceName": "University Grants Commission (UGC)",
-      "dept": "University Grants Commission (UGC)",
-      "state": "All India",
-      "category": "teaching",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "3263ad107f9d8029",
-      "title": "PUBLIC NOTICE – CTET Feb 2026 – RESULT",
-      "link": "https://cdnbbsr.s3waas.gov.in/s3443dec3062d0286986e21dc0631734c9/uploads/2026/03/202603311458590440.pdf",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [
-        "https://cdnbbsr.s3waas.gov.in/s3443dec3062d0286986e21dc0631734c9/uploads/2026/03/202603311458590440.pdf"
-      ],
-      "sourceId": "ctet",
-      "sourceName": "CBSE — CTET",
-      "dept": "CBSE — CTET",
-      "state": "All India",
-      "category": "teaching",
       "stateIds": [
         "all"
       ],
@@ -973,155 +1340,17 @@
       "fetchMethod": "html"
     },
     {
-      "id": "86dc09a156fe9120",
-      "title": "CBSE 12th Result 2026: KV और नवोदय का जलवा, 12वीं के नतीजों में इन स्कूलों ने मारी बाजी",
-      "link": "https://ndtv.in/education/cbse-12th-result-2026-school-wise-performance-kv-jnv-pass-percentage-list-11425718",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "kvs",
-      "sourceName": "Kendriya Vidyalaya Sangathan",
-      "dept": "Kendriya Vidyalaya Sangathan",
-      "state": "All India",
-      "category": "teaching",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "ebfc2a9f2cf5cca8",
-      "title": "CBSE 12th Result: संस्थानवार प्रदर्शन में केंद्रीय विद्यालय रहा टॉप पर",
-      "link": "https://www.amarujala.com/education/cbse-class-12-result-2026-kv-secures-top-spot-know-how-different-schools-performed-2026-05-13",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "kvs",
-      "sourceName": "Kendriya Vidyalaya Sangathan",
-      "dept": "Kendriya Vidyalaya Sangathan",
-      "state": "All India",
-      "category": "teaching",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "2b0cf313b821dae3",
-      "title": "CBSE 12th Result 2026: सीबीएसई 12वीं में केंद्रीय विद्यालय का दबदबा, 98.55% छात्रों की सफलता के साथ टॉप पर",
-      "link": "https://www.timesnowhindi.com/education/cbse-12th-result-2026-kvs-vs-jnv-whose-result-is-highest-kendriya-vidyalaya-and-jawahar-navodaya-vidyalaya-12th-pass-percentage-article-154315169",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "kvs",
-      "sourceName": "Kendriya Vidyalaya Sangathan",
-      "dept": "Kendriya Vidyalaya Sangathan",
-      "state": "All India",
-      "category": "teaching",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "04631c79b6471ca9",
-      "title": "विज्ञापन संख्या 01/2025: TGT (अंग्रेजी, सामाजिक विज्ञान एवं विशेष शिक्षक) एवं वरिष्ठ सचिवालय सहायक के टियर-II परीक्षा परिणाम संबंधी प्रेस विज्ञप्ति नई",
-      "link": "https://cdnbbsr.s3waas.gov.in/s32d2ca7eedf739ef4c3800713ec482e1a/uploads/2026/09/2026090192.pdf",
+      "id": "a3ad3cb920b364ba",
+      "title": "BHEL Artisan – Skill Test Result Declaration",
+      "link": "https://careers.bhel.in/ar_2025/Skill%20Test%20Result%20Declaration.pdf",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [
-        "https://cdnbbsr.s3waas.gov.in/s32d2ca7eedf739ef4c3800713ec482e1a/uploads/2026/09/2026090192.pdf"
+        "https://careers.bhel.in/ar_2025/Skill%20Test%20Result%20Declaration.pdf"
       ],
-      "sourceId": "kvs",
-      "sourceName": "Kendriya Vidyalaya Sangathan",
-      "dept": "Kendriya Vidyalaya Sangathan",
-      "state": "All India",
-      "category": "teaching",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "08a6fead3943369e",
-      "title": "Comparative Result Analysis – Class X",
-      "link": "https://kvsangathan.nic.in/en/comparative-result-analysis-class-x/",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "kvs",
-      "sourceName": "Kendriya Vidyalaya Sangathan",
-      "dept": "Kendriya Vidyalaya Sangathan",
-      "state": "All India",
-      "category": "teaching",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "a91e35efe906a21a",
-      "title": "Comparative Result Analysis – Class XII",
-      "link": "https://kvsangathan.nic.in/en/comparative-result-analysis-class-xii/",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "kvs",
-      "sourceName": "Kendriya Vidyalaya Sangathan",
-      "dept": "Kendriya Vidyalaya Sangathan",
-      "state": "All India",
-      "category": "teaching",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "3cb3737965d5c83c",
-      "title": "Recruitment Result",
-      "link": "https://www.aiims.edu/index.php/en/notices/recruitment/archive-recruitment",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "aiims",
-      "sourceName": "AIIMS New Delhi — Recruitment",
-      "dept": "AIIMS New Delhi — Recruitment",
-      "state": "All India",
-      "category": "health",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "5248b404d0a4fa81",
-      "title": "Financial Result",
-      "link": "https://www.canarabank.bank.in/financial-result",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "canara",
-      "sourceName": "Canara Bank — Careers",
-      "dept": "Canara Bank — Careers",
-      "state": "All India",
-      "category": "banking",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "3f5f0150d9a9618d",
-      "title": "Jharkhand Group of Mines: Result of the 'Walk-in-Interview' held on 12/08/2026 for Engagement of Consultants (Doctors in Medical Discipline) against Advertisement No. BSL/R-C/2026-07",
-      "link": "https://aima-web-images.s3.ap-south-1.amazonaws.com/sailcareers.com/Downloads/BSP_News_01092026_121727.pdf",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [
-        "https://aima-web-images.s3.ap-south-1.amazonaws.com/sailcareers.com/Downloads/BSP_News_01092026_121727.pdf"
-      ],
-      "sourceId": "sail",
-      "sourceName": "Steel Authority of India (SAIL)",
-      "dept": "Steel Authority of India (SAIL)",
+      "sourceId": "bhel",
+      "sourceName": "BHEL — Careers",
+      "dept": "BHEL — Careers",
       "state": "All India",
       "category": "psu",
       "stateIds": [
@@ -1130,17 +1359,17 @@
       "fetchMethod": "html"
     },
     {
-      "id": "84cb09f417efc23b",
-      "title": "Rourkela Steel Plant :Result of walk-in Interview held on 05/08/2026 for Engagement of Consultants (Specialist & GDMO) on Contractual basis against Advt. No. 02/2026, dated 14.07.2026",
-      "link": "https://aima-web-images.s3.ap-south-1.amazonaws.com/sailcareers.com/Downloads/RSP_News%20&%20Jobs_24082026_153856.pdf",
+      "id": "2d723268728d6720",
+      "title": "ET  2025 Final Cut-Off",
+      "link": "https://careers.bhel.in/archives/Final%20Cut-Off_ETs.pdf",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [
-        "https://aima-web-images.s3.ap-south-1.amazonaws.com/sailcareers.com/Downloads/RSP_News%20&%20Jobs_24082026_153856.pdf"
+        "https://careers.bhel.in/archives/Final%20Cut-Off_ETs.pdf"
       ],
-      "sourceId": "sail",
-      "sourceName": "Steel Authority of India (SAIL)",
-      "dept": "Steel Authority of India (SAIL)",
+      "sourceId": "bhel",
+      "sourceName": "BHEL — Careers",
+      "dept": "BHEL — Careers",
       "state": "All India",
       "category": "psu",
       "stateIds": [
@@ -1149,17 +1378,17 @@
       "fetchMethod": "html"
     },
     {
-      "id": "7a9b0027b83e17f4",
-      "title": "Collieries Division: Result of the 'Walk-in-Interview' held for Engagement of General Duty Medical Officer (GDMO) against Advertisement No. CD/HR/Rectt/26-27/68 Dated: 10.07.2026",
-      "link": "https://aima-web-images.s3.ap-south-1.amazonaws.com/sailcareers.com/Downloads/SAIL_News%20&%20Jobs_21082026_165023.pdf",
+      "id": "d3fb46874b856e0d",
+      "title": "ET  2024 Cut-Off",
+      "link": "https://careers.bhel.in/archives/Cut_Off_ET_2024.pdf",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [
-        "https://aima-web-images.s3.ap-south-1.amazonaws.com/sailcareers.com/Downloads/SAIL_News%20&%20Jobs_21082026_165023.pdf"
+        "https://careers.bhel.in/archives/Cut_Off_ET_2024.pdf"
       ],
-      "sourceId": "sail",
-      "sourceName": "Steel Authority of India (SAIL)",
-      "dept": "Steel Authority of India (SAIL)",
+      "sourceId": "bhel",
+      "sourceName": "BHEL — Careers",
+      "dept": "BHEL — Careers",
       "state": "All India",
       "category": "psu",
       "stateIds": [
@@ -1168,17 +1397,17 @@
       "fetchMethod": "html"
     },
     {
-      "id": "d5d6d7e72e8fce1d",
-      "title": "Result of Personal Interview with reference to Advertisement No. ISP/YP/2026/01 dated 22.05.2026",
-      "link": "https://aima-web-images.s3.ap-south-1.amazonaws.com/sailcareers.com/Downloads/IISCO_News_18082026_190419.pdf",
+      "id": "159634fbf39ba516",
+      "title": "ET-2019 Cut Off",
+      "link": "https://careers.bhel.in/archives/Cut_Off_ET_2019.pdf",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [
-        "https://aima-web-images.s3.ap-south-1.amazonaws.com/sailcareers.com/Downloads/IISCO_News_18082026_190419.pdf"
+        "https://careers.bhel.in/archives/Cut_Off_ET_2019.pdf"
       ],
-      "sourceId": "sail",
-      "sourceName": "Steel Authority of India (SAIL)",
-      "dept": "Steel Authority of India (SAIL)",
+      "sourceId": "bhel",
+      "sourceName": "BHEL — Careers",
+      "dept": "BHEL — Careers",
       "state": "All India",
       "category": "psu",
       "stateIds": [
@@ -1187,17 +1416,17 @@
       "fetchMethod": "html"
     },
     {
-      "id": "75e6fc0783705ba3",
-      "title": "Bokaro Steel Plant: Result of the 'Walk-in-Interview' held on 16/07/2026 for Engagement of Consultants (Doctors in Medical Discipline) against Advertisement No. BSL/R-C/2026-06",
-      "link": "https://aima-web-images.s3.ap-south-1.amazonaws.com/sailcareers.com/Downloads/BSP_News_13082026_140856.pdf",
+      "id": "1b7c4d3509a7e0a9",
+      "title": "ST  2025 Final Cut Off",
+      "link": "https://careers.bhel.in/archives/ST2025_FInal%20Cut%20Offs.pdf",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [
-        "https://aima-web-images.s3.ap-south-1.amazonaws.com/sailcareers.com/Downloads/BSP_News_13082026_140856.pdf"
+        "https://careers.bhel.in/archives/ST2025_FInal%20Cut%20Offs.pdf"
       ],
-      "sourceId": "sail",
-      "sourceName": "Steel Authority of India (SAIL)",
-      "dept": "Steel Authority of India (SAIL)",
+      "sourceId": "bhel",
+      "sourceName": "BHEL — Careers",
+      "dept": "BHEL — Careers",
       "state": "All India",
       "category": "psu",
       "stateIds": [
@@ -1206,17 +1435,17 @@
       "fetchMethod": "html"
     },
     {
-      "id": "7363b936b2b772f5",
-      "title": "Result of Personal Interview with reference to Advertisement No. ISP/YP/2026/01 dated 22.05.2026",
-      "link": "https://aima-web-images.s3.ap-south-1.amazonaws.com/sailcareers.com/Downloads/IISCO_Jobs_18082026_190340.pdf",
+      "id": "2a786b53150a5691",
+      "title": "ST  2024 Cut-Off",
+      "link": "https://careers.bhel.in/archives/Cut_Off_ST_2024.pdf",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [
-        "https://aima-web-images.s3.ap-south-1.amazonaws.com/sailcareers.com/Downloads/IISCO_Jobs_18082026_190340.pdf"
+        "https://careers.bhel.in/archives/Cut_Off_ST_2024.pdf"
       ],
-      "sourceId": "sail",
-      "sourceName": "Steel Authority of India (SAIL)",
-      "dept": "Steel Authority of India (SAIL)",
+      "sourceId": "bhel",
+      "sourceName": "BHEL — Careers",
+      "dept": "BHEL — Careers",
       "state": "All India",
       "category": "psu",
       "stateIds": [
@@ -1225,19 +1454,192 @@
       "fetchMethod": "html"
     },
     {
-      "id": "59d89ab2523737c9",
-      "title": "Click here to view the result of Personal Interview for the Advertisement No. ISP/YP/2026/01 dated 22.05.2026",
-      "link": "https://sailcareers.com/sail2026yp/SAIL2026YPInterviewResult.aspx",
+      "id": "bbdb21c671148161",
+      "title": "Cut-Off Marks for shortlisting to Document Verification cum Skill Test stage.",
+      "link": "https://careers.bhel.in/ar_2025/Unit%20wise%20Cut%20Off_Artisans%202026.pdf",
       "publishedAt": null,
       "summary": null,
-      "pdfUrls": [],
-      "sourceId": "sail",
-      "sourceName": "Steel Authority of India (SAIL)",
-      "dept": "Steel Authority of India (SAIL)",
+      "pdfUrls": [
+        "https://careers.bhel.in/ar_2025/Unit%20wise%20Cut%20Off_Artisans%202026.pdf"
+      ],
+      "sourceId": "bhel",
+      "sourceName": "BHEL — Careers",
+      "dept": "BHEL — Careers",
       "state": "All India",
       "category": "psu",
       "stateIds": [
         "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "01245293c5782aeb",
+      "title": "Notification regarding provisional Answer Keys (General Knowledge), Forest Ranger, Assam Forest Service, Environment & Forests Deptt., Assam (Advt. No. 22/2025 dtd. 16-06-2025)",
+      "link": "https://apsc.nic.in/misc_2026/Forest_Ranger_GK_Answerkey_Notifi_22_2025.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://apsc.nic.in/misc_2026/Forest_Ranger_GK_Answerkey_Notifi_22_2025.pdf"
+      ],
+      "sourceId": "psc-as",
+      "sourceName": "Assam PSC (APSC)",
+      "dept": "Assam PSC (APSC)",
+      "state": "Assam",
+      "category": "state",
+      "stateIds": [
+        "as"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "a94394b3094a410a",
+      "title": "Result of Assistant Director of Cottage Industries and its equivalent posts under Industries & Commerce Department (Advt. No.06/2025 dated 11.02.2025)",
+      "link": "https://apsc.nic.in/misc_2026/Result_Asst._Director_Cottage_06_2025.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://apsc.nic.in/misc_2026/Result_Asst._Director_Cottage_06_2025.pdf"
+      ],
+      "sourceId": "psc-as",
+      "sourceName": "Assam PSC (APSC)",
+      "dept": "Assam PSC (APSC)",
+      "state": "Assam",
+      "category": "state",
+      "stateIds": [
+        "as"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "1d0634fdb23c82db",
+      "title": "Notification regarding provisional Answer Keys, Research Assistant, Finance (Budget) Department (Advt. No. 28/2025 dtd. 30-08-2025)",
+      "link": "https://apsc.nic.in/misc_2026/RA_Finance(Budget)_AnswerKey_Notifi_28_2025.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://apsc.nic.in/misc_2026/RA_Finance(Budget)_AnswerKey_Notifi_28_2025.pdf"
+      ],
+      "sourceId": "psc-as",
+      "sourceName": "Assam PSC (APSC)",
+      "dept": "Assam PSC (APSC)",
+      "state": "Assam",
+      "category": "state",
+      "stateIds": [
+        "as"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "46497a1e4b8b49bd",
+      "title": "Notification regarding provisional Answer Keys, District Museum Officer Grade-I (Gazetted) in the Directorate of Museums under the Department of Indigenous and Tribal Faith and Culture Department, Assam (Advt. No. 34/2025 dated 16/12/2025)",
+      "link": "https://apsc.nic.in/misc_2026/Answerkey_Notifi_District_Museum_Officer_34_2025.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://apsc.nic.in/misc_2026/Answerkey_Notifi_District_Museum_Officer_34_2025.pdf"
+      ],
+      "sourceId": "psc-as",
+      "sourceName": "Assam PSC (APSC)",
+      "dept": "Assam PSC (APSC)",
+      "state": "Assam",
+      "category": "state",
+      "stateIds": [
+        "as"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "724342e6d2457abf",
+      "title": "Notification - Category wise Cut-off marks and marks secured for Junior Engineer (Civil/Mechanical/Chemical/Electrical) under Public Health Engineering Department [Advt. No. 27/2025, dtd. 11-08-2025]",
+      "link": "https://apsc.nic.in/misc_2026/JE_PHE_Cut_Off_27_2025.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://apsc.nic.in/misc_2026/JE_PHE_Cut_Off_27_2025.pdf"
+      ],
+      "sourceId": "psc-as",
+      "sourceName": "Assam PSC (APSC)",
+      "dept": "Assam PSC (APSC)",
+      "state": "Assam",
+      "category": "state",
+      "stateIds": [
+        "as"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "62ca3945e1d1b6e9",
+      "title": "Notification - Category wise Cut-off marks and marks secured for Assistant Engineer (Civil), Water Resources Department [Advt. No. 13/2025 dtd. 10/04/2025]",
+      "link": "https://apsc.nic.in/misc_2026/Asst._Engg_Civil_WRD_Cut_Off_13_2025.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://apsc.nic.in/misc_2026/Asst._Engg_Civil_WRD_Cut_Off_13_2025.pdf"
+      ],
+      "sourceId": "psc-as",
+      "sourceName": "Assam PSC (APSC)",
+      "dept": "Assam PSC (APSC)",
+      "state": "Assam",
+      "category": "state",
+      "stateIds": [
+        "as"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "3aac918d6309d615",
+      "title": "Notification - Category wise Cut-off marks and marks secured for Assistant Engineer (Mechanical), Water Resources Department [Advt. No. 15/2025 dtd. 11/04/2025]",
+      "link": "https://apsc.nic.in/misc_2026/Asst._Engg_Mech_WRD_Cut_Off_15_2025.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://apsc.nic.in/misc_2026/Asst._Engg_Mech_WRD_Cut_Off_15_2025.pdf"
+      ],
+      "sourceId": "psc-as",
+      "sourceName": "Assam PSC (APSC)",
+      "dept": "Assam PSC (APSC)",
+      "state": "Assam",
+      "category": "state",
+      "stateIds": [
+        "as"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "b68034acc6b70a12",
+      "title": "Notification - Category wise Cut-off marks and marks secured for Junior Engineer (Mechanical), Water Resources Department (Advt. No. 18/2025 dtd. 05/05/2025)",
+      "link": "https://apsc.nic.in/misc_2026/Jr._Engg_Mech_WRD_Cut_Off_18_2025.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://apsc.nic.in/misc_2026/Jr._Engg_Mech_WRD_Cut_Off_18_2025.pdf"
+      ],
+      "sourceId": "psc-as",
+      "sourceName": "Assam PSC (APSC)",
+      "dept": "Assam PSC (APSC)",
+      "state": "Assam",
+      "category": "state",
+      "stateIds": [
+        "as"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "e95ddc7b082ccd13",
+      "title": "Suggestion Sheet for Provisional Answer Key (CBRT)",
+      "link": "http://gpsc.gujarat.gov.in/Documents/AdvertismentDocument/2019-9-4_49.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "http://gpsc.gujarat.gov.in/Documents/AdvertismentDocument/2019-9-4_49.pdf"
+      ],
+      "sourceId": "psc-gj",
+      "sourceName": "Gujarat PSC (GPSC)",
+      "dept": "Gujarat PSC (GPSC)",
+      "state": "Gujarat",
+      "category": "state",
+      "stateIds": [
+        "gj"
       ],
       "fetchMethod": "html"
     },
@@ -1805,6 +2207,681 @@
       "fetchMethod": "html"
     },
     {
+      "id": "259b19fde8ca300f",
+      "title": "Final Result of Gr-B (NG) Tech, X-Ray Tech. under H&FW Deptt.",
+      "link": "https://mpsc.mizoram.gov.in/post/final-result-of-gr-b-ng-tech-x-ray-tech-under-hfw-deptt",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-mz",
+      "sourceName": "Mizoram PSC",
+      "dept": "Mizoram PSC",
+      "state": "NE States",
+      "category": "state",
+      "stateIds": [
+        "ne"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "5162bbeff4ef1516",
+      "title": "Departmental Result",
+      "link": "https://mpsc.mizoram.gov.in/page/2021-2023-departmental-result",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-mz",
+      "sourceName": "Mizoram PSC",
+      "dept": "Mizoram PSC",
+      "state": "NE States",
+      "category": "state",
+      "stateIds": [
+        "ne"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "4f9a627929adaf52",
+      "title": "Provisional Answer key of Nursing Officer(Contract) under H&FW Dept. & Staff Nurse(Contract) under Home (Prisons) Dept.",
+      "link": "https://mpsc.mizoram.gov.in/post/provisional-answer-key-of-nursing-officercontract-under-hfw-dept-staff-nursecontract-under-home-prisons-dept",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-mz",
+      "sourceName": "Mizoram PSC",
+      "dept": "Mizoram PSC",
+      "state": "NE States",
+      "category": "state",
+      "stateIds": [
+        "ne"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "62f8e6f4c0f11dec",
+      "title": "02/09/2026 Main Merit List for Asst. Professor (Medical Edu.) - 2024 (Surgical Gastroenterology (SS))",
+      "link": "https://rpsc.rajasthan.gov.in/Static/Result/869FAB4BE12040CCBCD5B52C5C0CBE14.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://rpsc.rajasthan.gov.in/Static/Result/869FAB4BE12040CCBCD5B52C5C0CBE14.pdf"
+      ],
+      "sourceId": "psc-rj",
+      "sourceName": "Rajasthan PSC (RPSC)",
+      "dept": "Rajasthan PSC (RPSC)",
+      "state": "Rajasthan",
+      "category": "state",
+      "stateIds": [
+        "rj"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "6ff053576098deaf",
+      "title": "02/09/2026 Main Merit List for Asst. Professor (Medical Edu.) - 2024 (Neuro Surgery (SS))",
+      "link": "https://rpsc.rajasthan.gov.in/Static/Result/6D06A486C34C4A88B65E40981D145AB3.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://rpsc.rajasthan.gov.in/Static/Result/6D06A486C34C4A88B65E40981D145AB3.pdf"
+      ],
+      "sourceId": "psc-rj",
+      "sourceName": "Rajasthan PSC (RPSC)",
+      "dept": "Rajasthan PSC (RPSC)",
+      "state": "Rajasthan",
+      "category": "state",
+      "stateIds": [
+        "rj"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "f4ee1a4f509da438",
+      "title": "02/09/2026 Main Merit List for Asst. Professor (Medical Edu.) - 2024 (Plastic And Reconstructive Surgery (SS))",
+      "link": "https://rpsc.rajasthan.gov.in/Static/Result/3C89F8B742C74EF9842725004A8824A9.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://rpsc.rajasthan.gov.in/Static/Result/3C89F8B742C74EF9842725004A8824A9.pdf"
+      ],
+      "sourceId": "psc-rj",
+      "sourceName": "Rajasthan PSC (RPSC)",
+      "dept": "Rajasthan PSC (RPSC)",
+      "state": "Rajasthan",
+      "category": "state",
+      "stateIds": [
+        "rj"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "e3f118dae7add440",
+      "title": "02/09/2026 Main Merit List for Asst. Professor (Medical Edu.) - 2024 (Neurology (SS))",
+      "link": "https://rpsc.rajasthan.gov.in/Static/Result/B1413ABCCEA04F1E8E73C01E8EBCC9F8.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://rpsc.rajasthan.gov.in/Static/Result/B1413ABCCEA04F1E8E73C01E8EBCC9F8.pdf"
+      ],
+      "sourceId": "psc-rj",
+      "sourceName": "Rajasthan PSC (RPSC)",
+      "dept": "Rajasthan PSC (RPSC)",
+      "state": "Rajasthan",
+      "category": "state",
+      "stateIds": [
+        "rj"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "dd0be8b712820327",
+      "title": "02/09/2026 Main Merit List for Asst. Professor (Medical Edu.) - 2024 (Nephrology (SS))",
+      "link": "https://rpsc.rajasthan.gov.in/Static/Result/A9B8ED56E3CE416D8C550CEAE18B6112.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://rpsc.rajasthan.gov.in/Static/Result/A9B8ED56E3CE416D8C550CEAE18B6112.pdf"
+      ],
+      "sourceId": "psc-rj",
+      "sourceName": "Rajasthan PSC (RPSC)",
+      "dept": "Rajasthan PSC (RPSC)",
+      "state": "Rajasthan",
+      "category": "state",
+      "stateIds": [
+        "rj"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "e7cb21944652c80f",
+      "title": "01/09/2026 Result Preamble and Cutoff Marks (Provisional List for Eligibility Checking) for School Lecturer (School Edu.) - 2025 (Sanskrit)",
+      "link": "https://rpsc.rajasthan.gov.in/Static/Result/84C2E841500D4CD3B3CEEBECFA7F811A.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://rpsc.rajasthan.gov.in/Static/Result/84C2E841500D4CD3B3CEEBECFA7F811A.pdf"
+      ],
+      "sourceId": "psc-rj",
+      "sourceName": "Rajasthan PSC (RPSC)",
+      "dept": "Rajasthan PSC (RPSC)",
+      "state": "Rajasthan",
+      "category": "state",
+      "stateIds": [
+        "rj"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "3236aa6764462bca",
+      "title": "01/09/2026 Result Preamble and Cutoff Marks (Provisional List for Eligibility Checking) for School Lecturer (School Edu.) - 2025 (Biology)",
+      "link": "https://rpsc.rajasthan.gov.in/Static/Result/0B0A5CE414584B0393E4F8E4674D3017.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://rpsc.rajasthan.gov.in/Static/Result/0B0A5CE414584B0393E4F8E4674D3017.pdf"
+      ],
+      "sourceId": "psc-rj",
+      "sourceName": "Rajasthan PSC (RPSC)",
+      "dept": "Rajasthan PSC (RPSC)",
+      "state": "Rajasthan",
+      "category": "state",
+      "stateIds": [
+        "rj"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "56443eed521ca0ba",
+      "title": "01/09/2026 Result Preamble and Cutoff Marks (Provisional List for Eligibility Checking) for School Lecturer (School Edu.) - 2025 (Public Administration)",
+      "link": "https://rpsc.rajasthan.gov.in/Static/Result/702137361BC14A5E95B3AF0E8DA63D71.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://rpsc.rajasthan.gov.in/Static/Result/702137361BC14A5E95B3AF0E8DA63D71.pdf"
+      ],
+      "sourceId": "psc-rj",
+      "sourceName": "Rajasthan PSC (RPSC)",
+      "dept": "Rajasthan PSC (RPSC)",
+      "state": "Rajasthan",
+      "category": "state",
+      "stateIds": [
+        "rj"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "b35770b7970316f2",
+      "title": "01/09/2026 Result Preamble and Cutoff Marks (Provisional List for Eligibility Checking) for School Lecturer (School Edu.) - 2025 (Music)",
+      "link": "https://rpsc.rajasthan.gov.in/Static/Result/F75E70BBF5FF4A8A9C738C26161A03C3.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://rpsc.rajasthan.gov.in/Static/Result/F75E70BBF5FF4A8A9C738C26161A03C3.pdf"
+      ],
+      "sourceId": "psc-rj",
+      "sourceName": "Rajasthan PSC (RPSC)",
+      "dept": "Rajasthan PSC (RPSC)",
+      "state": "Rajasthan",
+      "category": "state",
+      "stateIds": [
+        "rj"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "031640aba03e662b",
+      "title": "01/09/2026 Main Merit List for Asst. Professor (Medical Edu.) - 2024 (Urology (SS))",
+      "link": "https://rpsc.rajasthan.gov.in/Static/Result/C8220111FDB64BF3AE8E6509EB577016.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://rpsc.rajasthan.gov.in/Static/Result/C8220111FDB64BF3AE8E6509EB577016.pdf"
+      ],
+      "sourceId": "psc-rj",
+      "sourceName": "Rajasthan PSC (RPSC)",
+      "dept": "Rajasthan PSC (RPSC)",
+      "state": "Rajasthan",
+      "category": "state",
+      "stateIds": [
+        "rj"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "f2e4ae64a2dea13e",
+      "title": "01/09/2026 Main Merit List for Asst. Professor (Medical Edu.) - 2024 (Surgical Oncology (SS))",
+      "link": "https://rpsc.rajasthan.gov.in/Static/Result/73F20EFBEE244131906639A2F5A9D83A.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://rpsc.rajasthan.gov.in/Static/Result/73F20EFBEE244131906639A2F5A9D83A.pdf"
+      ],
+      "sourceId": "psc-rj",
+      "sourceName": "Rajasthan PSC (RPSC)",
+      "dept": "Rajasthan PSC (RPSC)",
+      "state": "Rajasthan",
+      "category": "state",
+      "stateIds": [
+        "rj"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "44c72b8cc84339e8",
+      "title": "01/09/2026 Main Merit List for Asst. Professor (Medical Edu.) - 2024 (Paediatric Surgery (SS))",
+      "link": "https://rpsc.rajasthan.gov.in/Static/Result/4EBAA684AA5046148404E21040308E87.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://rpsc.rajasthan.gov.in/Static/Result/4EBAA684AA5046148404E21040308E87.pdf"
+      ],
+      "sourceId": "psc-rj",
+      "sourceName": "Rajasthan PSC (RPSC)",
+      "dept": "Rajasthan PSC (RPSC)",
+      "state": "Rajasthan",
+      "category": "state",
+      "stateIds": [
+        "rj"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "bf8e1b27fc6625a0",
+      "title": "01/09/2026 Main Merit List for Asst. Professor (Medical Edu.) - 2024 (Radiation Oncology / Radiotherapy (BS))",
+      "link": "https://rpsc.rajasthan.gov.in/Static/Result/2F2032429B7D4C688958E36AB8262B2C.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://rpsc.rajasthan.gov.in/Static/Result/2F2032429B7D4C688958E36AB8262B2C.pdf"
+      ],
+      "sourceId": "psc-rj",
+      "sourceName": "Rajasthan PSC (RPSC)",
+      "dept": "Rajasthan PSC (RPSC)",
+      "state": "Rajasthan",
+      "category": "state",
+      "stateIds": [
+        "rj"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "52537fe24617f819",
+      "title": "31/08/2026 Result Preamble for School Lecturer (School Edu.) - 2025 (Punjabi)",
+      "link": "https://rpsc.rajasthan.gov.in/Static/Result/F165B8DC1B0C463F97DE46B5071451D6.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://rpsc.rajasthan.gov.in/Static/Result/F165B8DC1B0C463F97DE46B5071451D6.pdf"
+      ],
+      "sourceId": "psc-rj",
+      "sourceName": "Rajasthan PSC (RPSC)",
+      "dept": "Rajasthan PSC (RPSC)",
+      "state": "Rajasthan",
+      "category": "state",
+      "stateIds": [
+        "rj"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "2327bfeca440d6a3",
+      "title": "31/08/2026 Result Preamble and Cutoff Marks (Provisional List for Eligibility Checking) for School Lecturer (School Edu.) - 2025 (Home Science)",
+      "link": "https://rpsc.rajasthan.gov.in/Static/Result/A6B5128F93EB4E7EB5CA4B7B53EF3973.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://rpsc.rajasthan.gov.in/Static/Result/A6B5128F93EB4E7EB5CA4B7B53EF3973.pdf"
+      ],
+      "sourceId": "psc-rj",
+      "sourceName": "Rajasthan PSC (RPSC)",
+      "dept": "Rajasthan PSC (RPSC)",
+      "state": "Rajasthan",
+      "category": "state",
+      "stateIds": [
+        "rj"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "1e0b5ae0ef5c1407",
+      "title": "31/08/2026 Result Preamble and Cutoff Marks (Main List) for Asst. Professor (Medical Edu.) - 2024 (Neuro Surgery (SS))",
+      "link": "https://rpsc.rajasthan.gov.in/Static/Result/7A0820ACDAB8400CBFE4FD0B2CAE2AF9.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://rpsc.rajasthan.gov.in/Static/Result/7A0820ACDAB8400CBFE4FD0B2CAE2AF9.pdf"
+      ],
+      "sourceId": "psc-rj",
+      "sourceName": "Rajasthan PSC (RPSC)",
+      "dept": "Rajasthan PSC (RPSC)",
+      "state": "Rajasthan",
+      "category": "state",
+      "stateIds": [
+        "rj"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "9cf20235d4dbd2a3",
+      "title": "Final Result For The Posts Of Assistant Research Officer Group-a In The Department Of Water Resources Government Of Punjab Uploaded On 30-07-2026",
+      "link": "https://ppsc.gov.in/index.aspx?page=2786&tabid=10&tablinkid=6825",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-pb",
+      "sourceName": "Punjab PSC (PPSC)",
+      "dept": "Punjab PSC (PPSC)",
+      "state": "Punjab",
+      "category": "state",
+      "stateIds": [
+        "pb"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "a3e4bd3b562ec83c",
+      "title": "Final Result For The Posts Of Research Officer Group-a In The Department Of Water Resources Government Of Punjab Uploaded On 30-07-2026",
+      "link": "https://ppsc.gov.in/index.aspx?page=2785&tabid=10&tablinkid=6824",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-pb",
+      "sourceName": "Punjab PSC (PPSC)",
+      "dept": "Punjab PSC (PPSC)",
+      "state": "Punjab",
+      "category": "state",
+      "stateIds": [
+        "pb"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "f0612b7cb98bf6b4",
+      "title": "FINAL RESULT FOR RECRUITMENT TO 21 POSTS OF DISTRICT DEFENCE SERVICES WELFARE OFFICER GROUP-A IN THE DEPARTMENT OF DEFENCE SERVICES WELFARE GOVERNMENT OF PUNJAB UPLOADED ON 29-05-2026",
+      "link": "https://ppsc.gov.in/index.aspx?page=2758&tabid=10&tablinkid=6797",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-pb",
+      "sourceName": "Punjab PSC (PPSC)",
+      "dept": "Punjab PSC (PPSC)",
+      "state": "Punjab",
+      "category": "state",
+      "stateIds": [
+        "pb"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "a18665e2e0bcfb7d",
+      "title": "FINAL RESULT FOR RECRUITMENT TO 07 POSTS OF REMOTE SENSING AND GEOGRAPHIC INFORMATION SYSTEM OFFICER GROUP-B IN THE DEPARTMENT OF HOUSING AND URBAN DEVELOPMENT DIRECTORATE OF TOWN AND COUNTRY PLANNING UPLOADED ON 25-05-2026",
+      "link": "https://ppsc.gov.in/index.aspx?page=2753&tabid=10&tablinkid=6792",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-pb",
+      "sourceName": "Punjab PSC (PPSC)",
+      "dept": "Punjab PSC (PPSC)",
+      "state": "Punjab",
+      "category": "state",
+      "stateIds": [
+        "pb"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "6cee9166bd397c7b",
+      "title": "Final Result For Recruitment To 11 Posts Of Divisional Accountant Group-b In The Department Of Local Government Punjab Water Supply And Sewerage Board Government Of Punjab Uploaded On 23-04-2026",
+      "link": "https://ppsc.gov.in/index.aspx?page=2746&tabid=10&tablinkid=6785",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-pb",
+      "sourceName": "Punjab PSC (PPSC)",
+      "dept": "Punjab PSC (PPSC)",
+      "state": "Punjab",
+      "category": "state",
+      "stateIds": [
+        "pb"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "c828099344b71e1c",
+      "title": "Final Result For Recruitment To 01 Post Of Accountant Grade-i Group B In The Department Of Local Government Improvement Trust Government Of Punjab Uploaded On 23-04-2026",
+      "link": "https://ppsc.gov.in/index.aspx?page=2745&tabid=10&tablinkid=6784",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-pb",
+      "sourceName": "Punjab PSC (PPSC)",
+      "dept": "Punjab PSC (PPSC)",
+      "state": "Punjab",
+      "category": "state",
+      "stateIds": [
+        "pb"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "71b06d1d5cbe2138",
+      "title": "FINAL RESULT FOR RECRUITMENT TO 09 POSTS OF ACCOUNTANT GRADE-I GROUP B IN THE DEPARTMENT OF LOCAL GOVERNMENT MUNICIPALCORPORATION GOVERNMENT OF PUNJAB UPLOADED ON 23-04-2026",
+      "link": "https://ppsc.gov.in/index.aspx?page=2744&tabid=10&tablinkid=6783",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-pb",
+      "sourceName": "Punjab PSC (PPSC)",
+      "dept": "Punjab PSC (PPSC)",
+      "state": "Punjab",
+      "category": "state",
+      "stateIds": [
+        "pb"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "3d9ebb66cb10af2a",
+      "title": "FINAL RESULT FOR RECRUITMENT TO 10 POSTS OF SANITARY INSPECTOR GROUP-B IN THE DEPARTMENT OF LOCAL GOVERNMENT MUNICIPAL CORPORATION CADRE GOVERNMENT OF PUNJAB UPLOADED ON 20-04-2026",
+      "link": "https://ppsc.gov.in/index.aspx?page=2742&tabid=10&tablinkid=6781",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-pb",
+      "sourceName": "Punjab PSC (PPSC)",
+      "dept": "Punjab PSC (PPSC)",
+      "state": "Punjab",
+      "category": "state",
+      "stateIds": [
+        "pb"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "702ef9e7a2f1becb",
+      "title": "FINAL RESULT FOR RECRUITMENT TO 19 POSTS OF CHILD DEVELOPMENT PROJECT OFFICER GROUP-B IN THE DEPARTMENT OF SOCIAL SECURITY AND DEVELOPMENT OF WOMEN AND CHILDREN GOVERNMENT OF PUNJA UPLOADED ON 09-03-2026",
+      "link": "https://ppsc.gov.in/index.aspx?page=2725&tabid=10&tablinkid=6764",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-pb",
+      "sourceName": "Punjab PSC (PPSC)",
+      "dept": "Punjab PSC (PPSC)",
+      "state": "Punjab",
+      "category": "state",
+      "stateIds": [
+        "pb"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "df95280dd4970fd3",
+      "title": "Notification regarding breakup of marks for the post of Assistant Tourist Officer (Advt. No-01/2026)",
+      "link": "https://tpsc.tripura.gov.in/sites/default/files/Notif_ATO_210826.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://tpsc.tripura.gov.in/sites/default/files/Notif_ATO_210826.pdf"
+      ],
+      "sourceId": "psc-tr",
+      "sourceName": "Tripura PSC (TPSC)",
+      "dept": "Tripura PSC (TPSC)",
+      "state": "NE States",
+      "category": "state",
+      "stateIds": [
+        "ne"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "fd6b3ac643bfc2cb",
+      "title": "Provisional Answer Key of Written Exam. for the post of Research Officer (Advt. No.-10/2025)(Series-A,B,C & D)",
+      "link": "https://tpsc.tripura.gov.in/sites/default/files/P_Ans_RO_180826.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://tpsc.tripura.gov.in/sites/default/files/P_Ans_RO_180826.pdf"
+      ],
+      "sourceId": "psc-tr",
+      "sourceName": "Tripura PSC (TPSC)",
+      "dept": "Tripura PSC (TPSC)",
+      "state": "NE States",
+      "category": "state",
+      "stateIds": [
+        "ne"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "17a674c317c555da",
+      "title": "Result of written examination for the post of System Analyst (Advt. No-13/2025)",
+      "link": "https://tpsc.tripura.gov.in/sites/default/files/R_Sys_Analyst_120826.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://tpsc.tripura.gov.in/sites/default/files/R_Sys_Analyst_120826.pdf"
+      ],
+      "sourceId": "psc-tr",
+      "sourceName": "Tripura PSC (TPSC)",
+      "dept": "Tripura PSC (TPSC)",
+      "state": "NE States",
+      "category": "state",
+      "stateIds": [
+        "ne"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "16eccb537337dc10",
+      "title": "Result of written examination for the post of Programmer (Advt. No-17/2025)",
+      "link": "https://tpsc.tripura.gov.in/sites/default/files/R_Programmer_120826.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://tpsc.tripura.gov.in/sites/default/files/R_Programmer_120826.pdf"
+      ],
+      "sourceId": "psc-tr",
+      "sourceName": "Tripura PSC (TPSC)",
+      "dept": "Tripura PSC (TPSC)",
+      "state": "NE States",
+      "category": "state",
+      "stateIds": [
+        "ne"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "1502fb2785c36dc6",
+      "title": "Result of the Preliminary Examination for recruitment to the Miscellaneous Posts (Advt. No-18/2025).",
+      "link": "https://tpsc.tripura.gov.in/sites/default/files/R_Pre_Misc_18_25_030826.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://tpsc.tripura.gov.in/sites/default/files/R_Pre_Misc_18_25_030826.pdf"
+      ],
+      "sourceId": "psc-tr",
+      "sourceName": "Tripura PSC (TPSC)",
+      "dept": "Tripura PSC (TPSC)",
+      "state": "NE States",
+      "category": "state",
+      "stateIds": [
+        "ne"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "d7f4517123acb2bb",
+      "title": "Result of written examination for the post of Youth Organizer (Advt. No-01/2025)",
+      "link": "https://tpsc.tripura.gov.in/sites/default/files/R_Youth_Org_240726.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://tpsc.tripura.gov.in/sites/default/files/R_Youth_Org_240726.pdf"
+      ],
+      "sourceId": "psc-tr",
+      "sourceName": "Tripura PSC (TPSC)",
+      "dept": "Tripura PSC (TPSC)",
+      "state": "NE States",
+      "category": "state",
+      "stateIds": [
+        "ne"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "54ff1c566bd2c62c",
+      "title": "Challenge on Provisional Answer Keys for the post of Research Officer(Advt. No-10/2025) upto 03.09.2026.",
+      "link": "https://tpsc.tripura.gov.in/challenge-provisional-answer-keys-post-research-officeradvt-no-102025-upto-03092026",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-tr",
+      "sourceName": "Tripura PSC (TPSC)",
+      "dept": "Tripura PSC (TPSC)",
+      "state": "NE States",
+      "category": "state",
+      "stateIds": [
+        "ne"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "57d022b1588182f8",
+      "title": "Notification regarding availability of Provisional API Score for recruitment to the post of Assistant Professor(Advt. No-05/2025)",
+      "link": "https://tpsc.tripura.gov.in/sites/default/files/Notif_API_AF_120626.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://tpsc.tripura.gov.in/sites/default/files/Notif_API_AF_120626.pdf"
+      ],
+      "sourceId": "psc-tr",
+      "sourceName": "Tripura PSC (TPSC)",
+      "dept": "Tripura PSC (TPSC)",
+      "state": "NE States",
+      "category": "state",
+      "stateIds": [
+        "ne"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "4117eb74ee655107",
+      "title": "Assistant Conservator of Forest, Logging Officer and Forest Range Officer Combined Examination-2025-- Notification and Mains (Written) Exam Result ( Results )",
+      "link": "https://psc.uk.gov.in/candidate-corner/results",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-uk",
+      "sourceName": "Uttarakhand PSC (UKPSC)",
+      "dept": "Uttarakhand PSC (UKPSC)",
+      "state": "Uttarakhand",
+      "category": "state",
+      "stateIds": [
+        "uk"
+      ],
+      "fetchMethod": "html"
+    },
+    {
       "id": "40ed83132aef7de3",
       "title": "MCSCC (Main) Examination, 2022 – Link for Viewing Marks of Candidates Updated: 04/07/2026",
       "link": "https://mpscmanipur.gov.in/files/MPSC_26070416190.pdf",
@@ -1837,6 +2914,400 @@
       "category": "state",
       "stateIds": [
         "ne"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "2e7fa8a4ffb7c7be",
+      "title": "Results: Result of Walk-In-Interview for the post of PGRMO and Non-DNB JRD/SRD held on 09.07.2026 at BARC Hospital, Mumbai",
+      "link": "http://www.barc.gov.in/careers/result19.pdf",
+      "publishedAt": "2026-08-11T10:22:00.000Z",
+      "summary": "Result of Walk-In-Interview for the post of PGRMO and Non-DNB JRD/SRD held on 09.07.2026 at BARC Hospital, Mumbai",
+      "pdfUrls": [],
+      "sourceId": "barc",
+      "sourceName": "Bhabha Atomic Research Centre (BARC)",
+      "dept": "Bhabha Atomic Research Centre (BARC)",
+      "state": "All India",
+      "category": "defence",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "rss-discovered"
+    },
+    {
+      "id": "47b63350ad7e31a5",
+      "title": "Results: Result of walk-in-interview for the post of Locum Medical Officer Dental and GDMO",
+      "link": "http://www.barc.gov.in/careers/result17.pdf",
+      "publishedAt": "2026-07-17T05:47:07.000Z",
+      "summary": "Result of walk-in-interview for the post of Locum Medical Officer Dental and GDMO",
+      "pdfUrls": [],
+      "sourceId": "barc",
+      "sourceName": "Bhabha Atomic Research Centre (BARC)",
+      "dept": "Bhabha Atomic Research Centre (BARC)",
+      "state": "All India",
+      "category": "defence",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "rss-discovered"
+    },
+    {
+      "id": "a1e96cd5509bf99d",
+      "title": "Notice No. 13/2026 - Result for the Posts of Assistant General Manager (Finance)",
+      "link": "https://apeda.gov.in/sites/default/files/announcements/Notice_No_13_2026.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://apeda.gov.in/sites/default/files/announcements/Notice_No_13_2026.pdf"
+      ],
+      "sourceId": "apeda",
+      "sourceName": "APEDA / BEDF — Recruitments",
+      "dept": "APEDA / BEDF — Recruitments",
+      "state": "All India",
+      "category": "psu",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "f5ec72f5d069bbdc",
+      "title": "परिणाम",
+      "link": "https://www.npcil.nic.in/content/Hindi/401_1_Results.aspx",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "npcil",
+      "sourceName": "Nuclear Power Corporation of India (NPCIL)",
+      "dept": "Nuclear Power Corporation of India (NPCIL)",
+      "state": "All India",
+      "category": "psu",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "17b00e8647b4e2e1",
+      "title": "21 Jul 2026 संविदा के आधार पर चयनित करने के संबंध मे विज्ञापन",
+      "link": "https://crpf.gov.in/hi/Media-Centre/Latest-News/3291",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "crpf",
+      "sourceName": "Central Reserve Police Force (CRPF)",
+      "dept": "Central Reserve Police Force (CRPF)",
+      "state": "All India",
+      "category": "police",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "4019af35bb956aee",
+      "title": "Result under Hungaricum Stipendium Programme for the year 2026-27.",
+      "link": "https://www.ugc.gov.in/pdfnews/6824339_Result-of-Stipendium-Hungaricum-Scholarship-2026-27.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://www.ugc.gov.in/pdfnews/6824339_Result-of-Stipendium-Hungaricum-Scholarship-2026-27.pdf"
+      ],
+      "sourceId": "ugc",
+      "sourceName": "University Grants Commission (UGC)",
+      "dept": "University Grants Commission (UGC)",
+      "state": "All India",
+      "category": "teaching",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "3263ad107f9d8029",
+      "title": "PUBLIC NOTICE – CTET Feb 2026 – RESULT",
+      "link": "https://cdnbbsr.s3waas.gov.in/s3443dec3062d0286986e21dc0631734c9/uploads/2026/03/202603311458590440.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://cdnbbsr.s3waas.gov.in/s3443dec3062d0286986e21dc0631734c9/uploads/2026/03/202603311458590440.pdf"
+      ],
+      "sourceId": "ctet",
+      "sourceName": "CBSE — CTET",
+      "dept": "CBSE — CTET",
+      "state": "All India",
+      "category": "teaching",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "86dc09a156fe9120",
+      "title": "CBSE 12th Result 2026: KV और नवोदय का जलवा, 12वीं के नतीजों में इन स्कूलों ने मारी बाजी",
+      "link": "https://ndtv.in/education/cbse-12th-result-2026-school-wise-performance-kv-jnv-pass-percentage-list-11425718",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "kvs",
+      "sourceName": "Kendriya Vidyalaya Sangathan",
+      "dept": "Kendriya Vidyalaya Sangathan",
+      "state": "All India",
+      "category": "teaching",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "ebfc2a9f2cf5cca8",
+      "title": "CBSE 12th Result: संस्थानवार प्रदर्शन में केंद्रीय विद्यालय रहा टॉप पर",
+      "link": "https://www.amarujala.com/education/cbse-class-12-result-2026-kv-secures-top-spot-know-how-different-schools-performed-2026-05-13",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "kvs",
+      "sourceName": "Kendriya Vidyalaya Sangathan",
+      "dept": "Kendriya Vidyalaya Sangathan",
+      "state": "All India",
+      "category": "teaching",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "2b0cf313b821dae3",
+      "title": "CBSE 12th Result 2026: सीबीएसई 12वीं में केंद्रीय विद्यालय का दबदबा, 98.55% छात्रों की सफलता के साथ टॉप पर",
+      "link": "https://www.timesnowhindi.com/education/cbse-12th-result-2026-kvs-vs-jnv-whose-result-is-highest-kendriya-vidyalaya-and-jawahar-navodaya-vidyalaya-12th-pass-percentage-article-154315169",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "kvs",
+      "sourceName": "Kendriya Vidyalaya Sangathan",
+      "dept": "Kendriya Vidyalaya Sangathan",
+      "state": "All India",
+      "category": "teaching",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "04631c79b6471ca9",
+      "title": "विज्ञापन संख्या 01/2025: TGT (अंग्रेजी, सामाजिक विज्ञान एवं विशेष शिक्षक) एवं वरिष्ठ सचिवालय सहायक के टियर-II परीक्षा परिणाम संबंधी प्रेस विज्ञप्ति नई",
+      "link": "https://cdnbbsr.s3waas.gov.in/s32d2ca7eedf739ef4c3800713ec482e1a/uploads/2026/09/2026090192.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://cdnbbsr.s3waas.gov.in/s32d2ca7eedf739ef4c3800713ec482e1a/uploads/2026/09/2026090192.pdf"
+      ],
+      "sourceId": "kvs",
+      "sourceName": "Kendriya Vidyalaya Sangathan",
+      "dept": "Kendriya Vidyalaya Sangathan",
+      "state": "All India",
+      "category": "teaching",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "08a6fead3943369e",
+      "title": "Comparative Result Analysis – Class X",
+      "link": "https://kvsangathan.nic.in/en/comparative-result-analysis-class-x/",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "kvs",
+      "sourceName": "Kendriya Vidyalaya Sangathan",
+      "dept": "Kendriya Vidyalaya Sangathan",
+      "state": "All India",
+      "category": "teaching",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "a91e35efe906a21a",
+      "title": "Comparative Result Analysis – Class XII",
+      "link": "https://kvsangathan.nic.in/en/comparative-result-analysis-class-xii/",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "kvs",
+      "sourceName": "Kendriya Vidyalaya Sangathan",
+      "dept": "Kendriya Vidyalaya Sangathan",
+      "state": "All India",
+      "category": "teaching",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "3cb3737965d5c83c",
+      "title": "Recruitment Result",
+      "link": "https://www.aiims.edu/index.php/en/notices/recruitment/archive-recruitment",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "aiims",
+      "sourceName": "AIIMS New Delhi — Recruitment",
+      "dept": "AIIMS New Delhi — Recruitment",
+      "state": "All India",
+      "category": "health",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "5248b404d0a4fa81",
+      "title": "Financial Result",
+      "link": "https://www.canarabank.bank.in/financial-result",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "canara",
+      "sourceName": "Canara Bank — Careers",
+      "dept": "Canara Bank — Careers",
+      "state": "All India",
+      "category": "banking",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "3f5f0150d9a9618d",
+      "title": "Jharkhand Group of Mines: Result of the 'Walk-in-Interview' held on 12/08/2026 for Engagement of Consultants (Doctors in Medical Discipline) against Advertisement No. BSL/R-C/2026-07",
+      "link": "https://aima-web-images.s3.ap-south-1.amazonaws.com/sailcareers.com/Downloads/BSP_News_01092026_121727.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://aima-web-images.s3.ap-south-1.amazonaws.com/sailcareers.com/Downloads/BSP_News_01092026_121727.pdf"
+      ],
+      "sourceId": "sail",
+      "sourceName": "Steel Authority of India (SAIL)",
+      "dept": "Steel Authority of India (SAIL)",
+      "state": "All India",
+      "category": "psu",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "84cb09f417efc23b",
+      "title": "Rourkela Steel Plant :Result of walk-in Interview held on 05/08/2026 for Engagement of Consultants (Specialist & GDMO) on Contractual basis against Advt. No. 02/2026, dated 14.07.2026",
+      "link": "https://aima-web-images.s3.ap-south-1.amazonaws.com/sailcareers.com/Downloads/RSP_News%20&%20Jobs_24082026_153856.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://aima-web-images.s3.ap-south-1.amazonaws.com/sailcareers.com/Downloads/RSP_News%20&%20Jobs_24082026_153856.pdf"
+      ],
+      "sourceId": "sail",
+      "sourceName": "Steel Authority of India (SAIL)",
+      "dept": "Steel Authority of India (SAIL)",
+      "state": "All India",
+      "category": "psu",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "7a9b0027b83e17f4",
+      "title": "Collieries Division: Result of the 'Walk-in-Interview' held for Engagement of General Duty Medical Officer (GDMO) against Advertisement No. CD/HR/Rectt/26-27/68 Dated: 10.07.2026",
+      "link": "https://aima-web-images.s3.ap-south-1.amazonaws.com/sailcareers.com/Downloads/SAIL_News%20&%20Jobs_21082026_165023.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://aima-web-images.s3.ap-south-1.amazonaws.com/sailcareers.com/Downloads/SAIL_News%20&%20Jobs_21082026_165023.pdf"
+      ],
+      "sourceId": "sail",
+      "sourceName": "Steel Authority of India (SAIL)",
+      "dept": "Steel Authority of India (SAIL)",
+      "state": "All India",
+      "category": "psu",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "d5d6d7e72e8fce1d",
+      "title": "Result of Personal Interview with reference to Advertisement No. ISP/YP/2026/01 dated 22.05.2026",
+      "link": "https://aima-web-images.s3.ap-south-1.amazonaws.com/sailcareers.com/Downloads/IISCO_News_18082026_190419.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://aima-web-images.s3.ap-south-1.amazonaws.com/sailcareers.com/Downloads/IISCO_News_18082026_190419.pdf"
+      ],
+      "sourceId": "sail",
+      "sourceName": "Steel Authority of India (SAIL)",
+      "dept": "Steel Authority of India (SAIL)",
+      "state": "All India",
+      "category": "psu",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "75e6fc0783705ba3",
+      "title": "Bokaro Steel Plant: Result of the 'Walk-in-Interview' held on 16/07/2026 for Engagement of Consultants (Doctors in Medical Discipline) against Advertisement No. BSL/R-C/2026-06",
+      "link": "https://aima-web-images.s3.ap-south-1.amazonaws.com/sailcareers.com/Downloads/BSP_News_13082026_140856.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://aima-web-images.s3.ap-south-1.amazonaws.com/sailcareers.com/Downloads/BSP_News_13082026_140856.pdf"
+      ],
+      "sourceId": "sail",
+      "sourceName": "Steel Authority of India (SAIL)",
+      "dept": "Steel Authority of India (SAIL)",
+      "state": "All India",
+      "category": "psu",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "7363b936b2b772f5",
+      "title": "Result of Personal Interview with reference to Advertisement No. ISP/YP/2026/01 dated 22.05.2026",
+      "link": "https://aima-web-images.s3.ap-south-1.amazonaws.com/sailcareers.com/Downloads/IISCO_Jobs_18082026_190340.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://aima-web-images.s3.ap-south-1.amazonaws.com/sailcareers.com/Downloads/IISCO_Jobs_18082026_190340.pdf"
+      ],
+      "sourceId": "sail",
+      "sourceName": "Steel Authority of India (SAIL)",
+      "dept": "Steel Authority of India (SAIL)",
+      "state": "All India",
+      "category": "psu",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "59d89ab2523737c9",
+      "title": "Click here to view the result of Personal Interview for the Advertisement No. ISP/YP/2026/01 dated 22.05.2026",
+      "link": "https://sailcareers.com/sail2026yp/SAIL2026YPInterviewResult.aspx",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "sail",
+      "sourceName": "Steel Authority of India (SAIL)",
+      "dept": "Steel Authority of India (SAIL)",
+      "state": "All India",
+      "category": "psu",
+      "stateIds": [
+        "all"
       ],
       "fetchMethod": "html"
     },
@@ -2383,74 +3854,6 @@
         "br"
       ],
       "fetchMethod": "html"
-    },
-    {
-      "id": "c4c9266da946f3d2",
-      "title": "Marks of Recommended Candidates",
-      "link": "https://www.upsc.gov.in/examinations/marks-recommended-candidates",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "upsc-e-admit-hub",
-      "sourceName": "UPSC — e-Admit cards",
-      "dept": "Union Public Service Commission",
-      "state": "All India",
-      "category": "upsc",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "9f46af2ef87ad857",
-      "title": "Marks of Recommended Candidates (Reserve List)",
-      "link": "https://www.upsc.gov.in/examinations/marks-recommended-candidates-reserve-list",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "upsc-e-admit-hub",
-      "sourceName": "UPSC — e-Admit cards",
-      "dept": "Union Public Service Commission",
-      "state": "All India",
-      "category": "upsc",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "246cf795a95a5a9f",
-      "title": "Cut-off Marks",
-      "link": "https://www.upsc.gov.in/examinations/cutoff-marks--",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "upsc-e-admit-hub",
-      "sourceName": "UPSC — e-Admit cards",
-      "dept": "Union Public Service Commission",
-      "state": "All India",
-      "category": "upsc",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "bf2ab913def084c8",
-      "title": "Marks Information",
-      "link": "https://upsconline.gov.in/marksheet/exam/marksheet_system/",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "upsc-e-admit-hub",
-      "sourceName": "UPSC — e-Admit cards",
-      "dept": "Union Public Service Commission",
-      "state": "All India",
-      "category": "upsc",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
     },
     {
       "id": "776d7a60e25e33b7",
@@ -7966,34 +9369,6 @@
       "fetchMethod": "live-jobs-supplement"
     },
     {
-      "id": "f0612b7cb98bf6b4",
-      "title": "FINAL RESULT FOR RECRUITMENT TO 21 POSTS OF DISTRICT DEFENCE SERVICES WELFARE OFFICER GROUP-A IN THE DEPARTMENT OF DEFENCE SERVICES WELFARE GOVERNMENT OF PUNJAB UPLOADED ON 29-05-2026",
-      "link": "https://ppsc.gov.in/index.aspx?page=2758&tabid=10&tablinkid=6797",
-      "publishedAt": "2026-05-29T00:00:00Z",
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-pb",
-      "sourceName": "Ppsc",
-      "dept": "Ppsc",
-      "state": "All India",
-      "category": "defence",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "a18665e2e0bcfb7d",
-      "title": "FINAL RESULT FOR RECRUITMENT TO 07 POSTS OF REMOTE SENSING AND GEOGRAPHIC INFORMATION SYSTEM OFFICER GROUP-B IN THE DEPARTMENT OF HOUSING AND URBAN DEVELOPMENT DIRECTORATE OF TOWN AND COUNTRY PLANNING UPLOADED ON 25-05-2026",
-      "link": "https://ppsc.gov.in/index.aspx?page=2753&tabid=10&tablinkid=6792",
-      "publishedAt": "2026-05-25T00:00:00Z",
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-pb",
-      "sourceName": "Ppsc",
-      "dept": "Ppsc",
-      "state": "All India",
-      "category": "state",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
       "id": "6a108e7f555a3e71",
       "title": "Publication of Result against Hindi Translator CEN 07-2024 (M&Iso)",
       "link": "https://www.rrbguwahati.gov.in/documents/Publication of Result against Hindi Translator CEN 07-2024 (M&Iso).pdf",
@@ -8265,40 +9640,6 @@
       "fetchMethod": "html-listing"
     },
     {
-      "id": "86b865539e361b0d",
-      "title": "Marks of all Interviewed Candidates",
-      "link": "http://hpsc.gov.in/en-us/Examination/Marks-of-all-Interviewed-Candidates",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-hr-notifications",
-      "sourceName": "HPSC — Recruitment",
-      "dept": "Haryana PSC",
-      "state": "Haryana",
-      "category": "state",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "10bf12b53e6cd695",
-      "title": "Marks of Subject Knowledge Test for all candidates",
-      "link": "http://hpsc.gov.in/en-us/Examination/Marks-of-Subject-Knowledge-Test-for-all-candidates",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-hr-notifications",
-      "sourceName": "HPSC — Recruitment",
-      "dept": "Haryana PSC",
-      "state": "Haryana",
-      "category": "state",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
       "id": "e20e1897c955e09d",
       "title": "Roll No. wise marks dated 09.07.2026 of all candidates who appeared in the Subject Knowledge Test for the posts of Assistant Professor (College Cadre) in the subject of Music (Vocal) in Higher Education Department (Advt. No. 58/2024)",
       "link": "https://hpsc.gov.in/Portals/0/Rollwisemarks_SKT_Music_Vocal_09_07_2026.pdf",
@@ -8326,23 +9667,6 @@
       "pdfUrls": [
         "https://hpsc.gov.in/Portals/0/Roll_wisemarks_SKT_AP_Sankrit_08_07_2026.pdf"
       ],
-      "sourceId": "psc-hr-notifications",
-      "sourceName": "HPSC — Recruitment",
-      "dept": "Haryana PSC",
-      "state": "Haryana",
-      "category": "state",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "7606dfea71c92c42",
-      "title": "Marks of the Screening Test",
-      "link": "http://hpsc.gov.in/en-us/Marks",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
       "sourceId": "psc-hr-notifications",
       "sourceName": "HPSC — Recruitment",
       "dept": "Haryana PSC",
@@ -8715,23 +10039,6 @@
       "fetchMethod": "html"
     },
     {
-      "id": "4117eb74ee655107",
-      "title": "Uttarakhand Combined State Civil/Upper Subordinate Services Examination-2024-- Notification candidate Marks ( Results )",
-      "link": "https://psc.uk.gov.in/candidate-corner/results",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-uk",
-      "sourceName": "Uttarakhand PSC (UKPSC)",
-      "dept": "Uttarakhand PSC (UKPSC)",
-      "state": "Uttarakhand",
-      "category": "state",
-      "stateIds": [
-        "uk"
-      ],
-      "fetchMethod": "html"
-    },
-    {
       "id": "b195553b75fc94d5",
       "title": "Superintendent (Woman Welfare Department) Selection-2025--Candidate Marks ( Recruitment Notification )",
       "link": "https://result.pscuk.net.in/",
@@ -8755,25 +10062,6 @@
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
-      "sourceId": "psc-tr",
-      "sourceName": "Tripura PSC (TPSC)",
-      "dept": "Tripura PSC (TPSC)",
-      "state": "NE States",
-      "category": "state",
-      "stateIds": [
-        "ne"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "57d022b1588182f8",
-      "title": "Notification regarding availability of Provisional API Score for recruitment to the post of Assistant Professor(Advt. No-05/2025)",
-      "link": "https://tpsc.tripura.gov.in/sites/default/files/Notif_API_AF_120626.pdf",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [
-        "https://tpsc.tripura.gov.in/sites/default/files/Notif_API_AF_120626.pdf"
-      ],
       "sourceId": "psc-tr",
       "sourceName": "Tripura PSC (TPSC)",
       "dept": "Tripura PSC (TPSC)",
@@ -9614,22 +10902,6 @@
       "fetchMethod": "live-jobs-supplement"
     },
     {
-      "id": "e95ddc7b082ccd13",
-      "title": "Suggestion Sheet for Provisional Answer Key (CBRT)",
-      "link": "http://gpsc.gujarat.gov.in/Documents/AdvertismentDocument/2019-9-4_49.pdf",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [
-        "http://gpsc.gujarat.gov.in/Documents/AdvertismentDocument/2019-9-4_49.pdf"
-      ],
-      "sourceId": "psc-gj",
-      "sourceName": "Gujarat PSC (GPSC)",
-      "dept": "Gujarat PSC (GPSC)",
-      "state": "All India",
-      "category": "state",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
       "id": "87781bddf14db1d2",
       "title": "Press release and P.T. result of the Recruitment of Jharkhand Combined Civil Services Examination (Backlog)-2025 Advt.No.-05/2026 (06-07-2026)",
       "link": "https://jpsc.gov.in/data/Press_Release_and_P.T_Result_05_26_dated_06_07_2026.pdf",
@@ -9967,20 +11239,6 @@
       "id": "35b9cf9d0da8d166",
       "title": "Written Result of District Social Welfare Officer(DSWO) under Social Welfare, Women & Child Development Deptt., 2026",
       "link": "https://mpsc.mizoram.gov.in/post/written-result-of-district-social-welfare-officerdswo-under-social-welfare-women-child-development-deptt-2026",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-mz",
-      "sourceName": "Mizoram PSC",
-      "dept": "Mizoram PSC",
-      "state": "All India",
-      "category": "state",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "5162bbeff4ef1516",
-      "title": "Departmental Result",
-      "link": "https://mpsc.mizoram.gov.in/page/2021-2023-departmental-result",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
@@ -12142,48 +13400,6 @@
       "dept": "ESIC — Employees' State Insurance Corporation",
       "state": "All India",
       "category": "health",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "6cee9166bd397c7b",
-      "title": "Final Result For Recruitment To 11 Posts Of Divisional Accountant Group-b In The Department Of Local Government Punjab Water Supply And Sewerage Board Government Of Punjab Uploaded On 23-04-2026",
-      "link": "https://ppsc.gov.in/index.aspx?page=2746&tabid=10&tablinkid=6785",
-      "publishedAt": "2026-04-23T00:00:00Z",
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-pb",
-      "sourceName": "Ppsc",
-      "dept": "Ppsc",
-      "state": "All India",
-      "category": "state",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "c828099344b71e1c",
-      "title": "Final Result For Recruitment To 01 Post Of Accountant Grade-i Group B In The Department Of Local Government Improvement Trust Government Of Punjab Uploaded On 23-04-2026",
-      "link": "https://ppsc.gov.in/index.aspx?page=2745&tabid=10&tablinkid=6784",
-      "publishedAt": "2026-04-23T00:00:00Z",
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-pb",
-      "sourceName": "Ppsc",
-      "dept": "Ppsc",
-      "state": "All India",
-      "category": "state",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "71b06d1d5cbe2138",
-      "title": "FINAL RESULT FOR RECRUITMENT TO 09 POSTS OF ACCOUNTANT GRADE-I GROUP B IN THE DEPARTMENT OF LOCAL GOVERNMENT MUNICIPALCORPORATION GOVERNMENT OF PUNJAB UPLOADED ON 23-04-2026",
-      "link": "https://ppsc.gov.in/index.aspx?page=2744&tabid=10&tablinkid=6783",
-      "publishedAt": "2026-04-23T00:00:00Z",
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-pb",
-      "sourceName": "Ppsc",
-      "dept": "Ppsc",
-      "state": "All India",
-      "category": "state",
       "fetchMethod": "live-jobs-supplement"
     },
     {

@@ -1,21 +1,40 @@
 {
-  "generatedAt": "2026-09-02T08:52:25.168Z",
-  "count": 45,
+  "generatedAt": "2026-09-02T10:41:15.260Z",
+  "count": 54,
   "items": [
     {
-      "id": "65b953b91c3e8ca2",
-      "title": "FINAL ANSWER KEY",
-      "link": "https://ctet.nic.in/previous-year-final-answer-key/",
+      "id": "e95ddc7b082ccd13",
+      "title": "Suggestion Sheet for Provisional Answer Key (CBRT)",
+      "link": "http://gpsc.gujarat.gov.in/Documents/AdvertismentDocument/2019-9-4_49.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "http://gpsc.gujarat.gov.in/Documents/AdvertismentDocument/2019-9-4_49.pdf"
+      ],
+      "sourceId": "psc-gj",
+      "sourceName": "Gujarat PSC (GPSC)",
+      "dept": "Gujarat PSC (GPSC)",
+      "state": "Gujarat",
+      "category": "state",
+      "stateIds": [
+        "gj"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "29f318f60d7290e5",
+      "title": "For filing Objections on the Answer Key of MCQ's",
+      "link": "http://hpsc.gov.in/en-us/Examination/For-filing-Objections-on-the-Answer-Key-of-MCQs",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
-      "sourceId": "ctet",
-      "sourceName": "CBSE — CTET",
-      "dept": "CBSE — CTET",
-      "state": "All India",
-      "category": "teaching",
+      "sourceId": "psc-hr",
+      "sourceName": "Haryana PSC (HPSC)",
+      "dept": "Haryana PSC (HPSC)",
+      "state": "Haryana",
+      "category": "state",
       "stateIds": [
-        "all"
+        "hr"
       ],
       "fetchMethod": "html"
     },
@@ -145,6 +164,180 @@
       "fetchMethod": "html"
     },
     {
+      "id": "4f9a627929adaf52",
+      "title": "Provisional Answer key of Nursing Officer(Contract) under H&FW Dept. & Staff Nurse(Contract) under Home (Prisons) Dept.",
+      "link": "https://mpsc.mizoram.gov.in/post/provisional-answer-key-of-nursing-officercontract-under-hfw-dept-staff-nursecontract-under-home-prisons-dept",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-mz",
+      "sourceName": "Mizoram PSC",
+      "dept": "Mizoram PSC",
+      "state": "NE States",
+      "category": "state",
+      "stateIds": [
+        "ne"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "b4e4e16dfad554a6",
+      "title": "Public Notice Regarding Objections In The Answer Key For The Recruitment To The Posts Of Senior Assistant Accounts Group B In The Department Of Housing And Urban Development Puda Govt Of Punjab Uploaded On 02-08-2026",
+      "link": "https://ppsc.gov.in/index.aspx?page=2787&tabid=10&tablinkid=6826",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-pb",
+      "sourceName": "Punjab PSC (PPSC)",
+      "dept": "Punjab PSC (PPSC)",
+      "state": "Punjab",
+      "category": "state",
+      "stateIds": [
+        "pb"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "9d6be80a09d900d1",
+      "title": "PUBLIC NOTICE REGARDING OBJECTIONS IN THE ANSWER KEY FOR THE RECRUITMENT TO THE POSTS OF ACCOUNTANT GRADE-2 GROUP B IN THE DEPARTMENT OF LOCAL GOVERNMENT MUNICIPAL CORPORATION AND MUNICIPAL COUNCIL NAGAR PANCHAYATS UPLOADED ON 11-07-2026",
+      "link": "https://ppsc.gov.in/index.aspx?page=2777&tabid=10&tablinkid=6816",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-pb",
+      "sourceName": "Punjab PSC (PPSC)",
+      "dept": "Punjab PSC (PPSC)",
+      "state": "Punjab",
+      "category": "state",
+      "stateIds": [
+        "pb"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "01894b66bc36ab91",
+      "title": "PUBLIC NOTICE REGARDING REVISED ANSWER KEY AND PROVISIONALLY SHORTLISTED CANDIDATES FOR THE JOINT COMPETITIVE EXAMINATION FOR THE VARIOUS POSTS OF SUB DIVISIONAL OFFICER AND SUB DIVISIONAL ENGINEER IN VARIOUS DEPARTMENTS UPLOADED ON 03-07-2026",
+      "link": "https://ppsc.gov.in/index.aspx?page=2769&tabid=10&tablinkid=6808",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-pb",
+      "sourceName": "Punjab PSC (PPSC)",
+      "dept": "Punjab PSC (PPSC)",
+      "state": "Punjab",
+      "category": "state",
+      "stateIds": [
+        "pb"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "c89f3ed5b76ab1de",
+      "title": "PUBLIC NOTICE REGARDING OBJECTIONS IN THE ANSWER KEY FOR THE RECRUITMENT TO 08 POSTS OF ACCOUNTS OFFICER GROUP-B IN THE DEPARTMENT OF LOCAL GOVERNMENT MUNICIPAL CORPORATION UPLOADED ON 13-06-2026",
+      "link": "https://ppsc.gov.in/index.aspx?page=2766&tabid=10&tablinkid=6805",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-pb",
+      "sourceName": "Punjab PSC (PPSC)",
+      "dept": "Punjab PSC (PPSC)",
+      "state": "Punjab",
+      "category": "state",
+      "stateIds": [
+        "pb"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "b4d604d672f87877",
+      "title": "PUBLIC NOTICE REGARDING OBJECTIONS IN THE ANSWER KEY FOR THE RECRUITMENT TO 101 POSTS OF HORTICULTURE DEVELOPMENT OFFICER IN THE DEPARTMENT OF HORTICULTURE GOVERNMENT OF PUNJAB UPLOADED ON 14-03-2026",
+      "link": "https://ppsc.gov.in/index.aspx?page=2729&tabid=10&tablinkid=6768",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-pb",
+      "sourceName": "Punjab PSC (PPSC)",
+      "dept": "Punjab PSC (PPSC)",
+      "state": "Punjab",
+      "category": "state",
+      "stateIds": [
+        "pb"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "511bc0d184c507f6",
+      "title": "PUBLIC NOTICE REGARDING OBJECTIONS IN THE ANSWER KEY FOR THE RECRUITMENT TO 06 POSTS OF DRAFTSMAN ARCHITECT GROUP-B IN THE DEPARTMENT OF HOUSING AND URBAN DEVELOPMENT PUDA GOVERNMENT OF PUNJAB UPLOADED ON 14-03-2026",
+      "link": "https://ppsc.gov.in/index.aspx?page=2728&tabid=10&tablinkid=6767",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-pb",
+      "sourceName": "Punjab PSC (PPSC)",
+      "dept": "Punjab PSC (PPSC)",
+      "state": "Punjab",
+      "category": "state",
+      "stateIds": [
+        "pb"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "fd6b3ac643bfc2cb",
+      "title": "Provisional Answer Key of Written Exam. for the post of Research Officer (Advt. No.-10/2025)(Series-A,B,C & D)",
+      "link": "https://tpsc.tripura.gov.in/sites/default/files/P_Ans_RO_180826.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://tpsc.tripura.gov.in/sites/default/files/P_Ans_RO_180826.pdf"
+      ],
+      "sourceId": "psc-tr",
+      "sourceName": "Tripura PSC (TPSC)",
+      "dept": "Tripura PSC (TPSC)",
+      "state": "NE States",
+      "category": "state",
+      "stateIds": [
+        "ne"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "fc4957532c9707fe",
+      "title": "Notification regarding Final Answer Key of Preliminary Exam. of Misc. Posts(Advt. No-.-18/2025)",
+      "link": "https://tpsc.tripura.gov.in/sites/default/files/Notif_F_Ans_Misc_200726.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://tpsc.tripura.gov.in/sites/default/files/Notif_F_Ans_Misc_200726.pdf"
+      ],
+      "sourceId": "psc-tr",
+      "sourceName": "Tripura PSC (TPSC)",
+      "dept": "Tripura PSC (TPSC)",
+      "state": "NE States",
+      "category": "state",
+      "stateIds": [
+        "ne"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "00e31e8fe10932ac",
+      "title": "Asst. Review Officer, Asst. Librarian, Translator & Typist in the Establishment of High Court Uttarakhand, Exam-2025-- Notification regarding Online Objection on Structure of Questions and Options and Instructions ( Answer Key )",
+      "link": "https://psc.uk.gov.in/candidate-corner/answerkey",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-uk",
+      "sourceName": "Uttarakhand PSC (UKPSC)",
+      "dept": "Uttarakhand PSC (UKPSC)",
+      "state": "Uttarakhand",
+      "category": "state",
+      "stateIds": [
+        "uk"
+      ],
+      "fetchMethod": "html"
+    },
+    {
       "id": "cc09d44023c47d00",
       "title": "Final Answer Key for recruitment of various posts in the Directorate of Handloom & Textiles, Manipur on contractual basis. Updated: 12/05/2026",
       "link": "https://mpscmanipur.gov.in/files/MPSC_26051212320.pdf",
@@ -160,6 +353,23 @@
       "category": "state",
       "stateIds": [
         "ne"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "65b953b91c3e8ca2",
+      "title": "FINAL ANSWER KEY",
+      "link": "https://ctet.nic.in/previous-year-final-answer-key/",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "ctet",
+      "sourceName": "CBSE — CTET",
+      "dept": "CBSE — CTET",
+      "state": "All India",
+      "category": "teaching",
+      "stateIds": [
+        "all"
       ],
       "fetchMethod": "html"
     },
@@ -395,23 +605,6 @@
       "fetchMethod": "html-listing"
     },
     {
-      "id": "00e31e8fe10932ac",
-      "title": "Answer Key and Online Objection",
-      "link": "https://psc.uk.gov.in/candidate-corner/answerkey",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-uk",
-      "sourceName": "Uttarakhand PSC (UKPSC)",
-      "dept": "Uttarakhand PSC (UKPSC)",
-      "state": "Uttarakhand",
-      "category": "state",
-      "stateIds": [
-        "uk"
-      ],
-      "fetchMethod": "html"
-    },
-    {
       "id": "0dad7b500584788c",
       "title": "Final Answer Key of Written Exam. for the post of Sub-Inspector of Excise (Advt. No. 11/2025)(Series-A,B,C & D)",
       "link": "https://tpsc.tripura.gov.in/sites/default/files/F_Ans_SI_Excise_010726.pdf",
@@ -467,36 +660,6 @@
         "ne"
       ],
       "fetchMethod": "html"
-    },
-    {
-      "id": "e95ddc7b082ccd13",
-      "title": "Suggestion Sheet for Provisional Answer Key (CBRT)",
-      "link": "http://gpsc.gujarat.gov.in/Documents/AdvertismentDocument/2019-9-4_49.pdf",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [
-        "http://gpsc.gujarat.gov.in/Documents/AdvertismentDocument/2019-9-4_49.pdf"
-      ],
-      "sourceId": "psc-gj",
-      "sourceName": "Gujarat PSC (GPSC)",
-      "dept": "Gujarat PSC (GPSC)",
-      "state": "All India",
-      "category": "state",
-      "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "29f318f60d7290e5",
-      "title": "For filing Objections on the Answer Key of MCQ's",
-      "link": "http://hpsc.gov.in/en-us/Examination/For-filing-Objections-on-the-Answer-Key-of-MCQs",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-hr",
-      "sourceName": "Haryana PSC (HPSC)",
-      "dept": "Haryana PSC (HPSC)",
-      "state": "All India",
-      "category": "state",
-      "fetchMethod": "live-jobs-supplement"
     },
     {
       "id": "4931d95ad78ffb85",
