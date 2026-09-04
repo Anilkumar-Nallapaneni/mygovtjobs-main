@@ -229,10 +229,15 @@ async function main() {
   const hubLastmod = eventsLastmod || archivesLastmod;
 
   const supabaseJobs = await loadJobsFromSupabase();
-  const jobs = [
-    ...(supabaseJobs ?? loadJobsFromJson()),
-    ...(!supabaseJobs ? loadArchiveJobsFromJson() : []),
-  ];
+  const primaryJobs = supabaseJobs ?? loadJobsFromJson();
+  const seenSlugs = new Set(
+    primaryJobs.map((job) => String(job.slug || job.id || "")).filter(Boolean)
+  );
+  const archiveExtras = loadArchiveJobsFromJson().filter((job) => {
+    const slug = String(job.slug || job.id || "");
+    return slug && !seenSlugs.has(slug);
+  });
+  const jobs = [...primaryJobs, ...archiveExtras];
 
   const staticPageEntries = [];
   const stateEntries = [];

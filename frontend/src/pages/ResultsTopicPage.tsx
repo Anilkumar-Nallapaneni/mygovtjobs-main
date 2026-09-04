@@ -5,7 +5,6 @@ import { useTranslation } from 'react-i18next'
 import Footer from '@/components/layout/Footer'
 import OfficialHeadlinesSection from '@/components/home/OfficialHeadlinesSection'
 import NotFoundPage from '@/pages/NotFoundPage'
-import { pageTitle } from '@/data/siteMeta'
 import {
   RESULTS_TOPICS_INDEX_PATH,
   getResultTopicBySlug,
@@ -27,11 +26,6 @@ export default function ResultsTopicPage({ onFooterLink }: ResultsTopicPageProps
   useEffect(() => {
     if (!topic) return undefined
     return applyBrowseSeo(`/results/${topic.slug}`)
-  }, [topic])
-
-  useEffect(() => {
-    if (!topic) return
-    document.title = pageTitle(topic.title)
   }, [topic])
 
   if (!isValidResultTopicSlug(topicSlug) || !topic) {

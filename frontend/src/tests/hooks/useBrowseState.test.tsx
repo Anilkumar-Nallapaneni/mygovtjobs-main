@@ -275,11 +275,11 @@ describe('useBrowseState', () => {
     })
 
     act(() => {
-      result.current.navigateToOrg('bhabha-atomic-research-centre-barc')
+      result.current.navigateToOrg('madhya-pradesh-psc-mppsc')
     })
 
-    expect(currentPathname).toBe('/org/bhabha-atomic-research-centre-barc')
-    expect(result.current.orgSlug).toBe('bhabha-atomic-research-centre-barc')
+    expect(currentPathname).toBe('/org/madhya-pradesh-psc-mppsc')
+    expect(result.current.orgSlug).toBe('madhya-pradesh-psc-mppsc')
   })
 
   it('handleNavigate jobs opens /jobs with current sort', () => {

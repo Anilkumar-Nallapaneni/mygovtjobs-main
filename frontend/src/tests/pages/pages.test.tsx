@@ -3,7 +3,7 @@ import { afterEach, describe, expect, it, vi } from "vitest";
 import type { ReactElement } from "react";
 import { cleanup, render, screen } from "@testing-library/react";
 import { I18nextProvider } from "react-i18next";
-import { MemoryRouter } from "react-router-dom";
+import { MemoryRouter, Route, Routes } from "react-router-dom";
 import i18n from "@/i18n";
 import type { JobRecord } from "@/types/job";
 
@@ -136,14 +136,30 @@ describe("page smoke tests", () => {
 
   it("ResultsTopicPage renders unique syllabus hub content", async () => {
     const Page = (await import("@/pages/ResultsTopicPage")).default;
-    renderPage(<Page />, "/results/syllabus");
+    render(
+      <MemoryRouter initialEntries={["/results/syllabus"]}>
+        <I18nextProvider i18n={i18n}>
+          <Routes>
+            <Route path="/results/:topicSlug" element={<Page />} />
+          </Routes>
+        </I18nextProvider>
+      </MemoryRouter>
+    );
     expect(screen.getByRole("heading", { level: 1, name: /syllabus/i })).toBeTruthy();
     expect(document.querySelector(".home-page-main")).toBeNull();
   });
 
   it("ResultsTopicPage 404s unknown topic slugs", async () => {
     const Page = (await import("@/pages/ResultsTopicPage")).default;
-    renderPage(<Page />, "/results/not-a-real-topic");
+    render(
+      <MemoryRouter initialEntries={["/results/not-a-real-topic"]}>
+        <I18nextProvider i18n={i18n}>
+          <Routes>
+            <Route path="/results/:topicSlug" element={<Page />} />
+          </Routes>
+        </I18nextProvider>
+      </MemoryRouter>
+    );
     expect(screen.getByRole("heading", { level: 1, name: /not found/i })).toBeTruthy();
   });
 
