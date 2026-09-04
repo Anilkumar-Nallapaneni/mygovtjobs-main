@@ -69,4 +69,29 @@ describe("prerender hub islands", () => {
     assert.equal(rows.length, 1);
     assert.match(rows[0].org, /Uttar Pradesh/);
   });
+
+  it("matches event-only org hubs by slugified organisation name", () => {
+    const slugify = (value) =>
+      String(value || "")
+        .toLowerCase()
+        .replace(/[^a-z0-9]+/g, "-")
+        .replace(/^-+|-+$/g, "");
+    const slug = "kerala-psc";
+    const rows = flattenEventsMatching(
+      {
+        byType: {
+          result: [
+            { organization: "Kerala PSC", title: "LDC", official_url: "https://keralapsc.gov.in" },
+            { organization: "Haryana PSC", title: "HCS", official_url: "https://hpsc.gov.in" },
+          ],
+        },
+      },
+      (hay) => {
+        const deptSlug = slugify(hay);
+        return deptSlug === slug || deptSlug.includes(slug) || slug.includes(deptSlug);
+      }
+    );
+    assert.equal(rows.length, 1);
+    assert.equal(rows[0].org, "Kerala PSC");
+  });
 });

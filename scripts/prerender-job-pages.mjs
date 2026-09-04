@@ -117,6 +117,25 @@ function loadJobs() {
   return Array.isArray(payload.items) ? payload.items : [];
 }
 
+function loadArchiveJobs() {
+  const payload = loadJson(join(root, "frontend/public/data/jobs-archive.json"), { items: [] });
+  const items = Array.isArray(payload.items) ? payload.items : [];
+  return items
+    .filter((job) => job && (job.slug || job.id))
+    .map((job) => ({ ...job, status: "expired" }));
+}
+
+function mergeJobsForPrerender(liveJobs, archiveJobs) {
+  const seen = new Set(
+    liveJobs.map((job) => String(job.slug || job.id || "")).filter(Boolean)
+  );
+  const extras = archiveJobs.filter((job) => {
+    const slug = String(job.slug || job.id || "");
+    return slug && !seen.has(slug);
+  });
+  return [...liveJobs, ...extras];
+}
+
 function jobDescription(job) {
   const detail = job.detail && typeof job.detail === "object" ? job.detail : {};
   return jobSeoDescription({
@@ -702,17 +721,22 @@ function hubIslandForRoute(route, { jobs, events, archives, seoBodies, orgs }) {
   const orgMatch = /^\/org\/([^/]+)$/.exec(path);
   if (orgMatch) {
     const slug = orgMatch[1];
-    const matched = jobs.filter((job) => {
-      const deptSlug = String(job.dept || "")
+    const orgSlugOf = (value) =>
+      String(value || "")
         .toLowerCase()
         .replace(/[^a-z0-9]+/g, "-")
         .replace(/^-+|-+$/g, "");
-      return deptSlug === slug || deptSlug.includes(slug) || slug.includes(deptSlug);
-    });
+    const matchesOrg = (value) => {
+      const deptSlug = orgSlugOf(value);
+      return Boolean(deptSlug) && (deptSlug === slug || deptSlug.includes(slug) || slug.includes(deptSlug));
+    };
+    const matched = jobs.filter((job) => matchesOrg(job.dept));
+    const eventItems = flattenEventsMatching(events, (hay) => matchesOrg(hay));
     return buildSeoHubIsland({
       title: route.title,
       lede: route.description,
-      items: flattenJobItems(matched),
+      items: [...flattenJobItems(matched), ...eventItems].slice(0, 16),
+      empty: "No matching live notifications or official updates in the current snapshot.",
     });
   }
   return "";
@@ -756,7 +780,9 @@ function main() {
   const jobsDir = join(dist, "jobs");
   mkdirSync(jobsDir, { recursive: true });
 
-  const jobs = loadJobs().filter((j) => j.slug || j.id).slice(0, MAX_PAGES);
+  const liveJobs = loadJobs().filter((j) => j.slug || j.id).slice(0, MAX_PAGES);
+  const archiveJobs = loadArchiveJobs();
+  const jobs = mergeJobsForPrerender(liveJobs, archiveJobs).slice(0, MAX_PAGES);
   const events = loadJson(join(root, "frontend/public/data/recruitment-events.json"), { byType: {} });
   const archiveTopics = [
     "results",
@@ -798,7 +824,7 @@ function main() {
   };
   const orgsRaw = loadJson(join(root, "frontend/src/data/org-index.json"), []);
   const orgs = Array.isArray(orgsRaw) ? orgsRaw : [];
-  const hubCtx = { jobs, events, archives, seoBodies, orgs };
+  const hubCtx = { jobs: liveJobs, events, archives, seoBodies, orgs };
   let written = 0;
   let withLocality = 0;
   for (const job of jobs) {
@@ -827,7 +853,7 @@ function main() {
 
   for (const route of SPA_SHELL_ROUTES) {
     writeSpaRoute(spaHtml, route, {
-      latestJobs: jobs,
+      latestJobs: liveJobs,
       islandHtml: hubIslandForRoute(route, hubCtx),
     });
   }
