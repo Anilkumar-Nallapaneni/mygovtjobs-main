@@ -1,6 +1,11 @@
 {
+<<<<<<< HEAD
   "generatedAt": "2026-09-02T10:41:15.260Z",
   "count": 54,
+=======
+  "generatedAt": "2026-09-04T09:05:36.313Z",
+  "count": 45,
+>>>>>>> 4e61d62931e7a29c4d4fe0d051adef9ae42dac96
   "items": [
     {
       "id": "e95ddc7b082ccd13",
@@ -69,59 +74,6 @@
       "category": "state",
       "stateIds": [
         "kl"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "b0408e9076d75cad",
-      "title": "Answer Key-OMR Exams",
-      "link": "https://www.keralapsc.gov.in/index.php/answerkey_omrexams",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-kl",
-      "sourceName": "Kerala PSC",
-      "dept": "Kerala PSC",
-      "state": "Kerala",
-      "category": "state",
-      "stateIds": [
-        "kl"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "bfc1c395481cde09",
-      "title": "Answer key-Online Exam",
-      "link": "https://www.keralapsc.gov.in/index.php/answerkey_onlineexams",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-kl",
-      "sourceName": "Kerala PSC",
-      "dept": "Kerala PSC",
-      "state": "Kerala",
-      "category": "state",
-      "stateIds": [
-        "kl"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "709e8e56b7fa0ba2",
-      "title": "Final Answer Key - Assistant Professor Exam 2025 (06 Subjects - Hindi, English, Commerce, Political Science, Economics, Sociology), Dated 19/08/2026",
-      "link": "https://mppsc.mp.gov.in/uploads/files/Final_Answer_Key_Assistant_Professor_Exam_2025_06_Subjects_Dated_19_08_2026.pdf",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [
-        "https://mppsc.mp.gov.in/uploads/files/Final_Answer_Key_Assistant_Professor_Exam_2025_06_Subjects_Dated_19_08_2026.pdf"
-      ],
-      "sourceId": "psc-mp",
-      "sourceName": "Madhya Pradesh PSC (MPPSC)",
-      "dept": "Madhya Pradesh PSC (MPPSC)",
-      "state": "Madhya Pradesh",
-      "category": "state",
-      "stateIds": [
-        "mp"
       ],
       "fetchMethod": "html"
     },
@@ -357,6 +309,7 @@
       "fetchMethod": "html"
     },
     {
+<<<<<<< HEAD
       "id": "65b953b91c3e8ca2",
       "title": "FINAL ANSWER KEY",
       "link": "https://ctet.nic.in/previous-year-final-answer-key/",
@@ -370,6 +323,57 @@
       "category": "teaching",
       "stateIds": [
         "all"
+=======
+      "id": "709e8e56b7fa0ba2",
+      "title": "Final Answer Key - Assistant Professor Exam 2025 (06 Subjects - Hindi, English, Commerce, Political Science, Economics, Sociology), Dated 19/08/2026",
+      "link": "https://mppsc.mp.gov.in/uploads/files/Final_Answer_Key_Assistant_Professor_Exam_2025_06_Subjects_Dated_19_08_2026.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://mppsc.mp.gov.in/uploads/files/Final_Answer_Key_Assistant_Professor_Exam_2025_06_Subjects_Dated_19_08_2026.pdf"
+      ],
+      "sourceId": "psc-mp",
+      "sourceName": "Madhya Pradesh PSC (MPPSC)",
+      "dept": "Madhya Pradesh PSC (MPPSC)",
+      "state": "Madhya Pradesh",
+      "category": "state",
+      "stateIds": [
+        "mp"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "b0408e9076d75cad",
+      "title": "Answer Key-OMR Exams",
+      "link": "https://www.keralapsc.gov.in/index.php/answerkey_omrexams",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-kl",
+      "sourceName": "Kerala PSC",
+      "dept": "Kerala PSC",
+      "state": "Kerala",
+      "category": "state",
+      "stateIds": [
+        "kl"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "bfc1c395481cde09",
+      "title": "Answer key-Online Exam",
+      "link": "https://www.keralapsc.gov.in/index.php/answerkey_onlineexams",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-kl",
+      "sourceName": "Kerala PSC",
+      "dept": "Kerala PSC",
+      "state": "Kerala",
+      "category": "state",
+      "stateIds": [
+        "kl"
+>>>>>>> 4e61d62931e7a29c4d4fe0d051adef9ae42dac96
       ],
       "fetchMethod": "html"
     },
