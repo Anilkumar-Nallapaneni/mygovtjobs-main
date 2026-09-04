@@ -1,6 +1,21 @@
 {
-  "generatedAt": "2026-09-04T22:10:00.000Z",
-  "count": 0,
-  "items": [],
-  "note": "No approved expired jobs in the current catalog. The live snapshot is live-only (16 published rows, all last_date still in the future on the India calendar). Archive URLs will appear after daily export once gated rows expire."
+  "generatedAt": "2026-09-04T22:20:02.648Z",
+  "count": 1,
+  "items": [
+    {
+      "slug": "isro-careers-recruitment-to-the-post-of-technical-assistant-technician-b-draught-412bc5db",
+      "title": "Recruitment to the post of Technical Assistant, Technician 'B', Draughtsman 'B' and Fireman 'A' in LPSC",
+      "dept": "ISRO — Careers",
+      "last_date": "2026-09-04",
+      "updated_at": "2026-09-04T14:46:53.081146Z",
+      "published_at": "2026-08-15T00:00:00Z",
+      "status": "expired",
+      "published_to_site": true,
+      "document_type": "RECRUITMENT",
+      "verification_status": "VERIFIED",
+      "completeness_score": 80,
+      "publication_confidence": 100
+    }
+  ],
+  "note": null
 }
