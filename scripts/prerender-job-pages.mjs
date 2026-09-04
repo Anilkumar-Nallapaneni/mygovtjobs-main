@@ -13,8 +13,11 @@ import { STATIC_PAGES, NOT_FOUND_PAGE, SPA_SHELL_ROUTES } from "./lib/static-pag
 import {
   buildSeoHubIsland,
   flattenArchiveItems,
+  flattenEventsMatching,
   flattenJobItems,
+  flattenOrgItems,
   flattenRecruitmentEvents,
+  textMatchesBoard,
 } from "./lib/prerender-hub-islands.mjs";
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
@@ -590,8 +593,16 @@ function jobMatchesState(job, stateId, stateName) {
   return Boolean(stateName && state.includes(String(stateName).toLowerCase()));
 }
 
-function hubIslandForRoute(route, { jobs, events, archives, seoBodies }) {
+function hubIslandForRoute(route, { jobs, events, archives, seoBodies, orgs }) {
   const path = route.path;
+  if (path === "/organizations") {
+    return buildSeoHubIsland({
+      title: route.title,
+      lede: route.description,
+      items: flattenOrgItems(orgs),
+      empty: "No organisation hubs in the current snapshot.",
+    });
+  }
   if (path === "/sarkari-naukri" || path === "/government-jobs") {
     return buildSeoHubIsland({
       title: route.title,
@@ -645,22 +656,34 @@ function hubIslandForRoute(route, { jobs, events, archives, seoBodies }) {
     const id = stateMatch[1];
     const name = STATE_NAMES[id] || id;
     const matched = jobs.filter((job) => jobMatchesState(job, id, name));
+    const nameNeedle = String(name).toLowerCase();
+    const eventItems = flattenEventsMatching(events, (hay) => {
+      const t = hay.toLowerCase();
+      if (id === "up") return /uttar pradesh|\buppsc\b/.test(t) && !/uttarakhand/.test(t);
+      if (id === "uk") return /uttarakhand|\bukpsc\b/.test(t);
+      return t.includes(nameNeedle);
+    });
     return buildSeoHubIsland({
       title: route.title,
       lede: route.description,
       body: seoBodies.states[id] || "",
-      items: flattenJobItems(matched),
+      items: [...flattenJobItems(matched), ...eventItems].slice(0, 16),
     });
   }
   const boardMatch = /^\/(?:board|category)\/([^/]+)$/.exec(path);
   if (boardMatch) {
     const id = boardMatch[1];
-    const matched = jobs.filter((job) => String(job.category || "").toLowerCase() === id);
+    const matched = jobs.filter((job) => {
+      if (String(job.category || "").toLowerCase() === id) return true;
+      return textMatchesBoard(`${job.title || ""} ${job.dept || ""}`, id);
+    });
+    const eventItems = flattenEventsMatching(events, (hay) => textMatchesBoard(hay, id));
     return buildSeoHubIsland({
       title: route.title,
       lede: route.description,
       body: seoBodies.boards[id] || "",
-      items: flattenJobItems(matched),
+      items: [...flattenJobItems(matched), ...eventItems].slice(0, 16),
+      empty: "No matching live notifications or official updates in the current snapshot.",
     });
   }
   const examMatch = /^\/exam\/([^/]+)$/.exec(path);
@@ -773,7 +796,9 @@ function main() {
       state: "State PSC recruitments on this hub come from official state e-recruitment portals.",
     },
   };
-  const hubCtx = { jobs, events, archives, seoBodies };
+  const orgsRaw = loadJson(join(root, "frontend/src/data/org-index.json"), []);
+  const orgs = Array.isArray(orgsRaw) ? orgsRaw : [];
+  const hubCtx = { jobs, events, archives, seoBodies, orgs };
   let written = 0;
   let withLocality = 0;
   for (const job of jobs) {
@@ -881,27 +906,17 @@ function main() {
       description: `Live official ${slug.replace(/-/g, " ")} recruitment from verified .gov.in sources.`,
     });
   }
-  const orgIndexPath = join(feSrc, "data/org-index.json");
-  if (existsSync(orgIndexPath)) {
-    try {
-      const orgs = JSON.parse(readFileSync(orgIndexPath, "utf8"));
-      if (Array.isArray(orgs)) {
-        for (const row of orgs) {
-          const slug = String(row?.slug || "").trim();
-          if (!slug) continue;
-          const dept = String(row?.dept || slug).trim();
-          const orgRoute = {
-            path: `/org/${slug}`,
-            file: ["org", `${slug}.html`],
-            title: `${dept} Recruitment 2026`,
-            description: `Live ${dept} government job notifications from official sources.`,
-          };
-          writeSpaRoute(spaHtml, orgRoute, { islandHtml: hubIslandForRoute(orgRoute, hubCtx) });
-        }
-      }
-    } catch {
-      /* org index optional */
-    }
+  for (const row of orgs) {
+    const slug = String(row?.slug || "").trim();
+    if (!slug) continue;
+    const dept = String(row?.dept || slug).trim();
+    const orgRoute = {
+      path: `/org/${slug}`,
+      file: ["org", `${slug}.html`],
+      title: `${dept} Recruitment 2026`,
+      description: `Live ${dept} government job notifications from official sources.`,
+    };
+    writeSpaRoute(spaHtml, orgRoute, { islandHtml: hubIslandForRoute(orgRoute, hubCtx) });
   }
 
   const notFoundCanonical = `${siteUrl}/404`;

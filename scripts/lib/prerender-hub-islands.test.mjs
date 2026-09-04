@@ -3,8 +3,11 @@ import { describe, it } from "node:test";
 import {
   buildSeoHubIsland,
   flattenArchiveItems,
+  flattenEventsMatching,
   flattenJobItems,
+  flattenOrgItems,
   flattenRecruitmentEvents,
+  textMatchesBoard,
 } from "./prerender-hub-islands.mjs";
 
 describe("prerender hub islands", () => {
@@ -44,5 +47,26 @@ describe("prerender hub islands", () => {
   it("flattens archive and job items", () => {
     assert.equal(flattenArchiveItems({ items: [{ title: "Cutoff", link: "https://upsc.gov.in/x", dept: "UPSC" }] })[0].org, "UPSC");
     assert.equal(flattenJobItems([{ title: "ISRO", slug: "isro", dept: "ISRO", last_date: "2026-10-01" }])[0].href, "/jobs/isro");
+  });
+
+  it("flattens org hubs and does not treat HSSC as SSC", () => {
+    const orgs = flattenOrgItems([{ dept: "MPPSC", slug: "mppsc", count: 7 }]);
+    assert.equal(orgs[0].href, "/org/mppsc");
+    assert.equal(orgs[0].org, "7 live");
+    assert.equal(textMatchesBoard("Staff Selection Commission (SSC)", "ssc"), true);
+    assert.equal(textMatchesBoard("Haryana Staff Selection Commission (HSSC)", "ssc"), false);
+    const rows = flattenEventsMatching(
+      {
+        byType: {
+          result: [
+            { organization: "Uttar Pradesh PSC (UPPSC)", title: "PCS", official_url: "https://uppsc.up.nic.in" },
+            { organization: "Haryana PSC", title: "HCS", official_url: "https://hpsc.gov.in" },
+          ],
+        },
+      },
+      (hay) => /uttar pradesh|uppsc/.test(hay.toLowerCase())
+    );
+    assert.equal(rows.length, 1);
+    assert.match(rows[0].org, /Uttar Pradesh/);
   });
 });

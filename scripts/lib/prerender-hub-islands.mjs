@@ -53,6 +53,66 @@ export function flattenJobItems(jobs, limit = 16) {
   }));
 }
 
+export function flattenOrgItems(orgs, limit = 30) {
+  return (orgs || []).slice(0, limit).map((row) => ({
+    title: row.dept || row.slug || "Organisation",
+    org: Number(row.count) > 0 ? `${row.count} live` : Number(row.vacancies) > 0 ? `${row.vacancies} vacancies` : "",
+    date: "",
+    href: row.slug ? `/org/${encodeURIComponent(String(row.slug))}` : "",
+  }));
+}
+
+/** Conservative board/state needles so HSSC/UPSSSC do not count as SSC. */
+export function textMatchesBoard(text, boardId) {
+  const hay = String(text || "").toLowerCase();
+  switch (boardId) {
+    case "ssc":
+      return /\bssc\b/.test(hay) && !/\b(upsssc|hssc|bssc|jssc|ossc|gkssc)\b/.test(hay);
+    case "upsc":
+      return /\bupsc\b/.test(hay);
+    case "railways":
+      return /\b(railway|rrb|rrc)\b/.test(hay);
+    case "banking":
+      return /\b(ibps|sbi|rbi|bank)\b/.test(hay);
+    case "police":
+      return /\b(police|capf|crpf|bsf|cisf|itbp)\b/.test(hay);
+    case "teaching":
+      return /\b(ctet|kvs|nvs|teacher|university|iit|iiser)\b/.test(hay);
+    case "defence":
+      return /\b(defence|drdo|army|navy|air force|isro)\b/.test(hay);
+    case "psu":
+      return /\b(psu|ongc|ntpc|gail|sail|port)\b/.test(hay);
+    case "health":
+      return /\b(nhm|esic|aiims|health|medical)\b/.test(hay);
+    case "engineering":
+      return /\b(engineer|engineering)\b/.test(hay);
+    case "state":
+      return /\bpsc\b/.test(hay);
+    default:
+      return hay.includes(String(boardId || "").toLowerCase());
+  }
+}
+
+export function flattenEventsMatching(payload, predicate, limit = 16) {
+  const out = [];
+  for (const rows of Object.values(payload?.byType || {})) {
+    if (!Array.isArray(rows)) continue;
+    for (const rec of rows) {
+      const hay = `${rec.organization || ""} ${rec.title || ""}`;
+      if (!predicate(hay, rec)) continue;
+      const ev = Array.isArray(rec.events) ? rec.events[0] : null;
+      out.push({
+        title: ev?.title || rec.title || "Official update",
+        org: rec.organization || "",
+        date: ev?.event_date || "",
+        href: ev?.document_url || ev?.official_url || rec.official_url || "",
+      });
+      if (out.length >= limit) return out;
+    }
+  }
+  return out;
+}
+
 export function buildSeoHubIsland({ title, lede, body, items = [], empty = "" }) {
   const rows = items
     .map((item) => {
