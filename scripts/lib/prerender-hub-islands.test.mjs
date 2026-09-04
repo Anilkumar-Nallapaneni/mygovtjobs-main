@@ -87,7 +87,13 @@ describe("prerender hub islands", () => {
     assert.equal(rows[0].org, "Kerala PSC");
     assert.equal(matchesOrgSlug("Uttar Pradesh PSC (UPPSC)", "uttar-pradesh-psc-uppsc"), true);
     assert.equal(matchesOrgSlug("Uttar Pradesh PSC (UPPSC)", "uttar-pradesh-psc"), true);
+    assert.equal(matchesOrgSlug("UPPSC", "uttar-pradesh-psc-uppsc"), true);
+    assert.equal(matchesOrgSlug("HSSC", "haryana-staff-selection-commission-hssc"), true);
     assert.equal(matchesOrgSlug("Kerala PSC", "psc"), false);
     assert.equal(matchesOrgSlug("Haryana PSC", "kerala-psc"), false);
+    assert.equal(
+      matchesOrgSlug("Railway Recruitment Board (RRB)", "railway-recruitment-board-rrb-patna"),
+      false
+    );
   });
 });
