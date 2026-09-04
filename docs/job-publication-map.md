@@ -82,6 +82,10 @@ they request still goes through `JobPersistService.export_live_jobs_json`.
 | `scripts/build-live-jobs-bootstrap.mjs` | bootstrap projection | first-paint snapshot |
 | `scripts/verify-live-jobs-snapshot.mjs` | release gate | rejects unapproved, invalid, duplicate, HTML, or expired live records |
 | `scripts/clean-live-jobs-json.py` | repair utility | revalidates an existing snapshot; not a source of new jobs |
+| `scripts/populate-recruitment-events-from-feeds.py` | maps official feed rows → `recruitments` / `recruitment_events` | run in daily sync after `fetch:official:feeds` |
+| `scripts/export-recruitment-events.py` | static hub snapshot | `recruitment-events.json` (chained from `export:live-jobs`) |
+| `scripts/export-archive-jobs.py` | approved expired jobs | `jobs-archive.json` for `jobs-archive.xml` (empty until gated rows expire) |
+| `scripts/build-org-index.mjs` | live jobs + event orgs | `org-index.json` (public + bundled src); invoked by `build:sitemap` |
 
 Primary export callers are `IngestAgent`, `PdfReaderAgent`, `JobDetailAgent`,
 `run-daily-8am-sync.py`, `export-live-jobs-now.py`, and the operator repair
@@ -103,7 +107,7 @@ Frontend filtering is defense in depth. It is not the publication boundary.
 
 | File | Function | Output |
 | --- | --- | --- |
-| `scripts/build-sitemap.mjs` | reads approved Supabase rows or verified static fallback | sitemap indexes plus active, archive, state, qualification, organization, result, admit-card, and static-page sitemaps |
+| `scripts/build-sitemap.mjs` | reads approved Supabase rows or verified static fallback | sitemap indexes plus active, archive, state, qualification, organization, result, admit-card, and static-page sitemaps (`/sarkari-naukri` on static-pages) |
 | `scripts/prerender-job-pages.mjs` | builds job HTML | `JobPosting` only for approved, active recruitment rows |
 | `frontend/src/utils/jobSeo.ts` | client-side structured data | mirrors active recruitment eligibility |
 

@@ -235,6 +235,12 @@ async def main() -> int:
         feed_code = run_npm("fetch:official:feeds")
         if feed_code != 0:
             print(f"warn: fetch:official:feeds exited {feed_code}; continuing", flush=True)
+        populate_code = run_npm("data:populate-recruitment-events:apply")
+        if populate_code != 0:
+            print(
+                f"warn: data:populate-recruitment-events:apply exited {populate_code}; continuing",
+                flush=True,
+            )
         archive_code = run_npm("build:official-archives")
         if archive_code != 0:
             print(f"warn: build:official-archives exited {archive_code}; continuing", flush=True)

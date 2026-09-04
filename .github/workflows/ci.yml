@@ -99,6 +99,8 @@ jobs:
           cache: npm
           cache-dependency-path: package-lock.json
       - run: npm ci
+      - name: Public data JSON validity and merge markers
+        run: npm run check:public-data
       - name: Public snapshot publication invariants
         env:
           MIN_PUBLIC_CATALOG_ROWS: "10"

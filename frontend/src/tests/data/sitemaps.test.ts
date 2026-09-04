@@ -39,11 +39,39 @@ describe("generated sitemaps", () => {
   });
 
   it("keeps the active-job sitemap aligned with the approved live snapshot", () => {
+    const today = new Intl.DateTimeFormat("en-CA", {
+      timeZone: "Asia/Kolkata",
+      year: "numeric",
+      month: "2-digit",
+      day: "2-digit",
+    }).format(new Date());
     const payload = JSON.parse(readPublic("data/live-jobs.json")) as {
-      items?: Array<{ slug?: string }>;
+      items?: Array<{
+        slug?: string;
+        status?: string;
+        published_to_site?: boolean;
+        document_type?: string;
+        verification_status?: string;
+        completeness_score?: number;
+        publication_confidence?: number;
+        last_date?: string;
+      }>;
     };
     const expected = new Set(
       (payload.items ?? [])
+        .filter((job) => {
+          const last = String(job.last_date || "").slice(0, 10);
+          return (
+            String(job.status || "").toLowerCase() === "live" &&
+            job.published_to_site === true &&
+            String(job.document_type || "").toUpperCase() === "RECRUITMENT" &&
+            ["VERIFIED", "PARTIALLY_VERIFIED"].includes(String(job.verification_status || "").toUpperCase()) &&
+            Number(job.completeness_score) >= 70 &&
+            Number(job.publication_confidence) >= 90 &&
+            /^\d{4}-\d{2}-\d{2}$/.test(last) &&
+            last >= today
+          );
+        })
         .map((job) => job.slug)
         .filter((slug): slug is string => Boolean(slug))
         .map((slug) => `https://www.livegovtjobs.com/jobs/${encodeURIComponent(slug)}`)
@@ -66,5 +94,13 @@ describe("generated sitemaps", () => {
     expect(readPublic("sitemaps/static-pages.xml")).not.toMatch(
       /\/(?:state|qualification|org|results)\//
     );
+    expect(readPublic("sitemaps/static-pages.xml")).toContain("/sarkari-naukri");
+  });
+
+  it("lists more than one organisation hub", () => {
+    const orgs = locations(readPublic("sitemaps/organizations.xml")).filter((loc) =>
+      loc.includes("/org/")
+    );
+    expect(orgs.length).toBeGreaterThan(1);
   });
 });
