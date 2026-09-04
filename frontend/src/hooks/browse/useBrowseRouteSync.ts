@@ -2,7 +2,6 @@ import { useCallback, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { getProfessionBySlug, applyProfessionToBrowseState, professionDefaultSort } from '@/data/professions'
 import { getQualificationBySlug } from '@/data/qualifications'
-import { isValidResultTopicSlug } from '@/data/resultTopics'
 import type { HeroStatFilterKey, HomeSortKey } from '@/utils/homePageFilters'
 import {
   applyQualificationToBrowseState,
@@ -12,7 +11,6 @@ import {
   parseBrowsePath,
   parseBrowseQuery,
   parseResultsHubQuery,
-  RESULTS_TOPICS_INDEX_PATH,
   shouldRedirectJobsToHome,
 } from '@/utils/browseRoutes'
 import { scrollToSection } from '@/utils/scrollToSection'
@@ -70,13 +68,6 @@ export function useBrowseRouteSync(core: BrowseStateCore) {
 
   useEffect(() => {
     if (isJobDetailRoute || isLatestNotificationsRoute) return
-    if (/^\/results\/[^/]+$/i.test(pathname)) {
-      const slug = decodeURIComponent(pathname.replace(/^\/results\//, '')).toLowerCase()
-      if (slug !== 'admit-card' && slug !== 'topics' && !isValidResultTopicSlug(slug)) {
-        navigate(RESULTS_TOPICS_INDEX_PATH, { replace: true })
-        return
-      }
-    }
     if (!isBrowseRoute) return
 
     if (isPageReload() && shouldRedirectJobsToHome(pathname, location.search)) {

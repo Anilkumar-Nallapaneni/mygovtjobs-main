@@ -53,9 +53,11 @@ const STATIC_PATHS = [
   { loc: "/qualifications", changefreq: "weekly", priority: "0.8" },
   { loc: "/professions", changefreq: "weekly", priority: "0.8" },
   { loc: "/organizations", changefreq: "weekly", priority: "0.8" },
+  { loc: "/sarkari-naukri", changefreq: "daily", priority: "0.9" },
   { loc: "/results", changefreq: "daily", priority: "0.8" },
   { loc: "/results/topics", changefreq: "weekly", priority: "0.75" },
   { loc: "/results/admit-card", changefreq: "daily", priority: "0.8" },
+  { loc: "/results/answer-key", changefreq: "daily", priority: "0.8" },
   { loc: "/alerts", changefreq: "weekly", priority: "0.7" },
   { loc: "/about", changefreq: "monthly", priority: "0.5" },
   { loc: "/contact", changefreq: "monthly", priority: "0.5" },
@@ -87,11 +89,28 @@ function loadEnv(path) {
   return out;
 }
 
-function loadJobsFromJson() {
-  const livePath = join(root, "frontend/public/data/live-jobs.json");
-  if (!existsSync(livePath)) return [];
-  const payload = JSON.parse(readFileSync(livePath, "utf8"));
+function loadJsonItems(filePath) {
+  if (!existsSync(filePath)) return [];
+  const payload = JSON.parse(readFileSync(filePath, "utf8"));
   return Array.isArray(payload.items) ? payload.items : [];
+}
+
+function loadJobsFromJson() {
+  return loadJsonItems(join(root, "frontend/public/data/live-jobs.json"));
+}
+
+function loadArchiveJobsFromJson() {
+  return loadJsonItems(join(root, "frontend/public/data/jobs-archive.json"));
+}
+
+function loadGeneratedAt(filePath) {
+  if (!existsSync(filePath)) return null;
+  const payload = JSON.parse(readFileSync(filePath, "utf8"));
+  const raw = payload.generatedAt || payload.generated_at;
+  if (!raw) return null;
+  const d = new Date(raw);
+  if (Number.isNaN(d.getTime())) return null;
+  return d.toISOString().slice(0, 10);
 }
 
 function indiaDateIso() {
@@ -205,8 +224,20 @@ async function main() {
     await import("./build-org-index.mjs");
   }
 
+  const eventsLastmod = loadGeneratedAt(join(root, "frontend/public/data/recruitment-events.json"));
+  const archivesLastmod = loadGeneratedAt(join(root, "frontend/public/data/official-archives/results.json"));
+  const hubLastmod = eventsLastmod || archivesLastmod;
+
   const supabaseJobs = await loadJobsFromSupabase();
-  const jobs = supabaseJobs ?? loadJobsFromJson();
+  const primaryJobs = supabaseJobs ?? loadJobsFromJson();
+  const seenSlugs = new Set(
+    primaryJobs.map((job) => String(job.slug || job.id || "")).filter(Boolean)
+  );
+  const archiveExtras = loadArchiveJobsFromJson().filter((job) => {
+    const slug = String(job.slug || job.id || "");
+    return slug && !seenSlugs.has(slug);
+  });
+  const jobs = [...primaryJobs, ...archiveExtras];
 
   const staticPageEntries = [];
   const stateEntries = [];
@@ -218,12 +249,16 @@ async function main() {
   const archiveJobEntries = [];
 
   for (const page of STATIC_PATHS) {
-    const entry = urlEntry(`${siteUrl}${page.loc}`, page.changefreq, page.priority);
+    const lastmod =
+      page.loc.startsWith("/results") || page.loc === "/sarkari-naukri" ? hubLastmod : null;
+    const entry = urlEntry(`${siteUrl}${page.loc}`, page.changefreq, page.priority, lastmod);
     if (page.loc === "/states") stateEntries.push(entry);
     else if (page.loc === "/qualifications") qualificationEntries.push(entry);
     else if (page.loc === "/organizations") organizationEntries.push(entry);
     else if (page.loc === "/results/admit-card") admitCardEntries.push(entry);
-    else if (page.loc === "/results" || page.loc === "/results/topics") resultEntries.push(entry);
+    else if (page.loc === "/results" || page.loc === "/results/topics" || page.loc === "/results/answer-key") {
+      resultEntries.push(entry);
+    }
     else staticPageEntries.push(entry);
   }
 
@@ -244,8 +279,8 @@ async function main() {
   }
 
   for (const slug of RESULT_TOPIC_SLUGS) {
-    if (slug === "admit-card") continue;
-    resultEntries.push(urlEntry(`${siteUrl}/results/${slug}`, "weekly", "0.75"));
+    if (slug === "admit-card" || slug === "answer-key") continue;
+    resultEntries.push(urlEntry(`${siteUrl}/results/${slug}`, "weekly", "0.75", hubLastmod));
   }
 
   for (const slug of loadExamSlugs()) {
@@ -314,6 +349,13 @@ async function main() {
   writeFileSync(indexPath, indexXml, "utf8");
   writeFileSync(namedIndexPath, indexXml, "utf8");
 
+  if (archiveJobEntries.length === 0) {
+    const archiveMeta = existsSync(join(root, "frontend/public/data/jobs-archive.json"))
+      ? JSON.parse(readFileSync(join(root, "frontend/public/data/jobs-archive.json"), "utf8"))
+      : null;
+    const reason = archiveMeta?.note || "no approved expired jobs in snapshot or jobs-archive.json";
+    console.log(`jobs-archive.xml is empty — ${reason}`);
+  }
   console.log(
     `Wrote ${indexPath} — ${groups.size} child sitemaps, ${activeJobEntries.length} active jobs, ${archiveJobEntries.length} archive jobs`
   );

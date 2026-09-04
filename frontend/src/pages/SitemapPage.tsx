@@ -23,6 +23,7 @@ import {
   PROFESSIONS_INDEX_PATH,
   QUALIFICATIONS_INDEX_PATH,
   RESULTS_TOPICS_INDEX_PATH,
+  SARKARI_NAUKRI_PATH,
   STATES_INDEX_PATH,
 } from '@/utils/browseRoutes'
 import { PROFESSIONS, professionRoutePath } from '@/data/professions'
@@ -52,6 +53,7 @@ export default function SitemapPage({ onFooterLink }: SitemapPageProps) {
     { href: '/', label: t('nav.home') },
     { href: EXPLORE_HUB_PATH, label: t('nav.explore', { defaultValue: 'Explore' }) },
     { href: '/jobs', label: t('nav.jobs') },
+    { href: SARKARI_NAUKRI_PATH, label: 'Sarkari naukri' },
     { href: LATEST_NOTIFICATIONS_PATH, label: t('nav.latest') },
     { href: ALL_INDIA_JOBS_PATH, label: t('nav.allIndia', { defaultValue: 'All India jobs' }) },
     { href: STATES_INDEX_PATH, label: t('states.indexTitle') },

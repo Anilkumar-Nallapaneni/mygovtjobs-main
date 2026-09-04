@@ -18,7 +18,9 @@ import {
   ORGANIZATIONS_INDEX_PATH,
   QUALIFICATIONS_INDEX_PATH,
   PROFESSIONS_INDEX_PATH,
+  GOVERNMENT_JOBS_PATH,
   RESULTS_TOPICS_INDEX_PATH,
+  SARKARI_NAUKRI_PATH,
   STATES_INDEX_PATH,
 } from "@/utils/browseRoutes";
 import type { JobRecord } from "@/types/job";
@@ -69,6 +71,8 @@ const AdmissionHubPage = lazy(() => import("@/pages/AdmissionHubPage"));
 const ScholarshipsHubPage = lazy(() => import("@/pages/ScholarshipsHubPage"));
 const YojanaHubPage = lazy(() => import("@/pages/YojanaHubPage"));
 const ResultsHubPage = lazy(() => import("@/pages/ResultsHubPage"));
+const ResultsTopicPage = lazy(() => import("@/pages/ResultsTopicPage"));
+const SarkariNaukriPage = lazy(() => import("@/pages/SarkariNaukriPage"));
 const DesignationLandingPage = lazy(() => import("@/pages/DesignationLandingPage"));
 const DesignationsIndexPage = lazy(() => import("@/pages/DesignationsIndexPage"));
 const AdminDashboardPage = lazy(() => import("@/pages/AdminDashboardPage"));
@@ -111,6 +115,32 @@ export default function AppRoutes({
       <Route path="/" element={homePageElement} />
       <Route path="/jobs" element={homePageElement} />
       <Route path={ALL_INDIA_JOBS_PATH} element={homePageElement} />
+      <Route
+        path={SARKARI_NAUKRI_PATH}
+        element={
+          <LazyRoute>
+            <SarkariNaukriPage
+              jobs={jobs}
+              jobsLoading={jobsLoading}
+              onJobClick={onJobClick}
+              onFooterLink={onFooterLink}
+            />
+          </LazyRoute>
+        }
+      />
+      <Route
+        path={GOVERNMENT_JOBS_PATH}
+        element={
+          <LazyRoute>
+            <SarkariNaukriPage
+              jobs={jobs}
+              jobsLoading={jobsLoading}
+              onJobClick={onJobClick}
+              onFooterLink={onFooterLink}
+            />
+          </LazyRoute>
+        }
+      />
       <Route
         path="/qualification/:slug"
         element={
@@ -301,7 +331,14 @@ export default function AppRoutes({
           </LazyRoute>
         }
       />
-      <Route path="/results/:topicSlug" element={homePageElement} />
+      <Route
+        path="/results/:topicSlug"
+        element={
+          <LazyRoute>
+            <ResultsTopicPage onFooterLink={onFooterLink} />
+          </LazyRoute>
+        }
+      />
       <Route
         path="/results"
         element={

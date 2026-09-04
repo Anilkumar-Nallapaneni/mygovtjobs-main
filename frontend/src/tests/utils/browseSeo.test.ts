@@ -35,6 +35,19 @@ describe("browseSeoForPath", () => {
     expect(meta.title).toContain("Uttar Pradesh");
   });
 
+  it("builds sarkari-naukri title and canonical path", () => {
+    const meta = browseSeoForPath("/sarkari-naukri");
+    expect(meta.path).toBe("/sarkari-naukri");
+    expect(meta.title).toMatch(/Sarkari Naukri/i);
+    expect(browseSeoForPath("/government-jobs").path).toBe("/sarkari-naukri");
+  });
+
+  it("builds results topic titles without falling back to the homepage", () => {
+    const meta = browseSeoForPath("/results/syllabus");
+    expect(meta.title).toMatch(/Syllabus/i);
+    expect(meta.path).toBe("/results/syllabus");
+  });
+
   it("builds results hub title with state and board filters", () => {
     const meta = browseSeoForPath("/results/admit-card", "?state=ka&cat=ssc");
     expect(meta.title).toContain("Admit Cards");

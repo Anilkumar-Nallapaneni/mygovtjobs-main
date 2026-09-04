@@ -165,6 +165,7 @@ export type LiveJobsSnapshot = {
 export const LIVE_JOBS_BOOTSTRAP_URL = '/data/live-jobs-bootstrap.json'
 export const LIVE_JOBS_LIST_URL = '/data/live-jobs-list.json'
 export const LIVE_JOBS_FULL_URL = '/data/live-jobs.json'
+export const JOBS_ARCHIVE_URL = '/data/jobs-archive.json'
 
 let snapshotPrefetch: Promise<LiveJobsSnapshot> | null = null
 let fullSnapshotPromise: Promise<LiveJobsSnapshot> | null = null
@@ -173,6 +174,8 @@ let fullSnapshotPromise: Promise<LiveJobsSnapshot> | null = null
 export function invalidateLiveJobsSnapshotPrefetch(): void {
   snapshotPrefetch = null
   fullSnapshotPromise = null
+  staticFullCatalogPromise = null
+  staticArchiveCatalogPromise = null
   if (typeof window !== 'undefined') {
     delete window.__LIVE_JOBS_PREFETCH__
   }
@@ -303,30 +306,45 @@ export type AlertSubscribePayload = {
 }
 
 let staticFullCatalogPromise: Promise<ApiJob[] | null> | null = null
+let staticArchiveCatalogPromise: Promise<ApiJob[] | null> | null = null
+
+async function loadJsonJobItems(url: string): Promise<ApiJob[] | null> {
+  try {
+    const res = await fetchWithTimeout(dataJsonUrl(url), {
+      cache: 'default',
+      timeoutMs: LIVE_JOBS_SNAPSHOT_TIMEOUT_MS,
+    })
+    if (!res.ok) return null
+    const json = (await res.json()) as { items?: ApiJob[] }
+    return Array.isArray(json.items) ? json.items : null
+  } catch {
+    return null
+  }
+}
 
 async function loadStaticFullCatalog(): Promise<ApiJob[] | null> {
   if (!staticFullCatalogPromise) {
-    staticFullCatalogPromise = (async () => {
-      try {
-        const res = await fetchWithTimeout(dataJsonUrl(LIVE_JOBS_FULL_URL), {
-          cache: 'default',
-          timeoutMs: LIVE_JOBS_SNAPSHOT_TIMEOUT_MS,
-        })
-        if (!res.ok) return null
-        const json = (await res.json()) as { items?: ApiJob[] }
-        return Array.isArray(json.items) ? json.items : null
-      } catch {
-        return null
-      }
-    })()
+    staticFullCatalogPromise = loadJsonJobItems(LIVE_JOBS_FULL_URL)
   }
   return staticFullCatalogPromise
 }
 
-async function fetchJobFromStaticCatalog(slug: string): Promise<ApiJob | null> {
-  const items = await loadStaticFullCatalog()
+async function loadStaticArchiveCatalog(): Promise<ApiJob[] | null> {
+  if (!staticArchiveCatalogPromise) {
+    staticArchiveCatalogPromise = loadJsonJobItems(JOBS_ARCHIVE_URL)
+  }
+  return staticArchiveCatalogPromise
+}
+
+function findJobBySlug(items: ApiJob[] | null | undefined, slug: string): ApiJob | null {
   if (!items?.length) return null
   return items.find((row) => row.slug === slug || row.id === slug) ?? null
+}
+
+async function fetchJobFromStaticCatalog(slug: string): Promise<ApiJob | null> {
+  const live = findJobBySlug(await loadStaticFullCatalog(), slug)
+  if (live) return live
+  return findJobBySlug(await loadStaticArchiveCatalog(), slug)
 }
 
 async function fetchJobDetailBundle(slug: string): Promise<ApiJob | null> {

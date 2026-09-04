@@ -46,6 +46,20 @@ async def main() -> int:
     )
     if events.returncode != 0:
         print("warn: recruitment-events export failed", flush=True)
+    archive = subprocess.run(
+        [sys.executable, str(ROOT / "scripts" / "export-archive-jobs.py")],
+        cwd=str(ROOT),
+        check=False,
+    )
+    if archive.returncode != 0:
+        print("warn: archive-jobs export failed", flush=True)
+    shell = subprocess.run(
+        ["node", str(ROOT / "scripts" / "sync-home-shell-stats.mjs")],
+        cwd=str(ROOT),
+        check=False,
+    )
+    if shell.returncode != 0:
+        print("warn: home-shell stats sync failed", flush=True)
     return 0
 
 

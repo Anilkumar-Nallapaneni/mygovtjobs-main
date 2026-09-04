@@ -257,6 +257,9 @@ API docs: http://localhost:8000/docs
 |---------|-------------|
 | `npm run fetch:official:feeds` | Fetch RSS + portal notices |
 | `npm run fetch:official:feeds -- --rss-only` | RSS only (faster) |
+| `npm run data:populate-recruitment-events:apply` | Map feeds → recruitment events (daily, after feeds) |
+| `npm run export:archive-jobs` | Export approved expired jobs for `jobs-archive.xml` |
+| `npm run check:public-data` | JSON validity + no merge markers in `frontend/public/data` |
 | `npm run build:official-archives` | Build archive pages after fetch |
 
 ---

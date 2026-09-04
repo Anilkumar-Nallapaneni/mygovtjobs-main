@@ -19,6 +19,8 @@ import { PROFESSION_SLUGS } from "@/data/professions";
 describe("browseRoutes", () => {
   it("parses hub URLs", () => {
     expect(parseBrowsePath("/jobs").view).toBe("jobs");
+    expect(parseBrowsePath("/sarkari-naukri").view).toBe("jobs");
+    expect(parseBrowsePath("/government-jobs").view).toBe("jobs");
     expect(parseBrowsePath("/state/up").stateId).toBe("up");
     expect(parseBrowsePath("/state/ar").stateId).toBe("ar");
     expect(parseBrowsePath("/state/tr").stateId).toBe("tr");

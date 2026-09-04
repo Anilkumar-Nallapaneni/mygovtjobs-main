@@ -19,7 +19,9 @@ import {
   ORGANIZATIONS_INDEX_PATH,
   QUALIFICATIONS_INDEX_PATH,
   PROFESSIONS_INDEX_PATH,
+  GOVERNMENT_JOBS_PATH,
   RESULTS_TOPICS_INDEX_PATH,
+  SARKARI_NAUKRI_PATH,
   STATES_INDEX_PATH,
   parseBrowsePath,
   parseLatestNotifQuery,
@@ -265,6 +267,15 @@ export function browseSeoForPath(pathname: string, _search = ""): BrowseSeoMeta 
       path,
       title: `All India Government Jobs 2026 | ${SITE_NAME}`,
       description: "Central government and nationwide recruitment notifications open to candidates across all states.",
+    };
+  }
+
+  if (path === SARKARI_NAUKRI_PATH || path === GOVERNMENT_JOBS_PATH) {
+    return {
+      path: SARKARI_NAUKRI_PATH,
+      title: `Sarkari Naukri 2026 — Live Government Jobs | ${SITE_NAME}`,
+      description:
+        "Official sarkari naukri notifications from verified .gov.in sources — UPSC, SSC, railways, banking, state PSC, and PSU vacancies with apply links.",
     };
   }
 
