@@ -16,6 +16,7 @@ from app.services.publish_gate import (
     calculate_job_status,
     can_publish_job,
     india_today,
+    is_corrupt_url,
     resolve_persist_status,
     validate_job_for_publication,
 )
@@ -374,6 +375,24 @@ def test_is_real_pdf_and_dates():
     ok, reasons = enrichment_meets_quality(summary="short", sections=[], fields={})
     assert not ok
     assert reasons
+
+
+def test_corrupt_apply_urls_rejected():
+    today = date(2026, 7, 24)
+    for apply_url in (
+        "https://mppsc.mp.gov.ln",
+        "https://ssc.gov.con/apply",
+        "https://ssc.gov.in/path^foo",
+    ):
+        ok, errors = can_publish_job(
+            {**_publishable_job(today, today + timedelta(days=10)), "apply_url": apply_url},
+            today=today,
+        )
+        assert not ok
+        assert any("Apply URL" in e for e in errors)
+    assert is_corrupt_url("https://mppsc.mp.gov.ln")
+    assert is_corrupt_url("https://ssc.gov.in/advt^2026")
+    assert not is_corrupt_url("https://upsc.gov.in/apply")
 
 
 def test_completeness_scoring():

@@ -170,6 +170,8 @@ describe("buildJobPostingJsonLd", () => {
     expect(jsonLd?.validThrough).toBe("2099-12-31T23:59:59+05:30");
     expect(jsonLd?.datePosted).toBe("2026-06-01");
     expect(jsonLd?.totalJobOpenings).toBe(7500);
+    expect(String(jsonLd?.description)).toMatch(/Official SSC CGL/i);
+    expect(String(jsonLd?.description)).not.toMatch(/Page 1 of/i);
 
     const location = jsonLd?.jobLocation as {
       address: { addressLocality: string; addressRegion: string; addressCountry: string };
@@ -303,6 +305,20 @@ describe("buildJobPostingJsonLd", () => {
     const address = (jsonLd?.jobLocation as { address: Record<string, string> }).address;
     expect(address.streetAddress).toBe("CGO Complex, Lodhi Road");
     expect(address.postalCode).toBe("110003");
+  });
+
+  it("scrubs PDF OCR boilerplate from JobPosting description", () => {
+    const jsonLd = buildJobPostingJsonLd({
+      id: "ocr-1",
+      slug: "ocr-job",
+      title: "Clerk Recruitment",
+      dept: "High Court",
+      qual: "Graduate",
+      published_at: "2026-01-01",
+      detail: { summary: "Page 1 of 10 scanned by CamScanner" },
+    });
+    expect(String(jsonLd?.description)).toBe("Clerk Recruitment — High Court — Graduate");
+    expect(String(jsonLd?.description)).not.toMatch(/Page 1 of/i);
   });
 
   it("omits JobPosting when publication approval or the active deadline is missing", () => {

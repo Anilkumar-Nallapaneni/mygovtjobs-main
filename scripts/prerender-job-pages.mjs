@@ -1,14 +1,15 @@
 #!/usr/bin/env node
 /**
- * Post-build: SEO HTML for /jobs/:slug (JSON-LD + meta inside the Vite SPA shell).
- * Writes frontend/dist/jobs/{slug}.html — served at /jobs/{slug} when cleanUrls is on.
- * Also writes jobs/index.html plus SPA shells for /results and other deep links
- * so Vercel cleanUrls does not 404 those paths.
- * Missing slugs fall through to SPA rewrite (fetch-by-slug still works).
+ * Post-build: SEO HTML for /jobs/:slug plus static/legal pages and 404.html.
+ * Job pages inject a visible #seo-job island (H1 + facts) for crawlers / no-JS.
+ * Legal routes get unique title/canonical/body — never homepage clones.
+ * Unknown paths are left to Vercel 404.html (no SPA catch-all rewrite).
  */
 import { readFileSync, writeFileSync, existsSync, mkdirSync } from "fs";
 import { join, dirname } from "path";
 import { fileURLToPath } from "url";
+import { jobSeoDescription } from "../shared/scrub-seo-text.mjs";
+import { STATIC_PAGES, NOT_FOUND_PAGE, SPA_SHELL_ROUTES } from "./lib/static-page-content.mjs";
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
 const dist = join(root, "frontend/dist");
@@ -109,10 +110,148 @@ function loadJobs() {
 
 function jobDescription(job) {
   const detail = job.detail && typeof job.detail === "object" ? job.detail : {};
-  const summary = String(detail.summary || job.about || "").replace(/\s+/g, " ").trim();
-  if (summary.length > 155) return `${summary.slice(0, 152)}…`;
-  if (summary) return summary;
-  return [job.title, job.dept, job.qualification].filter(Boolean).join(" — ");
+  return jobSeoDescription({
+    summary: detail.summary,
+    about: job.about,
+    title: job.title,
+    dept: job.dept,
+    qualification: job.qualification || job.qual,
+  });
+}
+
+function restoreBlockingCss(html) {
+  let next = String(html);
+  next = next.replace(
+    /<link([^>]*rel="stylesheet"[^>]*)\s+media="print"\s+onload="this.media='all'"\s*\/>/gi,
+    "<link$1 />"
+  );
+  next = next.replace(/\s*<noscript><link rel="stylesheet" href="[^"]+" \/><\/noscript>/gi, "");
+  return next;
+}
+
+function stripLcpShell(html) {
+  return String(html).replace(/<div id="lcp-shell"[\s\S]*?<\/div>\s*(?=<div id="root")/i, "");
+}
+
+function applyRouteHead(html, { title, description, canonical, noindex = false, ogType = "website" }) {
+  const safeTitle = escapeHtml(title);
+  const safeDesc = escapeHtml(description);
+  let next = html;
+  next = next.replace(/<title>[^<]*<\/title>/i, `<title>${safeTitle}</title>`);
+  next = replaceMeta(next, "description", safeDesc, "name");
+  if (/<link rel="canonical" href="[^"]*"\s*\/?>/i.test(next)) {
+    next = next.replace(/<link rel="canonical" href="[^"]*"\s*\/?>/i, `<link rel="canonical" href="${canonical}" />`);
+  } else {
+    next = next.replace("</head>", `  <link rel="canonical" href="${canonical}" />\n  </head>`);
+  }
+  next = replaceMeta(next, "og:type", ogType, "property");
+  next = replaceMeta(next, "og:title", safeTitle, "property");
+  next = replaceMeta(next, "og:description", safeDesc, "property");
+  next = replaceMeta(next, "og:url", canonical, "property");
+  next = replaceMeta(next, "twitter:title", safeTitle, "name");
+  next = replaceMeta(next, "twitter:description", safeDesc, "name");
+  if (noindex) {
+    next = replaceMeta(next, "robots", "noindex, nofollow", "name");
+  }
+  return next;
+}
+
+function injectIsland(html, islandHtml) {
+  if (html.includes('id="root"')) {
+    return html.replace(/<div id="root"><\/div>/i, `${islandHtml}\n    <div id="root"></div>`);
+  }
+  return html.replace("<body>", `<body>\n    ${islandHtml}`);
+}
+
+function formatDisplayDate(value) {
+  const raw = String(value ?? "").trim();
+  const m = /^(\d{4})-(\d{2})-(\d{2})/.exec(raw);
+  if (!m) return raw && raw !== "—" ? escapeHtml(raw) : "";
+  const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+  return `${Number(m[3])} ${months[Number(m[2]) - 1]} ${m[1]}`;
+}
+
+function buildSeoJobIsland(job) {
+  const title = escapeHtml(job.title || "Government recruitment");
+  const dept = escapeHtml(job.dept || "");
+  const vacancies = Number(job.vacancies);
+  const vacLabel =
+    Number.isFinite(vacancies) && vacancies > 0 ? `${vacancies.toLocaleString("en-IN")} vacancies` : "";
+  const last = formatDisplayDate(job.last_date || job.lastDate);
+  const applyUrl = String(job.apply_url || job.applyUrl || "").trim();
+  const applyHref =
+    applyUrl && applyUrl !== "#" && /^https?:\/\//i.test(applyUrl) ? escapeHtml(applyUrl) : "";
+  const summary = escapeHtml(
+    jobSeoDescription({
+      summary: job.detail && typeof job.detail === "object" ? job.detail.summary : "",
+      about: job.about,
+      title: job.title,
+      dept: job.dept,
+      qualification: job.qualification || job.qual,
+      maxLen: 320,
+    })
+  );
+  const facts = [dept, vacLabel, last ? `Last date: ${last}` : ""].filter(Boolean);
+  return `<article id="seo-job" class="seo-job-island">
+  <h1>${title}</h1>
+  ${facts.length ? `<p class="seo-job-island__facts">${facts.join(" · ")}</p>` : ""}
+  ${summary ? `<p class="seo-job-island__summary">${summary}</p>` : ""}
+  ${applyHref ? `<p><a href="${applyHref}" rel="noopener noreferrer">Apply on official website</a></p>` : ""}
+</article>`;
+}
+
+function buildSeoStaticIsland(page) {
+  const sections = (page.sections || [])
+    .map((section) => {
+      const paras = (section.paragraphs || []).map((p) => `<p>${escapeHtml(p)}</p>`).join("\n    ");
+      return `<section>
+    <h2>${escapeHtml(section.heading)}</h2>
+    ${paras}
+  </section>`;
+    })
+    .join("\n  ");
+  return `<article id="seo-static" class="seo-static-island">
+  <h1>${escapeHtml(page.title)}</h1>
+  <p class="seo-static-island__lede">${escapeHtml(page.description)}</p>
+  ${sections}
+</article>`;
+}
+
+function buildSeo404Island() {
+  return `<article id="seo-404" class="seo-static-island">
+  <p class="seo-static-island__code" aria-hidden="true">404</p>
+  <h1>${escapeHtml(NOT_FOUND_PAGE.title)}</h1>
+  <p class="seo-static-island__lede">${escapeHtml(NOT_FOUND_PAGE.description)}</p>
+  <p><a href="/">Home</a> · <a href="/jobs/latest-notifications">Latest</a> · <a href="/explore">Explore</a></p>
+</article>`;
+}
+
+/** First-paint + crawler body for Latest so hard reload is not a blank #root. */
+function buildSeoLatestIsland(jobs) {
+  const rows = (jobs || [])
+    .slice(0, 8)
+    .map((job) => {
+      const title = escapeHtml(job.title || "Government recruitment");
+      const dept = escapeHtml(job.dept || "");
+      const last = formatDisplayDate(job.last_date || job.lastDate);
+      const slug = encodeURIComponent(String(job.slug || job.id || ""));
+      return `<tr><td>${dept}</td><td><a href="/jobs/${slug}">${title}</a></td><td>${last || "—"}</td></tr>`;
+    })
+    .join("\n    ");
+  return `<article id="seo-static" class="seo-static-island">
+  <h1>Latest Government Job Notifications</h1>
+  <p class="seo-static-island__lede">Official recruitment notifications from verified .gov.in sources — board, post, vacancies, and last date.</p>
+  ${
+    rows
+      ? `<table class="seo-latest-table">
+    <thead><tr><th>Board</th><th>Post</th><th>Last date</th></tr></thead>
+    <tbody>
+    ${rows}
+    </tbody>
+  </table>`
+      : ""
+  }
+</article>`;
 }
 
 function parseIsoDate(value) {
@@ -385,29 +524,22 @@ function replaceMeta(html, key, value, attrName = "name") {
   return html.replace("</head>", `  ${tag}\n  </head>`);
 }
 
-/** Clone Vite SPA shell and inject job SEO + JobPosting JSON-LD (no redirect loop). */
+function prepareNonHomeShell(spaHtml) {
+  return restoreBlockingCss(stripLcpShell(spaHtml));
+}
+
+/** Clone Vite SPA shell and inject job SEO + JobPosting JSON-LD + visible body island. */
 function buildHtml(job, spaHtml) {
   const slug = job.slug || job.id;
-  const title = escapeHtml(job.title || "Government recruitment");
-  const desc = escapeHtml(jobDescription(job));
+  const title = `${job.title || "Government recruitment"} | Live Govt Jobs`;
+  const desc = jobDescription(job);
   const canonical = `${siteUrl}/jobs/${encodeURIComponent(slug)}`;
   const ogImage = `${siteUrl}/api/og?title=${encodeURIComponent(job.title || "Govt Job")}`;
   const jsonLd = buildJobPostingJsonLd(job, canonical);
 
-  let html = spaHtml;
-  html = html.replace(/<title>[^<]*<\/title>/i, `<title>${title} | Live Govt Jobs</title>`);
-  html = replaceMeta(html, "description", desc, "name");
-  html = html.replace(
-    /<link rel="canonical" href="[^"]*"\s*\/?>/i,
-    `<link rel="canonical" href="${canonical}" />`
-  );
-  html = replaceMeta(html, "og:type", "article", "property");
-  html = replaceMeta(html, "og:title", `${title} | Live Govt Jobs`, "property");
-  html = replaceMeta(html, "og:description", desc, "property");
-  html = replaceMeta(html, "og:url", canonical, "property");
+  let html = prepareNonHomeShell(spaHtml);
+  html = applyRouteHead(html, { title, description: desc, canonical, ogType: "article" });
   html = replaceMeta(html, "og:image", ogImage, "property");
-  html = replaceMeta(html, "twitter:title", title, "name");
-  html = replaceMeta(html, "twitter:description", desc, "name");
   html = replaceMeta(html, "twitter:image", ogImage, "name");
 
   if (jsonLd) {
@@ -427,7 +559,39 @@ function buildHtml(job, spaHtml) {
     );
   }
 
+  html = injectIsland(html, buildSeoJobIsland(job));
   return html;
+}
+
+function writeHtml(dest, html) {
+  mkdirSync(dirname(dest), { recursive: true });
+  writeFileSync(dest, html, "utf8");
+}
+
+function slugsFromSource(filePath, key = "slug") {
+  if (!existsSync(filePath)) return [];
+  const text = readFileSync(filePath, "utf8");
+  const re = new RegExp(`${key}:\\s*['"]([^'"]+)['"]`, "g");
+  const out = [];
+  let m;
+  while ((m = re.exec(text))) out.push(m[1]);
+  return [...new Set(out)];
+}
+
+function writeSpaRoute(spaHtml, route, { latestJobs = [] } = {}) {
+  const canonical = `${siteUrl}${route.path}`;
+  const title = route.title.includes("Live Govt Jobs") ? route.title : `${route.title} | Live Govt Jobs`;
+  let html = prepareNonHomeShell(spaHtml);
+  html = applyRouteHead(html, {
+    title,
+    description: route.description,
+    canonical,
+    noindex: Boolean(route.noindex),
+  });
+  if (route.path === "/jobs/latest-notifications") {
+    html = injectIsland(html, buildSeoLatestIsland(latestJobs));
+  }
+  writeHtml(join(dist, ...route.file), html);
 }
 
 function main() {
@@ -455,24 +619,127 @@ function main() {
   }
   // /jobs is a directory after slug HTML is written. Without index.html Vercel
   // 404s the listing even when the SPA rewrite is correct.
-  writeFileSync(join(jobsDir, "index.html"), spaHtml, "utf8");
-
-  const spaShells = [
-    ["results.html"],
-    ["results", "admit-card.html"],
-    ["results", "answer-key.html"],
-    ["alerts.html"],
-    ["contact.html"],
-    ["about.html"],
-  ];
-  for (const parts of spaShells) {
-    const dest = join(dist, ...parts);
-    mkdirSync(dirname(dest), { recursive: true });
-    writeFileSync(dest, spaHtml, "utf8");
+  for (const page of STATIC_PAGES) {
+    const canonical = `${siteUrl}${page.path}`;
+    let html = prepareNonHomeShell(spaHtml);
+    html = applyRouteHead(html, {
+      title: `${page.title} | Live Govt Jobs`,
+      description: page.description,
+      canonical,
+    });
+    html = injectIsland(html, buildSeoStaticIsland(page));
+    writeHtml(join(dist, ...page.file), html);
   }
 
+  for (const route of SPA_SHELL_ROUTES) {
+    writeSpaRoute(spaHtml, route, { latestJobs: jobs });
+  }
+
+  for (const [id, name] of Object.entries(STATE_NAMES)) {
+    writeSpaRoute(spaHtml, {
+      path: `/state/${id}`,
+      file: ["state", `${id}.html`],
+      title: `${name} Government Jobs 2026`,
+      description: `Browse live ${name} government job notifications from official state portals and PSC websites.`,
+    });
+  }
+
+  const categoryNames = {
+    upsc: "UPSC",
+    ssc: "SSC",
+    railways: "Railways",
+    banking: "Banking",
+    police: "Police",
+    teaching: "Teaching",
+    defence: "Defence",
+    psu: "PSU",
+    health: "Health",
+    engineering: "Engineering",
+    state: "State PSC",
+  };
+  for (const [id, name] of Object.entries(categoryNames)) {
+    writeSpaRoute(spaHtml, {
+      path: `/board/${id}`,
+      file: ["board", `${id}.html`],
+      title: `${name} Government Jobs`,
+      description: `Official ${name} recruitment notifications, vacancies, and apply links from verified government sources.`,
+    });
+    writeSpaRoute(spaHtml, {
+      path: `/category/${id}`,
+      file: ["category", `${id}.html`],
+      title: `${name} Government Jobs`,
+      description: `Official ${name} recruitment notifications, vacancies, and apply links from verified government sources.`,
+    });
+  }
+
+  const feSrc = join(root, "frontend/src");
+  for (const slug of slugsFromSource(join(feSrc, "data/exams.ts"))) {
+    writeSpaRoute(spaHtml, {
+      path: `/exam/${slug}`,
+      file: ["exam", `${slug}.html`],
+      title: `${slug.replace(/-/g, " ")} | Live Govt Jobs`,
+      description: `Live official ${slug.replace(/-/g, " ")} recruitment from verified .gov.in sources.`,
+    });
+  }
+  for (const slug of slugsFromSource(join(feSrc, "data/professions.ts"))) {
+    writeSpaRoute(spaHtml, {
+      path: `/profession/${slug}`,
+      file: ["profession", `${slug}.html`],
+      title: `${slug.replace(/-/g, " ")} Government Jobs 2026`,
+      description: `Live official ${slug.replace(/-/g, " ")} recruitment from verified .gov.in sources.`,
+    });
+  }
+  for (const slug of slugsFromSource(join(feSrc, "data/qualifications.ts"))) {
+    writeSpaRoute(spaHtml, {
+      path: `/qualification/${slug}`,
+      file: ["qualification", `${slug}.html`],
+      title: `${slug.replace(/-/g, " ")} Government Jobs 2026`,
+      description: `Find government jobs matched to ${slug.replace(/-/g, " ")} from official sources.`,
+    });
+  }
+  for (const slug of slugsFromSource(join(feSrc, "data/designations.ts"))) {
+    writeSpaRoute(spaHtml, {
+      path: `/designation/${slug}`,
+      file: ["designation", `${slug}.html`],
+      title: `${slug.replace(/-/g, " ")} Government Jobs 2026`,
+      description: `Live official ${slug.replace(/-/g, " ")} recruitment from verified .gov.in sources.`,
+    });
+  }
+  const orgIndexPath = join(feSrc, "data/org-index.json");
+  if (existsSync(orgIndexPath)) {
+    try {
+      const orgs = JSON.parse(readFileSync(orgIndexPath, "utf8"));
+      if (Array.isArray(orgs)) {
+        for (const row of orgs) {
+          const slug = String(row?.slug || "").trim();
+          if (!slug) continue;
+          const dept = String(row?.dept || slug).trim();
+          writeSpaRoute(spaHtml, {
+            path: `/org/${slug}`,
+            file: ["org", `${slug}.html`],
+            title: `${dept} Recruitment 2026`,
+            description: `Live ${dept} government job notifications from official sources.`,
+          });
+        }
+      }
+    } catch {
+      /* org index optional */
+    }
+  }
+
+  const notFoundCanonical = `${siteUrl}/404`;
+  let notFoundHtml = prepareNonHomeShell(spaHtml);
+  notFoundHtml = applyRouteHead(notFoundHtml, {
+    title: `${NOT_FOUND_PAGE.title} | Live Govt Jobs`,
+    description: NOT_FOUND_PAGE.description,
+    canonical: notFoundCanonical,
+    noindex: true,
+  });
+  notFoundHtml = injectIsland(notFoundHtml, buildSeo404Island());
+  writeHtml(join(dist, "404.html"), notFoundHtml);
+
   console.log(
-    `Prerendered ${written} job pages under frontend/dist/jobs/*.html (${withLocality} with addressLocality)`
+    `Prerendered ${written} job pages under frontend/dist/jobs/*.html (${withLocality} with addressLocality); static + 404.html written`
   );
 }
 

@@ -98,6 +98,15 @@ export default function JobDetailPage({ jobs, loading }: JobDetailPageProps) {
   }, [slug, listJob]);
 
   useEffect(() => {
+    if (loading || detailLoading) return undefined;
+    document.body.classList.add("job-detail-ready");
+    return () => {
+      document.body.classList.remove("job-detail-ready");
+      document.getElementById("seo-job")?.remove();
+    };
+  }, [loading, detailLoading, job]);
+
+  useEffect(() => {
     if (!job?.title) return;
     return applyJobSeo(job);
   }, [job]);

@@ -6,7 +6,7 @@ import {
   type LatestTableSortKey,
   type NotificationRow,
 } from '@/utils/latestNotificationsTable'
-import { dateTimeLocale } from '@/utils/formatLocale'
+import { formatJobDate } from '@/utils/formatJobDate'
 
 type LatestJobsSimpleTableProps = {
   rows: NotificationRow[]
@@ -15,17 +15,8 @@ type LatestJobsSimpleTableProps = {
   onRowClick: (row: NotificationRow) => void
 }
 
-function formatDisplayDate(value: string | null | undefined, locale: string) {
-  if (!value) return '—'
-  const d = new Date(value)
-  if (!Number.isNaN(d.getTime())) {
-    return d.toLocaleDateString(dateTimeLocale(locale), {
-      day: '2-digit',
-      month: '2-digit',
-      year: 'numeric',
-    })
-  }
-  return String(value)
+function formatDisplayDate(value: string | null | undefined, _locale?: string) {
+  return formatJobDate(value)
 }
 
 export default function LatestJobsSimpleTable({
@@ -34,8 +25,7 @@ export default function LatestJobsSimpleTable({
   onSortChange,
   onRowClick,
 }: LatestJobsSimpleTableProps) {
-  const { t, i18n } = useTranslation()
-  const locale = dateTimeLocale(i18n.language)
+  const { t } = useTranslation()
 
   const sortedRows = useMemo(() => sortNotificationRows(rows, sort), [rows, sort])
 
@@ -92,7 +82,7 @@ export default function LatestJobsSimpleTable({
                   <td className="latest-notif__board">{row.board}</td>
                   <td className="latest-notif__post">{row.postName}</td>
                   <td>{row.qualification || '—'}</td>
-                  <td>{formatDisplayDate(row.lastDateIso || row.lastDate, locale)}</td>
+                  <td>{formatDisplayDate(row.lastDateIso || row.lastDate)}</td>
                   <td>
                     {applyHref ? (
                       <a

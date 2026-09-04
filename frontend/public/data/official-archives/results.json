@@ -1,11 +1,6 @@
 {
-<<<<<<< HEAD
   "generatedAt": "2026-09-02T10:41:15.260Z",
   "count": 818,
-=======
-  "generatedAt": "2026-09-04T09:05:36.313Z",
-  "count": 755,
->>>>>>> 4e61d62931e7a29c4d4fe0d051adef9ae42dac96
   "items": [
     {
       "id": "c4c9266da946f3d2",
@@ -712,6 +707,23 @@
       "fetchMethod": "html-listing"
     },
     {
+      "id": "0cf627359f6e6487",
+      "title": "RESULT OF ADVT. NO.D-2/E-1/2025, UTTAR PRADESH DAIRY DEVELOPMENT/DEPUTY DAIRY DE..",
+      "link": "https://uppsc.up.nic.in/Open_PDF_DB.aspx?I4PnQ0tBaglovGFVjGJMaEk+muvLsysO",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "uppsc-hall-tickets",
+      "sourceName": "UPPSC — Hall tickets",
+      "dept": "Uttar Pradesh PSC",
+      "state": "Uttar Pradesh",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
       "id": "12ca81e8e0617c5b",
       "title": "Click here to view List of Candidates who are not selected in P.C.S. Examination-2022, but Qualified for Interview in P.C.S - 2022 (In Merit Order).",
       "link": "https://uppsc.up.nic.in/Open_PDF.aspx?I4PnQ0tBagk9q6upnHHyW7Pdh9qfF6wa",
@@ -729,26 +741,6 @@
       "fetchMethod": "html-listing"
     },
     {
-<<<<<<< HEAD
-=======
-      "id": "f5ec72f5d069bbdc",
-      "title": "परिणाम",
-      "link": "https://www.npcil.nic.in/content/Hindi/401_1_Results.aspx",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "npcil",
-      "sourceName": "Nuclear Power Corporation of India (NPCIL)",
-      "dept": "Nuclear Power Corporation of India (NPCIL)",
-      "state": "All India",
-      "category": "psu",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
->>>>>>> 4e61d62931e7a29c4d4fe0d051adef9ae42dac96
       "id": "00ee42b2c7426451",
       "title": "इनमास, दिल्ली में 15 से 24 जुलाई 2026 के दौरान हुए इंटरव्यू के ज़रिए प्रोविज़नल तौर पर चुने गए आर ए एवं जे आर एफ का परिणाम",
       "link": "https://xn--m1b0a2bb8esed.xn--11b7cb3a6a.xn--h2brj9c/drdo/hi/offerings/vacancies/inamaasa-dailalai-maen-15-sae-24-jaulaai-2026-kae-daauraana-haue-intaravayauu",
@@ -1348,7 +1340,6 @@
       "fetchMethod": "html"
     },
     {
-<<<<<<< HEAD
       "id": "a3ad3cb920b364ba",
       "title": "BHEL Artisan – Skill Test Result Declaration",
       "link": "https://careers.bhel.in/ar_2025/Skill%20Test%20Result%20Declaration.pdf",
@@ -1360,53 +1351,6 @@
       "sourceId": "bhel",
       "sourceName": "BHEL — Careers",
       "dept": "BHEL — Careers",
-=======
-      "id": "3cb3737965d5c83c",
-      "title": "Recruitment Result",
-      "link": "https://www.aiims.edu/index.php/en/notices/recruitment/archive-recruitment",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "aiims",
-      "sourceName": "AIIMS New Delhi — Recruitment",
-      "dept": "AIIMS New Delhi — Recruitment",
-      "state": "All India",
-      "category": "health",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "rss-discovered"
-    },
-    {
-      "id": "5248b404d0a4fa81",
-      "title": "Financial Result",
-      "link": "https://www.canarabank.bank.in/financial-result",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "canara",
-      "sourceName": "Canara Bank — Careers",
-      "dept": "Canara Bank — Careers",
-      "state": "All India",
-      "category": "banking",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "3f5f0150d9a9618d",
-      "title": "Jharkhand Group of Mines: Result of the 'Walk-in-Interview' held on 12/08/2026 for Engagement of Consultants (Doctors in Medical Discipline) against Advertisement No. BSL/R-C/2026-07",
-      "link": "https://aima-web-images.s3.ap-south-1.amazonaws.com/sailcareers.com/Downloads/BSP_News_01092026_121727.pdf",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [
-        "https://aima-web-images.s3.ap-south-1.amazonaws.com/sailcareers.com/Downloads/BSP_News_01092026_121727.pdf"
-      ],
-      "sourceId": "sail",
-      "sourceName": "Steel Authority of India (SAIL)",
-      "dept": "Steel Authority of India (SAIL)",
->>>>>>> 4e61d62931e7a29c4d4fe0d051adef9ae42dac96
       "state": "All India",
       "category": "psu",
       "stateIds": [
@@ -1921,44 +1865,6 @@
       "fetchMethod": "html"
     },
     {
-      "id": "72951590a314de1c",
-      "title": "Caveat Vigyapti on Written Exam Result - Assistant Director/Veterinary Assistant Surgeon/Veterinary Extension Officer 2026, Dated 03/09/2026",
-      "link": "https://mppsc.mp.gov.in/uploads/files/Caveat_Vigyapti_Written_Exam_Result_AD_Veterinary_Assistant_Surgeon_VEO_2026_Dated_03_09_2026.pdf",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [
-        "https://mppsc.mp.gov.in/uploads/files/Caveat_Vigyapti_Written_Exam_Result_AD_Veterinary_Assistant_Surgeon_VEO_2026_Dated_03_09_2026.pdf"
-      ],
-      "sourceId": "psc-mp",
-      "sourceName": "Madhya Pradesh PSC (MPPSC)",
-      "dept": "Madhya Pradesh PSC (MPPSC)",
-      "state": "Madhya Pradesh",
-      "category": "state",
-      "stateIds": [
-        "mp"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "be9138a335a42f91",
-      "title": "Written Exam Result - Assistant Director/Veterinary Assistant Surgeon/Veterinary Extension Officer 2026, Dated 03/09/2026",
-      "link": "https://mppsc.mp.gov.in/uploads/files/Written_Exam_Result_AD_Veterinary_Assistant_Surgeon_VEO_2026_Dated_03_09_2026.pdf",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [
-        "https://mppsc.mp.gov.in/uploads/files/Written_Exam_Result_AD_Veterinary_Assistant_Surgeon_VEO_2026_Dated_03_09_2026.pdf"
-      ],
-      "sourceId": "psc-mp",
-      "sourceName": "Madhya Pradesh PSC (MPPSC)",
-      "dept": "Madhya Pradesh PSC (MPPSC)",
-      "state": "Madhya Pradesh",
-      "category": "state",
-      "stateIds": [
-        "mp"
-      ],
-      "fetchMethod": "html"
-    },
-    {
       "id": "4c7b1bbc11381e44",
       "title": "Caveat Vigyapti on Selection List of State Engineering Services (Civil) Exam 2025, Dated 31/08/2026",
       "link": "https://mppsc.mp.gov.in/uploads/advertisement/Caveat_Vigyapti_State_Engineering_Services_Civil_Exam_2025_Dated_31_08_2026.pdf",
@@ -2111,7 +2017,6 @@
       "fetchMethod": "html"
     },
     {
-<<<<<<< HEAD
       "id": "2f008ff68f07423d",
       "title": "Caveat Vigyapti on Selection List of Assistant Manager Exam 2024, Dated 19/08/2026",
       "link": "https://mppsc.mp.gov.in/uploads/advertisement/Caveat_Vigyapti_Assistant_Manager_Exam_2024_Dated_19_08_2026.pdf",
@@ -2977,8 +2882,6 @@
       "fetchMethod": "html"
     },
     {
-=======
->>>>>>> 4e61d62931e7a29c4d4fe0d051adef9ae42dac96
       "id": "40ed83132aef7de3",
       "title": "MCSCC (Main) Examination, 2022 – Link for Viewing Marks of Candidates Updated: 04/07/2026",
       "link": "https://mpscmanipur.gov.in/files/MPSC_26070416190.pdf",
@@ -3953,407 +3856,6 @@
       "fetchMethod": "html"
     },
     {
-<<<<<<< HEAD
-=======
-      "id": "c4c9266da946f3d2",
-      "title": "Marks of Recommended Candidates",
-      "link": "https://www.upsc.gov.in/examinations/marks-recommended-candidates",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "upsc-e-admit-hub",
-      "sourceName": "UPSC — e-Admit cards",
-      "dept": "Union Public Service Commission",
-      "state": "All India",
-      "category": "upsc",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "9f46af2ef87ad857",
-      "title": "Marks of Recommended Candidates (Reserve List)",
-      "link": "https://www.upsc.gov.in/examinations/marks-recommended-candidates-reserve-list",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "upsc-e-admit-hub",
-      "sourceName": "UPSC — e-Admit cards",
-      "dept": "Union Public Service Commission",
-      "state": "All India",
-      "category": "upsc",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "246cf795a95a5a9f",
-      "title": "Cut-off Marks",
-      "link": "https://www.upsc.gov.in/examinations/cutoff-marks--",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "upsc-e-admit-hub",
-      "sourceName": "UPSC — e-Admit cards",
-      "dept": "Union Public Service Commission",
-      "state": "All India",
-      "category": "upsc",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "bf2ab913def084c8",
-      "title": "Marks Information",
-      "link": "https://upsconline.gov.in/marksheet/exam/marksheet_system/",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "upsc-e-admit-hub",
-      "sourceName": "UPSC — e-Admit cards",
-      "dept": "Union Public Service Commission",
-      "state": "All India",
-      "category": "upsc",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "0cf627359f6e6487",
-      "title": "RESULT OF ADVT. NO.D-2/E-1/2025, UTTAR PRADESH DAIRY DEVELOPMENT/DEPUTY DAIRY DE..",
-      "link": "https://uppsc.up.nic.in/Open_PDF_DB.aspx?I4PnQ0tBaglovGFVjGJMaEk+muvLsysO",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "uppsc-hall-tickets",
-      "sourceName": "UPPSC — Hall tickets",
-      "dept": "Uttar Pradesh PSC",
-      "state": "Uttar Pradesh",
-      "category": "state",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "2f008ff68f07423d",
-      "title": "Caveat Vigyapti on Selection List of Assistant Manager Exam 2024, Dated 19/08/2026",
-      "link": "https://mppsc.mp.gov.in/uploads/advertisement/Caveat_Vigyapti_Assistant_Manager_Exam_2024_Dated_19_08_2026.pdf",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [
-        "https://mppsc.mp.gov.in/uploads/advertisement/Caveat_Vigyapti_Assistant_Manager_Exam_2024_Dated_19_08_2026.pdf"
-      ],
-      "sourceId": "psc-mp",
-      "sourceName": "Madhya Pradesh PSC (MPPSC)",
-      "dept": "Madhya Pradesh PSC (MPPSC)",
-      "state": "Madhya Pradesh",
-      "category": "state",
-      "stateIds": [
-        "mp"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "c71fd4d913590eb9",
-      "title": "Selection List - Assistant Manager Exam 2024, Dated 19/08/2026",
-      "link": "https://mppsc.mp.gov.in/uploads/files/Selection_List_Assistant_Manager_Exam_2024_Dated_19_08_2026.pdf",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [
-        "https://mppsc.mp.gov.in/uploads/files/Selection_List_Assistant_Manager_Exam_2024_Dated_19_08_2026.pdf"
-      ],
-      "sourceId": "psc-mp",
-      "sourceName": "Madhya Pradesh PSC (MPPSC)",
-      "dept": "Madhya Pradesh PSC (MPPSC)",
-      "state": "Madhya Pradesh",
-      "category": "state",
-      "stateIds": [
-        "mp"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "a1e96cd5509bf99d",
-      "title": "Notice No. 13/2026 - Result for the Posts of Assistant General Manager (Finance)",
-      "link": "https://apeda.gov.in/sites/default/files/announcements/Notice_No_13_2026.pdf",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [
-        "https://apeda.gov.in/sites/default/files/announcements/Notice_No_13_2026.pdf"
-      ],
-      "sourceId": "apeda",
-      "sourceName": "APEDA / BEDF — Recruitments",
-      "dept": "APEDA / BEDF — Recruitments",
-      "state": "All India",
-      "category": "psu",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "86dc09a156fe9120",
-      "title": "CBSE 12th Result 2026: KV और नवोदय का जलवा, 12वीं के नतीजों में इन स्कूलों ने मारी बाजी",
-      "link": "https://ndtv.in/education/cbse-12th-result-2026-school-wise-performance-kv-jnv-pass-percentage-list-11425718",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "kvs",
-      "sourceName": "Kendriya Vidyalaya Sangathan",
-      "dept": "Kendriya Vidyalaya Sangathan",
-      "state": "All India",
-      "category": "teaching",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "ebfc2a9f2cf5cca8",
-      "title": "CBSE 12th Result: संस्थानवार प्रदर्शन में केंद्रीय विद्यालय रहा टॉप पर",
-      "link": "https://www.amarujala.com/education/cbse-class-12-result-2026-kv-secures-top-spot-know-how-different-schools-performed-2026-05-13",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "kvs",
-      "sourceName": "Kendriya Vidyalaya Sangathan",
-      "dept": "Kendriya Vidyalaya Sangathan",
-      "state": "All India",
-      "category": "teaching",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "2b0cf313b821dae3",
-      "title": "CBSE 12th Result 2026: सीबीएसई 12वीं में केंद्रीय विद्यालय का दबदबा, 98.55% छात्रों की सफलता के साथ टॉप पर",
-      "link": "https://www.timesnowhindi.com/education/cbse-12th-result-2026-kvs-vs-jnv-whose-result-is-highest-kendriya-vidyalaya-and-jawahar-navodaya-vidyalaya-12th-pass-percentage-article-154315169",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "kvs",
-      "sourceName": "Kendriya Vidyalaya Sangathan",
-      "dept": "Kendriya Vidyalaya Sangathan",
-      "state": "All India",
-      "category": "teaching",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "04631c79b6471ca9",
-      "title": "विज्ञापन संख्या 01/2025: TGT (अंग्रेजी, सामाजिक विज्ञान एवं विशेष शिक्षक) एवं वरिष्ठ सचिवालय सहायक के टियर-II परीक्षा परिणाम संबंधी प्रेस विज्ञप्ति नई",
-      "link": "https://cdnbbsr.s3waas.gov.in/s32d2ca7eedf739ef4c3800713ec482e1a/uploads/2026/09/2026090192.pdf",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [
-        "https://cdnbbsr.s3waas.gov.in/s32d2ca7eedf739ef4c3800713ec482e1a/uploads/2026/09/2026090192.pdf"
-      ],
-      "sourceId": "kvs",
-      "sourceName": "Kendriya Vidyalaya Sangathan",
-      "dept": "Kendriya Vidyalaya Sangathan",
-      "state": "All India",
-      "category": "teaching",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "08a6fead3943369e",
-      "title": "Comparative Result Analysis – Class X",
-      "link": "https://kvsangathan.nic.in/en/comparative-result-analysis-class-x/",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "kvs",
-      "sourceName": "Kendriya Vidyalaya Sangathan",
-      "dept": "Kendriya Vidyalaya Sangathan",
-      "state": "All India",
-      "category": "teaching",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "a91e35efe906a21a",
-      "title": "Comparative Result Analysis – Class XII",
-      "link": "https://kvsangathan.nic.in/en/comparative-result-analysis-class-xii/",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "kvs",
-      "sourceName": "Kendriya Vidyalaya Sangathan",
-      "dept": "Kendriya Vidyalaya Sangathan",
-      "state": "All India",
-      "category": "teaching",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "f672804f2078c8b9",
-      "title": "Caveat Vigyapti on Written Exam Result - Assistant Professor (Geology) Exam 2025, Dated 18/08/2026",
-      "link": "https://mppsc.mp.gov.in/uploads/advertisement/Caveat_Vigyapti_Written_Exam_Result_Assistant_Professor_Geology_Exam_2025_Dated_18_08_2026.pdf",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [
-        "https://mppsc.mp.gov.in/uploads/advertisement/Caveat_Vigyapti_Written_Exam_Result_Assistant_Professor_Geology_Exam_2025_Dated_18_08_2026.pdf"
-      ],
-      "sourceId": "psc-mp",
-      "sourceName": "Madhya Pradesh PSC (MPPSC)",
-      "dept": "Madhya Pradesh PSC (MPPSC)",
-      "state": "Madhya Pradesh",
-      "category": "state",
-      "stateIds": [
-        "mp"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "a4c96ac7bb4f9dfb",
-      "title": "Written Exam Result - Assistant Professor (Geology) Exam 2025, Dated 18/08/2026",
-      "link": "https://mppsc.mp.gov.in/uploads/files/Written_Exam_Result_Assistant_Professor_Geology_Exam_2025_Dated_18_08_2026.pdf",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [
-        "https://mppsc.mp.gov.in/uploads/files/Written_Exam_Result_Assistant_Professor_Geology_Exam_2025_Dated_18_08_2026.pdf"
-      ],
-      "sourceId": "psc-mp",
-      "sourceName": "Madhya Pradesh PSC (MPPSC)",
-      "dept": "Madhya Pradesh PSC (MPPSC)",
-      "state": "Madhya Pradesh",
-      "category": "state",
-      "stateIds": [
-        "mp"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "13a83095a9579bdf",
-      "title": "Caveat Vigyapti on Written Exam Result - Assistant Professor (Law) Exam 2025, Dated 18/08/2026",
-      "link": "https://mppsc.mp.gov.in/uploads/advertisement/Caveat_Vigyapti_Written_Exam_Result_Assistant_Professor_Law_Exam_2025_Dated_18_08_2026.pdf",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [
-        "https://mppsc.mp.gov.in/uploads/advertisement/Caveat_Vigyapti_Written_Exam_Result_Assistant_Professor_Law_Exam_2025_Dated_18_08_2026.pdf"
-      ],
-      "sourceId": "psc-mp",
-      "sourceName": "Madhya Pradesh PSC (MPPSC)",
-      "dept": "Madhya Pradesh PSC (MPPSC)",
-      "state": "Madhya Pradesh",
-      "category": "state",
-      "stateIds": [
-        "mp"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "7c8e4ac9e984eee7",
-      "title": "Written Exam Result - Assistant Professor (Law) Exam 2025, Dated 18/08/2026",
-      "link": "https://mppsc.mp.gov.in/uploads/files/Written_Exam_Result_Assistant_Professor_Law_Exam_2025_Dated_18_08_2026.pdf",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [
-        "https://mppsc.mp.gov.in/uploads/files/Written_Exam_Result_Assistant_Professor_Law_Exam_2025_Dated_18_08_2026.pdf"
-      ],
-      "sourceId": "psc-mp",
-      "sourceName": "Madhya Pradesh PSC (MPPSC)",
-      "dept": "Madhya Pradesh PSC (MPPSC)",
-      "state": "Madhya Pradesh",
-      "category": "state",
-      "stateIds": [
-        "mp"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "fcdcc02f9eec1e61",
-      "title": "Caveat Vigyapti on Written Exam Result - Assistant Professor (Psychology) Exam 2025, Dated 18/08/2026",
-      "link": "https://mppsc.mp.gov.in/uploads/advertisement/Caveat_Vigyapti_Written_Exam_Result_Assistant_Professor_Psychology_Exam_2025_Dated_18_08_2026.pdf",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [
-        "https://mppsc.mp.gov.in/uploads/advertisement/Caveat_Vigyapti_Written_Exam_Result_Assistant_Professor_Psychology_Exam_2025_Dated_18_08_2026.pdf"
-      ],
-      "sourceId": "psc-mp",
-      "sourceName": "Madhya Pradesh PSC (MPPSC)",
-      "dept": "Madhya Pradesh PSC (MPPSC)",
-      "state": "Madhya Pradesh",
-      "category": "state",
-      "stateIds": [
-        "mp"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "ac90916e6b054127",
-      "title": "Written Exam Result - Assistant Professor (Psychology) Exam 2025, Dated 18/08/2026",
-      "link": "https://mppsc.mp.gov.in/uploads/files/Written_Exam_Result_Assistant_Professor_Psychology_Exam_2025_Dated_18_08_2026.pdf",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [
-        "https://mppsc.mp.gov.in/uploads/files/Written_Exam_Result_Assistant_Professor_Psychology_Exam_2025_Dated_18_08_2026.pdf"
-      ],
-      "sourceId": "psc-mp",
-      "sourceName": "Madhya Pradesh PSC (MPPSC)",
-      "dept": "Madhya Pradesh PSC (MPPSC)",
-      "state": "Madhya Pradesh",
-      "category": "state",
-      "stateIds": [
-        "mp"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "635e596f2617e7d3",
-      "title": "Caveat Vigyapti on Written Exam Result - Assistant Professor (Sanskrit) Exam 2025, Dated 18/08/2026",
-      "link": "https://mppsc.mp.gov.in/uploads/advertisement/Caveat_Vigyapti_Written_Exam_Result_Assistant_Professor_Sanskrit_Exam_2025_Dated_18_08_2026.pdf",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [
-        "https://mppsc.mp.gov.in/uploads/advertisement/Caveat_Vigyapti_Written_Exam_Result_Assistant_Professor_Sanskrit_Exam_2025_Dated_18_08_2026.pdf"
-      ],
-      "sourceId": "psc-mp",
-      "sourceName": "Madhya Pradesh PSC (MPPSC)",
-      "dept": "Madhya Pradesh PSC (MPPSC)",
-      "state": "Madhya Pradesh",
-      "category": "state",
-      "stateIds": [
-        "mp"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "a1fd44cef8d0b46a",
-      "title": "Written Exam Result - Assistant Professor (Sanskrit) Exam 2025, Dated 18/08/2026",
-      "link": "https://mppsc.mp.gov.in/uploads/files/Written_Exam_Result_Assistant_Professor_Sanskrit_Exam_2025_Dated_18_08_2026.pdf",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [
-        "https://mppsc.mp.gov.in/uploads/files/Written_Exam_Result_Assistant_Professor_Sanskrit_Exam_2025_Dated_18_08_2026.pdf"
-      ],
-      "sourceId": "psc-mp",
-      "sourceName": "Madhya Pradesh PSC (MPPSC)",
-      "dept": "Madhya Pradesh PSC (MPPSC)",
-      "state": "Madhya Pradesh",
-      "category": "state",
-      "stateIds": [
-        "mp"
-      ],
-      "fetchMethod": "html"
-    },
-    {
->>>>>>> 4e61d62931e7a29c4d4fe0d051adef9ae42dac96
       "id": "776d7a60e25e33b7",
       "title": "विज्ञापन संख्या 01/2025 के अंतर्गत स्नातकोत्तर शिक्षक (जीव विज्ञान) , पुस्तकालयध्यक्ष एवं सहायक अनुभाग अधिकारी पद के टियर II परीक्षा के परिणाम घोषित करने संबंधित प्रेस विज्ञप्ति। नई",
       "link": "https://cdnbbsr.s3waas.gov.in/s32d2ca7eedf739ef4c3800713ec482e1a/uploads/2026/08/2026082895.pdf",

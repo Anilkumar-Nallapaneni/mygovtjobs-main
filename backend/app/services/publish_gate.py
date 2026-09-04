@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import re
 from dataclasses import dataclass, field
 from datetime import date, datetime, timedelta
 from typing import Any
@@ -65,9 +66,41 @@ def calculate_job_status(
     return "active"
 
 
-def _valid_http_url(value: Any) -> bool:
+_TYPO_TLDS = frozenset({"ln", "con", "comm", "ogr", "edus", "govv"})
+_ILLEGAL_URL_CHARS = re.compile(r'[\^<>"`{|}\\]')
+_WHITESPACE = re.compile(r"\s")
+
+
+def is_corrupt_url(value: Any) -> bool:
+    """True for typo TLDs (.ln, .con), illegal path chars, or unparseable URLs."""
+    raw = str(value or "").strip()
+    if not raw:
+        return True
+    if _ILLEGAL_URL_CHARS.search(raw) or _WHITESPACE.search(raw):
+        return True
     try:
-        parsed = urlparse(str(value or "").strip())
+        parsed = urlparse(raw)
+    except Exception:
+        return True
+    if parsed.scheme not in ("http", "https"):
+        return True
+    host = (parsed.hostname or "").lower()
+    if not host or host.startswith(".") or host.endswith(".") or ".." in host:
+        return True
+    tld = host.rsplit(".", 1)[-1]
+    if tld in _TYPO_TLDS:
+        return True
+    if parsed.path and _ILLEGAL_URL_CHARS.search(parsed.path):
+        return True
+    return False
+
+
+def _valid_http_url(value: Any) -> bool:
+    raw = str(value or "").strip()
+    if not raw or is_corrupt_url(raw):
+        return False
+    try:
+        parsed = urlparse(raw)
         return parsed.scheme in ("http", "https") and bool(parsed.hostname)
     except Exception:
         return False
@@ -187,7 +220,9 @@ def validate_job_for_publication(
             warnings.append("Notification URL is invalid or unofficial")
 
     if apply_url:
-        if _valid_http_url(apply_url) and is_official_recruitment_host(apply_url):
+        if is_corrupt_url(apply_url):
+            errors.append("Apply URL is corrupt or malformed")
+        elif _valid_http_url(apply_url) and is_official_recruitment_host(apply_url):
             score += 10
         else:
             errors.append("Apply URL is invalid or unofficial")

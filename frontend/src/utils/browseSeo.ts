@@ -132,6 +132,30 @@ export function browseSeoForPath(pathname: string, _search = ""): BrowseSeoMeta 
     };
   }
 
+  if (path === "/privacy") {
+    return {
+      path,
+      title: `Privacy Policy | ${SITE_NAME}`,
+      description: "How Live Govt Jobs collects, uses, and protects your information.",
+    };
+  }
+
+  if (path === "/terms") {
+    return {
+      path,
+      title: `Terms of Service | ${SITE_NAME}`,
+      description: "Terms for using the Live Govt Jobs website and alert service.",
+    };
+  }
+
+  if (path === "/disclaimer") {
+    return {
+      path,
+      title: `Disclaimer | ${SITE_NAME}`,
+      description: "Important notice about government job listings on Live Govt Jobs.",
+    };
+  }
+
   if (path === QUALIFICATIONS_INDEX_PATH) {
     return {
       path,

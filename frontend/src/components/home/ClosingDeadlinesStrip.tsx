@@ -4,8 +4,7 @@ import { useTranslation } from "react-i18next";
 import type { JobRecord } from "@/types/job";
 import { buildLatestNotifUrl } from "@/utils/browseRoutes";
 import { jobDetailPath } from "@/utils/jobRoutes";
-import { parseLastDate } from "@/utils/jobFilters";
-import { dateTimeLocale } from "@/utils/formatLocale";
+import { formatJobDate } from "@/utils/formatJobDate";
 
 type ClosingDeadlinesStripProps = {
   today: JobRecord[];
@@ -14,10 +13,9 @@ type ClosingDeadlinesStripProps = {
   locale: string;
 };
 
-function formatDay(value: string | undefined, locale: string): string {
-  const date = parseLastDate(value);
-  if (!date) return value || "";
-  return date.toLocaleDateString(dateTimeLocale(locale), { day: "numeric", month: "short" });
+function formatDay(value: string | undefined, _locale?: string): string {
+  const formatted = formatJobDate(value);
+  return formatted === "—" ? value || "" : formatted;
 }
 
 function ClosingGroup({
