@@ -1,24 +1,7 @@
 {
-  "generatedAt": "2026-09-02T10:41:15.260Z",
+  "generatedAt": "2026-09-05T08:39:10.705Z",
   "count": 130,
   "items": [
-    {
-      "id": "246cf795a95a5a9f",
-      "title": "Cut-off Marks",
-      "link": "https://www.upsc.gov.in/examinations/cutoff-marks--",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "upsc-notifications",
-      "sourceName": "UPSC — What's New",
-      "dept": "Union Public Service Commission",
-      "state": "All India",
-      "category": "upsc",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
     {
       "id": "c70f8b20c685365f",
       "title": "Results & Cutoffs",
@@ -137,6 +120,40 @@
         "all"
       ],
       "fetchMethod": "html"
+    },
+    {
+      "id": "c9189f55ccd79cdc",
+      "title": "MCSCC (Main) Examination, 2022 – Cutoff Marks Updated: 15/07/2026",
+      "link": "https://mpscmanipur.gov.in/Cutoff.html",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-mn",
+      "sourceName": "Manipur PSC",
+      "dept": "Manipur PSC",
+      "state": "NE States",
+      "category": "state",
+      "stateIds": [
+        "ne"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "246cf795a95a5a9f",
+      "title": "Cut-off Marks",
+      "link": "https://www.upsc.gov.in/examinations/cutoff-marks--",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "upsc-notifications",
+      "sourceName": "UPSC — What's New",
+      "dept": "Union Public Service Commission",
+      "state": "All India",
+      "category": "upsc",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
     },
     {
       "id": "2d723268728d6720",
@@ -439,23 +456,6 @@
       "category": "state",
       "stateIds": [
         "rj"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "c9189f55ccd79cdc",
-      "title": "MCSCC (Main) Examination, 2022 – Cutoff Marks Updated: 15/07/2026",
-      "link": "https://mpscmanipur.gov.in/Cutoff.html",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-mn",
-      "sourceName": "Manipur PSC",
-      "dept": "Manipur PSC",
-      "state": "NE States",
-      "category": "state",
-      "stateIds": [
-        "ne"
       ],
       "fetchMethod": "html"
     },
