@@ -1,29 +1,13 @@
 {
-  "generatedAt": "2026-09-05T08:56:05.535571+00:00",
+  "generatedAt": "2026-09-06T04:07:13.528607+00:00",
   "apply": true,
-  "scanned": 22,
-  "ok": 16,
+  "scanned": 19,
+  "ok": 15,
   "demoted": [
-    {
-      "id": "b80f3544-f90b-4e37-8ee5-ca449e8b1fc5",
-      "slug": "indian-oil-corporation-limited-iocl-iocl-recruitment-of-executives-through-cbt-2-6253484d",
-      "title": "IOCL Recruitment of Executives through CBT 2026 — 470 posts",
-      "reasons": [
-        "deadline expired"
-      ]
-    },
     {
       "id": "883e67fc-687d-482b-a915-f36f114b6670",
       "slug": "addendum-notice-19-posts-of-manager-grade-i-section-officer-ministry-of-defence-67983808",
       "title": "Addendum Notice: 19 Posts of Manager Grade - I - Section Officer, Ministry of Defence",
-      "reasons": [
-        "non-vacancy document"
-      ]
-    },
-    {
-      "id": "d46f5889-507b-46a6-b698-7d0cc8099eb0",
-      "slug": "addendum-notice-32-posts-of-accounts-officer-administration-of-union-territory-o-61662120",
-      "title": "Addendum Notice: 32 Posts of Accounts Officer, Administration of Union Territory of Ladakh",
       "reasons": [
         "non-vacancy document"
       ]
@@ -37,11 +21,11 @@
       ]
     },
     {
-      "id": "c9c5f62b-4eaa-45de-bf85-0dcdc0ae44a1",
-      "slug": "mppsc-recruitment-2026-apply-online-for-06-iaeo-aao-and-more-posts-9bc6da58",
-      "title": "MPPSC Recruitment 2026 - Apply Online for 06 IAEO, AAO and More Posts",
+      "id": "d46f5889-507b-46a6-b698-7d0cc8099eb0",
+      "slug": "addendum-notice-32-posts-of-accounts-officer-administration-of-union-territory-o-61662120",
+      "title": "Addendum Notice: 32 Posts of Accounts Officer, Administration of Union Territory of Ladakh",
       "reasons": [
-        "deadline expired"
+        "non-vacancy document"
       ]
     },
     {
@@ -53,5 +37,5 @@
       ]
     }
   ],
-  "rowsUpdated": 6
+  "rowsUpdated": 4
 }

@@ -14,6 +14,7 @@ from sqlalchemy import select
 from app.config import get_settings
 from app.database.session import SessionLocal
 from app.models.job import Job
+from app.services.publish_gate import is_corrupt_url
 from app.utils.official_hosts import is_blocked_aggregator_host, is_official_recruitment_host, pick_best_official_url
 from app.utils.sanitize_detail import sanitize_job_detail
 
@@ -79,6 +80,33 @@ def _text_blocked(*values: str | None) -> bool:
     return any(isinstance(v, str) and any(b in v.lower() for b in _BLOCKED_SUBSTR) for v in values)
 
 
+def _bad_apply_url(url: str | None) -> bool:
+    if not url:
+        return False
+    return is_corrupt_url(url) or _url_blocked(url) or not is_official_recruitment_host(url)
+
+
+def _replacement_apply_url(detail: dict, *extra_urls: str | None) -> str | None:
+    urls: list[str] = []
+
+    def add(value: str | None) -> None:
+        if isinstance(value, str) and value.strip():
+            urls.append(value.strip())
+
+    for value in extra_urls:
+        add(value)
+    for key in ("source_url", "notification_url", "pdf_url", "official_url"):
+        add(detail.get(key) if isinstance(detail.get(key), str) else None)
+    for key in ("pdf_urls", "pdfUrls"):
+        values = detail.get(key) or []
+        if isinstance(values, list):
+            for value in values:
+                add(value if isinstance(value, str) else None)
+
+    clean = [url for url in urls if not is_corrupt_url(url) and is_official_recruitment_host(url)]
+    return pick_best_official_url(clean)
+
+
 def _detail_blocked(detail: dict) -> bool:
     for key in ("discovery_ref", "discovered_via", "notification_url", "source_url"):
         if _url_blocked(detail.get(key) if isinstance(detail.get(key), str) else None):
@@ -123,9 +151,8 @@ async def scrub_db() -> tuple[int, int, int]:
             apply = job.apply_url
             changed = detail != (job.detail or {})
 
-            if _url_blocked(apply) or (apply and not is_official_recruitment_host(apply)):
-                pdfs = detail.get("pdf_urls") or detail.get("pdfUrls") or []
-                official = pick_best_official_url([p for p in pdfs if isinstance(p, str)])
+            if _bad_apply_url(apply):
+                official = _replacement_apply_url(detail, job.primary_pdf_url, job.source_url)
                 if official:
                     job.apply_url = official
                     fixed += 1
@@ -167,9 +194,12 @@ def scrub_live_json() -> int:
         if _detail_blocked(detail):
             dropped += 1
             continue
-        if _url_blocked(apply):
-            pdfs = detail.get("pdf_urls") or detail.get("pdfUrls") or []
-            official = pick_best_official_url([p for p in pdfs if isinstance(p, str)])
+        if _bad_apply_url(apply):
+            official = _replacement_apply_url(
+                detail,
+                row.get("primary_pdf_url") if isinstance(row.get("primary_pdf_url"), str) else None,
+                row.get("source_url") if isinstance(row.get("source_url"), str) else None,
+            )
             if official:
                 row["apply_url"] = official
             else:
