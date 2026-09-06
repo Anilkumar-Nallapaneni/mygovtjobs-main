@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-09-05T08:56:05.535571+00:00",
+  "generatedAt": "2026-09-06T09:08:11.948065+00:00",
   "apply": true,
-  "scanned": 22,
+  "scanned": 20,
   "ok": 16,
   "demoted": [
     {
-      "id": "b80f3544-f90b-4e37-8ee5-ca449e8b1fc5",
-      "slug": "indian-oil-corporation-limited-iocl-iocl-recruitment-of-executives-through-cbt-2-6253484d",
-      "title": "IOCL Recruitment of Executives through CBT 2026 — 470 posts",
+      "id": "437549f0-25db-4b07-8ea9-4800b3fc4242",
+      "slug": "addendum-notice-08-posts-of-administrative-officer-grade-i-ministry-of-defence-074b6ac5",
+      "title": "Addendum Notice: 08 Posts of Administrative Officer Grade - I, Ministry of Defence",
       "reasons": [
-        "deadline expired"
+        "non-vacancy document"
       ]
     },
     {
@@ -29,22 +29,6 @@
       ]
     },
     {
-      "id": "437549f0-25db-4b07-8ea9-4800b3fc4242",
-      "slug": "addendum-notice-08-posts-of-administrative-officer-grade-i-ministry-of-defence-074b6ac5",
-      "title": "Addendum Notice: 08 Posts of Administrative Officer Grade - I, Ministry of Defence",
-      "reasons": [
-        "non-vacancy document"
-      ]
-    },
-    {
-      "id": "c9c5f62b-4eaa-45de-bf85-0dcdc0ae44a1",
-      "slug": "mppsc-recruitment-2026-apply-online-for-06-iaeo-aao-and-more-posts-9bc6da58",
-      "title": "MPPSC Recruitment 2026 - Apply Online for 06 IAEO, AAO and More Posts",
-      "reasons": [
-        "deadline expired"
-      ]
-    },
-    {
       "id": "5aaff605-8801-4455-bb34-a1ab6b8ef8bd",
       "slug": "tezpur-university-junior-research-fellow-recruitment-2026-apply-online-96f771fe",
       "title": "Tezpur University Junior Research Fellow Recruitment 2026 - Apply Online",
@@ -53,5 +37,5 @@
       ]
     }
   ],
-  "rowsUpdated": 6
+  "rowsUpdated": 4
 }

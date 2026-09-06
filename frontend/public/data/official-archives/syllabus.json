@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-05T08:39:10.705Z",
+  "generatedAt": "2026-09-06T08:50:17.921Z",
   "count": 46,
   "items": [
     {
@@ -41,9 +41,9 @@
       "fetchMethod": "html"
     },
     {
-      "id": "85b1767449295db8",
+      "id": "e5d59009e1eecc89",
       "title": "Postwise Syllabus",
-      "link": "https://www.keralapsc.gov.in/syllabus1",
+      "link": "https://www.keralapsc.gov.in/index.php/syllabus1",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
@@ -143,6 +143,23 @@
       "category": "state",
       "stateIds": [
         "an"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "85b1767449295db8",
+      "title": "Postwise Syllabus",
+      "link": "https://www.keralapsc.gov.in/syllabus1",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-kl",
+      "sourceName": "Kerala PSC",
+      "dept": "Kerala PSC",
+      "state": "Kerala",
+      "category": "state",
+      "stateIds": [
+        "kl"
       ],
       "fetchMethod": "html"
     },
@@ -674,23 +691,6 @@
       "state": "All India",
       "category": "state",
       "fetchMethod": "live-jobs-supplement"
-    },
-    {
-      "id": "e5d59009e1eecc89",
-      "title": "Postwise Syllabus",
-      "link": "https://www.keralapsc.gov.in/index.php/syllabus1",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-kl",
-      "sourceName": "Kerala PSC",
-      "dept": "Kerala PSC",
-      "state": "Kerala",
-      "category": "state",
-      "stateIds": [
-        "kl"
-      ],
-      "fetchMethod": "html"
     },
     {
       "id": "b1d028e16297f78b",

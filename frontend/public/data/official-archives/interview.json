@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-09-05T08:39:10.705Z",
-  "count": 280,
+  "generatedAt": "2026-09-06T08:50:17.921Z",
+  "count": 281,
   "items": [
     {
       "id": "29e735f6c2245346",
@@ -958,9 +958,9 @@
       "fetchMethod": "html"
     },
     {
-      "id": "1709d751f92d2140",
+      "id": "c019d0c423cf10b5",
       "title": "Procedure for Interview Date Change Requests",
-      "link": "https://www.keralapsc.gov.in/procedure-interview-date-change-requests",
+      "link": "https://www.keralapsc.gov.in/index.php/procedure-interview-date-change-requests",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
@@ -975,9 +975,9 @@
       "fetchMethod": "html"
     },
     {
-      "id": "39e61c0337589778",
+      "id": "05de1912b0b5a28f",
       "title": "Interview Schedule",
-      "link": "https://www.keralapsc.gov.in/interviews",
+      "link": "https://www.keralapsc.gov.in/index.php/interviews",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
@@ -1014,6 +1014,23 @@
       "id": "0c8b608876f8adbe",
       "title": "examination-interview",
       "link": "https://www.keralapsc.gov.in/examination-interview",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-kl",
+      "sourceName": "Kerala PSC",
+      "dept": "Kerala PSC",
+      "state": "Kerala",
+      "category": "state",
+      "stateIds": [
+        "kl"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "1709d751f92d2140",
+      "title": "Procedure for Interview Date Change Requests",
+      "link": "https://www.keralapsc.gov.in/procedure-interview-date-change-requests",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
@@ -1123,6 +1140,23 @@
       "fetchMethod": "rss-discovered"
     },
     {
+      "id": "39e61c0337589778",
+      "title": "Interview Schedule",
+      "link": "https://www.keralapsc.gov.in/interviews",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-kl",
+      "sourceName": "Kerala PSC",
+      "dept": "Kerala PSC",
+      "state": "Kerala",
+      "category": "state",
+      "stateIds": [
+        "kl"
+      ],
+      "fetchMethod": "html"
+    },
+    {
       "id": "ef1ec3ffdbb56c6b",
       "title": "NOT REACHED ZONE FOR INTERVIEW",
       "link": "https://tnpsc.gov.in/English/Checkresult.aspx?key=bafcc5b2-2911-48a5-aabe-927c650e9f47&&id=E413D952-5117-4CF7-921D-4B2754CCA27E",
@@ -1155,23 +1189,6 @@
         "all"
       ],
       "fetchMethod": "html-listing"
-    },
-    {
-      "id": "c019d0c423cf10b5",
-      "title": "Procedure for Interview Date Change Requests",
-      "link": "https://www.keralapsc.gov.in/index.php/procedure-interview-date-change-requests",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-kl",
-      "sourceName": "Kerala PSC",
-      "dept": "Kerala PSC",
-      "state": "Kerala",
-      "category": "state",
-      "stateIds": [
-        "kl"
-      ],
-      "fetchMethod": "html"
     },
     {
       "id": "37277d471752171b",

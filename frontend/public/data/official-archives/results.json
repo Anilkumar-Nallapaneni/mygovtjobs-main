@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-05T08:39:10.705Z",
+  "generatedAt": "2026-09-06T08:50:17.921Z",
   "count": 821,
   "items": [
     {
@@ -201,23 +201,6 @@
       "id": "f1112e23f75428db",
       "title": "RESULT OF ADVT. NO. D-4/E-1/2025, DIRECTORATE GENERAL OF FAMILY WELFARE UTTAR PR..",
       "link": "https://uppsc.up.nic.in/Open_PDF_DB.aspx?I4PnQ0tBagkKN9rKVhlu7ysKNFjEqVIK",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "uppsc-hall-tickets",
-      "sourceName": "UPPSC — Hall tickets",
-      "dept": "Uttar Pradesh PSC",
-      "state": "Uttar Pradesh",
-      "category": "state",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "4b02ab0f27e053f3",
-      "title": "RESULT OF ADVT. NO. D-5/E-1/2025, UTTAR PRADESH STATE ARCHAEOLOGICAL DIRECTORATE..",
-      "link": "https://uppsc.up.nic.in/Open_PDF_DB.aspx?I4PnQ0tBagkKN9rKVhlu76/9na81EE1P",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
@@ -934,7 +917,7 @@
       "stateIds": [
         "all"
       ],
-      "fetchMethod": "rss-discovered"
+      "fetchMethod": "html"
     },
     {
       "id": "5248b404d0a4fa81",
@@ -2074,6 +2057,23 @@
         "br"
       ],
       "fetchMethod": "html"
+    },
+    {
+      "id": "4b02ab0f27e053f3",
+      "title": "RESULT OF ADVT. NO. D-5/E-1/2025, UTTAR PRADESH STATE ARCHAEOLOGICAL DIRECTORATE..",
+      "link": "https://uppsc.up.nic.in/Open_PDF_DB.aspx?I4PnQ0tBagkKN9rKVhlu76/9na81EE1P",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "uppsc-hall-tickets",
+      "sourceName": "UPPSC — Hall tickets",
+      "dept": "Uttar Pradesh PSC",
+      "state": "Uttar Pradesh",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
     },
     {
       "id": "c4c9266da946f3d2",
