@@ -1,21 +1,21 @@
 {
-  "generatedAt": "2026-09-06T09:08:11.948065+00:00",
+  "generatedAt": "2026-09-07T04:05:42.376966+00:00",
   "apply": true,
   "scanned": 20,
-  "ok": 16,
+  "ok": 15,
   "demoted": [
     {
-      "id": "437549f0-25db-4b07-8ea9-4800b3fc4242",
-      "slug": "addendum-notice-08-posts-of-administrative-officer-grade-i-ministry-of-defence-074b6ac5",
-      "title": "Addendum Notice: 08 Posts of Administrative Officer Grade - I, Ministry of Defence",
+      "id": "883e67fc-687d-482b-a915-f36f114b6670",
+      "slug": "addendum-notice-19-posts-of-manager-grade-i-section-officer-ministry-of-defence-67983808",
+      "title": "Addendum Notice: 19 Posts of Manager Grade - I - Section Officer, Ministry of Defence",
       "reasons": [
         "non-vacancy document"
       ]
     },
     {
-      "id": "883e67fc-687d-482b-a915-f36f114b6670",
-      "slug": "addendum-notice-19-posts-of-manager-grade-i-section-officer-ministry-of-defence-67983808",
-      "title": "Addendum Notice: 19 Posts of Manager Grade - I - Section Officer, Ministry of Defence",
+      "id": "437549f0-25db-4b07-8ea9-4800b3fc4242",
+      "slug": "addendum-notice-08-posts-of-administrative-officer-grade-i-ministry-of-defence-074b6ac5",
+      "title": "Addendum Notice: 08 Posts of Administrative Officer Grade - I, Ministry of Defence",
       "reasons": [
         "non-vacancy document"
       ]
@@ -35,7 +35,15 @@
       "reasons": [
         "non-vacancy document"
       ]
+    },
+    {
+      "id": "4389a201-80be-4f8e-badc-b552c3a5cf48",
+      "slug": "recruitment-advertisement-for-assistant-accounts-officer-assistant-director-farm-54ae0ddb",
+      "title": "Recruitment Advertisement for Assistant Accounts Officer/Assistant Director Farmer Welfare and Agriculture Development D",
+      "reasons": [
+        "deadline expired"
+      ]
     }
   ],
-  "rowsUpdated": 4
+  "rowsUpdated": 5
 }
