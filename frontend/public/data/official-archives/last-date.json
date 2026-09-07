@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-06T08:50:17.921Z",
+  "generatedAt": "2026-09-07T09:08:30.754Z",
   "count": 293,
   "items": [
     {
@@ -637,23 +637,6 @@
       "fetchMethod": "html"
     },
     {
-      "id": "c1769462bc9ab575",
-      "title": "Apply : CTET SEP 2026 (Date Extended till 01.09.2026)",
-      "link": "https://ctet.nic.in/apply-ctet-sep-2026-date-extended-till-01-09-2026/",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "ctet",
-      "sourceName": "CBSE — CTET",
-      "dept": "CBSE — CTET",
-      "state": "All India",
-      "category": "teaching",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
       "id": "988ed4272bbf3f80",
       "title": "Public Notice: CTET Feb-2026 Key Challenge / Scanned Images of OMR (last Date 15/03/2026,up-to 11:59 PM)",
       "link": "https://cdnbbsr.s3waas.gov.in/s3443dec3062d0286986e21dc0631734c9/uploads/2026/03/202603121086699841.pdf",
@@ -1020,6 +1003,23 @@
       "category": "teaching",
       "stateIds": [
         "od"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "c1769462bc9ab575",
+      "title": "Apply : CTET SEP 2026 (Date Extended till 01.09.2026)",
+      "link": "https://ctet.nic.in/apply-ctet-sep-2026-date-extended-till-01-09-2026/",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "ctet",
+      "sourceName": "CBSE — CTET",
+      "dept": "CBSE — CTET",
+      "state": "All India",
+      "category": "teaching",
+      "stateIds": [
+        "all"
       ],
       "fetchMethod": "html"
     },

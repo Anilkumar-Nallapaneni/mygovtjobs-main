@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-09-06T08:50:17.921Z",
-  "count": 821,
+  "generatedAt": "2026-09-07T09:08:30.754Z",
+  "count": 822,
   "items": [
     {
       "id": "2e7fa8a4ffb7c7be",
@@ -903,23 +903,6 @@
       "fetchMethod": "html"
     },
     {
-      "id": "3cb3737965d5c83c",
-      "title": "Recruitment Result",
-      "link": "https://www.aiims.edu/index.php/en/notices/recruitment/archive-recruitment",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "aiims",
-      "sourceName": "AIIMS New Delhi — Recruitment",
-      "dept": "AIIMS New Delhi — Recruitment",
-      "state": "All India",
-      "category": "health",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
       "id": "5248b404d0a4fa81",
       "title": "Financial Result",
       "link": "https://www.canarabank.bank.in/financial-result",
@@ -931,6 +914,23 @@
       "dept": "Canara Bank — Careers",
       "state": "All India",
       "category": "banking",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "05c99bb7aba25100",
+      "title": "07 September 2026: Final result for the post of Junior Consultant on contract basis at Tripura Asset, Agartala",
+      "link": "https://ongcindia.com/documents/77751/2659209/Result_Agartala07092026.pdf/6746998f-5e9c-835a-df6f-c09ea9f192d4",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "ongc",
+      "sourceName": "ONGC — Careers",
+      "dept": "ONGC — Careers",
+      "state": "All India",
+      "category": "psu",
       "stateIds": [
         "all"
       ],
@@ -1437,80 +1437,6 @@
       "category": "state",
       "stateIds": [
         "mp"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "a36d1e0933c7fcd3",
-      "title": "Caveat Vigyapti on Selection List of Sports Officer Exam 2024, Dated 22/08/2026",
-      "link": "https://mppsc.mp.gov.in/uploads/advertisement/Caveat_Vigyapti_Sports_Officer_Exam_2024_Dated_22_08_2026.pdf",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [
-        "https://mppsc.mp.gov.in/uploads/advertisement/Caveat_Vigyapti_Sports_Officer_Exam_2024_Dated_22_08_2026.pdf"
-      ],
-      "sourceId": "psc-mp",
-      "sourceName": "Madhya Pradesh PSC (MPPSC)",
-      "dept": "Madhya Pradesh PSC (MPPSC)",
-      "state": "Madhya Pradesh",
-      "category": "state",
-      "stateIds": [
-        "mp"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "30f562a86bab6341",
-      "title": "Selection List - Sports Officer Exam 2024, Dated 22/08/2026",
-      "link": "https://mppsc.mp.gov.in/uploads/files/Selection_List_Sports_Officer_Exam_2024_Dated_22_08_2026.pdf",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [
-        "https://mppsc.mp.gov.in/uploads/files/Selection_List_Sports_Officer_Exam_2024_Dated_22_08_2026.pdf"
-      ],
-      "sourceId": "psc-mp",
-      "sourceName": "Madhya Pradesh PSC (MPPSC)",
-      "dept": "Madhya Pradesh PSC (MPPSC)",
-      "state": "Madhya Pradesh",
-      "category": "state",
-      "stateIds": [
-        "mp"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "40ed83132aef7de3",
-      "title": "MCSCC (Main) Examination, 2022 – Link for Viewing Marks of Candidates Updated: 04/07/2026",
-      "link": "https://mpscmanipur.gov.in/files/MPSC_26070416190.pdf",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [
-        "https://mpscmanipur.gov.in/files/MPSC_26070416190.pdf"
-      ],
-      "sourceId": "psc-mn",
-      "sourceName": "Manipur PSC",
-      "dept": "Manipur PSC",
-      "state": "NE States",
-      "category": "state",
-      "stateIds": [
-        "ne"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "c9189f55ccd79cdc",
-      "title": "MCSCC (Main) Examination, 2022 – Cutoff Marks Updated: 15/07/2026",
-      "link": "https://mpscmanipur.gov.in/Cutoff.html",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-mn",
-      "sourceName": "Manipur PSC",
-      "dept": "Manipur PSC",
-      "state": "NE States",
-      "category": "state",
-      "stateIds": [
-        "ne"
       ],
       "fetchMethod": "html"
     },
@@ -2055,6 +1981,97 @@
       "category": "teaching",
       "stateIds": [
         "br"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "3cb3737965d5c83c",
+      "title": "Recruitment Result",
+      "link": "https://www.aiims.edu/index.php/en/notices/recruitment/archive-recruitment",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "aiims",
+      "sourceName": "AIIMS New Delhi — Recruitment",
+      "dept": "AIIMS New Delhi — Recruitment",
+      "state": "All India",
+      "category": "health",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "a36d1e0933c7fcd3",
+      "title": "Caveat Vigyapti on Selection List of Sports Officer Exam 2024, Dated 22/08/2026",
+      "link": "https://mppsc.mp.gov.in/uploads/advertisement/Caveat_Vigyapti_Sports_Officer_Exam_2024_Dated_22_08_2026.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://mppsc.mp.gov.in/uploads/advertisement/Caveat_Vigyapti_Sports_Officer_Exam_2024_Dated_22_08_2026.pdf"
+      ],
+      "sourceId": "psc-mp",
+      "sourceName": "Madhya Pradesh PSC (MPPSC)",
+      "dept": "Madhya Pradesh PSC (MPPSC)",
+      "state": "Madhya Pradesh",
+      "category": "state",
+      "stateIds": [
+        "mp"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "30f562a86bab6341",
+      "title": "Selection List - Sports Officer Exam 2024, Dated 22/08/2026",
+      "link": "https://mppsc.mp.gov.in/uploads/files/Selection_List_Sports_Officer_Exam_2024_Dated_22_08_2026.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://mppsc.mp.gov.in/uploads/files/Selection_List_Sports_Officer_Exam_2024_Dated_22_08_2026.pdf"
+      ],
+      "sourceId": "psc-mp",
+      "sourceName": "Madhya Pradesh PSC (MPPSC)",
+      "dept": "Madhya Pradesh PSC (MPPSC)",
+      "state": "Madhya Pradesh",
+      "category": "state",
+      "stateIds": [
+        "mp"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "40ed83132aef7de3",
+      "title": "MCSCC (Main) Examination, 2022 – Link for Viewing Marks of Candidates Updated: 04/07/2026",
+      "link": "https://mpscmanipur.gov.in/files/MPSC_26070416190.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://mpscmanipur.gov.in/files/MPSC_26070416190.pdf"
+      ],
+      "sourceId": "psc-mn",
+      "sourceName": "Manipur PSC",
+      "dept": "Manipur PSC",
+      "state": "NE States",
+      "category": "state",
+      "stateIds": [
+        "ne"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "c9189f55ccd79cdc",
+      "title": "MCSCC (Main) Examination, 2022 – Cutoff Marks Updated: 15/07/2026",
+      "link": "https://mpscmanipur.gov.in/Cutoff.html",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-mn",
+      "sourceName": "Manipur PSC",
+      "dept": "Manipur PSC",
+      "state": "NE States",
+      "category": "state",
+      "stateIds": [
+        "ne"
       ],
       "fetchMethod": "html"
     },
