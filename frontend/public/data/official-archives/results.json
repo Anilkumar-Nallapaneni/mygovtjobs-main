@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-09-07T09:08:30.754Z",
-  "count": 822,
+  "generatedAt": "2026-09-08T08:59:33.228Z",
+  "count": 824,
   "items": [
     {
       "id": "2e7fa8a4ffb7c7be",
@@ -903,6 +903,23 @@
       "fetchMethod": "html"
     },
     {
+      "id": "3cb3737965d5c83c",
+      "title": "Recruitment Result",
+      "link": "https://www.aiims.edu/index.php/en/notices/recruitment/archive-recruitment",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "aiims",
+      "sourceName": "AIIMS New Delhi — Recruitment",
+      "dept": "AIIMS New Delhi — Recruitment",
+      "state": "All India",
+      "category": "health",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
       "id": "5248b404d0a4fa81",
       "title": "Financial Result",
       "link": "https://www.canarabank.bank.in/financial-result",
@@ -1289,6 +1306,25 @@
       "fetchMethod": "html"
     },
     {
+      "id": "b493bfd275996ba5",
+      "title": "Caveat Vigyapti on Selection List of Scientific Officer Chemistry 2023, Dated 07/09/2026",
+      "link": "https://mppsc.mp.gov.in/uploads/advertisement/Caveat_Vigyapti_Scientific_Officer_Chemistry_2023_Dated_07_09_2026.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://mppsc.mp.gov.in/uploads/advertisement/Caveat_Vigyapti_Scientific_Officer_Chemistry_2023_Dated_07_09_2026.pdf"
+      ],
+      "sourceId": "psc-mp",
+      "sourceName": "Madhya Pradesh PSC (MPPSC)",
+      "dept": "Madhya Pradesh PSC (MPPSC)",
+      "state": "Madhya Pradesh",
+      "category": "state",
+      "stateIds": [
+        "mp"
+      ],
+      "fetchMethod": "html"
+    },
+    {
       "id": "72951590a314de1c",
       "title": "Caveat Vigyapti on Written Exam Result - Assistant Director/Veterinary Assistant Surgeon/Veterinary Extension Officer 2026, Dated 03/09/2026",
       "link": "https://mppsc.mp.gov.in/uploads/files/Caveat_Vigyapti_Written_Exam_Result_AD_Veterinary_Assistant_Surgeon_VEO_2026_Dated_03_09_2026.pdf",
@@ -1441,6 +1477,61 @@
       "fetchMethod": "html"
     },
     {
+      "id": "ab2b7c09d87aebbc",
+      "title": "Selection List - Scientific Officer Chemistry 2023, Dated 07/09/2026",
+      "link": "https://mppsc.mp.gov.in/uploads/files/Selection_List_Scientific_Officer_Chemistry_2023_Dated_07_09_2026.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://mppsc.mp.gov.in/uploads/files/Selection_List_Scientific_Officer_Chemistry_2023_Dated_07_09_2026.pdf"
+      ],
+      "sourceId": "psc-mp",
+      "sourceName": "Madhya Pradesh PSC (MPPSC)",
+      "dept": "Madhya Pradesh PSC (MPPSC)",
+      "state": "Madhya Pradesh",
+      "category": "state",
+      "stateIds": [
+        "mp"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "40ed83132aef7de3",
+      "title": "MCSCC (Main) Examination, 2022 – Link for Viewing Marks of Candidates Updated: 04/07/2026",
+      "link": "https://mpscmanipur.gov.in/files/MPSC_26070416190.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://mpscmanipur.gov.in/files/MPSC_26070416190.pdf"
+      ],
+      "sourceId": "psc-mn",
+      "sourceName": "Manipur PSC",
+      "dept": "Manipur PSC",
+      "state": "NE States",
+      "category": "state",
+      "stateIds": [
+        "ne"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "c9189f55ccd79cdc",
+      "title": "MCSCC (Main) Examination, 2022 – Cutoff Marks Updated: 15/07/2026",
+      "link": "https://mpscmanipur.gov.in/Cutoff.html",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-mn",
+      "sourceName": "Manipur PSC",
+      "dept": "Manipur PSC",
+      "state": "NE States",
+      "category": "state",
+      "stateIds": [
+        "ne"
+      ],
+      "fetchMethod": "html"
+    },
+    {
       "id": "8a1990602dbb2e40",
       "title": "Marks of the candidates for the post of Primary Teacher (Mewat Cadre) against Advt. No. 05/2024, Cat. No. 01 of Elementary Education Department, Haryana.",
       "link": "https://hssc.gov.in/file/ac1f23cd-9f7f-1923-819f-9e104a82000c/result",
@@ -1531,23 +1622,6 @@
       "id": "4c32f43efe645900",
       "title": "उत्तर प्रदेश पुलिस मोटर परिवहन शाखा में मुख्य आरक्षी मोटर परिवहन की भर्ती/चयन वर्ष 2020 से 2025 तक के वर्ष वार परिणाम देखने हेतु लिंक",
       "link": "https://admitcards.iroams.com/AdmitCards/hcmtpdffordisplaylink/",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "police-up",
-      "sourceName": "UP Police Recruitment Board (UPPRPB)",
-      "dept": "UP Police Recruitment Board (UPPRPB)",
-      "state": "Uttar Pradesh",
-      "category": "police",
-      "stateIds": [
-        "up"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "e48e3345d5a0595a",
-      "title": "उत्तर प्रदेश पुलिस मोटर परिवहन शाखा में मुख्य आरक्षी मोटर परिवहन की भर्ती/चयन वर्ष 2020 से 2025 के सम्बन्ध में अंक देखने हेतु लिंक",
-      "link": "https://admitcards.iroams.com/AdmitCards/upprbhcmtresultsaugust2026/",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
@@ -1985,19 +2059,19 @@
       "fetchMethod": "html"
     },
     {
-      "id": "3cb3737965d5c83c",
-      "title": "Recruitment Result",
-      "link": "https://www.aiims.edu/index.php/en/notices/recruitment/archive-recruitment",
+      "id": "e48e3345d5a0595a",
+      "title": "उत्तर प्रदेश पुलिस मोटर परिवहन शाखा में मुख्य आरक्षी मोटर परिवहन की भर्ती/चयन वर्ष 2020 से 2025 के सम्बन्ध में अंक देखने हेतु लिंक",
+      "link": "https://admitcards.iroams.com/AdmitCards/upprbhcmtresultsaugust2026/",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
-      "sourceId": "aiims",
-      "sourceName": "AIIMS New Delhi — Recruitment",
-      "dept": "AIIMS New Delhi — Recruitment",
-      "state": "All India",
-      "category": "health",
+      "sourceId": "police-up",
+      "sourceName": "UP Police Recruitment Board (UPPRPB)",
+      "dept": "UP Police Recruitment Board (UPPRPB)",
+      "state": "Uttar Pradesh",
+      "category": "police",
       "stateIds": [
-        "all"
+        "up"
       ],
       "fetchMethod": "html"
     },
@@ -2036,42 +2110,6 @@
       "category": "state",
       "stateIds": [
         "mp"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "40ed83132aef7de3",
-      "title": "MCSCC (Main) Examination, 2022 – Link for Viewing Marks of Candidates Updated: 04/07/2026",
-      "link": "https://mpscmanipur.gov.in/files/MPSC_26070416190.pdf",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [
-        "https://mpscmanipur.gov.in/files/MPSC_26070416190.pdf"
-      ],
-      "sourceId": "psc-mn",
-      "sourceName": "Manipur PSC",
-      "dept": "Manipur PSC",
-      "state": "NE States",
-      "category": "state",
-      "stateIds": [
-        "ne"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "c9189f55ccd79cdc",
-      "title": "MCSCC (Main) Examination, 2022 – Cutoff Marks Updated: 15/07/2026",
-      "link": "https://mpscmanipur.gov.in/Cutoff.html",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-mn",
-      "sourceName": "Manipur PSC",
-      "dept": "Manipur PSC",
-      "state": "NE States",
-      "category": "state",
-      "stateIds": [
-        "ne"
       ],
       "fetchMethod": "html"
     },

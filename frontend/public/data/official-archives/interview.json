@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-07T09:08:30.754Z",
+  "generatedAt": "2026-09-08T08:59:33.228Z",
   "count": 281,
   "items": [
     {
@@ -1011,61 +1011,6 @@
       "fetchMethod": "html"
     },
     {
-      "id": "91558011355dca9d",
-      "title": "Recent Examinations/Interview",
-      "link": "https://jpsc.gov.in/Examination-Links.php",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-jh",
-      "sourceName": "Jharkhand PSC (JPSC)",
-      "dept": "Jharkhand PSC (JPSC)",
-      "state": "Jharkhand",
-      "category": "state",
-      "stateIds": [
-        "jh"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "481473008e181ee4",
-      "title": "Press note regarding the personal interview for the Post of Assistant Engineer MGNREGA, C.D Block Little Andaman under South Andaman District",
-      "link": "https://erecruitment.andamannicobar.gov.in/Notice/64_fbe80dee-4dc3-4385-9622-d2f8e1ad2f29.pdf",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [
-        "https://erecruitment.andamannicobar.gov.in/Notice/64_fbe80dee-4dc3-4385-9622-d2f8e1ad2f29.pdf"
-      ],
-      "sourceId": "an-rec",
-      "sourceName": "Andaman & Nicobar e-Recruitment",
-      "dept": "Andaman & Nicobar e-Recruitment",
-      "state": "Andaman & Nicobar",
-      "category": "state",
-      "stateIds": [
-        "an"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "125fee0a1f6840d1",
-      "title": "Walk-in-Interview for Coach & Club Teacher Vacancies - Click Here",
-      "link": "https://sainikschoolgoalpara.org/wp-content/uploads/2026/05/Advt_Coach_Club-Teacher_02_2026-1.pdf",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [
-        "https://sainikschoolgoalpara.org/wp-content/uploads/2026/05/Advt_Coach_Club-Teacher_02_2026-1.pdf"
-      ],
-      "sourceId": "ss-goalpara",
-      "sourceName": "Sainik School Goalpara",
-      "dept": "Sainik School Goalpara",
-      "state": "Assam",
-      "category": "teaching",
-      "stateIds": [
-        "as"
-      ],
-      "fetchMethod": "rss-discovered"
-    },
-    {
       "id": "c019d0c423cf10b5",
       "title": "Procedure for Interview Date Change Requests",
       "link": "https://www.keralapsc.gov.in/index.php/procedure-interview-date-change-requests",
@@ -1083,19 +1028,19 @@
       "fetchMethod": "html"
     },
     {
-      "id": "05de1912b0b5a28f",
-      "title": "Interview Schedule",
-      "link": "https://www.keralapsc.gov.in/index.php/interviews",
+      "id": "91558011355dca9d",
+      "title": "Recent Examinations/Interview",
+      "link": "https://jpsc.gov.in/Examination-Links.php",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
-      "sourceId": "psc-kl",
-      "sourceName": "Kerala PSC",
-      "dept": "Kerala PSC",
-      "state": "Kerala",
+      "sourceId": "psc-jh",
+      "sourceName": "Jharkhand PSC (JPSC)",
+      "dept": "Jharkhand PSC (JPSC)",
+      "state": "Jharkhand",
       "category": "state",
       "stateIds": [
-        "kl"
+        "jh"
       ],
       "fetchMethod": "html"
     },
@@ -1153,6 +1098,61 @@
       "category": "state",
       "stateIds": [
         "ne"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "481473008e181ee4",
+      "title": "Press note regarding the personal interview for the Post of Assistant Engineer MGNREGA, C.D Block Little Andaman under South Andaman District",
+      "link": "https://erecruitment.andamannicobar.gov.in/Notice/64_fbe80dee-4dc3-4385-9622-d2f8e1ad2f29.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://erecruitment.andamannicobar.gov.in/Notice/64_fbe80dee-4dc3-4385-9622-d2f8e1ad2f29.pdf"
+      ],
+      "sourceId": "an-rec",
+      "sourceName": "Andaman & Nicobar e-Recruitment",
+      "dept": "Andaman & Nicobar e-Recruitment",
+      "state": "Andaman & Nicobar",
+      "category": "state",
+      "stateIds": [
+        "an"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "125fee0a1f6840d1",
+      "title": "Walk-in-Interview for Coach & Club Teacher Vacancies - Click Here",
+      "link": "https://sainikschoolgoalpara.org/wp-content/uploads/2026/05/Advt_Coach_Club-Teacher_02_2026-1.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://sainikschoolgoalpara.org/wp-content/uploads/2026/05/Advt_Coach_Club-Teacher_02_2026-1.pdf"
+      ],
+      "sourceId": "ss-goalpara",
+      "sourceName": "Sainik School Goalpara",
+      "dept": "Sainik School Goalpara",
+      "state": "Assam",
+      "category": "teaching",
+      "stateIds": [
+        "as"
+      ],
+      "fetchMethod": "rss-discovered"
+    },
+    {
+      "id": "05de1912b0b5a28f",
+      "title": "Interview Schedule",
+      "link": "https://www.keralapsc.gov.in/index.php/interviews",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-kl",
+      "sourceName": "Kerala PSC",
+      "dept": "Kerala PSC",
+      "state": "Kerala",
+      "category": "state",
+      "stateIds": [
+        "kl"
       ],
       "fetchMethod": "html"
     },
