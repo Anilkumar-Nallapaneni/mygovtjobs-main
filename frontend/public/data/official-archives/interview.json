@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-09-08T08:59:33.228Z",
-  "count": 281,
+  "generatedAt": "2026-09-09T09:09:52.925Z",
+  "count": 283,
   "items": [
     {
       "id": "29e735f6c2245346",
@@ -598,15 +598,17 @@
       "fetchMethod": "html"
     },
     {
-      "id": "9e7e8810785833f5",
-      "title": "A World Class Sea Survival Centre",
-      "link": "https://ongcindia.com/web/eng/sea-survival-training",
+      "id": "4915a9cd9eb23e5b",
+      "title": "Notice for Shortlisting of candidates for Personal Interview for Advertisement No. ISP/YP/2026/01",
+      "link": "https://aima-web-images.s3.ap-south-1.amazonaws.com/sailcareers.com/Downloads/_News%20&%20Jobs_08092026_172801.pdf",
       "publishedAt": null,
       "summary": null,
-      "pdfUrls": [],
-      "sourceId": "ongc",
-      "sourceName": "ONGC — Careers",
-      "dept": "ONGC — Careers",
+      "pdfUrls": [
+        "https://aima-web-images.s3.ap-south-1.amazonaws.com/sailcareers.com/Downloads/_News%20&%20Jobs_08092026_172801.pdf"
+      ],
+      "sourceId": "sail",
+      "sourceName": "Steel Authority of India (SAIL)",
+      "dept": "Steel Authority of India (SAIL)",
       "state": "All India",
       "category": "psu",
       "stateIds": [
@@ -856,6 +858,23 @@
       "fetchMethod": "html"
     },
     {
+      "id": "32e44b90515bc891",
+      "title": "Download Interview Call Letter for against Advt. No. ISP/YP/2026/01 dated 22.05.2026",
+      "link": "https://sailcareers.com/SAIL2026YP/SAIL2026YPIntCallLetter.aspx",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "sail",
+      "sourceName": "Steel Authority of India (SAIL)",
+      "dept": "Steel Authority of India (SAIL)",
+      "state": "All India",
+      "category": "psu",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
       "id": "fa359b9114331fc3",
       "title": "Personality Test / Viva-Voce",
       "link": "https://hppsc.hp.gov.in/CommonControls/ViewContinuousLinkPage?qs=mhlKjiXMMIveW0iAADPEiC57R27%2BGya8ay4kbm0dJkcnlKHGzV4U5%2BQlrRl1TG3OQWWkf93oLxROjrnFX90ov6IhjjgH2qZXMgsT6KqPbJM%3D",
@@ -1045,6 +1064,61 @@
       "fetchMethod": "html"
     },
     {
+      "id": "481473008e181ee4",
+      "title": "Press note regarding the personal interview for the Post of Assistant Engineer MGNREGA, C.D Block Little Andaman under South Andaman District",
+      "link": "https://erecruitment.andamannicobar.gov.in/Notice/64_fbe80dee-4dc3-4385-9622-d2f8e1ad2f29.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://erecruitment.andamannicobar.gov.in/Notice/64_fbe80dee-4dc3-4385-9622-d2f8e1ad2f29.pdf"
+      ],
+      "sourceId": "an-rec",
+      "sourceName": "Andaman & Nicobar e-Recruitment",
+      "dept": "Andaman & Nicobar e-Recruitment",
+      "state": "Andaman & Nicobar",
+      "category": "state",
+      "stateIds": [
+        "an"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "125fee0a1f6840d1",
+      "title": "Walk-in-Interview for Coach & Club Teacher Vacancies - Click Here",
+      "link": "https://sainikschoolgoalpara.org/wp-content/uploads/2026/05/Advt_Coach_Club-Teacher_02_2026-1.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://sainikschoolgoalpara.org/wp-content/uploads/2026/05/Advt_Coach_Club-Teacher_02_2026-1.pdf"
+      ],
+      "sourceId": "ss-goalpara",
+      "sourceName": "Sainik School Goalpara",
+      "dept": "Sainik School Goalpara",
+      "state": "Assam",
+      "category": "teaching",
+      "stateIds": [
+        "as"
+      ],
+      "fetchMethod": "rss-discovered"
+    },
+    {
+      "id": "9e7e8810785833f5",
+      "title": "A World Class Sea Survival Centre",
+      "link": "https://ongcindia.com/web/eng/sea-survival-training",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "ongc",
+      "sourceName": "ONGC — Careers",
+      "dept": "ONGC — Careers",
+      "state": "All India",
+      "category": "psu",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
       "id": "4ac64be59afb579a",
       "title": "Schedule of Interview for Recruitment to Various Posts under the Directorate of Handloom & Textiles, Manipur. Updated: 27/05/2026",
       "link": "https://mpscmanipur.gov.in/files/MPSC_26052719480.pdf",
@@ -1100,44 +1174,6 @@
         "ne"
       ],
       "fetchMethod": "html"
-    },
-    {
-      "id": "481473008e181ee4",
-      "title": "Press note regarding the personal interview for the Post of Assistant Engineer MGNREGA, C.D Block Little Andaman under South Andaman District",
-      "link": "https://erecruitment.andamannicobar.gov.in/Notice/64_fbe80dee-4dc3-4385-9622-d2f8e1ad2f29.pdf",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [
-        "https://erecruitment.andamannicobar.gov.in/Notice/64_fbe80dee-4dc3-4385-9622-d2f8e1ad2f29.pdf"
-      ],
-      "sourceId": "an-rec",
-      "sourceName": "Andaman & Nicobar e-Recruitment",
-      "dept": "Andaman & Nicobar e-Recruitment",
-      "state": "Andaman & Nicobar",
-      "category": "state",
-      "stateIds": [
-        "an"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "125fee0a1f6840d1",
-      "title": "Walk-in-Interview for Coach & Club Teacher Vacancies - Click Here",
-      "link": "https://sainikschoolgoalpara.org/wp-content/uploads/2026/05/Advt_Coach_Club-Teacher_02_2026-1.pdf",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [
-        "https://sainikschoolgoalpara.org/wp-content/uploads/2026/05/Advt_Coach_Club-Teacher_02_2026-1.pdf"
-      ],
-      "sourceId": "ss-goalpara",
-      "sourceName": "Sainik School Goalpara",
-      "dept": "Sainik School Goalpara",
-      "state": "Assam",
-      "category": "teaching",
-      "stateIds": [
-        "as"
-      ],
-      "fetchMethod": "rss-discovered"
     },
     {
       "id": "05de1912b0b5a28f",

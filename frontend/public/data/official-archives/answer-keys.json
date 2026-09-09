@@ -1,24 +1,7 @@
 {
-  "generatedAt": "2026-09-08T08:59:33.228Z",
+  "generatedAt": "2026-09-09T09:09:52.925Z",
   "count": 54,
   "items": [
-    {
-      "id": "65b953b91c3e8ca2",
-      "title": "FINAL ANSWER KEY",
-      "link": "https://ctet.nic.in/previous-year-final-answer-key/",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "ctet",
-      "sourceName": "CBSE — CTET",
-      "dept": "CBSE — CTET",
-      "state": "All India",
-      "category": "teaching",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
     {
       "id": "37c45556314fa75d",
       "title": "Answer Key-OMR Exams",
@@ -122,6 +105,23 @@
       "category": "state",
       "stateIds": [
         "mp"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "65b953b91c3e8ca2",
+      "title": "FINAL ANSWER KEY",
+      "link": "https://ctet.nic.in/previous-year-final-answer-key/",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "ctet",
+      "sourceName": "CBSE — CTET",
+      "dept": "CBSE — CTET",
+      "state": "All India",
+      "category": "teaching",
+      "stateIds": [
+        "all"
       ],
       "fetchMethod": "html"
     },
