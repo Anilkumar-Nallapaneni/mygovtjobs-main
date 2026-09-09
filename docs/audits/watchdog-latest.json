@@ -1,21 +1,29 @@
 {
-  "generatedAt": "2026-09-08T09:15:20.989429+00:00",
+  "generatedAt": "2026-09-09T04:05:52.701213+00:00",
   "apply": true,
   "scanned": 19,
-  "ok": 15,
+  "ok": 14,
   "demoted": [
     {
-      "id": "883e67fc-687d-482b-a915-f36f114b6670",
-      "slug": "addendum-notice-19-posts-of-manager-grade-i-section-officer-ministry-of-defence-67983808",
-      "title": "Addendum Notice: 19 Posts of Manager Grade - I - Section Officer, Ministry of Defence",
+      "id": "d71785ed-38d5-4427-a4ec-6c6e8ddbc0db",
+      "slug": "drdo-recruitment-public-notice-263-17-kb-requirement-of-valid-gate-score-for-dir-93a29418",
+      "title": "Public Notice 263.17 KB Requirement of Valid GATE Score for Direct Recruitment of Scientist 'B' (Group A Gazetted) post ",
       "reasons": [
-        "non-vacancy document"
+        "deadline expired"
       ]
     },
     {
       "id": "437549f0-25db-4b07-8ea9-4800b3fc4242",
       "slug": "addendum-notice-08-posts-of-administrative-officer-grade-i-ministry-of-defence-074b6ac5",
       "title": "Addendum Notice: 08 Posts of Administrative Officer Grade - I, Ministry of Defence",
+      "reasons": [
+        "non-vacancy document"
+      ]
+    },
+    {
+      "id": "883e67fc-687d-482b-a915-f36f114b6670",
+      "slug": "addendum-notice-19-posts-of-manager-grade-i-section-officer-ministry-of-defence-67983808",
+      "title": "Addendum Notice: 19 Posts of Manager Grade - I - Section Officer, Ministry of Defence",
       "reasons": [
         "non-vacancy document"
       ]
@@ -37,5 +45,5 @@
       ]
     }
   ],
-  "rowsUpdated": 4
+  "rowsUpdated": 5
 }
