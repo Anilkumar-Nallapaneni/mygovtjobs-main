@@ -1,7 +1,75 @@
 {
-  "generatedAt": "2026-09-09T09:09:52.925Z",
-  "count": 160,
+  "generatedAt": "2026-09-10T09:03:07.599Z",
+  "count": 165,
   "items": [
+    {
+      "id": "dab406e23a6537a1",
+      "title": "E-Admit Cards for various Recruitment Posts",
+      "link": "https://upsconline.gov.in/oraadmitcard/",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "upsc-e-admit-hub",
+      "sourceName": "UPSC — e-Admit cards",
+      "dept": "Union Public Service Commission",
+      "state": "All India",
+      "category": "upsc",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "99c9f94d8e7c5a15",
+      "title": "e-Admit Cards For Computer Based Skill Test For Various Recruitment Posts (ORA)",
+      "link": "https://upsconline.gov.in/eadmitcard/admitcard_steno_2024/",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "upsc-e-admit-hub",
+      "sourceName": "UPSC — e-Admit cards",
+      "dept": "Union Public Service Commission",
+      "state": "All India",
+      "category": "upsc",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "7749ebd16d22dad7",
+      "title": "E- Admit Cards",
+      "link": "https://www.upsc.gov.in/e-admit-cards",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "upsc-e-admit-hub",
+      "sourceName": "UPSC — e-Admit cards",
+      "dept": "Union Public Service Commission",
+      "state": "All India",
+      "category": "upsc",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "7e7c65253294c1b7",
+      "title": "E-Admit Cards for various Examinations of UPSC",
+      "link": "https://upsconline.nic.in/",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "upsc-e-admit-hub",
+      "sourceName": "UPSC — e-Admit cards",
+      "dept": "Union Public Service Commission",
+      "state": "All India",
+      "category": "upsc",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
     {
       "id": "1ef5255ac7c74e68",
       "title": "NOTICE REGARDING ADMIT CARD OF ADVT. NO. A-7/E-1/2025, ASSISTANT PROFESSOR, GOVT..",
@@ -113,6 +181,57 @@
       "fetchMethod": "html"
     },
     {
+      "id": "0157354131476c03",
+      "title": "Intimation to Stock Exchange(s)",
+      "link": "https://ongcindia.com/web/eng/investors/intimation-to-stock-exchange",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "ongc",
+      "sourceName": "ONGC — Careers",
+      "dept": "ONGC — Careers",
+      "state": "All India",
+      "category": "psu",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "97a06d61ec80c264",
+      "title": "Conference call/analyst meet with Investors",
+      "link": "https://ntpc.co.in/index.php/investors/confrence-call-analyst-meet-investors/conference-call-analysts-investors",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "ntpc",
+      "sourceName": "NTPC — Careers",
+      "dept": "NTPC — Careers",
+      "state": "All India",
+      "category": "psu",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "4382aefa8fd5c9cb",
+      "title": "NTPC Ltd. Q4/12M FY26 Conference Call on May 23, 2026",
+      "link": "https://ntpc.co.in/index.php/ntpc-ltd-q412m-fy26-conference-call-may-23-2026",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "ntpc",
+      "sourceName": "NTPC — Careers",
+      "dept": "NTPC — Careers",
+      "state": "All India",
+      "category": "psu",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
       "id": "2b909d8e996d4c94",
       "title": "Conference call/analyst meet with Investors",
       "link": "https://ntpc.co.in/investors/confrence-call-analyst-meet-investors/conference-call-analysts-investors",
@@ -130,15 +249,15 @@
       "fetchMethod": "html"
     },
     {
-      "id": "4e1bcf588af156f0",
-      "title": "NTPC Ltd. Q4/12M FY26 Conference Call on May 23, 2026",
-      "link": "https://ntpc.co.in/ntpc-ltd-q412m-fy26-conference-call-may-23-2026",
+      "id": "eea0763a5451a158",
+      "title": "Presentations & Conference Calls",
+      "link": "https://www.bhel.com/presentations-conference-calls",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
-      "sourceId": "ntpc",
-      "sourceName": "NTPC — Careers",
-      "dept": "NTPC — Careers",
+      "sourceId": "bhel",
+      "sourceName": "BHEL — Careers",
+      "dept": "BHEL — Careers",
       "state": "All India",
       "category": "psu",
       "stateIds": [
@@ -300,6 +419,129 @@
       "fetchMethod": "html"
     },
     {
+      "id": "fe40b1b9ceff9486",
+      "title": "Interview Call Letter - Assistant Professor (Zoology) Examination - 2024",
+      "link": "https://mppsc.mponline.gov.in/Portal/Examinations/MPPSC/2025/ASP24/CallLetter/Login.aspx?Pid=AP19",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-mp",
+      "sourceName": "Madhya Pradesh PSC (MPPSC)",
+      "dept": "Madhya Pradesh PSC (MPPSC)",
+      "state": "Madhya Pradesh",
+      "category": "state",
+      "stateIds": [
+        "mp"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "0f149f2f86bb09b8",
+      "title": "Admit Card - State Service Main Exam 2026",
+      "link": "https://mppsc.mponline.gov.in/Portal/Examinations/MPPSC/2026/Admitcard/SM26Login.aspx",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-mp",
+      "sourceName": "Madhya Pradesh PSC (MPPSC)",
+      "dept": "Madhya Pradesh PSC (MPPSC)",
+      "state": "Madhya Pradesh",
+      "category": "state",
+      "stateIds": [
+        "mp"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "749a37e48c404ddf",
+      "title": "Interview Call Letter - Assistant Professor (Mathematics) 2024",
+      "link": "https://mppsc.mponline.gov.in/Portal/Examinations/MPPSC/2025/ASP24/CallLetter/Login.aspx?Pid=AP21",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-mp",
+      "sourceName": "Madhya Pradesh PSC (MPPSC)",
+      "dept": "Madhya Pradesh PSC (MPPSC)",
+      "state": "Madhya Pradesh",
+      "category": "state",
+      "stateIds": [
+        "mp"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "4fdef8dec26c366f",
+      "title": "Interview Call Letter",
+      "link": "https://mppsc.mp.gov.in/Callletter",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-mp",
+      "sourceName": "Madhya Pradesh PSC (MPPSC)",
+      "dept": "Madhya Pradesh PSC (MPPSC)",
+      "state": "Madhya Pradesh",
+      "category": "state",
+      "stateIds": [
+        "mp"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "2cb6ef6de1513685",
+      "title": "Under Secretary (Law) and Law Officer Recruitment – Examination Schedule Updated: 08/05/2026",
+      "link": "https://mpscmanipur.gov.in/files/Notification_Under_Secy_Law_Officer_Admit_card.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://mpscmanipur.gov.in/files/Notification_Under_Secy_Law_Officer_Admit_card.pdf"
+      ],
+      "sourceId": "psc-mn",
+      "sourceName": "Manipur PSC",
+      "dept": "Manipur PSC",
+      "state": "NE States",
+      "category": "state",
+      "stateIds": [
+        "ne"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "686e8d5b26f137a9",
+      "title": "Planning Department Research Assistant Recruitment – Examination Schedule Updated: 08/05/2026",
+      "link": "https://mpscmanipur.gov.in/files/Research_Asst_notification_Admit_card.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://mpscmanipur.gov.in/files/Research_Asst_notification_Admit_card.pdf"
+      ],
+      "sourceId": "psc-mn",
+      "sourceName": "Manipur PSC",
+      "dept": "Manipur PSC",
+      "state": "NE States",
+      "category": "state",
+      "stateIds": [
+        "ne"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "56de02281a84cf5b",
+      "title": "Admit Cards",
+      "link": "https://empsconline.gov.in/downloadadmitcardv2.aspx",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-mn",
+      "sourceName": "Manipur PSC",
+      "dept": "Manipur PSC",
+      "state": "NE States",
+      "category": "state",
+      "stateIds": [
+        "ne"
+      ],
+      "fetchMethod": "html"
+    },
+    {
       "id": "8d3f9e5a69106b55",
       "title": "उत्तर प्रदेश होमगार्ड के पदों पर एनरोलमेंट 2025 के अन्तर्गत शारीरिक दक्षता परीक्षा (पीईटी) के प्रवेश पत्र डाउनलोड किये जाने हेतु महत्वपूर्ण सूचना",
       "link": "https://uppbpb.gov.in/FilesUploaded/Notice/Home%20guard%20PET%20Vigyapti_21e47723f-2975-41d8-9bd0-779f339ca8ab.pdf",
@@ -425,44 +667,6 @@
         "an"
       ],
       "fetchMethod": "html"
-    },
-    {
-      "id": "a38d507836aede97",
-      "title": "AISSEE 2026 CATEGORY WISE LIST OF CANDIDATES ADMITTED IN CLASS VI THROUGH OFFLINE ADMISSION AS ON DATE: 30 JUNE 2026 - Click Here",
-      "link": "https://sainikschoolgoalpara.org/wp-content/uploads/2026/07/Final-Admitted-Candidates-06-30-Jun-26.pdf",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [
-        "https://sainikschoolgoalpara.org/wp-content/uploads/2026/07/Final-Admitted-Candidates-06-30-Jun-26.pdf"
-      ],
-      "sourceId": "ss-goalpara",
-      "sourceName": "Sainik School Goalpara",
-      "dept": "Sainik School Goalpara",
-      "state": "Assam",
-      "category": "teaching",
-      "stateIds": [
-        "as"
-      ],
-      "fetchMethod": "rss-discovered"
-    },
-    {
-      "id": "bd7a84534bd530b5",
-      "title": "AISSEE 2026 CATEGORY WISE LIST OF CANDIDATES ADMITTED IN CLASS IX THROUGH OFFLINE ADMISSION AS ON DATE: 30 JUNE 2026 - Click Here",
-      "link": "https://sainikschoolgoalpara.org/wp-content/uploads/2026/07/Final-Admitted-Candidates-09-30-Jun-26.pdf",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [
-        "https://sainikschoolgoalpara.org/wp-content/uploads/2026/07/Final-Admitted-Candidates-09-30-Jun-26.pdf"
-      ],
-      "sourceId": "ss-goalpara",
-      "sourceName": "Sainik School Goalpara",
-      "dept": "Sainik School Goalpara",
-      "state": "Assam",
-      "category": "teaching",
-      "stateIds": [
-        "as"
-      ],
-      "fetchMethod": "rss-discovered"
     },
     {
       "id": "f0037206cd249aad",
@@ -617,6 +821,61 @@
       "fetchMethod": "html"
     },
     {
+      "id": "4e1bcf588af156f0",
+      "title": "NTPC Ltd. Q4/12M FY26 Conference Call on May 23, 2026",
+      "link": "https://ntpc.co.in/ntpc-ltd-q412m-fy26-conference-call-may-23-2026",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "ntpc",
+      "sourceName": "NTPC — Careers",
+      "dept": "NTPC — Careers",
+      "state": "All India",
+      "category": "psu",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "a38d507836aede97",
+      "title": "AISSEE 2026 CATEGORY WISE LIST OF CANDIDATES ADMITTED IN CLASS VI THROUGH OFFLINE ADMISSION AS ON DATE: 30 JUNE 2026 - Click Here",
+      "link": "https://sainikschoolgoalpara.org/wp-content/uploads/2026/07/Final-Admitted-Candidates-06-30-Jun-26.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://sainikschoolgoalpara.org/wp-content/uploads/2026/07/Final-Admitted-Candidates-06-30-Jun-26.pdf"
+      ],
+      "sourceId": "ss-goalpara",
+      "sourceName": "Sainik School Goalpara",
+      "dept": "Sainik School Goalpara",
+      "state": "Assam",
+      "category": "teaching",
+      "stateIds": [
+        "as"
+      ],
+      "fetchMethod": "rss-discovered"
+    },
+    {
+      "id": "bd7a84534bd530b5",
+      "title": "AISSEE 2026 CATEGORY WISE LIST OF CANDIDATES ADMITTED IN CLASS IX THROUGH OFFLINE ADMISSION AS ON DATE: 30 JUNE 2026 - Click Here",
+      "link": "https://sainikschoolgoalpara.org/wp-content/uploads/2026/07/Final-Admitted-Candidates-09-30-Jun-26.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://sainikschoolgoalpara.org/wp-content/uploads/2026/07/Final-Admitted-Candidates-09-30-Jun-26.pdf"
+      ],
+      "sourceId": "ss-goalpara",
+      "sourceName": "Sainik School Goalpara",
+      "dept": "Sainik School Goalpara",
+      "state": "Assam",
+      "category": "teaching",
+      "stateIds": [
+        "as"
+      ],
+      "fetchMethod": "rss-discovered"
+    },
+    {
       "id": "87967a3b63a7791a",
       "title": "NOTICE REGARDING ADMIT CARD OF ADVT. NO. A-9/E-1/2025, RESEARCH ASSISTANT (ENGI..",
       "link": "https://uppsc.up.nic.in/Open_PDF_DB.aspx?I4PnQ0tBagnM8dHr1ViOnohgFzbKcHY6",
@@ -632,112 +891,6 @@
         "all"
       ],
       "fetchMethod": "html-listing"
-    },
-    {
-      "id": "0157354131476c03",
-      "title": "Intimation to Stock Exchange(s)",
-      "link": "https://ongcindia.com/web/eng/investors/intimation-to-stock-exchange",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "ongc",
-      "sourceName": "ONGC — Careers",
-      "dept": "ONGC — Careers",
-      "state": "All India",
-      "category": "psu",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "97a06d61ec80c264",
-      "title": "Conference call/analyst meet with Investors",
-      "link": "https://ntpc.co.in/index.php/investors/confrence-call-analyst-meet-investors/conference-call-analysts-investors",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "ntpc",
-      "sourceName": "NTPC — Careers",
-      "dept": "NTPC — Careers",
-      "state": "All India",
-      "category": "psu",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "4382aefa8fd5c9cb",
-      "title": "NTPC Ltd. Q4/12M FY26 Conference Call on May 23, 2026",
-      "link": "https://ntpc.co.in/index.php/ntpc-ltd-q412m-fy26-conference-call-may-23-2026",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "ntpc",
-      "sourceName": "NTPC — Careers",
-      "dept": "NTPC — Careers",
-      "state": "All India",
-      "category": "psu",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "2cb6ef6de1513685",
-      "title": "Under Secretary (Law) and Law Officer Recruitment – Examination Schedule Updated: 08/05/2026",
-      "link": "https://mpscmanipur.gov.in/files/Notification_Under_Secy_Law_Officer_Admit_card.pdf",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [
-        "https://mpscmanipur.gov.in/files/Notification_Under_Secy_Law_Officer_Admit_card.pdf"
-      ],
-      "sourceId": "psc-mn",
-      "sourceName": "Manipur PSC",
-      "dept": "Manipur PSC",
-      "state": "NE States",
-      "category": "state",
-      "stateIds": [
-        "ne"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "686e8d5b26f137a9",
-      "title": "Planning Department Research Assistant Recruitment – Examination Schedule Updated: 08/05/2026",
-      "link": "https://mpscmanipur.gov.in/files/Research_Asst_notification_Admit_card.pdf",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [
-        "https://mpscmanipur.gov.in/files/Research_Asst_notification_Admit_card.pdf"
-      ],
-      "sourceId": "psc-mn",
-      "sourceName": "Manipur PSC",
-      "dept": "Manipur PSC",
-      "state": "NE States",
-      "category": "state",
-      "stateIds": [
-        "ne"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "56de02281a84cf5b",
-      "title": "Admit Cards",
-      "link": "https://empsconline.gov.in/downloadadmitcardv2.aspx",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-mn",
-      "sourceName": "Manipur PSC",
-      "dept": "Manipur PSC",
-      "state": "NE States",
-      "category": "state",
-      "stateIds": [
-        "ne"
-      ],
-      "fetchMethod": "html"
     },
     {
       "id": "8c7104cb7aea4338",
@@ -825,40 +978,6 @@
       "fetchMethod": "html-listing"
     },
     {
-      "id": "eea0763a5451a158",
-      "title": "Presentations & Conference Calls",
-      "link": "https://www.bhel.com/presentations-conference-calls",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "bhel",
-      "sourceName": "BHEL — Careers",
-      "dept": "BHEL — Careers",
-      "state": "All India",
-      "category": "psu",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "7749ebd16d22dad7",
-      "title": "Admit Cards",
-      "link": "https://www.upsc.gov.in/e-admit-cards",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "upsc-notifications",
-      "sourceName": "UPSC — What's New",
-      "dept": "Union Public Service Commission",
-      "state": "All India",
-      "category": "upsc",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
       "id": "acf1b98a336e793f",
       "title": "Announcement dated 07.08.2026 regarding provisional admit card for the posts of Assistant District Attorney in Prosecution Department, Haryana (Advt. No. 18/2025)",
       "link": "https://hpsc.gov.in/Portals/0/Ann_Admitcard_SKT_ADA_07_08_2026.pdf",
@@ -889,40 +1008,6 @@
       "dept": "Haryana PSC",
       "state": "Haryana",
       "category": "state",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "dab406e23a6537a1",
-      "title": "E-Admit Cards for various Recruitment Posts",
-      "link": "https://upsconline.gov.in/oraadmitcard/",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "upsc-e-admit-hub",
-      "sourceName": "UPSC — e-Admit cards",
-      "dept": "Union Public Service Commission",
-      "state": "All India",
-      "category": "upsc",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "99c9f94d8e7c5a15",
-      "title": "e-Admit Cards For Computer Based Skill Test For Various Recruitment Posts (ORA)",
-      "link": "https://upsconline.gov.in/eadmitcard/admitcard_steno_2024/",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "upsc-e-admit-hub",
-      "sourceName": "UPSC — e-Admit cards",
-      "dept": "Union Public Service Commission",
-      "state": "All India",
-      "category": "upsc",
       "stateIds": [
         "all"
       ],

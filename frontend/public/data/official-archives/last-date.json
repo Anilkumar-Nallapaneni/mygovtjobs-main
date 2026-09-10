@@ -1,7 +1,41 @@
 {
-  "generatedAt": "2026-09-09T09:09:52.925Z",
-  "count": 304,
+  "generatedAt": "2026-09-10T09:03:07.599Z",
+  "count": 306,
   "items": [
+    {
+      "id": "80aeeab5d0e5bf5e",
+      "title": "Tender No. BARC/NRB(T)/INRPC/MPT-566 /2026/1643[e-Tender]",
+      "link": "http://www.barc.gov.in/tenders/tender255.pdf",
+      "publishedAt": "2026-09-09T05:16:35.000Z",
+      "summary": "Out-Cell piping and Equipment installation for Block- 102A at rNRP, NRB Tarapur Last date: 08-Oct-2026",
+      "pdfUrls": [],
+      "sourceId": "barc",
+      "sourceName": "Bhabha Atomic Research Centre (BARC)",
+      "dept": "Bhabha Atomic Research Centre (BARC)",
+      "state": "All India",
+      "category": "defence",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "rss-discovered"
+    },
+    {
+      "id": "c1b7f86f5c449ea7",
+      "title": "Tender No.  BARC/CED/ET/36/2026-2027[e-Tender]",
+      "link": "http://www.barc.gov.in/tenders/tender256.pdf",
+      "publishedAt": "2026-09-09T05:16:26.000Z",
+      "summary": "Composite work of refurbishment related to Civil, Electrical, HVAC and interior works of Canteen at Mod Labs, North Site, BARC, Trombay, Mumbai - 400085 Last date: 06-Oct-2026",
+      "pdfUrls": [],
+      "sourceId": "barc",
+      "sourceName": "Bhabha Atomic Research Centre (BARC)",
+      "dept": "Bhabha Atomic Research Centre (BARC)",
+      "state": "All India",
+      "category": "defence",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "rss-discovered"
+    },
     {
       "id": "fbdd8d732a7a3709",
       "title": "Procurement of “3D Printer Hardware and Machine Interface Software” for Burns & Plastic Surgery Block, AIIMS, , New Delhi",
@@ -743,9 +777,81 @@
       "fetchMethod": "html"
     },
     {
-      "id": "f6e0c2b3096daa6e",
+      "id": "e3d502ed3ef8ab05",
+      "title": "PUBLIC NOTICE: CTET SEP-2026 CORRECTION WINDOW (last date 10.09.2026)",
+      "link": "https://cdnbbsr.s3waas.gov.in/s3443dec3062d0286986e21dc0631734c9/uploads/2026/09/20260907461266783.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://cdnbbsr.s3waas.gov.in/s3443dec3062d0286986e21dc0631734c9/uploads/2026/09/20260907461266783.pdf"
+      ],
+      "sourceId": "ctet",
+      "sourceName": "CBSE — CTET",
+      "dept": "CBSE — CTET",
+      "state": "All India",
+      "category": "teaching",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "988ed4272bbf3f80",
+      "title": "Public Notice: CTET Feb-2026 Key Challenge / Scanned Images of OMR (last Date 15/03/2026,up-to 11:59 PM)",
+      "link": "https://cdnbbsr.s3waas.gov.in/s3443dec3062d0286986e21dc0631734c9/uploads/2026/03/202603121086699841.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://cdnbbsr.s3waas.gov.in/s3443dec3062d0286986e21dc0631734c9/uploads/2026/03/202603121086699841.pdf"
+      ],
+      "sourceId": "ctet",
+      "sourceName": "CBSE — CTET",
+      "dept": "CBSE — CTET",
+      "state": "All India",
+      "category": "teaching",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "190b0749867fb96c",
+      "title": "CTET SEP 2026 CORRECTION WINDOW (last date 10.09.2026)",
+      "link": "https://ctet.nic.in/correction-window-ctet-sep-2026-2/",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "ctet",
+      "sourceName": "CBSE — CTET",
+      "dept": "CBSE — CTET",
+      "state": "All India",
+      "category": "teaching",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "ca02d329344a8460",
+      "title": "Login: CTET SEP 2026 CORRECTION WINDOW (last date 10.09.2026)",
+      "link": "https://examinationservices.nic.in/ExamSysCTET/root/Home.aspx?enc=Ei4cajBkK1gZSfgr53ImFfEytN2I3LFrLvNrMJcZJNmO/XE3+xNuu3rFt9agQvt0",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "ctet",
+      "sourceName": "CBSE — CTET",
+      "dept": "CBSE — CTET",
+      "state": "All India",
+      "category": "teaching",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "d0cb6df37111adb4",
       "title": "Last date extended upto 12:30 PM of 09.03.2026 for submission of bids for Rupee term loan of up-to ₹ 1000 Crore",
-      "link": "https://ntpc.co.in/last-date-extended-upto-1230-pm-09032026-submission-bids-rupee-term-loan-rs-1000-crore",
+      "link": "https://ntpc.co.in/index.php/last-date-extended-upto-1230-pm-09032026-submission-bids-rupee-term-loan-rs-1000-crore",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
@@ -894,25 +1000,6 @@
       "summary": null,
       "pdfUrls": [
         "https://mppsc.mp.gov.in/uploads/advertisement/Advt_AD_Veterinary_Assistant_Surgeon_VEO_2026_Dated_10_03_2026.pdf"
-      ],
-      "sourceId": "psc-mp",
-      "sourceName": "Madhya Pradesh PSC (MPPSC)",
-      "dept": "Madhya Pradesh PSC (MPPSC)",
-      "state": "Madhya Pradesh",
-      "category": "state",
-      "stateIds": [
-        "mp"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "6175aaff76599d92",
-      "title": "Final Answer Key - Assistant Director / Veterinary Assistant Surgeon / Veterinary Extension Officer Exam 2026, Dated 25/08/2026",
-      "link": "https://mppsc.mp.gov.in/uploads/files/Final_Answer_Key_AD_Veterinary_Assistant_Surgeon_VEO_2026_Dated_25_08_2026.pdf",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [
-        "https://mppsc.mp.gov.in/uploads/files/Final_Answer_Key_AD_Veterinary_Assistant_Surgeon_VEO_2026_Dated_25_08_2026.pdf"
       ],
       "sourceId": "psc-mp",
       "sourceName": "Madhya Pradesh PSC (MPPSC)",
@@ -1077,81 +1164,9 @@
       "fetchMethod": "html"
     },
     {
-      "id": "e3d502ed3ef8ab05",
-      "title": "PUBLIC NOTICE: CTET SEP-2026 CORRECTION WINDOW (last date 10.09.2026)",
-      "link": "https://cdnbbsr.s3waas.gov.in/s3443dec3062d0286986e21dc0631734c9/uploads/2026/09/20260907461266783.pdf",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [
-        "https://cdnbbsr.s3waas.gov.in/s3443dec3062d0286986e21dc0631734c9/uploads/2026/09/20260907461266783.pdf"
-      ],
-      "sourceId": "ctet",
-      "sourceName": "CBSE — CTET",
-      "dept": "CBSE — CTET",
-      "state": "All India",
-      "category": "teaching",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "988ed4272bbf3f80",
-      "title": "Public Notice: CTET Feb-2026 Key Challenge / Scanned Images of OMR (last Date 15/03/2026,up-to 11:59 PM)",
-      "link": "https://cdnbbsr.s3waas.gov.in/s3443dec3062d0286986e21dc0631734c9/uploads/2026/03/202603121086699841.pdf",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [
-        "https://cdnbbsr.s3waas.gov.in/s3443dec3062d0286986e21dc0631734c9/uploads/2026/03/202603121086699841.pdf"
-      ],
-      "sourceId": "ctet",
-      "sourceName": "CBSE — CTET",
-      "dept": "CBSE — CTET",
-      "state": "All India",
-      "category": "teaching",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "190b0749867fb96c",
-      "title": "CTET SEP 2026 CORRECTION WINDOW (last date 10.09.2026)",
-      "link": "https://ctet.nic.in/correction-window-ctet-sep-2026-2/",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "ctet",
-      "sourceName": "CBSE — CTET",
-      "dept": "CBSE — CTET",
-      "state": "All India",
-      "category": "teaching",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "ca02d329344a8460",
-      "title": "Login: CTET SEP 2026 CORRECTION WINDOW (last date 10.09.2026)",
-      "link": "https://examinationservices.nic.in/ExamSysCTET/root/Home.aspx?enc=Ei4cajBkK1gZSfgr53ImFfEytN2I3LFrLvNrMJcZJNmO/XE3+xNuu3rFt9agQvt0",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "ctet",
-      "sourceName": "CBSE — CTET",
-      "dept": "CBSE — CTET",
-      "state": "All India",
-      "category": "teaching",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "d0cb6df37111adb4",
+      "id": "f6e0c2b3096daa6e",
       "title": "Last date extended upto 12:30 PM of 09.03.2026 for submission of bids for Rupee term loan of up-to ₹ 1000 Crore",
-      "link": "https://ntpc.co.in/index.php/last-date-extended-upto-1230-pm-09032026-submission-bids-rupee-term-loan-rs-1000-crore",
+      "link": "https://ntpc.co.in/last-date-extended-upto-1230-pm-09032026-submission-bids-rupee-term-loan-rs-1000-crore",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
@@ -1162,6 +1177,25 @@
       "category": "psu",
       "stateIds": [
         "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "6175aaff76599d92",
+      "title": "Final Answer Key - Assistant Director / Veterinary Assistant Surgeon / Veterinary Extension Officer Exam 2026, Dated 25/08/2026",
+      "link": "https://mppsc.mp.gov.in/uploads/files/Final_Answer_Key_AD_Veterinary_Assistant_Surgeon_VEO_2026_Dated_25_08_2026.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://mppsc.mp.gov.in/uploads/files/Final_Answer_Key_AD_Veterinary_Assistant_Surgeon_VEO_2026_Dated_25_08_2026.pdf"
+      ],
+      "sourceId": "psc-mp",
+      "sourceName": "Madhya Pradesh PSC (MPPSC)",
+      "dept": "Madhya Pradesh PSC (MPPSC)",
+      "state": "Madhya Pradesh",
+      "category": "state",
+      "stateIds": [
+        "mp"
       ],
       "fetchMethod": "html"
     },

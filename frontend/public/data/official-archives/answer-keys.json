@@ -1,7 +1,24 @@
 {
-  "generatedAt": "2026-09-09T09:09:52.925Z",
-  "count": 54,
+  "generatedAt": "2026-09-10T09:03:07.599Z",
+  "count": 56,
   "items": [
+    {
+      "id": "65b953b91c3e8ca2",
+      "title": "FINAL ANSWER KEY",
+      "link": "https://ctet.nic.in/previous-year-final-answer-key/",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "ctet",
+      "sourceName": "CBSE — CTET",
+      "dept": "CBSE — CTET",
+      "state": "All India",
+      "category": "teaching",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
     {
       "id": "37c45556314fa75d",
       "title": "Answer Key-OMR Exams",
@@ -33,6 +50,59 @@
       "category": "state",
       "stateIds": [
         "kl"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "cc09d44023c47d00",
+      "title": "Final Answer Key for recruitment of various posts in the Directorate of Handloom & Textiles, Manipur on contractual basis. Updated: 12/05/2026",
+      "link": "https://mpscmanipur.gov.in/files/MPSC_26051212320.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://mpscmanipur.gov.in/files/MPSC_26051212320.pdf"
+      ],
+      "sourceId": "psc-mn",
+      "sourceName": "Manipur PSC",
+      "dept": "Manipur PSC",
+      "state": "NE States",
+      "category": "state",
+      "stateIds": [
+        "ne"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "130a7eba0169af1c",
+      "title": "Notice to the candidates regarding Final Answer Key for the post of Primary Teacher (Mewat Cadre) against Advt. No. 05/2024, Cat. No.1 of Elementary Education Department, Haryana. | 2026-09-10",
+      "link": "https://hssc.gov.in/file/ac1f23cd-9fda-137e-81a0-89ede0820007/publicNotice",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "ssb-hr",
+      "sourceName": "Haryana Staff Selection Commission (HSSC)",
+      "dept": "Haryana Staff Selection Commission (HSSC)",
+      "state": "Haryana",
+      "category": "state",
+      "stateIds": [
+        "hr"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "89583121f65e2f76",
+      "title": "Final Answer Key For The Post Of Primary Teacher (PRT) | 2026-09-10",
+      "link": "https://hssc.gov.in/file/ac1f23cd-9fda-137e-81a0-89a629190004/publicNotice",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "ssb-hr",
+      "sourceName": "Haryana Staff Selection Commission (HSSC)",
+      "dept": "Haryana Staff Selection Commission (HSSC)",
+      "state": "Haryana",
+      "category": "state",
+      "stateIds": [
+        "hr"
       ],
       "fetchMethod": "html"
     },
@@ -105,42 +175,6 @@
       "category": "state",
       "stateIds": [
         "mp"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "65b953b91c3e8ca2",
-      "title": "FINAL ANSWER KEY",
-      "link": "https://ctet.nic.in/previous-year-final-answer-key/",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "ctet",
-      "sourceName": "CBSE — CTET",
-      "dept": "CBSE — CTET",
-      "state": "All India",
-      "category": "teaching",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "cc09d44023c47d00",
-      "title": "Final Answer Key for recruitment of various posts in the Directorate of Handloom & Textiles, Manipur on contractual basis. Updated: 12/05/2026",
-      "link": "https://mpscmanipur.gov.in/files/MPSC_26051212320.pdf",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [
-        "https://mpscmanipur.gov.in/files/MPSC_26051212320.pdf"
-      ],
-      "sourceId": "psc-mn",
-      "sourceName": "Manipur PSC",
-      "dept": "Manipur PSC",
-      "state": "NE States",
-      "category": "state",
-      "stateIds": [
-        "ne"
       ],
       "fetchMethod": "html"
     },
