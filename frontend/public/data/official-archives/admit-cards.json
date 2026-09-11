@@ -1,7 +1,24 @@
 {
-  "generatedAt": "2026-09-10T09:03:07.599Z",
-  "count": 165,
+  "generatedAt": "2026-09-11T09:02:44.233Z",
+  "count": 167,
   "items": [
+    {
+      "id": "49ea6cc13a2dfc22",
+      "title": "Admit Card Download Link – CBT For Recruitment Of Assistants, Junior Personal Assistants, Upper Division Clerks & Stenographers (Advertisement No.: ISRO:ICRB:01(A-JPA):2026 dated 27-07-2026 & Corrigendum dated 11-08-2026) Scheduled to be Held on 21-09-2026. Read More",
+      "link": "https://www.isro.gov.in/ICRB_Recruitment11.html",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "isro-careers",
+      "sourceName": "ISRO — Careers",
+      "dept": "Indian Space Research Organisation",
+      "state": "All India",
+      "category": "psu",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
     {
       "id": "dab406e23a6537a1",
       "title": "E-Admit Cards for various Recruitment Posts",
@@ -181,6 +198,23 @@
       "fetchMethod": "html"
     },
     {
+      "id": "0061efa193149dd4",
+      "title": "Intimation relating to Debt Securities",
+      "link": "https://pnb.bank.in/Intimation-relating-to-Debt-Securities.html",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "pnb",
+      "sourceName": "Punjab National Bank — Careers",
+      "dept": "Punjab National Bank — Careers",
+      "state": "All India",
+      "category": "banking",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
       "id": "0157354131476c03",
       "title": "Intimation to Stock Exchange(s)",
       "link": "https://ongcindia.com/web/eng/investors/intimation-to-stock-exchange",
@@ -190,40 +224,6 @@
       "sourceId": "ongc",
       "sourceName": "ONGC — Careers",
       "dept": "ONGC — Careers",
-      "state": "All India",
-      "category": "psu",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "97a06d61ec80c264",
-      "title": "Conference call/analyst meet with Investors",
-      "link": "https://ntpc.co.in/index.php/investors/confrence-call-analyst-meet-investors/conference-call-analysts-investors",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "ntpc",
-      "sourceName": "NTPC — Careers",
-      "dept": "NTPC — Careers",
-      "state": "All India",
-      "category": "psu",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "4382aefa8fd5c9cb",
-      "title": "NTPC Ltd. Q4/12M FY26 Conference Call on May 23, 2026",
-      "link": "https://ntpc.co.in/index.php/ntpc-ltd-q412m-fy26-conference-call-may-23-2026",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "ntpc",
-      "sourceName": "NTPC — Careers",
-      "dept": "NTPC — Careers",
       "state": "All India",
       "category": "psu",
       "stateIds": [
@@ -249,32 +249,15 @@
       "fetchMethod": "html"
     },
     {
-      "id": "eea0763a5451a158",
-      "title": "Presentations & Conference Calls",
-      "link": "https://www.bhel.com/presentations-conference-calls",
+      "id": "4e1bcf588af156f0",
+      "title": "NTPC Ltd. Q4/12M FY26 Conference Call on May 23, 2026",
+      "link": "https://ntpc.co.in/ntpc-ltd-q412m-fy26-conference-call-may-23-2026",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
-      "sourceId": "bhel",
-      "sourceName": "BHEL — Careers",
-      "dept": "BHEL — Careers",
-      "state": "All India",
-      "category": "psu",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "80bdf850f99dfdf4",
-      "title": "Click here to download GD / Interview Call Letter for Post of MTT",
-      "link": "https://sailcareers.com/sail2025MT/SAIL2026MTIntCallLetter.aspx",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "sail",
-      "sourceName": "Steel Authority of India (SAIL)",
-      "dept": "Steel Authority of India (SAIL)",
+      "sourceId": "ntpc",
+      "sourceName": "NTPC — Careers",
+      "dept": "NTPC — Careers",
       "state": "All India",
       "category": "psu",
       "stateIds": [
@@ -309,6 +292,23 @@
       "sourceId": "sail",
       "sourceName": "Steel Authority of India (SAIL)",
       "dept": "Steel Authority of India (SAIL)",
+      "state": "All India",
+      "category": "psu",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "eea0763a5451a158",
+      "title": "Presentations & Conference Calls",
+      "link": "https://www.bhel.com/presentations-conference-calls",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "bhel",
+      "sourceName": "BHEL — Careers",
+      "dept": "BHEL — Careers",
       "state": "All India",
       "category": "psu",
       "stateIds": [
@@ -419,60 +419,26 @@
       "fetchMethod": "html"
     },
     {
+      "id": "cb6b3038df222c18",
+      "title": "Admit Card - Assistant Town Planner Examination - 2026",
+      "link": "https://mppsc.co.in/candidate-login/Admit-Card",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-mp",
+      "sourceName": "Madhya Pradesh PSC (MPPSC)",
+      "dept": "Madhya Pradesh PSC (MPPSC)",
+      "state": "Madhya Pradesh",
+      "category": "state",
+      "stateIds": [
+        "mp"
+      ],
+      "fetchMethod": "html"
+    },
+    {
       "id": "fe40b1b9ceff9486",
       "title": "Interview Call Letter - Assistant Professor (Zoology) Examination - 2024",
       "link": "https://mppsc.mponline.gov.in/Portal/Examinations/MPPSC/2025/ASP24/CallLetter/Login.aspx?Pid=AP19",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-mp",
-      "sourceName": "Madhya Pradesh PSC (MPPSC)",
-      "dept": "Madhya Pradesh PSC (MPPSC)",
-      "state": "Madhya Pradesh",
-      "category": "state",
-      "stateIds": [
-        "mp"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "0f149f2f86bb09b8",
-      "title": "Admit Card - State Service Main Exam 2026",
-      "link": "https://mppsc.mponline.gov.in/Portal/Examinations/MPPSC/2026/Admitcard/SM26Login.aspx",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-mp",
-      "sourceName": "Madhya Pradesh PSC (MPPSC)",
-      "dept": "Madhya Pradesh PSC (MPPSC)",
-      "state": "Madhya Pradesh",
-      "category": "state",
-      "stateIds": [
-        "mp"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "749a37e48c404ddf",
-      "title": "Interview Call Letter - Assistant Professor (Mathematics) 2024",
-      "link": "https://mppsc.mponline.gov.in/Portal/Examinations/MPPSC/2025/ASP24/CallLetter/Login.aspx?Pid=AP21",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-mp",
-      "sourceName": "Madhya Pradesh PSC (MPPSC)",
-      "dept": "Madhya Pradesh PSC (MPPSC)",
-      "state": "Madhya Pradesh",
-      "category": "state",
-      "stateIds": [
-        "mp"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "4fdef8dec26c366f",
-      "title": "Interview Call Letter",
-      "link": "https://mppsc.mp.gov.in/Callletter",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
@@ -542,27 +508,8 @@
       "fetchMethod": "html"
     },
     {
-      "id": "8d3f9e5a69106b55",
-      "title": "उत्तर प्रदेश होमगार्ड के पदों पर एनरोलमेंट 2025 के अन्तर्गत शारीरिक दक्षता परीक्षा (पीईटी) के प्रवेश पत्र डाउनलोड किये जाने हेतु महत्वपूर्ण सूचना",
-      "link": "https://uppbpb.gov.in/FilesUploaded/Notice/Home%20guard%20PET%20Vigyapti_21e47723f-2975-41d8-9bd0-779f339ca8ab.pdf",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [
-        "https://uppbpb.gov.in/FilesUploaded/Notice/Home%20guard%20PET%20Vigyapti_21e47723f-2975-41d8-9bd0-779f339ca8ab.pdf"
-      ],
-      "sourceId": "police-up",
-      "sourceName": "UP Police Recruitment Board (UPPRPB)",
-      "dept": "UP Police Recruitment Board (UPPRPB)",
-      "state": "Uttar Pradesh",
-      "category": "police",
-      "stateIds": [
-        "up"
-      ],
-      "fetchMethod": "html"
-    },
-    {
       "id": "cfe49765032fc46f",
-      "title": "LATEST NOTICE: उत्तर प्रदेश होमगार्ड्स के पदों पर एनरोलमेंट-2025 के अन्तर्गत शारीरिक दक्षता परीक्षा (पीईटी) के प्रवेश पत्र डाउनलोड किये जाने हेतु महत्वपूर्ण सूचना ।",
+      "title": "उत्तर प्रदेश होमगार्ड्स के पदों पर एनरोलमेंट-2025 के अन्तर्गत शारीरिक दक्षता परीक्षा (पीईटी) के प्रवेश पत्र डाउनलोड किये जाने हेतु महत्वपूर्ण सूचना ।",
       "link": "https://uppbpb.gov.in/FilesUploaded/Notice/vig1070920264a1e0d67-32c0-4ab8-ac3c-41c40f235e15.pdf",
       "publishedAt": null,
       "summary": null,
@@ -580,12 +527,14 @@
       "fetchMethod": "html"
     },
     {
-      "id": "4c32f43efe645900",
-      "title": "उत्तर प्रदेश पुलिस मोटर परिवहन शाखा में मुख्य आरक्षी मोटर परिवहन की भर्ती/चयन वर्ष 2020 से 2025 तक के वर्ष वार परिणाम देखने हेतु लिंक",
-      "link": "https://admitcards.iroams.com/AdmitCards/hcmtpdffordisplaylink/",
+      "id": "8d3f9e5a69106b55",
+      "title": "उत्तर प्रदेश होमगार्ड के पदों पर एनरोलमेंट 2025 के अन्तर्गत शारीरिक दक्षता परीक्षा (पीईटी) के प्रवेश पत्र डाउनलोड किये जाने हेतु महत्वपूर्ण सूचना",
+      "link": "https://uppbpb.gov.in/FilesUploaded/Notice/Home%20guard%20PET%20Vigyapti_21e47723f-2975-41d8-9bd0-779f339ca8ab.pdf",
       "publishedAt": null,
       "summary": null,
-      "pdfUrls": [],
+      "pdfUrls": [
+        "https://uppbpb.gov.in/FilesUploaded/Notice/Home%20guard%20PET%20Vigyapti_21e47723f-2975-41d8-9bd0-779f339ca8ab.pdf"
+      ],
       "sourceId": "police-up",
       "sourceName": "UP Police Recruitment Board (UPPRPB)",
       "dept": "UP Police Recruitment Board (UPPRPB)",
@@ -821,9 +770,9 @@
       "fetchMethod": "html"
     },
     {
-      "id": "4e1bcf588af156f0",
-      "title": "NTPC Ltd. Q4/12M FY26 Conference Call on May 23, 2026",
-      "link": "https://ntpc.co.in/ntpc-ltd-q412m-fy26-conference-call-may-23-2026",
+      "id": "97a06d61ec80c264",
+      "title": "Conference call/analyst meet with Investors",
+      "link": "https://ntpc.co.in/index.php/investors/confrence-call-analyst-meet-investors/conference-call-analysts-investors",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
@@ -834,6 +783,108 @@
       "category": "psu",
       "stateIds": [
         "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "4382aefa8fd5c9cb",
+      "title": "NTPC Ltd. Q4/12M FY26 Conference Call on May 23, 2026",
+      "link": "https://ntpc.co.in/index.php/ntpc-ltd-q412m-fy26-conference-call-may-23-2026",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "ntpc",
+      "sourceName": "NTPC — Careers",
+      "dept": "NTPC — Careers",
+      "state": "All India",
+      "category": "psu",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "80bdf850f99dfdf4",
+      "title": "Click here to download GD / Interview Call Letter for Post of MTT",
+      "link": "https://sailcareers.com/sail2025MT/SAIL2026MTIntCallLetter.aspx",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "sail",
+      "sourceName": "Steel Authority of India (SAIL)",
+      "dept": "Steel Authority of India (SAIL)",
+      "state": "All India",
+      "category": "psu",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "0f149f2f86bb09b8",
+      "title": "Admit Card - State Service Main Exam 2026",
+      "link": "https://mppsc.mponline.gov.in/Portal/Examinations/MPPSC/2026/Admitcard/SM26Login.aspx",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-mp",
+      "sourceName": "Madhya Pradesh PSC (MPPSC)",
+      "dept": "Madhya Pradesh PSC (MPPSC)",
+      "state": "Madhya Pradesh",
+      "category": "state",
+      "stateIds": [
+        "mp"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "749a37e48c404ddf",
+      "title": "Interview Call Letter - Assistant Professor (Mathematics) 2024",
+      "link": "https://mppsc.mponline.gov.in/Portal/Examinations/MPPSC/2025/ASP24/CallLetter/Login.aspx?Pid=AP21",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-mp",
+      "sourceName": "Madhya Pradesh PSC (MPPSC)",
+      "dept": "Madhya Pradesh PSC (MPPSC)",
+      "state": "Madhya Pradesh",
+      "category": "state",
+      "stateIds": [
+        "mp"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "4fdef8dec26c366f",
+      "title": "Interview Call Letter",
+      "link": "https://mppsc.mp.gov.in/Callletter",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-mp",
+      "sourceName": "Madhya Pradesh PSC (MPPSC)",
+      "dept": "Madhya Pradesh PSC (MPPSC)",
+      "state": "Madhya Pradesh",
+      "category": "state",
+      "stateIds": [
+        "mp"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "4c32f43efe645900",
+      "title": "उत्तर प्रदेश पुलिस मोटर परिवहन शाखा में मुख्य आरक्षी मोटर परिवहन की भर्ती/चयन वर्ष 2020 से 2025 तक के वर्ष वार परिणाम देखने हेतु लिंक",
+      "link": "https://admitcards.iroams.com/AdmitCards/hcmtpdffordisplaylink/",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "police-up",
+      "sourceName": "UP Police Recruitment Board (UPPRPB)",
+      "dept": "UP Police Recruitment Board (UPPRPB)",
+      "state": "Uttar Pradesh",
+      "category": "police",
+      "stateIds": [
+        "up"
       ],
       "fetchMethod": "html"
     },
@@ -2560,23 +2611,6 @@
       "category": "state",
       "stateIds": [
         "uk"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "0061efa193149dd4",
-      "title": "Intimation relating to Debt Securities",
-      "link": "https://pnb.bank.in/Intimation-relating-to-Debt-Securities.html",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "pnb",
-      "sourceName": "Punjab National Bank — Careers",
-      "dept": "Punjab National Bank — Careers",
-      "state": "All India",
-      "category": "banking",
-      "stateIds": [
-        "all"
       ],
       "fetchMethod": "html"
     },

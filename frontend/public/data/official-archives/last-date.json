@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-09-10T09:03:07.599Z",
-  "count": 306,
+  "generatedAt": "2026-09-11T09:02:44.233Z",
+  "count": 307,
   "items": [
     {
       "id": "80aeeab5d0e5bf5e",
@@ -31,44 +31,6 @@
       "dept": "Bhabha Atomic Research Centre (BARC)",
       "state": "All India",
       "category": "defence",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "rss-discovered"
-    },
-    {
-      "id": "fbdd8d732a7a3709",
-      "title": "Procurement of “3D Printer Hardware and Machine Interface Software” for Burns & Plastic Surgery Block, AIIMS, , New Delhi",
-      "link": "https://aiims.edu/index.php/en/133-tender/global-open-tender/24586-2025-aimsd-872815-2",
-      "publishedAt": "2026-09-08T11:21:49.000Z",
-      "summary": "VIEW TENDER DETAILS Tender No 2025_AIMSD_872815_2 Title Procurement of “3D Printer Hardware and Machine Interface Software- 01 set” for Burns & Plastic Surgery Block, AIIMS, , New Delhi Date of Uploading 31/07/2026 Date of Closing 10/09/2026 Document",
-      "pdfUrls": [
-        "https://www.aiims.edu/images/pdf/tender/eProcure3D.pdf"
-      ],
-      "sourceId": "aiims",
-      "sourceName": "AIIMS New Delhi — Recruitment",
-      "dept": "AIIMS New Delhi — Recruitment",
-      "state": "All India",
-      "category": "health",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "rss-discovered"
-    },
-    {
-      "id": "7ae8dcac2cb55eaf",
-      "title": "Procurement of “Dermatoscope- 04 Nos.” for Burns & Plastic Surgery Block, AIIMS, , New Delhi",
-      "link": "https://aiims.edu/index.php/en/133-tender/global-open-tender/24585-2025-aimsd-872847-2",
-      "publishedAt": "2026-09-08T11:14:23.000Z",
-      "summary": "VIEW TENDER DETAILS Tender No 2025_AIMSD_872847_2 Title Procurement of “Dermatoscope- 04 Nos.” for Burns & Plastic Surgery Block, AIIMS, , New Delhi Date of Uploading 31/07/2026 Date of Closing 10/09/2026 Document",
-      "pdfUrls": [
-        "https://www.aiims.edu/images/pdf/tender/EprocureDerma1.pdf"
-      ],
-      "sourceId": "aiims",
-      "sourceName": "AIIMS New Delhi — Recruitment",
-      "dept": "AIIMS New Delhi — Recruitment",
-      "state": "All India",
-      "category": "health",
       "stateIds": [
         "all"
       ],
@@ -849,9 +811,26 @@
       "fetchMethod": "html"
     },
     {
-      "id": "d0cb6df37111adb4",
+      "id": "04ece3b44713bfa2",
+      "title": "10 September 2026: Second Extension of Date - Digitization of Suggested Vendor List (SVL)",
+      "link": "https://ongcindia.com/documents/77751/2660534/AdvertisementNotice_2ndExtension.pdf/ac6ff917-a4bb-153c-608b-3b6d12490d46",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "ongc",
+      "sourceName": "ONGC — Careers",
+      "dept": "ONGC — Careers",
+      "state": "All India",
+      "category": "psu",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "f6e0c2b3096daa6e",
       "title": "Last date extended upto 12:30 PM of 09.03.2026 for submission of bids for Rupee term loan of up-to ₹ 1000 Crore",
-      "link": "https://ntpc.co.in/index.php/last-date-extended-upto-1230-pm-09032026-submission-bids-rupee-term-loan-rs-1000-crore",
+      "link": "https://ntpc.co.in/last-date-extended-upto-1230-pm-09032026-submission-bids-rupee-term-loan-rs-1000-crore",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
@@ -1164,9 +1143,47 @@
       "fetchMethod": "html"
     },
     {
-      "id": "f6e0c2b3096daa6e",
+      "id": "fbdd8d732a7a3709",
+      "title": "Procurement of “3D Printer Hardware and Machine Interface Software” for Burns & Plastic Surgery Block, AIIMS, , New Delhi",
+      "link": "https://aiims.edu/index.php/en/133-tender/global-open-tender/24586-2025-aimsd-872815-2",
+      "publishedAt": "2026-09-08T11:21:49.000Z",
+      "summary": "VIEW TENDER DETAILS Tender No 2025_AIMSD_872815_2 Title Procurement of “3D Printer Hardware and Machine Interface Software- 01 set” for Burns & Plastic Surgery Block, AIIMS, , New Delhi Date of Uploading 31/07/2026 Date of Closing 10/09/2026 Document",
+      "pdfUrls": [
+        "https://www.aiims.edu/images/pdf/tender/eProcure3D.pdf"
+      ],
+      "sourceId": "aiims",
+      "sourceName": "AIIMS New Delhi — Recruitment",
+      "dept": "AIIMS New Delhi — Recruitment",
+      "state": "All India",
+      "category": "health",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "rss-discovered"
+    },
+    {
+      "id": "7ae8dcac2cb55eaf",
+      "title": "Procurement of “Dermatoscope- 04 Nos.” for Burns & Plastic Surgery Block, AIIMS, , New Delhi",
+      "link": "https://aiims.edu/index.php/en/133-tender/global-open-tender/24585-2025-aimsd-872847-2",
+      "publishedAt": "2026-09-08T11:14:23.000Z",
+      "summary": "VIEW TENDER DETAILS Tender No 2025_AIMSD_872847_2 Title Procurement of “Dermatoscope- 04 Nos.” for Burns & Plastic Surgery Block, AIIMS, , New Delhi Date of Uploading 31/07/2026 Date of Closing 10/09/2026 Document",
+      "pdfUrls": [
+        "https://www.aiims.edu/images/pdf/tender/EprocureDerma1.pdf"
+      ],
+      "sourceId": "aiims",
+      "sourceName": "AIIMS New Delhi — Recruitment",
+      "dept": "AIIMS New Delhi — Recruitment",
+      "state": "All India",
+      "category": "health",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "rss-discovered"
+    },
+    {
+      "id": "d0cb6df37111adb4",
       "title": "Last date extended upto 12:30 PM of 09.03.2026 for submission of bids for Rupee term loan of up-to ₹ 1000 Crore",
-      "link": "https://ntpc.co.in/last-date-extended-upto-1230-pm-09032026-submission-bids-rupee-term-loan-rs-1000-crore",
+      "link": "https://ntpc.co.in/index.php/last-date-extended-upto-1230-pm-09032026-submission-bids-rupee-term-loan-rs-1000-crore",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],

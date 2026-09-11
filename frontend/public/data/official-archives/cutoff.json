@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-09-10T09:03:07.599Z",
-  "count": 130,
+  "generatedAt": "2026-09-11T09:02:44.233Z",
+  "count": 132,
   "items": [
     {
       "id": "246cf795a95a5a9f",
@@ -133,6 +133,44 @@
       "dept": "Railway Recruitment Board (RRB) — Bhubaneswar",
       "state": "All India",
       "category": "railways",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "53df49cf2421fd5c",
+      "title": "Cut-Off Marks for Recruitment of Management Trainees (Technical)",
+      "link": "https://aima-web-images.s3.ap-south-1.amazonaws.com/sailcareers.com/Downloads/MTR_News_10092026_153557.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://aima-web-images.s3.ap-south-1.amazonaws.com/sailcareers.com/Downloads/MTR_News_10092026_153557.pdf"
+      ],
+      "sourceId": "sail",
+      "sourceName": "Steel Authority of India (SAIL)",
+      "dept": "Steel Authority of India (SAIL)",
+      "state": "All India",
+      "category": "psu",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "052e650c60cb44d5",
+      "title": "CUT OFF Marks",
+      "link": "https://sailcareers.com/download/CutOffMTT23Feb26.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://sailcareers.com/download/CutOffMTT23Feb26.pdf"
+      ],
+      "sourceId": "sail",
+      "sourceName": "Steel Authority of India (SAIL)",
+      "dept": "Steel Authority of India (SAIL)",
+      "state": "All India",
+      "category": "psu",
       "stateIds": [
         "all"
       ],

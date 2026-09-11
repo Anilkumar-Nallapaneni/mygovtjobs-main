@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-09-10T09:03:07.599Z",
-  "count": 286,
+  "generatedAt": "2026-09-11T09:02:44.233Z",
+  "count": 288,
   "items": [
     {
       "id": "29e735f6c2245346",
@@ -103,6 +103,42 @@
         "all"
       ],
       "fetchMethod": "html-listing"
+    },
+    {
+      "id": "0d1f705a55a6db5f",
+      "title": "11th September 2026 Result of Online Interview Advt. No. WII/ADVT. 1/RP-CELL/July, 2026",
+      "link": "https://www.wii.gov.in/news/result_online_interview_advt_no_wii_advt1_rp_cell_july_2026",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "wii",
+      "sourceName": "Wildlife Institute of India (WII)",
+      "dept": "Wildlife Institute of India (WII)",
+      "state": "All India",
+      "category": "psu",
+      "stateIds": [
+        "uk",
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "10368d4d8ec4fd69",
+      "title": "11th September 2026 Result of Online Interview Advt. No. WII/ADVT. 2/RP-CELL/June, 2026",
+      "link": "https://www.wii.gov.in/news/result_online_interview_advt_no_wii_advt2_rpcell_june2026",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "wii",
+      "sourceName": "Wildlife Institute of India (WII)",
+      "dept": "Wildlife Institute of India (WII)",
+      "state": "All India",
+      "category": "psu",
+      "stateIds": [
+        "uk",
+        "all"
+      ],
+      "fetchMethod": "html"
     },
     {
       "id": "a1bc7ecbd075f319",
@@ -805,25 +841,6 @@
       "fetchMethod": "html"
     },
     {
-      "id": "c93c1c3c194d6488",
-      "title": "GD/Interview Schedule for MTT Recruitment",
-      "link": "https://sailcareers.com/sail2025mt/GD_Interview_ScheduleMTT.pdf",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [
-        "https://sailcareers.com/sail2025mt/GD_Interview_ScheduleMTT.pdf"
-      ],
-      "sourceId": "sail",
-      "sourceName": "Steel Authority of India (SAIL)",
-      "dept": "Steel Authority of India (SAIL)",
-      "state": "All India",
-      "category": "psu",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
       "id": "59d89ab2523737c9",
       "title": "Click here to view the result of Personal Interview for the Advertisement No. ISP/YP/2026/01 dated 22.05.2026",
       "link": "https://sailcareers.com/sail2026yp/SAIL2026YPInterviewResult.aspx",
@@ -844,23 +861,6 @@
       "id": "a2cdc2e2fd87ca8e",
       "title": "Bio Data Form and Other Relevant documents for GD/Interview shortlisted candidates of MTT Posts",
       "link": "https://sailcareers.com/SAIL2025MT/DownloadPerformaInterview.htm",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "sail",
-      "sourceName": "Steel Authority of India (SAIL)",
-      "dept": "Steel Authority of India (SAIL)",
-      "state": "All India",
-      "category": "psu",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "80bdf850f99dfdf4",
-      "title": "Click here to download GD / Interview Call Letter for Post of MTT",
-      "link": "https://sailcareers.com/sail2025MT/SAIL2026MTIntCallLetter.aspx",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
@@ -977,26 +977,9 @@
       "fetchMethod": "html"
     },
     {
-      "id": "91558011355dca9d",
-      "title": "Recent Examinations/Interview",
-      "link": "https://jpsc.gov.in/Examination-Links.php",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-jh",
-      "sourceName": "Jharkhand PSC (JPSC)",
-      "dept": "Jharkhand PSC (JPSC)",
-      "state": "Jharkhand",
-      "category": "state",
-      "stateIds": [
-        "jh"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "1709d751f92d2140",
+      "id": "c019d0c423cf10b5",
       "title": "Procedure for Interview Date Change Requests",
-      "link": "https://www.keralapsc.gov.in/procedure-interview-date-change-requests",
+      "link": "https://www.keralapsc.gov.in/index.php/procedure-interview-date-change-requests",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
@@ -1011,9 +994,9 @@
       "fetchMethod": "html"
     },
     {
-      "id": "39e61c0337589778",
+      "id": "05de1912b0b5a28f",
       "title": "Interview Schedule",
-      "link": "https://www.keralapsc.gov.in/interviews",
+      "link": "https://www.keralapsc.gov.in/index.php/interviews",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
@@ -1064,43 +1047,43 @@
       "fetchMethod": "html"
     },
     {
+      "id": "1709d751f92d2140",
+      "title": "Procedure for Interview Date Change Requests",
+      "link": "https://www.keralapsc.gov.in/procedure-interview-date-change-requests",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-kl",
+      "sourceName": "Kerala PSC",
+      "dept": "Kerala PSC",
+      "state": "Kerala",
+      "category": "state",
+      "stateIds": [
+        "kl"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "91558011355dca9d",
+      "title": "Recent Examinations/Interview",
+      "link": "https://jpsc.gov.in/Examination-Links.php",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-jh",
+      "sourceName": "Jharkhand PSC (JPSC)",
+      "dept": "Jharkhand PSC (JPSC)",
+      "state": "Jharkhand",
+      "category": "state",
+      "stateIds": [
+        "jh"
+      ],
+      "fetchMethod": "html"
+    },
+    {
       "id": "fe40b1b9ceff9486",
       "title": "Interview Call Letter - Assistant Professor (Zoology) Examination - 2024",
       "link": "https://mppsc.mponline.gov.in/Portal/Examinations/MPPSC/2025/ASP24/CallLetter/Login.aspx?Pid=AP19",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-mp",
-      "sourceName": "Madhya Pradesh PSC (MPPSC)",
-      "dept": "Madhya Pradesh PSC (MPPSC)",
-      "state": "Madhya Pradesh",
-      "category": "state",
-      "stateIds": [
-        "mp"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "749a37e48c404ddf",
-      "title": "Interview Call Letter - Assistant Professor (Mathematics) 2024",
-      "link": "https://mppsc.mponline.gov.in/Portal/Examinations/MPPSC/2025/ASP24/CallLetter/Login.aspx?Pid=AP21",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-mp",
-      "sourceName": "Madhya Pradesh PSC (MPPSC)",
-      "dept": "Madhya Pradesh PSC (MPPSC)",
-      "state": "Madhya Pradesh",
-      "category": "state",
-      "stateIds": [
-        "mp"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "4fdef8dec26c366f",
-      "title": "Interview Call Letter",
-      "link": "https://mppsc.mp.gov.in/Callletter",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
@@ -1210,9 +1193,45 @@
       "fetchMethod": "rss-discovered"
     },
     {
-      "id": "c019d0c423cf10b5",
-      "title": "Procedure for Interview Date Change Requests",
-      "link": "https://www.keralapsc.gov.in/index.php/procedure-interview-date-change-requests",
+      "id": "c93c1c3c194d6488",
+      "title": "GD/Interview Schedule for MTT Recruitment",
+      "link": "https://sailcareers.com/sail2025mt/GD_Interview_ScheduleMTT.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://sailcareers.com/sail2025mt/GD_Interview_ScheduleMTT.pdf"
+      ],
+      "sourceId": "sail",
+      "sourceName": "Steel Authority of India (SAIL)",
+      "dept": "Steel Authority of India (SAIL)",
+      "state": "All India",
+      "category": "psu",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "80bdf850f99dfdf4",
+      "title": "Click here to download GD / Interview Call Letter for Post of MTT",
+      "link": "https://sailcareers.com/sail2025MT/SAIL2026MTIntCallLetter.aspx",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "sail",
+      "sourceName": "Steel Authority of India (SAIL)",
+      "dept": "Steel Authority of India (SAIL)",
+      "state": "All India",
+      "category": "psu",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "39e61c0337589778",
+      "title": "Interview Schedule",
+      "link": "https://www.keralapsc.gov.in/interviews",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
@@ -1227,19 +1246,36 @@
       "fetchMethod": "html"
     },
     {
-      "id": "05de1912b0b5a28f",
-      "title": "Interview Schedule",
-      "link": "https://www.keralapsc.gov.in/index.php/interviews",
+      "id": "749a37e48c404ddf",
+      "title": "Interview Call Letter - Assistant Professor (Mathematics) 2024",
+      "link": "https://mppsc.mponline.gov.in/Portal/Examinations/MPPSC/2025/ASP24/CallLetter/Login.aspx?Pid=AP21",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
-      "sourceId": "psc-kl",
-      "sourceName": "Kerala PSC",
-      "dept": "Kerala PSC",
-      "state": "Kerala",
+      "sourceId": "psc-mp",
+      "sourceName": "Madhya Pradesh PSC (MPPSC)",
+      "dept": "Madhya Pradesh PSC (MPPSC)",
+      "state": "Madhya Pradesh",
       "category": "state",
       "stateIds": [
-        "kl"
+        "mp"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "4fdef8dec26c366f",
+      "title": "Interview Call Letter",
+      "link": "https://mppsc.mp.gov.in/Callletter",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-mp",
+      "sourceName": "Madhya Pradesh PSC (MPPSC)",
+      "dept": "Madhya Pradesh PSC (MPPSC)",
+      "state": "Madhya Pradesh",
+      "category": "state",
+      "stateIds": [
+        "mp"
       ],
       "fetchMethod": "html"
     },

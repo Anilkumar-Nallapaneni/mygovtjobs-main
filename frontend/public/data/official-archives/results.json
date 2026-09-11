@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-09-10T09:03:07.599Z",
-  "count": 827,
+  "generatedAt": "2026-09-11T09:02:44.233Z",
+  "count": 831,
   "items": [
     {
       "id": "2e7fa8a4ffb7c7be",
@@ -266,23 +266,6 @@
       "fetchMethod": "html-listing"
     },
     {
-      "id": "f1112e23f75428db",
-      "title": "RESULT OF ADVT. NO. D-4/E-1/2025, DIRECTORATE GENERAL OF FAMILY WELFARE UTTAR PR..",
-      "link": "https://uppsc.up.nic.in/Open_PDF_DB.aspx?I4PnQ0tBagkKN9rKVhlu7ysKNFjEqVIK",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "uppsc-hall-tickets",
-      "sourceName": "UPPSC — Hall tickets",
-      "dept": "Uttar Pradesh PSC",
-      "state": "Uttar Pradesh",
-      "category": "state",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
       "id": "12ca81e8e0617c5b",
       "title": "Click here to view List of Candidates who are not selected in P.C.S. Examination-2022, but Qualified for Interview in P.C.S - 2022 (In Merit Order).",
       "link": "https://uppsc.up.nic.in/Open_PDF.aspx?I4PnQ0tBagk9q6upnHHyW7Pdh9qfF6wa",
@@ -298,6 +281,42 @@
         "all"
       ],
       "fetchMethod": "html-listing"
+    },
+    {
+      "id": "0d1f705a55a6db5f",
+      "title": "11th September 2026 Result of Online Interview Advt. No. WII/ADVT. 1/RP-CELL/July, 2026",
+      "link": "https://www.wii.gov.in/news/result_online_interview_advt_no_wii_advt1_rp_cell_july_2026",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "wii",
+      "sourceName": "Wildlife Institute of India (WII)",
+      "dept": "Wildlife Institute of India (WII)",
+      "state": "All India",
+      "category": "psu",
+      "stateIds": [
+        "uk",
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "10368d4d8ec4fd69",
+      "title": "11th September 2026 Result of Online Interview Advt. No. WII/ADVT. 2/RP-CELL/June, 2026",
+      "link": "https://www.wii.gov.in/news/result_online_interview_advt_no_wii_advt2_rpcell_june2026",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "wii",
+      "sourceName": "Wildlife Institute of India (WII)",
+      "dept": "Wildlife Institute of India (WII)",
+      "state": "All India",
+      "category": "psu",
+      "stateIds": [
+        "uk",
+        "all"
+      ],
+      "fetchMethod": "html"
     },
     {
       "id": "f5ec72f5d069bbdc",
@@ -985,7 +1004,24 @@
       "stateIds": [
         "all"
       ],
-      "fetchMethod": "rss-discovered"
+      "fetchMethod": "html"
+    },
+    {
+      "id": "05c99bb7aba25100",
+      "title": "07 September 2026: Final result for the post of Junior Consultant on contract basis at Tripura Asset, Agartala",
+      "link": "https://ongcindia.com/documents/77751/2659209/Result_Agartala07092026.pdf/6746998f-5e9c-835a-df6f-c09ea9f192d4",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "ongc",
+      "sourceName": "ONGC — Careers",
+      "dept": "ONGC — Careers",
+      "state": "All India",
+      "category": "psu",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
     },
     {
       "id": "5248b404d0a4fa81",
@@ -1005,15 +1041,17 @@
       "fetchMethod": "html"
     },
     {
-      "id": "05c99bb7aba25100",
-      "title": "07 September 2026: Final result for the post of Junior Consultant on contract basis at Tripura Asset, Agartala",
-      "link": "https://ongcindia.com/documents/77751/2659209/Result_Agartala07092026.pdf/6746998f-5e9c-835a-df6f-c09ea9f192d4",
+      "id": "53df49cf2421fd5c",
+      "title": "Cut-Off Marks for Recruitment of Management Trainees (Technical)",
+      "link": "https://aima-web-images.s3.ap-south-1.amazonaws.com/sailcareers.com/Downloads/MTR_News_10092026_153557.pdf",
       "publishedAt": null,
       "summary": null,
-      "pdfUrls": [],
-      "sourceId": "ongc",
-      "sourceName": "ONGC — Careers",
-      "dept": "ONGC — Careers",
+      "pdfUrls": [
+        "https://aima-web-images.s3.ap-south-1.amazonaws.com/sailcareers.com/Downloads/MTR_News_10092026_153557.pdf"
+      ],
+      "sourceId": "sail",
+      "sourceName": "Steel Authority of India (SAIL)",
+      "dept": "Steel Authority of India (SAIL)",
       "state": "All India",
       "category": "psu",
       "stateIds": [
@@ -1124,6 +1162,25 @@
       "summary": null,
       "pdfUrls": [
         "https://aima-web-images.s3.ap-south-1.amazonaws.com/sailcareers.com/Downloads/IISCO_Jobs_18082026_190340.pdf"
+      ],
+      "sourceId": "sail",
+      "sourceName": "Steel Authority of India (SAIL)",
+      "dept": "Steel Authority of India (SAIL)",
+      "state": "All India",
+      "category": "psu",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "052e650c60cb44d5",
+      "title": "CUT OFF Marks",
+      "link": "https://sailcareers.com/download/CutOffMTT23Feb26.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://sailcareers.com/download/CutOffMTT23Feb26.pdf"
       ],
       "sourceId": "sail",
       "sourceName": "Steel Authority of India (SAIL)",
@@ -1611,23 +1668,6 @@
       "fetchMethod": "html"
     },
     {
-      "id": "4c32f43efe645900",
-      "title": "उत्तर प्रदेश पुलिस मोटर परिवहन शाखा में मुख्य आरक्षी मोटर परिवहन की भर्ती/चयन वर्ष 2020 से 2025 तक के वर्ष वार परिणाम देखने हेतु लिंक",
-      "link": "https://admitcards.iroams.com/AdmitCards/hcmtpdffordisplaylink/",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "police-up",
-      "sourceName": "UP Police Recruitment Board (UPPRPB)",
-      "dept": "UP Police Recruitment Board (UPPRPB)",
-      "state": "Uttar Pradesh",
-      "category": "police",
-      "stateIds": [
-        "up"
-      ],
-      "fetchMethod": "html"
-    },
-    {
       "id": "41ffa29b9939e13c",
       "title": "रिट याचिका संख्या-18442/2018 प्रमोद कुमार सिंह व 09 अन्य बनाम उ0प्र0 राज्य व अन्य में मा0 उच्च न्यायालय द्वारा पारित आदेश दि0 21.05.2019 आरक्षी एवं समकक्ष पदों पर सीधी भर्ती - 2013 में चयनित पाये गये शेष अभ्यर्थियों के जे0टी0सी0 में आगमन के उपरान्त उनके व्यवस्थित, अनुशासित एवं स्वस्थय अवस्थान के सम्बन्ध में। [ Advertisments ]",
       "link": "https://uppolice.gov.in/site/writereaddata/UploadNews/pdf/NC_201911281720540078.pdf",
@@ -2047,6 +2087,40 @@
       "category": "teaching",
       "stateIds": [
         "br"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "f1112e23f75428db",
+      "title": "RESULT OF ADVT. NO. D-4/E-1/2025, DIRECTORATE GENERAL OF FAMILY WELFARE UTTAR PR..",
+      "link": "https://uppsc.up.nic.in/Open_PDF_DB.aspx?I4PnQ0tBagkKN9rKVhlu7ysKNFjEqVIK",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "uppsc-hall-tickets",
+      "sourceName": "UPPSC — Hall tickets",
+      "dept": "Uttar Pradesh PSC",
+      "state": "Uttar Pradesh",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "4c32f43efe645900",
+      "title": "उत्तर प्रदेश पुलिस मोटर परिवहन शाखा में मुख्य आरक्षी मोटर परिवहन की भर्ती/चयन वर्ष 2020 से 2025 तक के वर्ष वार परिणाम देखने हेतु लिंक",
+      "link": "https://admitcards.iroams.com/AdmitCards/hcmtpdffordisplaylink/",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "police-up",
+      "sourceName": "UP Police Recruitment Board (UPPRPB)",
+      "dept": "UP Police Recruitment Board (UPPRPB)",
+      "state": "Uttar Pradesh",
+      "category": "police",
+      "stateIds": [
+        "up"
       ],
       "fetchMethod": "html"
     },
