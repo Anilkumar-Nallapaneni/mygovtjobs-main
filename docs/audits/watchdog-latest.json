@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-09-11T09:19:13.472749+00:00",
+  "generatedAt": "2026-09-12T04:15:33.716931+00:00",
   "apply": true,
   "scanned": 19,
-  "ok": 15,
+  "ok": 14,
   "demoted": [
     {
       "id": "437549f0-25db-4b07-8ea9-4800b3fc4242",
@@ -35,7 +35,15 @@
       "reasons": [
         "non-vacancy document"
       ]
+    },
+    {
+      "id": "9dbc6124-a90d-4b63-a0c7-49dffe5a189b",
+      "slug": "recruitment-advertisement-for-assistant-town-planner-2026-urban-development-depa-5e987649",
+      "title": "Recruitment Advertisement for Assistant Town Planner, 2026 (Urban Development Department - Government of Madhya Pradesh)",
+      "reasons": [
+        "deadline expired"
+      ]
     }
   ],
-  "rowsUpdated": 4
+  "rowsUpdated": 5
 }
