@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-11T09:02:44.233Z",
+  "generatedAt": "2026-09-12T08:54:17.116Z",
   "count": 288,
   "items": [
     {
@@ -977,9 +977,9 @@
       "fetchMethod": "html"
     },
     {
-      "id": "c019d0c423cf10b5",
+      "id": "1709d751f92d2140",
       "title": "Procedure for Interview Date Change Requests",
-      "link": "https://www.keralapsc.gov.in/index.php/procedure-interview-date-change-requests",
+      "link": "https://www.keralapsc.gov.in/procedure-interview-date-change-requests",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
@@ -994,9 +994,9 @@
       "fetchMethod": "html"
     },
     {
-      "id": "05de1912b0b5a28f",
+      "id": "39e61c0337589778",
       "title": "Interview Schedule",
-      "link": "https://www.keralapsc.gov.in/index.php/interviews",
+      "link": "https://www.keralapsc.gov.in/interviews",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
@@ -1047,9 +1047,9 @@
       "fetchMethod": "html"
     },
     {
-      "id": "1709d751f92d2140",
+      "id": "c019d0c423cf10b5",
       "title": "Procedure for Interview Date Change Requests",
-      "link": "https://www.keralapsc.gov.in/procedure-interview-date-change-requests",
+      "link": "https://www.keralapsc.gov.in/index.php/procedure-interview-date-change-requests",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
@@ -1077,23 +1077,6 @@
       "category": "state",
       "stateIds": [
         "jh"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "fe40b1b9ceff9486",
-      "title": "Interview Call Letter - Assistant Professor (Zoology) Examination - 2024",
-      "link": "https://mppsc.mponline.gov.in/Portal/Examinations/MPPSC/2025/ASP24/CallLetter/Login.aspx?Pid=AP19",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-mp",
-      "sourceName": "Madhya Pradesh PSC (MPPSC)",
-      "dept": "Madhya Pradesh PSC (MPPSC)",
-      "state": "Madhya Pradesh",
-      "category": "state",
-      "stateIds": [
-        "mp"
       ],
       "fetchMethod": "html"
     },
@@ -1193,6 +1176,40 @@
       "fetchMethod": "rss-discovered"
     },
     {
+      "id": "05de1912b0b5a28f",
+      "title": "Interview Schedule",
+      "link": "https://www.keralapsc.gov.in/index.php/interviews",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-kl",
+      "sourceName": "Kerala PSC",
+      "dept": "Kerala PSC",
+      "state": "Kerala",
+      "category": "state",
+      "stateIds": [
+        "kl"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "fe40b1b9ceff9486",
+      "title": "Interview Call Letter - Assistant Professor (Zoology) Examination - 2024",
+      "link": "https://mppsc.mponline.gov.in/Portal/Examinations/MPPSC/2025/ASP24/CallLetter/Login.aspx?Pid=AP19",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-mp",
+      "sourceName": "Madhya Pradesh PSC (MPPSC)",
+      "dept": "Madhya Pradesh PSC (MPPSC)",
+      "state": "Madhya Pradesh",
+      "category": "state",
+      "stateIds": [
+        "mp"
+      ],
+      "fetchMethod": "html"
+    },
+    {
       "id": "c93c1c3c194d6488",
       "title": "GD/Interview Schedule for MTT Recruitment",
       "link": "https://sailcareers.com/sail2025mt/GD_Interview_ScheduleMTT.pdf",
@@ -1225,23 +1242,6 @@
       "category": "psu",
       "stateIds": [
         "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "39e61c0337589778",
-      "title": "Interview Schedule",
-      "link": "https://www.keralapsc.gov.in/interviews",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-kl",
-      "sourceName": "Kerala PSC",
-      "dept": "Kerala PSC",
-      "state": "Kerala",
-      "category": "state",
-      "stateIds": [
-        "kl"
       ],
       "fetchMethod": "html"
     },

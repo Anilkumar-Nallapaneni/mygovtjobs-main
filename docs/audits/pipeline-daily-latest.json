@@ -1,12 +1,12 @@
 {
   "mode": "daily",
-  "started_at_epoch": 1789111474,
+  "started_at_epoch": 1789197418,
   "steps": [
     {
       "name": "production sync",
       "required": true,
       "returncode": 0,
-      "duration_seconds": 6901.35
+      "duration_seconds": 6899.86
     },
     {
       "name": "strict snapshot verification",
@@ -24,10 +24,10 @@
       "name": "alert delivery",
       "required": false,
       "returncode": 0,
-      "duration_seconds": 5.61
+      "duration_seconds": 5.33
     }
   ],
-  "run_id": "026d50d1-201c-4ff4-947b-5336eef4ee74",
-  "finished_at_epoch": 1789118385,
+  "run_id": "f998ca33-2576-4719-94ca-77813152fe7c",
+  "finished_at_epoch": 1789204328,
   "status": "succeeded"
 }

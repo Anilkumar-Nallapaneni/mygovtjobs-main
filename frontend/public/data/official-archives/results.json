@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-09-11T09:02:44.233Z",
-  "count": 831,
+  "generatedAt": "2026-09-12T08:54:17.116Z",
+  "count": 834,
   "items": [
     {
       "id": "2e7fa8a4ffb7c7be",
@@ -249,23 +249,6 @@
       "fetchMethod": "html-listing"
     },
     {
-      "id": "fdd91644926ff15b",
-      "title": "RESULT OF ADVT. NO. D-4/E-1/2025, U.P. AYUSH (AYURVEDA) DEPARTMENT/PROFESSOR(SPE..",
-      "link": "https://uppsc.up.nic.in/Open_PDF_DB.aspx?I4PnQ0tBagkKN9rKVhlu7z0vaAs91GKj",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "uppsc-hall-tickets",
-      "sourceName": "UPPSC — Hall tickets",
-      "dept": "Uttar Pradesh PSC",
-      "state": "Uttar Pradesh",
-      "category": "state",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
       "id": "12ca81e8e0617c5b",
       "title": "Click here to view List of Candidates who are not selected in P.C.S. Examination-2022, but Qualified for Interview in P.C.S - 2022 (In Merit Order).",
       "link": "https://uppsc.up.nic.in/Open_PDF.aspx?I4PnQ0tBagk9q6upnHHyW7Pdh9qfF6wa",
@@ -281,6 +264,24 @@
         "all"
       ],
       "fetchMethod": "html-listing"
+    },
+    {
+      "id": "a1a44e1bd9d935b4",
+      "title": "11th September 2026 Result of Engagement of Office Assistant (Ex-servicemen) on Contract Basis (Advertisement No, WII/ADM/2026-27/02)",
+      "link": "https://www.wii.gov.in/news/result_ex_servicemen_wii_adm_2026_27_02",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "wii",
+      "sourceName": "Wildlife Institute of India (WII)",
+      "dept": "Wildlife Institute of India (WII)",
+      "state": "All India",
+      "category": "psu",
+      "stateIds": [
+        "uk",
+        "all"
+      ],
+      "fetchMethod": "html"
     },
     {
       "id": "0d1f705a55a6db5f",
@@ -570,6 +571,91 @@
       "sourceId": "ctet",
       "sourceName": "CBSE — CTET",
       "dept": "CBSE — CTET",
+      "state": "All India",
+      "category": "teaching",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "86dc09a156fe9120",
+      "title": "CBSE 12th Result 2026: KV और नवोदय का जलवा, 12वीं के नतीजों में इन स्कूलों ने मारी बाजी",
+      "link": "https://ndtv.in/education/cbse-12th-result-2026-school-wise-performance-kv-jnv-pass-percentage-list-11425718",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "kvs",
+      "sourceName": "Kendriya Vidyalaya Sangathan",
+      "dept": "Kendriya Vidyalaya Sangathan",
+      "state": "All India",
+      "category": "teaching",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "ebfc2a9f2cf5cca8",
+      "title": "CBSE 12th Result: संस्थानवार प्रदर्शन में केंद्रीय विद्यालय रहा टॉप पर",
+      "link": "https://www.amarujala.com/education/cbse-class-12-result-2026-kv-secures-top-spot-know-how-different-schools-performed-2026-05-13",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "kvs",
+      "sourceName": "Kendriya Vidyalaya Sangathan",
+      "dept": "Kendriya Vidyalaya Sangathan",
+      "state": "All India",
+      "category": "teaching",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "2b0cf313b821dae3",
+      "title": "CBSE 12th Result 2026: सीबीएसई 12वीं में केंद्रीय विद्यालय का दबदबा, 98.55% छात्रों की सफलता के साथ टॉप पर",
+      "link": "https://www.timesnowhindi.com/education/cbse-12th-result-2026-kvs-vs-jnv-whose-result-is-highest-kendriya-vidyalaya-and-jawahar-navodaya-vidyalaya-12th-pass-percentage-article-154315169",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "kvs",
+      "sourceName": "Kendriya Vidyalaya Sangathan",
+      "dept": "Kendriya Vidyalaya Sangathan",
+      "state": "All India",
+      "category": "teaching",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "08a6fead3943369e",
+      "title": "Comparative Result Analysis – Class X",
+      "link": "https://kvsangathan.nic.in/en/comparative-result-analysis-class-x/",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "kvs",
+      "sourceName": "Kendriya Vidyalaya Sangathan",
+      "dept": "Kendriya Vidyalaya Sangathan",
+      "state": "All India",
+      "category": "teaching",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "a91e35efe906a21a",
+      "title": "Comparative Result Analysis – Class XII",
+      "link": "https://kvsangathan.nic.in/en/comparative-result-analysis-class-xii/",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "kvs",
+      "sourceName": "Kendriya Vidyalaya Sangathan",
+      "dept": "Kendriya Vidyalaya Sangathan",
       "state": "All India",
       "category": "teaching",
       "stateIds": [
@@ -1007,23 +1093,6 @@
       "fetchMethod": "html"
     },
     {
-      "id": "05c99bb7aba25100",
-      "title": "07 September 2026: Final result for the post of Junior Consultant on contract basis at Tripura Asset, Agartala",
-      "link": "https://ongcindia.com/documents/77751/2659209/Result_Agartala07092026.pdf/6746998f-5e9c-835a-df6f-c09ea9f192d4",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "ongc",
-      "sourceName": "ONGC — Careers",
-      "dept": "ONGC — Careers",
-      "state": "All India",
-      "category": "psu",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
       "id": "5248b404d0a4fa81",
       "title": "Financial Result",
       "link": "https://www.canarabank.bank.in/financial-result",
@@ -1035,6 +1104,23 @@
       "dept": "Canara Bank — Careers",
       "state": "All India",
       "category": "banking",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "05c99bb7aba25100",
+      "title": "07 September 2026: Final result for the post of Junior Consultant on contract basis at Tripura Asset, Agartala",
+      "link": "https://ongcindia.com/documents/77751/2659209/Result_Agartala07092026.pdf/6746998f-5e9c-835a-df6f-c09ea9f192d4",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "ongc",
+      "sourceName": "ONGC — Careers",
+      "dept": "ONGC — Careers",
+      "state": "All India",
+      "category": "psu",
       "stateIds": [
         "all"
       ],
@@ -1431,6 +1517,44 @@
       "fetchMethod": "html"
     },
     {
+      "id": "df274e38443d2890",
+      "title": "Caveat Vigyapti on Written Exam Result - Assistant Professor (Economics) Exam 2025, Dated 11/09/2026",
+      "link": "https://mppsc.mp.gov.in/uploads/advertisement/Caveat_Vigyapti_Written_Exam_Result_Assistant_Professor_Economics_Exam_2025_Dated_11_09_2026.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://mppsc.mp.gov.in/uploads/advertisement/Caveat_Vigyapti_Written_Exam_Result_Assistant_Professor_Economics_Exam_2025_Dated_11_09_2026.pdf"
+      ],
+      "sourceId": "psc-mp",
+      "sourceName": "Madhya Pradesh PSC (MPPSC)",
+      "dept": "Madhya Pradesh PSC (MPPSC)",
+      "state": "Madhya Pradesh",
+      "category": "state",
+      "stateIds": [
+        "mp"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "cf3ee58dec05896b",
+      "title": "Written Exam Result - Assistant Professor (Economics) Exam 2025, Dated 11/09/2026",
+      "link": "https://mppsc.mp.gov.in/uploads/files/Written_Exam_Result_Assistant_Professor_Economics_Exam_2025_Dated_11_09_2026.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://mppsc.mp.gov.in/uploads/files/Written_Exam_Result_Assistant_Professor_Economics_Exam_2025_Dated_11_09_2026.pdf"
+      ],
+      "sourceId": "psc-mp",
+      "sourceName": "Madhya Pradesh PSC (MPPSC)",
+      "dept": "Madhya Pradesh PSC (MPPSC)",
+      "state": "Madhya Pradesh",
+      "category": "state",
+      "stateIds": [
+        "mp"
+      ],
+      "fetchMethod": "html"
+    },
+    {
       "id": "b493bfd275996ba5",
       "title": "Caveat Vigyapti on Selection List of Scientific Officer Chemistry 2023, Dated 07/09/2026",
       "link": "https://mppsc.mp.gov.in/uploads/advertisement/Caveat_Vigyapti_Scientific_Officer_Chemistry_2023_Dated_07_09_2026.pdf",
@@ -1645,25 +1769,6 @@
       "category": "state",
       "stateIds": [
         "hr"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "22fc89ed4ff3226a",
-      "title": "उत्तर प्रदेश पुलिस मोटर परिवहन शाखा में मुख्य आरक्षी मोटर परिवहन की भर्ती/चयन वर्ष 2020 से 2025 के चयन परिणाम देखने हेतु विज्ञप्ति",
-      "link": "https://uppbpb.gov.in/FilesUploaded/Notice/Notice_HCMT_1767a81daab-089c-4e3e-99e1-37906245cc55.pdf",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [
-        "https://uppbpb.gov.in/FilesUploaded/Notice/Notice_HCMT_1767a81daab-089c-4e3e-99e1-37906245cc55.pdf"
-      ],
-      "sourceId": "police-up",
-      "sourceName": "UP Police Recruitment Board (UPPRPB)",
-      "dept": "UP Police Recruitment Board (UPPRPB)",
-      "state": "Uttar Pradesh",
-      "category": "police",
-      "stateIds": [
-        "up"
       ],
       "fetchMethod": "html"
     },
@@ -2091,6 +2196,42 @@
       "fetchMethod": "html"
     },
     {
+      "id": "fdd91644926ff15b",
+      "title": "RESULT OF ADVT. NO. D-4/E-1/2025, U.P. AYUSH (AYURVEDA) DEPARTMENT/PROFESSOR(SPE..",
+      "link": "https://uppsc.up.nic.in/Open_PDF_DB.aspx?I4PnQ0tBagkKN9rKVhlu7z0vaAs91GKj",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "uppsc-hall-tickets",
+      "sourceName": "UPPSC — Hall tickets",
+      "dept": "Uttar Pradesh PSC",
+      "state": "Uttar Pradesh",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "22fc89ed4ff3226a",
+      "title": "उत्तर प्रदेश पुलिस मोटर परिवहन शाखा में मुख्य आरक्षी मोटर परिवहन की भर्ती/चयन वर्ष 2020 से 2025 के चयन परिणाम देखने हेतु विज्ञप्ति",
+      "link": "https://uppbpb.gov.in/FilesUploaded/Notice/Notice_HCMT_1767a81daab-089c-4e3e-99e1-37906245cc55.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://uppbpb.gov.in/FilesUploaded/Notice/Notice_HCMT_1767a81daab-089c-4e3e-99e1-37906245cc55.pdf"
+      ],
+      "sourceId": "police-up",
+      "sourceName": "UP Police Recruitment Board (UPPRPB)",
+      "dept": "UP Police Recruitment Board (UPPRPB)",
+      "state": "Uttar Pradesh",
+      "category": "police",
+      "stateIds": [
+        "up"
+      ],
+      "fetchMethod": "html"
+    },
+    {
       "id": "f1112e23f75428db",
       "title": "RESULT OF ADVT. NO. D-4/E-1/2025, DIRECTORATE GENERAL OF FAMILY WELFARE UTTAR PR..",
       "link": "https://uppsc.up.nic.in/Open_PDF_DB.aspx?I4PnQ0tBagkKN9rKVhlu7ysKNFjEqVIK",
@@ -2125,57 +2266,6 @@
       "fetchMethod": "html"
     },
     {
-      "id": "86dc09a156fe9120",
-      "title": "CBSE 12th Result 2026: KV और नवोदय का जलवा, 12वीं के नतीजों में इन स्कूलों ने मारी बाजी",
-      "link": "https://ndtv.in/education/cbse-12th-result-2026-school-wise-performance-kv-jnv-pass-percentage-list-11425718",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "kvs",
-      "sourceName": "Kendriya Vidyalaya Sangathan",
-      "dept": "Kendriya Vidyalaya Sangathan",
-      "state": "All India",
-      "category": "teaching",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "ebfc2a9f2cf5cca8",
-      "title": "CBSE 12th Result: संस्थानवार प्रदर्शन में केंद्रीय विद्यालय रहा टॉप पर",
-      "link": "https://www.amarujala.com/education/cbse-class-12-result-2026-kv-secures-top-spot-know-how-different-schools-performed-2026-05-13",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "kvs",
-      "sourceName": "Kendriya Vidyalaya Sangathan",
-      "dept": "Kendriya Vidyalaya Sangathan",
-      "state": "All India",
-      "category": "teaching",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "2b0cf313b821dae3",
-      "title": "CBSE 12th Result 2026: सीबीएसई 12वीं में केंद्रीय विद्यालय का दबदबा, 98.55% छात्रों की सफलता के साथ टॉप पर",
-      "link": "https://www.timesnowhindi.com/education/cbse-12th-result-2026-kvs-vs-jnv-whose-result-is-highest-kendriya-vidyalaya-and-jawahar-navodaya-vidyalaya-12th-pass-percentage-article-154315169",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "kvs",
-      "sourceName": "Kendriya Vidyalaya Sangathan",
-      "dept": "Kendriya Vidyalaya Sangathan",
-      "state": "All India",
-      "category": "teaching",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
       "id": "90b0b6cf95c2bb71",
       "title": "विज्ञापन संख्या 01/2025 के अंतर्गत स्नातकोत्तर शिक्षक (हिंदी) एवं स्नातक शिक्षक ( हिंदी)पद के टियर II परीक्षा के परिणाम घोषित करने संबंधित प्रेस विज्ञप्ति। नई",
       "link": "https://cdnbbsr.s3waas.gov.in/s32d2ca7eedf739ef4c3800713ec482e1a/uploads/2026/09/2026090512-1.pdf",
@@ -2203,40 +2293,6 @@
       "pdfUrls": [
         "https://cdnbbsr.s3waas.gov.in/s32d2ca7eedf739ef4c3800713ec482e1a/uploads/2026/09/2026090528-2.pdf"
       ],
-      "sourceId": "kvs",
-      "sourceName": "Kendriya Vidyalaya Sangathan",
-      "dept": "Kendriya Vidyalaya Sangathan",
-      "state": "All India",
-      "category": "teaching",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "08a6fead3943369e",
-      "title": "Comparative Result Analysis – Class X",
-      "link": "https://kvsangathan.nic.in/en/comparative-result-analysis-class-x/",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "kvs",
-      "sourceName": "Kendriya Vidyalaya Sangathan",
-      "dept": "Kendriya Vidyalaya Sangathan",
-      "state": "All India",
-      "category": "teaching",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "a91e35efe906a21a",
-      "title": "Comparative Result Analysis – Class XII",
-      "link": "https://kvsangathan.nic.in/en/comparative-result-analysis-class-xii/",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
       "sourceId": "kvs",
       "sourceName": "Kendriya Vidyalaya Sangathan",
       "dept": "Kendriya Vidyalaya Sangathan",

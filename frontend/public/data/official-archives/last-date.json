@@ -1,7 +1,24 @@
 {
-  "generatedAt": "2026-09-11T09:02:44.233Z",
-  "count": 307,
+  "generatedAt": "2026-09-12T08:54:17.116Z",
+  "count": 309,
   "items": [
+    {
+      "id": "3d872469bf19db8b",
+      "title": "Tender No. BARC/CED/ET/38/2026-2027[e-Tender]",
+      "link": "http://www.barc.gov.in/tenders/tender257.pdf",
+      "publishedAt": "2026-09-11T08:42:42.000Z",
+      "summary": "Supplying & erection of Precast earth retaining walls and backfilling of earth for Engineering Halls Canteen at Sea Side, North site, BARC, Trombay, Mumbai Last date: 12-Oct-2026",
+      "pdfUrls": [],
+      "sourceId": "barc",
+      "sourceName": "Bhabha Atomic Research Centre (BARC)",
+      "dept": "Bhabha Atomic Research Centre (BARC)",
+      "state": "All India",
+      "category": "defence",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "rss-discovered"
+    },
     {
       "id": "80aeeab5d0e5bf5e",
       "title": "Tender No. BARC/NRB(T)/INRPC/MPT-566 /2026/1643[e-Tender]",
@@ -212,23 +229,6 @@
       "link": "http://www.barc.gov.in/tenders/tender246.pdf",
       "publishedAt": "2026-09-04T05:30:32.000Z",
       "summary": "Supply, installation, testing and commissioning of LTpanel and associated works to provide power supply forEV bus charging station at BARC, Trombay, Mumbai 400085 Last date: 24-Sep-2026",
-      "pdfUrls": [],
-      "sourceId": "barc",
-      "sourceName": "Bhabha Atomic Research Centre (BARC)",
-      "dept": "Bhabha Atomic Research Centre (BARC)",
-      "state": "All India",
-      "category": "defence",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "rss-discovered"
-    },
-    {
-      "id": "fbf1076cd2bd5584",
-      "title": "Tender No. BARC/SMFC/CS/04/2025-26/NIT[e-Tender]",
-      "link": "http://www.barc.gov.in/tenders/tender120.pdf",
-      "publishedAt": "2026-09-02T04:46:12.000Z",
-      "summary": "Miscellaneous civil and steel structure works at BARC Plant site, Ullarthi Kaval, Challakere, Chitradurga District, Karnataka Last date: 07-Sep-2026",
       "pdfUrls": [],
       "sourceId": "barc",
       "sourceName": "Bhabha Atomic Research Centre (BARC)",
@@ -647,6 +647,23 @@
         "all"
       ],
       "fetchMethod": "rss-discovered"
+    },
+    {
+      "id": "d483071fb499ad9c",
+      "title": "Consultation paper on “Review of certain aspects of the Closing Auction Session, Market Timings and Settlement Methodologies for Derivative Contracts”)",
+      "link": "https://www.sebi.gov.in/reports-and-statistics/reports/sep-2026/consultation-paper-on-review-of-certain-aspects-of-the-closing-auction-session-market-timings-and-settlement-methodologies-for-derivative-contracts-_104464.html",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "sebi",
+      "sourceName": "Securities and Exchange Board of India",
+      "dept": "Securities and Exchange Board of India",
+      "state": "All India",
+      "category": "banking",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
     },
     {
       "id": "cf7727ab821fe25c",
@@ -1141,6 +1158,23 @@
         "od"
       ],
       "fetchMethod": "html"
+    },
+    {
+      "id": "fbf1076cd2bd5584",
+      "title": "Tender No. BARC/SMFC/CS/04/2025-26/NIT[e-Tender]",
+      "link": "http://www.barc.gov.in/tenders/tender120.pdf",
+      "publishedAt": "2026-09-02T04:46:12.000Z",
+      "summary": "Miscellaneous civil and steel structure works at BARC Plant site, Ullarthi Kaval, Challakere, Chitradurga District, Karnataka Last date: 07-Sep-2026",
+      "pdfUrls": [],
+      "sourceId": "barc",
+      "sourceName": "Bhabha Atomic Research Centre (BARC)",
+      "dept": "Bhabha Atomic Research Centre (BARC)",
+      "state": "All India",
+      "category": "defence",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "rss-discovered"
     },
     {
       "id": "fbdd8d732a7a3709",
