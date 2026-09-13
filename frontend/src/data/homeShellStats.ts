@@ -5,27 +5,27 @@ import type { HeadlineStats } from '@/utils/headlineStats'
  *  `vacancies` / hero posts only count listings with vacancies > 0.
  */
 export const HOME_SHELL_HEADLINE_STATS: HeadlineStats = {
-  notifications: 16,
-  vacancies: 4147,
-  orgs: 10,
+  notifications: 13,
+  vacancies: 4136,
+  orgs: 9,
 }
 
 /** Avoid importing full ORG_INDEX / OFFICIAL_SITES just for counts on the home shell. */
-export const HOME_SHELL_ORG_COUNT = 10
+export const HOME_SHELL_ORG_COUNT = 9
 export const HOME_SHELL_OFFICIAL_SOURCE_COUNT = 153
 
 export const HOME_SHELL_CATALOG_STATS: CatalogStats = {
-  totalNotices: 16,
-  liveNotices: 16,
-  vacancies: 4147,
-  noticesWithVacancies: 16,
+  totalNotices: 13,
+  liveNotices: 13,
+  vacancies: 4136,
+  noticesWithVacancies: 13,
 }
 
 export const HOME_SHELL_HERO_STATS = {
-  posts: 4147,
-  withPostCount: 16,
+  posts: 4136,
+  withPostCount: 13,
   hotNew: 1,
   states: 6,
-  stateListings: 13,
-  live: 16,
+  stateListings: 11,
+  live: 13,
 }
