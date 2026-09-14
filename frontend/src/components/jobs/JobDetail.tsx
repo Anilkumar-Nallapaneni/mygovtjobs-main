@@ -19,6 +19,7 @@ import {
   buildUnifiedDetailActions,
   sanitizeParagraphText,
 } from "@/utils/jobDetailLinks";
+import { isJobExpired } from "@/utils/jobFilters";
 import RelatedJobs from "@/components/jobs/RelatedJobs";
 import JobDetailFaq from "@/components/jobs/JobDetailFaq";
 import ReportJobButton from "@/components/jobs/ReportJobButton";
@@ -84,6 +85,7 @@ export default function JobDetail({
     ? Math.ceil((lastDateMs - now) / DAY_MS)
     : null;
   const isUrgent = daysLeft != null && daysLeft >= 0 && daysLeft <= 7;
+  const isExpired = isJobExpired({ status: job.status, lastDate: view.lastDate, last_date: job.last_date }, now);
   const countLocale = numberLocale(i18n.language);
 
   const detailActions = useMemo(() => buildUnifiedDetailActions(job), [job]);
@@ -260,7 +262,7 @@ export default function JobDetail({
         ) : null}
         <div>
           <dt>Status</dt>
-          <dd>{String(job.status || "live").toLowerCase() === "live" ? "Active" : "Expired"}</dd>
+          <dd>{isExpired ? "Expired" : "Active"}</dd>
         </div>
       </dl>
 
