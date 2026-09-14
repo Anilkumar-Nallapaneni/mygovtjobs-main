@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-12T08:54:17.116Z",
+  "generatedAt": "2026-09-14T09:42:11.779Z",
   "count": 170,
   "items": [
     {
@@ -154,44 +154,6 @@
         "all"
       ],
       "fetchMethod": "html-listing"
-    },
-    {
-      "id": "b05869f1f68adaa4",
-      "title": "Click for details",
-      "link": "https://www.rrbthiruvananthapuram.gov.in/assets/pdf/Exam_Notice_CEN_5_2025_JE_CBTI_City_Intimation_Eng.pdf",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [
-        "https://www.rrbthiruvananthapuram.gov.in/assets/pdf/Exam_Notice_CEN_5_2025_JE_CBTI_City_Intimation_Eng.pdf"
-      ],
-      "sourceId": "rrb-tvm",
-      "sourceName": "Railway Recruitment Board (RRB) — Thiruvananthapuram",
-      "dept": "Railway Recruitment Board (RRB) — Thiruvananthapuram",
-      "state": "All India",
-      "category": "railways",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "0fdd1f2f251ee403",
-      "title": "Click for details",
-      "link": "https://www.rrbthiruvananthapuram.gov.in/assets/pdf/NOTICE_Regarding_City_Intimation_CBAT_re_exam_.pdf",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [
-        "https://www.rrbthiruvananthapuram.gov.in/assets/pdf/NOTICE_Regarding_City_Intimation_CBAT_re_exam_.pdf"
-      ],
-      "sourceId": "rrb-tvm",
-      "sourceName": "Railway Recruitment Board (RRB) — Thiruvananthapuram",
-      "dept": "Railway Recruitment Board (RRB) — Thiruvananthapuram",
-      "state": "All India",
-      "category": "railways",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
     },
     {
       "id": "1134e9072dc7886b",
@@ -453,57 +415,21 @@
       "fetchMethod": "html"
     },
     {
-      "id": "2cb6ef6de1513685",
-      "title": "Under Secretary (Law) and Law Officer Recruitment – Examination Schedule Updated: 08/05/2026",
-      "link": "https://mpscmanipur.gov.in/files/Notification_Under_Secy_Law_Officer_Admit_card.pdf",
+      "id": "8f245b6b109d26a5",
+      "title": "उत्तर प्रदेश होमगार्ड्स के पदों पर एनरोलमेंट-2025 शारीरिक दक्षता परीक्षा (पीईटी) के आयोजन एवं उनके प्रवेश पत्र डाउनलोड किये जाने हेतु महत्वपूर्ण सूचना",
+      "link": "https://uppbpb.gov.in/FilesUploaded/Notice/vig1_1109202654e5f4ec-372d-40e6-8235-26f9fe33e93c.pdf",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [
-        "https://mpscmanipur.gov.in/files/Notification_Under_Secy_Law_Officer_Admit_card.pdf"
+        "https://uppbpb.gov.in/FilesUploaded/Notice/vig1_1109202654e5f4ec-372d-40e6-8235-26f9fe33e93c.pdf"
       ],
-      "sourceId": "psc-mn",
-      "sourceName": "Manipur PSC",
-      "dept": "Manipur PSC",
-      "state": "NE States",
-      "category": "state",
+      "sourceId": "police-up",
+      "sourceName": "UP Police Recruitment Board (UPPRPB)",
+      "dept": "UP Police Recruitment Board (UPPRPB)",
+      "state": "Uttar Pradesh",
+      "category": "police",
       "stateIds": [
-        "ne"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "686e8d5b26f137a9",
-      "title": "Planning Department Research Assistant Recruitment – Examination Schedule Updated: 08/05/2026",
-      "link": "https://mpscmanipur.gov.in/files/Research_Asst_notification_Admit_card.pdf",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [
-        "https://mpscmanipur.gov.in/files/Research_Asst_notification_Admit_card.pdf"
-      ],
-      "sourceId": "psc-mn",
-      "sourceName": "Manipur PSC",
-      "dept": "Manipur PSC",
-      "state": "NE States",
-      "category": "state",
-      "stateIds": [
-        "ne"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "56de02281a84cf5b",
-      "title": "Admit Cards",
-      "link": "https://empsconline.gov.in/downloadadmitcardv2.aspx",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-mn",
-      "sourceName": "Manipur PSC",
-      "dept": "Manipur PSC",
-      "state": "NE States",
-      "category": "state",
-      "stateIds": [
-        "ne"
+        "up"
       ],
       "fetchMethod": "html"
     },
@@ -534,25 +460,6 @@
       "summary": null,
       "pdfUrls": [
         "https://uppbpb.gov.in/FilesUploaded/Notice/Home%20guard%20PET%20Vigyapti_21e47723f-2975-41d8-9bd0-779f339ca8ab.pdf"
-      ],
-      "sourceId": "police-up",
-      "sourceName": "UP Police Recruitment Board (UPPRPB)",
-      "dept": "UP Police Recruitment Board (UPPRPB)",
-      "state": "Uttar Pradesh",
-      "category": "police",
-      "stateIds": [
-        "up"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "8f245b6b109d26a5",
-      "title": "LATEST NOTICE: उत्तर प्रदेश होमगार्ड्स के पदों पर एनरोलमेंट-2025 शारीरिक दक्षता परीक्षा (पीईटी) के आयोजन एवं उनके प्रवेश पत्र डाउनलोड किये जाने हेतु महत्वपूर्ण सूचना",
-      "link": "https://uppbpb.gov.in/FilesUploaded/Notice/vig1_1109202654e5f4ec-372d-40e6-8235-26f9fe33e93c.pdf",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [
-        "https://uppbpb.gov.in/FilesUploaded/Notice/vig1_1109202654e5f4ec-372d-40e6-8235-26f9fe33e93c.pdf"
       ],
       "sourceId": "police-up",
       "sourceName": "UP Police Recruitment Board (UPPRPB)",
@@ -785,6 +692,99 @@
       "category": "teaching",
       "stateIds": [
         "tn"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "b05869f1f68adaa4",
+      "title": "Click for details",
+      "link": "https://www.rrbthiruvananthapuram.gov.in/assets/pdf/Exam_Notice_CEN_5_2025_JE_CBTI_City_Intimation_Eng.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://www.rrbthiruvananthapuram.gov.in/assets/pdf/Exam_Notice_CEN_5_2025_JE_CBTI_City_Intimation_Eng.pdf"
+      ],
+      "sourceId": "rrb-tvm",
+      "sourceName": "Railway Recruitment Board (RRB) — Thiruvananthapuram",
+      "dept": "Railway Recruitment Board (RRB) — Thiruvananthapuram",
+      "state": "All India",
+      "category": "railways",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "0fdd1f2f251ee403",
+      "title": "Click for details",
+      "link": "https://www.rrbthiruvananthapuram.gov.in/assets/pdf/NOTICE_Regarding_City_Intimation_CBAT_re_exam_.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://www.rrbthiruvananthapuram.gov.in/assets/pdf/NOTICE_Regarding_City_Intimation_CBAT_re_exam_.pdf"
+      ],
+      "sourceId": "rrb-tvm",
+      "sourceName": "Railway Recruitment Board (RRB) — Thiruvananthapuram",
+      "dept": "Railway Recruitment Board (RRB) — Thiruvananthapuram",
+      "state": "All India",
+      "category": "railways",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "2cb6ef6de1513685",
+      "title": "Under Secretary (Law) and Law Officer Recruitment – Examination Schedule Updated: 08/05/2026",
+      "link": "https://mpscmanipur.gov.in/files/Notification_Under_Secy_Law_Officer_Admit_card.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://mpscmanipur.gov.in/files/Notification_Under_Secy_Law_Officer_Admit_card.pdf"
+      ],
+      "sourceId": "psc-mn",
+      "sourceName": "Manipur PSC",
+      "dept": "Manipur PSC",
+      "state": "NE States",
+      "category": "state",
+      "stateIds": [
+        "ne"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "686e8d5b26f137a9",
+      "title": "Planning Department Research Assistant Recruitment – Examination Schedule Updated: 08/05/2026",
+      "link": "https://mpscmanipur.gov.in/files/Research_Asst_notification_Admit_card.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://mpscmanipur.gov.in/files/Research_Asst_notification_Admit_card.pdf"
+      ],
+      "sourceId": "psc-mn",
+      "sourceName": "Manipur PSC",
+      "dept": "Manipur PSC",
+      "state": "NE States",
+      "category": "state",
+      "stateIds": [
+        "ne"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "56de02281a84cf5b",
+      "title": "Admit Cards",
+      "link": "https://empsconline.gov.in/downloadadmitcardv2.aspx",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-mn",
+      "sourceName": "Manipur PSC",
+      "dept": "Manipur PSC",
+      "state": "NE States",
+      "category": "state",
+      "stateIds": [
+        "ne"
       ],
       "fetchMethod": "html"
     },
