@@ -1,9 +1,17 @@
 {
-  "generatedAt": "2026-09-14T09:57:14.156157+00:00",
+  "generatedAt": "2026-09-15T04:04:11.801930+00:00",
   "apply": true,
   "scanned": 18,
-  "ok": 14,
+  "ok": 13,
   "demoted": [
+    {
+      "id": "d73aeb4e-62de-4808-a85f-2c1900686c97",
+      "slug": "railway-recruitment-boards-rrb-rrb-recruitment-cen-04-2026-3993-posts-of-junior--883856ec",
+      "title": "RRB Recruitment CEN 04/2026 — 3993 posts of Junior Engineer, DMS and CMA",
+      "reasons": [
+        "deadline expired"
+      ]
+    },
     {
       "id": "437549f0-25db-4b07-8ea9-4800b3fc4242",
       "slug": "addendum-notice-08-posts-of-administrative-officer-grade-i-ministry-of-defence-074b6ac5",
@@ -37,5 +45,5 @@
       ]
     }
   ],
-  "rowsUpdated": 4
+  "rowsUpdated": 5
 }
