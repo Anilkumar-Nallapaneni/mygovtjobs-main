@@ -6,7 +6,13 @@
 import { readFileSync, existsSync, writeFileSync } from "fs";
 import { join, dirname } from "path";
 import { fileURLToPath } from "url";
-import { collectJobUrls, isBlockedAggregatorUrl, rowHasBlockedAggregatorUrl } from "./lib/audit-urls.mjs";
+import {
+  collectJobUrls,
+  isBlockedAggregatorUrl,
+  isCorruptUrl,
+  isSaneHttpUrl,
+  rowHasBlockedAggregatorUrl,
+} from "./lib/audit-urls.mjs";
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
 
@@ -118,6 +124,7 @@ async function main() {
     liveWithPdf: 0,
     liveWithContentSections: 0,
     blockedHost: 0,
+    corruptApplyUrl: 0,
     shortTitle: 0,
     noPdfNoApply: 0,
   };
@@ -125,6 +132,7 @@ async function main() {
   const issues = {
     noPdfNoApply: [],
     blockedHost: [],
+    corruptApplyUrl: [],
     shortTitle: [],
     notRecruitment: [],
   };
@@ -138,7 +146,14 @@ async function main() {
     const pdfs = collectPdfUrls(row);
     const apply = String(row.apply_url || "").trim();
     const hasPdf = pdfs.length > 0;
-    const hasApply = Boolean(apply && !isBlockedAggregatorUrl(apply));
+    const hasApply = Boolean(apply && !isBlockedAggregatorUrl(apply) && isSaneHttpUrl(apply));
+
+    if (apply && isCorruptUrl(apply)) {
+      stats.corruptApplyUrl += 1;
+      if (issues.corruptApplyUrl.length < 15) {
+        issues.corruptApplyUrl.push({ slug: row.slug, title: title.slice(0, 80), url: apply });
+      }
+    }
 
     if (hasPdf) stats.withPdf += 1;
     const sections = (row.detail && typeof row.detail === "object" ? row.detail : {}).content_sections;
@@ -199,6 +214,7 @@ async function main() {
   console.log(`  Recruitment-like:  ${stats.recruitmentLike} (${pct(stats.recruitmentLike)})`);
   console.log(`  No PDF & no apply: ${stats.noPdfNoApply} (${pct(stats.noPdfNoApply)})`);
   console.log(`  Blocked host hint: ${stats.blockedHost}`);
+  console.log(`  Corrupt apply URL: ${stats.corruptApplyUrl}`);
 
   console.log("\n── Live-only summary ──");
   console.log(`  Live recruitment-like: ${stats.liveRecruitmentLike} (${livePct(stats.liveRecruitmentLike)})`);
@@ -216,6 +232,7 @@ async function main() {
   printIssues("no PDF / no apply", issues.noPdfNoApply);
   printIssues("non-recruitment title", issues.notRecruitment);
   printIssues("blocked host", issues.blockedHost);
+  printIssues("corrupt apply URL", issues.corruptApplyUrl);
   printIssues("short title", issues.shortTitle);
 
   const recruitPct = jobs.length ? (stats.recruitmentLike / jobs.length) * 100 : 0;
@@ -228,6 +245,9 @@ async function main() {
   }
   if (stats.blockedHost > THRESHOLDS.maxBlockedHost) {
     failures.push(`blocked host ${stats.blockedHost} > max ${THRESHOLDS.maxBlockedHost}`);
+  }
+  if (stats.corruptApplyUrl > 0) {
+    failures.push(`corrupt apply URLs ${stats.corruptApplyUrl} > max 0`);
   }
   if (liveNoLinkPct > THRESHOLDS.maxNoPdfNoApplyPctLive) {
     failures.push(

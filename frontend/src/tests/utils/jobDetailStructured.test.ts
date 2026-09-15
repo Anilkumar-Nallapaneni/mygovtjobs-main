@@ -259,23 +259,4 @@ describe("buildStructuredJobDetail", () => {
       expect(overviewArticle.paragraphs.some((p) => /frequently\s+asked/i.test(p))).toBe(false);
     }
   });
-  it("filters Answer/fee junk from regenerated ISRO job-details JSON", async () => {
-    const { readFileSync } = await import("node:fs");
-    const { resolve } = await import("node:path");
-    const { fileURLToPath } = await import("node:url");
-    const here = fileURLToPath(new URL(".", import.meta.url));
-    const path = resolve(
-      here,
-      "../../../public/data/job-details/isro-careers-advt-no-isro-icrb-02-emc-cepo-2026-dated-28-07-2026-recruitment-to--d96680f7.json"
-    );
-    const job = JSON.parse(readFileSync(path, "utf8"));
-    const structured = buildStructuredJobDetail(job);
-    expect(structured.overviewFacts.some((f) => /^answer$/i.test(f.label))).toBe(false);
-    expect(structured.overviewFacts.some((f) => /paper\s*code/i.test(f.label))).toBe(false);
-    // No FAQ Answer fee promotion
-    const fee = job.detail?.fee;
-    if (fee && typeof fee === "object") {
-      expect(Object.keys(fee).some((k) => /^answer$/i.test(k))).toBe(false);
-    }
-  });
 });

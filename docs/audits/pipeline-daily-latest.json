@@ -1,33 +1,57 @@
 {
   "mode": "daily",
+<<<<<<< HEAD
   "started_at_epoch": 1788527554,
+=======
+  "started_at_epoch": 1789372892,
+>>>>>>> 683e58da7a193da3de834c0f18626f6f8f8e7982
   "steps": [
     {
       "name": "production sync",
       "required": true,
       "returncode": 0,
+<<<<<<< HEAD
       "duration_seconds": 6667.8
+=======
+      "duration_seconds": 6969.12
+>>>>>>> 683e58da7a193da3de834c0f18626f6f8f8e7982
     },
     {
       "name": "strict snapshot verification",
       "required": true,
       "returncode": 0,
+<<<<<<< HEAD
       "duration_seconds": 0.2
+=======
+      "duration_seconds": 0.06
+>>>>>>> 683e58da7a193da3de834c0f18626f6f8f8e7982
     },
     {
       "name": "vacancy totals",
       "required": true,
       "returncode": 0,
+<<<<<<< HEAD
       "duration_seconds": 0.17
+=======
+      "duration_seconds": 0.03
+>>>>>>> 683e58da7a193da3de834c0f18626f6f8f8e7982
     },
     {
       "name": "alert delivery",
       "required": false,
       "returncode": 0,
+<<<<<<< HEAD
       "duration_seconds": 9.06
     }
   ],
   "run_id": "04fb7833-7c55-48c5-946a-a789686b991d",
   "finished_at_epoch": 1788534240,
+=======
+      "duration_seconds": 5.97
+    }
+  ],
+  "run_id": "559bb26e-f3cb-4860-bcad-ea24e27a1434",
+  "finished_at_epoch": 1789379873,
+>>>>>>> 683e58da7a193da3de834c0f18626f6f8f8e7982
   "status": "succeeded"
 }

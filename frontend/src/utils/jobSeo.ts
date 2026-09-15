@@ -3,6 +3,7 @@ import { getSiteOrigin } from "@/data/siteLinks";
 import { STATES } from "@/data/states";
 import type { JobRecord } from "@/types/job";
 import { jobDetailUrl } from "@/utils/jobRoutes";
+import { jobSeoDescription } from "@/utils/scrubSeoText";
 import { beginSeoHead } from "@/utils/seoHead";
 
 const DEFAULT_DESCRIPTION = SITE_DESCRIPTION;
@@ -10,16 +11,20 @@ const NATIONWIDE_RE = /^(all[\s-]?india|india|nationwide|pan[\s-]?india)$/i;
 
 function jobDescription(job: JobRecord): string {
   const summary =
-    (typeof job.detail === "object" && job.detail && "summary" in job.detail
+    typeof job.detail === "object" && job.detail && "summary" in job.detail
       ? String((job.detail as { summary?: string }).summary || "")
-      : "") ||
-    String(job.about || "");
-  const trimmed = summary.replace(/\s+/g, " ").trim();
-  if (trimmed.length > 155) return `${trimmed.slice(0, 152)}…`;
-  if (trimmed) return trimmed;
+      : "";
   const dept = String(job.dept || "").trim();
   const qual = String(job.qual || job.qualification || "").trim();
-  return [job.title, dept, qual].filter(Boolean).join(" — ") || DEFAULT_DESCRIPTION;
+  return (
+    jobSeoDescription({
+      summary,
+      about: job.about,
+      title: job.title,
+      dept,
+      qualification: qual,
+    }) || DEFAULT_DESCRIPTION
+  );
 }
 
 function defaultOgImage(job?: JobRecord | null): string {

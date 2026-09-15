@@ -10,6 +10,7 @@ import type { JobRecord } from "@/types/job";
 import { enrichJobMetadata } from "@/utils/jobMetadataUtils";
 import { resolveOfficialApplyHref } from "@/utils/officialDomains";
 import { resolveJobApplyHref } from "@/utils/jobDetailLinks";
+import { formatJobDate } from "@/utils/formatJobDate";
 import { dateTimeLocale, numberLocale } from "@/utils/formatLocale";
 import { extractPostName } from "@/utils/extractPostName";
 import BookmarkButton from "@/components/jobs/BookmarkButton";
@@ -17,20 +18,8 @@ import "@/styles/jobs.css";
 
 const DAY_MS = 1000 * 60 * 60 * 24;
 
-function formatCardDate(value: string | undefined | null, locale: string, compact: boolean) {
-  if (!value || value === "—") return "—";
-  const d = new Date(value);
-  if (Number.isNaN(d.getTime())) return String(value);
-  const loc = dateTimeLocale(locale);
-  if (compact) {
-    const month = d.toLocaleDateString(loc, { month: "short" });
-    return `${d.getDate()} ${month} '${String(d.getFullYear()).slice(-2)}`;
-  }
-  return d.toLocaleDateString(loc, {
-    day: "numeric",
-    month: "short",
-    year: "numeric",
-  });
+function formatCardDate(value: string | undefined | null, _locale: string, compact: boolean) {
+  return formatJobDate(value, { compact });
 }
 
 function hasKnownDisplayValue(value) {

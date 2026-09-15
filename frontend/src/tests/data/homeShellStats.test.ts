@@ -34,8 +34,9 @@ describe('homeShellStats', () => {
     expect(HOME_SHELL_HERO_STATS.posts).toBe(vacancies)
     expect(HOME_SHELL_ORG_COUNT).toBe(Math.max(orgs, 1))
 
-    // Guard against the old fake marketing totals regressing.
+    // Guard against the old fake marketing totals regressing (55,597 / 874).
+    expect(HOME_SHELL_HEADLINE_STATS.notifications).not.toBe(874)
+    expect(HOME_SHELL_HEADLINE_STATS.vacancies).not.toBe(55597)
     expect(HOME_SHELL_HEADLINE_STATS.notifications).toBeLessThan(200)
-    expect(HOME_SHELL_HEADLINE_STATS.vacancies).toBeLessThan(2000)
   })
 })

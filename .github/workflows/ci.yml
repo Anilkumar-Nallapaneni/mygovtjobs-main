@@ -104,6 +104,8 @@ jobs:
           MIN_PUBLIC_CATALOG_ROWS: "10"
           MAX_CATALOG_DROP_RATE: "0.50"
         run: npm run verify:live-jobs
+      - name: Catalog apply-URL sanity (no database)
+        run: npm run jobs:check-links:catalog
       - name: Job quality audit (strict thresholds)
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         env:

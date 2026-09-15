@@ -18,6 +18,11 @@ const BLOCKED_HOST_RE = new RegExp(
 const OFFICIAL_TLD_RE = /\.(gov|nic|ac|org|res|edu)\.in$/i;
 const OFFICIAL_STEMS = new Set(catalog.officialStems);
 
+/** Common OCR / scrape TLD typos that are never official. */
+const TYPO_TLDS = new Set(["ln", "con", "comm", "ogr", "edus", "govv"]);
+const ILLEGAL_URL_CHARS = /[\^<>"`{|}\\]/;
+const WHITESPACE = /\s/;
+
 export function hostnameOf(url) {
   try {
     return new URL(url).hostname.toLowerCase();
@@ -32,8 +37,39 @@ export function isBlockedAggregatorUrl(url) {
   return BLOCKED_HOST_RE.test(host);
 }
 
+/** True when the URL is structurally corrupt (typo TLD, illegal path chars, bad host). */
+export function isCorruptUrl(url) {
+  const raw = String(url || "").trim();
+  if (!raw) return true;
+  if (ILLEGAL_URL_CHARS.test(raw) || WHITESPACE.test(raw)) return true;
+  let parsed;
+  try {
+    parsed = new URL(raw);
+  } catch {
+    return true;
+  }
+  if (parsed.protocol !== "http:" && parsed.protocol !== "https:") return true;
+  const host = (parsed.hostname || "").toLowerCase();
+  if (!host || host.startsWith(".") || host.endsWith(".") || host.includes("..")) return true;
+  const labels = host.split(".");
+  const tld = labels[labels.length - 1] || "";
+  if (TYPO_TLDS.has(tld)) return true;
+  if (parsed.pathname && ILLEGAL_URL_CHARS.test(parsed.pathname)) return true;
+  return false;
+}
+
+export function isSaneHttpUrl(url) {
+  return !isCorruptUrl(url);
+}
+
+export function isPublishableApplyUrl(url) {
+  const raw = String(url || "").trim();
+  if (!raw) return false;
+  return isSaneHttpUrl(raw) && isOfficialishUrl(raw);
+}
+
 export function isOfficialishUrl(url) {
-  if (!url || isBlockedAggregatorUrl(url)) return false;
+  if (!url || isCorruptUrl(url) || isBlockedAggregatorUrl(url)) return false;
   const host = hostnameOf(url);
   if (!host) return false;
   if (OFFICIAL_TLD_RE.test(host)) return true;

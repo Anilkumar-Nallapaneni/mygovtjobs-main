@@ -372,6 +372,8 @@ def extract_fields(text: str, *, pdf_url: str | None = None) -> dict[str, Any]:
 
     # Keep paragraph breaks so JobDetailAgent can re-sectionize from summary later.
     summary = re.sub(r"[ \t]+", " ", text)
+    summary = re.sub(r"(?im)^page\s+\d+\s+of\s+\d+\s*$", "", summary)
+    summary = re.sub(r"page\s+\d+\s+of\s+\d+", " ", summary, flags=re.I)
     summary = re.sub(r"\n{3,}", "\n\n", summary).strip()
     out["summary"] = summary[:12_000]
     sections = text_to_content_sections(text, pdf_url=pdf_url)
