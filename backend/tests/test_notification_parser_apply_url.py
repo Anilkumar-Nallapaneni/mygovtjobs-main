@@ -33,3 +33,21 @@ def test_parser_leaves_apply_url_empty_when_only_pdf_exists():
     )
     assert out["apply_url"] is None
     assert out["detail"]["pdf_url"].endswith(".pdf")
+
+
+def test_parser_keeps_scraper_last_date_and_source_url():
+    parser = NotificationParser()
+    out = parser.parse(
+        {
+            "title": "IBPS CRP-RRBs-XV Recruitment of Officers",
+            "link": "https://ibpsreg.ibps.in/rrbxvaug26/",
+            "lastDate": "2026-09-21",
+            "source_url": "https://www.ibps.in/wp-content/uploads/CRP-RRBs-XV-notification.pdf",
+            "source": "ibps",
+            "dept": "Institute of Banking Personnel Selection (IBPS)",
+        }
+    )
+    assert out["last_date"] == "2026-09-21"
+    assert out["source_url"] == (
+        "https://www.ibps.in/wp-content/uploads/CRP-RRBs-XV-notification.pdf"
+    )

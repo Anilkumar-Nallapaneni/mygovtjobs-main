@@ -360,6 +360,7 @@ class NotificationParser:
         last_date = (
             pdf.get("last_date")
             or raw.get("last_date")
+            or raw.get("lastDate")
             or title_fields.get("last_date")
             or text_fields.get("last_date")
         )
@@ -398,5 +399,6 @@ class NotificationParser:
             "selection_process": pdf.get("selection_process") or raw.get("selection_process"),
             "last_date": last_date,
             "published_at": published_dt,
+            "source_url": raw.get("source_url") or raw.get("sourceUrl"),
             "detail": detail,
         }

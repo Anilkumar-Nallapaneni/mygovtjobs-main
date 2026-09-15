@@ -22,6 +22,7 @@ const CUSTOM_MODULES = new Set([
   "bhel_careers",
   "hal_careers",
   "ssc_api",
+  "ibps_listings",
 ]);
 
 const htmlScrapers = [];

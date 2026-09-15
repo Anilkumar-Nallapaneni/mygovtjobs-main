@@ -18,5 +18,7 @@ def test_assert_safe_url_blocks_non_http():
 def test_host_allows_legacy_tls_gov_in():
     assert host_allows_legacy_tls("https://ssc.gov.in/notice.pdf") is True
     assert host_allows_legacy_tls("https://www.nic.in/") is True
+    assert host_allows_legacy_tls("https://www.ibps.in/wp-content/uploads/x.pdf") is True
+    assert host_allows_legacy_tls("https://ibpsreg.ibps.in/rrbxvaug26/") is True
     assert host_allows_legacy_tls("https://example.com/x") is False
     assert host_allows_legacy_tls("https://drive.google.com/file/d/1") is False

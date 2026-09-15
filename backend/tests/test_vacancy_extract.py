@@ -113,6 +113,27 @@ def test_iocl_recruitment_title_not_non_vacancy_when_body_mentions_dv():
     assert is_non_vacancy_document("Result of IOCL Executives CBT 2026", body) is True
 
 
+def test_ssc_exam_notice_title_not_non_vacancy_when_body_mentions_admit_card():
+    body = (
+        "Admission Certificates will be issued on the SSC website. "
+        "Document verification of original certificates. The result of Tier-I "
+        "will be published on ssc.gov.in."
+    )
+    assert is_non_vacancy_document(
+        "Notice of Combined Higher Secondary (10+2) Level Examination, 2026", body
+    ) is False
+    assert is_non_vacancy_document("Notice of Junior Engineer Examination, 2026", body) is False
+    assert is_non_vacancy_document(
+        "Notice of Sub-Inspector in Delhi Police and Central Armed Police Forces Examination, 2026",
+        body,
+    ) is False
+    assert is_non_vacancy_document(
+        "Notice of Assistant Section Officer Limited Departmental Competitive Examination, 2025",
+        body,
+    ) is True
+    assert is_non_vacancy_document("Final Answer Key for Tier-I CHSL 2026", body) is True
+
+
 def test_iocl_category_vacancy_sheet_sums_discipline_totals():
     body = """
     Advt. No.: IOCL/CO-HR/RECTT/2026/01 14th August, 2026

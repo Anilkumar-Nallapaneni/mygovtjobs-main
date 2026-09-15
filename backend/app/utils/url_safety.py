@@ -69,6 +69,8 @@ def host_allows_legacy_tls(url: str) -> bool:
     host = (urlparse(url).hostname or "").strip().lower().rstrip(".")
     if not host:
         return False
-    if host in {"gov.in", "nic.in"}:
+    if host in {"gov.in", "nic.in", "ibps.in", "www.ibps.in"}:
+        return True
+    if host.endswith(".ibps.in"):
         return True
     return any(host.endswith(suffix) for suffix in _LEGACY_TLS_SUFFIXES)

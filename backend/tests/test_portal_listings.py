@@ -1,6 +1,6 @@
 """Portal listing scrapers — RRB CEN table, BSF/BHEL filters, SSC events."""
 
-from app.scrapers.portal_listings import classify_lifecycle_row, parse_rrb_cen_html, parse_rrb_open_cen_html
+from app.scrapers.portal_listings import classify_lifecycle_row, ibps_rrb_xv_rows, parse_rrb_cen_html, parse_rrb_open_cen_html
 from app.scrapers.ssc_api import _is_event_headline, _is_recruitment_headline
 from app.utils.official_hosts import is_official_recruitment_host
 
@@ -85,4 +85,21 @@ def test_rrb_open_cen_html_keeps_detailed_notice_skips_faq():
     assert rows[0]["pdf"].endswith("Detailed_CEN_04_2026.pdf")
     assert "Junior Engineer" in rows[0]["title"]
     assert "Recruitment" in rows[0]["title"]
-    assert "Recruitment" in rows[0]["title"]
+
+
+def test_ibps_rrb_xv_rows_use_official_apply_portals():
+    rows = ibps_rrb_xv_rows(
+        last_date="2026-09-21",
+        published="2026-09-01",
+        pdf_url="https://www.ibps.in/wp-content/uploads/CRP-RRBs-XV-notification.pdf",
+    )
+    assert len(rows) == 2
+    titles = " ".join(row["title"] for row in rows)
+    assert "Officers" in titles
+    assert "Office Assistants" in titles
+    assert rows[0]["applyUrl"] == "https://ibpsreg.ibps.in/rrbxvaug26/"
+    assert rows[1]["applyUrl"] == "https://ibpsreg.ibps.in/rrboaxvaug26/"
+    assert rows[0]["lastDate"] == "2026-09-21"
+    assert rows[0]["pdfUrls"][0].endswith("CRP-RRBs-XV-notification.pdf")
+    assert is_official_recruitment_host(rows[0]["applyUrl"])
+    assert is_official_recruitment_host(rows[0]["pdfUrls"][0])

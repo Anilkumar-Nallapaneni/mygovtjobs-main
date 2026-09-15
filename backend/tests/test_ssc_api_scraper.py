@@ -19,6 +19,19 @@ def test_recruitment_headline_keeps_exam_notices():
     assert _is_recruitment_headline("Engagement of 05 (Five) Young Professional (General) in SSC(HQ)")
 
 
+def test_current_exam_notice_keeps_chsl_skips_ldce():
+    from app.scrapers.ssc_api import _is_current_exam_notice
+
+    assert _is_current_exam_notice("Notice of Combined Higher Secondary (10+2) Level Examination, 2026")
+    assert _is_current_exam_notice("Notice of Junior Engineer Examination, 2026")
+    assert not _is_current_exam_notice(
+        "Notice of Assistant Section Officer/ Assistant Grade Limited Departmental Competitive Examination, 2025"
+    )
+    assert not _is_current_exam_notice(
+        "Important Notice regarding Own Scribe - Amendment in relevant provisions of Notice of Exam"
+    )
+
+
 def test_recruitment_headline_skips_vacancy_tables_and_results():
     assert not _is_recruitment_headline(
         "Tentative Vacancies of Constable (GD) in Central Armed Police Forces (CAPFs)"

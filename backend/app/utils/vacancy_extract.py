@@ -248,7 +248,9 @@ _OPEN_RECRUITMENT_TITLE = re.compile(
     r"detailed\s+advertisement|"
     r"centralised\s+employment\s+notice|"
     r"\bcen\s+\d{1,2}[/-]\d{4}|"
-    r"advt\.?\s*no"
+    r"advt\.?\s*no|"
+    # SSC open exam notifications: "Notice of Combined Higher Secondary … Examination, 2026"
+    r"notice\s+of\s+(?!.*(?:limited\s+departmental|\bldce\b|own\s+scribe)).{8,160}?\bexamination,\s*20\d{2}"
     r")",
     re.I,
 )

@@ -390,6 +390,11 @@ class IngestAgent:
 
             return IoclListingsScraper(max_items=max_items, lookback_days=lookback)
 
+        if module == "ibps_listings":
+            from app.scrapers.portal_listings import IbpsListingsScraper
+
+            return IbpsListingsScraper(max_items=max_items, lookback_days=lookback)
+
         if module == "rrb_cen":
             from app.scrapers.portal_listings import RrbCenScraper
 

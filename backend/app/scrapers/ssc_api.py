@@ -5,16 +5,20 @@ from __future__ import annotations
 import asyncio
 import logging
 import re
+from datetime import date
 from typing import Any
 from urllib.parse import quote
 
 import httpx
 
+from app.parsers.pdf_dates import extract_dates_from_text
+from app.parsers.pdf_fetch import extract_text_from_pdf_bytes
 from app.scrapers.base import BaseScraper
 from app.scrapers.date_utils import parse_published, within_lookback
 from app.scrapers.http_client import create_async_client
 from app.services.document_classifier import classify_document
 from app.services.noise_filter import clean_job_title, is_junk_job_title
+from app.utils.url_safety import assert_safe_url
 
 logger = logging.getLogger(__name__)
 
@@ -55,6 +59,24 @@ _KEEP_DESPITE_DROP = re.compile(
     r"\bre-?opening of window\b|\bnotice of\b|\bengagement of\b|\badvertisement\b",
     re.I,
 )
+_LDCE = re.compile(r"limited departmental", re.I)
+_SKIP_PROCESS = re.compile(
+    r"own scribe|reschedule of|revision of dates of window|correction.?window",
+    re.I,
+)
+SSC_APPLY = "https://ssc.gov.in"
+
+
+def _is_current_exam_notice(title: str) -> bool:
+    """Keep open-cycle exam advertisements; skip LDCE and process-only notes."""
+    t = title or ""
+    if _LDCE.search(t) or _SKIP_PROCESS.search(t):
+        return False
+    if not re.search(r"\b2026\b", t):
+        return False
+    if not re.search(r"^notice of\b", t, re.I):
+        return False
+    return _is_recruitment_headline(t)
 
 
 def _attachment_url(path: str | None) -> str | None:
@@ -188,7 +210,7 @@ class SscApiScraper(BaseScraper):
             if not isinstance(raw, dict):
                 continue
             title = clean_job_title(str(raw.get("headline") or "").replace("\r", " ").replace("\n", " "))
-            keep = _is_event_headline if self.mode == "events" else _is_recruitment_headline
+            keep = _is_event_headline if self.mode == "events" else _is_current_exam_notice
             if not title or not keep(title):
                 continue
             key = title.lower()
@@ -210,13 +232,15 @@ class SscApiScraper(BaseScraper):
                     pdf_urls.append(url)
 
             end = raw.get("endDate")
-            link = pdf_urls[0] if pdf_urls else f"https://ssc.gov.in/home/notice-board#{quote(str(raw.get('id') or ''), safe='')}"
+            apply_url = SSC_APPLY if self.mode == "jobs" else (
+                pdf_urls[0] if pdf_urls else f"https://ssc.gov.in/home/notice-board#{quote(str(raw.get('id') or ''), safe='')}"
+            )
 
             candidates.append(
                 {
                     "title": title,
-                    "link": link,
-                    "applyUrl": link,
+                    "link": apply_url,
+                    "applyUrl": apply_url,
                     "published": published.isoformat() if published else (raw.get("createdAt") or None),
                     "lastDate": end,
                     "pdfUrls": pdf_urls[:5],
@@ -226,6 +250,8 @@ class SscApiScraper(BaseScraper):
                     "state": "All India",
                     "category": "ssc",
                     "_priority": _priority(title),
+                    "_pdf": pdf_urls[0] if pdf_urls else None,
+                    "source_url": pdf_urls[0] if pdf_urls else apply_url,
                 }
             )
 
@@ -234,9 +260,43 @@ class SscApiScraper(BaseScraper):
             reverse=True,
         )
         out: list[dict[str, Any]] = []
-        for row in candidates[: self.max_items]:
-            row.pop("_priority", None)
-            out.append(row)
+        today = date.today().isoformat()
+        if self.mode == "jobs" and candidates:
+            async with create_async_client(
+                timeout=60.0,
+                user_agent=USER_AGENT,
+                url_for_tls_policy=SSC_API,
+            ) as client:
+                for row in candidates:
+                    if len(out) >= self.max_items:
+                        break
+                    pdf = row.pop("_pdf", None)
+                    row.pop("_priority", None)
+                    last = str(row.get("lastDate") or "")[:10]
+                    if not re.match(r"^\d{4}-\d{2}-\d{2}$", last) and pdf:
+                        try:
+                            assert_safe_url(str(pdf))
+                            data = (
+                                await client.get(str(pdf), headers={"Accept": "application/pdf,*/*"})
+                            ).content
+                            last = (
+                                extract_dates_from_text(
+                                    extract_text_from_pdf_bytes(data, max_pages=8)
+                                ).get("last_date")
+                                or ""
+                            )
+                        except Exception as exc:
+                            logger.info("SSC pdf last_date failed %s: %s", str(pdf)[:80], exc)
+                            last = ""
+                    if not last or last < today:
+                        continue
+                    row["lastDate"] = last
+                    out.append(row)
+        else:
+            for row in candidates[: self.max_items]:
+                row.pop("_priority", None)
+                row.pop("_pdf", None)
+                out.append(row)
 
         logger.info(
             "SSC API scraped %s %s notices (from %s returned, %s candidates)",

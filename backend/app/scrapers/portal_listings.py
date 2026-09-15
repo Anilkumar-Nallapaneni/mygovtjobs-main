@@ -93,6 +93,7 @@ def _job_row(
         "applyUrl": apply,
         "pdfUrls": pdfs[:5],
         "lastDate": last_date,
+        "last_date": last_date,
         "published": published,
         "publishedAt": published,
         "summary": summary[:500],
@@ -235,6 +236,89 @@ class IoclListingsScraper(BaseScraper):
                     )
                 )
         logger.info("IOCL listings scraped %s openings", len(out))
+        return out
+
+
+def ibps_rrb_xv_rows(
+    *,
+    last_date: str | None,
+    published: str | None,
+    pdf_url: str,
+) -> list[dict[str, Any]]:
+    """Official CRP-RRBs-XV Officers + Office Assistants (separate apply portals)."""
+    pdfs = [pdf_url] if pdf_url else []
+    summary = (
+        "Official IBPS Common Recruitment Process for Regional Rural Banks (CRP RRBs XV). "
+        "Apply online on the IBPS registration portal."
+    )
+    return [
+        _job_row(
+            title="IBPS CRP-RRBs-XV recruitment of Officers (Scale I, II and III)",
+            link="https://ibpsreg.ibps.in/rrbxvaug26/",
+            source="ibps",
+            source_name="Institute of Banking Personnel Selection (IBPS)",
+            dept="Institute of Banking Personnel Selection (IBPS)",
+            category="banking",
+            pdf_urls=pdfs,
+            last_date=last_date,
+            published=published,
+            summary=summary,
+        ),
+        _job_row(
+            title="IBPS CRP-RRBs-XV recruitment of Office Assistants (Multipurpose)",
+            link="https://ibpsreg.ibps.in/rrboaxvaug26/",
+            source="ibps",
+            source_name="Institute of Banking Personnel Selection (IBPS)",
+            dept="Institute of Banking Personnel Selection (IBPS)",
+            category="banking",
+            pdf_urls=pdfs,
+            last_date=last_date,
+            published=published,
+            summary=summary,
+        ),
+    ]
+
+
+class IbpsListingsScraper(BaseScraper):
+    """IBPS homepage is a CMS; CRP-RRBs-XV PDFs and apply portals are public."""
+
+    PDF_URL = "https://www.ibps.in/wp-content/uploads/CRP-RRBs-XV-notification.pdf"
+
+    def __init__(self, *, max_items: int = 8, lookback_days: int = 400):
+        self.max_items = max_items
+        self.lookback_days = lookback_days
+
+    async def fetch(self) -> list[dict[str, Any]]:
+        last = None
+        published = None
+        try:
+            assert_safe_url(self.PDF_URL)
+            async with create_async_client(
+                timeout=60,
+                user_agent=USER_AGENT,
+                allow_legacy_tls=True,
+                url_for_tls_policy=self.PDF_URL,
+            ) as client:
+                data = (await client.get(self.PDF_URL, headers={"Accept": "application/pdf,*/*"})).content
+            text = extract_text_from_pdf_bytes(data, max_pages=8)
+            dates = extract_dates_from_text(text)
+            last = dates.get("last_date")
+            published = dates.get("published_date")
+            logger.info(
+                "IBPS CRP-RRBs-XV pdf bytes=%s text=%s last=%s published=%s",
+                len(data or b""),
+                len(text or ""),
+                last,
+                published,
+            )
+        except Exception as exc:
+            logger.info("IBPS CRP-RRBs-XV pdf parse failed: %s", exc)
+        if last and not _last_not_expired(last):
+            logger.info("IBPS CRP-RRBs-XV skipped expired last_date=%s", last)
+            return []
+        rows = ibps_rrb_xv_rows(last_date=last, published=published, pdf_url=self.PDF_URL)
+        out = rows[: self.max_items]
+        logger.info("IBPS listings scraped %s openings", len(out))
         return out
 
 

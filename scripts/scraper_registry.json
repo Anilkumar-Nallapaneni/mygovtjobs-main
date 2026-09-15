@@ -105,12 +105,13 @@
     },
     {
       "code": "ibps",
-      "module": "state_portal_html",
+      "module": "ibps_listings",
       "portal_url": "https://www.ibps.in/",
       "state": "all",
       "category": "banking",
       "enabled": true,
-      "maxItems": 50
+      "maxItems": 8,
+      "notes": "CRP-RRBs-XV official PDF on ibps.in plus ibpsreg apply portals"
     },
     {
       "code": "rbi",
