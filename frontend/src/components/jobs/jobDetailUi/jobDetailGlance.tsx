@@ -11,8 +11,19 @@ export type GlanceFact = {
   id: string;
   icon: string;
   label: string;
-  value: string;
+  value: string | { count: string; unit: string };
 };
+
+function renderGlanceFactValue(value: GlanceFact["value"]) {
+  if (typeof value === "string") return value;
+  return (
+    <span className="job-detail-keyfacts__count-value">
+      <span>{value.count}</span>
+      {" "}
+      <span>{value.unit}</span>
+    </span>
+  );
+}
 
 export function buildGlanceFacts({
   postName,
@@ -35,6 +46,11 @@ export function buildGlanceFacts({
   countLocale: string;
   t: (key: string, opts?: Record<string, unknown>) => string;
 }): GlanceFact[] {
+  const postsUnit =
+    vacancies === 1
+      ? t("job.post", { defaultValue: "POST" })
+      : t("job.posts");
+
   return [
     postName
       ? { id: "post", icon: "", label: t("jobDetail.postName"), value: postName }
@@ -45,7 +61,10 @@ export function buildGlanceFacts({
       label: t("job.posts"),
       value:
         vacancies > 0
-          ? `${vacancies.toLocaleString(countLocale)} ${t("job.posts")}`
+          ? {
+              count: vacancies.toLocaleString(countLocale),
+              unit: postsUnit,
+            }
           : t("jobDetail.vacanciesNotListed", {
               defaultValue: "Not listed in source",
             }),
@@ -167,7 +186,7 @@ export function JobDetailKeyFactsPanel({
                 <div key={fact.id} className="job-detail-keyfacts__tile">
                   <div className="job-detail-keyfacts__tile-body">
                     <dt>{fact.label}</dt>
-                    <dd>{fact.value}</dd>
+                    <dd>{renderGlanceFactValue(fact.value)}</dd>
                   </div>
                 </div>
               ))}
@@ -266,7 +285,7 @@ export function JobDetailGlancePanel({
             {glanceRows.map((row) => (
               <div key={row.label} className="job-detail-glance__fact">
                 <dt>{row.label}</dt>
-                <dd>{row.value}</dd>
+                <dd>{renderGlanceFactValue(row.value)}</dd>
               </div>
             ))}
           </dl>

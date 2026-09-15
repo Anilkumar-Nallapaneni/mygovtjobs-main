@@ -1576,6 +1576,12 @@
   word-break: break-word;
 }
 
+.job-detail-keyfacts__count-value {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.35em;
+}
+
 .job-detail-verification-meta {
   display: flex;
   flex-wrap: wrap;

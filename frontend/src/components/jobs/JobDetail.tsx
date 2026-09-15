@@ -19,6 +19,7 @@ import {
   buildUnifiedDetailActions,
   sanitizeParagraphText,
 } from "@/utils/jobDetailLinks";
+import { isJobExpired } from "@/utils/jobFilters";
 import RelatedJobs from "@/components/jobs/RelatedJobs";
 import JobDetailFaq from "@/components/jobs/JobDetailFaq";
 import ReportJobButton from "@/components/jobs/ReportJobButton";
@@ -84,7 +85,19 @@ export default function JobDetail({
     ? Math.ceil((lastDateMs - now) / DAY_MS)
     : null;
   const isUrgent = daysLeft != null && daysLeft >= 0 && daysLeft <= 7;
+  const isExpired = isJobExpired(
+    {
+      status: job.status,
+      lastDate: view.lastDate || job.lastDate,
+      last_date: job.last_date,
+    },
+    now
+  );
   const countLocale = numberLocale(i18n.language);
+  const postsUnit =
+    view.vacancies === 1
+      ? t("job.post", { defaultValue: "POST" })
+      : t("job.posts");
 
   const detailActions = useMemo(() => buildUnifiedDetailActions(job), [job]);
   const primaryAction = detailActions.find((a) => a.variant === "primary") ?? detailActions[0] ?? null;
@@ -260,7 +273,7 @@ export default function JobDetail({
         ) : null}
         <div>
           <dt>Status</dt>
-          <dd>{String(job.status || "live").toLowerCase() === "live" ? "Active" : "Expired"}</dd>
+          <dd>{isExpired ? "Expired" : "Active"}</dd>
         </div>
       </dl>
 
@@ -518,7 +531,7 @@ export default function JobDetail({
                 ) : null}
                 {view.vacancies > 0 ? (
                   <span className="job-detail-badge job-detail-badge-vacancy">
-                    {view.vacancies.toLocaleString(countLocale)} {t("job.posts")}
+                    {view.vacancies.toLocaleString(countLocale)} {postsUnit}
                   </span>
                 ) : null}
                 {isUrgent ? (
@@ -533,7 +546,7 @@ export default function JobDetail({
                   <span className="job-detail-hero__vacancy-num">
                     {view.vacancies.toLocaleString(countLocale)}
                   </span>
-                  <span className="job-detail-hero__vacancy-label">{t("job.posts")}</span>
+                  <span className="job-detail-hero__vacancy-label">{postsUnit}</span>
                 </div>
               ) : null}
             </div>

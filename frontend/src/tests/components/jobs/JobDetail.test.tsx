@@ -1,5 +1,5 @@
 /** @vitest-environment happy-dom */
-import { describe, expect, it, vi } from 'vitest'
+import { afterEach, describe, expect, it, vi } from 'vitest'
 import { render, screen, fireEvent } from '@testing-library/react'
 import { I18nextProvider } from 'react-i18next'
 import { MemoryRouter } from 'react-router-dom'
@@ -15,6 +15,10 @@ function renderJobDetail(ui: ReactElement) {
     </MemoryRouter>
   )
 }
+
+afterEach(() => {
+  vi.useRealTimers()
+})
 
 const mockJob: JobRecord = {
   id: '1',
@@ -50,5 +54,28 @@ describe('JobDetail', () => {
     expect(back).toBeTruthy()
     fireEvent.click(back)
     expect(onClose).toHaveBeenCalled()
+  })
+
+  it('shows active verification status for hot/new jobs with a future deadline', () => {
+    vi.useFakeTimers()
+    vi.setSystemTime(new Date('2026-09-15T00:00:00Z'))
+
+    renderJobDetail(
+      <JobDetail
+        job={{
+          ...mockJob,
+          id: '2',
+          slug: 'mppsc-adppo-2026',
+          title: 'MPPSC Assistant District Public Prosecution Officer 2026',
+          status: 'hot',
+          lastDate: '2026-09-23',
+          vacancies: 1,
+        }}
+        onClose={vi.fn()}
+      />
+    )
+
+    expect(screen.getByText('Active')).toBeTruthy()
+    expect(screen.getAllByText('1 POST').length).toBeGreaterThan(0)
   })
 })
