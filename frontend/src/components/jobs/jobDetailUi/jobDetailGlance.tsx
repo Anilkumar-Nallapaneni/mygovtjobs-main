@@ -1,6 +1,6 @@
 import { useRevealOnScroll } from "@/hooks/useRevealOnScroll";
 
-function orgInitials(dept: string) {
+export function orgInitials(dept: string) {
   const words = dept.trim().split(/\s+/).filter(Boolean);
   if (!words.length) return "GO";
   if (words.length === 1) return words[0].slice(0, 2).toUpperCase();
@@ -277,7 +277,8 @@ export function JobDetailGlancePanel({
             href={primaryAction.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="job-detail-glance__apply"
+            className="job-detail-apply-btn job-detail-glance__apply"
+            role="button"
           >
             {primaryAction.label}
           </a>

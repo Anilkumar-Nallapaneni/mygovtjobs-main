@@ -26,9 +26,10 @@ export function JobDetailActions({
             {...(isMailto ? {} : { target: "_blank", rel: "noopener noreferrer" })}
             className={
               action.variant === "primary"
-                ? "job-detail-action-btn job-detail-action-btn--primary"
+                ? "job-detail-apply-btn job-detail-action-btn job-detail-action-btn--primary"
                 : "job-detail-action-btn job-detail-action-btn--secondary"
             }
+            role={action.variant === "primary" ? "button" : undefined}
             data-testid={action.variant === "primary" ? "official-apply-link" : undefined}
             onClick={(e) => e.stopPropagation()}
           >

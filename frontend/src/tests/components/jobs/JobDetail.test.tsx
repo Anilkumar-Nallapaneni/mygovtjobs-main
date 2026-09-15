@@ -52,6 +52,28 @@ describe('JobDetail', () => {
     expect(onClose).toHaveBeenCalled()
   })
 
+  it('shows a last-date stamp and skips the old key-facts strip', () => {
+    const { container } = renderJobDetail(
+      <JobDetail
+        job={{
+          ...mockJob,
+          dates: { last_date: '2026-08-01', exam_date: '2026-09-01' },
+          about: 'Staff Selection Commission invites online applications for Combined Graduate Level Examination 2026.',
+        }}
+        onClose={vi.fn()}
+      />
+    )
+    expect(container.querySelector('.job-detail-hero__stamp')).toBeTruthy()
+    expect(container.querySelector('.job-detail-hero__kicker')?.textContent).toMatch(/official notification/i)
+    expect(container.querySelector('.job-detail-keyfacts')).toBeNull()
+    expect(container.querySelector('.job-detail-toc')).toBeTruthy()
+    expect(container.querySelector('#jd-dates')).toBeTruthy()
+    const applyBtn = container.querySelector('.job-detail-apply-btn') as HTMLAnchorElement
+    expect(applyBtn).toBeTruthy()
+    expect(applyBtn.getAttribute('role')).toBe('button')
+    expect(applyBtn.href).toMatch(/ssc\.gov\.in/)
+  })
+
   it('shows official helpdesk mailto from the notification', () => {
     renderJobDetail(
       <JobDetail

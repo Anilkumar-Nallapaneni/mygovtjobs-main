@@ -7,12 +7,14 @@ export function Section({
   className = "",
   reveal = true,
   revealDelay = 0,
+  id,
 }: {
   title?: string;
   children: ReactNode;
   className?: string;
   reveal?: boolean;
   revealDelay?: number;
+  id?: string;
 }) {
   const { ref, visible } = useRevealOnScroll<HTMLElement>();
   const revealClass =
@@ -23,6 +25,7 @@ export function Section({
 
   return (
     <section
+      id={id}
       ref={reveal ? ref : undefined}
       className={`job-detail-section ${revealClass} ${className}`.trim()}
       style={style}

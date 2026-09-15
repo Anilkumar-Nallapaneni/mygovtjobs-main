@@ -9,6 +9,7 @@ import {
   HOME_SHELL_HERO_STATS,
   HOME_SHELL_ORG_COUNT,
 } from '@/data/homeShellStats'
+import { processLiveJobPayload } from '@/utils/liveJobsPipeline'
 
 describe('homeShellStats', () => {
   it('matches the gated live-jobs.json snapshot (no inflated hero totals)', () => {
@@ -38,5 +39,15 @@ describe('homeShellStats', () => {
     expect(HOME_SHELL_HEADLINE_STATS.notifications).not.toBe(874)
     expect(HOME_SHELL_HEADLINE_STATS.vacancies).not.toBe(55597)
     expect(HOME_SHELL_HEADLINE_STATS.notifications).toBeLessThan(200)
+  })
+
+  it('keeps official vacancy totals after catalog adapt', () => {
+    const payload = JSON.parse(
+      readFileSync(join(process.cwd(), 'public/data/live-jobs.json'), 'utf8')
+    ) as { items?: unknown[] }
+    const items = Array.isArray(payload.items) ? payload.items : []
+    const { stats } = processLiveJobPayload(items)
+    expect(stats.liveNotices).toBe(HOME_SHELL_HEADLINE_STATS.notifications)
+    expect(stats.vacancies).toBe(HOME_SHELL_HEADLINE_STATS.vacancies)
   })
 })

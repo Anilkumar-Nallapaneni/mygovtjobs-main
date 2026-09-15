@@ -72,6 +72,20 @@ export const HOME_SHELL_HERO_STATS = {
 `
 
 await writeFileAtomic(outPath, contents)
+
+const indexPath = path.join(root, 'frontend/index.html')
+const statsLine = `${vacancies.toLocaleString('en-IN')} vacancies · ${live} notifications · ${Math.max(orgs, 1)} orgs`
+const indexHtml = fs.readFileSync(indexPath, 'utf8')
+const nextIndex = indexHtml.replace(
+  /(<div class="static-app-shell__stats">)[^<]*(<\/div>)/,
+  `$1${statsLine}$2`
+)
+if (nextIndex === indexHtml) {
+  console.warn('sync-home-shell-stats: index.html stats marker not found')
+} else {
+  await writeFileAtomic(indexPath, nextIndex)
+}
+
 console.log(
   `Synced homeShellStats — live=${live} countableVacancies=${vacancies} withVac=${withVac} orgs=${orgs} states=${states}`
 )

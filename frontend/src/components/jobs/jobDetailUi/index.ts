@@ -19,6 +19,7 @@ export { JobDetailActions } from "./jobDetailActions";
 export {
   type GlanceFact,
   buildGlanceFacts,
+  orgInitials,
   JobDetailKeyFactsPanel,
   JobDetailGlancePanel,
 } from "./jobDetailGlance";

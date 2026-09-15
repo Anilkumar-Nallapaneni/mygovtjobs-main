@@ -21,7 +21,8 @@ export function JobDetailStickyBar({
           href={primaryAction.url}
           target="_blank"
           rel="noopener noreferrer"
-          className="job-detail-sticky-bar__apply"
+          className="job-detail-apply-btn job-detail-sticky-bar__apply"
+          role="button"
           data-testid="official-apply-link"
         >
           {primaryAction.label}

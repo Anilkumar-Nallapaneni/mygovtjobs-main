@@ -338,7 +338,7 @@
 }
 
 .job-detail-page__shell {
-  max-width: min(920px, var(--layout-max));
+  max-width: min(1120px, var(--layout-max));
   margin: 0 auto;
   padding: 18px 20px 40px;
   display: flex;
@@ -382,14 +382,13 @@
 }
 
 .job-detail-page .job-detail-language-note {
-  margin: 0 0 14px;
-  padding: 10px 14px;
-  border-radius: 12px;
-  border: 1px dashed var(--ds-borderHi);
+  margin: 0 0 10px;
+  padding: 0;
+  border: none;
+  background: transparent;
   color: var(--ds-muted);
-  font-size: 12px;
-  line-height: 1.5;
-  background: color-mix(in srgb, var(--ds-bg2) 70%, transparent);
+  font-size: 11px;
+  line-height: 1.45;
 }
 
 .job-detail-toolbar {
@@ -407,19 +406,10 @@
 
 .job-detail-toolbar-apply {
   margin-left: auto;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 38px;
+  min-height: 40px;
   padding: 0 16px;
-  border-radius: 999px;
-  background: var(--ds-gradientBrand);
-  color: var(--ds-inkOnBrand);
-  font-size: 12px;
-  font-weight: 800;
-  text-decoration: none;
+  font-size: 13px;
   white-space: nowrap;
-  box-shadow: 0 4px 14px color-mix(in srgb, var(--ds-saffron) 24%, transparent);
 }
 
 .job-detail-stat-card--urgent {
