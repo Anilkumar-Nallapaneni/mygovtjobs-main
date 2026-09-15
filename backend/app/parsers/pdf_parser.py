@@ -5,7 +5,8 @@ from typing import Any
 
 from app.config import get_settings
 from app.parsers.pdf_dates import extract_dates_from_text, to_iso_date
-from app.parsers.pdf_fetch import fetch_pdf_text
+from app.parsers.pdf_fetch import extract_text_from_pdf_bytes, fetch_pdf_bytes
+from app.utils.contact_extract import extract_official_contacts
 from app.parsers.pdf_sections import text_to_content_sections
 from app.services.noise_filter import sanitize_json_for_postgres
 from app.utils.vacancy_extract import extract_vacancies, sanitize_vacancies
@@ -360,6 +361,7 @@ def extract_fields(text: str, *, pdf_url: str | None = None) -> dict[str, Any]:
             out["age_limit"] = a
 
     out.update(_extract_address_fields(text))
+    out.update(extract_official_contacts(text))
 
     urls = _URL.findall(text)
     if urls:
@@ -386,8 +388,16 @@ def extract_fields(text: str, *, pdf_url: str | None = None) -> dict[str, Any]:
 async def parse_pdf_url(url: str) -> dict[str, Any]:
     settings = get_settings()
     try:
-        text = await fetch_pdf_text(url, ocr_enabled=settings.pdf_ocr_enabled)
+        data = await fetch_pdf_bytes(url)
+        text = extract_text_from_pdf_bytes(
+            data, max_pages=12, ocr_enabled=settings.pdf_ocr_enabled
+        )
         fields = extract_fields(text, pdf_url=url)
+        # Helpdesk emails are often on the last pages of long SSC/UPSC notices.
+        contact_blob = extract_text_from_pdf_bytes(data, max_pages=12, last_pages=8)
+        contacts = extract_official_contacts(contact_blob)
+        if contacts:
+            fields.update(contacts)
         if not fields.get("content_sections"):
             fields["content_sections"] = text_to_content_sections(text, pdf_url=url)
         fields["pdf_url"] = url

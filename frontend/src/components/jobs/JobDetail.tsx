@@ -19,6 +19,7 @@ import {
   buildUnifiedDetailActions,
   sanitizeParagraphText,
 } from "@/utils/jobDetailLinks";
+import { extractOfficialHelpdeskEmails, extractOfficialHelpdeskUrl } from "@/utils/officialContact";
 import RelatedJobs from "@/components/jobs/RelatedJobs";
 import JobDetailFaq from "@/components/jobs/JobDetailFaq";
 import ReportJobButton from "@/components/jobs/ReportJobButton";
@@ -87,6 +88,8 @@ export default function JobDetail({
   const countLocale = numberLocale(i18n.language);
 
   const detailActions = useMemo(() => buildUnifiedDetailActions(job), [job]);
+  const helpdeskEmails = useMemo(() => extractOfficialHelpdeskEmails(job), [job]);
+  const helpdeskUrl = useMemo(() => extractOfficialHelpdeskUrl(job), [job]);
   const primaryAction = detailActions.find((a) => a.variant === "primary") ?? detailActions[0] ?? null;
   const actionUrls = useMemo(
     () => new Set(detailActions.map((a) => a.url)),
@@ -153,7 +156,6 @@ export default function JobDetail({
     showField(view.attempts) ? { label: t("jobDetail.attempts", { defaultValue: "Attempts" }), value: displayValue(view.attempts) } : null,
     showField(view.syllabus) ? { label: t("jobDetail.syllabus", { defaultValue: "Syllabus" }), value: displayValue(view.syllabus) } : null,
     showField(view.helpdesk) ? { label: t("jobDetail.helpdesk", { defaultValue: "Helpdesk" }), value: displayValue(view.helpdesk) } : null,
-    showField(view.email) ? { label: t("jobDetail.email", { defaultValue: "Email" }), value: displayValue(view.email) } : null,
     showField(view.streetAddress || view.street_address)
       ? {
           label: t("jobDetail.officeAddress", { defaultValue: "Office address" }),
@@ -351,6 +353,29 @@ export default function JobDetail({
       {eligibilityList.length > 0 || eligibilityRows.length > 0 ? (
         <Section title={t("jobDetail.eligibilityDetails", { defaultValue: "Eligibility details" })}>
           <EligibilityBlock items={eligibilityList} rows={eligibilityRows} />
+        </Section>
+      ) : null}
+
+      {helpdeskEmails.length > 0 || helpdeskUrl ? (
+        <Section title={t("jobDetail.officialHelpdesk", { defaultValue: "Official helpdesk" })}>
+          {helpdeskEmails.length > 0 ? (
+            <ul className="job-detail-helpdesk-list">
+              {helpdeskEmails.map((email) => (
+                <li key={email}>
+                  <a className="job-detail-helpdesk-mail" href={`mailto:${email}`}>
+                    {email}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          ) : null}
+          {helpdeskUrl ? (
+            <p className="job-detail-helpdesk-portal">
+              <a href={helpdeskUrl} target="_blank" rel="noopener noreferrer">
+                {t("jobDetail.grievancePortal", { defaultValue: "Query / grievance portal" })}
+              </a>
+            </p>
+          ) : null}
         </Section>
       ) : null}
 

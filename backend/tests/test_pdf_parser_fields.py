@@ -118,3 +118,10 @@ def test_faq_answer_exempted_is_not_fee():
     ]
     out = extract_structured_detail_fields(sections)
     assert "fee" not in out or "Answer" not in out.get("fee", {})
+
+
+def test_extract_fields_keeps_official_helpdesk_email():
+    fields = extract_fields(
+        "Helpdesk Email: helpdesk@ssc.gov.in\nPay Scale: Rs. 35400 - 112400\n"
+    )
+    assert fields.get("helpdesk_email") == "helpdesk@ssc.gov.in"

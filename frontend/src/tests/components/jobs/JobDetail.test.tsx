@@ -51,4 +51,18 @@ describe('JobDetail', () => {
     fireEvent.click(back)
     expect(onClose).toHaveBeenCalled()
   })
+
+  it('shows official helpdesk mailto from the notification', () => {
+    renderJobDetail(
+      <JobDetail
+        job={{
+          ...mockJob,
+          detail: { helpdesk_email: 'helpdesk@ssc.gov.in', helpdesk_emails: ['helpdesk@ssc.gov.in'] },
+        }}
+        onClose={vi.fn()}
+      />
+    )
+    const mail = screen.getByRole('link', { name: 'helpdesk@ssc.gov.in' })
+    expect(mail.getAttribute('href')).toBe('mailto:helpdesk@ssc.gov.in')
+  })
 })

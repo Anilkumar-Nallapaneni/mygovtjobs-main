@@ -51,3 +51,22 @@ def test_parser_keeps_scraper_last_date_and_source_url():
     assert out["source_url"] == (
         "https://www.ibps.in/wp-content/uploads/CRP-RRBs-XV-notification.pdf"
     )
+
+
+def test_parser_copies_helpdesk_email_from_pdf_fields():
+    parser = NotificationParser()
+    out = parser.parse(
+        {
+            "title": "SSC CHSL 2026",
+            "link": "https://ssc.gov.in",
+            "source": "ssc",
+            "dept": "Staff Selection Commission (SSC)",
+        },
+        pdf_fields={
+            "summary": "Official SSC CHSL notice.",
+            "helpdesk_email": "helpdesk@ssc.gov.in",
+            "helpdesk_emails": ["helpdesk@ssc.gov.in"],
+        },
+    )
+    assert out["detail"]["helpdesk_email"] == "helpdesk@ssc.gov.in"
+    assert out["detail"]["helpdesk_emails"] == ["helpdesk@ssc.gov.in"]

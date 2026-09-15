@@ -342,6 +342,14 @@ class NotificationParser:
         for key in ("application_fee", "how_to_apply", "selection_process", "fee"):
             if pdf.get(key):
                 detail[key] = pdf[key]
+        if pdf.get("helpdesk_emails"):
+            detail["helpdesk_emails"] = pdf["helpdesk_emails"]
+            detail["helpdesk_email"] = pdf.get("helpdesk_email") or pdf["helpdesk_emails"][0]
+        elif pdf.get("helpdesk_email"):
+            detail["helpdesk_email"] = pdf["helpdesk_email"]
+            detail["helpdesk_emails"] = [pdf["helpdesk_email"]]
+        if pdf.get("helpdesk_url"):
+            detail["helpdesk_url"] = pdf["helpdesk_url"]
 
         merged_text = " ".join(
             filter(

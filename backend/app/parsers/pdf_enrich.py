@@ -28,6 +28,25 @@ def _merge_into(target: dict[str, Any], fields: dict[str, Any]) -> None:
         if fields.get(key) and not target.get(key):
             target[key] = fields[key]
 
+    emails: list[str] = []
+    seen: set[str] = set()
+    for src in (target.get("helpdesk_emails") or [], fields.get("helpdesk_emails") or []):
+        if not isinstance(src, list):
+            continue
+        for email in src:
+            key = str(email or "").strip().lower()
+            if key and key not in seen:
+                seen.add(key)
+                emails.append(key)
+    single = str(fields.get("helpdesk_email") or target.get("helpdesk_email") or "").strip().lower()
+    if single and single not in seen:
+        emails.insert(0, single)
+    if emails:
+        target["helpdesk_emails"] = emails[:5]
+        target["helpdesk_email"] = emails[0]
+    if fields.get("helpdesk_url") and not target.get("helpdesk_url"):
+        target["helpdesk_url"] = fields["helpdesk_url"]
+
     if fields.get("vacancies"):
         cur = int(target.get("vacancies") or 0)
         nxt = int(fields["vacancies"])

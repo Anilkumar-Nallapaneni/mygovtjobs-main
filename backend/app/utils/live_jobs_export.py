@@ -50,6 +50,9 @@ LIST_DETAIL_KEYS = (
     "postalCode",
     "postal_code",
     "pincode",
+    "helpdesk_email",
+    "helpdesk_emails",
+    "helpdesk_url",
 )
 
 

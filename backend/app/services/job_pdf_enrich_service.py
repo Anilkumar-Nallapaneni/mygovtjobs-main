@@ -257,6 +257,10 @@ async def apply_pdf_enrichment(
         if pdf_fields.get(key) and not detail.get(key):
             detail[key] = pdf_fields[key]
             changed = True
+    for key in ("helpdesk_email", "helpdesk_emails", "helpdesk_url"):
+        if pdf_fields.get(key) and not detail.get(key):
+            detail[key] = pdf_fields[key]
+            changed = True
     # Prefer richer fee / selection blobs from PDF when present.
     if isinstance(pdf_fields.get("fee"), dict) and pdf_fields["fee"]:
         detail["fee"] = pdf_fields["fee"]

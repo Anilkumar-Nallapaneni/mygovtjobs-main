@@ -38,6 +38,10 @@ export type JobDetailBlob = {
   postalCode?: string
   postal_code?: string
   pincode?: string
+  helpdesk_email?: string
+  helpdesk_emails?: string[]
+  helpdesk_url?: string
+  email?: string
 }
 
 export type JobRecord = {

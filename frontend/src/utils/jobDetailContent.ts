@@ -61,6 +61,9 @@ function buildExtraDetails(job) {
     "selection_process",
     "documents_required",
     "external_id",
+    "helpdesk_email",
+    "helpdesk_emails",
+    "helpdesk_url",
   ]);
 
   return Object.entries(detail)
@@ -475,7 +478,10 @@ export function buildJobDetailView(job) {
     ageRelax: job.ageRelax || "See official notification",
     attempts: job.attempts || "See official notification",
     helpdesk: job.helpdesk || "—",
-    email: job.email || "—",
+    email:
+      meaningfulValue(job.email) ||
+      meaningfulValue(job.detail?.helpdesk_email) ||
+      "—",
     syllabus: job.syllabus || "",
     extraDetails,
     structured,

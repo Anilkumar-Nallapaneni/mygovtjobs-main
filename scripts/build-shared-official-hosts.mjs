@@ -57,6 +57,7 @@ fs.writeFileSync(
         'eil',
         'iocl',
         'bhel',
+        'ncrtc',
       ],
       officialStems: union,
     },

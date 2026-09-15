@@ -24,11 +24,27 @@ def _is_pdf_bytes(data: bytes) -> bool:
     return head.startswith(_PDF_MAGIC)
 
 
-def _extract_with_pypdf(data: bytes, *, max_pages: int = 12) -> str:
+def _page_indices(n: int, *, max_pages: int, last_pages: int) -> list[int]:
+    """First max_pages plus last last_pages, de-duplicated, original order."""
+    if n <= 0:
+        return []
+    head = list(range(min(max(max_pages, 0), n)))
+    if last_pages <= 0:
+        return head
+    seen = set(head)
+    out = list(head)
+    for i in range(max(0, n - last_pages), n):
+        if i not in seen:
+            out.append(i)
+            seen.add(i)
+    return out
+
+
+def _extract_with_pypdf(data: bytes, *, max_pages: int = 12, last_pages: int = 0) -> str:
     reader = PdfReader(io.BytesIO(data))
     parts: list[str] = []
-    for page in reader.pages[:max_pages]:
-        parts.append(page.extract_text() or "")
+    for i in _page_indices(len(reader.pages), max_pages=max_pages, last_pages=last_pages):
+        parts.append(reader.pages[i].extract_text() or "")
     return "\n".join(parts)
 
 
@@ -41,13 +57,13 @@ def _page_text_to_str(raw: object) -> str:
     return str(raw)
 
 
-def _extract_with_pymupdf(data: bytes, *, max_pages: int = 12) -> str:
+def _extract_with_pymupdf(data: bytes, *, max_pages: int = 12, last_pages: int = 0) -> str:
     import fitz  # pymupdf
 
     parts: list[str] = []
     with fitz.open(stream=data, filetype="pdf") as doc:
-        for page in doc[:max_pages]:
-            parts.append(_page_text_to_str(page.get_text("text")))
+        for i in _page_indices(doc.page_count, max_pages=max_pages, last_pages=last_pages):
+            parts.append(_page_text_to_str(doc[i].get_text("text")))
     return "\n".join(parts)
 
 
@@ -73,6 +89,7 @@ def extract_text_from_pdf_bytes(
     data: bytes,
     *,
     max_pages: int = 12,
+    last_pages: int = 0,
     ocr_enabled: bool = False,
 ) -> str:
     """Best-effort text from PDF bytes."""
@@ -81,13 +98,13 @@ def extract_text_from_pdf_bytes(
 
     text = ""
     try:
-        text = _extract_with_pymupdf(data, max_pages=max_pages)
+        text = _extract_with_pymupdf(data, max_pages=max_pages, last_pages=last_pages)
     except Exception as exc:
         logger.debug("pymupdf extract failed: %s", exc)
 
     if len(text.strip()) < _MIN_OCR_TEXT:
         try:
-            fallback = _extract_with_pypdf(data, max_pages=max_pages)
+            fallback = _extract_with_pypdf(data, max_pages=max_pages, last_pages=last_pages)
             if len(fallback.strip()) > len(text.strip()):
                 text = fallback
         except Exception as exc:

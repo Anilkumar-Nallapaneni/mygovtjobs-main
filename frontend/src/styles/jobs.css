@@ -978,6 +978,32 @@
   margin-bottom: 12px;
 }
 
+.job-detail-helpdesk-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.job-detail-helpdesk-mail {
+  font-weight: 700;
+  color: var(--ds-saffron, #f4a261);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.job-detail-helpdesk-portal {
+  margin: 10px 0 0;
+  font-size: 14px;
+}
+
+.job-detail-helpdesk-portal a {
+  font-weight: 600;
+  color: var(--ds-saffron, #f4a261);
+}
+
 .job-detail-link-bar,
 .job-detail-apply-links-row {
   display: flex;

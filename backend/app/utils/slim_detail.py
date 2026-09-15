@@ -42,6 +42,9 @@ _DB_SLIM_KEYS = frozenset(
         "postalCode",
         "postal_code",
         "pincode",
+        "helpdesk_email",
+        "helpdesk_emails",
+        "helpdesk_url",
         "completeness_score",
         "missing_fields",
     }
