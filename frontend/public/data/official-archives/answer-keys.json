@@ -1,11 +1,6 @@
 {
-<<<<<<< HEAD
-  "generatedAt": "2026-09-04T14:53:33.782Z",
-  "count": 16,
-=======
   "generatedAt": "2026-09-14T09:42:11.779Z",
   "count": 56,
->>>>>>> 683e58da7a193da3de834c0f18626f6f8f8e7982
   "items": [
     {
       "id": "37c45556314fa75d",
@@ -413,8 +408,6 @@
         "uk"
       ],
       "fetchMethod": "html"
-<<<<<<< HEAD
-=======
     },
     {
       "id": "46c0fc4afe374382",
@@ -1018,7 +1011,6 @@
       "state": "All India",
       "category": "railways",
       "fetchMethod": "live-jobs-supplement"
->>>>>>> 683e58da7a193da3de834c0f18626f6f8f8e7982
     }
   ]
 }

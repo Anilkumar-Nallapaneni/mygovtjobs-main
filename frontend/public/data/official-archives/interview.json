@@ -1,25 +1,4 @@
 {
-<<<<<<< HEAD
-  "generatedAt": "2026-09-04T14:53:33.782Z",
-  "count": 32,
-  "items": [
-    {
-      "id": "302b0e06d5394dc1",
-      "title": "Interview Schedule: Combined Geo-Scientist (Main) Examination, 2026",
-      "link": "https://www.upsc.gov.in/whats-new/Combined%20Geo-Scientist%20%28Main%29%20Examination%2C%202026/Interview%20Schedule",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "upsc-notifications",
-      "sourceName": "UPSC — What's New",
-      "dept": "Union Public Service Commission",
-      "state": "All India",
-      "category": "upsc",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-=======
   "generatedAt": "2026-09-14T09:42:11.779Z",
   "count": 288,
   "items": [
@@ -73,7 +52,6 @@
         "all"
       ],
       "fetchMethod": "rss-discovered"
->>>>>>> 683e58da7a193da3de834c0f18626f6f8f8e7982
     },
     {
       "id": "f43d7aa6e0241ca3",
@@ -110,26 +88,6 @@
       "fetchMethod": "html-listing"
     },
     {
-<<<<<<< HEAD
-      "id": "ef1ec3ffdbb56c6b",
-      "title": "NOT REACHED ZONE FOR INTERVIEW",
-      "link": "https://tnpsc.gov.in/English/Checkresult.aspx?key=bafcc5b2-2911-48a5-aabe-927c650e9f47&&id=E413D952-5117-4CF7-921D-4B2754CCA27E",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "tnpsc-hall-tickets",
-      "sourceName": "TNPSC — Hall tickets",
-      "dept": "Tamil Nadu PSC",
-      "state": "Tamil Nadu",
-      "category": "state",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-=======
->>>>>>> 683e58da7a193da3de834c0f18626f6f8f8e7982
       "id": "12ca81e8e0617c5b",
       "title": "Click here to view List of Candidates who are not selected in P.C.S. Examination-2022, but Qualified for Interview in P.C.S - 2022 (In Merit Order).",
       "link": "https://uppsc.up.nic.in/Open_PDF.aspx?I4PnQ0tBagk9q6upnHHyW7Pdh9qfF6wa",
@@ -147,8 +105,6 @@
       "fetchMethod": "html-listing"
     },
     {
-<<<<<<< HEAD
-=======
       "id": "0d1f705a55a6db5f",
       "title": "11th September 2026 Result of Online Interview Advt. No. WII/ADVT. 1/RP-CELL/July, 2026",
       "link": "https://www.wii.gov.in/news/result_online_interview_advt_no_wii_advt1_rp_cell_july_2026",
@@ -771,6 +727,250 @@
       "fetchMethod": "html"
     },
     {
+      "id": "7363b936b2b772f5",
+      "title": "Result of Personal Interview with reference to Advertisement No. ISP/YP/2026/01 dated 22.05.2026",
+      "link": "https://aima-web-images.s3.ap-south-1.amazonaws.com/sailcareers.com/Downloads/IISCO_Jobs_18082026_190340.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "sbi",
+      "sourceName": "State Bank of India — Careers",
+      "dept": "State Bank of India — Careers",
+      "state": "All India",
+      "category": "banking",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "32e44b90515bc891",
+      "title": "Download Interview Call Letter for against Advt. No. ISP/YP/2026/01 dated 22.05.2026",
+      "link": "https://sailcareers.com/SAIL2026YP/SAIL2026YPIntCallLetter.aspx",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "sbi",
+      "sourceName": "State Bank of India — Careers",
+      "dept": "State Bank of India — Careers",
+      "state": "All India",
+      "category": "banking",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "fa359b9114331fc3",
+      "title": "Personality Test / Viva-Voce",
+      "link": "https://hppsc.hp.gov.in/CommonControls/ViewContinuousLinkPage?qs=mhlKjiXMMIveW0iAADPEiC57R27%2BGya8ay4kbm0dJkcnlKHGzV4U5%2BQlrRl1TG3OQWWkf93oLxROjrnFX90ov6IhjjgH2qZXMgsT6KqPbJM%3D",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-hp",
+      "sourceName": "Himachal Pradesh PSC (HPPSC)",
+      "dept": "Himachal Pradesh PSC (HPPSC)",
+      "state": "Himachal Pradesh",
+      "category": "state",
+      "stateIds": [
+        "hp"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "66bff2c416041b99",
+      "title": "Interview notice for the post of Professor Cardio Vascular Thoracic Surgery in SKIMS Soura HME Deptt",
+      "link": "https://jkpsc.nic.in/Pdf/Downloader1.ashx?nid=18012&type=n",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-jk",
+      "sourceName": "Jammu & Kashmir PSC (JKPSC)",
+      "dept": "Jammu & Kashmir PSC (JKPSC)",
+      "state": "Jammu & Kashmir",
+      "category": "state",
+      "stateIds": [
+        "jk"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "f5750572b8e40d65",
+      "title": "Interview notice for the post of Lecturer-II (Non Engineering) Wood Technology in Skill Development Department",
+      "link": "https://jkpsc.nic.in/Pdf/Downloader1.ashx?nid=18010&type=n",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-jk",
+      "sourceName": "Jammu & Kashmir PSC (JKPSC)",
+      "dept": "Jammu & Kashmir PSC (JKPSC)",
+      "state": "Jammu & Kashmir",
+      "category": "state",
+      "stateIds": [
+        "jk"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "1639539b148806d2",
+      "title": "Interview notice for the post of Lecturer-I Computer Engineering in Skill Development Department",
+      "link": "https://jkpsc.nic.in/Pdf/Downloader1.ashx?nid=18005&type=n",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-jk",
+      "sourceName": "Jammu & Kashmir PSC (JKPSC)",
+      "dept": "Jammu & Kashmir PSC (JKPSC)",
+      "state": "Jammu & Kashmir",
+      "category": "state",
+      "stateIds": [
+        "jk"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "2d5cc53e1a3244e6",
+      "title": "Interview notice for the post of Lecturer-II (Non Engineering) Wood Technology in Skill Development Department",
+      "link": "https://jkpsc.nic.in/Pdf/Downloader1.ashx?nid=18006&type=n",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-jk",
+      "sourceName": "Jammu & Kashmir PSC (JKPSC)",
+      "dept": "Jammu & Kashmir PSC (JKPSC)",
+      "state": "Jammu & Kashmir",
+      "category": "state",
+      "stateIds": [
+        "jk"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "91558011355dca9d",
+      "title": "Recent Examinations/Interview",
+      "link": "https://jpsc.gov.in/Examination-Links.php",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-jh",
+      "sourceName": "Jharkhand PSC (JPSC)",
+      "dept": "Jharkhand PSC (JPSC)",
+      "state": "Jharkhand",
+      "category": "state",
+      "stateIds": [
+        "jh"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "1709d751f92d2140",
+      "title": "Procedure for Interview Date Change Requests",
+      "link": "https://www.keralapsc.gov.in/procedure-interview-date-change-requests",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-kl",
+      "sourceName": "Kerala PSC",
+      "dept": "Kerala PSC",
+      "state": "Kerala",
+      "category": "state",
+      "stateIds": [
+        "kl"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "39e61c0337589778",
+      "title": "Interview Schedule",
+      "link": "https://www.keralapsc.gov.in/interviews",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-kl",
+      "sourceName": "Kerala PSC",
+      "dept": "Kerala PSC",
+      "state": "Kerala",
+      "category": "state",
+      "stateIds": [
+        "kl"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "b789b81a3c6161aa",
+      "title": "INTERVIEW - Assistant Professor in Community Medicine & Medical Gastroenterology (I NCA -Dheevara & III NCA - Muslim) - Medical Education (Cat.No.812/2025&895/25)",
+      "link": "https://www.keralapsc.gov.in/sites/default/files/inline-files/inter-812-895-25.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://www.keralapsc.gov.in/sites/default/files/inline-files/inter-812-895-25.pdf"
+      ],
+      "sourceId": "psc-kl",
+      "sourceName": "Kerala PSC",
+      "dept": "Kerala PSC",
+      "state": "Kerala",
+      "category": "state",
+      "stateIds": [
+        "kl"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "0c8b608876f8adbe",
+      "title": "examination-interview",
+      "link": "https://www.keralapsc.gov.in/examination-interview",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-kl",
+      "sourceName": "Kerala PSC",
+      "dept": "Kerala PSC",
+      "state": "Kerala",
+      "category": "state",
+      "stateIds": [
+        "kl"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "481473008e181ee4",
+      "title": "Press note regarding the personal interview for the Post of Assistant Engineer MGNREGA, C.D Block Little Andaman under South Andaman District",
+      "link": "https://erecruitment.andamannicobar.gov.in/Notice/64_fbe80dee-4dc3-4385-9622-d2f8e1ad2f29.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://erecruitment.andamannicobar.gov.in/Notice/64_fbe80dee-4dc3-4385-9622-d2f8e1ad2f29.pdf"
+      ],
+      "sourceId": "an-rec",
+      "sourceName": "Andaman & Nicobar e-Recruitment",
+      "dept": "Andaman & Nicobar e-Recruitment",
+      "state": "Andaman & Nicobar",
+      "category": "state",
+      "stateIds": [
+        "an"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "125fee0a1f6840d1",
+      "title": "2. Walk-in-Interview for Coach & Club Teacher Vacancies - Click Here",
+      "link": "https://sainikschoolgoalpara.org/wp-content/uploads/2026/05/Advt_Coach_Club-Teacher_02_2026-1.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://sainikschoolgoalpara.org/wp-content/uploads/2026/05/Advt_Coach_Club-Teacher_02_2026-1.pdf"
+      ],
+      "sourceId": "ss-goalpara",
+      "sourceName": "Sainik School Goalpara",
+      "dept": "Sainik School Goalpara",
+      "state": "Assam",
+      "category": "teaching",
+      "stateIds": [
+        "as"
+      ],
+      "fetchMethod": "rss-discovered"
+    },
+    {
       "id": "84cb09f417efc23b",
       "title": "Rourkela Steel Plant :Result of walk-in Interview held on 05/08/2026 for Engagement of Consultants (Specialist & GDMO) on Contractual basis against Advt. No. 02/2026, dated 14.07.2026",
       "link": "https://aima-web-images.s3.ap-south-1.amazonaws.com/sailcareers.com/Downloads/RSP_News%20&%20Jobs_24082026_153856.pdf",
@@ -847,25 +1047,6 @@
       "fetchMethod": "html"
     },
     {
-      "id": "7363b936b2b772f5",
-      "title": "Result of Personal Interview with reference to Advertisement No. ISP/YP/2026/01 dated 22.05.2026",
-      "link": "https://aima-web-images.s3.ap-south-1.amazonaws.com/sailcareers.com/Downloads/IISCO_Jobs_18082026_190340.pdf",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [
-        "https://aima-web-images.s3.ap-south-1.amazonaws.com/sailcareers.com/Downloads/IISCO_Jobs_18082026_190340.pdf"
-      ],
-      "sourceId": "sail",
-      "sourceName": "Steel Authority of India (SAIL)",
-      "dept": "Steel Authority of India (SAIL)",
-      "state": "All India",
-      "category": "psu",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
       "id": "59d89ab2523737c9",
       "title": "Click here to view the result of Personal Interview for the Advertisement No. ISP/YP/2026/01 dated 22.05.2026",
       "link": "https://sailcareers.com/sail2026yp/SAIL2026YPInterviewResult.aspx",
@@ -898,292 +1079,6 @@
         "all"
       ],
       "fetchMethod": "html"
-    },
-    {
-      "id": "32e44b90515bc891",
-      "title": "Download Interview Call Letter for against Advt. No. ISP/YP/2026/01 dated 22.05.2026",
-      "link": "https://sailcareers.com/SAIL2026YP/SAIL2026YPIntCallLetter.aspx",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "sail",
-      "sourceName": "Steel Authority of India (SAIL)",
-      "dept": "Steel Authority of India (SAIL)",
-      "state": "All India",
-      "category": "psu",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
->>>>>>> 683e58da7a193da3de834c0f18626f6f8f8e7982
-      "id": "fa359b9114331fc3",
-      "title": "Personality Test / Viva-Voce",
-      "link": "https://hppsc.hp.gov.in/CommonControls/ViewContinuousLinkPage?qs=mhlKjiXMMIveW0iAADPEiC57R27%2BGya8ay4kbm0dJkcnlKHGzV4U5%2BQlrRl1TG3OQWWkf93oLxROjrnFX90ov6IhjjgH2qZXMgsT6KqPbJM%3D",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-hp",
-      "sourceName": "Himachal Pradesh PSC (HPPSC)",
-      "dept": "Himachal Pradesh PSC (HPPSC)",
-      "state": "Himachal Pradesh",
-      "category": "state",
-      "stateIds": [
-        "hp"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-<<<<<<< HEAD
-      "id": "91558011355dca9d",
-      "title": "Recent Examinations/Interview",
-      "link": "https://jpsc.gov.in/Examination-Links.php",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-jh",
-      "sourceName": "Jharkhand PSC (JPSC)",
-      "dept": "Jharkhand PSC (JPSC)",
-      "state": "Jharkhand",
-      "category": "state",
-      "stateIds": [
-        "jh"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-=======
->>>>>>> 683e58da7a193da3de834c0f18626f6f8f8e7982
-      "id": "66bff2c416041b99",
-      "title": "Interview notice for the post of Professor Cardio Vascular Thoracic Surgery in SKIMS Soura HME Deptt",
-      "link": "https://jkpsc.nic.in/Pdf/Downloader1.ashx?nid=18012&type=n",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-jk",
-      "sourceName": "Jammu & Kashmir PSC (JKPSC)",
-      "dept": "Jammu & Kashmir PSC (JKPSC)",
-      "state": "Jammu & Kashmir",
-      "category": "state",
-      "stateIds": [
-        "jk"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "f5750572b8e40d65",
-      "title": "Interview notice for the post of Lecturer-II (Non Engineering) Wood Technology in Skill Development Department",
-      "link": "https://jkpsc.nic.in/Pdf/Downloader1.ashx?nid=18010&type=n",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-jk",
-      "sourceName": "Jammu & Kashmir PSC (JKPSC)",
-      "dept": "Jammu & Kashmir PSC (JKPSC)",
-      "state": "Jammu & Kashmir",
-      "category": "state",
-      "stateIds": [
-        "jk"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "1639539b148806d2",
-      "title": "Interview notice for the post of Lecturer-I Computer Engineering in Skill Development Department",
-      "link": "https://jkpsc.nic.in/Pdf/Downloader1.ashx?nid=18005&type=n",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-jk",
-      "sourceName": "Jammu & Kashmir PSC (JKPSC)",
-      "dept": "Jammu & Kashmir PSC (JKPSC)",
-      "state": "Jammu & Kashmir",
-      "category": "state",
-      "stateIds": [
-        "jk"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "2d5cc53e1a3244e6",
-      "title": "Interview notice for the post of Lecturer-II (Non Engineering) Wood Technology in Skill Development Department",
-      "link": "https://jkpsc.nic.in/Pdf/Downloader1.ashx?nid=18006&type=n",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-jk",
-      "sourceName": "Jammu & Kashmir PSC (JKPSC)",
-      "dept": "Jammu & Kashmir PSC (JKPSC)",
-      "state": "Jammu & Kashmir",
-      "category": "state",
-      "stateIds": [
-        "jk"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-<<<<<<< HEAD
-=======
-      "id": "91558011355dca9d",
-      "title": "Recent Examinations/Interview",
-      "link": "https://jpsc.gov.in/Examination-Links.php",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-jh",
-      "sourceName": "Jharkhand PSC (JPSC)",
-      "dept": "Jharkhand PSC (JPSC)",
-      "state": "Jharkhand",
-      "category": "state",
-      "stateIds": [
-        "jh"
-      ],
-      "fetchMethod": "html"
-    },
-    {
->>>>>>> 683e58da7a193da3de834c0f18626f6f8f8e7982
-      "id": "1709d751f92d2140",
-      "title": "Procedure for Interview Date Change Requests",
-      "link": "https://www.keralapsc.gov.in/procedure-interview-date-change-requests",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-kl",
-      "sourceName": "Kerala PSC",
-      "dept": "Kerala PSC",
-      "state": "Kerala",
-      "category": "state",
-      "stateIds": [
-        "kl"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "39e61c0337589778",
-      "title": "Interview Schedule",
-      "link": "https://www.keralapsc.gov.in/interviews",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-kl",
-      "sourceName": "Kerala PSC",
-      "dept": "Kerala PSC",
-      "state": "Kerala",
-      "category": "state",
-      "stateIds": [
-        "kl"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "b789b81a3c6161aa",
-      "title": "INTERVIEW - Assistant Professor in Community Medicine & Medical Gastroenterology (I NCA -Dheevara & III NCA - Muslim) - Medical Education (Cat.No.812/2025&895/25)",
-      "link": "https://www.keralapsc.gov.in/sites/default/files/inline-files/inter-812-895-25.pdf",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [
-        "https://www.keralapsc.gov.in/sites/default/files/inline-files/inter-812-895-25.pdf"
-      ],
-      "sourceId": "psc-kl",
-      "sourceName": "Kerala PSC",
-      "dept": "Kerala PSC",
-      "state": "Kerala",
-      "category": "state",
-      "stateIds": [
-        "kl"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "0c8b608876f8adbe",
-      "title": "examination-interview",
-      "link": "https://www.keralapsc.gov.in/examination-interview",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-kl",
-      "sourceName": "Kerala PSC",
-      "dept": "Kerala PSC",
-      "state": "Kerala",
-      "category": "state",
-      "stateIds": [
-        "kl"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-<<<<<<< HEAD
-      "id": "4c42ef54425cb974",
-      "title": "03/09/2026 Result Preamble and Cutoff Marks (Qualified for Interview) for Vice Principal / Superintendent ITI - 2024",
-      "link": "https://rpsc.rajasthan.gov.in/Static/Result/6425C81B5B384E5785C2DBAD998C03A4.pdf",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [
-        "https://rpsc.rajasthan.gov.in/Static/Result/6425C81B5B384E5785C2DBAD998C03A4.pdf"
-      ],
-      "sourceId": "psc-rj",
-      "sourceName": "Rajasthan PSC (RPSC)",
-      "dept": "Rajasthan PSC (RPSC)",
-      "state": "Rajasthan",
-      "category": "state",
-      "stateIds": [
-        "rj"
-=======
-      "id": "481473008e181ee4",
-      "title": "Press note regarding the personal interview for the Post of Assistant Engineer MGNREGA, C.D Block Little Andaman under South Andaman District",
-      "link": "https://erecruitment.andamannicobar.gov.in/Notice/64_fbe80dee-4dc3-4385-9622-d2f8e1ad2f29.pdf",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [
-        "https://erecruitment.andamannicobar.gov.in/Notice/64_fbe80dee-4dc3-4385-9622-d2f8e1ad2f29.pdf"
-      ],
-      "sourceId": "an-rec",
-      "sourceName": "Andaman & Nicobar e-Recruitment",
-      "dept": "Andaman & Nicobar e-Recruitment",
-      "state": "Andaman & Nicobar",
-      "category": "state",
-      "stateIds": [
-        "an"
->>>>>>> 683e58da7a193da3de834c0f18626f6f8f8e7982
-      ],
-      "fetchMethod": "html"
-    },
-    {
-<<<<<<< HEAD
-      "id": "fe6017732244b3e9",
-      "title": "02/09/2026 Result Preamble and Cutoff Marks (Qualified for Interview) for Deputy Jailor - 2024",
-      "link": "https://rpsc.rajasthan.gov.in/Static/Result/D51FFCB31DF34283A242D560047FB445.pdf",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [
-        "https://rpsc.rajasthan.gov.in/Static/Result/D51FFCB31DF34283A242D560047FB445.pdf"
-      ],
-      "sourceId": "psc-rj",
-      "sourceName": "Rajasthan PSC (RPSC)",
-      "dept": "Rajasthan PSC (RPSC)",
-      "state": "Rajasthan",
-      "category": "state",
-      "stateIds": [
-        "rj"
-=======
-      "id": "125fee0a1f6840d1",
-      "title": "2. Walk-in-Interview for Coach & Club Teacher Vacancies - Click Here",
-      "link": "https://sainikschoolgoalpara.org/wp-content/uploads/2026/05/Advt_Coach_Club-Teacher_02_2026-1.pdf",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [
-        "https://sainikschoolgoalpara.org/wp-content/uploads/2026/05/Advt_Coach_Club-Teacher_02_2026-1.pdf"
-      ],
-      "sourceId": "ss-goalpara",
-      "sourceName": "Sainik School Goalpara",
-      "dept": "Sainik School Goalpara",
-      "state": "Assam",
-      "category": "teaching",
-      "stateIds": [
-        "as"
-      ],
-      "fetchMethod": "rss-discovered"
     },
     {
       "id": "75e6fc0783705ba3",
@@ -1430,7 +1325,6 @@
       "category": "state",
       "stateIds": [
         "ne"
->>>>>>> 683e58da7a193da3de834c0f18626f6f8f8e7982
       ],
       "fetchMethod": "html"
     },
@@ -1693,8 +1587,6 @@
       "fetchMethod": "html"
     },
     {
-<<<<<<< HEAD
-=======
       "id": "60ef47b60e47190d",
       "title": "Eligible list for Interview/Personality Test for recruitment to the post of Assistant Professor (Advt. No-05/2025)(1st Phase)",
       "link": "https://tpsc.tripura.gov.in/sites/default/files/Eligible_Asstt._Prof_1st_phase_160526.pdf",
@@ -1714,7 +1606,6 @@
       "fetchMethod": "html"
     },
     {
->>>>>>> 683e58da7a193da3de834c0f18626f6f8f8e7982
       "id": "57f58bad0712ac0d",
       "title": "Uttarakhand Combined State Civil Lower Subordinate Services Examination-2024-- Interview Programme, Disqualified Candidates List, Candidature Cancelled List , Medical Certificate Format , Interview Memo and Notification ( Interview )",
       "link": "https://psc.uk.gov.in/candidate-corner/interview",
@@ -1730,8 +1621,6 @@
         "uk"
       ],
       "fetchMethod": "html"
-<<<<<<< HEAD
-=======
     },
     {
       "id": "50768b5bacd14bfa",
@@ -5144,7 +5033,6 @@
       "state": "All India",
       "category": "state",
       "fetchMethod": "live-jobs-supplement"
->>>>>>> 683e58da7a193da3de834c0f18626f6f8f8e7982
     }
   ]
 }

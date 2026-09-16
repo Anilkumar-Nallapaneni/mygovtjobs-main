@@ -1,47 +1,4 @@
 {
-<<<<<<< HEAD
-  "generatedAt": "2026-09-04T14:53:33.782Z",
-  "count": 34,
-  "items": [
-    {
-      "id": "aa7dac9c0942bc5e",
-      "title": "e - Admit Card: Combined Defence Services Examination (II), 2026",
-      "link": "https://www.upsc.gov.in/whats-new/Combined%20Defence%20Services%20Examination%20%28II%29%2C%202026/e%20-%20Admit%20Card",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "upsc-notifications",
-      "sourceName": "UPSC — What's New",
-      "dept": "Union Public Service Commission",
-      "state": "All India",
-      "category": "upsc",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "22cb1c999439a93e",
-      "title": "e - Admit Card: National Defence Academy and Naval Academy Examination (II), 2026",
-      "link": "https://www.upsc.gov.in/whats-new/National%20Defence%20Academy%20and%20Naval%20Academy%20Examination%20%28II%29%2C%202026/e%20-%20Admit%20Card",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "upsc-notifications",
-      "sourceName": "UPSC — What's New",
-      "dept": "Union Public Service Commission",
-      "state": "All India",
-      "category": "upsc",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "7749ebd16d22dad7",
-      "title": "Admit Cards",
-      "link": "https://www.upsc.gov.in/e-admit-cards",
-=======
   "generatedAt": "2026-09-14T09:42:11.779Z",
   "count": 170,
   "items": [
@@ -49,7 +6,6 @@
       "id": "49ea6cc13a2dfc22",
       "title": "Admit Card Download Link – CBT For Recruitment Of Assistants, Junior Personal Assistants, Upper Division Clerks & Stenographers (Advertisement No.: ISRO:ICRB:01(A-JPA):2026 dated 27-07-2026 & Corrigendum dated 11-08-2026) Scheduled to be Held on 21-09-2026. Read More",
       "link": "https://www.isro.gov.in/ICRB_Recruitment11.html",
->>>>>>> 683e58da7a193da3de834c0f18626f6f8f8e7982
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
@@ -64,11 +20,6 @@
       "fetchMethod": "html-listing"
     },
     {
-<<<<<<< HEAD
-      "id": "87967a3b63a7791a",
-      "title": "NOTICE REGARDING ADMIT CARD OF ADVT. NO. A-9/E-1/2025, RESEARCH ASSISTANT (ENGI..",
-      "link": "https://uppsc.up.nic.in/Open_PDF_DB.aspx?I4PnQ0tBagnM8dHr1ViOnohgFzbKcHY6",
-=======
       "id": "dab406e23a6537a1",
       "title": "E-Admit Cards for various Recruitment Posts",
       "link": "https://upsconline.gov.in/oraadmitcard/",
@@ -140,7 +91,6 @@
       "id": "ec699e71aa9f649c",
       "title": "NOTICE REGARDING ADMIT CARD OF ADVT. NO. A-7/E-1/2025, ASSISTANT PROFESSOR, GOVT..",
       "link": "https://uppsc.up.nic.in/Open_PDF_DB.aspx?I4PnQ0tBagnQ0/TjMEfCjG1nSVQb3U34",
->>>>>>> 683e58da7a193da3de834c0f18626f6f8f8e7982
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
@@ -206,74 +156,6 @@
       "fetchMethod": "html-listing"
     },
     {
-<<<<<<< HEAD
-      "id": "b46690c86eda192d",
-      "title": "Download Hallticket",
-      "link": "https://portal-psc.ap.gov.in/Download_HallTickets",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-ap",
-      "sourceName": "Andhra Pradesh PSC (APPSC)",
-      "dept": "Andhra Pradesh PSC (APPSC)",
-      "state": "Andhra Pradesh",
-      "category": "state",
-      "stateIds": [
-        "ap"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "55acc2f9ced6244f",
-      "title": "Admit Cards/Call Letters",
-      "link": "https://apsc.nic.in/admit_cards_2026.php#admit_arch",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-as",
-      "sourceName": "Assam PSC (APSC)",
-      "dept": "Assam PSC (APSC)",
-      "state": "Assam",
-      "category": "state",
-      "stateIds": [
-        "as"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "704d262606758050",
-      "title": "Download Admit Cards for written examination (Conventional & OMR type) for the post of Forest Ranger in the Assam Forest Service under Environment & Forests Department, Assam (Advt. No. 22/2025)",
-      "link": "https://apscrecruitment.in/#/auth/admitcard-by-applicationno",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-as",
-      "sourceName": "Assam PSC (APSC)",
-      "dept": "Assam PSC (APSC)",
-      "state": "Assam",
-      "category": "state",
-      "stateIds": [
-        "as"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "b790f63348140b27",
-      "title": "ATTACHMENT",
-      "link": "https://gpsc.gujarat.gov.in/Documents/AdvertismentDocument/call_letter_notice_sep_2026.pdf",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [
-        "https://gpsc.gujarat.gov.in/Documents/AdvertismentDocument/call_letter_notice_sep_2026.pdf"
-      ],
-      "sourceId": "psc-gj",
-      "sourceName": "Gujarat PSC (GPSC)",
-      "dept": "Gujarat PSC (GPSC)",
-      "state": "Gujarat",
-      "category": "state",
-      "stateIds": [
-        "gj"
-=======
       "id": "1134e9072dc7886b",
       "title": "केऔसुब में पैरामेडिकल स्टाफ़ की भर्ती (2026) के लिए पीएसटी और दस्तवेजीकरण में शामिल होने के लिए प्रवेश पत्र केऔसुब की भर्ती वेबसाइट https://cisfrectt.cisf.gov.in/ पर अपलोड कर दिया गया है। उम्मीदवारों को सलाह दी जाती है कि वे भर्ती प्रक्रिया में शामिल होने के लिए ई-एडमिट कार्ड डाउनलोड कर लें",
       "link": "https://www.cisf.gov.in/assets/pdfs/2026/08/rectt_imp_not_pmsr_hindi.pdf",
@@ -289,28 +171,10 @@
       "category": "police",
       "stateIds": [
         "all"
->>>>>>> 683e58da7a193da3de834c0f18626f6f8f8e7982
       ],
       "fetchMethod": "html"
     },
     {
-<<<<<<< HEAD
-      "id": "02a19a2483f29c90",
-      "title": "Announcement dated 06.08.2026 regarding Combined Subject Knowledge Test for the posts of Assistant District Attorney in Prosecution Department, Haryana (Advt. No. 18/2025) & Superintendent (Legal) in Law and Legislative Department, Haryana (Advt. No. 01/2025)",
-      "link": "https://hpsc.gov.in/Portals/0/Ann_Admitcard_ADA_06_08_2026.pdf",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [
-        "https://hpsc.gov.in/Portals/0/Ann_Admitcard_ADA_06_08_2026.pdf"
-      ],
-      "sourceId": "psc-hr",
-      "sourceName": "Haryana PSC (HPSC)",
-      "dept": "Haryana PSC (HPSC)",
-      "state": "Haryana",
-      "category": "state",
-      "stateIds": [
-        "hr"
-=======
       "id": "cf1edc8bbc9c61d9",
       "title": "केऔसुब में पैरामेडिकल स्टाफ़ की भर्ती (2026) के लिए पीएसटी और दस्तवेजीकरण में शामिल होने के लिए प्रवेश पत्र केऔसुब की भर्ती वेबसाइट https://cisfrectt.cisf.gov.in/ पर अपलोड कर दिया गया है। उम्मीदवारों को सलाह दी जाती है कि वे भर्ती प्रक्रिया में शामिल होने के लिए ई-एडमिट कार्ड डाउनलोड कर लें",
       "link": "https://cisf.gov.in/assets/pdfs/2026/08/rectt_imp_not_pmsr_hindi.pdf",
@@ -404,28 +268,11 @@
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
-      "sourceId": "sail",
-      "sourceName": "Steel Authority of India (SAIL)",
-      "dept": "Steel Authority of India (SAIL)",
+      "sourceId": "sbi",
+      "sourceName": "State Bank of India — Careers",
+      "dept": "State Bank of India — Careers",
       "state": "All India",
-      "category": "psu",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "0f946a7c74850690",
-      "title": "Click here to download call letter for PI of Provisionally shortlisted candidates for Engagement of Young Professionals in Rourkela Steel Plant, SAIL vide Advt.No. RSP/R-YP/2026-01 dated 03/07/2026",
-      "link": "https://sailcareers.com/sail2026yprourkela/SAIL2026YPRourkelaInterviewCallLetter.aspx",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "sail",
-      "sourceName": "Steel Authority of India (SAIL)",
-      "dept": "Steel Authority of India (SAIL)",
-      "state": "All India",
-      "category": "psu",
+      "category": "banking",
       "stateIds": [
         "all"
       ],
@@ -445,7 +292,6 @@
       "category": "psu",
       "stateIds": [
         "all"
->>>>>>> 683e58da7a193da3de834c0f18626f6f8f8e7982
       ],
       "fetchMethod": "html"
     },
@@ -552,17 +398,6 @@
       "fetchMethod": "html"
     },
     {
-<<<<<<< HEAD
-      "id": "370e99979ee3d6ad",
-      "title": "Notification 5 of 2026-27-Admit Card download",
-      "link": "https://mpsc.mizoram.gov.in/post/notification-5-of-2026-27-admit-card-download",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-mz",
-      "sourceName": "Mizoram PSC",
-      "dept": "Mizoram PSC",
-=======
       "id": "8f245b6b109d26a5",
       "title": "उत्तर प्रदेश होमगार्ड्स के पदों पर एनरोलमेंट-2025 शारीरिक दक्षता परीक्षा (पीईटी) के आयोजन एवं उनके प्रवेश पत्र डाउनलोड किये जाने हेतु महत्वपूर्ण सूचना",
       "link": "https://uppbpb.gov.in/FilesUploaded/Notice/vig1_1109202654e5f4ec-372d-40e6-8235-26f9fe33e93c.pdf",
@@ -844,6 +679,23 @@
       "fetchMethod": "html"
     },
     {
+      "id": "0f946a7c74850690",
+      "title": "Click here to download call letter for PI of Provisionally shortlisted candidates for Engagement of Young Professionals in Rourkela Steel Plant, SAIL vide Advt.No. RSP/R-YP/2026-01 dated 03/07/2026",
+      "link": "https://sailcareers.com/sail2026yprourkela/SAIL2026YPRourkelaInterviewCallLetter.aspx",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "sail",
+      "sourceName": "Steel Authority of India (SAIL)",
+      "dept": "Steel Authority of India (SAIL)",
+      "state": "All India",
+      "category": "psu",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
       "id": "b05869f1f68adaa4",
       "title": "Click for details",
       "link": "https://www.rrbthiruvananthapuram.gov.in/assets/pdf/Exam_Notice_CEN_5_2025_JE_CBTI_City_Intimation_Eng.pdf",
@@ -893,7 +745,6 @@
       "sourceId": "psc-mn",
       "sourceName": "Manipur PSC",
       "dept": "Manipur PSC",
->>>>>>> 683e58da7a193da3de834c0f18626f6f8f8e7982
       "state": "NE States",
       "category": "state",
       "stateIds": [
@@ -902,8 +753,6 @@
       "fetchMethod": "html"
     },
     {
-<<<<<<< HEAD
-=======
       "id": "686e8d5b26f137a9",
       "title": "Planning Department Research Assistant Recruitment – Examination Schedule Updated: 08/05/2026",
       "link": "https://mpscmanipur.gov.in/files/Research_Asst_notification_Admit_card.pdf",
@@ -1356,7 +1205,6 @@
       "fetchMethod": "html"
     },
     {
->>>>>>> 683e58da7a193da3de834c0f18626f6f8f8e7982
       "id": "26e74717a17c51d7",
       "title": "LDE Admit Card",
       "link": "https://mpsc.mizoram.gov.in/page/lde-admit-card",
@@ -1576,8 +1424,6 @@
         "uk"
       ],
       "fetchMethod": "html"
-<<<<<<< HEAD
-=======
     },
     {
       "id": "d5a102675c741219",
@@ -3037,7 +2883,6 @@
         "all"
       ],
       "fetchMethod": "html"
->>>>>>> 683e58da7a193da3de834c0f18626f6f8f8e7982
     }
   ]
 }

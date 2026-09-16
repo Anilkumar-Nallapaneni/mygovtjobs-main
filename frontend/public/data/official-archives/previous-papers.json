@@ -1,11 +1,6 @@
 {
-<<<<<<< HEAD
-  "generatedAt": "2026-09-04T14:53:33.782Z",
-  "count": 9,
-=======
   "generatedAt": "2026-09-14T09:42:11.779Z",
   "count": 28,
->>>>>>> 683e58da7a193da3de834c0f18626f6f8f8e7982
   "items": [
     {
       "id": "1bb2282873cb0efd",
@@ -76,26 +71,6 @@
       "fetchMethod": "html-listing"
     },
     {
-<<<<<<< HEAD
-      "id": "1bb2282873cb0efd",
-      "title": "Specimen Question Cum Answer Booklet (QCAB)",
-      "link": "https://www.upsc.gov.in/examination/model-question-and-answer-booklets",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "upsc-previous-papers",
-      "sourceName": "UPSC — Previous Question Papers",
-      "dept": "Union Public Service Commission",
-      "state": "All India",
-      "category": "upsc",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-=======
->>>>>>> 683e58da7a193da3de834c0f18626f6f8f8e7982
       "id": "e89d8cfee71410b4",
       "title": "Question paper for Descriptive Examinations",
       "link": "https://www.keralapsc.gov.in/question-paper-descriptive-exam",
@@ -164,8 +139,6 @@
       "fetchMethod": "html"
     },
     {
-<<<<<<< HEAD
-=======
       "id": "c5f858985b70fccb",
       "title": "Question Paper Feb 2026",
       "link": "https://ctet.nic.in/question-paper-feb-2026/",
@@ -421,7 +394,6 @@
       "fetchMethod": "html"
     },
     {
->>>>>>> 683e58da7a193da3de834c0f18626f6f8f8e7982
       "id": "d8e4b595dfe40717",
       "title": "Old Question Paper",
       "link": "https://tpsc.tripura.gov.in/old-question-paper",
@@ -437,8 +409,6 @@
         "ne"
       ],
       "fetchMethod": "html"
-<<<<<<< HEAD
-=======
     },
     {
       "id": "ba6df61f0df29b66",
@@ -505,7 +475,6 @@
         "all"
       ],
       "fetchMethod": "html-listing"
->>>>>>> 683e58da7a193da3de834c0f18626f6f8f8e7982
     }
   ]
 }

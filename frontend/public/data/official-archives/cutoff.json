@@ -1,11 +1,6 @@
 {
-<<<<<<< HEAD
-  "generatedAt": "2026-09-04T14:53:33.782Z",
-  "count": 27,
-=======
   "generatedAt": "2026-09-14T09:42:11.779Z",
-  "count": 132,
->>>>>>> 683e58da7a193da3de834c0f18626f6f8f8e7982
+  "count": 138,
   "items": [
     {
       "id": "246cf795a95a5a9f",
@@ -175,7 +170,7 @@
       "sourceName": "Steel Authority of India (SAIL)",
       "dept": "Steel Authority of India (SAIL)",
       "state": "All India",
-      "category": "psu",
+      "category": "banking",
       "stateIds": [
         "all"
       ],
@@ -558,8 +553,6 @@
         "rj"
       ],
       "fetchMethod": "html"
-<<<<<<< HEAD
-=======
     },
     {
       "id": "b35770b7970316f2",
@@ -2415,7 +2408,6 @@
         "rj"
       ],
       "fetchMethod": "html"
->>>>>>> 683e58da7a193da3de834c0f18626f6f8f8e7982
     }
   ]
 }

@@ -1,11 +1,6 @@
 {
-<<<<<<< HEAD
-  "generatedAt": "2026-09-04T14:53:33.782Z",
-  "count": 13,
-=======
   "generatedAt": "2026-09-14T09:42:11.779Z",
   "count": 46,
->>>>>>> 683e58da7a193da3de834c0f18626f6f8f8e7982
   "items": [
     {
       "id": "19df6addea51f1a1",
@@ -262,26 +257,6 @@
       "fetchMethod": "html-listing"
     },
     {
-<<<<<<< HEAD
-      "id": "19df6addea51f1a1",
-      "title": "Revised Syllabus and Scheme",
-      "link": "https://www.upsc.gov.in/examinations/revised-syllabus-scheme",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "upsc",
-      "sourceName": "Union Public Service Commission (UPSC)",
-      "dept": "Union Public Service Commission (UPSC)",
-      "state": "All India",
-      "category": "upsc",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "rss-config"
-    },
-    {
-=======
->>>>>>> 683e58da7a193da3de834c0f18626f6f8f8e7982
       "id": "1eeb16555e4593b8",
       "title": "BHEL Artisan Syllabus",
       "link": "https://careers.bhel.in/ar_2025/BHEL%20Artisan%20-%20CBE%20Syllabus.pdf",
@@ -320,76 +295,6 @@
       "fetchMethod": "html"
     },
     {
-<<<<<<< HEAD
-      "id": "780e165e84997f6a",
-      "title": "S.O. 41 - Syllabus for Prosecuting Officer (G) Examination",
-      "link": "https://jkpsc.nic.in/pdf/SO41of2021.pdf",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [
-        "https://jkpsc.nic.in/pdf/SO41of2021.pdf"
-      ],
-      "sourceId": "psc-jk",
-      "sourceName": "Jammu & Kashmir PSC (JKPSC)",
-      "dept": "Jammu & Kashmir PSC (JKPSC)",
-      "state": "Jammu & Kashmir",
-      "category": "state",
-      "stateIds": [
-        "jk"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "2f1159565433b630",
-      "title": "SRO 103-Syllabus for CCE(Main),2018",
-      "link": "https://jkpsc.nic.in/pdf/SRO_103_CCE_2018.pdf",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [
-        "https://jkpsc.nic.in/pdf/SRO_103_CCE_2018.pdf"
-      ],
-      "sourceId": "psc-jk",
-      "sourceName": "Jammu & Kashmir PSC (JKPSC)",
-      "dept": "Jammu & Kashmir PSC (JKPSC)",
-      "state": "Jammu & Kashmir",
-      "category": "state",
-      "stateIds": [
-        "jk"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "85b1767449295db8",
-      "title": "Postwise Syllabus",
-      "link": "https://www.keralapsc.gov.in/syllabus1",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-kl",
-      "sourceName": "Kerala PSC",
-      "dept": "Kerala PSC",
-      "state": "Kerala",
-      "category": "state",
-      "stateIds": [
-        "kl"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "22dd56168d2566c0",
-      "title": "Syllabus and Scheme",
-      "link": "https://mppsc.mp.gov.in/Syllabus",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-mp",
-      "sourceName": "Madhya Pradesh PSC (MPPSC)",
-      "dept": "Madhya Pradesh PSC (MPPSC)",
-      "state": "Madhya Pradesh",
-      "category": "state",
-      "stateIds": [
-        "mp"
-=======
       "id": "c62a544b76d8c7ea",
       "title": "Syllabus",
       "link": "https://apsc.nic.in/dr_syllabus_archive.php#dr_syllabus",
@@ -403,7 +308,6 @@
       "category": "state",
       "stateIds": [
         "as"
->>>>>>> 683e58da7a193da3de834c0f18626f6f8f8e7982
       ],
       "fetchMethod": "html"
     },
@@ -440,8 +344,6 @@
         "uk"
       ],
       "fetchMethod": "html"
-<<<<<<< HEAD
-=======
     },
     {
       "id": "9423bfb2f1b6b8da",
@@ -874,7 +776,6 @@
         "jk"
       ],
       "fetchMethod": "html"
->>>>>>> 683e58da7a193da3de834c0f18626f6f8f8e7982
     }
   ]
 }

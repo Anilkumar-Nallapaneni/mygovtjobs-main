@@ -1,11 +1,6 @@
 {
-<<<<<<< HEAD
-  "generatedAt": "2026-09-04T14:53:33.782Z",
-  "count": 21,
-=======
   "generatedAt": "2026-09-14T09:42:11.779Z",
-  "count": 309,
->>>>>>> 683e58da7a193da3de834c0f18626f6f8f8e7982
+  "count": 303,
   "items": [
     {
       "id": "3d872469bf19db8b",
@@ -184,32 +179,15 @@
       "publishedAt": "2026-09-04T09:09:29.000Z",
       "summary": "Up-gradation of Fire Alarm System for CC and SCF Building at BARC, Trombay, Mumbai–400085 Last date: 25-Sep-2026",
       "pdfUrls": [],
-      "sourceId": "barc",
-      "sourceName": "Bhabha Atomic Research Centre (BARC)",
-      "dept": "Bhabha Atomic Research Centre (BARC)",
+      "sourceId": "upsc-e-admit-hub",
+      "sourceName": "UPSC — e-Admit cards",
+      "dept": "Union Public Service Commission",
       "state": "All India",
-      "category": "defence",
+      "category": "upsc",
       "stateIds": [
         "all"
       ],
-      "fetchMethod": "rss-discovered"
-    },
-    {
-      "id": "16ef2d12afe50083",
-      "title": "Tender No. BARC/TSD/ET/27/⁠2026-⁠27[e-Tender]",
-      "link": "http://www.barc.gov.in/tenders/tender248.pdf",
-      "publishedAt": "2026-09-04T09:09:13.000Z",
-      "summary": "Supply, Installation, Testing and Commissioning of AHUs, VFD panels, Chilled Water Piping, Valves, Insulation, etc. at Central Complex, CDM and PP Nursery inside BARC, Trombay, Mumbai – 400085 Last date: 28-Sep-2026",
-      "pdfUrls": [],
-      "sourceId": "barc",
-      "sourceName": "Bhabha Atomic Research Centre (BARC)",
-      "dept": "Bhabha Atomic Research Centre (BARC)",
-      "state": "All India",
-      "category": "defence",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "rss-discovered"
+      "fetchMethod": "rss-feed"
     },
     {
       "id": "2c477aede722bab5",
@@ -1093,6 +1071,23 @@
       "fetchMethod": "html"
     },
     {
+      "id": "16ef2d12afe50083",
+      "title": "Tender No. BARC/TSD/ET/27/⁠2026-⁠27[e-Tender]",
+      "link": "http://www.barc.gov.in/tenders/tender248.pdf",
+      "publishedAt": "2026-09-04T09:09:13.000Z",
+      "summary": "Supply, Installation, Testing and Commissioning of AHUs, VFD panels, Chilled Water Piping, Valves, Insulation, etc. at Central Complex, CDM and PP Nursery inside BARC, Trombay, Mumbai – 400085 Last date: 28-Sep-2026",
+      "pdfUrls": [],
+      "sourceId": "barc",
+      "sourceName": "Bhabha Atomic Research Centre (BARC)",
+      "dept": "Bhabha Atomic Research Centre (BARC)",
+      "state": "All India",
+      "category": "defence",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "rss-discovered"
+    },
+    {
       "id": "e3d502ed3ef8ab05",
       "title": "PUBLIC NOTICE: CTET SEP-2026 CORRECTION WINDOW (last date 10.09.2026)",
       "link": "https://cdnbbsr.s3waas.gov.in/s3443dec3062d0286986e21dc0631734c9/uploads/2026/09/20260907461266783.pdf",
@@ -1491,174 +1486,6 @@
       "fetchMethod": "html"
     },
     {
-<<<<<<< HEAD
-      "id": "2de7cfc610c57a1c",
-      "title": "Filling up of the posts of AP Librarian (GCET) (backlog vacancies) and AP, College Director of Physical Education and Sports and Librarians in Government Colleges of HED, in UT of JK - Extension of date thereof",
-      "link": "https://jkpsc.nic.in/Pdf/Downloader1.ashx?nid=18039&type=n",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-jk",
-      "sourceName": "Jammu & Kashmir PSC (JKPSC)",
-      "dept": "Jammu & Kashmir PSC (JKPSC)",
-      "state": "Jammu & Kashmir",
-      "category": "state",
-      "stateIds": [
-        "jk"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "ca0538cc2de46c75",
-      "title": "Filling up of the posts of Assistant professor(s) Librarian (GCET) (backlog vacancies) and Assistant Professor, College Director of Physical Education &amp; Sports and Librarians in Government Colleges of Higher Education Department, Union Territory of Jammu and Kashmir - Extension of date thereof",
-      "link": "https://jkpsc.nic.in/Pdf/Downloader1.ashx?nid=18038&type=n",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-jk",
-      "sourceName": "Jammu & Kashmir PSC (JKPSC)",
-      "dept": "Jammu & Kashmir PSC (JKPSC)",
-      "state": "Jammu & Kashmir",
-      "category": "state",
-      "stateIds": [
-        "jk"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "6967597d09434a84",
-      "title": "Filling up of Gazetted vacancies of Skill Department. Extension of date thereof",
-      "link": "https://jkpsc.nic.in/Pdf/Downloader1.ashx?nid=18002&type=n",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-jk",
-      "sourceName": "Jammu & Kashmir PSC (JKPSC)",
-      "dept": "Jammu & Kashmir PSC (JKPSC)",
-      "state": "Jammu & Kashmir",
-      "category": "state",
-      "stateIds": [
-        "jk"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "eaa3469aa6b46723",
-      "title": "Date Extended - Forest Watcher (SR) - Forest & Wildlife (Cat.No.97/2026)",
-      "link": "https://www.keralapsc.gov.in/sites/default/files/inline-files/ariyippu-97-26.pdf",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [
-        "https://www.keralapsc.gov.in/sites/default/files/inline-files/ariyippu-97-26.pdf"
-      ],
-      "sourceId": "psc-kl",
-      "sourceName": "Kerala PSC",
-      "dept": "Kerala PSC",
-      "state": "Kerala",
-      "category": "state",
-      "stateIds": [
-        "kl"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "72951590a314de1c",
-      "title": "Caveat Vigyapti on Written Exam Result - Assistant Director/Veterinary Assistant Surgeon/Veterinary Extension Officer 2026, Dated 03/09/2026",
-      "link": "https://mppsc.mp.gov.in/uploads/files/Caveat_Vigyapti_Written_Exam_Result_AD_Veterinary_Assistant_Surgeon_VEO_2026_Dated_03_09_2026.pdf",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [
-        "https://mppsc.mp.gov.in/uploads/files/Caveat_Vigyapti_Written_Exam_Result_AD_Veterinary_Assistant_Surgeon_VEO_2026_Dated_03_09_2026.pdf"
-      ],
-      "sourceId": "psc-mp",
-      "sourceName": "Madhya Pradesh PSC (MPPSC)",
-      "dept": "Madhya Pradesh PSC (MPPSC)",
-      "state": "Madhya Pradesh",
-      "category": "state",
-      "stateIds": [
-        "mp"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "be9138a335a42f91",
-      "title": "Written Exam Result - Assistant Director/Veterinary Assistant Surgeon/Veterinary Extension Officer 2026, Dated 03/09/2026",
-      "link": "https://mppsc.mp.gov.in/uploads/files/Written_Exam_Result_AD_Veterinary_Assistant_Surgeon_VEO_2026_Dated_03_09_2026.pdf",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [
-        "https://mppsc.mp.gov.in/uploads/files/Written_Exam_Result_AD_Veterinary_Assistant_Surgeon_VEO_2026_Dated_03_09_2026.pdf"
-      ],
-      "sourceId": "psc-mp",
-      "sourceName": "Madhya Pradesh PSC (MPPSC)",
-      "dept": "Madhya Pradesh PSC (MPPSC)",
-      "state": "Madhya Pradesh",
-      "category": "state",
-      "stateIds": [
-        "mp"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "e4c395e795490d84",
-      "title": "Recruitment Advertisement for Assistant Director, Farmer Welfare and Agriculture Development Department (Field and Extension) 2025 (Advt. No. 35/2025), Dated 31/12/2025",
-      "link": "https://mppsc.mp.gov.in/uploads/advertisement/Advt_AD_Farmer_Welfare_Agri_Dev_Dept_Field_Extension_Exam_2025_Dated_31_12_2025.pdf",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [
-        "https://mppsc.mp.gov.in/uploads/advertisement/Advt_AD_Farmer_Welfare_Agri_Dev_Dept_Field_Extension_Exam_2025_Dated_31_12_2025.pdf"
-      ],
-      "sourceId": "psc-mp",
-      "sourceName": "Madhya Pradesh PSC (MPPSC)",
-      "dept": "Madhya Pradesh PSC (MPPSC)",
-      "state": "Madhya Pradesh",
-      "category": "state",
-      "stateIds": [
-        "mp"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "b679aea6aa4ff8f7",
-      "title": "Recruitment Advertisement for Assistant Director /Veterinary Assistant Surgeon/Veterinary Extension Officer 2026 (Adv No./04/2026), Dated 10/03/2026",
-      "link": "https://mppsc.mp.gov.in/uploads/advertisement/Advt_AD_Veterinary_Assistant_Surgeon_VEO_2026_Dated_10_03_2026.pdf",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [
-        "https://mppsc.mp.gov.in/uploads/advertisement/Advt_AD_Veterinary_Assistant_Surgeon_VEO_2026_Dated_10_03_2026.pdf"
-      ],
-      "sourceId": "psc-mp",
-      "sourceName": "Madhya Pradesh PSC (MPPSC)",
-      "dept": "Madhya Pradesh PSC (MPPSC)",
-      "state": "Madhya Pradesh",
-      "category": "state",
-      "stateIds": [
-        "mp"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "6175aaff76599d92",
-      "title": "Final Answer Key - Assistant Director / Veterinary Assistant Surgeon / Veterinary Extension Officer Exam 2026, Dated 25/08/2026",
-      "link": "https://mppsc.mp.gov.in/uploads/files/Final_Answer_Key_AD_Veterinary_Assistant_Surgeon_VEO_2026_Dated_25_08_2026.pdf",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [
-        "https://mppsc.mp.gov.in/uploads/files/Final_Answer_Key_AD_Veterinary_Assistant_Surgeon_VEO_2026_Dated_25_08_2026.pdf"
-      ],
-      "sourceId": "psc-mp",
-      "sourceName": "Madhya Pradesh PSC (MPPSC)",
-      "dept": "Madhya Pradesh PSC (MPPSC)",
-      "state": "Madhya Pradesh",
-      "category": "state",
-      "stateIds": [
-        "mp"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-=======
->>>>>>> 683e58da7a193da3de834c0f18626f6f8f8e7982
       "id": "48ceb62aaa3233ec",
       "title": "Public Notice Regarding Extension Of Last Date For Submission Of Pscscce-2025 Mains Exam Online Application Form Uploaded On 18-03-2026",
       "link": "https://ppsc.gov.in/index.aspx?page=2730&tabid=10&tablinkid=6769",
@@ -1729,8 +1556,6 @@
         "ne"
       ],
       "fetchMethod": "html"
-<<<<<<< HEAD
-=======
     },
     {
       "id": "605474578e17ebba",
@@ -5156,7 +4981,6 @@
       "state": "All India",
       "category": "state",
       "fetchMethod": "live-jobs-supplement"
->>>>>>> 683e58da7a193da3de834c0f18626f6f8f8e7982
     }
   ]
 }
