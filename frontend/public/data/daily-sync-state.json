@@ -1,25 +1,10 @@
 {
-<<<<<<< HEAD
-  "status": "failed",
-  "completedAt": "2026-09-15T08:06:22.915313+00:00",
-  "completedAtIst": "2026-09-15T13:36:22.915313+05:30",
-  "lastCompletedDateIst": "2026-09-15",
-  "nextRunAtIst": "2026-09-17T08:00:00+05:30",
-  "jobCount": 17,
-=======
   "status": "completed",
   "completedAt": "2026-09-16T09:14:19.360362+00:00",
   "completedAtIst": "2026-09-16T14:44:19.360395+05:30",
   "lastCompletedDateIst": "2026-09-16",
   "nextRunAtIst": "2026-09-17T08:00:00+05:30",
   "jobCount": 37,
->>>>>>> 49223c496a1f5eba0fde6bb81bbed5653ab2134c
   "sourcesScraped": 154,
-  "notes": "IngestAgent: official India govt portals + RSS",
-  "startedAt": "2026-09-16T08:32:34.164141+00:00",
-  "startedAtIst": "2026-09-16T14:02:34.164141+05:30",
-  "dateIst": "2026-09-16",
-  "failedAt": "2026-09-16T13:42:31.951104+00:00",
-  "failedAtIst": "2026-09-16T19:12:31.963225+05:30",
-  "error": "RuntimeError: export_live_jobs_json: refusing to write 3-row snapshot (host=localhost); minimum release floor is 10. Point DATABASE_URL at the production catalog or set ALLOW_EMPTY_JSON_EXPORT=1 to override."
+  "notes": "IngestAgent: official India govt portals + RSS"
 }

@@ -1,23 +1,10 @@
 {
   "mode": "daily",
-<<<<<<< HEAD
-  "started_at_epoch": 1789547549,
-=======
   "started_at_epoch": 1789544970,
->>>>>>> 49223c496a1f5eba0fde6bb81bbed5653ab2134c
   "steps": [
     {
       "name": "production sync",
       "required": true,
-<<<<<<< HEAD
-      "returncode": 1,
-      "duration_seconds": 18602.2
-    }
-  ],
-  "run_id": "f84e2019-2e91-4515-854b-e993b84aed97",
-  "finished_at_epoch": 1789566153,
-  "status": "failed"
-=======
       "returncode": 0,
       "duration_seconds": 5095.4
     },
@@ -43,5 +30,4 @@
   "run_id": "b833fa1f-dda2-4f56-8a5d-d69ed3f09ad2",
   "finished_at_epoch": 1789550076,
   "status": "succeeded"
->>>>>>> 49223c496a1f5eba0fde6bb81bbed5653ab2134c
 }
