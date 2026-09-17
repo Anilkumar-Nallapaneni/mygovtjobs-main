@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-09-16T08:10:11.628Z",
-  "count": 32,
+  "generatedAt": "2026-09-17T09:45:46.723Z",
+  "count": 34,
   "items": [
     {
       "id": "246cf795a95a5a9f",
@@ -35,6 +35,61 @@
         "all"
       ],
       "fetchMethod": "html-listing"
+    },
+    {
+      "id": "53df49cf2421fd5c",
+      "title": "Cut-Off Marks for Recruitment of Management Trainees (Technical)",
+      "link": "https://aima-web-images.s3.ap-south-1.amazonaws.com/sailcareers.com/Downloads/MTR_News_10092026_153557.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://aima-web-images.s3.ap-south-1.amazonaws.com/sailcareers.com/Downloads/MTR_News_10092026_153557.pdf"
+      ],
+      "sourceId": "sail",
+      "sourceName": "Steel Authority of India (SAIL)",
+      "dept": "Steel Authority of India (SAIL)",
+      "state": "All India",
+      "category": "psu",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "052e650c60cb44d5",
+      "title": "CUT OFF Marks",
+      "link": "https://sailcareers.com/download/CutOffMTT23Feb26.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://sailcareers.com/download/CutOffMTT23Feb26.pdf"
+      ],
+      "sourceId": "sail",
+      "sourceName": "Steel Authority of India (SAIL)",
+      "dept": "Steel Authority of India (SAIL)",
+      "state": "All India",
+      "category": "psu",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "c9189f55ccd79cdc",
+      "title": "MCSCC (Main) Examination, 2022 – Cutoff Marks Updated: 15/07/2026",
+      "link": "https://mpscmanipur.gov.in/Cutoff.html",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-mn",
+      "sourceName": "Manipur PSC",
+      "dept": "Manipur PSC",
+      "state": "NE States",
+      "category": "state",
+      "stateIds": [
+        "ne"
+      ],
+      "fetchMethod": "html"
     },
     {
       "id": "c70f8b20c685365f",
@@ -568,23 +623,6 @@
       "category": "state",
       "stateIds": [
         "uk"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "c9189f55ccd79cdc",
-      "title": "MCSCC (Main) Examination, 2022 – Cutoff Marks Updated: 15/07/2026",
-      "link": "https://mpscmanipur.gov.in/Cutoff.html",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-mn",
-      "sourceName": "Manipur PSC",
-      "dept": "Manipur PSC",
-      "state": "NE States",
-      "category": "state",
-      "stateIds": [
-        "ne"
       ],
       "fetchMethod": "html"
     }

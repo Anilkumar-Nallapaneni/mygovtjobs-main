@@ -1,7 +1,202 @@
 {
-  "generatedAt": "2026-09-16T08:10:11.628Z",
-  "count": 13,
+  "generatedAt": "2026-09-17T09:45:46.723Z",
+  "count": 20,
   "items": [
+    {
+      "id": "19df6addea51f1a1",
+      "title": "Revised Syllabus and Scheme",
+      "link": "https://www.upsc.gov.in/examinations/revised-syllabus-scheme",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "upsc-e-admit-hub",
+      "sourceName": "UPSC — e-Admit cards",
+      "dept": "Union Public Service Commission",
+      "state": "All India",
+      "category": "upsc",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "780e165e84997f6a",
+      "title": "S.O. 41 - Syllabus for Prosecuting Officer (G) Examination",
+      "link": "https://jkpsc.nic.in/pdf/SO41of2021.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://jkpsc.nic.in/pdf/SO41of2021.pdf"
+      ],
+      "sourceId": "psc-jk",
+      "sourceName": "Jammu & Kashmir PSC (JKPSC)",
+      "dept": "Jammu & Kashmir PSC (JKPSC)",
+      "state": "Jammu & Kashmir",
+      "category": "state",
+      "stateIds": [
+        "jk"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "2f1159565433b630",
+      "title": "SRO 103-Syllabus for CCE(Main),2018",
+      "link": "https://jkpsc.nic.in/pdf/SRO_103_CCE_2018.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://jkpsc.nic.in/pdf/SRO_103_CCE_2018.pdf"
+      ],
+      "sourceId": "psc-jk",
+      "sourceName": "Jammu & Kashmir PSC (JKPSC)",
+      "dept": "Jammu & Kashmir PSC (JKPSC)",
+      "state": "Jammu & Kashmir",
+      "category": "state",
+      "stateIds": [
+        "jk"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "e5d59009e1eecc89",
+      "title": "Postwise Syllabus",
+      "link": "https://www.keralapsc.gov.in/index.php/syllabus1",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-kl",
+      "sourceName": "Kerala PSC",
+      "dept": "Kerala PSC",
+      "state": "Kerala",
+      "category": "state",
+      "stateIds": [
+        "kl"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "22dd56168d2566c0",
+      "title": "Syllabus and Scheme",
+      "link": "https://mppsc.mp.gov.in/Syllabus",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-mp",
+      "sourceName": "Madhya Pradesh PSC (MPPSC)",
+      "dept": "Madhya Pradesh PSC (MPPSC)",
+      "state": "Madhya Pradesh",
+      "category": "state",
+      "stateIds": [
+        "mp"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "5f67be237fad8aad",
+      "title": "Notification No. NPSC/EXAM-2/2026 dt. 23.06.2026 (NCS New Pattern & Syllabus)",
+      "link": "https://npsc.nagaland.gov.in/notification/178220292129536",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-nl",
+      "sourceName": "Nagaland PSC (NPSC)",
+      "dept": "Nagaland PSC (NPSC)",
+      "state": "NE States",
+      "category": "state",
+      "stateIds": [
+        "ne"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "948506b4a8ef4abf",
+      "title": "Syllabus",
+      "link": "https://hssc.gov.in/examsyllabus",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "ssb-hr",
+      "sourceName": "Haryana Staff Selection Commission (HSSC)",
+      "dept": "Haryana Staff Selection Commission (HSSC)",
+      "state": "Haryana",
+      "category": "state",
+      "stateIds": [
+        "hr"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "f4b0127bbca574bc",
+      "title": "पदनाम-विधि सहायक/शोध अधिकारी/सहायक बोरिंग टेक्नीशियन व अन्य तकनीकी अर्हता से सम्बंधित पाठ्यक्रम(Syllabus)हेतु क्लिक करें New",
+      "link": "https://sssc.uk.gov.in/document/%e0%a4%aa%e0%a4%a6%e0%a4%a8%e0%a4%be%e0%a4%ae-%e0%a4%b5%e0%a4%bf%e0%a4%a7%e0%a4%bf-%e0%a4%b8%e0%a4%b9%e0%a4%be%e0%a4%af%e0%a4%95-%e0%a4%b6%e0%a5%8b%e0%a4%a7-%e0%a4%85%e0%a4%a7%e0%a4%bf%e0%a4%95-2/",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "ssb-uk",
+      "sourceName": "Uttarakhand Subordinate Service Selection (UKSSSC)",
+      "dept": "Uttarakhand Subordinate Service Selection (UKSSSC)",
+      "state": "Uttarakhand",
+      "category": "state",
+      "stateIds": [
+        "uk"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "d80061781828ad4a",
+      "title": "Training Syllabus",
+      "link": "https://uppolice.gov.in/pages/en/topmenu/police-units/training-directorate/en-training-syllabus-page",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "police-up",
+      "sourceName": "UP Police Recruitment Board (UPPRPB)",
+      "dept": "UP Police Recruitment Board (UPPRPB)",
+      "state": "Uttar Pradesh",
+      "category": "police",
+      "stateIds": [
+        "up"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "0ee075bd9e923a90",
+      "title": "Syllabus for the the post of food safety officer, A & N Adminstration",
+      "link": "https://erecruitment.andamannicobar.gov.in/Notice/81_a4a9f192-a736-4760-a0ad-14f7a90395cd.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://erecruitment.andamannicobar.gov.in/Notice/81_a4a9f192-a736-4760-a0ad-14f7a90395cd.pdf"
+      ],
+      "sourceId": "an-rec",
+      "sourceName": "Andaman & Nicobar e-Recruitment",
+      "dept": "Andaman & Nicobar e-Recruitment",
+      "state": "Andaman & Nicobar",
+      "category": "state",
+      "stateIds": [
+        "an"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "ab7f1718b0ab109e",
+      "title": "Syllabus for recruitment to various Group ‘B’ (Non-Gazetted) and Group ‘C’ posts under the Common Graduate Level (CGL) Examination",
+      "link": "https://erecruitment.andamannicobar.gov.in/Notice/67_f0581b64-b355-4fa9-8b20-3d4776112e35.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://erecruitment.andamannicobar.gov.in/Notice/67_f0581b64-b355-4fa9-8b20-3d4776112e35.pdf"
+      ],
+      "sourceId": "an-rec",
+      "sourceName": "Andaman & Nicobar e-Recruitment",
+      "dept": "Andaman & Nicobar e-Recruitment",
+      "state": "Andaman & Nicobar",
+      "category": "state",
+      "stateIds": [
+        "an"
+      ],
+      "fetchMethod": "html"
+    },
     {
       "id": "ad081c1e42d5a3f5",
       "title": "Announcement dated 24.08.2026 regarding Scheme and Pattern of examination & Syllabus for the posts of System Analyst/Senior Programmer (Advt. No. 16/2026) & Jr. System Analyst/Programmer (Advt. No. 17/2026) in HSIIDC",
@@ -79,23 +274,6 @@
       "fetchMethod": "html-listing"
     },
     {
-      "id": "19df6addea51f1a1",
-      "title": "Revised Syllabus and Scheme",
-      "link": "https://www.upsc.gov.in/examinations/revised-syllabus-scheme",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "upsc",
-      "sourceName": "Union Public Service Commission (UPSC)",
-      "dept": "Union Public Service Commission (UPSC)",
-      "state": "All India",
-      "category": "upsc",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "rss-config"
-    },
-    {
       "id": "1eeb16555e4593b8",
       "title": "BHEL Artisan Syllabus",
       "link": "https://careers.bhel.in/ar_2025/BHEL%20Artisan%20-%20CBE%20Syllabus.pdf",
@@ -134,44 +312,6 @@
       "fetchMethod": "html"
     },
     {
-      "id": "780e165e84997f6a",
-      "title": "S.O. 41 - Syllabus for Prosecuting Officer (G) Examination",
-      "link": "https://jkpsc.nic.in/pdf/SO41of2021.pdf",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [
-        "https://jkpsc.nic.in/pdf/SO41of2021.pdf"
-      ],
-      "sourceId": "psc-jk",
-      "sourceName": "Jammu & Kashmir PSC (JKPSC)",
-      "dept": "Jammu & Kashmir PSC (JKPSC)",
-      "state": "Jammu & Kashmir",
-      "category": "state",
-      "stateIds": [
-        "jk"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "2f1159565433b630",
-      "title": "SRO 103-Syllabus for CCE(Main),2018",
-      "link": "https://jkpsc.nic.in/pdf/SRO_103_CCE_2018.pdf",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [
-        "https://jkpsc.nic.in/pdf/SRO_103_CCE_2018.pdf"
-      ],
-      "sourceId": "psc-jk",
-      "sourceName": "Jammu & Kashmir PSC (JKPSC)",
-      "dept": "Jammu & Kashmir PSC (JKPSC)",
-      "state": "Jammu & Kashmir",
-      "category": "state",
-      "stateIds": [
-        "jk"
-      ],
-      "fetchMethod": "html"
-    },
-    {
       "id": "85b1767449295db8",
       "title": "Postwise Syllabus",
       "link": "https://www.keralapsc.gov.in/syllabus1",
@@ -185,23 +325,6 @@
       "category": "state",
       "stateIds": [
         "kl"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "22dd56168d2566c0",
-      "title": "Syllabus and Scheme",
-      "link": "https://mppsc.mp.gov.in/Syllabus",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-mp",
-      "sourceName": "Madhya Pradesh PSC (MPPSC)",
-      "dept": "Madhya Pradesh PSC (MPPSC)",
-      "state": "Madhya Pradesh",
-      "category": "state",
-      "stateIds": [
-        "mp"
       ],
       "fetchMethod": "html"
     },
