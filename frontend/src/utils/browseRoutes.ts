@@ -67,7 +67,8 @@ export type LatestNotifQuery = {
   sort: LatestNotifSortKey;
   viewMode: "simple" | "detailed";
   showExpiring: boolean;
-  deadlineWindow: "all" | "today" | "week";
+  deadlineWindow: "all" | "today" | "tomorrow" | "week" | "date";
+  deadlineDate: string | null;
 };
 
 const VALID_HERO = new Set<string>(HERO_STAT_FILTER_KEYS);
@@ -288,6 +289,8 @@ export function parseBrowseQuery(search: string): BrowseQuery {
 }
 
 /** Parse /jobs/latest-notifications query: ?state=up&category=ssc&profession=medical&filter=graduate&sort=expiringSoon&view=simple&section=expiring */
+const CLOSING_DATE_SECTION = /^closing-(\d{4}-\d{2}-\d{2})$/;
+
 export function parseLatestNotifQuery(search: string): LatestNotifQuery {
   const params = new globalThis.URLSearchParams(search.startsWith("?") ? search.slice(1) : search);
   const stateRaw = params.get("state");
@@ -315,9 +318,23 @@ export function parseLatestNotifQuery(search: string): LatestNotifQuery {
     quickFilter: filter?.trim() || null,
     sort: VALID_LATEST_SORT.has(sortRaw || "") ? (sortRaw as LatestNotifSortKey) : "newest",
     viewMode: view === "simple" ? "simple" : "detailed",
-    showExpiring: section === "expiring" || section === "closing-today" || section === "closing-week",
+    showExpiring:
+      section === "expiring" ||
+      section === "closing-today" ||
+      section === "closing-tomorrow" ||
+      section === "closing-week" ||
+      Boolean(section && CLOSING_DATE_SECTION.test(section)),
     deadlineWindow:
-      section === "closing-today" ? "today" : section === "closing-week" || section === "expiring" ? "week" : "all",
+      section === "closing-today"
+        ? "today"
+        : section === "closing-tomorrow"
+          ? "tomorrow"
+          : section === "closing-week" || section === "expiring"
+            ? "week"
+            : section && CLOSING_DATE_SECTION.test(section)
+              ? "date"
+              : "all",
+    deadlineDate: section && CLOSING_DATE_SECTION.test(section) ? section.slice("closing-".length) : null,
   };
 }
 
@@ -331,6 +348,8 @@ export function buildLatestNotifQuery(opts: Partial<LatestNotifQuery>): string {
   if (opts.sort && opts.sort !== "newest") params.set("sort", opts.sort);
   if (opts.viewMode === "simple") params.set("view", "simple");
   if (opts.deadlineWindow === "today") params.set("section", "closing-today");
+  else if (opts.deadlineWindow === "tomorrow") params.set("section", "closing-tomorrow");
+  else if (opts.deadlineWindow === "date" && opts.deadlineDate) params.set("section", `closing-${opts.deadlineDate}`);
   else if (opts.deadlineWindow === "week" || opts.showExpiring) params.set("section", "closing-week");
   const qs = params.toString();
   return qs ? `?${qs}` : "";

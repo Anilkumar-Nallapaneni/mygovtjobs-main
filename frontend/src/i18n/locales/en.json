@@ -3,7 +3,7 @@
     "name": "Live Govt Jobs",
     "primary": "Live ",
     "accent": "Govt Jobs",
-    "tagline": "Never Miss a Govt Notification",
+    "tagline": "Verified official-source catalog",
     "subtitle": "livegovtjobs.com",
     "domain": "livegovtjobs.com",
     "logoAlt": "Live Govt Jobs — never miss a government notification",
@@ -92,8 +92,8 @@
     "allIndia": "All India"
   },
   "home": {
-    "tagline": "LIVE GOVERNMENT JOB NOTIFICATIONS · INDIA",
-    "heroHeading": "Live government job notifications across India",
+    "tagline": "VERIFIED OFFICIAL-SOURCE CATALOG · INDIA",
+    "heroHeading": "Verified official government job notifications",
     "statsStrip": {
       "primary": "{{vacancies}} notified posts · {{liveNotices}} live notifications",
       "secondary": "{{sources}} official sources · {{syncLabel}}",
@@ -230,7 +230,7 @@
     "browseProfession": "Browse by Profession",
     "liveCount": "{{count}} official notices",
     "firstVisitTitle": "New here?",
-    "firstVisitText": "Start with the map, sector cards, or education filters. Every listing links back to an official notification.",
+    "firstVisitText": "This is a verified official-source catalog, not a national board. Start with the map or filters — every listing links to an official notification.",
     "clearFilter": "Clear filter",
     "jobsInState": "Jobs in {{state}}",
     "jobsCount": "{{count}} listings · {{vacancies}} vacancies",

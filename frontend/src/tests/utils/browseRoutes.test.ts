@@ -81,6 +81,13 @@ describe("browseRoutes", () => {
     expect(parseLatestNotifQuery("?state=tr").stateId).toBe("tr");
     expect(parseLatestNotifQuery("?filter=graduate").quickFilter).toBe("graduate");
     expect(parseLatestNotifQuery("?section=closing-today").deadlineWindow).toBe("today");
+    expect(parseLatestNotifQuery("?section=closing-tomorrow").deadlineWindow).toBe("tomorrow");
+    const dated = parseLatestNotifQuery("?section=closing-2026-09-18");
+    expect(dated.deadlineWindow).toBe("date");
+    expect(dated.deadlineDate).toBe("2026-09-18");
+    expect(buildLatestNotifUrl({ deadlineWindow: "tomorrow" })).toBe(
+      "/jobs/latest-notifications?section=closing-tomorrow"
+    );
   });
 
   it("detects bare /jobs URLs that should return home on refresh", () => {

@@ -8,9 +8,12 @@ from urllib.parse import urlparse
 
 from app.scrapers.date_utils import parse_published
 from app.services.noise_filter import strip_postgres_control_chars
+from app.utils.public_job_policy import public_document_type, public_verification_statuses
+from app.utils.state_resolve import resolve_state_codes
 
 _slug_re = re.compile(r"[^a-z0-9]+")
-_PUBLIC_VERIFICATION_STATUSES = ("VERIFIED", "PARTIALLY_VERIFIED")
+_PUBLIC_VERIFICATION_STATUSES = public_verification_statuses()
+_PUBLIC_DOCUMENT_TYPE = public_document_type()
 _SNAPSHOT_DROP_GUARD_MIN_EXISTING = 100
 _SNAPSHOT_DROP_GUARD_RATIO = 0.5
 _DEFAULT_PUBLIC_CATALOG_FLOOR = 10
@@ -47,19 +50,19 @@ def slugify(
 
 def _resolve_state_codes(normalized: dict) -> list[str]:
     """Nationwide listings use [] in DB; single-state PSC uses e.g. ['ap']."""
-    explicit = normalized.get("state_codes")
-    if explicit is not None:
-        codes = [str(c).lower()[:8] for c in explicit if c and str(c).lower() not in ("all", "all india")]
-        return codes
-    state_raw = str(normalized.get("state") or "").strip().lower()
-    if not state_raw or state_raw in ("all", "all india"):
-        source = str((normalized.get("detail") or {}).get("source") or normalized.get("source") or "")
-        if source.startswith("psc-"):
-            code = source[4:8]
-            if code and code not in ("all", "india"):
-                return [code]
-        return []
-    return [state_raw[:8]]
+    detail = normalized.get("detail") if isinstance(normalized.get("detail"), dict) else {}
+    return resolve_state_codes(
+        state_codes=normalized.get("state_codes"),
+        title=str(normalized.get("title") or ""),
+        dept=str(normalized.get("dept") or normalized.get("organization") or ""),
+        source=str(detail.get("source") or normalized.get("source") or ""),
+        apply_url=str(normalized.get("apply_url") or ""),
+        source_url=str(normalized.get("source_url") or detail.get("source_url") or ""),
+        primary_pdf_url=str(
+            normalized.get("primary_pdf_url") or normalized.get("pdf_url") or detail.get("pdf_url") or ""
+        ),
+        notification_url=str(detail.get("notification_url") or ""),
+    )
 
 
 def _parse_date(value) -> date | None:
@@ -188,7 +191,7 @@ def _snapshot_looks_like_ungated_feed_dump(payload: dict | None) -> bool:
     wrong_doc = sum(
         1
         for row in sample
-        if not isinstance(row, dict) or str(row.get("document_type") or "").upper() != "RECRUITMENT"
+        if not isinstance(row, dict) or str(row.get("document_type") or "").upper() != _PUBLIC_DOCUMENT_TYPE
     )
     return (
         unapproved >= threshold

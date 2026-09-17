@@ -22,8 +22,6 @@ import {
 import { extractOfficialHelpdeskEmails, extractOfficialHelpdeskUrl } from "@/utils/officialContact";
 import RelatedJobs from "@/components/jobs/RelatedJobs";
 import JobDetailFaq from "@/components/jobs/JobDetailFaq";
-import ReportJobButton from "@/components/jobs/ReportJobButton";
-import BookmarkButton from "@/components/jobs/BookmarkButton";
 import JobComments from "@/components/jobs/JobComments";
 import AdSlot from "@/components/ads/AdSlot";
 import SocialAlertBar from "@/components/home/SocialAlertBar";
@@ -42,8 +40,8 @@ import {
   JobDetailHighlights,
   JobDetailStickyBar,
   Section,
-  orgInitials,
 } from "@/components/jobs/jobDetailUi";
+import { JobDetailHero } from "@/components/jobs/jobDetailUi/jobDetailHero";
 import type { JobRecord } from "@/types/job";
 import { numberLocale } from "@/utils/formatLocale";
 
@@ -53,19 +51,6 @@ const SKIP_PLACEHOLDER = /^(?:see official notification|see notification|-+|—)
 function showField(value: unknown) {
   const s = displayValue(value, "");
   return Boolean(s) && !SKIP_PLACEHOLDER.test(s);
-}
-
-function formatNoticeDate(iso: string, locale: string) {
-  const raw = String(iso || "").trim().slice(0, 10);
-  if (!/^\d{4}-\d{2}-\d{2}$/.test(raw)) return iso;
-  const parsed = new Date(`${raw}T12:00:00+05:30`);
-  if (Number.isNaN(parsed.getTime())) return iso;
-  return new Intl.DateTimeFormat(locale, {
-    timeZone: "Asia/Kolkata",
-    day: "numeric",
-    month: "short",
-    year: "numeric",
-  }).format(parsed);
 }
 
 export default function JobDetail({
@@ -497,122 +482,29 @@ export default function JobDetail({
   const detailBody = (
     <>
       <div ref={panelRef} className="job-detail-scroll" tabIndex={-1}>
-        <div className="job-detail-toolbar">
-          <button type="button" onClick={onClose} className="job-detail-back-btn">
-            {t("jobDetail.back")}
-          </button>
-          {applyMode ? <span className="job-detail-toolbar-chip">{applyMode}</span> : null}
-          {job.id || job.slug ? (
-            <div className="job-detail-toolbar-tools">
-              <BookmarkButton
-                compact
-                jobId={String(job.id || job.slug)}
-                jobSlug={String(job.slug || job.id || "")}
-              />
-              <ReportJobButton jobId={String(job.id || job.slug)} jobTitle={view.title} />
-            </div>
-          ) : null}
-          {primaryAction ? (
-            <a
-              href={primaryAction.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="job-detail-apply-btn job-detail-toolbar-apply"
-              role="button"
-              data-testid="official-apply-link"
-            >
-              {primaryAction.label}
-            </a>
-          ) : null}
-        </div>
-
-        <header className={`job-detail-hero job-detail-hero--premium job-detail-hero--notice${isPageLayout ? " job-detail-hero--page" : ""}`}>
-          <div className="job-detail-hero__accent" aria-hidden />
-          <div className="job-detail-hero__inner">
-            <div className="job-detail-hero__masthead">
-              <div className="job-detail-hero__identity">
-                <div className="job-detail-hero__seal" aria-hidden>
-                  {orgInitials(view.dept || "Govt")}
-                </div>
-                <div>
-                  <p className="job-detail-hero__kicker">
-                    {t("jobDetail.officialNotification", { defaultValue: "Official notification" })}
-                  </p>
-                  {view.dept ? <p className="job-detail-dept">{view.dept}</p> : null}
-                </div>
-              </div>
-              {view.lastDate ? (
-                <div
-                  className={`job-detail-hero__stamp${isUrgent ? " job-detail-hero__stamp--urgent" : ""}`}
-                >
-                  <span className="job-detail-hero__stamp-label">{t("jobDetail.lastDateLabel")}</span>
-                  <strong className="job-detail-hero__stamp-date">
-                    {formatNoticeDate(displayValue(view.lastDate, ""), i18n.language)}
-                  </strong>
-                  {daysLeft != null && daysLeft >= 0 ? (
-                    <span className="job-detail-hero__stamp-hint">
-                      {isUrgent
-                        ? t("jobDetail.closingIn", { count: daysLeft })
-                        : t("jobDetail.daysLeft", {
-                            count: daysLeft,
-                            defaultValue: "{{count}} days left",
-                          })}
-                    </span>
-                  ) : null}
-                </div>
-              ) : null}
-            </div>
-
-            <div className="job-detail-badges">
-              <span
-                className="job-detail-badge"
-                style={{ color: catColor, borderColor: `${catColor}40`, background: `${catColor}18` }}
-              >
-                {t(`category.${view.category}`).toUpperCase()}
-              </span>
-              {view.state ? (
-                <span className="job-detail-badge job-detail-badge-muted">{view.state}</span>
-              ) : null}
-              {view.vacancies > 0 ? (
-                <span className="job-detail-badge job-detail-badge-vacancy">
-                  {view.vacancies.toLocaleString(countLocale)} {t("job.posts")}
-                </span>
-              ) : null}
-              {String(job.status || "live").toLowerCase() === "live" ? (
-                <span className="job-detail-badge job-detail-badge-live">
-                  {t("jobDetail.activeWindow", { defaultValue: "Open to apply" })}
-                </span>
-              ) : null}
-            </div>
-
-            <h1 className="job-detail-title">{view.title}</h1>
-            {postName && !view.title.toLowerCase().includes(postName.toLowerCase()) ? (
-              <p className="job-detail-post-name">{postName}</p>
-            ) : null}
-
-            <p className="job-detail-hero__trust">
-              {t("jobDetail.officialSourceBadge", {
-                defaultValue: "Verified official source — .gov.in portals only",
-              })}
-              {verifiedAtText ? ` · ${verifiedAtText} IST` : ""}
-            </p>
-
-            {primaryAction ? (
-              <div className="job-detail-hero__cta">
-                <a
-                  href={primaryAction.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="job-detail-apply-btn"
-                  role="button"
-                  data-testid="official-apply-link"
-                >
-                  {primaryAction.label}
-                </a>
-              </div>
-            ) : null}
-          </div>
-        </header>
+        <JobDetailHero
+          title={view.title}
+          dept={view.dept || ""}
+          postName={postName}
+          lastDate={displayValue(view.lastDate, "")}
+          categoryLabel={t(`category.${view.category}`).toUpperCase()}
+          catColor={catColor}
+          state={view.state || ""}
+          vacancies={view.vacancies}
+          isLive={String(job.status || "live").toLowerCase() === "live"}
+          isUrgent={isUrgent}
+          daysLeft={daysLeft}
+          isPageLayout={isPageLayout}
+          applyMode={applyMode}
+          jobId={String(job.id || "")}
+          jobSlug={String(job.slug || "")}
+          verifiedAtText={verifiedAtText}
+          primaryAction={primaryAction}
+          countLocale={countLocale}
+          language={i18n.language}
+          onClose={onClose}
+          t={t}
+        />
 
         {dossierNav.length > 1 ? (
           <nav className="job-detail-toc" aria-label={t("jobDetail.onThisNotice", { defaultValue: "On this notice" })}>

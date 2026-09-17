@@ -74,6 +74,20 @@ _PUBLISHED_PATTERNS = (
 )
 _LAST_PATTERNS = (
     re.compile(
+        r"(?:closing\s+date\s+for\s+(?:submission\s+of\s+)?online\s+application|"
+        r"registration\s+closing\s+date|"
+        r"last\s+date\s+(?:of|to|for)\s+(?:the\s+)?(?:online\s+)?(?:application|apply(?:ing)?(?:\s+online)?))"
+        r"[:\s]+(\d{1,2}[./-]\d{1,2}[./-]\d{2,4})",
+        re.I,
+    ),
+    re.compile(
+        rf"(?:closing\s+date\s+for\s+(?:submission\s+of\s+)?online\s+application|"
+        rf"registration\s+closing\s+date|"
+        rf"last\s+date\s+(?:of|to|for)\s+(?:the\s+)?(?:online\s+)?(?:application|apply(?:ing)?(?:\s+online)?))"
+        rf"[:\s]+(\d{{1,2}}(?:st|nd|rd|th)?[\s,\-]+{_MONTH_NAME}[\s,\-]+\d{{2,4}})",
+        re.I,
+    ),
+    re.compile(
         r"apply\s+online[\s\S]{0,220}?on\s+or\s+before\s+(\d{1,2}[./-]\d{1,2}[./-]\d{4})",
         re.I,
     ),

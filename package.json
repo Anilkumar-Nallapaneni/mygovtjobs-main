@@ -149,6 +149,7 @@
     "db:migrate:pending": "node scripts/run-python.mjs scripts/apply-database-schema.py --from 009",
     "db:find-pooler": "node scripts/run-python.mjs scripts/find-pooler-database-url.py",
     "build:org-index": "node scripts/build-org-index.mjs",
+    "export:source-health": "node scripts/run-python.mjs scripts/export-source-health-public.py",
     "build:sitemap": "node scripts/build-sitemap.mjs",
     "verify": "node scripts/verify-stack.mjs",
     "deploy:verify": "node scripts/verify-deploy.mjs",

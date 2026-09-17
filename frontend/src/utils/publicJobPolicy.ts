@@ -1,8 +1,10 @@
+import policy from '@shared/public-job-policy.json'
+
 export const PUBLIC_JOB_POLICY = {
-  documentType: 'RECRUITMENT',
-  verificationStatuses: ['VERIFIED', 'PARTIALLY_VERIFIED'],
-  minimumCompleteness: 70,
-  minimumConfidence: 90,
+  documentType: policy.documentType,
+  verificationStatuses: policy.verificationStatuses,
+  minimumCompleteness: policy.minimumCompleteness,
+  minimumConfidence: policy.minimumConfidence,
 } as const
 
 type PublicJobCandidate = Record<string, unknown>

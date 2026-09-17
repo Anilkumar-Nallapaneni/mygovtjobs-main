@@ -3,6 +3,12 @@ export type OrgIndexEntry = {
   dept: string
   count: number
   vacancies: number
+  officialDomain?: string | null
+  officialUrl?: string | null
+  sourceHealth?: "healthy" | "degraded" | "broken" | "stale" | "unknown" | null
+  lastPostedAt?: string | null
+  lastCheckedAt?: string | null
+  pdfCoverage?: number | null
 }
 
 export function slugifyOrg(name: string): string {

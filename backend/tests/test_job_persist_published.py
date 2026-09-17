@@ -290,3 +290,11 @@ def test_atomic_write_replaces_target_and_cleans_temp(tmp_path):
     _atomic_write_text(path, '{"ok": true}')
     assert path.read_text(encoding="utf-8") == '{"ok": true}'
     assert list(tmp_path.glob(".live-jobs.json.*.tmp")) == []
+
+
+def test_resolve_state_codes_uses_dept_and_host_hints():
+    from app.services.job_persist_helpers import _resolve_state_codes
+
+    assert _resolve_state_codes({"dept": "Madhya Pradesh PSC (MPPSC)", "title": "State Service"}) == ["mp"]
+    assert _resolve_state_codes({"dept": "Staff Selection Commission (SSC)"}) == []
+    assert _resolve_state_codes({"state_codes": ["tn"]}) == ["tn"]

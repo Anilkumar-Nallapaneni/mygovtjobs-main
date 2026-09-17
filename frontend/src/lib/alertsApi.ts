@@ -12,6 +12,16 @@ export type AlertSubscriptionRow = {
   qualification_tags: string[] | null
   is_active: boolean | null
   created_at?: string | null
+  last_delivered_at?: string | null
+  delivery_count?: number
+}
+
+export type AlertChannelStatus = {
+  email: boolean
+  telegram: boolean
+  whatsapp: boolean
+  push: boolean
+  last_site_delivery_at: string | null
 }
 
 function apiUrl(path: string) {
@@ -37,7 +47,64 @@ export async function listMyAlertSubscriptions(
     console.warn('[alertsApi] list failed', error.message)
     return []
   }
-  return (data as AlertSubscriptionRow[]) ?? []
+  const rows = (data as AlertSubscriptionRow[]) ?? []
+  const ids = rows.map((row) => row.id)
+  if (!ids.length) return rows
+
+  const { data: deliveries, error: deliveryError } = await supabase
+    .from('alert_deliveries')
+    .select('subscription_id, sent_at')
+    .in('subscription_id', ids)
+    .order('sent_at', { ascending: false })
+
+  if (deliveryError) {
+    console.warn('[alertsApi] deliveries list failed', deliveryError.message)
+    return rows
+  }
+
+  const latest = new Map<string, { last: string; count: number }>()
+  for (const row of deliveries || []) {
+    const id = String(row.subscription_id || '')
+    const sent = String(row.sent_at || '')
+    const prev = latest.get(id)
+    if (!prev) {
+      latest.set(id, { last: sent, count: 1 })
+    } else {
+      prev.count += 1
+      if (sent > prev.last) prev.last = sent
+    }
+  }
+
+  return rows.map((row) => ({
+    ...row,
+    last_delivered_at: latest.get(row.id)?.last || null,
+    delivery_count: latest.get(row.id)?.count || 0,
+  }))
+}
+
+export async function fetchAlertChannelStatus(): Promise<AlertChannelStatus> {
+  const empty: AlertChannelStatus = {
+    email: false,
+    telegram: false,
+    whatsapp: false,
+    push: false,
+    last_site_delivery_at: null,
+  }
+  if (!API_BASE) return empty
+  try {
+    const res = await fetch(apiUrl('/api/alerts/channels'))
+    if (!res.ok) return empty
+    const body = (await res.json()) as Partial<AlertChannelStatus>
+    return {
+      email: Boolean(body.email),
+      telegram: Boolean(body.telegram),
+      whatsapp: Boolean(body.whatsapp),
+      push: Boolean(body.push),
+      last_site_delivery_at: body.last_site_delivery_at || null,
+    }
+  } catch {
+    return empty
+  }
 }
 
 export async function unsubscribeAlert(

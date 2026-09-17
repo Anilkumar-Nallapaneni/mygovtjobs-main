@@ -16,11 +16,12 @@ from app.services.noise_filter import (
     is_tender_or_procurement,
 )
 from app.utils.official_hosts import is_official_recruitment_host, looks_like_notification_document
+from app.utils.public_job_policy import public_min_confidence, public_verification_statuses
 from app.utils.state_resolve import normalize_state_codes
 
 INDIA_TZ = ZoneInfo("Asia/Kolkata")
-AUTO_PUBLISH_MIN_CONFIDENCE = 90.0
-PUBLIC_VERIFICATION_STATUSES = ("VERIFIED", "PARTIALLY_VERIFIED")
+AUTO_PUBLISH_MIN_CONFIDENCE = public_min_confidence()
+PUBLIC_VERIFICATION_STATUSES = public_verification_statuses()
 
 
 @dataclass(frozen=True)

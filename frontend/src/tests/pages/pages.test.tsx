@@ -31,6 +31,14 @@ vi.mock("@/hooks/useAuth", () => ({
   }),
 }));
 
+vi.mock("@/hooks/useOfficialArchive", () => ({
+  useOfficialArchive: () => ({ items: [], generatedAt: "2026-09-16T00:00:00.000Z", error: null }),
+}));
+
+vi.mock("@/hooks/useOfficialFeed", () => ({
+  useOfficialFeed: () => ({ items: [], generatedAt: "2026-09-16T00:00:00.000Z", error: null }),
+}));
+
 vi.mock("@/hooks/useRecruitmentEvents", () => ({
   useRecruitmentEventsByType: () => ({
     rows: [

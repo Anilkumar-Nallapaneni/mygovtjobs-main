@@ -25,7 +25,7 @@ export const HOME_SHELL_HERO_STATS = {
   posts: 15579,
   withPostCount: 33,
   hotNew: 6,
-  states: 6,
-  stateListings: 11,
+  states: 7,
+  stateListings: 12,
   live: 36,
 }

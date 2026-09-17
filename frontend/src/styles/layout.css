@@ -2425,6 +2425,24 @@ a.navbar__nav-btn {
   margin-top: 4px;
 }
 
+.account-alerts-list__status {
+  display: block;
+  font-size: 12px;
+  color: var(--ds-mutedHi);
+  margin-top: 6px;
+}
+
+.account-channel-status {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 12px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+  font-size: 13px;
+  color: var(--ds-mutedHi);
+}
+
 .account-alerts-list__unsub {
   flex-shrink: 0;
   padding: 6px 12px;

@@ -1,476 +1,314 @@
 [
   {
-    "dept": "Gpsc Gujarat",
-    "slug": "gpsc-gujarat",
-    "count": 75,
-    "vacancies": 2292
+    "dept": "Madhya Pradesh PSC (MPPSC)",
+    "slug": "madhya-pradesh-psc-mppsc",
+    "count": 5,
+    "vacancies": 5,
+    "officialDomain": "mppsc.mp.gov.in",
+    "officialUrl": "https://mppsc.mp.gov.in",
+    "sourceHealth": "degraded",
+    "lastPostedAt": "2026-03-16T00:00:00",
+    "lastCheckedAt": "2026-09-17T02:56:10.742507+00:00",
+    "pdfCoverage": 1
   },
   {
-    "dept": "Jpsc",
-    "slug": "jpsc",
-    "count": 45,
-    "vacancies": 1487
-  },
-  {
-    "dept": "Union Public Service Commission (UPSC)",
-    "slug": "union-public-service-commission-upsc",
-    "count": 45,
-    "vacancies": 243
-  },
-  {
-    "dept": "Uco Bank In",
-    "slug": "uco-bank-in",
-    "count": 39,
-    "vacancies": 0
-  },
-  {
-    "dept": "Erecruitment Andamannicobar",
-    "slug": "erecruitment-andamannicobar",
-    "count": 37,
-    "vacancies": 28
-  },
-  {
-    "dept": "ESIC — Employees' State Insurance Corporation",
-    "slug": "esic-employees-state-insurance-corporation",
-    "count": 37,
-    "vacancies": 4071
-  },
-  {
-    "dept": "NSUT",
-    "slug": "nsut",
-    "count": 33,
-    "vacancies": 122
-  },
-  {
-    "dept": "Mppolice",
-    "slug": "mppolice",
-    "count": 28,
-    "vacancies": 3
-  },
-  {
-    "dept": "Mha",
-    "slug": "mha",
-    "count": 26,
-    "vacancies": 14248
-  },
-  {
-    "dept": "Canarabank Com",
-    "slug": "canarabank-com",
-    "count": 23,
-    "vacancies": 0
-  },
-  {
-    "dept": "Railway Recruitment Board (RRB) — Mumbai",
-    "slug": "railway-recruitment-board-rrb-mumbai",
-    "count": 23,
-    "vacancies": 5623
-  },
-  {
-    "dept": "Recruitment Py",
-    "slug": "recruitment-py",
-    "count": 23,
-    "vacancies": 0
+    "dept": "Rashtriya Chemicals and Fertilizers Limited (RCF)",
+    "slug": "rashtriya-chemicals-and-fertilizers-limited-rcf",
+    "count": 3,
+    "vacancies": 431,
+    "officialDomain": "rcfltd.com",
+    "officialUrl": "https://rcfltd.com",
+    "sourceHealth": "healthy",
+    "lastPostedAt": "2026-09-04T00:00:00",
+    "lastCheckedAt": null,
+    "pdfCoverage": 1
   },
   {
     "dept": "Staff Selection Commission (SSC)",
     "slug": "staff-selection-commission-ssc",
-    "count": 23,
-    "vacancies": 1
-  },
-  {
-    "dept": "Wii",
-    "slug": "wii",
-    "count": 23,
-    "vacancies": 1770
-  },
-  {
-    "dept": "Hpsc",
-    "slug": "hpsc",
-    "count": 21,
-    "vacancies": 0
-  },
-  {
-    "dept": "UPSC — What's New",
-    "slug": "upsc-what-s-new",
-    "count": 21,
-    "vacancies": 131
-  },
-  {
-    "dept": "Rrbajmer",
-    "slug": "rrbajmer",
-    "count": 20,
-    "vacancies": 43
+    "count": 3,
+    "vacancies": 0,
+    "officialDomain": "ssc.gov.in",
+    "officialUrl": "https://ssc.gov.in",
+    "sourceHealth": "healthy",
+    "lastPostedAt": "2026-09-10T07:35:10",
+    "lastCheckedAt": "2026-09-17T02:42:42.629558+00:00",
+    "pdfCoverage": 1
   },
   {
     "dept": "Institute of Banking Personnel Selection (IBPS)",
     "slug": "institute-of-banking-personnel-selection-ibps",
-    "count": 19,
-    "vacancies": 0
+    "count": 2,
+    "vacancies": 13693,
+    "officialDomain": "ibps.in",
+    "officialUrl": "https://ibps.in",
+    "sourceHealth": "healthy",
+    "lastPostedAt": "2026-09-01T00:00:00",
+    "lastCheckedAt": "2026-09-17T02:41:43.818920+00:00",
+    "pdfCoverage": 1
   },
   {
-    "dept": "ISRO — Careers",
-    "slug": "isro-careers",
-    "count": 19,
-    "vacancies": 0
+    "dept": "National Capital Region Transport Corporation (NCRTC)",
+    "slug": "national-capital-region-transport-corporation-ncrtc",
+    "count": 2,
+    "vacancies": 90,
+    "officialDomain": "ncrtc.in",
+    "officialUrl": "https://ncrtc.in",
+    "sourceHealth": "healthy",
+    "lastPostedAt": "2026-09-10T00:00:00",
+    "lastCheckedAt": null,
+    "pdfCoverage": 1
   },
   {
-    "dept": "PPSC",
-    "slug": "ppsc",
-    "count": 19,
-    "vacancies": 202
+    "dept": "Brahmaputra Cracker and Polymer Limited (BCPL)",
+    "slug": "brahmaputra-cracker-and-polymer-limited-bcpl",
+    "count": 1,
+    "vacancies": 24,
+    "officialDomain": "bcplonline.co.in",
+    "officialUrl": "https://bcplonline.co.in",
+    "sourceHealth": "healthy",
+    "lastPostedAt": "2026-09-10T00:00:00",
+    "lastCheckedAt": null,
+    "pdfCoverage": 1
   },
   {
-    "dept": "APEDA",
-    "slug": "apeda",
-    "count": 17,
-    "vacancies": 67
+    "dept": "Container Corporation of India Limited (CONCOR)",
+    "slug": "container-corporation-of-india-limited-concor",
+    "count": 1,
+    "vacancies": 77,
+    "officialDomain": "cms.concorindia.co.in",
+    "officialUrl": "https://cms.concorindia.co.in",
+    "sourceHealth": "healthy",
+    "lastPostedAt": "2026-08-18T00:00:00",
+    "lastCheckedAt": null,
+    "pdfCoverage": 1
   },
   {
-    "dept": "Kvsangathan",
-    "slug": "kvsangathan",
-    "count": 16,
-    "vacancies": 11
+    "dept": "Export-Import Bank of India",
+    "slug": "export-import-bank-of-india",
+    "count": 1,
+    "vacancies": 8,
+    "officialDomain": "eximbankindia.in",
+    "officialUrl": "https://eximbankindia.in",
+    "sourceHealth": "healthy",
+    "lastPostedAt": "2026-09-15T00:00:00",
+    "lastCheckedAt": null,
+    "pdfCoverage": 1
   },
   {
-    "dept": "Indian Space Research Organisation (ISRO)",
-    "slug": "indian-space-research-organisation-isro",
-    "count": 15,
-    "vacancies": 0
+    "dept": "ICAR CRRI",
+    "slug": "icar-crri",
+    "count": 1,
+    "vacancies": 2,
+    "officialDomain": "icar-crri.in",
+    "officialUrl": "https://icar-crri.in",
+    "sourceHealth": "healthy",
+    "lastPostedAt": "2026-06-15T00:00:00",
+    "lastCheckedAt": null,
+    "pdfCoverage": 1
   },
   {
-    "dept": "Rrbguwahati",
-    "slug": "rrbguwahati",
-    "count": 15,
-    "vacancies": 0
+    "dept": "IISER Mohali",
+    "slug": "iiser-mohali",
+    "count": 1,
+    "vacancies": 40,
+    "officialDomain": "web.iisermohali.ac.in",
+    "officialUrl": "https://web.iisermohali.ac.in",
+    "sourceHealth": "healthy",
+    "lastPostedAt": "2026-05-03T00:00:00",
+    "lastCheckedAt": null,
+    "pdfCoverage": 1
   },
   {
-    "dept": "Uppbpb",
-    "slug": "uppbpb",
-    "count": 15,
-    "vacancies": 0
+    "dept": "IIT Madras",
+    "slug": "iit-madras",
+    "count": 1,
+    "vacancies": 40,
+    "officialDomain": "facapp.iitm.ac.in",
+    "officialUrl": "https://facapp.iitm.ac.in",
+    "sourceHealth": "healthy",
+    "lastPostedAt": "2026-02-27T00:00:00",
+    "lastCheckedAt": null,
+    "pdfCoverage": 1
   },
   {
-    "dept": "Railway Recruitment Board",
-    "slug": "railway-recruitment-board",
-    "count": 14,
-    "vacancies": 4
-  },
-  {
-    "dept": "Rrbmalda",
-    "slug": "rrbmalda",
-    "count": 13,
-    "vacancies": 2
-  },
-  {
-    "dept": "Rrbthiruvananthapuram",
-    "slug": "rrbthiruvananthapuram",
-    "count": 12,
-    "vacancies": 6
-  },
-  {
-    "dept": "Mahapolice",
-    "slug": "mahapolice",
-    "count": 11,
-    "vacancies": 6
-  },
-  {
-    "dept": "Railway Recruitment Board (RRB) — Chandigarh",
-    "slug": "railway-recruitment-board-rrb-chandigarh",
-    "count": 10,
-    "vacancies": 0
-  },
-  {
-    "dept": "Rrbbbs",
-    "slug": "rrbbbs",
-    "count": 10,
-    "vacancies": 0
-  },
-  {
-    "dept": "Sainik School Goalpara",
-    "slug": "sainik-school-goalpara",
-    "count": 10,
-    "vacancies": 44
-  },
-  {
-    "dept": "Indian Navy — Notifications",
-    "slug": "indian-navy-notifications",
-    "count": 9,
-    "vacancies": 173
-  },
-  {
-    "dept": "Mpscmanipur",
-    "slug": "mpscmanipur",
-    "count": 9,
-    "vacancies": 0
-  },
-  {
-    "dept": "NITI Aayog",
-    "slug": "niti-aayog",
-    "count": 9,
-    "vacancies": 1
-  },
-  {
-    "dept": "Sainikschoolgoalpara Org",
-    "slug": "sainikschoolgoalpara-org",
-    "count": 9,
-    "vacancies": 47
-  },
-  {
-    "dept": "Drdo",
-    "slug": "drdo",
-    "count": 8,
-    "vacancies": 120
+    "dept": "Indian Oil Corporation Limited (IOCL)",
+    "slug": "indian-oil-corporation-limited-iocl",
+    "count": 1,
+    "vacancies": 3,
+    "officialDomain": "iocl.com",
+    "officialUrl": "https://iocl.com",
+    "sourceHealth": "broken",
+    "lastPostedAt": "2026-09-03T00:00:00",
+    "lastCheckedAt": "2026-09-17T02:49:42.463202+00:00",
+    "pdfCoverage": 1
   },
   {
     "dept": "ISRO — Indian Space Research Organisation",
     "slug": "isro-indian-space-research-organisation",
-    "count": 8,
-    "vacancies": 24
+    "count": 1,
+    "vacancies": 48,
+    "officialDomain": "isro.gov.in",
+    "officialUrl": "https://isro.gov.in",
+    "sourceHealth": "healthy",
+    "lastPostedAt": "2026-09-10T00:00:00",
+    "lastCheckedAt": "2026-09-17T02:43:42.438993+00:00",
+    "pdfCoverage": 1
   },
   {
-    "dept": "Mpsc Mizoram",
-    "slug": "mpsc-mizoram",
-    "count": 7,
-    "vacancies": 36
+    "dept": "ISRO Propulsion Complex (IPRC), Mahendragiri",
+    "slug": "isro-propulsion-complex-iprc-mahendragiri",
+    "count": 1,
+    "vacancies": 22,
+    "officialDomain": "iprc.gov.in",
+    "officialUrl": "https://iprc.gov.in",
+    "sourceHealth": "healthy",
+    "lastPostedAt": "2026-09-12T00:00:00",
+    "lastCheckedAt": null,
+    "pdfCoverage": 1
   },
   {
-    "dept": "Pakur",
-    "slug": "pakur",
-    "count": 7,
-    "vacancies": 0
+    "dept": "Mineral Exploration and Consultancy Limited (MECL)",
+    "slug": "mineral-exploration-and-consultancy-limited-mecl",
+    "count": 1,
+    "vacancies": 121,
+    "officialDomain": "mecl.co.in",
+    "officialUrl": "https://mecl.co.in",
+    "sourceHealth": "healthy",
+    "lastPostedAt": "2026-09-12T00:00:00",
+    "lastCheckedAt": null,
+    "pdfCoverage": 1
   },
   {
-    "dept": "Bpsc Bihar",
-    "slug": "bpsc-bihar",
-    "count": 6,
-    "vacancies": 44
+    "dept": "National Informatics Centre (NIC)",
+    "slug": "national-informatics-centre-nic",
+    "count": 1,
+    "vacancies": 376,
+    "officialDomain": "recruitment.nic.in",
+    "officialUrl": "https://recruitment.nic.in",
+    "sourceHealth": "healthy",
+    "lastPostedAt": "2026-09-01T00:00:00",
+    "lastCheckedAt": null,
+    "pdfCoverage": 1
   },
   {
-    "dept": "DRDO — Recruitment",
-    "slug": "drdo-recruitment",
-    "count": 6,
-    "vacancies": 224
+    "dept": "National Test House (NTH)",
+    "slug": "national-test-house-nth",
+    "count": 1,
+    "vacancies": 36,
+    "officialDomain": "nth.gov.in",
+    "officialUrl": "https://nth.gov.in",
+    "sourceHealth": "healthy",
+    "lastPostedAt": "2026-09-11T00:00:00",
+    "lastCheckedAt": null,
+    "pdfCoverage": 1
   },
   {
-    "dept": "Kullu Dcourts",
-    "slug": "kullu-dcourts",
-    "count": 5,
-    "vacancies": 12
+    "dept": "NHM Chandigarh",
+    "slug": "nhm-chandigarh",
+    "count": 1,
+    "vacancies": 6,
+    "officialDomain": "nrhmchd.gov.in",
+    "officialUrl": "https://nrhmchd.gov.in",
+    "sourceHealth": "healthy",
+    "lastPostedAt": "2026-06-04T00:00:00",
+    "lastCheckedAt": null,
+    "pdfCoverage": 1
   },
   {
-    "dept": "Recruitment Itbpolice",
-    "slug": "recruitment-itbpolice",
-    "count": 5,
-    "vacancies": 0
+    "dept": "Paradip Port Authority",
+    "slug": "paradip-port-authority",
+    "count": 1,
+    "vacancies": 18,
+    "officialDomain": "paradipport.gov.in",
+    "officialUrl": "https://paradipport.gov.in",
+    "sourceHealth": "healthy",
+    "lastPostedAt": "2026-08-04T00:00:00",
+    "lastCheckedAt": null,
+    "pdfCoverage": 1
   },
   {
-    "dept": "Rrbgkp",
-    "slug": "rrbgkp",
-    "count": 5,
-    "vacancies": 16
+    "dept": "Pension Fund Regulatory and Development Authority (PFRDA)",
+    "slug": "pension-fund-regulatory-and-development-authority-pfrda",
+    "count": 1,
+    "vacancies": 30,
+    "officialDomain": "pfrda.org.in",
+    "officialUrl": "https://pfrda.org.in",
+    "sourceHealth": "healthy",
+    "lastPostedAt": "2026-09-03T00:00:00",
+    "lastCheckedAt": null,
+    "pdfCoverage": 1
   },
   {
-    "dept": "Rrbranchi",
-    "slug": "rrbranchi",
-    "count": 5,
-    "vacancies": 0
+    "dept": "Pharmaceuticals & Medical Devices Bureau of India (PMBI)",
+    "slug": "pharmaceuticals-medical-devices-bureau-of-india-pmbi",
+    "count": 1,
+    "vacancies": 178,
+    "officialDomain": "pmbi.co.in",
+    "officialUrl": "https://pmbi.co.in",
+    "sourceHealth": "healthy",
+    "lastPostedAt": "2026-09-03T00:00:00",
+    "lastCheckedAt": null,
+    "pdfCoverage": 1
   },
   {
-    "dept": "Trb Tn",
-    "slug": "trb-tn",
-    "count": 5,
-    "vacancies": 150
+    "dept": "Prasar Bharati",
+    "slug": "prasar-bharati",
+    "count": 1,
+    "vacancies": 20,
+    "officialDomain": "prasarbharati.gov.in",
+    "officialUrl": "https://prasarbharati.gov.in",
+    "sourceHealth": "healthy",
+    "lastPostedAt": "2026-09-07T00:00:00",
+    "lastCheckedAt": null,
+    "pdfCoverage": 1
   },
   {
-    "dept": "Barc",
-    "slug": "barc",
-    "count": 4,
-    "vacancies": 20
+    "dept": "Ramagundam Fertilizers and Chemicals Limited (RFCL)",
+    "slug": "ramagundam-fertilizers-and-chemicals-limited-rfcl",
+    "count": 1,
+    "vacancies": 40,
+    "officialDomain": "rfcl.co.in",
+    "officialUrl": "https://rfcl.co.in",
+    "sourceHealth": "healthy",
+    "lastPostedAt": "2026-08-26T00:00:00",
+    "lastCheckedAt": null,
+    "pdfCoverage": 1
   },
   {
-    "dept": "Delhi",
-    "slug": "delhi",
-    "count": 4,
-    "vacancies": 819
+    "dept": "Solar Energy Corporation of India Limited (SECI)",
+    "slug": "solar-energy-corporation-of-india-limited-seci",
+    "count": 1,
+    "vacancies": 28,
+    "officialDomain": "seci.co.in",
+    "officialUrl": "https://seci.co.in",
+    "sourceHealth": "healthy",
+    "lastPostedAt": "2026-08-24T00:00:00",
+    "lastCheckedAt": null,
+    "pdfCoverage": 1
   },
   {
-    "dept": "DLSA Sitapur",
-    "slug": "dlsa-sitapur",
-    "count": 4,
-    "vacancies": 2
+    "dept": "Tezpur University",
+    "slug": "tezpur-university",
+    "count": 1,
+    "vacancies": 31,
+    "officialDomain": "tezu.ernet.in",
+    "officialUrl": "https://tezu.ernet.in",
+    "sourceHealth": "healthy",
+    "lastPostedAt": "2026-06-08T00:00:00",
+    "lastCheckedAt": null,
+    "pdfCoverage": 1
   },
   {
-    "dept": "Nabard Org",
-    "slug": "nabard-org",
-    "count": 4,
-    "vacancies": 0
-  },
-  {
-    "dept": "NIT Rourkela",
-    "slug": "nit-rourkela",
-    "count": 4,
-    "vacancies": 4
-  },
-  {
-    "dept": "Ongcindia Com",
-    "slug": "ongcindia-com",
-    "count": 4,
-    "vacancies": 92
-  },
-  {
-    "dept": "Rrbpatna",
-    "slug": "rrbpatna",
-    "count": 4,
-    "vacancies": 0
-  },
-  {
-    "dept": "Sainikschoolbhubaneswar Edu In",
-    "slug": "sainikschoolbhubaneswar-edu-in",
-    "count": 4,
-    "vacancies": 14
-  },
-  {
-    "dept": "Sbi Bank In",
-    "slug": "sbi-bank-in",
-    "count": 4,
-    "vacancies": 0
-  },
-  {
-    "dept": "Wildlife Institute of India (WII)",
-    "slug": "wildlife-institute-of-india-wii",
-    "count": 4,
-    "vacancies": 1729
-  },
-  {
-    "dept": "BEDF",
-    "slug": "bedf",
-    "count": 3,
-    "vacancies": 15
-  },
-  {
-    "dept": "Bhabha Atomic Research Centre (BARC)",
-    "slug": "bhabha-atomic-research-centre-barc",
-    "count": 3,
-    "vacancies": 20
-  },
-  {
-    "dept": "BITS Pilani",
-    "slug": "bits-pilani",
-    "count": 3,
-    "vacancies": 31
-  },
-  {
-    "dept": "Coochbehar Dcourts",
-    "slug": "coochbehar-dcourts",
-    "count": 3,
-    "vacancies": 14
-  },
-  {
-    "dept": "Ctet",
-    "slug": "ctet",
-    "count": 3,
-    "vacancies": 450
-  },
-  {
-    "dept": "Fssai",
-    "slug": "fssai",
-    "count": 3,
-    "vacancies": 0
-  },
-  {
-    "dept": "Howrah Dcourts",
-    "slug": "howrah-dcourts",
-    "count": 3,
-    "vacancies": 23
-  },
-  {
-    "dept": "IIT Dharwad",
-    "slug": "iit-dharwad",
-    "count": 3,
-    "vacancies": 3
-  },
-  {
-    "dept": "IIT Gandhinagar",
-    "slug": "iit-gandhinagar",
-    "count": 3,
-    "vacancies": 3
-  },
-  {
-    "dept": "Jagatsinghpur Dcourts",
-    "slug": "jagatsinghpur-dcourts",
-    "count": 3,
-    "vacancies": 1
-  },
-  {
-    "dept": "Jharsuguda Dcourts",
-    "slug": "jharsuguda-dcourts",
-    "count": 3,
-    "vacancies": 20
-  },
-  {
-    "dept": "Nuclear Power Corporation of India (NPCIL)",
-    "slug": "nuclear-power-corporation-of-india-npcil",
-    "count": 3,
-    "vacancies": 0
-  },
-  {
-    "dept": "Panjab University",
-    "slug": "panjab-university",
-    "count": 3,
-    "vacancies": 4
-  },
-  {
-    "dept": "Psc Uk",
-    "slug": "psc-uk",
-    "count": 3,
-    "vacancies": 0
-  },
-  {
-    "dept": "Puri Dcourts",
-    "slug": "puri-dcourts",
-    "count": 3,
-    "vacancies": 2
-  },
-  {
-    "dept": "RRI",
-    "slug": "rri",
-    "count": 3,
-    "vacancies": 136
-  },
-  {
-    "dept": "Siddipet Dcourts",
-    "slug": "siddipet-dcourts",
-    "count": 3,
-    "vacancies": 0
-  },
-  {
-    "dept": "Sitapur Dcourts",
-    "slug": "sitapur-dcourts",
-    "count": 3,
-    "vacancies": 0
-  },
-  {
-    "dept": "SSC",
-    "slug": "ssc",
-    "count": 3,
-    "vacancies": 12632
-  },
-  {
-    "dept": "Tnusrb Tn",
-    "slug": "tnusrb-tn",
-    "count": 3,
-    "vacancies": 50
-  },
-  {
-    "dept": "UPSSSC",
-    "slug": "upsssc",
-    "count": 3,
-    "vacancies": 2074
-  },
-  {
-    "dept": "Yamunanagar Dcourts",
-    "slug": "yamunanagar-dcourts",
-    "count": 3,
-    "vacancies": 0
+    "dept": "Union Public Service Commission (UPSC)",
+    "slug": "union-public-service-commission-upsc",
+    "count": 1,
+    "vacancies": 212,
+    "officialDomain": "upsc.gov.in",
+    "officialUrl": "https://upsc.gov.in",
+    "sourceHealth": "healthy",
+    "lastPostedAt": "2026-09-12T00:00:00",
+    "lastCheckedAt": "2026-09-04T13:13:45.014471+00:00",
+    "pdfCoverage": 1
   }
 ]

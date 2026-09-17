@@ -68,6 +68,34 @@ export type LatestNotifJobFilter = {
   quickFilter?: string | null
   expiringOnly?: boolean
   expiringWithinDays?: number
+  deadlineWindow?: 'all' | 'today' | 'tomorrow' | 'week' | 'date'
+  deadlineDate?: string | null
+}
+
+export function jobLastDateIso(job: JobRecord): string | null {
+  const raw = String(job?.lastDate || '').slice(0, 10)
+  return /^\d{4}-\d{2}-\d{2}$/.test(raw) ? raw : null
+}
+
+export function indiaDateIso(nowMs: number = Date.now()): string {
+  return new Intl.DateTimeFormat('en-CA', {
+    timeZone: 'Asia/Kolkata',
+    year: 'numeric',
+    month: '2-digit',
+    day: '2-digit',
+  }).format(new Date(nowMs))
+}
+
+export function addCalendarDays(iso: string, days: number): string {
+  const [year, month, day] = iso.split('-').map(Number)
+  return new Date(Date.UTC(year, month - 1, day + days)).toISOString().slice(0, 10)
+}
+
+export function daysUntilDeadline(job: JobRecord, nowMs: number = Date.now()): number | null {
+  if (String(job?.status || '').toLowerCase() === 'expired') return null
+  const last = parseLastDate(job?.lastDate)
+  if (!last) return null
+  return Math.ceil((last.getTime() - nowMs) / DAY_MS)
 }
 
 export function isExpiringSoonJob(
@@ -85,11 +113,13 @@ export function isExpiringSoonJob(
 export function partitionClosingDeadlineJobs(
   jobs: JobRecord[],
   nowMs: number = Date.now()
-): { today: JobRecord[]; week: JobRecord[] } {
+): { today: JobRecord[]; tomorrow: JobRecord[]; week: JobRecord[] } {
   const open = jobs.filter((job) => !isJobExpired(job, nowMs))
-  const today = open.filter((job) => isExpiringSoonJob(job, 0, nowMs))
+  const todayIso = indiaDateIso(nowMs)
+  const tomorrowIso = addCalendarDays(todayIso, 1)
+  const today = open.filter((job) => jobLastDateIso(job) === todayIso)
+  const tomorrow = open.filter((job) => jobLastDateIso(job) === tomorrowIso)
   const week = open.filter((job) => isExpiringSoonJob(job, EXPIRING_SOON_DAYS, nowMs))
-  const restOfWeek = week.filter((job) => !today.some((row) => row.id === job.id))
   const byDate = (a: JobRecord, b: JobRecord) => {
     const da = parseLastDate(a.lastDate)?.getTime() ?? 0
     const db = parseLastDate(b.lastDate)?.getTime() ?? 0
@@ -97,7 +127,8 @@ export function partitionClosingDeadlineJobs(
   }
   return {
     today: [...today].sort(byDate),
-    week: [...restOfWeek].sort(byDate),
+    tomorrow: [...tomorrow].sort(byDate),
+    week: [...week].sort(byDate),
   }
 }
 
@@ -112,6 +143,8 @@ export function filterLatestNotificationJobs(
     quickFilter = null,
     expiringOnly = false,
     expiringWithinDays = EXPIRING_SOON_DAYS,
+    deadlineWindow = 'all',
+    deadlineDate = null,
     nowMs = Date.now(),
   }: LatestNotifJobFilterWithClock
 ): JobRecord[] {
@@ -139,7 +172,15 @@ export function filterLatestNotificationJobs(
     })
   }
 
-  if (expiringOnly) {
+  if (deadlineWindow === 'today') {
+    const todayIso = indiaDateIso(nowMs)
+    rows = rows.filter((job) => jobLastDateIso(job) === todayIso)
+  } else if (deadlineWindow === 'tomorrow') {
+    const tomorrowIso = addCalendarDays(indiaDateIso(nowMs), 1)
+    rows = rows.filter((job) => jobLastDateIso(job) === tomorrowIso)
+  } else if (deadlineWindow === 'date' && deadlineDate) {
+    rows = rows.filter((job) => jobLastDateIso(job) === deadlineDate)
+  } else if (deadlineWindow === 'week' || expiringOnly) {
     rows = rows.filter((job) => isExpiringSoonJob(job, expiringWithinDays, nowMs))
   }
 

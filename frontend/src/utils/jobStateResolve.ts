@@ -1,7 +1,42 @@
 import { STATES } from '@/data/states';
 
+type StateResolveRow = {
+  state_codes?: string[] | null
+  dept?: string | null
+  title?: string | null
+  apply_url?: string | null
+  source?: string | null
+  detail?: {
+    source?: string | null
+    notification_url?: string | null
+    link?: string | null
+  } | null
+}
+
 /** Host / org substring → state id (longest match wins). */
-const HOST_STATE_HINTS = [
+const HOST_STATE_HINTS: Array<[string, string | null]> = [
+  ['jkpsc', 'jk'],
+  ['jammu and kashmir', 'jk'],
+  ['jammu & kashmir', 'jk'],
+  ['ladakh', 'la'],
+  ['hssc.gov', 'hr'],
+  ['haryana', 'hr'],
+  ['hpsssb', 'hp'],
+  ['ncrtc', 'dl'],
+  ['puducherry', 'py'],
+  ['py.gov', 'py'],
+  ['andaman', 'an'],
+  ['nicobar', 'an'],
+  ['lakshadweep', 'ld'],
+  ['dadra', 'dd'],
+  ['daman', 'dd'],
+  ['diu.gov', 'dd'],
+  ['gpsc.goa', 'ga'],
+  ['mnpsc', 'mn'],
+  ['npsc.nagaland', 'nl'],
+  ['tpsc.tripura', 'tr'],
+  ['spsc.sikkim', 'sk'],
+  ['arpscc', 'ar'],
   ['keralapsc', 'kl'],
   ['kerala', 'kl'],
   ['tamilnadupsc', 'tn'],
@@ -10,6 +45,8 @@ const HOST_STATE_HINTS = [
   ['maharashtra', 'mh'],
   ['upsc.gov', null],
   ['ssc.nic', null],
+  ['ssc.gov', null],
+  ['ibps.in', null],
   ['isro.gov', null],
   ['jpsc.gov', 'jh'],
   ['jharkhand', 'jh'],
@@ -48,7 +85,7 @@ const HOST_STATE_HINTS = [
   ['bhojpur.dcourts', 'br'],
   ['siddipet.dcourts', 'tg'],
   ['kullu.dcourts', 'hp'],
-  ['jowai.dcourts', 'ne'],
+  ['jowai.dcourts', 'ml'],
   ['mppsc', 'mp'],
   ['madhya pradesh', 'mp'],
   ['ppsc.gov', 'pb'],
@@ -75,26 +112,27 @@ const HOST_STATE_HINTS = [
 
 const VALID_STATE_IDS = new Set(STATES.map((s) => s.id));
 
-function normalizeCodes(codes) {
+function normalizeCodes(codes: unknown): string[] {
+  if (!Array.isArray(codes)) return []
   return [...new Set(codes.map((c) => String(c).toLowerCase().slice(0, 8)).filter((c) => VALID_STATE_IDS.has(c)))];
 }
 
-function fromSourceCode(source) {
+function fromSourceCode(source: unknown): string[] {
   const code = String(source || '').toLowerCase();
   if (code.startsWith('psc-')) {
     const st = code.slice(4, 8);
     if (VALID_STATE_IDS.has(st)) return [st];
   }
   const m = code.match(/^([a-z]{2})-rss$/);
-  if (m && VALID_STATE_IDS.has(m[1])) return [m[1]];
+  if (m?.[1] && VALID_STATE_IDS.has(m[1])) return [m[1]];
   return [];
 }
 
-function fromHostProbe(probe) {
+function fromHostProbe(probe: string): string[] {
   const p = String(probe || '').toLowerCase();
   if (!p) return [];
   for (const [hint, stateId] of HOST_STATE_HINTS) {
-    if (p.includes(hint) && stateId) return [stateId];
+    if (p.includes(hint)) return stateId ? [stateId] : [];
   }
   for (const s of STATES) {
     if (p.includes(s.n.toLowerCase())) return [s.id];
@@ -104,7 +142,7 @@ function fromHostProbe(probe) {
 }
 
 /** Resolve state_codes for API/JSON rows (fallback when DB field is empty). */
-export function resolveStateCodes(row) {
+export function resolveStateCodes(row: StateResolveRow | null | undefined): string[] {
   const explicit = normalizeCodes(row?.state_codes || []);
   if (explicit.length) return explicit;
 
@@ -125,7 +163,7 @@ export function resolveStateCodes(row) {
   return fromHostProbe(probe);
 }
 
-export function resolveStateDisplay(row) {
+export function resolveStateDisplay(row: StateResolveRow | null | undefined) {
   const codes = resolveStateCodes(row);
   if (!codes.length) {
     return { stateIds: ['all'], stateName: 'All India', isNationwide: true };

@@ -27,9 +27,14 @@ import {
   type LatestTableSortKey,
   type NotificationRow,
 } from '@/utils/latestNotificationsTable'
+import { useNow } from '@/hooks/useNow'
 import {
   countJobsByState,
   filterLatestNotificationJobs,
+  indiaDateIso,
+  addCalendarDays,
+  partitionClosingDeadlineJobs,
+  jobLastDateIso,
 } from '@/utils/latestNotificationsFilters'
 import {
   aggregateCountsByQuickFilter,
@@ -198,9 +203,16 @@ export default function LatestNotificationsTable({
 }) {
   const { t, i18n } = useTranslation()
   const locale = dateTimeLocale(i18n.language)
+  const nowMs = useNow()
 
   const unfilteredData = useMemo(() => buildLatestNotificationsData(jobs), [jobs])
   const stateCounts = useMemo(() => countJobsByState(jobs), [jobs])
+  const closing = useMemo(() => partitionClosingDeadlineJobs(jobs, nowMs), [jobs, nowMs])
+  const todayIso = indiaDateIso(nowMs)
+  const dateTabs = useMemo(
+    () => Array.from({ length: 7 }, (_, offset) => addCalendarDays(todayIso, offset)),
+    [todayIso]
+  )
   const quickFilterCounts = useMemo(() => {
     const summary = computeEducationVacancySummary(jobs, { liveOnly: false })
     return aggregateCountsByQuickFilter(summary)
@@ -213,10 +225,11 @@ export default function LatestNotificationsTable({
         categoryId: query.categoryId,
         professionSlug: query.professionSlug,
         quickFilter: query.quickFilter,
-        expiringOnly: query.deadlineWindow !== 'all',
-        expiringWithinDays: query.deadlineWindow === 'today' ? 0 : 7,
+        deadlineWindow: query.deadlineWindow,
+        deadlineDate: query.deadlineDate,
+        nowMs,
       }),
-    [jobs, query.stateId, query.categoryId, query.professionSlug, query.quickFilter, query.deadlineWindow]
+    [jobs, query.stateId, query.categoryId, query.professionSlug, query.quickFilter, query.deadlineWindow, query.deadlineDate, nowMs]
   )
 
   const { items, stateGroups, sectorGroups, total, vacancyTotal } = useMemo(
@@ -285,21 +298,53 @@ export default function LatestNotificationsTable({
   return (
     <div className="latest-notif">
       <div className="latest-notif__view-toggle" role="group" aria-label={t('latestNotif.deadlineWindow', { defaultValue: 'Closing date' })}>
-        {(['all', 'today', 'week'] as const).map((window) => (
+        {([
+          ['all', t('latestNotif.allDeadlines', { defaultValue: 'All open jobs' }), jobs.length],
+          ['today', t('latestNotif.closingToday', { defaultValue: 'Closing Today' }), closing.today.length],
+          ['tomorrow', t('latestNotif.closingTomorrow', { defaultValue: 'Closing Tomorrow' }), closing.tomorrow.length],
+          ['week', t('latestNotif.closingWeek', { defaultValue: 'Closing This Week' }), closing.week.length],
+        ] as const).map(([window, label, count]) => (
           <button
             key={window}
             type="button"
             className={`latest-notif__view-btn${query.deadlineWindow === window ? ' latest-notif__view-btn--active' : ''}`}
             aria-pressed={query.deadlineWindow === window}
-            onClick={() => onQueryChange({ deadlineWindow: window, showExpiring: window !== 'all' })}
+            onClick={() => onQueryChange({ deadlineWindow: window, deadlineDate: null, showExpiring: window !== 'all' })}
           >
-            {window === 'all'
-              ? t('latestNotif.allDeadlines', { defaultValue: 'All open jobs' })
-              : window === 'today'
-                ? t('latestNotif.closingToday', { defaultValue: 'Closing Today' })
-                : t('latestNotif.closingWeek', { defaultValue: 'Closing This Week' })}
+            {label}
+            <span className="latest-notif__view-count"> ({count})</span>
           </button>
         ))}
+      </div>
+      <div className="latest-notif__view-toggle" role="group" aria-label={t('latestNotif.deadlineDates', { defaultValue: 'Last date' })}>
+        {dateTabs.map((iso) => {
+          const count = jobs.filter((job) => jobLastDateIso(job) === iso).length
+          const active = query.deadlineWindow === 'date' && query.deadlineDate === iso
+          const label = new Date(`${iso}T12:00:00+05:30`).toLocaleDateString(locale, {
+            weekday: 'short',
+            day: 'numeric',
+            month: 'short',
+            timeZone: 'Asia/Kolkata',
+          })
+          return (
+            <button
+              key={iso}
+              type="button"
+              className={`latest-notif__view-btn${active ? ' latest-notif__view-btn--active' : ''}`}
+              aria-pressed={active}
+              onClick={() =>
+                onQueryChange({
+                  deadlineWindow: 'date',
+                  deadlineDate: iso,
+                  showExpiring: true,
+                })
+              }
+            >
+              {label}
+              <span className="latest-notif__view-count"> ({count})</span>
+            </button>
+          )
+        })}
       </div>
       {onViewModeChange ? (
         <div className="latest-notif__view-toggle" role="group" aria-label={t('latestNotif.viewMode')}>
@@ -437,6 +482,7 @@ export default function LatestNotificationsTable({
                 onQueryChange({
                   showExpiring: !query.showExpiring,
                   deadlineWindow: query.showExpiring ? 'all' : 'week',
+                  deadlineDate: null,
                   stateId: null,
                   categoryId: null,
                   professionSlug: null,

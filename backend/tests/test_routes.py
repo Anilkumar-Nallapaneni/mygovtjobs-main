@@ -135,3 +135,17 @@ def test_list_jobs_304_when_etag_matches():
 def test_subscribe_validation_422():
     res = client.post("/api/alerts/subscribe", json={"channel": "email", "channel_address": "not-an-email"})
     assert res.status_code == 422
+
+
+def test_alert_channels_public(monkeypatch):
+    from app.config import get_settings
+
+    monkeypatch.setenv("RESEND_API_KEY", "re_test")
+    get_settings.cache_clear()
+    res = client.get("/api/alerts/channels")
+    get_settings.cache_clear()
+    assert res.status_code == 200
+    body = res.json()
+    assert body["email"] is True
+    assert "push" in body
+    assert "last_site_delivery_at" in body

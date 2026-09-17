@@ -1,22 +1,60 @@
 import { useCallback, useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import { listMyAlertSubscriptions, unsubscribeAlert, type AlertSubscriptionRow } from '@/lib/alertsApi'
+import {
+  fetchAlertChannelStatus,
+  listMyAlertSubscriptions,
+  unsubscribeAlert,
+  type AlertChannelStatus,
+  type AlertSubscriptionRow,
+} from '@/lib/alertsApi'
 
 type AccountAlertsPanelProps = {
   userId: string
 }
 
+function formatWhen(value: string | null | undefined, locale: string): string | null {
+  if (!value) return null
+  const parsed = new Date(value)
+  if (Number.isNaN(parsed.getTime())) return null
+  return new Intl.DateTimeFormat(locale, {
+    dateStyle: 'medium',
+    timeStyle: 'short',
+    timeZone: 'Asia/Kolkata',
+  }).format(parsed)
+}
+
+function deliveryStatus(
+  row: AlertSubscriptionRow,
+  t: (key: string, opts?: Record<string, unknown>) => string,
+  locale: string
+): string {
+  const when = formatWhen(row.last_delivered_at, locale)
+  if (when) {
+    return t('account.alertsDeliveredAt', {
+      when,
+      count: row.delivery_count || 1,
+      defaultValue: 'Last delivered {{when}} IST ({{count}} sent)',
+    })
+  }
+  return t('account.alertsNeverDelivered', {
+    defaultValue: 'No delivery yet — you will see status here after the next matching live job.',
+  })
+}
+
 export default function AccountAlertsPanel({ userId }: AccountAlertsPanelProps) {
-  const { t } = useTranslation()
+  const { t, i18n } = useTranslation()
   const [rows, setRows] = useState<AlertSubscriptionRow[]>([])
+  const [channels, setChannels] = useState<AlertChannelStatus | null>(null)
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
+  const locale = i18n.language || 'en-IN'
 
   const reload = useCallback(async () => {
     setLoading(true)
     setError(null)
-    const data = await listMyAlertSubscriptions(userId)
+    const [data, status] = await Promise.all([listMyAlertSubscriptions(userId), fetchAlertChannelStatus()])
     setRows(data)
+    setChannels(status)
     setLoading(false)
   }, [userId])
 
@@ -33,6 +71,8 @@ export default function AccountAlertsPanel({ userId }: AccountAlertsPanelProps) 
     }
   }
 
+  const lastSite = formatWhen(channels?.last_site_delivery_at, locale)
+
   return (
     <section className="account-page__section">
       <h2>{t('account.alertsTitle', { defaultValue: 'Job alerts' })}</h2>
@@ -41,6 +81,36 @@ export default function AccountAlertsPanel({ userId }: AccountAlertsPanelProps) 
           defaultValue: 'Manage channels you subscribed to while signed in. Subscribe to more from the homepage.',
         })}
       </p>
+      {channels ? (
+        <ul className="account-channel-status" aria-label={t('account.channelStatus', { defaultValue: 'Delivery channels' })}>
+          <li>
+            {t('account.channelEmail', { defaultValue: 'Email' })}:{' '}
+            {channels.email
+              ? t('account.channelReady', { defaultValue: 'ready' })
+              : t('account.channelOff', { defaultValue: 'not configured' })}
+          </li>
+          <li>
+            {t('account.channelPush', { defaultValue: 'Web push' })}:{' '}
+            {channels.push
+              ? t('account.channelReady', { defaultValue: 'ready' })
+              : t('account.channelOff', { defaultValue: 'not configured' })}
+          </li>
+          <li>
+            {t('account.channelTelegram', { defaultValue: 'Telegram' })}:{' '}
+            {channels.telegram
+              ? t('account.channelReady', { defaultValue: 'ready' })
+              : t('account.channelOff', { defaultValue: 'not configured' })}
+          </li>
+          {lastSite ? (
+            <li>
+              {t('account.lastSiteDelivery', {
+                when: lastSite,
+                defaultValue: 'Last site-wide delivery {{when}} IST',
+              })}
+            </li>
+          ) : null}
+        </ul>
+      ) : null}
       {loading && <p>{t('jobsStatus.loading', { defaultValue: 'Loading…' })}</p>}
       {error && (
         <p className="account-page__error" role="alert">
@@ -61,6 +131,7 @@ export default function AccountAlertsPanel({ userId }: AccountAlertsPanelProps) 
                   {[...(row.state_codes || []), ...(row.categories || [])].join(', ')}
                 </span>
               ) : null}
+              <span className="account-alerts-list__status">{deliveryStatus(row, t, locale)}</span>
             </div>
             <button type="button" className="account-alerts-list__unsub" onClick={() => onUnsubscribe(row)}>
               {t('account.alertsUnsubscribe', { defaultValue: 'Unsubscribe' })}

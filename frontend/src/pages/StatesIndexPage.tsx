@@ -45,7 +45,7 @@ export default function StatesIndexPage({ jobs, onFooterLink }: StatesIndexPageP
         <p className="static-page__lede">
           {t('states.indexDesc', {
             defaultValue:
-              'Browse live recruitment from every state and union territory — official PSC and department notifications only.',
+              'States and union territories with verified live notifications. Empty cards mean no gated listing yet — we do not invent coverage.',
           })}
         </p>
       </header>
@@ -64,10 +64,14 @@ export default function StatesIndexPage({ jobs, onFooterLink }: StatesIndexPageP
             >
               <h2 className="browse-index-card__title">{state.n}</h2>
               <p className="browse-index-card__meta">
-                {t('states.cardMeta', {
-                  count: count.toLocaleString(locale),
-                  defaultValue: '{{count}} live notifications',
-                })}
+                {count > 0
+                  ? t('states.cardMeta', {
+                      count: count.toLocaleString(locale),
+                      defaultValue: '{{count}} live notifications',
+                    })
+                  : t('states.cardEmpty', {
+                      defaultValue: 'Awaiting a verified official notice',
+                    })}
               </p>
             </TrackedLink>
           )

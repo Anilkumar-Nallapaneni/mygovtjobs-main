@@ -53,14 +53,38 @@ describe('latestNotificationsFilters', () => {
     expect(isExpiringSoonJob(far)).toBe(false)
   })
 
-  it('partitions closing today vs rest of week', () => {
+  it('partitions closing today vs tomorrow vs week', () => {
     const now = Date.parse('2026-09-01T12:00:00+05:30')
     const todayJob = { ...baseJob, id: 't', lastDate: '2026-09-01' }
+    const tomorrowJob = { ...baseJob, id: 'm', lastDate: '2026-09-02' }
     const weekJob = { ...baseJob, id: 'w', lastDate: '2026-09-04' }
     const later = { ...baseJob, id: 'l', lastDate: '2026-10-01' }
-    const { today, week } = partitionClosingDeadlineJobs([todayJob, weekJob, later], now)
+    const { today, tomorrow, week } = partitionClosingDeadlineJobs(
+      [todayJob, tomorrowJob, weekJob, later],
+      now
+    )
     expect(today.map((j) => j.id)).toEqual(['t'])
-    expect(week.map((j) => j.id)).toEqual(['w'])
+    expect(tomorrow.map((j) => j.id)).toEqual(['m'])
+    expect(week.map((j) => j.id)).toEqual(['t', 'm', 'w'])
+  })
+
+  it('filters tomorrow and a specific last date', () => {
+    const now = Date.parse('2026-09-01T12:00:00+05:30')
+    const jobs = [
+      { ...baseJob, id: 't', lastDate: '2026-09-01' },
+      { ...baseJob, id: 'm', lastDate: '2026-09-02' },
+      { ...baseJob, id: 'w', lastDate: '2026-09-04' },
+    ]
+    expect(filterLatestNotificationJobs(jobs, { deadlineWindow: 'tomorrow', nowMs: now }).map((j) => j.id)).toEqual([
+      'm',
+    ])
+    expect(
+      filterLatestNotificationJobs(jobs, {
+        deadlineWindow: 'date',
+        deadlineDate: '2026-09-04',
+        nowMs: now,
+      }).map((j) => j.id)
+    ).toEqual(['w'])
   })
 
   it('matches NE umbrella jobs to split state chips via title hints', () => {

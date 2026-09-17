@@ -8,6 +8,10 @@
     "src/utils/publicJobPolicy.ts",
     "src/utils/jobFilters.ts",
     "src/utils/relatedJobs.ts",
+    "src/utils/formatLocale.ts",
+    "src/utils/jobRoutes.ts",
+    "src/utils/orgSlug.ts",
+    "src/utils/orgSourceHealth.ts",
     "src/hooks/useNow.ts",
     "src/hooks/useJobDetailFocusTrap.ts"
   ]

@@ -1,0 +1,1454 @@
+{
+  "generatedAt": "2026-09-17T07:27:44.378201+00:00",
+  "items": [
+    {
+      "sourceCode": "afcat",
+      "homepageUrl": "https://afcat.cdac.in",
+      "recruitmentUrl": "https://afcat.cdac.in",
+      "healthStatus": "BROKEN",
+      "lastCheckedAt": "2026-08-14T03:39:46.172665+00:00",
+      "acceptedCount": 0,
+      "discoveredCount": 0
+    },
+    {
+      "sourceCode": "aiims",
+      "homepageUrl": "https://www.aiimsexams.ac.in",
+      "recruitmentUrl": "https://www.aiimsexams.ac.in",
+      "healthStatus": "DEGRADED",
+      "lastCheckedAt": "2026-09-17T02:48:16.640150+00:00",
+      "acceptedCount": 0,
+      "discoveredCount": 4
+    },
+    {
+      "sourceCode": "an-gov",
+      "homepageUrl": "https://andamannicobar.gov.in",
+      "recruitmentUrl": "https://andamannicobar.gov.in",
+      "healthStatus": "DEGRADED",
+      "lastCheckedAt": "2026-09-17T03:04:43.181811+00:00",
+      "acceptedCount": 0,
+      "discoveredCount": 75
+    },
+    {
+      "sourceCode": "an-rec",
+      "homepageUrl": "https://erecruitment.andamannicobar.gov.in",
+      "recruitmentUrl": "https://erecruitment.andamannicobar.gov.in",
+      "healthStatus": "HEALTHY",
+      "lastCheckedAt": "2026-09-17T03:04:17.391790+00:00",
+      "acceptedCount": 30,
+      "discoveredCount": 30
+    },
+    {
+      "sourceCode": "apeda",
+      "homepageUrl": "https://apeda.gov.in/recruitment-appointment",
+      "recruitmentUrl": "https://apeda.gov.in/recruitment-appointment",
+      "healthStatus": "HEALTHY",
+      "lastCheckedAt": "2026-09-17T02:43:50.772991+00:00",
+      "acceptedCount": 8,
+      "discoveredCount": 27
+    },
+    {
+      "sourceCode": "apprenticeship-india",
+      "homepageUrl": "https://www.apprenticeshipindia.gov.in",
+      "recruitmentUrl": "https://www.apprenticeshipindia.gov.in",
+      "healthStatus": "BROKEN",
+      "lastCheckedAt": "2026-09-17T02:42:18.098171+00:00",
+      "acceptedCount": 0,
+      "discoveredCount": 0
+    },
+    {
+      "sourceCode": "army",
+      "homepageUrl": "https://joinindianarmy.nic.in",
+      "recruitmentUrl": "https://joinindianarmy.nic.in",
+      "healthStatus": "BROKEN",
+      "lastCheckedAt": "2026-08-14T03:38:46.216037+00:00",
+      "acceptedCount": 0,
+      "discoveredCount": 0
+    },
+    {
+      "sourceCode": "barc",
+      "homepageUrl": "https://www.barc.gov.in/careers",
+      "recruitmentUrl": "https://www.barc.gov.in/careers",
+      "healthStatus": "HEALTHY",
+      "lastCheckedAt": "2026-09-17T02:43:49.697477+00:00",
+      "acceptedCount": 4,
+      "discoveredCount": 28
+    },
+    {
+      "sourceCode": "bel",
+      "homepageUrl": "https://bel-india.in/job-notifications",
+      "recruitmentUrl": "https://bel-india.in/job-notifications",
+      "healthStatus": "BROKEN",
+      "lastCheckedAt": "2026-09-17T02:50:24.110603+00:00",
+      "acceptedCount": 0,
+      "discoveredCount": 0
+    },
+    {
+      "sourceCode": "bhel",
+      "homepageUrl": "https://careers.bhel.in",
+      "recruitmentUrl": "https://careers.bhel.in",
+      "healthStatus": "BROKEN",
+      "lastCheckedAt": "2026-09-17T02:50:04.666260+00:00",
+      "acceptedCount": 0,
+      "discoveredCount": 0
+    },
+    {
+      "sourceCode": "bisag-n",
+      "homepageUrl": "https://bisag-n.gov.in",
+      "recruitmentUrl": "https://bisag-n.gov.in",
+      "healthStatus": "DEGRADED",
+      "lastCheckedAt": "2026-09-17T02:43:00.162459+00:00",
+      "acceptedCount": 0,
+      "discoveredCount": 9
+    },
+    {
+      "sourceCode": "bob",
+      "homepageUrl": "https://www.bankofbaroda.in/career",
+      "recruitmentUrl": "https://www.bankofbaroda.in/career",
+      "healthStatus": "DEGRADED",
+      "lastCheckedAt": "2026-09-17T02:48:39.005295+00:00",
+      "acceptedCount": 0,
+      "discoveredCount": 18
+    },
+    {
+      "sourceCode": "bpcl",
+      "homepageUrl": "https://bharatpetroleum.in/About-BPCL/Careers/Careers.aspx",
+      "recruitmentUrl": "https://bharatpetroleum.in/About-BPCL/Careers/Careers.aspx",
+      "healthStatus": "HEALTHY",
+      "lastCheckedAt": "2026-09-17T02:50:54.859861+00:00",
+      "acceptedCount": 20,
+      "discoveredCount": 37
+    },
+    {
+      "sourceCode": "bsf",
+      "homepageUrl": "https://rectt.bsf.gov.in",
+      "recruitmentUrl": "https://rectt.bsf.gov.in",
+      "healthStatus": "BROKEN",
+      "lastCheckedAt": "2026-09-17T02:46:07.206978+00:00",
+      "acceptedCount": 0,
+      "discoveredCount": 0
+    },
+    {
+      "sourceCode": "canara",
+      "homepageUrl": "https://canarabank.com/pages/recruitment",
+      "recruitmentUrl": "https://canarabank.com/pages/recruitment",
+      "healthStatus": "HEALTHY",
+      "lastCheckedAt": "2026-09-17T02:49:44.375885+00:00",
+      "acceptedCount": 8,
+      "discoveredCount": 50
+    },
+    {
+      "sourceCode": "cisf",
+      "homepageUrl": "https://www.cisf.gov.in/recruitment",
+      "recruitmentUrl": "https://www.cisf.gov.in/recruitment",
+      "healthStatus": "DEGRADED",
+      "lastCheckedAt": "2026-09-17T02:48:06.788853+00:00",
+      "acceptedCount": 0,
+      "discoveredCount": 5
+    },
+    {
+      "sourceCode": "coast-guard",
+      "homepageUrl": "https://joinindiancoastguard.cdac.in",
+      "recruitmentUrl": "https://joinindiancoastguard.cdac.in",
+      "healthStatus": "DEGRADED",
+      "lastCheckedAt": "2026-09-04T13:15:40.235325+00:00",
+      "acceptedCount": 0,
+      "discoveredCount": 4
+    },
+    {
+      "sourceCode": "crpf",
+      "homepageUrl": "https://crpf.gov.in/recruitment.htm",
+      "recruitmentUrl": "https://crpf.gov.in/recruitment.htm",
+      "healthStatus": "DEGRADED",
+      "lastCheckedAt": "2026-09-17T02:46:41.133290+00:00",
+      "acceptedCount": 0,
+      "discoveredCount": 49
+    },
+    {
+      "sourceCode": "ctet",
+      "homepageUrl": "https://ctet.nic.in",
+      "recruitmentUrl": "https://ctet.nic.in",
+      "healthStatus": "DEGRADED",
+      "lastCheckedAt": "2026-09-17T02:48:58.477384+00:00",
+      "acceptedCount": 0,
+      "discoveredCount": 16
+    },
+    {
+      "sourceCode": "dcourt-angul",
+      "homepageUrl": "https://angul.dcourts.gov.in/notice-category/recruitments",
+      "recruitmentUrl": "https://angul.dcourts.gov.in/notice-category/recruitments",
+      "healthStatus": "DEGRADED",
+      "lastCheckedAt": "2026-09-04T13:22:09.247774+00:00",
+      "acceptedCount": 0,
+      "discoveredCount": 13
+    },
+    {
+      "sourceCode": "dcourt-balangir",
+      "homepageUrl": "https://balangir.dcourts.gov.in/notice-category/recruitments",
+      "recruitmentUrl": "https://balangir.dcourts.gov.in/notice-category/recruitments",
+      "healthStatus": "DEGRADED",
+      "lastCheckedAt": "2026-09-04T13:22:16.492053+00:00",
+      "acceptedCount": 0,
+      "discoveredCount": 13
+    },
+    {
+      "sourceCode": "dcourt-begusarai",
+      "homepageUrl": "https://begusarai.dcourts.gov.in/notice-category/recruitments",
+      "recruitmentUrl": "https://begusarai.dcourts.gov.in/notice-category/recruitments",
+      "healthStatus": "DEGRADED",
+      "lastCheckedAt": "2026-09-04T13:23:59.888779+00:00",
+      "acceptedCount": 0,
+      "discoveredCount": 14
+    },
+    {
+      "sourceCode": "dcourt-bhojpur",
+      "homepageUrl": "https://bhojpur.dcourts.gov.in/notice-category/recruitments",
+      "recruitmentUrl": "https://bhojpur.dcourts.gov.in/notice-category/recruitments",
+      "healthStatus": "HEALTHY",
+      "lastCheckedAt": "2026-09-04T13:24:03.594578+00:00",
+      "acceptedCount": 1,
+      "discoveredCount": 16
+    },
+    {
+      "sourceCode": "dcourt-coochbehar",
+      "homepageUrl": "https://coochbehar.dcourts.gov.in/notice-category/recruitments",
+      "recruitmentUrl": "https://coochbehar.dcourts.gov.in/notice-category/recruitments",
+      "healthStatus": "HEALTHY",
+      "lastCheckedAt": "2026-09-04T13:24:02.930499+00:00",
+      "acceptedCount": 1,
+      "discoveredCount": 14
+    },
+    {
+      "sourceCode": "dcourt-dhenkanal",
+      "homepageUrl": "https://dhenkanal.dcourts.gov.in/notice-category/recruitments",
+      "recruitmentUrl": "https://dhenkanal.dcourts.gov.in/notice-category/recruitments",
+      "healthStatus": "DEGRADED",
+      "lastCheckedAt": "2026-09-04T13:23:18.803928+00:00",
+      "acceptedCount": 0,
+      "discoveredCount": 12
+    },
+    {
+      "sourceCode": "dcourt-howrah",
+      "homepageUrl": "https://howrah.dcourts.gov.in/notice-category/recruitments",
+      "recruitmentUrl": "https://howrah.dcourts.gov.in/notice-category/recruitments",
+      "healthStatus": "HEALTHY",
+      "lastCheckedAt": "2026-09-04T13:24:03.179091+00:00",
+      "acceptedCount": 2,
+      "discoveredCount": 14
+    },
+    {
+      "sourceCode": "dcourt-indore",
+      "homepageUrl": "https://indore.dcourts.gov.in/notice-category/recruitments",
+      "recruitmentUrl": "https://indore.dcourts.gov.in/notice-category/recruitments",
+      "healthStatus": "HEALTHY",
+      "lastCheckedAt": "2026-09-04T13:23:42.071401+00:00",
+      "acceptedCount": 1,
+      "discoveredCount": 15
+    },
+    {
+      "sourceCode": "dcourt-jagatsinghpur",
+      "homepageUrl": "https://jagatsinghpur.dcourts.gov.in/notice-category/recruitments",
+      "recruitmentUrl": "https://jagatsinghpur.dcourts.gov.in/notice-category/recruitments",
+      "healthStatus": "HEALTHY",
+      "lastCheckedAt": "2026-09-04T13:22:35.521297+00:00",
+      "acceptedCount": 1,
+      "discoveredCount": 13
+    },
+    {
+      "sourceCode": "dcourt-jharsuguda",
+      "homepageUrl": "https://jharsuguda.dcourts.gov.in/notice-category/recruitments",
+      "recruitmentUrl": "https://jharsuguda.dcourts.gov.in/notice-category/recruitments",
+      "healthStatus": "HEALTHY",
+      "lastCheckedAt": "2026-09-04T13:22:52.145946+00:00",
+      "acceptedCount": 2,
+      "discoveredCount": 15
+    },
+    {
+      "sourceCode": "dcourt-kullu",
+      "homepageUrl": "https://kullu.dcourts.gov.in/notice-category/recruitments",
+      "recruitmentUrl": "https://kullu.dcourts.gov.in/notice-category/recruitments",
+      "healthStatus": "HEALTHY",
+      "lastCheckedAt": "2026-09-04T13:23:42.506197+00:00",
+      "acceptedCount": 2,
+      "discoveredCount": 15
+    },
+    {
+      "sourceCode": "dcourt-ludhiana",
+      "homepageUrl": "https://ludhiana.dcourts.gov.in/notice-category/recruitments",
+      "recruitmentUrl": "https://ludhiana.dcourts.gov.in/notice-category/recruitments",
+      "healthStatus": "HEALTHY",
+      "lastCheckedAt": "2026-09-04T13:23:38.565348+00:00",
+      "acceptedCount": 2,
+      "discoveredCount": 16
+    },
+    {
+      "sourceCode": "dcourt-nayagarh",
+      "homepageUrl": "https://nayagarh.dcourts.gov.in/notice-category/recruitments",
+      "recruitmentUrl": "https://nayagarh.dcourts.gov.in/notice-category/recruitments",
+      "healthStatus": "DEGRADED",
+      "lastCheckedAt": "2026-09-04T13:22:32.713723+00:00",
+      "acceptedCount": 0,
+      "discoveredCount": 13
+    },
+    {
+      "sourceCode": "dcourt-nuapada",
+      "homepageUrl": "https://nuapada.dcourts.gov.in/notice-category/recruitments",
+      "recruitmentUrl": "https://nuapada.dcourts.gov.in/notice-category/recruitments",
+      "healthStatus": "DEGRADED",
+      "lastCheckedAt": "2026-09-04T13:23:17.726488+00:00",
+      "acceptedCount": 0,
+      "discoveredCount": 13
+    },
+    {
+      "sourceCode": "dcourt-puri",
+      "homepageUrl": "https://puri.dcourts.gov.in/notice-category/recruitments",
+      "recruitmentUrl": "https://puri.dcourts.gov.in/notice-category/recruitments",
+      "healthStatus": "DEGRADED",
+      "lastCheckedAt": "2026-09-04T13:22:55.126983+00:00",
+      "acceptedCount": 0,
+      "discoveredCount": 12
+    },
+    {
+      "sourceCode": "dcourt-rayagada",
+      "homepageUrl": "https://rayagada.dcourts.gov.in/notice-category/recruitments",
+      "recruitmentUrl": "https://rayagada.dcourts.gov.in/notice-category/recruitments",
+      "healthStatus": "DEGRADED",
+      "lastCheckedAt": "2026-09-04T13:23:16.351211+00:00",
+      "acceptedCount": 0,
+      "discoveredCount": 13
+    },
+    {
+      "sourceCode": "dcourt-siddipet",
+      "homepageUrl": "https://siddipet.dcourts.gov.in/notice-category/recruitments",
+      "recruitmentUrl": "https://siddipet.dcourts.gov.in/notice-category/recruitments",
+      "healthStatus": "DEGRADED",
+      "lastCheckedAt": "2026-09-04T13:24:04.749237+00:00",
+      "acceptedCount": 0,
+      "discoveredCount": 13
+    },
+    {
+      "sourceCode": "dcourt-sitapur",
+      "homepageUrl": "https://sitapur.dcourts.gov.in/notice-category/recruitments",
+      "recruitmentUrl": "https://sitapur.dcourts.gov.in/notice-category/recruitments",
+      "healthStatus": "DEGRADED",
+      "lastCheckedAt": "2026-09-04T13:23:19.986314+00:00",
+      "acceptedCount": 0,
+      "discoveredCount": 13
+    },
+    {
+      "sourceCode": "dcourt-ujjain",
+      "homepageUrl": "https://ujjain.dcourts.gov.in/notice-category/recruitments",
+      "recruitmentUrl": "https://ujjain.dcourts.gov.in/notice-category/recruitments",
+      "healthStatus": "DEGRADED",
+      "lastCheckedAt": "2026-09-04T13:23:42.116395+00:00",
+      "acceptedCount": 0,
+      "discoveredCount": 13
+    },
+    {
+      "sourceCode": "dcourt-yamunanagar",
+      "homepageUrl": "https://yamunanagar.dcourts.gov.in/notice-category/recruitments",
+      "recruitmentUrl": "https://yamunanagar.dcourts.gov.in/notice-category/recruitments",
+      "healthStatus": "HEALTHY",
+      "lastCheckedAt": "2026-09-04T13:23:38.564039+00:00",
+      "acceptedCount": 2,
+      "discoveredCount": 17
+    },
+    {
+      "sourceCode": "delhi-police",
+      "homepageUrl": "https://www.delhipolice.gov.in/recruitment",
+      "recruitmentUrl": "https://www.delhipolice.gov.in/recruitment",
+      "healthStatus": "BROKEN",
+      "lastCheckedAt": "2026-09-16T07:58:18.797109+00:00",
+      "acceptedCount": 0,
+      "discoveredCount": 0
+    },
+    {
+      "sourceCode": "delhi-portal",
+      "homepageUrl": "https://labour.delhi.gov.in",
+      "recruitmentUrl": "https://labour.delhi.gov.in",
+      "healthStatus": "HEALTHY",
+      "lastCheckedAt": "2026-09-04T13:21:32.463173+00:00",
+      "acceptedCount": 3,
+      "discoveredCount": 71
+    },
+    {
+      "sourceCode": "drdo",
+      "homepageUrl": "https://www.drdo.gov.in",
+      "recruitmentUrl": "https://www.drdo.gov.in",
+      "healthStatus": "HEALTHY",
+      "lastCheckedAt": "2026-09-17T02:43:43.516056+00:00",
+      "acceptedCount": 3,
+      "discoveredCount": 30
+    },
+    {
+      "sourceCode": "drdo-rss",
+      "homepageUrl": "https://rac.gov.in/",
+      "recruitmentUrl": "https://rac.gov.in/",
+      "healthStatus": "BROKEN",
+      "lastCheckedAt": "2026-08-03T11:06:53.003339+00:00",
+      "acceptedCount": 0,
+      "discoveredCount": 0
+    },
+    {
+      "sourceCode": "employment-news",
+      "homepageUrl": "https://employmentnews.gov.in",
+      "recruitmentUrl": "https://employmentnews.gov.in",
+      "healthStatus": "BROKEN",
+      "lastCheckedAt": "2026-09-17T02:41:44.349497+00:00",
+      "acceptedCount": 0,
+      "discoveredCount": 0
+    },
+    {
+      "sourceCode": "employment-news-rss",
+      "homepageUrl": "https://employmentnews.gov.in/",
+      "recruitmentUrl": "https://employmentnews.gov.in/",
+      "healthStatus": "HEALTHY",
+      "lastCheckedAt": "2026-08-03T11:06:43.978510+00:00",
+      "acceptedCount": 0,
+      "discoveredCount": 0
+    },
+    {
+      "sourceCode": "emrs-pakur",
+      "homepageUrl": "https://pakur.nic.in",
+      "recruitmentUrl": "https://pakur.nic.in",
+      "healthStatus": "HEALTHY",
+      "lastCheckedAt": "2026-09-17T03:11:54.801073+00:00",
+      "acceptedCount": 2,
+      "discoveredCount": 20
+    },
+    {
+      "sourceCode": "epfo",
+      "homepageUrl": "https://www.epfindia.gov.in/site_en/Recruitments.php",
+      "recruitmentUrl": "https://www.epfindia.gov.in/site_en/Recruitments.php",
+      "healthStatus": "BROKEN",
+      "lastCheckedAt": "2026-09-17T02:41:55.272121+00:00",
+      "acceptedCount": 0,
+      "discoveredCount": 0
+    },
+    {
+      "sourceCode": "esic",
+      "homepageUrl": "https://www.esic.gov.in/recruitments",
+      "recruitmentUrl": "https://www.esic.gov.in/recruitments",
+      "healthStatus": "BROKEN",
+      "lastCheckedAt": "2026-09-17T02:42:54.544872+00:00",
+      "acceptedCount": 0,
+      "discoveredCount": 0
+    },
+    {
+      "sourceCode": "fci",
+      "homepageUrl": "https://fci.gov.in/recruitment",
+      "recruitmentUrl": "https://fci.gov.in/recruitment",
+      "healthStatus": "DEGRADED",
+      "lastCheckedAt": "2026-09-17T02:45:17.425135+00:00",
+      "acceptedCount": 0,
+      "discoveredCount": 5
+    },
+    {
+      "sourceCode": "fssai",
+      "homepageUrl": "https://www.fssai.gov.in/cms/recruitment.php",
+      "recruitmentUrl": "https://www.fssai.gov.in/cms/recruitment.php",
+      "healthStatus": "BROKEN",
+      "lastCheckedAt": "2026-09-17T02:45:27.404190+00:00",
+      "acceptedCount": 0,
+      "discoveredCount": 0
+    },
+    {
+      "sourceCode": "gail",
+      "homepageUrl": "https://gailonline.com/careers",
+      "recruitmentUrl": "https://gailonline.com/careers",
+      "healthStatus": "BROKEN",
+      "lastCheckedAt": "2026-09-17T02:49:57.297428+00:00",
+      "acceptedCount": 0,
+      "discoveredCount": 0
+    },
+    {
+      "sourceCode": "hal",
+      "homepageUrl": "https://hal-india.co.in/Careers/M__93",
+      "recruitmentUrl": "https://hal-india.co.in/Careers/M__93",
+      "healthStatus": "BROKEN",
+      "lastCheckedAt": "2026-09-17T02:50:11.754896+00:00",
+      "acceptedCount": 0,
+      "discoveredCount": 0
+    },
+    {
+      "sourceCode": "hpcl",
+      "homepageUrl": "https://hindustanpetroleum.com/careersopportunities",
+      "recruitmentUrl": "https://hindustanpetroleum.com/careersopportunities",
+      "healthStatus": "BROKEN",
+      "lastCheckedAt": "2026-09-17T02:49:49.757527+00:00",
+      "acceptedCount": 0,
+      "discoveredCount": 0
+    },
+    {
+      "sourceCode": "iaf",
+      "homepageUrl": "https://careerindianairforce.cdac.in",
+      "recruitmentUrl": "https://careerindianairforce.cdac.in",
+      "healthStatus": "BROKEN",
+      "lastCheckedAt": "2026-08-14T03:39:31.147851+00:00",
+      "acceptedCount": 0,
+      "discoveredCount": 0
+    },
+    {
+      "sourceCode": "ib",
+      "homepageUrl": "https://www.mha.gov.in/en/notifications/vacancies",
+      "recruitmentUrl": "https://www.mha.gov.in/en/notifications/vacancies",
+      "healthStatus": "HEALTHY",
+      "lastCheckedAt": "2026-09-17T02:47:39.054553+00:00",
+      "acceptedCount": 16,
+      "discoveredCount": 50
+    },
+    {
+      "sourceCode": "ibps",
+      "homepageUrl": "https://www.ibps.in/notification",
+      "recruitmentUrl": "https://www.ibps.in/notification",
+      "healthStatus": "HEALTHY",
+      "lastCheckedAt": "2026-09-17T02:41:43.818920+00:00",
+      "acceptedCount": 2,
+      "discoveredCount": 2
+    },
+    {
+      "sourceCode": "ibps-rss",
+      "homepageUrl": "https://www.ibps.in/index.php/cwe-notification/",
+      "recruitmentUrl": "https://www.ibps.in/index.php/cwe-notification/",
+      "healthStatus": "DEGRADED",
+      "lastCheckedAt": "2026-08-03T11:06:51.543157+00:00",
+      "acceptedCount": 0,
+      "discoveredCount": 0
+    },
+    {
+      "sourceCode": "ies",
+      "homepageUrl": "https://upsc.gov.in/whats-new",
+      "recruitmentUrl": "https://upsc.gov.in/whats-new",
+      "healthStatus": "BROKEN",
+      "lastCheckedAt": "2026-09-10T02:50:51.474700+00:00",
+      "acceptedCount": 0,
+      "discoveredCount": 0
+    },
+    {
+      "sourceCode": "indiapost",
+      "homepageUrl": "https://www.indiapost.gov.in/vacancies",
+      "recruitmentUrl": "https://www.indiapost.gov.in/vacancies",
+      "healthStatus": "HEALTHY",
+      "lastCheckedAt": "2026-09-16T07:55:31.352521+00:00",
+      "acceptedCount": 1,
+      "discoveredCount": 12
+    },
+    {
+      "sourceCode": "iocl",
+      "homepageUrl": "https://iocl.com/job-search",
+      "recruitmentUrl": "https://iocl.com/job-search",
+      "healthStatus": "BROKEN",
+      "lastCheckedAt": "2026-09-17T02:49:42.463202+00:00",
+      "acceptedCount": 0,
+      "discoveredCount": 0
+    },
+    {
+      "sourceCode": "ircon",
+      "homepageUrl": "https://ircon.org",
+      "recruitmentUrl": "https://ircon.org",
+      "healthStatus": "DEGRADED",
+      "lastCheckedAt": "2026-09-17T02:44:34.774491+00:00",
+      "acceptedCount": 0,
+      "discoveredCount": 39
+    },
+    {
+      "sourceCode": "isro",
+      "homepageUrl": "https://www.isro.gov.in/Careers.html",
+      "recruitmentUrl": "https://www.isro.gov.in/Careers.html",
+      "healthStatus": "HEALTHY",
+      "lastCheckedAt": "2026-09-17T02:43:42.438993+00:00",
+      "acceptedCount": 9,
+      "discoveredCount": 10
+    },
+    {
+      "sourceCode": "isro-rss",
+      "homepageUrl": "https://www.isro.gov.in/Careers.html",
+      "recruitmentUrl": "https://www.isro.gov.in/Careers.html",
+      "healthStatus": "BLOCKED",
+      "lastCheckedAt": "2026-08-03T11:06:53.619413+00:00",
+      "acceptedCount": 0,
+      "discoveredCount": 0
+    },
+    {
+      "sourceCode": "itbp",
+      "homepageUrl": "https://recruitment.itbpolice.nic.in",
+      "recruitmentUrl": "https://recruitment.itbpolice.nic.in",
+      "healthStatus": "HEALTHY",
+      "lastCheckedAt": "2026-09-04T13:17:37.297320+00:00",
+      "acceptedCount": 4,
+      "discoveredCount": 7
+    },
+    {
+      "sourceCode": "kvs",
+      "homepageUrl": "https://kvsangathan.nic.in",
+      "recruitmentUrl": "https://kvsangathan.nic.in",
+      "healthStatus": "HEALTHY",
+      "lastCheckedAt": "2026-09-17T02:48:23.356956+00:00",
+      "acceptedCount": 1,
+      "discoveredCount": 50
+    },
+    {
+      "sourceCode": "la-gov",
+      "homepageUrl": "https://ladakh.gov.in",
+      "recruitmentUrl": "https://ladakh.gov.in",
+      "healthStatus": "HEALTHY",
+      "lastCheckedAt": "2026-09-17T03:05:00.595257+00:00",
+      "acceptedCount": 4,
+      "discoveredCount": 60
+    },
+    {
+      "sourceCode": "la-recruitment",
+      "homepageUrl": "https://ladakh.gov.in/recruitment",
+      "recruitmentUrl": "https://ladakh.gov.in/recruitment",
+      "healthStatus": "DEGRADED",
+      "lastCheckedAt": "2026-09-17T03:03:43.268034+00:00",
+      "acceptedCount": 0,
+      "discoveredCount": 27
+    },
+    {
+      "sourceCode": "lic",
+      "homepageUrl": "https://licindia.in/careers",
+      "recruitmentUrl": "https://licindia.in/careers",
+      "healthStatus": "HEALTHY",
+      "lastCheckedAt": "2026-09-17T02:42:25.873697+00:00",
+      "acceptedCount": 2,
+      "discoveredCount": 28
+    },
+    {
+      "sourceCode": "nabard",
+      "homepageUrl": "https://www.nabard.org/career.aspx",
+      "recruitmentUrl": "https://www.nabard.org/career.aspx",
+      "healthStatus": "DEGRADED",
+      "lastCheckedAt": "2026-09-04T13:17:44.928916+00:00",
+      "acceptedCount": 0,
+      "discoveredCount": 14
+    },
+    {
+      "sourceCode": "navy",
+      "homepageUrl": "https://www.joinindiannavy.gov.in",
+      "recruitmentUrl": "https://www.joinindiannavy.gov.in",
+      "healthStatus": "HEALTHY",
+      "lastCheckedAt": "2026-09-04T13:15:34.865205+00:00",
+      "acceptedCount": 1,
+      "discoveredCount": 13
+    },
+    {
+      "sourceCode": "ncert",
+      "homepageUrl": "https://ncert.nic.in/vacancies.php",
+      "recruitmentUrl": "https://ncert.nic.in/vacancies.php",
+      "healthStatus": "BROKEN",
+      "lastCheckedAt": "2026-09-16T07:56:25.567846+00:00",
+      "acceptedCount": 0,
+      "discoveredCount": 0
+    },
+    {
+      "sourceCode": "niti",
+      "homepageUrl": "https://www.niti.gov.in/whats-new",
+      "recruitmentUrl": "https://www.niti.gov.in/whats-new",
+      "healthStatus": "BROKEN",
+      "lastCheckedAt": "2026-09-17T02:42:09.145624+00:00",
+      "acceptedCount": 0,
+      "discoveredCount": 0
+    },
+    {
+      "sourceCode": "npcil",
+      "homepageUrl": "https://www.npcil.nic.in/content/331_1_Recruitments.aspx",
+      "recruitmentUrl": "https://www.npcil.nic.in/content/331_1_Recruitments.aspx",
+      "healthStatus": "DEGRADED",
+      "lastCheckedAt": "2026-09-17T02:43:50.775859+00:00",
+      "acceptedCount": 0,
+      "discoveredCount": 21
+    },
+    {
+      "sourceCode": "nsut",
+      "homepageUrl": "https://www.nsut.ac.in/teaching-post/105",
+      "recruitmentUrl": "https://www.nsut.ac.in/teaching-post/105",
+      "healthStatus": "DEGRADED",
+      "lastCheckedAt": "2026-09-17T02:43:11.381532+00:00",
+      "acceptedCount": 0,
+      "discoveredCount": 2
+    },
+    {
+      "sourceCode": "ntpc",
+      "homepageUrl": "https://www.ntpc.co.in/en/career",
+      "recruitmentUrl": "https://www.ntpc.co.in/en/career",
+      "healthStatus": "BROKEN",
+      "lastCheckedAt": "2026-09-17T02:50:09.007641+00:00",
+      "acceptedCount": 0,
+      "discoveredCount": 0
+    },
+    {
+      "sourceCode": "nvs",
+      "homepageUrl": "https://navodaya.gov.in/nvs/en/Recruitment-Notice/Recruitment",
+      "recruitmentUrl": "https://navodaya.gov.in/nvs/en/Recruitment-Notice/Recruitment",
+      "healthStatus": "BROKEN",
+      "lastCheckedAt": "2026-09-04T13:16:53.539920+00:00",
+      "acceptedCount": 0,
+      "discoveredCount": 0
+    },
+    {
+      "sourceCode": "ongc",
+      "homepageUrl": "https://ongcindia.com/web/eng/career/recruitment-notice",
+      "recruitmentUrl": "https://ongcindia.com/web/eng/career/recruitment-notice",
+      "healthStatus": "BROKEN",
+      "lastCheckedAt": "2026-09-17T03:02:02.195162+00:00",
+      "acceptedCount": 0,
+      "discoveredCount": 0
+    },
+    {
+      "sourceCode": "pib",
+      "homepageUrl": "https://www.pib.gov.in",
+      "recruitmentUrl": "https://www.pib.gov.in",
+      "healthStatus": "BROKEN",
+      "lastCheckedAt": "2026-09-17T02:41:37.611967+00:00",
+      "acceptedCount": 0,
+      "discoveredCount": 0
+    },
+    {
+      "sourceCode": "pib-rss",
+      "homepageUrl": "https://www.pib.gov.in/RssMain.aspx?ModId=6&Lang=2&Regid=3&reg=48",
+      "recruitmentUrl": "https://www.pib.gov.in/RssMain.aspx?ModId=6&Lang=2&Regid=3&reg=48",
+      "healthStatus": "BROKEN",
+      "lastCheckedAt": "2026-09-17T02:41:29.023619+00:00",
+      "acceptedCount": 0,
+      "discoveredCount": 0
+    },
+    {
+      "sourceCode": "pnb",
+      "homepageUrl": "https://www.pnbindia.in/Recruitments.html",
+      "recruitmentUrl": "https://www.pnbindia.in/Recruitments.html",
+      "healthStatus": "HEALTHY",
+      "lastCheckedAt": "2026-09-17T02:49:37.160339+00:00",
+      "acceptedCount": 1,
+      "discoveredCount": 50
+    },
+    {
+      "sourceCode": "police-ka",
+      "homepageUrl": "https://ksp.karnataka.gov.in",
+      "recruitmentUrl": "https://ksp.karnataka.gov.in",
+      "healthStatus": "DEGRADED",
+      "lastCheckedAt": "2026-09-04T13:21:12.158272+00:00",
+      "acceptedCount": 0,
+      "discoveredCount": 43
+    },
+    {
+      "sourceCode": "police-kl",
+      "homepageUrl": "https://keralapolice.gov.in/page/recruitment-board",
+      "recruitmentUrl": "https://keralapolice.gov.in/page/recruitment-board",
+      "healthStatus": "BROKEN",
+      "lastCheckedAt": "2026-09-17T03:01:40.426409+00:00",
+      "acceptedCount": 0,
+      "discoveredCount": 0
+    },
+    {
+      "sourceCode": "police-mh",
+      "homepageUrl": "https://www.mahapolice.gov.in",
+      "recruitmentUrl": "https://www.mahapolice.gov.in",
+      "healthStatus": "DEGRADED",
+      "lastCheckedAt": "2026-09-17T03:01:28.151281+00:00",
+      "acceptedCount": 0,
+      "discoveredCount": 54
+    },
+    {
+      "sourceCode": "police-mp",
+      "homepageUrl": "https://mppolice.gov.in",
+      "recruitmentUrl": "https://mppolice.gov.in",
+      "healthStatus": "DEGRADED",
+      "lastCheckedAt": "2026-09-04T13:21:11.569098+00:00",
+      "acceptedCount": 0,
+      "discoveredCount": 37
+    },
+    {
+      "sourceCode": "police-rj",
+      "homepageUrl": "https://recruitment2.rajasthan.gov.in",
+      "recruitmentUrl": "https://recruitment2.rajasthan.gov.in",
+      "healthStatus": "BROKEN",
+      "lastCheckedAt": "2026-09-03T11:38:25.065013+00:00",
+      "acceptedCount": 0,
+      "discoveredCount": 0
+    },
+    {
+      "sourceCode": "police-tn",
+      "homepageUrl": "https://tnusrb.tn.gov.in",
+      "recruitmentUrl": "https://tnusrb.tn.gov.in",
+      "healthStatus": "HEALTHY",
+      "lastCheckedAt": "2026-09-04T13:21:04.477978+00:00",
+      "acceptedCount": 1,
+      "discoveredCount": 34
+    },
+    {
+      "sourceCode": "police-up",
+      "homepageUrl": "https://uppbpb.gov.in",
+      "recruitmentUrl": "https://uppbpb.gov.in",
+      "healthStatus": "HEALTHY",
+      "lastCheckedAt": "2026-09-17T03:00:59.069686+00:00",
+      "acceptedCount": 2,
+      "discoveredCount": 13
+    },
+    {
+      "sourceCode": "psc-ap",
+      "homepageUrl": "https://psc.ap.gov.in",
+      "recruitmentUrl": "https://psc.ap.gov.in",
+      "healthStatus": "BROKEN",
+      "lastCheckedAt": "2026-09-10T02:46:18.893674+00:00",
+      "acceptedCount": 0,
+      "discoveredCount": 0
+    },
+    {
+      "sourceCode": "psc-ar",
+      "homepageUrl": "https://appsc.gov.in/Index/institute_index/ins/RECINS001",
+      "recruitmentUrl": "https://appsc.gov.in/Index/institute_index/ins/RECINS001",
+      "healthStatus": "DEGRADED",
+      "lastCheckedAt": "2026-09-17T02:58:39.512404+00:00",
+      "acceptedCount": 0,
+      "discoveredCount": 1
+    },
+    {
+      "sourceCode": "psc-as",
+      "homepageUrl": "https://apsc.nic.in/notifications",
+      "recruitmentUrl": "https://apsc.nic.in/notifications",
+      "healthStatus": "BROKEN",
+      "lastCheckedAt": "2026-09-04T13:18:40.615769+00:00",
+      "acceptedCount": 0,
+      "discoveredCount": 0
+    },
+    {
+      "sourceCode": "psc-br",
+      "homepageUrl": "https://bpsc.bihar.gov.in/Notices.html",
+      "recruitmentUrl": "https://bpsc.bihar.gov.in/Notices.html",
+      "healthStatus": "HEALTHY",
+      "lastCheckedAt": "2026-09-17T02:54:27.319762+00:00",
+      "acceptedCount": 4,
+      "discoveredCount": 13
+    },
+    {
+      "sourceCode": "psc-cg",
+      "homepageUrl": "https://psc.cg.gov.in",
+      "recruitmentUrl": "https://psc.cg.gov.in",
+      "healthStatus": "DEGRADED",
+      "lastCheckedAt": "2026-09-04T13:18:48.869138+00:00",
+      "acceptedCount": 0,
+      "discoveredCount": 19
+    },
+    {
+      "sourceCode": "psc-dl",
+      "homepageUrl": "https://dsssbonline.nic.in",
+      "recruitmentUrl": "https://dsssbonline.nic.in",
+      "healthStatus": "DEGRADED",
+      "lastCheckedAt": "2026-09-17T03:02:28.808999+00:00",
+      "acceptedCount": 0,
+      "discoveredCount": 3
+    },
+    {
+      "sourceCode": "psc-ga",
+      "homepageUrl": "https://gpsc.goa.gov.in",
+      "recruitmentUrl": "https://gpsc.goa.gov.in",
+      "healthStatus": "BROKEN",
+      "lastCheckedAt": "2026-09-17T02:54:06.124544+00:00",
+      "acceptedCount": 0,
+      "discoveredCount": 0
+    },
+    {
+      "sourceCode": "psc-gj",
+      "homepageUrl": "https://gpsc.gujarat.gov.in",
+      "recruitmentUrl": "https://gpsc.gujarat.gov.in",
+      "healthStatus": "HEALTHY",
+      "lastCheckedAt": "2026-09-04T13:19:23.912693+00:00",
+      "acceptedCount": 17,
+      "discoveredCount": 64
+    },
+    {
+      "sourceCode": "psc-hp",
+      "homepageUrl": "https://hppsc.hp.gov.in/hppsc",
+      "recruitmentUrl": "https://hppsc.hp.gov.in/hppsc",
+      "healthStatus": "DEGRADED",
+      "lastCheckedAt": "2026-09-17T02:54:52.466537+00:00",
+      "acceptedCount": 0,
+      "discoveredCount": 5
+    },
+    {
+      "sourceCode": "psc-hr",
+      "homepageUrl": "https://hpsc.gov.in/en-us/Recruitment",
+      "recruitmentUrl": "https://hpsc.gov.in/en-us/Recruitment",
+      "healthStatus": "HEALTHY",
+      "lastCheckedAt": "2026-09-04T13:19:06.785214+00:00",
+      "acceptedCount": 10,
+      "discoveredCount": 25
+    },
+    {
+      "sourceCode": "psc-jh",
+      "homepageUrl": "https://jpsc.gov.in",
+      "recruitmentUrl": "https://jpsc.gov.in",
+      "healthStatus": "HEALTHY",
+      "lastCheckedAt": "2026-09-04T13:20:44.433771+00:00",
+      "acceptedCount": 45,
+      "discoveredCount": 64
+    },
+    {
+      "sourceCode": "psc-jk",
+      "homepageUrl": "https://jkpsc.nic.in/Notifications.html",
+      "recruitmentUrl": "https://jkpsc.nic.in/Notifications.html",
+      "healthStatus": "BROKEN",
+      "lastCheckedAt": "2026-09-17T02:55:01.814363+00:00",
+      "acceptedCount": 0,
+      "discoveredCount": 0
+    },
+    {
+      "sourceCode": "psc-ka",
+      "homepageUrl": "https://kpsc.kar.nic.in/notifications.html",
+      "recruitmentUrl": "https://kpsc.kar.nic.in/notifications.html",
+      "healthStatus": "BROKEN",
+      "lastCheckedAt": "2026-09-17T02:56:27.310445+00:00",
+      "acceptedCount": 0,
+      "discoveredCount": 0
+    },
+    {
+      "sourceCode": "psc-kl",
+      "homepageUrl": "https://www.keralapsc.gov.in/notifications",
+      "recruitmentUrl": "https://www.keralapsc.gov.in/notifications",
+      "healthStatus": "DEGRADED",
+      "lastCheckedAt": "2026-09-17T02:56:04.790433+00:00",
+      "acceptedCount": 0,
+      "discoveredCount": 13
+    },
+    {
+      "sourceCode": "psc-mh",
+      "homepageUrl": "https://mpsc.gov.in/english/notices",
+      "recruitmentUrl": "https://mpsc.gov.in/english/notices",
+      "healthStatus": "BROKEN",
+      "lastCheckedAt": "2026-09-17T02:56:13.288388+00:00",
+      "acceptedCount": 0,
+      "discoveredCount": 0
+    },
+    {
+      "sourceCode": "psc-ml",
+      "homepageUrl": "https://megpsc.gov.in",
+      "recruitmentUrl": "https://megpsc.gov.in",
+      "healthStatus": "BROKEN",
+      "lastCheckedAt": "2026-09-17T02:59:10.564349+00:00",
+      "acceptedCount": 0,
+      "discoveredCount": 0
+    },
+    {
+      "sourceCode": "psc-mn",
+      "homepageUrl": "https://mpscmanipur.gov.in",
+      "recruitmentUrl": "https://mpscmanipur.gov.in",
+      "healthStatus": "HEALTHY",
+      "lastCheckedAt": "2026-09-17T02:59:09.350187+00:00",
+      "acceptedCount": 2,
+      "discoveredCount": 3
+    },
+    {
+      "sourceCode": "psc-mp",
+      "homepageUrl": "https://mppsc.mp.gov.in/news.aspx",
+      "recruitmentUrl": "https://mppsc.mp.gov.in/news.aspx",
+      "healthStatus": "DEGRADED",
+      "lastCheckedAt": "2026-09-17T02:56:10.742507+00:00",
+      "acceptedCount": 0,
+      "discoveredCount": 1
+    },
+    {
+      "sourceCode": "psc-mz",
+      "homepageUrl": "https://mpsc.mizoram.gov.in",
+      "recruitmentUrl": "https://mpsc.mizoram.gov.in",
+      "healthStatus": "BROKEN",
+      "lastCheckedAt": "2026-09-17T02:56:17.665448+00:00",
+      "acceptedCount": 0,
+      "discoveredCount": 0
+    },
+    {
+      "sourceCode": "psc-nl",
+      "homepageUrl": "https://npsc.co.in/recruitment.html",
+      "recruitmentUrl": "https://npsc.co.in/recruitment.html",
+      "healthStatus": "BROKEN",
+      "lastCheckedAt": "2026-09-17T02:56:14.235858+00:00",
+      "acceptedCount": 0,
+      "discoveredCount": 0
+    },
+    {
+      "sourceCode": "psc-od",
+      "homepageUrl": "https://opsc.gov.in",
+      "recruitmentUrl": "https://opsc.gov.in",
+      "healthStatus": "BROKEN",
+      "lastCheckedAt": "2026-09-17T02:56:25.539074+00:00",
+      "acceptedCount": 0,
+      "discoveredCount": 0
+    },
+    {
+      "sourceCode": "psc-pb",
+      "homepageUrl": "https://ppsc.gov.in/Notifications.aspx",
+      "recruitmentUrl": "https://ppsc.gov.in/Notifications.aspx",
+      "healthStatus": "HEALTHY",
+      "lastCheckedAt": "2026-09-04T13:19:26.766365+00:00",
+      "acceptedCount": 8,
+      "discoveredCount": 19
+    },
+    {
+      "sourceCode": "psc-rj",
+      "homepageUrl": "https://rpsc.rajasthan.gov.in/advertisements",
+      "recruitmentUrl": "https://rpsc.rajasthan.gov.in/advertisements",
+      "healthStatus": "DEGRADED",
+      "lastCheckedAt": "2026-09-04T13:19:32.925658+00:00",
+      "acceptedCount": 0,
+      "discoveredCount": 4
+    },
+    {
+      "sourceCode": "psc-sk",
+      "homepageUrl": "https://spscskm.gov.in",
+      "recruitmentUrl": "https://spscskm.gov.in",
+      "healthStatus": "BROKEN",
+      "lastCheckedAt": "2026-08-18T02:46:20.872751+00:00",
+      "acceptedCount": 0,
+      "discoveredCount": 0
+    },
+    {
+      "sourceCode": "psc-tg",
+      "homepageUrl": "https://tspsc.gov.in",
+      "recruitmentUrl": "https://tspsc.gov.in",
+      "healthStatus": "BROKEN",
+      "lastCheckedAt": "2026-09-17T02:57:05.998429+00:00",
+      "acceptedCount": 0,
+      "discoveredCount": 0
+    },
+    {
+      "sourceCode": "psc-tn",
+      "homepageUrl": "https://www.tnpsc.gov.in",
+      "recruitmentUrl": "https://www.tnpsc.gov.in",
+      "healthStatus": "DEGRADED",
+      "lastCheckedAt": "2026-09-04T13:19:27.986527+00:00",
+      "acceptedCount": 0,
+      "discoveredCount": 2
+    },
+    {
+      "sourceCode": "psc-tr",
+      "homepageUrl": "https://tpsc.tripura.gov.in",
+      "recruitmentUrl": "https://tpsc.tripura.gov.in",
+      "healthStatus": "HEALTHY",
+      "lastCheckedAt": "2026-09-04T13:20:28.037176+00:00",
+      "acceptedCount": 17,
+      "discoveredCount": 31
+    },
+    {
+      "sourceCode": "psc-uk",
+      "homepageUrl": "https://psc.uk.gov.in",
+      "recruitmentUrl": "https://psc.uk.gov.in",
+      "healthStatus": "HEALTHY",
+      "lastCheckedAt": "2026-09-04T13:20:06.764669+00:00",
+      "acceptedCount": 1,
+      "discoveredCount": 19
+    },
+    {
+      "sourceCode": "psc-up",
+      "homepageUrl": "https://uppsc.up.nic.in/Notifications.aspx",
+      "recruitmentUrl": "https://uppsc.up.nic.in/Notifications.aspx",
+      "healthStatus": "HEALTHY",
+      "lastCheckedAt": "2026-09-17T02:59:05.061517+00:00",
+      "acceptedCount": 2,
+      "discoveredCount": 9
+    },
+    {
+      "sourceCode": "psc-wb",
+      "homepageUrl": "https://wbpsc.gov.in",
+      "recruitmentUrl": "https://wbpsc.gov.in",
+      "healthStatus": "BROKEN",
+      "lastCheckedAt": "2026-09-11T07:46:06.410913+00:00",
+      "acceptedCount": 0,
+      "discoveredCount": 0
+    },
+    {
+      "sourceCode": "py-psc",
+      "homepageUrl": "https://py.gov.in/websites/PuducherryPublicServiceCommission",
+      "recruitmentUrl": "https://py.gov.in/websites/PuducherryPublicServiceCommission",
+      "healthStatus": "HEALTHY",
+      "lastCheckedAt": "2026-08-18T02:52:28.300198+00:00",
+      "acceptedCount": 5,
+      "discoveredCount": 35
+    },
+    {
+      "sourceCode": "py-rec",
+      "homepageUrl": "https://recruitment.py.gov.in",
+      "recruitmentUrl": "https://recruitment.py.gov.in",
+      "healthStatus": "HEALTHY",
+      "lastCheckedAt": "2026-09-04T13:21:56.898679+00:00",
+      "acceptedCount": 23,
+      "discoveredCount": 23
+    },
+    {
+      "sourceCode": "rbi",
+      "homepageUrl": "https://www.rbi.org.in/Scripts/Opportunities.aspx",
+      "recruitmentUrl": "https://www.rbi.org.in/Scripts/Opportunities.aspx",
+      "healthStatus": "DEGRADED",
+      "lastCheckedAt": "2026-09-17T02:41:50.510206+00:00",
+      "acceptedCount": 0,
+      "discoveredCount": 18
+    },
+    {
+      "sourceCode": "rrb-ajmer",
+      "homepageUrl": "https://www.rrbajmer.gov.in",
+      "recruitmentUrl": "https://www.rrbajmer.gov.in",
+      "healthStatus": "BROKEN",
+      "lastCheckedAt": "2026-09-17T02:45:09.849636+00:00",
+      "acceptedCount": 0,
+      "discoveredCount": 0
+    },
+    {
+      "sourceCode": "rrb-ald",
+      "homepageUrl": "https://www.rrbald.gov.in",
+      "recruitmentUrl": "https://www.rrbald.gov.in",
+      "healthStatus": "DEGRADED",
+      "lastCheckedAt": "2026-09-17T02:43:58.195377+00:00",
+      "acceptedCount": 0,
+      "discoveredCount": 1
+    },
+    {
+      "sourceCode": "rrb-bbs",
+      "homepageUrl": "https://www.rrbbbs.gov.in",
+      "recruitmentUrl": "https://www.rrbbbs.gov.in",
+      "healthStatus": "DEGRADED",
+      "lastCheckedAt": "2026-09-17T02:44:02.130265+00:00",
+      "acceptedCount": 0,
+      "discoveredCount": 8
+    },
+    {
+      "sourceCode": "rrb-bhopal",
+      "homepageUrl": "https://www.rrbbhopal.gov.in",
+      "recruitmentUrl": "https://www.rrbbhopal.gov.in",
+      "healthStatus": "BROKEN",
+      "lastCheckedAt": "2026-08-03T11:07:10.546409+00:00",
+      "acceptedCount": 0,
+      "discoveredCount": 0
+    },
+    {
+      "sourceCode": "rrb-bilaspur",
+      "homepageUrl": "https://www.rrbbilaspur.gov.in",
+      "recruitmentUrl": "https://www.rrbbilaspur.gov.in",
+      "healthStatus": "BROKEN",
+      "lastCheckedAt": "2026-09-16T07:53:03.032351+00:00",
+      "acceptedCount": 0,
+      "discoveredCount": 0
+    },
+    {
+      "sourceCode": "rrb-cdg",
+      "homepageUrl": "https://www.rrbcdg.gov.in",
+      "recruitmentUrl": "https://www.rrbcdg.gov.in",
+      "healthStatus": "BROKEN",
+      "lastCheckedAt": "2026-09-17T02:43:54.424534+00:00",
+      "acceptedCount": 0,
+      "discoveredCount": 0
+    },
+    {
+      "sourceCode": "rrb-gorakhpur",
+      "homepageUrl": "https://www.rrbgkp.gov.in",
+      "recruitmentUrl": "https://www.rrbgkp.gov.in",
+      "healthStatus": "BROKEN",
+      "lastCheckedAt": "2026-09-17T02:44:41.096242+00:00",
+      "acceptedCount": 0,
+      "discoveredCount": 0
+    },
+    {
+      "sourceCode": "rrb-guwahati",
+      "homepageUrl": "https://www.rrbguwahati.gov.in",
+      "recruitmentUrl": "https://www.rrbguwahati.gov.in",
+      "healthStatus": "BROKEN",
+      "lastCheckedAt": "2026-08-24T03:47:38.107235+00:00",
+      "acceptedCount": 0,
+      "discoveredCount": 0
+    },
+    {
+      "sourceCode": "rrb-kolkata",
+      "homepageUrl": "https://www.rrbkolkata.gov.in",
+      "recruitmentUrl": "https://www.rrbkolkata.gov.in",
+      "healthStatus": "BROKEN",
+      "lastCheckedAt": "2026-09-17T02:44:37.289463+00:00",
+      "acceptedCount": 0,
+      "discoveredCount": 0
+    },
+    {
+      "sourceCode": "rrb-malda",
+      "homepageUrl": "https://www.rrbmalda.gov.in",
+      "recruitmentUrl": "https://www.rrbmalda.gov.in",
+      "healthStatus": "BROKEN",
+      "lastCheckedAt": "2026-09-17T02:44:44.125919+00:00",
+      "acceptedCount": 0,
+      "discoveredCount": 0
+    },
+    {
+      "sourceCode": "rrb-mumbai",
+      "homepageUrl": "https://rrbmumbai.gov.in",
+      "recruitmentUrl": "https://rrbmumbai.gov.in",
+      "healthStatus": "BROKEN",
+      "lastCheckedAt": "2026-09-17T02:44:01.413659+00:00",
+      "acceptedCount": 0,
+      "discoveredCount": 0
+    },
+    {
+      "sourceCode": "rrb-patna",
+      "homepageUrl": "https://www.rrbpatna.gov.in",
+      "recruitmentUrl": "https://www.rrbpatna.gov.in",
+      "healthStatus": "BROKEN",
+      "lastCheckedAt": "2026-09-17T02:44:46.998032+00:00",
+      "acceptedCount": 0,
+      "discoveredCount": 0
+    },
+    {
+      "sourceCode": "rrb-ranchi",
+      "homepageUrl": "https://www.rrbranchi.gov.in",
+      "recruitmentUrl": "https://www.rrbranchi.gov.in",
+      "healthStatus": "HEALTHY",
+      "lastCheckedAt": "2026-09-17T02:45:33.061037+00:00",
+      "acceptedCount": 1,
+      "discoveredCount": 1
+    },
+    {
+      "sourceCode": "rrb-rss",
+      "homepageUrl": "https://www.rrbcdg.gov.in/",
+      "recruitmentUrl": "https://www.rrbcdg.gov.in/",
+      "healthStatus": "BROKEN",
+      "lastCheckedAt": "2026-08-03T11:06:52.297517+00:00",
+      "acceptedCount": 0,
+      "discoveredCount": 0
+    },
+    {
+      "sourceCode": "rrb-sec",
+      "homepageUrl": "https://www.rrbsecunderabad.nic.in",
+      "recruitmentUrl": "https://www.rrbsecunderabad.nic.in",
+      "healthStatus": "BROKEN",
+      "lastCheckedAt": "2026-08-24T03:48:43.782804+00:00",
+      "acceptedCount": 0,
+      "discoveredCount": 0
+    },
+    {
+      "sourceCode": "rrb-siliguri",
+      "homepageUrl": "https://www.rrbsiliguri.gov.in",
+      "recruitmentUrl": "https://www.rrbsiliguri.gov.in",
+      "healthStatus": "BROKEN",
+      "lastCheckedAt": "2026-09-17T02:44:50.709231+00:00",
+      "acceptedCount": 0,
+      "discoveredCount": 0
+    },
+    {
+      "sourceCode": "rrb-tvm",
+      "homepageUrl": "https://www.rrbthiruvananthapuram.gov.in",
+      "recruitmentUrl": "https://www.rrbthiruvananthapuram.gov.in",
+      "healthStatus": "HEALTHY",
+      "lastCheckedAt": "2026-09-13T07:40:11.357881+00:00",
+      "acceptedCount": 1,
+      "discoveredCount": 1
+    },
+    {
+      "sourceCode": "rrcb",
+      "homepageUrl": "https://www.rrcb.gov.in",
+      "recruitmentUrl": "https://www.rrcb.gov.in",
+      "healthStatus": "BROKEN",
+      "lastCheckedAt": "2026-08-03T11:07:07.946306+00:00",
+      "acceptedCount": 0,
+      "discoveredCount": 0
+    },
+    {
+      "sourceCode": "sail",
+      "homepageUrl": "https://sail.co.in/en/career/career-opportunities",
+      "recruitmentUrl": "https://sail.co.in/en/career/career-opportunities",
+      "healthStatus": "HEALTHY",
+      "lastCheckedAt": "2026-09-15T08:07:24.554010+00:00",
+      "acceptedCount": 13,
+      "discoveredCount": 19
+    },
+    {
+      "sourceCode": "sbi",
+      "homepageUrl": "https://sbi.bank.in/web/careers/current-openings",
+      "recruitmentUrl": "https://sbi.bank.in/web/careers/current-openings",
+      "healthStatus": "HEALTHY",
+      "lastCheckedAt": "2026-09-17T02:49:32.859074+00:00",
+      "acceptedCount": 2,
+      "discoveredCount": 36
+    },
+    {
+      "sourceCode": "sebi",
+      "homepageUrl": "https://www.sebi.gov.in/sebiweb/home/HomeAction.do",
+      "recruitmentUrl": "https://www.sebi.gov.in/sebiweb/home/HomeAction.do",
+      "healthStatus": "DEGRADED",
+      "lastCheckedAt": "2026-09-17T02:41:59.229878+00:00",
+      "acceptedCount": 0,
+      "discoveredCount": 47
+    },
+    {
+      "sourceCode": "ss-amaravathi",
+      "homepageUrl": "https://www.sainikschoolamaravathinagar.edu.in/careers.php",
+      "recruitmentUrl": "https://www.sainikschoolamaravathinagar.edu.in/careers.php",
+      "healthStatus": "DEGRADED",
+      "lastCheckedAt": "2026-09-17T03:10:52.201629+00:00",
+      "acceptedCount": 0,
+      "discoveredCount": 20
+    },
+    {
+      "sourceCode": "ss-bhubaneswar",
+      "homepageUrl": "https://www.sainikschoolbhubaneswar.edu.in",
+      "recruitmentUrl": "https://www.sainikschoolbhubaneswar.edu.in",
+      "healthStatus": "HEALTHY",
+      "lastCheckedAt": "2026-09-17T03:11:08.525361+00:00",
+      "acceptedCount": 1,
+      "discoveredCount": 13
+    },
+    {
+      "sourceCode": "ss-goalpara",
+      "homepageUrl": "https://sainikschoolgoalpara.org",
+      "recruitmentUrl": "https://sainikschoolgoalpara.org",
+      "healthStatus": "DEGRADED",
+      "lastCheckedAt": "2026-09-17T03:10:44.812884+00:00",
+      "acceptedCount": 0,
+      "discoveredCount": 28
+    },
+    {
+      "sourceCode": "ss-gopalganj",
+      "homepageUrl": "https://www.ssgopalganj.in/Documents/vacancy",
+      "recruitmentUrl": "https://www.ssgopalganj.in/Documents/vacancy",
+      "healthStatus": "BROKEN",
+      "lastCheckedAt": "2026-09-17T03:11:12.483602+00:00",
+      "acceptedCount": 0,
+      "discoveredCount": 0
+    },
+    {
+      "sourceCode": "ss-jhansi",
+      "homepageUrl": "https://www.sainikschooljhansi.com/files/recruitments",
+      "recruitmentUrl": "https://www.sainikschooljhansi.com/files/recruitments",
+      "healthStatus": "HEALTHY",
+      "lastCheckedAt": "2026-09-17T03:11:03.597220+00:00",
+      "acceptedCount": 3,
+      "discoveredCount": 12
+    },
+    {
+      "sourceCode": "ssb",
+      "homepageUrl": "https://ssbrectt.gov.in",
+      "recruitmentUrl": "https://ssbrectt.gov.in",
+      "healthStatus": "BROKEN",
+      "lastCheckedAt": "2026-09-17T02:46:54.169877+00:00",
+      "acceptedCount": 0,
+      "discoveredCount": 0
+    },
+    {
+      "sourceCode": "ssb-gj",
+      "homepageUrl": "https://gsssb.gujarat.gov.in",
+      "recruitmentUrl": "https://gsssb.gujarat.gov.in",
+      "healthStatus": "DEGRADED",
+      "lastCheckedAt": "2026-09-04T13:20:48.085351+00:00",
+      "acceptedCount": 0,
+      "discoveredCount": 3
+    },
+    {
+      "sourceCode": "ssb-hr",
+      "homepageUrl": "https://hssc.gov.in",
+      "recruitmentUrl": "https://hssc.gov.in",
+      "healthStatus": "HEALTHY",
+      "lastCheckedAt": "2026-09-17T03:01:22.075832+00:00",
+      "acceptedCount": 16,
+      "discoveredCount": 25
+    },
+    {
+      "sourceCode": "ssb-mh",
+      "homepageUrl": "https://mahapariksha.gov.in",
+      "recruitmentUrl": "https://mahapariksha.gov.in",
+      "healthStatus": "BROKEN",
+      "lastCheckedAt": "2026-09-17T02:59:14.966702+00:00",
+      "acceptedCount": 0,
+      "discoveredCount": 0
+    },
+    {
+      "sourceCode": "ssb-mp",
+      "homepageUrl": "https://esb.mp.gov.in",
+      "recruitmentUrl": "https://esb.mp.gov.in",
+      "healthStatus": "BROKEN",
+      "lastCheckedAt": "2026-09-17T03:00:35.714793+00:00",
+      "acceptedCount": 0,
+      "discoveredCount": 0
+    },
+    {
+      "sourceCode": "ssb-rj",
+      "homepageUrl": "https://rsmssb.rajasthan.gov.in",
+      "recruitmentUrl": "https://rsmssb.rajasthan.gov.in",
+      "healthStatus": "DEGRADED",
+      "lastCheckedAt": "2026-09-17T02:59:55.713442+00:00",
+      "acceptedCount": 0,
+      "discoveredCount": 1
+    },
+    {
+      "sourceCode": "ssb-tn",
+      "homepageUrl": "https://trb.tn.gov.in",
+      "recruitmentUrl": "https://trb.tn.gov.in",
+      "healthStatus": "DEGRADED",
+      "lastCheckedAt": "2026-09-04T13:20:33.957083+00:00",
+      "acceptedCount": 0,
+      "discoveredCount": 9
+    },
+    {
+      "sourceCode": "ssb-up",
+      "homepageUrl": "https://upsssc.gov.in/AllNotifications.aspx",
+      "recruitmentUrl": "https://upsssc.gov.in/AllNotifications.aspx",
+      "healthStatus": "HEALTHY",
+      "lastCheckedAt": "2026-09-04T13:20:34.384058+00:00",
+      "acceptedCount": 1,
+      "discoveredCount": 47
+    },
+    {
+      "sourceCode": "ssc",
+      "homepageUrl": "https://ssc.gov.in/home/notice-board",
+      "recruitmentUrl": "https://ssc.gov.in/home/notice-board",
+      "healthStatus": "HEALTHY",
+      "lastCheckedAt": "2026-09-17T02:42:42.629558+00:00",
+      "acceptedCount": 3,
+      "discoveredCount": 3
+    },
+    {
+      "sourceCode": "ssc-rss",
+      "homepageUrl": "https://ssc.gov.in/home/notice-board",
+      "recruitmentUrl": "https://ssc.gov.in/home/notice-board",
+      "healthStatus": "HEALTHY",
+      "lastCheckedAt": "2026-08-03T11:06:50.272068+00:00",
+      "acceptedCount": 0,
+      "discoveredCount": 0
+    },
+    {
+      "sourceCode": "uco",
+      "homepageUrl": "https://www.uco.bank.in/job-opportunities",
+      "recruitmentUrl": "https://www.uco.bank.in/job-opportunities",
+      "healthStatus": "HEALTHY",
+      "lastCheckedAt": "2026-09-04T13:18:56.451700+00:00",
+      "acceptedCount": 16,
+      "discoveredCount": 50
+    },
+    {
+      "sourceCode": "ugc",
+      "homepageUrl": "https://www.ugc.gov.in/Tenders/Jobs",
+      "recruitmentUrl": "https://www.ugc.gov.in/Tenders/Jobs",
+      "healthStatus": "DEGRADED",
+      "lastCheckedAt": "2026-09-17T02:47:59.531477+00:00",
+      "acceptedCount": 0,
+      "discoveredCount": 20
+    },
+    {
+      "sourceCode": "upsc",
+      "homepageUrl": "https://upsc.gov.in/whats-new",
+      "recruitmentUrl": "https://upsc.gov.in/whats-new",
+      "healthStatus": "HEALTHY",
+      "lastCheckedAt": "2026-09-04T13:13:45.014471+00:00",
+      "acceptedCount": 3,
+      "discoveredCount": 43
+    },
+    {
+      "sourceCode": "upsc-rss",
+      "homepageUrl": "https://upsc.gov.in/whats-new",
+      "recruitmentUrl": "https://upsc.gov.in/whats-new",
+      "healthStatus": "BROKEN",
+      "lastCheckedAt": "2026-08-03T11:06:44.335721+00:00",
+      "acceptedCount": 0,
+      "discoveredCount": 0
+    },
+    {
+      "sourceCode": "wii",
+      "homepageUrl": "https://www.wii.gov.in/recruitments",
+      "recruitmentUrl": "https://www.wii.gov.in/recruitments",
+      "healthStatus": "HEALTHY",
+      "lastCheckedAt": "2026-09-01T08:02:41.874438+00:00",
+      "acceptedCount": 16,
+      "discoveredCount": 50
+    }
+  ]
+}

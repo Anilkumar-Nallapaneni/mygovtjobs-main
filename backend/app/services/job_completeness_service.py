@@ -4,6 +4,8 @@ from __future__ import annotations
 
 from typing import Any
 
+from app.utils.public_job_policy import public_min_completeness
+
 REQUIRED_FIELDS = (
     "title",
     "organisation",
@@ -21,7 +23,7 @@ IMPORTANT_FIELDS = (
     "how_to_apply",
 )
 
-PUBLISH_MIN_SCORE = 70
+PUBLISH_MIN_SCORE = public_min_completeness()
 PARTIAL_MIN_SCORE = 60
 
 

@@ -5,9 +5,36 @@ from app.middleware.supabase_auth import get_current_user_id, get_optional_curre
 from app.schemas.alert import AlertSubscribeRequest, AlertUnsubscribeRequest
 from app.services.alert_service import AlertService, AlertSubscriptionError
 from app.services.turnstile_service import verify_turnstile
+from app.config import get_settings
 
 router = APIRouter()
 service = AlertService()
+
+
+@router.get("/channels")
+async def alert_channels():
+    """Public channel configuration + last site-wide delivery (no PII)."""
+    settings = get_settings()
+    last_sent = None
+    try:
+        from sqlalchemy import func, select
+
+        from app.database.session import SessionLocal
+        from app.models.alert import AlertDelivery
+
+        async with SessionLocal() as session:
+            last_sent = (await session.execute(select(func.max(AlertDelivery.sent_at)))).scalar()
+    except Exception:
+        last_sent = None
+    return {
+        "email": bool(settings.resend_api_key),
+        "telegram": bool(settings.telegram_bot_token),
+        "whatsapp": bool(
+            settings.twilio_account_sid and settings.twilio_auth_token and settings.twilio_whatsapp_from
+        ),
+        "push": bool(settings.push_webhook_url),
+        "last_site_delivery_at": last_sent.isoformat() if last_sent else None,
+    }
 
 
 @router.post("/subscribe")

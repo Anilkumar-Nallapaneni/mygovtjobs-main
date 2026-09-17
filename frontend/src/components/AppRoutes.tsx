@@ -1,9 +1,43 @@
-import { lazy, Suspense, type ComponentProps, type ReactNode } from "react";
-import { Route, Routes } from "react-router-dom";
+import { type ReactNode } from "react";
+import { Navigate, Route, Routes } from "react-router-dom";
 import AdminRouteGuard from "@/components/AdminRouteGuard";
 import RouteErrorBoundary from "@/components/RouteErrorBoundary";
-import RoutePageFallback from "@/components/RoutePageFallback";
-import type StaticPage from "@/pages/StaticPage";
+import {
+  AboutPage,
+  AccountPage,
+  AdminDashboardPage,
+  AdmissionHubPage,
+  AlertsPage,
+  BookmarksPage,
+  BrowseJobsLandingPage,
+  CategoriesIndexPage,
+  ContactPage,
+  DesignationLandingPage,
+  DesignationsIndexPage,
+  DisclaimerPage,
+  ExamCalendarPage,
+  ExamLandingPage,
+  ExamPrepPage,
+  ExamsIndexPage,
+  ExploreHubPage,
+  FaqPage,
+  HowToApplyPage,
+  JobDetailPage,
+  LatestNotificationsPage,
+  LazyRoute,
+  NotFoundPage,
+  OrganizationsIndexPage,
+  PrivacyPage,
+  ProfessionsIndexPage,
+  QualificationsIndexPage,
+  ResultsHubPage,
+  ResultsTopicsIndexPage,
+  ScholarshipsHubPage,
+  SitemapPage,
+  StatesIndexPage,
+  TermsPage,
+  YojanaHubPage,
+} from "@/components/appRoutePages";
 import {
   ALL_INDIA_JOBS_PATH,
   BOARDS_INDEX_PATH,
@@ -24,66 +58,6 @@ import {
 import type { JobRecord } from "@/types/job";
 import type { FooterLinkTarget } from "@/hooks/browseStateTypes";
 import type { CatalogStats } from "@/utils/liveJobsPipeline";
-
-type StaticLegalContent = Omit<ComponentProps<typeof StaticPage>, "onFooterLink">;
-
-function lazyStaticLegalPage(contentImporter: () => Promise<object>, pageKey: string) {
-  return lazy(() =>
-    Promise.all([import("@/pages/StaticPage"), contentImporter()]).then(
-      ([{ default: StaticPageComponent }, content]) => {
-        const page = (content as Record<string, StaticLegalContent>)[pageKey];
-        return {
-          default: function StaticLegalPage({
-            onFooterLink,
-          }: {
-            onFooterLink?: (target: FooterLinkTarget) => void;
-          }) {
-            return <StaticPageComponent {...page} onFooterLink={onFooterLink} />;
-          },
-        };
-      }
-    )
-  );
-}
-
-const JobDetailPage = lazy(() => import("@/pages/JobDetailPage"));
-const LatestNotificationsPage = lazy(() => import("@/pages/LatestNotificationsPage"));
-const QualificationsIndexPage = lazy(() => import("@/pages/QualificationsIndexPage"));
-const ProfessionsIndexPage = lazy(() => import("@/pages/ProfessionsIndexPage"));
-const OrganizationsIndexPage = lazy(() => import("@/pages/OrganizationsIndexPage"));
-const ResultsTopicsIndexPage = lazy(() => import("@/pages/ResultsTopicsIndexPage"));
-const StatesIndexPage = lazy(() => import("@/pages/StatesIndexPage"));
-const CategoriesIndexPage = lazy(() => import("@/pages/CategoriesIndexPage"));
-const ExploreHubPage = lazy(() => import("@/pages/ExploreHubPage"));
-const AlertsPage = lazy(() => import("@/pages/AlertsPage"));
-const ExamsIndexPage = lazy(() => import("@/pages/ExamsIndexPage"));
-const ExamLandingPage = lazy(() => import("@/pages/ExamLandingPage"));
-const BrowseJobsLandingPage = lazy(() => import("@/pages/BrowseJobsLandingPage"));
-const ExamCalendarPage = lazy(() => import("@/pages/ExamCalendarPage"));
-const FaqPage = lazy(() => import("@/pages/FaqPage"));
-const ContactPage = lazy(() => import("@/pages/ContactPage"));
-const SitemapPage = lazy(() => import("@/pages/SitemapPage"));
-const AccountPage = lazy(() => import("@/pages/AccountPage"));
-const BookmarksPage = lazy(() => import("@/pages/BookmarksPage"));
-const AdmissionHubPage = lazy(() => import("@/pages/AdmissionHubPage"));
-const ScholarshipsHubPage = lazy(() => import("@/pages/ScholarshipsHubPage"));
-const YojanaHubPage = lazy(() => import("@/pages/YojanaHubPage"));
-const ResultsHubPage = lazy(() => import("@/pages/ResultsHubPage"));
-const DesignationLandingPage = lazy(() => import("@/pages/DesignationLandingPage"));
-const DesignationsIndexPage = lazy(() => import("@/pages/DesignationsIndexPage"));
-const AdminDashboardPage = lazy(() => import("@/pages/AdminDashboardPage"));
-const NotFoundPage = lazy(() => import("@/pages/NotFoundPage"));
-
-const AboutPage = lazyStaticLegalPage(() => import("@/pages/legalContent"), "ABOUT_PAGE");
-const PrivacyPage = lazyStaticLegalPage(() => import("@/pages/legalContent"), "PRIVACY_PAGE");
-const TermsPage = lazyStaticLegalPage(() => import("@/pages/legalContent"), "TERMS_PAGE");
-const DisclaimerPage = lazyStaticLegalPage(() => import("@/pages/legalContent"), "DISCLAIMER_PAGE");
-const HowToApplyPage = lazyStaticLegalPage(() => import("@/pages/guideContent"), "HOW_TO_APPLY_PAGE");
-const ExamPrepPage = lazyStaticLegalPage(() => import("@/pages/guideContent"), "EXAM_PREP_PAGE");
-
-function LazyRoute({ children }: { children: ReactNode }) {
-  return <Suspense fallback={<RoutePageFallback />}>{children}</Suspense>;
-}
 
 type AppRoutesProps = {
   homePageElement: ReactNode;
@@ -281,6 +255,7 @@ export default function AppRoutes({
           <LazyRoute>
             <ResultsHubPage
               eventType="admit_card"
+              topicKey="admit-card"
               pageTitle="Admit Cards & Hall Tickets"
               lead="Download official admit cards from all major recruitment boards."
               onFooterLink={onFooterLink}
@@ -294,6 +269,7 @@ export default function AppRoutes({
           <LazyRoute>
             <ResultsHubPage
               eventType="answer_key"
+              topicKey="answer-key"
               pageTitle="Answer Keys"
               lead="Official answer keys released after exam."
               onFooterLink={onFooterLink}
@@ -308,6 +284,7 @@ export default function AppRoutes({
           <LazyRoute>
             <ResultsHubPage
               eventType="result"
+              topicKey="sarkari-result"
               pageTitle="Latest Government Job Results"
               lead="Auto-detected results across UPSC, SSC, PSC, banks, railways, PSU and state departments."
               onFooterLink={onFooterLink}
@@ -480,6 +457,7 @@ export default function AppRoutes({
           <LazyRoute>
             <ResultsHubPage
               eventType="result"
+              topicKey="sarkari-result"
               pageTitle="Latest Government Job Results"
               lead="Auto-detected results across UPSC, SSC, PSC, banks, railways, PSU and state departments."
               onFooterLink={onFooterLink}
@@ -493,6 +471,7 @@ export default function AppRoutes({
           <LazyRoute>
             <ResultsHubPage
               eventType="admit_card"
+              topicKey="admit-card"
               pageTitle="Admit Cards & Hall Tickets"
               lead="Download official admit cards from all major recruitment boards."
               onFooterLink={onFooterLink}
@@ -506,6 +485,7 @@ export default function AppRoutes({
           <LazyRoute>
             <ResultsHubPage
               eventType="answer_key"
+              topicKey="answer-key"
               pageTitle="Answer Keys"
               lead="Official answer keys released after exam."
               onFooterLink={onFooterLink}
@@ -513,19 +493,7 @@ export default function AppRoutes({
           </LazyRoute>
         }
       />
-      <Route
-        path="/upcoming-exams"
-        element={
-          <LazyRoute>
-            <ResultsHubPage
-              eventType="exam_date"
-              pageTitle="Upcoming Exam Dates"
-              lead="Announced exam dates across active recruitment cycles."
-              onFooterLink={onFooterLink}
-            />
-          </LazyRoute>
-        }
-      />
+      <Route path="/upcoming-exams" element={<Navigate to={EXAM_CALENDAR_PATH} replace />} />
       <Route
         path="/designations"
         element={

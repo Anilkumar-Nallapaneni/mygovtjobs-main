@@ -117,6 +117,23 @@ class JobPersistService:
         settings = get_settings()
         apply_url = strip_postgres_control_chars(normalized.get("apply_url")) or None
         last_date = _parse_date(normalized.get("last_date"))
+        if last_date is None:
+            from app.parsers.pdf_dates import extract_dates_from_text
+
+            detail_blob = normalized.get("detail") if isinstance(normalized.get("detail"), dict) else {}
+            date_blob = " ".join(
+                part
+                for part in (
+                    title,
+                    str(normalized.get("qualification") or ""),
+                    str(detail_blob.get("summary") or ""),
+                    str(detail_blob.get("how_to_apply") or ""),
+                    str(detail_blob.get("important_dates") or ""),
+                )
+                if part
+            )
+            extracted = extract_dates_from_text(date_blob)
+            last_date = _parse_date(extracted.get("last_date"))
         digest = normalized.get("content_hash") or content_hash(
             title=title, apply_url=apply_url, last_date=str(last_date or "")
         )

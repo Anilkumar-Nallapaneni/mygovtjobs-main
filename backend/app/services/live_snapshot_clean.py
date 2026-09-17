@@ -9,11 +9,20 @@ import logging
 
 from app.services.noise_filter import clean_job_title, contains_html_markup, sanitize_source_text_fields
 from app.services.publish_gate import can_publish_job, india_today
+from app.utils.public_job_policy import (
+    public_document_type,
+    public_min_completeness,
+    public_min_confidence,
+    public_verification_statuses,
+)
 
 logger = logging.getLogger(__name__)
 
 _ISO_DATE_RE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
-_PUBLIC_VERIFICATION = frozenset({"VERIFIED", "PARTIALLY_VERIFIED"})
+_PUBLIC_VERIFICATION = frozenset(public_verification_statuses())
+_PUBLIC_DOCUMENT_TYPE = public_document_type()
+_MIN_COMPLETENESS = public_min_completeness()
+_MIN_CONFIDENCE = public_min_confidence()
 
 
 def _has_http_source(row: dict[str, Any]) -> bool:
@@ -51,17 +60,17 @@ def prepare_live_snapshot_row(
         return None
     if str(row.get("status") or "").lower() != "live":
         return None
-    if str(row.get("document_type") or "").upper() != "RECRUITMENT":
+    if str(row.get("document_type") or "").upper() != _PUBLIC_DOCUMENT_TYPE:
         return None
     if str(row.get("verification_status") or "").upper() not in _PUBLIC_VERIFICATION:
         return None
     try:
-        if int(row.get("completeness_score") or 0) < 70:
+        if int(row.get("completeness_score") or 0) < _MIN_COMPLETENESS:
             return None
     except (TypeError, ValueError):
         return None
     try:
-        if float(row.get("publication_confidence") or 0) < 90:
+        if float(row.get("publication_confidence") or 0) < _MIN_CONFIDENCE:
             return None
     except (TypeError, ValueError):
         return None

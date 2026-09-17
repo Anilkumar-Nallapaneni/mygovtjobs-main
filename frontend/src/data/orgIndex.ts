@@ -2,7 +2,9 @@ import type { OrgIndexEntry } from '@/utils/orgSlug'
 
 import rawIndex from '@/data/org-index.json'
 
-export const ORG_INDEX: OrgIndexEntry[] = Array.isArray(rawIndex) ? rawIndex : []
+export const ORG_INDEX: OrgIndexEntry[] = Array.isArray(rawIndex)
+  ? (rawIndex as OrgIndexEntry[])
+  : []
 
 export function getOrgBySlug(slug: string | null | undefined): OrgIndexEntry | null {
   if (!slug) return null

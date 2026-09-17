@@ -28,7 +28,7 @@ export default function AdmissionHubPage({ onFooterLink }: Props) {
       <h1>{t('admission.title', { defaultValue: 'Entrance Exams & Admissions' })}</h1>
       <p className="hub-page__lead">
         {t('admission.lead', {
-          defaultValue: 'Official links to India\'s major entrance exams: engineering, medical, law, management, design, and university admissions.',
+          defaultValue: 'Official entrance-exam links only. Admissions are a resource directory until a live applications pipeline exists.',
         })}
       </p>
 

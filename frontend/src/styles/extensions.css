@@ -144,7 +144,16 @@
 
 .hub-page__lead {
   color: var(--ds-muted);
-  margin-bottom: 24px;
+  margin-bottom: 16px;
+}
+
+.hub-page__events {
+  margin-top: 32px;
+}
+
+.hub-page__events-title {
+  font-size: 1.1rem;
+  margin: 0 0 12px;
 }
 
 .hub-grid {
@@ -207,4 +216,69 @@
 
 .exam-events-table tr:last-child td {
   border-bottom: none;
+}
+
+.org-source-panel {
+  margin: 0 16px 20px;
+  padding: 14px 16px;
+  border: 1px solid var(--ds-border);
+  border-radius: 12px;
+  background: var(--ds-bg1);
+  display: grid;
+  gap: 8px;
+}
+
+.org-source-panel__row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 8px 16px;
+  font-size: 13px;
+}
+
+.org-source-panel__label {
+  color: var(--ds-muted);
+}
+
+.org-source-panel__link {
+  color: var(--ds-accent);
+  font-weight: 600;
+}
+
+.browse-index-card__domain {
+  margin: 4px 0 0;
+  font-size: 12px;
+  color: var(--ds-mutedHi);
+}
+
+.org-source-health {
+  display: inline-block;
+  margin: 4px 0 0;
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: capitalize;
+  letter-spacing: 0.02em;
+}
+
+.org-source-health--healthy {
+  color: var(--ds-text);
+  background: color-mix(in srgb, #1b7f3a 16%, transparent);
+}
+
+.org-source-health--degraded,
+.org-source-health--stale {
+  color: var(--ds-text);
+  background: color-mix(in srgb, var(--ds-saffron) 18%, transparent);
+}
+
+.org-source-health--broken {
+  color: var(--ds-text);
+  background: color-mix(in srgb, #b42318 16%, transparent);
+}
+
+.org-source-health--unknown {
+  color: var(--ds-muted);
+  background: var(--ds-bg0);
 }

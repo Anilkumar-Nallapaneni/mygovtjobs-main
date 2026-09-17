@@ -49,6 +49,14 @@ export default function OrganizationsIndexPage({ onFooterLink }: OrganizationsIn
                 defaultValue: '{{count}} notifications · {{vacancies}} posts',
               })}
             </p>
+            {org.officialDomain ? (
+              <p className="browse-index-card__domain">{org.officialDomain}</p>
+            ) : null}
+            {org.sourceHealth ? (
+              <p className={`org-source-health org-source-health--${org.sourceHealth}`}>
+                {org.sourceHealth}
+              </p>
+            ) : null}
           </Link>
         ))}
       </div>

@@ -117,7 +117,7 @@ export const ABOUT_PAGE = {
     {
       heading: "What is Live Govt Jobs?",
       paragraphs: [
-        "A free portal for live government job notifications from official sources across India.",
+        "Live Govt Jobs is a verified official-source catalog. We publish recruitment notifications only when they pass the official-host and completeness gate. We do not claim to be a comprehensive national board until that catalog is complete.",
       ],
     },
     {

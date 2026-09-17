@@ -18,72 +18,15 @@ import {
   type NotificationRow,
 } from "@/utils/latestNotificationsTable";
 import { filterOfficialItems, parseHeadlineStatus } from "@/utils/officialFilters";
-import { LATEST_NOTIFICATIONS_PATH, RESULTS_TOPICS_INDEX_PATH } from "@/utils/browseRoutes";
+import { RESULTS_TOPICS_INDEX_PATH } from "@/utils/browseRoutes";
+import { FEED_ROWS, LATEST_TAB, type HomeExamTabId } from "@/utils/homeExamUpdatesConfig";
 import { jobDetailPath } from "@/utils/jobRoutes";
 import type { JobRecord } from "@/types/job";
 
 const ROW_LIMIT = 12;
 const FEED_TAB_LIMIT = 16;
 
-const LATEST_TAB = {
-  id: "latest",
-  tabTitleKey: "home.examRows.tabLatest",
-  tabTitleDefault: "Latest",
-  panelTitleKey: "sidebar.latestJobs",
-  panelTitleDefault: "Latest Job Notifications",
-  viewAllPath: LATEST_NOTIFICATIONS_PATH,
-  trackId: "latest-notifications",
-} as const;
-
-const FEED_ROWS = [
-  {
-    id: "admit-card",
-    topicKey: "admit-card",
-    archiveTopic: "admit-cards",
-    tabTitleKey: "sidebar.admitCard",
-    tabTitleDefault: "Admit Card",
-    panelTitleKey: "sidebar.admitCard",
-    panelTitleDefault: "Admit Cards",
-    viewAllPath: "/results/admit-card",
-    trackId: "admit-card",
-  },
-  {
-    id: "sarkari-result",
-    topicKey: "sarkari-result",
-    archiveTopic: "results",
-    tabTitleKey: "sidebar.sarkariResult",
-    tabTitleDefault: "Government Result",
-    panelTitleKey: "sidebar.sarkariResult",
-    panelTitleDefault: "Government Results",
-    viewAllPath: "/results",
-    trackId: "sarkari-result",
-  },
-  {
-    id: "answer-key",
-    topicKey: "answer-key",
-    archiveTopic: "answer-keys",
-    tabTitleKey: "sidebar.answerKey",
-    tabTitleDefault: "Answer Key",
-    panelTitleKey: "sidebar.answerKey",
-    panelTitleDefault: "Answer Keys",
-    viewAllPath: "/results/answer-key",
-    trackId: "answer-key",
-  },
-  {
-    id: "syllabus",
-    topicKey: "syllabus",
-    archiveTopic: "syllabus",
-    tabTitleKey: "sidebar.syllabus",
-    tabTitleDefault: "Syllabus",
-    panelTitleKey: "sidebar.syllabus",
-    panelTitleDefault: "Syllabus",
-    viewAllPath: "/results/syllabus",
-    trackId: "syllabus",
-  },
-] as const;
-
-type FeedRowId = (typeof FEED_ROWS)[number]["id"];
-type TabId = typeof LATEST_TAB.id | FeedRowId;
+type TabId = HomeExamTabId;
 
 type DiscoveryChip = {
   key: string;

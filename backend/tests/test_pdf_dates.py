@@ -147,3 +147,37 @@ def test_validate_rejects_ancient_published():
 
     errs = validate_extracted_dates(date(1995, 6, 27), date(2027, 3, 31), today=date(2026, 8, 4))
     assert any("implausibly old" in e for e in errs)
+
+
+def test_extract_ssc_registration_closing_date():
+    text = """
+    Combined Higher Secondary Level Examination.
+    Closing Date for Submission of Online Application: 15-10-2026
+    """
+    out = extract_dates_from_text(text)
+    assert out["last_date"] == "2026-10-15"
+
+
+def test_resolve_state_codes_from_dept_hint():
+    from app.utils.state_resolve import resolve_state_codes
+
+    assert resolve_state_codes(dept="Madhya Pradesh PSC (MPPSC)") == ["mp"]
+    assert resolve_state_codes(title="TNUSRB Constable Recruitment", dept="Tnusrb Tn") == ["tn"]
+    assert resolve_state_codes(dept="Staff Selection Commission (SSC)") == []
+    assert resolve_state_codes(dept="JKPSC Combined Services") == ["jk"]
+    assert resolve_state_codes(dept="NCRTC Recruitment") == ["dl"]
+    assert resolve_state_codes(title="Andaman & Nicobar Police") == ["an"]
+
+
+def test_public_job_policy_matches_shared_json():
+    from app.utils.public_job_policy import (
+        public_document_type,
+        public_min_completeness,
+        public_min_confidence,
+        public_verification_statuses,
+    )
+
+    assert public_document_type() == "RECRUITMENT"
+    assert public_min_completeness() == 70
+    assert public_min_confidence() == 90
+    assert "VERIFIED" in public_verification_statuses()

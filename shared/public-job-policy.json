@@ -1,0 +1,6 @@
+{
+  "documentType": "RECRUITMENT",
+  "verificationStatuses": ["VERIFIED", "PARTIALLY_VERIFIED"],
+  "minimumCompleteness": 70,
+  "minimumConfidence": 90
+}
