@@ -127,8 +127,8 @@
     "altUrls": ["https://www.sail.co.in/en", "https://sail.co.in/en/career/career-opportunities"]
   },
   "rrb-ald": {
-    "latestUrl": "https://www.rrbald.gov.in/rrbald/",
-    "altUrls": ["https://rrbald.gov.in/"]
+    "latestUrl": "https://rrb.indianrailways.gov.in/prayagraj",
+    "altUrls": ["https://rrb.indianrailways.gov.in/"]
   },
   "rrcb": {
     "latestUrl": "https://www.rrcb.gov.in/",
@@ -152,8 +152,9 @@
     "altUrls": ["https://apsc.nic.in/notifications", "https://apsc.nic.in/"]
   },
   "psc-br": {
-    "latestUrl": "https://www.onlinebpsc.bihar.gov.in/",
-    "altUrls": ["https://bpsc.bihar.gov.in/Notices.html", "https://bpsc.bihar.gov.in/"]
+    "latestUrl": "https://onlinebpsc.bihar.gov.in/",
+    "altUrls": ["https://bpsc.bihar.gov.in/"],
+    "relaxed": true
   },
   "psc-hp": {
     "latestUrl": "https://hppsc.hp.gov.in/hppscoafc/Notifications.aspx",
@@ -191,10 +192,10 @@
     ]
   },
   "psc-tg": {
-    "latestUrl": "https://tspsc.gov.in/",
+    "latestUrl": "https://websitenew.tgpsc.gov.in/notifications",
     "altUrls": [
-      "https://www.tspsc.gov.in/notification.do",
-      "https://www.tspsc.gov.in/notifications.do"
+      "https://www.tgpsc.gov.in/",
+      "https://websitenew.tgpsc.gov.in/"
     ]
   },
   "psc-up": {
@@ -215,7 +216,8 @@
   },
   "ssb-mh": {
     "latestUrl": "https://mpsc.gov.in/english/notices",
-    "altUrls": ["https://mahapariksha.gov.in/", "https://mahapariksha.gov.in/notice-board/"]
+    "altUrls": ["https://mpsc.gov.in/"],
+    "relaxed": true
   },
   "ssb-rj": {
     "latestUrl": "https://rsmssb.rajasthan.gov.in/CurrentOpenings",
@@ -258,12 +260,12 @@
     "altUrls": ["https://www.spscskm.gov.in/"]
   },
   "psc-nl": {
-    "latestUrl": "https://npsc.co.in/",
-    "altUrls": ["https://npsc.co.in/recruitment.html"]
+    "latestUrl": "https://npsc.nagaland.gov.in/",
+    "altUrls": ["https://npsc.nagaland.gov.in/"]
   },
   "psc-ml": {
-    "latestUrl": "https://megpsc.gov.in/",
-    "altUrls": ["https://www.megpsc.gov.in/"]
+    "latestUrl": "https://mpsc.meghalaya.gov.in/advertisements.html",
+    "altUrls": ["https://mpsc.meghalaya.gov.in/"]
   },
   "psc-mn": {
     "latestUrl": "https://mpscmanipur.gov.in/",

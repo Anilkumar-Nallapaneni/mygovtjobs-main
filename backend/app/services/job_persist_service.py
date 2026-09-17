@@ -20,8 +20,11 @@ from app.services.job_completeness_service import calculate_completeness
 from app.services.job_persist_helpers import (
     _PUBLIC_VERIFICATION_STATUSES,
     _atomic_write_text,
+    _below_public_catalog_floor,
+    _database_host_label,
     _is_dramatic_snapshot_drop,
     _parse_date,
+    _public_catalog_floor,
     _resolve_published_at,
     _resolve_source_url,
     _resolve_state_codes,
@@ -60,6 +63,8 @@ __all__ = [
     "_source_domain",
     "_should_preserve_public_gate_on_conflict",
     "_is_dramatic_snapshot_drop",
+    "_below_public_catalog_floor",
+    "_database_host_label",
     "_snapshot_looks_like_ungated_feed_dump",
 ]
 
@@ -399,18 +404,33 @@ class JobPersistService:
             kept_slugs = {str(row.get("slug") or "") for row in slim_items}
             list_items = [row for row in list_items if str(row.get("slug") or "") in kept_slugs]
         catalog_count = count_catalog_display_jobs(slim_items)
+        settings = get_settings()
+        db_host = _database_host_label(settings.database_url)
+        logger.info(
+            "export_live_jobs_json: host=%s queried=%s gated=%s",
+            db_host,
+            before_strict,
+            len(slim_items),
+        )
+        print(
+            f"export_live_jobs_json: database host={db_host} "
+            f"queried={before_strict} gated={len(slim_items)}",
+            flush=True,
+        )
 
-        # Guard against overwriting the shipped catalog with an empty payload
-        # (transient DB session issues in the sync path have shipped empty
-        # live-jobs.json to prod before). Set ALLOW_EMPTY_JSON_EXPORT=1 to
-        # bypass in legitimate wipe/reset scenarios.
-        if not slim_items and os.environ.get("ALLOW_EMPTY_JSON_EXPORT") != "1":
-            logger.error(
-                "export_live_jobs_json: refusing to write empty snapshot "
-                "(list_jobs returned 0 rows after strict filter). "
-                "Set ALLOW_EMPTY_JSON_EXPORT=1 to override."
+        # Guard against overwriting the shipped catalog with an empty or
+        # below-floor payload. ALLOW_DRASTIC_JSON_EXPORT does not bypass this.
+        # Set ALLOW_EMPTY_JSON_EXPORT=1 only for an intentional wipe.
+        if _below_public_catalog_floor(len(slim_items)):
+            floor = _public_catalog_floor()
+            msg = (
+                f"export_live_jobs_json: refusing to write {len(slim_items)}-row snapshot "
+                f"(host={db_host}); minimum release floor is {floor}. "
+                "Point DATABASE_URL at the production catalog or set "
+                "ALLOW_EMPTY_JSON_EXPORT=1 to override."
             )
-            return 0
+            logger.error(msg)
+            raise RuntimeError(msg)
 
         daily_block: dict = {}
         try:
@@ -435,7 +455,7 @@ class JobPersistService:
             "dailySync": daily_block or None,
             "items": slim_items,
         }
-        path = Path(get_settings().live_jobs_json_path)
+        path = Path(settings.live_jobs_json_path)
         path.parent.mkdir(parents=True, exist_ok=True)
         existing_count: int | None = None
         existing_payload: dict | None = None

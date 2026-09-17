@@ -27,7 +27,7 @@ function readJson(path) {
 
 function previousCommittedCount() {
   try {
-    const raw = execFileSync('git', ['show', `HEAD^:${SNAPSHOT_REPO_PATH}`], {
+    const raw = execFileSync('git', ['show', `HEAD:${SNAPSHOT_REPO_PATH}`], {
       cwd: root,
       encoding: 'utf8',
       stdio: ['ignore', 'pipe', 'ignore'],

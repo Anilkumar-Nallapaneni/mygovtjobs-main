@@ -13,6 +13,7 @@ _slug_re = re.compile(r"[^a-z0-9]+")
 _PUBLIC_VERIFICATION_STATUSES = ("VERIFIED", "PARTIALLY_VERIFIED")
 _SNAPSHOT_DROP_GUARD_MIN_EXISTING = 100
 _SNAPSHOT_DROP_GUARD_RATIO = 0.5
+_DEFAULT_PUBLIC_CATALOG_FLOOR = 10
 
 
 def _atomic_write_text(path: Path, content: str) -> None:
@@ -133,6 +134,34 @@ def _is_dramatic_snapshot_drop(existing_count: int | None, next_count: int) -> b
     if existing_count is None or existing_count < _SNAPSHOT_DROP_GUARD_MIN_EXISTING:
         return False
     return next_count < int(existing_count * _SNAPSHOT_DROP_GUARD_RATIO)
+
+
+def _public_catalog_floor() -> int:
+    raw = os.environ.get("MIN_PUBLIC_CATALOG_ROWS", "").strip()
+    if raw.isdigit():
+        return int(raw)
+    return _DEFAULT_PUBLIC_CATALOG_FLOOR
+
+
+def _below_public_catalog_floor(next_count: int) -> bool:
+    """True when a gated export is too small to replace the public snapshot.
+
+    ALLOW_DRASTIC_JSON_EXPORT still cannot write below this floor. Use
+    ALLOW_EMPTY_JSON_EXPORT=1 only for an intentional wipe.
+    """
+    if os.environ.get("ALLOW_EMPTY_JSON_EXPORT") == "1":
+        return False
+    return next_count < _public_catalog_floor()
+
+
+def _database_host_label(database_url: str | None) -> str:
+    if not database_url:
+        return "unknown"
+    try:
+        parsed = urlparse(database_url.replace("postgresql+asyncpg://", "postgresql://", 1))
+        return (parsed.hostname or "unknown").lower()
+    except Exception:
+        return "unknown"
 
 
 def _snapshot_looks_like_ungated_feed_dump(payload: dict | None) -> bool:

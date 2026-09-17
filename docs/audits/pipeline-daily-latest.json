@@ -1,33 +1,15 @@
 {
   "mode": "daily",
-  "started_at_epoch": 1789458982,
+  "started_at_epoch": 1789547549,
   "steps": [
     {
       "name": "production sync",
       "required": true,
-      "returncode": 0,
-      "duration_seconds": 5170.49
-    },
-    {
-      "name": "strict snapshot verification",
-      "required": true,
-      "returncode": 0,
-      "duration_seconds": 0.06
-    },
-    {
-      "name": "vacancy totals",
-      "required": true,
-      "returncode": 0,
-      "duration_seconds": 0.04
-    },
-    {
-      "name": "alert delivery",
-      "required": false,
-      "returncode": 0,
-      "duration_seconds": 5.33
+      "returncode": 1,
+      "duration_seconds": 18602.2
     }
   ],
-  "run_id": "9471157a-6316-43d0-b442-347ade5cb03a",
-  "finished_at_epoch": 1789464162,
-  "status": "succeeded"
+  "run_id": "f84e2019-2e91-4515-854b-e993b84aed97",
+  "finished_at_epoch": 1789566153,
+  "status": "failed"
 }

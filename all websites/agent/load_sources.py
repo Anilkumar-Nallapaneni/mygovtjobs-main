@@ -44,6 +44,7 @@ def load_official_sites() -> list[dict[str, Any]]:
         name_m = re.search(r'name:\s*"([^"]+)"', block)
         url_m = re.search(r'url:\s*"([^"]+)"', block)
         latest_m = re.search(r'latestUrl:\s*"([^"]+)"', block)
+        spread_m = re.search(r'\.\.\.u\(\s*"([^"]+)"(?:\s*,\s*"([^"]+)")?\s*\)', block)
         scope_m = re.search(r'scope:\s*"([^"]+)"', block)
         cat_m = re.search(r'category:\s*"([^"]+)"', block)
         states_m = re.search(r'stateIds:\s*\[([^\]]+)\]', block)
@@ -58,6 +59,9 @@ def load_official_sites() -> list[dict[str, Any]]:
 
         url = url_m.group(1) if url_m else ""
         latest = latest_m.group(1) if latest_m else url
+        if spread_m:
+            url = url or spread_m.group(1)
+            latest = latest or spread_m.group(2) or spread_m.group(1)
 
         sites.append(
             {

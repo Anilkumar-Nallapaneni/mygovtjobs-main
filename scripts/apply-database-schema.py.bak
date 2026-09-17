@@ -42,7 +42,7 @@ def strip_sql_comments(content: str) -> str:
 
 
 def split_sql(content: str) -> list[str]:
-    """Split SQL file into executable statements (respects $tag$ blocks and 'quoted strings')."""
+    """Split SQL file into executable statements (respects $tag$ ... $tag$ blocks)."""
     body = strip_sql_comments(content).strip()
     if not body:
         return []
@@ -50,23 +50,12 @@ def split_sql(content: str) -> list[str]:
     parts: list[str] = []
     current: list[str] = []
     in_dollar = False
-    in_quote = False
     dollar_delim: str | None = None
     i = 0
     n = len(body)
 
     while i < n:
         ch = body[i]
-        if in_quote:
-            current.append(ch)
-            if ch == "'":
-                if i + 1 < n and body[i + 1] == "'":
-                    current.append("'")
-                    i += 2
-                    continue
-                in_quote = False
-            i += 1
-            continue
         if ch == "$" and not in_dollar:
             j = i + 1
             while j < n and (body[j].isalnum() or body[j] == "_"):
@@ -82,11 +71,6 @@ def split_sql(content: str) -> list[str]:
             i += len(dollar_delim)
             in_dollar = False
             dollar_delim = None
-            continue
-        if ch == "'" and not in_dollar:
-            in_quote = True
-            current.append(ch)
-            i += 1
             continue
         if ch == ";" and not in_dollar:
             stmt = "".join(current).strip()

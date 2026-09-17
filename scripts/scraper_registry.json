@@ -249,9 +249,27 @@
       "maxItems": 50
     },
     {
+      "code": "rrb",
+      "module": "state_portal_html",
+      "portal_url": "https://rrb.indianrailways.gov.in",
+      "state": "all",
+      "category": "railways",
+      "enabled": true,
+      "maxItems": 50
+    },
+    {
+      "code": "rrb-apply",
+      "module": "state_portal_html",
+      "portal_url": "https://www.rrbapply.gov.in",
+      "state": "all",
+      "category": "railways",
+      "enabled": true,
+      "maxItems": 50
+    },
+    {
       "code": "rrb-cdg",
       "module": "state_portal_html",
-      "portal_url": "https://www.rrbcdg.gov.in",
+      "portal_url": "https://rrb.indianrailways.gov.in/chandigarh",
       "state": "all",
       "category": "railways",
       "enabled": true,
@@ -260,36 +278,16 @@
     {
       "code": "rrb-ald",
       "module": "state_portal_html",
-      "portal_url": "https://rrbald.gov.in",
-      "state": "all",
-      "category": "railways",
-      "enabled": true,
-      "maxItems": 50,
-      "notes": "www.rrbald.gov.in 404s — use apex host"
-    },
-    {
-      "code": "rrb-mumbai",
-      "module": "state_portal_html",
-      "portal_url": "https://rrbmumbai.gov.in",
+      "portal_url": "https://rrb.indianrailways.gov.in/prayagraj",
       "state": "all",
       "category": "railways",
       "enabled": true,
       "maxItems": 50
     },
     {
-      "code": "rrcb",
+      "code": "rrb-mumbai",
       "module": "state_portal_html",
-      "portal_url": "https://www.rrcb.gov.in",
-      "state": "all",
-      "category": "railways",
-      "enabled": false,
-      "maxItems": 50,
-      "notes": "Host consistently times out; re-enable when reachable"
-    },
-    {
-      "code": "ircon",
-      "module": "state_portal_html",
-      "portal_url": "https://ircon.org",
+      "portal_url": "https://rrb.indianrailways.gov.in/mumbai",
       "state": "all",
       "category": "railways",
       "enabled": true,
@@ -298,7 +296,7 @@
     {
       "code": "rrb-ajmer",
       "module": "state_portal_html",
-      "portal_url": "https://www.rrbajmer.gov.in",
+      "portal_url": "https://rrb.indianrailways.gov.in/ajmer",
       "state": "all",
       "category": "railways",
       "enabled": true,
@@ -307,12 +305,11 @@
     {
       "code": "rrb-bhopal",
       "module": "state_portal_html",
-      "portal_url": "https://www.rrbbhopal.gov.in",
+      "portal_url": "https://rrb.indianrailways.gov.in/bhopal",
       "state": "all",
       "category": "railways",
-      "enabled": false,
-      "maxItems": 50,
-      "notes": "Host consistently times out; re-enable when reachable"
+      "enabled": true,
+      "maxItems": 50
     },
     {
       "code": "rrb-bbs",
@@ -328,7 +325,7 @@
     {
       "code": "rrb-bilaspur",
       "module": "state_portal_html",
-      "portal_url": "https://www.rrbbilaspur.gov.in",
+      "portal_url": "https://rrb.indianrailways.gov.in/bilaspur",
       "state": "all",
       "category": "railways",
       "enabled": true,
@@ -337,7 +334,7 @@
     {
       "code": "rrb-gorakhpur",
       "module": "state_portal_html",
-      "portal_url": "https://www.rrbgkp.gov.in",
+      "portal_url": "https://rrb.indianrailways.gov.in/gorakhpur",
       "state": "all",
       "category": "railways",
       "enabled": true,
@@ -346,7 +343,7 @@
     {
       "code": "rrb-guwahati",
       "module": "state_portal_html",
-      "portal_url": "https://www.rrbguwahati.gov.in",
+      "portal_url": "https://rrb.indianrailways.gov.in/guwahati",
       "state": "all",
       "category": "railways",
       "enabled": true,
@@ -355,7 +352,7 @@
     {
       "code": "rrb-kolkata",
       "module": "state_portal_html",
-      "portal_url": "https://www.rrbkolkata.gov.in",
+      "portal_url": "https://rrb.indianrailways.gov.in/kolkata",
       "state": "all",
       "category": "railways",
       "enabled": true,
@@ -364,7 +361,7 @@
     {
       "code": "rrb-malda",
       "module": "state_portal_html",
-      "portal_url": "https://www.rrbmalda.gov.in",
+      "portal_url": "https://rrb.indianrailways.gov.in/malda",
       "state": "all",
       "category": "railways",
       "enabled": true,
@@ -373,7 +370,7 @@
     {
       "code": "rrb-patna",
       "module": "state_portal_html",
-      "portal_url": "https://www.rrbpatna.gov.in",
+      "portal_url": "https://rrb.indianrailways.gov.in/patna",
       "state": "all",
       "category": "railways",
       "enabled": true,
@@ -382,7 +379,7 @@
     {
       "code": "rrb-ranchi",
       "module": "state_portal_html",
-      "portal_url": "https://www.rrbranchi.gov.in",
+      "portal_url": "https://rrb.indianrailways.gov.in/ranchi",
       "state": "all",
       "category": "railways",
       "enabled": true,
@@ -391,7 +388,7 @@
     {
       "code": "rrb-sec",
       "module": "state_portal_html",
-      "portal_url": "https://www.rrbsecunderabad.nic.in",
+      "portal_url": "https://rrb.indianrailways.gov.in/secunderabad",
       "state": "all",
       "category": "railways",
       "enabled": true,
@@ -400,7 +397,7 @@
     {
       "code": "rrb-siliguri",
       "module": "state_portal_html",
-      "portal_url": "https://www.rrbsiliguri.gov.in",
+      "portal_url": "https://rrb.indianrailways.gov.in/siliguri",
       "state": "all",
       "category": "railways",
       "enabled": true,
@@ -418,15 +415,76 @@
       "notes": "Detailed CEN PDFs (incl. CEN 04/2026 JE). Apply at rrbapply.gov.in"
     },
     {
+      "code": "rrb-ahmedabad",
+      "module": "state_portal_html",
+      "portal_url": "https://rrb.indianrailways.gov.in/ahmedabad",
+      "state": "all",
+      "category": "railways",
+      "enabled": true,
+      "maxItems": 50
+    },
+    {
+      "code": "rrb-bangalore",
+      "module": "state_portal_html",
+      "portal_url": "https://rrb.indianrailways.gov.in/bangalore",
+      "state": "all",
+      "category": "railways",
+      "enabled": true,
+      "maxItems": 50
+    },
+    {
+      "code": "rrb-chennai",
+      "module": "state_portal_html",
+      "portal_url": "https://rrb.indianrailways.gov.in/chennai",
+      "state": "all",
+      "category": "railways",
+      "enabled": true,
+      "maxItems": 50
+    },
+    {
+      "code": "rrb-jammu",
+      "module": "state_portal_html",
+      "portal_url": "https://rrb.indianrailways.gov.in/jammu",
+      "state": "all",
+      "category": "railways",
+      "enabled": true,
+      "maxItems": 50
+    },
+    {
+      "code": "rrb-muzaffarpur",
+      "module": "state_portal_html",
+      "portal_url": "https://rrb.indianrailways.gov.in/muzaffarpur",
+      "state": "all",
+      "category": "railways",
+      "enabled": true,
+      "maxItems": 50
+    },
+    {
+      "code": "rrcb",
+      "module": "state_portal_html",
+      "portal_url": "https://www.rrcb.gov.in",
+      "state": "all",
+      "category": "railways",
+      "enabled": true,
+      "maxItems": 50
+    },
+    {
+      "code": "ircon",
+      "module": "state_portal_html",
+      "portal_url": "https://ircon.org",
+      "state": "all",
+      "category": "railways",
+      "enabled": true,
+      "maxItems": 50
+    },
+    {
       "code": "fci",
       "module": "state_portal_html",
       "portal_url": "https://fci.gov.in/en/careers/recruitment-notices",
       "state": "all",
       "category": "psu",
       "enabled": true,
-      "maxItems": 50,
-      "skipCommonPaths": true,
-      "notes": "Listing often empty until the next AG-3 / MT window; keep enabled"
+      "maxItems": 50
     },
     {
       "code": "fssai",
@@ -449,12 +507,11 @@
     {
       "code": "army",
       "module": "state_portal_html",
-      "portal_url": "https://joinindianarmy.nic.in/writereaddata/Portal/NotificationPDF/",
+      "portal_url": "https://joinindianarmy.nic.in",
       "state": "all",
       "category": "defence",
-      "enabled": false,
-      "maxItems": 50,
-      "notes": "Homepage is an auth wall; NotificationPDF folder now returns an error page; re-enable when a public listing is reachable"
+      "enabled": true,
+      "maxItems": 50
     },
     {
       "code": "navy",
@@ -471,9 +528,8 @@
       "portal_url": "https://indianairforce.nic.in",
       "state": "all",
       "category": "defence",
-      "enabled": false,
-      "maxItems": 50,
-      "notes": "Homepage times out for automated clients; career.aspx fails; CDAC Agniveer often CAPTCHA"
+      "enabled": true,
+      "maxItems": 50
     },
     {
       "code": "afcat",
@@ -481,9 +537,8 @@
       "portal_url": "https://afcat.cdac.in",
       "state": "all",
       "category": "defence",
-      "enabled": false,
-      "maxItems": 50,
-      "notes": "Host returns 403 to automated clients; re-enable when a public listing is reachable"
+      "enabled": true,
+      "maxItems": 50
     },
     {
       "code": "coast-guard",
@@ -685,8 +740,7 @@
       "state": "all",
       "category": "psu",
       "enabled": true,
-      "maxItems": 50,
-      "skipCommonPaths": true
+      "maxItems": 50
     },
     {
       "code": "hpcl",
@@ -753,8 +807,7 @@
       "state": "all",
       "category": "psu",
       "enabled": true,
-      "maxItems": 50,
-      "skipCommonPaths": true
+      "maxItems": 50
     },
     {
       "code": "ies",
@@ -795,7 +848,7 @@
     {
       "code": "psc-br",
       "module": "state_portal_html",
-      "portal_url": "https://bpsc.bihar.gov.in/Notices.html",
+      "portal_url": "https://onlinebpsc.bihar.gov.in",
       "state": "br",
       "category": "state",
       "enabled": true,
@@ -912,7 +965,7 @@
     {
       "code": "psc-nl",
       "module": "state_portal_html",
-      "portal_url": "https://npsc.co.in/recruitment.html",
+      "portal_url": "https://npsc.nagaland.gov.in",
       "state": "ne",
       "category": "state",
       "enabled": true,
@@ -966,7 +1019,7 @@
     {
       "code": "psc-tg",
       "module": "state_portal_html",
-      "portal_url": "https://tspsc.gov.in",
+      "portal_url": "https://websitenew.tgpsc.gov.in/notifications",
       "state": "tg",
       "category": "state",
       "enabled": true,
@@ -984,7 +1037,7 @@
     {
       "code": "psc-up",
       "module": "state_portal_html",
-      "portal_url": "https://uppsc.up.nic.in/CandidatePages/Notifications.aspx",
+      "portal_url": "https://uppsc.up.nic.in/Notifications.aspx",
       "state": "up",
       "category": "state",
       "enabled": true,
@@ -1029,7 +1082,7 @@
     {
       "code": "psc-ml",
       "module": "state_portal_html",
-      "portal_url": "https://megpsc.gov.in",
+      "portal_url": "https://mpsc.meghalaya.gov.in/advertisements.html",
       "state": "ne",
       "category": "state",
       "enabled": true,
@@ -1047,7 +1100,7 @@
     {
       "code": "ssb-mh",
       "module": "state_portal_html",
-      "portal_url": "https://mahapariksha.gov.in",
+      "portal_url": "https://mpsc.gov.in/english/notices",
       "state": "mh",
       "category": "state",
       "enabled": true,
@@ -1094,6 +1147,33 @@
       "module": "state_portal_html",
       "portal_url": "https://esb.mp.gov.in",
       "state": "mp",
+      "category": "state",
+      "enabled": true,
+      "maxItems": 80
+    },
+    {
+      "code": "ssb-od",
+      "module": "state_portal_html",
+      "portal_url": "https://www.ossc.gov.in/Public/OSSC/Default.aspx",
+      "state": "od",
+      "category": "state",
+      "enabled": true,
+      "maxItems": 80
+    },
+    {
+      "code": "ssb-jk",
+      "module": "state_portal_html",
+      "portal_url": "https://jkssb.nic.in",
+      "state": "jk",
+      "category": "state",
+      "enabled": true,
+      "maxItems": 80
+    },
+    {
+      "code": "ssb-uk",
+      "module": "state_portal_html",
+      "portal_url": "https://sssc.uk.gov.in",
+      "state": "uk",
       "category": "state",
       "enabled": true,
       "maxItems": 80

@@ -1,6 +1,7 @@
 from datetime import date, datetime, timezone
 
 from app.services.job_persist_service import (
+    _below_public_catalog_floor,
     _is_dramatic_snapshot_drop,
     _resolve_published_at,
     _should_preserve_public_gate_on_conflict,
@@ -53,6 +54,18 @@ def test_dramatic_snapshot_drop_guard_flags_large_catalog_collapse():
     assert _is_dramatic_snapshot_drop(2600, 1)
     assert _is_dramatic_snapshot_drop(2600, 1299)
     assert not _is_dramatic_snapshot_drop(2600, 1300)
+
+
+def test_public_catalog_floor_blocks_tiny_exports(monkeypatch):
+    monkeypatch.delenv("ALLOW_EMPTY_JSON_EXPORT", raising=False)
+    monkeypatch.delenv("MIN_PUBLIC_CATALOG_ROWS", raising=False)
+    monkeypatch.setenv("ALLOW_DRASTIC_JSON_EXPORT", "1")
+    assert _below_public_catalog_floor(0)
+    assert _below_public_catalog_floor(3)
+    assert _below_public_catalog_floor(9)
+    assert not _below_public_catalog_floor(10)
+    monkeypatch.setenv("ALLOW_EMPTY_JSON_EXPORT", "1")
+    assert not _below_public_catalog_floor(3)
 
 
 def test_ungated_feed_dump_detection():
@@ -159,11 +172,16 @@ def test_export_raises_on_dramatic_drop_when_not_allowed(tmp_path, monkeypatch):
         with (
             patch(
                 "app.services.job_persist_service.get_settings",
-                return_value=SimpleNamespace(live_jobs_json_path=str(snapshot)),
+                return_value=SimpleNamespace(
+                    live_jobs_json_path=str(snapshot),
+                    database_url="postgresql+asyncpg://postgres:postgres@localhost:5432/mygovtjobs",
+                ),
             ),
             patch("app.services.job_service.JobService") as job_service_cls,
         ):
-            job_service_cls.return_value.list_jobs = AsyncMock(return_value=([row], 1))
+            job_service_cls.return_value.list_jobs = AsyncMock(
+                return_value=([row] * 50, 50)
+            )
             try:
                 await JobPersistService().export_live_jobs_json(AsyncMock())
                 raised = False
@@ -172,6 +190,94 @@ def test_export_raises_on_dramatic_drop_when_not_allowed(tmp_path, monkeypatch):
                 assert "refusing to replace" in str(exc)
             assert raised
             assert len(json.loads(snapshot.read_text(encoding="utf-8"))["items"]) == 2600
+
+    asyncio.run(_run())
+
+
+def test_export_raises_below_catalog_floor_even_when_drastic_allowed(tmp_path, monkeypatch):
+    import asyncio
+    import json
+    from types import SimpleNamespace
+    from unittest.mock import AsyncMock, patch
+
+    from app.schemas.job import JobOut
+    from app.services.job_persist_service import JobPersistService
+
+    snapshot = tmp_path / "live-jobs.json"
+    snapshot.write_text(
+        json.dumps(
+            {
+                "items": [
+                    {
+                        "title": f"Job {i}",
+                        "status": "live",
+                        "published_to_site": True,
+                        "document_type": "RECRUITMENT",
+                        "verification_status": "VERIFIED",
+                        "last_date": "2026-12-01",
+                        "vacancies": 1,
+                    }
+                    for i in range(38)
+                ]
+            }
+        ),
+        encoding="utf-8",
+    )
+    monkeypatch.setenv("ALLOW_DRASTIC_JSON_EXPORT", "1")
+    monkeypatch.delenv("ALLOW_EMPTY_JSON_EXPORT", raising=False)
+    monkeypatch.delenv("MIN_PUBLIC_CATALOG_ROWS", raising=False)
+
+    row = JobOut(
+        id="1",
+        slug="tiny",
+        title="UPSC Combined Recruitment Notification 2026",
+        dept="UPSC",
+        category=None,
+        state_codes=["DL"],
+        vacancies=10,
+        qualification="Graduate",
+        salary="Level-7",
+        age_limit="21-30",
+        last_date=date(2026, 12, 1),
+        apply_url="https://upsc.gov.in/apply",
+        pdf_url="https://upsc.gov.in/n.pdf",
+        status="live",
+        published_at=datetime(2026, 6, 1, tzinfo=timezone.utc),
+        detail={
+            "source_url": "https://upsc.gov.in/recruitment",
+            "notification_url": "https://upsc.gov.in/n.pdf",
+            "official_url": "https://upsc.gov.in/recruitment",
+        },
+        document_type="RECRUITMENT",
+        verification_status="VERIFIED",
+        completeness_score=80,
+        publication_confidence=95.0,
+        published_to_site=True,
+    )
+
+    async def _run():
+        with (
+            patch(
+                "app.services.job_persist_service.get_settings",
+                return_value=SimpleNamespace(
+                    live_jobs_json_path=str(snapshot),
+                    database_url="postgresql+asyncpg://postgres:postgres@localhost:5432/mygovtjobs",
+                ),
+            ),
+            patch("app.services.job_service.JobService") as job_service_cls,
+        ):
+            job_service_cls.return_value.list_jobs = AsyncMock(return_value=([row], 1))
+            try:
+                await JobPersistService().export_live_jobs_json(AsyncMock())
+                raised = False
+                message = ""
+            except RuntimeError as exc:
+                raised = True
+                message = str(exc)
+            assert raised
+            assert "minimum release floor" in message
+            assert "localhost" in message
+            assert len(json.loads(snapshot.read_text(encoding="utf-8"))["items"]) == 38
 
     asyncio.run(_run())
 

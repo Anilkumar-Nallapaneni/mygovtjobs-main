@@ -445,18 +445,18 @@ export const EXAMS: ExamDef[] = [
   },
   {
     slug: 'tspsc',
-    title: 'TSPSC 2026 — Telangana Public Service Commission',
-    shortTitle: 'TSPSC',
+    title: 'TGPSC 2026 — Telangana Public Service Commission',
+    shortTitle: 'TGPSC',
     board: 'Telangana PSC',
     icon: '🏛️',
     accent: '#BE185D',
     categoryId: 'state',
-    probe: /\btspsc\b|telangana public service|group [iiv]+.*tspsc/i,
+    probe: /\btspsc\b|\btgpsc\b|telangana public service|group [iiv]+.*t[sg]psc/i,
     probeRequired: true,
     seoDescription:
-      'TSPSC Group I, II, IV and state notifications — official tspsc.gov.in recruitment.',
+      'TGPSC Group I, II, IV and state notifications — official tgpsc.gov.in recruitment.',
     seoBody:
-      'Telangana Public Service Commission conducts group examinations for state government posts. All official notifications link from tspsc.gov.in.',
+      'Telangana Public Service Commission conducts group examinations for state government posts. All official notifications link from tgpsc.gov.in.',
     links: { results: '/results', admitCard: '/results/admit-card' },
   },
   {

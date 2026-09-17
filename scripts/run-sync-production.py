@@ -219,7 +219,16 @@ async def main() -> int:
 
     inserted = 0
     updated = 0
+    from app.config import get_settings
+    from app.services.job_persist_helpers import _database_host_label
+
+    print(
+        f"[sync:production] database host={_database_host_label(get_settings().database_url)}",
+        flush=True,
+    )
     # Allow gated catalog recovery before *any* export (daily nested, promote, export:live-jobs).
+    # Allow replacing an ungated feed dump with a gated catalog. Exports still
+    # cannot write below MIN_PUBLIC_CATALOG_ROWS (default 10).
     os.environ["ALLOW_DRASTIC_JSON_EXPORT"] = "1"
 
     try:

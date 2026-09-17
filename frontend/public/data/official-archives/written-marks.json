@@ -1,11 +1,6 @@
 {
-<<<<<<< HEAD
-  "generatedAt": "2026-09-04T14:53:33.782Z",
-  "count": 1,
-=======
-  "generatedAt": "2026-09-14T09:42:11.779Z",
-  "count": 26,
->>>>>>> 683e58da7a193da3de834c0f18626f6f8f8e7982
+  "generatedAt": "2026-09-16T08:10:11.628Z",
+  "count": 3,
   "items": [
     {
       "id": "a145835aa3e3662e",
@@ -21,6 +16,42 @@
       "category": "railways",
       "stateIds": [
         "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "4117eb74ee655107",
+      "title": "Additional Private Secretary Exam-2024 -- Notification, Selection Result, Cut Off Marks, Final Answer Key (General Studies) and Marks Of Candidates ( Results )",
+      "link": "https://psc.uk.gov.in/candidate-corner/results",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-uk",
+      "sourceName": "Uttarakhand PSC (UKPSC)",
+      "dept": "Uttarakhand PSC (UKPSC)",
+      "state": "Uttarakhand",
+      "category": "state",
+      "stateIds": [
+        "uk"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "40ed83132aef7de3",
+      "title": "MCSCC (Main) Examination, 2022 – Link for Viewing Marks of Candidates Updated: 04/07/2026",
+      "link": "https://mpscmanipur.gov.in/files/MPSC_26070416190.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://mpscmanipur.gov.in/files/MPSC_26070416190.pdf"
+      ],
+      "sourceId": "psc-mn",
+      "sourceName": "Manipur PSC",
+      "dept": "Manipur PSC",
+      "state": "NE States",
+      "category": "state",
+      "stateIds": [
+        "ne"
       ],
       "fetchMethod": "html"
     }
