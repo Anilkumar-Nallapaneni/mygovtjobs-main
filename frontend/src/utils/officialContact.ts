@@ -1,6 +1,6 @@
 import { isOfficialRecruitmentUrl } from "@/utils/officialDomains";
 
-const EMAIL_RE = /\b([a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,})\b/gi;
+const EMAIL_RE = /\b([a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,})\b/gi;
 const JUNK_LOCAL = /^(?:noreply|no-?reply|donotreply|do-?not-reply|webmaster|admin)$/i;
 const CONSUMER_HOST = /(?:^|\.)(?:gmail|yahoo|hotmail|outlook|live|rediff|protonmail|icloud)\./i;
 const PREFERRED_LOCAL = /helpdesk|help-?desk|helpline|grievance|quer(?:y|ies)|recruit|career|ssc|ibps|upsc|contact/i;
