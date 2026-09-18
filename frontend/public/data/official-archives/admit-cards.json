@@ -1,24 +1,7 @@
 {
-  "generatedAt": "2026-09-17T09:45:46.723Z",
-  "count": 144,
+  "generatedAt": "2026-09-18T09:27:32.967Z",
+  "count": 145,
   "items": [
-    {
-      "id": "7749ebd16d22dad7",
-      "title": "Admit Cards",
-      "link": "https://www.upsc.gov.in/e-admit-cards",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "upsc-notifications",
-      "sourceName": "UPSC — What's New",
-      "dept": "Union Public Service Commission",
-      "state": "All India",
-      "category": "upsc",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
     {
       "id": "dab406e23a6537a1",
       "title": "E-Admit Cards for various Recruitment Posts",
@@ -40,6 +23,23 @@
       "id": "99c9f94d8e7c5a15",
       "title": "e-Admit Cards For Computer Based Skill Test For Various Recruitment Posts (ORA)",
       "link": "https://upsconline.gov.in/eadmitcard/admitcard_steno_2024/",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "upsc-e-admit-hub",
+      "sourceName": "UPSC — e-Admit cards",
+      "dept": "Union Public Service Commission",
+      "state": "All India",
+      "category": "upsc",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "7749ebd16d22dad7",
+      "title": "E- Admit Cards",
+      "link": "https://www.upsc.gov.in/e-admit-cards",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
@@ -364,26 +364,9 @@
       "fetchMethod": "html"
     },
     {
-      "id": "feb76978c25ef5ed",
-      "title": "Admit Card - Specialist Ayurved Exam - 2024",
-      "link": "https://mppsc.mponline.gov.in/Portal/Examinations/MPPSC/2026/AdmitCard/SA24Login.aspx",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-mp",
-      "sourceName": "Madhya Pradesh PSC (MPPSC)",
-      "dept": "Madhya Pradesh PSC (MPPSC)",
-      "state": "Madhya Pradesh",
-      "category": "state",
-      "stateIds": [
-        "mp"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "cb6b3038df222c18",
-      "title": "Admit Card - Assistant Town Planner Examination - 2026",
-      "link": "https://mppsc.co.in/candidate-login/Admit-Card",
+      "id": "0d44c22e4b73f116",
+      "title": "Admit Card - State Forest Service Main Exam 2026",
+      "link": "https://mppsc.mponline.gov.in/Portal/Examinations/MPPSC/2026/AdmitCard/F26Login.aspx",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
@@ -500,6 +483,61 @@
       "category": "state",
       "stateIds": [
         "od"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "8f245b6b109d26a5",
+      "title": "उत्तर प्रदेश होमगार्ड्स के पदों पर एनरोलमेंट-2025 शारीरिक दक्षता परीक्षा (पीईटी) के आयोजन एवं उनके प्रवेश पत्र डाउनलोड किये जाने हेतु महत्वपूर्ण सूचना",
+      "link": "https://uppbpb.gov.in/FilesUploaded/Notice/vig1_1109202654e5f4ec-372d-40e6-8235-26f9fe33e93c.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://uppbpb.gov.in/FilesUploaded/Notice/vig1_1109202654e5f4ec-372d-40e6-8235-26f9fe33e93c.pdf"
+      ],
+      "sourceId": "police-up",
+      "sourceName": "UP Police Recruitment Board (UPPRPB)",
+      "dept": "UP Police Recruitment Board (UPPRPB)",
+      "state": "Uttar Pradesh",
+      "category": "police",
+      "stateIds": [
+        "up"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "cfe49765032fc46f",
+      "title": "उत्तर प्रदेश होमगार्ड्स के पदों पर एनरोलमेंट-2025 के अन्तर्गत शारीरिक दक्षता परीक्षा (पीईटी) के प्रवेश पत्र डाउनलोड किये जाने हेतु महत्वपूर्ण सूचना ।",
+      "link": "https://uppbpb.gov.in/FilesUploaded/Notice/vig1070920264a1e0d67-32c0-4ab8-ac3c-41c40f235e15.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://uppbpb.gov.in/FilesUploaded/Notice/vig1070920264a1e0d67-32c0-4ab8-ac3c-41c40f235e15.pdf"
+      ],
+      "sourceId": "police-up",
+      "sourceName": "UP Police Recruitment Board (UPPRPB)",
+      "dept": "UP Police Recruitment Board (UPPRPB)",
+      "state": "Uttar Pradesh",
+      "category": "police",
+      "stateIds": [
+        "up"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "b11c4e6a3089e953",
+      "title": "उत्तर प्रदेश होमगार्ड्स के पदों पर एनरोलमेंट-2025 के अन्तर्गत दिनांक - 15.09.2026 से आयोजित होने वाली शारीरिक दक्षता परीक्षा (पीईटी) के प्रवेश पत्र डाउनलोड किये जाने हेतु लिंक",
+      "link": "https://www.hgupexam2025.com/hg2025petadmitcard/loginpage.aspx",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "police-up",
+      "sourceName": "UP Police Recruitment Board (UPPRPB)",
+      "dept": "UP Police Recruitment Board (UPPRPB)",
+      "state": "Uttar Pradesh",
+      "category": "police",
+      "stateIds": [
+        "up"
       ],
       "fetchMethod": "html"
     },
@@ -621,61 +659,6 @@
       "category": "state",
       "stateIds": [
         "uk"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "8f245b6b109d26a5",
-      "title": "उत्तर प्रदेश होमगार्ड्स के पदों पर एनरोलमेंट-2025 शारीरिक दक्षता परीक्षा (पीईटी) के आयोजन एवं उनके प्रवेश पत्र डाउनलोड किये जाने हेतु महत्वपूर्ण सूचना",
-      "link": "https://uppbpb.gov.in/FilesUploaded/Notice/vig1_1109202654e5f4ec-372d-40e6-8235-26f9fe33e93c.pdf",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [
-        "https://uppbpb.gov.in/FilesUploaded/Notice/vig1_1109202654e5f4ec-372d-40e6-8235-26f9fe33e93c.pdf"
-      ],
-      "sourceId": "police-up",
-      "sourceName": "UP Police Recruitment Board (UPPRPB)",
-      "dept": "UP Police Recruitment Board (UPPRPB)",
-      "state": "Uttar Pradesh",
-      "category": "police",
-      "stateIds": [
-        "up"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "cfe49765032fc46f",
-      "title": "उत्तर प्रदेश होमगार्ड्स के पदों पर एनरोलमेंट-2025 के अन्तर्गत शारीरिक दक्षता परीक्षा (पीईटी) के प्रवेश पत्र डाउनलोड किये जाने हेतु महत्वपूर्ण सूचना ।",
-      "link": "https://uppbpb.gov.in/FilesUploaded/Notice/vig1070920264a1e0d67-32c0-4ab8-ac3c-41c40f235e15.pdf",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [
-        "https://uppbpb.gov.in/FilesUploaded/Notice/vig1070920264a1e0d67-32c0-4ab8-ac3c-41c40f235e15.pdf"
-      ],
-      "sourceId": "police-up",
-      "sourceName": "UP Police Recruitment Board (UPPRPB)",
-      "dept": "UP Police Recruitment Board (UPPRPB)",
-      "state": "Uttar Pradesh",
-      "category": "police",
-      "stateIds": [
-        "up"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "b11c4e6a3089e953",
-      "title": "उत्तर प्रदेश होमगार्ड्स के पदों पर एनरोलमेंट-2025 के अन्तर्गत दिनांक - 15.09.2026 से आयोजित होने वाली शारीरिक दक्षता परीक्षा (पीईटी) के प्रवेश पत्र डाउनलोड किये जाने हेतु लिंक",
-      "link": "https://www.hgupexam2025.com/hg2025petadmitcard/loginpage.aspx",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "police-up",
-      "sourceName": "UP Police Recruitment Board (UPPRPB)",
-      "dept": "UP Police Recruitment Board (UPPRPB)",
-      "state": "Uttar Pradesh",
-      "category": "police",
-      "stateIds": [
-        "up"
       ],
       "fetchMethod": "html"
     },
@@ -883,6 +866,40 @@
       "category": "teaching",
       "stateIds": [
         "tn"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "feb76978c25ef5ed",
+      "title": "Admit Card - Specialist Ayurved Exam - 2024",
+      "link": "https://mppsc.mponline.gov.in/Portal/Examinations/MPPSC/2026/AdmitCard/SA24Login.aspx",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-mp",
+      "sourceName": "Madhya Pradesh PSC (MPPSC)",
+      "dept": "Madhya Pradesh PSC (MPPSC)",
+      "state": "Madhya Pradesh",
+      "category": "state",
+      "stateIds": [
+        "mp"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "cb6b3038df222c18",
+      "title": "Admit Card - Assistant Town Planner Examination - 2026",
+      "link": "https://mppsc.co.in/candidate-login/Admit-Card",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-mp",
+      "sourceName": "Madhya Pradesh PSC (MPPSC)",
+      "dept": "Madhya Pradesh PSC (MPPSC)",
+      "state": "Madhya Pradesh",
+      "category": "state",
+      "stateIds": [
+        "mp"
       ],
       "fetchMethod": "html"
     },

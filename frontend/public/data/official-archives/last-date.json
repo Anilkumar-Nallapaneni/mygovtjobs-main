@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-09-17T09:45:46.723Z",
-  "count": 81,
+  "generatedAt": "2026-09-18T09:27:32.967Z",
+  "count": 82,
   "items": [
     {
       "id": "92753744b09f76b3",
@@ -681,6 +681,23 @@
         "all"
       ],
       "fetchMethod": "rss-discovered"
+    },
+    {
+      "id": "252bbec5152d4fef",
+      "title": "Samuhik Prativedan Manch- A Technology based common reporting mechanism extended to Members of Clearing Corporations",
+      "link": "https://www.sebi.gov.in/media-and-notifications/press-releases/sep-2026/samuhik-prativedan-manch-a-technology-based-common-reporting-mechanism-extended-to-members-of-clearing-corporations_104568.html",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "sebi",
+      "sourceName": "Securities and Exchange Board of India",
+      "dept": "Securities and Exchange Board of India",
+      "state": "All India",
+      "category": "banking",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
     },
     {
       "id": "cf7727ab821fe25c",

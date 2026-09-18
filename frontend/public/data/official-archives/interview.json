@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-09-17T09:45:46.723Z",
-  "count": 91,
+  "generatedAt": "2026-09-18T09:27:32.967Z",
+  "count": 93,
   "items": [
     {
       "id": "29e735f6c2245346",
@@ -37,34 +37,17 @@
       "fetchMethod": "rss-discovered"
     },
     {
-      "id": "bebf6319ad84e819",
-      "title": "Interview Schedule: Engineering Services (Main) Examination, 2026",
-      "link": "https://www.upsc.gov.in/whats-new/Engineering%20Services%20%28Main%29%20Examination%2C%202026/Interview%20Schedule",
+      "id": "b233fa4b73263639",
+      "title": "Advt. No. ISRO:ICRB:02(EMC-CEPO):2026 dated 28-07-2026 - List of candidates screened-in for interview Read More",
+      "link": "https://www.isro.gov.in/ICRB_Recruitment12.html",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
-      "sourceId": "upsc-notifications",
-      "sourceName": "UPSC — What's New",
-      "dept": "Union Public Service Commission",
+      "sourceId": "isro-careers",
+      "sourceName": "ISRO — Careers",
+      "dept": "Indian Space Research Organisation",
       "state": "All India",
-      "category": "upsc",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "302b0e06d5394dc1",
-      "title": "Interview Schedule: Combined Geo-Scientist (Main) Examination, 2026",
-      "link": "https://www.upsc.gov.in/whats-new/Combined%20Geo-Scientist%20%28Main%29%20Examination%2C%202026/Interview%20Schedule",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "upsc-notifications",
-      "sourceName": "UPSC — What's New",
-      "dept": "Union Public Service Commission",
-      "state": "All India",
-      "category": "upsc",
+      "category": "psu",
       "stateIds": [
         "all"
       ],
@@ -98,6 +81,23 @@
       "sourceName": "BPSC — Notices",
       "dept": "Bihar PSC",
       "state": "Bihar",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "98e8959df1b18c64",
+      "title": "17 Oct 2026 LIST OF CANDIDATES PROVISIONALLY QUALIFIED FOR INTERVIEW IN ADVT. NO. A-1/E-1/2025, COMBINED STATE/UPPER SUBORDINATE SERVICES (M.) EXAM.-2025",
+      "link": "https://uppsc.up.nic.in/Open_PDF.aspx?I4PnQ0tBagnQ0/TjMEfCjM2A27zHkRdP",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "uppsc-hall-tickets",
+      "sourceName": "UPPSC — Hall tickets",
+      "dept": "Uttar Pradesh PSC",
+      "state": "Uttar Pradesh",
       "category": "state",
       "stateIds": [
         "all"
@@ -784,44 +784,6 @@
       "fetchMethod": "html"
     },
     {
-      "id": "d5d6d7e72e8fce1d",
-      "title": "Result of Personal Interview with reference to Advertisement No. ISP/YP/2026/01 dated 22.05.2026",
-      "link": "https://aima-web-images.s3.ap-south-1.amazonaws.com/sailcareers.com/Downloads/IISCO_News_18082026_190419.pdf",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [
-        "https://aima-web-images.s3.ap-south-1.amazonaws.com/sailcareers.com/Downloads/IISCO_News_18082026_190419.pdf"
-      ],
-      "sourceId": "sail",
-      "sourceName": "Steel Authority of India (SAIL)",
-      "dept": "Steel Authority of India (SAIL)",
-      "state": "All India",
-      "category": "psu",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "7363b936b2b772f5",
-      "title": "Result of Personal Interview with reference to Advertisement No. ISP/YP/2026/01 dated 22.05.2026",
-      "link": "https://aima-web-images.s3.ap-south-1.amazonaws.com/sailcareers.com/Downloads/IISCO_Jobs_18082026_190340.pdf",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [
-        "https://aima-web-images.s3.ap-south-1.amazonaws.com/sailcareers.com/Downloads/IISCO_Jobs_18082026_190340.pdf"
-      ],
-      "sourceId": "sail",
-      "sourceName": "Steel Authority of India (SAIL)",
-      "dept": "Steel Authority of India (SAIL)",
-      "state": "All India",
-      "category": "psu",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
       "id": "59d89ab2523737c9",
       "title": "Click here to view the result of Personal Interview for the Advertisement No. ISP/YP/2026/01 dated 22.05.2026",
       "link": "https://sailcareers.com/sail2026yp/SAIL2026YPInterviewResult.aspx",
@@ -1153,25 +1115,6 @@
       "fetchMethod": "html"
     },
     {
-      "id": "8c7ae6d6bc447fbc",
-      "title": "NOTICE This is for general information to all the concerned candidates that the Personal Interview for the Post(s) of Draughtsman Grade-II/Surveyor Grade-II under the Directorate of Soil and Water Conservation [April 2025]",
-      "link": "https://mpsc.meghalaya.gov.in/programme/Notice17Feb2026a.pdf",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [
-        "https://mpsc.meghalaya.gov.in/programme/Notice17Feb2026a.pdf"
-      ],
-      "sourceId": "psc-ml",
-      "sourceName": "Meghalaya PSC",
-      "dept": "Meghalaya PSC",
-      "state": "NE States",
-      "category": "state",
-      "stateIds": [
-        "ne"
-      ],
-      "fetchMethod": "html"
-    },
-    {
       "id": "4ac64be59afb579a",
       "title": "Schedule of Interview for Recruitment to Various Posts under the Directorate of Handloom & Textiles, Manipur. Updated: 27/05/2026",
       "link": "https://mpscmanipur.gov.in/files/MPSC_26052719480.pdf",
@@ -1244,6 +1187,97 @@
       "category": "state",
       "stateIds": [
         "an"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "bebf6319ad84e819",
+      "title": "Interview Schedule: Engineering Services (Main) Examination, 2026",
+      "link": "https://www.upsc.gov.in/whats-new/Engineering%20Services%20%28Main%29%20Examination%2C%202026/Interview%20Schedule",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "upsc-notifications",
+      "sourceName": "UPSC — What's New",
+      "dept": "Union Public Service Commission",
+      "state": "All India",
+      "category": "upsc",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "302b0e06d5394dc1",
+      "title": "Interview Schedule: Combined Geo-Scientist (Main) Examination, 2026",
+      "link": "https://www.upsc.gov.in/whats-new/Combined%20Geo-Scientist%20%28Main%29%20Examination%2C%202026/Interview%20Schedule",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "upsc-notifications",
+      "sourceName": "UPSC — What's New",
+      "dept": "Union Public Service Commission",
+      "state": "All India",
+      "category": "upsc",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "d5d6d7e72e8fce1d",
+      "title": "Result of Personal Interview with reference to Advertisement No. ISP/YP/2026/01 dated 22.05.2026",
+      "link": "https://aima-web-images.s3.ap-south-1.amazonaws.com/sailcareers.com/Downloads/IISCO_News_18082026_190419.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://aima-web-images.s3.ap-south-1.amazonaws.com/sailcareers.com/Downloads/IISCO_News_18082026_190419.pdf"
+      ],
+      "sourceId": "sail",
+      "sourceName": "Steel Authority of India (SAIL)",
+      "dept": "Steel Authority of India (SAIL)",
+      "state": "All India",
+      "category": "psu",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "7363b936b2b772f5",
+      "title": "Result of Personal Interview with reference to Advertisement No. ISP/YP/2026/01 dated 22.05.2026",
+      "link": "https://aima-web-images.s3.ap-south-1.amazonaws.com/sailcareers.com/Downloads/IISCO_Jobs_18082026_190340.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://aima-web-images.s3.ap-south-1.amazonaws.com/sailcareers.com/Downloads/IISCO_Jobs_18082026_190340.pdf"
+      ],
+      "sourceId": "sail",
+      "sourceName": "Steel Authority of India (SAIL)",
+      "dept": "Steel Authority of India (SAIL)",
+      "state": "All India",
+      "category": "psu",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "8c7ae6d6bc447fbc",
+      "title": "NOTICE This is for general information to all the concerned candidates that the Personal Interview for the Post(s) of Draughtsman Grade-II/Surveyor Grade-II under the Directorate of Soil and Water Conservation [April 2025]",
+      "link": "https://mpsc.meghalaya.gov.in/programme/Notice17Feb2026a.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://mpsc.meghalaya.gov.in/programme/Notice17Feb2026a.pdf"
+      ],
+      "sourceId": "psc-ml",
+      "sourceName": "Meghalaya PSC",
+      "dept": "Meghalaya PSC",
+      "state": "NE States",
+      "category": "state",
+      "stateIds": [
+        "ne"
       ],
       "fetchMethod": "html"
     },

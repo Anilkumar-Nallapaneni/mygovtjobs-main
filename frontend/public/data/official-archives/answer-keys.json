@@ -1,41 +1,7 @@
 {
-  "generatedAt": "2026-09-17T09:45:46.723Z",
+  "generatedAt": "2026-09-18T09:27:32.967Z",
   "count": 26,
   "items": [
-    {
-      "id": "ca0dbc13a4f305b6",
-      "title": "Provisional Answer Key: Combined Defence Services Examination (II), 2026",
-      "link": "https://www.upsc.gov.in/whats-new/Combined%20Defence%20Services%20Examination%20%28II%29%2C%202026/Provisional%20Answer%20Key",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "upsc-notifications",
-      "sourceName": "UPSC — What's New",
-      "dept": "Union Public Service Commission",
-      "state": "All India",
-      "category": "upsc",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "4325676fbb369de7",
-      "title": "Provisional Answer Key: National Defence Academy and Naval Academy Examination (II), 2026",
-      "link": "https://www.upsc.gov.in/whats-new/National%20Defence%20Academy%20and%20Naval%20Academy%20Examination%20%28II%29%2C%202026/Provisional%20Answer%20Key",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "upsc-notifications",
-      "sourceName": "UPSC — What's New",
-      "dept": "Union Public Service Commission",
-      "state": "All India",
-      "category": "upsc",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
     {
       "id": "65b953b91c3e8ca2",
       "title": "FINAL ANSWER KEY",
@@ -173,6 +139,40 @@
         "hr"
       ],
       "fetchMethod": "html"
+    },
+    {
+      "id": "ca0dbc13a4f305b6",
+      "title": "Provisional Answer Key: Combined Defence Services Examination (II), 2026",
+      "link": "https://www.upsc.gov.in/whats-new/Combined%20Defence%20Services%20Examination%20%28II%29%2C%202026/Provisional%20Answer%20Key",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "upsc-notifications",
+      "sourceName": "UPSC — What's New",
+      "dept": "Union Public Service Commission",
+      "state": "All India",
+      "category": "upsc",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "4325676fbb369de7",
+      "title": "Provisional Answer Key: National Defence Academy and Naval Academy Examination (II), 2026",
+      "link": "https://www.upsc.gov.in/whats-new/National%20Defence%20Academy%20and%20Naval%20Academy%20Examination%20%28II%29%2C%202026/Provisional%20Answer%20Key",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "upsc-notifications",
+      "sourceName": "UPSC — What's New",
+      "dept": "Union Public Service Commission",
+      "state": "All India",
+      "category": "upsc",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
     },
     {
       "id": "e95ddc7b082ccd13",
