@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-09-18T09:27:32.967Z",
-  "count": 145,
+  "generatedAt": "2026-09-19T09:20:58.003Z",
+  "count": 150,
   "items": [
     {
       "id": "dab406e23a6537a1",
@@ -122,23 +122,6 @@
       "fetchMethod": "html-listing"
     },
     {
-      "id": "1271cc1050a50c03",
-      "title": "01 Oct 2026 NOTICE REGARDING ADMIT CARD OF ADVT. NO. A-7/E-1/2025, ASSISTANT PROFESSOR, GOVT. DEGREE COLLEGE MAINS EXAM-2025",
-      "link": "https://uppsc.up.nic.in/Open_PDF.aspx?I4PnQ0tBaglFjifabMvCvUqhY4dxzbZV",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "uppsc-hall-tickets",
-      "sourceName": "UPPSC — Hall tickets",
-      "dept": "Uttar Pradesh PSC",
-      "state": "Uttar Pradesh",
-      "category": "state",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
       "id": "1134e9072dc7886b",
       "title": "केऔसुब में पैरामेडिकल स्टाफ़ की भर्ती (2026) के लिए पीएसटी और दस्तवेजीकरण में शामिल होने के लिए प्रवेश पत्र केऔसुब की भर्ती वेबसाइट https://cisfrectt.cisf.gov.in/ पर अपलोड कर दिया गया है। उम्मीदवारों को सलाह दी जाती है कि वे भर्ती प्रक्रिया में शामिल होने के लिए ई-एडमिट कार्ड डाउनलोड कर लें",
       "link": "https://www.cisf.gov.in/assets/pdfs/2026/08/rectt_imp_not_pmsr_hindi.pdf",
@@ -194,9 +177,9 @@
       "fetchMethod": "html"
     },
     {
-      "id": "2b909d8e996d4c94",
+      "id": "97a06d61ec80c264",
       "title": "Conference call/analyst meet with Investors",
-      "link": "https://ntpc.co.in/investors/confrence-call-analyst-meet-investors/conference-call-analysts-investors",
+      "link": "https://ntpc.co.in/index.php/investors/confrence-call-analyst-meet-investors/conference-call-analysts-investors",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
@@ -211,9 +194,26 @@
       "fetchMethod": "html"
     },
     {
-      "id": "4e1bcf588af156f0",
+      "id": "4382aefa8fd5c9cb",
       "title": "NTPC Ltd. Q4/12M FY26 Conference Call on May 23, 2026",
-      "link": "https://ntpc.co.in/ntpc-ltd-q412m-fy26-conference-call-may-23-2026",
+      "link": "https://ntpc.co.in/index.php/ntpc-ltd-q412m-fy26-conference-call-may-23-2026",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "ntpc",
+      "sourceName": "NTPC — Careers",
+      "dept": "NTPC — Careers",
+      "state": "All India",
+      "category": "psu",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "2b909d8e996d4c94",
+      "title": "Conference call/analyst meet with Investors",
+      "link": "https://ntpc.co.in/investors/confrence-call-analyst-meet-investors/conference-call-analysts-investors",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
@@ -381,6 +381,40 @@
       "fetchMethod": "html"
     },
     {
+      "id": "cbc497d1de70ca43",
+      "title": "Interview Call Letter - Assistant Professor (Political Science) 2024",
+      "link": "https://mppsc.mponline.gov.in/Portal/Examinations/MPPSC/2025/ASP24/CallLetter/Login.aspx?Pid=AP23",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-mp",
+      "sourceName": "Madhya Pradesh PSC (MPPSC)",
+      "dept": "Madhya Pradesh PSC (MPPSC)",
+      "state": "Madhya Pradesh",
+      "category": "state",
+      "stateIds": [
+        "mp"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "feb76978c25ef5ed",
+      "title": "Admit Card - Specialist Ayurved Exam - 2024",
+      "link": "https://mppsc.mponline.gov.in/Portal/Examinations/MPPSC/2026/AdmitCard/SA24Login.aspx",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-mp",
+      "sourceName": "Madhya Pradesh PSC (MPPSC)",
+      "dept": "Madhya Pradesh PSC (MPPSC)",
+      "state": "Madhya Pradesh",
+      "category": "state",
+      "stateIds": [
+        "mp"
+      ],
+      "fetchMethod": "html"
+    },
+    {
       "id": "490bb67a63427b49",
       "title": "Download Admit Card for Post prior to August 2025",
       "link": "https://megrecruitment.nic.in/rpa/printadmitcard.htm",
@@ -470,6 +504,40 @@
       "fetchMethod": "html"
     },
     {
+      "id": "8c7104cb7aea4338",
+      "title": "Admit Cards",
+      "link": "http://rsmssb.rajasthan.gov.in/page?menuName=/ur7491nQtP/eTfIoLmSTQ==",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "ssb-rj",
+      "sourceName": "Rajasthan Staff Selection Board (RSSB)",
+      "dept": "Rajasthan Staff Selection Board (RSSB)",
+      "state": "Rajasthan",
+      "category": "state",
+      "stateIds": [
+        "rj"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "a11c8ece90f5c6bb",
+      "title": "Admit Card",
+      "link": "http://rsmssb.rajasthan.gov.in/page?menuName=/ur7491nQtP6K0BefutjEQ==",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "ssb-rj",
+      "sourceName": "Rajasthan Staff Selection Board (RSSB)",
+      "dept": "Rajasthan Staff Selection Board (RSSB)",
+      "state": "Rajasthan",
+      "category": "state",
+      "stateIds": [
+        "rj"
+      ],
+      "fetchMethod": "html"
+    },
+    {
       "id": "69e0193828bd2a04",
       "title": "Download Admit Card",
       "link": "https://www.ossc.gov.in/Public/Pages/View_Content.aspx?id=C9b2YKMBT/uqqeRzU3B22A==",
@@ -483,61 +551,6 @@
       "category": "state",
       "stateIds": [
         "od"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "8f245b6b109d26a5",
-      "title": "उत्तर प्रदेश होमगार्ड्स के पदों पर एनरोलमेंट-2025 शारीरिक दक्षता परीक्षा (पीईटी) के आयोजन एवं उनके प्रवेश पत्र डाउनलोड किये जाने हेतु महत्वपूर्ण सूचना",
-      "link": "https://uppbpb.gov.in/FilesUploaded/Notice/vig1_1109202654e5f4ec-372d-40e6-8235-26f9fe33e93c.pdf",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [
-        "https://uppbpb.gov.in/FilesUploaded/Notice/vig1_1109202654e5f4ec-372d-40e6-8235-26f9fe33e93c.pdf"
-      ],
-      "sourceId": "police-up",
-      "sourceName": "UP Police Recruitment Board (UPPRPB)",
-      "dept": "UP Police Recruitment Board (UPPRPB)",
-      "state": "Uttar Pradesh",
-      "category": "police",
-      "stateIds": [
-        "up"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "cfe49765032fc46f",
-      "title": "उत्तर प्रदेश होमगार्ड्स के पदों पर एनरोलमेंट-2025 के अन्तर्गत शारीरिक दक्षता परीक्षा (पीईटी) के प्रवेश पत्र डाउनलोड किये जाने हेतु महत्वपूर्ण सूचना ।",
-      "link": "https://uppbpb.gov.in/FilesUploaded/Notice/vig1070920264a1e0d67-32c0-4ab8-ac3c-41c40f235e15.pdf",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [
-        "https://uppbpb.gov.in/FilesUploaded/Notice/vig1070920264a1e0d67-32c0-4ab8-ac3c-41c40f235e15.pdf"
-      ],
-      "sourceId": "police-up",
-      "sourceName": "UP Police Recruitment Board (UPPRPB)",
-      "dept": "UP Police Recruitment Board (UPPRPB)",
-      "state": "Uttar Pradesh",
-      "category": "police",
-      "stateIds": [
-        "up"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "b11c4e6a3089e953",
-      "title": "उत्तर प्रदेश होमगार्ड्स के पदों पर एनरोलमेंट-2025 के अन्तर्गत दिनांक - 15.09.2026 से आयोजित होने वाली शारीरिक दक्षता परीक्षा (पीईटी) के प्रवेश पत्र डाउनलोड किये जाने हेतु लिंक",
-      "link": "https://www.hgupexam2025.com/hg2025petadmitcard/loginpage.aspx",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "police-up",
-      "sourceName": "UP Police Recruitment Board (UPPRPB)",
-      "dept": "UP Police Recruitment Board (UPPRPB)",
-      "state": "Uttar Pradesh",
-      "category": "police",
-      "stateIds": [
-        "up"
       ],
       "fetchMethod": "html"
     },
@@ -659,6 +672,61 @@
       "category": "state",
       "stateIds": [
         "uk"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "8f245b6b109d26a5",
+      "title": "उत्तर प्रदेश होमगार्ड्स के पदों पर एनरोलमेंट-2025 शारीरिक दक्षता परीक्षा (पीईटी) के आयोजन एवं उनके प्रवेश पत्र डाउनलोड किये जाने हेतु महत्वपूर्ण सूचना",
+      "link": "https://uppbpb.gov.in/FilesUploaded/Notice/vig1_1109202654e5f4ec-372d-40e6-8235-26f9fe33e93c.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://uppbpb.gov.in/FilesUploaded/Notice/vig1_1109202654e5f4ec-372d-40e6-8235-26f9fe33e93c.pdf"
+      ],
+      "sourceId": "police-up",
+      "sourceName": "UP Police Recruitment Board (UPPRPB)",
+      "dept": "UP Police Recruitment Board (UPPRPB)",
+      "state": "Uttar Pradesh",
+      "category": "police",
+      "stateIds": [
+        "up"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "cfe49765032fc46f",
+      "title": "उत्तर प्रदेश होमगार्ड्स के पदों पर एनरोलमेंट-2025 के अन्तर्गत शारीरिक दक्षता परीक्षा (पीईटी) के प्रवेश पत्र डाउनलोड किये जाने हेतु महत्वपूर्ण सूचना ।",
+      "link": "https://uppbpb.gov.in/FilesUploaded/Notice/vig1070920264a1e0d67-32c0-4ab8-ac3c-41c40f235e15.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://uppbpb.gov.in/FilesUploaded/Notice/vig1070920264a1e0d67-32c0-4ab8-ac3c-41c40f235e15.pdf"
+      ],
+      "sourceId": "police-up",
+      "sourceName": "UP Police Recruitment Board (UPPRPB)",
+      "dept": "UP Police Recruitment Board (UPPRPB)",
+      "state": "Uttar Pradesh",
+      "category": "police",
+      "stateIds": [
+        "up"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "b11c4e6a3089e953",
+      "title": "उत्तर प्रदेश होमगार्ड्स के पदों पर एनरोलमेंट-2025 के अन्तर्गत दिनांक - 15.09.2026 से आयोजित होने वाली शारीरिक दक्षता परीक्षा (पीईटी) के प्रवेश पत्र डाउनलोड किये जाने हेतु लिंक",
+      "link": "https://www.hgupexam2025.com/hg2025petadmitcard/loginpage.aspx",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "police-up",
+      "sourceName": "UP Police Recruitment Board (UPPRPB)",
+      "dept": "UP Police Recruitment Board (UPPRPB)",
+      "state": "Uttar Pradesh",
+      "category": "police",
+      "stateIds": [
+        "up"
       ],
       "fetchMethod": "html"
     },
@@ -870,19 +938,36 @@
       "fetchMethod": "html"
     },
     {
-      "id": "feb76978c25ef5ed",
-      "title": "Admit Card - Specialist Ayurved Exam - 2024",
-      "link": "https://mppsc.mponline.gov.in/Portal/Examinations/MPPSC/2026/AdmitCard/SA24Login.aspx",
+      "id": "1271cc1050a50c03",
+      "title": "01 Oct 2026 NOTICE REGARDING ADMIT CARD OF ADVT. NO. A-7/E-1/2025, ASSISTANT PROFESSOR, GOVT. DEGREE COLLEGE MAINS EXAM-2025",
+      "link": "https://uppsc.up.nic.in/Open_PDF.aspx?I4PnQ0tBaglFjifabMvCvUqhY4dxzbZV",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
-      "sourceId": "psc-mp",
-      "sourceName": "Madhya Pradesh PSC (MPPSC)",
-      "dept": "Madhya Pradesh PSC (MPPSC)",
-      "state": "Madhya Pradesh",
+      "sourceId": "uppsc-hall-tickets",
+      "sourceName": "UPPSC — Hall tickets",
+      "dept": "Uttar Pradesh PSC",
+      "state": "Uttar Pradesh",
       "category": "state",
       "stateIds": [
-        "mp"
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "4e1bcf588af156f0",
+      "title": "NTPC Ltd. Q4/12M FY26 Conference Call on May 23, 2026",
+      "link": "https://ntpc.co.in/ntpc-ltd-q412m-fy26-conference-call-may-23-2026",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "ntpc",
+      "sourceName": "NTPC — Careers",
+      "dept": "NTPC — Careers",
+      "state": "All India",
+      "category": "psu",
+      "stateIds": [
+        "all"
       ],
       "fetchMethod": "html"
     },
