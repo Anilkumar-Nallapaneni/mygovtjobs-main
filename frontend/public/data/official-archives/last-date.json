@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-09-19T09:20:58.003Z",
-  "count": 87,
+  "generatedAt": "2026-09-20T09:43:16.904Z",
+  "count": 88,
   "items": [
     {
       "id": "4b8d07db322d57d6",
@@ -717,6 +717,23 @@
       "fetchMethod": "rss-discovered"
     },
     {
+      "id": "252bbec5152d4fef",
+      "title": "Samuhik Prativedan Manch- A Technology based common reporting mechanism extended to Members of Clearing Corporations",
+      "link": "https://www.sebi.gov.in/media-and-notifications/press-releases/sep-2026/samuhik-prativedan-manch-a-technology-based-common-reporting-mechanism-extended-to-members-of-clearing-corporations_104568.html",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "sebi",
+      "sourceName": "Securities and Exchange Board of India",
+      "dept": "Securities and Exchange Board of India",
+      "state": "All India",
+      "category": "banking",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
       "id": "cf7727ab821fe25c",
       "title": "Research, Recruitment, & Extension",
       "link": "https://www.wii.gov.in/research-recruitment-and-extension",
@@ -879,6 +896,23 @@
       "fetchMethod": "html"
     },
     {
+      "id": "1a8fa8b40cc21bb0",
+      "title": "APPLY ONLINE (Online Registration extended till 28.09.2026)",
+      "link": "https://recruitment.sbi.bank.in/crpd-sco-2026-27-15/apply",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "sbi",
+      "sourceName": "State Bank of India — Careers",
+      "dept": "State Bank of India — Careers",
+      "state": "All India",
+      "category": "banking",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
       "id": "d0cb6df37111adb4",
       "title": "Last date extended upto 12:30 PM of 09.03.2026 for submission of bids for Rupee term loan of up-to ₹ 1000 Crore",
       "link": "https://ntpc.co.in/index.php/last-date-extended-upto-1230-pm-09032026-submission-bids-rupee-term-loan-rs-1000-crore",
@@ -892,91 +926,6 @@
       "category": "psu",
       "stateIds": [
         "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "6078e16cd2f39cdc",
-      "title": "Filling up of the posts of Assistant professor(s) Librarian (GCET) (backlog vacancies) and Assistant Professor, College Director of Physical Education Sports and Librarians in Government Colleges of Higher Education Department. Extension of date thereof",
-      "link": "https://jkpsc.nic.in/Pdf/Downloader1.ashx?nid=18041&type=n",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-jk",
-      "sourceName": "Jammu & Kashmir PSC (JKPSC)",
-      "dept": "Jammu & Kashmir PSC (JKPSC)",
-      "state": "Jammu & Kashmir",
-      "category": "state",
-      "stateIds": [
-        "jk"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "2de7cfc610c57a1c",
-      "title": "Filling up of the posts of AP Librarian (GCET) (backlog vacancies) and AP, College Director of Physical Education and Sports and Librarians in Government Colleges of HED, in UT of JK - Extension of date thereof",
-      "link": "https://jkpsc.nic.in/Pdf/Downloader1.ashx?nid=18039&type=n",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-jk",
-      "sourceName": "Jammu & Kashmir PSC (JKPSC)",
-      "dept": "Jammu & Kashmir PSC (JKPSC)",
-      "state": "Jammu & Kashmir",
-      "category": "state",
-      "stateIds": [
-        "jk"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "57c117283265aba5",
-      "title": "Filling up of the posts of Assistant professor(s) Librarian (GCET) (backlog vacancies) and Assistant Professor, College Director of Physical Education Sports and Librarians in Government Colleges of Higher Education Department. Extension of date thereof",
-      "link": "https://jkpsc.nic.in/Pdf/Downloader1.ashx?nid=18040&type=n",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-jk",
-      "sourceName": "Jammu & Kashmir PSC (JKPSC)",
-      "dept": "Jammu & Kashmir PSC (JKPSC)",
-      "state": "Jammu & Kashmir",
-      "category": "state",
-      "stateIds": [
-        "jk"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "ca0538cc2de46c75",
-      "title": "Filling up of the posts of Assistant professor(s) Librarian (GCET) (backlog vacancies) and Assistant Professor, College Director of Physical Education &amp; Sports and Librarians in Government Colleges of Higher Education Department, Union Territory of Jammu and Kashmir - Extension of date thereof",
-      "link": "https://jkpsc.nic.in/Pdf/Downloader1.ashx?nid=18038&type=n",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-jk",
-      "sourceName": "Jammu & Kashmir PSC (JKPSC)",
-      "dept": "Jammu & Kashmir PSC (JKPSC)",
-      "state": "Jammu & Kashmir",
-      "category": "state",
-      "stateIds": [
-        "jk"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "6967597d09434a84",
-      "title": "Filling up of Gazetted vacancies of Skill Department. Extension of date thereof",
-      "link": "https://jkpsc.nic.in/Pdf/Downloader1.ashx?nid=18002&type=n",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-jk",
-      "sourceName": "Jammu & Kashmir PSC (JKPSC)",
-      "dept": "Jammu & Kashmir PSC (JKPSC)",
-      "state": "Jammu & Kashmir",
-      "category": "state",
-      "stateIds": [
-        "jk"
       ],
       "fetchMethod": "html"
     },
@@ -1209,6 +1158,91 @@
       "fetchMethod": "html"
     },
     {
+      "id": "6078e16cd2f39cdc",
+      "title": "Filling up of the posts of Assistant professor(s) Librarian (GCET) (backlog vacancies) and Assistant Professor, College Director of Physical Education Sports and Librarians in Government Colleges of Higher Education Department. Extension of date thereof",
+      "link": "https://jkpsc.nic.in/Pdf/Downloader1.ashx?nid=18041&type=n",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-jk",
+      "sourceName": "Jammu & Kashmir PSC (JKPSC)",
+      "dept": "Jammu & Kashmir PSC (JKPSC)",
+      "state": "Jammu & Kashmir",
+      "category": "state",
+      "stateIds": [
+        "jk"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "2de7cfc610c57a1c",
+      "title": "Filling up of the posts of AP Librarian (GCET) (backlog vacancies) and AP, College Director of Physical Education and Sports and Librarians in Government Colleges of HED, in UT of JK - Extension of date thereof",
+      "link": "https://jkpsc.nic.in/Pdf/Downloader1.ashx?nid=18039&type=n",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-jk",
+      "sourceName": "Jammu & Kashmir PSC (JKPSC)",
+      "dept": "Jammu & Kashmir PSC (JKPSC)",
+      "state": "Jammu & Kashmir",
+      "category": "state",
+      "stateIds": [
+        "jk"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "57c117283265aba5",
+      "title": "Filling up of the posts of Assistant professor(s) Librarian (GCET) (backlog vacancies) and Assistant Professor, College Director of Physical Education Sports and Librarians in Government Colleges of Higher Education Department. Extension of date thereof",
+      "link": "https://jkpsc.nic.in/Pdf/Downloader1.ashx?nid=18040&type=n",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-jk",
+      "sourceName": "Jammu & Kashmir PSC (JKPSC)",
+      "dept": "Jammu & Kashmir PSC (JKPSC)",
+      "state": "Jammu & Kashmir",
+      "category": "state",
+      "stateIds": [
+        "jk"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "ca0538cc2de46c75",
+      "title": "Filling up of the posts of Assistant professor(s) Librarian (GCET) (backlog vacancies) and Assistant Professor, College Director of Physical Education &amp; Sports and Librarians in Government Colleges of Higher Education Department, Union Territory of Jammu and Kashmir - Extension of date thereof",
+      "link": "https://jkpsc.nic.in/Pdf/Downloader1.ashx?nid=18038&type=n",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-jk",
+      "sourceName": "Jammu & Kashmir PSC (JKPSC)",
+      "dept": "Jammu & Kashmir PSC (JKPSC)",
+      "state": "Jammu & Kashmir",
+      "category": "state",
+      "stateIds": [
+        "jk"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "6967597d09434a84",
+      "title": "Filling up of Gazetted vacancies of Skill Department. Extension of date thereof",
+      "link": "https://jkpsc.nic.in/Pdf/Downloader1.ashx?nid=18002&type=n",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-jk",
+      "sourceName": "Jammu & Kashmir PSC (JKPSC)",
+      "dept": "Jammu & Kashmir PSC (JKPSC)",
+      "state": "Jammu & Kashmir",
+      "category": "state",
+      "stateIds": [
+        "jk"
+      ],
+      "fetchMethod": "html"
+    },
+    {
       "id": "de27db5f60dc6e29",
       "title": "Tender No. BARC/CED/ET/33/2026-2027[e-Tender]",
       "link": "http://www.barc.gov.in/tenders/tender229.pdf",
@@ -1241,23 +1275,6 @@
         "all"
       ],
       "fetchMethod": "rss-discovered"
-    },
-    {
-      "id": "252bbec5152d4fef",
-      "title": "Samuhik Prativedan Manch- A Technology based common reporting mechanism extended to Members of Clearing Corporations",
-      "link": "https://www.sebi.gov.in/media-and-notifications/press-releases/sep-2026/samuhik-prativedan-manch-a-technology-based-common-reporting-mechanism-extended-to-members-of-clearing-corporations_104568.html",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "sebi",
-      "sourceName": "Securities and Exchange Board of India",
-      "dept": "Securities and Exchange Board of India",
-      "state": "All India",
-      "category": "banking",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
     },
     {
       "id": "f6e0c2b3096daa6e",

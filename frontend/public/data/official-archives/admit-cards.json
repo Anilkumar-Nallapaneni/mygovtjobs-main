@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-19T09:20:58.003Z",
+  "generatedAt": "2026-09-20T09:43:16.904Z",
   "count": 150,
   "items": [
     {
@@ -279,74 +279,6 @@
       "fetchMethod": "html"
     },
     {
-      "id": "f4dc78c867d60ac9",
-      "title": "11/06/2026 Download Marks Card for Civil Services (Judicial) Competitive Examination, 2025",
-      "link": "http://jkpsc.nic.in/RESULT/KCSJ_MARKS_CARD_2025.HTML",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-jk",
-      "sourceName": "Jammu & Kashmir PSC (JKPSC)",
-      "dept": "Jammu & Kashmir PSC (JKPSC)",
-      "state": "Jammu & Kashmir",
-      "category": "state",
-      "stateIds": [
-        "jk"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "5d904412163e6c44",
-      "title": "04/06/2026 Download Marks Card for Combined Competitive Examination, 2024",
-      "link": "http://jkpsc.nic.in/result/KASM_MARKS_CARD_2025.html",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-jk",
-      "sourceName": "Jammu & Kashmir PSC (JKPSC)",
-      "dept": "Jammu & Kashmir PSC (JKPSC)",
-      "state": "Jammu & Kashmir",
-      "category": "state",
-      "stateIds": [
-        "jk"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "ec303e191a0d4b56",
-      "title": "06/05/2026 Download Marks Card for Assistant Director (ES) Competitive Examination- 2023/24",
-      "link": "http://jkpsc.nic.in/resulT/MAARKSCARD_ADSTS_23_24.html",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-jk",
-      "sourceName": "Jammu & Kashmir PSC (JKPSC)",
-      "dept": "Jammu & Kashmir PSC (JKPSC)",
-      "state": "Jammu & Kashmir",
-      "category": "state",
-      "stateIds": [
-        "jk"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "8a9ba85648648a8d",
-      "title": "08/07/2026 Download Admit Card for Prosecuting Officer (G)(Mains) Examination, 2025",
-      "link": "http://jkpsc.nic.in/result/POMAINS_ADMITCARD_2025.html",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-jk",
-      "sourceName": "Jammu & Kashmir PSC (JKPSC)",
-      "dept": "Jammu & Kashmir PSC (JKPSC)",
-      "state": "Jammu & Kashmir",
-      "category": "state",
-      "stateIds": [
-        "jk"
-      ],
-      "fetchMethod": "html"
-    },
-    {
       "id": "158bb00a9699c472",
       "title": "Admit Cards",
       "link": "https://mppsc.mp.gov.in/Admitcard",
@@ -449,61 +381,6 @@
       "fetchMethod": "html"
     },
     {
-      "id": "2cb6ef6de1513685",
-      "title": "Under Secretary (Law) and Law Officer Recruitment – Examination Schedule Updated: 08/05/2026",
-      "link": "https://mpscmanipur.gov.in/files/Notification_Under_Secy_Law_Officer_Admit_card.pdf",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [
-        "https://mpscmanipur.gov.in/files/Notification_Under_Secy_Law_Officer_Admit_card.pdf"
-      ],
-      "sourceId": "psc-mn",
-      "sourceName": "Manipur PSC",
-      "dept": "Manipur PSC",
-      "state": "NE States",
-      "category": "state",
-      "stateIds": [
-        "ne"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "686e8d5b26f137a9",
-      "title": "Planning Department Research Assistant Recruitment – Examination Schedule Updated: 08/05/2026",
-      "link": "https://mpscmanipur.gov.in/files/Research_Asst_notification_Admit_card.pdf",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [
-        "https://mpscmanipur.gov.in/files/Research_Asst_notification_Admit_card.pdf"
-      ],
-      "sourceId": "psc-mn",
-      "sourceName": "Manipur PSC",
-      "dept": "Manipur PSC",
-      "state": "NE States",
-      "category": "state",
-      "stateIds": [
-        "ne"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "56de02281a84cf5b",
-      "title": "Admit Cards",
-      "link": "https://empsconline.gov.in/downloadadmitcardv2.aspx",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-mn",
-      "sourceName": "Manipur PSC",
-      "dept": "Manipur PSC",
-      "state": "NE States",
-      "category": "state",
-      "stateIds": [
-        "ne"
-      ],
-      "fetchMethod": "html"
-    },
-    {
       "id": "8c7104cb7aea4338",
       "title": "Admit Cards",
       "link": "http://rsmssb.rajasthan.gov.in/page?menuName=/ur7491nQtP/eTfIoLmSTQ==",
@@ -551,6 +428,61 @@
       "category": "state",
       "stateIds": [
         "od"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "8f245b6b109d26a5",
+      "title": "उत्तर प्रदेश होमगार्ड्स के पदों पर एनरोलमेंट-2025 शारीरिक दक्षता परीक्षा (पीईटी) के आयोजन एवं उनके प्रवेश पत्र डाउनलोड किये जाने हेतु महत्वपूर्ण सूचना",
+      "link": "https://uppbpb.gov.in/FilesUploaded/Notice/vig1_1109202654e5f4ec-372d-40e6-8235-26f9fe33e93c.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://uppbpb.gov.in/FilesUploaded/Notice/vig1_1109202654e5f4ec-372d-40e6-8235-26f9fe33e93c.pdf"
+      ],
+      "sourceId": "police-up",
+      "sourceName": "UP Police Recruitment Board (UPPRPB)",
+      "dept": "UP Police Recruitment Board (UPPRPB)",
+      "state": "Uttar Pradesh",
+      "category": "police",
+      "stateIds": [
+        "up"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "cfe49765032fc46f",
+      "title": "उत्तर प्रदेश होमगार्ड्स के पदों पर एनरोलमेंट-2025 के अन्तर्गत शारीरिक दक्षता परीक्षा (पीईटी) के प्रवेश पत्र डाउनलोड किये जाने हेतु महत्वपूर्ण सूचना ।",
+      "link": "https://uppbpb.gov.in/FilesUploaded/Notice/vig1070920264a1e0d67-32c0-4ab8-ac3c-41c40f235e15.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://uppbpb.gov.in/FilesUploaded/Notice/vig1070920264a1e0d67-32c0-4ab8-ac3c-41c40f235e15.pdf"
+      ],
+      "sourceId": "police-up",
+      "sourceName": "UP Police Recruitment Board (UPPRPB)",
+      "dept": "UP Police Recruitment Board (UPPRPB)",
+      "state": "Uttar Pradesh",
+      "category": "police",
+      "stateIds": [
+        "up"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "b11c4e6a3089e953",
+      "title": "उत्तर प्रदेश होमगार्ड्स के पदों पर एनरोलमेंट-2025 के अन्तर्गत दिनांक - 15.09.2026 से आयोजित होने वाली शारीरिक दक्षता परीक्षा (पीईटी) के प्रवेश पत्र डाउनलोड किये जाने हेतु लिंक",
+      "link": "https://www.hgupexam2025.com/hg2025petadmitcard/loginpage.aspx",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "police-up",
+      "sourceName": "UP Police Recruitment Board (UPPRPB)",
+      "dept": "UP Police Recruitment Board (UPPRPB)",
+      "state": "Uttar Pradesh",
+      "category": "police",
+      "stateIds": [
+        "up"
       ],
       "fetchMethod": "html"
     },
@@ -672,61 +604,6 @@
       "category": "state",
       "stateIds": [
         "uk"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "8f245b6b109d26a5",
-      "title": "उत्तर प्रदेश होमगार्ड्स के पदों पर एनरोलमेंट-2025 शारीरिक दक्षता परीक्षा (पीईटी) के आयोजन एवं उनके प्रवेश पत्र डाउनलोड किये जाने हेतु महत्वपूर्ण सूचना",
-      "link": "https://uppbpb.gov.in/FilesUploaded/Notice/vig1_1109202654e5f4ec-372d-40e6-8235-26f9fe33e93c.pdf",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [
-        "https://uppbpb.gov.in/FilesUploaded/Notice/vig1_1109202654e5f4ec-372d-40e6-8235-26f9fe33e93c.pdf"
-      ],
-      "sourceId": "police-up",
-      "sourceName": "UP Police Recruitment Board (UPPRPB)",
-      "dept": "UP Police Recruitment Board (UPPRPB)",
-      "state": "Uttar Pradesh",
-      "category": "police",
-      "stateIds": [
-        "up"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "cfe49765032fc46f",
-      "title": "उत्तर प्रदेश होमगार्ड्स के पदों पर एनरोलमेंट-2025 के अन्तर्गत शारीरिक दक्षता परीक्षा (पीईटी) के प्रवेश पत्र डाउनलोड किये जाने हेतु महत्वपूर्ण सूचना ।",
-      "link": "https://uppbpb.gov.in/FilesUploaded/Notice/vig1070920264a1e0d67-32c0-4ab8-ac3c-41c40f235e15.pdf",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [
-        "https://uppbpb.gov.in/FilesUploaded/Notice/vig1070920264a1e0d67-32c0-4ab8-ac3c-41c40f235e15.pdf"
-      ],
-      "sourceId": "police-up",
-      "sourceName": "UP Police Recruitment Board (UPPRPB)",
-      "dept": "UP Police Recruitment Board (UPPRPB)",
-      "state": "Uttar Pradesh",
-      "category": "police",
-      "stateIds": [
-        "up"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "b11c4e6a3089e953",
-      "title": "उत्तर प्रदेश होमगार्ड्स के पदों पर एनरोलमेंट-2025 के अन्तर्गत दिनांक - 15.09.2026 से आयोजित होने वाली शारीरिक दक्षता परीक्षा (पीईटी) के प्रवेश पत्र डाउनलोड किये जाने हेतु लिंक",
-      "link": "https://www.hgupexam2025.com/hg2025petadmitcard/loginpage.aspx",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "police-up",
-      "sourceName": "UP Police Recruitment Board (UPPRPB)",
-      "dept": "UP Police Recruitment Board (UPPRPB)",
-      "state": "Uttar Pradesh",
-      "category": "police",
-      "stateIds": [
-        "up"
       ],
       "fetchMethod": "html"
     },
@@ -934,6 +811,129 @@
       "category": "teaching",
       "stateIds": [
         "tn"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "f4dc78c867d60ac9",
+      "title": "11/06/2026 Download Marks Card for Civil Services (Judicial) Competitive Examination, 2025",
+      "link": "http://jkpsc.nic.in/RESULT/KCSJ_MARKS_CARD_2025.HTML",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-jk",
+      "sourceName": "Jammu & Kashmir PSC (JKPSC)",
+      "dept": "Jammu & Kashmir PSC (JKPSC)",
+      "state": "Jammu & Kashmir",
+      "category": "state",
+      "stateIds": [
+        "jk"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "5d904412163e6c44",
+      "title": "04/06/2026 Download Marks Card for Combined Competitive Examination, 2024",
+      "link": "http://jkpsc.nic.in/result/KASM_MARKS_CARD_2025.html",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-jk",
+      "sourceName": "Jammu & Kashmir PSC (JKPSC)",
+      "dept": "Jammu & Kashmir PSC (JKPSC)",
+      "state": "Jammu & Kashmir",
+      "category": "state",
+      "stateIds": [
+        "jk"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "ec303e191a0d4b56",
+      "title": "06/05/2026 Download Marks Card for Assistant Director (ES) Competitive Examination- 2023/24",
+      "link": "http://jkpsc.nic.in/resulT/MAARKSCARD_ADSTS_23_24.html",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-jk",
+      "sourceName": "Jammu & Kashmir PSC (JKPSC)",
+      "dept": "Jammu & Kashmir PSC (JKPSC)",
+      "state": "Jammu & Kashmir",
+      "category": "state",
+      "stateIds": [
+        "jk"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "8a9ba85648648a8d",
+      "title": "08/07/2026 Download Admit Card for Prosecuting Officer (G)(Mains) Examination, 2025",
+      "link": "http://jkpsc.nic.in/result/POMAINS_ADMITCARD_2025.html",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-jk",
+      "sourceName": "Jammu & Kashmir PSC (JKPSC)",
+      "dept": "Jammu & Kashmir PSC (JKPSC)",
+      "state": "Jammu & Kashmir",
+      "category": "state",
+      "stateIds": [
+        "jk"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "2cb6ef6de1513685",
+      "title": "Under Secretary (Law) and Law Officer Recruitment – Examination Schedule Updated: 08/05/2026",
+      "link": "https://mpscmanipur.gov.in/files/Notification_Under_Secy_Law_Officer_Admit_card.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://mpscmanipur.gov.in/files/Notification_Under_Secy_Law_Officer_Admit_card.pdf"
+      ],
+      "sourceId": "psc-mn",
+      "sourceName": "Manipur PSC",
+      "dept": "Manipur PSC",
+      "state": "NE States",
+      "category": "state",
+      "stateIds": [
+        "ne"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "686e8d5b26f137a9",
+      "title": "Planning Department Research Assistant Recruitment – Examination Schedule Updated: 08/05/2026",
+      "link": "https://mpscmanipur.gov.in/files/Research_Asst_notification_Admit_card.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://mpscmanipur.gov.in/files/Research_Asst_notification_Admit_card.pdf"
+      ],
+      "sourceId": "psc-mn",
+      "sourceName": "Manipur PSC",
+      "dept": "Manipur PSC",
+      "state": "NE States",
+      "category": "state",
+      "stateIds": [
+        "ne"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "56de02281a84cf5b",
+      "title": "Admit Cards",
+      "link": "https://empsconline.gov.in/downloadadmitcardv2.aspx",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-mn",
+      "sourceName": "Manipur PSC",
+      "dept": "Manipur PSC",
+      "state": "NE States",
+      "category": "state",
+      "stateIds": [
+        "ne"
       ],
       "fetchMethod": "html"
     },
