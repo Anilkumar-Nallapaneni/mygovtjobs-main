@@ -11,11 +11,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.livegovtjobs.com/org/rashtriya-chemicals-and-fertilizers-limited-rcf</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://www.livegovtjobs.com/org/staff-selection-commission-ssc</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -112,6 +107,11 @@
   </url>
   <url>
     <loc>https://www.livegovtjobs.com/org/ramagundam-fertilizers-and-chemicals-limited-rfcl</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.livegovtjobs.com/org/rashtriya-chemicals-and-fertilizers-limited-rcf</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>

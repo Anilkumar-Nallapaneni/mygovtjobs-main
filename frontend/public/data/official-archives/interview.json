@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-09-20T09:43:16.904Z",
-  "count": 95,
+  "generatedAt": "2026-09-21T09:59:55.596Z",
+  "count": 96,
   "items": [
     {
       "id": "29e735f6c2245346",
@@ -65,6 +65,23 @@
       "dept": "Indian Space Research Organisation",
       "state": "All India",
       "category": "psu",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "98096e0f3c848ae9",
+      "title": "Interview Letter",
+      "link": "https://bpsc.bihar.gov.in/interview-letter/",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-br-notifications",
+      "sourceName": "BPSC — Notices",
+      "dept": "Bihar PSC",
+      "state": "Bihar",
+      "category": "state",
       "stateIds": [
         "all"
       ],
@@ -729,25 +746,6 @@
       "fetchMethod": "html"
     },
     {
-      "id": "7a9b0027b83e17f4",
-      "title": "Collieries Division: Result of the 'Walk-in-Interview' held for Engagement of General Duty Medical Officer (GDMO) against Advertisement No. CD/HR/Rectt/26-27/68 Dated: 10.07.2026",
-      "link": "https://aima-web-images.s3.ap-south-1.amazonaws.com/sailcareers.com/Downloads/SAIL_News%20&%20Jobs_21082026_165023.pdf",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [
-        "https://aima-web-images.s3.ap-south-1.amazonaws.com/sailcareers.com/Downloads/SAIL_News%20&%20Jobs_21082026_165023.pdf"
-      ],
-      "sourceId": "sail",
-      "sourceName": "Steel Authority of India (SAIL)",
-      "dept": "Steel Authority of India (SAIL)",
-      "state": "All India",
-      "category": "psu",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
       "id": "a2cdc2e2fd87ca8e",
       "title": "Bio Data Form and Other Relevant documents for GD/Interview shortlisted candidates of MTT Posts",
       "link": "https://sailcareers.com/SAIL2025MT/DownloadPerformaInterview.htm",
@@ -795,6 +793,23 @@
       "category": "state",
       "stateIds": [
         "hp"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "91558011355dca9d",
+      "title": "Recent Examinations/Interview",
+      "link": "https://jpsc.gov.in/Examination-Links.php",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-jh",
+      "sourceName": "Jharkhand PSC (JPSC)",
+      "dept": "Jharkhand PSC (JPSC)",
+      "state": "Jharkhand",
+      "category": "state",
+      "stateIds": [
+        "jh"
       ],
       "fetchMethod": "html"
     },
@@ -869,19 +884,19 @@
       "fetchMethod": "html"
     },
     {
-      "id": "91558011355dca9d",
-      "title": "Recent Examinations/Interview",
-      "link": "https://jpsc.gov.in/Examination-Links.php",
+      "id": "c019d0c423cf10b5",
+      "title": "Procedure for Interview Date Change Requests",
+      "link": "https://www.keralapsc.gov.in/index.php/procedure-interview-date-change-requests",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
-      "sourceId": "psc-jh",
-      "sourceName": "Jharkhand PSC (JPSC)",
-      "dept": "Jharkhand PSC (JPSC)",
-      "state": "Jharkhand",
+      "sourceId": "psc-kl",
+      "sourceName": "Kerala PSC",
+      "dept": "Kerala PSC",
+      "state": "Kerala",
       "category": "state",
       "stateIds": [
-        "jh"
+        "kl"
       ],
       "fetchMethod": "html"
     },
@@ -889,6 +904,23 @@
       "id": "cbc497d1de70ca43",
       "title": "Interview Call Letter - Assistant Professor (Political Science) 2024",
       "link": "https://mppsc.mponline.gov.in/Portal/Examinations/MPPSC/2025/ASP24/CallLetter/Login.aspx?Pid=AP23",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-mp",
+      "sourceName": "Madhya Pradesh PSC (MPPSC)",
+      "dept": "Madhya Pradesh PSC (MPPSC)",
+      "state": "Madhya Pradesh",
+      "category": "state",
+      "stateIds": [
+        "mp"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "fe40b1b9ceff9486",
+      "title": "Interview Call Letter - Assistant Professor (Zoology) Examination - 2024",
+      "link": "https://mppsc.mponline.gov.in/Portal/Examinations/MPPSC/2025/ASP24/CallLetter/Login.aspx?Pid=AP19",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
@@ -1013,21 +1045,23 @@
       "fetchMethod": "html"
     },
     {
-      "id": "98096e0f3c848ae9",
-      "title": "Interview Letter",
-      "link": "https://bpsc.bihar.gov.in/interview-letter/",
+      "id": "7a9b0027b83e17f4",
+      "title": "Collieries Division: Result of the 'Walk-in-Interview' held for Engagement of General Duty Medical Officer (GDMO) against Advertisement No. CD/HR/Rectt/26-27/68 Dated: 10.07.2026",
+      "link": "https://aima-web-images.s3.ap-south-1.amazonaws.com/sailcareers.com/Downloads/SAIL_News%20&%20Jobs_21082026_165023.pdf",
       "publishedAt": null,
       "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-br-notifications",
-      "sourceName": "BPSC — Notices",
-      "dept": "Bihar PSC",
-      "state": "Bihar",
-      "category": "state",
+      "pdfUrls": [
+        "https://aima-web-images.s3.ap-south-1.amazonaws.com/sailcareers.com/Downloads/SAIL_News%20&%20Jobs_21082026_165023.pdf"
+      ],
+      "sourceId": "sail",
+      "sourceName": "Steel Authority of India (SAIL)",
+      "dept": "Steel Authority of India (SAIL)",
+      "state": "All India",
+      "category": "psu",
       "stateIds": [
         "all"
       ],
-      "fetchMethod": "html-listing"
+      "fetchMethod": "html"
     },
     {
       "id": "98e8959df1b18c64",
@@ -1204,23 +1238,6 @@
       "category": "psu",
       "stateIds": [
         "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "c019d0c423cf10b5",
-      "title": "Procedure for Interview Date Change Requests",
-      "link": "https://www.keralapsc.gov.in/index.php/procedure-interview-date-change-requests",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-kl",
-      "sourceName": "Kerala PSC",
-      "dept": "Kerala PSC",
-      "state": "Kerala",
-      "category": "state",
-      "stateIds": [
-        "kl"
       ],
       "fetchMethod": "html"
     },
