@@ -4,7 +4,7 @@
   "workspaces": [
     "frontend"
   ],
-  "description": "Live Govt Jobs — frontend (Vite) and official-site fetch scripts",
+  "description": "Live Govt Jobs \u2014 frontend (Vite) and official-site fetch scripts",
   "engines": {
     "node": ">=24 <25"
   },
@@ -199,7 +199,8 @@
     "pipeline:daily": "node scripts/run-python.mjs scripts/run_pipeline.py --mode daily",
     "pipeline:production": "node scripts/run-python.mjs scripts/run_pipeline.py --mode production",
     "pipeline:weekly": "node scripts/run-python.mjs scripts/run_pipeline.py --mode weekly",
-    "pipeline:verify": "node scripts/run-python.mjs scripts/run_pipeline.py --mode verify"
+    "pipeline:verify": "node scripts/run-python.mjs scripts/run_pipeline.py --mode verify",
+    "growth:audit": "node scripts/growth-audit.mjs"
   },
   "dependencies": {
     "@vercel/analytics": "^2.0.1"

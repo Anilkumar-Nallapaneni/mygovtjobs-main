@@ -1,17 +1,9 @@
 {
-  "generatedAt": "2026-09-16T09:14:03.274734+00:00",
+  "generatedAt": "2026-09-20T09:52:10.218974+00:00",
   "apply": true,
-  "scanned": 43,
-  "ok": 38,
+  "scanned": 40,
+  "ok": 36,
   "demoted": [
-    {
-      "id": "62c467f9-c486-4437-8fba-2c8c23d941c7",
-      "slug": "isro-indian-space-research-organisation-inviting-applications-for-the-post-of-sc-b5ae0c29",
-      "title": "Inviting applications for the post of Scientist/Engineer ‘SC’",
-      "reasons": [
-        "non-vacancy document"
-      ]
-    },
     {
       "id": "883e67fc-687d-482b-a915-f36f114b6670",
       "slug": "addendum-notice-19-posts-of-manager-grade-i-section-officer-ministry-of-defence-67983808",
@@ -45,5 +37,5 @@
       ]
     }
   ],
-  "rowsUpdated": 5
+  "rowsUpdated": 4
 }

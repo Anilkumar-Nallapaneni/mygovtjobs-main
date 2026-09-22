@@ -5,6 +5,7 @@ import { MemoryRouter, useLocation } from 'react-router-dom'
 import { useEffect } from 'react'
 import type { ReactNode } from 'react'
 import { useBrowseState } from '@/hooks/useBrowseState'
+import { ORG_INDEX } from '@/data/orgIndex'
 
 let currentPathname = '/'
 let currentSearch = ''
@@ -274,12 +275,15 @@ describe('useBrowseState', () => {
       wrapper: wrapper('/'),
     })
 
+    const org = ORG_INDEX[0]
+    expect(org).toBeDefined()
+
     act(() => {
-      result.current.navigateToOrg('bhabha-atomic-research-centre-barc')
+      result.current.navigateToOrg(org.slug)
     })
 
-    expect(currentPathname).toBe('/org/bhabha-atomic-research-centre-barc')
-    expect(result.current.orgSlug).toBe('bhabha-atomic-research-centre-barc')
+    expect(currentPathname).toBe(`/org/${org.slug}`)
+    expect(result.current.orgSlug).toBe(org.slug)
   })
 
   it('handleNavigate jobs opens /jobs with current sort', () => {

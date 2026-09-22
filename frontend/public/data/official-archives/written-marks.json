@@ -1,7 +1,26 @@
 {
-  "generatedAt": "2026-09-16T08:10:11.628Z",
+  "generatedAt": "2026-09-20T09:43:16.904Z",
   "count": 3,
   "items": [
+    {
+      "id": "40ed83132aef7de3",
+      "title": "MCSCC (Main) Examination, 2022 – Link for Viewing Marks of Candidates Updated: 04/07/2026",
+      "link": "https://mpscmanipur.gov.in/files/MPSC_26070416190.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://mpscmanipur.gov.in/files/MPSC_26070416190.pdf"
+      ],
+      "sourceId": "psc-mn",
+      "sourceName": "Manipur PSC",
+      "dept": "Manipur PSC",
+      "state": "NE States",
+      "category": "state",
+      "stateIds": [
+        "ne"
+      ],
+      "fetchMethod": "html"
+    },
     {
       "id": "a145835aa3e3662e",
       "title": "Result and cut off marks of candidates shortlisted for Document Verification and Medical Examination.",
@@ -33,25 +52,6 @@
       "category": "state",
       "stateIds": [
         "uk"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "40ed83132aef7de3",
-      "title": "MCSCC (Main) Examination, 2022 – Link for Viewing Marks of Candidates Updated: 04/07/2026",
-      "link": "https://mpscmanipur.gov.in/files/MPSC_26070416190.pdf",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [
-        "https://mpscmanipur.gov.in/files/MPSC_26070416190.pdf"
-      ],
-      "sourceId": "psc-mn",
-      "sourceName": "Manipur PSC",
-      "dept": "Manipur PSC",
-      "state": "NE States",
-      "category": "state",
-      "stateIds": [
-        "ne"
       ],
       "fetchMethod": "html"
     }
