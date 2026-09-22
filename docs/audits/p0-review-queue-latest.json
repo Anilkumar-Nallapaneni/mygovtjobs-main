@@ -1,0 +1,280 @@
+{
+  "generated_at": "2026-09-22T15:36:36.378096+00:00",
+  "review_queue_total": 1223,
+  "review_queue_status": {
+    "pending": 1223
+  },
+  "confidence_bands": {
+    "80-84": 118,
+    "60-79": 988,
+    "90-100": 23,
+    "85-89": 67,
+    "<60": 27
+  },
+  "top_validation_errors": [
+    [
+      "Missing or malformed deadline",
+      1093
+    ],
+    [
+      "Completeness score 45 below 70",
+      810
+    ],
+    [
+      "Job has not been verified",
+      740
+    ],
+    [
+      "Document is not classified as recruitment",
+      511
+    ],
+    [
+      "Missing official notification PDF",
+      366
+    ],
+    [
+      "Completeness score 52 below 70",
+      162
+    ],
+    [
+      "Past deadline",
+      99
+    ],
+    [
+      "Completeness score 66 below 70",
+      96
+    ],
+    [
+      "Completeness score 59 below 70",
+      70
+    ],
+    [
+      "Publication date is in the future",
+      57
+    ],
+    [
+      "Publication date is implausibly old",
+      33
+    ],
+    [
+      "Missing or invalid official source URL",
+      15
+    ],
+    [
+      "Source domain is not approved",
+      12
+    ],
+    [
+      "State-scoped recruitment requires state_codes",
+      12
+    ],
+    [
+      "Auto-publish disabled",
+      7
+    ],
+    [
+      "Deadline occurs before publication date",
+      5
+    ],
+    [
+      "Notification URL is invalid or unofficial",
+      4
+    ],
+    [
+      "Live audit action: needs_review",
+      3
+    ],
+    [
+      "Duplicate record",
+      2
+    ]
+  ],
+  "top_validation_warnings": [
+    [
+      "Vacancy count is not specified",
+      1056
+    ],
+    [
+      "Qualification is not specified",
+      948
+    ],
+    [
+      "Separate HTML notification URL present",
+      576
+    ],
+    [
+      "Missing apply URL",
+      441
+    ],
+    [
+      "Notification URL is invalid or unofficial",
+      25
+    ],
+    [
+      "Link audit: source=200, apply=200",
+      9
+    ],
+    [
+      "Link audit: source=error:ConnectError, apply=200",
+      3
+    ],
+    [
+      "Link audit: source=403, apply=403",
+      2
+    ],
+    [
+      "Link audit: source=error:ConnectError, apply=error:ConnectError",
+      2
+    ],
+    [
+      "Link audit: source=error:ConnectError, apply=missing",
+      1
+    ],
+    [
+      "Link audit: source=200, apply=missing",
+      1
+    ],
+    [
+      "Link audit: source=404, apply=404",
+      1
+    ],
+    [
+      "Link audit: source=200, apply=error:ConnectTimeout",
+      1
+    ],
+    [
+      "Link audit: source=200, apply=404",
+      1
+    ]
+  ],
+  "top_queue_sources": [
+    [
+      "Mha",
+      169
+    ],
+    [
+      "UPPSC — Hall tickets",
+      86
+    ],
+    [
+      "UPSC — What's New",
+      77
+    ],
+    [
+      "Staff Selection Commission (SSC)",
+      75
+    ],
+    [
+      "Press Information Bureau (PIB)",
+      73
+    ],
+    [
+      "ISRO — Careers",
+      61
+    ],
+    [
+      "Jpsc",
+      45
+    ],
+    [
+      "ESIC — Employees' State Insurance Corporation",
+      36
+    ],
+    [
+      "Erecruitment Andamannicobar",
+      36
+    ],
+    [
+      "Wii",
+      28
+    ],
+    [
+      "Sailcareers Com",
+      28
+    ],
+    [
+      "Reserve Bank of India — Careers",
+      26
+    ],
+    [
+      "Apeda",
+      25
+    ],
+    [
+      "Sainik School Goalpara",
+      25
+    ],
+    [
+      "Institute of Banking Personnel Selection (IBPS)",
+      24
+    ],
+    [
+      "Recruitment Py",
+      24
+    ],
+    [
+      "Securities and Exchange Board of India",
+      23
+    ],
+    [
+      "Railway Recruitment Board",
+      21
+    ],
+    [
+      "NITI Aayog",
+      19
+    ],
+    [
+      "Tpsc Tripura",
+      18
+    ],
+    [
+      "Bharatpetroleum In",
+      17
+    ],
+    [
+      "Drdo",
+      16
+    ],
+    [
+      "Uco Bank In",
+      16
+    ],
+    [
+      "Gpsc Gujarat",
+      14
+    ],
+    [
+      "Hpsc",
+      14
+    ],
+    [
+      "Ppsc",
+      12
+    ],
+    [
+      "Bhabha Atomic Research Centre (BARC)",
+      10
+    ],
+    [
+      "Nsut",
+      8
+    ],
+    [
+      "ISRO — Indian Space Research Organisation",
+      8
+    ],
+    [
+      "Indian Space Research Organisation (ISRO)",
+      8
+    ]
+  ],
+  "jobs_total": 3732,
+  "job_status": {
+    "draft": 3192,
+    "expired": 506,
+    "live": 34
+  },
+  "live_jobs": 34,
+  "draft_pending_jobs": 3192
+}

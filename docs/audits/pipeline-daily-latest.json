@@ -1,49 +1,33 @@
 {
   "mode": "daily",
-<<<<<<< HEAD
-  "started_at_epoch": 1790068871,
-=======
-  "started_at_epoch": 1789977991,
->>>>>>> 9b838ad605c9aacbb6534a091eca7ad12ffeab70
+  "started_at_epoch": 1789890696,
   "steps": [
     {
       "name": "production sync",
       "required": true,
       "returncode": 0,
-<<<<<<< HEAD
-      "duration_seconds": 2.91
-=======
-      "duration_seconds": 7362.69
->>>>>>> 9b838ad605c9aacbb6534a091eca7ad12ffeab70
+      "duration_seconds": 7260.15
     },
     {
       "name": "strict snapshot verification",
       "required": true,
       "returncode": 0,
-      "duration_seconds": 0.2
+      "duration_seconds": 0.06
     },
     {
       "name": "vacancy totals",
       "required": true,
       "returncode": 0,
-      "duration_seconds": 0.11
+      "duration_seconds": 0.04
     },
     {
       "name": "alert delivery",
       "required": false,
       "returncode": 0,
-<<<<<<< HEAD
-      "duration_seconds": 2.72
+      "duration_seconds": 5.65
     }
   ],
-  "run_id": "190cc0be-ed18-4aa2-af97-d71fc3f4313a",
-  "finished_at_epoch": 1790068879,
-=======
-      "duration_seconds": 5.59
-    }
-  ],
-  "run_id": "cf94cde2-38b6-482c-91c8-66158d860702",
-  "finished_at_epoch": 1789985364,
->>>>>>> 9b838ad605c9aacbb6534a091eca7ad12ffeab70
+  "run_id": "1ed344bb-8be6-46c3-94e4-d06b039c0d18",
+  "finished_at_epoch": 1789897967,
   "status": "succeeded"
 }

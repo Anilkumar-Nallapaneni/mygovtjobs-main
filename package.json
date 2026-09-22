@@ -200,7 +200,24 @@
     "pipeline:production": "node scripts/run-python.mjs scripts/run_pipeline.py --mode production",
     "pipeline:weekly": "node scripts/run-python.mjs scripts/run_pipeline.py --mode weekly",
     "pipeline:verify": "node scripts/run-python.mjs scripts/run_pipeline.py --mode verify",
-    "growth:audit": "node scripts/growth-audit.mjs"
+    "growth:audit": "node scripts/growth-audit.mjs",
+    "p0:audit": "npm run audit:review-queue && npm run audit:source-funnel && npm run data:promote-publish-gate && npm run ai:review -- --draft-only --no-llm",
+    "p0:apply": "npm run ai:review:apply -- --draft-only --no-llm && npm run data:promote-publish-gate:apply && npm run ai:watchdog:apply-db && npm run export:live-jobs && npm run clean:live-jobs && npm run build:sitemap && npm run verify:live-jobs",
+    "audit:review-queue": "node scripts/run-python.mjs scripts/audit-review-queue.py",
+    "p0:repair": "npm run backfill:dates:all && npm run pdf:backfill && npm run pdf:backfill-fields && npm run job:details:all && npm run ai:review:apply -- --draft-only --no-llm && npm run data:promote-publish-gate:apply && npm run ai:watchdog:apply-db && npm run export:live-jobs && npm run clean:live-jobs && npm run build:sitemap && npm run verify:live-jobs",
+    "p1:audit": "npm run audit:official-sites && npm run audit:source-funnel",
+    "p1:apply": "npm run health:sources && npm run export:source-health",
+    "p2:audit": "npm run audit:detail-coverage && npm run jobs:audit",
+    "p2:apply": "npm run enrich:jobs:all && npm run sync:job-children",
+    "p3:apply": "npm run data:populate-recruitment-events:apply && npm run build:official-archives && npm run export:recruitment-events && npm run build:sitemap",
+    "p4:apply": "npm run build:org-index && npm run build:sitemap && npm run growth:audit",
+    "p5:apply": "npm run i18n:generate && npm run i18n:fill && npm run i18n:audit",
+    "p6:apply": "npm run build:live-jobs-list && npm run build:live-jobs-bootstrap && npm run verify:job-detail-route",
+    "p7:apply": "npm run alerts:deliver",
+    "p8:audit": "npm run growth:audit && npm run check:performance-budgets",
+    "p9:audit": "node scripts/audit-monetization-readiness.mjs",
+    "phases:audit": "node scripts/run-all-phases.mjs",
+    "phases:apply": "node scripts/run-all-phases.mjs --apply"
   },
   "dependencies": {
     "@vercel/analytics": "^2.0.1"

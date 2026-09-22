@@ -1,0 +1,12 @@
+import fs from 'node:fs';
+const checks=[];
+const add=(name,ok,note='')=>checks.push({name,ok:Boolean(ok),note});
+const envExample=fs.existsSync('frontend/.env.example')?fs.readFileSync('frontend/.env.example','utf8'):'';
+add('AdSense configuration documented',/VITE_ADSENSE_CLIENT/.test(envExample),'Set the real value in Vercel, never commit secrets.');
+add('Ad component exists',fs.existsSync('frontend/src/components/ads/AdSlot.tsx'));
+add('Alerts page exists',fs.existsSync('frontend/src/pages/AlertsPage.tsx'));
+add('Analytics configuration present',/VITE_GA|GOOGLE_ANALYTICS|GA_/.test(envExample),'Verify production analytics separately.');
+console.log('\n=== P9 MONETIZATION READINESS (READ ONLY) ===');
+for(const c of checks) console.log(`${c.ok?'PASS':'WARN'} ${c.name}${c.note?' — '+c.note:''}`);
+console.log(`Ready checks: ${checks.filter(x=>x.ok).length}/${checks.length}`);
+process.exitCode=0;

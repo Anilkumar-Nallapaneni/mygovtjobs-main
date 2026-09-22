@@ -75,7 +75,7 @@ _PUBLISHED_PATTERNS = (
 _LAST_PATTERNS = (
     re.compile(
         r"(?:closing\s+date\s+for\s+(?:submission\s+of\s+)?online\s+application|"
-        r"registration\s+closing\s+date|"
+        r"registration\s+closing\s+date|online\s+registration\s+closes?|application\s+deadline|"
         r"last\s+date\s+(?:of|to|for)\s+(?:the\s+)?(?:online\s+)?(?:application|apply(?:ing)?(?:\s+online)?))"
         r"[:\s]+(\d{1,2}[./-]\d{1,2}[./-]\d{2,4})",
         re.I,
@@ -98,7 +98,7 @@ _LAST_PATTERNS = (
     ),
     re.compile(
         r"(?:last\s*date(?:\s*for\s*(?:the\s+)?(?:submission\s+of\s+)?(?:online\s*)?(?:application|registration)s?)?|"
-        r"closing\s*date|apply\s*(?:by|before|till)|submission\s*deadline|"
+        r"closing\s*date|apply\s*(?:by|before|till)|submission\s*deadline|application\s*deadline|online\s+registration\s+closes?|"
         r"अंतिम\s*तिथि)(?:[:\s]+|\s+is\s+)(\d{1,2}[./\s-]\d{1,2}[./\s-]\d{2,4})",
         re.I,
     ),
