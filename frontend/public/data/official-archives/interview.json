@@ -1,6 +1,11 @@
 {
+<<<<<<< HEAD
   "generatedAt": "2026-09-20T09:43:16.904Z",
   "count": 95,
+=======
+  "generatedAt": "2026-09-21T09:59:55.596Z",
+  "count": 96,
+>>>>>>> 9b838ad605c9aacbb6534a091eca7ad12ffeab70
   "items": [
     {
       "id": "29e735f6c2245346",
@@ -77,6 +82,26 @@
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
+<<<<<<< HEAD
+=======
+      "sourceId": "psc-br-notifications",
+      "sourceName": "BPSC — Notices",
+      "dept": "Bihar PSC",
+      "state": "Bihar",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "0de52133664cd2ad",
+      "title": "24 Oct 2026 NOTICE REGARDING INTERVIEW SCHEDULE OF ADVT. NO. A-1/E-1/2025, COMBINED STATE/UPPER SUBORDINATE SERVICES (M.) EXAM.-2025",
+      "link": "https://uppsc.up.nic.in/Open_PDF.aspx?I4PnQ0tBagnQ0/TjMEfCjILNJltHvQFj",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+>>>>>>> 9b838ad605c9aacbb6534a091eca7ad12ffeab70
       "sourceId": "uppsc-hall-tickets",
       "sourceName": "UPPSC — Hall tickets",
       "dept": "Uttar Pradesh PSC",
@@ -729,6 +754,7 @@
       "fetchMethod": "html"
     },
     {
+<<<<<<< HEAD
       "id": "7a9b0027b83e17f4",
       "title": "Collieries Division: Result of the 'Walk-in-Interview' held for Engagement of General Duty Medical Officer (GDMO) against Advertisement No. CD/HR/Rectt/26-27/68 Dated: 10.07.2026",
       "link": "https://aima-web-images.s3.ap-south-1.amazonaws.com/sailcareers.com/Downloads/SAIL_News%20&%20Jobs_21082026_165023.pdf",
@@ -748,6 +774,8 @@
       "fetchMethod": "html"
     },
     {
+=======
+>>>>>>> 9b838ad605c9aacbb6534a091eca7ad12ffeab70
       "id": "a2cdc2e2fd87ca8e",
       "title": "Bio Data Form and Other Relevant documents for GD/Interview shortlisted candidates of MTT Posts",
       "link": "https://sailcareers.com/SAIL2025MT/DownloadPerformaInterview.htm",
@@ -799,6 +827,26 @@
       "fetchMethod": "html"
     },
     {
+<<<<<<< HEAD
+=======
+      "id": "91558011355dca9d",
+      "title": "Recent Examinations/Interview",
+      "link": "https://jpsc.gov.in/Examination-Links.php",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-jh",
+      "sourceName": "Jharkhand PSC (JPSC)",
+      "dept": "Jharkhand PSC (JPSC)",
+      "state": "Jharkhand",
+      "category": "state",
+      "stateIds": [
+        "jh"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+>>>>>>> 9b838ad605c9aacbb6534a091eca7ad12ffeab70
       "id": "1709d751f92d2140",
       "title": "Procedure for Interview Date Change Requests",
       "link": "https://www.keralapsc.gov.in/procedure-interview-date-change-requests",
@@ -1225,6 +1273,350 @@
       "fetchMethod": "html"
     },
     {
+<<<<<<< HEAD
+=======
+      "id": "cbc497d1de70ca43",
+      "title": "Interview Call Letter - Assistant Professor (Political Science) 2024",
+      "link": "https://mppsc.mponline.gov.in/Portal/Examinations/MPPSC/2025/ASP24/CallLetter/Login.aspx?Pid=AP23",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-mp",
+      "sourceName": "Madhya Pradesh PSC (MPPSC)",
+      "dept": "Madhya Pradesh PSC (MPPSC)",
+      "state": "Madhya Pradesh",
+      "category": "state",
+      "stateIds": [
+        "mp"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "fe40b1b9ceff9486",
+      "title": "Interview Call Letter - Assistant Professor (Zoology) Examination - 2024",
+      "link": "https://mppsc.mponline.gov.in/Portal/Examinations/MPPSC/2025/ASP24/CallLetter/Login.aspx?Pid=AP19",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-mp",
+      "sourceName": "Madhya Pradesh PSC (MPPSC)",
+      "dept": "Madhya Pradesh PSC (MPPSC)",
+      "state": "Madhya Pradesh",
+      "category": "state",
+      "stateIds": [
+        "mp"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "29b69c62dccbbbba",
+      "title": "Notification for Personal Interview",
+      "link": "https://mpsc.meghalaya.gov.in/notifications-pi.html",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-ml",
+      "sourceName": "Meghalaya PSC",
+      "dept": "Meghalaya PSC",
+      "state": "NE States",
+      "category": "state",
+      "stateIds": [
+        "ne"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "a13fe269e27aacdc",
+      "title": "Results of Personal Interview",
+      "link": "https://mpsc.meghalaya.gov.in/result_interview.html",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-ml",
+      "sourceName": "Meghalaya PSC",
+      "dept": "Meghalaya PSC",
+      "state": "NE States",
+      "category": "state",
+      "stateIds": [
+        "ne"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "87ebfa8e48b444f1",
+      "title": "NOTICE PROGRAMME OF PERSONAL INTERVIEW Mechanic Motor Vehicle (M.V) Instructor under the Directorate of Employment & Craftsmen Training, Department of Labour, Employment & Skill Development [June 2025]",
+      "link": "https://mpsc.meghalaya.gov.in/programme/Notice02Sep2026a.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://mpsc.meghalaya.gov.in/programme/Notice02Sep2026a.pdf"
+      ],
+      "sourceId": "psc-ml",
+      "sourceName": "Meghalaya PSC",
+      "dept": "Meghalaya PSC",
+      "state": "NE States",
+      "category": "state",
+      "stateIds": [
+        "ne"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "e9df63d00719c7fa",
+      "title": "PROGRAMME OF PERSONAL INTERVIEW. Electrician Instructor under the Directorate of Employment & Craftsmen Training, Department of Labour Employment & Skill Develoment [June 2025]",
+      "link": "https://mpsc.meghalaya.gov.in/programme/Notice17Aug2026a.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://mpsc.meghalaya.gov.in/programme/Notice17Aug2026a.pdf"
+      ],
+      "sourceId": "psc-ml",
+      "sourceName": "Meghalaya PSC",
+      "dept": "Meghalaya PSC",
+      "state": "NE States",
+      "category": "state",
+      "stateIds": [
+        "ne"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "4a0d303c2aaf8ec9",
+      "title": "PROGRAMME OF PERSONAL INTERVIEW. Inspector of Excise in the Office of the Commissioner of Excise [Dec 2024] Library Assistant at State Central Library, Shillong (Non-Gazetted) [April 2025] Librarian in the Directorate of Information and Public Relations [April 2025] LIAISON OFFICER IN THE OFFICE OF THE ADDITIONAL RESIDENT COMMISSIONER, MEGHALAYA HOUSE, MUMBAI UNDER GENERAL ADMINISTRATION (A) DEPARTMENT[SEPT 2025]",
+      "link": "https://mpsc.meghalaya.gov.in/programme/Notice24June2026a.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://mpsc.meghalaya.gov.in/programme/Notice24June2026a.pdf"
+      ],
+      "sourceId": "psc-ml",
+      "sourceName": "Meghalaya PSC",
+      "dept": "Meghalaya PSC",
+      "state": "NE States",
+      "category": "state",
+      "stateIds": [
+        "ne"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "481473008e181ee4",
+      "title": "Press note regarding the personal interview for the Post of Assistant Engineer MGNREGA, C.D Block Little Andaman under South Andaman District",
+      "link": "https://erecruitment.andamannicobar.gov.in/Notice/64_fbe80dee-4dc3-4385-9622-d2f8e1ad2f29.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://erecruitment.andamannicobar.gov.in/Notice/64_fbe80dee-4dc3-4385-9622-d2f8e1ad2f29.pdf"
+      ],
+      "sourceId": "an-rec",
+      "sourceName": "Andaman & Nicobar e-Recruitment",
+      "dept": "Andaman & Nicobar e-Recruitment",
+      "state": "Andaman & Nicobar",
+      "category": "state",
+      "stateIds": [
+        "an"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "7a9b0027b83e17f4",
+      "title": "Collieries Division: Result of the 'Walk-in-Interview' held for Engagement of General Duty Medical Officer (GDMO) against Advertisement No. CD/HR/Rectt/26-27/68 Dated: 10.07.2026",
+      "link": "https://aima-web-images.s3.ap-south-1.amazonaws.com/sailcareers.com/Downloads/SAIL_News%20&%20Jobs_21082026_165023.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://aima-web-images.s3.ap-south-1.amazonaws.com/sailcareers.com/Downloads/SAIL_News%20&%20Jobs_21082026_165023.pdf"
+      ],
+      "sourceId": "sail",
+      "sourceName": "Steel Authority of India (SAIL)",
+      "dept": "Steel Authority of India (SAIL)",
+      "state": "All India",
+      "category": "psu",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "98e8959df1b18c64",
+      "title": "17 Oct 2026 LIST OF CANDIDATES PROVISIONALLY QUALIFIED FOR INTERVIEW IN ADVT. NO. A-1/E-1/2025, COMBINED STATE/UPPER SUBORDINATE SERVICES (M.) EXAM.-2025",
+      "link": "https://uppsc.up.nic.in/Open_PDF.aspx?I4PnQ0tBagnQ0/TjMEfCjM2A27zHkRdP",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "uppsc-hall-tickets",
+      "sourceName": "UPPSC — Hall tickets",
+      "dept": "Uttar Pradesh PSC",
+      "state": "Uttar Pradesh",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "66bff2c416041b99",
+      "title": "Interview notice for the post of Professor Cardio Vascular Thoracic Surgery in SKIMS Soura HME Deptt",
+      "link": "https://jkpsc.nic.in/Pdf/Downloader1.ashx?nid=18012&type=n",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-jk",
+      "sourceName": "Jammu & Kashmir PSC (JKPSC)",
+      "dept": "Jammu & Kashmir PSC (JKPSC)",
+      "state": "Jammu & Kashmir",
+      "category": "state",
+      "stateIds": [
+        "jk"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "f5750572b8e40d65",
+      "title": "Interview notice for the post of Lecturer-II (Non Engineering) Wood Technology in Skill Development Department",
+      "link": "https://jkpsc.nic.in/Pdf/Downloader1.ashx?nid=18010&type=n",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-jk",
+      "sourceName": "Jammu & Kashmir PSC (JKPSC)",
+      "dept": "Jammu & Kashmir PSC (JKPSC)",
+      "state": "Jammu & Kashmir",
+      "category": "state",
+      "stateIds": [
+        "jk"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "1639539b148806d2",
+      "title": "Interview notice for the post of Lecturer-I Computer Engineering in Skill Development Department",
+      "link": "https://jkpsc.nic.in/Pdf/Downloader1.ashx?nid=18005&type=n",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-jk",
+      "sourceName": "Jammu & Kashmir PSC (JKPSC)",
+      "dept": "Jammu & Kashmir PSC (JKPSC)",
+      "state": "Jammu & Kashmir",
+      "category": "state",
+      "stateIds": [
+        "jk"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "2d5cc53e1a3244e6",
+      "title": "Interview notice for the post of Lecturer-II (Non Engineering) Wood Technology in Skill Development Department",
+      "link": "https://jkpsc.nic.in/Pdf/Downloader1.ashx?nid=18006&type=n",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-jk",
+      "sourceName": "Jammu & Kashmir PSC (JKPSC)",
+      "dept": "Jammu & Kashmir PSC (JKPSC)",
+      "state": "Jammu & Kashmir",
+      "category": "state",
+      "stateIds": [
+        "jk"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "4ac64be59afb579a",
+      "title": "Schedule of Interview for Recruitment to Various Posts under the Directorate of Handloom & Textiles, Manipur. Updated: 27/05/2026",
+      "link": "https://mpscmanipur.gov.in/files/MPSC_26052719480.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://mpscmanipur.gov.in/files/MPSC_26052719480.pdf"
+      ],
+      "sourceId": "psc-mn",
+      "sourceName": "Manipur PSC",
+      "dept": "Manipur PSC",
+      "state": "NE States",
+      "category": "state",
+      "stateIds": [
+        "ne"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "3f7663453dcd756c",
+      "title": "Notification for postponement of interview for direct recruitment of various posts in the Directorate of Handloom & Textiles, Manipur. Updated: 20/05/2026",
+      "link": "https://mpscmanipur.gov.in/files/MPSC_26052016560.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://mpscmanipur.gov.in/files/MPSC_26052016560.pdf"
+      ],
+      "sourceId": "psc-mn",
+      "sourceName": "Manipur PSC",
+      "dept": "Manipur PSC",
+      "state": "NE States",
+      "category": "state",
+      "stateIds": [
+        "ne"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "b5773e5c8e75d0e3",
+      "title": "Interview Schedule for recruitment to various posts in the Directorate of Handloom & Textiles, Manipur on contractual basis. Updated: 13/05/2026",
+      "link": "https://mpscmanipur.gov.in/files/MPSC_26051320250.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://mpscmanipur.gov.in/files/MPSC_26051320250.pdf"
+      ],
+      "sourceId": "psc-mn",
+      "sourceName": "Manipur PSC",
+      "dept": "Manipur PSC",
+      "state": "NE States",
+      "category": "state",
+      "stateIds": [
+        "ne"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "29433f19566f8cd4",
+      "title": "Walk-in Interview for Engagement of Consultants (Doctors in Medical Disciplines) for IISCO Steel Plant – advt. dated 18/AUG/2026.",
+      "link": "https://aima-web-images.s3.ap-south-1.amazonaws.com/sailcareers.com/Downloads/IISCO_News%20&%20Jobs_19082026_095439.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://aima-web-images.s3.ap-south-1.amazonaws.com/sailcareers.com/Downloads/IISCO_News%20&%20Jobs_19082026_095439.pdf"
+      ],
+      "sourceId": "sail",
+      "sourceName": "Steel Authority of India (SAIL)",
+      "dept": "Steel Authority of India (SAIL)",
+      "state": "All India",
+      "category": "psu",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "59d89ab2523737c9",
+      "title": "Click here to view the result of Personal Interview for the Advertisement No. ISP/YP/2026/01 dated 22.05.2026",
+      "link": "https://sailcareers.com/sail2026yp/SAIL2026YPInterviewResult.aspx",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "sail",
+      "sourceName": "Steel Authority of India (SAIL)",
+      "dept": "Steel Authority of India (SAIL)",
+      "state": "All India",
+      "category": "psu",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+>>>>>>> 9b838ad605c9aacbb6534a091eca7ad12ffeab70
       "id": "05de1912b0b5a28f",
       "title": "Interview Schedule",
       "link": "https://www.keralapsc.gov.in/index.php/interviews",
