@@ -1,18 +1,10 @@
 {
   "status": "completed",
-<<<<<<< HEAD
-  "completedAt": "2026-09-20T09:52:28.970988+00:00",
-  "completedAtIst": "2026-09-20T15:22:28.971021+05:30",
-  "lastCompletedDateIst": "2026-09-20",
-  "nextRunAtIst": "2026-09-21T08:00:00+05:30",
-  "jobCount": 35,
-=======
-  "completedAt": "2026-09-21T10:09:06.659536+00:00",
-  "completedAtIst": "2026-09-21T15:39:06.659564+05:30",
-  "lastCompletedDateIst": "2026-09-21",
-  "nextRunAtIst": "2026-09-22T08:00:00+05:30",
-  "jobCount": 33,
->>>>>>> 9b838ad605c9aacbb6534a091eca7ad12ffeab70
+  "completedAt": "2026-09-22T09:32:23.107829+00:00",
+  "completedAtIst": "2026-09-22T15:02:23.107829+05:30",
+  "lastCompletedDateIst": "2026-09-22",
+  "nextRunAtIst": "2026-09-23T08:00:00+05:30",
+  "jobCount": 31,
   "sourcesScraped": 154,
   "notes": "IngestAgent: official India govt portals + RSS"
 }

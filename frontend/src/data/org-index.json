@@ -12,18 +12,6 @@
     "pdfCoverage": 1
   },
   {
-    "dept": "Rashtriya Chemicals and Fertilizers Limited (RCF)",
-    "slug": "rashtriya-chemicals-and-fertilizers-limited-rcf",
-    "count": 3,
-    "vacancies": 431,
-    "officialDomain": "rcfltd.com",
-    "officialUrl": "https://rcfltd.com",
-    "sourceHealth": "healthy",
-    "lastPostedAt": "2026-09-04T00:00:00",
-    "lastCheckedAt": null,
-    "pdfCoverage": 1
-  },
-  {
     "dept": "Staff Selection Commission (SSC)",
     "slug": "staff-selection-commission-ssc",
     "count": 3,
@@ -33,18 +21,6 @@
     "sourceHealth": "healthy",
     "lastPostedAt": "2026-09-10T07:35:10",
     "lastCheckedAt": "2026-09-17T02:42:42.629558+00:00",
-    "pdfCoverage": 1
-  },
-  {
-    "dept": "Institute of Banking Personnel Selection (IBPS)",
-    "slug": "institute-of-banking-personnel-selection-ibps",
-    "count": 2,
-    "vacancies": 13693,
-    "officialDomain": "ibps.in",
-    "officialUrl": "https://ibps.in",
-    "sourceHealth": "healthy",
-    "lastPostedAt": "2026-09-01T00:00:00",
-    "lastCheckedAt": "2026-09-17T02:41:43.818920+00:00",
     "pdfCoverage": 1
   },
   {
@@ -260,6 +236,18 @@
     "officialUrl": "https://rfcl.co.in",
     "sourceHealth": "healthy",
     "lastPostedAt": "2026-08-26T00:00:00",
+    "lastCheckedAt": null,
+    "pdfCoverage": 1
+  },
+  {
+    "dept": "Rashtriya Chemicals and Fertilizers Limited (RCF)",
+    "slug": "rashtriya-chemicals-and-fertilizers-limited-rcf",
+    "count": 1,
+    "vacancies": 10,
+    "officialDomain": "rcfltd.com",
+    "officialUrl": "https://rcfltd.com",
+    "sourceHealth": "healthy",
+    "lastPostedAt": "2026-09-03T00:00:00",
     "lastCheckedAt": null,
     "pdfCoverage": 1
   },
