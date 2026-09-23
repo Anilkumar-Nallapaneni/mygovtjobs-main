@@ -1,7 +1,24 @@
 {
-  "generatedAt": "2026-09-20T09:43:16.904Z",
-  "count": 150,
+  "generatedAt": "2026-09-23T09:48:46.665Z",
+  "count": 156,
   "items": [
+    {
+      "id": "3ab90b393ed54006",
+      "title": "Advt. No. ISTRAC:02:2026 dated 27.06.2026 - Download Admit Card for Computer Based Test (CBT) Read More",
+      "link": "https://www.isro.gov.in/ISTRACRecruitment4.html",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "isro-careers",
+      "sourceName": "ISRO — Careers",
+      "dept": "Indian Space Research Organisation",
+      "state": "All India",
+      "category": "psu",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
     {
       "id": "dab406e23a6537a1",
       "title": "E-Admit Cards for various Recruitment Posts",
@@ -105,23 +122,6 @@
       "fetchMethod": "html-listing"
     },
     {
-      "id": "a258e1bf70494142",
-      "title": "01 Oct 2026 NOTICE REGARDING ADMIT CARD OF ADVT. NO. A-7/E-1/2025, ASSISTANT PROFESSOR, GOVT. DEGREE COLLEGE MAINS EXAM-2025",
-      "link": "https://uppsc.up.nic.in/Open_PDF.aspx?I4PnQ0tBagnQ0/TjMEfCjDxCKVUIkbBP",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "uppsc-hall-tickets",
-      "sourceName": "UPPSC — Hall tickets",
-      "dept": "Uttar Pradesh PSC",
-      "state": "Uttar Pradesh",
-      "category": "state",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
       "id": "1134e9072dc7886b",
       "title": "केऔसुब में पैरामेडिकल स्टाफ़ की भर्ती (2026) के लिए पीएसटी और दस्तवेजीकरण में शामिल होने के लिए प्रवेश पत्र केऔसुब की भर्ती वेबसाइट https://cisfrectt.cisf.gov.in/ पर अपलोड कर दिया गया है। उम्मीदवारों को सलाह दी जाती है कि वे भर्ती प्रक्रिया में शामिल होने के लिए ई-एडमिट कार्ड डाउनलोड कर लें",
       "link": "https://www.cisf.gov.in/assets/pdfs/2026/08/rectt_imp_not_pmsr_hindi.pdf",
@@ -177,43 +177,43 @@
       "fetchMethod": "html"
     },
     {
-      "id": "97a06d61ec80c264",
-      "title": "Conference call/analyst meet with Investors",
-      "link": "https://ntpc.co.in/index.php/investors/confrence-call-analyst-meet-investors/conference-call-analysts-investors",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "ntpc",
-      "sourceName": "NTPC — Careers",
-      "dept": "NTPC — Careers",
-      "state": "All India",
-      "category": "psu",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "4382aefa8fd5c9cb",
-      "title": "NTPC Ltd. Q4/12M FY26 Conference Call on May 23, 2026",
-      "link": "https://ntpc.co.in/index.php/ntpc-ltd-q412m-fy26-conference-call-may-23-2026",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "ntpc",
-      "sourceName": "NTPC — Careers",
-      "dept": "NTPC — Careers",
-      "state": "All India",
-      "category": "psu",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
       "id": "2b909d8e996d4c94",
       "title": "Conference call/analyst meet with Investors",
       "link": "https://ntpc.co.in/investors/confrence-call-analyst-meet-investors/conference-call-analysts-investors",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "ntpc",
+      "sourceName": "NTPC — Careers",
+      "dept": "NTPC — Careers",
+      "state": "All India",
+      "category": "psu",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "4e1bcf588af156f0",
+      "title": "NTPC Ltd. Q4/12M FY26 Conference Call on May 23, 2026",
+      "link": "https://ntpc.co.in/ntpc-ltd-q412m-fy26-conference-call-may-23-2026",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "ntpc",
+      "sourceName": "NTPC — Careers",
+      "dept": "NTPC — Careers",
+      "state": "All India",
+      "category": "psu",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "97a06d61ec80c264",
+      "title": "Conference call/analyst meet with Investors",
+      "link": "https://ntpc.co.in/index.php/investors/confrence-call-analyst-meet-investors/conference-call-analysts-investors",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
@@ -279,74 +279,6 @@
       "fetchMethod": "html"
     },
     {
-      "id": "158bb00a9699c472",
-      "title": "Admit Cards",
-      "link": "https://mppsc.mp.gov.in/Admitcard",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-mp",
-      "sourceName": "Madhya Pradesh PSC (MPPSC)",
-      "dept": "Madhya Pradesh PSC (MPPSC)",
-      "state": "Madhya Pradesh",
-      "category": "state",
-      "stateIds": [
-        "mp"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "0d44c22e4b73f116",
-      "title": "Admit Card - State Forest Service Main Exam 2026",
-      "link": "https://mppsc.mponline.gov.in/Portal/Examinations/MPPSC/2026/AdmitCard/F26Login.aspx",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-mp",
-      "sourceName": "Madhya Pradesh PSC (MPPSC)",
-      "dept": "Madhya Pradesh PSC (MPPSC)",
-      "state": "Madhya Pradesh",
-      "category": "state",
-      "stateIds": [
-        "mp"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "cbc497d1de70ca43",
-      "title": "Interview Call Letter - Assistant Professor (Political Science) 2024",
-      "link": "https://mppsc.mponline.gov.in/Portal/Examinations/MPPSC/2025/ASP24/CallLetter/Login.aspx?Pid=AP23",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-mp",
-      "sourceName": "Madhya Pradesh PSC (MPPSC)",
-      "dept": "Madhya Pradesh PSC (MPPSC)",
-      "state": "Madhya Pradesh",
-      "category": "state",
-      "stateIds": [
-        "mp"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "feb76978c25ef5ed",
-      "title": "Admit Card - Specialist Ayurved Exam - 2024",
-      "link": "https://mppsc.mponline.gov.in/Portal/Examinations/MPPSC/2026/AdmitCard/SA24Login.aspx",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-mp",
-      "sourceName": "Madhya Pradesh PSC (MPPSC)",
-      "dept": "Madhya Pradesh PSC (MPPSC)",
-      "state": "Madhya Pradesh",
-      "category": "state",
-      "stateIds": [
-        "mp"
-      ],
-      "fetchMethod": "html"
-    },
-    {
       "id": "490bb67a63427b49",
       "title": "Download Admit Card for Post prior to August 2025",
       "link": "https://megrecruitment.nic.in/rpa/printadmitcard.htm",
@@ -381,36 +313,95 @@
       "fetchMethod": "html"
     },
     {
-      "id": "8c7104cb7aea4338",
-      "title": "Admit Cards",
-      "link": "http://rsmssb.rajasthan.gov.in/page?menuName=/ur7491nQtP/eTfIoLmSTQ==",
+      "id": "2cb6ef6de1513685",
+      "title": "Under Secretary (Law) and Law Officer Recruitment – Examination Schedule Updated: 08/05/2026",
+      "link": "https://mpscmanipur.gov.in/files/Notification_Under_Secy_Law_Officer_Admit_card.pdf",
       "publishedAt": null,
       "summary": null,
-      "pdfUrls": [],
-      "sourceId": "ssb-rj",
-      "sourceName": "Rajasthan Staff Selection Board (RSSB)",
-      "dept": "Rajasthan Staff Selection Board (RSSB)",
-      "state": "Rajasthan",
+      "pdfUrls": [
+        "https://mpscmanipur.gov.in/files/Notification_Under_Secy_Law_Officer_Admit_card.pdf"
+      ],
+      "sourceId": "psc-mn",
+      "sourceName": "Manipur PSC",
+      "dept": "Manipur PSC",
+      "state": "NE States",
       "category": "state",
       "stateIds": [
-        "rj"
+        "ne"
       ],
       "fetchMethod": "html"
     },
     {
-      "id": "a11c8ece90f5c6bb",
-      "title": "Admit Card",
-      "link": "http://rsmssb.rajasthan.gov.in/page?menuName=/ur7491nQtP6K0BefutjEQ==",
+      "id": "686e8d5b26f137a9",
+      "title": "Planning Department Research Assistant Recruitment – Examination Schedule Updated: 08/05/2026",
+      "link": "https://mpscmanipur.gov.in/files/Research_Asst_notification_Admit_card.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://mpscmanipur.gov.in/files/Research_Asst_notification_Admit_card.pdf"
+      ],
+      "sourceId": "psc-mn",
+      "sourceName": "Manipur PSC",
+      "dept": "Manipur PSC",
+      "state": "NE States",
+      "category": "state",
+      "stateIds": [
+        "ne"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "56de02281a84cf5b",
+      "title": "Admit Cards",
+      "link": "https://empsconline.gov.in/downloadadmitcardv2.aspx",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
-      "sourceId": "ssb-rj",
-      "sourceName": "Rajasthan Staff Selection Board (RSSB)",
-      "dept": "Rajasthan Staff Selection Board (RSSB)",
-      "state": "Rajasthan",
+      "sourceId": "psc-mn",
+      "sourceName": "Manipur PSC",
+      "dept": "Manipur PSC",
+      "state": "NE States",
       "category": "state",
       "stateIds": [
-        "rj"
+        "ne"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "15a1ceeee27b14c7",
+      "title": "Under Secretary (Law) and Law Officer Recruitment – Examination Schedule Updated: 08/05/2026",
+      "link": "https://www.mpscmanipur.gov.in/files/Notification_Under_Secy_Law_Officer_Admit_card.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://www.mpscmanipur.gov.in/files/Notification_Under_Secy_Law_Officer_Admit_card.pdf"
+      ],
+      "sourceId": "psc-mn",
+      "sourceName": "Manipur PSC",
+      "dept": "Manipur PSC",
+      "state": "NE States",
+      "category": "state",
+      "stateIds": [
+        "ne"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "85376654e80d7e2a",
+      "title": "Planning Department Research Assistant Recruitment – Examination Schedule Updated: 08/05/2026",
+      "link": "https://www.mpscmanipur.gov.in/files/Research_Asst_notification_Admit_card.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://www.mpscmanipur.gov.in/files/Research_Asst_notification_Admit_card.pdf"
+      ],
+      "sourceId": "psc-mn",
+      "sourceName": "Manipur PSC",
+      "dept": "Manipur PSC",
+      "state": "NE States",
+      "category": "state",
+      "stateIds": [
+        "ne"
       ],
       "fetchMethod": "html"
     },
@@ -487,13 +478,13 @@
       "fetchMethod": "html"
     },
     {
-      "id": "9da3b7adfdb92e81",
-      "title": "पदनाम-साहसिक खेल अधिकारी/कैमरामैन/प्रावधिक सहायक(इतिहास) के प्रवेश पत्र(Admit Card) से सम्बंधित विज्ञप्ति हेतु क्लिक करें",
-      "link": "https://cdnbbsr.s3waas.gov.in/s34ffd0e19d2069412274bd3025b0e176c/uploads/2026/09/20260914621896480.pdf",
+      "id": "23f31794659948f7",
+      "title": "पदनाम-सहायक वोरिंग टेक्निशियन/कम्प्यूटर प्रोग्रामर के प्रवेश पत्र डाउनलोड(ADMIT CARD) से सम्बंधित विज्ञप्ति हेतु क्लिक करें",
+      "link": "https://cdnbbsr.s3waas.gov.in/s34ffd0e19d2069412274bd3025b0e176c/uploads/2026/09/202609211927879955.pdf",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [
-        "https://cdnbbsr.s3waas.gov.in/s34ffd0e19d2069412274bd3025b0e176c/uploads/2026/09/20260914621896480.pdf"
+        "https://cdnbbsr.s3waas.gov.in/s34ffd0e19d2069412274bd3025b0e176c/uploads/2026/09/202609211927879955.pdf"
       ],
       "sourceId": "ssb-uk",
       "sourceName": "Uttarakhand Subordinate Service Selection (UKSSSC)",
@@ -506,9 +497,9 @@
       "fetchMethod": "html"
     },
     {
-      "id": "b830f20fc21f4667",
-      "title": "पदनाम-प्रावधिक सहायक(इतिहास)(Advt-74) के प्रवेश पत्र(Admit Card) हेतु क्लिक करें",
-      "link": "https://admitcard.ukssscrecruitment.in/Home/AdmitCard/index/74-19",
+      "id": "7938c86c8076e8ee",
+      "title": "पदनाम-सहायक वोरिंग टेक्निशियन के प्रवेश पत्र डाउनलोड(ADMIT CARD)हेतु क्लिक करें",
+      "link": "https://admitcard.ukssscrecruitment.in/Home/AdmitCard/index/74-26",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
@@ -523,26 +514,9 @@
       "fetchMethod": "html"
     },
     {
-      "id": "b7b0674aed13181c",
-      "title": "पदनाम-साहसिक खेल अधिकारी(Advt-74) के प्रवेश पत्र(Admit Card) हेतु क्लिक करें",
-      "link": "https://admitcard.ukssscrecruitment.in/Home/AdmitCard/index/74-9",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "ssb-uk",
-      "sourceName": "Uttarakhand Subordinate Service Selection (UKSSSC)",
-      "dept": "Uttarakhand Subordinate Service Selection (UKSSSC)",
-      "state": "Uttarakhand",
-      "category": "state",
-      "stateIds": [
-        "uk"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "2b01d274a1d41e81",
-      "title": "पदनाम-कैमरामैन(Advt-74) के प्रवेश पत्र(Admit Card) हेतु क्लिक करें",
-      "link": "https://admitcard.ukssscrecruitment.in/Home/AdmitCard/index/74-10",
+      "id": "35b4decab232fb12",
+      "title": "पदनाम-कम्प्यूटर प्रोग्रामर के प्रवेश पत्र डाउनलोड(ADMIT CARD)हेतु क्लिक करें",
+      "link": "https://admitcard.ukssscrecruitment.in/Home/AdmitCard/index/74-15",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
@@ -560,40 +534,6 @@
       "id": "bbbe10054786d258",
       "title": "Admit Card",
       "link": "https://sssc.uk.gov.in/admit-card/",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "ssb-uk",
-      "sourceName": "Uttarakhand Subordinate Service Selection (UKSSSC)",
-      "dept": "Uttarakhand Subordinate Service Selection (UKSSSC)",
-      "state": "Uttarakhand",
-      "category": "state",
-      "stateIds": [
-        "uk"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "bb9a3ba38e6876af",
-      "title": "पदनाम-साहसिक खेल अधिकारी/कैमरामैन/प्रावधिक सहायक(इतिहास) के प्रवेश पत्र(Admit Card) से सम्बंधित विज्ञप्ति हेतु क्लिक करें",
-      "link": "https://sssc.uk.gov.in/document/%e0%a4%aa%e0%a4%a6%e0%a4%a8%e0%a4%be%e0%a4%ae-%e0%a4%b8%e0%a4%be%e0%a4%b9%e0%a4%b8%e0%a4%bf%e0%a4%95-%e0%a4%96%e0%a5%87%e0%a4%b2-%e0%a4%85%e0%a4%a7%e0%a4%bf%e0%a4%95%e0%a4%be%e0%a4%b0%e0%a5%80/",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "ssb-uk",
-      "sourceName": "Uttarakhand Subordinate Service Selection (UKSSSC)",
-      "dept": "Uttarakhand Subordinate Service Selection (UKSSSC)",
-      "state": "Uttarakhand",
-      "category": "state",
-      "stateIds": [
-        "uk"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "099e3694aee1a69d",
-      "title": "पदनाम-वैयत्तिक सहायक,आशुलिपिक के टंकण एवं आशुलेखन परीक्षा के प्रवेश पत्र से सम्बंधित विज्ञप्ति(Admit Card)(Advt 26/UKSSSC/2020)",
-      "link": "https://sssc.uk.gov.in/document/%e0%a4%aa%e0%a4%a6%e0%a4%a8%e0%a4%be%e0%a4%ae-%e0%a4%b5%e0%a5%88%e0%a4%af%e0%a4%a4%e0%a5%8d%e0%a4%a4%e0%a4%bf%e0%a4%95-%e0%a4%b8%e0%a4%b9%e0%a4%be%e0%a4%af%e0%a4%95%e0%a4%86%e0%a4%b6%e0%a5%81-5/",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
@@ -815,6 +755,246 @@
       "fetchMethod": "html"
     },
     {
+      "id": "a258e1bf70494142",
+      "title": "01 Oct 2026 NOTICE REGARDING ADMIT CARD OF ADVT. NO. A-7/E-1/2025, ASSISTANT PROFESSOR, GOVT. DEGREE COLLEGE MAINS EXAM-2025",
+      "link": "https://uppsc.up.nic.in/Open_PDF.aspx?I4PnQ0tBagnQ0/TjMEfCjDxCKVUIkbBP",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "uppsc-hall-tickets",
+      "sourceName": "UPPSC — Hall tickets",
+      "dept": "Uttar Pradesh PSC",
+      "state": "Uttar Pradesh",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "4382aefa8fd5c9cb",
+      "title": "NTPC Ltd. Q4/12M FY26 Conference Call on May 23, 2026",
+      "link": "https://ntpc.co.in/index.php/ntpc-ltd-q412m-fy26-conference-call-may-23-2026",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "ntpc",
+      "sourceName": "NTPC — Careers",
+      "dept": "NTPC — Careers",
+      "state": "All India",
+      "category": "psu",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "158bb00a9699c472",
+      "title": "Admit Cards",
+      "link": "https://mppsc.mp.gov.in/Admitcard",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-mp",
+      "sourceName": "Madhya Pradesh PSC (MPPSC)",
+      "dept": "Madhya Pradesh PSC (MPPSC)",
+      "state": "Madhya Pradesh",
+      "category": "state",
+      "stateIds": [
+        "mp"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "0d44c22e4b73f116",
+      "title": "Admit Card - State Forest Service Main Exam 2026",
+      "link": "https://mppsc.mponline.gov.in/Portal/Examinations/MPPSC/2026/AdmitCard/F26Login.aspx",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-mp",
+      "sourceName": "Madhya Pradesh PSC (MPPSC)",
+      "dept": "Madhya Pradesh PSC (MPPSC)",
+      "state": "Madhya Pradesh",
+      "category": "state",
+      "stateIds": [
+        "mp"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "cbc497d1de70ca43",
+      "title": "Interview Call Letter - Assistant Professor (Political Science) 2024",
+      "link": "https://mppsc.mponline.gov.in/Portal/Examinations/MPPSC/2025/ASP24/CallLetter/Login.aspx?Pid=AP23",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-mp",
+      "sourceName": "Madhya Pradesh PSC (MPPSC)",
+      "dept": "Madhya Pradesh PSC (MPPSC)",
+      "state": "Madhya Pradesh",
+      "category": "state",
+      "stateIds": [
+        "mp"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "feb76978c25ef5ed",
+      "title": "Admit Card - Specialist Ayurved Exam - 2024",
+      "link": "https://mppsc.mponline.gov.in/Portal/Examinations/MPPSC/2026/AdmitCard/SA24Login.aspx",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-mp",
+      "sourceName": "Madhya Pradesh PSC (MPPSC)",
+      "dept": "Madhya Pradesh PSC (MPPSC)",
+      "state": "Madhya Pradesh",
+      "category": "state",
+      "stateIds": [
+        "mp"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "8c7104cb7aea4338",
+      "title": "Admit Cards",
+      "link": "http://rsmssb.rajasthan.gov.in/page?menuName=/ur7491nQtP/eTfIoLmSTQ==",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "ssb-rj",
+      "sourceName": "Rajasthan Staff Selection Board (RSSB)",
+      "dept": "Rajasthan Staff Selection Board (RSSB)",
+      "state": "Rajasthan",
+      "category": "state",
+      "stateIds": [
+        "rj"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "a11c8ece90f5c6bb",
+      "title": "Admit Card",
+      "link": "http://rsmssb.rajasthan.gov.in/page?menuName=/ur7491nQtP6K0BefutjEQ==",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "ssb-rj",
+      "sourceName": "Rajasthan Staff Selection Board (RSSB)",
+      "dept": "Rajasthan Staff Selection Board (RSSB)",
+      "state": "Rajasthan",
+      "category": "state",
+      "stateIds": [
+        "rj"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "9da3b7adfdb92e81",
+      "title": "पदनाम-साहसिक खेल अधिकारी/कैमरामैन/प्रावधिक सहायक(इतिहास) के प्रवेश पत्र(Admit Card) से सम्बंधित विज्ञप्ति हेतु क्लिक करें",
+      "link": "https://cdnbbsr.s3waas.gov.in/s34ffd0e19d2069412274bd3025b0e176c/uploads/2026/09/20260914621896480.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://cdnbbsr.s3waas.gov.in/s34ffd0e19d2069412274bd3025b0e176c/uploads/2026/09/20260914621896480.pdf"
+      ],
+      "sourceId": "ssb-uk",
+      "sourceName": "Uttarakhand Subordinate Service Selection (UKSSSC)",
+      "dept": "Uttarakhand Subordinate Service Selection (UKSSSC)",
+      "state": "Uttarakhand",
+      "category": "state",
+      "stateIds": [
+        "uk"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "b830f20fc21f4667",
+      "title": "पदनाम-प्रावधिक सहायक(इतिहास)(Advt-74) के प्रवेश पत्र(Admit Card) हेतु क्लिक करें",
+      "link": "https://admitcard.ukssscrecruitment.in/Home/AdmitCard/index/74-19",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "ssb-uk",
+      "sourceName": "Uttarakhand Subordinate Service Selection (UKSSSC)",
+      "dept": "Uttarakhand Subordinate Service Selection (UKSSSC)",
+      "state": "Uttarakhand",
+      "category": "state",
+      "stateIds": [
+        "uk"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "b7b0674aed13181c",
+      "title": "पदनाम-साहसिक खेल अधिकारी(Advt-74) के प्रवेश पत्र(Admit Card) हेतु क्लिक करें",
+      "link": "https://admitcard.ukssscrecruitment.in/Home/AdmitCard/index/74-9",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "ssb-uk",
+      "sourceName": "Uttarakhand Subordinate Service Selection (UKSSSC)",
+      "dept": "Uttarakhand Subordinate Service Selection (UKSSSC)",
+      "state": "Uttarakhand",
+      "category": "state",
+      "stateIds": [
+        "uk"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "2b01d274a1d41e81",
+      "title": "पदनाम-कैमरामैन(Advt-74) के प्रवेश पत्र(Admit Card) हेतु क्लिक करें",
+      "link": "https://admitcard.ukssscrecruitment.in/Home/AdmitCard/index/74-10",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "ssb-uk",
+      "sourceName": "Uttarakhand Subordinate Service Selection (UKSSSC)",
+      "dept": "Uttarakhand Subordinate Service Selection (UKSSSC)",
+      "state": "Uttarakhand",
+      "category": "state",
+      "stateIds": [
+        "uk"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "bb9a3ba38e6876af",
+      "title": "पदनाम-साहसिक खेल अधिकारी/कैमरामैन/प्रावधिक सहायक(इतिहास) के प्रवेश पत्र(Admit Card) से सम्बंधित विज्ञप्ति हेतु क्लिक करें",
+      "link": "https://sssc.uk.gov.in/document/%e0%a4%aa%e0%a4%a6%e0%a4%a8%e0%a4%be%e0%a4%ae-%e0%a4%b8%e0%a4%be%e0%a4%b9%e0%a4%b8%e0%a4%bf%e0%a4%95-%e0%a4%96%e0%a5%87%e0%a4%b2-%e0%a4%85%e0%a4%a7%e0%a4%bf%e0%a4%95%e0%a4%be%e0%a4%b0%e0%a5%80/",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "ssb-uk",
+      "sourceName": "Uttarakhand Subordinate Service Selection (UKSSSC)",
+      "dept": "Uttarakhand Subordinate Service Selection (UKSSSC)",
+      "state": "Uttarakhand",
+      "category": "state",
+      "stateIds": [
+        "uk"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "099e3694aee1a69d",
+      "title": "पदनाम-वैयत्तिक सहायक,आशुलिपिक के टंकण एवं आशुलेखन परीक्षा के प्रवेश पत्र से सम्बंधित विज्ञप्ति(Admit Card)(Advt 26/UKSSSC/2020)",
+      "link": "https://sssc.uk.gov.in/document/%e0%a4%aa%e0%a4%a6%e0%a4%a8%e0%a4%be%e0%a4%ae-%e0%a4%b5%e0%a5%88%e0%a4%af%e0%a4%a4%e0%a5%8d%e0%a4%a4%e0%a4%bf%e0%a4%95-%e0%a4%b8%e0%a4%b9%e0%a4%be%e0%a4%af%e0%a4%95%e0%a4%86%e0%a4%b6%e0%a5%81-5/",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "ssb-uk",
+      "sourceName": "Uttarakhand Subordinate Service Selection (UKSSSC)",
+      "dept": "Uttarakhand Subordinate Service Selection (UKSSSC)",
+      "state": "Uttarakhand",
+      "category": "state",
+      "stateIds": [
+        "uk"
+      ],
+      "fetchMethod": "html"
+    },
+    {
       "id": "f4dc78c867d60ac9",
       "title": "11/06/2026 Download Marks Card for Civil Services (Judicial) Competitive Examination, 2025",
       "link": "http://jkpsc.nic.in/RESULT/KCSJ_MARKS_CARD_2025.HTML",
@@ -883,61 +1063,6 @@
       "fetchMethod": "html"
     },
     {
-      "id": "2cb6ef6de1513685",
-      "title": "Under Secretary (Law) and Law Officer Recruitment – Examination Schedule Updated: 08/05/2026",
-      "link": "https://mpscmanipur.gov.in/files/Notification_Under_Secy_Law_Officer_Admit_card.pdf",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [
-        "https://mpscmanipur.gov.in/files/Notification_Under_Secy_Law_Officer_Admit_card.pdf"
-      ],
-      "sourceId": "psc-mn",
-      "sourceName": "Manipur PSC",
-      "dept": "Manipur PSC",
-      "state": "NE States",
-      "category": "state",
-      "stateIds": [
-        "ne"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "686e8d5b26f137a9",
-      "title": "Planning Department Research Assistant Recruitment – Examination Schedule Updated: 08/05/2026",
-      "link": "https://mpscmanipur.gov.in/files/Research_Asst_notification_Admit_card.pdf",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [
-        "https://mpscmanipur.gov.in/files/Research_Asst_notification_Admit_card.pdf"
-      ],
-      "sourceId": "psc-mn",
-      "sourceName": "Manipur PSC",
-      "dept": "Manipur PSC",
-      "state": "NE States",
-      "category": "state",
-      "stateIds": [
-        "ne"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "56de02281a84cf5b",
-      "title": "Admit Cards",
-      "link": "https://empsconline.gov.in/downloadadmitcardv2.aspx",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-mn",
-      "sourceName": "Manipur PSC",
-      "dept": "Manipur PSC",
-      "state": "NE States",
-      "category": "state",
-      "stateIds": [
-        "ne"
-      ],
-      "fetchMethod": "html"
-    },
-    {
       "id": "1271cc1050a50c03",
       "title": "01 Oct 2026 NOTICE REGARDING ADMIT CARD OF ADVT. NO. A-7/E-1/2025, ASSISTANT PROFESSOR, GOVT. DEGREE COLLEGE MAINS EXAM-2025",
       "link": "https://uppsc.up.nic.in/Open_PDF.aspx?I4PnQ0tBaglFjifabMvCvUqhY4dxzbZV",
@@ -953,23 +1078,6 @@
         "all"
       ],
       "fetchMethod": "html-listing"
-    },
-    {
-      "id": "4e1bcf588af156f0",
-      "title": "NTPC Ltd. Q4/12M FY26 Conference Call on May 23, 2026",
-      "link": "https://ntpc.co.in/ntpc-ltd-q412m-fy26-conference-call-may-23-2026",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "ntpc",
-      "sourceName": "NTPC — Careers",
-      "dept": "NTPC — Careers",
-      "state": "All India",
-      "category": "psu",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
     },
     {
       "id": "cb6b3038df222c18",

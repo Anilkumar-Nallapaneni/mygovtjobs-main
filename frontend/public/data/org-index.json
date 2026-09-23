@@ -12,63 +12,15 @@
     "pdfCoverage": 1
   },
   {
-    "dept": "Rashtriya Chemicals and Fertilizers Limited (RCF)",
-    "slug": "rashtriya-chemicals-and-fertilizers-limited-rcf",
-    "count": 3,
-    "vacancies": 431,
-    "officialDomain": "rcfltd.com",
-    "officialUrl": "https://rcfltd.com",
-    "sourceHealth": "healthy",
-    "lastPostedAt": "2026-09-04T00:00:00",
-    "lastCheckedAt": null,
-    "pdfCoverage": 1
-  },
-  {
     "dept": "Staff Selection Commission (SSC)",
     "slug": "staff-selection-commission-ssc",
-    "count": 3,
+    "count": 2,
     "vacancies": 0,
     "officialDomain": "ssc.gov.in",
     "officialUrl": "https://ssc.gov.in",
     "sourceHealth": "healthy",
     "lastPostedAt": "2026-09-10T07:35:10",
     "lastCheckedAt": "2026-09-17T02:42:42.629558+00:00",
-    "pdfCoverage": 1
-  },
-  {
-    "dept": "Institute of Banking Personnel Selection (IBPS)",
-    "slug": "institute-of-banking-personnel-selection-ibps",
-    "count": 2,
-    "vacancies": 13693,
-    "officialDomain": "ibps.in",
-    "officialUrl": "https://ibps.in",
-    "sourceHealth": "healthy",
-    "lastPostedAt": "2026-09-01T00:00:00",
-    "lastCheckedAt": "2026-09-17T02:41:43.818920+00:00",
-    "pdfCoverage": 1
-  },
-  {
-    "dept": "National Capital Region Transport Corporation (NCRTC)",
-    "slug": "national-capital-region-transport-corporation-ncrtc",
-    "count": 2,
-    "vacancies": 90,
-    "officialDomain": "ncrtc.in",
-    "officialUrl": "https://ncrtc.in",
-    "sourceHealth": "healthy",
-    "lastPostedAt": "2026-09-10T00:00:00",
-    "lastCheckedAt": null,
-    "pdfCoverage": 1
-  },
-  {
-    "dept": "Brahmaputra Cracker and Polymer Limited (BCPL)",
-    "slug": "brahmaputra-cracker-and-polymer-limited-bcpl",
-    "count": 1,
-    "vacancies": 24,
-    "officialDomain": "bcplonline.co.in",
-    "officialUrl": "https://bcplonline.co.in",
-    "sourceHealth": "healthy",
-    "lastPostedAt": "2026-09-10T00:00:00",
-    "lastCheckedAt": null,
     "pdfCoverage": 1
   },
   {
@@ -84,15 +36,15 @@
     "pdfCoverage": 1
   },
   {
-    "dept": "Export-Import Bank of India",
-    "slug": "export-import-bank-of-india",
+    "dept": "ESIC — Employees' State Insurance Corporation",
+    "slug": "esic-employees-state-insurance-corporation",
     "count": 1,
-    "vacancies": 8,
-    "officialDomain": "eximbankindia.in",
-    "officialUrl": "https://eximbankindia.in",
-    "sourceHealth": "healthy",
-    "lastPostedAt": "2026-09-15T00:00:00",
-    "lastCheckedAt": null,
+    "vacancies": 17,
+    "officialDomain": "esic.gov.in",
+    "officialUrl": "https://esic.gov.in",
+    "sourceHealth": "broken",
+    "lastPostedAt": "2026-09-18T00:00:00",
+    "lastCheckedAt": "2026-09-17T02:42:54.544872+00:00",
     "pdfCoverage": 1
   },
   {
@@ -144,18 +96,6 @@
     "pdfCoverage": 1
   },
   {
-    "dept": "ISRO Propulsion Complex (IPRC), Mahendragiri",
-    "slug": "isro-propulsion-complex-iprc-mahendragiri",
-    "count": 1,
-    "vacancies": 22,
-    "officialDomain": "iprc.gov.in",
-    "officialUrl": "https://iprc.gov.in",
-    "sourceHealth": "healthy",
-    "lastPostedAt": "2026-09-12T00:00:00",
-    "lastCheckedAt": null,
-    "pdfCoverage": 1
-  },
-  {
     "dept": "Mineral Exploration and Consultancy Limited (MECL)",
     "slug": "mineral-exploration-and-consultancy-limited-mecl",
     "count": 1,
@@ -164,30 +104,6 @@
     "officialUrl": "https://mecl.co.in",
     "sourceHealth": "healthy",
     "lastPostedAt": "2026-09-12T00:00:00",
-    "lastCheckedAt": null,
-    "pdfCoverage": 1
-  },
-  {
-    "dept": "National Informatics Centre (NIC)",
-    "slug": "national-informatics-centre-nic",
-    "count": 1,
-    "vacancies": 376,
-    "officialDomain": "recruitment.nic.in",
-    "officialUrl": "https://recruitment.nic.in",
-    "sourceHealth": "healthy",
-    "lastPostedAt": "2026-09-01T00:00:00",
-    "lastCheckedAt": null,
-    "pdfCoverage": 1
-  },
-  {
-    "dept": "National Test House (NTH)",
-    "slug": "national-test-house-nth",
-    "count": 1,
-    "vacancies": 36,
-    "officialDomain": "nth.gov.in",
-    "officialUrl": "https://nth.gov.in",
-    "sourceHealth": "healthy",
-    "lastPostedAt": "2026-09-11T00:00:00",
     "lastCheckedAt": null,
     "pdfCoverage": 1
   },
@@ -216,18 +132,6 @@
     "pdfCoverage": 1
   },
   {
-    "dept": "Pension Fund Regulatory and Development Authority (PFRDA)",
-    "slug": "pension-fund-regulatory-and-development-authority-pfrda",
-    "count": 1,
-    "vacancies": 30,
-    "officialDomain": "pfrda.org.in",
-    "officialUrl": "https://pfrda.org.in",
-    "sourceHealth": "healthy",
-    "lastPostedAt": "2026-09-03T00:00:00",
-    "lastCheckedAt": null,
-    "pdfCoverage": 1
-  },
-  {
     "dept": "Pharmaceuticals & Medical Devices Bureau of India (PMBI)",
     "slug": "pharmaceuticals-medical-devices-bureau-of-india-pmbi",
     "count": 1,
@@ -240,26 +144,14 @@
     "pdfCoverage": 1
   },
   {
-    "dept": "Prasar Bharati",
-    "slug": "prasar-bharati",
+    "dept": "Rashtriya Chemicals and Fertilizers Limited (RCF)",
+    "slug": "rashtriya-chemicals-and-fertilizers-limited-rcf",
     "count": 1,
-    "vacancies": 20,
-    "officialDomain": "prasarbharati.gov.in",
-    "officialUrl": "https://prasarbharati.gov.in",
+    "vacancies": 10,
+    "officialDomain": "rcfltd.com",
+    "officialUrl": "https://rcfltd.com",
     "sourceHealth": "healthy",
-    "lastPostedAt": "2026-09-07T00:00:00",
-    "lastCheckedAt": null,
-    "pdfCoverage": 1
-  },
-  {
-    "dept": "Ramagundam Fertilizers and Chemicals Limited (RFCL)",
-    "slug": "ramagundam-fertilizers-and-chemicals-limited-rfcl",
-    "count": 1,
-    "vacancies": 40,
-    "officialDomain": "rfcl.co.in",
-    "officialUrl": "https://rfcl.co.in",
-    "sourceHealth": "healthy",
-    "lastPostedAt": "2026-08-26T00:00:00",
+    "lastPostedAt": "2026-09-03T00:00:00",
     "lastCheckedAt": null,
     "pdfCoverage": 1
   },
@@ -271,7 +163,7 @@
     "officialDomain": "seci.co.in",
     "officialUrl": "https://seci.co.in",
     "sourceHealth": "healthy",
-    "lastPostedAt": "2026-08-24T00:00:00",
+    "lastPostedAt": "2026-09-03T00:00:00",
     "lastCheckedAt": null,
     "pdfCoverage": 1
   },
@@ -285,18 +177,6 @@
     "sourceHealth": "healthy",
     "lastPostedAt": "2026-06-08T00:00:00",
     "lastCheckedAt": null,
-    "pdfCoverage": 1
-  },
-  {
-    "dept": "Union Public Service Commission (UPSC)",
-    "slug": "union-public-service-commission-upsc",
-    "count": 1,
-    "vacancies": 212,
-    "officialDomain": "upsc.gov.in",
-    "officialUrl": "https://upsc.gov.in",
-    "sourceHealth": "healthy",
-    "lastPostedAt": "2026-09-12T00:00:00",
-    "lastCheckedAt": "2026-09-04T13:13:45.014471+00:00",
     "pdfCoverage": 1
   }
 ]

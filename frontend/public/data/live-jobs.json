@@ -1,144 +1,69 @@
 {
-  "generatedAt": "2026-09-20T09:52:36.077468Z",
+  "generatedAt": "2026-09-23T09:55:42.075385Z",
   "dailySync": {
-    "completedAt": "2026-09-20T09:52:28.970988+00:00",
-    "completedAtIst": "2026-09-20T15:22:28.971021+05:30",
-    "dateIst": "2026-09-20",
-    "nextRunAtIst": "2026-09-21T08:00:00+05:30",
-    "jobCount": 35,
+    "completedAt": "2026-09-23T09:55:35.402232+00:00",
+    "completedAtIst": "2026-09-23T15:25:35.402269+05:30",
+    "dateIst": "2026-09-23",
+    "nextRunAtIst": "2026-09-24T08:00:00+05:30",
+    "jobCount": 20,
     "sourcesScraped": 154,
     "scheduledLabel": "8:00 AM IST daily"
   },
   "items": [
     {
-      "id": "510eb3b0-4c23-43b5-8fb9-a9b428c3d534",
-      "slug": "export-import-bank-of-india-exim-bank-srd-deputy-manager-and-manager-hrm-dm-m-sr-d59386f2",
-      "title": "Exim Bank SRD Deputy Manager and Manager — HRM/DM & M/SRD/2026-27/04 (8 posts)",
-      "dept": "Export-Import Bank of India",
-      "category": "psu",
+      "id": "3791c2db-13aa-4e2f-8a86-9d44a415c1d6",
+      "slug": "esic-employees-state-insurance-corporation-3-esic-medical-college-and-hospital-r-5a69dc12",
+      "title": "3 ESIC MEDICAL COLLEGE AND HOSPITAL RAJAJI NAGAR BANGALORE RECRUITMENT OF TEACHING FACULTY ON CONTRACTUAL BASIS FOR THE",
+      "dept": "ESIC — Employees' State Insurance Corporation",
+      "category": "health",
       "state_codes": [],
-      "vacancies": 8,
-      "qualification": "Graduation with minimum 50% aggregate marks for Deputy Manager (6) and Manager (2) as per Advt. HRM/DM & M/SRD/2026-27/04",
-      "salary": "JM-I Rs. 48480-85920 (DM CTC ~Rs. 18 lakh); MM-II Rs. 64820-93960 (Manager CTC ~Rs. 20 lakh)",
-      "age_limit": "Maximum age as on 31-08-2026 as per Advt. HRM/DM & M/SRD/2026-27/04",
-      "last_date": "2026-10-10",
-      "apply_url": "https://www.eximbankindia.in/careers",
-      "pdf_url": "https://www.eximbankindia.in/sites/default/files/2026-09/Detailed%20SRD%20Advertisement%20for%20Website.pdf",
+      "vacancies": 17,
+      "qualification": "and teaching experience to be eligible for",
+      "salary": "Rs. 2,59,515",
+      "age_limit": "Not exceeding 67 years as on date of reporting for interview.",
+      "last_date": "2026-10-06",
+      "apply_url": "https://www.esic.gov.in/recruitments",
+      "pdf_url": "https://www.esic.gov.in/attachments/recruitmentfile/ROLLING_ADVERTISEMENT_1785842107.pdf",
       "status": "live",
       "is_sponsored": false,
-      "published_at": "2026-09-15T00:00:00Z",
+      "published_at": "2026-09-18T00:00:00Z",
       "verified_at": null,
-      "updated_at": "2026-09-15T14:32:14.445776Z",
+      "updated_at": "2026-09-23T09:55:06.322286Z",
       "document_type": "RECRUITMENT",
       "verification_status": "VERIFIED",
-      "completeness_score": 100,
-      "publication_confidence": 100.0,
+      "completeness_score": 80,
+      "publication_confidence": 95.0,
       "published_to_site": true,
-      "primary_pdf_url": "https://www.eximbankindia.in/sites/default/files/2026-09/Detailed%20SRD%20Advertisement%20for%20Website.pdf",
-      "post_name": null,
+      "primary_pdf_url": "https://www.esic.gov.in/attachments/recruitmentfile/ROLLING_ADVERTISEMENT_1785842107.pdf",
+      "post_name": "TEACHING FACULTY ON CONTRACTUAL BASIS FOR THE",
       "posts": [],
       "important_dates": [],
       "detail": {
-        "how_to_apply": "Apply online via the Exim Bank careers link from 15-09-2026 to 10-10-2026; registration completes only after fee payment",
-        "completeness_score": 100,
-        "source": "exim-srd-2026-04",
-        "selection_process": "Written examination (70%) and interview (30%); tentative written exam November 2026",
-        "pdfUrls": [
-          "https://www.eximbankindia.in/sites/default/files/2026-09/Detailed%20SRD%20Advertisement%20for%20Website.pdf"
-        ],
-        "pdf_url": "https://www.eximbankindia.in/sites/default/files/2026-09/Detailed%20SRD%20Advertisement%20for%20Website.pdf",
-        "application_fee": "Online examination fee / intimation charges as per Advt. HRM/DM & M/SRD/2026-27/04",
-        "notification_url": "https://www.eximbankindia.in/sites/default/files/2026-09/Detailed%20SRD%20Advertisement%20for%20Website.pdf",
+        "completeness_score": 73,
         "pdf_urls": [
-          "https://www.eximbankindia.in/sites/default/files/2026-09/Detailed%20SRD%20Advertisement%20for%20Website.pdf"
-        ]
-      }
-    },
-    {
-      "id": "575958c6-4845-4496-b5eb-0fbe1b2ea9f2",
-      "slug": "union-public-service-commission-upsc-upsc-advertisement-no-11-2026-specialist-ap-70237fd0",
-      "title": "UPSC Advertisement No. 11/2026 — Specialist, APP and other posts",
-      "dept": "Union Public Service Commission (UPSC)",
-      "category": "central",
-      "state_codes": [],
-      "vacancies": 212,
-      "qualification": "As per official Advertisement No. 11/2026 (post-wise)",
-      "salary": "As per official Advertisement No. 11/2026",
-      "age_limit": "As per official Advertisement No. 11/2026 (post-wise)",
-      "last_date": "2026-10-02",
-      "apply_url": "https://upsconline.nic.in",
-      "pdf_url": "https://www.upsc.gov.in/sites/default/files/AdvtNo-11-2026-Engl-100926.pdf",
-      "status": "live",
-      "is_sponsored": false,
-      "published_at": "2026-09-12T00:00:00Z",
-      "verified_at": null,
-      "updated_at": "2026-09-15T10:35:12.853104Z",
-      "document_type": "RECRUITMENT",
-      "verification_status": "VERIFIED",
-      "completeness_score": 100,
-      "publication_confidence": 100.0,
-      "published_to_site": true,
-      "primary_pdf_url": "https://www.upsc.gov.in/sites/default/files/AdvtNo-11-2026-Engl-100926.pdf",
-      "post_name": null,
-      "posts": [],
-      "important_dates": [],
-      "detail": {
-        "how_to_apply": "Apply online at https://upsconline.nic.in by 02-10-2026 (09-10-2026 for UT of Ladakh posts)",
-        "completeness_score": 100,
-        "source": "upsc-11-2026",
-        "selection_process": "Recruitment by selection as per Advertisement No. 11/2026",
-        "pdfUrls": [
-          "https://www.upsc.gov.in/sites/default/files/AdvtNo-11-2026-Engl-100926.pdf"
+          "https://www.esic.gov.in/attachments/recruitmentfile/ROLLING_ADVERTISEMENT_1785842107.pdf"
         ],
-        "pdf_url": "https://www.upsc.gov.in/sites/default/files/AdvtNo-11-2026-Engl-100926.pdf",
-        "application_fee": "Rs. 25 except Female/SC/ST/PwBD (exempted)",
-        "notification_url": "https://www.upsc.gov.in/sites/default/files/AdvtNo-11-2026-Engl-100926.pdf",
-        "pdf_urls": [
-          "https://www.upsc.gov.in/sites/default/files/AdvtNo-11-2026-Engl-100926.pdf"
-        ]
-      }
-    },
-    {
-      "id": "44770bec-8a2e-4d7e-8d3c-b610c69e2056",
-      "slug": "isro-propulsion-complex-iprc-mahendragiri-isro-iprc-technical-assistant-technici-63479bfd",
-      "title": "ISRO IPRC Technical Assistant, Technician B, Cook and Fireman — IPRC/RMT/2026/01 (22 posts)",
-      "dept": "ISRO Propulsion Complex (IPRC), Mahendragiri",
-      "category": "central",
-      "state_codes": [],
-      "vacancies": 22,
-      "qualification": "Diploma / ITI / SSLC with trade as per post code in Advertisement No. IPRC/RMT/2026/01",
-      "salary": "Level 7 / Level 3 / Level 2 as per post in the official advertisement",
-      "age_limit": "18-35 years (post codes 60-68 & 70) / 18-25 years (Fireman A) as on 05-10-2026",
-      "last_date": "2026-10-05",
-      "apply_url": "https://www.iprc.gov.in/careers.html",
-      "pdf_url": "https://www.iprc.gov.in/files/careers/Advertisement_12092026.pdf",
-      "status": "live",
-      "is_sponsored": false,
-      "published_at": "2026-09-12T00:00:00Z",
-      "verified_at": null,
-      "updated_at": "2026-09-15T11:32:20.855454Z",
-      "document_type": "RECRUITMENT",
-      "verification_status": "VERIFIED",
-      "completeness_score": 100,
-      "publication_confidence": 100.0,
-      "published_to_site": true,
-      "primary_pdf_url": "https://www.iprc.gov.in/files/careers/Advertisement_12092026.pdf",
-      "post_name": null,
-      "posts": [],
-      "important_dates": [],
-      "detail": {
-        "how_to_apply": "Apply online at https://www.iprc.gov.in from 15-09-2026 10:00 hrs to 05-10-2026 16:00 hrs",
-        "completeness_score": 100,
-        "source": "isro-iprc-2026-01",
-        "selection_process": "Written test and skill test / PET as per post in Advertisement No. IPRC/RMT/2026/01",
+        "summary": "532/A-12/CONT.TF/18/ESTT(VIOL-II) ROLLING ADVERTISEMENT ENGAGEMENT OF PROFESSOR ,ASSOCIATE PROFESSOR AND ASSISTANT PROFESSOR FOR ESIC MEDICAL COLLEGE & PGIMSR AND MEDICAL COLLEGE, RAJAJINAGAR, BANGALORE (ON CONTRACTUAL BASIS FOR A PERIOD OF THREE YEARS) (INCLUDING RETIRED ARMY MEDICAL TEACHERS) The details of vacancies and reservation position is as under: PROFESSOR Sl. No Department (Broad Specia…",
         "pdfUrls": [
-          "https://www.iprc.gov.in/files/careers/Advertisement_12092026.pdf"
+          "https://www.esic.gov.in/attachments/recruitmentfile/ROLLING_ADVERTISEMENT_1785842107.pdf"
         ],
-        "pdf_url": "https://www.iprc.gov.in/files/careers/Advertisement_12092026.pdf",
-        "application_fee": "Rs. 750 (post codes 60-62) / Rs. 500 (other codes); refund rules as per advertisement",
-        "notification_url": "https://www.iprc.gov.in/files/careers/Advertisement_12092026.pdf",
-        "pdf_urls": [
-          "https://www.iprc.gov.in/files/careers/Advertisement_12092026.pdf"
+        "post_name": "TEACHING FACULTY ON CONTRACTUAL BASIS FOR THE",
+        "memorized_at": "2026-08-14T12:35:34.022133+00:00",
+        "published": "2026-09-18T00:00:00+00:00",
+        "source": "esic",
+        "apply_urls": [
+          "https://www.esic.gov.in/recruitments",
+          "HTTPS://ESIC.GOV.IN/RECRUITMENTS",
+          "https://rogujarat.esic.gov.in/recruitments/rosro_rec"
+        ],
+        "notification_url": "https://www.esic.gov.in/attachments/recruitmentfile/ROLLING_ADVERTISEMENT_1785842107.pdf",
+        "detail_source": "pdf",
+        "pdf_url": "https://www.esic.gov.in/attachments/recruitmentfile/ROLLING_ADVERTISEMENT_1785842107.pdf",
+        "missing_fields": [
+          "vacancies",
+          "application_fee",
+          "selection_process",
+          "how_to_apply"
         ]
       }
     },
@@ -171,63 +96,19 @@
       "posts": [],
       "important_dates": [],
       "detail": {
-        "how_to_apply": "Apply online via MECL Careers from 12-09-2026 to 11-10-2026",
-        "completeness_score": 94,
-        "source": "mecl-03-2026",
-        "selection_process": "Written examination / skill or trade test and document verification as per official advertisement",
-        "pdfUrls": [
-          "https://www.mecl.co.in/writereaddata/meclpdf/Final_Advt_03R26.pdf"
-        ],
-        "pdf_url": "https://www.mecl.co.in/writereaddata/meclpdf/Final_Advt_03R26.pdf",
         "application_fee": "Rs. 500 for General/OBC/EWS",
-        "notification_url": "https://www.mecl.co.in/writereaddata/meclpdf/Final_Advt_03R26.pdf",
+        "selection_process": "Written examination / skill or trade test and document verification as per official advertisement",
+        "completeness_score": 94,
         "pdf_urls": [
           "https://www.mecl.co.in/writereaddata/meclpdf/Final_Advt_03R26.pdf"
-        ]
-      }
-    },
-    {
-      "id": "cfe45f63-70d8-4e96-88d0-c2b7caa7b3cb",
-      "slug": "national-test-house-nth-national-test-house-young-professional-sr-jr-nth-hq-yp-a-1269e3bc",
-      "title": "National Test House Young Professional (Sr/Jr) — NTH(HQ)/YP/ADVT./01/2026-27 (36 posts)",
-      "dept": "National Test House (NTH)",
-      "category": "central",
-      "state_codes": [],
-      "vacancies": 36,
-      "qualification": "BE/B.Tech / M.Sc / MBA or PG Diploma as per discipline in the official advertisement",
-      "salary": "Rs. 70000 per month (Sr YP) / Rs. 40000 per month (Jr YP), consolidated",
-      "age_limit": "38 years (Sr YP) / 35 years (Jr YP) as on the last date of application",
-      "last_date": "2026-09-26",
-      "apply_url": "https://nth.gov.in/recruitment-notices",
-      "pdf_url": "https://nth.gov.in/storage/recruitment-notices/3e4ed89f3c55ca7a5b8b8f575ea69c004afc0e78_37.pdf",
-      "status": "live",
-      "is_sponsored": false,
-      "published_at": "2026-09-11T00:00:00Z",
-      "verified_at": null,
-      "updated_at": "2026-09-15T11:32:18.815033Z",
-      "document_type": "RECRUITMENT",
-      "verification_status": "VERIFIED",
-      "completeness_score": 100,
-      "publication_confidence": 100.0,
-      "published_to_site": true,
-      "primary_pdf_url": "https://nth.gov.in/storage/recruitment-notices/3e4ed89f3c55ca7a5b8b8f575ea69c004afc0e78_37.pdf",
-      "post_name": null,
-      "posts": [],
-      "important_dates": [],
-      "detail": {
-        "how_to_apply": "Email the prescribed application to the location-wise NTH address in the advertisement within 15 days of publication in Employment News (12-18 Sep 2026)",
-        "completeness_score": 100,
-        "source": "nth-yp-2026-27",
-        "selection_process": "Screening of applications followed by interview of shortlisted candidates",
-        "pdfUrls": [
-          "https://nth.gov.in/storage/recruitment-notices/3e4ed89f3c55ca7a5b8b8f575ea69c004afc0e78_37.pdf"
         ],
-        "pdf_url": "https://nth.gov.in/storage/recruitment-notices/3e4ed89f3c55ca7a5b8b8f575ea69c004afc0e78_37.pdf",
-        "application_fee": "No application fee as per official advertisement",
-        "notification_url": "https://nth.gov.in/storage/recruitment-notices/3e4ed89f3c55ca7a5b8b8f575ea69c004afc0e78_37.pdf",
-        "pdf_urls": [
-          "https://nth.gov.in/storage/recruitment-notices/3e4ed89f3c55ca7a5b8b8f575ea69c004afc0e78_37.pdf"
-        ]
+        "pdfUrls": [
+          "https://www.mecl.co.in/writereaddata/meclpdf/Final_Advt_03R26.pdf"
+        ],
+        "source": "mecl-03-2026",
+        "how_to_apply": "Apply online via MECL Careers from 12-09-2026 to 11-10-2026",
+        "notification_url": "https://www.mecl.co.in/writereaddata/meclpdf/Final_Advt_03R26.pdf",
+        "pdf_url": "https://www.mecl.co.in/writereaddata/meclpdf/Final_Advt_03R26.pdf"
       }
     },
     {
@@ -247,8 +128,8 @@
       "status": "live",
       "is_sponsored": false,
       "published_at": "2026-09-10T07:35:10.190000Z",
-      "verified_at": null,
-      "updated_at": "2026-09-20T07:53:36.541246Z",
+      "verified_at": "2026-09-20T09:53:45.616321Z",
+      "updated_at": "2026-09-22T16:41:07.607794Z",
       "document_type": "RECRUITMENT",
       "verification_status": "VERIFIED",
       "completeness_score": 80,
@@ -259,75 +140,29 @@
       "posts": [],
       "important_dates": [],
       "detail": {
+        "application_fee": "1.1 Sub-Inspector (GD) in CAPFs: The post carries pay scale of Level-6 (Rs.35,400- Rs.1,12,400/-) and is classified as Group ‘B’ (Non-Gazetted), Non-Mini; 1.2 Sub-Inspector (Executive) - (Male/Female) in Delhi Police: The post carries pay scale of Level-6 (Rs.35,400-Rs.1,12,400/-) and is classified as Group ‘C’ by; 1.3 Sub-Inspector (FIRE)- (Male) in CISF: The post carries pay scale of Level-6 (Rs",
+        "completeness_score": 87,
+        "pdf_urls": [
+          "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_capf_2026.pdf"
+        ],
+        "summary": "(To be uploaded on the website of the Commission i.e. https://ssc.gov.in on 10.09.2026) भारत सरकार, कािमŊक, लोक िशकायत तथा पŐशन मंũालय, कािमŊक एवं ŮिशƗण िवभाग, कमŊचारी चयन आयोग, ɰॉक सं-12,केȾीय कायाŊलय पįरसर, लोधी रोड, नई िदʟी-110003 Government of India, Ministry of Personnel, Public Grievances & Pensions, Department of Personnel and Training, Staff Selection Commission, Block No…",
+        "pdfUrls": [
+          "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_capf_2026.pdf"
+        ],
+        "published": "2026-09-10T00:00:00+00:00",
+        "source": "ssc",
         "fee": {
           "9.1 Fee payable": "Rs.100/- (Rupees One Hundred only).",
           "1.1 Sub-Inspector (GD) in CAPFs": "The post carries pay scale of Level-6 (Rs.35,400- Rs.1,12,400/-) and is classified as Group ‘B’ (Non-Gazetted), Non-Mini",
           "1.3 Sub-Inspector (FIRE)- (Male) in CISF": "The post carries pay scale of Level-6 (Rs. 35,400- Rs.1,12,400/-) and is classified as Group ‘B’ (Non-Gazetted), Non-Min",
           "1.2 Sub-Inspector (Executive) - (Male/Female) in Delhi Police": "The post carries pay scale of Level-6 (Rs.35,400-Rs.1,12,400/-) and is classified as Group ‘C’ by"
         },
-        "published": "2026-09-10T07:35:10.190000+00:00",
-        "completeness_score": 87,
-        "summary": "(To be uploaded on the website of the Commission i.e. https://ssc.gov.in on 10.09.2026) भारत सरकार, कािमŊक, लोक िशकायत तथा पŐशन मंũालय, कािमŊक एवं ŮिशƗण िवभाग, कमŊचारी चयन आयोग, ɰॉक सं-12,केȾीय कायाŊलय पįरसर, लोधी रोड, नई िदʟी-110003 Government of India, Ministry of Personnel, Public Grievances & Pensions, Department of Personnel and Training, Staff Selection Commission, Block No. 12, CGO Complex,…",
-        "source": "ssc",
-        "pdfUrls": [
-          "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_capf_2026.pdf"
-        ],
-        "pdf_url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_capf_2026.pdf",
-        "application_fee": "1.1 Sub-Inspector (GD) in CAPFs: The post carries pay scale of Level-6 (Rs.35,400- Rs.1,12,400/-) and is classified as Group ‘B’ (Non-Gazetted), Non-Mini; 1.2 Sub-Inspector (Executive) - (Male/Female) in Delhi Police: The post carries pay scale of Level-6 (Rs.35,400-Rs.1,12,400/-) and is classified as Group ‘C’ by; 1.3 Sub-Inspector (FIRE)- (Male) in CISF: The post carries pay scale of Level-6 (Rs",
-        "notification_url": "https://ssc.gov.in",
-        "pdf_urls": [
-          "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_capf_2026.pdf"
-        ],
         "apply_urls": [
           "https://ssc.gov.in",
           "https://ssc.nic.in"
-        ]
-      }
-    },
-    {
-      "id": "e1646603-b95d-46ab-ae38-bbdb510094f1",
-      "slug": "national-capital-region-transport-corporation-ncrtc-ncrtc-vacancy-notice-33-2026-242400e8",
-      "title": "NCRTC Vacancy Notice 33/2026 — Supervisors and Non-Supervisors (contract)",
-      "dept": "National Capital Region Transport Corporation (NCRTC)",
-      "category": "psu",
-      "state_codes": [
-        "dl"
-      ],
-      "vacancies": 23,
-      "qualification": "Diploma / Graduate as per post in official vacancy notice 33/2026",
-      "salary": "Rs. 37000-115000 (Supervisor-I) / Rs. 18250-59200 (Junior Maintainer)",
-      "age_limit": "As per official vacancy notice 33/2026 (as on 10-09-2026)",
-      "last_date": "2026-10-09",
-      "apply_url": "https://ncrtc.in/jobs.php",
-      "pdf_url": "https://ncrtc.in/wp-content/uploads/2026/09/332026VacancyNoticeforSupervisorNonsupervisorContractonRegualr-1.pdf",
-      "status": "live",
-      "is_sponsored": false,
-      "published_at": "2026-09-10T00:00:00Z",
-      "verified_at": null,
-      "updated_at": "2026-09-17T07:27:52.701998Z",
-      "document_type": "RECRUITMENT",
-      "verification_status": "VERIFIED",
-      "completeness_score": 100,
-      "publication_confidence": 100.0,
-      "published_to_site": true,
-      "primary_pdf_url": "https://ncrtc.in/wp-content/uploads/2026/09/332026VacancyNoticeforSupervisorNonsupervisorContractonRegualr-1.pdf",
-      "post_name": null,
-      "posts": [],
-      "important_dates": [],
-      "detail": {
-        "how_to_apply": "Apply online via Career on https://ncrtc.in by 09-10-2026 23:55 hrs",
-        "completeness_score": 100,
-        "source": "ncrtc-33-2026",
-        "selection_process": "Computer Based Test (CBT) as per vacancy notice 33/2026",
-        "pdfUrls": [
-          "https://ncrtc.in/wp-content/uploads/2026/09/332026VacancyNoticeforSupervisorNonsupervisorContractonRegualr-1.pdf"
         ],
-        "pdf_url": "https://ncrtc.in/wp-content/uploads/2026/09/332026VacancyNoticeforSupervisorNonsupervisorContractonRegualr-1.pdf",
-        "application_fee": "Rs. 500 for UR/OBC/EWS/Ex-Servicemen; Nil for SC/ST/PwBD",
-        "notification_url": "https://ncrtc.in/wp-content/uploads/2026/09/332026VacancyNoticeforSupervisorNonsupervisorContractonRegualr-1.pdf",
-        "pdf_urls": [
-          "https://ncrtc.in/wp-content/uploads/2026/09/332026VacancyNoticeforSupervisorNonsupervisorContractonRegualr-1.pdf"
-        ]
+        "notification_url": "https://ssc.gov.in",
+        "pdf_url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_capf_2026.pdf"
       }
     },
     {
@@ -348,7 +183,7 @@
       "is_sponsored": false,
       "published_at": "2026-09-10T00:00:00Z",
       "verified_at": null,
-      "updated_at": "2026-09-20T08:58:39.771190Z",
+      "updated_at": "2026-09-23T09:01:57.099791Z",
       "document_type": "RECRUITMENT",
       "verification_status": "VERIFIED",
       "completeness_score": 73,
@@ -359,116 +194,26 @@
       "posts": [],
       "important_dates": [],
       "detail": {
-        "published": "2026-09-10T00:00:00+00:00",
-        "completeness_score": 73,
-        "summary": "विज्ञापन सं./ADVERTISEMENT NO.: सैकSAC:02:2026, विनांक Dated 10.09.2026 (ऑनलाइन पंजीयन तथा आििेन प्रस्तुत करने के वलए ऑनलाइन भती पोर्टल 10.09.2026 के 1000 बजे से 30.09.2026 के 1700 बजे तक खुला रहेगा) (Online recruitment portal will be open from 1000 hours of 10.09.2026 to 1700 hours of 30.09.2026 for online registration and submission of application) अंतरिक्ष उपयोग केंद्र (सैक), अहमदाबाद भाितीय अं…",
-        "helpdesk_emails": [
-          "ao_rr@sac.isro.gov.in"
-        ],
-        "source": "isro-careers",
         "helpdesk_email": "ao_rr@sac.isro.gov.in",
-        "pdfUrls": [
-          "https://www.isro.gov.in/media_isro/pdf/recruitmentNotice/2026/Sept/SAC_02_2026_dated_09092026.pdf"
-        ],
-        "pdf_url": "https://www.isro.gov.in/media_isro/pdf/recruitmentNotice/2026/Sept/SAC_02_2026_dated_09092026.pdf",
-        "notification_url": "https://www.isro.gov.in/SACRecruitment21.html",
+        "completeness_score": 73,
         "pdf_urls": [
           "https://www.isro.gov.in/media_isro/pdf/recruitmentNotice/2026/Sept/SAC_02_2026_dated_09092026.pdf"
         ],
+        "summary": "विज्ञापन सं./ADVERTISEMENT NO.: सैकSAC:02:2026, विनांक Dated 10.09.2026 (ऑनलाइन पंजीयन तथा आििेन प्रस्तुत करने के वलए ऑनलाइन भती पोर्टल 10.09.2026 के 1000 बजे से 30.09.2026 के 1700 बजे तक खुला रहेगा) (Online recruitment portal will be open from 1000 hours of 10.09.2026 to 1700 hours of 30.09.2026 for online registration and submission of application) अंतरिक्ष उपयोग केंद्र (सैक), अहमदाबाद भाितीय अं…",
+        "pdfUrls": [
+          "https://www.isro.gov.in/media_isro/pdf/recruitmentNotice/2026/Sept/SAC_02_2026_dated_09092026.pdf"
+        ],
+        "published": "2026-09-10T00:00:00+00:00",
+        "source": "isro-careers",
         "apply_urls": [
           "https://career.sac.gov.in",
           "https://www.sac.gov.in"
-        ]
-      }
-    },
-    {
-      "id": "3cb80c6f-be81-405e-9005-c86018f1a834",
-      "slug": "brahmaputra-cracker-and-polymer-limited-bcpl-bcpl-foreman-operator-technician-an-483822cf",
-      "title": "BCPL Foreman, Operator, Technician and Trainee — Advt BCPL-NE/06/2026 (24 posts)",
-      "dept": "Brahmaputra Cracker and Polymer Limited (BCPL)",
-      "category": "psu",
-      "state_codes": [],
-      "vacancies": 24,
-      "qualification": "Diploma in Engineering / B.Sc. / B.Com. / Matric plus ITI or NAC as per post in Advertisement No. BCPL-NE/06/2026",
-      "salary": "S-5 Rs. 28500-86570 / S-3 Rs. 25000-81430; trainee stipend as per advertisement",
-      "age_limit": "30 or 32 years as on 09-10-2026 for UR (post-wise in BCPL-NE/06/2026)",
-      "last_date": "2026-10-09",
-      "apply_url": "https://www.bcplonline.co.in/Career/Index",
-      "pdf_url": "https://bcplonline.co.in/UploadFiles/Downloads/BCPL-NE062026.pdf",
-      "status": "live",
-      "is_sponsored": false,
-      "published_at": "2026-09-10T00:00:00Z",
-      "verified_at": null,
-      "updated_at": "2026-09-15T14:32:17.611910Z",
-      "document_type": "RECRUITMENT",
-      "verification_status": "VERIFIED",
-      "completeness_score": 100,
-      "publication_confidence": 100.0,
-      "published_to_site": true,
-      "primary_pdf_url": "https://bcplonline.co.in/UploadFiles/Downloads/BCPL-NE062026.pdf",
-      "post_name": null,
-      "posts": [],
-      "important_dates": [],
-      "detail": {
-        "how_to_apply": "Apply online through the BCPL website www.bcplonline.co.in from 10-09-2026 08:00 hrs to 09-10-2026 17:00 hrs",
-        "completeness_score": 100,
-        "source": "bcpl-ne-06-2026",
-        "selection_process": "Written test and/or skill test or interview as per Advertisement No. BCPL-NE/06/2026",
-        "pdfUrls": [
-          "https://bcplonline.co.in/UploadFiles/Downloads/BCPL-NE062026.pdf"
         ],
-        "pdf_url": "https://bcplonline.co.in/UploadFiles/Downloads/BCPL-NE062026.pdf",
-        "application_fee": "Rs. 200 for UR/EWS/OBC(NCL); Nil for SC/ST/PwBD",
-        "notification_url": "https://bcplonline.co.in/UploadFiles/Downloads/BCPL-NE062026.pdf",
-        "pdf_urls": [
-          "https://bcplonline.co.in/UploadFiles/Downloads/BCPL-NE062026.pdf"
-        ]
-      }
-    },
-    {
-      "id": "01806b6a-dd7e-4718-adcd-064da8f11214",
-      "slug": "national-capital-region-transport-corporation-ncrtc-ncrtc-vacancy-notice-32-2026-987e8bec",
-      "title": "NCRTC Vacancy Notice 32/2026 — Supervisor-I and Junior Maintainer (O&M)",
-      "dept": "National Capital Region Transport Corporation (NCRTC)",
-      "category": "psu",
-      "state_codes": [
-        "dl"
-      ],
-      "vacancies": 67,
-      "qualification": "Diploma / B.E. / B.Tech in the relevant discipline as per official notice 32/2026",
-      "salary": "Rs. 37000-115000 (Supervisor-I) / Rs. 18250-59200 (Junior Maintainer)",
-      "age_limit": "As per official vacancy notice 32/2026 (as on 10-09-2026)",
-      "last_date": "2026-10-09",
-      "apply_url": "https://ncrtc.in/jobs.php",
-      "pdf_url": "https://ncrtc.in/wp-content/uploads/2026/09/322026VacancyNoticeforOnM.pdf",
-      "status": "live",
-      "is_sponsored": false,
-      "published_at": "2026-09-10T00:00:00Z",
-      "verified_at": null,
-      "updated_at": "2026-09-17T07:27:52.701998Z",
-      "document_type": "RECRUITMENT",
-      "verification_status": "VERIFIED",
-      "completeness_score": 100,
-      "publication_confidence": 100.0,
-      "published_to_site": true,
-      "primary_pdf_url": "https://ncrtc.in/wp-content/uploads/2026/09/322026VacancyNoticeforOnM.pdf",
-      "post_name": null,
-      "posts": [],
-      "important_dates": [],
-      "detail": {
-        "how_to_apply": "Apply online via Career on https://ncrtc.in by 09-10-2026 23:55 hrs",
-        "completeness_score": 100,
-        "source": "ncrtc-32-2026",
-        "selection_process": "Computer Based Test (CBT) as per vacancy notice 32/2026",
-        "pdfUrls": [
-          "https://ncrtc.in/wp-content/uploads/2026/09/322026VacancyNoticeforOnM.pdf"
+        "helpdesk_emails": [
+          "ao_rr@sac.isro.gov.in"
         ],
-        "pdf_url": "https://ncrtc.in/wp-content/uploads/2026/09/322026VacancyNoticeforOnM.pdf",
-        "application_fee": "Rs. 500 for UR/OBC/EWS/Ex-Servicemen; Nil for SC/ST/PwBD",
-        "notification_url": "https://ncrtc.in/wp-content/uploads/2026/09/322026VacancyNoticeforOnM.pdf",
-        "pdf_urls": [
-          "https://ncrtc.in/wp-content/uploads/2026/09/322026VacancyNoticeforOnM.pdf"
-        ]
+        "notification_url": "https://www.isro.gov.in/SACRecruitment21.html",
+        "pdf_url": "https://www.isro.gov.in/media_isro/pdf/recruitmentNotice/2026/Sept/SAC_02_2026_dated_09092026.pdf"
       }
     },
     {
@@ -488,8 +233,8 @@
       "status": "live",
       "is_sponsored": false,
       "published_at": "2026-09-07T15:59:02.300000Z",
-      "verified_at": null,
-      "updated_at": "2026-09-20T07:53:36.541246Z",
+      "verified_at": "2026-09-20T09:53:45.627140Z",
+      "updated_at": "2026-09-22T16:41:07.607794Z",
       "document_type": "RECRUITMENT",
       "verification_status": "VERIFIED",
       "completeness_score": 80,
@@ -500,206 +245,76 @@
       "posts": [],
       "important_dates": [],
       "detail": {
+        "application_fee": "Lower Division Clerk (LDC)/ Junior Secretariat Assistant (JSA): Pay Level-2 (Rs. 19,900- 63,200).; Data Entry Operator (DEO): Pay Level-4(Rs. 25,500-81,100) and Level-5(Rs. 29,200-92,300).; Data Entry Operator, Grade „A‟: Pay Level-4(Rs. 25,500-81,100).; Requirements: S=Sitting, ST=Standing, W=Walking, BN=Bending, MF=Manipulation with Fingers, RW=Reading & Writing, SE=Seeing, H=Hearing,",
+        "completeness_score": 87,
+        "pdf_urls": [
+          "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_chsle_2026.pdf"
+        ],
+        "summary": "(To be uploaded on the website of the Commission; i.e. https://ssc.gov.in/ on 07-09-2026) भारत सरकार, कार्मिक, लोक र्िकायत तथा पेंिन मंत्रालय, कार्मिक एवं प्रर्िक्षण र्वभाग, कमिचारी चयन आयोग, ब्लॉक स - 21 ,केन्द्रीय कायािलय पररसर, लोधी रोड, नई र्दल्ली-110003. Government of India, Ministry of Personnel, Public Grievances & Pensions, Department of Personnel and Training, Staff …",
+        "pdfUrls": [
+          "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_chsle_2026.pdf"
+        ],
+        "published": "2026-09-07T00:00:00+00:00",
+        "source": "ssc",
         "fee": {
           "Requirements": "S=Sitting, ST=Standing, W=Walking, BN=Bending, MF=Manipulation with Fingers, RW=Reading & Writing, SE=Seeing, H=Hearing,",
           "Data Entry Operator (DEO)": "Pay Level-4(Rs. 25,500-81,100) and Level-5(Rs. 29,200-92,300).",
           "Data Entry Operator, Grade „A‟": "Pay Level-4(Rs. 25,500-81,100).",
           "Lower Division Clerk (LDC)/ Junior Secretariat Assistant (JSA)": "Pay Level-2 (Rs. 19,900- 63,200)."
         },
-        "published": "2026-09-07T15:59:02.300000+00:00",
-        "completeness_score": 87,
-        "summary": "(To be uploaded on the website of the Commission; i.e. https://ssc.gov.in/ on 07-09-2026) भारत सरकार, कार्मिक, लोक र्िकायत तथा पेंिन मंत्रालय, कार्मिक एवं प्रर्िक्षण र्वभाग, कमिचारी चयन आयोग, ब्लॉक स - 21 ,केन्द्रीय कायािलय पररसर, लोधी रोड, नई र्दल्ली-110003. Government of India, Ministry of Personnel, Public Grievances & Pensions, Department of Personnel and Training, Staff Selection Commission, …",
-        "source": "ssc",
-        "pdfUrls": [
-          "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_chsle_2026.pdf"
-        ],
-        "pdf_url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_chsle_2026.pdf",
-        "application_fee": "Lower Division Clerk (LDC)/ Junior Secretariat Assistant (JSA): Pay Level-2 (Rs. 19,900- 63,200).; Data Entry Operator (DEO): Pay Level-4(Rs. 25,500-81,100) and Level-5(Rs. 29,200-92,300).; Data Entry Operator, Grade „A‟: Pay Level-4(Rs. 25,500-81,100).; Requirements: S=Sitting, ST=Standing, W=Walking, BN=Bending, MF=Manipulation with Fingers, RW=Reading & Writing, SE=Seeing, H=Hearing,",
-        "notification_url": "https://ssc.gov.in",
-        "pdf_urls": [
-          "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_chsle_2026.pdf"
-        ],
         "apply_urls": [
           "https://ssc.gov.in/",
           "https://ssc.gov.in",
           "https://ssc.nic.in"
-        ]
-      }
-    },
-    {
-      "id": "5dad0f7b-aa85-4a25-b3c4-3654a0e22149",
-      "slug": "prasar-bharati-prasar-bharati-marketing-executive-nia-2026-10-sales-20-posts-202-ac94ea00",
-      "title": "Prasar Bharati Marketing Executive — NIA/2026/10/Sales (20 posts)",
-      "dept": "Prasar Bharati",
-      "category": "central",
-      "state_codes": [],
-      "vacancies": 20,
-      "qualification": "MBA / MBA (Marketing) / PG Diploma in Management or Marketing, plus 1 year direct sales",
-      "salary": "Rs. 35000-42000 per month; Rs. 35000-50000 in metro cities",
-      "age_limit": "Below 35 years as on 07-09-2026",
-      "last_date": "2026-09-22",
-      "apply_url": "https://prasarbharati.gov.in",
-      "pdf_url": "https://prasarbharati.gov.in/wp-content/uploads/2026/09/NIA-ME-1.pdf",
-      "status": "live",
-      "is_sponsored": false,
-      "published_at": "2026-09-07T00:00:00Z",
-      "verified_at": null,
-      "updated_at": "2026-09-15T11:32:16.768602Z",
-      "document_type": "RECRUITMENT",
-      "verification_status": "VERIFIED",
-      "completeness_score": 100,
-      "publication_confidence": 100.0,
-      "published_to_site": true,
-      "primary_pdf_url": "https://prasarbharati.gov.in/wp-content/uploads/2026/09/NIA-ME-1.pdf",
-      "post_name": null,
-      "posts": [],
-      "important_dates": [],
-      "detail": {
-        "how_to_apply": "Apply online at https://avedan.prasarbharati.org within 15 days of newspaper publication of NIA/2026/10/Sales dated 07-09-2026",
-        "completeness_score": 100,
-        "source": "prasar-bharati-me-2026",
-        "selection_process": "Shortlisting of applications; test and/or interview as decided by Prasar Bharati",
-        "pdfUrls": [
-          "https://prasarbharati.gov.in/wp-content/uploads/2026/09/NIA-ME-1.pdf"
         ],
-        "pdf_url": "https://prasarbharati.gov.in/wp-content/uploads/2026/09/NIA-ME-1.pdf",
-        "application_fee": "As per official NIA/2026/10/Sales",
-        "notification_url": "https://prasarbharati.gov.in/wp-content/uploads/2026/09/NIA-ME-1.pdf",
-        "pdf_urls": [
-          "https://prasarbharati.gov.in/wp-content/uploads/2026/09/NIA-ME-1.pdf"
-        ]
+        "notification_url": "https://ssc.gov.in",
+        "pdf_url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_chsle_2026.pdf"
       }
     },
     {
-      "id": "f01030a9-6925-41d9-9bbd-6b65126e77cd",
-      "slug": "rashtriya-chemicals-and-fertilizers-limited-rcf-rcf-graduate-technician-trade-ap-0b10ba6b",
-      "title": "RCF Graduate / Technician / Trade Apprentice 2026-27 (326 posts)",
-      "dept": "Rashtriya Chemicals and Fertilizers Limited (RCF)",
+      "id": "a51c8dd1-769a-4ca8-86e8-ac403816c1e6",
+      "slug": "solar-energy-corporation-of-india-limited-seci-seci-experienced-professionals-no-69671470",
+      "title": "SECI experienced professionals — Notification 3/2026 (28 posts)",
+      "dept": "Solar Energy Corporation of India Limited (SECI)",
       "category": "psu",
       "state_codes": [],
-      "vacancies": 326,
-      "qualification": "Graduate / Diploma / ITI as per trade in the official apprentice advertisement",
-      "salary": "Stipend as per Apprentices Act / BOAT WR guidelines",
-      "age_limit": "As per official apprentice advertisement (as on 01-09-2026)",
-      "last_date": "2026-09-20",
-      "apply_url": "https://www.rcfltd.com/hrrecruitment/recruitment-1",
-      "pdf_url": "https://www.rcfltd.com/files/Apprentice%20Advt%202026-27(%20new).pdf",
-      "status": "live",
-      "is_sponsored": false,
-      "published_at": "2026-09-04T00:00:00Z",
-      "verified_at": null,
-      "updated_at": "2026-09-15T10:40:06.824771Z",
-      "document_type": "RECRUITMENT",
-      "verification_status": "VERIFIED",
-      "completeness_score": 100,
-      "publication_confidence": 100.0,
-      "published_to_site": true,
-      "primary_pdf_url": "https://www.rcfltd.com/files/Apprentice%20Advt%202026-27(%20new).pdf",
-      "post_name": null,
-      "posts": [],
-      "important_dates": [],
-      "detail": {
-        "how_to_apply": "Apply online via RCF Recruitment — Engagement of Apprentices 2026-27 by 20-09-2026 17:00 hrs",
-        "completeness_score": 100,
-        "source": "rcfl-apprentice-2026",
-        "selection_process": "Engagement under the Apprentices Act, 1961 as per official advertisement",
-        "pdfUrls": [
-          "https://www.rcfltd.com/files/Apprentice%20Advt%202026-27(%20new).pdf"
-        ],
-        "pdf_url": "https://www.rcfltd.com/files/Apprentice%20Advt%202026-27(%20new).pdf",
-        "application_fee": "No application fee as per official advertisement",
-        "notification_url": "https://www.rcfltd.com/files/Apprentice%20Advt%202026-27(%20new).pdf",
-        "pdf_urls": [
-          "https://www.rcfltd.com/files/Apprentice%20Advt%202026-27(%20new).pdf"
-        ]
-      }
-    },
-    {
-      "id": "4d57a0ce-d62f-42bd-8a17-d5a20ed26fb0",
-      "slug": "pension-fund-regulatory-and-development-authority-pfrda-pfrda-officer-grade-a-as-ddfdf3ba",
-      "title": "PFRDA Officer Grade A (Assistant Manager) 2026 — Advt 03/2026",
-      "dept": "Pension Fund Regulatory and Development Authority (PFRDA)",
-      "category": "central",
-      "state_codes": [],
-      "vacancies": 30,
-      "qualification": "As per official Advertisement No. 03/2026 (stream-wise)",
-      "salary": "Rs. 62500-126100 (Grade A)",
-      "age_limit": "30 years as on 31-07-2026",
-      "last_date": "2026-09-24",
-      "apply_url": "https://www.pfrda.org.in",
-      "pdf_url": "https://pfrda.org.in/documents/33652/212847/Recruitment+of+Officer+Grade+A+%28Assistant+Manager%29-2026.pdf",
+      "vacancies": 28,
+      "qualification": "Graduate / B.Tech / LLB as per post in Notification No. 3/2026 (9 regular + 19 fixed-term posts)",
+      "salary": "IDA E-8 to E-1 regular scales; FTE consolidated CTC as per Notification 3/2026",
+      "age_limit": "28-55 years post-wise as on the closing date in Notification No. 3/2026",
+      "last_date": "2026-09-23",
+      "apply_url": "https://www.seci.co.in",
+      "pdf_url": "https://www.seci.co.in/uploads/careers/Final_notification_3-2026_24th_August1.pdf",
       "status": "live",
       "is_sponsored": false,
       "published_at": "2026-09-03T00:00:00Z",
-      "verified_at": null,
-      "updated_at": "2026-09-15T10:40:08.911035Z",
+      "verified_at": "2026-09-20T09:53:46.975991Z",
+      "updated_at": "2026-09-22T16:48:34.313245Z",
       "document_type": "RECRUITMENT",
       "verification_status": "VERIFIED",
       "completeness_score": 100,
       "publication_confidence": 100.0,
       "published_to_site": true,
-      "primary_pdf_url": "https://pfrda.org.in/documents/33652/212847/Recruitment+of+Officer+Grade+A+%28Assistant+Manager%29-2026.pdf",
+      "primary_pdf_url": "https://www.seci.co.in/uploads/careers/Final_notification_3-2026_24th_August1.pdf",
       "post_name": null,
       "posts": [],
       "important_dates": [],
       "detail": {
-        "how_to_apply": "Apply online at https://www.pfrda.org.in from 03-09-2026 to 24-09-2026",
+        "application_fee": "Rs. 1000 for regular executive posts; Rs. 500 for fixed-term executive posts",
+        "selection_process": "Shortlisting and interview as per SECI Notification No. 3/2026",
         "completeness_score": 100,
-        "source": "pfrda-grade-a-2026",
-        "selection_process": "Phase I and Phase II online examinations followed by interview",
-        "pdfUrls": [
-          "https://pfrda.org.in/documents/33652/212847/Recruitment+of+Officer+Grade+A+%28Assistant+Manager%29-2026.pdf"
-        ],
-        "pdf_url": "https://pfrda.org.in/documents/33652/212847/Recruitment+of+Officer+Grade+A+%28Assistant+Manager%29-2026.pdf",
-        "application_fee": "Rs. 1000 for UR/EWS/OBC (inclusive of GST); exempted for SC/ST/PwBD/Ex-servicemen",
-        "notification_url": "https://pfrda.org.in/documents/33652/212847/Recruitment+of+Officer+Grade+A+%28Assistant+Manager%29-2026.pdf",
         "pdf_urls": [
-          "https://pfrda.org.in/documents/33652/212847/Recruitment+of+Officer+Grade+A+%28Assistant+Manager%29-2026.pdf"
-        ]
-      }
-    },
-    {
-      "id": "693d439d-2255-4d9d-8dcd-02dc0006d891",
-      "slug": "pharmaceuticals-medical-devices-bureau-of-india-pmbi-pmbi-contractual-posts-phar-44d20835",
-      "title": "PMBI contractual posts — Pharmacist, Executive and others (Advt 02/2026, 178 posts)",
-      "dept": "Pharmaceuticals & Medical Devices Bureau of India (PMBI)",
-      "category": "central",
-      "state_codes": [],
-      "vacancies": 178,
-      "qualification": "Graduate / B.Pharma / post-wise qualification in Advt. No. 02/2026",
-      "salary": "Consolidated pay as per post in Advt. No. 02/2026",
-      "age_limit": "Post-wise maximum age as per Advt. No. 02/2026",
-      "last_date": "2026-09-24",
-      "apply_url": "https://www.pmbi.co.in/index.aspx",
-      "pdf_url": "https://www.pmbi.co.in/vacancies/HR_Advt_No_022026_03092026.pdf",
-      "status": "live",
-      "is_sponsored": false,
-      "published_at": "2026-09-03T00:00:00Z",
-      "verified_at": null,
-      "updated_at": "2026-09-15T11:32:14.550349Z",
-      "document_type": "RECRUITMENT",
-      "verification_status": "VERIFIED",
-      "completeness_score": 100,
-      "publication_confidence": 100.0,
-      "published_to_site": true,
-      "primary_pdf_url": "https://www.pmbi.co.in/vacancies/HR_Advt_No_022026_03092026.pdf",
-      "post_name": null,
-      "posts": [],
-      "important_dates": [],
-      "detail": {
-        "how_to_apply": "Send hard-copy application with Rs. 100 demand draft to CEO, PMBI, B-500, Tower B, 5th Floor, World Trade Centre, Nauroji Nagar, New Delhi 110029 by 24-09-2026 17:00 hrs",
-        "completeness_score": 100,
-        "source": "pmbi-02-2026",
-        "selection_process": "Shortlisting as per vacancy circular Advt. No. 02/2026",
-        "pdfUrls": [
-          "https://www.pmbi.co.in/vacancies/HR_Advt_No_022026_03092026.pdf"
+          "https://www.seci.co.in/uploads/careers/Final_notification_3-2026_24th_August1.pdf"
         ],
-        "pdf_url": "https://www.pmbi.co.in/vacancies/HR_Advt_No_022026_03092026.pdf",
-        "application_fee": "Rs. 100 demand draft in favour of Pharmaceuticals & Medical Devices Bureau of India (PMBI)",
-        "notification_url": "https://www.pmbi.co.in/vacancies/HR_Advt_No_022026_03092026.pdf",
-        "pdf_urls": [
-          "https://www.pmbi.co.in/vacancies/HR_Advt_No_022026_03092026.pdf"
-        ]
+        "summary": "Notification No.: 03/2026 An ISO Certified Company 1 CIN No. U40106DL2011GOI225263 Solar Energy Corporation of India Limited (A Government of India Enterprise) (A Navratna Company) “Recruitment of Experienced Professionals” Solar Energy Corporation of India Limited (SECI)-is a schedule ‘A’ Navratna CPSE under the administrative control of Ministry of N…",
+        "pdfUrls": [
+          "https://www.seci.co.in/uploads/careers/Final_notification_3-2026_24th_August1.pdf"
+        ],
+        "published": "2026-09-03T00:00:00+00:00",
+        "source": "seci-3-2026",
+        "how_to_apply": "Register online on the SECI website from 25-08-2026 11:00 hrs to 23-09-2026 17:00 hrs as per Notification No. 3/2026",
+        "notification_url": "https://www.seci.co.in/uploads/careers/Final_notification_3-2026_24th_August1.pdf",
+        "pdf_url": "https://www.seci.co.in/uploads/careers/Final_notification_3-2026_24th_August1.pdf"
       }
     },
     {
@@ -720,7 +335,7 @@
       "is_sponsored": false,
       "published_at": "2026-09-03T00:00:00Z",
       "verified_at": null,
-      "updated_at": "2026-09-15T11:32:11.958457Z",
+      "updated_at": "2026-09-22T16:48:21.314952Z",
       "document_type": "RECRUITMENT",
       "verification_status": "VERIFIED",
       "completeness_score": 100,
@@ -731,292 +346,65 @@
       "posts": [],
       "important_dates": [],
       "detail": {
-        "how_to_apply": "Apply online via RCF recruitment for Assistant Officer (Secretarial) E0 Grade from 10-09-2026 08:00 hrs to 26-09-2026 17:00 hrs",
-        "completeness_score": 100,
-        "source": "rcfl-ao-secretarial-2026",
-        "selection_process": "Online test and qualifying skill test as per Advertisement No. 01072026",
-        "pdfUrls": [
-          "https://www.rcfltd.com/files/Secretarial%20advertisement%2003_09_2026.pdf"
-        ],
-        "pdf_url": "https://www.rcfltd.com/files/Secretarial%20advertisement%2003_09_2026.pdf",
         "application_fee": "Rs. 1000 plus GST for UR/OBC/EWS; Nil for SC/ST/ExSM/PwBD/Female/Departmental",
-        "notification_url": "https://www.rcfltd.com/files/Secretarial%20advertisement%2003_09_2026.pdf",
+        "selection_process": "Online test and qualifying skill test as per Advertisement No. 01072026",
+        "completeness_score": 100,
         "pdf_urls": [
           "https://www.rcfltd.com/files/Secretarial%20advertisement%2003_09_2026.pdf"
-        ]
-      }
-    },
-    {
-      "id": "e22a3042-5747-47cd-a150-1f8e2e620d34",
-      "slug": "staff-selection-commission-ssc-notice-of-junior-engineer-examination-2026-2026-h-adfb1951",
-      "title": "Notice of Junior Engineer Examination, 2026",
-      "dept": "Staff Selection Commission (SSC)",
-      "category": "ssc",
-      "state_codes": [],
-      "vacancies": 0,
-      "qualification": "and experience and other terms of",
-      "salary": "Pay as per 7th Central Pay Commission (see official notice)",
-      "age_limit": null,
-      "last_date": "2026-09-22",
-      "apply_url": "https://ssc.gov.in",
-      "pdf_url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_je_2026.pdf",
-      "status": "live",
-      "is_sponsored": false,
-      "published_at": "2026-09-02T12:38:43.600000Z",
-      "verified_at": null,
-      "updated_at": "2026-09-20T07:53:36.541246Z",
-      "document_type": "RECRUITMENT",
-      "verification_status": "VERIFIED",
-      "completeness_score": 73,
-      "publication_confidence": 95.0,
-      "published_to_site": true,
-      "primary_pdf_url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_je_2026.pdf",
-      "post_name": null,
-      "posts": [],
-      "important_dates": [],
-      "detail": {
-        "published": "2026-09-02T12:38:43.600000+00:00",
-        "completeness_score": 80,
-        "summary": "(To be uploaded on the Website of the Commission; i.e., https://ssc.gov.in on 02.09.2026) भारत सरकार, कार्मिक, लोक र्िकायत तथा पेंिन मंत्रालय, कार्मिक एवं प्रर्िक्षण ववभाग, कमिचारी चयन आयोग, ब्लॉक सं-12,केन्द्रीय कायािलय पररसर, लोधी रोड, नई दिल्ली -110003 Government of India, Ministry of Personnel, Public Grievances & Pensions, Department of Personnel and Training, Staff Selection Commission, Bloc…",
-        "source": "ssc",
+        ],
+        "summary": "Rashtriya Chemicals and Fertilizers Limited (A Government of India Undertaking) Administrative Building, Chembur, Mumbai- 400 074 1 “RCF strives to have a workforce which reflects gender balance and women candidates are encouraged to apply.” Advertisement No.: 01072026 Rashtriya Chemicals and Fertilizers Limited (RCF Ltd) is a leading profit making “Navratna” company in the business…",
         "pdfUrls": [
-          "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_je_2026.pdf"
+          "https://www.rcfltd.com/files/Secretarial%20advertisement%2003_09_2026.pdf"
         ],
-        "pdf_url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_je_2026.pdf",
-        "notification_url": "https://ssc.gov.in",
-        "pdf_urls": [
-          "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_je_2026.pdf"
-        ],
-        "apply_urls": [
-          "https://ssc.gov.in",
-          "https://depwd.gov.in"
-        ]
+        "source": "rcfl-ao-secretarial-2026",
+        "how_to_apply": "Apply online via RCF recruitment for Assistant Officer (Secretarial) E0 Grade from 10-09-2026 08:00 hrs to 26-09-2026 17:00 hrs",
+        "notification_url": "https://www.rcfltd.com/files/Secretarial%20advertisement%2003_09_2026.pdf",
+        "pdf_url": "https://www.rcfltd.com/files/Secretarial%20advertisement%2003_09_2026.pdf"
       }
     },
     {
-      "id": "52d2dcfa-f92d-4ed3-86f4-0b08ffd1967f",
-      "slug": "institute-of-banking-personnel-selection-ibps-ibps-crp-rrbs-xv-recruitment-of-of-92e88be2",
-      "title": "IBPS CRP-RRBs-XV recruitment of Officers (Scale I, II and III)",
-      "dept": "Institute of Banking Personnel Selection (IBPS)",
-      "category": "banking",
-      "state_codes": [],
-      "vacancies": 5510,
-      "qualification": null,
-      "salary": null,
-      "age_limit": null,
-      "last_date": "2026-09-21",
-      "apply_url": "https://ibpsreg.ibps.in/rrbxvaug26/",
-      "pdf_url": "https://www.ibps.in/wp-content/uploads/CRP-RRBs-XV-notification.pdf",
-      "status": "live",
-      "is_sponsored": false,
-      "published_at": "2026-09-01T00:00:00Z",
-      "verified_at": null,
-      "updated_at": "2026-09-20T07:52:57.282511Z",
-      "document_type": "RECRUITMENT",
-      "verification_status": "VERIFIED",
-      "completeness_score": 73,
-      "publication_confidence": 100.0,
-      "published_to_site": true,
-      "primary_pdf_url": "https://www.ibps.in/wp-content/uploads/CRP-RRBs-XV-notification.pdf",
-      "post_name": "Officers (Scale I",
-      "posts": [],
-      "important_dates": [],
-      "detail": {
-        "published": "2026-09-01T00:00:00+00:00",
-        "completeness_score": 73,
-        "summary": "CRP RRBs XV Common Recruitment Process for Recruitment of Officers (Scale-I, II & III) and Office Assistants (Multipurpose) in Regional Rural Banks (RRBs) Official Website: www.ibps.in In case of queries / complaints please log on to https://cgrs.ibps.in The online examinations for the upcoming Common Recruitment Process for RRBs (CRP RRBs XV) for recruitment of Group “A”- Officers (Scale-I, II & …",
-        "source": "ibps",
-        "pdfUrls": [
-          "https://www.ibps.in/wp-content/uploads/CRP-RRBs-XV-notification.pdf"
-        ],
-        "pdf_url": "https://www.ibps.in/wp-content/uploads/CRP-RRBs-XV-notification.pdf",
-        "helpdesk_url": "https://cgrs.ibps.in",
-        "notification_url": "https://ibpsreg.ibps.in/rrbxvaug26/",
-        "pdf_urls": [
-          "https://www.ibps.in/wp-content/uploads/CRP-RRBs-XV-notification.pdf"
-        ],
-        "apply_urls": [
-          "https://cgrs.ibps.in"
-        ]
-      }
-    },
-    {
-      "id": "6417e311-93cd-45f5-a52a-ffa3e2d018cd",
-      "slug": "institute-of-banking-personnel-selection-ibps-ibps-crp-rrbs-xv-recruitment-of-of-84e1f763",
-      "title": "IBPS CRP-RRBs-XV recruitment of Office Assistants (Multipurpose)",
-      "dept": "Institute of Banking Personnel Selection (IBPS)",
-      "category": "banking",
-      "state_codes": [],
-      "vacancies": 8183,
-      "qualification": null,
-      "salary": null,
-      "age_limit": null,
-      "last_date": "2026-09-21",
-      "apply_url": "https://ibpsreg.ibps.in/rrboaxvaug26/",
-      "pdf_url": "https://www.ibps.in/wp-content/uploads/CRP-RRBs-XV-notification.pdf",
-      "status": "live",
-      "is_sponsored": false,
-      "published_at": "2026-09-01T00:00:00Z",
-      "verified_at": null,
-      "updated_at": "2026-09-20T07:52:57.282511Z",
-      "document_type": "RECRUITMENT",
-      "verification_status": "VERIFIED",
-      "completeness_score": 73,
-      "publication_confidence": 100.0,
-      "published_to_site": true,
-      "primary_pdf_url": "https://www.ibps.in/wp-content/uploads/CRP-RRBs-XV-notification.pdf",
-      "post_name": "Office Assistants (Multipurpose)",
-      "posts": [],
-      "important_dates": [],
-      "detail": {
-        "published": "2026-09-01T00:00:00+00:00",
-        "completeness_score": 73,
-        "summary": "CRP RRBs XV Common Recruitment Process for Recruitment of Officers (Scale-I, II & III) and Office Assistants (Multipurpose) in Regional Rural Banks (RRBs) Official Website: www.ibps.in In case of queries / complaints please log on to https://cgrs.ibps.in The online examinations for the upcoming Common Recruitment Process for RRBs (CRP RRBs XV) for recruitment of Group “A”- Officers (Scale-I, II & …",
-        "source": "ibps",
-        "pdfUrls": [
-          "https://www.ibps.in/wp-content/uploads/CRP-RRBs-XV-notification.pdf"
-        ],
-        "pdf_url": "https://www.ibps.in/wp-content/uploads/CRP-RRBs-XV-notification.pdf",
-        "helpdesk_url": "https://cgrs.ibps.in",
-        "notification_url": "https://ibpsreg.ibps.in/rrboaxvaug26/",
-        "pdf_urls": [
-          "https://www.ibps.in/wp-content/uploads/CRP-RRBs-XV-notification.pdf"
-        ],
-        "apply_urls": [
-          "https://cgrs.ibps.in"
-        ]
-      }
-    },
-    {
-      "id": "95b28845-2012-4416-ab6a-68b3caba1a91",
-      "slug": "national-informatics-centre-nic-scientific-technical-assistant-a-sta-a-nic-sta-2-6c0e2563",
-      "title": "Scientific / Technical Assistant-A (STA-A) — NIC/STA/2026/2",
-      "dept": "National Informatics Centre (NIC)",
+      "id": "693d439d-2255-4d9d-8dcd-02dc0006d891",
+      "slug": "pharmaceuticals-medical-devices-bureau-of-india-pmbi-pmbi-contractual-posts-phar-44d20835",
+      "title": "PMBI contractual posts — Pharmacist, Executive and others (Advt 02/2026, 178 posts)",
+      "dept": "Pharmaceuticals & Medical Devices Bureau of India (PMBI)",
       "category": "central",
       "state_codes": [],
-      "vacancies": 376,
-      "qualification": "M.Sc./MS/MCA/B.E./B.Tech in Computer Science, Electronics & Communication or Data Science / AI with a valid GATE 2024/2025/2026 score (CS / EC / DA)",
-      "salary": "Level 6 Rs. 35400-112400",
-      "age_limit": "30 years as on 30-09-2026 (relaxations as per official advertisement)",
-      "last_date": "2026-09-30",
-      "apply_url": "https://recruitment.nic.in",
-      "pdf_url": "https://recruitment.nic.in/DetailedSTA.pdf",
-      "status": "live",
-      "is_sponsored": false,
-      "published_at": "2026-09-01T00:00:00Z",
-      "verified_at": null,
-      "updated_at": "2026-09-15T10:35:11.571252Z",
-      "document_type": "RECRUITMENT",
-      "verification_status": "VERIFIED",
-      "completeness_score": 100,
-      "publication_confidence": 100.0,
-      "published_to_site": true,
-      "primary_pdf_url": "https://recruitment.nic.in/DetailedSTA.pdf",
-      "post_name": null,
-      "posts": [],
-      "important_dates": [],
-      "detail": {
-        "how_to_apply": "Apply online at https://recruitment.nic.in between 01-09-2026 and 30-09-2026",
-        "completeness_score": 100,
-        "source": "nic-sta",
-        "selection_process": "GATE 2024/2025/2026 score merit list followed by document verification",
-        "pdfUrls": [
-          "https://recruitment.nic.in/DetailedSTA.pdf"
-        ],
-        "pdf_url": "https://recruitment.nic.in/DetailedSTA.pdf",
-        "application_fee": "Rs. 800 for UR/OBC/EWS; Nil for SC/ST/PwBD/Women",
-        "notification_url": "https://recruitment.nic.in/DetailedSTA.pdf",
-        "pdf_urls": [
-          "https://recruitment.nic.in/DetailedSTA.pdf"
-        ]
-      }
-    },
-    {
-      "id": "b331ef3a-4d7b-4bf4-a03b-6a114f223dfc",
-      "slug": "ramagundam-fertilizers-and-chemicals-limited-rfcl-rfcl-experienced-professionals-3667c374",
-      "title": "RFCL experienced professionals — Rectt/01/2026 (40 posts)",
-      "dept": "Ramagundam Fertilizers and Chemicals Limited (RFCL)",
-      "category": "psu",
-      "state_codes": [],
-      "vacancies": 40,
-      "qualification": "Engineering degree / post-wise qualification in Chemical, Mechanical and other disciplines as per Advertisement No. Rectt/01/2026",
-      "salary": "IDA E-1 to E-4 scales as per Rectt/01/2026 (e.g. Rs. 40000-140000 at E-1)",
-      "age_limit": "Post-wise upper age as on the last date in Advertisement No. Rectt/01/2026",
+      "vacancies": 178,
+      "qualification": "Graduate / B.Pharma / post-wise qualification in Advt. No. 02/2026",
+      "salary": "Consolidated pay as per post in Advt. No. 02/2026",
+      "age_limit": "Post-wise maximum age as per Advt. No. 02/2026",
       "last_date": "2026-09-24",
-      "apply_url": "https://www.rfcl.co.in",
-      "pdf_url": "https://www.rfcl.co.in/upload/Detailed%20Advt%2001_2026.pdf",
+      "apply_url": "https://www.pmbi.co.in/index.aspx",
+      "pdf_url": "https://www.pmbi.co.in/vacancies/HR_Advt_No_022026_03092026.pdf",
       "status": "live",
       "is_sponsored": false,
-      "published_at": "2026-08-26T00:00:00Z",
-      "verified_at": null,
-      "updated_at": "2026-09-15T14:32:12.269765Z",
+      "published_at": "2026-09-03T00:00:00Z",
+      "verified_at": "2026-09-20T09:53:47.945726Z",
+      "updated_at": "2026-09-22T16:48:21.314952Z",
       "document_type": "RECRUITMENT",
       "verification_status": "VERIFIED",
       "completeness_score": 100,
       "publication_confidence": 100.0,
       "published_to_site": true,
-      "primary_pdf_url": "https://www.rfcl.co.in/upload/Detailed%20Advt%2001_2026.pdf",
+      "primary_pdf_url": "https://www.pmbi.co.in/vacancies/HR_Advt_No_022026_03092026.pdf",
       "post_name": null,
       "posts": [],
       "important_dates": [],
       "detail": {
-        "how_to_apply": "Apply online at https://www.rfcl.co.in Careers from 26-08-2026 08:00 hrs to 24-09-2026 17:00 hrs, then send the printed form with documents to DGM (HR), RFCL, Noida by 01-10-2026 (08-10-2026 for far-flung areas)",
+        "application_fee": "Rs. 100 demand draft in favour of Pharmaceuticals & Medical Devices Bureau of India (PMBI)",
+        "selection_process": "Shortlisting as per vacancy circular Advt. No. 02/2026",
         "completeness_score": 100,
-        "source": "rfcl-rectt-01-2026",
-        "selection_process": "Scrutiny of applications and personal interview; CBT if applications are large",
-        "pdfUrls": [
-          "https://www.rfcl.co.in/upload/Detailed%20Advt%2001_2026.pdf"
-        ],
-        "pdf_url": "https://www.rfcl.co.in/upload/Detailed%20Advt%2001_2026.pdf",
-        "application_fee": "Rs. 700 (E-1 to E-4) / Rs. 1000 (E-5 and above); Nil for SC/ST/PwBD/ExSM/Departmental",
-        "notification_url": "https://www.rfcl.co.in/upload/Detailed%20Advt%2001_2026.pdf",
         "pdf_urls": [
-          "https://www.rfcl.co.in/upload/Detailed%20Advt%2001_2026.pdf"
-        ]
-      }
-    },
-    {
-      "id": "a51c8dd1-769a-4ca8-86e8-ac403816c1e6",
-      "slug": "solar-energy-corporation-of-india-limited-seci-seci-experienced-professionals-no-69671470",
-      "title": "SECI experienced professionals — Notification 3/2026 (28 posts)",
-      "dept": "Solar Energy Corporation of India Limited (SECI)",
-      "category": "psu",
-      "state_codes": [],
-      "vacancies": 28,
-      "qualification": "Graduate / B.Tech / LLB as per post in Notification No. 3/2026 (9 regular + 19 fixed-term posts)",
-      "salary": "IDA E-8 to E-1 regular scales; FTE consolidated CTC as per Notification 3/2026",
-      "age_limit": "28-55 years post-wise as on the closing date in Notification No. 3/2026",
-      "last_date": "2026-09-23",
-      "apply_url": "https://www.seci.co.in",
-      "pdf_url": "https://www.seci.co.in/uploads/careers/Final_notification_3-2026_24th_August1.pdf",
-      "status": "live",
-      "is_sponsored": false,
-      "published_at": "2026-08-24T00:00:00Z",
-      "verified_at": null,
-      "updated_at": "2026-09-15T14:32:13.358086Z",
-      "document_type": "RECRUITMENT",
-      "verification_status": "VERIFIED",
-      "completeness_score": 100,
-      "publication_confidence": 100.0,
-      "published_to_site": true,
-      "primary_pdf_url": "https://www.seci.co.in/uploads/careers/Final_notification_3-2026_24th_August1.pdf",
-      "post_name": null,
-      "posts": [],
-      "important_dates": [],
-      "detail": {
-        "how_to_apply": "Register online on the SECI website from 25-08-2026 11:00 hrs to 23-09-2026 17:00 hrs as per Notification No. 3/2026",
-        "completeness_score": 100,
-        "source": "seci-3-2026",
-        "selection_process": "Shortlisting and interview as per SECI Notification No. 3/2026",
-        "pdfUrls": [
-          "https://www.seci.co.in/uploads/careers/Final_notification_3-2026_24th_August1.pdf"
+          "https://www.pmbi.co.in/vacancies/HR_Advt_No_022026_03092026.pdf"
         ],
-        "pdf_url": "https://www.seci.co.in/uploads/careers/Final_notification_3-2026_24th_August1.pdf",
-        "application_fee": "Rs. 1000 for regular executive posts; Rs. 500 for fixed-term executive posts",
-        "notification_url": "https://www.seci.co.in/uploads/careers/Final_notification_3-2026_24th_August1.pdf",
-        "pdf_urls": [
-          "https://www.seci.co.in/uploads/careers/Final_notification_3-2026_24th_August1.pdf"
-        ]
+        "summary": "PHARMACEUTICALS & MEDICAL DEVICES BUREAU OF INDIA (PMBI) B-500, Tower B, 5th Floor, World Trade Centre, Nauroji Nagar, New Delhi – 110029 VACANCY CIRCULAR Advt. No.: 02/2026 Pharmaceuticals & Medical Devices Bureau of India (PMBI) is the implementing agency for Pradhan Mantri Bhartiya Janaushadhi Pariyojana and registered under the Societies Registration act 1860. PMBI invites applicat…",
+        "pdfUrls": [
+          "https://www.pmbi.co.in/vacancies/HR_Advt_No_022026_03092026.pdf"
+        ],
+        "source": "pmbi-02-2026",
+        "how_to_apply": "Send hard-copy application with Rs. 100 demand draft to CEO, PMBI, B-500, Tower B, 5th Floor, World Trade Centre, Nauroji Nagar, New Delhi 110029 by 24-09-2026 17:00 hrs",
+        "notification_url": "https://www.pmbi.co.in/vacancies/HR_Advt_No_022026_03092026.pdf",
+        "pdf_url": "https://www.pmbi.co.in/vacancies/HR_Advt_No_022026_03092026.pdf"
       }
     },
     {
@@ -1048,63 +436,19 @@
       "posts": [],
       "important_dates": [],
       "detail": {
-        "how_to_apply": "Apply online via CONCOR HR & Career on https://www.concorindia.co.in by 30-09-2026 23:55 hrs",
-        "completeness_score": 100,
-        "source": "concor-mt-ao-2026",
-        "selection_process": "As per CONCOR detailed advertisement dated 18 August 2026",
-        "pdfUrls": [
-          "https://cms.concorindia.co.in:8000/uploads/cms/pdf/Asf6Xc3Mnw5BWdp_FinalAdvertisement-18thAug2026(Published).pdf"
-        ],
-        "pdf_url": "https://cms.concorindia.co.in:8000/uploads/cms/pdf/Asf6Xc3Mnw5BWdp_FinalAdvertisement-18thAug2026(Published).pdf",
         "application_fee": "Rs. 750 (Management Trainee) / Rs. 500 (Accounts Officer); relaxations as per advertisement",
-        "notification_url": "https://cms.concorindia.co.in:8000/uploads/cms/pdf/Asf6Xc3Mnw5BWdp_FinalAdvertisement-18thAug2026(Published).pdf",
+        "selection_process": "As per CONCOR detailed advertisement dated 18 August 2026",
+        "completeness_score": 100,
         "pdf_urls": [
           "https://cms.concorindia.co.in:8000/uploads/cms/pdf/Asf6Xc3Mnw5BWdp_FinalAdvertisement-18thAug2026(Published).pdf"
-        ]
-      }
-    },
-    {
-      "id": "581c1b5d-6c9c-4263-b0b6-a2cc96c00542",
-      "slug": "rashtriya-chemicals-and-fertilizers-limited-rcf-rcf-management-trainee-in-variou-a4db524e",
-      "title": "RCF Management Trainee in various disciplines — Advt 16022026",
-      "dept": "Rashtriya Chemicals and Fertilizers Limited (RCF)",
-      "category": "psu",
-      "state_codes": [],
-      "vacancies": 95,
-      "qualification": "Full-time B.E./B.Tech or equivalent in the relevant discipline as per Advertisement No. 16022026",
-      "salary": "Rs. 60000 per month stipend during one-year training",
-      "age_limit": "27 years as on 01-02-2026 for UR/EWS (relaxations as per advertisement)",
-      "last_date": "2026-09-20",
-      "apply_url": "https://www.rcfltd.com/hrrecruitment/recruitment-1",
-      "pdf_url": "https://rcfltd.com/files/MT%202026.pdf",
-      "status": "live",
-      "is_sponsored": false,
-      "published_at": "2026-08-08T00:00:00Z",
-      "verified_at": null,
-      "updated_at": "2026-09-15T10:50:18.872466Z",
-      "document_type": "RECRUITMENT",
-      "verification_status": "VERIFIED",
-      "completeness_score": 94,
-      "publication_confidence": 95.0,
-      "published_to_site": true,
-      "primary_pdf_url": "https://rcfltd.com/files/MT%202026.pdf",
-      "post_name": null,
-      "posts": [],
-      "important_dates": [],
-      "detail": {
-        "how_to_apply": "Apply online via RCF recruitment (Advt 16022026); last date extended to 20-09-2026 17:00 hrs on the official recruitment page",
-        "completeness_score": 94,
-        "source": "rcfl-mt-2026",
-        "selection_process": "Online test and personal interview as per Advertisement No. 16022026",
-        "pdfUrls": [
-          "https://rcfltd.com/files/MT%202026.pdf"
         ],
-        "pdf_url": "https://rcfltd.com/files/MT%202026.pdf",
-        "application_fee": "Rs. 1000 plus GST for UR/OBC/EWS; Nil for SC/ST/ExSM/PwBD/Female",
-        "notification_url": "https://rcfltd.com/files/MT%202026.pdf",
-        "pdf_urls": [
-          "https://rcfltd.com/files/MT%202026.pdf"
-        ]
+        "pdfUrls": [
+          "https://cms.concorindia.co.in:8000/uploads/cms/pdf/Asf6Xc3Mnw5BWdp_FinalAdvertisement-18thAug2026(Published).pdf"
+        ],
+        "source": "concor-mt-ao-2026",
+        "how_to_apply": "Apply online via CONCOR HR & Career on https://www.concorindia.co.in by 30-09-2026 23:55 hrs",
+        "notification_url": "https://cms.concorindia.co.in:8000/uploads/cms/pdf/Asf6Xc3Mnw5BWdp_FinalAdvertisement-18thAug2026(Published).pdf",
+        "pdf_url": "https://cms.concorindia.co.in:8000/uploads/cms/pdf/Asf6Xc3Mnw5BWdp_FinalAdvertisement-18thAug2026(Published).pdf"
       }
     },
     {
@@ -1138,13 +482,29 @@
       "posts": [],
       "important_dates": [],
       "detail": {
-        "published": "2026-09-01T00:00:00+00:00",
         "completeness_score": 73,
-        "external_id": "3049705",
+        "pdf_urls": [
+          "https://paradipport.gov.in/Writereaddata/Career/Dy%20CE_18052026.pdf"
+        ],
         "summary": "Selection Criteria for Dir PARADIP PORT TRUST rect Recruitment to Class-I, Class-I TRAFFIC DEPARTMENT II & Class-III Posts Selection Criteria for direct recruitment to Class-I Posts under Traffic Department, PPT Sl. No . Name of the post No. of posts Classi ficatio n Scale of pay(Rs. Whether selection or non selection Upper age limit for direct recruit ment(in years) Educational and other Qualific…",
+        "pdfUrls": [
+          "https://paradipport.gov.in/Writereaddata/Career/Dy%20CE_18052026.pdf"
+        ],
+        "post_name": "Dy. Chief Engineer (Civil)",
         "memorized_at": "2026-08-04T16:57:54.836895+00:00",
-        "detail_source": "pdf",
+        "published": "2026-09-01T00:00:00+00:00",
+        "source": "structured-import",
         "detail_updated_at": "2026-09-04T15:04:27.417796+00:00",
+        "external_id": "3049705",
+        "notification_url": "https://paradipport.gov.in",
+        "detail_source": "pdf",
+        "pdf_url": "https://paradipport.gov.in/Writereaddata/Career/Dy%20CE_18052026.pdf",
+        "missing_fields": [
+          "age_limit",
+          "application_fee",
+          "selection_process",
+          "how_to_apply"
+        ],
         "important_dates": [
           {
             "date": "18 May 2026",
@@ -1154,22 +514,6 @@
             "date": "18 June 2026",
             "event": "Last Date for Receipt of Application"
           }
-        ],
-        "source": "structured-import",
-        "post_name": "Dy. Chief Engineer (Civil)",
-        "pdfUrls": [
-          "https://paradipport.gov.in/Writereaddata/Career/Dy%20CE_18052026.pdf"
-        ],
-        "pdf_url": "https://paradipport.gov.in/Writereaddata/Career/Dy%20CE_18052026.pdf",
-        "missing_fields": [
-          "age_limit",
-          "application_fee",
-          "selection_process",
-          "how_to_apply"
-        ],
-        "notification_url": "https://paradipport.gov.in",
-        "pdf_urls": [
-          "https://paradipport.gov.in/Writereaddata/Career/Dy%20CE_18052026.pdf"
         ]
       }
     },
@@ -1205,11 +549,25 @@
       "important_dates": [],
       "detail": {
         "completeness_score": 80,
-        "external_id": "3052461",
+        "pdf_urls": [
+          "https://icar-crri.in/wp-content/uploads/2026/06/EAP-245.pdf"
+        ],
         "summary": "भाकृअनुप-केÛġȣय चावल अनुसंधान संèथान, कटक-753 006)ओͫडशा (, भारत ICAR – CENTRAL RICE RESEARCH INSTITUTE, CUTTACK-753 006 (ODISHA), INDIA Advertisement No. 10/SRF/2026-27 Walk-in-Interview Name of the Project : “National Innovations on Climate Resilient Agriculture” (EAP-245) Name of the Position : Senior Research Fellow (SRF) Number of Position : Two (02) Rate of remuneration : Rs. 37,000/- p.m. +…",
+        "pdfUrls": [
+          "https://icar-crri.in/wp-content/uploads/2026/06/EAP-245.pdf"
+        ],
         "memorized_at": "2026-08-03T16:52:59.919819+00:00",
-        "detail_source": "pdf",
+        "source": "structured-import",
         "detail_updated_at": "2026-09-04T15:04:29.654628+00:00",
+        "external_id": "3052461",
+        "notification_url": "https://icar-crri.in/wp-content/uploads/2026/06/EAP-245.pdf",
+        "detail_source": "pdf",
+        "pdf_url": "https://icar-crri.in/wp-content/uploads/2026/06/EAP-245.pdf",
+        "missing_fields": [
+          "application_fee",
+          "selection_process",
+          "how_to_apply"
+        ],
         "important_dates": [
           {
             "date": "15 June 2026",
@@ -1219,20 +577,6 @@
             "date": "Up to 30 September 2026",
             "event": "Project Duration"
           }
-        ],
-        "source": "structured-import",
-        "pdfUrls": [
-          "https://icar-crri.in/wp-content/uploads/2026/06/EAP-245.pdf"
-        ],
-        "pdf_url": "https://icar-crri.in/wp-content/uploads/2026/06/EAP-245.pdf",
-        "missing_fields": [
-          "application_fee",
-          "selection_process",
-          "how_to_apply"
-        ],
-        "notification_url": "https://icar-crri.in/wp-content/uploads/2026/06/EAP-245.pdf",
-        "pdf_urls": [
-          "https://icar-crri.in/wp-content/uploads/2026/06/EAP-245.pdf"
         ]
       }
     },
@@ -1267,40 +611,40 @@
       "posts": [],
       "important_dates": [],
       "detail": {
+        "application_fee": "प्राथमिकता II: उन अभ्यर्थियों को वरीयता दी जाएगी जिनके पास प्रोग्रामिंग, कंप्यूटर नेटवर्किंग, क्लाउड कंप्यूटिंग, साइबर सुरक्षा, डेटा वि; Preference II: Preference will be given to candidates having hands-on experience in programming, computer networking, cloud computing,",
+        "helpdesk_email": "nmedhi@tezu.ernet.in",
+        "completeness_score": 87,
+        "pdf_urls": [
+          "https://www.tezu.ernet.in/ProjectWalkin/20-623Hin-Eng.pdf"
+        ],
+        "summary": "तेजपुर विश्वविद्यालय / TEZPUR UNIVERSITY (संसद के अधिनियम द्वारा स्थापित केंद्रीय विश्वविद्यालय) (A Central University established by an Act of Parliament) संकायाध्यक्ष का कार्याालय, शोध व विकास OFFICE OF THE DEAN, RESEARCH & DEVELOPMENT तेजपुर-784028 :: असम / TEZPUR-784028 तात्कालिक साक्षात्कार / Walk-in-interview मुख्य अनुसंधानकर्ता प्रो. प्रीतम देब, भौतिकी विभाग, तेजपुर विश्वविद्यालय,…",
+        "pdfUrls": [
+          "https://www.tezu.ernet.in/ProjectWalkin/20-623Hin-Eng.pdf"
+        ],
+        "memorized_at": "2026-08-31T11:22:48.728659+00:00",
+        "published": "2026-06-08T00:00:00+00:00",
+        "source": "structured-import",
         "fee": {
           "Preference II": "Preference will be given to candidates having hands-on experience in programming, computer networking, cloud computing,",
           "प्राथमिकता II": "उन अभ्यर्थियों को वरीयता दी जाएगी जिनके पास प्रोग्रामिंग, कंप्यूटर नेटवर्किंग, क्लाउड कंप्यूटिंग, साइबर सुरक्षा, डेटा वि"
         },
-        "published": "2026-06-08T00:00:00+00:00",
-        "completeness_score": 87,
-        "external_id": "3053285",
-        "summary": "तेजपुर विश्वविद्यालय / TEZPUR UNIVERSITY (संसद के अधिनियम द्वारा स्थापित केंद्रीय विश्वविद्यालय) (A Central University established by an Act of Parliament) संकायाध्यक्ष का कार्याालय, शोध व विकास OFFICE OF THE DEAN, RESEARCH & DEVELOPMENT तेजपुर-784028 :: असम / TEZPUR-784028 तात्कालिक साक्षात्कार / Walk-in-interview मुख्य अनुसंधानकर्ता प्रो. प्रीतम देब, भौतिकी विभाग, तेजपुर विश्वविद्यालय,…",
-        "memorized_at": "2026-08-31T11:22:48.728659+00:00",
+        "detail_updated_at": "2026-09-04T15:04:30.956426+00:00",
         "helpdesk_emails": [
           "nmedhi@tezu.ernet.in"
         ],
+        "external_id": "3053285",
+        "notification_url": "https://www.tezu.ernet.in/ProjectWalkin/20-623Hin-Eng.pdf",
         "detail_source": "pdf",
-        "detail_updated_at": "2026-09-04T15:04:30.956426+00:00",
+        "pdf_url": "https://www.tezu.ernet.in/ProjectWalkin/20-623Hin-Eng.pdf",
+        "missing_fields": [
+          "selection_process",
+          "how_to_apply"
+        ],
         "important_dates": [
           {
             "date": "01 July 2026",
             "event": "Walk-in Interview"
           }
-        ],
-        "source": "structured-import",
-        "helpdesk_email": "nmedhi@tezu.ernet.in",
-        "pdfUrls": [
-          "https://www.tezu.ernet.in/ProjectWalkin/20-623Hin-Eng.pdf"
-        ],
-        "pdf_url": "https://www.tezu.ernet.in/ProjectWalkin/20-623Hin-Eng.pdf",
-        "application_fee": "प्राथमिकता II: उन अभ्यर्थियों को वरीयता दी जाएगी जिनके पास प्रोग्रामिंग, कंप्यूटर नेटवर्किंग, क्लाउड कंप्यूटिंग, साइबर सुरक्षा, डेटा वि; Preference II: Preference will be given to candidates having hands-on experience in programming, computer networking, cloud computing,",
-        "missing_fields": [
-          "selection_process",
-          "how_to_apply"
-        ],
-        "notification_url": "https://www.tezu.ernet.in/ProjectWalkin/20-623Hin-Eng.pdf",
-        "pdf_urls": [
-          "https://www.tezu.ernet.in/ProjectWalkin/20-623Hin-Eng.pdf"
         ]
       }
     },
@@ -1335,32 +679,32 @@
       "posts": [],
       "important_dates": [],
       "detail": {
-        "published": "1995-06-27T00:00:00+00:00",
         "completeness_score": 80,
-        "external_id": "3052814",
-        "summary": "Advt No. – NHM-UT/06/2026-27 Date: 04.06.2026___________ PUBLIC NOTICE REQUIRES QUALIFIED CONTRACTUAL STAFF UNDER NATIONAL HEALTH MISSION(NHM) & PRADHAN MANTRI AYUSHMAN BHARAT HEALTH INFRASTRUCTURE MISSION (PMABHIM), U.T, CHANDIGARH Sr. No . Name of the post No. of Posts Category Qualification Consolidat ed Amount In Rs. (per month) Gen SC OBC 1. Radiologist under NHM 01 01 - - Essential:  MBBS D…",
-        "memorized_at": "2026-08-04T09:08:44.064319+00:00",
-        "detail_source": "pdf",
-        "detail_updated_at": "2026-09-04T15:04:31.881563+00:00",
-        "important_dates": [
-          {
-            "date": "11 June 2026",
-            "event": "Walk-in Interview"
-          }
+        "pdf_urls": [
+          "http://nrhmchd.gov.in/cadmin/uploads/filemanagers/1780486049.pdf"
         ],
-        "source": "structured-import",
+        "summary": "Advt No. – NHM-UT/06/2026-27 Date: 04.06.2026___________ PUBLIC NOTICE REQUIRES QUALIFIED CONTRACTUAL STAFF UNDER NATIONAL HEALTH MISSION(NHM) & PRADHAN MANTRI AYUSHMAN BHARAT HEALTH INFRASTRUCTURE MISSION (PMABHIM), U.T, CHANDIGARH Sr. No . Name of the post No. of Posts Category Qualification Consolidat ed Amount In Rs. (per month) Gen SC OBC 1. Radiologist under NHM 01 01 - - Essential:  MBBS D…",
         "pdfUrls": [
           "http://nrhmchd.gov.in/cadmin/uploads/filemanagers/1780486049.pdf"
         ],
+        "memorized_at": "2026-08-04T09:08:44.064319+00:00",
+        "published": "1995-06-27T00:00:00+00:00",
+        "source": "structured-import",
+        "detail_updated_at": "2026-09-04T15:04:31.881563+00:00",
+        "external_id": "3052814",
+        "notification_url": "http://nrhmchd.gov.in/cadmin/uploads/filemanagers/1780486049.pdf",
+        "detail_source": "pdf",
         "pdf_url": "http://nrhmchd.gov.in/cadmin/uploads/filemanagers/1780486049.pdf",
         "missing_fields": [
           "application_fee",
           "selection_process",
           "how_to_apply"
         ],
-        "notification_url": "http://nrhmchd.gov.in/cadmin/uploads/filemanagers/1780486049.pdf",
-        "pdf_urls": [
-          "http://nrhmchd.gov.in/cadmin/uploads/filemanagers/1780486049.pdf"
+        "important_dates": [
+          {
+            "date": "11 June 2026",
+            "event": "Walk-in Interview"
+          }
         ]
       }
     },
@@ -1383,8 +727,8 @@
       "status": "live",
       "is_sponsored": false,
       "published_at": "2026-05-03T00:00:00Z",
-      "verified_at": "2026-09-13T09:32:55.843712Z",
-      "updated_at": "2026-09-04T15:04:31.018186Z",
+      "verified_at": "2026-09-20T09:53:51.255825Z",
+      "updated_at": "2026-09-22T16:27:23.378862Z",
       "document_type": "RECRUITMENT",
       "verification_status": "VERIFIED",
       "completeness_score": 80,
@@ -1395,13 +739,30 @@
       "posts": [],
       "important_dates": [],
       "detail": {
-        "published": "2026-05-03T00:00:00+00:00",
         "completeness_score": 80,
-        "external_id": "3047564",
+        "pdf_urls": [
+          "https://web.iisermohali.ac.in:8080/noticeportal/attachments/article/3096/Detailed%20advertisement.pdf"
+        ],
         "summary": "भारतीय विज्ञान विक्षा एिं अनुसंधान संस्थान मोहाली (विक्षा मंत्रालय, भारत सरकार) INDIAN INSTITUTE OF SCIENCE EDUCATION AND RESEARCH MOHALI (Ministry of Education, Govt. of India) 1 of 34 आईआईएसईआर मोहाली, नॉलेज वसटी, सेक्टर-81, मोहाली, पंजाब-140306, भारत IISER Mohali, Knowledge City, Sector-81, Mohali, Punjab-140306, India विज्ञापन सं. गै. सं. (03)/वनयवित/2026 विनांक: 03.05.20…",
+        "pdfUrls": [
+          "https://web.iisermohali.ac.in:8080/noticeportal/attachments/article/3096/Detailed%20advertisement.pdf"
+        ],
         "memorized_at": "2026-08-31T11:23:32.450942+00:00",
-        "detail_source": "pdf",
+        "published": "2026-05-03T00:00:00+00:00",
+        "source": "structured-import",
+        "apply_urls": [
+          "https://www.iisermohali.ac.in/institute"
+        ],
         "detail_updated_at": "2026-09-04T15:04:33.509882+00:00",
+        "external_id": "3047564",
+        "notification_url": "https://erp.iisermohali.ac.in/OnlineRecruitmentApplicationIISERM.action",
+        "detail_source": "pdf",
+        "pdf_url": "https://web.iisermohali.ac.in:8080/noticeportal/attachments/article/3096/Detailed%20advertisement.pdf",
+        "missing_fields": [
+          "application_fee",
+          "selection_process",
+          "how_to_apply"
+        ],
         "important_dates": [
           {
             "date": "03/05/2026",
@@ -1427,131 +788,6 @@
             "date": "To be intimated via registered email and IISER Mohali website",
             "event": "Written Test / Skill Test / Interview Date"
           }
-        ],
-        "source": "structured-import",
-        "pdfUrls": [
-          "https://web.iisermohali.ac.in:8080/noticeportal/attachments/article/3096/Detailed%20advertisement.pdf"
-        ],
-        "pdf_url": "https://web.iisermohali.ac.in:8080/noticeportal/attachments/article/3096/Detailed%20advertisement.pdf",
-        "missing_fields": [
-          "application_fee",
-          "selection_process",
-          "how_to_apply"
-        ],
-        "notification_url": "https://erp.iisermohali.ac.in/OnlineRecruitmentApplicationIISERM.action",
-        "pdf_urls": [
-          "https://web.iisermohali.ac.in:8080/noticeportal/attachments/article/3096/Detailed%20advertisement.pdf"
-        ],
-        "apply_urls": [
-          "https://www.iisermohali.ac.in/institute"
-        ]
-      }
-    },
-    {
-      "id": "88b102c4-b0bb-431a-8120-9368cd781e86",
-      "slug": "recruitment-advertisement-for-scientific-officer-physics-2026-adv-no-05-2026-dat-a9e73cef",
-      "title": "Recruitment Advertisement for Scientific Officer Physics 2026 (Adv No./05/2026), Dated 16/03/2026",
-      "dept": "Madhya Pradesh PSC (MPPSC)",
-      "category": "state",
-      "state_codes": [
-        "mp"
-      ],
-      "vacancies": 1,
-      "qualification": "As per official notification",
-      "salary": "As per official notification",
-      "age_limit": "As per official notification",
-      "last_date": "2026-10-28",
-      "apply_url": "https://mppsc.mp.gov.in/uploads/advertisement/Advt_Scientific_Officer_Physics_2026_Dated_16_03_2026.pdf",
-      "pdf_url": "https://mppsc.mp.gov.in/uploads/advertisement/Advt_Scientific_Officer_Physics_2026_Dated_16_03_2026.pdf",
-      "status": "live",
-      "is_sponsored": false,
-      "published_at": "2026-03-16T00:00:00Z",
-      "verified_at": "2026-09-13T09:32:55.486421Z",
-      "updated_at": "2026-09-06T04:10:53.553391Z",
-      "document_type": "RECRUITMENT",
-      "verification_status": "VERIFIED",
-      "completeness_score": 100,
-      "publication_confidence": 95.0,
-      "published_to_site": true,
-      "primary_pdf_url": "https://mppsc.mp.gov.in/uploads/advertisement/Advt_Scientific_Officer_Physics_2026_Dated_16_03_2026.pdf",
-      "post_name": null,
-      "posts": [],
-      "important_dates": [],
-      "detail": {
-        "how_to_apply": "Apply online through the official notification / portal link.",
-        "published": "2026-03-16T00:00:00+00:00",
-        "completeness_score": 100,
-        "summary": "srnfhT ^?llPl+ ^fftfMt [scientific officer physics] % ^ ^ f^^rm 2026 05/2026 16.03.2026 : 22.11.2026 ^JiT^^iM-Tjoydl f%f^ : 12.11.2026 ¥rpr-\"A\" 3TT%^ 20.05.2026 lEiEKtiEacBa 'Hm ^ ^ sTpftTT^^f^^fTFT, tte^t ^freR\" A?iiR+ arfit^^rCf [scientific officer physics] ^5iiR+ [scientific officer physics] %^^ 3Tr%^ Rdi+ 21.04.2026 ^ 20.05.2026 www.mppsc.mp.gov.in ^ ^ ^ WTi srr^rfWf ^ srrm # | f…",
-        "memorized_at": "2026-08-31T11:24:31.103634+00:00",
-        "detail_source": "pdf",
-        "detail_updated_at": "2026-09-04T15:04:35.893881+00:00",
-        "source": "psc-mp",
-        "selection_process": "As per official notification.",
-        "pdfUrls": [
-          "https://mppsc.mp.gov.in/uploads/advertisement/Advt_Scientific_Officer_Physics_2026_Dated_16_03_2026.pdf"
-        ],
-        "pdf_url": "https://mppsc.mp.gov.in/uploads/advertisement/Advt_Scientific_Officer_Physics_2026_Dated_16_03_2026.pdf",
-        "application_fee": "As per official notification.",
-        "notification_url": "https://mppsc.mp.gov.in/uploads/advertisement/Advt_Scientific_Officer_Physics_2026_Dated_16_03_2026.pdf",
-        "pdf_urls": [
-          "https://mppsc.mp.gov.in/uploads/advertisement/Advt_Scientific_Officer_Physics_2026_Dated_16_03_2026.pdf"
-        ],
-        "apply_urls": [
-          "http://www.mppsc.mp.gov.in/^"
-        ]
-      }
-    },
-    {
-      "id": "306443cf-25d5-45d7-8141-c7417755bc61",
-      "slug": "recruitment-advertisement-for-scientific-officer-biology-2026-adv-no-07-2026-dat-e221204c",
-      "title": "Recruitment Advertisement for Scientific Officer Biology 2026 (Adv No./07/2026), Dated 16/03/2026",
-      "dept": "Madhya Pradesh PSC (MPPSC)",
-      "category": "state",
-      "state_codes": [
-        "mp"
-      ],
-      "vacancies": 1,
-      "qualification": "As per official notification",
-      "salary": "As per official notification",
-      "age_limit": "As per official notification",
-      "last_date": "2026-10-28",
-      "apply_url": "https://mppsc.mp.gov.in/uploads/advertisement/Advt_Scientific_Officer_Biology_2026_Dated_16_03_2026.pdf",
-      "pdf_url": "https://mppsc.mp.gov.in/uploads/advertisement/Advt_Scientific_Officer_Biology_2026_Dated_16_03_2026.pdf",
-      "status": "live",
-      "is_sponsored": false,
-      "published_at": "2026-03-16T00:00:00Z",
-      "verified_at": "2026-09-13T09:32:55.496528Z",
-      "updated_at": "2026-09-06T04:10:53.553391Z",
-      "document_type": "RECRUITMENT",
-      "verification_status": "VERIFIED",
-      "completeness_score": 100,
-      "publication_confidence": 95.0,
-      "published_to_site": true,
-      "primary_pdf_url": "https://mppsc.mp.gov.in/uploads/advertisement/Advt_Scientific_Officer_Biology_2026_Dated_16_03_2026.pdf",
-      "post_name": null,
-      "posts": [],
-      "important_dates": [],
-      "detail": {
-        "how_to_apply": "Apply online through the official notification / portal link.",
-        "published": "2026-03-16T00:00:00+00:00",
-        "completeness_score": 100,
-        "summary": "^ ^ STpftrr ^5llR+ R^M [scientific officer biology] 2026 07/2026 16.03.2026 : 22.11.2026 : 12.11.2026 wr - \"A\" 3tf^f%^ 20.05.2026 2. Tsq\" 3iN~l^i SKT ^ TTS'T ^ ^5iiR=t> R5111 [scientific officer biology] ^ ^^ 3IT%^ sii+iRci f%T^ f i ^5iiR+ siHr^rrft ^ f%?r7^ [scientific officer biology] % ^ ^ siM^KH 3tt%^ 21.04.2026 ^ Rni* 20.05.2026 ^ www.mppsc.mp.gov.in ^ ^ ^ stvmR^I ^ ^ | f%…",
-        "memorized_at": "2026-08-31T11:24:04.452067+00:00",
-        "detail_source": "pdf",
-        "detail_updated_at": "2026-09-04T15:04:38.527570+00:00",
-        "source": "psc-mp",
-        "selection_process": "As per official notification.",
-        "pdfUrls": [
-          "https://mppsc.mp.gov.in/uploads/advertisement/Advt_Scientific_Officer_Biology_2026_Dated_16_03_2026.pdf"
-        ],
-        "pdf_url": "https://mppsc.mp.gov.in/uploads/advertisement/Advt_Scientific_Officer_Biology_2026_Dated_16_03_2026.pdf",
-        "application_fee": "As per official notification.",
-        "notification_url": "https://mppsc.mp.gov.in/uploads/advertisement/Advt_Scientific_Officer_Biology_2026_Dated_16_03_2026.pdf",
-        "pdf_urls": [
-          "https://mppsc.mp.gov.in/uploads/advertisement/Advt_Scientific_Officer_Biology_2026_Dated_16_03_2026.pdf"
-        ],
-        "apply_urls": [
-          "http://www.mppsc.mp.gov.in/HKUddf^d"
         ]
       }
     },
@@ -1575,7 +811,7 @@
       "is_sponsored": false,
       "published_at": "2026-03-16T00:00:00Z",
       "verified_at": null,
-      "updated_at": "2026-09-04T15:04:35.090512Z",
+      "updated_at": "2026-09-22T18:48:19.080954Z",
       "document_type": "RECRUITMENT",
       "verification_status": "VERIFIED",
       "completeness_score": 100,
@@ -1586,27 +822,135 @@
       "posts": [],
       "important_dates": [],
       "detail": {
-        "how_to_apply": "Apply online through the official notification / portal link.",
-        "published": "2026-03-16T00:00:00+00:00",
-        "completeness_score": 100,
-        "summary": "Tfsq\" strW ' MMrTrRTTT- arf^^rrtt <^l-m [scientific officer chemistry] % ^ R^iim^ 2026 06/2026 16.03.2026 2. 3. : 22.11.2026 : 12.11.2026 ^ - \"A\" sfcTTFT 3Tr%^ # 3Tl%^1%f^ 20.05.2026 sTTTT ^ R^mi, ^ THPRT [scientific officer chemistry] % ^3Tt%^ sii^Rd ^fl ^?||R+ wjtt [scientific officer chemistry] % ^ ^ sfR^TTFT 3TT%^ 21.04.2026 % 20.05.2026 ^ www.mppsc.mp.gov.in ^ ^ ^ ^ 11% stfrt^…",
-        "memorized_at": "2026-08-31T11:24:07.746345+00:00",
-        "detail_source": "pdf",
-        "detail_updated_at": "2026-09-04T15:04:37.147436+00:00",
-        "source": "psc-mp",
-        "selection_process": "As per official notification.",
-        "pdfUrls": [
-          "https://mppsc.mp.gov.in/uploads/advertisement/Advt_Scientific_Officer_Chemistry_2026_Dated_16_03_2026.pdf"
-        ],
-        "pdf_url": "https://mppsc.mp.gov.in/uploads/advertisement/Advt_Scientific_Officer_Chemistry_2026_Dated_16_03_2026.pdf",
         "application_fee": "As per official notification.",
-        "notification_url": "https://mppsc.mp.gov.in/uploads/advertisement/Advt_Scientific_Officer_Chemistry_2026_Dated_16_03_2026.pdf",
+        "selection_process": "As per official notification.",
+        "completeness_score": 100,
         "pdf_urls": [
           "https://mppsc.mp.gov.in/uploads/advertisement/Advt_Scientific_Officer_Chemistry_2026_Dated_16_03_2026.pdf"
         ],
+        "summary": "Tfsq\" strW ' MMrTrRTTT- arf^^rrtt <^l-m [scientific officer chemistry] % ^ R^iim^ 2026 06/2026 16.03.2026 2. 3. : 22.11.2026 : 12.11.2026 ^ - \"A\" sfcTTFT 3Tr%^ # 3Tl%^1%f^ 20.05.2026 sTTTT ^ R^mi, ^ THPRT [scientific officer chemistry] % ^3Tt%^ sii^Rd ^fl ^?||R+ wjtt [scientific officer chemistry] % ^ ^ sfR^TTFT 3TT%^ 21.04.2026 % 20.05.2026 ^ www.mppsc.mp.gov.in ^ ^ ^ ^ 11% stfrt^…",
+        "pdfUrls": [
+          "https://mppsc.mp.gov.in/uploads/advertisement/Advt_Scientific_Officer_Chemistry_2026_Dated_16_03_2026.pdf"
+        ],
+        "memorized_at": "2026-08-31T11:24:07.746345+00:00",
+        "published": "2026-03-16T00:00:00+00:00",
+        "source": "psc-mp",
         "apply_urls": [
           "http://www.mppsc.mp.gov.in/"
-        ]
+        ],
+        "detail_updated_at": "2026-09-04T15:04:37.147436+00:00",
+        "how_to_apply": "Apply online through the official notification / portal link.",
+        "notification_url": "https://mppsc.mp.gov.in/uploads/advertisement/Advt_Scientific_Officer_Chemistry_2026_Dated_16_03_2026.pdf",
+        "detail_source": "pdf",
+        "pdf_url": "https://mppsc.mp.gov.in/uploads/advertisement/Advt_Scientific_Officer_Chemistry_2026_Dated_16_03_2026.pdf"
+      }
+    },
+    {
+      "id": "88b102c4-b0bb-431a-8120-9368cd781e86",
+      "slug": "recruitment-advertisement-for-scientific-officer-physics-2026-adv-no-05-2026-dat-a9e73cef",
+      "title": "Recruitment Advertisement for Scientific Officer Physics 2026 (Adv No./05/2026), Dated 16/03/2026",
+      "dept": "Madhya Pradesh PSC (MPPSC)",
+      "category": "state",
+      "state_codes": [
+        "mp"
+      ],
+      "vacancies": 1,
+      "qualification": "As per official notification",
+      "salary": "As per official notification",
+      "age_limit": "As per official notification",
+      "last_date": "2026-10-28",
+      "apply_url": "https://mppsc.mp.gov.in/uploads/advertisement/Advt_Scientific_Officer_Physics_2026_Dated_16_03_2026.pdf",
+      "pdf_url": "https://mppsc.mp.gov.in/uploads/advertisement/Advt_Scientific_Officer_Physics_2026_Dated_16_03_2026.pdf",
+      "status": "live",
+      "is_sponsored": false,
+      "published_at": "2026-03-16T00:00:00Z",
+      "verified_at": "2026-09-20T09:53:50.190061Z",
+      "updated_at": "2026-09-22T18:48:19.080954Z",
+      "document_type": "RECRUITMENT",
+      "verification_status": "VERIFIED",
+      "completeness_score": 100,
+      "publication_confidence": 95.0,
+      "published_to_site": true,
+      "primary_pdf_url": "https://mppsc.mp.gov.in/uploads/advertisement/Advt_Scientific_Officer_Physics_2026_Dated_16_03_2026.pdf",
+      "post_name": null,
+      "posts": [],
+      "important_dates": [],
+      "detail": {
+        "application_fee": "As per official notification.",
+        "selection_process": "As per official notification.",
+        "completeness_score": 100,
+        "pdf_urls": [
+          "https://mppsc.mp.gov.in/uploads/advertisement/Advt_Scientific_Officer_Physics_2026_Dated_16_03_2026.pdf"
+        ],
+        "summary": "srnfhT ^?llPl+ ^fftfMt [scientific officer physics] % ^ ^ f^^rm 2026 05/2026 16.03.2026 : 22.11.2026 ^JiT^^iM-Tjoydl f%f^ : 12.11.2026 ¥rpr-\"A\" 3TT%^ 20.05.2026 lEiEKtiEacBa 'Hm ^ ^ sTpftTT^^f^^fTFT, tte^t ^freR\" A?iiR+ arfit^^rCf [scientific officer physics] ^5iiR+ [scientific officer physics] %^^ 3Tr%^ Rdi+ 21.04.2026 ^ 20.05.2026 www.mppsc.mp.gov.in ^ ^ ^ WTi srr^rfWf ^ srrm # | f…",
+        "pdfUrls": [
+          "https://mppsc.mp.gov.in/uploads/advertisement/Advt_Scientific_Officer_Physics_2026_Dated_16_03_2026.pdf"
+        ],
+        "memorized_at": "2026-08-31T11:24:31.103634+00:00",
+        "published": "2026-03-16T00:00:00+00:00",
+        "source": "psc-mp",
+        "apply_urls": [
+          "http://www.mppsc.mp.gov.in/^"
+        ],
+        "detail_updated_at": "2026-09-04T15:04:35.893881+00:00",
+        "how_to_apply": "Apply online through the official notification / portal link.",
+        "notification_url": "https://mppsc.mp.gov.in/uploads/advertisement/Advt_Scientific_Officer_Physics_2026_Dated_16_03_2026.pdf",
+        "detail_source": "pdf",
+        "pdf_url": "https://mppsc.mp.gov.in/uploads/advertisement/Advt_Scientific_Officer_Physics_2026_Dated_16_03_2026.pdf"
+      }
+    },
+    {
+      "id": "306443cf-25d5-45d7-8141-c7417755bc61",
+      "slug": "recruitment-advertisement-for-scientific-officer-biology-2026-adv-no-07-2026-dat-e221204c",
+      "title": "Recruitment Advertisement for Scientific Officer Biology 2026 (Adv No./07/2026), Dated 16/03/2026",
+      "dept": "Madhya Pradesh PSC (MPPSC)",
+      "category": "state",
+      "state_codes": [
+        "mp"
+      ],
+      "vacancies": 1,
+      "qualification": "As per official notification",
+      "salary": "As per official notification",
+      "age_limit": "As per official notification",
+      "last_date": "2026-10-28",
+      "apply_url": "https://mppsc.mp.gov.in/uploads/advertisement/Advt_Scientific_Officer_Biology_2026_Dated_16_03_2026.pdf",
+      "pdf_url": "https://mppsc.mp.gov.in/uploads/advertisement/Advt_Scientific_Officer_Biology_2026_Dated_16_03_2026.pdf",
+      "status": "live",
+      "is_sponsored": false,
+      "published_at": "2026-03-16T00:00:00Z",
+      "verified_at": "2026-09-20T09:53:50.612744Z",
+      "updated_at": "2026-09-22T18:48:19.080954Z",
+      "document_type": "RECRUITMENT",
+      "verification_status": "VERIFIED",
+      "completeness_score": 100,
+      "publication_confidence": 95.0,
+      "published_to_site": true,
+      "primary_pdf_url": "https://mppsc.mp.gov.in/uploads/advertisement/Advt_Scientific_Officer_Biology_2026_Dated_16_03_2026.pdf",
+      "post_name": null,
+      "posts": [],
+      "important_dates": [],
+      "detail": {
+        "application_fee": "As per official notification.",
+        "selection_process": "As per official notification.",
+        "completeness_score": 100,
+        "pdf_urls": [
+          "https://mppsc.mp.gov.in/uploads/advertisement/Advt_Scientific_Officer_Biology_2026_Dated_16_03_2026.pdf"
+        ],
+        "summary": "^ ^ STpftrr ^5llR+ R^M [scientific officer biology] 2026 07/2026 16.03.2026 : 22.11.2026 : 12.11.2026 wr - \"A\" 3tf^f%^ 20.05.2026 2. Tsq\" 3iN~l^i SKT ^ TTS'T ^ ^5iiR=t> R5111 [scientific officer biology] ^ ^^ 3IT%^ sii+iRci f%T^ f i ^5iiR+ siHr^rrft ^ f%?r7^ [scientific officer biology] % ^ ^ siM^KH 3tt%^ 21.04.2026 ^ Rni* 20.05.2026 ^ www.mppsc.mp.gov.in ^ ^ ^ stvmR^I ^ ^ | f%…",
+        "pdfUrls": [
+          "https://mppsc.mp.gov.in/uploads/advertisement/Advt_Scientific_Officer_Biology_2026_Dated_16_03_2026.pdf"
+        ],
+        "memorized_at": "2026-08-31T11:24:04.452067+00:00",
+        "published": "2026-03-16T00:00:00+00:00",
+        "source": "psc-mp",
+        "apply_urls": [
+          "http://www.mppsc.mp.gov.in/HKUddf^d"
+        ],
+        "detail_updated_at": "2026-09-04T15:04:38.527570+00:00",
+        "how_to_apply": "Apply online through the official notification / portal link.",
+        "notification_url": "https://mppsc.mp.gov.in/uploads/advertisement/Advt_Scientific_Officer_Biology_2026_Dated_16_03_2026.pdf",
+        "detail_source": "pdf",
+        "pdf_url": "https://mppsc.mp.gov.in/uploads/advertisement/Advt_Scientific_Officer_Biology_2026_Dated_16_03_2026.pdf"
       }
     },
     {
@@ -1629,7 +973,7 @@
       "is_sponsored": false,
       "published_at": "2026-03-10T00:00:00Z",
       "verified_at": null,
-      "updated_at": "2026-09-04T15:04:37.444088Z",
+      "updated_at": "2026-09-22T18:48:19.080954Z",
       "document_type": "RECRUITMENT",
       "verification_status": "VERIFIED",
       "completeness_score": 100,
@@ -1640,27 +984,27 @@
       "posts": [],
       "important_dates": [],
       "detail": {
-        "how_to_apply": "Apply online through the official notification / portal link.",
-        "published": "2026-03-10T00:00:00+00:00",
-        "completeness_score": 100,
-        "summary": "TTsq\" sTpfhr sff^r^jrtt\" (Assistant District Public Prosecution Officer) 2026 1%WFn\"^iTrRi 03/2026 10.03.2026 : 18.10.2026 ^ ^ftWT : 08.10.2026 08.05.2026 wr - \"A\" STT^^ ^KT ^ f^^TFT, ^fPGR\" Pi<jii (Assistant District Public Prosecution Officer) % ^^ Wsimf^d f%TT^|i f^rar 3Tf^^\"1^d (Assistant District Public Prosecution Officer) ^ Wt# ^^ siH^i^d 3TT%^ Rdi+ 09.04.2026 ^ 08.05.2026 ^ W…",
-        "memorized_at": "2026-08-31T11:24:36.274917+00:00",
-        "detail_source": "pdf",
-        "detail_updated_at": "2026-09-04T15:04:39.634931+00:00",
-        "source": "psc-mp",
-        "selection_process": "As per official notification.",
-        "pdfUrls": [
-          "https://mppsc.mp.gov.in/uploads/advertisement/Advt_ADPO_Exam_2026_Dated_10_03_2026.pdf"
-        ],
-        "pdf_url": "https://mppsc.mp.gov.in/uploads/advertisement/Advt_ADPO_Exam_2026_Dated_10_03_2026.pdf",
         "application_fee": "As per official notification.",
-        "notification_url": "https://mppsc.mp.gov.in/uploads/advertisement/Advt_ADPO_Exam_2026_Dated_10_03_2026.pdf",
+        "selection_process": "As per official notification.",
+        "completeness_score": 100,
         "pdf_urls": [
           "https://mppsc.mp.gov.in/uploads/advertisement/Advt_ADPO_Exam_2026_Dated_10_03_2026.pdf"
         ],
+        "summary": "TTsq\" sTpfhr sff^r^jrtt\" (Assistant District Public Prosecution Officer) 2026 1%WFn\"^iTrRi 03/2026 10.03.2026 : 18.10.2026 ^ ^ftWT : 08.10.2026 08.05.2026 wr - \"A\" STT^^ ^KT ^ f^^TFT, ^fPGR\" Pi<jii (Assistant District Public Prosecution Officer) % ^^ Wsimf^d f%TT^|i f^rar 3Tf^^\"1^d (Assistant District Public Prosecution Officer) ^ Wt# ^^ siH^i^d 3TT%^ Rdi+ 09.04.2026 ^ 08.05.2026 ^ W…",
+        "pdfUrls": [
+          "https://mppsc.mp.gov.in/uploads/advertisement/Advt_ADPO_Exam_2026_Dated_10_03_2026.pdf"
+        ],
+        "memorized_at": "2026-08-31T11:24:36.274917+00:00",
+        "published": "2026-03-10T00:00:00+00:00",
+        "source": "psc-mp",
         "apply_urls": [
           "http://www.mppsc.mp.gov.in/"
-        ]
+        ],
+        "detail_updated_at": "2026-09-04T15:04:39.634931+00:00",
+        "how_to_apply": "Apply online through the official notification / portal link.",
+        "notification_url": "https://mppsc.mp.gov.in/uploads/advertisement/Advt_ADPO_Exam_2026_Dated_10_03_2026.pdf",
+        "detail_source": "pdf",
+        "pdf_url": "https://mppsc.mp.gov.in/uploads/advertisement/Advt_ADPO_Exam_2026_Dated_10_03_2026.pdf"
       }
     },
     {
@@ -1682,8 +1026,8 @@
       "status": "live",
       "is_sponsored": false,
       "published_at": "2026-02-27T00:00:00Z",
-      "verified_at": "2026-09-13T09:32:57.172855Z",
-      "updated_at": "2026-09-15T10:33:59.902442Z",
+      "verified_at": "2026-09-20T09:53:51.853119Z",
+      "updated_at": "2026-09-22T16:28:47.008353Z",
       "document_type": "RECRUITMENT",
       "verification_status": "VERIFIED",
       "completeness_score": 87,
@@ -1694,22 +1038,42 @@
       "posts": [],
       "important_dates": [],
       "detail": {
+        "application_fee": "F.1. ASSISTANT PROFESSOR Grade-II: 7th CPC Pay Level 10, Minimum Basic Pay: ₹ 70,900/-; F.2. ASSISTANT PROFESSOR Grade-I: 7th CPC Pay Level 12, Minimum Basic Pay: ₹ 1,01,500/- For direct recruits, minimum starting basic pay to be fixed in Aca; Minimum Pay: ₹ 101500/-",
+        "helpdesk_email": "deanfacultyoffice@iitm.ac.in",
+        "completeness_score": 87,
+        "pdf_urls": [
+          "https://facapp.iitm.ac.in/img/Advertisement_RA-2026.pdf"
+        ],
+        "summary": "Page 1 | 6 INDIAN INSTITUTE OF TECHNOLOGY MADRAS CHENNAI – 600 036 Rolling Advertisement No. IITM/R/1/2026 Dated 27.02.2026 IIT Madras invites applications from individuals with an established record of independent, high-quality research and commitment to teaching and research for the faculty position at the level of ASSISTANT PROFESSOR (AP). The requirement is for various dep…",
+        "pdfUrls": [
+          "https://facapp.iitm.ac.in/img/Advertisement_RA-2026.pdf"
+        ],
+        "memorized_at": "2026-08-31T11:24:45.119097+00:00",
+        "published": "2026-02-27T00:00:00+00:00",
+        "source": "structured-import",
         "fee": {
           "Minimum Pay": "₹ 101500/-",
           "F.2. ASSISTANT PROFESSOR Grade-I": "7th CPC Pay Level 12, Minimum Basic Pay: ₹ 1,01,500/- For direct recruits, minimum starting basic pay to be fixed in Aca",
           "F.1. ASSISTANT PROFESSOR Grade-II": "7th CPC Pay Level 10, Minimum Basic Pay: ₹ 70,900/-"
         },
-        "published": "2026-02-27T00:00:00+00:00",
-        "completeness_score": 87,
-        "external_id": "3040278",
-        "summary": "Page 1 | 6 INDIAN INSTITUTE OF TECHNOLOGY MADRAS CHENNAI – 600 036 Rolling Advertisement No. IITM/R/1/2026 Dated 27.02.2026 IIT Madras invites applications from individuals with an established record of independent, high-quality research and commitment to teaching and research for the faculty position at the level of ASSISTANT PROFESSOR (AP). The requirement is for various dep…",
-        "memorized_at": "2026-08-31T11:24:45.119097+00:00",
+        "apply_urls": [
+          "https://facapp.iitm.ac.in",
+          "https://facapp.iitm.in",
+          "https://facapp.iitm.ac.in/2026ra"
+        ],
+        "detail_updated_at": "2026-09-04T15:04:40.898253+00:00",
         "helpdesk_emails": [
           "deanfacultyoffice@iitm.ac.in",
           "also@www.iitm.ac.in"
         ],
+        "external_id": "3040278",
+        "notification_url": "https://facapp.iitm.ac.in/img/Advertisement_RA-2026.pdf",
         "detail_source": "pdf",
-        "detail_updated_at": "2026-09-04T15:04:40.898253+00:00",
+        "pdf_url": "https://facapp.iitm.ac.in/img/Advertisement_RA-2026.pdf",
+        "missing_fields": [
+          "selection_process",
+          "how_to_apply"
+        ],
         "important_dates": [
           {
             "date": "27 February 2026",
@@ -1723,26 +1087,6 @@
             "date": "15 October 2026",
             "event": "Last Date to Apply"
           }
-        ],
-        "source": "structured-import",
-        "helpdesk_email": "deanfacultyoffice@iitm.ac.in",
-        "pdfUrls": [
-          "https://facapp.iitm.ac.in/img/Advertisement_RA-2026.pdf"
-        ],
-        "pdf_url": "https://facapp.iitm.ac.in/img/Advertisement_RA-2026.pdf",
-        "application_fee": "F.1. ASSISTANT PROFESSOR Grade-II: 7th CPC Pay Level 10, Minimum Basic Pay: ₹ 70,900/-; F.2. ASSISTANT PROFESSOR Grade-I: 7th CPC Pay Level 12, Minimum Basic Pay: ₹ 1,01,500/- For direct recruits, minimum starting basic pay to be fixed in Aca; Minimum Pay: ₹ 101500/-",
-        "missing_fields": [
-          "selection_process",
-          "how_to_apply"
-        ],
-        "notification_url": "https://facapp.iitm.ac.in/img/Advertisement_RA-2026.pdf",
-        "pdf_urls": [
-          "https://facapp.iitm.ac.in/img/Advertisement_RA-2026.pdf"
-        ],
-        "apply_urls": [
-          "https://facapp.iitm.ac.in",
-          "https://facapp.iitm.in",
-          "https://facapp.iitm.ac.in/2026ra"
         ]
       }
     },
@@ -1765,8 +1109,8 @@
       "status": "live",
       "is_sponsored": false,
       "published_at": "2025-12-31T00:00:00Z",
-      "verified_at": "2026-09-13T09:32:55.495316Z",
-      "updated_at": "2026-09-06T04:10:53.553391Z",
+      "verified_at": "2026-09-20T09:53:50.189377Z",
+      "updated_at": "2026-09-22T19:03:03.966262Z",
       "document_type": "RECRUITMENT",
       "verification_status": "VERIFIED",
       "completeness_score": 100,
@@ -1777,27 +1121,27 @@
       "posts": [],
       "important_dates": [],
       "detail": {
-        "how_to_apply": "Apply online through the official notification / portal link.",
-        "published": "2025-12-31T00:00:00+00:00",
-        "completeness_score": 100,
-        "summary": "TOT arraW V ^ O ^ . /V ♦ ^ ^'diS'di ysH*\\\\ - ^T^T^Ri\" «t>*»^l\"l H^IT f^^TRT X7^ 1^<-c1K) (ASSISTANT DIRECTOR, FARMER WELFARE & AGRICULTURE DEVELOPMENT DEPARTMENT(FIELD & EXTENSION)) ^ ft iff f^irm 2025 g^TT^ 35/2025 31.12.2025 irftw : 22.11.2026 3iMoil^H 3TTto' ft 4*0^101 ^ ^ ^it^r qg-3TO5«mr : 12.11.2026 srf^ 24.05.2026 12:00 Hgi) f^3TTT smr - \"A\" 2. 3. Jity y^r ?fra» airaW ff^…",
-        "memorized_at": "2026-08-31T11:24:50.497001+00:00",
-        "detail_source": "pdf",
-        "detail_updated_at": "2026-09-04T15:04:43.081194+00:00",
-        "source": "psc-mp",
-        "selection_process": "As per official notification.",
-        "pdfUrls": [
-          "https://mppsc.mp.gov.in/uploads/advertisement/Advt_AD_Farmer_Welfare_Agri_Dev_Dept_Field_Extension_Exam_2025_Dated_31_12_2025.pdf"
-        ],
-        "pdf_url": "https://mppsc.mp.gov.in/uploads/advertisement/Advt_AD_Farmer_Welfare_Agri_Dev_Dept_Field_Extension_Exam_2025_Dated_31_12_2025.pdf",
         "application_fee": "As per official notification.",
-        "notification_url": "https://mppsc.mp.gov.in/uploads/advertisement/Advt_AD_Farmer_Welfare_Agri_Dev_Dept_Field_Extension_Exam_2025_Dated_31_12_2025.pdf",
+        "selection_process": "As per official notification.",
+        "completeness_score": 100,
         "pdf_urls": [
           "https://mppsc.mp.gov.in/uploads/advertisement/Advt_AD_Farmer_Welfare_Agri_Dev_Dept_Field_Extension_Exam_2025_Dated_31_12_2025.pdf"
         ],
+        "summary": "TOT arraW V ^ O ^ . /V ♦ ^ ^'diS'di ysH*\\\\ - ^T^T^Ri\" «t>*»^l\"l H^IT f^^TRT X7^ 1^<-c1K) (ASSISTANT DIRECTOR, FARMER WELFARE & AGRICULTURE DEVELOPMENT DEPARTMENT(FIELD & EXTENSION)) ^ ft iff f^irm 2025 g^TT^ 35/2025 31.12.2025 irftw : 22.11.2026 3iMoil^H 3TTto' ft 4*0^101 ^ ^ ^it^r qg-3TO5«mr : 12.11.2026 srf^ 24.05.2026 12:00 Hgi) f^3TTT smr - \"A\" 2. 3. Jity y^r ?fra» airaW ff^…",
+        "pdfUrls": [
+          "https://mppsc.mp.gov.in/uploads/advertisement/Advt_AD_Farmer_Welfare_Agri_Dev_Dept_Field_Extension_Exam_2025_Dated_31_12_2025.pdf"
+        ],
+        "memorized_at": "2026-08-31T11:24:50.497001+00:00",
+        "published": "2025-12-31T00:00:00+00:00",
+        "source": "psc-mp",
         "apply_urls": [
           "http://www.mppsc.mp.gov.ln/"
-        ]
+        ],
+        "detail_updated_at": "2026-09-04T15:04:43.081194+00:00",
+        "how_to_apply": "Apply online through the official notification / portal link.",
+        "notification_url": "https://mppsc.mp.gov.in/uploads/advertisement/Advt_AD_Farmer_Welfare_Agri_Dev_Dept_Field_Extension_Exam_2025_Dated_31_12_2025.pdf",
+        "detail_source": "pdf",
+        "pdf_url": "https://mppsc.mp.gov.in/uploads/advertisement/Advt_AD_Farmer_Welfare_Agri_Dev_Dept_Field_Extension_Exam_2025_Dated_31_12_2025.pdf"
       }
     }
   ]
