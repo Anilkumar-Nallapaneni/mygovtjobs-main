@@ -2,8 +2,8 @@
   {
     "dept": "Madhya Pradesh PSC (MPPSC)",
     "slug": "madhya-pradesh-psc-mppsc",
-    "count": 5,
-    "vacancies": 5,
+    "count": 4,
+    "vacancies": 4,
     "officialDomain": "mppsc.mp.gov.in",
     "officialUrl": "https://mppsc.mp.gov.in",
     "sourceHealth": "degraded",
@@ -151,19 +151,7 @@
     "officialDomain": "rcfltd.com",
     "officialUrl": "https://rcfltd.com",
     "sourceHealth": "healthy",
-    "lastPostedAt": "2026-09-03T00:00:00",
-    "lastCheckedAt": null,
-    "pdfCoverage": 1
-  },
-  {
-    "dept": "Solar Energy Corporation of India Limited (SECI)",
-    "slug": "solar-energy-corporation-of-india-limited-seci",
-    "count": 1,
-    "vacancies": 28,
-    "officialDomain": "seci.co.in",
-    "officialUrl": "https://seci.co.in",
-    "sourceHealth": "healthy",
-    "lastPostedAt": "2026-09-03T00:00:00",
+    "lastPostedAt": "2026-09-10T00:00:00",
     "lastCheckedAt": null,
     "pdfCoverage": 1
   },

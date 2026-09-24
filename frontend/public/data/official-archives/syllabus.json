@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-23T09:48:46.665Z",
+  "generatedAt": "2026-09-24T09:40:16.924Z",
   "count": 20,
   "items": [
     {
@@ -20,9 +20,9 @@
       "fetchMethod": "html-listing"
     },
     {
-      "id": "85b1767449295db8",
+      "id": "e5d59009e1eecc89",
       "title": "Postwise Syllabus",
-      "link": "https://www.keralapsc.gov.in/syllabus1",
+      "link": "https://www.keralapsc.gov.in/index.php/syllabus1",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
@@ -71,23 +71,6 @@
       "fetchMethod": "html"
     },
     {
-      "id": "d80061781828ad4a",
-      "title": "Training Syllabus",
-      "link": "https://uppolice.gov.in/pages/en/topmenu/police-units/training-directorate/en-training-syllabus-page",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "police-up",
-      "sourceName": "UP Police Recruitment Board (UPPRPB)",
-      "dept": "UP Police Recruitment Board (UPPRPB)",
-      "state": "Uttar Pradesh",
-      "category": "police",
-      "stateIds": [
-        "up"
-      ],
-      "fetchMethod": "html"
-    },
-    {
       "id": "f4b0127bbca574bc",
       "title": "पदनाम-विधि सहायक/शोध अधिकारी/सहायक बोरिंग टेक्नीशियन व अन्य तकनीकी अर्हता से सम्बंधित पाठ्यक्रम(Syllabus)हेतु क्लिक करें New",
       "link": "https://sssc.uk.gov.in/document/%e0%a4%aa%e0%a4%a6%e0%a4%a8%e0%a4%be%e0%a4%ae-%e0%a4%b5%e0%a4%bf%e0%a4%a7%e0%a4%bf-%e0%a4%b8%e0%a4%b9%e0%a4%be%e0%a4%af%e0%a4%95-%e0%a4%b6%e0%a5%8b%e0%a4%a7-%e0%a4%85%e0%a4%a7%e0%a4%bf%e0%a4%95-2/",
@@ -101,6 +84,23 @@
       "category": "state",
       "stateIds": [
         "uk"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "d80061781828ad4a",
+      "title": "Training Syllabus",
+      "link": "https://uppolice.gov.in/pages/en/topmenu/police-units/training-directorate/en-training-syllabus-page",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "police-up",
+      "sourceName": "UP Police Recruitment Board (UPPRPB)",
+      "dept": "UP Police Recruitment Board (UPPRPB)",
+      "state": "Uttar Pradesh",
+      "category": "police",
+      "stateIds": [
+        "up"
       ],
       "fetchMethod": "html"
     },
@@ -139,6 +139,23 @@
       "category": "state",
       "stateIds": [
         "an"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "85b1767449295db8",
+      "title": "Postwise Syllabus",
+      "link": "https://www.keralapsc.gov.in/syllabus1",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-kl",
+      "sourceName": "Kerala PSC",
+      "dept": "Kerala PSC",
+      "state": "Kerala",
+      "category": "state",
+      "stateIds": [
+        "kl"
       ],
       "fetchMethod": "html"
     },
@@ -194,23 +211,6 @@
       "category": "state",
       "stateIds": [
         "jk"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "e5d59009e1eecc89",
-      "title": "Postwise Syllabus",
-      "link": "https://www.keralapsc.gov.in/index.php/syllabus1",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-kl",
-      "sourceName": "Kerala PSC",
-      "dept": "Kerala PSC",
-      "state": "Kerala",
-      "category": "state",
-      "stateIds": [
-        "kl"
       ],
       "fetchMethod": "html"
     },

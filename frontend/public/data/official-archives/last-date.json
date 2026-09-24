@@ -1,7 +1,24 @@
 {
-  "generatedAt": "2026-09-23T09:48:46.665Z",
-  "count": 90,
+  "generatedAt": "2026-09-24T09:40:16.924Z",
+  "count": 92,
   "items": [
+    {
+      "id": "d80bb8add0227114",
+      "title": "Tender No. BARC/CED/ET/43/2026-2027[e-Tender]",
+      "link": "http://www.barc.gov.in/tenders/tender267.pdf",
+      "publishedAt": "2026-09-22T09:21:10.000Z",
+      "summary": "Providing and applying painting works in general areas, along with minor repairs at CISF Command Posts, Pump House, Water Tank, and Substation at various locations including Trombay/Mandala Hill, BARC, Mumbai, for the year 2026–2027 Last date: 21-Oct-2026",
+      "pdfUrls": [],
+      "sourceId": "barc",
+      "sourceName": "Bhabha Atomic Research Centre (BARC)",
+      "dept": "Bhabha Atomic Research Centre (BARC)",
+      "state": "All India",
+      "category": "defence",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "rss-discovered"
+    },
     {
       "id": "e588be9a5143a104",
       "title": "Tender No. BARC/CED/ET/42/2026-2027[e-Tender]",
@@ -739,23 +756,6 @@
       "fetchMethod": "html"
     },
     {
-      "id": "1a8fa8b40cc21bb0",
-      "title": "APPLY ONLINE (Online Registration extended till 28.09.2026)",
-      "link": "https://recruitment.sbi.bank.in/crpd-sco-2026-27-15/apply",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "sbi",
-      "sourceName": "State Bank of India — Careers",
-      "dept": "State Bank of India — Careers",
-      "state": "All India",
-      "category": "banking",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
       "id": "f6e0c2b3096daa6e",
       "title": "Last date extended upto 12:30 PM of 09.03.2026 for submission of bids for Rupee term loan of up-to ₹ 1000 Crore",
       "link": "https://ntpc.co.in/last-date-extended-upto-1230-pm-09032026-submission-bids-rupee-term-loan-rs-1000-crore",
@@ -826,6 +826,25 @@
       "category": "state",
       "stateIds": [
         "ne"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "7e363686d7651312",
+      "title": "Advertisement for recruitment to Group ‘B’ non-gazetted (non-ministerial) and Group ‘C’ (non-ministerial) posts to be filled in various zones under the Department of Agriculture, Andaman and Nicobar Administration. ( Start Date: 24-09-2026 and Last Date: 23-10-2026)",
+      "link": "https://erecruitment.andamannicobar.gov.in/Advertisement/1055_29a155c9-680d-4586-8924-8ab13996bba7.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://erecruitment.andamannicobar.gov.in/Advertisement/1055_29a155c9-680d-4586-8924-8ab13996bba7.pdf"
+      ],
+      "sourceId": "an-rec",
+      "sourceName": "Andaman & Nicobar e-Recruitment",
+      "dept": "Andaman & Nicobar e-Recruitment",
+      "state": "Andaman & Nicobar",
+      "category": "state",
+      "stateIds": [
+        "an"
       ],
       "fetchMethod": "html"
     },
@@ -977,6 +996,23 @@
       "state": "All India",
       "category": "state",
       "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "1a8fa8b40cc21bb0",
+      "title": "APPLY ONLINE (Online Registration extended till 28.09.2026)",
+      "link": "https://recruitment.sbi.bank.in/crpd-sco-2026-27-15/apply",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "sbi",
+      "sourceName": "State Bank of India — Careers",
+      "dept": "State Bank of India — Careers",
+      "state": "All India",
+      "category": "banking",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
     },
     {
       "id": "0d4e3050c16ffebe",

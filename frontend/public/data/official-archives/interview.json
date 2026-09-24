@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-23T09:48:46.665Z",
+  "generatedAt": "2026-09-24T09:40:16.924Z",
   "count": 100,
   "items": [
     {
@@ -729,25 +729,6 @@
       "fetchMethod": "html"
     },
     {
-      "id": "84cb09f417efc23b",
-      "title": "Rourkela Steel Plant :Result of walk-in Interview held on 05/08/2026 for Engagement of Consultants (Specialist & GDMO) on Contractual basis against Advt. No. 02/2026, dated 14.07.2026",
-      "link": "https://aima-web-images.s3.ap-south-1.amazonaws.com/sailcareers.com/Downloads/RSP_News%20&%20Jobs_24082026_153856.pdf",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [
-        "https://aima-web-images.s3.ap-south-1.amazonaws.com/sailcareers.com/Downloads/RSP_News%20&%20Jobs_24082026_153856.pdf"
-      ],
-      "sourceId": "sail",
-      "sourceName": "Steel Authority of India (SAIL)",
-      "dept": "Steel Authority of India (SAIL)",
-      "state": "All India",
-      "category": "psu",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
       "id": "a2cdc2e2fd87ca8e",
       "title": "Bio Data Form and Other Relevant documents for GD/Interview shortlisted candidates of MTT Posts",
       "link": "https://sailcareers.com/SAIL2025MT/DownloadPerformaInterview.htm",
@@ -799,26 +780,9 @@
       "fetchMethod": "html"
     },
     {
-      "id": "91558011355dca9d",
-      "title": "Recent Examinations/Interview",
-      "link": "https://jpsc.gov.in/Examination-Links.php",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-jh",
-      "sourceName": "Jharkhand PSC (JPSC)",
-      "dept": "Jharkhand PSC (JPSC)",
-      "state": "Jharkhand",
-      "category": "state",
-      "stateIds": [
-        "jh"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "1709d751f92d2140",
+      "id": "c019d0c423cf10b5",
       "title": "Procedure for Interview Date Change Requests",
-      "link": "https://www.keralapsc.gov.in/procedure-interview-date-change-requests",
+      "link": "https://www.keralapsc.gov.in/index.php/procedure-interview-date-change-requests",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
@@ -833,9 +797,9 @@
       "fetchMethod": "html"
     },
     {
-      "id": "39e61c0337589778",
+      "id": "05de1912b0b5a28f",
       "title": "Interview Schedule",
-      "link": "https://www.keralapsc.gov.in/interviews",
+      "link": "https://www.keralapsc.gov.in/index.php/interviews",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
@@ -882,6 +846,40 @@
       "category": "state",
       "stateIds": [
         "kl"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "1709d751f92d2140",
+      "title": "Procedure for Interview Date Change Requests",
+      "link": "https://www.keralapsc.gov.in/procedure-interview-date-change-requests",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-kl",
+      "sourceName": "Kerala PSC",
+      "dept": "Kerala PSC",
+      "state": "Kerala",
+      "category": "state",
+      "stateIds": [
+        "kl"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "91558011355dca9d",
+      "title": "Recent Examinations/Interview",
+      "link": "https://jpsc.gov.in/Examination-Links.php",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-jh",
+      "sourceName": "Jharkhand PSC (JPSC)",
+      "dept": "Jharkhand PSC (JPSC)",
+      "state": "Jharkhand",
+      "category": "state",
+      "stateIds": [
+        "jh"
       ],
       "fetchMethod": "html"
     },
@@ -1129,6 +1127,42 @@
       "fetchMethod": "html"
     },
     {
+      "id": "84cb09f417efc23b",
+      "title": "Rourkela Steel Plant :Result of walk-in Interview held on 05/08/2026 for Engagement of Consultants (Specialist & GDMO) on Contractual basis against Advt. No. 02/2026, dated 14.07.2026",
+      "link": "https://aima-web-images.s3.ap-south-1.amazonaws.com/sailcareers.com/Downloads/RSP_News%20&%20Jobs_24082026_153856.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://aima-web-images.s3.ap-south-1.amazonaws.com/sailcareers.com/Downloads/RSP_News%20&%20Jobs_24082026_153856.pdf"
+      ],
+      "sourceId": "sail",
+      "sourceName": "Steel Authority of India (SAIL)",
+      "dept": "Steel Authority of India (SAIL)",
+      "state": "All India",
+      "category": "psu",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "39e61c0337589778",
+      "title": "Interview Schedule",
+      "link": "https://www.keralapsc.gov.in/interviews",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-kl",
+      "sourceName": "Kerala PSC",
+      "dept": "Kerala PSC",
+      "state": "Kerala",
+      "category": "state",
+      "stateIds": [
+        "kl"
+      ],
+      "fetchMethod": "html"
+    },
+    {
       "id": "29e735f6c2245346",
       "title": "Recruitment : Walk-in-interview for appoinment of Pharmacist on Adhoc/Locum basis",
       "link": "http://www.barc.gov.in/careers/vacancy22.pdf",
@@ -1299,40 +1333,6 @@
       "category": "psu",
       "stateIds": [
         "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "c019d0c423cf10b5",
-      "title": "Procedure for Interview Date Change Requests",
-      "link": "https://www.keralapsc.gov.in/index.php/procedure-interview-date-change-requests",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-kl",
-      "sourceName": "Kerala PSC",
-      "dept": "Kerala PSC",
-      "state": "Kerala",
-      "category": "state",
-      "stateIds": [
-        "kl"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "05de1912b0b5a28f",
-      "title": "Interview Schedule",
-      "link": "https://www.keralapsc.gov.in/index.php/interviews",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-kl",
-      "sourceName": "Kerala PSC",
-      "dept": "Kerala PSC",
-      "state": "Kerala",
-      "category": "state",
-      "stateIds": [
-        "kl"
       ],
       "fetchMethod": "html"
     },

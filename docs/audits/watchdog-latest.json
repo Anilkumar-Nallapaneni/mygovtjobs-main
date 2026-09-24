@@ -1,9 +1,18 @@
 {
-  "generatedAt": "2026-09-23T09:55:12.692963+00:00",
+  "generatedAt": "2026-09-24T09:46:33.449943+00:00",
   "apply": true,
-  "scanned": 40,
-  "ok": 23,
+  "scanned": 39,
+  "ok": 21,
   "demoted": [
+    {
+      "id": "5dad0f7b-aa85-4a25-b3c4-3654a0e22149",
+      "slug": "prasar-bharati-prasar-bharati-marketing-executive-nia-2026-10-sales-20-posts-202-ac94ea00",
+      "title": "Prasar Bharati Marketing Executive — NIA/2026/10/Sales (20 posts)",
+      "reasons": [
+        "deadline expired",
+        "deadline before publication"
+      ]
+    },
     {
       "id": "36f98ae6-8714-4298-91d6-75de0093fe58",
       "slug": "sainik-school-amaravathinagar-recruitment-2026-apply-online-for-medical-officer--2d1bcff8",
@@ -16,6 +25,14 @@
       "id": "510eb3b0-4c23-43b5-8fb9-a9b428c3d534",
       "slug": "export-import-bank-of-india-exim-bank-srd-deputy-manager-and-manager-hrm-dm-m-sr-d59386f2",
       "title": "Exim Bank SRD Deputy Manager and Manager — HRM/DM & M/SRD/2026-27/04 (8 posts)",
+      "reasons": [
+        "non-vacancy document"
+      ]
+    },
+    {
+      "id": "6e83c72e-5d0f-4535-b85e-50956c47f96f",
+      "slug": "isro-indian-space-research-organisation-inviting-online-applications-for-the-pos-3cc293e0",
+      "title": "Inviting online applications for the posts of Technical Assistant, Technician 'B', Cook 'A' and Fireman 'A'",
       "reasons": [
         "non-vacancy document"
       ]
@@ -77,9 +94,9 @@
       ]
     },
     {
-      "id": "52d2dcfa-f92d-4ed3-86f4-0b08ffd1967f",
-      "slug": "institute-of-banking-personnel-selection-ibps-ibps-crp-rrbs-xv-recruitment-of-of-92e88be2",
-      "title": "IBPS CRP-RR Bs-XV recruitment of Officers (Scale I, II and III)",
+      "id": "e22a3042-5747-47cd-a150-1f8e2e620d34",
+      "slug": "staff-selection-commission-ssc-notice-of-junior-engineer-examination-2026-2026-h-adfb1951",
+      "title": "Notice of Junior Engineer Examination, 2026",
       "reasons": [
         "deadline expired"
       ]
@@ -90,14 +107,6 @@
       "title": "Scientific / Technical Assistant-A (STA-A) — NIC/STA/2026/2",
       "reasons": [
         "non-vacancy document"
-      ]
-    },
-    {
-      "id": "6417e311-93cd-45f5-a52a-ffa3e2d018cd",
-      "slug": "institute-of-banking-personnel-selection-ibps-ibps-crp-rrbs-xv-recruitment-of-of-84e1f763",
-      "title": "IBPS CRP-RR Bs-XV recruitment of Office Assistants (Multipurpose)",
-      "reasons": [
-        "deadline expired"
       ]
     },
     {
@@ -141,5 +150,5 @@
       ]
     }
   ],
-  "rowsUpdated": 17
+  "rowsUpdated": 18
 }
