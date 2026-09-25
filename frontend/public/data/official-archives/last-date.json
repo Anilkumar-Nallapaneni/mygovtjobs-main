@@ -1,7 +1,26 @@
 {
-  "generatedAt": "2026-09-24T09:40:16.924Z",
-  "count": 92,
+  "generatedAt": "2026-09-25T10:03:48.161Z",
+  "count": 94,
   "items": [
+    {
+      "id": "730537a1e7d8fa68",
+      "title": "The proposal for purchase of Remote and Leg Plate for the O.T Table installed at O.T., BPS, AIIMS under PAC",
+      "link": "https://aiims.edu/index.php/en/131-tender/proprietary-tender/24767-the-proposal-for-purchase-of-remote-and-leg-plate-for-the-o-t-table-installed-at-o-t-bps-aiims-under-pac",
+      "publishedAt": "2026-09-25T06:14:40.000Z",
+      "summary": "VIEW TENDER DETAILS Tender No B&PS/63/26-27 Title The proposal for purchase of Remote and Leg Plate for the O.T Table installed at O.T., BPS, AIIMS under PAC Date of Uploading 25/09/2026 Date of Closing 12/10/2026 Document",
+      "pdfUrls": [
+        "https://www.aiims.edu/images/pdf/tender/OTtable.pdf"
+      ],
+      "sourceId": "aiims",
+      "sourceName": "AIIMS New Delhi — Recruitment",
+      "dept": "AIIMS New Delhi — Recruitment",
+      "state": "All India",
+      "category": "health",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "rss-discovered"
+    },
     {
       "id": "d80bb8add0227114",
       "title": "Tender No. BARC/CED/ET/43/2026-2027[e-Tender]",
@@ -666,99 +685,115 @@
       "fetchMethod": "rss-discovered"
     },
     {
-      "id": "cf7727ab821fe25c",
-      "title": "Research, Recruitment, & Extension",
-      "link": "https://www.wii.gov.in/research-recruitment-and-extension",
+      "id": "e3d502ed3ef8ab05",
+      "title": "PUBLIC NOTICE: CTET SEP-2026 CORRECTION WINDOW (last date 10.09.2026)",
+      "link": "https://cdnbbsr.s3waas.gov.in/s3443dec3062d0286986e21dc0631734c9/uploads/2026/09/20260907461266783.pdf",
       "publishedAt": null,
       "summary": null,
-      "pdfUrls": [],
-      "sourceId": "wii",
-      "sourceName": "Wildlife Institute of India (WII)",
-      "dept": "Wildlife Institute of India (WII)",
+      "pdfUrls": [
+        "https://cdnbbsr.s3waas.gov.in/s3443dec3062d0286986e21dc0631734c9/uploads/2026/09/20260907461266783.pdf"
+      ],
+      "sourceId": "ctet",
+      "sourceName": "CBSE — CTET",
+      "dept": "CBSE — CTET",
       "state": "All India",
-      "category": "psu",
+      "category": "teaching",
       "stateIds": [
-        "uk",
         "all"
       ],
       "fetchMethod": "html"
     },
     {
-      "id": "a2acb547470561a0",
-      "title": "CORRIGENDUM: Extension of closing date of online applications for Advt. No. WII/ADVT. 1/RP–CELL/ August, 2026",
-      "link": "https://www.wii.gov.in/recruitments/corrigendum_advtno_wii_advt1_rpcell_august2026",
+      "id": "988ed4272bbf3f80",
+      "title": "Public Notice: CTET Feb-2026 Key Challenge / Scanned Images of OMR (last Date 15/03/2026,up-to 11:59 PM)",
+      "link": "https://cdnbbsr.s3waas.gov.in/s3443dec3062d0286986e21dc0631734c9/uploads/2026/03/202603121086699841.pdf",
       "publishedAt": null,
       "summary": null,
-      "pdfUrls": [],
-      "sourceId": "wii",
-      "sourceName": "Wildlife Institute of India (WII)",
-      "dept": "Wildlife Institute of India (WII)",
+      "pdfUrls": [
+        "https://cdnbbsr.s3waas.gov.in/s3443dec3062d0286986e21dc0631734c9/uploads/2026/03/202603121086699841.pdf"
+      ],
+      "sourceId": "ctet",
+      "sourceName": "CBSE — CTET",
+      "dept": "CBSE — CTET",
       "state": "All India",
-      "category": "psu",
+      "category": "teaching",
       "stateIds": [
-        "uk",
         "all"
       ],
       "fetchMethod": "html"
     },
     {
-      "id": "0aa466f8fd9d71bb",
-      "title": "Extension of last date of Applications for Scientist-D/E/F/G on deputation (Advertisement No. WII/ADM/2026-27/05/56)",
-      "link": "https://www.wii.gov.in/recruitments/date_extend_advertisement-no_wii_adm_2026_27_05_56",
+      "id": "190b0749867fb96c",
+      "title": "CTET SEP 2026 CORRECTION WINDOW (last date 10.09.2026)",
+      "link": "https://ctet.nic.in/correction-window-ctet-sep-2026-2/",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
-      "sourceId": "wii",
-      "sourceName": "Wildlife Institute of India (WII)",
-      "dept": "Wildlife Institute of India (WII)",
+      "sourceId": "ctet",
+      "sourceName": "CBSE — CTET",
+      "dept": "CBSE — CTET",
       "state": "All India",
-      "category": "psu",
+      "category": "teaching",
       "stateIds": [
-        "uk",
         "all"
       ],
       "fetchMethod": "html"
     },
     {
-      "id": "ec7b727cf7b025f2",
-      "title": "Advt. No. WII/ADVT. 1/RP–CELL/ July, 2026 to engage 20 different categories of positions for various research projects at WII (extended close date until 07 August, 2026)",
-      "link": "https://www.wii.gov.in/recruitments/advtno_wii_advt1_rpcell_july2026",
+      "id": "ca02d329344a8460",
+      "title": "Login: CTET SEP 2026 CORRECTION WINDOW (last date 10.09.2026)",
+      "link": "https://examinationservices.nic.in/ExamSysCTET/root/Home.aspx?enc=Ei4cajBkK1gZSfgr53ImFfEytN2I3LFrLvNrMJcZJNmO/XE3+xNuu3rFt9agQvt0",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
-      "sourceId": "wii",
-      "sourceName": "Wildlife Institute of India (WII)",
-      "dept": "Wildlife Institute of India (WII)",
+      "sourceId": "ctet",
+      "sourceName": "CBSE — CTET",
+      "dept": "CBSE — CTET",
       "state": "All India",
-      "category": "psu",
+      "category": "teaching",
       "stateIds": [
-        "uk",
         "all"
       ],
       "fetchMethod": "html"
     },
     {
-      "id": "91fb9aee663b1513",
-      "title": "Extension of last date of Applications for Section Officer on deputation (Advt. No. WII/ADM/2023/29/23)",
-      "link": "https://www.wii.gov.in/recruitments/extension-of-last-date-of-applications-for-section-officer-on-deputation",
+      "id": "d0831531e36202c0",
+      "title": "APPLY ONLINE (Online Registration Extended till 05.10.2026)",
+      "link": "https://recruitment.sbi.bank.in/crpd-sco-2026-27-23/apply",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
-      "sourceId": "wii",
-      "sourceName": "Wildlife Institute of India (WII)",
-      "dept": "Wildlife Institute of India (WII)",
+      "sourceId": "sbi",
+      "sourceName": "State Bank of India — Careers",
+      "dept": "State Bank of India — Careers",
       "state": "All India",
-      "category": "psu",
+      "category": "banking",
       "stateIds": [
-        "uk",
         "all"
       ],
       "fetchMethod": "html"
     },
     {
-      "id": "f6e0c2b3096daa6e",
+      "id": "1a8fa8b40cc21bb0",
+      "title": "APPLY ONLINE (Online Registration extended till 28.09.2026)",
+      "link": "https://recruitment.sbi.bank.in/crpd-sco-2026-27-15/apply",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "sbi",
+      "sourceName": "State Bank of India — Careers",
+      "dept": "State Bank of India — Careers",
+      "state": "All India",
+      "category": "banking",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "d0cb6df37111adb4",
       "title": "Last date extended upto 12:30 PM of 09.03.2026 for submission of bids for Rupee term loan of up-to ₹ 1000 Crore",
-      "link": "https://ntpc.co.in/last-date-extended-upto-1230-pm-09032026-submission-bids-rupee-term-loan-rs-1000-crore",
+      "link": "https://ntpc.co.in/index.php/last-date-extended-upto-1230-pm-09032026-submission-bids-rupee-term-loan-rs-1000-crore",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
@@ -998,17 +1033,107 @@
       "fetchMethod": "live-jobs-supplement"
     },
     {
-      "id": "1a8fa8b40cc21bb0",
-      "title": "APPLY ONLINE (Online Registration extended till 28.09.2026)",
-      "link": "https://recruitment.sbi.bank.in/crpd-sco-2026-27-15/apply",
+      "id": "cf7727ab821fe25c",
+      "title": "Research, Recruitment, & Extension",
+      "link": "https://www.wii.gov.in/research-recruitment-and-extension",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
-      "sourceId": "sbi",
-      "sourceName": "State Bank of India — Careers",
-      "dept": "State Bank of India — Careers",
+      "sourceId": "wii",
+      "sourceName": "Wildlife Institute of India (WII)",
+      "dept": "Wildlife Institute of India (WII)",
       "state": "All India",
-      "category": "banking",
+      "category": "psu",
+      "stateIds": [
+        "uk",
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "a2acb547470561a0",
+      "title": "CORRIGENDUM: Extension of closing date of online applications for Advt. No. WII/ADVT. 1/RP–CELL/ August, 2026",
+      "link": "https://www.wii.gov.in/recruitments/corrigendum_advtno_wii_advt1_rpcell_august2026",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "wii",
+      "sourceName": "Wildlife Institute of India (WII)",
+      "dept": "Wildlife Institute of India (WII)",
+      "state": "All India",
+      "category": "psu",
+      "stateIds": [
+        "uk",
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "0aa466f8fd9d71bb",
+      "title": "Extension of last date of Applications for Scientist-D/E/F/G on deputation (Advertisement No. WII/ADM/2026-27/05/56)",
+      "link": "https://www.wii.gov.in/recruitments/date_extend_advertisement-no_wii_adm_2026_27_05_56",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "wii",
+      "sourceName": "Wildlife Institute of India (WII)",
+      "dept": "Wildlife Institute of India (WII)",
+      "state": "All India",
+      "category": "psu",
+      "stateIds": [
+        "uk",
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "ec7b727cf7b025f2",
+      "title": "Advt. No. WII/ADVT. 1/RP–CELL/ July, 2026 to engage 20 different categories of positions for various research projects at WII (extended close date until 07 August, 2026)",
+      "link": "https://www.wii.gov.in/recruitments/advtno_wii_advt1_rpcell_july2026",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "wii",
+      "sourceName": "Wildlife Institute of India (WII)",
+      "dept": "Wildlife Institute of India (WII)",
+      "state": "All India",
+      "category": "psu",
+      "stateIds": [
+        "uk",
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "91fb9aee663b1513",
+      "title": "Extension of last date of Applications for Section Officer on deputation (Advt. No. WII/ADM/2023/29/23)",
+      "link": "https://www.wii.gov.in/recruitments/extension-of-last-date-of-applications-for-section-officer-on-deputation",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "wii",
+      "sourceName": "Wildlife Institute of India (WII)",
+      "dept": "Wildlife Institute of India (WII)",
+      "state": "All India",
+      "category": "psu",
+      "stateIds": [
+        "uk",
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "f6e0c2b3096daa6e",
+      "title": "Last date extended upto 12:30 PM of 09.03.2026 for submission of bids for Rupee term loan of up-to ₹ 1000 Crore",
+      "link": "https://ntpc.co.in/last-date-extended-upto-1230-pm-09032026-submission-bids-rupee-term-loan-rs-1000-crore",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "ntpc",
+      "sourceName": "NTPC — Careers",
+      "dept": "NTPC — Careers",
+      "state": "All India",
+      "category": "psu",
       "stateIds": [
         "all"
       ],
@@ -1128,95 +1253,6 @@
       "dept": "Securities and Exchange Board of India",
       "state": "All India",
       "category": "banking",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "e3d502ed3ef8ab05",
-      "title": "PUBLIC NOTICE: CTET SEP-2026 CORRECTION WINDOW (last date 10.09.2026)",
-      "link": "https://cdnbbsr.s3waas.gov.in/s3443dec3062d0286986e21dc0631734c9/uploads/2026/09/20260907461266783.pdf",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [
-        "https://cdnbbsr.s3waas.gov.in/s3443dec3062d0286986e21dc0631734c9/uploads/2026/09/20260907461266783.pdf"
-      ],
-      "sourceId": "ctet",
-      "sourceName": "CBSE — CTET",
-      "dept": "CBSE — CTET",
-      "state": "All India",
-      "category": "teaching",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "988ed4272bbf3f80",
-      "title": "Public Notice: CTET Feb-2026 Key Challenge / Scanned Images of OMR (last Date 15/03/2026,up-to 11:59 PM)",
-      "link": "https://cdnbbsr.s3waas.gov.in/s3443dec3062d0286986e21dc0631734c9/uploads/2026/03/202603121086699841.pdf",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [
-        "https://cdnbbsr.s3waas.gov.in/s3443dec3062d0286986e21dc0631734c9/uploads/2026/03/202603121086699841.pdf"
-      ],
-      "sourceId": "ctet",
-      "sourceName": "CBSE — CTET",
-      "dept": "CBSE — CTET",
-      "state": "All India",
-      "category": "teaching",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "190b0749867fb96c",
-      "title": "CTET SEP 2026 CORRECTION WINDOW (last date 10.09.2026)",
-      "link": "https://ctet.nic.in/correction-window-ctet-sep-2026-2/",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "ctet",
-      "sourceName": "CBSE — CTET",
-      "dept": "CBSE — CTET",
-      "state": "All India",
-      "category": "teaching",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "ca02d329344a8460",
-      "title": "Login: CTET SEP 2026 CORRECTION WINDOW (last date 10.09.2026)",
-      "link": "https://examinationservices.nic.in/ExamSysCTET/root/Home.aspx?enc=Ei4cajBkK1gZSfgr53ImFfEytN2I3LFrLvNrMJcZJNmO/XE3+xNuu3rFt9agQvt0",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "ctet",
-      "sourceName": "CBSE — CTET",
-      "dept": "CBSE — CTET",
-      "state": "All India",
-      "category": "teaching",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "d0cb6df37111adb4",
-      "title": "Last date extended upto 12:30 PM of 09.03.2026 for submission of bids for Rupee term loan of up-to ₹ 1000 Crore",
-      "link": "https://ntpc.co.in/index.php/last-date-extended-upto-1230-pm-09032026-submission-bids-rupee-term-loan-rs-1000-crore",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "ntpc",
-      "sourceName": "NTPC — Careers",
-      "dept": "NTPC — Careers",
-      "state": "All India",
-      "category": "psu",
       "stateIds": [
         "all"
       ],

@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-09-24T09:40:16.924Z",
-  "count": 20,
+  "generatedAt": "2026-09-25T10:03:48.161Z",
+  "count": 23,
   "items": [
     {
       "id": "19df6addea51f1a1",
@@ -20,9 +20,9 @@
       "fetchMethod": "html-listing"
     },
     {
-      "id": "e5d59009e1eecc89",
+      "id": "85b1767449295db8",
       "title": "Postwise Syllabus",
-      "link": "https://www.keralapsc.gov.in/index.php/syllabus1",
+      "link": "https://www.keralapsc.gov.in/syllabus1",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
@@ -54,19 +54,40 @@
       "fetchMethod": "html"
     },
     {
-      "id": "948506b4a8ef4abf",
+      "id": "d64474436a591e73",
       "title": "Syllabus",
-      "link": "https://hssc.gov.in/examsyllabus",
+      "link": "https://mpscmanipur.gov.in/files/DS_Syllabus_2026.pdf",
       "publishedAt": null,
       "summary": null,
-      "pdfUrls": [],
-      "sourceId": "ssb-hr",
-      "sourceName": "Haryana Staff Selection Commission (HSSC)",
-      "dept": "Haryana Staff Selection Commission (HSSC)",
-      "state": "Haryana",
+      "pdfUrls": [
+        "https://mpscmanipur.gov.in/files/DS_Syllabus_2026.pdf"
+      ],
+      "sourceId": "psc-mn",
+      "sourceName": "Manipur PSC",
+      "dept": "Manipur PSC",
+      "state": "NE States",
       "category": "state",
       "stateIds": [
-        "hr"
+        "ne"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "1f5f369ee792b818",
+      "title": "Syllabus",
+      "link": "https://www.mpscmanipur.gov.in/files/DS_Syllabus_2026.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://www.mpscmanipur.gov.in/files/DS_Syllabus_2026.pdf"
+      ],
+      "sourceId": "psc-mn",
+      "sourceName": "Manipur PSC",
+      "dept": "Manipur PSC",
+      "state": "NE States",
+      "category": "state",
+      "stateIds": [
+        "ne"
       ],
       "fetchMethod": "html"
     },
@@ -101,6 +122,25 @@
       "category": "police",
       "stateIds": [
         "up"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "1cc5e7bdfd8122f9",
+      "title": "Revised Common Syllabus for Combined Graduate Level Examination for the posts of Junior Engineer in the Electricity Department and Junior Engineer (E&M) in APWD",
+      "link": "https://erecruitment.andamannicobar.gov.in/Notice/118_fe13cffe-6aec-4875-8742-9089cc9397fe.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://erecruitment.andamannicobar.gov.in/Notice/118_fe13cffe-6aec-4875-8742-9089cc9397fe.pdf"
+      ],
+      "sourceId": "an-rec",
+      "sourceName": "Andaman & Nicobar e-Recruitment",
+      "dept": "Andaman & Nicobar e-Recruitment",
+      "state": "Andaman & Nicobar",
+      "category": "state",
+      "stateIds": [
+        "an"
       ],
       "fetchMethod": "html"
     },
@@ -143,9 +183,9 @@
       "fetchMethod": "html"
     },
     {
-      "id": "85b1767449295db8",
+      "id": "e5d59009e1eecc89",
       "title": "Postwise Syllabus",
-      "link": "https://www.keralapsc.gov.in/syllabus1",
+      "link": "https://www.keralapsc.gov.in/index.php/syllabus1",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
@@ -156,6 +196,23 @@
       "category": "state",
       "stateIds": [
         "kl"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "948506b4a8ef4abf",
+      "title": "Syllabus",
+      "link": "https://hssc.gov.in/examsyllabus",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "ssb-hr",
+      "sourceName": "Haryana Staff Selection Commission (HSSC)",
+      "dept": "Haryana Staff Selection Commission (HSSC)",
+      "state": "Haryana",
+      "category": "state",
+      "stateIds": [
+        "hr"
       ],
       "fetchMethod": "html"
     },

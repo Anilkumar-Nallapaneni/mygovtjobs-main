@@ -1,18 +1,9 @@
 {
-  "generatedAt": "2026-09-24T09:46:33.449943+00:00",
+  "generatedAt": "2026-09-25T10:10:22.320720+00:00",
   "apply": true,
-  "scanned": 39,
-  "ok": 21,
+  "scanned": 35,
+  "ok": 19,
   "demoted": [
-    {
-      "id": "5dad0f7b-aa85-4a25-b3c4-3654a0e22149",
-      "slug": "prasar-bharati-prasar-bharati-marketing-executive-nia-2026-10-sales-20-posts-202-ac94ea00",
-      "title": "Prasar Bharati Marketing Executive — NIA/2026/10/Sales (20 posts)",
-      "reasons": [
-        "deadline expired",
-        "deadline before publication"
-      ]
-    },
     {
       "id": "36f98ae6-8714-4298-91d6-75de0093fe58",
       "slug": "sainik-school-amaravathinagar-recruitment-2026-apply-online-for-medical-officer--2d1bcff8",
@@ -31,7 +22,7 @@
     },
     {
       "id": "6e83c72e-5d0f-4535-b85e-50956c47f96f",
-      "slug": "isro-indian-space-research-organisation-inviting-online-applications-for-the-pos-3cc293e0",
+      "slug": "isro-careers-inviting-online-applications-for-the-posts-of-technical-assistant-t-3cc293e0",
       "title": "Inviting online applications for the posts of Technical Assistant, Technician 'B', Cook 'A' and Fireman 'A'",
       "reasons": [
         "non-vacancy document"
@@ -86,17 +77,9 @@
       ]
     },
     {
-      "id": "4d57a0ce-d62f-42bd-8a17-d5a20ed26fb0",
-      "slug": "pension-fund-regulatory-and-development-authority-pfrda-pfrda-officer-grade-a-as-ddfdf3ba",
-      "title": "PFRDA Officer Grade A (Assistant Manager) 2026 — Advt 03/2026",
-      "reasons": [
-        "non-vacancy document"
-      ]
-    },
-    {
-      "id": "e22a3042-5747-47cd-a150-1f8e2e620d34",
-      "slug": "staff-selection-commission-ssc-notice-of-junior-engineer-examination-2026-2026-h-adfb1951",
-      "title": "Notice of Junior Engineer Examination, 2026",
+      "id": "a51c8dd1-769a-4ca8-86e8-ac403816c1e6",
+      "slug": "solar-energy-corporation-of-india-limited-seci-seci-experienced-professionals-no-69671470",
+      "title": "SECI experienced professionals — Notification 3/2026 (28 posts)",
       "reasons": [
         "deadline expired"
       ]
@@ -110,9 +93,9 @@
       ]
     },
     {
-      "id": "b331ef3a-4d7b-4bf4-a03b-6a114f223dfc",
-      "slug": "ramagundam-fertilizers-and-chemicals-limited-rfcl-rfcl-experienced-professionals-3667c374",
-      "title": "RFCL experienced professionals — Rectt/01/2026 (40 posts)",
+      "id": "d46f5889-507b-46a6-b698-7d0cc8099eb0",
+      "slug": "addendum-notice-32-posts-of-accounts-officer-administration-of-union-territory-o-61662120",
+      "title": "Addendum Notice: 32 Posts of Accounts Officer, Administration of Union Territory of Ladakh",
       "reasons": [
         "non-vacancy document"
       ]
@@ -134,21 +117,21 @@
       ]
     },
     {
-      "id": "d46f5889-507b-46a6-b698-7d0cc8099eb0",
-      "slug": "addendum-notice-32-posts-of-accounts-officer-administration-of-union-territory-o-61662120",
-      "title": "Addendum Notice: 32 Posts of Accounts Officer, Administration of Union Territory of Ladakh",
-      "reasons": [
-        "non-vacancy document"
-      ]
-    },
-    {
       "id": "5aaff605-8801-4455-bb34-a1ab6b8ef8bd",
       "slug": "tezpur-university-junior-research-fellow-recruitment-2026-apply-online-96f771fe",
       "title": "Tezpur University Junior Research Fellow Recruitment 2026 - Apply Online",
       "reasons": [
         "non-vacancy document"
       ]
+    },
+    {
+      "id": "7a6bfba9-b24e-4c15-aaed-4d85af044443",
+      "slug": "recruitment-advertisement-for-assistant-district-public-prosecution-officer-2026-5b32a0f7",
+      "title": "Recruitment Advertisement for Assistant District Public Prosecution Officer 2026, Dated 10/03/2026",
+      "reasons": [
+        "deadline expired"
+      ]
     }
   ],
-  "rowsUpdated": 18
+  "rowsUpdated": 16
 }
