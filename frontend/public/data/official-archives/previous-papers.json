@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-09-25T10:03:48.161Z",
-  "count": 29,
+  "generatedAt": "2026-09-26T09:51:57.981Z",
+  "count": 33,
   "items": [
     {
       "id": "1bb2282873cb0efd",
@@ -309,12 +309,88 @@
       "fetchMethod": "html"
     },
     {
+      "id": "feab0ea2910a1863",
+      "title": "Paper-I Specimen Question Booklet",
+      "link": "https://mpscmanipur.gov.in/files/MPSC_26092514450.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://mpscmanipur.gov.in/files/MPSC_26092514450.pdf"
+      ],
+      "sourceId": "psc-mn",
+      "sourceName": "Manipur PSC",
+      "dept": "Manipur PSC",
+      "state": "NE States",
+      "category": "state",
+      "stateIds": [
+        "ne"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "175f6c89d85642db",
+      "title": "Paper-II Specimen Question Booklet",
+      "link": "https://mpscmanipur.gov.in/files/MPSC_26092516280.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://mpscmanipur.gov.in/files/MPSC_26092516280.pdf"
+      ],
+      "sourceId": "psc-mn",
+      "sourceName": "Manipur PSC",
+      "dept": "Manipur PSC",
+      "state": "NE States",
+      "category": "state",
+      "stateIds": [
+        "ne"
+      ],
+      "fetchMethod": "html"
+    },
+    {
       "id": "1f26c2bbb725585e",
       "title": "Previous Year Question Papers",
       "link": "https://mpscmanipur.gov.in/question.html",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
+      "sourceId": "psc-mn",
+      "sourceName": "Manipur PSC",
+      "dept": "Manipur PSC",
+      "state": "NE States",
+      "category": "state",
+      "stateIds": [
+        "ne"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "aedd1d393204cd81",
+      "title": "Paper-I Specimen Question Booklet",
+      "link": "https://www.mpscmanipur.gov.in/files/MPSC_26092514450.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://www.mpscmanipur.gov.in/files/MPSC_26092514450.pdf"
+      ],
+      "sourceId": "psc-mn",
+      "sourceName": "Manipur PSC",
+      "dept": "Manipur PSC",
+      "state": "NE States",
+      "category": "state",
+      "stateIds": [
+        "ne"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "6b51d3d7e323885f",
+      "title": "Paper-II Specimen Question Booklet",
+      "link": "https://www.mpscmanipur.gov.in/files/MPSC_26092516280.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://www.mpscmanipur.gov.in/files/MPSC_26092516280.pdf"
+      ],
       "sourceId": "psc-mn",
       "sourceName": "Manipur PSC",
       "dept": "Manipur PSC",

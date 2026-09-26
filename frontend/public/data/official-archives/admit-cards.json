@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-25T10:03:48.161Z",
+  "generatedAt": "2026-09-26T09:51:57.981Z",
   "count": 158,
   "items": [
     {
@@ -211,43 +211,9 @@
       "fetchMethod": "html"
     },
     {
-      "id": "2b909d8e996d4c94",
-      "title": "Conference call/analyst meet with Investors",
-      "link": "https://ntpc.co.in/investors/confrence-call-analyst-meet-investors/conference-call-analysts-investors",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "ntpc",
-      "sourceName": "NTPC — Careers",
-      "dept": "NTPC — Careers",
-      "state": "All India",
-      "category": "psu",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
       "id": "32e44b90515bc891",
       "title": "Download Interview Call Letter for against Advt. No. ISP/YP/2026/01 dated 22.05.2026",
       "link": "https://sailcareers.com/SAIL2026YP/SAIL2026YPIntCallLetter.aspx",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "sail",
-      "sourceName": "Steel Authority of India (SAIL)",
-      "dept": "Steel Authority of India (SAIL)",
-      "state": "All India",
-      "category": "psu",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "0f946a7c74850690",
-      "title": "Click here to download call letter for PI of Provisionally shortlisted candidates for Engagement of Young Professionals in Rourkela Steel Plant, SAIL vide Advt.No. RSP/R-YP/2026-01 dated 03/07/2026",
-      "link": "https://sailcareers.com/sail2026yprourkela/SAIL2026YPRourkelaInterviewCallLetter.aspx",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
@@ -326,6 +292,40 @@
       "category": "state",
       "stateIds": [
         "ne"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "8c7104cb7aea4338",
+      "title": "Admit Cards",
+      "link": "http://rsmssb.rajasthan.gov.in/page?menuName=/ur7491nQtP/eTfIoLmSTQ==",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "ssb-rj",
+      "sourceName": "Rajasthan Staff Selection Board (RSSB)",
+      "dept": "Rajasthan Staff Selection Board (RSSB)",
+      "state": "Rajasthan",
+      "category": "state",
+      "stateIds": [
+        "rj"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "a11c8ece90f5c6bb",
+      "title": "Admit Card",
+      "link": "http://rsmssb.rajasthan.gov.in/page?menuName=/ur7491nQtP6K0BefutjEQ==",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "ssb-rj",
+      "sourceName": "Rajasthan Staff Selection Board (RSSB)",
+      "dept": "Rajasthan Staff Selection Board (RSSB)",
+      "state": "Rajasthan",
+      "category": "state",
+      "stateIds": [
+        "rj"
       ],
       "fetchMethod": "html"
     },
@@ -620,6 +620,40 @@
       "fetchMethod": "html"
     },
     {
+      "id": "2b909d8e996d4c94",
+      "title": "Conference call/analyst meet with Investors",
+      "link": "https://ntpc.co.in/investors/confrence-call-analyst-meet-investors/conference-call-analysts-investors",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "ntpc",
+      "sourceName": "NTPC — Careers",
+      "dept": "NTPC — Careers",
+      "state": "All India",
+      "category": "psu",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "0f946a7c74850690",
+      "title": "Click here to download call letter for PI of Provisionally shortlisted candidates for Engagement of Young Professionals in Rourkela Steel Plant, SAIL vide Advt.No. RSP/R-YP/2026-01 dated 03/07/2026",
+      "link": "https://sailcareers.com/sail2026yprourkela/SAIL2026YPRourkelaInterviewCallLetter.aspx",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "sail",
+      "sourceName": "Steel Authority of India (SAIL)",
+      "dept": "Steel Authority of India (SAIL)",
+      "state": "All India",
+      "category": "psu",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
       "id": "4e1bcf588af156f0",
       "title": "NTPC Ltd. Q4/12M FY26 Conference Call on May 23, 2026",
       "link": "https://ntpc.co.in/ntpc-ltd-q412m-fy26-conference-call-may-23-2026",
@@ -889,40 +923,6 @@
       "category": "state",
       "stateIds": [
         "mp"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "8c7104cb7aea4338",
-      "title": "Admit Cards",
-      "link": "http://rsmssb.rajasthan.gov.in/page?menuName=/ur7491nQtP/eTfIoLmSTQ==",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "ssb-rj",
-      "sourceName": "Rajasthan Staff Selection Board (RSSB)",
-      "dept": "Rajasthan Staff Selection Board (RSSB)",
-      "state": "Rajasthan",
-      "category": "state",
-      "stateIds": [
-        "rj"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "a11c8ece90f5c6bb",
-      "title": "Admit Card",
-      "link": "http://rsmssb.rajasthan.gov.in/page?menuName=/ur7491nQtP6K0BefutjEQ==",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "ssb-rj",
-      "sourceName": "Rajasthan Staff Selection Board (RSSB)",
-      "dept": "Rajasthan Staff Selection Board (RSSB)",
-      "state": "Rajasthan",
-      "category": "state",
-      "stateIds": [
-        "rj"
       ],
       "fetchMethod": "html"
     },
