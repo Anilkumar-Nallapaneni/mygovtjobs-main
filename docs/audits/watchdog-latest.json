@@ -1,17 +1,9 @@
 {
-  "generatedAt": "2026-09-26T10:01:08.970148+00:00",
+  "generatedAt": "2026-09-27T10:34:40.014048+00:00",
   "apply": true,
-  "scanned": 33,
+  "scanned": 30,
   "ok": 18,
   "demoted": [
-    {
-      "id": "36f98ae6-8714-4298-91d6-75de0093fe58",
-      "slug": "sainik-school-amaravathinagar-recruitment-2026-apply-online-for-medical-officer--2d1bcff8",
-      "title": "Sainik School Amaravathinagar Recruitment 2026 - Apply Online for Medical Officer, LDC and More Posts",
-      "reasons": [
-        "non-vacancy document"
-      ]
-    },
     {
       "id": "510eb3b0-4c23-43b5-8fb9-a9b428c3d534",
       "slug": "export-import-bank-of-india-exim-bank-srd-deputy-manager-and-manager-hrm-dm-m-sr-d59386f2",
@@ -53,14 +45,6 @@
       ]
     },
     {
-      "id": "cfe45f63-70d8-4e96-88d0-c2b7caa7b3cb",
-      "slug": "national-test-house-nth-national-test-house-young-professional-sr-jr-nth-hq-yp-a-1269e3bc",
-      "title": "National Test House Young Professional (Sr/Jr) — NTH(HQ)/YP/ADVT./01/2026-27 (36 posts)",
-      "reasons": [
-        "non-vacancy document"
-      ]
-    },
-    {
       "id": "e1646603-b95d-46ab-ae38-bbdb510094f1",
       "slug": "national-capital-region-transport-corporation-ncrtc-ncrtc-vacancy-notice-33-2026-242400e8",
       "title": "NCRTC Vacancy Notice 33/2026 — Supervisors and Non-Supervisors (contract)",
@@ -77,17 +61,17 @@
       ]
     },
     {
-      "id": "693d439d-2255-4d9d-8dcd-02dc0006d891",
-      "slug": "pharmaceuticals-medical-devices-bureau-of-india-pmbi-pmbi-contractual-posts-phar-44d20835",
-      "title": "PMBI contractual posts — Pharmacist, Executive and others (Advt 02/2026, 178 posts)",
-      "reasons": [
-        "deadline expired"
-      ]
-    },
-    {
       "id": "95b28845-2012-4416-ab6a-68b3caba1a91",
       "slug": "national-informatics-centre-nic-scientific-technical-assistant-a-sta-a-nic-sta-2-6c0e2563",
       "title": "Scientific / Technical Assistant-A (STA-A) — NIC/STA/2026/2",
+      "reasons": [
+        "non-vacancy document"
+      ]
+    },
+    {
+      "id": "883e67fc-687d-482b-a915-f36f114b6670",
+      "slug": "addendum-notice-19-posts-of-manager-grade-i-section-officer-ministry-of-defence-67983808",
+      "title": "Addendum Notice: 19 Posts of Manager Grade - I - Section Officer, Ministry of Defence",
       "reasons": [
         "non-vacancy document"
       ]
@@ -109,14 +93,6 @@
       ]
     },
     {
-      "id": "883e67fc-687d-482b-a915-f36f114b6670",
-      "slug": "addendum-notice-19-posts-of-manager-grade-i-section-officer-ministry-of-defence-67983808",
-      "title": "Addendum Notice: 19 Posts of Manager Grade - I - Section Officer, Ministry of Defence",
-      "reasons": [
-        "non-vacancy document"
-      ]
-    },
-    {
       "id": "5aaff605-8801-4455-bb34-a1ab6b8ef8bd",
       "slug": "tezpur-university-junior-research-fellow-recruitment-2026-apply-online-96f771fe",
       "title": "Tezpur University Junior Research Fellow Recruitment 2026 - Apply Online",
@@ -125,5 +101,5 @@
       ]
     }
   ],
-  "rowsUpdated": 15
+  "rowsUpdated": 12
 }

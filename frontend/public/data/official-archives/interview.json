@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-09-26T09:51:57.981Z",
-  "count": 101,
+  "generatedAt": "2026-09-27T10:25:26.507Z",
+  "count": 102,
   "items": [
     {
       "id": "2e7fa8a4ffb7c7be",
@@ -64,6 +64,23 @@
       "sourceName": "BPSC — Notices",
       "dept": "Bihar PSC",
       "state": "Bihar",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "98e8959df1b18c64",
+      "title": "17 Oct 2026 LIST OF CANDIDATES PROVISIONALLY QUALIFIED FOR INTERVIEW IN ADVT. NO. A-1/E-1/2025, COMBINED STATE/UPPER SUBORDINATE SERVICES (M.) EXAM.-2025",
+      "link": "https://uppsc.up.nic.in/Open_PDF.aspx?I4PnQ0tBagnQ0/TjMEfCjM2A27zHkRdP",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "uppsc-hall-tickets",
+      "sourceName": "UPPSC — Hall tickets",
+      "dept": "Uttar Pradesh PSC",
+      "state": "Uttar Pradesh",
       "category": "state",
       "stateIds": [
         "all"
@@ -617,6 +634,23 @@
       "fetchMethod": "html"
     },
     {
+      "id": "9e7e8810785833f5",
+      "title": "A World Class Sea Survival Centre",
+      "link": "https://ongcindia.com/web/eng/sea-survival-training",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "ongc",
+      "sourceName": "ONGC — Careers",
+      "dept": "ONGC — Careers",
+      "state": "All India",
+      "category": "psu",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
       "id": "d3aae02ec33eb033",
       "title": "RSP:Interview Schedule for selection of Trainees for Training Programmes in Ispat General Hospital (IGH), RSP, Rourkela on stipend basis against Advt. No. HR-T&M/2498, dated 31.08.2026",
       "link": "https://aima-web-images.s3.ap-south-1.amazonaws.com/sailcareers.com/Downloads/RSP_News%20&%20Jobs_24092026_171757.pdf",
@@ -869,6 +903,23 @@
       "fetchMethod": "html"
     },
     {
+      "id": "c019d0c423cf10b5",
+      "title": "Procedure for Interview Date Change Requests",
+      "link": "https://www.keralapsc.gov.in/index.php/procedure-interview-date-change-requests",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-kl",
+      "sourceName": "Kerala PSC",
+      "dept": "Kerala PSC",
+      "state": "Kerala",
+      "category": "state",
+      "stateIds": [
+        "kl"
+      ],
+      "fetchMethod": "html"
+    },
+    {
       "id": "29b69c62dccbbbba",
       "title": "Notification for Personal Interview",
       "link": "https://mpsc.meghalaya.gov.in/notifications-pi.html",
@@ -1013,23 +1064,6 @@
         "all"
       ],
       "fetchMethod": "html-listing"
-    },
-    {
-      "id": "c019d0c423cf10b5",
-      "title": "Procedure for Interview Date Change Requests",
-      "link": "https://www.keralapsc.gov.in/index.php/procedure-interview-date-change-requests",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-kl",
-      "sourceName": "Kerala PSC",
-      "dept": "Kerala PSC",
-      "state": "Kerala",
-      "category": "state",
-      "stateIds": [
-        "kl"
-      ],
-      "fetchMethod": "html"
     },
     {
       "id": "05de1912b0b5a28f",
@@ -1233,23 +1267,6 @@
         "mp"
       ],
       "fetchMethod": "html"
-    },
-    {
-      "id": "98e8959df1b18c64",
-      "title": "17 Oct 2026 LIST OF CANDIDATES PROVISIONALLY QUALIFIED FOR INTERVIEW IN ADVT. NO. A-1/E-1/2025, COMBINED STATE/UPPER SUBORDINATE SERVICES (M.) EXAM.-2025",
-      "link": "https://uppsc.up.nic.in/Open_PDF.aspx?I4PnQ0tBagnQ0/TjMEfCjM2A27zHkRdP",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "uppsc-hall-tickets",
-      "sourceName": "UPPSC — Hall tickets",
-      "dept": "Uttar Pradesh PSC",
-      "state": "Uttar Pradesh",
-      "category": "state",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
     },
     {
       "id": "66bff2c416041b99",

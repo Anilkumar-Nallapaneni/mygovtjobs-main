@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-09-26T09:51:57.981Z",
-  "count": 158,
+  "generatedAt": "2026-09-27T10:25:26.507Z",
+  "count": 163,
   "items": [
     {
       "id": "3ab90b393ed54006",
@@ -88,6 +88,40 @@
       "fetchMethod": "html-listing"
     },
     {
+      "id": "9d8946210ca4e566",
+      "title": "NOTICE REGARDING ADMIT CARD FOR ADVT.NO.D-6/E-1/2025, SWASTHYA SHIKSHA ADHIKARI ..",
+      "link": "https://uppsc.up.nic.in/Open_PDF_DB.aspx?I4PnQ0tBagmNKfqXmoSUnkhoZwOzbGVv",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "uppsc-hall-tickets",
+      "sourceName": "UPPSC — Hall tickets",
+      "dept": "Uttar Pradesh PSC",
+      "state": "Uttar Pradesh",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "7a2db368e13d4a7b",
+      "title": "NOTICE REGARDING ADMIT CARD FOR ADVT.NO.D-6/E-1/2025, VETERINARY OFFICER (SCREEN..",
+      "link": "https://uppsc.up.nic.in/Open_PDF_DB.aspx?I4PnQ0tBagmNKfqXmoSUnqe31UVS6Xc9",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "uppsc-hall-tickets",
+      "sourceName": "UPPSC — Hall tickets",
+      "dept": "Uttar Pradesh PSC",
+      "state": "Uttar Pradesh",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
       "id": "ec699e71aa9f649c",
       "title": "NOTICE REGARDING ADMIT CARD OF ADVT. NO. A-7/E-1/2025, ASSISTANT PROFESSOR, GOVT..",
       "link": "https://uppsc.up.nic.in/Open_PDF_DB.aspx?I4PnQ0tBagnQ0/TjMEfCjG1nSVQb3U34",
@@ -108,6 +142,40 @@
       "id": "1ef5255ac7c74e68",
       "title": "NOTICE REGARDING ADMIT CARD OF ADVT. NO. A-7/E-1/2025, ASSISTANT PROFESSOR, GOVT..",
       "link": "https://uppsc.up.nic.in/Open_PDF_DB.aspx?I4PnQ0tBaglFjifabMvCvQhkTL2Hie7+",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "uppsc-hall-tickets",
+      "sourceName": "UPPSC — Hall tickets",
+      "dept": "Uttar Pradesh PSC",
+      "state": "Uttar Pradesh",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "854159c504003534",
+      "title": "04 Oct 2026 NOTICE REGARDING ADMIT CARD FOR ADVT.NO.D-6/E-1/2025, SWASTHYA SHIKSHA ADHIKARI (SCREENING) EXAM-2025, (EXAM. DATED:-04/10/2026)",
+      "link": "https://uppsc.up.nic.in/Open_PDF.aspx?I4PnQ0tBagmNKfqXmoSUnogh/qia6eY5",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "uppsc-hall-tickets",
+      "sourceName": "UPPSC — Hall tickets",
+      "dept": "Uttar Pradesh PSC",
+      "state": "Uttar Pradesh",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "b040643329e8d874",
+      "title": "03 Oct 2026 NOTICE REGARDING ADMIT CARD FOR ADVT.NO.D-6/E-1/2025, VETERINARY OFFICER (SCREENING) EXAM-2025, (EXAM. DATED:-03/10/2026)",
+      "link": "https://uppsc.up.nic.in/Open_PDF.aspx?I4PnQ0tBagmNKfqXmoSUnldydJvoUHhz",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
@@ -177,6 +245,23 @@
       "fetchMethod": "html"
     },
     {
+      "id": "0157354131476c03",
+      "title": "Intimation to Stock Exchange(s)",
+      "link": "https://ongcindia.com/web/eng/investors/intimation-to-stock-exchange",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "ongc",
+      "sourceName": "ONGC — Careers",
+      "dept": "ONGC — Careers",
+      "state": "All India",
+      "category": "psu",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
       "id": "97a06d61ec80c264",
       "title": "Conference call/analyst meet with Investors",
       "link": "https://ntpc.co.in/index.php/investors/confrence-call-analyst-meet-investors/conference-call-analysts-investors",
@@ -211,15 +296,15 @@
       "fetchMethod": "html"
     },
     {
-      "id": "32e44b90515bc891",
-      "title": "Download Interview Call Letter for against Advt. No. ISP/YP/2026/01 dated 22.05.2026",
-      "link": "https://sailcareers.com/SAIL2026YP/SAIL2026YPIntCallLetter.aspx",
+      "id": "2b909d8e996d4c94",
+      "title": "Conference call/analyst meet with Investors",
+      "link": "https://ntpc.co.in/investors/confrence-call-analyst-meet-investors/conference-call-analysts-investors",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
-      "sourceId": "sail",
-      "sourceName": "Steel Authority of India (SAIL)",
-      "dept": "Steel Authority of India (SAIL)",
+      "sourceId": "ntpc",
+      "sourceName": "NTPC — Careers",
+      "dept": "NTPC — Careers",
       "state": "All India",
       "category": "psu",
       "stateIds": [
@@ -237,6 +322,23 @@
       "sourceId": "bhel",
       "sourceName": "BHEL — Careers",
       "dept": "BHEL — Careers",
+      "state": "All India",
+      "category": "psu",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "32e44b90515bc891",
+      "title": "Download Interview Call Letter for against Advt. No. ISP/YP/2026/01 dated 22.05.2026",
+      "link": "https://sailcareers.com/SAIL2026YP/SAIL2026YPIntCallLetter.aspx",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "sail",
+      "sourceName": "Steel Authority of India (SAIL)",
+      "dept": "Steel Authority of India (SAIL)",
       "state": "All India",
       "category": "psu",
       "stateIds": [
@@ -472,23 +574,6 @@
       "fetchMethod": "html"
     },
     {
-      "id": "69e0193828bd2a04",
-      "title": "Download Admit Card",
-      "link": "https://www.ossc.gov.in/Public/Pages/View_Content.aspx?id=C9b2YKMBT/uqqeRzU3B22A==",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "ssb-od",
-      "sourceName": "Odisha Staff Selection Commission (OSSC)",
-      "dept": "Odisha Staff Selection Commission (OSSC)",
-      "state": "Odisha",
-      "category": "state",
-      "stateIds": [
-        "od"
-      ],
-      "fetchMethod": "html"
-    },
-    {
       "id": "8da769e32021542a",
       "title": "Generate/Print eAdmit Card",
       "link": "https://dsssbonline.nic.in/AdmitCardEntry.aspx",
@@ -620,19 +705,19 @@
       "fetchMethod": "html"
     },
     {
-      "id": "2b909d8e996d4c94",
-      "title": "Conference call/analyst meet with Investors",
-      "link": "https://ntpc.co.in/investors/confrence-call-analyst-meet-investors/conference-call-analysts-investors",
+      "id": "69e0193828bd2a04",
+      "title": "Download Admit Card",
+      "link": "https://www.ossc.gov.in/Public/Pages/View_Content.aspx?id=C9b2YKMBT/uqqeRzU3B22A==",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
-      "sourceId": "ntpc",
-      "sourceName": "NTPC — Careers",
-      "dept": "NTPC — Careers",
-      "state": "All India",
-      "category": "psu",
+      "sourceId": "ssb-od",
+      "sourceName": "Odisha Staff Selection Commission (OSSC)",
+      "dept": "Odisha Staff Selection Commission (OSSC)",
+      "state": "Odisha",
+      "category": "state",
       "stateIds": [
-        "all"
+        "od"
       ],
       "fetchMethod": "html"
     },

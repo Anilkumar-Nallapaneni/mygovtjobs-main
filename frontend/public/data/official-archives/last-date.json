@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-26T09:51:57.981Z",
+  "generatedAt": "2026-09-27T10:25:26.507Z",
   "count": 97,
   "items": [
     {
@@ -20,9 +20,9 @@
       "fetchMethod": "rss-discovered"
     },
     {
-      "id": "3ce8e0b95fc891ec",
+      "id": "730537a1e7d8fa68",
       "title": "The proposal for purchase of Remote and Leg Plate for the O.T Table installed at O.T., BPS, AIIMS under PAC",
-      "link": "https://www.aiims.edu/index.php/en/131-tender/proprietary-tender/24767-the-proposal-for-purchase-of-remote-and-leg-plate-for-the-o-t-table-installed-at-o-t-bps-aiims-under-pac",
+      "link": "https://aiims.edu/index.php/en/131-tender/proprietary-tender/24767-the-proposal-for-purchase-of-remote-and-leg-plate-for-the-o-t-table-installed-at-o-t-bps-aiims-under-pac",
       "publishedAt": "2026-09-25T06:14:40.000Z",
       "summary": "VIEW TENDER DETAILS Tender No B&PS/63/26-27 Title The proposal for purchase of Remote and Leg Plate for the O.T Table installed at O.T., BPS, AIIMS under PAC Date of Uploading 25/09/2026 Date of Closing 12/10/2026 Document",
       "pdfUrls": [
@@ -762,6 +762,40 @@
       "fetchMethod": "html"
     },
     {
+      "id": "d0831531e36202c0",
+      "title": "APPLY ONLINE (Online Registration Extended till 05.10.2026)",
+      "link": "https://recruitment.sbi.bank.in/crpd-sco-2026-27-23/apply",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "sbi",
+      "sourceName": "State Bank of India — Careers",
+      "dept": "State Bank of India — Careers",
+      "state": "All India",
+      "category": "banking",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "1a8fa8b40cc21bb0",
+      "title": "APPLY ONLINE (Online Registration extended till 28.09.2026)",
+      "link": "https://recruitment.sbi.bank.in/crpd-sco-2026-27-15/apply",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "sbi",
+      "sourceName": "State Bank of India — Careers",
+      "dept": "State Bank of India — Careers",
+      "state": "All India",
+      "category": "banking",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
       "id": "d0cb6df37111adb4",
       "title": "Last date extended upto 12:30 PM of 09.03.2026 for submission of bids for Rupee term loan of up-to ₹ 1000 Crore",
       "link": "https://ntpc.co.in/index.php/last-date-extended-upto-1230-pm-09032026-submission-bids-rupee-term-loan-rs-1000-crore",
@@ -1004,9 +1038,9 @@
       "fetchMethod": "live-jobs-supplement"
     },
     {
-      "id": "730537a1e7d8fa68",
+      "id": "3ce8e0b95fc891ec",
       "title": "The proposal for purchase of Remote and Leg Plate for the O.T Table installed at O.T., BPS, AIIMS under PAC",
-      "link": "https://aiims.edu/index.php/en/131-tender/proprietary-tender/24767-the-proposal-for-purchase-of-remote-and-leg-plate-for-the-o-t-table-installed-at-o-t-bps-aiims-under-pac",
+      "link": "https://www.aiims.edu/index.php/en/131-tender/proprietary-tender/24767-the-proposal-for-purchase-of-remote-and-leg-plate-for-the-o-t-table-installed-at-o-t-bps-aiims-under-pac",
       "publishedAt": "2026-09-25T06:14:40.000Z",
       "summary": "VIEW TENDER DETAILS Tender No B&PS/63/26-27 Title The proposal for purchase of Remote and Leg Plate for the O.T Table installed at O.T., BPS, AIIMS under PAC Date of Uploading 25/09/2026 Date of Closing 12/10/2026 Document",
       "pdfUrls": [
@@ -1140,40 +1174,6 @@
         "all"
       ],
       "fetchMethod": "rss-discovered"
-    },
-    {
-      "id": "d0831531e36202c0",
-      "title": "APPLY ONLINE (Online Registration Extended till 05.10.2026)",
-      "link": "https://recruitment.sbi.bank.in/crpd-sco-2026-27-23/apply",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "sbi",
-      "sourceName": "State Bank of India — Careers",
-      "dept": "State Bank of India — Careers",
-      "state": "All India",
-      "category": "banking",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "1a8fa8b40cc21bb0",
-      "title": "APPLY ONLINE (Online Registration extended till 28.09.2026)",
-      "link": "https://recruitment.sbi.bank.in/crpd-sco-2026-27-15/apply",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "sbi",
-      "sourceName": "State Bank of India — Careers",
-      "dept": "State Bank of India — Careers",
-      "state": "All India",
-      "category": "banking",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
     },
     {
       "id": "f6e0c2b3096daa6e",
