@@ -1,6 +1,7 @@
 import { Link, useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { LATEST_NOTIFICATIONS_PATH, EXPLORE_HUB_PATH } from "@/utils/browseRoutes";
+import { CONTENT_HUB_LINKS } from "@/data/contentHubLinks";
 import { trackNavClick } from "@/lib/analytics";
 
 const NAV_KEYS = ["home", "explore", "latest", "results", "admitCard", "alert"] as const;
@@ -90,6 +91,26 @@ export default function MobileNavDrawer({
           <Link to="/account" className="mobile-nav-drawer__link" onClick={onClose}>
             {t("nav.login")}
           </Link>
+          <p className="mobile-nav-drawer__section-label">
+            {t("footer.hubsTitle", { defaultValue: "Portals" })}
+          </p>
+          {CONTENT_HUB_LINKS.map((link) => {
+            const active = pathname === link.href || pathname.startsWith(`${link.href}/`);
+            return (
+              <Link
+                key={link.id}
+                to={link.href}
+                className={`mobile-nav-drawer__link${active ? " mobile-nav-drawer__link--active" : ""}`}
+                aria-current={active ? "page" : undefined}
+                onClick={() => {
+                  trackNavClick(link.id, link.href);
+                  onClose();
+                }}
+              >
+                {t(link.labelKey, { defaultValue: link.labelDefault })}
+              </Link>
+            );
+          })}
         </div>
 
         {showInstall ? (

@@ -47,18 +47,27 @@ cd E:\gov-job-alert-Govt-Jobs
 
 ## GitHub Actions (production — recommended)
 
-### Daily (fast, ~20–45 min)
+### Daily
 
-Workflow: `.github/workflows/supabase-auto-ingest.yml`  
+Workflow: `.github/workflows/canonical-daily-pipeline.yml` (name: **Canonical daily pipeline**)  
 Cron: `30 2 * * *` (= 8:00 AM IST)
 
-| Step | Time | What it does |
-|------|------|----------------|
-| Scrape 100 govt sources | 15–30 min | Parallel ingest → Supabase |
-| Scrub + export | 2–5 min | `live-jobs.json` |
-| Commit | <1 min | Only `live-jobs.json` + archives (not 1900 detail files) |
+The job runs only when the repository **variable** `ALLOW_CANONICAL_PIPELINE` is `true`. It runs `scripts/run_pipeline.py --mode daily`, which calls `sync:production`:
 
-**Skipped in daily CI** (too slow): full `pdf:read:live` + `job:details` without limit — these take **hours**.
+| Step | What it does |
+|------|----------------|
+| Scrape enabled registry sources | Parallel ingest → Supabase. New rows stay **draft** (`AUTO_PUBLISH_VERIFIED=0`) |
+| Promote | `data:promote-publish-gate:apply` publishes only rows that already pass the gate |
+| Watchdog | Demotes bad live rows |
+| Export + scrub | Writes `live-jobs.json` |
+| Sitemap + RSS | `build:sitemap` then `build:rss` (`frontend/public/rss.xml`) |
+| Commit | Snapshots, sitemaps, and `rss.xml` |
+
+Do **not** set `AUTO_PUBLISH_VERIFIED=1` to skip review. The promote step inside this pipeline is the publisher.
+
+**Skipped in daily CI** (too slow): unbounded `pdf:read:live` + `job:details` — weekly enrich covers a bounded batch.
+
+Legacy workflows `supabase-auto-ingest.yml` and `supabase-auto-ingest-self-hosted.yml` were removed. Do not recreate them.
 
 ### Weekly (PDF + detail agents)
 
@@ -81,7 +90,7 @@ Job detail pages load from **Supabase first**; static JSON is a fallback.
 
 ### Test it now
 
-1. GitHub → **Actions** → **Supabase auto ingest** → **Run workflow**
+1. GitHub → **Actions** → **Canonical daily pipeline** → **Run workflow** (requires `ALLOW_CANONICAL_PIPELINE=true`)
 2. Green check = jobs updated in Supabase + static JSON committed to repo
 3. Red X = open the failed step; usually missing/wrong `DATABASE_URL`
 
@@ -91,14 +100,15 @@ Validate secrets locally:
 node scripts/check-github-actions-secrets.mjs
 ```
 
-### Self-hosted PC runner (optional, not recommended)
+### Local fallback (no self-hosted Actions runner)
 
-Only use if cloud workflow cannot reach your database. Workflow: `supabase-auto-ingest-self-hosted.yml` (manual trigger only).
+`supabase-auto-ingest-self-hosted.yml` was removed. If GitHub-hosted runners cannot reach the database, run the same pipeline on a machine that can:
 
-- Install `actions-runner` **outside** this repo (e.g. `C:\actions-runner\mygovtjobs`)
-- Do **not** put `actions-runner/` inside the project — it breaks git checkout
-- Add `DATABASE_URL` as a GitHub secret (checkout folder has no `backend/.env`)
-- Uses Windows PowerShell (`powershell`), not `pwsh`
+```bash
+npm run sync:production
+```
+
+That still respects `AUTO_PUBLISH_VERIFIED=0` and the promote gate inside `scripts/run-sync-production.py`.
 
 ## Frontend behaviour
 

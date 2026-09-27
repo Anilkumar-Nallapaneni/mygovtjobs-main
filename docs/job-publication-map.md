@@ -111,11 +111,12 @@ Frontend filtering is defense in depth. It is not the publication boundary.
 
 | Workflow | Publication relevance |
 | --- | --- |
-| `.github/workflows/supabase-auto-ingest.yml` | canonical scheduled ingest, DB write, audit, export, sitemap commit |
+| `.github/workflows/canonical-daily-pipeline.yml` | canonical scheduled ingest, DB write, audit, export, sitemap + RSS commit. Gated by `ALLOW_CANONICAL_PIPELINE=true`. `AUTO_PUBLISH_VERIFIED=0`; promote runs inside `sync:production` |
 | `.github/workflows/fetch-official-feeds.yml` | RSS/archive JSON only; it does not publish `jobs` |
 | `.github/workflows/weekly-enrich.yml` | existing-job detail enrichment; DB writer |
-| `.github/workflows/ingest-api.yml` | deprecated manual-only remote trigger |
-| `.github/workflows/supabase-auto-ingest-self-hosted.yml` | disabled manual legacy path |
+| `.github/workflows/catalog-recovery-export.yml` | manual promote/export/sitemap/RSS without a full scrape |
+
+Legacy `supabase-auto-ingest.yml`, `supabase-auto-ingest-self-hosted.yml`, and `ingest-api.yml` were removed.
 
 All active workflow writers use the shared `live-jobs-publication` concurrency
 group. Details and overlap decisions are in `docs/workflow-audit.md`.

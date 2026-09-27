@@ -530,7 +530,9 @@ vercel --prod
 
 ## Part 8 — GitHub Actions (scheduled ingest)
 
-Workflow: `.github/workflows/supabase-auto-ingest.yml`
+Workflow: `.github/workflows/canonical-daily-pipeline.yml`
+
+Set the Actions **variable** `ALLOW_CANONICAL_PIPELINE=true` or the scheduled job will skip. Scrapes stay draft until the promote step inside `sync:production` (`AUTO_PUBLISH_VERIFIED=0` is intentional). Legacy `supabase-auto-ingest.yml` was removed.
 
 **Repository secrets** (Settings → Secrets → Actions):
 

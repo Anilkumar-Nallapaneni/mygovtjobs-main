@@ -25,7 +25,7 @@ Terminal 2: npm run dev         →  http://localhost:3689
 ## Ingest pipeline
 
 ```
-scraper_registry.json (~111 official sources)
+scraper_registry.json (171 scrapers, 164 enabled)
     → RSS / HTML scrapers (backend/app/scrapers/)
     → NotificationParser + ValidationService + noise_filter
     → dedupe (content_hash)
@@ -33,7 +33,7 @@ scraper_registry.json (~111 official sources)
     → export → frontend/public/data/live-jobs.json
 ```
 
-Scheduled: GitHub Actions `supabase-auto-ingest.yml` (daily ~8 AM IST).
+Scheduled: GitHub Actions `.github/workflows/canonical-daily-pipeline.yml` (daily ~8:00 AM IST, cron `30 2 * * *`). The job runs only when the repository variable `ALLOW_CANONICAL_PIPELINE` is `true`. It calls `scripts/run_pipeline.py --mode daily` → `sync:production` (scrape, publish-gate promote, watchdog, export, sitemap, RSS). New scrapes stay draft while `AUTO_PUBLISH_VERIFIED=0`; only rows that already pass the gate are promoted. Legacy `supabase-auto-ingest.yml` was removed.
 
 ## Job visibility
 

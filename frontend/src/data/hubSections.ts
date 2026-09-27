@@ -15,6 +15,7 @@ import {
   STATES_INDEX_PATH,
 } from '@/utils/browseRoutes'
 import { SITE_LINKS } from '@/data/siteLinks'
+import { CONTENT_HUB_LINKS } from '@/data/contentHubLinks'
 
 export type HubSectionDef = {
   id: string
@@ -188,6 +189,20 @@ export const HUB_SECTIONS: HubSectionDef[] = [
         accent: '#EF4444',
       },
     ],
+  },
+  {
+    id: 'content-hubs',
+    titleKey: 'explore.sections.contentHubs',
+    titleDefault: 'Results, schemes & saved jobs',
+    cards: CONTENT_HUB_LINKS.map((link) => ({
+      id: `hub-${link.id}`,
+      href: link.href,
+      icon: link.icon,
+      titleKey: link.labelKey,
+      titleDefault: link.labelDefault,
+      descKey: link.descKey,
+      descDefault: link.descDefault,
+    })),
   },
   {
     id: 'help-tools',

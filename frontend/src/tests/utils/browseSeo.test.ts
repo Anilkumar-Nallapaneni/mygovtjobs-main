@@ -44,6 +44,15 @@ describe("browseSeoForPath", () => {
   });
 
   it("builds unique legal page titles", () => {
+    expect(browseSeoForPath("/latest-results").title).toMatch(/Results/i);
+    expect(browseSeoForPath("/admit-cards").title).toMatch(/Admit Cards/i);
+    expect(browseSeoForPath("/answer-keys").title).toMatch(/Answer Keys/i);
+    expect(browseSeoForPath("/upcoming-exams").path).toBe("/exam-calendar");
+    expect(browseSeoForPath("/admission").title).toMatch(/Admissions/i);
+    expect(browseSeoForPath("/scholarships").title).toMatch(/Scholarships/i);
+    expect(browseSeoForPath("/yojana").title).toMatch(/Yojana/i);
+    expect(browseSeoForPath("/designations").title).toMatch(/Designation/i);
+    expect(browseSeoForPath("/designation/nurse").title).toMatch(/Nurse/i);
     expect(browseSeoForPath("/privacy").title).toMatch(/Privacy/i);
     expect(browseSeoForPath("/terms").title).toMatch(/Terms/i);
     expect(browseSeoForPath("/disclaimer").title).toMatch(/Disclaimer/i);

@@ -1,4 +1,5 @@
 import { FormEvent, useState } from 'react'
+import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { useAuth } from '@/hooks/useAuth'
 import { STATES } from '@/data/states'
@@ -136,6 +137,9 @@ export default function AccountPage({ onFooterLink }: AccountPageProps) {
     <div className="static-page account-page">
       <h1>{t('account.title', { defaultValue: 'Account' })}</h1>
       <p className="account-page__lead">{user.email}</p>
+      <p>
+        <Link to="/account/bookmarks">{t('hubs.bookmarks', { defaultValue: 'Saved jobs' })}</Link>
+      </p>
 
       <form className="account-form" onSubmit={onSaveProfile}>
         <label className="account-form__label" htmlFor="account-display-name">

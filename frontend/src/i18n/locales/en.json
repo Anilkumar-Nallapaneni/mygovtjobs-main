@@ -608,7 +608,28 @@
     "terms": "Terms of Service",
     "contact": "Contact",
     "disclaimerLink": "Disclaimer",
-    "sitemap": "Sitemap"
+    "sitemap": "Sitemap",
+    "hubsTitle": "Portals"
+  },
+  "hubs": {
+    "latestResults": "Latest results",
+    "latestResultsDesc": "Result notices grouped from official recruitment updates.",
+    "admitCards": "Admit cards",
+    "admitCardsDesc": "Hall tickets and call letters from recruiting boards.",
+    "answerKeys": "Answer keys",
+    "answerKeysDesc": "Official answer keys released after the exam.",
+    "upcomingExams": "Upcoming exams",
+    "upcomingExamsDesc": "Exam dates and application deadlines on the calendar.",
+    "admission": "Admission",
+    "admissionDesc": "Official entrance-exam and admission portals.",
+    "scholarships": "Scholarships",
+    "scholarshipsDesc": "Central and state scholarship and fellowship portals.",
+    "yojana": "Yojana",
+    "yojanaDesc": "Government welfare schemes and yojana portals.",
+    "designations": "Designations",
+    "designationsDesc": "Browse live jobs by role — clerk, officer, teacher, and more.",
+    "bookmarks": "Saved jobs",
+    "bookmarksDesc": "Jobs you starred. Sign in to sync them across devices."
   },
   "headlines": {
     "loading": "Loading official headlines…",
