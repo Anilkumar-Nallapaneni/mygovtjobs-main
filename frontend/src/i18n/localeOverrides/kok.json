@@ -1,11 +1,13 @@
 {
   "brand": {
+    "name": "लायव्ह सरकारी नोकऱ्यो",
     "primary": "म्हजें",
     "accent": "सरकारी नोकऱ्यो",
     "tagline": "अधिकृत सरकारी नोकरी सावधानताय",
+    "subtitle": "livegovtjobs.com ह्या संकेतथळार",
     "domain": "livegovtjobs.com",
-    "logoAlt": "म्हजें सरकारी नोकऱ्यो — अधिकृत सरकारी नोकरी सावधानताय",
-    "homeAria": "म्हजें सरकारी नोकऱ्यो — घर"
+    "logoAlt": "livegovtjobs.com — अधिकृत सरकारी नोकरी सावधानताय",
+    "homeAria": "livegovtjobs.com — घर"
   },
   "browse": {
     "breadcrumbs": "ब्रेडक्रंब हें नांव"
@@ -70,11 +72,14 @@
     "magicLinkSent": "सायन-इन दुव्या खातीर तुमचो ईमेल तपासात.",
     "signInFailed": "सायन-इन अपयशी थारलें",
     "signInLead": "सावधानताय प्राधान्यां आनी आवडीच्यो स्थिती जतनाय घेवपाक पर्यायी खातें. नोकऱ्यो ब्राउझ करपाक सायन-इन करपाची गरज ना.",
+    "emailRequired": "उपकार करून वैध ईमेल पत्तो घालात.",
     "saveProfile": "प्रोफायल जतनाय घेयात",
     "profileSaved": "प्रोफायल जतनाय घेतल्या.",
     "saveFailed": "प्रोफायल जतनाय घेवंक शकलो ना",
     "favoriteStates": "आवडीचीं राज्यां",
-    "notConfigured": "Sign-in is temporarily unavailable. You can still browse jobs without an account."
+    "notConfigured": "सायन-इन करपाक Supabase संरचना जाय.",
+    "premiumError": "चेकआउट सुरू करूंक शकलो ना. उपकार करून फुडें परतून यत्न करात.",
+    "alertsUnsubscribeFailed": "सदस्यताय रद्द करूंक शकली ना. उपकार करून परतून यत्न करात."
   },
   "ticker": {
     "live": "जिवें",
@@ -88,6 +93,7 @@
   },
   "home": {
     "tagline": "सरकारी अधिसुचोवणी केन्नाच चुकोवची न्हय",
+    "heroHeading": "सत्यापीत केल्ली अधिकृत सरकारी नोकरी अधिसुचोवण्यो",
     "statsStrip": {
       "primary": "{{liveNotices}} लायव्ह अधिसुचोवण्यो · {{vacancies}} अधिसुचोवणी केल्लीं पोस्टां",
       "secondary": "{{sources}} अधिकृत स्रोत · अद्ययावत केला {{syncLabel}}",
@@ -371,20 +377,38 @@
   "jobsStatus": {
     "loading": "नोकरी यादी लोड करप...",
     "refreshing": "लायव्ह लिस्टिंग अद्ययावत करप...",
-    "liveMode": "Live listings",
-    "demoMode": "Showing available listings",
+    "liveMode": "लायव्ह डेटाबेस जोडला",
+    "demoMode": "डेमो कॅटलॉग — रियल-टायम कामां खातीर Supabase + बॅकएंड जोडचो",
     "listings": "यादींचो आस्पाव जाता",
     "curated": "क्युरेट केल्लें",
     "liveFromDb": "अधिकृत स्त्रोतां वयल्यान लायव्ह करतात",
     "live": "जिवें",
-    "setupHint": "Listings update automatically from official sources",
-    "degraded": "Some listings may be delayed. Showing the latest available data.",
+    "setupHint": "फुडें: सुपाबेस सेट करचो → बॅकएंड इंजेस्ट चालीक लावचो → VITE_SUPABASE_URL जोडचो",
+    "degraded": "बॅकएंड डेटाबेस तात्पुरतो उपलब्ध ना — कॅश केल्लीं वा डेमो यादी दाखयता",
     "dailySchedule": "अधिकृत यादी दर दिसा सकाळीं 8:00 वरांचेर ताजी जातात",
     "dailyUpdated": "दर दिसा अद्ययावत केल्लें · निमाणें समक्रमण {{time}} IST",
     "dailyUpdatedRelative": "अद्ययावत केलां {{time}}",
     "dailyNext": "फुडलें अद्ययावत {{time}} IST · आयज फुडले अद्ययावत नात",
     "loadError": "नोकरी यादी लोड करूंक शकली ना. उपलब्ध आसल्यार कॅश केल्लो डेटा दाखोवप.",
     "retry": "परतून यत्न करात"
+  },
+  "jobReport": {
+    "button": "चुकीचें काम कळयात",
+    "title": "अहवाल: {__पीएच_0__}",
+    "reasonLabel": "कारण",
+    "reasonExpired": "नोकरी सोंपली",
+    "reasonWrongDeadline": "चुकीची मुजत",
+    "reasonBrokenLink": "मोडली दुवो",
+    "reasonWrongVacancy": "रिक्त सुवातांची संख्या चुकीची",
+    "reasonDuplicate": "डुप्लीकेट लिस्टिंग",
+    "reasonNotRecruitment": "भरती पद न्हय",
+    "reasonSuspiciousSource": "दुबावीत स्रोत",
+    "detailsLabel": "तपशील (पर्यायी) 1.1.",
+    "emailLabel": "ईमेल (पर्यायी) 1.1.",
+    "submit": "अहवाल सादर करचो",
+    "sending": "धाडून...",
+    "success": "धन्यवाद — आमी हे वळेरेचो नियाळ घेतले.",
+    "error": "अहवाल सादर करूंक शकलो ना. उपकार करून फुडें परतून यत्न करात."
   },
   "subscribeBanner": {
     "title": "दैनिक सरकारी नोकऱ्यो अलर्ट",
@@ -418,11 +442,12 @@
     "sending": "धाडून...",
     "success": "धन्यवाद — आमी 2 वेवसायीक दिसां भितर जाप दितले.",
     "error": "धाडूंक मेळ्ळें ना. contact@livegovtjobs.com ह्या ईमेलाचेर आमकां ईमेल करात",
+    "offlineError": "सर्वराक पावूंक शकलो ना. तुमचें जोडणी तपासात आनी परतून यत्न करात.",
     "fallback": "वा आमकां थेट ईमेल करात"
   },
   "sitemap": {
     "title": "साइटमॅप",
-    "description": "Live Govt Jobs चेर सगळे मुखेल पान, वर्ग, आनी राज्यां ब्राउझ करात.",
+    "description": "My Govt Jobs चेर सगळे मुखेल पान, वर्ग, आनी राज्यां ब्राउझ करात.",
     "mainPages": "मुखेल पानां",
     "resultsTopics": "परिक्षेचे निकाल & प्रवेश कार्डां",
     "states": "राज्यां आनी केंद्र शासित प्रदेश",
@@ -472,7 +497,7 @@
       "faqTitle": "FAQ",
       "faqDesc": "सरकारी नोकरी अर्जांचेर सामान्य प्रस्नांची जाप.",
       "contactDesc": "प्रस्न, प्रतिसाद, वा भागीदारी — आमी 2 वेवसायीक दिसां भितर जाप दितात.",
-      "sitemapDesc": "Live Govt Jobs — वर्ग, राज्यां, आनी परिक्षेच्या विशयांचेर दरेक पान."
+      "sitemapDesc": "My Govt Jobs — वर्ग, राज्यां, आनी परिक्षेच्या विशयांचेर दरेक पान."
     }
   },
   "states": {
@@ -555,6 +580,10 @@
   "errorBoundary": {
     "title": "कितें तरी चुकलें",
     "message": "उपकार करून पान ताजें करचें. समस्या चालू उरल्यार, फुडें परतून यत्न करात."
+  },
+  "notFound": {
+    "title": "पान मेळूंक ना",
+    "description": "ती दुवो ह्या साइटचेर आशिल्ल्या एका पानाक जुळना. घर, नवीनतम अधिसुचोवण्यो वा एक्सप्लोर करपाचो यत्न करात."
   },
   "footer": {
     "blurb": "भारताचो विस्वासपात्र सरकारी नोकरी अलर्ट प्लॅटफॉर्म. अधिकृत स्रोतां कडल्यान लायव्ह अधिसुचोवण्यो — यूपीएससी, एसएससी, रेल्वे, बँकिंग & सगळ्या राज्यांनी.",

@@ -1,11 +1,13 @@
 {
   "brand": {
+    "name": "थेट सरकारी नोकऱ्या",
     "primary": "माझे",
     "accent": "सरकारी नोकऱ्या",
     "tagline": "अधिकृत सरकारी नोकरी सूचना",
+    "subtitle": "livegovtjobs.com",
     "domain": "livegovtjobs.com",
-    "logoAlt": "माझे सरकारी नोकऱ्या — अधिकृत सरकारी नोकऱ्या सूचना",
-    "homeAria": "माझे सरकारी नोकऱ्या — घर"
+    "logoAlt": "livegovtjobs.com — अधिकृत सरकारी नोकऱ्या सूचना",
+    "homeAria": "livegovtjobs.com — घर"
   },
   "browse": {
     "breadcrumbs": "ब्रेडक्रंब"
@@ -70,11 +72,14 @@
     "magicLinkSent": "साइन-इन लिंकसाठी तुमचा ईमेल तपासा.",
     "signInFailed": "साइन इन अयशस्वी",
     "signInLead": "अलर्ट प्राधान्ये आणि आवडते राज्ये जतन करण्यासाठी पर्यायी खाते. ब्राउझिंग जॉबसाठी साइन-इन आवश्यक नाही.",
+    "emailRequired": "कृपया वैध ईमेल पत्ता प्रविष्ट करा.",
     "saveProfile": "प्रोफाइल जतन करा",
     "profileSaved": "प्रोफाइल सेव्ह केले.",
     "saveFailed": "प्रोफाइल सेव्ह करू शकलो नाही",
     "favoriteStates": "आवडती राज्ये",
-    "notConfigured": "Sign-in is temporarily unavailable. You can still browse jobs without an account."
+    "notConfigured": "साइन इन करण्यासाठी सुपाबेस कॉन्फिगरेशन आवश्यक आहे.",
+    "premiumError": "चेकआउट सुरू करू शकलो नाही. कृपया नंतर पुन्हा प्रयत्न करा.",
+    "alertsUnsubscribeFailed": "सदस्यत्व रद्द करू शकलो नाही. कृपया पुन्हा प्रयत्न करा."
   },
   "ticker": {
     "live": "लाइव्ह",
@@ -88,6 +93,7 @@
   },
   "home": {
     "tagline": "सरकारी अधिसूचना कधीही चुकवू नका",
+    "heroHeading": "सत्यापित अधिकृत सरकारी नोकरी सूचना",
     "statsStrip": {
       "primary": "{{liveNotices}} थेट सूचना · {{vacancies}} सूचित पोस्ट",
       "secondary": "{{sources}} अधिकृत स्रोत · अद्यतनित केले {{syncLabel}}",
@@ -371,20 +377,38 @@
   "jobsStatus": {
     "loading": "नोकरीच्या सूची लोड करत आहे...",
     "refreshing": "थेट सूची अपडेट करत आहे...",
-    "liveMode": "Live listings",
-    "demoMode": "Showing available listings",
+    "liveMode": "थेट डेटाबेस कनेक्ट केला",
+    "demoMode": "डेमो कॅटलॉग — रिअल-टाइम नोकऱ्यांसाठी सुपाबेस + बॅकएंड कनेक्ट करा",
     "listings": "सूची",
     "curated": "क्युरेट केलेले",
     "liveFromDb": "अधिकृत स्त्रोतांकडून थेट",
     "live": "जगणे",
-    "setupHint": "Listings update automatically from official sources",
-    "degraded": "Some listings may be delayed. Showing the latest available data.",
+    "setupHint": "पुढे: सुपाबेस सेट करा → बॅकएंड इंजेस्ट रन करा → VITE_SUPABASE_URL जोडा",
+    "degraded": "बॅकएंड डेटाबेस तात्पुरता अनुपलब्ध — कॅशे किंवा डेमो सूची दर्शवित आहे",
     "dailySchedule": "अधिकृत सूची दररोज 8:00 AM IST वाजता रिफ्रेश होतात",
     "dailyUpdated": "दररोज अद्यतनित केले · अंतिम समक्रमण {{time}} IST",
     "dailyUpdatedRelative": "अपडेट केले {{time}}",
     "dailyNext": "पुढील अपडेट {{time}} IST · आज आणखी अपडेट नाहीत",
     "loadError": "नोकरीच्या सूची लोड करू शकलो नाही. उपलब्ध असल्यास कॅशे केलेला डेटा दाखवत आहे.",
     "retry": "पुन्हा प्रयत्न करा"
+  },
+  "jobReport": {
+    "button": "चुकीच्या कामाची तक्रार करा",
+    "title": "अहवाल: {{job}}",
+    "reasonLabel": "कारण",
+    "reasonExpired": "कालबाह्य झालेली नोकरी",
+    "reasonWrongDeadline": "चुकीची मुदत",
+    "reasonBrokenLink": "तुटलेली लिंक",
+    "reasonWrongVacancy": "चुकीची रिक्त जागा मोजणी",
+    "reasonDuplicate": "डुप्लिकेट सूची",
+    "reasonNotRecruitment": "भरती पद नाही",
+    "reasonSuspiciousSource": "संशयास्पद स्रोत",
+    "detailsLabel": "तपशील (पर्यायी)",
+    "emailLabel": "ईमेल (पर्यायी)",
+    "submit": "अहवाल सादर करा",
+    "sending": "पाठवत आहे...",
+    "success": "धन्यवाद — आम्ही या सूचीचे पुनरावलोकन करू.",
+    "error": "अहवाल सादर करता आला नाही. कृपया नंतर पुन्हा प्रयत्न करा."
   },
   "subscribeBanner": {
     "title": "दैनिक सरकारी नोकऱ्या सूचना",
@@ -418,11 +442,12 @@
     "sending": "पाठवत आहे...",
     "success": "धन्यवाद — आम्ही 2 व्यावसायिक दिवसात उत्तर देऊ.",
     "error": "पाठवू शकलो नाही. आम्हाला contact@livegovtjobs.com वर ईमेल करा",
+    "offlineError": "सर्व्हरपर्यंत पोहोचू शकलो नाही. तुमचे कनेक्शन तपासा आणि पुन्हा प्रयत्न करा.",
     "fallback": "किंवा आम्हाला थेट ईमेल करा"
   },
   "sitemap": {
     "title": "साइटमॅप",
-    "description": "Live Govt Jobs वर सर्व मुख्य पृष्ठे, श्रेणी आणि राज्ये ब्राउझ करा.",
+    "description": "My Govt Jobs वर सर्व मुख्य पृष्ठे, श्रेणी आणि राज्ये ब्राउझ करा.",
     "mainPages": "मुख्य पृष्ठे",
     "resultsTopics": "परीक्षेचे निकाल आणि प्रवेशपत्रे",
     "states": "राज्ये आणि केंद्रशासित प्रदेश",
@@ -555,6 +580,10 @@
   "errorBoundary": {
     "title": "काहीतरी चूक झाली",
     "message": "कृपया पृष्ठ रीफ्रेश करा. समस्या कायम राहिल्यास, नंतर पुन्हा प्रयत्न करा."
+  },
+  "notFound": {
+    "title": "पृष्ठ आढळले नाही",
+    "description": "ती लिंक या साइटवरील पृष्ठाशी जुळत नाही. होम वापरून पहा, नवीनतम सूचना किंवा एक्सप्लोर करा."
   },
   "footer": {
     "blurb": "भारतातील विश्वसनीय सरकारी नोकरी सूचना प्लॅटफॉर्म. अधिकृत स्त्रोतांकडून थेट सूचना - UPSC, SSC, रेल्वे, बँकिंग आणि सर्व राज्ये.",

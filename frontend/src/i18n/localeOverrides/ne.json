@@ -1,11 +1,13 @@
 {
   "brand": {
+    "name": "प्रत्यक्ष सरकारी जागिर",
     "primary": "मेरो",
     "accent": "सरकारी जागिर",
     "tagline": "आधिकारिक सरकारी जागिर अलर्टहरू",
+    "subtitle": "livegovtjobs.com",
     "domain": "livegovtjobs.com",
-    "logoAlt": "मेरो सरकारी जागिर — आधिकारिक सरकारी जागिर अलर्ट",
-    "homeAria": "मेरो सरकारी जागिर — घर"
+    "logoAlt": "livegovtjobs.com - आधिकारिक सरकारी जागिर अलर्ट",
+    "homeAria": "livegovtjobs.com - घर"
   },
   "browse": {
     "breadcrumbs": "ब्रेडक्रम्ब"
@@ -70,11 +72,14 @@
     "magicLinkSent": "साइन-इन लिङ्कको लागि आफ्नो इमेल जाँच गर्नुहोस्।",
     "signInFailed": "Sign-in failed",
     "signInLead": "Optional account to save alert preferences and favourite states. Browsing jobs does not require sign-in.",
+    "emailRequired": "कृपया मान्य इमेल ठेगाना प्रविष्ट गर्नुहोस्।",
     "saveProfile": "प्रोफाइल बचत गर्नुहोस्",
     "profileSaved": "प्रोफाइल सेभ गरियो।",
     "saveFailed": "Could not save profile",
     "favoriteStates": "मनपर्ने राज्यहरू",
-    "notConfigured": "Sign-in is temporarily unavailable. You can still browse jobs without an account."
+    "notConfigured": "Sign-in requires Supabase configuration.",
+    "premiumError": "चेकआउट सुरु गर्न सकिएन। कृपया पछि पुन: प्रयास गर्नुहोस्।",
+    "alertsUnsubscribeFailed": "सदस्यता रद्द गर्न सकिएन। कृपया पुन: प्रयास गर्नुहोस्।"
   },
   "ticker": {
     "live": "लाइभ",
@@ -88,6 +93,7 @@
   },
   "home": {
     "tagline": "सरकारी अधिसूचना कहिल्यै नछुटाउनुहोस्",
+    "heroHeading": "प्रमाणित आधिकारिक सरकारी जागिर सूचनाहरू",
     "statsStrip": {
       "primary": "{{liveNotices}} live notifications · {{vacancies}} notified posts",
       "secondary": "{{sources}} आधिकारिक स्रोतहरू · अद्यावधिक गरियो {{syncLabel}}",
@@ -371,20 +377,38 @@
   "jobsStatus": {
     "loading": "जागिरको सूची लोड गर्दै...",
     "refreshing": "लाइभ सूचीहरू अद्यावधिक गर्दै...",
-    "liveMode": "Live listings",
-    "demoMode": "Showing available listings",
+    "liveMode": "प्रत्यक्ष डाटाबेस जडान भयो",
+    "demoMode": "डेमो क्याटलग — वास्तविक-समय कार्यहरूको लागि Supabase + ब्याकइन्ड जडान गर्नुहोस्",
     "listings": "सूचीहरू",
     "curated": "क्यूरेट गरिएको",
     "liveFromDb": "आधिकारिक स्रोतहरूबाट प्रत्यक्ष",
     "live": "लाइभ",
-    "setupHint": "Listings update automatically from official sources",
-    "degraded": "Some listings may be delayed. Showing the latest available data.",
+    "setupHint": "अर्को: सुपाबेस सेट अप गर्नुहोस् → ब्याकइन्ड इन्जेस्ट रन गर्नुहोस् → VITE_SUPABASE_URL थप्नुहोस्",
+    "degraded": "ब्याकएन्ड डाटाबेस अस्थायी रूपमा अनुपलब्ध — क्यास वा डेमो सूचीहरू देखाउँदै",
     "dailySchedule": "आधिकारिक सूचीहरू दैनिक 8:00 AM IST मा ताजा हुन्छन्",
     "dailyUpdated": "दैनिक अद्यावधिक गरिएको · पछिल्लो सिंक {{time}} IST",
     "dailyUpdatedRelative": "Updated {{time}}",
     "dailyNext": "अर्को अपडेट {{time}} IST · आज कुनै थप अपडेट छैन",
     "loadError": "जागिरको सूची लोड गर्न सकिएन। उपलब्ध भएमा क्यास गरिएको डाटा देखाउँदै।",
     "retry": "पुन: प्रयास गर्नुहोस्"
+  },
+  "jobReport": {
+    "button": "गलत काम रिपोर्ट गर्नुहोस्",
+    "title": "रिपोर्ट: {{job}}",
+    "reasonLabel": "कारण",
+    "reasonExpired": "म्याद सकिएको काम",
+    "reasonWrongDeadline": "गलत समयसीमा",
+    "reasonBrokenLink": "टुटेको लिङ्क",
+    "reasonWrongVacancy": "गलत रिक्तता गणना",
+    "reasonDuplicate": "डुप्लिकेट सूची",
+    "reasonNotRecruitment": "भर्ती पद होइन",
+    "reasonSuspiciousSource": "शंकास्पद स्रोत",
+    "detailsLabel": "विवरण (वैकल्पिक)",
+    "emailLabel": "इमेल (वैकल्पिक)",
+    "submit": "प्रतिवेदन पेश गर्नुहोस्",
+    "sending": "पठाउँदै...",
+    "success": "धन्यवाद - हामी यो सूची समीक्षा गर्नेछौं।",
+    "error": "प्रतिवेदन पेश गर्न सकिएन। कृपया पछि पुन: प्रयास गर्नुहोस्।"
   },
   "subscribeBanner": {
     "title": "दैनिक सरकारी जागिर अलर्ट",
@@ -401,7 +425,7 @@
   },
   "pwa": {
     "install": "स्थापना गर्नुहोस्",
-    "bannerTitle": "Install Live Govt Jobs",
+    "bannerTitle": "Install My Govt Jobs",
     "bannerBody": "आफ्नो गृह स्क्रिनबाट छिटो पहुँच र अफलाइन ब्राउजिङ प्राप्त गर्नुहोस्।",
     "iosTitle": "गृह स्क्रिनमा थप्नुहोस्",
     "iosSteps": "मेरो सरकारी जागिरहरू स्थापना गर्न साझेदारी गर्नुहोस्, त्यसपछि \"गृह स्क्रिनमा थप्नुहोस्\" मा ट्याप गर्नुहोस्।",
@@ -418,11 +442,12 @@
     "sending": "पठाउँदै...",
     "success": "धन्यवाद — हामी २ व्यापार दिन भित्र जवाफ दिनेछौं।",
     "error": "पठाउन सकिएन। हामीलाई contact@livegovtjobs.com मा इमेल गर्नुहोस्",
+    "offlineError": "सर्भरमा पुग्न सकेन। आफ्नो जडान जाँच गर्नुहोस् र फेरि प्रयास गर्नुहोस्।",
     "fallback": "वा हामीलाई सिधै इमेल गर्नुहोस्"
   },
   "sitemap": {
     "title": "साइटम्याप",
-    "description": "Live Govt Jobs मा सबै मुख्य पृष्ठहरू, कोटीहरू र राज्यहरू ब्राउज गर्नुहोस्।",
+    "description": "My Govt Jobs मा सबै मुख्य पृष्ठहरू, कोटीहरू र राज्यहरू ब्राउज गर्नुहोस्।",
     "mainPages": "मुख्य पृष्ठहरू",
     "resultsTopics": "परीक्षा परिणाम र प्रवेश पत्र",
     "states": "राज्य र केन्द्र शासित प्रदेशहरू",
@@ -555,6 +580,10 @@
   "errorBoundary": {
     "title": "केही गडबड भयो",
     "message": "कृपया पृष्ठ रिफ्रेस गर्नुहोस्। यदि समस्या जारी रह्यो भने, पछि पुन: प्रयास गर्नुहोस्।"
+  },
+  "notFound": {
+    "title": "पृष्ठ फेला परेन",
+    "description": "त्यो लिङ्क यस साइटको पृष्ठसँग मेल खाँदैन। गृह प्रयास गर्नुहोस्, नवीनतम सूचनाहरू, वा अन्वेषण गर्नुहोस्।"
   },
   "footer": {
     "blurb": "भारतको भरपर्दो सरकारी जागिर चेतावनी प्लेटफर्म। आधिकारिक स्रोतहरूबाट प्रत्यक्ष सूचनाहरू - UPSC, SSC, रेलवे, बैंकिङ र सबै राज्यहरू।",

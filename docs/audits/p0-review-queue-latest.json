@@ -1,36 +1,36 @@
 {
-  "generated_at": "2026-09-22T15:36:36.378096+00:00",
-  "review_queue_total": 1223,
+  "generated_at": "2026-09-24T17:02:07.776732+00:00",
+  "review_queue_total": 1237,
   "review_queue_status": {
-    "pending": 1223
+    "pending": 1237
   },
   "confidence_bands": {
-    "80-84": 118,
-    "60-79": 988,
-    "90-100": 23,
+    "80-84": 119,
+    "60-79": 998,
+    "90-100": 24,
     "85-89": 67,
-    "<60": 27
+    "<60": 29
   },
   "top_validation_errors": [
     [
       "Missing or malformed deadline",
-      1093
+      1106
     ],
     [
       "Completeness score 45 below 70",
-      810
+      822
     ],
     [
       "Job has not been verified",
-      740
+      754
     ],
     [
       "Document is not classified as recruitment",
-      511
+      520
     ],
     [
       "Missing official notification PDF",
-      366
+      378
     ],
     [
       "Completeness score 52 below 70",
@@ -38,11 +38,11 @@
     ],
     [
       "Past deadline",
-      99
+      100
     ],
     [
       "Completeness score 66 below 70",
-      96
+      97
     ],
     [
       "Completeness score 59 below 70",
@@ -50,7 +50,7 @@
     ],
     [
       "Publication date is in the future",
-      57
+      59
     ],
     [
       "Publication date is implausibly old",
@@ -58,7 +58,7 @@
     ],
     [
       "Missing or invalid official source URL",
-      15
+      17
     ],
     [
       "Source domain is not approved",
@@ -70,7 +70,7 @@
     ],
     [
       "Auto-publish disabled",
-      7
+      8
     ],
     [
       "Deadline occurs before publication date",
@@ -92,23 +92,23 @@
   "top_validation_warnings": [
     [
       "Vacancy count is not specified",
-      1056
+      1071
     ],
     [
       "Qualification is not specified",
-      948
+      960
     ],
     [
       "Separate HTML notification URL present",
-      576
+      588
     ],
     [
       "Missing apply URL",
-      441
+      443
     ],
     [
       "Notification URL is invalid or unofficial",
-      25
+      27
     ],
     [
       "Link audit: source=200, apply=200",
@@ -154,7 +154,11 @@
     ],
     [
       "UPPSC — Hall tickets",
-      86
+      88
+    ],
+    [
+      "Press Information Bureau (PIB)",
+      79
     ],
     [
       "UPSC — What's New",
@@ -165,12 +169,8 @@
       75
     ],
     [
-      "Press Information Bureau (PIB)",
-      73
-    ],
-    [
       "ISRO — Careers",
-      61
+      62
     ],
     [
       "Jpsc",
@@ -185,11 +185,11 @@
       36
     ],
     [
-      "Wii",
-      28
+      "Sailcareers Com",
+      29
     ],
     [
-      "Sailcareers Com",
+      "Wii",
       28
     ],
     [
@@ -229,12 +229,12 @@
       18
     ],
     [
-      "Bharatpetroleum In",
-      17
+      "Drdo",
+      18
     ],
     [
-      "Drdo",
-      16
+      "Bharatpetroleum In",
+      17
     ],
     [
       "Uco Bank In",
@@ -254,14 +254,14 @@
     ],
     [
       "Bhabha Atomic Research Centre (BARC)",
-      10
-    ],
-    [
-      "Nsut",
-      8
+      11
     ],
     [
       "ISRO — Indian Space Research Organisation",
+      9
+    ],
+    [
+      "Nsut",
       8
     ],
     [
@@ -269,12 +269,12 @@
       8
     ]
   ],
-  "jobs_total": 3732,
+  "jobs_total": 3746,
   "job_status": {
-    "draft": 3192,
+    "draft": 3219,
     "expired": 506,
-    "live": 34
+    "live": 21
   },
-  "live_jobs": 34,
-  "draft_pending_jobs": 3192
+  "live_jobs": 21,
+  "draft_pending_jobs": 3219
 }

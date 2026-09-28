@@ -1,11 +1,13 @@
 {
   "brand": {
+    "name": "Live Govt Jobs",
     "primary": "मम",
     "accent": "Govt Jobs",
     "tagline": "आधिकारिक सरकारी नौकरी अलर्ट",
+    "subtitle": "livegovtjobs.com",
     "domain": "livegovtjobs.com",
-    "logoAlt": "मम Govt Jobs — आधिकारिक सरकारी नौकरी अलर्ट",
-    "homeAria": "मम Govt Jobs — गृहम्"
+    "logoAlt": "livegovtjobs.com — आधिकारिक सरकारी नौकरी अलर्ट",
+    "homeAria": "livegovtjobs.com — गृहम्"
   },
   "browse": {
     "breadcrumbs": "ब्रेडक्रम्ब"
@@ -70,11 +72,14 @@
     "magicLinkSent": "प्रवेशलिङ्कार्थं स्वस्य ईमेलं पश्यन्तु।",
     "signInFailed": "प्रवेशः विफलः अभवत्",
     "signInLead": "अलर्ट-प्राथमिकतानि प्रिय-स्थितयः च रक्षितुं वैकल्पिकं खातं । कार्याणि ब्राउज् कर्तुं प्रवेशस्य आवश्यकता नास्ति ।",
+    "emailRequired": "कृपया वैधं ईमेल-सङ्केतं प्रविशतु।",
     "saveProfile": "प्रोफाइल रक्षतु",
     "profileSaved": "प्रोफाइल रक्षितम्।",
     "saveFailed": "प्रोफाइल रक्षितुं न शक्तवान्",
     "favoriteStates": "प्रिय राज्यानि",
-    "notConfigured": "Sign-in is temporarily unavailable. You can still browse jobs without an account."
+    "notConfigured": "प्रवेशार्थं Supabase विन्यासस्य आवश्यकता भवति ।",
+    "premiumError": "चेकआउट् आरभ्यतुं न शक्तवान्। कृपया पश्चात् पुनः प्रयासं कुर्वन्तु।",
+    "alertsUnsubscribeFailed": "सदस्यतां त्यक्तुं न शक्तवान्। कृपया पुनः प्रयासं कुर्वन्तु।"
   },
   "ticker": {
     "live": "निवसति",
@@ -88,6 +93,7 @@
   },
   "home": {
     "tagline": "कदापि सर्वकारीयसूचना न त्यजन्तु",
+    "heroHeading": "सत्यापित आधिकारिक सरकारी नौकरी अधिसूचना",
     "statsStrip": {
       "primary": "{{liveNotices}} लाइव सूचनाएँ · {{vacancies}} अधिसूचित पोस्ट",
       "secondary": "{{sources}} आधिकारिकस्रोताः · अद्यतनं {{syncLabel}}",
@@ -371,20 +377,38 @@
   "jobsStatus": {
     "loading": "कार्यसूची लोड् भवति...",
     "refreshing": "लाइव सूचीं अद्यतनं कुर्वन्...",
-    "liveMode": "Live listings",
-    "demoMode": "Showing available listings",
+    "liveMode": "लाइव डाटाबेस सम्बद्ध",
+    "demoMode": "डेमो कैटलॉग् — वास्तविकसमयकार्यस्य कृते Supabase + backend संयोजयन्तु",
     "listings": "सूचीकरणम्",
     "curated": "curated इति",
     "liveFromDb": "आधिकारिकस्रोताभ्यां जीवन्ति",
     "live": "निवसति",
-    "setupHint": "Listings update automatically from official sources",
-    "degraded": "Some listings may be delayed. Showing the latest available data.",
+    "setupHint": "अग्रिमम्: Supabase सेट् अप → बैकएण्ड् ingest चालयन्तु → VITE_SUPABASE_URL योजयन्तु",
+    "degraded": "पृष्ठभागदत्तांशकोशः अस्थायीरूपेण अनुपलब्धः — संग्रहीताः अथवा प्रदर्शनसूचीः दर्शयति",
     "dailySchedule": "आधिकारिकसूची प्रतिदिनं प्रातः ८:०० वादने IST वादने ताजगीं प्राप्नोति",
     "dailyUpdated": "प्रतिदिनं अद्यतनं भवति · अन्तिमसमन्वयः {{time}} IST",
     "dailyUpdatedRelative": "अद्यतनम् {{time}}",
     "dailyNext": "अग्रिमः अद्यतनः {{time}} IST · अद्य अधिकं अद्यतनं नास्ति",
     "loadError": "कार्यसूचीः लोड् कर्तुं न शक्तवान्। यदि उपलब्धं भवति तर्हि संग्रहीतदत्तांशं दर्शयति।",
     "retry": "पुनः प्रयासं कुर्वन्तु"
+  },
+  "jobReport": {
+    "button": "अशुद्धं कार्यं सूचयन्तु",
+    "title": "प्रतिवेदनम् : {{job}}",
+    "reasonLabel": "कारणम्‌",
+    "reasonExpired": "कार्यकाल समाप्त",
+    "reasonWrongDeadline": "गलत समयसीमा",
+    "reasonBrokenLink": "भग्न कड़ी",
+    "reasonWrongVacancy": "अशुद्ध रिक्तस्थानगणना",
+    "reasonDuplicate": "द्वितीयकसूची",
+    "reasonNotRecruitment": "न तु भर्तीपदम्",
+    "reasonSuspiciousSource": "शङ्कितः स्रोतः",
+    "detailsLabel": "विवरणम् (वैकल्पिकम्) २.",
+    "emailLabel": "ईमेल (वैकल्पिक) २.",
+    "submit": "प्रतिवेदन प्रस्तुत करें",
+    "sending": "प्रेषयन्...",
+    "success": "धन्यवादः — वयम् एतस्य सूचीयाः समीक्षां करिष्यामः ।",
+    "error": "प्रतिवेदनं दातुं न शक्तवान्। कृपया पश्चात् पुनः प्रयासं कुर्वन्तु।"
   },
   "subscribeBanner": {
     "title": "दैनिक सरकारी नौकरी अलर्ट",
@@ -401,15 +425,15 @@
   },
   "pwa": {
     "install": "प्रतिस्था",
-    "bannerTitle": "Install Live Govt Jobs",
+    "bannerTitle": "Install My Govt Jobs",
     "bannerBody": "स्वस्य गृहपर्दे द्रुततरं प्रवेशं, अफलाइन-ब्राउजिंग् च प्राप्नुवन्तु ।",
     "iosTitle": "गृहपर्दे योजयतु",
-    "iosSteps": "Share इति ट्याप् कुर्वन्तु, ततः \"Add to Home Screen\" इति ट्याप् कृत्वा Live Govt Jobs इत्येतत् संस्थापयन्तु।",
+    "iosSteps": "Share इति ट्याप् कुर्वन्तु, ततः \"Add to Home Screen\" इति ट्याप् कृत्वा My Govt Jobs इत्येतत् संस्थापयन्तु।",
     "dismiss": "न खलु"
   },
   "contact": {
     "title": "संपर्कः",
-    "description": "Live Govt Jobs दलस्य सम्पर्कं कुर्वन्तु।",
+    "description": "My Govt Jobs दलस्य सम्पर्कं कुर्वन्तु।",
     "name": "सम्पूर्ण नाम",
     "email": "ईमेल",
     "mobile": "मोबाईल (वैकल्पिक) ९.",
@@ -418,11 +442,12 @@
     "sending": "Sending…",
     "success": "धन्यवादः — वयं २ ​​व्यावसायिकदिनानां अन्तः उत्तरं दास्यामः।",
     "error": "प्रेषयितुं न शक्तवान्। contact@livegovtjobs.com इत्यत्र अस्मान् ईमेल कुर्वन्तु",
+    "offlineError": "सर्वरं प्राप्तुं न शक्तवान्। स्वस्य संयोजनं पश्यन्तु पुनः प्रयासं कुर्वन्तु।",
     "fallback": "अथवा अस्मान् प्रत्यक्षतया ईमेल कुर्वन्तु"
   },
   "sitemap": {
     "title": "साइटमैप",
-    "description": "Live Govt Jobs इत्यत्र सर्वाणि मुख्यपृष्ठानि, श्रेणयः, राज्यानि च ब्राउज् कुर्वन्तु।",
+    "description": "My Govt Jobs इत्यत्र सर्वाणि मुख्यपृष्ठानि, श्रेणयः, राज्यानि च ब्राउज् कुर्वन्तु।",
     "mainPages": "मुख्य पृष्ठ",
     "resultsTopics": "परीक्षा परिणाम & प्रवेश कार्ड",
     "states": "राज्य एवं केंद्र शासित प्रदेश",
@@ -431,7 +456,7 @@
     "xmlLink": "XML sitemap (अन्वेषणयन्त्राणां कृते)"
   },
   "explore": {
-    "title": "Explore Live Govt Jobs",
+    "title": "Explore My Govt Jobs",
     "eyebrow": "एकस्मिन् स्थाने सर्वं",
     "lede": "राज्येन, बोर्डेन, योग्यतायाः, व्यवसायेन च कार्याणि ब्राउज् कुर्वन्तु। परीक्षाफलं, प्रवेशपत्राणि, समयसीमाः च पश्यन्तु — प्रत्येकस्य विभागस्य स्वकीयं पृष्ठं भवति ।",
     "backToExplore": "अन्वेषण",
@@ -472,7 +497,7 @@
       "faqTitle": "FAQ",
       "faqDesc": "सरकारीकार्यानुरोधविषये सामान्यप्रश्नानां उत्तराणि।",
       "contactDesc": "प्रश्नाः, प्रतिक्रियाः, साझेदारी वा — वयं २ ​​व्यावसायिकदिनानां अन्तः उत्तरं दद्मः ।",
-      "sitemapDesc": "Live Govt Jobs इत्यस्य प्रत्येकं पृष्ठं — श्रेणयः, राज्यानि, परीक्षाविषयाणि च।"
+      "sitemapDesc": "My Govt Jobs इत्यस्य प्रत्येकं पृष्ठं — श्रेणयः, राज्यानि, परीक्षाविषयाणि च।"
     }
   },
   "states": {
@@ -523,7 +548,7 @@
   },
   "faq": {
     "title": "बहुधा पृष्टाः प्रश्नाः",
-    "lede": "सर्वकारीयकार्यसचेतनानि, आवेदनपत्राणि, परिणामाः, Live Govt Jobs कथं कार्यं करोति इति विषये सामान्यप्रश्नाः।",
+    "lede": "सर्वकारीयकार्यसचेतनानि, आवेदनपत्राणि, परिणामाः, My Govt Jobs कथं कार्यं करोति इति विषये सामान्यप्रश्नाः।",
     "stillQuestions": "अद्यापि प्रश्नाः सन्ति वा ?"
   },
   "qualification": {
@@ -556,6 +581,10 @@
     "title": "किमपि भ्रष्टं जातम्",
     "message": "कृपया पृष्ठं ताजगीं कुर्वन्तु। यदि समस्या निरन्तरं भवति तर्हि पश्चात् पुनः प्रयासं कुर्वन्तु।"
   },
+  "notFound": {
+    "title": "पृष्ठं न प्राप्तम्",
+    "description": "सः लिङ्कः अस्मिन् स्थले पृष्ठे न मेलति । गृहं, नवीनतमसूचनाः, अन्वेषणं वा प्रयतस्व।"
+  },
   "footer": {
     "blurb": "भारतस्य विश्वसनीयः सर्वकारीयः नौकरी-सचेतना-मञ्चः। आधिकारिकस्रोताभ्यां लाइव सूचनाः — UPSC, SSC, Railways, Banking & all states.",
     "disclaimer": "मम Govt Jobs केवलं आधिकारिकसरकारीपोर्टलतः (.gov.in / .gov) कार्याणि सूचीबद्धं करोति। आवेदनात् पूर्वं नियुक्तिसंस्थायाः जालपुटे सर्वदा सत्यापनम् कुर्वन्तु।",
@@ -563,7 +592,7 @@
     "categories": "श्रेणियाँ",
     "topStates": "शीर्ष राज्य",
     "company": "गोष्ठी",
-    "copyright": "© {{year}} Live Govt Jobs · भारते ❤️ सहित निर्मित",
+    "copyright": "© {{year}} My Govt Jobs · भारते ❤️ सहित निर्मित",
     "latestJobs": "नवीनतम नौकरियां",
     "results": "परिणामाः",
     "admitCards": "प्रवेशपत्रम्",

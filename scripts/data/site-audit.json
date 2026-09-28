@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-06T12:02:01.268Z",
+  "generatedAt": "2026-09-23T07:30:50.791Z",
   "results": [
     {
       "id": "employment-news",
@@ -10,7 +10,7 @@
         "ok": true,
         "stale": false,
         "finalUrl": "https://employmentnews.gov.in/",
-        "bytes": 2917,
+        "bytes": 4522,
         "hasRss": false
       },
       "home": null,
@@ -27,7 +27,7 @@
         "ok": true,
         "stale": false,
         "finalUrl": "https://www.pib.gov.in/index.aspx?reg=48&lang=2",
-        "bytes": 6083,
+        "bytes": 6009,
         "hasRss": false
       },
       "home": {
@@ -35,7 +35,7 @@
         "ok": true,
         "stale": false,
         "finalUrl": "https://www.pib.gov.in/RssMain.aspx?ModId=6&Lang=2&Regid=3&reg=48",
-        "bytes": 4272,
+        "bytes": 4015,
         "hasRss": false
       },
       "stale": false,
@@ -51,7 +51,7 @@
         "ok": true,
         "stale": false,
         "finalUrl": "https://www.upsc.gov.in/",
-        "bytes": 90411,
+        "bytes": 99644,
         "hasRss": false
       },
       "home": {
@@ -59,7 +59,7 @@
         "ok": true,
         "stale": false,
         "finalUrl": "https://www.upsc.gov.in/",
-        "bytes": 90411,
+        "bytes": 99644,
         "hasRss": false
       },
       "stale": false,
@@ -119,7 +119,7 @@
         "ok": true,
         "stale": false,
         "finalUrl": "https://www.rbi.org.in/Scripts/Error.aspx?aspxerrorpath=/Scripts/Opportunities.aspx",
-        "bytes": 48891,
+        "bytes": 54928,
         "hasRss": false
       },
       "home": {
@@ -127,7 +127,7 @@
         "ok": true,
         "stale": false,
         "finalUrl": "https://www.rbi.org.in/",
-        "bytes": 172666,
+        "bytes": 150826,
         "hasRss": false
       },
       "stale": false,
@@ -143,7 +143,7 @@
         "ok": true,
         "stale": false,
         "finalUrl": "https://www.sebi.gov.in/sebiweb/home/HomeAction.do?doListingAll=yes&search=&category=Notifications",
-        "bytes": 46416,
+        "bytes": 47583,
         "hasRss": false
       },
       "home": {
@@ -151,7 +151,7 @@
         "ok": true,
         "stale": false,
         "finalUrl": "https://www.sebi.gov.in/",
-        "bytes": 57094,
+        "bytes": 58314,
         "hasRss": false
       },
       "stale": false,
@@ -167,7 +167,7 @@
         "ok": true,
         "stale": false,
         "finalUrl": "https://licindia.in/careers",
-        "bytes": 175683,
+        "bytes": 208698,
         "hasRss": false
       },
       "home": {
@@ -175,7 +175,7 @@
         "ok": true,
         "stale": false,
         "finalUrl": "https://licindia.in/",
-        "bytes": 250584,
+        "bytes": 287257,
         "hasRss": false
       },
       "stale": false,
@@ -187,10 +187,10 @@
       "name": "Employees' Provident Fund Organisation",
       "latestUrl": "https://www.epfindia.gov.in/site_en/Recruitment.php",
       "latest": {
-        "status": 200,
-        "ok": true,
-        "stale": false,
-        "finalUrl": "https://www.epfindia.gov.in/site_en/Recruitment.php",
+        "status": 404,
+        "ok": false,
+        "stale": true,
+        "finalUrl": "https://www.epfo.gov.in/site_en/Recruitment.php",
         "bytes": 0,
         "hasRss": false
       },
@@ -198,11 +198,11 @@
         "status": 200,
         "ok": true,
         "stale": false,
-        "finalUrl": "https://www.epfindia.gov.in/site_hi/index.php",
-        "bytes": 291840,
-        "hasRss": false
+        "finalUrl": "https://www.epfo.gov.in/",
+        "bytes": 282618,
+        "hasRss": true
       },
-      "stale": false,
+      "stale": true,
       "networkFail": false,
       "homeFallbackOk": true
     },
@@ -211,31 +211,35 @@
       "name": "Employees' State Insurance Corporation",
       "latestUrl": "https://www.esic.gov.in/recruitments",
       "latest": {
-        "status": 0,
-        "ok": false,
+        "status": 200,
+        "ok": true,
         "stale": false,
-        "error": "fetch failed"
+        "finalUrl": "https://esic.gov.in/recruitments",
+        "bytes": 85757,
+        "hasRss": false
       },
       "home": {
-        "status": 0,
-        "ok": false,
+        "status": 200,
+        "ok": true,
         "stale": false,
-        "error": "fetch failed"
+        "finalUrl": "https://esic.gov.in/",
+        "bytes": 83497,
+        "hasRss": false
       },
       "stale": false,
-      "networkFail": true,
-      "homeFallbackOk": false
+      "networkFail": false,
+      "homeFallbackOk": true
     },
     {
       "id": "niti",
       "name": "NITI Aayog",
       "latestUrl": "https://www.niti.gov.in/whats-new",
       "latest": {
-        "status": 200,
-        "ok": true,
-        "stale": false,
+        "status": 404,
+        "ok": false,
+        "stale": true,
         "finalUrl": "https://www.niti.gov.in/whats-new",
-        "bytes": 96420,
+        "bytes": 0,
         "hasRss": false
       },
       "home": {
@@ -243,10 +247,10 @@
         "ok": true,
         "stale": false,
         "finalUrl": "https://www.niti.gov.in/",
-        "bytes": 169809,
+        "bytes": 119824,
         "hasRss": false
       },
-      "stale": false,
+      "stale": true,
       "networkFail": false,
       "homeFallbackOk": true
     },
@@ -259,7 +263,7 @@
         "ok": true,
         "stale": false,
         "finalUrl": "https://apeda.gov.in/recruitment-appointment",
-        "bytes": 133180,
+        "bytes": 98091,
         "hasRss": false
       },
       "home": {
@@ -267,7 +271,7 @@
         "ok": true,
         "stale": false,
         "finalUrl": "https://apeda.gov.in/",
-        "bytes": 169098,
+        "bytes": 162043,
         "hasRss": false
       },
       "stale": false,
@@ -320,7 +324,7 @@
         "ok": true,
         "stale": false,
         "finalUrl": "https://www.wii.gov.in/recruitments",
-        "bytes": 229645,
+        "bytes": 244437,
         "hasRss": false
       },
       "home": {
@@ -328,7 +332,7 @@
         "ok": true,
         "stale": false,
         "finalUrl": "https://www.wii.gov.in/",
-        "bytes": 277249,
+        "bytes": 292196,
         "hasRss": false
       },
       "stale": false,
@@ -344,7 +348,7 @@
         "ok": true,
         "stale": false,
         "finalUrl": "https://bisag-n.gov.in/",
-        "bytes": 93436,
+        "bytes": 0,
         "hasRss": false
       },
       "home": null,
@@ -361,7 +365,7 @@
         "ok": true,
         "stale": false,
         "finalUrl": "https://www.isro.gov.in/Careers.html",
-        "bytes": 32832,
+        "bytes": 40941,
         "hasRss": false
       },
       "home": {
@@ -369,7 +373,7 @@
         "ok": true,
         "stale": false,
         "finalUrl": "https://www.isro.gov.in/",
-        "bytes": 304257,
+        "bytes": 346721,
         "hasRss": false
       },
       "stale": false,
@@ -385,7 +389,7 @@
         "ok": true,
         "stale": false,
         "finalUrl": "https://xn--m1b0a2bb8esed.xn--11b7cb3a6a.xn--h2brj9c/drdo/hi/",
-        "bytes": 403374,
+        "bytes": 406946,
         "hasRss": false
       },
       "home": null,
@@ -402,7 +406,7 @@
         "ok": true,
         "stale": false,
         "finalUrl": "https://www.barc.gov.in/careers/",
-        "bytes": 42459,
+        "bytes": 42711,
         "hasRss": false
       },
       "home": {
@@ -410,7 +414,7 @@
         "ok": true,
         "stale": false,
         "finalUrl": "https://www.barc.gov.in/",
-        "bytes": 51670,
+        "bytes": 50768,
         "hasRss": false
       },
       "stale": false,
@@ -434,7 +438,7 @@
         "ok": true,
         "stale": false,
         "finalUrl": "https://www.npcil.nic.in/Content/Hindi/index.aspx",
-        "bytes": 111505,
+        "bytes": 111147,
         "hasRss": false
       },
       "stale": false,
@@ -442,51 +446,542 @@
       "homeFallbackOk": true
     },
     {
-      "id": "rrb-cdg",
-      "name": "Railway Recruitment Board (RRB) — Chandigarh",
-      "latestUrl": "https://www.rrbcdg.gov.in/",
-      "latest": {
-        "status": 0,
-        "ok": false,
-        "stale": false,
-        "error": "fetch failed"
-      },
-      "home": null,
-      "stale": false,
-      "networkFail": true,
-      "homeFallbackOk": null
-    },
-    {
-      "id": "rrb-ald",
-      "name": "Railway Recruitment Board (RRB) — Prayagraj",
-      "latestUrl": "https://www.rrbald.gov.in/",
-      "latest": {
-        "status": 0,
-        "ok": false,
-        "stale": false,
-        "error": "fetch failed"
-      },
-      "home": null,
-      "stale": false,
-      "networkFail": true,
-      "homeFallbackOk": null
-    },
-    {
-      "id": "rrb-mumbai",
-      "name": "Railway Recruitment Board (RRB) — Mumbai",
-      "latestUrl": "https://rrbmumbai.gov.in/",
+      "id": "rrb",
+      "name": "Railway Recruitment Board — unified portal",
+      "latestUrl": "https://rrb.indianrailways.gov.in/",
       "latest": {
         "status": 200,
         "ok": true,
         "stale": false,
-        "finalUrl": "https://rrbmumbai.gov.in/",
-        "bytes": 22406,
+        "finalUrl": "https://rrb.indianrailways.gov.in/",
+        "bytes": 65138,
         "hasRss": false
       },
       "home": null,
       "stale": false,
       "networkFail": false,
       "homeFallbackOk": null
+    },
+    {
+      "id": "rrb-apply",
+      "name": "RRB — Apply online",
+      "latestUrl": "https://www.rrbapply.gov.in/",
+      "latest": {
+        "status": 200,
+        "ok": true,
+        "stale": false,
+        "finalUrl": "https://www.rrbapply.gov.in/",
+        "bytes": 37728,
+        "hasRss": false
+      },
+      "home": null,
+      "stale": false,
+      "networkFail": false,
+      "homeFallbackOk": null
+    },
+    {
+      "id": "rrb-cdg",
+      "name": "Railway Recruitment Board (RRB) — Chandigarh",
+      "latestUrl": "https://rrb.indianrailways.gov.in/chandigarh",
+      "latest": {
+        "status": 200,
+        "ok": true,
+        "stale": false,
+        "finalUrl": "https://rrb.indianrailways.gov.in/chandigarh",
+        "bytes": 142931,
+        "hasRss": false
+      },
+      "home": {
+        "status": 200,
+        "ok": true,
+        "stale": false,
+        "finalUrl": "https://rrb.indianrailways.gov.in/",
+        "bytes": 65138,
+        "hasRss": false
+      },
+      "stale": false,
+      "networkFail": false,
+      "homeFallbackOk": true
+    },
+    {
+      "id": "rrb-ald",
+      "name": "Railway Recruitment Board (RRB) — Prayagraj",
+      "latestUrl": "https://rrb.indianrailways.gov.in/prayagraj",
+      "latest": {
+        "status": 200,
+        "ok": true,
+        "stale": false,
+        "finalUrl": "https://rrb.indianrailways.gov.in/prayagraj",
+        "bytes": 147883,
+        "hasRss": false
+      },
+      "home": {
+        "status": 200,
+        "ok": true,
+        "stale": false,
+        "finalUrl": "https://rrb.indianrailways.gov.in/",
+        "bytes": 65138,
+        "hasRss": false
+      },
+      "stale": false,
+      "networkFail": false,
+      "homeFallbackOk": true
+    },
+    {
+      "id": "rrb-mumbai",
+      "name": "Railway Recruitment Board (RRB) — Mumbai",
+      "latestUrl": "https://rrb.indianrailways.gov.in/mumbai",
+      "latest": {
+        "status": 200,
+        "ok": true,
+        "stale": false,
+        "finalUrl": "https://rrb.indianrailways.gov.in/mumbai",
+        "bytes": 144544,
+        "hasRss": false
+      },
+      "home": {
+        "status": 200,
+        "ok": true,
+        "stale": false,
+        "finalUrl": "https://rrb.indianrailways.gov.in/",
+        "bytes": 65138,
+        "hasRss": false
+      },
+      "stale": false,
+      "networkFail": false,
+      "homeFallbackOk": true
+    },
+    {
+      "id": "rrb-ajmer",
+      "name": "Railway Recruitment Board (RRB) — Ajmer",
+      "latestUrl": "https://rrb.indianrailways.gov.in/ajmer",
+      "latest": {
+        "status": 200,
+        "ok": true,
+        "stale": false,
+        "finalUrl": "https://rrb.indianrailways.gov.in/ajmer",
+        "bytes": 140741,
+        "hasRss": false
+      },
+      "home": {
+        "status": 200,
+        "ok": true,
+        "stale": false,
+        "finalUrl": "https://rrb.indianrailways.gov.in/",
+        "bytes": 65138,
+        "hasRss": false
+      },
+      "stale": false,
+      "networkFail": false,
+      "homeFallbackOk": true
+    },
+    {
+      "id": "rrb-bhopal",
+      "name": "Railway Recruitment Board (RRB) — Bhopal",
+      "latestUrl": "https://rrb.indianrailways.gov.in/bhopal",
+      "latest": {
+        "status": 200,
+        "ok": true,
+        "stale": false,
+        "finalUrl": "https://rrb.indianrailways.gov.in/bhopal",
+        "bytes": 141718,
+        "hasRss": false
+      },
+      "home": {
+        "status": 200,
+        "ok": true,
+        "stale": false,
+        "finalUrl": "https://rrb.indianrailways.gov.in/",
+        "bytes": 65138,
+        "hasRss": false
+      },
+      "stale": false,
+      "networkFail": false,
+      "homeFallbackOk": true
+    },
+    {
+      "id": "rrb-bbs",
+      "name": "Railway Recruitment Board (RRB) — Bhubaneswar",
+      "latestUrl": "https://rrb.indianrailways.gov.in/bhubaneswar",
+      "latest": {
+        "status": 200,
+        "ok": true,
+        "stale": false,
+        "finalUrl": "https://rrb.indianrailways.gov.in/bhubaneswar",
+        "bytes": 146947,
+        "hasRss": false
+      },
+      "home": {
+        "status": 200,
+        "ok": true,
+        "stale": false,
+        "finalUrl": "https://rrb.indianrailways.gov.in/",
+        "bytes": 65138,
+        "hasRss": false
+      },
+      "stale": false,
+      "networkFail": false,
+      "homeFallbackOk": true
+    },
+    {
+      "id": "rrb-bilaspur",
+      "name": "Railway Recruitment Board (RRB) — Bilaspur",
+      "latestUrl": "https://rrb.indianrailways.gov.in/bilaspur",
+      "latest": {
+        "status": 200,
+        "ok": true,
+        "stale": false,
+        "finalUrl": "https://rrb.indianrailways.gov.in/bilaspur",
+        "bytes": 142803,
+        "hasRss": false
+      },
+      "home": {
+        "status": 200,
+        "ok": true,
+        "stale": false,
+        "finalUrl": "https://rrb.indianrailways.gov.in/",
+        "bytes": 65138,
+        "hasRss": false
+      },
+      "stale": false,
+      "networkFail": false,
+      "homeFallbackOk": true
+    },
+    {
+      "id": "rrb-gorakhpur",
+      "name": "Railway Recruitment Board (RRB) — Gorakhpur",
+      "latestUrl": "https://rrb.indianrailways.gov.in/gorakhpur",
+      "latest": {
+        "status": 200,
+        "ok": true,
+        "stale": false,
+        "finalUrl": "https://rrb.indianrailways.gov.in/gorakhpur",
+        "bytes": 142086,
+        "hasRss": false
+      },
+      "home": {
+        "status": 200,
+        "ok": true,
+        "stale": false,
+        "finalUrl": "https://rrb.indianrailways.gov.in/",
+        "bytes": 65138,
+        "hasRss": false
+      },
+      "stale": false,
+      "networkFail": false,
+      "homeFallbackOk": true
+    },
+    {
+      "id": "rrb-guwahati",
+      "name": "Railway Recruitment Board (RRB) — Guwahati",
+      "latestUrl": "https://rrb.indianrailways.gov.in/guwahati",
+      "latest": {
+        "status": 200,
+        "ok": true,
+        "stale": false,
+        "finalUrl": "https://rrb.indianrailways.gov.in/guwahati",
+        "bytes": 147459,
+        "hasRss": false
+      },
+      "home": {
+        "status": 200,
+        "ok": true,
+        "stale": false,
+        "finalUrl": "https://rrb.indianrailways.gov.in/",
+        "bytes": 65138,
+        "hasRss": false
+      },
+      "stale": false,
+      "networkFail": false,
+      "homeFallbackOk": true
+    },
+    {
+      "id": "rrb-kolkata",
+      "name": "Railway Recruitment Board (RRB) — Kolkata",
+      "latestUrl": "https://rrb.indianrailways.gov.in/kolkata",
+      "latest": {
+        "status": 200,
+        "ok": true,
+        "stale": false,
+        "finalUrl": "https://rrb.indianrailways.gov.in/kolkata",
+        "bytes": 142502,
+        "hasRss": false
+      },
+      "home": {
+        "status": 200,
+        "ok": true,
+        "stale": false,
+        "finalUrl": "https://rrb.indianrailways.gov.in/",
+        "bytes": 65138,
+        "hasRss": false
+      },
+      "stale": false,
+      "networkFail": false,
+      "homeFallbackOk": true
+    },
+    {
+      "id": "rrb-malda",
+      "name": "Railway Recruitment Board (RRB) — Malda",
+      "latestUrl": "https://rrb.indianrailways.gov.in/malda",
+      "latest": {
+        "status": 200,
+        "ok": true,
+        "stale": false,
+        "finalUrl": "https://rrb.indianrailways.gov.in/malda",
+        "bytes": 138874,
+        "hasRss": false
+      },
+      "home": {
+        "status": 200,
+        "ok": true,
+        "stale": false,
+        "finalUrl": "https://rrb.indianrailways.gov.in/",
+        "bytes": 65138,
+        "hasRss": false
+      },
+      "stale": false,
+      "networkFail": false,
+      "homeFallbackOk": true
+    },
+    {
+      "id": "rrb-patna",
+      "name": "Railway Recruitment Board (RRB) — Patna",
+      "latestUrl": "https://rrb.indianrailways.gov.in/patna",
+      "latest": {
+        "status": 200,
+        "ok": true,
+        "stale": false,
+        "finalUrl": "https://rrb.indianrailways.gov.in/patna",
+        "bytes": 142513,
+        "hasRss": false
+      },
+      "home": {
+        "status": 200,
+        "ok": true,
+        "stale": false,
+        "finalUrl": "https://rrb.indianrailways.gov.in/",
+        "bytes": 65138,
+        "hasRss": false
+      },
+      "stale": false,
+      "networkFail": false,
+      "homeFallbackOk": true
+    },
+    {
+      "id": "rrb-ranchi",
+      "name": "Railway Recruitment Board (RRB) — Ranchi",
+      "latestUrl": "https://rrb.indianrailways.gov.in/ranchi",
+      "latest": {
+        "status": 200,
+        "ok": true,
+        "stale": false,
+        "finalUrl": "https://rrb.indianrailways.gov.in/ranchi",
+        "bytes": 142557,
+        "hasRss": false
+      },
+      "home": {
+        "status": 200,
+        "ok": true,
+        "stale": false,
+        "finalUrl": "https://rrb.indianrailways.gov.in/",
+        "bytes": 65138,
+        "hasRss": false
+      },
+      "stale": false,
+      "networkFail": false,
+      "homeFallbackOk": true
+    },
+    {
+      "id": "rrb-sec",
+      "name": "Railway Recruitment Board (RRB) — Secunderabad",
+      "latestUrl": "https://rrb.indianrailways.gov.in/secunderabad",
+      "latest": {
+        "status": 200,
+        "ok": true,
+        "stale": false,
+        "finalUrl": "https://rrb.indianrailways.gov.in/secunderabad",
+        "bytes": 148335,
+        "hasRss": false
+      },
+      "home": {
+        "status": 200,
+        "ok": true,
+        "stale": false,
+        "finalUrl": "https://rrb.indianrailways.gov.in/",
+        "bytes": 65138,
+        "hasRss": false
+      },
+      "stale": false,
+      "networkFail": false,
+      "homeFallbackOk": true
+    },
+    {
+      "id": "rrb-siliguri",
+      "name": "Railway Recruitment Board (RRB) — Siliguri",
+      "latestUrl": "https://rrb.indianrailways.gov.in/siliguri",
+      "latest": {
+        "status": 200,
+        "ok": true,
+        "stale": false,
+        "finalUrl": "https://rrb.indianrailways.gov.in/siliguri",
+        "bytes": 142574,
+        "hasRss": false
+      },
+      "home": {
+        "status": 200,
+        "ok": true,
+        "stale": false,
+        "finalUrl": "https://rrb.indianrailways.gov.in/",
+        "bytes": 65138,
+        "hasRss": false
+      },
+      "stale": false,
+      "networkFail": false,
+      "homeFallbackOk": true
+    },
+    {
+      "id": "rrb-tvm",
+      "name": "Railway Recruitment Board (RRB) — Thiruvananthapuram",
+      "latestUrl": "https://rrb.indianrailways.gov.in/thiruvananthapuram",
+      "latest": {
+        "status": 200,
+        "ok": true,
+        "stale": false,
+        "finalUrl": "https://rrb.indianrailways.gov.in/thiruvananthapuram",
+        "bytes": 151477,
+        "hasRss": false
+      },
+      "home": {
+        "status": 200,
+        "ok": true,
+        "stale": false,
+        "finalUrl": "https://rrb.indianrailways.gov.in/",
+        "bytes": 65138,
+        "hasRss": false
+      },
+      "stale": false,
+      "networkFail": false,
+      "homeFallbackOk": true
+    },
+    {
+      "id": "rrb-ahmedabad",
+      "name": "Railway Recruitment Board (RRB) — Ahmedabad",
+      "latestUrl": "https://rrb.indianrailways.gov.in/ahmedabad",
+      "latest": {
+        "status": 200,
+        "ok": true,
+        "stale": false,
+        "finalUrl": "https://rrb.indianrailways.gov.in/ahmedabad",
+        "bytes": 153426,
+        "hasRss": false
+      },
+      "home": {
+        "status": 200,
+        "ok": true,
+        "stale": false,
+        "finalUrl": "https://rrb.indianrailways.gov.in/",
+        "bytes": 65138,
+        "hasRss": false
+      },
+      "stale": false,
+      "networkFail": false,
+      "homeFallbackOk": true
+    },
+    {
+      "id": "rrb-bangalore",
+      "name": "Railway Recruitment Board (RRB) — Bangalore",
+      "latestUrl": "https://rrb.indianrailways.gov.in/bangalore",
+      "latest": {
+        "status": 200,
+        "ok": true,
+        "stale": false,
+        "finalUrl": "https://rrb.indianrailways.gov.in/bangalore",
+        "bytes": 247,
+        "hasRss": false
+      },
+      "home": {
+        "status": 200,
+        "ok": true,
+        "stale": false,
+        "finalUrl": "https://rrb.indianrailways.gov.in/",
+        "bytes": 65138,
+        "hasRss": false
+      },
+      "stale": false,
+      "networkFail": false,
+      "homeFallbackOk": true
+    },
+    {
+      "id": "rrb-chennai",
+      "name": "Railway Recruitment Board (RRB) — Chennai",
+      "latestUrl": "https://rrb.indianrailways.gov.in/chennai",
+      "latest": {
+        "status": 200,
+        "ok": true,
+        "stale": false,
+        "finalUrl": "https://rrb.indianrailways.gov.in/chennai",
+        "bytes": 146549,
+        "hasRss": false
+      },
+      "home": {
+        "status": 200,
+        "ok": true,
+        "stale": false,
+        "finalUrl": "https://rrb.indianrailways.gov.in/",
+        "bytes": 65138,
+        "hasRss": false
+      },
+      "stale": false,
+      "networkFail": false,
+      "homeFallbackOk": true
+    },
+    {
+      "id": "rrb-jammu",
+      "name": "Railway Recruitment Board (RRB) — Jammu & Srinagar",
+      "latestUrl": "https://rrb.indianrailways.gov.in/jammu",
+      "latest": {
+        "status": 200,
+        "ok": true,
+        "stale": false,
+        "finalUrl": "https://rrb.indianrailways.gov.in/jammu",
+        "bytes": 144817,
+        "hasRss": false
+      },
+      "home": {
+        "status": 200,
+        "ok": true,
+        "stale": false,
+        "finalUrl": "https://rrb.indianrailways.gov.in/",
+        "bytes": 65138,
+        "hasRss": false
+      },
+      "stale": false,
+      "networkFail": false,
+      "homeFallbackOk": true
+    },
+    {
+      "id": "rrb-muzaffarpur",
+      "name": "Railway Recruitment Board (RRB) — Muzaffarpur",
+      "latestUrl": "https://rrb.indianrailways.gov.in/muzaffarpur",
+      "latest": {
+        "status": 200,
+        "ok": true,
+        "stale": false,
+        "finalUrl": "https://rrb.indianrailways.gov.in/muzaffarpur",
+        "bytes": 144087,
+        "hasRss": false
+      },
+      "home": {
+        "status": 200,
+        "ok": true,
+        "stale": false,
+        "finalUrl": "https://rrb.indianrailways.gov.in/",
+        "bytes": 65138,
+        "hasRss": false
+      },
+      "stale": false,
+      "networkFail": false,
+      "homeFallbackOk": true
     },
     {
       "id": "rrcb",
@@ -512,219 +1007,12 @@
         "ok": true,
         "stale": false,
         "finalUrl": "https://ircon.org/",
-        "bytes": 131373,
+        "bytes": 134194,
         "hasRss": false
       },
       "home": null,
       "stale": false,
       "networkFail": false,
-      "homeFallbackOk": null
-    },
-    {
-      "id": "rrb-ajmer",
-      "name": "Railway Recruitment Board (RRB) — Ajmer",
-      "latestUrl": "https://www.rrbajmer.gov.in/",
-      "latest": {
-        "status": 0,
-        "ok": false,
-        "stale": false,
-        "error": "fetch failed"
-      },
-      "home": null,
-      "stale": false,
-      "networkFail": true,
-      "homeFallbackOk": null
-    },
-    {
-      "id": "rrb-bhopal",
-      "name": "Railway Recruitment Board (RRB) — Bhopal",
-      "latestUrl": "https://www.rrbbhopal.gov.in/",
-      "latest": {
-        "status": 404,
-        "ok": false,
-        "stale": true,
-        "finalUrl": "https://www.rrbbhopal.gov.in/",
-        "bytes": 0,
-        "hasRss": false
-      },
-      "home": null,
-      "stale": true,
-      "networkFail": false,
-      "homeFallbackOk": null
-    },
-    {
-      "id": "rrb-bbs",
-      "name": "Railway Recruitment Board (RRB) — Bhubaneswar",
-      "latestUrl": "https://www.rrbbbs.gov.in/",
-      "latest": {
-        "status": 200,
-        "ok": true,
-        "stale": false,
-        "finalUrl": "https://www.rrbbbs.gov.in/",
-        "bytes": 47852,
-        "hasRss": false
-      },
-      "home": null,
-      "stale": false,
-      "networkFail": false,
-      "homeFallbackOk": null
-    },
-    {
-      "id": "rrb-bilaspur",
-      "name": "Railway Recruitment Board (RRB) — Bilaspur",
-      "latestUrl": "https://www.rrbbilaspur.gov.in/",
-      "latest": {
-        "status": 0,
-        "ok": false,
-        "stale": false,
-        "error": "fetch failed"
-      },
-      "home": null,
-      "stale": false,
-      "networkFail": true,
-      "homeFallbackOk": null
-    },
-    {
-      "id": "rrb-gorakhpur",
-      "name": "Railway Recruitment Board (RRB) — Gorakhpur",
-      "latestUrl": "https://www.rrbgkp.gov.in/",
-      "latest": {
-        "status": 200,
-        "ok": true,
-        "stale": false,
-        "finalUrl": "https://www.rrbgkp.gov.in/",
-        "bytes": 180471,
-        "hasRss": false
-      },
-      "home": null,
-      "stale": false,
-      "networkFail": false,
-      "homeFallbackOk": null
-    },
-    {
-      "id": "rrb-guwahati",
-      "name": "Railway Recruitment Board (RRB) — Guwahati",
-      "latestUrl": "https://www.rrbguwahati.gov.in/",
-      "latest": {
-        "status": 200,
-        "ok": true,
-        "stale": false,
-        "finalUrl": "https://www.rrbguwahati.gov.in/",
-        "bytes": 147896,
-        "hasRss": false
-      },
-      "home": null,
-      "stale": false,
-      "networkFail": false,
-      "homeFallbackOk": null
-    },
-    {
-      "id": "rrb-kolkata",
-      "name": "Railway Recruitment Board (RRB) — Kolkata",
-      "latestUrl": "https://www.rrbkolkata.gov.in/",
-      "latest": {
-        "status": 0,
-        "ok": false,
-        "stale": false,
-        "error": "fetch failed"
-      },
-      "home": null,
-      "stale": false,
-      "networkFail": true,
-      "homeFallbackOk": null
-    },
-    {
-      "id": "rrb-malda",
-      "name": "Railway Recruitment Board (RRB) — Malda",
-      "latestUrl": "https://www.rrbmalda.gov.in/",
-      "latest": {
-        "status": 0,
-        "ok": false,
-        "stale": false,
-        "error": "fetch failed"
-      },
-      "home": null,
-      "stale": false,
-      "networkFail": true,
-      "homeFallbackOk": null
-    },
-    {
-      "id": "rrb-patna",
-      "name": "Railway Recruitment Board (RRB) — Patna",
-      "latestUrl": "https://www.rrbpatna.gov.in/",
-      "latest": {
-        "status": 200,
-        "ok": true,
-        "stale": false,
-        "finalUrl": "https://www.rrbpatna.gov.in/",
-        "bytes": 254124,
-        "hasRss": false
-      },
-      "home": null,
-      "stale": false,
-      "networkFail": false,
-      "homeFallbackOk": null
-    },
-    {
-      "id": "rrb-ranchi",
-      "name": "Railway Recruitment Board (RRB) — Ranchi",
-      "latestUrl": "https://www.rrbranchi.gov.in/",
-      "latest": {
-        "status": 200,
-        "ok": true,
-        "stale": false,
-        "finalUrl": "https://www.rrbranchi.gov.in/",
-        "bytes": 80477,
-        "hasRss": false
-      },
-      "home": null,
-      "stale": false,
-      "networkFail": false,
-      "homeFallbackOk": null
-    },
-    {
-      "id": "rrb-sec",
-      "name": "Railway Recruitment Board (RRB) — Secunderabad",
-      "latestUrl": "https://www.rrbsecunderabad.nic.in/",
-      "latest": {
-        "status": 0,
-        "ok": false,
-        "stale": false,
-        "error": "fetch failed"
-      },
-      "home": null,
-      "stale": false,
-      "networkFail": true,
-      "homeFallbackOk": null
-    },
-    {
-      "id": "rrb-siliguri",
-      "name": "Railway Recruitment Board (RRB) — Siliguri",
-      "latestUrl": "https://www.rrbsiliguri.gov.in/",
-      "latest": {
-        "status": 0,
-        "ok": false,
-        "stale": false,
-        "error": "fetch failed"
-      },
-      "home": null,
-      "stale": false,
-      "networkFail": true,
-      "homeFallbackOk": null
-    },
-    {
-      "id": "rrb-tvm",
-      "name": "Railway Recruitment Board (RRB) — Thiruvananthapuram",
-      "latestUrl": "https://www.rrbthiruvananthapuram.gov.in/",
-      "latest": {
-        "status": 0,
-        "ok": false,
-        "stale": false,
-        "error": "fetch failed"
-      },
-      "home": null,
-      "stale": false,
-      "networkFail": true,
       "homeFallbackOk": null
     },
     {
@@ -736,7 +1024,7 @@
         "ok": true,
         "stale": false,
         "finalUrl": "https://fci.gov.in/en/careers/recruitment-notices/",
-        "bytes": 44702,
+        "bytes": 287456,
         "hasRss": false
       },
       "home": {
@@ -744,7 +1032,7 @@
         "ok": true,
         "stale": false,
         "finalUrl": "https://fci.gov.in/",
-        "bytes": 44702,
+        "bytes": 287456,
         "hasRss": false
       },
       "stale": false,
@@ -759,8 +1047,8 @@
         "status": 200,
         "ok": true,
         "stale": false,
-        "finalUrl": "https://www.fssai.gov.in/index.php",
-        "bytes": 1639994,
+        "finalUrl": "https://www.fssai.gov.in/cms/recruitment.php",
+        "bytes": 4007,
         "hasRss": false
       },
       "home": {
@@ -768,7 +1056,7 @@
         "ok": true,
         "stale": false,
         "finalUrl": "https://www.fssai.gov.in/",
-        "bytes": 1640384,
+        "bytes": 4007,
         "hasRss": false
       },
       "stale": false,
@@ -788,14 +1076,16 @@
         "hasRss": false
       },
       "home": {
-        "status": 0,
-        "ok": false,
+        "status": 200,
+        "ok": true,
         "stale": false,
-        "error": "The operation was aborted due to timeout"
+        "finalUrl": "https://www.indiapost.gov.in/",
+        "bytes": 372812,
+        "hasRss": false
       },
       "stale": true,
       "networkFail": false,
-      "homeFallbackOk": false
+      "homeFallbackOk": true
     },
     {
       "id": "army",
@@ -806,7 +1096,7 @@
         "ok": true,
         "stale": false,
         "finalUrl": "https://joinindianarmy.nic.in/Authentication.aspx",
-        "bytes": 10848,
+        "bytes": 11124,
         "hasRss": false
       },
       "home": null,
@@ -823,7 +1113,7 @@
         "ok": true,
         "stale": false,
         "finalUrl": "https://www.joinindiannavy.gov.in/",
-        "bytes": 87395,
+        "bytes": 89843,
         "hasRss": false
       },
       "home": null,
@@ -834,14 +1124,8 @@
     {
       "id": "iaf",
       "name": "Indian Air Force — Careers",
-      "latestUrl": "https://careerindianairforce.cdac.in/",
+      "latestUrl": "https://indianairforce.nic.in/",
       "latest": {
-        "status": 0,
-        "ok": false,
-        "stale": false,
-        "error": "fetch failed"
-      },
-      "home": {
         "status": 200,
         "ok": true,
         "stale": false,
@@ -849,20 +1133,21 @@
         "bytes": 0,
         "hasRss": false
       },
+      "home": null,
       "stale": false,
-      "networkFail": true,
-      "homeFallbackOk": true
+      "networkFail": false,
+      "homeFallbackOk": null
     },
     {
       "id": "afcat",
       "name": "AFCAT — IAF officer entry",
       "latestUrl": "https://afcat.cdac.in/",
       "latest": {
-        "status": 200,
-        "ok": true,
+        "status": 403,
+        "ok": false,
         "stale": false,
-        "finalUrl": "https://afcat.cdac.in/AFCAT/",
-        "bytes": 33449,
+        "finalUrl": "https://afcat.cdac.in/",
+        "bytes": 0,
         "hasRss": false
       },
       "home": null,
@@ -896,7 +1181,7 @@
         "ok": true,
         "stale": false,
         "finalUrl": "https://rectt.bsf.gov.in/",
-        "bytes": 28237,
+        "bytes": 33277,
         "hasRss": false
       },
       "home": null,
@@ -921,7 +1206,7 @@
         "ok": true,
         "stale": false,
         "finalUrl": "https://crpf.gov.in/",
-        "bytes": 192378,
+        "bytes": 192220,
         "hasRss": false
       },
       "stale": false,
@@ -931,22 +1216,26 @@
     {
       "id": "cisf",
       "name": "Central Industrial Security Force (CISF)",
-      "latestUrl": "https://www.cisf.gov.in/recruitment/",
+      "latestUrl": "https://cisf.gov.in/cisfeng/Recruitment",
       "latest": {
-        "status": 0,
+        "status": 404,
         "ok": false,
-        "stale": false,
-        "error": "fetch failed"
+        "stale": true,
+        "finalUrl": "https://cisf.gov.in/cisfeng/Recruitment",
+        "bytes": 0,
+        "hasRss": false
       },
       "home": {
-        "status": 0,
-        "ok": false,
+        "status": 200,
+        "ok": true,
         "stale": false,
-        "error": "fetch failed"
+        "finalUrl": "https://www.cisf.gov.in/",
+        "bytes": 165622,
+        "hasRss": false
       },
-      "stale": false,
-      "networkFail": true,
-      "homeFallbackOk": false
+      "stale": true,
+      "networkFail": false,
+      "homeFallbackOk": true
     },
     {
       "id": "itbp",
@@ -956,8 +1245,8 @@
         "status": 200,
         "ok": true,
         "stale": false,
-        "finalUrl": "https://recruitment.itbpolice.nic.in/rect/index.php",
-        "bytes": 93190,
+        "finalUrl": "https://recruitment.itbpolice.nic.in/",
+        "bytes": 94325,
         "hasRss": false
       },
       "home": null,
@@ -994,7 +1283,7 @@
         "ok": true,
         "stale": false,
         "finalUrl": "https://www.mha.gov.in/en/notifications/vacancies",
-        "bytes": 83540,
+        "bytes": 84224,
         "hasRss": false
       },
       "home": {
@@ -1002,7 +1291,7 @@
         "ok": true,
         "stale": false,
         "finalUrl": "https://www.mha.gov.in/hi",
-        "bytes": 105477,
+        "bytes": 106081,
         "hasRss": false
       },
       "stale": false,
@@ -1018,7 +1307,7 @@
         "ok": true,
         "stale": false,
         "finalUrl": "https://www.ugc.gov.in/page/ErrorPage/ErrorPage/index?code=404",
-        "bytes": 44812,
+        "bytes": 42678,
         "hasRss": false
       },
       "home": {
@@ -1026,7 +1315,7 @@
         "ok": true,
         "stale": false,
         "finalUrl": "https://www.ugc.gov.in/",
-        "bytes": 174839,
+        "bytes": 170842,
         "hasRss": false
       },
       "stale": false,
@@ -1037,472 +1326,6 @@
       "id": "ncert",
       "name": "NCERT",
       "latestUrl": "https://ncert.nic.in/vacancies.php",
-      "latest": {
-        "status": 200,
-        "ok": true,
-        "stale": false,
-        "finalUrl": "https://ncert.nic.in/vacancies.php",
-        "bytes": 0,
-        "hasRss": false
-      },
-      "home": {
-        "status": 200,
-        "ok": true,
-        "stale": false,
-        "finalUrl": "https://ncert.nic.in/",
-        "bytes": 338787,
-        "hasRss": false
-      },
-      "stale": false,
-      "networkFail": false,
-      "homeFallbackOk": true
-    },
-    {
-      "id": "ctet",
-      "name": "CBSE — CTET",
-      "latestUrl": "https://ctet.nic.in/",
-      "latest": {
-        "status": 200,
-        "ok": true,
-        "stale": false,
-        "finalUrl": "https://ctet.nic.in/",
-        "bytes": 94477,
-        "hasRss": false
-      },
-      "home": null,
-      "stale": false,
-      "networkFail": false,
-      "homeFallbackOk": null
-    },
-    {
-      "id": "kvs",
-      "name": "Kendriya Vidyalaya Sangathan",
-      "latestUrl": "https://kvsangathan.nic.in/",
-      "latest": {
-        "status": 200,
-        "ok": true,
-        "stale": false,
-        "finalUrl": "https://kvsangathan.nic.in/",
-        "bytes": 212263,
-        "hasRss": false
-      },
-      "home": null,
-      "stale": false,
-      "networkFail": false,
-      "homeFallbackOk": null
-    },
-    {
-      "id": "nvs",
-      "name": "Navodaya Vidyalaya Samiti",
-      "latestUrl": "https://navodaya.gov.in/nvs/en/Recruitment-Notice/Recruitment/",
-      "latest": {
-        "status": 200,
-        "ok": true,
-        "stale": false,
-        "finalUrl": "https://navodaya.gov.in/nvsgov.html",
-        "bytes": 3715,
-        "hasRss": false
-      },
-      "home": {
-        "status": 200,
-        "ok": true,
-        "stale": false,
-        "finalUrl": "https://navodaya.gov.in/nvsgov.html",
-        "bytes": 3715,
-        "hasRss": false
-      },
-      "stale": false,
-      "networkFail": false,
-      "homeFallbackOk": true
-    },
-    {
-      "id": "aiims",
-      "name": "AIIMS New Delhi — Recruitment",
-      "latestUrl": "https://www.aiimsexams.ac.in/",
-      "latest": {
-        "status": 200,
-        "ok": true,
-        "stale": false,
-        "finalUrl": "https://www.aiimsexams.ac.in/",
-        "bytes": 33864,
-        "hasRss": false
-      },
-      "home": {
-        "status": 200,
-        "ok": true,
-        "stale": false,
-        "finalUrl": "https://www.aiims.edu/index.php/en",
-        "bytes": 226019,
-        "hasRss": true
-      },
-      "stale": false,
-      "networkFail": false,
-      "homeFallbackOk": true
-    },
-    {
-      "id": "sbi",
-      "name": "State Bank of India — Careers",
-      "latestUrl": "https://sbi.bank.in/web/careers/current-openings",
-      "latest": {
-        "status": 200,
-        "ok": true,
-        "stale": false,
-        "finalUrl": "https://sbi.bank.in/web/careers/current-openings",
-        "bytes": 313945,
-        "hasRss": false
-      },
-      "home": {
-        "status": 200,
-        "ok": true,
-        "stale": false,
-        "finalUrl": "https://sbi.bank.in/",
-        "bytes": 420782,
-        "hasRss": false
-      },
-      "stale": false,
-      "networkFail": false,
-      "homeFallbackOk": true
-    },
-    {
-      "id": "bob",
-      "name": "Bank of Baroda — Careers",
-      "latestUrl": "https://www.bankofbaroda.in/career",
-      "latest": {
-        "status": 200,
-        "ok": true,
-        "stale": false,
-        "finalUrl": "https://bankofbaroda.bank.in/career",
-        "bytes": 394914,
-        "hasRss": false
-      },
-      "home": {
-        "status": 200,
-        "ok": true,
-        "stale": false,
-        "finalUrl": "https://bankofbaroda.bank.in/",
-        "bytes": 1262412,
-        "hasRss": false
-      },
-      "stale": false,
-      "networkFail": false,
-      "homeFallbackOk": true
-    },
-    {
-      "id": "pnb",
-      "name": "Punjab National Bank — Careers",
-      "latestUrl": "https://www.pnbindia.in/Recruitments.html",
-      "latest": {
-        "status": 200,
-        "ok": true,
-        "stale": false,
-        "finalUrl": "https://pnb.bank.in/Page-Not-Found.html",
-        "bytes": 225060,
-        "hasRss": false
-      },
-      "home": {
-        "status": 200,
-        "ok": true,
-        "stale": false,
-        "finalUrl": "https://pnb.bank.in/",
-        "bytes": 336754,
-        "hasRss": false
-      },
-      "stale": false,
-      "networkFail": false,
-      "homeFallbackOk": true
-    },
-    {
-      "id": "canara",
-      "name": "Canara Bank — Careers",
-      "latestUrl": "https://canarabank.com/pages/recruitment",
-      "latest": {
-        "status": 200,
-        "ok": true,
-        "stale": false,
-        "finalUrl": "https://www.canarabank.bank.in/pages/recruitment",
-        "bytes": 396479,
-        "hasRss": false
-      },
-      "home": {
-        "status": 200,
-        "ok": true,
-        "stale": false,
-        "finalUrl": "https://www.canarabank.bank.in/",
-        "bytes": 484351,
-        "hasRss": false
-      },
-      "stale": false,
-      "networkFail": false,
-      "homeFallbackOk": true
-    },
-    {
-      "id": "uco",
-      "name": "UCO Bank — Careers",
-      "latestUrl": "https://www.uco.bank.in/job-opportunities",
-      "latest": {
-        "status": 200,
-        "ok": true,
-        "stale": false,
-        "finalUrl": "https://www.uco.bank.in/job-opportunities",
-        "bytes": 269640,
-        "hasRss": false
-      },
-      "home": {
-        "status": 200,
-        "ok": true,
-        "stale": false,
-        "finalUrl": "https://www.uco.bank.in/en/",
-        "bytes": 413465,
-        "hasRss": false
-      },
-      "stale": false,
-      "networkFail": false,
-      "homeFallbackOk": true
-    },
-    {
-      "id": "nabard",
-      "name": "NABARD — Careers",
-      "latestUrl": "https://www.nabard.org/career.aspx",
-      "latest": {
-        "status": 200,
-        "ok": true,
-        "stale": false,
-        "finalUrl": "https://www.nabard.org/pagenotfound.aspx",
-        "bytes": 52923,
-        "hasRss": false
-      },
-      "home": {
-        "status": 200,
-        "ok": true,
-        "stale": false,
-        "finalUrl": "https://www.nabard.org/Hindi/Default.aspx",
-        "bytes": 94893,
-        "hasRss": false
-      },
-      "stale": false,
-      "networkFail": false,
-      "homeFallbackOk": true
-    },
-    {
-      "id": "ongc",
-      "name": "ONGC — Careers",
-      "latestUrl": "https://ongcindia.com/web/eng/career/recruitment-notice",
-      "latest": {
-        "status": 200,
-        "ok": true,
-        "stale": false,
-        "finalUrl": "https://ongcindia.com/web/eng/career/recruitment-notice",
-        "bytes": 463274,
-        "hasRss": false
-      },
-      "home": {
-        "status": 200,
-        "ok": true,
-        "stale": false,
-        "finalUrl": "https://ongcindia.com/",
-        "bytes": 136245,
-        "hasRss": false
-      },
-      "stale": false,
-      "networkFail": false,
-      "homeFallbackOk": true
-    },
-    {
-      "id": "iocl",
-      "name": "Indian Oil Corporation — Careers",
-      "latestUrl": "https://iocl.com/job-search",
-      "latest": {
-        "status": 307,
-        "ok": false,
-        "stale": false,
-        "finalUrl": "https://iocl.com/job-search",
-        "bytes": 1463,
-        "hasRss": false
-      },
-      "home": {
-        "status": 307,
-        "ok": false,
-        "stale": false,
-        "finalUrl": "https://iocl.com/",
-        "bytes": 1355,
-        "hasRss": false
-      },
-      "stale": false,
-      "networkFail": false,
-      "homeFallbackOk": true
-    },
-    {
-      "id": "bpcl",
-      "name": "Bharat Petroleum — Careers",
-      "latestUrl": "https://bharatpetroleum.in/About-BPCL/Careers/Careers.aspx",
-      "latest": {
-        "status": 200,
-        "ok": true,
-        "stale": false,
-        "finalUrl": "https://bharatpetroleum.in/errorpage",
-        "bytes": 199315,
-        "hasRss": false
-      },
-      "home": {
-        "status": 200,
-        "ok": true,
-        "stale": false,
-        "finalUrl": "https://www.bharatpetroleum.in/index",
-        "bytes": 238824,
-        "hasRss": false
-      },
-      "stale": false,
-      "networkFail": false,
-      "homeFallbackOk": true
-    },
-    {
-      "id": "hpcl",
-      "name": "Hindustan Petroleum — Careers",
-      "latestUrl": "https://hindustanpetroleum.com/careersopportunities",
-      "latest": {
-        "status": 200,
-        "ok": true,
-        "stale": false,
-        "finalUrl": "https://www.hindustanpetroleum.com/",
-        "bytes": 140546,
-        "hasRss": false
-      },
-      "home": {
-        "status": 200,
-        "ok": true,
-        "stale": false,
-        "finalUrl": "https://www.hindustanpetroleum.com/",
-        "bytes": 140546,
-        "hasRss": false
-      },
-      "stale": false,
-      "networkFail": false,
-      "homeFallbackOk": true
-    },
-    {
-      "id": "gail",
-      "name": "GAIL India — Careers",
-      "latestUrl": "https://gailonline.com/careers/",
-      "latest": {
-        "status": 403,
-        "ok": false,
-        "stale": false,
-        "finalUrl": "https://gailonline.com/careers/",
-        "bytes": 210,
-        "hasRss": false
-      },
-      "home": {
-        "status": 200,
-        "ok": true,
-        "stale": false,
-        "finalUrl": "https://gailonline.com/",
-        "bytes": 89707,
-        "hasRss": false
-      },
-      "stale": false,
-      "networkFail": false,
-      "homeFallbackOk": true
-    },
-    {
-      "id": "ntpc",
-      "name": "NTPC — Careers",
-      "latestUrl": "https://www.ntpc.co.in/en/career",
-      "latest": {
-        "status": 200,
-        "ok": true,
-        "stale": false,
-        "finalUrl": "https://validate.perfdrive.com/?ssa=a70f68f3-fb6f-4370-8695-210ada2162ba&ssb=79940229904&ssc=https%3A%2F%2Fwww.ntpc.co.in%2Fen%2Fcareer&ssi=25a4b9f8-cs5n-43d1-97e6-8ea2e2fe5653&ssk=botmanager_support@radware.com&ssm=84254174212737762101198173682857&ssn=bb46923cf300a48bc80c8923512dd4d2fcd9885d46a5-e547-4b3e-a59d22&sso=1229f32a-4c95f57be8ca0bbc4370db7a138fa5a25bab6efbdf3a54e7&ssp=63735087021783383385178339158664813&ssq=96633063900574160825139005225880305216977&ssr=MTIyLjE3MS4xNy4yMDA=&sst=Mozilla/5.0%20(Windows%20NT%2010.0;%20Win64;%20x64)%20AppleWebKit/537.36%20(KHTML,%20like%20Gecko)%20Chrome/121.0.0.0%20Safari/537.36&ssu=&ssv=&ssw=&ssx=eyJ1em14IjoiN2Y5MDAwMGE5NWI0M2QtMGJmZi00ODc2LTkzNGMtN2U3MjljYzAyMTIwMS0xNzgzMzM5MDA1OTM2MC00ZmU4NTQ1NzE1MWM4Njk1MTAiLCJfX3V6bWYiOiI3ZjkwMDA4ODVkNDZhNS1lNTQ3LTRiM2UtYTMyYS00Yzk1ZjU3YmU4Y2ExLTE3ODMzMzkwMDU5MzYwLTAwNGVmMWEzZDJiZmM1OWZiNjUxMCIsInJkIjoibnRwYy5jby5pbiJ9",
-        "bytes": 15042,
-        "hasRss": false
-      },
-      "home": {
-        "status": 200,
-        "ok": true,
-        "stale": false,
-        "finalUrl": "https://validate.perfdrive.com/?ssa=4a24e3c7-1f44-463a-94dd-7bd36465524f&ssb=32232220997&ssc=https%3A%2F%2Fwww.ntpc.co.in%2F&ssi=e515bbf1-cs5n-4a8b-a1f7-495481c8d5bc&ssk=botmanager_support@radware.com&ssm=10003268166847602104645899596083&ssn=9f6751639220e97057355e293ef81b50be5aa0c4f92a-d0b9-457d-bb2f00&sso=c2cf53c4-b464f7318bf47b9ea2e0b36d771cdf9de5db9c9fef00ceac&ssp=57379895121783392373178331898729547&ssq=46049203900613132880239006631156032189630&ssr=MTIyLjE3MS4xNy4yMDA=&sst=Mozilla/5.0%20(Windows%20NT%2010.0;%20Win64;%20x64)%20AppleWebKit/537.36%20(KHTML,%20like%20Gecko)%20Chrome/121.0.0.0%20Safari/537.36&ssu=&ssv=&ssw=&ssx=eyJ1em14IjoiN2Y5MDAwN2NkZjdlYjEtZTM0ZS00NWQ1LWJjZjgtMWY0MDgxNjdmNzA0MS0xNzgzMzM5MDA2ODQ1MC1mNWU5ZWJkYWM1OGJlZGQ1MTAiLCJfX3V6bWYiOiI3ZjkwMDBhMGM0ZjkyYS1kMGI5LTQ1N2QtYjNjNC1iNDY0ZjczMThiZjQxLTE3ODMzMzkwMDY4NDUwLTAwNGJhNGY3ZTllYmQ0M2U2YjQxMCIsInJkIjoibnRwYy5jby5pbiJ9",
-        "bytes": 15033,
-        "hasRss": false
-      },
-      "stale": false,
-      "networkFail": false,
-      "homeFallbackOk": true
-    },
-    {
-      "id": "bhel",
-      "name": "BHEL — Careers",
-      "latestUrl": "https://careers.bhel.in/",
-      "latest": {
-        "status": 200,
-        "ok": true,
-        "stale": false,
-        "finalUrl": "https://careers.bhel.in/",
-        "bytes": 159,
-        "hasRss": false
-      },
-      "home": {
-        "status": 200,
-        "ok": true,
-        "stale": false,
-        "finalUrl": "https://www.bhel.com/",
-        "bytes": 144654,
-        "hasRss": false
-      },
-      "stale": false,
-      "networkFail": false,
-      "homeFallbackOk": true
-    },
-    {
-      "id": "hal",
-      "name": "Hindustan Aeronautics (HAL)",
-      "latestUrl": "https://hal-india.co.in/Careers/M__93",
-      "latest": {
-        "status": 200,
-        "ok": true,
-        "stale": false,
-        "finalUrl": "https://hal-india.co.in/Careers/M__93",
-        "bytes": 20673,
-        "hasRss": false
-      },
-      "home": {
-        "status": 200,
-        "ok": true,
-        "stale": false,
-        "finalUrl": "https://hal-india.co.in/",
-        "bytes": 20673,
-        "hasRss": false
-      },
-      "stale": false,
-      "networkFail": false,
-      "homeFallbackOk": true
-    },
-    {
-      "id": "bel",
-      "name": "Bharat Electronics (BEL)",
-      "latestUrl": "https://bel-india.in/job-notifications/",
-      "latest": {
-        "status": 200,
-        "ok": true,
-        "stale": false,
-        "finalUrl": "https://bel-india.in/job-notifications/",
-        "bytes": 364484,
-        "hasRss": true
-      },
-      "home": {
-        "status": 200,
-        "ok": true,
-        "stale": false,
-        "finalUrl": "https://bel-india.in/",
-        "bytes": 321704,
-        "hasRss": true
-      },
-      "stale": false,
-      "networkFail": false,
-      "homeFallbackOk": true
-    },
-    {
-      "id": "sail",
-      "name": "Steel Authority of India (SAIL)",
-      "latestUrl": "https://sail.co.in/en/career/career-opportunities",
       "latest": {
         "status": 0,
         "ok": false,
@@ -1520,6 +1343,460 @@
       "homeFallbackOk": false
     },
     {
+      "id": "ctet",
+      "name": "CBSE — CTET",
+      "latestUrl": "https://ctet.nic.in/",
+      "latest": {
+        "status": 200,
+        "ok": true,
+        "stale": false,
+        "finalUrl": "https://ctet.nic.in/",
+        "bytes": 92239,
+        "hasRss": false
+      },
+      "home": null,
+      "stale": false,
+      "networkFail": false,
+      "homeFallbackOk": null
+    },
+    {
+      "id": "kvs",
+      "name": "Kendriya Vidyalaya Sangathan",
+      "latestUrl": "https://kvsangathan.nic.in/",
+      "latest": {
+        "status": 0,
+        "ok": false,
+        "stale": false,
+        "error": "fetch failed"
+      },
+      "home": null,
+      "stale": false,
+      "networkFail": true,
+      "homeFallbackOk": null
+    },
+    {
+      "id": "nvs",
+      "name": "Navodaya Vidyalaya Samiti",
+      "latestUrl": "https://navodaya.gov.in/nvs/en/Recruitment-Notice/Recruitment/",
+      "latest": {
+        "status": 200,
+        "ok": true,
+        "stale": false,
+        "finalUrl": "https://navodaya.gov.in/nvs/en/Recruitment-Notice/Recruitment/",
+        "bytes": 884,
+        "hasRss": false
+      },
+      "home": {
+        "status": 200,
+        "ok": true,
+        "stale": false,
+        "finalUrl": "https://navodaya.gov.in/nvs/",
+        "bytes": 884,
+        "hasRss": false
+      },
+      "stale": false,
+      "networkFail": false,
+      "homeFallbackOk": true
+    },
+    {
+      "id": "aiims",
+      "name": "AIIMS New Delhi — Recruitment",
+      "latestUrl": "https://www.aiimsexams.ac.in/",
+      "latest": {
+        "status": 200,
+        "ok": true,
+        "stale": false,
+        "finalUrl": "https://www.aiimsexams.ac.in/",
+        "bytes": 36203,
+        "hasRss": false
+      },
+      "home": {
+        "status": 200,
+        "ok": true,
+        "stale": false,
+        "finalUrl": "https://www.aiims.edu/index.php/en",
+        "bytes": 226094,
+        "hasRss": true
+      },
+      "stale": false,
+      "networkFail": false,
+      "homeFallbackOk": true
+    },
+    {
+      "id": "sbi",
+      "name": "State Bank of India — Careers",
+      "latestUrl": "https://sbi.bank.in/web/careers/current-openings",
+      "latest": {
+        "status": 200,
+        "ok": true,
+        "stale": false,
+        "finalUrl": "https://sbi.bank.in/web/careers/current-openings",
+        "bytes": 342375,
+        "hasRss": false
+      },
+      "home": {
+        "status": 200,
+        "ok": true,
+        "stale": false,
+        "finalUrl": "https://sbi.bank.in/",
+        "bytes": 455307,
+        "hasRss": false
+      },
+      "stale": false,
+      "networkFail": false,
+      "homeFallbackOk": true
+    },
+    {
+      "id": "bob",
+      "name": "Bank of Baroda — Careers",
+      "latestUrl": "https://www.bankofbaroda.in/career",
+      "latest": {
+        "status": 0,
+        "ok": false,
+        "stale": false,
+        "error": "fetch failed"
+      },
+      "home": {
+        "status": 0,
+        "ok": false,
+        "stale": false,
+        "error": "fetch failed"
+      },
+      "stale": false,
+      "networkFail": true,
+      "homeFallbackOk": false
+    },
+    {
+      "id": "pnb",
+      "name": "Punjab National Bank — Careers",
+      "latestUrl": "https://www.pnbindia.in/Recruitments.html",
+      "latest": {
+        "status": 200,
+        "ok": true,
+        "stale": false,
+        "finalUrl": "https://pnb.bank.in/Page-Not-Found.html",
+        "bytes": 232617,
+        "hasRss": false
+      },
+      "home": {
+        "status": 200,
+        "ok": true,
+        "stale": false,
+        "finalUrl": "https://pnb.bank.in/",
+        "bytes": 342278,
+        "hasRss": false
+      },
+      "stale": false,
+      "networkFail": false,
+      "homeFallbackOk": true
+    },
+    {
+      "id": "canara",
+      "name": "Canara Bank — Careers",
+      "latestUrl": "https://canarabank.com/pages/recruitment",
+      "latest": {
+        "status": 200,
+        "ok": true,
+        "stale": false,
+        "finalUrl": "https://www.canarabank.bank.in/pages/recruitment",
+        "bytes": 415983,
+        "hasRss": false
+      },
+      "home": {
+        "status": 200,
+        "ok": true,
+        "stale": false,
+        "finalUrl": "https://www.canarabank.bank.in/",
+        "bytes": 508035,
+        "hasRss": false
+      },
+      "stale": false,
+      "networkFail": false,
+      "homeFallbackOk": true
+    },
+    {
+      "id": "uco",
+      "name": "UCO Bank — Careers",
+      "latestUrl": "https://www.uco.bank.in/job-opportunities",
+      "latest": {
+        "status": 200,
+        "ok": true,
+        "stale": false,
+        "finalUrl": "https://www.uco.bank.in/job-opportunities",
+        "bytes": 276468,
+        "hasRss": false
+      },
+      "home": {
+        "status": 200,
+        "ok": true,
+        "stale": false,
+        "finalUrl": "https://www.uco.bank.in/en/",
+        "bytes": 422376,
+        "hasRss": false
+      },
+      "stale": false,
+      "networkFail": false,
+      "homeFallbackOk": true
+    },
+    {
+      "id": "nabard",
+      "name": "NABARD — Careers",
+      "latestUrl": "https://www.nabard.org/career.aspx",
+      "latest": {
+        "status": 200,
+        "ok": true,
+        "stale": false,
+        "finalUrl": "https://www.nabard.org/pagenotfound.aspx",
+        "bytes": 53285,
+        "hasRss": false
+      },
+      "home": {
+        "status": 200,
+        "ok": true,
+        "stale": false,
+        "finalUrl": "https://www.nabard.org/Hindi/Default.aspx",
+        "bytes": 96182,
+        "hasRss": false
+      },
+      "stale": false,
+      "networkFail": false,
+      "homeFallbackOk": true
+    },
+    {
+      "id": "ongc",
+      "name": "ONGC — Careers",
+      "latestUrl": "https://ongcindia.com/web/eng/career/recruitment-notice",
+      "latest": {
+        "status": 200,
+        "ok": true,
+        "stale": false,
+        "finalUrl": "https://ongcindia.com/web/eng/career/recruitment-notice",
+        "bytes": 465788,
+        "hasRss": false
+      },
+      "home": {
+        "status": 200,
+        "ok": true,
+        "stale": false,
+        "finalUrl": "https://ongcindia.com/",
+        "bytes": 135554,
+        "hasRss": false
+      },
+      "stale": false,
+      "networkFail": false,
+      "homeFallbackOk": true
+    },
+    {
+      "id": "iocl",
+      "name": "Indian Oil Corporation — Careers",
+      "latestUrl": "https://iocl.com/latest-job-opening",
+      "latest": {
+        "status": 307,
+        "ok": false,
+        "stale": false,
+        "finalUrl": "https://iocl.com/latest-job-opening",
+        "bytes": 1387,
+        "hasRss": false
+      },
+      "home": {
+        "status": 307,
+        "ok": false,
+        "stale": false,
+        "finalUrl": "https://iocl.com/",
+        "bytes": 1355,
+        "hasRss": false
+      },
+      "stale": false,
+      "networkFail": false,
+      "homeFallbackOk": true
+    },
+    {
+      "id": "bpcl",
+      "name": "Bharat Petroleum — Careers",
+      "latestUrl": "https://www.bharatpetroleum.in/careers/job-openings",
+      "latest": {
+        "status": 200,
+        "ok": true,
+        "stale": false,
+        "finalUrl": "https://www.bharatpetroleum.in/careers/job-openings",
+        "bytes": 230972,
+        "hasRss": false
+      },
+      "home": {
+        "status": 200,
+        "ok": true,
+        "stale": false,
+        "finalUrl": "https://www.bharatpetroleum.in/index",
+        "bytes": 245301,
+        "hasRss": false
+      },
+      "stale": false,
+      "networkFail": false,
+      "homeFallbackOk": true
+    },
+    {
+      "id": "hpcl",
+      "name": "Hindustan Petroleum — Careers",
+      "latestUrl": "https://hindustanpetroleum.com/careersopportunities",
+      "latest": {
+        "status": 200,
+        "ok": true,
+        "stale": false,
+        "finalUrl": "https://www.hindustanpetroleum.com/",
+        "bytes": 151832,
+        "hasRss": false
+      },
+      "home": {
+        "status": 200,
+        "ok": true,
+        "stale": false,
+        "finalUrl": "https://www.hindustanpetroleum.com/",
+        "bytes": 151832,
+        "hasRss": false
+      },
+      "stale": false,
+      "networkFail": false,
+      "homeFallbackOk": true
+    },
+    {
+      "id": "gail",
+      "name": "GAIL India — Careers",
+      "latestUrl": "https://gailonline.com/careers/",
+      "latest": {
+        "status": 403,
+        "ok": false,
+        "stale": false,
+        "finalUrl": "https://www.gailonline.com/careers/",
+        "bytes": 1233,
+        "hasRss": false
+      },
+      "home": {
+        "status": 200,
+        "ok": true,
+        "stale": false,
+        "finalUrl": "https://www.gailonline.com/",
+        "bytes": 94452,
+        "hasRss": false
+      },
+      "stale": false,
+      "networkFail": false,
+      "homeFallbackOk": true
+    },
+    {
+      "id": "ntpc",
+      "name": "NTPC — Careers",
+      "latestUrl": "https://www.ntpc.co.in/en/career",
+      "latest": {
+        "status": 200,
+        "ok": true,
+        "stale": false,
+        "finalUrl": "https://validate.perfdrive.com/?ssa=7a7d513b-019d-4762-8f74-cd1d16e0949a&ssb=85069259633&ssc=https%3A%2F%2Fwww.ntpc.co.in%2Fen%2Fcareer&ssi=dbd06ce8-cs5n-4191-aaf8-f5ddb598f398&ssk=botmanager_support@radware.com&ssm=14152300171350561102169404846676&ssn=37e67147e25f0f9425ef4540e4499fbce0edd6bde67c-9f26-45bf-a106d0&sso=8e06ee2f-e1ae124b716ed7864736326a1d837db3392f123d79bd7401&ssp=66978091731790105408179019406326003&ssq=19433144842509530994648425074742988247897&ssr=MTIyLjE3MS4xNy4yMTU=&sst=Mozilla/5.0%20(Windows%20NT%2010.0;%20Win64;%20x64)%20AppleWebKit/537.36%20(KHTML,%20like%20Gecko)%20Chrome/121.0.0.0%20Safari/537.36&ssu=&ssv=&ssw=&ssx=eyJfX3V6bWYiOiI3ZjkwMDBkNmJkZTY3Yy05ZjI2LTQ1YmYtYWUyZi1lMWFlMTI0YjcxNmUxLTE3OTAxNDg0MjUwODkwLTAwNTM4YTI2NmY0ODY2MTFkMDUxMCIsInV6bXgiOiI3ZmMwMDAxNDgwNzdhOC05MTg3LTRjMzItYjE5NS1mN2Y1NmI1NTJlYTAxLTE3OTAxNDg0MjUwODkwLTAwNjFmZDMzOTg5MWRhOTM4ODAxMCIsInJkIjoibnRwYy5jby5pbiJ9",
+        "bytes": 15047,
+        "hasRss": false
+      },
+      "home": {
+        "status": 200,
+        "ok": true,
+        "stale": false,
+        "finalUrl": "https://validate.perfdrive.com/?ssa=8fcb4826-c7f7-4460-9eb8-3d71fa4a1de3&ssb=39571263512&ssc=https%3A%2F%2Fwww.ntpc.co.in%2F&ssi=8a873c71-cs5n-4beb-b47c-644ff5b28d43&ssk=botmanager_support@radware.com&ssm=18628814847565107105542977051112&ssn=a911b0e1cbc5458f2d0f30658ffde98e6fe86d566d42-1cef-4038-ad03cc&sso=ea018661-ee8fbc1a9d2909e6ba2a2bfbc5381a737bce412bfa222cfc&ssp=19517065641790103416179010577782219&ssq=72624644842698511665448426230701904464648&ssr=MTIyLjE3MS4xNy4yMTU=&sst=Mozilla/5.0%20(Windows%20NT%2010.0;%20Win64;%20x64)%20AppleWebKit/537.36%20(KHTML,%20like%20Gecko)%20Chrome/121.0.0.0%20Safari/537.36&ssu=&ssv=&ssw=&ssx=eyJfX3V6bWYiOiI3ZjkwMDA2ZDU2NmQ0Mi0xY2VmLTQwMzgtYTY2MS1lZThmYmMxYTlkMjkxLTE3OTAxNDg0MjYzMjkwLTAwNTE0YTBjZjkxNzJlYjViNTIxMCIsInV6bXgiOiI3ZmMwMDBlMzRmODU5NC1kMGNkLTQwMzEtYWVmNC1iYmVhOWNhYjcxMzExLTE3OTAxNDg0MjYzMjkwLTAwNjBiMTUxZjhiYTg1MDI0MGExMCIsInJkIjoibnRwYy5jby5pbiJ9",
+        "bytes": 15038,
+        "hasRss": false
+      },
+      "stale": false,
+      "networkFail": false,
+      "homeFallbackOk": true
+    },
+    {
+      "id": "bhel",
+      "name": "BHEL — Careers",
+      "latestUrl": "https://careers.bhel.in/index.jsp",
+      "latest": {
+        "status": 200,
+        "ok": true,
+        "stale": false,
+        "finalUrl": "https://careers.bhel.in/index.jsp",
+        "bytes": 55453,
+        "hasRss": false
+      },
+      "home": {
+        "status": 200,
+        "ok": true,
+        "stale": false,
+        "finalUrl": "https://www.bhel.com/",
+        "bytes": 145952,
+        "hasRss": false
+      },
+      "stale": false,
+      "networkFail": false,
+      "homeFallbackOk": true
+    },
+    {
+      "id": "hal",
+      "name": "Hindustan Aeronautics (HAL)",
+      "latestUrl": "https://hal-india.co.in/Careers/M__93",
+      "latest": {
+        "status": 200,
+        "ok": true,
+        "stale": false,
+        "finalUrl": "https://hal-india.co.in/Careers/M__93",
+        "bytes": 20023,
+        "hasRss": false
+      },
+      "home": {
+        "status": 200,
+        "ok": true,
+        "stale": false,
+        "finalUrl": "https://hal-india.co.in/",
+        "bytes": 20023,
+        "hasRss": false
+      },
+      "stale": false,
+      "networkFail": false,
+      "homeFallbackOk": true
+    },
+    {
+      "id": "bel",
+      "name": "Bharat Electronics (BEL)",
+      "latestUrl": "https://bel-india.in/job-notifications/",
+      "latest": {
+        "status": 0,
+        "ok": false,
+        "stale": false,
+        "error": "fetch failed"
+      },
+      "home": {
+        "status": 0,
+        "ok": false,
+        "stale": false,
+        "error": "fetch failed"
+      },
+      "stale": false,
+      "networkFail": true,
+      "homeFallbackOk": false
+    },
+    {
+      "id": "sail",
+      "name": "Steel Authority of India (SAIL)",
+      "latestUrl": "https://sailcareers.com/",
+      "latest": {
+        "status": 200,
+        "ok": true,
+        "stale": false,
+        "finalUrl": "https://sailcareers.com/",
+        "bytes": 41676,
+        "hasRss": false
+      },
+      "home": {
+        "status": 0,
+        "ok": false,
+        "stale": false,
+        "error": "fetch failed"
+      },
+      "stale": false,
+      "networkFail": false,
+      "homeFallbackOk": false
+    },
+    {
       "id": "ies",
       "name": "Indian Statistical Service / ESE",
       "latestUrl": "https://upsc.gov.in/whats-new",
@@ -1528,7 +1805,7 @@
         "ok": true,
         "stale": false,
         "finalUrl": "https://www.upsc.gov.in/",
-        "bytes": 90401,
+        "bytes": 99647,
         "hasRss": false
       },
       "home": {
@@ -1536,7 +1813,7 @@
         "ok": true,
         "stale": false,
         "finalUrl": "https://www.upsc.gov.in/",
-        "bytes": 90401,
+        "bytes": 99647,
         "hasRss": false
       },
       "stale": false,
@@ -1603,12 +1880,14 @@
     {
       "id": "psc-br",
       "name": "Bihar PSC (BPSC)",
-      "latestUrl": "https://bpsc.bihar.gov.in/Notices.html",
+      "latestUrl": "https://onlinebpsc.bihar.gov.in/",
       "latest": {
-        "status": 0,
-        "ok": false,
+        "status": 200,
+        "ok": true,
         "stale": false,
-        "error": "fetch failed"
+        "finalUrl": "https://onlinebpsc.bihar.gov.in/",
+        "bytes": 29218,
+        "hasRss": false
       },
       "home": {
         "status": 0,
@@ -1617,7 +1896,7 @@
         "error": "fetch failed"
       },
       "stale": false,
-      "networkFail": true,
+      "networkFail": false,
       "homeFallbackOk": false
     },
     {
@@ -1642,12 +1921,12 @@
       "name": "Goa PSC",
       "latestUrl": "https://gpsc.goa.gov.in/",
       "latest": {
-        "status": 500,
-        "ok": false,
+        "status": 200,
+        "ok": true,
         "stale": false,
         "finalUrl": "https://gpsc.goa.gov.in/",
-        "bytes": 1208,
-        "hasRss": false
+        "bytes": 251283,
+        "hasRss": true
       },
       "home": null,
       "stale": false,
@@ -1663,7 +1942,7 @@
         "ok": true,
         "stale": false,
         "finalUrl": "https://gpsc.gujarat.gov.in/",
-        "bytes": 432129,
+        "bytes": 405455,
         "hasRss": false
       },
       "home": null,
@@ -1680,7 +1959,7 @@
         "ok": true,
         "stale": false,
         "finalUrl": "https://hpsc.gov.in/en-us/Instructions",
-        "bytes": 118705,
+        "bytes": 128117,
         "hasRss": false
       },
       "home": {
@@ -1688,7 +1967,7 @@
         "ok": true,
         "stale": false,
         "finalUrl": "https://hpsc.gov.in/en-us/",
-        "bytes": 42220,
+        "bytes": 51072,
         "hasRss": false
       },
       "stale": false,
@@ -1720,24 +1999,20 @@
       "name": "Jammu & Kashmir PSC (JKPSC)",
       "latestUrl": "https://jkpsc.nic.in/Notifications.html",
       "latest": {
-        "status": 400,
+        "status": 0,
         "ok": false,
         "stale": false,
-        "finalUrl": "https://jkpsc.nic.in/Notifications.html",
-        "bytes": 0,
-        "hasRss": false
+        "error": "fetch failed"
       },
       "home": {
-        "status": 200,
-        "ok": true,
+        "status": 0,
+        "ok": false,
         "stale": false,
-        "finalUrl": "https://jkpsc.nic.in/",
-        "bytes": 169945,
-        "hasRss": false
+        "error": "fetch failed"
       },
       "stale": false,
-      "networkFail": false,
-      "homeFallbackOk": true
+      "networkFail": true,
+      "homeFallbackOk": false
     },
     {
       "id": "psc-jh",
@@ -1748,7 +2023,7 @@
         "ok": true,
         "stale": false,
         "finalUrl": "https://jpsc.gov.in/",
-        "bytes": 34608,
+        "bytes": 34843,
         "hasRss": false
       },
       "home": null,
@@ -1761,24 +2036,20 @@
       "name": "Karnataka PSC (KPSC)",
       "latestUrl": "https://kpsc.kar.nic.in/notifications.html",
       "latest": {
-        "status": 404,
+        "status": 0,
         "ok": false,
-        "stale": true,
-        "finalUrl": "https://kpsc.kar.nic.in/notifications.html",
-        "bytes": 0,
-        "hasRss": false
+        "stale": false,
+        "error": "fetch failed"
       },
       "home": {
-        "status": 200,
-        "ok": true,
+        "status": 0,
+        "ok": false,
         "stale": false,
-        "finalUrl": "https://kpsc.kar.nic.in/",
-        "bytes": 15074,
-        "hasRss": false
+        "error": "fetch failed"
       },
-      "stale": true,
-      "networkFail": false,
-      "homeFallbackOk": true
+      "stale": false,
+      "networkFail": true,
+      "homeFallbackOk": false
     },
     {
       "id": "psc-kl",
@@ -1789,7 +2060,7 @@
         "ok": true,
         "stale": false,
         "finalUrl": "https://www.keralapsc.gov.in/notifications",
-        "bytes": 48739,
+        "bytes": 48725,
         "hasRss": false
       },
       "home": {
@@ -1797,7 +2068,7 @@
         "ok": true,
         "stale": false,
         "finalUrl": "https://www.keralapsc.gov.in/",
-        "bytes": 70975,
+        "bytes": 70374,
         "hasRss": false
       },
       "stale": false,
@@ -1813,7 +2084,7 @@
         "ok": true,
         "stale": false,
         "finalUrl": "https://mppsc.mp.gov.in/Errors",
-        "bytes": 18750,
+        "bytes": 18877,
         "hasRss": false
       },
       "home": {
@@ -1821,7 +2092,7 @@
         "ok": true,
         "stale": false,
         "finalUrl": "https://mppsc.mp.gov.in/",
-        "bytes": 55799,
+        "bytes": 52313,
         "hasRss": false
       },
       "stale": false,
@@ -1837,7 +2108,7 @@
         "ok": true,
         "stale": false,
         "finalUrl": "https://mpsc.gov.in/english/notices",
-        "bytes": 4661,
+        "bytes": 4363,
         "hasRss": false
       },
       "home": {
@@ -1845,7 +2116,7 @@
         "ok": true,
         "stale": false,
         "finalUrl": "https://mpsc.gov.in/",
-        "bytes": 4661,
+        "bytes": 4363,
         "hasRss": false
       },
       "stale": false,
@@ -1861,7 +2132,7 @@
         "ok": true,
         "stale": false,
         "finalUrl": "https://mpsc.mizoram.gov.in/",
-        "bytes": 1405857,
+        "bytes": 1406355,
         "hasRss": false
       },
       "home": null,
@@ -1872,42 +2143,43 @@
     {
       "id": "psc-nl",
       "name": "Nagaland PSC (NPSC)",
-      "latestUrl": "https://npsc.co.in/recruitment.html",
+      "latestUrl": "https://npsc.nagaland.gov.in/",
       "latest": {
-        "status": 0,
-        "ok": false,
+        "status": 200,
+        "ok": true,
         "stale": false,
-        "error": "fetch failed"
+        "finalUrl": "https://npsc.nagaland.gov.in/",
+        "bytes": 38210,
+        "hasRss": false
       },
-      "home": {
-        "status": 0,
-        "ok": false,
-        "stale": false,
-        "error": "fetch failed"
-      },
+      "home": null,
       "stale": false,
-      "networkFail": true,
-      "homeFallbackOk": false
+      "networkFail": false,
+      "homeFallbackOk": null
     },
     {
       "id": "psc-od",
       "name": "Odisha PSC (OPSC)",
       "latestUrl": "https://opsc.gov.in/?LK=NRA",
       "latest": {
-        "status": 0,
-        "ok": false,
+        "status": 200,
+        "ok": true,
         "stale": false,
-        "error": "fetch failed"
+        "finalUrl": "https://opsc.gov.in/Public/OPSC/Default.aspx",
+        "bytes": 45885,
+        "hasRss": false
       },
       "home": {
-        "status": 0,
-        "ok": false,
+        "status": 200,
+        "ok": true,
         "stale": false,
-        "error": "fetch failed"
+        "finalUrl": "https://opsc.gov.in/Public/OPSC/Default.aspx",
+        "bytes": 45885,
+        "hasRss": false
       },
       "stale": false,
-      "networkFail": true,
-      "homeFallbackOk": false
+      "networkFail": false,
+      "homeFallbackOk": true
     },
     {
       "id": "psc-pb",
@@ -1938,7 +2210,7 @@
         "ok": true,
         "stale": false,
         "finalUrl": "https://rpsc.rajasthan.gov.in/advertisements",
-        "bytes": 793360,
+        "bytes": 799178,
         "hasRss": false
       },
       "home": {
@@ -1946,7 +2218,7 @@
         "ok": true,
         "stale": false,
         "finalUrl": "https://rpsc.rajasthan.gov.in/",
-        "bytes": 375853,
+        "bytes": 311303,
         "hasRss": false
       },
       "stale": false,
@@ -1977,7 +2249,7 @@
         "ok": true,
         "stale": false,
         "finalUrl": "https://www.tnpsc.gov.in/",
-        "bytes": 6994,
+        "bytes": 106916,
         "hasRss": false
       },
       "home": null,
@@ -1987,18 +2259,27 @@
     },
     {
       "id": "psc-tg",
-      "name": "Telangana PSC (TSPSC)",
-      "latestUrl": "https://tspsc.gov.in/",
+      "name": "Telangana PSC (TGPSC)",
+      "latestUrl": "https://websitenew.tgpsc.gov.in/notifications",
       "latest": {
-        "status": 0,
-        "ok": false,
+        "status": 200,
+        "ok": true,
         "stale": false,
-        "error": "fetch failed"
+        "finalUrl": "https://websitenew.tgpsc.gov.in/notifications",
+        "bytes": 71263,
+        "hasRss": false
       },
-      "home": null,
+      "home": {
+        "status": 200,
+        "ok": true,
+        "stale": false,
+        "finalUrl": "https://www.tgpsc.gov.in/",
+        "bytes": 22260,
+        "hasRss": false
+      },
       "stale": false,
-      "networkFail": true,
-      "homeFallbackOk": null
+      "networkFail": false,
+      "homeFallbackOk": true
     },
     {
       "id": "psc-tr",
@@ -2009,7 +2290,7 @@
         "ok": true,
         "stale": false,
         "finalUrl": "https://tpsc.tripura.gov.in/",
-        "bytes": 127162,
+        "bytes": 135922,
         "hasRss": false
       },
       "home": null,
@@ -2034,7 +2315,7 @@
         "ok": true,
         "stale": false,
         "finalUrl": "https://uppsc.up.nic.in/",
-        "bytes": 181084,
+        "bytes": 181232,
         "hasRss": false
       },
       "stale": false,
@@ -2050,7 +2331,7 @@
         "ok": true,
         "stale": false,
         "finalUrl": "https://psc.uk.gov.in/",
-        "bytes": 116576,
+        "bytes": 121859,
         "hasRss": false
       },
       "home": null,
@@ -2082,7 +2363,7 @@
         "ok": true,
         "stale": false,
         "finalUrl": "https://appsc.gov.in/Index/institute_index/ins/RECINS001",
-        "bytes": 167266,
+        "bytes": 171823,
         "hasRss": false
       },
       "home": null,
@@ -2095,30 +2376,41 @@
       "name": "Manipur PSC",
       "latestUrl": "https://mpscmanipur.gov.in/",
       "latest": {
-        "status": 0,
-        "ok": false,
+        "status": 200,
+        "ok": true,
         "stale": false,
-        "error": "fetch failed"
+        "finalUrl": "https://mpscmanipur.gov.in/",
+        "bytes": 23164,
+        "hasRss": false
       },
       "home": null,
       "stale": false,
-      "networkFail": true,
+      "networkFail": false,
       "homeFallbackOk": null
     },
     {
       "id": "psc-ml",
       "name": "Meghalaya PSC",
-      "latestUrl": "https://megpsc.gov.in/",
+      "latestUrl": "https://mpsc.meghalaya.gov.in/advertisements.html",
       "latest": {
-        "status": 0,
-        "ok": false,
+        "status": 200,
+        "ok": true,
         "stale": false,
-        "error": "fetch failed"
+        "finalUrl": "https://mpsc.meghalaya.gov.in/advertisements.html",
+        "bytes": 66839,
+        "hasRss": false
       },
-      "home": null,
+      "home": {
+        "status": 200,
+        "ok": true,
+        "stale": false,
+        "finalUrl": "https://mpsc.meghalaya.gov.in/",
+        "bytes": 464813,
+        "hasRss": false
+      },
       "stale": false,
-      "networkFail": true,
-      "homeFallbackOk": null
+      "networkFail": false,
+      "homeFallbackOk": true
     },
     {
       "id": "ssb-up",
@@ -2142,18 +2434,27 @@
     },
     {
       "id": "ssb-mh",
-      "name": "Maharashtra State Selection Board (MahaPariksha)",
-      "latestUrl": "https://mahapariksha.gov.in/",
+      "name": "Maharashtra PSC notices (MahaPariksha host retired)",
+      "latestUrl": "https://mpsc.gov.in/english/notices",
       "latest": {
-        "status": 0,
-        "ok": false,
+        "status": 200,
+        "ok": true,
         "stale": false,
-        "error": "fetch failed"
+        "finalUrl": "https://mpsc.gov.in/english/notices",
+        "bytes": 4363,
+        "hasRss": false
       },
-      "home": null,
+      "home": {
+        "status": 200,
+        "ok": true,
+        "stale": false,
+        "finalUrl": "https://mpsc.gov.in/",
+        "bytes": 4363,
+        "hasRss": false
+      },
       "stale": false,
-      "networkFail": true,
-      "homeFallbackOk": null
+      "networkFail": false,
+      "homeFallbackOk": true
     },
     {
       "id": "ssb-tn",
@@ -2194,7 +2495,7 @@
         "ok": true,
         "stale": false,
         "finalUrl": "https://hssc.gov.in/",
-        "bytes": 21896,
+        "bytes": 21372,
         "hasRss": false
       },
       "home": null,
@@ -2211,7 +2512,7 @@
         "ok": true,
         "stale": false,
         "finalUrl": "https://gsssb.gujarat.gov.in/Index",
-        "bytes": 21054,
+        "bytes": 21274,
         "hasRss": false
       },
       "home": null,
@@ -2235,6 +2536,62 @@
       "homeFallbackOk": null
     },
     {
+      "id": "ssb-od",
+      "name": "Odisha Staff Selection Commission (OSSC)",
+      "latestUrl": "https://www.ossc.gov.in/Public/OSSC/Default.aspx",
+      "latest": {
+        "status": 200,
+        "ok": true,
+        "stale": false,
+        "finalUrl": "https://www.ossc.gov.in/Public/OSSC/Default.aspx",
+        "bytes": 48549,
+        "hasRss": false
+      },
+      "home": {
+        "status": 200,
+        "ok": true,
+        "stale": false,
+        "finalUrl": "https://www.ossc.gov.in/Public/OSSC/Default.aspx",
+        "bytes": 48549,
+        "hasRss": false
+      },
+      "stale": false,
+      "networkFail": false,
+      "homeFallbackOk": true
+    },
+    {
+      "id": "ssb-jk",
+      "name": "J&K Services Selection Board (JKSSB)",
+      "latestUrl": "https://jkssb.nic.in/",
+      "latest": {
+        "status": 0,
+        "ok": false,
+        "stale": false,
+        "error": "fetch failed"
+      },
+      "home": null,
+      "stale": false,
+      "networkFail": true,
+      "homeFallbackOk": null
+    },
+    {
+      "id": "ssb-uk",
+      "name": "Uttarakhand Subordinate Service Selection (UKSSSC)",
+      "latestUrl": "https://sssc.uk.gov.in/",
+      "latest": {
+        "status": 200,
+        "ok": true,
+        "stale": false,
+        "finalUrl": "https://sssc.uk.gov.in/",
+        "bytes": 120745,
+        "hasRss": false
+      },
+      "home": null,
+      "stale": false,
+      "networkFail": false,
+      "homeFallbackOk": null
+    },
+    {
       "id": "police-up",
       "name": "UP Police Recruitment Board (UPPRPB)",
       "latestUrl": "https://uppbpb.gov.in/",
@@ -2243,7 +2600,7 @@
         "ok": true,
         "stale": false,
         "finalUrl": "https://uppbpb.gov.in/",
-        "bytes": 67823,
+        "bytes": 0,
         "hasRss": false
       },
       "home": null,
@@ -2260,7 +2617,7 @@
         "ok": true,
         "stale": false,
         "finalUrl": "https://www.mahapolice.gov.in/",
-        "bytes": 216108,
+        "bytes": 218637,
         "hasRss": false
       },
       "home": null,
@@ -2316,7 +2673,7 @@
         "ok": true,
         "stale": false,
         "finalUrl": "https://www.mppolice.gov.in/en",
-        "bytes": 163757,
+        "bytes": 126673,
         "hasRss": true
       },
       "home": null,
@@ -2341,7 +2698,7 @@
         "ok": true,
         "stale": false,
         "finalUrl": "https://keralapolice.gov.in/",
-        "bytes": 353269,
+        "bytes": 363570,
         "hasRss": false
       },
       "stale": true,
@@ -2357,7 +2714,7 @@
         "ok": true,
         "stale": false,
         "finalUrl": "https://ksp.karnataka.gov.in/",
-        "bytes": 264230,
+        "bytes": 267821,
         "hasRss": false
       },
       "home": null,
@@ -2374,7 +2731,7 @@
         "ok": true,
         "stale": false,
         "finalUrl": "https://labour.delhi.gov.in/",
-        "bytes": 105872,
+        "bytes": 105730,
         "hasRss": false
       },
       "home": {
@@ -2382,7 +2739,7 @@
         "ok": true,
         "stale": false,
         "finalUrl": "https://delhi.gov.in/",
-        "bytes": 53404,
+        "bytes": 53240,
         "hasRss": false
       },
       "stale": false,
@@ -2398,7 +2755,7 @@
         "ok": true,
         "stale": false,
         "finalUrl": "https://dsssbonline.nic.in/",
-        "bytes": 43129,
+        "bytes": 25771,
         "hasRss": false
       },
       "home": null,
@@ -2415,7 +2772,7 @@
         "ok": true,
         "stale": false,
         "finalUrl": "https://recruitment.py.gov.in/",
-        "bytes": 187927,
+        "bytes": 187982,
         "hasRss": false
       },
       "home": null,
@@ -2449,7 +2806,7 @@
         "ok": true,
         "stale": false,
         "finalUrl": "https://ladakh.gov.in/",
-        "bytes": 230150,
+        "bytes": 236556,
         "hasRss": false
       },
       "home": null,
@@ -2466,7 +2823,7 @@
         "ok": true,
         "stale": false,
         "finalUrl": "https://ladakh.gov.in/recruitment-corner/",
-        "bytes": 98708,
+        "bytes": 104519,
         "hasRss": false
       },
       "home": null,
@@ -2483,7 +2840,7 @@
         "ok": true,
         "stale": false,
         "finalUrl": "https://erecruitment.andamannicobar.gov.in/",
-        "bytes": 138914,
+        "bytes": 141161,
         "hasRss": false
       },
       "home": null,
@@ -2500,7 +2857,7 @@
         "ok": true,
         "stale": false,
         "finalUrl": "https://andamannicobar.gov.in/",
-        "bytes": 126964,
+        "bytes": 160795,
         "hasRss": false
       },
       "home": null,
@@ -2517,7 +2874,7 @@
         "ok": true,
         "stale": false,
         "finalUrl": "https://angul.dcourts.gov.in/notice-category/recruitments/",
-        "bytes": 102255,
+        "bytes": 103255,
         "hasRss": true
       },
       "home": {
@@ -2525,7 +2882,7 @@
         "ok": true,
         "stale": false,
         "finalUrl": "https://angul.dcourts.gov.in/",
-        "bytes": 168866,
+        "bytes": 170391,
         "hasRss": false
       },
       "stale": false,
@@ -2541,7 +2898,7 @@
         "ok": true,
         "stale": false,
         "finalUrl": "https://balangir.dcourts.gov.in/notice-category/recruitments/",
-        "bytes": 104348,
+        "bytes": 103089,
         "hasRss": true
       },
       "home": {
@@ -2549,7 +2906,7 @@
         "ok": true,
         "stale": false,
         "finalUrl": "https://balangir.dcourts.gov.in/",
-        "bytes": 175964,
+        "bytes": 177934,
         "hasRss": false
       },
       "stale": false,
@@ -2565,7 +2922,7 @@
         "ok": true,
         "stale": false,
         "finalUrl": "https://nayagarh.dcourts.gov.in/notice-category/recruitments/",
-        "bytes": 102219,
+        "bytes": 103222,
         "hasRss": true
       },
       "home": {
@@ -2573,7 +2930,7 @@
         "ok": true,
         "stale": false,
         "finalUrl": "https://nayagarh.dcourts.gov.in/",
-        "bytes": 158841,
+        "bytes": 160328,
         "hasRss": false
       },
       "stale": false,
@@ -2589,7 +2946,7 @@
         "ok": true,
         "stale": false,
         "finalUrl": "https://jagatsinghpur.dcourts.gov.in/notice-category/recruitments/",
-        "bytes": 102648,
+        "bytes": 103656,
         "hasRss": true
       },
       "home": {
@@ -2597,7 +2954,7 @@
         "ok": true,
         "stale": false,
         "finalUrl": "https://jagatsinghpur.dcourts.gov.in/",
-        "bytes": 168741,
+        "bytes": 170626,
         "hasRss": false
       },
       "stale": false,
@@ -2613,7 +2970,7 @@
         "ok": true,
         "stale": false,
         "finalUrl": "https://jharsuguda.dcourts.gov.in/notice-category/recruitments/",
-        "bytes": 103043,
+        "bytes": 104048,
         "hasRss": true
       },
       "home": {
@@ -2621,7 +2978,7 @@
         "ok": true,
         "stale": false,
         "finalUrl": "https://jharsuguda.dcourts.gov.in/",
-        "bytes": 169419,
+        "bytes": 170374,
         "hasRss": false
       },
       "stale": false,
@@ -2637,7 +2994,7 @@
         "ok": true,
         "stale": false,
         "finalUrl": "https://puri.dcourts.gov.in/notice-category/recruitments/",
-        "bytes": 101746,
+        "bytes": 102745,
         "hasRss": true
       },
       "home": {
@@ -2645,7 +3002,7 @@
         "ok": true,
         "stale": false,
         "finalUrl": "https://puri.dcourts.gov.in/",
-        "bytes": 159172,
+        "bytes": 160394,
         "hasRss": false
       },
       "stale": false,
@@ -2661,7 +3018,7 @@
         "ok": true,
         "stale": false,
         "finalUrl": "https://rayagada.dcourts.gov.in/notice-category/recruitments/",
-        "bytes": 102141,
+        "bytes": 103144,
         "hasRss": true
       },
       "home": {
@@ -2669,7 +3026,7 @@
         "ok": true,
         "stale": false,
         "finalUrl": "https://rayagada.dcourts.gov.in/",
-        "bytes": 160882,
+        "bytes": 162863,
         "hasRss": false
       },
       "stale": false,
@@ -2685,7 +3042,7 @@
         "ok": true,
         "stale": false,
         "finalUrl": "https://dhenkanal.dcourts.gov.in/notice-category/recruitments/",
-        "bytes": 102703,
+        "bytes": 103707,
         "hasRss": true
       },
       "home": {
@@ -2693,7 +3050,7 @@
         "ok": true,
         "stale": false,
         "finalUrl": "https://dhenkanal.dcourts.gov.in/",
-        "bytes": 167721,
+        "bytes": 169250,
         "hasRss": false
       },
       "stale": false,
@@ -2705,23 +3062,21 @@
       "name": "District & Sessions Judge, Nuapada",
       "latestUrl": "https://nuapada.dcourts.gov.in/notice-category/recruitments/",
       "latest": {
-        "status": 200,
-        "ok": true,
+        "status": 0,
+        "ok": false,
         "stale": false,
-        "finalUrl": "https://nuapada.dcourts.gov.in/notice-category/recruitments/",
-        "bytes": 101985,
-        "hasRss": true
+        "error": "fetch failed"
       },
       "home": {
         "status": 200,
         "ok": true,
         "stale": false,
         "finalUrl": "https://nuapada.dcourts.gov.in/",
-        "bytes": 167637,
+        "bytes": 0,
         "hasRss": false
       },
       "stale": false,
-      "networkFail": false,
+      "networkFail": true,
       "homeFallbackOk": true
     },
     {
@@ -2733,7 +3088,7 @@
         "ok": true,
         "stale": false,
         "finalUrl": "https://sitapur.dcourts.gov.in/notice-category/recruitments/",
-        "bytes": 104365,
+        "bytes": 103418,
         "hasRss": true
       },
       "home": {
@@ -2741,7 +3096,7 @@
         "ok": true,
         "stale": false,
         "finalUrl": "https://sitapur.dcourts.gov.in/",
-        "bytes": 151075,
+        "bytes": 153258,
         "hasRss": false
       },
       "stale": false,
@@ -2757,7 +3112,7 @@
         "ok": true,
         "stale": false,
         "finalUrl": "https://ludhiana.dcourts.gov.in/notice-category/recruitments/",
-        "bytes": 102614,
+        "bytes": 97988,
         "hasRss": true
       },
       "home": {
@@ -2765,7 +3120,7 @@
         "ok": true,
         "stale": false,
         "finalUrl": "https://ludhiana.dcourts.gov.in/",
-        "bytes": 164268,
+        "bytes": 164543,
         "hasRss": false
       },
       "stale": false,
@@ -2777,23 +3132,21 @@
       "name": "District & Sessions Judge, Yamunanagar",
       "latestUrl": "https://yamunanagar.dcourts.gov.in/notice-category/recruitments/",
       "latest": {
-        "status": 200,
-        "ok": true,
+        "status": 0,
+        "ok": false,
         "stale": false,
-        "finalUrl": "https://yamunanagar.dcourts.gov.in/notice-category/recruitments/",
-        "bytes": 97827,
-        "hasRss": true
+        "error": "fetch failed"
       },
       "home": {
         "status": 200,
         "ok": true,
         "stale": false,
         "finalUrl": "https://yamunanagar.dcourts.gov.in/",
-        "bytes": 149666,
+        "bytes": 0,
         "hasRss": false
       },
       "stale": false,
-      "networkFail": false,
+      "networkFail": true,
       "homeFallbackOk": true
     },
     {
@@ -2805,7 +3158,7 @@
         "ok": true,
         "stale": false,
         "finalUrl": "https://kullu.dcourts.gov.in/notice-category/recruitments/",
-        "bytes": 107061,
+        "bytes": 105047,
         "hasRss": true
       },
       "home": {
@@ -2813,7 +3166,7 @@
         "ok": true,
         "stale": false,
         "finalUrl": "https://kullu.dcourts.gov.in/",
-        "bytes": 163230,
+        "bytes": 163980,
         "hasRss": false
       },
       "stale": false,
@@ -2829,7 +3182,7 @@
         "ok": true,
         "stale": false,
         "finalUrl": "https://indore.dcourts.gov.in/notice-category/recruitments/",
-        "bytes": 105235,
+        "bytes": 104069,
         "hasRss": true
       },
       "home": {
@@ -2837,7 +3190,7 @@
         "ok": true,
         "stale": false,
         "finalUrl": "https://indore.dcourts.gov.in/",
-        "bytes": 155945,
+        "bytes": 157260,
         "hasRss": false
       },
       "stale": false,
@@ -2853,7 +3206,7 @@
         "ok": true,
         "stale": false,
         "finalUrl": "https://ujjain.dcourts.gov.in/notice-category/recruitments/",
-        "bytes": 105154,
+        "bytes": 108372,
         "hasRss": true
       },
       "home": {
@@ -2861,7 +3214,7 @@
         "ok": true,
         "stale": false,
         "finalUrl": "https://ujjain.dcourts.gov.in/",
-        "bytes": 164900,
+        "bytes": 167545,
         "hasRss": false
       },
       "stale": false,
@@ -2877,7 +3230,7 @@
         "ok": true,
         "stale": false,
         "finalUrl": "https://howrah.dcourts.gov.in/notice-category/recruitments/",
-        "bytes": 104382,
+        "bytes": 105383,
         "hasRss": true
       },
       "home": {
@@ -2885,7 +3238,7 @@
         "ok": true,
         "stale": false,
         "finalUrl": "https://howrah.dcourts.gov.in/",
-        "bytes": 154940,
+        "bytes": 159912,
         "hasRss": false
       },
       "stale": false,
@@ -2901,7 +3254,7 @@
         "ok": true,
         "stale": false,
         "finalUrl": "https://coochbehar.dcourts.gov.in/notice-category/recruitments/",
-        "bytes": 103031,
+        "bytes": 104036,
         "hasRss": true
       },
       "home": {
@@ -2909,7 +3262,7 @@
         "ok": true,
         "stale": false,
         "finalUrl": "https://coochbehar.dcourts.gov.in/",
-        "bytes": 156237,
+        "bytes": 156897,
         "hasRss": false
       },
       "stale": false,
@@ -2925,7 +3278,7 @@
         "ok": true,
         "stale": false,
         "finalUrl": "https://begusarai.dcourts.gov.in/notice-category/recruitments/",
-        "bytes": 102644,
+        "bytes": 98563,
         "hasRss": true
       },
       "home": {
@@ -2933,7 +3286,7 @@
         "ok": true,
         "stale": false,
         "finalUrl": "https://begusarai.dcourts.gov.in/",
-        "bytes": 155916,
+        "bytes": 158058,
         "hasRss": false
       },
       "stale": false,
@@ -2949,7 +3302,7 @@
         "ok": true,
         "stale": false,
         "finalUrl": "https://bhojpur.dcourts.gov.in/notice-category/recruitments/",
-        "bytes": 104172,
+        "bytes": 105062,
         "hasRss": true
       },
       "home": {
@@ -2957,7 +3310,7 @@
         "ok": true,
         "stale": false,
         "finalUrl": "https://bhojpur.dcourts.gov.in/",
-        "bytes": 169014,
+        "bytes": 173564,
         "hasRss": false
       },
       "stale": false,
@@ -2973,7 +3326,7 @@
         "ok": true,
         "stale": false,
         "finalUrl": "https://siddipet.dcourts.gov.in/notice-category/recruitments/",
-        "bytes": 104304,
+        "bytes": 105155,
         "hasRss": true
       },
       "home": {
@@ -2981,7 +3334,7 @@
         "ok": true,
         "stale": false,
         "finalUrl": "https://siddipet.dcourts.gov.in/",
-        "bytes": 138830,
+        "bytes": 140925,
         "hasRss": false
       },
       "stale": false,
@@ -2997,7 +3350,7 @@
         "ok": true,
         "stale": false,
         "finalUrl": "https://sainikschoolgoalpara.org/",
-        "bytes": 169642,
+        "bytes": 161212,
         "hasRss": true
       },
       "home": null,
@@ -3014,7 +3367,7 @@
         "ok": true,
         "stale": false,
         "finalUrl": "https://www.sainikschoolamaravathinagar.edu.in/careers.php",
-        "bytes": 91864,
+        "bytes": 201092,
         "hasRss": false
       },
       "home": {
@@ -3022,7 +3375,7 @@
         "ok": true,
         "stale": false,
         "finalUrl": "https://www.sainikschoolamaravathinagar.edu.in/",
-        "bytes": 109328,
+        "bytes": 113005,
         "hasRss": false
       },
       "stale": false,
@@ -3038,7 +3391,7 @@
         "ok": false,
         "stale": false,
         "finalUrl": "https://www.sainikschooljhansi.com/files/recruitments/",
-        "bytes": 1291,
+        "bytes": 1154,
         "hasRss": false
       },
       "home": {
@@ -3046,7 +3399,7 @@
         "ok": true,
         "stale": false,
         "finalUrl": "https://www.sainikschooljhansi.com/",
-        "bytes": 172031,
+        "bytes": 178330,
         "hasRss": false
       },
       "stale": false,
@@ -3062,7 +3415,7 @@
         "ok": true,
         "stale": false,
         "finalUrl": "https://www.sainikschoolbhubaneswar.edu.in/",
-        "bytes": 120785,
+        "bytes": 116542,
         "hasRss": false
       },
       "home": null,
@@ -3087,7 +3440,7 @@
         "ok": true,
         "stale": false,
         "finalUrl": "https://www.ssgopalganj.in/",
-        "bytes": 46555,
+        "bytes": 46525,
         "hasRss": false
       },
       "stale": false,
@@ -3103,7 +3456,7 @@
         "ok": true,
         "stale": false,
         "finalUrl": "https://pakur.nic.in/",
-        "bytes": 208909,
+        "bytes": 208663,
         "hasRss": false
       },
       "home": null,

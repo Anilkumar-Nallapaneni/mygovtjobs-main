@@ -1,11 +1,13 @@
 {
   "brand": {
+    "name": "ᱛᱟᱦᱮᱱ ᱥᱚᱨᱠᱟᱨᱤ ᱱᱩᱠᱨᱤ",
     "primary": "My ",
     "accent": "Govt Jobs",
     "tagline": "ᱟᱢᱞᱟ ᱥᱚᱨᱠᱟᱨ ᱪᱟᱹᱠᱨᱤ ᱥᱚᱱᱛᱚᱨ",
+    "subtitle": "ᱞᱟᱭᱤᱵᱷᱜᱚᱴᱡᱚᱵᱽᱥ.ᱠᱚᱢ",
     "domain": "ᱜᱚᱵᱷᱴᱡᱚᱵᱽᱥ.ᱤᱧ",
-    "logoAlt": "Live Govt Jobs — ᱟᱢᱞᱟ ᱥᱚᱨᱠᱟᱨᱤ ᱠᱟᱹᱢᱤ ᱮᱞᱟᱨᱴ",
-    "homeAria": "Live Govt Jobs — ᱚᱲᱟᱜ"
+    "logoAlt": "livegovtjobs.com — ᱟᱢᱞᱟ ᱥᱚᱨᱠᱟᱨᱤ ᱠᱟᱹᱢᱤ ᱮᱞᱟᱨᱴ",
+    "homeAria": "ᱜᱚᱵᱷᱴᱡᱚᱵᱽᱥ.ᱢᱤ — ᱚᱲᱟᱜ"
   },
   "browse": {
     "breadcrumbs": "ᱵᱨᱮᱰᱠᱨᱟᱢᱵᱽ"
@@ -70,11 +72,14 @@
     "magicLinkSent": "ᱥᱟᱭᱤᱱ-ᱤᱱ ᱞᱤᱝᱠ ᱞᱟᱹᱜᱤᱫ ᱟᱢᱟᱜ ᱤᱢᱮᱞ ᱧᱮᱞ ᱢᱮ ᱾",
     "signInFailed": "ᱥᱟᱭᱤᱱ-ᱤᱱ ᱵᱟᱝ ᱥᱟᱹᱛ ᱟᱠᱟᱱᱟ",
     "signInLead": "ᱮᱞᱟᱨᱴ ᱠᱩᱥᱤᱠᱚ ᱟᱨ ᱠᱩᱥᱤ ᱯᱚᱱᱚᱛ ᱠᱚ ᱵᱟᱧᱪᱟᱣ ᱞᱟᱹᱜᱤᱫ ᱚᱯᱥᱚᱱᱟᱞ ᱮᱠᱟᱣᱩᱱᱴ᱾ ᱵᱽᱨᱟᱣᱩᱡᱤᱝ ᱠᱟᱹᱢᱤ ᱠᱚ ᱞᱟᱹᱜᱤᱫ ᱥᱟᱭᱤᱱ ᱤᱱ ᱨᱮᱭᱟᱜ ᱞᱟᱹᱠᱛᱤ ᱵᱟᱹᱱᱩᱜᱼᱟ ᱾",
+    "emailRequired": "ᱫᱟᱭᱟ ᱠᱟᱛᱮ ᱢᱤᱫ ᱢᱟᱱᱭᱟ ᱤᱢᱮᱞ ᱴᱷᱤᱠᱟᱹᱱᱟ ᱮᱢ ᱢᱮ᱾",
     "saveProfile": "ᱯᱨᱚᱯᱷᱟᱭᱤᱞ ᱥᱟᱧᱪᱟᱣ ᱢᱮ",
     "profileSaved": "ᱯᱨᱚᱯᱷᱟᱭᱤᱞ ᱥᱟᱧᱪᱟᱣ ᱮᱱᱟ᱾",
     "saveFailed": "ᱯᱨᱚᱯᱷᱟᱭᱤᱞ ᱵᱟᱝ ᱥᱟᱸᱪᱟᱣ ᱫᱟᱲᱮᱭᱟᱜ ᱠᱟᱱᱟ",
     "favoriteStates": "ᱠᱩᱥᱤ ᱯᱚᱱᱚᱛ",
-    "notConfigured": "Sign-in is temporarily unavailable. You can still browse jobs without an account."
+    "notConfigured": "ᱥᱟᱭᱤᱱ ᱤᱱ ᱞᱟᱹᱜᱤᱫ ᱥᱩᱯᱟᱵᱮᱥ ᱠᱚᱱᱯᱷᱤᱜᱟᱨᱮᱥᱚᱱ ᱞᱟᱹᱠᱛᱤᱜ ᱠᱟᱱᱟ ᱾",
+    "premiumError": "ᱪᱮᱠᱟᱣᱩᱴ ᱵᱟᱝ ᱮᱦᱚᱵ ᱫᱟᱲᱮᱭᱟᱜ ᱠᱟᱱᱟ ᱾ ᱫᱟᱭᱟ ᱠᱟᱛᱮ ᱛᱟᱭᱚᱢ ᱫᱚᱦᱲᱟ ᱠᱩᱨᱩᱢᱩᱴᱩᱭ ᱢᱮ᱾",
+    "alertsUnsubscribeFailed": "ᱟᱱᱥᱟᱵᱽᱥᱠᱨᱟᱭᱤᱵᱷ ᱵᱟᱝ ᱦᱩᱭ ᱫᱟᱲᱮᱭᱟᱜᱼᱟ᱾ ᱫᱟᱭᱟ ᱠᱟᱛᱮ ᱫᱚᱦᱲᱟ ᱠᱩᱨᱩᱢᱩᱴᱩᱭ ᱢᱮ᱾"
   },
   "ticker": {
     "live": "ᱡᱤᱣᱤᱫᱳᱜ",
@@ -88,6 +93,7 @@
   },
   "home": {
     "tagline": "ᱥᱚᱨᱠᱟᱨ ᱵᱮᱣᱨᱟ ᱛᱤᱥ ᱦᱚᱸ ᱟᱞᱚᱢ ᱦᱤᱲᱤᱧᱟ",
+    "heroHeading": "ᱯᱩᱥᱴᱟᱹᱣ ᱟᱠᱟᱱ ᱟᱢᱞᱟ ᱥᱚᱨᱠᱟᱨᱤ ᱠᱟᱹᱢᱤ ᱱᱚᱴᱤᱯᱷᱤᱠᱮᱥᱚᱱ",
     "statsStrip": {
       "primary": "{{liveNotices}} ᱞᱟᱭᱤᱵᱷ ᱱᱚᱴᱤᱯᱷᱤᱠᱮᱥᱚᱱ · {{vacancies}} ᱱᱚᱴᱤᱯᱷᱤᱠᱮᱥᱚᱱ ᱯᱚᱥᱴ",
       "secondary": "{{sources}} ᱚᱯᱷᱤᱥᱤᱭᱟᱞ ᱥᱚᱨᱥ ᱠᱚ · ᱱᱟᱦᱟᱜ ᱟᱠᱟᱱᱟ {{syncLabel}}",
@@ -371,20 +377,38 @@
   "jobsStatus": {
     "loading": "ᱠᱟᱹᱢᱤ ᱥᱩᱪᱤ ᱞᱳᱰᱤᱝ ᱠᱟᱱᱟ...",
     "refreshing": "ᱞᱟᱭᱤᱵᱽ ᱞᱤᱥᱴᱤᱝ ᱟᱯᱰᱮᱴ ᱦᱩᱭᱩᱜ ᱠᱟᱱᱟ...",
-    "liveMode": "Live listings",
-    "demoMode": "Showing available listings",
+    "liveMode": "ᱞᱟᱭᱤᱵᱽ ᱰᱟᱴᱟᱵᱮᱥ ᱡᱚᱯᱲᱟᱣ ᱟᱠᱟᱱᱟ",
+    "demoMode": "ᱰᱮᱢᱚ ᱠᱮᱴᱟᱞᱚᱜᱽ — ᱥᱟᱹᱨᱤ ᱚᱠᱛᱚ ᱠᱟᱹᱢᱤ ᱠᱚ ᱞᱟᱹᱜᱤᱫ ᱥᱩᱯᱟᱵᱮᱥ + ᱵᱮᱠᱮᱱᱰ ᱡᱚᱯᱲᱟᱣ ᱢᱮ",
     "listings": "ᱥᱩᱪᱤ",
     "curated": "ᱠᱩᱨᱮᱴᱮᱰ",
     "liveFromDb": "ᱚᱯᱷᱤᱥᱤᱭᱟᱞ ᱥᱚᱨᱥ ᱠᱷᱚᱱ ᱞᱟᱭᱤᱵᱽ",
     "live": "ᱡᱤᱣᱤᱫᱳᱜ",
-    "setupHint": "Listings update automatically from official sources",
-    "degraded": "Some listings may be delayed. Showing the latest available data.",
+    "setupHint": "ᱤᱱᱟᱹ ᱛᱟᱭᱚᱢ: ᱥᱩᱯᱟᱵᱮᱥ ᱥᱮᱴ ᱟᱯ ᱢᱮ → ᱵᱮᱠᱮᱱᱰ ᱤᱱᱡᱮᱥᱴ ᱪᱟᱹᱞᱩᱭ ᱢᱮ → VITE_SUPABASE_URL ᱥᱮᱞᱮᱫ ᱢᱮ",
+    "degraded": "ᱵᱮᱠᱮᱱᱰ ᱰᱟᱴᱟᱵᱮᱥ ᱚᱠᱟ ᱚᱠᱛᱚ ᱞᱟᱹᱜᱤᱫ ᱵᱟᱝ ᱧᱟᱢᱚᱜ ᱠᱟᱱᱟ — ᱠᱮᱪᱰ ᱥᱮ ᱰᱮᱢᱚ ᱥᱩᱪᱤ ᱩᱫᱩᱜ ᱠᱟᱱᱟ",
     "dailySchedule": "ᱚᱯᱷᱤᱥᱤᱭᱟᱞ ᱞᱤᱥᱴᱤᱝ ᱫᱤᱱᱟᱹᱢ ᱥᱮᱛᱟᱜ ᱘ᱺ᱐᱐ ᱴᱟᱲᱟᱝ ᱨᱮ ᱨᱤᱯᱷᱨᱮᱥ ᱦᱩᱭᱩᱜ ᱠᱟᱱᱟ",
     "dailyUpdated": "ᱫᱤᱱᱟᱹᱢ ᱜᱮ ᱟᱯᱰᱮᱴ ᱟᱠᱟᱱᱟ · ᱢᱩᱪᱟᱹᱫ ᱥᱤᱱᱠ {{time}} IST",
     "dailyUpdatedRelative": "अपडेट किया गया {{time}}",
     "dailyNext": "ᱫᱚᱥᱟᱨ ᱟᱯᱰᱮᱴ {{time}} IST · ᱛᱮᱦᱮᱧ ᱫᱚ ᱪᱮᱫ ᱦᱚᱸ ᱟᱯᱰᱮᱴ ᱵᱟᱹᱱᱩᱜᱼᱟ",
     "loadError": "ᱪᱟᱹᱠᱨᱤ ᱥᱩᱪᱤ ᱵᱟᱝ ᱞᱳᱰ ᱫᱟᱲᱮᱭᱟᱜᱼᱟ ᱾ ᱡᱩᱫᱤ ᱢᱮᱱᱟᱜ ᱠᱷᱟᱱ ᱠᱮᱪᱰ ᱰᱟᱴᱟ ᱩᱫᱩᱜᱚᱜ ᱠᱟᱱᱟ᱾",
     "retry": "ᱫᱚᱦᱲᱟ ᱪᱮᱥᱴᱟᱭ ᱢᱮ"
+  },
+  "jobReport": {
+    "button": "ᱵᱷᱩᱞ ᱠᱟᱹᱢᱤ ᱨᱤᱯᱚᱨᱴ ᱢᱮ",
+    "title": "ᱠᱷᱚᱵᱚᱨ: {__ᱯᱤᱮᱪ_᱐__}",
+    "reasonLabel": "ᱠᱟᱨᱚᱱ",
+    "reasonExpired": "ᱢᱩᱪᱟᱹᱫ ᱠᱟᱹᱢᱤ",
+    "reasonWrongDeadline": "ᱵᱷᱩᱞ ᱢᱩᱪᱟᱹᱫ ᱢᱟᱦᱟᱸ",
+    "reasonBrokenLink": "ᱨᱟᱹᱯᱩᱫ ᱞᱤᱝᱠ",
+    "reasonWrongVacancy": "ᱵᱷᱩᱞ ᱠᱷᱟᱹᱞᱤ ᱴᱷᱟᱶ ᱞᱮᱠᱷᱟ",
+    "reasonDuplicate": "ᱰᱩᱯᱞᱤᱠᱮᱴ ᱞᱤᱥᱴᱤᱝ",
+    "reasonNotRecruitment": "ᱵᱷᱩᱨᱛᱤ ᱯᱚᱥᱴ ᱫᱚ ᱵᱟᱝ ᱠᱟᱱᱟ",
+    "reasonSuspiciousSource": "ᱥᱚᱱᱫᱮᱦᱚ ᱥᱚᱨᱥ",
+    "detailsLabel": "ᱵᱤᱵᱨᱚᱬ (ᱚᱯᱥᱚᱱᱟᱞ)",
+    "emailLabel": "ᱤᱢᱮᱞ (ᱚᱯᱥᱚᱱᱟᱞ)",
+    "submit": "ᱨᱤᱯᱚᱨᱴ ᱡᱚᱢᱟᱣ ᱢᱮ",
+    "sending": "ᱠᱩᱞᱚᱜ ᱠᱟᱱᱟ...",
+    "success": "ᱟᱭᱢᱟ ᱥᱟᱨᱦᱟᱣ — ᱟᱞᱮ ᱱᱚᱣᱟ ᱥᱩᱪᱤ ᱞᱮ ᱧᱮᱞ ᱫᱚᱦᱚᱭᱟ᱾",
+    "error": "ᱨᱤᱯᱳᱨᱴ ᱵᱟᱝ ᱡᱚᱢᱟᱣ ᱫᱟᱲᱮᱭᱟᱜ ᱠᱟᱱᱟ ᱾ ᱫᱟᱭᱟ ᱠᱟᱛᱮ ᱛᱟᱭᱚᱢ ᱫᱚᱦᱲᱟ ᱠᱩᱨᱩᱢᱩᱴᱩᱭ ᱢᱮ᱾"
   },
   "subscribeBanner": {
     "title": "दैनिक सरकारी नौकरियाँ अलर्ट",
@@ -418,6 +442,7 @@
     "sending": "भेजा जा रहा है...",
     "success": "धन्यवाद - हम 2 व्यावसायिक दिनों के भीतर उत्तर देंगे।",
     "error": "नहीं भेजा जा सका. हमें contact@livegovtjobs.com पर ईमेल करें",
+    "offlineError": "ᱥᱮᱨᱵᱷᱟᱨ ᱴᱷᱮᱱ ᱵᱟᱝ ᱥᱮᱴᱮᱨ ᱫᱟᱲᱮᱭᱟᱜ ᱠᱟᱱᱟ ᱾ ᱟᱢᱟᱜ ᱡᱚᱯᱲᱟᱣ ᱧᱮᱞ ᱢᱮ ᱟᱨ ᱫᱚᱦᱲᱟ ᱠᱩᱨᱩᱢᱩᱴᱩᱭ ᱢᱮ ᱾",
     "fallback": "या हमें सीधे ईमेल करें"
   },
   "sitemap": {
@@ -555,6 +580,10 @@
   "errorBoundary": {
     "title": "ᱡᱟᱦᱟᱱᱟᱜ ᱜᱮ ᱵᱟᱹᱲᱤᱡ ᱪᱟᱞᱟᱣ ᱮᱱᱟ",
     "message": "ᱫᱟᱭᱟ ᱠᱟᱛᱮ ᱥᱟᱦᱴᱟ ᱨᱤᱯᱷᱨᱮᱥ ᱢᱮ᱾ ᱡᱩᱫᱤ ᱮᱴᱠᱮᱴᱚᱬᱮ ᱞᱟᱦᱟ ᱪᱟᱞᱟᱜ ᱠᱟᱱᱟ, ᱛᱟᱭᱚᱢ ᱫᱚᱦᱲᱟ ᱠᱩᱨᱩᱢᱩᱴᱩᱭ ᱢᱮ ᱾"
+  },
+  "notFound": {
+    "title": "ᱥᱟᱦᱴᱟ ᱵᱟᱝ ᱧᱟᱢ ᱟᱠᱟᱱᱟ",
+    "description": "ᱚᱱᱟ ᱞᱤᱝᱠ ᱫᱚ ᱱᱚᱶᱟ ᱥᱟᱭᱤᱴ ᱨᱮᱱᱟᱜ ᱥᱟᱦᱴᱟ ᱥᱟᱶ ᱵᱟᱝ ᱢᱤᱞᱟᱹᱣᱜ ᱠᱟᱱᱟ ᱾ ᱚᱲᱟᱜ ᱨᱮ ᱪᱮᱥᱴᱟᱭ ᱢᱮ, ᱱᱟᱶᱟ ᱱᱚᱴᱤᱯᱷᱤᱠᱮᱥᱚᱱ, ᱵᱟᱝᱠᱷᱟᱱ ᱯᱟᱱᱛᱮ ᱢᱮ᱾"
   },
   "footer": {
     "blurb": "ᱵᱷᱟᱨᱚᱛ ᱨᱮᱭᱟᱜ ᱯᱟᱹᱛᱭᱟᱹᱣᱟᱱ ᱥᱚᱨᱠᱟᱨ ᱠᱟᱹᱢᱤ ᱮᱞᱟᱨᱴ ᱯᱞᱮᱴᱯᱷᱚᱨᱢ᱾ ᱟᱢᱞᱟ ᱥᱚᱛ ᱠᱷᱚᱱ ᱞᱟᱭᱤᱵᱽ ᱱᱚᱴᱤᱯᱷᱤᱠᱮᱥᱚᱱ — UPSC, SSC, ᱨᱮᱞᱣᱮᱥ, ᱵᱮᱝᱠᱤᱝ ᱟᱨ ᱥᱟᱱᱟᱢ ᱯᱚᱱᱚᱛ ᱠᱚ ᱾",

@@ -1,11 +1,13 @@
 {
   "brand": {
+    "name": "لائیو سرکاری نوکریاں",
     "primary": "میرا",
     "accent": "سرکاری نوکریاں",
     "tagline": "سرکاری سرکاری جاب الرٹس",
+    "subtitle": "livegovtjobs.com",
     "domain": "livegovtjobs.com",
-    "logoAlt": "میرا سرکاری نوکریاں — سرکاری سرکاری ملازمت کے انتباہات",
-    "homeAria": "میرا سرکاری نوکریاں — گھر"
+    "logoAlt": "livegovtjobs.com - سرکاری سرکاری ملازمت کے انتباہات",
+    "homeAria": "livegovtjobs.com - گھر"
   },
   "browse": {
     "breadcrumbs": "بریڈ کرمب"
@@ -70,11 +72,14 @@
     "magicLinkSent": "سائن ان لنک کے لیے اپنا ای میل چیک کریں۔",
     "signInFailed": "سائن ان ناکام ہو گیا۔",
     "signInLead": "الرٹ کی ترجیحات اور پسندیدہ ریاستوں کو بچانے کے لیے اختیاری اکاؤنٹ۔ براؤزنگ جابز کے لیے سائن ان کی ضرورت نہیں ہے۔",
+    "emailRequired": "براہ کرم ایک درست ای میل ایڈریس درج کریں۔",
     "saveProfile": "پروفائل محفوظ کریں۔",
     "profileSaved": "پروفائل محفوظ ہو گیا۔",
     "saveFailed": "پروفائل محفوظ نہیں ہو سکا",
     "favoriteStates": "پسندیدہ ریاستیں۔",
-    "notConfigured": "Sign-in is temporarily unavailable. You can still browse jobs without an account."
+    "notConfigured": "سائن ان کے لیے Supabase کنفیگریشن کی ضرورت ہے۔",
+    "premiumError": "چیک آؤٹ شروع نہیں کیا جا سکا۔ براہ کرم بعد میں دوبارہ کوشش کریں۔",
+    "alertsUnsubscribeFailed": "اَن سبسکرائب نہیں ہو سکا۔ براہ کرم دوبارہ کوشش کریں۔"
   },
   "ticker": {
     "live": "لائیو",
@@ -88,6 +93,7 @@
   },
   "home": {
     "tagline": "کبھی بھی حکومتی اطلاع سے محروم نہ ہوں۔",
+    "heroHeading": "تصدیق شدہ سرکاری سرکاری ملازمت کی اطلاعات",
     "statsStrip": {
       "primary": "{{liveNotices}} لائیو اطلاعات · {{vacancies}} اطلاع شدہ پوسٹس",
       "secondary": "{{sources}} سرکاری ذرائع · اپ ڈیٹ کردہ {{syncLabel}}",
@@ -371,20 +377,38 @@
   "jobsStatus": {
     "loading": "ملازمت کی فہرستیں لوڈ ہو رہی ہیں…",
     "refreshing": "لائیو فہرستوں کو اپ ڈیٹ کیا جا رہا ہے…",
-    "liveMode": "Live listings",
-    "demoMode": "Showing available listings",
+    "liveMode": "لائیو ڈیٹا بیس منسلک ہے۔",
+    "demoMode": "ڈیمو کیٹلاگ — ریئل ٹائم ملازمتوں کے لیے سوپا بیس + بیک اینڈ کو مربوط کریں۔",
     "listings": "فہرستیں",
     "curated": "کیوریٹڈ",
     "liveFromDb": "سرکاری ذرائع سے لائیو",
     "live": "زندہ",
-    "setupHint": "Listings update automatically from official sources",
-    "degraded": "Some listings may be delayed. Showing the latest available data.",
+    "setupHint": "اگلا: Supabase سیٹ اپ کریں → بیک اینڈ انجسٹ چلائیں → VITE_SUPABASE_URL شامل کریں۔",
+    "degraded": "بیک اینڈ ڈیٹا بیس عارضی طور پر دستیاب نہیں ہے — کیشڈ یا ڈیمو لسٹنگ دکھا رہا ہے۔",
     "dailySchedule": "سرکاری فہرستیں روزانہ صبح 8:00 AM IST پر تازہ ہوتی ہیں۔",
     "dailyUpdated": "روزانہ اپ ڈیٹ کیا گیا · آخری مطابقت پذیری {{time}} IST",
     "dailyUpdatedRelative": "اپ ڈیٹ کیا گیا {{time}",
     "dailyNext": "اگلی اپ ڈیٹ {{time}} IST · آج کوئی مزید اپ ڈیٹ نہیں ہے۔",
     "loadError": "ملازمت کی فہرستیں لوڈ نہیں کی جا سکیں۔ اگر دستیاب ہو تو کیشڈ ڈیٹا دکھا رہا ہے۔",
     "retry": "دوبارہ کوشش کریں۔"
+  },
+  "jobReport": {
+    "button": "غلط کام کی اطلاع دیں۔",
+    "title": "رپورٹ: {{job}}",
+    "reasonLabel": "وجہ",
+    "reasonExpired": "میعاد ختم ہونے والی ملازمت",
+    "reasonWrongDeadline": "غلط ڈیڈ لائن",
+    "reasonBrokenLink": "ٹوٹا ہوا لنک",
+    "reasonWrongVacancy": "خالی آسامیوں کی غلط گنتی",
+    "reasonDuplicate": "ڈپلیکیٹ لسٹنگ",
+    "reasonNotRecruitment": "بھرتی کی پوسٹ نہیں۔",
+    "reasonSuspiciousSource": "مشتبہ ذریعہ",
+    "detailsLabel": "تفصیلات (اختیاری)",
+    "emailLabel": "ای میل (اختیاری)",
+    "submit": "رپورٹ جمع کروائیں۔",
+    "sending": "بھیج رہا ہے…",
+    "success": "آپ کا شکریہ - ہم اس فہرست کا جائزہ لیں گے۔",
+    "error": "رپورٹ پیش نہیں کر سکے۔ براہ کرم بعد میں دوبارہ کوشش کریں۔"
   },
   "subscribeBanner": {
     "title": "روزانہ سرکاری نوکریوں کے انتباہات",
@@ -418,11 +442,12 @@
     "sending": "بھیج رہا ہے…",
     "success": "شکریہ — ہم 2 کاروباری دنوں میں جواب دیں گے۔",
     "error": "نہیں بھیج سکا۔ ہمیں contact@livegovtjobs.com پر ای میل کریں۔",
+    "offlineError": "سرور تک نہیں پہنچ سکا۔ اپنا کنکشن چیک کریں اور دوبارہ کوشش کریں۔",
     "fallback": "یا ہمیں براہ راست ای میل کریں۔"
   },
   "sitemap": {
     "title": "سائٹ کا نقشہ",
-    "description": "Live Govt Jobs پر تمام اہم صفحات، زمرہ جات اور ریاستوں کو براؤز کریں۔",
+    "description": "My Govt Jobs پر تمام اہم صفحات، زمرہ جات اور ریاستوں کو براؤز کریں۔",
     "mainPages": "مرکزی صفحات",
     "resultsTopics": "امتحان کے نتائج اور داخلہ کارڈ",
     "states": "ریاستیں اور UTs",
@@ -472,7 +497,7 @@
       "faqTitle": "اکثر پوچھے گئے سوالات",
       "faqDesc": "سرکاری ملازمت کی درخواستوں کے بارے میں عام سوالات کے جوابات۔",
       "contactDesc": "سوالات، تاثرات، یا شراکت داری — ہم 2 کاروباری دنوں کے اندر جواب دیتے ہیں۔",
-      "sitemapDesc": "Live Govt Jobs پر ہر صفحہ — زمرہ جات، ریاستیں اور امتحان کے موضوعات۔"
+      "sitemapDesc": "My Govt Jobs پر ہر صفحہ — زمرہ جات، ریاستیں اور امتحان کے موضوعات۔"
     }
   },
   "states": {
@@ -523,7 +548,7 @@
   },
   "faq": {
     "title": "اکثر پوچھے گئے سوالات",
-    "lede": "سرکاری ملازمت کے انتباہات، درخواستیں، نتائج، اور Live Govt Jobs کیسے کام کرتی ہیں کے بارے میں عام سوالات۔",
+    "lede": "سرکاری ملازمت کے انتباہات، درخواستیں، نتائج، اور My Govt Jobs کیسے کام کرتی ہیں کے بارے میں عام سوالات۔",
     "stillQuestions": "اب بھی سوالات ہیں؟"
   },
   "qualification": {
@@ -555,6 +580,10 @@
   "errorBoundary": {
     "title": "کچھ غلط ہو گیا۔",
     "message": "براہ کرم صفحہ کو ریفریش کریں۔ اگر مسئلہ جاری رہتا ہے تو بعد میں دوبارہ کوشش کریں۔"
+  },
+  "notFound": {
+    "title": "صفحہ نہیں ملا",
+    "description": "وہ لنک اس سائٹ کے کسی صفحے سے میل نہیں کھاتا۔ گھر، تازہ ترین اطلاعات، یا دریافت کرنے کی کوشش کریں۔"
   },
   "footer": {
     "blurb": "بھارت کا جامع سرکاری نوکری پورٹل۔",

@@ -1,11 +1,13 @@
 {
   "brand": {
+    "name": "लाइव सरकारी नौकरी",
     "primary": "My ",
     "accent": "Govt Jobs",
     "tagline": "आधिकारिक सरकारी नौकरी अलर्ट",
+    "subtitle": "livegovtjobs डॉट कॉम पर",
     "domain": "livegovtjobs.com",
-    "logoAlt": "Live Govt Jobs — आधिकारिक सरकारी नौकरी अलर्ट",
-    "homeAria": "Live Govt Jobs — घर"
+    "logoAlt": "livegovtjobs.com — आधिकारिक सरकारी नौकरी अलर्ट",
+    "homeAria": "livegovtjobs.com — घर"
   },
   "browse": {
     "breadcrumbs": "ब्रेडक्रंब"
@@ -70,11 +72,14 @@
     "magicLinkSent": "साइन-इन लिंक के लेल अपन ईमेल देखू.",
     "signInFailed": "साइन-इन विफल भ गेल",
     "signInLead": "अलर्ट वरीयता आओर पसंदीदा राज्य सहेजबाक लेल वैकल्पिक खाता. काज ब्राउज करबाक लेल साइन-इन करबाक आवश्यकता नहि अछि.",
+    "emailRequired": "कृपया एकटा वैध ईमेल पता दर्ज करू.",
     "saveProfile": "प्रोफाइल सहेजें",
     "profileSaved": "प्रोफाइल सहेजल गेल।",
     "saveFailed": "प्रोफाइल सेव नै क सकल",
     "favoriteStates": "पसंदीदा राज्य",
-    "notConfigured": "Sign-in is temporarily unavailable. You can still browse jobs without an account."
+    "notConfigured": "साइन-इन करबाक लेल सुपाबेस विन्यास क आवश्यकता अछि.",
+    "premiumError": "चेकआउट शुरू नहि क सकल। कृपया बाद मे दोबारा प्रयास करू।",
+    "alertsUnsubscribeFailed": "सदस्यता रद्द नहि क सकल। कृपया पुनः प्रयास करू।"
   },
   "ticker": {
     "live": "सीधा प्रसारण",
@@ -88,6 +93,7 @@
   },
   "home": {
     "tagline": "सरकारी अधिसूचना कहियो नहि छोड़ू",
+    "heroHeading": "सत्यापित आधिकारिक सरकारी नौकरी अधिसूचना",
     "statsStrip": {
       "primary": "{{liveNotices}} लाइव सूचना · {{vacancies}} अधिसूचित पोस्ट",
       "secondary": "{{sources}} आधिकारिक स्रोत · अद्यतन {{syncLabel}}",
@@ -371,20 +377,38 @@
   "jobsStatus": {
     "loading": "नौकरी लिस्टिंग लोड भ रहल अछि...",
     "refreshing": "लाइव लिस्टिंग अपडेट करब...",
-    "liveMode": "Live listings",
-    "demoMode": "Showing available listings",
+    "liveMode": "लाइव डाटाबेस कनेक्टेड",
+    "demoMode": "डेमो कैटलॉग — वास्तविक समय नौकरी के लेल Supabase + बैकएंड कनेक्ट करू",
     "listings": "लिस्टिंग",
     "curated": "क्यूरेट कएल गेल",
     "liveFromDb": "आधिकारिक स्रोत स लाइव",
     "live": "सीधा प्रसारण",
-    "setupHint": "Listings update automatically from official sources",
-    "degraded": "Some listings may be delayed. Showing the latest available data.",
+    "setupHint": "अगिला: सुपाबेस सेट करू → बैकएंड इंजेस्ट चलाउ → VITE_SUPABASE_URL जोड़ू",
+    "degraded": "बैकएंड डाटाबेस अस्थायी रूप सँ अनुपलब्ध — कैश कएल गेल अथवा डेमो सूची देखा रहल अछि",
     "dailySchedule": "आधिकारिक लिस्टिंग रोजाना 8:00 AM IST पर रिफ्रेश होइत अछि",
     "dailyUpdated": "दैनिक अद्यतन · अंतिम सिंक {{time}} IST",
     "dailyUpdatedRelative": "अद्यतन {{time}}।",
     "dailyNext": "अगिला अपडेट {{time}} IST · आइ कोनो आओर अपडेट नहि",
     "loadError": "जॉब लिस्टिंग लोड नहि भ सकल. यदि उपलब्ध अछि त कैश कएल गेल डाटा देखा रहल अछि.",
     "retry": "पुनः प्रयास करू"
+  },
+  "jobReport": {
+    "button": "गलत काज के रिपोर्ट करू",
+    "title": "रिपोर्ट: {{job}}।",
+    "reasonLabel": "कारण",
+    "reasonExpired": "एक्सपायरी नौकरी",
+    "reasonWrongDeadline": "गलत समय सीमा",
+    "reasonBrokenLink": "टूटल कड़ी",
+    "reasonWrongVacancy": "गलत रिक्ति गिनती",
+    "reasonDuplicate": "डुप्लिकेट लिस्टिंग",
+    "reasonNotRecruitment": "भर्ती पद नहि",
+    "reasonSuspiciousSource": "संदिग्ध स्रोत",
+    "detailsLabel": "विवरण (वैकल्पिक) २.",
+    "emailLabel": "ईमेल (वैकल्पिक) २.",
+    "submit": "रिपोर्ट जमा करब",
+    "sending": "भेज रहल छी...",
+    "success": "धन्यवाद — हम एहि लिस्टिंग के समीक्षा करब।",
+    "error": "रिपोर्ट जमा नहि क सकल। कृपया बाद मे दोबारा प्रयास करू।"
   },
   "subscribeBanner": {
     "title": "दैनिक सरकारी नौकरी अलर्ट",
@@ -409,7 +433,7 @@
   },
   "contact": {
     "title": "संपर्क करनाइ",
-    "description": "Live Govt Jobs टीम स संपर्क करू।",
+    "description": "My Govt Jobs टीम स संपर्क करू।",
     "name": "पूरा नाम",
     "email": "ईमेल",
     "mobile": "मोबाइल (वैकल्पिक) २.",
@@ -418,11 +442,12 @@
     "sending": "भेज रहल छी...",
     "success": "धन्यवाद — हम 2 व्यावसायिक दिन के भीतर जवाब देब।",
     "error": "नहि पठा सकल। हमरा contact@livegovtjobs.com पर ईमेल करू",
+    "offlineError": "सर्वर धरि नहि पहुँचि सकल. अपन कनेक्शन देखू आओर फेर कोशिश करू.",
     "fallback": "अथवा सीधा ईमेल करू"
   },
   "sitemap": {
     "title": "साइटमैप",
-    "description": "Live Govt Jobs पर सभी मुख्य पृष्ठ, श्रेणियाँ, और राज्य ब्राउज़ करें |",
+    "description": "My Govt Jobs पर सभी मुख्य पृष्ठ, श्रेणियाँ, और राज्य ब्राउज़ करें |",
     "mainPages": "मुख्य पृष्ठ",
     "resultsTopics": "परीक्षा के रिजल्ट एवं एडमिट कार्ड",
     "states": "राज्य एवं केंद्र शासित प्रदेश",
@@ -472,7 +497,7 @@
       "faqTitle": "पूछल जाए वाला सवाल",
       "faqDesc": "सरकारी नौकरी आवेदन के बारे मे आम सवाल के जवाब।",
       "contactDesc": "प्रश्न, प्रतिक्रिया, या साझेदारी — हम 2 व्यावसायिक दिनों के भीतर जवाब देते हैं |",
-      "sitemapDesc": "Live Govt Jobs पर हर पेज — श्रेणियाँ, राज्य, एवं परीक्षा विषय |"
+      "sitemapDesc": "My Govt Jobs पर हर पेज — श्रेणियाँ, राज्य, एवं परीक्षा विषय |"
     }
   },
   "states": {
@@ -523,7 +548,7 @@
   },
   "faq": {
     "title": "बार-बार पूछे जाने वाले प्रश्न",
-    "lede": "सरकारी जॉब अलर्ट, आवेदन, रिजल्ट, आ Live Govt Jobs कोना काज करैत अछि ताहि पर आम सवाल.",
+    "lede": "सरकारी जॉब अलर्ट, आवेदन, रिजल्ट, आ My Govt Jobs कोना काज करैत अछि ताहि पर आम सवाल.",
     "stillQuestions": "एखनो प्रश्न अछि?"
   },
   "qualification": {
@@ -555,6 +580,10 @@
   "errorBoundary": {
     "title": "किछु गड़बड़ भ’ गेलै",
     "message": "कृपया पेज को रिफ्रेश करें। जँ समस्या जारी अछि तँ बादमे फेरसँ प्रयास करू।"
+  },
+  "notFound": {
+    "title": "पृष्ठ नहीं मिला",
+    "description": "ओ लिंक एहि साइट पर कोनो पन्ना सं मेल नहि खाइत अछि. घर, नवीनतम सूचना, या खोज करबाक प्रयास करू."
   },
   "footer": {
     "blurb": "भारत के भरोसेमंद सरकारी नौकरी अलर्ट प्लेटफॉर्म। आधिकारिक स्रोत — यूपीएससी, एसएससी, रेलवे, बैंकिंग एवं सभी राज्यों से लाइव सूचना |",

@@ -1,11 +1,13 @@
 {
   "brand": {
+    "name": "زندهه سرڪاري نوڪريون",
     "primary": "My ",
     "accent": "Govt Jobs",
     "tagline": "OFFICIAL GOVT JOB ALERTS",
+    "subtitle": "livegovtjobs.com",
     "domain": "livegovtjobs.com",
-    "logoAlt": "Live Govt Jobs — سرڪاري سرڪاري نوڪري جون خبرون",
-    "homeAria": "Live Govt Jobs — گھر"
+    "logoAlt": "livegovtjobs.com - سرڪاري سرڪاري نوڪري جون خبرون",
+    "homeAria": "livegovtjobs.com - گھر"
   },
   "browse": {
     "breadcrumbs": "مانيءَ جو ٽڪر"
@@ -70,11 +72,14 @@
     "magicLinkSent": "سائن ان لنڪ لاءِ پنهنجي اي ميل چيڪ ڪريو.",
     "signInFailed": "سائن ان ناڪام ٿيو",
     "signInLead": "خبرداري جي ترجيحن ۽ پسنديده رياستن کي بچائڻ لاءِ اختياري اڪائونٽ. برائوزنگ نوڪريون سائن ان جي ضرورت ناهي.",
+    "emailRequired": "مھرباني ڪري صحيح اي ميل پتو داخل ڪريو.",
     "saveProfile": "پروفائل محفوظ ڪريو",
     "profileSaved": "پروفائل محفوظ ڪيو ويو.",
     "saveFailed": "پروفائل محفوظ نه ٿي سگھيو",
     "favoriteStates": "پسنديده رياستون",
-    "notConfigured": "Sign-in is temporarily unavailable. You can still browse jobs without an account."
+    "notConfigured": "سائن ان ڪرڻ جي ضرورت آهي Supabase ترتيب.",
+    "premiumError": "چيڪ آئوٽ شروع نه ٿي سگهيو. مهرباني ڪري ڪجھہ دير رکي ٻيهر ڪوشش ڪندا.",
+    "alertsUnsubscribeFailed": "رڪنيت ختم نه ٿي سگهي. مهرباني ڪري ٻيهر ڪوشش ڪريو."
   },
   "ticker": {
     "live": "LIVE",
@@ -88,6 +93,7 @@
   },
   "home": {
     "tagline": "NEVER MISS A GOVERNMENT NOTIFICATION",
+    "heroHeading": "تصديق ٿيل سرڪاري سرڪاري نوڪري نوٽيفڪيشن",
     "statsStrip": {
       "primary": "{{liveNotices}} لائيو اطلاع · {{vacancies}} اطلاع ٿيل پوسٽون",
       "secondary": "{{sources}} سرڪاري ذريعا · اپڊيٽ ٿيل {{syncLabel}}",
@@ -371,20 +377,38 @@
   "jobsStatus": {
     "loading": "نوڪرين جون لسٽون لوڊ ٿي رهيون آهن...",
     "refreshing": "لائيو لسٽنگ کي اپڊيٽ ڪيو پيو وڃي...",
-    "liveMode": "Live listings",
-    "demoMode": "Showing available listings",
+    "liveMode": "لائيو ڊيٽابيس سان ڳنڍيل",
+    "demoMode": "Demo catalog — ڳنڍيو Supabase + backend حقيقي وقت جي نوڪرين لاءِ",
     "listings": "لسٽون",
     "curated": "تيار ڪيل",
     "liveFromDb": "سرڪاري ذريعن کان رهن ٿا",
     "live": "جيئرو",
-    "setupHint": "Listings update automatically from official sources",
-    "degraded": "Some listings may be delayed. Showing the latest available data.",
+    "setupHint": "اڳيون: سيٽ اپ Supabase → رن backend ingest → VITE_SUPABASE_URL شامل ڪريو",
+    "degraded": "Backend ڊيٽابيس عارضي طور تي دستياب ناهي — ڏيکاريو ڪيش يا ڊيمو لسٽنگ",
     "dailySchedule": "سرڪاري لسٽون روزاني 8:00 AM IST تي تازه ٿين ٿيون",
     "dailyUpdated": "تازه ڪاري روزاني · آخري هم وقت سازي {{time}} IST",
     "dailyUpdatedRelative": "اپڊيٽ ڪيو ويو {{time}}",
     "dailyNext": "اڳيون اپڊيٽ {{time}} IST · اڄ وڌيڪ ڪا به تازه ڪاري ناهي",
     "loadError": "نوڪري جي لسٽ لوڊ نه ٿي سگھي. جيڪڏهن موجود هجي ته ڪيش ڪيل ڊيٽا ڏيکاريندي.",
     "retry": "ٻيهر ڪوشش ڪريو"
+  },
+  "jobReport": {
+    "button": "غلط ڪم جي رپورٽ ڪريو",
+    "title": "رپورٽ: {{job}}",
+    "reasonLabel": "دليل",
+    "reasonExpired": "ختم ٿيل نوڪري",
+    "reasonWrongDeadline": "غلط ڊيڊ لائن",
+    "reasonBrokenLink": "ٽٽل لنڪ",
+    "reasonWrongVacancy": "خالي جاين جي غلط ڳڻپ",
+    "reasonDuplicate": "نقل ڪيل لسٽنگ",
+    "reasonNotRecruitment": "نه ڀرتي جي پوسٽ",
+    "reasonSuspiciousSource": "مشڪوڪ ذريعو",
+    "detailsLabel": "تفصيل (اختياري)",
+    "emailLabel": "اي ميل (اختياري)",
+    "submit": "رپورٽ پيش ڪريو",
+    "sending": "موڪلي رهيو آهي…",
+    "success": "مهرباني - اسان هن لسٽنگ جو جائزو وٺنداسين.",
+    "error": "رپورٽ پيش نه ٿي سگهي. مهرباني ڪري ڪجھہ دير رکي ٻيهر ڪوشش ڪندا."
   },
   "subscribeBanner": {
     "title": "روزاني سرڪاري نوڪريون الرٽ",
@@ -418,11 +442,12 @@
     "sending": "موڪلي رهيو آهي…",
     "success": "مهرباني - اسان 2 ڪاروباري ڏينهن اندر جواب ڏينداسين.",
     "error": "موڪلي نه سگهيو. اسان کي اي ميل ڪريو contact@livegovtjobs.com",
+    "offlineError": "سرور تائين پهچي نه سگهيو. پنهنجو ڪنيڪشن چيڪ ڪريو ۽ ٻيهر ڪوشش ڪريو.",
     "fallback": "يا اسان کي سڌو سنئون اي ميل ڪريو"
   },
   "sitemap": {
     "title": "سائيٽ ميپ",
-    "description": "Live Govt Jobs تي سڀ مکيه صفحا، زمرا، ۽ رياستون براؤز ڪريو.",
+    "description": "My Govt Jobs تي سڀ مکيه صفحا، زمرا، ۽ رياستون براؤز ڪريو.",
     "mainPages": "مکيه صفحا",
     "resultsTopics": "امتحان جا نتيجا ۽ داخلا ڪارڊ",
     "states": "رياستون ۽ UTs",
@@ -556,14 +581,18 @@
     "title": "ڪجهه غلط ٿي ويو",
     "message": "مھرباني ڪري صفحي کي تازو ڪريو. جيڪڏهن مسئلو جاري رهي، ٻيهر ڪوشش ڪريو."
   },
+  "notFound": {
+    "title": "صفحو نه مليو",
+    "description": "اهو لنڪ هن سائيٽ تي ڪنهن صفحي سان نه ٿو ملي. گھر جي ڪوشش ڪريو، تازيون اطلاعون، يا دريافت ڪريو."
+  },
   "footer": {
     "blurb": "هندستان جي قابل اعتماد سرڪاري نوڪري خبرداري پليٽ فارم. سرڪاري ذريعن کان لائيو اطلاع - UPSC، SSC، ريلوي، بئنڪنگ ۽ سڀ رياستون.",
-    "disclaimer": "Live Govt Jobs صرف سرڪاري سرڪاري پورٽلز (.gov.in / .gov) کان نوڪريون لسٽ ڪري ٿو. درخواست ڏيڻ کان پهريان هميشه ڀرتي ڪندڙ تنظيم جي ويب سائيٽ تي تصديق ڪريو.",
+    "disclaimer": "My Govt Jobs صرف سرڪاري سرڪاري پورٽلز (.gov.in / .gov) کان نوڪريون لسٽ ڪري ٿو. درخواست ڏيڻ کان پهريان هميشه ڀرتي ڪندڙ تنظيم جي ويب سائيٽ تي تصديق ڪريو.",
     "quickLinks": "جلدي لنڪس",
     "categories": "ڪيٽيگريون",
     "topStates": "مٿيون رياستون",
     "company": "ڪمپني",
-    "copyright": "© {{year}} Live Govt Jobs · هندستان ۾ ❤️ سان ٺهيل",
+    "copyright": "© {{year}} My Govt Jobs · هندستان ۾ ❤️ سان ٺهيل",
     "latestJobs": "جديد نوڪريون",
     "results": "نتيجا",
     "admitCards": "داخلا ڪارڊ",
@@ -719,7 +748,7 @@
     "boardExamLinksAria": "هن بورڊ لاء امتحان تازه ڪاري",
     "checkAdmitCards": "{{board}} لاءِ ايڊمٽ ڪارڊ چيڪ ڪريو",
     "checkResults": "{{board}} جا نتيجا چيڪ ڪريو",
-    "disclaimer": "Live Govt Jobs صرف سرڪاري سرڪاري پورٽلز (.gov.in / .gov) کان نوڪريون لسٽ ڪري ٿو. درخواست ڏيڻ کان پهريان هميشه ڀرتي ڪندڙ تنظيم جي ويب سائيٽ تي تصديق ڪريو.",
+    "disclaimer": "My Govt Jobs صرف سرڪاري سرڪاري پورٽلز (.gov.in / .gov) کان نوڪريون لسٽ ڪري ٿو. درخواست ڏيڻ کان پهريان هميشه ڀرتي ڪندڙ تنظيم جي ويب سائيٽ تي تصديق ڪريو.",
     "dates": {
       "Notification": "اطلاع",
       "ApplyStart": "لاڳو ڪريو شروع",

@@ -1,11 +1,13 @@
 {
   "brand": {
+    "name": "જીવંત સરકારી નોકરીઓ",
     "primary": "મારા",
     "accent": "સરકારી નોકરીઓ",
     "tagline": "અધિકૃત સરકારી નોકરીની ચેતવણીઓ",
+    "subtitle": "livegovtjobs.com",
     "domain": "livegovtjobs.com",
-    "logoAlt": "મારા સરકારી નોકરીઓ — સત્તાવાર સરકારી નોકરીની ચેતવણીઓ",
-    "homeAria": "મારા સરકારી નોકરીઓ — ઘર"
+    "logoAlt": "livegovtjobs.com — સત્તાવાર સરકારી નોકરીની ચેતવણીઓ",
+    "homeAria": "livegovtjobs.com — ઘર"
   },
   "browse": {
     "breadcrumbs": "બ્રેડક્રમ્બ"
@@ -70,11 +72,14 @@
     "magicLinkSent": "સાઇન-ઇન લિંક માટે તમારું ઇમેઇલ તપાસો.",
     "signInFailed": "સાઇન-ઇન નિષ્ફળ થયું",
     "signInLead": "ચેતવણી પસંદગીઓ અને મનપસંદ રાજ્યો સાચવવા માટે વૈકલ્પિક ખાતું. બ્રાઉઝિંગ જોબ્સ માટે સાઇન-ઇનની જરૂર નથી.",
+    "emailRequired": "કૃપા કરીને માન્ય ઇમેઇલ સરનામું દાખલ કરો.",
     "saveProfile": "પ્રોફાઇલ સાચવો",
     "profileSaved": "પ્રોફાઇલ સાચવી.",
     "saveFailed": "પ્રોફાઇલ સાચવી શકાઈ નથી",
     "favoriteStates": "મનપસંદ રાજ્યો",
-    "notConfigured": "Sign-in is temporarily unavailable. You can still browse jobs without an account."
+    "notConfigured": "સાઇન-ઇન માટે સુપાબેઝ ગોઠવણીની જરૂર છે.",
+    "premiumError": "ચેકઆઉટ શરૂ કરી શકાયું નથી. કૃપા કરીને પછીથી ફરી પ્રયાસ કરો.",
+    "alertsUnsubscribeFailed": "અનસબ્સ્ક્રાઇબ કરી શકાયું નથી. કૃપા કરીને ફરી પ્રયાસ કરો."
   },
   "ticker": {
     "live": "લાઈવ",
@@ -88,6 +93,7 @@
   },
   "home": {
     "tagline": "સરકારી સૂચનાને ક્યારેય ચૂકશો નહીં",
+    "heroHeading": "ચકાસાયેલ સત્તાવાર સરકારી નોકરીની સૂચનાઓ",
     "statsStrip": {
       "primary": "{{liveNotices}} લાઇવ સૂચનાઓ · {{vacancies}} સૂચના પોસ્ટ્સ",
       "secondary": "{{sources}} અધિકૃત સ્ત્રોત · અપડેટ કરેલ {{syncLabel}}",
@@ -371,20 +377,38 @@
   "jobsStatus": {
     "loading": "નોકરીની સૂચિ લોડ કરી રહ્યાં છીએ...",
     "refreshing": "લાઇવ સૂચિઓ અપડેટ કરી રહ્યાં છીએ...",
-    "liveMode": "Live listings",
-    "demoMode": "Showing available listings",
+    "liveMode": "લાઇવ ડેટાબેઝ જોડાયેલ છે",
+    "demoMode": "ડેમો કેટલોગ — રીઅલ-ટાઇમ જોબ માટે સુપાબેસ + બેકએન્ડને કનેક્ટ કરો",
     "listings": "સૂચિઓ",
     "curated": "ક્યુરેટેડ",
     "liveFromDb": "સત્તાવાર સ્ત્રોતોમાંથી જીવંત",
     "live": "જીવંત",
-    "setupHint": "Listings update automatically from official sources",
-    "degraded": "Some listings may be delayed. Showing the latest available data.",
+    "setupHint": "આગળ: સુપાબેઝ સેટ કરો → બેકએન્ડ ઇન્જેસ્ટ ચલાવો → VITE_SUPABASE_URL ઉમેરો",
+    "degraded": "બેકએન્ડ ડેટાબેઝ અસ્થાયી રૂપે અનુપલબ્ધ — કેશ્ડ અથવા ડેમો સૂચિઓ દર્શાવે છે",
     "dailySchedule": "સત્તાવાર સૂચિઓ દરરોજ સવારે 8:00 AM IST પર તાજી થાય છે",
     "dailyUpdated": "દરરોજ અપડેટ થયેલ · છેલ્લું સમન્વયન {{time}} IST",
     "dailyUpdatedRelative": "અપડેટ કરેલ {{time}}",
     "dailyNext": "આગલું અપડેટ {{time}} IST · આજે કોઈ વધુ અપડેટ નથી",
     "loadError": "નોકરીની સૂચિ લોડ કરી શકાઈ નથી. જો ઉપલબ્ધ હોય તો કેશ્ડ ડેટા બતાવી રહ્યું છે.",
     "retry": "ફરી પ્રયાસ કરો"
+  },
+  "jobReport": {
+    "button": "ખોટી નોકરીની જાણ કરો",
+    "title": "જાણ કરો: {{job}}",
+    "reasonLabel": "કારણ",
+    "reasonExpired": "નિવૃત્ત નોકરી",
+    "reasonWrongDeadline": "ખોટી સમયમર્યાદા",
+    "reasonBrokenLink": "તૂટેલી કડી",
+    "reasonWrongVacancy": "ખોટી ખાલી જગ્યાઓની ગણતરી",
+    "reasonDuplicate": "ડુપ્લિકેટ સૂચિ",
+    "reasonNotRecruitment": "ભરતીની પોસ્ટ નથી",
+    "reasonSuspiciousSource": "શંકાસ્પદ સ્ત્રોત",
+    "detailsLabel": "વિગતો (વૈકલ્પિક)",
+    "emailLabel": "ઇમેઇલ (વૈકલ્પિક)",
+    "submit": "રિપોર્ટ સબમિટ કરો",
+    "sending": "મોકલી રહ્યું છે...",
+    "success": "આભાર — અમે આ સૂચિની સમીક્ષા કરીશું.",
+    "error": "રિપોર્ટ સબમિટ કરી શકાયો નથી. કૃપા કરીને પછીથી ફરી પ્રયાસ કરો."
   },
   "subscribeBanner": {
     "title": "દૈનિક સરકારી નોકરીની ચેતવણીઓ",
@@ -418,6 +442,7 @@
     "sending": "મોકલી રહ્યું છે...",
     "success": "આભાર — અમે 2 કામકાજી દિવસમાં જવાબ આપીશું.",
     "error": "મોકલી શકાયું નથી. અમને contact@livegovtjobs.com પર ઈમેલ કરો",
+    "offlineError": "સર્વર સુધી પહોંચી શકાયું નથી. તમારું કનેક્શન તપાસો અને ફરી પ્રયાસ કરો.",
     "fallback": "અથવા અમને સીધો ઈમેલ કરો"
   },
   "sitemap": {
@@ -555,6 +580,10 @@
   "errorBoundary": {
     "title": "કંઈક ખોટું થયું",
     "message": "કૃપા કરીને પૃષ્ઠ તાજું કરો. જો સમસ્યા ચાલુ રહે, તો પછીથી ફરી પ્રયાસ કરો."
+  },
+  "notFound": {
+    "title": "પૃષ્ઠ મળ્યું નથી",
+    "description": "તે લિંક આ સાઇટ પરના પૃષ્ઠ સાથે મેળ ખાતી નથી. હોમ, નવીનતમ સૂચનાઓ અથવા અન્વેષણ કરવાનો પ્રયાસ કરો."
   },
   "footer": {
     "blurb": "ભારતનું વિશ્વસનીય સરકારી નોકરી ચેતવણી પ્લેટફોર્મ. સત્તાવાર સ્ત્રોતો તરફથી લાઇવ સૂચનાઓ - UPSC, SSC, રેલ્વે, બેંકિંગ અને તમામ રાજ્યો.",

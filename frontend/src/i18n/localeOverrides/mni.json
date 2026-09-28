@@ -1,11 +1,13 @@
 {
   "brand": {
+    "name": "Live Govt Jobs",
     "primary": "My ",
     "accent": "Govt Jobs",
     "tagline": "OFFICIAL GOVT JOB ALERTS",
+    "subtitle": "livegovtjobs.com",
     "domain": "livegovtjobs.com",
-    "logoAlt": "Live Govt Jobs — official government job alerts",
-    "homeAria": "Live Govt Jobs — home"
+    "logoAlt": "livegovtjobs.com — official government job alerts",
+    "homeAria": "livegovtjobs.com — home"
   },
   "browse": {
     "breadcrumbs": "Breadcrumb"
@@ -70,11 +72,14 @@
     "magicLinkSent": "Check your email for a sign-in link.",
     "signInFailed": "Sign-in failed",
     "signInLead": "Optional account to save alert preferences and favourite states. Browsing jobs does not require sign-in.",
+    "emailRequired": "Please enter a valid email address.",
     "saveProfile": "Save profile",
     "profileSaved": "Profile saved.",
     "saveFailed": "Could not save profile",
     "favoriteStates": "Favourite states",
-    "notConfigured": "Sign-in is temporarily unavailable. You can still browse jobs without an account."
+    "notConfigured": "Sign-in requires Supabase configuration.",
+    "premiumError": "Could not start checkout. Please try again later.",
+    "alertsUnsubscribeFailed": "Could not unsubscribe. Please try again."
   },
   "ticker": {
     "live": "LIVE",
@@ -88,6 +93,7 @@
   },
   "home": {
     "tagline": "NEVER MISS A GOVERNMENT NOTIFICATION",
+    "heroHeading": "Verified official government job notifications",
     "statsStrip": {
       "primary": "{{liveNotices}} live notifications · {{vacancies}} notified posts",
       "secondary": "{{sources}} official sources · Updated {{syncLabel}}",
@@ -247,7 +253,7 @@
     "noJobsHint": "Try removing filters or selecting a different state",
     "loadMore": "Load More Jobs ({{count}} more) ↓",
     "catalogMix": "{{demo}} curated + {{live}} from official portals",
-    "showEverything": "Showing all listings — central, state and official notifications",
+    "showEverything": "Showing all listings — central, state & scraped notifications",
     "clearAllFilters": "Show everything",
     "browseBoards": "Browse by Recruitment Board",
     "examRows": {
@@ -371,20 +377,38 @@
   "jobsStatus": {
     "loading": "Loading job listings…",
     "refreshing": "Updating live listings…",
-    "liveMode": "Live listings",
-    "demoMode": "Showing available listings",
+    "liveMode": "Live database connected",
+    "demoMode": "Demo catalog — connect Supabase + backend for real-time jobs",
     "listings": "listings",
     "curated": "curated",
     "liveFromDb": "live from official sources",
     "live": "live",
-    "setupHint": "Listings update automatically from official sources",
-    "degraded": "Some listings may be delayed. Showing the latest available data.",
+    "setupHint": "Next: set up Supabase → run backend ingest → add VITE_SUPABASE_URL",
+    "degraded": "Backend database temporarily unavailable — showing cached or demo listings",
     "dailySchedule": "Official listings refresh daily at 8:00 AM IST",
     "dailyUpdated": "Updated daily · last sync {{time}} IST",
     "dailyUpdatedRelative": "Updated {{time}}",
     "dailyNext": "Next update {{time}} IST · no further updates today",
     "loadError": "Could not load job listings. Showing cached data if available.",
     "retry": "Retry"
+  },
+  "jobReport": {
+    "button": "Report incorrect job",
+    "title": "Report: {{job}}",
+    "reasonLabel": "Reason",
+    "reasonExpired": "Expired job",
+    "reasonWrongDeadline": "Wrong deadline",
+    "reasonBrokenLink": "Broken link",
+    "reasonWrongVacancy": "Incorrect vacancy count",
+    "reasonDuplicate": "Duplicate listing",
+    "reasonNotRecruitment": "Not a recruitment post",
+    "reasonSuspiciousSource": "Suspicious source",
+    "detailsLabel": "Details (optional)",
+    "emailLabel": "Email (optional)",
+    "submit": "Submit report",
+    "sending": "Sending…",
+    "success": "Thank you — we will review this listing.",
+    "error": "Could not submit report. Please try again later."
   },
   "subscribeBanner": {
     "title": "Daily Govt Jobs Alerts",
@@ -401,15 +425,15 @@
   },
   "pwa": {
     "install": "Install",
-    "bannerTitle": "Install Live Govt Jobs",
+    "bannerTitle": "Install My Govt Jobs",
     "bannerBody": "Get faster access and offline browsing from your home screen.",
     "iosTitle": "Add to Home Screen",
-    "iosSteps": "Tap Share, then \"Add to Home Screen\" to install Live Govt Jobs.",
+    "iosSteps": "Tap Share, then \"Add to Home Screen\" to install My Govt Jobs.",
     "dismiss": "Not now"
   },
   "contact": {
     "title": "Contact",
-    "description": "Get in touch with the Live Govt Jobs team.",
+    "description": "Get in touch with the My Govt Jobs team.",
     "name": "Full name",
     "email": "Email",
     "mobile": "Mobile (optional)",
@@ -418,11 +442,12 @@
     "sending": "Sending…",
     "success": "Thanks — we'll reply within 2 business days.",
     "error": "Could not send. Email us at contact@livegovtjobs.com",
+    "offlineError": "Could not reach the server. Check your connection and try again.",
     "fallback": "Or email us directly at"
   },
   "sitemap": {
     "title": "Sitemap",
-    "description": "Browse all main pages, categories, and states on Live Govt Jobs.",
+    "description": "Browse all main pages, categories, and states on My Govt Jobs.",
     "mainPages": "Main pages",
     "resultsTopics": "Exam results & admit cards",
     "states": "States & UTs",
@@ -431,7 +456,7 @@
     "xmlLink": "XML sitemap (for search engines)"
   },
   "explore": {
-    "title": "Explore Live Govt Jobs",
+    "title": "Explore My Govt Jobs",
     "eyebrow": "Everything in one place",
     "lede": "Browse jobs by state, board, qualification, and profession. Track exam results, admit cards, and deadlines — every section has its own page.",
     "backToExplore": "Explore",
@@ -472,7 +497,7 @@
       "faqTitle": "FAQ",
       "faqDesc": "Answers to common questions about government job applications.",
       "contactDesc": "Questions, feedback, or partnership — we reply within 2 business days.",
-      "sitemapDesc": "Every page on Live Govt Jobs — categories, states, and exam topics."
+      "sitemapDesc": "Every page on My Govt Jobs — categories, states, and exam topics."
     }
   },
   "states": {
@@ -523,7 +548,7 @@
   },
   "faq": {
     "title": "Frequently Asked Questions",
-    "lede": "Common questions about government job alerts, applications, results, and how Live Govt Jobs works.",
+    "lede": "Common questions about government job alerts, applications, results, and how My Govt Jobs works.",
     "stillQuestions": "Still have questions?"
   },
   "qualification": {
@@ -556,14 +581,18 @@
     "title": "Something went wrong",
     "message": "Please refresh the page. If the problem continues, try again later."
   },
+  "notFound": {
+    "title": "Page not found",
+    "description": "That link does not match a page on this site. Try home, latest notifications, or explore."
+  },
   "footer": {
     "blurb": "India's trusted government job alert platform. Live notifications from official sources — UPSC, SSC, Railways, Banking & all states.",
-    "disclaimer": "Live Govt Jobs lists jobs from official government portals (.gov.in / .gov) only. Always verify on the recruiting organisation's website before applying.",
+    "disclaimer": "My Govt Jobs lists jobs from official government portals (.gov.in / .gov) only. Always verify on the recruiting organisation's website before applying.",
     "quickLinks": "Quick Links",
     "categories": "Categories",
     "topStates": "Top States",
     "company": "Company",
-    "copyright": "© {{year}} Live Govt Jobs · Made with ❤️ in India",
+    "copyright": "© {{year}} My Govt Jobs · Made with ❤️ in India",
     "latestJobs": "Latest Jobs",
     "results": "Results",
     "admitCards": "Admit Cards",
@@ -719,7 +748,7 @@
     "boardExamLinksAria": "Exam updates for this board",
     "checkAdmitCards": "Check admit cards for {{board}}",
     "checkResults": "Check results for {{board}}",
-    "disclaimer": "Live Govt Jobs lists jobs from official government portals (.gov.in / .gov) only. Always verify on the recruiting organisation's website before applying.",
+    "disclaimer": "My Govt Jobs lists jobs from official government portals (.gov.in / .gov) only. Always verify on the recruiting organisation's website before applying.",
     "dates": {
       "Notification": "Notification",
       "ApplyStart": "Apply Start",

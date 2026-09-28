@@ -1,11 +1,13 @@
 {
   "brand": {
+    "name": "लाइव सरकारी नौकरियाँ",
     "primary": "मेरा",
     "accent": "सरकारी नौकरियाँ",
     "tagline": "सरकारी नौकरी पोर्टल",
+    "subtitle": "Livegovtjobs.com",
     "domain": "livegovtjobs.com",
-    "logoAlt": "मेरा सरकारी नौकरियाँ — आधिकारिक सरकारी नौकरी अलर्ट",
-    "homeAria": "मेरा सरकारी नौकरियाँ — घर"
+    "logoAlt": "livegovtjobs.com - आधिकारिक सरकारी नौकरी अलर्ट",
+    "homeAria": "livegovtjobs.com - घर"
   },
   "browse": {
     "breadcrumbs": "ब्रेडक्रम्ब"
@@ -70,11 +72,14 @@
     "magicLinkSent": "साइन-इन लिंक के लिए अपना ईमेल जांचें।",
     "signInFailed": "भाग लेना विफल हुआ",
     "signInLead": "अलर्ट प्राथमिकताओं और पसंदीदा स्थितियों को सहेजने के लिए वैकल्पिक खाता। नौकरियों को ब्राउज़ करने के लिए साइन-इन की आवश्यकता नहीं है।",
+    "emailRequired": "कृपया एक मान्य ईमेल पता प्रविष्ट करें।",
     "saveProfile": "प्रोफ़ाइल बचा",
     "profileSaved": "प्रोफ़ाइल सहेजी गई.",
     "saveFailed": "प्रोफ़ाइल सहेजी नहीं जा सकी",
     "favoriteStates": "पसंदीदा राज्य",
-    "notConfigured": "Sign-in is temporarily unavailable. You can still browse jobs without an account."
+    "notConfigured": "साइन-इन के लिए सुपाबेस कॉन्फ़िगरेशन की आवश्यकता होती है।",
+    "premiumError": "चेकआउट प्रारंभ नहीं किया जा सका. कृपया बाद में पुन: प्रयास करें।",
+    "alertsUnsubscribeFailed": "सदस्यता समाप्त नहीं की जा सकी. कृपया पुन: प्रयास करें।"
   },
   "ticker": {
     "live": "लाइव",
@@ -88,6 +93,7 @@
   },
   "home": {
     "tagline": "भारत का #1 सरकारी नौकरी पोर्टल",
+    "heroHeading": "सत्यापित आधिकारिक सरकारी नौकरी अधिसूचनाएँ",
     "statsStrip": {
       "primary": "{{liveNotices}} लाइव सूचनाएं · {{vacancies}} अधिसूचित पोस्ट",
       "secondary": "{{sources}} आधिकारिक स्रोत · अपडेट किया गया {{syncLabel}}",
@@ -371,20 +377,38 @@
   "jobsStatus": {
     "loading": "नौकरी सूची लोड हो रही है...",
     "refreshing": "लाइव लिस्टिंग अपडेट हो रही है...",
-    "liveMode": "Live listings",
-    "demoMode": "Showing available listings",
+    "liveMode": "लाइव डेटाबेस कनेक्ट किया गया",
+    "demoMode": "डेमो कैटलॉग - वास्तविक समय की नौकरियों के लिए सुपाबेस + बैकएंड कनेक्ट करें",
     "listings": "लिस्टिंग",
     "curated": "क्यूरेट किए गए",
     "liveFromDb": "आधिकारिक स्रोतों से लाइव",
     "live": "रहना",
-    "setupHint": "Listings update automatically from official sources",
-    "degraded": "Some listings may be delayed. Showing the latest available data.",
+    "setupHint": "अगला: सुपाबेस सेट करें → बैकएंड इंजेस्ट चलाएँ → VITE_SUPABASE_URL जोड़ें",
+    "degraded": "बैकएंड डेटाबेस अस्थायी रूप से अनुपलब्ध है - कैश्ड या डेमो लिस्टिंग दिखा रहा है",
     "dailySchedule": "आधिकारिक सूचियाँ प्रतिदिन प्रातः 8:00 बजे IST पर ताज़ा होती हैं",
     "dailyUpdated": "दैनिक अद्यतन किया गया · अंतिम सिंक {{time}} IST",
     "dailyUpdatedRelative": "अपडेट किया गया {{time}}",
     "dailyNext": "अगला अपडेट {{time}} IST · आज कोई और अपडेट नहीं",
     "loadError": "नौकरी सूची लोड नहीं की जा सकी. यदि उपलब्ध हो तो कैश्ड डेटा दिखाया जा रहा है।",
     "retry": "पुन: प्रयास करें"
+  },
+  "jobReport": {
+    "button": "ग़लत कार्य की रिपोर्ट करें",
+    "title": "रिपोर्ट: {{job}}",
+    "reasonLabel": "कारण",
+    "reasonExpired": "ख़त्म हुई नौकरी",
+    "reasonWrongDeadline": "गलत समय सीमा",
+    "reasonBrokenLink": "टूटा हुआ लिंक",
+    "reasonWrongVacancy": "गलत रिक्ति गणना",
+    "reasonDuplicate": "डुप्लिकेट सूची",
+    "reasonNotRecruitment": "भर्ती पद नहीं",
+    "reasonSuspiciousSource": "संदिग्ध स्रोत",
+    "detailsLabel": "विवरण (वैकल्पिक)",
+    "emailLabel": "ईमेल वैकल्पिक)",
+    "submit": "रिपोर्ट सबमिट करें",
+    "sending": "भेजा जा रहा है...",
+    "success": "धन्यवाद - हम इस सूची की समीक्षा करेंगे।",
+    "error": "रिपोर्ट प्रस्तुत नहीं हो सकी। कृपया बाद में पुन: प्रयास करें।"
   },
   "subscribeBanner": {
     "title": "दैनिक सरकारी नौकरियाँ अलर्ट",
@@ -418,6 +442,7 @@
     "sending": "भेजा जा रहा है...",
     "success": "धन्यवाद - हम 2 व्यावसायिक दिनों के भीतर उत्तर देंगे।",
     "error": "नहीं भेजा जा सका. हमें contact@livegovtjobs.com पर ईमेल करें",
+    "offlineError": "सर्वर तक नहीं पहुंच सका. अपना कनेक्शन जांचें और पुनः प्रयास करें।",
     "fallback": "या हमें सीधे ईमेल करें"
   },
   "sitemap": {
@@ -555,6 +580,10 @@
   "errorBoundary": {
     "title": "कुछ गलत हो गया",
     "message": "कृपया पृष्ठ को ताज़ा करें. यदि समस्या बनी रहती है, तो बाद में पुनः प्रयास करें।"
+  },
+  "notFound": {
+    "title": "पृष्ठ नहीं मिला",
+    "description": "वह लिंक इस साइट के किसी पेज से मेल नहीं खाता. होम, नवीनतम सूचनाएं आज़माएं या एक्सप्लोर करें।"
   },
   "footer": {
     "blurb": "भारत का सर्वश्रेष्ठ सरकारी नौकरी पोर्टल। रियल-टाइम अलर्ट, सत्यापित सूचियाँ, सभी 28 राज्य।",

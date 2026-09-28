@@ -1,11 +1,13 @@
 {
   "brand": {
+    "name": "ଲାଇଭ୍ ସରକାରୀ ଚାକିରି |",
     "primary": "ମୋର",
     "accent": "ସରକାରୀ ଚାକିରି",
     "tagline": "ଅଫିସିଆଲ୍ ସରକାରୀ କାର୍ଯ୍ୟ ଆଲର୍ଟସ୍",
+    "subtitle": "livegovtjobs.com",
     "domain": "livegovtjobs.com",
-    "logoAlt": "ମୋର ସରକାରୀ ଚାକିରି — ସରକାରୀ ସରକାରୀ ଚାକିରି ଆଲର୍ଟ |",
-    "homeAria": "ମୋର ସରକାରୀ ଚାକିରି — ଘର |"
+    "logoAlt": "livegovtjobs.com - ସରକାରୀ ସରକାରୀ ଚାକିରି ଆଲର୍ଟ |",
+    "homeAria": "livegovtjobs.com - ଘର |"
   },
   "browse": {
     "breadcrumbs": "ବ୍ରେଡ୍କ୍ରମ୍ |"
@@ -70,11 +72,14 @@
     "magicLinkSent": "ଏକ ସାଇନ୍ ଇନ୍ ଲିଙ୍କ୍ ପାଇଁ ଆପଣଙ୍କର ଇମେଲ୍ ଯାଞ୍ଚ କରନ୍ତୁ",
     "signInFailed": "ସାଇନ୍ ଇନ୍ ବିଫଳ ହେଲା",
     "signInLead": "ଆଲର୍ଟ ପ୍ରିଫରେନ୍ସ ଏବଂ ପ୍ରିୟ ରାଜ୍ୟଗୁଡିକ ସଞ୍ଚୟ କରିବାକୁ ବ al କଳ୍ପିକ ଆକାଉଣ୍ଟ୍ | ଚାକିରି ବ୍ରାଉଜିଂ ସାଇନ-ଇନ୍ ଆବଶ୍ୟକ କରେ ନାହିଁ",
+    "emailRequired": "ଦୟାକରି ଏକ ବ email ଧ ଇମେଲ୍ ଠିକଣା ପ୍ରବେଶ କରନ୍ତୁ |",
     "saveProfile": "ପ୍ରୋଫାଇଲ୍ ସଞ୍ଚୟ କରନ୍ତୁ",
     "profileSaved": "ପ୍ରୋଫାଇଲ୍ ସେଭ୍ ହୋଇଛି",
     "saveFailed": "ପ୍ରୋଫାଇଲ୍ ସଞ୍ଚୟ କରିପାରିଲା ନାହିଁ",
     "favoriteStates": "ପ୍ରିୟ ରାଜ୍ୟଗୁଡିକ",
-    "notConfigured": "Sign-in is temporarily unavailable. You can still browse jobs without an account."
+    "notConfigured": "ସାଇନ୍-ଇନ୍ ସୁପେଜ୍ ବିନ୍ୟାସ ଆବଶ୍ୟକ କରେ",
+    "premiumError": "ଚେକଆଉଟ୍ ଆରମ୍ଭ କରିପାରିଲା ନାହିଁ | ଦୟାକରି ପରେ ପୁନର୍ବାର ଚେଷ୍ଟା କରନ୍ତୁ |",
+    "alertsUnsubscribeFailed": "ସଦସ୍ୟତା ରଦ୍ଦ କରିପାରିଲା ନାହିଁ | ଦୟାକରି ପୁନର୍ବାର ଚେଷ୍ଟା କରନ୍ତୁ |"
   },
   "ticker": {
     "live": "ଜୀବନ୍ତ",
@@ -88,6 +93,7 @@
   },
   "home": {
     "tagline": "କ G ଣସି ସରକାରୀ ବିଜ୍ଞପ୍ତିକୁ ଭୁଲ୍ କରନ୍ତୁ ନାହିଁ",
+    "heroHeading": "ସରକାରୀ ସରକାରୀ ଚାକିରି ବିଜ୍ଞପ୍ତିଗୁଡିକ ଯାଞ୍ଚ କରାଯାଇଛି |",
     "statsStrip": {
       "primary": "{{liveNotices}} ଲାଇଭ୍ ବିଜ୍ଞପ୍ତିଗୁଡିକ · {{vacancies} ified ବିଜ୍ଞପ୍ତିଗୁଡିକ",
       "secondary": "{{sources}} ସରକାରୀ ଉତ୍ସ · ଅଦ୍ୟତନ {{syncLabel}}",
@@ -371,20 +377,38 @@
   "jobsStatus": {
     "loading": "ଚାକିରି ତାଲିକା ଲୋଡିଂ…",
     "refreshing": "ଲାଇଭ୍ ତାଲିକା ଅପଡେଟ୍…",
-    "liveMode": "Live listings",
-    "demoMode": "Showing available listings",
+    "liveMode": "ଲାଇଭ୍ ଡାଟାବେସ୍ ସଂଯୁକ୍ତ",
+    "demoMode": "ଡେମୋ କାଟାଲଗ୍ - ରିଅଲ୍ ଟାଇମ୍ ଚାକିରି ପାଇଁ ସୁପେଜ୍ + ବ୍ୟାକେଣ୍ଡକୁ ସଂଯୋଗ କରନ୍ତୁ",
     "listings": "ତାଲିକାଗୁଡ଼ିକ",
     "curated": "କ୍ୟୁରେଟେଡ୍",
     "liveFromDb": "ସରକାରୀ ଉତ୍ସରୁ ଲାଇଭ୍",
     "live": "ଜୀବନ୍ତ",
-    "setupHint": "Listings update automatically from official sources",
-    "degraded": "Some listings may be delayed. Showing the latest available data.",
+    "setupHint": "ପରବର୍ତ୍ତୀ: ସୁପବେସ୍ ସେଟ୍ ଅପ୍ କରନ୍ତୁ back ବ୍ୟାକେଣ୍ଡ୍ ଇଙ୍ଗେଷ୍ଟ ଚଲାନ୍ତୁ V VITE_SUPABASE_URL ଯୋଡନ୍ତୁ",
+    "degraded": "ବ୍ୟାକେଣ୍ଡ୍ ଡାଟାବେସ୍ ସାମୟିକ ଭାବରେ ଉପଲବ୍ଧ ନାହିଁ - କ୍ୟାଚ୍ କିମ୍ବା ଡେମୋ ତାଲିକା ଦେଖାଉଛି",
     "dailySchedule": "ଅଫିସିଆଲ୍ ତାଲିକାଗୁଡ଼ିକ ପ୍ରତିଦିନ 8:00 AM IST ରେ ସତେଜ ହୁଏ",
     "dailyUpdated": "ଦ daily ନିକ ଅଦ୍ୟତନ ହୋଇଛି · ଶେଷ ସିଙ୍କ {{time}} IST",
     "dailyUpdatedRelative": "ଅଦ୍ୟତନ {{time}}",
     "dailyNext": "ପରବର୍ତ୍ତୀ ଅଦ୍ୟତନ {{time}} IST · ଆଜି ଆଉ କ updates ଣସି ଅଦ୍ୟତନ ନାହିଁ",
     "loadError": "ଚାକିରି ତାଲିକା ଲୋଡ୍ ହୋଇପାରିଲା ନାହିଁ | ଉପଲବ୍ଧ ହେଲେ କ୍ୟାଚ୍ ହୋଇଥିବା ଡାଟା ଦେଖାଉଛି",
     "retry": "ପୁନ ry ଚେଷ୍ଟା କରନ୍ତୁ"
+  },
+  "jobReport": {
+    "button": "ଭୁଲ କାମ ରିପୋର୍ଟ କରନ୍ତୁ |",
+    "title": "ରିପୋର୍ଟ: {{job}}",
+    "reasonLabel": "କାରଣ",
+    "reasonExpired": "ମିଆଦ ପୂର୍ଣ୍ଣ କାର୍ଯ୍ୟ",
+    "reasonWrongDeadline": "ଭୁଲ ସମୟସୀମା |",
+    "reasonBrokenLink": "ଭଙ୍ଗା ଲିଙ୍କ୍ |",
+    "reasonWrongVacancy": "ଭୁଲ ଖାଲି ଗଣନା |",
+    "reasonDuplicate": "ନକଲ ତାଲିକା |",
+    "reasonNotRecruitment": "ଏକ ନିଯୁକ୍ତି ପୋଷ୍ଟ ନୁହେଁ |",
+    "reasonSuspiciousSource": "ସନ୍ଦେହଜନକ ଉତ୍ସ |",
+    "detailsLabel": "ବିବରଣୀ (ବ al କଳ୍ପିକ)",
+    "emailLabel": "ଇମେଲ୍ (ବ al କଳ୍ପିକ)",
+    "submit": "ରିପୋର୍ଟ ଦାଖଲ କରନ୍ତୁ |",
+    "sending": "ପଠାଉଛି…",
+    "success": "ଧନ୍ୟବାଦ - ଆମେ ଏହି ତାଲିକା ସମୀକ୍ଷା କରିବୁ |",
+    "error": "ରିପୋର୍ଟ ଦାଖଲ କରିପାରିଲା ନାହିଁ | ଦୟାକରି ପରେ ପୁନର୍ବାର ଚେଷ୍ଟା କରନ୍ତୁ |"
   },
   "subscribeBanner": {
     "title": "ଦ Daily ନିକ ସରକାରୀ ଚାକିରି ଆଲର୍ଟ",
@@ -418,6 +442,7 @@
     "sending": "ପଠାଉଛି…",
     "success": "ଧନ୍ୟବାଦ - ଆମେ 2 ବ୍ୟବସାୟ ଦିନ ମଧ୍ୟରେ ଉତ୍ତର ଦେବୁ",
     "error": "ପଠାଇ ପାରିଲା ନାହିଁ | ଆମକୁ contact@livegovtjobs.com ରେ ଇମେଲ୍ କରନ୍ତୁ",
+    "offlineError": "ସର୍ଭରରେ ପହଞ୍ଚି ପାରିଲା ନାହିଁ | ଆପଣଙ୍କର ସଂଯୋଗ ଯାଞ୍ଚ କରନ୍ତୁ ଏବଂ ପୁନର୍ବାର ଚେଷ୍ଟା କରନ୍ତୁ |",
     "fallback": "କିମ୍ବା ଆମକୁ ସିଧାସଳଖ ଇମେଲ୍ କରନ୍ତୁ"
   },
   "sitemap": {
@@ -555,6 +580,10 @@
   "errorBoundary": {
     "title": "କିଛି ଭୁଲ୍ ହୋଇଗଲା",
     "message": "ଦୟାକରି ପୃଷ୍ଠା ସତେଜ କରନ୍ତୁ | ଯଦି ସମସ୍ୟା ଜାରି ରହେ, ପରେ ପୁନର୍ବାର ଚେଷ୍ଟା କରନ୍ତୁ"
+  },
+  "notFound": {
+    "title": "ପୃଷ୍ଠା ମିଳିଲା ନାହିଁ |",
+    "description": "ସେହି ଲିଙ୍କ୍ ଏହି ସାଇଟରେ ଥିବା ଏକ ପୃଷ୍ଠା ସହିତ ମେଳ ଖାଉ ନାହିଁ | ଘର, ସର୍ବଶେଷ ବିଜ୍ଞପ୍ତି, କିମ୍ବା ଅନୁସନ୍ଧାନ କରନ୍ତୁ |"
   },
   "footer": {
     "blurb": "ଭାରତର ବିଶ୍ୱସ୍ତ ସରକାରୀ ଚାକିରି ଆଲର୍ଟ ପ୍ଲାଟଫର୍ମ | ସରକାରୀ ଉତ୍ସରୁ ଲାଇଭ୍ ବିଜ୍ଞପ୍ତି - UPSC, SSC, ରେଳବାଇ, ବ୍ୟାଙ୍କିଙ୍ଗ୍ ଏବଂ ସମସ୍ତ ରାଜ୍ୟ",
