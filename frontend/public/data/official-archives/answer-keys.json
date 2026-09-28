@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-09-20T09:43:16.904Z",
-  "count": 26,
+  "generatedAt": "2026-09-27T10:25:26.507Z",
+  "count": 27,
   "items": [
     {
       "id": "65b953b91c3e8ca2",
@@ -54,59 +54,6 @@
       "fetchMethod": "html"
     },
     {
-      "id": "130a7eba0169af1c",
-      "title": "Notice to the candidates regarding Final Answer Key for the post of Primary Teacher (Mewat Cadre) against Advt. No. 05/2024, Cat. No.1 of Elementary Education Department, Haryana. | 2026-09-10",
-      "link": "https://hssc.gov.in/file/ac1f23cd-9fda-137e-81a0-89ede0820007/publicNotice",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "ssb-hr",
-      "sourceName": "Haryana Staff Selection Commission (HSSC)",
-      "dept": "Haryana Staff Selection Commission (HSSC)",
-      "state": "Haryana",
-      "category": "state",
-      "stateIds": [
-        "hr"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "89583121f65e2f76",
-      "title": "Final Answer Key For The Post Of Primary Teacher (PRT) | 2026-09-10",
-      "link": "https://hssc.gov.in/file/ac1f23cd-9fda-137e-81a0-89a629190004/publicNotice",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "ssb-hr",
-      "sourceName": "Haryana Staff Selection Commission (HSSC)",
-      "dept": "Haryana Staff Selection Commission (HSSC)",
-      "state": "Haryana",
-      "category": "state",
-      "stateIds": [
-        "hr"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "cc09d44023c47d00",
-      "title": "Final Answer Key for recruitment of various posts in the Directorate of Handloom & Textiles, Manipur on contractual basis. Updated: 12/05/2026",
-      "link": "https://mpscmanipur.gov.in/files/MPSC_26051212320.pdf",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [
-        "https://mpscmanipur.gov.in/files/MPSC_26051212320.pdf"
-      ],
-      "sourceId": "psc-mn",
-      "sourceName": "Manipur PSC",
-      "dept": "Manipur PSC",
-      "state": "NE States",
-      "category": "state",
-      "stateIds": [
-        "ne"
-      ],
-      "fetchMethod": "html"
-    },
-    {
       "id": "b0408e9076d75cad",
       "title": "Answer Key-OMR Exams",
       "link": "https://www.keralapsc.gov.in/index.php/answerkey_omrexams",
@@ -137,6 +84,78 @@
       "category": "state",
       "stateIds": [
         "kl"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "cc09d44023c47d00",
+      "title": "Final Answer Key for recruitment of various posts in the Directorate of Handloom & Textiles, Manipur on contractual basis. Updated: 12/05/2026",
+      "link": "https://mpscmanipur.gov.in/files/MPSC_26051212320.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://mpscmanipur.gov.in/files/MPSC_26051212320.pdf"
+      ],
+      "sourceId": "psc-mn",
+      "sourceName": "Manipur PSC",
+      "dept": "Manipur PSC",
+      "state": "NE States",
+      "category": "state",
+      "stateIds": [
+        "ne"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "3ddd46a120ba112c",
+      "title": "Final Answer Key for recruitment of various posts in the Directorate of Handloom & Textiles, Manipur on contractual basis. Updated: 12/05/2026",
+      "link": "https://www.mpscmanipur.gov.in/files/MPSC_26051212320.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://www.mpscmanipur.gov.in/files/MPSC_26051212320.pdf"
+      ],
+      "sourceId": "psc-mn",
+      "sourceName": "Manipur PSC",
+      "dept": "Manipur PSC",
+      "state": "NE States",
+      "category": "state",
+      "stateIds": [
+        "ne"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "130a7eba0169af1c",
+      "title": "Notice to the candidates regarding Final Answer Key for the post of Primary Teacher (Mewat Cadre) against Advt. No. 05/2024, Cat. No.1 of Elementary Education Department, Haryana. | 2026-09-10",
+      "link": "https://hssc.gov.in/file/ac1f23cd-9fda-137e-81a0-89ede0820007/publicNotice",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "ssb-hr",
+      "sourceName": "Haryana Staff Selection Commission (HSSC)",
+      "dept": "Haryana Staff Selection Commission (HSSC)",
+      "state": "Haryana",
+      "category": "state",
+      "stateIds": [
+        "hr"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "89583121f65e2f76",
+      "title": "Final Answer Key For The Post Of Primary Teacher (PRT) | 2026-09-10",
+      "link": "https://hssc.gov.in/file/ac1f23cd-9fda-137e-81a0-89a629190004/publicNotice",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "ssb-hr",
+      "sourceName": "Haryana Staff Selection Commission (HSSC)",
+      "dept": "Haryana Staff Selection Commission (HSSC)",
+      "state": "Haryana",
+      "category": "state",
+      "stateIds": [
+        "hr"
       ],
       "fetchMethod": "html"
     },

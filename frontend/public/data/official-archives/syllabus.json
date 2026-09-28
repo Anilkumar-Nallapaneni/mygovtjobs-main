@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-09-20T09:43:16.904Z",
-  "count": 20,
+  "generatedAt": "2026-09-27T10:25:26.507Z",
+  "count": 23,
   "items": [
     {
       "id": "19df6addea51f1a1",
@@ -37,23 +37,6 @@
       "fetchMethod": "html"
     },
     {
-      "id": "22dd56168d2566c0",
-      "title": "Syllabus and Scheme",
-      "link": "https://mppsc.mp.gov.in/Syllabus",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-mp",
-      "sourceName": "Madhya Pradesh PSC (MPPSC)",
-      "dept": "Madhya Pradesh PSC (MPPSC)",
-      "state": "Madhya Pradesh",
-      "category": "state",
-      "stateIds": [
-        "mp"
-      ],
-      "fetchMethod": "html"
-    },
-    {
       "id": "5f67be237fad8aad",
       "title": "Notification No. NPSC/EXAM-2/2026 dt. 23.06.2026 (NCS New Pattern & Syllabus)",
       "link": "https://npsc.nagaland.gov.in/notification/178220292129536",
@@ -71,19 +54,57 @@
       "fetchMethod": "html"
     },
     {
-      "id": "948506b4a8ef4abf",
+      "id": "d64474436a591e73",
       "title": "Syllabus",
-      "link": "https://hssc.gov.in/examsyllabus",
+      "link": "https://mpscmanipur.gov.in/files/DS_Syllabus_2026.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://mpscmanipur.gov.in/files/DS_Syllabus_2026.pdf"
+      ],
+      "sourceId": "psc-mn",
+      "sourceName": "Manipur PSC",
+      "dept": "Manipur PSC",
+      "state": "NE States",
+      "category": "state",
+      "stateIds": [
+        "ne"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "1f5f369ee792b818",
+      "title": "Syllabus",
+      "link": "https://www.mpscmanipur.gov.in/files/DS_Syllabus_2026.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://www.mpscmanipur.gov.in/files/DS_Syllabus_2026.pdf"
+      ],
+      "sourceId": "psc-mn",
+      "sourceName": "Manipur PSC",
+      "dept": "Manipur PSC",
+      "state": "NE States",
+      "category": "state",
+      "stateIds": [
+        "ne"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "f4b0127bbca574bc",
+      "title": "पदनाम-विधि सहायक/शोध अधिकारी/सहायक बोरिंग टेक्नीशियन व अन्य तकनीकी अर्हता से सम्बंधित पाठ्यक्रम(Syllabus)हेतु क्लिक करें New",
+      "link": "https://sssc.uk.gov.in/document/%e0%a4%aa%e0%a4%a6%e0%a4%a8%e0%a4%be%e0%a4%ae-%e0%a4%b5%e0%a4%bf%e0%a4%a7%e0%a4%bf-%e0%a4%b8%e0%a4%b9%e0%a4%be%e0%a4%af%e0%a4%95-%e0%a4%b6%e0%a5%8b%e0%a4%a7-%e0%a4%85%e0%a4%a7%e0%a4%bf%e0%a4%95-2/",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
-      "sourceId": "ssb-hr",
-      "sourceName": "Haryana Staff Selection Commission (HSSC)",
-      "dept": "Haryana Staff Selection Commission (HSSC)",
-      "state": "Haryana",
+      "sourceId": "ssb-uk",
+      "sourceName": "Uttarakhand Subordinate Service Selection (UKSSSC)",
+      "dept": "Uttarakhand Subordinate Service Selection (UKSSSC)",
+      "state": "Uttarakhand",
       "category": "state",
       "stateIds": [
-        "hr"
+        "uk"
       ],
       "fetchMethod": "html"
     },
@@ -105,19 +126,21 @@
       "fetchMethod": "html"
     },
     {
-      "id": "f4b0127bbca574bc",
-      "title": "पदनाम-विधि सहायक/शोध अधिकारी/सहायक बोरिंग टेक्नीशियन व अन्य तकनीकी अर्हता से सम्बंधित पाठ्यक्रम(Syllabus)हेतु क्लिक करें New",
-      "link": "https://sssc.uk.gov.in/document/%e0%a4%aa%e0%a4%a6%e0%a4%a8%e0%a4%be%e0%a4%ae-%e0%a4%b5%e0%a4%bf%e0%a4%a7%e0%a4%bf-%e0%a4%b8%e0%a4%b9%e0%a4%be%e0%a4%af%e0%a4%95-%e0%a4%b6%e0%a5%8b%e0%a4%a7-%e0%a4%85%e0%a4%a7%e0%a4%bf%e0%a4%95-2/",
+      "id": "1cc5e7bdfd8122f9",
+      "title": "Revised Common Syllabus for Combined Graduate Level Examination for the posts of Junior Engineer in the Electricity Department and Junior Engineer (E&M) in APWD",
+      "link": "https://erecruitment.andamannicobar.gov.in/Notice/118_fe13cffe-6aec-4875-8742-9089cc9397fe.pdf",
       "publishedAt": null,
       "summary": null,
-      "pdfUrls": [],
-      "sourceId": "ssb-uk",
-      "sourceName": "Uttarakhand Subordinate Service Selection (UKSSSC)",
-      "dept": "Uttarakhand Subordinate Service Selection (UKSSSC)",
-      "state": "Uttarakhand",
+      "pdfUrls": [
+        "https://erecruitment.andamannicobar.gov.in/Notice/118_fe13cffe-6aec-4875-8742-9089cc9397fe.pdf"
+      ],
+      "sourceId": "an-rec",
+      "sourceName": "Andaman & Nicobar e-Recruitment",
+      "dept": "Andaman & Nicobar e-Recruitment",
+      "state": "Andaman & Nicobar",
       "category": "state",
       "stateIds": [
-        "uk"
+        "an"
       ],
       "fetchMethod": "html"
     },
@@ -160,6 +183,57 @@
       "fetchMethod": "html"
     },
     {
+      "id": "e5d59009e1eecc89",
+      "title": "Postwise Syllabus",
+      "link": "https://www.keralapsc.gov.in/index.php/syllabus1",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-kl",
+      "sourceName": "Kerala PSC",
+      "dept": "Kerala PSC",
+      "state": "Kerala",
+      "category": "state",
+      "stateIds": [
+        "kl"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "948506b4a8ef4abf",
+      "title": "Syllabus",
+      "link": "https://hssc.gov.in/examsyllabus",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "ssb-hr",
+      "sourceName": "Haryana Staff Selection Commission (HSSC)",
+      "dept": "Haryana Staff Selection Commission (HSSC)",
+      "state": "Haryana",
+      "category": "state",
+      "stateIds": [
+        "hr"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "22dd56168d2566c0",
+      "title": "Syllabus and Scheme",
+      "link": "https://mppsc.mp.gov.in/Syllabus",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-mp",
+      "sourceName": "Madhya Pradesh PSC (MPPSC)",
+      "dept": "Madhya Pradesh PSC (MPPSC)",
+      "state": "Madhya Pradesh",
+      "category": "state",
+      "stateIds": [
+        "mp"
+      ],
+      "fetchMethod": "html"
+    },
+    {
       "id": "780e165e84997f6a",
       "title": "S.O. 41 - Syllabus for Prosecuting Officer (G) Examination",
       "link": "https://jkpsc.nic.in/pdf/SO41of2021.pdf",
@@ -194,23 +268,6 @@
       "category": "state",
       "stateIds": [
         "jk"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "e5d59009e1eecc89",
-      "title": "Postwise Syllabus",
-      "link": "https://www.keralapsc.gov.in/index.php/syllabus1",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-kl",
-      "sourceName": "Kerala PSC",
-      "dept": "Kerala PSC",
-      "state": "Kerala",
-      "category": "state",
-      "stateIds": [
-        "kl"
       ],
       "fetchMethod": "html"
     },
