@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-09-27T10:25:26.507Z",
-  "count": 235,
+  "generatedAt": "2026-09-29T10:43:55.408Z",
+  "count": 242,
   "items": [
     {
       "id": "2e7fa8a4ffb7c7be",
@@ -18,6 +18,23 @@
         "all"
       ],
       "fetchMethod": "rss-discovered"
+    },
+    {
+      "id": "5e04e28008e88c34",
+      "title": "कौशल विकास और उद्यमशीलता मंत्रालय, 'विशेष अभियान 5.0' के अंतर्गत मिले उत्कृष्ट परिणामों के आधार पर 'विशेष अभियान 6' की तैयारी कर रहा है",
+      "link": "https://pib.gov.in/PressReleaseIframePage.aspx?PRID=2316448",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "pib-press-reg3",
+      "sourceName": "PIB — recent press releases",
+      "dept": "Press Information Bureau",
+      "state": "All India",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "rss-feed"
     },
     {
       "id": "2fcd6ff34f094281",
@@ -215,6 +232,57 @@
       "fetchMethod": "html-listing"
     },
     {
+      "id": "b3c33fffbb0b0748",
+      "title": "CLICK HERE TO DOWNLOAD MARKSHEET & CUT OFF FOR ADVT. NO. D-2-E-1-2025, [S-06-01].",
+      "link": "https://uppsc.up.nic.in/CandidatePages/Advertismentwise_DownloadDocument.aspx?inptprmtr=mc",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "uppsc-hall-tickets",
+      "sourceName": "UPPSC — Hall tickets",
+      "dept": "Uttar Pradesh PSC",
+      "state": "Uttar Pradesh",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "b478f4e335587ede",
+      "title": "RESULT OF ADVT. NO. D-1/E-1/2026, MEDICAL EDUCATION DEPARTMENT U.P. (ALLOPATHY)/..",
+      "link": "https://uppsc.up.nic.in/Open_PDF_DB.aspx?I4PnQ0tBagnr4uATu7lVS+Kdn7bANrC+",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "uppsc-hall-tickets",
+      "sourceName": "UPPSC — Hall tickets",
+      "dept": "Uttar Pradesh PSC",
+      "state": "Uttar Pradesh",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "2f9b84ae45df4ffa",
+      "title": "RESULT OF ADVT. NO. D-1/E-1/2026, MEDICAL EDUCATION DEPARTMENT U.P. (ALLOPATHY)/..",
+      "link": "https://uppsc.up.nic.in/Open_PDF_DB.aspx?I4PnQ0tBagnr4uATu7lVS9Jm9XBAaZWi",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "uppsc-hall-tickets",
+      "sourceName": "UPPSC — Hall tickets",
+      "dept": "Uttar Pradesh PSC",
+      "state": "Uttar Pradesh",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
       "id": "4a7c5c912e69d262",
       "title": "RESULT OF ADVT. NO. D-2/E-1/2024, HIGHER EDUCATION DEPARTMENT UTTAR PRADESH, REG..",
       "link": "https://uppsc.up.nic.in/Open_PDF_DB.aspx?I4PnQ0tBagmNKfqXmoSUnt55CdzP5iuV",
@@ -249,6 +317,40 @@
       "fetchMethod": "html-listing"
     },
     {
+      "id": "dd3071daf0f03226",
+      "title": "28 Oct 2026 RESULT OF ADVT. NO. D-1/E-1/2026, MEDICAL EDUCATION DEPARTMENT U.P. (ALLOPATHY)/ PROFESSOR PHYSICAL MEDICINE AND REHABILITATION, S-08/19",
+      "link": "https://uppsc.up.nic.in/Open_PDF.aspx?I4PnQ0tBagnr4uATu7lVS+VuLhYqcVza",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "uppsc-hall-tickets",
+      "sourceName": "UPPSC — Hall tickets",
+      "dept": "Uttar Pradesh PSC",
+      "state": "Uttar Pradesh",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "aa3b9a301e2d7c9e",
+      "title": "28 Oct 2026 RESULT OF ADVT. NO. D-1/E-1/2026, MEDICAL EDUCATION DEPARTMENT U.P. (ALLOPATHY)/ PROFESSOR NEPHROLOGY, S-08/18",
+      "link": "https://uppsc.up.nic.in/Open_PDF.aspx?I4PnQ0tBagnr4uATu7lVS39QlGvLlULC",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "uppsc-hall-tickets",
+      "sourceName": "UPPSC — Hall tickets",
+      "dept": "Uttar Pradesh PSC",
+      "state": "Uttar Pradesh",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
       "id": "0893b8f99dae6c2e",
       "title": "19 Oct 2026 RESULT OF ADVT. NO. D-2/E-1/2024, HIGHER EDUCATION DEPARTMENT UTTAR PRADESH, REGISTRAR, S-03/01",
       "link": "https://uppsc.up.nic.in/Open_PDF.aspx?I4PnQ0tBagmNKfqXmoSUnj3RSz4YcAsN",
@@ -266,9 +368,9 @@
       "fetchMethod": "html-listing"
     },
     {
-      "id": "4f3b0762946b363d",
-      "title": "17 Oct 2026 RESULT OF ADVT. NO.D-2/E-1/2024, UTTAR PRADESH AYUSH (AYURVEDA) DEPARTMENT, Reader Rachna Shareer, S-9/04",
-      "link": "https://uppsc.up.nic.in/Open_PDF.aspx?I4PnQ0tBagnQ0/TjMEfCjIL5L9Hs6r49",
+      "id": "084c64752657e4bf",
+      "title": "05 Oct 2026 NOTICE REGARDING ADVT. NO. D-2/E-1/2025, DIRECTORATE OF MEDICAL AND HEALTH SERVICES UTTAR PRADESH, FILARIA CONTROL OFFICER, S-06/01(CUT OFF)",
+      "link": "https://uppsc.up.nic.in/Open_PDF.aspx?I4PnQ0tBagmNKfqXmoSUngRHocPuog4h",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
@@ -872,6 +974,110 @@
       "fetchMethod": "html"
     },
     {
+      "id": "86dc09a156fe9120",
+      "title": "CBSE 12th Result 2026: KV और नवोदय का जलवा, 12वीं के नतीजों में इन स्कूलों ने मारी बाजी",
+      "link": "https://ndtv.in/education/cbse-12th-result-2026-school-wise-performance-kv-jnv-pass-percentage-list-11425718",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "kvs",
+      "sourceName": "Kendriya Vidyalaya Sangathan",
+      "dept": "Kendriya Vidyalaya Sangathan",
+      "state": "All India",
+      "category": "teaching",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "ebfc2a9f2cf5cca8",
+      "title": "CBSE 12th Result: संस्थानवार प्रदर्शन में केंद्रीय विद्यालय रहा टॉप पर",
+      "link": "https://www.amarujala.com/education/cbse-class-12-result-2026-kv-secures-top-spot-know-how-different-schools-performed-2026-05-13",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "kvs",
+      "sourceName": "Kendriya Vidyalaya Sangathan",
+      "dept": "Kendriya Vidyalaya Sangathan",
+      "state": "All India",
+      "category": "teaching",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "2b0cf313b821dae3",
+      "title": "CBSE 12th Result 2026: सीबीएसई 12वीं में केंद्रीय विद्यालय का दबदबा, 98.55% छात्रों की सफलता के साथ टॉप पर",
+      "link": "https://www.timesnowhindi.com/education/cbse-12th-result-2026-kvs-vs-jnv-whose-result-is-highest-kendriya-vidyalaya-and-jawahar-navodaya-vidyalaya-12th-pass-percentage-article-154315169",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "kvs",
+      "sourceName": "Kendriya Vidyalaya Sangathan",
+      "dept": "Kendriya Vidyalaya Sangathan",
+      "state": "All India",
+      "category": "teaching",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "063187d0fea715d5",
+      "title": "कार्यालय आदेश – टी.जी.टी. चयनित वेतनमान 2025 नई",
+      "link": "https://cdnbbsr.s3waas.gov.in/s32d2ca7eedf739ef4c3800713ec482e1a/uploads/2026/09/2026092554.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://cdnbbsr.s3waas.gov.in/s32d2ca7eedf739ef4c3800713ec482e1a/uploads/2026/09/2026092554.pdf"
+      ],
+      "sourceId": "kvs",
+      "sourceName": "Kendriya Vidyalaya Sangathan",
+      "dept": "Kendriya Vidyalaya Sangathan",
+      "state": "All India",
+      "category": "teaching",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "08a6fead3943369e",
+      "title": "Comparative Result Analysis – Class X",
+      "link": "https://kvsangathan.nic.in/en/comparative-result-analysis-class-x/",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "kvs",
+      "sourceName": "Kendriya Vidyalaya Sangathan",
+      "dept": "Kendriya Vidyalaya Sangathan",
+      "state": "All India",
+      "category": "teaching",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "a91e35efe906a21a",
+      "title": "Comparative Result Analysis – Class XII",
+      "link": "https://kvsangathan.nic.in/en/comparative-result-analysis-class-xii/",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "kvs",
+      "sourceName": "Kendriya Vidyalaya Sangathan",
+      "dept": "Kendriya Vidyalaya Sangathan",
+      "state": "All India",
+      "category": "teaching",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
       "id": "3cb3737965d5c83c",
       "title": "Recruitment Result",
       "link": "https://www.aiims.edu/index.php/en/notices/recruitment/archive-recruitment",
@@ -900,6 +1106,25 @@
       "dept": "Canara Bank — Careers",
       "state": "All India",
       "category": "banking",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "d80303b97dae0ff7",
+      "title": "Bokaro Steel Plant: Result of the 'Walk-in-Interview' held for the post of Audiologist against Advertisement No. BSL/R-C/2026-08",
+      "link": "https://aima-web-images.s3.ap-south-1.amazonaws.com/sailcareers.com/Downloads/BSP_News%20&%20Jobs_29092026_110701.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://aima-web-images.s3.ap-south-1.amazonaws.com/sailcareers.com/Downloads/BSP_News%20&%20Jobs_29092026_110701.pdf"
+      ],
+      "sourceId": "sail",
+      "sourceName": "Steel Authority of India (SAIL)",
+      "dept": "Steel Authority of India (SAIL)",
+      "state": "All India",
+      "category": "psu",
       "stateIds": [
         "all"
       ],
@@ -1092,6 +1317,93 @@
       "fetchMethod": "html"
     },
     {
+      "id": "8a1990602dbb2e40",
+      "title": "Marks of the candidates for the post of Primary Teacher (Mewat Cadre) against Advt. No. 05/2024, Cat. No. 01 of Elementary Education Department, Haryana.",
+      "link": "https://hssc.gov.in/file/ac1f23cd-9f7f-1923-819f-9e104a82000c/result",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "ssb-hr",
+      "sourceName": "Haryana Staff Selection Commission (HSSC)",
+      "dept": "Haryana Staff Selection Commission (HSSC)",
+      "state": "Haryana",
+      "category": "state",
+      "stateIds": [
+        "hr"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "68a0ebd2c54b9c3c",
+      "title": "Declaration of final result for the post of Primary Teacher (Mewat Cadre) against Advt. No. 05/2024, Cat. No. 01 of Elementary Education Department, Haryana",
+      "link": "https://hssc.gov.in/file/ac1f23cd-9f7f-1923-819f-94244ea70006/result",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "ssb-hr",
+      "sourceName": "Haryana Staff Selection Commission (HSSC)",
+      "dept": "Haryana Staff Selection Commission (HSSC)",
+      "state": "Haryana",
+      "category": "state",
+      "stateIds": [
+        "hr"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "e61b5cc421798717",
+      "title": "Declaration of revised final result for the post of TGT Science (ROH & Mewat Cadre) against Advt. No. 2/2023, Cat. No. 07 & 12 of Elementary Education Department, Haryana",
+      "link": "https://hssc.gov.in/file/ac1f23cd-9d9c-1328-819f-37163ea80089/result",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "ssb-hr",
+      "sourceName": "Haryana Staff Selection Commission (HSSC)",
+      "dept": "Haryana Staff Selection Commission (HSSC)",
+      "state": "Haryana",
+      "category": "state",
+      "stateIds": [
+        "hr"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "5e648f8af052f950",
+      "title": "हरियाणा कर्मचारी चयन आयोग Haryana Staff Selection Commission",
+      "link": "https://hssc.gov.in/",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "ssb-hr",
+      "sourceName": "Haryana Staff Selection Commission (HSSC)",
+      "dept": "Haryana Staff Selection Commission (HSSC)",
+      "state": "Haryana",
+      "category": "state",
+      "stateIds": [
+        "hr"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "41ffa29b9939e13c",
+      "title": "रिट याचिका संख्या-18442/2018 प्रमोद कुमार सिंह व 09 अन्य बनाम उ0प्र0 राज्य व अन्य में मा0 उच्च न्यायालय द्वारा पारित आदेश दि0 21.05.2019 आरक्षी एवं समकक्ष पदों पर सीधी भर्ती - 2013 में चयनित पाये गये शेष अभ्यर्थियों के जे0टी0सी0 में आगमन के उपरान्त उनके व्यवस्थित, अनुशासित एवं स्वस्थय अवस्थान के सम्बन्ध में। [ Advertisments ]",
+      "link": "https://uppolice.gov.in/site/writereaddata/UploadNews/pdf/NC_201911281720540078.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://uppolice.gov.in/site/writereaddata/UploadNews/pdf/NC_201911281720540078.pdf"
+      ],
+      "sourceId": "police-up",
+      "sourceName": "UP Police Recruitment Board (UPPRPB)",
+      "dept": "UP Police Recruitment Board (UPPRPB)",
+      "state": "Uttar Pradesh",
+      "category": "police",
+      "stateIds": [
+        "up"
+      ],
+      "fetchMethod": "html"
+    },
+    {
       "id": "0c2358dfad8ef49b",
       "title": "Result & Recommendation",
       "link": "https://sssc.uk.gov.in/document-category/result-answer-keys/",
@@ -1183,25 +1495,6 @@
       "fetchMethod": "html"
     },
     {
-      "id": "faa1265b6f15cd3e",
-      "title": "पदनाम-प्रारूपकार/तकनीशियन ग्रेड-2(विद्युत्)/नलकूप मिस्त्री(Advt-63/UKSSSC/2024) की चयन संस्तुति हेतु क्लिक करें",
-      "link": "https://cdnbbsr.s3waas.gov.in/s34ffd0e19d2069412274bd3025b0e176c/uploads/2026/08/202608191916074329.pdf",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [
-        "https://cdnbbsr.s3waas.gov.in/s34ffd0e19d2069412274bd3025b0e176c/uploads/2026/08/202608191916074329.pdf"
-      ],
-      "sourceId": "ssb-uk",
-      "sourceName": "Uttarakhand Subordinate Service Selection (UKSSSC)",
-      "dept": "Uttarakhand Subordinate Service Selection (UKSSSC)",
-      "state": "Uttarakhand",
-      "category": "state",
-      "stateIds": [
-        "uk"
-      ],
-      "fetchMethod": "html"
-    },
-    {
       "id": "375af042974bc785",
       "title": "General Merit List",
       "link": "https://sssc.uk.gov.in/document-category/general-merit-list/",
@@ -1215,25 +1508,6 @@
       "category": "state",
       "stateIds": [
         "uk"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "41ffa29b9939e13c",
-      "title": "रिट याचिका संख्या-18442/2018 प्रमोद कुमार सिंह व 09 अन्य बनाम उ0प्र0 राज्य व अन्य में मा0 उच्च न्यायालय द्वारा पारित आदेश दि0 21.05.2019 आरक्षी एवं समकक्ष पदों पर सीधी भर्ती - 2013 में चयनित पाये गये शेष अभ्यर्थियों के जे0टी0सी0 में आगमन के उपरान्त उनके व्यवस्थित, अनुशासित एवं स्वस्थय अवस्थान के सम्बन्ध में। [ Advertisments ]",
-      "link": "https://uppolice.gov.in/site/writereaddata/UploadNews/pdf/NC_201911281720540078.pdf",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [
-        "https://uppolice.gov.in/site/writereaddata/UploadNews/pdf/NC_201911281720540078.pdf"
-      ],
-      "sourceId": "police-up",
-      "sourceName": "UP Police Recruitment Board (UPPRPB)",
-      "dept": "UP Police Recruitment Board (UPPRPB)",
-      "state": "Uttar Pradesh",
-      "category": "police",
-      "stateIds": [
-        "up"
       ],
       "fetchMethod": "html"
     },
@@ -1563,6 +1837,42 @@
       "fetchMethod": "live-jobs-supplement"
     },
     {
+      "id": "4f3b0762946b363d",
+      "title": "17 Oct 2026 RESULT OF ADVT. NO.D-2/E-1/2024, UTTAR PRADESH AYUSH (AYURVEDA) DEPARTMENT, Reader Rachna Shareer, S-9/04",
+      "link": "https://uppsc.up.nic.in/Open_PDF.aspx?I4PnQ0tBagnQ0/TjMEfCjIL5L9Hs6r49",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "uppsc-hall-tickets",
+      "sourceName": "UPPSC — Hall tickets",
+      "dept": "Uttar Pradesh PSC",
+      "state": "Uttar Pradesh",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "faa1265b6f15cd3e",
+      "title": "पदनाम-प्रारूपकार/तकनीशियन ग्रेड-2(विद्युत्)/नलकूप मिस्त्री(Advt-63/UKSSSC/2024) की चयन संस्तुति हेतु क्लिक करें",
+      "link": "https://cdnbbsr.s3waas.gov.in/s34ffd0e19d2069412274bd3025b0e176c/uploads/2026/08/202608191916074329.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://cdnbbsr.s3waas.gov.in/s34ffd0e19d2069412274bd3025b0e176c/uploads/2026/08/202608191916074329.pdf"
+      ],
+      "sourceId": "ssb-uk",
+      "sourceName": "Uttarakhand Subordinate Service Selection (UKSSSC)",
+      "dept": "Uttarakhand Subordinate Service Selection (UKSSSC)",
+      "state": "Uttarakhand",
+      "category": "state",
+      "stateIds": [
+        "uk"
+      ],
+      "fetchMethod": "html"
+    },
+    {
       "id": "4d21cc57b1475641",
       "title": "कचरा उठाने से लेकर बेहतर वित्तीय सुरक्षा तक सुश्री कोमारागिरी अंकामा का सफ़र",
       "link": "https://pib.gov.in/PressReleaseIframePage.aspx?PRID=2315112",
@@ -1580,76 +1890,6 @@
       "fetchMethod": "rss-config"
     },
     {
-      "id": "86dc09a156fe9120",
-      "title": "CBSE 12th Result 2026: KV और नवोदय का जलवा, 12वीं के नतीजों में इन स्कूलों ने मारी बाजी",
-      "link": "https://ndtv.in/education/cbse-12th-result-2026-school-wise-performance-kv-jnv-pass-percentage-list-11425718",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "kvs",
-      "sourceName": "Kendriya Vidyalaya Sangathan",
-      "dept": "Kendriya Vidyalaya Sangathan",
-      "state": "All India",
-      "category": "teaching",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "ebfc2a9f2cf5cca8",
-      "title": "CBSE 12th Result: संस्थानवार प्रदर्शन में केंद्रीय विद्यालय रहा टॉप पर",
-      "link": "https://www.amarujala.com/education/cbse-class-12-result-2026-kv-secures-top-spot-know-how-different-schools-performed-2026-05-13",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "kvs",
-      "sourceName": "Kendriya Vidyalaya Sangathan",
-      "dept": "Kendriya Vidyalaya Sangathan",
-      "state": "All India",
-      "category": "teaching",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "2b0cf313b821dae3",
-      "title": "CBSE 12th Result 2026: सीबीएसई 12वीं में केंद्रीय विद्यालय का दबदबा, 98.55% छात्रों की सफलता के साथ टॉप पर",
-      "link": "https://www.timesnowhindi.com/education/cbse-12th-result-2026-kvs-vs-jnv-whose-result-is-highest-kendriya-vidyalaya-and-jawahar-navodaya-vidyalaya-12th-pass-percentage-article-154315169",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "kvs",
-      "sourceName": "Kendriya Vidyalaya Sangathan",
-      "dept": "Kendriya Vidyalaya Sangathan",
-      "state": "All India",
-      "category": "teaching",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "063187d0fea715d5",
-      "title": "कार्यालय आदेश – टी.जी.टी. चयनित वेतनमान 2025 नई",
-      "link": "https://cdnbbsr.s3waas.gov.in/s32d2ca7eedf739ef4c3800713ec482e1a/uploads/2026/09/2026092554.pdf",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [
-        "https://cdnbbsr.s3waas.gov.in/s32d2ca7eedf739ef4c3800713ec482e1a/uploads/2026/09/2026092554.pdf"
-      ],
-      "sourceId": "kvs",
-      "sourceName": "Kendriya Vidyalaya Sangathan",
-      "dept": "Kendriya Vidyalaya Sangathan",
-      "state": "All India",
-      "category": "teaching",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
       "id": "85be72c42d7b2f89",
       "title": "विज्ञापन संख्या 01/2025 के अंतर्गत प्राथमिक शिक्षक एवं कनिष्ठ सचिवालय सहायक पद के टियर II परीक्षा के परिणाम घोषित करने संबंधित प्रेस विज्ञप्ति। नई",
       "link": "https://cdnbbsr.s3waas.gov.in/s32d2ca7eedf739ef4c3800713ec482e1a/uploads/2026/09/2026091426.pdf",
@@ -1658,40 +1898,6 @@
       "pdfUrls": [
         "https://cdnbbsr.s3waas.gov.in/s32d2ca7eedf739ef4c3800713ec482e1a/uploads/2026/09/2026091426.pdf"
       ],
-      "sourceId": "kvs",
-      "sourceName": "Kendriya Vidyalaya Sangathan",
-      "dept": "Kendriya Vidyalaya Sangathan",
-      "state": "All India",
-      "category": "teaching",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "08a6fead3943369e",
-      "title": "Comparative Result Analysis – Class X",
-      "link": "https://kvsangathan.nic.in/en/comparative-result-analysis-class-x/",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "kvs",
-      "sourceName": "Kendriya Vidyalaya Sangathan",
-      "dept": "Kendriya Vidyalaya Sangathan",
-      "state": "All India",
-      "category": "teaching",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "a91e35efe906a21a",
-      "title": "Comparative Result Analysis – Class XII",
-      "link": "https://kvsangathan.nic.in/en/comparative-result-analysis-class-xii/",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
       "sourceId": "kvs",
       "sourceName": "Kendriya Vidyalaya Sangathan",
       "dept": "Kendriya Vidyalaya Sangathan",
@@ -1775,74 +1981,6 @@
       "fetchMethod": "html"
     },
     {
-      "id": "8a1990602dbb2e40",
-      "title": "Marks of the candidates for the post of Primary Teacher (Mewat Cadre) against Advt. No. 05/2024, Cat. No. 01 of Elementary Education Department, Haryana.",
-      "link": "https://hssc.gov.in/file/ac1f23cd-9f7f-1923-819f-9e104a82000c/result",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "ssb-hr",
-      "sourceName": "Haryana Staff Selection Commission (HSSC)",
-      "dept": "Haryana Staff Selection Commission (HSSC)",
-      "state": "Haryana",
-      "category": "state",
-      "stateIds": [
-        "hr"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "68a0ebd2c54b9c3c",
-      "title": "Declaration of final result for the post of Primary Teacher (Mewat Cadre) against Advt. No. 05/2024, Cat. No. 01 of Elementary Education Department, Haryana",
-      "link": "https://hssc.gov.in/file/ac1f23cd-9f7f-1923-819f-94244ea70006/result",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "ssb-hr",
-      "sourceName": "Haryana Staff Selection Commission (HSSC)",
-      "dept": "Haryana Staff Selection Commission (HSSC)",
-      "state": "Haryana",
-      "category": "state",
-      "stateIds": [
-        "hr"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "e61b5cc421798717",
-      "title": "Declaration of revised final result for the post of TGT Science (ROH & Mewat Cadre) against Advt. No. 2/2023, Cat. No. 07 & 12 of Elementary Education Department, Haryana",
-      "link": "https://hssc.gov.in/file/ac1f23cd-9d9c-1328-819f-37163ea80089/result",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "ssb-hr",
-      "sourceName": "Haryana Staff Selection Commission (HSSC)",
-      "dept": "Haryana Staff Selection Commission (HSSC)",
-      "state": "Haryana",
-      "category": "state",
-      "stateIds": [
-        "hr"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "5e648f8af052f950",
-      "title": "हरियाणा कर्मचारी चयन आयोग Haryana Staff Selection Commission",
-      "link": "https://hssc.gov.in/",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "ssb-hr",
-      "sourceName": "Haryana Staff Selection Commission (HSSC)",
-      "dept": "Haryana Staff Selection Commission (HSSC)",
-      "state": "Haryana",
-      "category": "state",
-      "stateIds": [
-        "hr"
-      ],
-      "fetchMethod": "html"
-    },
-    {
       "id": "5ad2dcce12c536bf",
       "title": "पदनाम-एक्स-रे तकनीशियन(पदकोड-11 मा० उच्च न्यायालय ,नैनीताल के आदेश के क्रम में) की चयन संस्तुति हेतु क्लिक करें",
       "link": "https://cdnbbsr.s3waas.gov.in/s34ffd0e19d2069412274bd3025b0e176c/uploads/2026/08/202608171551279653.pdf",
@@ -1917,23 +2055,6 @@
         "an"
       ],
       "fetchMethod": "html"
-    },
-    {
-      "id": "b3c33fffbb0b0748",
-      "title": "CLICK HERE TO DOWNLOAD MARKSHEET & CUT OFF FOR ADVT. NO. D-5-E-1-2025, [S-03-06].",
-      "link": "https://uppsc.up.nic.in/CandidatePages/Advertismentwise_DownloadDocument.aspx?inptprmtr=mc",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "uppsc-hall-tickets",
-      "sourceName": "UPPSC — Hall tickets",
-      "dept": "Uttar Pradesh PSC",
-      "state": "Uttar Pradesh",
-      "category": "state",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
     },
     {
       "id": "7a9b0027b83e17f4",
