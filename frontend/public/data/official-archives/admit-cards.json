@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-29T10:43:55.408Z",
+  "generatedAt": "2026-09-30T10:44:16.086Z",
   "count": 169,
   "items": [
     {
@@ -273,6 +273,23 @@
       "dept": "Punjab National Bank — Careers",
       "state": "All India",
       "category": "banking",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "0157354131476c03",
+      "title": "Intimation to Stock Exchange(s)",
+      "link": "https://ongcindia.com/web/eng/investors/intimation-to-stock-exchange",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "ongc",
+      "sourceName": "ONGC — Careers",
+      "dept": "ONGC — Careers",
+      "state": "All India",
+      "category": "psu",
       "stateIds": [
         "all"
       ],
@@ -625,23 +642,6 @@
       "category": "state",
       "stateIds": [
         "an"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "0157354131476c03",
-      "title": "Intimation to Stock Exchange(s)",
-      "link": "https://ongcindia.com/web/eng/investors/intimation-to-stock-exchange",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "ongc",
-      "sourceName": "ONGC — Careers",
-      "dept": "ONGC — Careers",
-      "state": "All India",
-      "category": "psu",
-      "stateIds": [
-        "all"
       ],
       "fetchMethod": "html"
     },

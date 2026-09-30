@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-29T10:43:55.408Z",
+  "generatedAt": "2026-09-30T10:44:16.086Z",
   "count": 103,
   "items": [
     {
@@ -21,7 +21,7 @@
     },
     {
       "id": "b233fa4b73263639",
-      "title": "Advt. No. ISRO:ICRB:02(EMC-CEPO):2026 dated 28-07-2026 - List of candidates screened-in for interview Read More",
+      "title": "Advt. No. ISRO:ICRB:02(EMC-CEPO):2026 dated 28-07-2026 - List of candidates screened in for interview Read More",
       "link": "https://www.isro.gov.in/ICRB_Recruitment12.html",
       "publishedAt": null,
       "summary": null,
@@ -139,6 +139,23 @@
         "all"
       ],
       "fetchMethod": "rss-discovered"
+    },
+    {
+      "id": "9e7e8810785833f5",
+      "title": "A World Class Sea Survival Centre",
+      "link": "https://ongcindia.com/web/eng/sea-survival-training",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "ongc",
+      "sourceName": "ONGC — Careers",
+      "dept": "ONGC — Careers",
+      "state": "All India",
+      "category": "psu",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
     },
     {
       "id": "26ef63b4a31cb06b",
@@ -818,9 +835,9 @@
       "fetchMethod": "html"
     },
     {
-      "id": "1709d751f92d2140",
+      "id": "c019d0c423cf10b5",
       "title": "Procedure for Interview Date Change Requests",
-      "link": "https://www.keralapsc.gov.in/procedure-interview-date-change-requests",
+      "link": "https://www.keralapsc.gov.in/index.php/procedure-interview-date-change-requests",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
@@ -835,9 +852,9 @@
       "fetchMethod": "html"
     },
     {
-      "id": "39e61c0337589778",
+      "id": "05de1912b0b5a28f",
       "title": "Interview Schedule",
-      "link": "https://www.keralapsc.gov.in/interviews",
+      "link": "https://www.keralapsc.gov.in/index.php/interviews",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
@@ -874,6 +891,23 @@
       "id": "0c8b608876f8adbe",
       "title": "examination-interview",
       "link": "https://www.keralapsc.gov.in/examination-interview",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-kl",
+      "sourceName": "Kerala PSC",
+      "dept": "Kerala PSC",
+      "state": "Kerala",
+      "category": "state",
+      "stateIds": [
+        "kl"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "1709d751f92d2140",
+      "title": "Procedure for Interview Date Change Requests",
+      "link": "https://www.keralapsc.gov.in/procedure-interview-date-change-requests",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
@@ -1017,6 +1051,23 @@
       "fetchMethod": "html"
     },
     {
+      "id": "39e61c0337589778",
+      "title": "Interview Schedule",
+      "link": "https://www.keralapsc.gov.in/interviews",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-kl",
+      "sourceName": "Kerala PSC",
+      "dept": "Kerala PSC",
+      "state": "Kerala",
+      "category": "state",
+      "stateIds": [
+        "kl"
+      ],
+      "fetchMethod": "html"
+    },
+    {
       "id": "98e8959df1b18c64",
       "title": "17 Oct 2026 LIST OF CANDIDATES PROVISIONALLY QUALIFIED FOR INTERVIEW IN ADVT. NO. A-1/E-1/2025, COMBINED STATE/UPPER SUBORDINATE SERVICES (M.) EXAM.-2025",
       "link": "https://uppsc.up.nic.in/Open_PDF.aspx?I4PnQ0tBagnQ0/TjMEfCjM2A27zHkRdP",
@@ -1034,40 +1085,6 @@
       "fetchMethod": "html-listing"
     },
     {
-      "id": "9e7e8810785833f5",
-      "title": "A World Class Sea Survival Centre",
-      "link": "https://ongcindia.com/web/eng/sea-survival-training",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "ongc",
-      "sourceName": "ONGC — Careers",
-      "dept": "ONGC — Careers",
-      "state": "All India",
-      "category": "psu",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "c019d0c423cf10b5",
-      "title": "Procedure for Interview Date Change Requests",
-      "link": "https://www.keralapsc.gov.in/index.php/procedure-interview-date-change-requests",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-kl",
-      "sourceName": "Kerala PSC",
-      "dept": "Kerala PSC",
-      "state": "Kerala",
-      "category": "state",
-      "stateIds": [
-        "kl"
-      ],
-      "fetchMethod": "html"
-    },
-    {
       "id": "0de52133664cd2ad",
       "title": "24 Oct 2026 NOTICE REGARDING INTERVIEW SCHEDULE OF ADVT. NO. A-1/E-1/2025, COMBINED STATE/UPPER SUBORDINATE SERVICES (M.) EXAM.-2025",
       "link": "https://uppsc.up.nic.in/Open_PDF.aspx?I4PnQ0tBagnQ0/TjMEfCjILNJltHvQFj",
@@ -1083,23 +1100,6 @@
         "all"
       ],
       "fetchMethod": "html-listing"
-    },
-    {
-      "id": "05de1912b0b5a28f",
-      "title": "Interview Schedule",
-      "link": "https://www.keralapsc.gov.in/index.php/interviews",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-kl",
-      "sourceName": "Kerala PSC",
-      "dept": "Kerala PSC",
-      "state": "Kerala",
-      "category": "state",
-      "stateIds": [
-        "kl"
-      ],
-      "fetchMethod": "html"
     },
     {
       "id": "4ac64be59afb579a",

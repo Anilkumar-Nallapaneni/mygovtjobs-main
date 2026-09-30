@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-29T10:43:55.408Z",
+  "generatedAt": "2026-09-30T10:44:16.086Z",
   "count": 33,
   "items": [
     {
@@ -69,6 +69,235 @@
         "all"
       ],
       "fetchMethod": "html-listing"
+    },
+    {
+      "id": "c4f57dea207a1fb4",
+      "title": "Question paper for Descriptive Examinations",
+      "link": "https://www.keralapsc.gov.in/index.php/question-paper-descriptive-exam",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-kl",
+      "sourceName": "Kerala PSC",
+      "dept": "Kerala PSC",
+      "state": "Kerala",
+      "category": "state",
+      "stateIds": [
+        "kl"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "f9b5a924f72ec798",
+      "title": "Previous Question Papers",
+      "link": "https://www.keralapsc.gov.in/index.php/previous-question-papers",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-kl",
+      "sourceName": "Kerala PSC",
+      "dept": "Kerala PSC",
+      "state": "Kerala",
+      "category": "state",
+      "stateIds": [
+        "kl"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "e89d8cfee71410b4",
+      "title": "Question paper for Descriptive Examinations",
+      "link": "https://www.keralapsc.gov.in/question-paper-descriptive-exam",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-kl",
+      "sourceName": "Kerala PSC",
+      "dept": "Kerala PSC",
+      "state": "Kerala",
+      "category": "state",
+      "stateIds": [
+        "kl"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "288eb14d7e699a2a",
+      "title": "Previous Question Papers",
+      "link": "https://opsc.gov.in/Public/Pages/View_Content.aspx?id=p/5qRxj7CZtpXYhZHF7BXQ==",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-od",
+      "sourceName": "Odisha PSC (OPSC)",
+      "dept": "Odisha PSC (OPSC)",
+      "state": "Odisha",
+      "category": "state",
+      "stateIds": [
+        "od"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "feab0ea2910a1863",
+      "title": "Paper-I Specimen Question Booklet",
+      "link": "https://mpscmanipur.gov.in/files/MPSC_26092514450.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://mpscmanipur.gov.in/files/MPSC_26092514450.pdf"
+      ],
+      "sourceId": "psc-mn",
+      "sourceName": "Manipur PSC",
+      "dept": "Manipur PSC",
+      "state": "NE States",
+      "category": "state",
+      "stateIds": [
+        "ne"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "175f6c89d85642db",
+      "title": "Paper-II Specimen Question Booklet",
+      "link": "https://mpscmanipur.gov.in/files/MPSC_26092516280.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://mpscmanipur.gov.in/files/MPSC_26092516280.pdf"
+      ],
+      "sourceId": "psc-mn",
+      "sourceName": "Manipur PSC",
+      "dept": "Manipur PSC",
+      "state": "NE States",
+      "category": "state",
+      "stateIds": [
+        "ne"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "1f26c2bbb725585e",
+      "title": "Previous Year Question Papers",
+      "link": "https://mpscmanipur.gov.in/question.html",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-mn",
+      "sourceName": "Manipur PSC",
+      "dept": "Manipur PSC",
+      "state": "NE States",
+      "category": "state",
+      "stateIds": [
+        "ne"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "aedd1d393204cd81",
+      "title": "Paper-I Specimen Question Booklet",
+      "link": "https://www.mpscmanipur.gov.in/files/MPSC_26092514450.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://www.mpscmanipur.gov.in/files/MPSC_26092514450.pdf"
+      ],
+      "sourceId": "psc-mn",
+      "sourceName": "Manipur PSC",
+      "dept": "Manipur PSC",
+      "state": "NE States",
+      "category": "state",
+      "stateIds": [
+        "ne"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "6b51d3d7e323885f",
+      "title": "Paper-II Specimen Question Booklet",
+      "link": "https://www.mpscmanipur.gov.in/files/MPSC_26092516280.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://www.mpscmanipur.gov.in/files/MPSC_26092516280.pdf"
+      ],
+      "sourceId": "psc-mn",
+      "sourceName": "Manipur PSC",
+      "dept": "Manipur PSC",
+      "state": "NE States",
+      "category": "state",
+      "stateIds": [
+        "ne"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "43f6c4f81b270054",
+      "title": "Previous Year Question Papers",
+      "link": "https://www.mpscmanipur.gov.in/question.html",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-mn",
+      "sourceName": "Manipur PSC",
+      "dept": "Manipur PSC",
+      "state": "NE States",
+      "category": "state",
+      "stateIds": [
+        "ne"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "005751ecf59f9869",
+      "title": "Previous Question Papers",
+      "link": "https://www.ossc.gov.in/Public/Pages/View_Content.aspx?id=p/5qRxj7CZtpXYhZHF7BXQ==",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "ssb-od",
+      "sourceName": "Odisha Staff Selection Commission (OSSC)",
+      "dept": "Odisha Staff Selection Commission (OSSC)",
+      "state": "Odisha",
+      "category": "state",
+      "stateIds": [
+        "od"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "0f8a3592fc10bcdd",
+      "title": "Previous Question Papers",
+      "link": "https://jkssb.nic.in/QP.html",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "ssb-jk",
+      "sourceName": "J&K Services Selection Board (JKSSB)",
+      "dept": "J&K Services Selection Board (JKSSB)",
+      "state": "Jammu & Kashmir",
+      "category": "state",
+      "stateIds": [
+        "jk"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "2f2f8fe8740ca14a",
+      "title": "Old Question Papers",
+      "link": "https://sssc.uk.gov.in/document-category/old-question-papers/",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "ssb-uk",
+      "sourceName": "Uttarakhand Subordinate Service Selection (UKSSSC)",
+      "dept": "Uttarakhand Subordinate Service Selection (UKSSSC)",
+      "state": "Uttarakhand",
+      "category": "state",
+      "stateIds": [
+        "uk"
+      ],
+      "fetchMethod": "html"
     },
     {
       "id": "c5f858985b70fccb",
@@ -258,238 +487,9 @@
       "fetchMethod": "html"
     },
     {
-      "id": "e89d8cfee71410b4",
-      "title": "Question paper for Descriptive Examinations",
-      "link": "https://www.keralapsc.gov.in/question-paper-descriptive-exam",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-kl",
-      "sourceName": "Kerala PSC",
-      "dept": "Kerala PSC",
-      "state": "Kerala",
-      "category": "state",
-      "stateIds": [
-        "kl"
-      ],
-      "fetchMethod": "html"
-    },
-    {
       "id": "b2abd6cc6348e1c6",
       "title": "Previous Question Papers",
       "link": "https://www.keralapsc.gov.in/previous-question-papers",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-kl",
-      "sourceName": "Kerala PSC",
-      "dept": "Kerala PSC",
-      "state": "Kerala",
-      "category": "state",
-      "stateIds": [
-        "kl"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "288eb14d7e699a2a",
-      "title": "Previous Question Papers",
-      "link": "https://opsc.gov.in/Public/Pages/View_Content.aspx?id=p/5qRxj7CZtpXYhZHF7BXQ==",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-od",
-      "sourceName": "Odisha PSC (OPSC)",
-      "dept": "Odisha PSC (OPSC)",
-      "state": "Odisha",
-      "category": "state",
-      "stateIds": [
-        "od"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "feab0ea2910a1863",
-      "title": "Paper-I Specimen Question Booklet",
-      "link": "https://mpscmanipur.gov.in/files/MPSC_26092514450.pdf",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [
-        "https://mpscmanipur.gov.in/files/MPSC_26092514450.pdf"
-      ],
-      "sourceId": "psc-mn",
-      "sourceName": "Manipur PSC",
-      "dept": "Manipur PSC",
-      "state": "NE States",
-      "category": "state",
-      "stateIds": [
-        "ne"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "175f6c89d85642db",
-      "title": "Paper-II Specimen Question Booklet",
-      "link": "https://mpscmanipur.gov.in/files/MPSC_26092516280.pdf",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [
-        "https://mpscmanipur.gov.in/files/MPSC_26092516280.pdf"
-      ],
-      "sourceId": "psc-mn",
-      "sourceName": "Manipur PSC",
-      "dept": "Manipur PSC",
-      "state": "NE States",
-      "category": "state",
-      "stateIds": [
-        "ne"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "1f26c2bbb725585e",
-      "title": "Previous Year Question Papers",
-      "link": "https://mpscmanipur.gov.in/question.html",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-mn",
-      "sourceName": "Manipur PSC",
-      "dept": "Manipur PSC",
-      "state": "NE States",
-      "category": "state",
-      "stateIds": [
-        "ne"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "aedd1d393204cd81",
-      "title": "Paper-I Specimen Question Booklet",
-      "link": "https://www.mpscmanipur.gov.in/files/MPSC_26092514450.pdf",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [
-        "https://www.mpscmanipur.gov.in/files/MPSC_26092514450.pdf"
-      ],
-      "sourceId": "psc-mn",
-      "sourceName": "Manipur PSC",
-      "dept": "Manipur PSC",
-      "state": "NE States",
-      "category": "state",
-      "stateIds": [
-        "ne"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "6b51d3d7e323885f",
-      "title": "Paper-II Specimen Question Booklet",
-      "link": "https://www.mpscmanipur.gov.in/files/MPSC_26092516280.pdf",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [
-        "https://www.mpscmanipur.gov.in/files/MPSC_26092516280.pdf"
-      ],
-      "sourceId": "psc-mn",
-      "sourceName": "Manipur PSC",
-      "dept": "Manipur PSC",
-      "state": "NE States",
-      "category": "state",
-      "stateIds": [
-        "ne"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "43f6c4f81b270054",
-      "title": "Previous Year Question Papers",
-      "link": "https://www.mpscmanipur.gov.in/question.html",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-mn",
-      "sourceName": "Manipur PSC",
-      "dept": "Manipur PSC",
-      "state": "NE States",
-      "category": "state",
-      "stateIds": [
-        "ne"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "005751ecf59f9869",
-      "title": "Previous Question Papers",
-      "link": "https://www.ossc.gov.in/Public/Pages/View_Content.aspx?id=p/5qRxj7CZtpXYhZHF7BXQ==",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "ssb-od",
-      "sourceName": "Odisha Staff Selection Commission (OSSC)",
-      "dept": "Odisha Staff Selection Commission (OSSC)",
-      "state": "Odisha",
-      "category": "state",
-      "stateIds": [
-        "od"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "2f2f8fe8740ca14a",
-      "title": "Old Question Papers",
-      "link": "https://sssc.uk.gov.in/document-category/old-question-papers/",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "ssb-uk",
-      "sourceName": "Uttarakhand Subordinate Service Selection (UKSSSC)",
-      "dept": "Uttarakhand Subordinate Service Selection (UKSSSC)",
-      "state": "Uttarakhand",
-      "category": "state",
-      "stateIds": [
-        "uk"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "c4f57dea207a1fb4",
-      "title": "Question paper for Descriptive Examinations",
-      "link": "https://www.keralapsc.gov.in/index.php/question-paper-descriptive-exam",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-kl",
-      "sourceName": "Kerala PSC",
-      "dept": "Kerala PSC",
-      "state": "Kerala",
-      "category": "state",
-      "stateIds": [
-        "kl"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "0f8a3592fc10bcdd",
-      "title": "Previous Question Papers",
-      "link": "https://jkssb.nic.in/QP.html",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "ssb-jk",
-      "sourceName": "J&K Services Selection Board (JKSSB)",
-      "dept": "J&K Services Selection Board (JKSSB)",
-      "state": "Jammu & Kashmir",
-      "category": "state",
-      "stateIds": [
-        "jk"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "f9b5a924f72ec798",
-      "title": "Previous Question Papers",
-      "link": "https://www.keralapsc.gov.in/index.php/previous-question-papers",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
