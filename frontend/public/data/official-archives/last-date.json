@@ -1,7 +1,26 @@
 {
-  "generatedAt": "2026-09-30T10:44:16.086Z",
-  "count": 98,
+  "generatedAt": "2026-10-01T11:05:38.952Z",
+  "count": 100,
   "items": [
+    {
+      "id": "dc33c3253f0d919c",
+      "title": "Procurement of Various Consumables for GE Anesthesia Work station for the O.T., Burn & Plastic Surgery Block Under GFR 166 (iii) , New Delhi",
+      "link": "https://www.aiims.edu/index.php/en/131-tender/proprietary-tender/24821-160-consumablesforgeworkstation-25-26",
+      "publishedAt": "2026-10-01T06:45:35.000Z",
+      "summary": "VIEW TENDER DETAILS Tender No 160/Consumables for GE Workstation/25-26 Title Procurement of Various Consumables for GE Anesthesia Work station for the O.T., Burn & Plastic Surgery Block Under GFR 166 (iii) , New Delhi Date of Uploading 01/10/2026 Date of Closing 15/10/2026 Document",
+      "pdfUrls": [
+        "https://www.aiims.edu/images/pdf/tender/GE.pdf"
+      ],
+      "sourceId": "aiims",
+      "sourceName": "AIIMS New Delhi — Recruitment",
+      "dept": "AIIMS New Delhi — Recruitment",
+      "state": "All India",
+      "category": "health",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "rss-discovered"
+    },
     {
       "id": "5f0eea17d51aef93",
       "title": "Tender No. BARC(T)/NRB/INRPO/SWMF-63/2026/210          [e-Tender]",
@@ -549,6 +568,23 @@
       "fetchMethod": "rss-discovered"
     },
     {
+      "id": "3c03a98b974c67d2",
+      "title": "*CLICK HERE TO APPLY FOR LIC GOLDEN JUBILEE SCHOLARSHIPS 2026 \"Last date extended up to 15th October 2026\"*",
+      "link": "https://licindia.in/en/web/guest/golden-jubilee-foundation",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "lic",
+      "sourceName": "Life Insurance Corporation — Careers",
+      "dept": "Life Insurance Corporation — Careers",
+      "state": "All India",
+      "category": "banking",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
       "id": "cf7727ab821fe25c",
       "title": "Research, Recruitment, & Extension",
       "link": "https://www.wii.gov.in/research-recruitment-and-extension",
@@ -634,6 +670,40 @@
       "category": "psu",
       "stateIds": [
         "uk",
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "d0831531e36202c0",
+      "title": "APPLY ONLINE (Online Registration Extended till 05.10.2026)",
+      "link": "https://recruitment.sbi.bank.in/crpd-sco-2026-27-23/apply",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "sbi",
+      "sourceName": "State Bank of India — Careers",
+      "dept": "State Bank of India — Careers",
+      "state": "All India",
+      "category": "banking",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "1a8fa8b40cc21bb0",
+      "title": "APPLY ONLINE (Online Registration extended till 28.09.2026)",
+      "link": "https://recruitment.sbi.bank.in/crpd-sco-2026-27-15/apply",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "sbi",
+      "sourceName": "State Bank of India — Careers",
+      "dept": "State Bank of India — Careers",
+      "state": "All India",
+      "category": "banking",
+      "stateIds": [
         "all"
       ],
       "fetchMethod": "html"
@@ -930,40 +1000,6 @@
       "dept": "CBSE — CTET",
       "state": "All India",
       "category": "teaching",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "d0831531e36202c0",
-      "title": "APPLY ONLINE (Online Registration Extended till 05.10.2026)",
-      "link": "https://recruitment.sbi.bank.in/crpd-sco-2026-27-23/apply",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "sbi",
-      "sourceName": "State Bank of India — Careers",
-      "dept": "State Bank of India — Careers",
-      "state": "All India",
-      "category": "banking",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "1a8fa8b40cc21bb0",
-      "title": "APPLY ONLINE (Online Registration extended till 28.09.2026)",
-      "link": "https://recruitment.sbi.bank.in/crpd-sco-2026-27-15/apply",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "sbi",
-      "sourceName": "State Bank of India — Careers",
-      "dept": "State Bank of India — Careers",
-      "state": "All India",
-      "category": "banking",
       "stateIds": [
         "all"
       ],

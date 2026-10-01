@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-09-30T10:44:16.086Z",
-  "count": 103,
+  "generatedAt": "2026-10-01T11:05:38.952Z",
+  "count": 104,
   "items": [
     {
       "id": "2e7fa8a4ffb7c7be",
@@ -71,23 +71,6 @@
       "fetchMethod": "html-listing"
     },
     {
-      "id": "12ca81e8e0617c5b",
-      "title": "Click here to view List of Candidates who are not selected in P.C.S. Examination-2022, but Qualified for Interview in P.C.S - 2022 (In Merit Order).",
-      "link": "https://uppsc.up.nic.in/Open_PDF.aspx?I4PnQ0tBagk9q6upnHHyW7Pdh9qfF6wa",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "uppsc-hall-tickets",
-      "sourceName": "UPPSC — Hall tickets",
-      "dept": "Uttar Pradesh PSC",
-      "state": "Uttar Pradesh",
-      "category": "state",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
       "id": "0d1f705a55a6db5f",
       "title": "11th September 2026 Result of Online Interview Advt. No. WII/ADVT. 1/RP-CELL/July, 2026",
       "link": "https://www.wii.gov.in/news/result_online_interview_advt_no_wii_advt1_rp_cell_july_2026",
@@ -139,23 +122,6 @@
         "all"
       ],
       "fetchMethod": "rss-discovered"
-    },
-    {
-      "id": "9e7e8810785833f5",
-      "title": "A World Class Sea Survival Centre",
-      "link": "https://ongcindia.com/web/eng/sea-survival-training",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "ongc",
-      "sourceName": "ONGC — Careers",
-      "dept": "ONGC — Careers",
-      "state": "All India",
-      "category": "psu",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
     },
     {
       "id": "26ef63b4a31cb06b",
@@ -634,6 +600,42 @@
       "fetchMethod": "html"
     },
     {
+      "id": "9e7e8810785833f5",
+      "title": "A World Class Sea Survival Centre",
+      "link": "https://ongcindia.com/web/eng/sea-survival-training",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "ongc",
+      "sourceName": "ONGC — Careers",
+      "dept": "ONGC — Careers",
+      "state": "All India",
+      "category": "psu",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "cb9f4381c5672f18",
+      "title": "RESULT OF PERSONAL INTERVIEW — ENGAGEMENT OF YOUNG PROFESSIONALS Advt. No. ISP/YP/2026/01 dated 22.05.2026",
+      "link": "https://aima-web-images.s3.ap-south-1.amazonaws.com/sailcareers.com/Downloads/IISCO_News%20&%20Jobs_01102026_091532.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://aima-web-images.s3.ap-south-1.amazonaws.com/sailcareers.com/Downloads/IISCO_News%20&%20Jobs_01102026_091532.pdf"
+      ],
+      "sourceId": "sail",
+      "sourceName": "Steel Authority of India (SAIL)",
+      "dept": "Steel Authority of India (SAIL)",
+      "state": "All India",
+      "category": "psu",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
       "id": "d80303b97dae0ff7",
       "title": "Bokaro Steel Plant: Result of the 'Walk-in-Interview' held for the post of Audiologist against Advertisement No. BSL/R-C/2026-08",
       "link": "https://aima-web-images.s3.ap-south-1.amazonaws.com/sailcareers.com/Downloads/BSP_News%20&%20Jobs_29092026_110701.pdf",
@@ -748,25 +750,6 @@
       "fetchMethod": "html"
     },
     {
-      "id": "7247a7fb05ee0576",
-      "title": "RSP:INTERVIEW FOR SELECTION OF TRAINEES FOR TRAINING PROGRAMMES IN ISPAT GENERAL HOSPITAL (IGH), ROURKELA ON STIPEND BASIS, vide Advt. No. HR-T&M/2498, dated 31.08.2026",
-      "link": "https://aima-web-images.s3.ap-south-1.amazonaws.com/sailcareers.com/Downloads/RSP_News%20&%20Jobs_31082026_181349.pdf",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [
-        "https://aima-web-images.s3.ap-south-1.amazonaws.com/sailcareers.com/Downloads/RSP_News%20&%20Jobs_31082026_181349.pdf"
-      ],
-      "sourceId": "sail",
-      "sourceName": "Steel Authority of India (SAIL)",
-      "dept": "Steel Authority of India (SAIL)",
-      "state": "All India",
-      "category": "psu",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
       "id": "a2cdc2e2fd87ca8e",
       "title": "Bio Data Form and Other Relevant documents for GD/Interview shortlisted candidates of MTT Posts",
       "link": "https://sailcareers.com/SAIL2025MT/DownloadPerformaInterview.htm",
@@ -835,9 +818,9 @@
       "fetchMethod": "html"
     },
     {
-      "id": "c019d0c423cf10b5",
+      "id": "1709d751f92d2140",
       "title": "Procedure for Interview Date Change Requests",
-      "link": "https://www.keralapsc.gov.in/index.php/procedure-interview-date-change-requests",
+      "link": "https://www.keralapsc.gov.in/procedure-interview-date-change-requests",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
@@ -852,9 +835,9 @@
       "fetchMethod": "html"
     },
     {
-      "id": "05de1912b0b5a28f",
+      "id": "39e61c0337589778",
       "title": "Interview Schedule",
-      "link": "https://www.keralapsc.gov.in/index.php/interviews",
+      "link": "https://www.keralapsc.gov.in/interviews",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
@@ -905,9 +888,9 @@
       "fetchMethod": "html"
     },
     {
-      "id": "1709d751f92d2140",
+      "id": "c019d0c423cf10b5",
       "title": "Procedure for Interview Date Change Requests",
-      "link": "https://www.keralapsc.gov.in/procedure-interview-date-change-requests",
+      "link": "https://www.keralapsc.gov.in/index.php/procedure-interview-date-change-requests",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
@@ -918,6 +901,23 @@
       "category": "state",
       "stateIds": [
         "kl"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "12ca81e8e0617c5b",
+      "title": "Click here to view List of Candidates who are not selected in P.C.S. Examination-2022, but Qualified for Interview in P.C.S - 2022 (In Merit Order).",
+      "link": "https://uppsc.up.nic.in/Open_PDF.aspx?I4PnQ0tBagk9q6upnHHyW7Pdh9qfF6wa",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-up",
+      "sourceName": "Uttar Pradesh PSC (UPPSC)",
+      "dept": "Uttar Pradesh PSC (UPPSC)",
+      "state": "Uttar Pradesh",
+      "category": "state",
+      "stateIds": [
+        "up"
       ],
       "fetchMethod": "html"
     },
@@ -1051,9 +1051,28 @@
       "fetchMethod": "html"
     },
     {
-      "id": "39e61c0337589778",
+      "id": "7247a7fb05ee0576",
+      "title": "RSP:INTERVIEW FOR SELECTION OF TRAINEES FOR TRAINING PROGRAMMES IN ISPAT GENERAL HOSPITAL (IGH), ROURKELA ON STIPEND BASIS, vide Advt. No. HR-T&M/2498, dated 31.08.2026",
+      "link": "https://aima-web-images.s3.ap-south-1.amazonaws.com/sailcareers.com/Downloads/RSP_News%20&%20Jobs_31082026_181349.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://aima-web-images.s3.ap-south-1.amazonaws.com/sailcareers.com/Downloads/RSP_News%20&%20Jobs_31082026_181349.pdf"
+      ],
+      "sourceId": "sail",
+      "sourceName": "Steel Authority of India (SAIL)",
+      "dept": "Steel Authority of India (SAIL)",
+      "state": "All India",
+      "category": "psu",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "05de1912b0b5a28f",
       "title": "Interview Schedule",
-      "link": "https://www.keralapsc.gov.in/interviews",
+      "link": "https://www.keralapsc.gov.in/index.php/interviews",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],

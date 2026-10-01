@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-30T10:44:16.086Z",
+  "generatedAt": "2026-10-01T11:05:38.952Z",
   "count": 169,
   "items": [
     {
@@ -193,23 +193,6 @@
       "id": "854159c504003534",
       "title": "04 Oct 2026 NOTICE REGARDING ADMIT CARD FOR ADVT.NO.D-6/E-1/2025, SWASTHYA SHIKSHA ADHIKARI (SCREENING) EXAM-2025, (EXAM. DATED:-04/10/2026)",
       "link": "https://uppsc.up.nic.in/Open_PDF.aspx?I4PnQ0tBagmNKfqXmoSUnogh/qia6eY5",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "uppsc-hall-tickets",
-      "sourceName": "UPPSC — Hall tickets",
-      "dept": "Uttar Pradesh PSC",
-      "state": "Uttar Pradesh",
-      "category": "state",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "b040643329e8d874",
-      "title": "03 Oct 2026 NOTICE REGARDING ADMIT CARD FOR ADVT.NO.D-6/E-1/2025, VETERINARY OFFICER (SCREENING) EXAM-2025, (EXAM. DATED:-03/10/2026)",
-      "link": "https://uppsc.up.nic.in/Open_PDF.aspx?I4PnQ0tBagmNKfqXmoSUnldydJvoUHhz",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
@@ -468,23 +451,6 @@
       "fetchMethod": "html"
     },
     {
-      "id": "b11c4e6a3089e953",
-      "title": "उत्तर प्रदेश होमगार्ड्स के पदों पर एनरोलमेंट-2025 के अन्तर्गत दिनांक - 15.09.2026 से आयोजित होने वाली शारीरिक दक्षता परीक्षा (पीईटी) के प्रवेश पत्र डाउनलोड किये जाने हेतु लिंक",
-      "link": "https://www.hgupexam2025.com/hg2025petadmitcard/loginpage.aspx",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "police-up",
-      "sourceName": "UP Police Recruitment Board (UPPRPB)",
-      "dept": "UP Police Recruitment Board (UPPRPB)",
-      "state": "Uttar Pradesh",
-      "category": "police",
-      "stateIds": [
-        "up"
-      ],
-      "fetchMethod": "html"
-    },
-    {
       "id": "1b53fc767d3f8552",
       "title": "पदनाम-कनिष्ठ कैमरामैन/प्रोजेक्टनिस्ट व फोटोग्राफर और शोध अधिकारी के प्रवेश पत्र डाउनलोड(ADMIT CARD) से सम्बंधित विज्ञप्ति हेतु क्लिक करें",
       "link": "https://cdnbbsr.s3waas.gov.in/s34ffd0e19d2069412274bd3025b0e176c/uploads/2026/09/20260928639492025.pdf",
@@ -642,6 +608,40 @@
       "category": "state",
       "stateIds": [
         "an"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "b040643329e8d874",
+      "title": "03 Oct 2026 NOTICE REGARDING ADMIT CARD FOR ADVT.NO.D-6/E-1/2025, VETERINARY OFFICER (SCREENING) EXAM-2025, (EXAM. DATED:-03/10/2026)",
+      "link": "https://uppsc.up.nic.in/Open_PDF.aspx?I4PnQ0tBagmNKfqXmoSUnldydJvoUHhz",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "uppsc-hall-tickets",
+      "sourceName": "UPPSC — Hall tickets",
+      "dept": "Uttar Pradesh PSC",
+      "state": "Uttar Pradesh",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "b11c4e6a3089e953",
+      "title": "उत्तर प्रदेश होमगार्ड्स के पदों पर एनरोलमेंट-2025 के अन्तर्गत दिनांक - 15.09.2026 से आयोजित होने वाली शारीरिक दक्षता परीक्षा (पीईटी) के प्रवेश पत्र डाउनलोड किये जाने हेतु लिंक",
+      "link": "https://www.hgupexam2025.com/hg2025petadmitcard/loginpage.aspx",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "police-up",
+      "sourceName": "UP Police Recruitment Board (UPPRPB)",
+      "dept": "UP Police Recruitment Board (UPPRPB)",
+      "state": "Uttar Pradesh",
+      "category": "police",
+      "stateIds": [
+        "up"
       ],
       "fetchMethod": "html"
     },
