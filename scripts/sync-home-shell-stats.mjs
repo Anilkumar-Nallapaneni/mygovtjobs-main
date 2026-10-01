@@ -38,6 +38,21 @@ const hotNew = items.filter((row) => {
   return Date.now() - pub < 7 * 24 * 60 * 60 * 1000
 }).length
 
+function officialSourceCount() {
+  try {
+    const registry = JSON.parse(
+      fs.readFileSync(path.join(root, 'scripts/scraper_registry.json'), 'utf8')
+    )
+    const scrapers = Array.isArray(registry?.scrapers) ? registry.scrapers : []
+    const enabled = scrapers.filter((row) => row && row.enabled !== false).length
+    return enabled || scrapers.length
+  } catch {
+    return 0
+  }
+}
+
+const officialSources = officialSourceCount()
+
 const contents = `import type { CatalogStats } from '@/utils/liveJobsPipeline'
 import type { HeadlineStats } from '@/utils/headlineStats'
 
@@ -52,7 +67,7 @@ export const HOME_SHELL_HEADLINE_STATS: HeadlineStats = {
 
 /** Avoid importing full ORG_INDEX / OFFICIAL_SITES just for counts on the home shell. */
 export const HOME_SHELL_ORG_COUNT = ${Math.max(orgs, 1)}
-export const HOME_SHELL_OFFICIAL_SOURCE_COUNT = 153
+export const HOME_SHELL_OFFICIAL_SOURCE_COUNT = ${officialSources || 164}
 
 export const HOME_SHELL_CATALOG_STATS: CatalogStats = {
   totalNotices: ${live},

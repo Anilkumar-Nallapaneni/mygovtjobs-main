@@ -22,6 +22,10 @@ interface ImportMetaEnv {
   readonly VITE_SOCIAL_YOUTUBE_URL?: string
   readonly VITE_TELEGRAM_CHANNEL_URL?: string
   readonly VITE_TURNSTILE_SITE_KEY?: string
+  readonly VITE_ADSENSE_CLIENT?: string
+  readonly VITE_ADSENSE_SLOT_JOB_DETAIL_MID?: string
+  readonly VITE_ADSENSE_SLOT_RESULTS_HUB?: string
+  readonly VITE_ADSENSE_SLOT_DESIGNATION_MID?: string
   readonly VITE_WHATSAPP_GROUP_URL?: string
 }
 

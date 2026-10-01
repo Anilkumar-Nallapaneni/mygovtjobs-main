@@ -9,6 +9,7 @@ import SearchMagnifyIcon from "@/components/layout/SearchMagnifyIcon";
 import { usePwaInstall } from "@/hooks/usePwaInstall";
 import { useMediaQuery } from "@/hooks/useMediaQuery";
 import { LATEST_NOTIFICATIONS_PATH, EXPLORE_HUB_PATH } from "@/utils/browseRoutes";
+import { CONTENT_HUB_LINKS } from "@/data/contentHubLinks";
 import { trackNavClick } from "@/lib/analytics";
 import { dateTimeLocale } from "@/utils/formatLocale";
 
@@ -224,6 +225,24 @@ export default function Navbar({
         </button>
 
         <NavButtons view={view} onNavigate={handleNavigate} className="navbar__nav navbar__nav--desktop" />
+
+        <details className="navbar__more">
+          <summary className="navbar__nav-btn navbar__more-summary">
+            {t("nav.more", { defaultValue: "More" })}
+          </summary>
+          <div className="navbar__more-panel">
+            {CONTENT_HUB_LINKS.map((link) => (
+              <Link
+                key={link.id}
+                to={link.href}
+                className="navbar__more-link"
+                onClick={() => trackNavClick(link.id, link.href)}
+              >
+                {t(link.labelKey, { defaultValue: link.labelDefault })}
+              </Link>
+            ))}
+          </div>
+        </details>
 
         <SearchForm search={search} setSearch={setSearch} onSearch={handleSearch} className="navbar__search--desktop" />
 

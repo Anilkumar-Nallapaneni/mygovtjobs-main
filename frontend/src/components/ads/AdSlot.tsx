@@ -13,6 +13,21 @@ type ModElement = HTMLElement & { cite: string; dateTime: string }
 
 const CLIENT_ID = import.meta.env.VITE_ADSENSE_CLIENT as string | undefined
 
+/** Named placements used in the UI. Real AdSense unit IDs come from env, not these labels. */
+const NAMED_AD_UNITS: Record<string, string | undefined> = {
+  'job-detail-mid': import.meta.env.VITE_ADSENSE_SLOT_JOB_DETAIL_MID,
+  'results-hub': import.meta.env.VITE_ADSENSE_SLOT_RESULTS_HUB,
+  'designation-mid': import.meta.env.VITE_ADSENSE_SLOT_DESIGNATION_MID,
+}
+
+export function resolveAdsenseUnit(slot: string): string | null {
+  const raw = slot.trim()
+  if (/^\d{8,}$/.test(raw)) return raw
+  const mapped = String(NAMED_AD_UNITS[raw] || '').trim()
+  if (/^\d{8,}$/.test(mapped)) return mapped
+  return null
+}
+
 let scriptLoaded = false
 let scriptLoading: Promise<void> | null = null
 
@@ -43,8 +58,8 @@ function loadAdsenseScript(): Promise<void> {
 }
 
 /**
- * AdSense slot. Renders nothing (returns null) unless VITE_ADSENSE_CLIENT is set.
- * Requires AdSense approval + a matching ad-slot ID from your AdSense dashboard.
+ * AdSense slot. Renders nothing unless VITE_ADSENSE_CLIENT is set and the placement
+ * resolves to a numeric ad-unit id (pass digits, or set VITE_ADSENSE_SLOT_* for the named slots).
  */
 export default function AdSlot({
   slot,
@@ -56,9 +71,10 @@ export default function AdSlot({
 }: AdSlotProps) {
   const insRef = useRef<ModElement | null>(null)
   const [ready, setReady] = useState(false)
+  const adUnit = resolveAdsenseUnit(slot)
 
   useEffect(() => {
-    if (!CLIENT_ID) return
+    if (!CLIENT_ID || !adUnit) return
     let cancelled = false
     loadAdsenseScript()
       .then(() => {
@@ -78,9 +94,9 @@ export default function AdSlot({
     return () => {
       cancelled = true
     }
-  }, [])
+  }, [adUnit])
 
-  if (!CLIENT_ID) return null
+  if (!CLIENT_ID || !adUnit) return null
 
   return (
     <div className={`ad-slot${className ? ` ${className}` : ''}`} style={style} data-adsense={ready ? 'ready' : 'loading'}>
@@ -90,7 +106,7 @@ export default function AdSlot({
         className="adsbygoogle"
         style={{ display: 'block' }}
         data-ad-client={CLIENT_ID}
-        data-ad-slot={slot}
+        data-ad-slot={adUnit}
         data-ad-format={format}
         data-ad-layout={layout}
         data-full-width-responsive={responsive ? 'true' : 'false'}

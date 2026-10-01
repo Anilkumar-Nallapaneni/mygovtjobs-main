@@ -27,6 +27,7 @@ import {
 } from '@/utils/browseRoutes'
 import { PROFESSIONS, professionRoutePath } from '@/data/professions'
 import { RESULT_TOPICS } from '@/data/resultTopics'
+import { CONTENT_HUB_LINKS } from '@/data/contentHubLinks'
 import type { FooterLinkTarget } from '@/hooks/browseStateTypes'
 
 const SITEMAP_PATH = '/sitemap'
@@ -69,6 +70,10 @@ export default function SitemapPage({ onFooterLink }: SitemapPageProps) {
     { href: GUIDE_EXAM_PREP_PATH, label: t('explore.cards.examPrepTitle') },
     { href: FAQ_PATH, label: t('explore.cards.faqTitle') },
     { href: '/account', label: t('nav.login') },
+    ...CONTENT_HUB_LINKS.map((link) => ({
+      href: link.href,
+      label: t(link.labelKey, { defaultValue: link.labelDefault }),
+    })),
   ]
 
   const legalLinks = [

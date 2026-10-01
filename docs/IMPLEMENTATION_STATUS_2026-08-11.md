@@ -63,8 +63,8 @@ Date: 2026-08-11 · Executed by Claude Code
 | Set up push webhook | Deploy web-push worker or use OneSignal free tier, set `PUSH_WEBHOOK_URL` |
 | Publish Android TWA | Build APK from `android-twa/`, upload to Play Console |
 | Run migrations 031 + 032 on Supabase | SQL Editor → paste each file's contents → Run |
-| Add `npm run build:rss` to daily pipeline | Add step to `.github/workflows/canonical-daily-pipeline.yml` after `build:sitemap` |
-| Add nav links to new pages | Update your header/footer components to link `/admit-cards`, `/latest-results`, `/admission`, `/scholarships`, `/yojana`, `/designations`, `/account/bookmarks` |
+| Add `npm run build:rss` to daily pipeline | Done — `sync:production` runs `build:rss` after `build:sitemap`; the canonical workflow commits `frontend/public/rss.xml` |
+| Add nav links to new pages | Done — header More menu, mobile drawer, footer Portals column, explore hub, and sitemap link the hub routes |
 
 ## What was NOT done (out of scope or too risky)
 

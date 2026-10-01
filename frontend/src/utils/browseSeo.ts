@@ -107,6 +107,72 @@ export function browseSeoForPath(pathname: string, _search = ""): BrowseSeoMeta 
     };
   }
 
+  if (path === "/latest-results") {
+    return {
+      path,
+      title: `Latest Government Job Results | ${SITE_NAME}`,
+      description: "Official result notices across UPSC, SSC, PSC, banks, railways, and state departments.",
+    };
+  }
+
+  if (path === "/admit-cards") {
+    return {
+      path,
+      title: `Admit Cards & Hall Tickets | ${SITE_NAME}`,
+      description: "Download official admit cards and hall tickets from major recruitment boards.",
+    };
+  }
+
+  if (path === "/answer-keys") {
+    return {
+      path,
+      title: `Answer Keys | ${SITE_NAME}`,
+      description: "Official answer keys released after government exams.",
+    };
+  }
+
+  if (path === "/upcoming-exams") {
+    return {
+      path: EXAM_CALENDAR_PATH,
+      title: `Government Job Exam Calendar | ${SITE_NAME}`,
+      description: "Application deadlines and announced exam dates — plan ahead and never miss a closing date.",
+    };
+  }
+
+  if (path === "/admission") {
+    return {
+      path,
+      title: `Entrance Exams & Admissions | ${SITE_NAME}`,
+      description: "Official entrance-exam and admission portals for engineering, medical, law, and universities.",
+    };
+  }
+
+  if (path === "/scholarships") {
+    return {
+      path,
+      title: `Scholarships & Fellowships | ${SITE_NAME}`,
+      description: "Official government scholarship portals for pre-matric, post-matric, minority, and research funding.",
+    };
+  }
+
+  if (path === "/yojana") {
+    return {
+      path,
+      title: `Government Schemes (Sarkari Yojana) | ${SITE_NAME}`,
+      description: "Central and state welfare schemes including PM-KISAN, Ayushman Bharat, and housing yojanas.",
+    };
+  }
+
+  if (path === "/designations" || path.startsWith("/designation/")) {
+    const slug = path.startsWith("/designation/") ? path.slice("/designation/".length).replace(/-/g, " ") : "";
+    const label = slug ? slug.replace(/\b\w/g, (ch) => ch.toUpperCase()) : "Designation";
+    return {
+      path,
+      title: slug ? `${label} Government Jobs | ${SITE_NAME}` : `Browse Jobs by Designation | ${SITE_NAME}`,
+      description: "Explore government openings by role — clerk, officer, engineer, teacher, constable, nurse, and more.",
+    };
+  }
+
   if (path === "/contact") {
     return {
       path,

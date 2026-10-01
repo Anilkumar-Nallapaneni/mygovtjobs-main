@@ -3,6 +3,7 @@
  * Uses Push API subscription JSON when VITE_VAPID_PUBLIC_KEY is set; else local id.
  */
 import { useCallback, useEffect, useState } from 'react'
+import { urlBase64ToUint8Array } from '@/lib/vapidKey'
 
 const STORAGE_KEY = 'mgj-push-device-token'
 
@@ -53,9 +54,10 @@ export function useWebPushToken() {
         }
         let sub = await reg.pushManager.getSubscription()
         if (!sub) {
+          const applicationServerKey = urlBase64ToUint8Array(vapid)
           sub = await reg.pushManager.subscribe({
             userVisibleOnly: true,
-            applicationServerKey: vapid,
+            applicationServerKey,
           })
         }
         const json = JSON.stringify(sub.toJSON())

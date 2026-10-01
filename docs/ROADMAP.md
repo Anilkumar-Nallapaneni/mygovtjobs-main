@@ -92,7 +92,7 @@ This roadmap covers what is **done**, what runs **daily**, what is **broken/pend
 
 | Schedule | Task | Workflow / system |
 |----------|------|-------------------|
-| **Daily 8:00 AM IST** | Scrape 100+ sources → Supabase → `live-jobs.json` → sitemap → commit | `supabase-auto-ingest.yml` → `sync:production` |
+| **Daily 8:00 AM IST** | Scrape registry → Supabase → promote gate → `live-jobs.json` → sitemap + RSS → commit | `canonical-daily-pipeline.yml` → `sync:production` |
 | **~Every 4 hours** | RSS + official archives | `fetch-official-feeds.yml` → `sync:quick` |
 | **Daily** | Vercel redeploy on `main` push | Vercel (currently failing on bad snapshot) |
 | **Sunday 8:30 AM IST** | PDF enrich (Agent 2+3, 50 jobs) | `weekly-enrich.yml` → `weekly:enrich:ci` |
@@ -106,7 +106,7 @@ This roadmap covers what is **done**, what runs **daily**, what is **broken/pend
 | **Daily (2 min)** | Open livegovtjobs.com · check GitHub Actions green · spot-check 2 job details · glance Vercel latest Ready |
 | **Weekly (10 min)** | `npm run jobs:audit:strict` · `npm run test` · `npm run go-live:check` · `npm run health:website:full` |
 | **After code change** | `npm run everything` (or lighter PR check) → push |
-| **If ingest fails** | Re-run `supabase-auto-ingest` workflow **or** `npm run sync:production` locally |
+| **If ingest fails** | Re-run **Canonical daily pipeline** (`ALLOW_CANONICAL_PIPELINE=true`) **or** `npm run sync:production` locally |
 | **If Vercel ERROR** | Confirm `live-jobs.json` has vacancies > 0; re-export + commit; avoid RSS commits deploying broken data |
 
 Full ops guide: **[RUN.md](../RUN.md)** · **[README.md](../README.md)**
@@ -170,7 +170,7 @@ See [HUMAN_CHECKLIST.md](./HUMAN_CHECKLIST.md).
 |----|------|--------|-----------|
 | 1.1 | Scheduled daily ingest (GitHub) | 🟡 | Green daily **and** snapshot committed to `main` |
 | 1.2 | Unified job load chain (static → Supabase) | ✅ | `useLiveJobs.ts` + `VITE_JOBS_SOURCE` |
-| 1.3 | 100+ official sources in registry | ✅ | `scripts/scraper_registry.json` (~163 sources in DB) |
+| 1.3 | 100+ official sources in registry | ✅ | `scripts/scraper_registry.json` (171 scrapers, 164 enabled) |
 | 1.4 | State PSC + national board coverage | 🟡 | Expand weak states |
 | 1.5 | `live-jobs.json` + sitemap export | 🟡 | Local OK; prod deploy blocked until remote snapshot fixed |
 | 1.6 | Portal noise filter (UI) | ✅ | `jobNoiseFilter.ts` |
@@ -359,7 +359,7 @@ See [HUMAN_CHECKLIST.md](./HUMAN_CHECKLIST.md).
 | **Schema** | `database/supabase_setup.sql`, `database/migrations/` |
 | **Scrapers** | `scripts/scraper_registry.json`, `backend/app/scrapers/` |
 | **Ingest agent** | `backend/app/agents/ingest_agent.py`, `scripts/run-sync-production.py` |
-| **Daily CI** | `.github/workflows/supabase-auto-ingest.yml` |
+| **Daily CI** | `.github/workflows/canonical-daily-pipeline.yml` |
 | **RSS CI** | `.github/workflows/fetch-official-feeds.yml` |
 | **Frontend jobs** | `frontend/src/hooks/useLiveJobs.ts` |
 | **Job detail** | `frontend/src/pages/JobDetailPage.tsx` |

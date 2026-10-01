@@ -116,8 +116,8 @@ async def main() -> int:
     print("  SUPABASE_DB_PASSWORD = your DB password (plain text)")
     print("  SUPABASE_DB_REGION   = region from pooler host (e.g. ap-south-1)")
     print("")
-    print("OR use self-hosted runner workflow: supabase-auto-ingest-self-hosted.yml")
-    print("(runs on your Windows PC where db host already works)")
+    print("OR run the canonical pipeline locally: npm run sync:production")
+    print("(legacy supabase-auto-ingest-self-hosted.yml was removed)")
     return 1
 
 

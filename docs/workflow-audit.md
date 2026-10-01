@@ -5,8 +5,8 @@
 | Workflow | Trigger | Reads | Writes | Overlap and decision |
 | --- | --- | --- | --- | --- |
 | `ci.yml` | push to `main`, pull request | repository and committed snapshot | build/test artifacts only | Keep. Read-only CI. |
-| `canonical-daily-pipeline.yml` | daily schedule, manual | official sources, Postgres, Supabase | `jobs`, ingest metadata, alerts, live snapshots, org index, sitemaps, Git commit | **Canonical daily publisher.** Gated by `ALLOW_CANONICAL_PIPELINE=true`. |
-| `catalog-recovery-export.yml` | manual only | Postgres / publish gate | gated `live-jobs*.json` + sitemap commit | Fast recovery (demote/promote/export/verify) without full scrape. |
+| `canonical-daily-pipeline.yml` | daily schedule, manual | official sources, Postgres, Supabase | `jobs`, ingest metadata, alerts, live snapshots, org index, sitemaps, `rss.xml`, Git commit | **Canonical daily publisher.** Gated by `ALLOW_CANONICAL_PIPELINE=true`. |
+| `catalog-recovery-export.yml` | manual only | Postgres / publish gate | gated `live-jobs*.json`, sitemap, and `rss.xml` commit | Fast recovery (demote/promote/export/verify) without full scrape. |
 | `fetch-official-feeds.yml` | every four hours, manual | official RSS and archive portals | official feed/archive JSON and Git commit | Keep. Must **not** overwrite publish-gated `live-jobs.json`. |
 | `weekly-enrich.yml` | Sunday, manual | existing jobs and official PDFs | existing job detail/PDF metadata | Keep. Enrichment only; serialize with the daily publisher. |
 | `uptime-check.yml` | every 30 minutes, manual | production homepage/API/sync state | none | Keep as production health. |

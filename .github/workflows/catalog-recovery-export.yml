@@ -80,13 +80,14 @@ jobs:
           npm run data:scrub-vacancies
           npm run clean:live-jobs
           npm run build:sitemap
+          npm run build:rss
           npm run verify:live-jobs
 
       - name: Commit verified snapshots
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -A -- frontend/public/data frontend/public/sitemap.xml frontend/public/sitemaps || true
+          git add -A -- frontend/public/data frontend/public/sitemap.xml frontend/public/sitemaps frontend/public/rss.xml || true
           git status --short
           if git diff --staged --quiet; then
             echo "No snapshot changes to commit"

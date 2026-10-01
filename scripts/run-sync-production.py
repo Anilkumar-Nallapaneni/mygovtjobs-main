@@ -257,6 +257,7 @@ async def main() -> int:
         require_npm("data:scrub-vacancies")
         require_npm("clean:live-jobs")
         require_npm("build:sitemap")
+        require_npm("build:rss")
         require_npm("verify:live-jobs")
 
         async with SessionLocal() as session:

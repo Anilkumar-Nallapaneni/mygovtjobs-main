@@ -12,6 +12,7 @@ import {
 } from "@/utils/browseRoutes";
 
 import type { FooterLinkTarget } from "@/hooks/browseStateTypes";
+import { CONTENT_HUB_LINKS } from "@/data/contentHubLinks";
 
 type FooterProps = {
   onFooterLink?: (target: FooterLinkTarget) => void;
@@ -112,6 +113,24 @@ export default function Footer({ onFooterLink }: FooterProps) {
               </ul>
             </div>
           ))}
+          <div>
+            <h4 className="footer__col-heading">{t("footer.hubsTitle", { defaultValue: "Portals" })}</h4>
+            <ul className="footer__links">
+              {CONTENT_HUB_LINKS.map((link) => (
+                <li key={link.id}>
+                  <TrackedLink
+                    to={link.href}
+                    trackId={`footer-${link.id}`}
+                    trackSource="footer"
+                    trackLabel={t(link.labelKey, { defaultValue: link.labelDefault })}
+                    className="footer__link"
+                  >
+                    {t(link.labelKey, { defaultValue: link.labelDefault })}
+                  </TrackedLink>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
         <div className="footer__bottom">
           <span className="footer__copyright">{t("footer.copyright", { year })}</span>

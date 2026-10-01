@@ -113,7 +113,7 @@ Set `CORS_ORIGINS` on the backend to include your Vercel domain, e.g. `https://m
 | `VITE_SUPABASE_URL` | Audit workflow |
 | `VITE_SUPABASE_ANON_KEY` | Audit workflow |
 
-See `.github/workflows/supabase-auto-ingest.yml`.
+See `.github/workflows/canonical-daily-pipeline.yml`. Set the Actions variable `ALLOW_CANONICAL_PIPELINE=true`. Legacy `supabase-auto-ingest.yml` was removed.
 
 ---
 
