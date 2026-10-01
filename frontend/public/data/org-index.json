@@ -12,30 +12,6 @@
     "pdfCoverage": 1
   },
   {
-    "dept": "Staff Selection Commission (SSC)",
-    "slug": "staff-selection-commission-ssc",
-    "count": 2,
-    "vacancies": 0,
-    "officialDomain": "ssc.gov.in",
-    "officialUrl": "https://ssc.gov.in",
-    "sourceHealth": "healthy",
-    "lastPostedAt": "2026-09-10T07:35:10",
-    "lastCheckedAt": "2026-09-17T02:42:42.629558+00:00",
-    "pdfCoverage": 1
-  },
-  {
-    "dept": "Container Corporation of India Limited (CONCOR)",
-    "slug": "container-corporation-of-india-limited-concor",
-    "count": 1,
-    "vacancies": 77,
-    "officialDomain": "cms.concorindia.co.in",
-    "officialUrl": "https://cms.concorindia.co.in",
-    "sourceHealth": "healthy",
-    "lastPostedAt": "2026-08-18T00:00:00",
-    "lastCheckedAt": null,
-    "pdfCoverage": 1
-  },
-  {
     "dept": "ESIC — Employees' State Insurance Corporation",
     "slug": "esic-employees-state-insurance-corporation",
     "count": 1,
@@ -48,18 +24,6 @@
     "pdfCoverage": 1
   },
   {
-    "dept": "ICAR CRRI",
-    "slug": "icar-crri",
-    "count": 1,
-    "vacancies": 2,
-    "officialDomain": "icar-crri.in",
-    "officialUrl": "https://icar-crri.in",
-    "sourceHealth": "healthy",
-    "lastPostedAt": "2026-06-15T00:00:00",
-    "lastCheckedAt": null,
-    "pdfCoverage": 1
-  },
-  {
     "dept": "IIT Madras",
     "slug": "iit-madras",
     "count": 1,
@@ -69,18 +33,6 @@
     "sourceHealth": "healthy",
     "lastPostedAt": "2026-02-27T00:00:00",
     "lastCheckedAt": null,
-    "pdfCoverage": 1
-  },
-  {
-    "dept": "ISRO — Careers",
-    "slug": "isro-careers",
-    "count": 1,
-    "vacancies": 48,
-    "officialDomain": "isro.gov.in",
-    "officialUrl": "https://isro.gov.in",
-    "sourceHealth": "healthy",
-    "lastPostedAt": "2026-09-10T00:00:00",
-    "lastCheckedAt": "2026-09-17T02:43:42.438993+00:00",
     "pdfCoverage": 1
   },
   {
@@ -108,15 +60,15 @@
     "pdfCoverage": 1
   },
   {
-    "dept": "Paradip Port Authority",
-    "slug": "paradip-port-authority",
+    "dept": "Staff Selection Commission (SSC)",
+    "slug": "staff-selection-commission-ssc",
     "count": 1,
-    "vacancies": 18,
-    "officialDomain": "paradipport.gov.in",
-    "officialUrl": "https://paradipport.gov.in",
+    "vacancies": 0,
+    "officialDomain": "ssc.gov.in",
+    "officialUrl": "https://ssc.gov.in",
     "sourceHealth": "healthy",
-    "lastPostedAt": "2026-08-04T00:00:00",
-    "lastCheckedAt": null,
+    "lastPostedAt": "2026-09-07T15:59:02",
+    "lastCheckedAt": "2026-09-17T02:42:42.629558+00:00",
     "pdfCoverage": 1
   },
   {
