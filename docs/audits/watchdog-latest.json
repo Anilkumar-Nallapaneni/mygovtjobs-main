@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-09-30T10:50:46.636424+00:00",
+  "generatedAt": "2026-10-01T04:17:38.374902+00:00",
   "apply": true,
-  "scanned": 25,
-  "ok": 16,
+  "scanned": 23,
+  "ok": 15,
   "demoted": [
     {
       "id": "510eb3b0-4c23-43b5-8fb9-a9b428c3d534",
@@ -61,14 +61,6 @@
       ]
     },
     {
-      "id": "95b28845-2012-4416-ab6a-68b3caba1a91",
-      "slug": "national-informatics-centre-nic-scientific-technical-assistant-a-sta-a-nic-sta-2-6c0e2563",
-      "title": "Scientific / Technical Assistant-A (STA-A) — NIC/STA/2026/2",
-      "reasons": [
-        "non-vacancy document"
-      ]
-    },
-    {
       "id": "5aaff605-8801-4455-bb34-a1ab6b8ef8bd",
       "slug": "tezpur-university-junior-research-fellow-recruitment-2026-apply-online-96f771fe",
       "title": "Tezpur University Junior Research Fellow Recruitment 2026 - Apply Online",
@@ -77,5 +69,5 @@
       ]
     }
   ],
-  "rowsUpdated": 9
+  "rowsUpdated": 8
 }
