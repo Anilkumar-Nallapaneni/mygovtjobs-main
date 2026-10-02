@@ -1,24 +1,7 @@
 {
-  "generatedAt": "2026-10-01T11:05:38.952Z",
+  "generatedAt": "2026-10-02T10:37:36.662Z",
   "count": 169,
   "items": [
-    {
-      "id": "3ab90b393ed54006",
-      "title": "Advt. No. ISTRAC:02:2026 dated 27.06.2026 - Download Admit Card for Computer Based Test (CBT) Read More",
-      "link": "https://www.isro.gov.in/ISTRACRecruitment4.html",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "isro-careers",
-      "sourceName": "ISRO — Careers",
-      "dept": "Indian Space Research Organisation",
-      "state": "All India",
-      "category": "psu",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
     {
       "id": "dab406e23a6537a1",
       "title": "E-Admit Cards for various Recruitment Posts",
@@ -125,74 +108,6 @@
       "id": "7a2db368e13d4a7b",
       "title": "NOTICE REGARDING ADMIT CARD FOR ADVT.NO.D-6/E-1/2025, VETERINARY OFFICER (SCREEN..",
       "link": "https://uppsc.up.nic.in/Open_PDF_DB.aspx?I4PnQ0tBagmNKfqXmoSUnqe31UVS6Xc9",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "uppsc-hall-tickets",
-      "sourceName": "UPPSC — Hall tickets",
-      "dept": "Uttar Pradesh PSC",
-      "state": "Uttar Pradesh",
-      "category": "state",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "ec699e71aa9f649c",
-      "title": "NOTICE REGARDING ADMIT CARD OF ADVT. NO. A-7/E-1/2025, ASSISTANT PROFESSOR, GOVT..",
-      "link": "https://uppsc.up.nic.in/Open_PDF_DB.aspx?I4PnQ0tBagnQ0/TjMEfCjG1nSVQb3U34",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "uppsc-hall-tickets",
-      "sourceName": "UPPSC — Hall tickets",
-      "dept": "Uttar Pradesh PSC",
-      "state": "Uttar Pradesh",
-      "category": "state",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "1ef5255ac7c74e68",
-      "title": "NOTICE REGARDING ADMIT CARD OF ADVT. NO. A-7/E-1/2025, ASSISTANT PROFESSOR, GOVT..",
-      "link": "https://uppsc.up.nic.in/Open_PDF_DB.aspx?I4PnQ0tBaglFjifabMvCvQhkTL2Hie7+",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "uppsc-hall-tickets",
-      "sourceName": "UPPSC — Hall tickets",
-      "dept": "Uttar Pradesh PSC",
-      "state": "Uttar Pradesh",
-      "category": "state",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "e88314f91bcadbe5",
-      "title": "06 Oct 2026 NOTICE REGARDING ADMIT CARD FOR ADVT NO. A-10/E-1/2025, ASSISTANT TOWN PLANNER (SPL. RECT.) (MAIN.) EXAM.-2025, (EXAM. DATED:-06/10/2026)",
-      "link": "https://uppsc.up.nic.in/Open_PDF.aspx?I4PnQ0tBagmNKfqXmoSUnpbtUMRDf7GA",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "uppsc-hall-tickets",
-      "sourceName": "UPPSC — Hall tickets",
-      "dept": "Uttar Pradesh PSC",
-      "state": "Uttar Pradesh",
-      "category": "state",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "854159c504003534",
-      "title": "04 Oct 2026 NOTICE REGARDING ADMIT CARD FOR ADVT.NO.D-6/E-1/2025, SWASTHYA SHIKSHA ADHIKARI (SCREENING) EXAM-2025, (EXAM. DATED:-04/10/2026)",
-      "link": "https://uppsc.up.nic.in/Open_PDF.aspx?I4PnQ0tBagmNKfqXmoSUnogh/qia6eY5",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
@@ -610,6 +525,91 @@
         "an"
       ],
       "fetchMethod": "html"
+    },
+    {
+      "id": "3ab90b393ed54006",
+      "title": "Advt. No. ISTRAC:02:2026 dated 27.06.2026 - Download Admit Card for Computer Based Test (CBT) Read More",
+      "link": "https://www.isro.gov.in/ISTRACRecruitment4.html",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "isro-careers",
+      "sourceName": "ISRO — Careers",
+      "dept": "Indian Space Research Organisation",
+      "state": "All India",
+      "category": "psu",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "ec699e71aa9f649c",
+      "title": "NOTICE REGARDING ADMIT CARD OF ADVT. NO. A-7/E-1/2025, ASSISTANT PROFESSOR, GOVT..",
+      "link": "https://uppsc.up.nic.in/Open_PDF_DB.aspx?I4PnQ0tBagnQ0/TjMEfCjG1nSVQb3U34",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "uppsc-hall-tickets",
+      "sourceName": "UPPSC — Hall tickets",
+      "dept": "Uttar Pradesh PSC",
+      "state": "Uttar Pradesh",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "1ef5255ac7c74e68",
+      "title": "NOTICE REGARDING ADMIT CARD OF ADVT. NO. A-7/E-1/2025, ASSISTANT PROFESSOR, GOVT..",
+      "link": "https://uppsc.up.nic.in/Open_PDF_DB.aspx?I4PnQ0tBaglFjifabMvCvQhkTL2Hie7+",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "uppsc-hall-tickets",
+      "sourceName": "UPPSC — Hall tickets",
+      "dept": "Uttar Pradesh PSC",
+      "state": "Uttar Pradesh",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "e88314f91bcadbe5",
+      "title": "06 Oct 2026 NOTICE REGARDING ADMIT CARD FOR ADVT NO. A-10/E-1/2025, ASSISTANT TOWN PLANNER (SPL. RECT.) (MAIN.) EXAM.-2025, (EXAM. DATED:-06/10/2026)",
+      "link": "https://uppsc.up.nic.in/Open_PDF.aspx?I4PnQ0tBagmNKfqXmoSUnpbtUMRDf7GA",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "uppsc-hall-tickets",
+      "sourceName": "UPPSC — Hall tickets",
+      "dept": "Uttar Pradesh PSC",
+      "state": "Uttar Pradesh",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "854159c504003534",
+      "title": "04 Oct 2026 NOTICE REGARDING ADMIT CARD FOR ADVT.NO.D-6/E-1/2025, SWASTHYA SHIKSHA ADHIKARI (SCREENING) EXAM-2025, (EXAM. DATED:-04/10/2026)",
+      "link": "https://uppsc.up.nic.in/Open_PDF.aspx?I4PnQ0tBagmNKfqXmoSUnogh/qia6eY5",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "uppsc-hall-tickets",
+      "sourceName": "UPPSC — Hall tickets",
+      "dept": "Uttar Pradesh PSC",
+      "state": "Uttar Pradesh",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
     },
     {
       "id": "b040643329e8d874",

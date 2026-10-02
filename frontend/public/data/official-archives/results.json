@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-10-01T11:05:38.952Z",
-  "count": 245,
+  "generatedAt": "2026-10-02T10:37:36.662Z",
+  "count": 246,
   "items": [
     {
       "id": "2e7fa8a4ffb7c7be",
@@ -385,6 +385,57 @@
       "fetchMethod": "html-listing"
     },
     {
+      "id": "084c64752657e4bf",
+      "title": "05 Oct 2026 NOTICE REGARDING ADVT. NO. D-2/E-1/2025, DIRECTORATE OF MEDICAL AND HEALTH SERVICES UTTAR PRADESH, FILARIA CONTROL OFFICER, S-06/01(CUT OFF)",
+      "link": "https://uppsc.up.nic.in/Open_PDF.aspx?I4PnQ0tBagmNKfqXmoSUngRHocPuog4h",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "uppsc-hall-tickets",
+      "sourceName": "UPPSC — Hall tickets",
+      "dept": "Uttar Pradesh PSC",
+      "state": "Uttar Pradesh",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "12ca81e8e0617c5b",
+      "title": "Click here to view List of Candidates who are not selected in P.C.S. Examination-2022, but Qualified for Interview in P.C.S - 2022 (In Merit Order).",
+      "link": "https://uppsc.up.nic.in/Open_PDF.aspx?I4PnQ0tBagk9q6upnHHyW7Pdh9qfF6wa",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "uppsc-hall-tickets",
+      "sourceName": "UPPSC — Hall tickets",
+      "dept": "Uttar Pradesh PSC",
+      "state": "Uttar Pradesh",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "e29413ad6aa891fe",
+      "title": "प्रधानमंत्री श्री नरेन्द्र मोदी ने एशियाई खेलों में महिला रिकर्व टीम स्पर्धा में ऐतिहासिक स्वर्ण पदक जीतने पर अंकिता भक्त, कुमकुम अनिल मोहोड और कीर्ति को बधाई दी",
+      "link": "https://pib.gov.in/PressReleaseIframePage.aspx?PRID=2318157",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "pib",
+      "sourceName": "Press Information Bureau (PIB)",
+      "dept": "Press Information Bureau (PIB)",
+      "state": "All India",
+      "category": "general",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "rss-config"
+    },
+    {
       "id": "a1a44e1bd9d935b4",
       "title": "11th September 2026 Result of Engagement of Office Assistant (Ex-servicemen) on Contract Basis (Advertisement No, WII/ADM/2026-27/02)",
       "link": "https://www.wii.gov.in/news/result_ex_servicemen_wii_adm_2026_27_02",
@@ -518,6 +569,25 @@
       "sourceId": "ugc",
       "sourceName": "University Grants Commission (UGC)",
       "dept": "University Grants Commission (UGC)",
+      "state": "All India",
+      "category": "teaching",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "3263ad107f9d8029",
+      "title": "PUBLIC NOTICE – CTET Feb 2026 – RESULT",
+      "link": "https://cdnbbsr.s3waas.gov.in/s3443dec3062d0286986e21dc0631734c9/uploads/2026/03/202603311458590440.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://cdnbbsr.s3waas.gov.in/s3443dec3062d0286986e21dc0631734c9/uploads/2026/03/202603311458590440.pdf"
+      ],
+      "sourceId": "ctet",
+      "sourceName": "CBSE — CTET",
+      "dept": "CBSE — CTET",
       "state": "All India",
       "category": "teaching",
       "stateIds": [
@@ -1086,25 +1156,6 @@
       "fetchMethod": "html"
     },
     {
-      "id": "3f5f0150d9a9618d",
-      "title": "Jharkhand Group of Mines: Result of the 'Walk-in-Interview' held on 12/08/2026 for Engagement of Consultants (Doctors in Medical Discipline) against Advertisement No. BSL/R-C/2026-07",
-      "link": "https://aima-web-images.s3.ap-south-1.amazonaws.com/sailcareers.com/Downloads/BSP_News_01092026_121727.pdf",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [
-        "https://aima-web-images.s3.ap-south-1.amazonaws.com/sailcareers.com/Downloads/BSP_News_01092026_121727.pdf"
-      ],
-      "sourceId": "sail",
-      "sourceName": "Steel Authority of India (SAIL)",
-      "dept": "Steel Authority of India (SAIL)",
-      "state": "All India",
-      "category": "psu",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
       "id": "052e650c60cb44d5",
       "title": "CUT OFF Marks",
       "link": "https://sailcareers.com/download/CutOffMTT23Feb26.pdf",
@@ -1137,40 +1188,6 @@
       "category": "state",
       "stateIds": [
         "kl"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "084c64752657e4bf",
-      "title": "05 Oct 2026 NOTICE REGARDING ADVT. NO. D-2/E-1/2025, DIRECTORATE OF MEDICAL AND HEALTH SERVICES UTTAR PRADESH, FILARIA CONTROL OFFICER, S-06/01(CUT OFF)",
-      "link": "https://uppsc.up.nic.in/Open_PDF.aspx?I4PnQ0tBagmNKfqXmoSUngRHocPuog4h",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-up",
-      "sourceName": "Uttar Pradesh PSC (UPPSC)",
-      "dept": "Uttar Pradesh PSC (UPPSC)",
-      "state": "Uttar Pradesh",
-      "category": "state",
-      "stateIds": [
-        "up"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "12ca81e8e0617c5b",
-      "title": "Click here to view List of Candidates who are not selected in P.C.S. Examination-2022, but Qualified for Interview in P.C.S - 2022 (In Merit Order).",
-      "link": "https://uppsc.up.nic.in/Open_PDF.aspx?I4PnQ0tBagk9q6upnHHyW7Pdh9qfF6wa",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-up",
-      "sourceName": "Uttar Pradesh PSC (UPPSC)",
-      "dept": "Uttar Pradesh PSC (UPPSC)",
-      "state": "Uttar Pradesh",
-      "category": "state",
-      "stateIds": [
-        "up"
       ],
       "fetchMethod": "html"
     },
@@ -1750,6 +1767,25 @@
       "fetchMethod": "live-jobs-supplement"
     },
     {
+      "id": "3f5f0150d9a9618d",
+      "title": "Jharkhand Group of Mines: Result of the 'Walk-in-Interview' held on 12/08/2026 for Engagement of Consultants (Doctors in Medical Discipline) against Advertisement No. BSL/R-C/2026-07",
+      "link": "https://aima-web-images.s3.ap-south-1.amazonaws.com/sailcareers.com/Downloads/BSP_News_01092026_121727.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://aima-web-images.s3.ap-south-1.amazonaws.com/sailcareers.com/Downloads/BSP_News_01092026_121727.pdf"
+      ],
+      "sourceId": "sail",
+      "sourceName": "Steel Authority of India (SAIL)",
+      "dept": "Steel Authority of India (SAIL)",
+      "state": "All India",
+      "category": "psu",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
       "id": "5e04e28008e88c34",
       "title": "कौशल विकास और उद्यमशीलता मंत्रालय, 'विशेष अभियान 5.0' के अंतर्गत मिले उत्कृष्ट परिणामों के आधार पर 'विशेष अभियान 6' की तैयारी कर रहा है",
       "link": "https://pib.gov.in/PressReleaseIframePage.aspx?PRID=2316448",
@@ -1765,25 +1801,6 @@
         "all"
       ],
       "fetchMethod": "rss-feed"
-    },
-    {
-      "id": "3263ad107f9d8029",
-      "title": "PUBLIC NOTICE – CTET Feb 2026 – RESULT",
-      "link": "https://cdnbbsr.s3waas.gov.in/s3443dec3062d0286986e21dc0631734c9/uploads/2026/03/202603311458590440.pdf",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [
-        "https://cdnbbsr.s3waas.gov.in/s3443dec3062d0286986e21dc0631734c9/uploads/2026/03/202603311458590440.pdf"
-      ],
-      "sourceId": "ctet",
-      "sourceName": "CBSE — CTET",
-      "dept": "CBSE — CTET",
-      "state": "All India",
-      "category": "teaching",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
     },
     {
       "id": "86dc09a156fe9120",

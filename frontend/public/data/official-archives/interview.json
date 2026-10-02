@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-01T11:05:38.952Z",
+  "generatedAt": "2026-10-02T10:37:36.662Z",
   "count": 104,
   "items": [
     {
@@ -64,6 +64,23 @@
       "sourceName": "BPSC — Notices",
       "dept": "Bihar PSC",
       "state": "Bihar",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "12ca81e8e0617c5b",
+      "title": "Click here to view List of Candidates who are not selected in P.C.S. Examination-2022, but Qualified for Interview in P.C.S - 2022 (In Merit Order).",
+      "link": "https://uppsc.up.nic.in/Open_PDF.aspx?I4PnQ0tBagk9q6upnHHyW7Pdh9qfF6wa",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "uppsc-hall-tickets",
+      "sourceName": "UPPSC — Hall tickets",
+      "dept": "Uttar Pradesh PSC",
+      "state": "Uttar Pradesh",
       "category": "state",
       "stateIds": [
         "all"
@@ -712,44 +729,6 @@
       "fetchMethod": "html"
     },
     {
-      "id": "4de09d64fb98a685",
-      "title": "BOKARO STEEL PLANT: WALK-IN-INTERVIEW FOR ENGAGEMENT OF AUDIOLOGISTS ON SHORT TERM CONTRACT BASIS",
-      "link": "https://aima-web-images.s3.ap-south-1.amazonaws.com/sailcareers.com/Downloads/BSP_News%20&%20Jobs_01092026_163338.pdf",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [
-        "https://aima-web-images.s3.ap-south-1.amazonaws.com/sailcareers.com/Downloads/BSP_News%20&%20Jobs_01092026_163338.pdf"
-      ],
-      "sourceId": "sail",
-      "sourceName": "Steel Authority of India (SAIL)",
-      "dept": "Steel Authority of India (SAIL)",
-      "state": "All India",
-      "category": "psu",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "3f5f0150d9a9618d",
-      "title": "Jharkhand Group of Mines: Result of the 'Walk-in-Interview' held on 12/08/2026 for Engagement of Consultants (Doctors in Medical Discipline) against Advertisement No. BSL/R-C/2026-07",
-      "link": "https://aima-web-images.s3.ap-south-1.amazonaws.com/sailcareers.com/Downloads/BSP_News_01092026_121727.pdf",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [
-        "https://aima-web-images.s3.ap-south-1.amazonaws.com/sailcareers.com/Downloads/BSP_News_01092026_121727.pdf"
-      ],
-      "sourceId": "sail",
-      "sourceName": "Steel Authority of India (SAIL)",
-      "dept": "Steel Authority of India (SAIL)",
-      "state": "All India",
-      "category": "psu",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
       "id": "a2cdc2e2fd87ca8e",
       "title": "Bio Data Form and Other Relevant documents for GD/Interview shortlisted candidates of MTT Posts",
       "link": "https://sailcareers.com/SAIL2025MT/DownloadPerformaInterview.htm",
@@ -905,23 +884,6 @@
       "fetchMethod": "html"
     },
     {
-      "id": "12ca81e8e0617c5b",
-      "title": "Click here to view List of Candidates who are not selected in P.C.S. Examination-2022, but Qualified for Interview in P.C.S - 2022 (In Merit Order).",
-      "link": "https://uppsc.up.nic.in/Open_PDF.aspx?I4PnQ0tBagk9q6upnHHyW7Pdh9qfF6wa",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-up",
-      "sourceName": "Uttar Pradesh PSC (UPPSC)",
-      "dept": "Uttar Pradesh PSC (UPPSC)",
-      "state": "Uttar Pradesh",
-      "category": "state",
-      "stateIds": [
-        "up"
-      ],
-      "fetchMethod": "html"
-    },
-    {
       "id": "29b69c62dccbbbba",
       "title": "Notification for Personal Interview",
       "link": "https://mpsc.meghalaya.gov.in/notifications-pi.html",
@@ -1047,6 +1009,44 @@
       "category": "teaching",
       "stateIds": [
         "od"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "4de09d64fb98a685",
+      "title": "BOKARO STEEL PLANT: WALK-IN-INTERVIEW FOR ENGAGEMENT OF AUDIOLOGISTS ON SHORT TERM CONTRACT BASIS",
+      "link": "https://aima-web-images.s3.ap-south-1.amazonaws.com/sailcareers.com/Downloads/BSP_News%20&%20Jobs_01092026_163338.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://aima-web-images.s3.ap-south-1.amazonaws.com/sailcareers.com/Downloads/BSP_News%20&%20Jobs_01092026_163338.pdf"
+      ],
+      "sourceId": "sail",
+      "sourceName": "Steel Authority of India (SAIL)",
+      "dept": "Steel Authority of India (SAIL)",
+      "state": "All India",
+      "category": "psu",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "3f5f0150d9a9618d",
+      "title": "Jharkhand Group of Mines: Result of the 'Walk-in-Interview' held on 12/08/2026 for Engagement of Consultants (Doctors in Medical Discipline) against Advertisement No. BSL/R-C/2026-07",
+      "link": "https://aima-web-images.s3.ap-south-1.amazonaws.com/sailcareers.com/Downloads/BSP_News_01092026_121727.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://aima-web-images.s3.ap-south-1.amazonaws.com/sailcareers.com/Downloads/BSP_News_01092026_121727.pdf"
+      ],
+      "sourceId": "sail",
+      "sourceName": "Steel Authority of India (SAIL)",
+      "dept": "Steel Authority of India (SAIL)",
+      "state": "All India",
+      "category": "psu",
+      "stateIds": [
+        "all"
       ],
       "fetchMethod": "html"
     },
