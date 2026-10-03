@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-02T10:37:36.662Z",
+  "generatedAt": "2026-10-03T10:22:16.485Z",
   "count": 246,
   "items": [
     {
@@ -417,23 +417,6 @@
         "all"
       ],
       "fetchMethod": "html-listing"
-    },
-    {
-      "id": "e29413ad6aa891fe",
-      "title": "प्रधानमंत्री श्री नरेन्द्र मोदी ने एशियाई खेलों में महिला रिकर्व टीम स्पर्धा में ऐतिहासिक स्वर्ण पदक जीतने पर अंकिता भक्त, कुमकुम अनिल मोहोड और कीर्ति को बधाई दी",
-      "link": "https://pib.gov.in/PressReleaseIframePage.aspx?PRID=2318157",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "pib",
-      "sourceName": "Press Information Bureau (PIB)",
-      "dept": "Press Information Bureau (PIB)",
-      "state": "All India",
-      "category": "general",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "rss-config"
     },
     {
       "id": "a1a44e1bd9d935b4",
@@ -1765,6 +1748,23 @@
       "state": "All India",
       "category": "ssc",
       "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "e29413ad6aa891fe",
+      "title": "प्रधानमंत्री श्री नरेन्द्र मोदी ने एशियाई खेलों में महिला रिकर्व टीम स्पर्धा में ऐतिहासिक स्वर्ण पदक जीतने पर अंकिता भक्त, कुमकुम अनिल मोहोड और कीर्ति को बधाई दी",
+      "link": "https://pib.gov.in/PressReleaseIframePage.aspx?PRID=2318157",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "pib",
+      "sourceName": "Press Information Bureau (PIB)",
+      "dept": "Press Information Bureau (PIB)",
+      "state": "All India",
+      "category": "general",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "rss-config"
     },
     {
       "id": "3f5f0150d9a9618d",

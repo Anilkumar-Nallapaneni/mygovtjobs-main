@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-10-02T10:37:36.662Z",
-  "count": 105,
+  "generatedAt": "2026-10-03T10:22:16.485Z",
+  "count": 106,
   "items": [
     {
       "id": "e4098f8933e2e1a0",
@@ -534,9 +534,9 @@
       "fetchMethod": "rss-discovered"
     },
     {
-      "id": "b4b649cbb0c58886",
+      "id": "3c03a98b974c67d2",
       "title": "*CLICK HERE TO APPLY FOR LIC GOLDEN JUBILEE SCHOLARSHIPS 2026 \"Last date extended up to 15th October 2026\"*",
-      "link": "https://licindia.in/web/guest/golden-jubilee-foundation",
+      "link": "https://licindia.in/en/web/guest/golden-jubilee-foundation",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
@@ -551,9 +551,9 @@
       "fetchMethod": "html"
     },
     {
-      "id": "3c03a98b974c67d2",
+      "id": "6b109e2f791def0f",
       "title": "*CLICK HERE TO APPLY FOR LIC GOLDEN JUBILEE SCHOLARSHIPS 2026 \"Last date extended up to 15th October 2026\"*",
-      "link": "https://licindia.in/en/web/guest/golden-jubilee-foundation",
+      "link": "https://www.licindia.in/en/web/guest/golden-jubilee-foundation",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
@@ -1004,6 +1004,23 @@
       "state": "All India",
       "category": "state",
       "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "b4b649cbb0c58886",
+      "title": "*CLICK HERE TO APPLY FOR LIC GOLDEN JUBILEE SCHOLARSHIPS 2026 \"Last date extended up to 15th October 2026\"*",
+      "link": "https://licindia.in/web/guest/golden-jubilee-foundation",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "lic",
+      "sourceName": "Life Insurance Corporation — Careers",
+      "dept": "Life Insurance Corporation — Careers",
+      "state": "All India",
+      "category": "banking",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
     },
     {
       "id": "dc33c3253f0d919c",

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-02T10:37:36.662Z",
+  "generatedAt": "2026-10-03T10:22:16.485Z",
   "count": 104,
   "items": [
     {
@@ -88,6 +88,23 @@
       "fetchMethod": "html-listing"
     },
     {
+      "id": "a1bc7ecbd075f319",
+      "title": "Various Results, Interview & Test Calls at Bhabha Atomic Research Centre",
+      "link": "https://www.barc.gov.in/careers/result.html",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "barc",
+      "sourceName": "Bhabha Atomic Research Centre (BARC)",
+      "dept": "Bhabha Atomic Research Centre (BARC)",
+      "state": "All India",
+      "category": "defence",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "rss-discovered"
+    },
+    {
       "id": "0d1f705a55a6db5f",
       "title": "11th September 2026 Result of Online Interview Advt. No. WII/ADVT. 1/RP-CELL/July, 2026",
       "link": "https://www.wii.gov.in/news/result_online_interview_advt_no_wii_advt1_rp_cell_july_2026",
@@ -122,23 +139,6 @@
         "all"
       ],
       "fetchMethod": "html"
-    },
-    {
-      "id": "a1bc7ecbd075f319",
-      "title": "Various Results, Interview & Test Calls at Bhabha Atomic Research Centre",
-      "link": "https://www.barc.gov.in/careers/result.html",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "barc",
-      "sourceName": "Bhabha Atomic Research Centre (BARC)",
-      "dept": "Bhabha Atomic Research Centre (BARC)",
-      "state": "All India",
-      "category": "defence",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "rss-discovered"
     },
     {
       "id": "26ef63b4a31cb06b",
@@ -867,23 +867,6 @@
       "fetchMethod": "html"
     },
     {
-      "id": "c019d0c423cf10b5",
-      "title": "Procedure for Interview Date Change Requests",
-      "link": "https://www.keralapsc.gov.in/index.php/procedure-interview-date-change-requests",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-kl",
-      "sourceName": "Kerala PSC",
-      "dept": "Kerala PSC",
-      "state": "Kerala",
-      "category": "state",
-      "stateIds": [
-        "kl"
-      ],
-      "fetchMethod": "html"
-    },
-    {
       "id": "29b69c62dccbbbba",
       "title": "Notification for Personal Interview",
       "link": "https://mpsc.meghalaya.gov.in/notifications-pi.html",
@@ -1009,6 +992,23 @@
       "category": "teaching",
       "stateIds": [
         "od"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "c019d0c423cf10b5",
+      "title": "Procedure for Interview Date Change Requests",
+      "link": "https://www.keralapsc.gov.in/index.php/procedure-interview-date-change-requests",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-kl",
+      "sourceName": "Kerala PSC",
+      "dept": "Kerala PSC",
+      "state": "Kerala",
+      "category": "state",
+      "stateIds": [
+        "kl"
       ],
       "fetchMethod": "html"
     },
