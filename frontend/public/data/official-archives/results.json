@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-10-03T10:22:16.485Z",
-  "count": 246,
+  "generatedAt": "2026-10-04T10:36:54.188Z",
+  "count": 250,
   "items": [
     {
       "id": "2e7fa8a4ffb7c7be",
@@ -18,6 +18,23 @@
         "all"
       ],
       "fetchMethod": "rss-discovered"
+    },
+    {
+      "id": "83f796cc1cc6fbf6",
+      "title": "10 वर्षों के समर्पित प्रयासों के परिणामस्वरूप केंद्रीय पर्यावरण मंत्री और राजस्थान के मुख्यमंत्री ने जैसलमेर स्थित डेजर्ट नेशनल पार्क में बंदी बनाकर पाले गए ग्रेट इंडियन बस्टर्ड को जंगल में छोड़ने की प्रक्रिया शुरू की",
+      "link": "https://pib.gov.in/PressReleaseIframePage.aspx?PRID=2318674",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "pib-press-reg3",
+      "sourceName": "PIB — recent press releases",
+      "dept": "Press Information Bureau",
+      "state": "All India",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "rss-feed"
     },
     {
       "id": "2fcd6ff34f094281",
@@ -417,60 +434,6 @@
         "all"
       ],
       "fetchMethod": "html-listing"
-    },
-    {
-      "id": "a1a44e1bd9d935b4",
-      "title": "11th September 2026 Result of Engagement of Office Assistant (Ex-servicemen) on Contract Basis (Advertisement No, WII/ADM/2026-27/02)",
-      "link": "https://www.wii.gov.in/news/result_ex_servicemen_wii_adm_2026_27_02",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "wii",
-      "sourceName": "Wildlife Institute of India (WII)",
-      "dept": "Wildlife Institute of India (WII)",
-      "state": "All India",
-      "category": "psu",
-      "stateIds": [
-        "uk",
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "0d1f705a55a6db5f",
-      "title": "11th September 2026 Result of Online Interview Advt. No. WII/ADVT. 1/RP-CELL/July, 2026",
-      "link": "https://www.wii.gov.in/news/result_online_interview_advt_no_wii_advt1_rp_cell_july_2026",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "wii",
-      "sourceName": "Wildlife Institute of India (WII)",
-      "dept": "Wildlife Institute of India (WII)",
-      "state": "All India",
-      "category": "psu",
-      "stateIds": [
-        "uk",
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "10368d4d8ec4fd69",
-      "title": "11th September 2026 Result of Online Interview Advt. No. WII/ADVT. 2/RP-CELL/June, 2026",
-      "link": "https://www.wii.gov.in/news/result_online_interview_advt_no_wii_advt2_rpcell_june2026",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "wii",
-      "sourceName": "Wildlife Institute of India (WII)",
-      "dept": "Wildlife Institute of India (WII)",
-      "state": "All India",
-      "category": "psu",
-      "stateIds": [
-        "uk",
-        "all"
-      ],
-      "fetchMethod": "html"
     },
     {
       "id": "f5ec72f5d069bbdc",
@@ -991,23 +954,6 @@
       "fetchMethod": "html"
     },
     {
-      "id": "3cb3737965d5c83c",
-      "title": "Recruitment Result",
-      "link": "https://www.aiims.edu/index.php/en/notices/recruitment/archive-recruitment",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "aiims",
-      "sourceName": "AIIMS New Delhi — Recruitment",
-      "dept": "AIIMS New Delhi — Recruitment",
-      "state": "All India",
-      "category": "health",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "rss-discovered"
-    },
-    {
       "id": "5248b404d0a4fa81",
       "title": "Financial Result",
       "link": "https://www.canarabank.bank.in/financial-result",
@@ -1294,6 +1240,59 @@
       "category": "state",
       "stateIds": [
         "hr"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "f9af03346752aa1b",
+      "title": "LATEST NOTICE: उत्तर प्रदेश होमगार्ड्स के पदों पर एनरोलमेंट - 2025 के अन्तर्गत अन्तिम चयन परिणाम का प्रकाशन ।",
+      "link": "https://uppbpb.gov.in/FilesUploaded/Notice/HG_03-10-2026d59cc153-9562-47ee-a56a-a1eede0e6ef0.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://uppbpb.gov.in/FilesUploaded/Notice/HG_03-10-2026d59cc153-9562-47ee-a56a-a1eede0e6ef0.pdf"
+      ],
+      "sourceId": "police-up",
+      "sourceName": "UP Police Recruitment Board (UPPRPB)",
+      "dept": "UP Police Recruitment Board (UPPRPB)",
+      "state": "Uttar Pradesh",
+      "category": "police",
+      "stateIds": [
+        "up"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "867d10556a0d50b6",
+      "title": "उत्तर प्रदेश होमगार्ड्स के पदों पर एनरोलमेंट - 2025 के अन्तर्गत अन्तिम चयन परिणाम की जनपदवार सूची देखने हेतु लिंक ।",
+      "link": "https://www.hgupexam2025.com/hg25finalresults/displayalldistricts.aspx",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "police-up",
+      "sourceName": "UP Police Recruitment Board (UPPRPB)",
+      "dept": "UP Police Recruitment Board (UPPRPB)",
+      "state": "Uttar Pradesh",
+      "category": "police",
+      "stateIds": [
+        "up"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "c9c54e2978338a31",
+      "title": "उत्तर प्रदेश होमगार्ड्स के पदों पर एनरोलमेंट - 2025 के अन्तर्गत अन्तिम चयन परिणाम देखने हेतु लिंक ।",
+      "link": "https://www.hgupexam2025.com/hg25finalresults/loginpage.aspx",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "police-up",
+      "sourceName": "UP Police Recruitment Board (UPPRPB)",
+      "dept": "UP Police Recruitment Board (UPPRPB)",
+      "state": "Uttar Pradesh",
+      "category": "police",
+      "stateIds": [
+        "up"
       ],
       "fetchMethod": "html"
     },
@@ -1748,6 +1747,77 @@
       "state": "All India",
       "category": "ssc",
       "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "a1a44e1bd9d935b4",
+      "title": "11th September 2026 Result of Engagement of Office Assistant (Ex-servicemen) on Contract Basis (Advertisement No, WII/ADM/2026-27/02)",
+      "link": "https://www.wii.gov.in/news/result_ex_servicemen_wii_adm_2026_27_02",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "wii",
+      "sourceName": "Wildlife Institute of India (WII)",
+      "dept": "Wildlife Institute of India (WII)",
+      "state": "All India",
+      "category": "psu",
+      "stateIds": [
+        "uk",
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "0d1f705a55a6db5f",
+      "title": "11th September 2026 Result of Online Interview Advt. No. WII/ADVT. 1/RP-CELL/July, 2026",
+      "link": "https://www.wii.gov.in/news/result_online_interview_advt_no_wii_advt1_rp_cell_july_2026",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "wii",
+      "sourceName": "Wildlife Institute of India (WII)",
+      "dept": "Wildlife Institute of India (WII)",
+      "state": "All India",
+      "category": "psu",
+      "stateIds": [
+        "uk",
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "10368d4d8ec4fd69",
+      "title": "11th September 2026 Result of Online Interview Advt. No. WII/ADVT. 2/RP-CELL/June, 2026",
+      "link": "https://www.wii.gov.in/news/result_online_interview_advt_no_wii_advt2_rpcell_june2026",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "wii",
+      "sourceName": "Wildlife Institute of India (WII)",
+      "dept": "Wildlife Institute of India (WII)",
+      "state": "All India",
+      "category": "psu",
+      "stateIds": [
+        "uk",
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "3cb3737965d5c83c",
+      "title": "Recruitment Result",
+      "link": "https://www.aiims.edu/index.php/en/notices/recruitment/archive-recruitment",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "aiims",
+      "sourceName": "AIIMS New Delhi — Recruitment",
+      "dept": "AIIMS New Delhi — Recruitment",
+      "state": "All India",
+      "category": "health",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "rss-discovered"
     },
     {
       "id": "e29413ad6aa891fe",

@@ -1,24 +1,7 @@
 {
-  "generatedAt": "2026-10-03T10:22:16.485Z",
+  "generatedAt": "2026-10-04T10:36:54.188Z",
   "count": 169,
   "items": [
-    {
-      "id": "dab406e23a6537a1",
-      "title": "E-Admit Cards for various Recruitment Posts",
-      "link": "https://upsconline.gov.in/oraadmitcard/",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "upsc-e-admit-hub",
-      "sourceName": "UPSC — e-Admit cards",
-      "dept": "Union Public Service Commission",
-      "state": "All India",
-      "category": "upsc",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
     {
       "id": "99c9f94d8e7c5a15",
       "title": "e-Admit Cards For Computer Based Skill Test For Various Recruitment Posts (ORA)",
@@ -105,9 +88,9 @@
       "fetchMethod": "html-listing"
     },
     {
-      "id": "7a2db368e13d4a7b",
-      "title": "NOTICE REGARDING ADMIT CARD FOR ADVT.NO.D-6/E-1/2025, VETERINARY OFFICER (SCREEN..",
-      "link": "https://uppsc.up.nic.in/Open_PDF_DB.aspx?I4PnQ0tBagmNKfqXmoSUnqe31UVS6Xc9",
+      "id": "e88314f91bcadbe5",
+      "title": "06 Oct 2026 NOTICE REGARDING ADMIT CARD FOR ADVT NO. A-10/E-1/2025, ASSISTANT TOWN PLANNER (SPL. RECT.) (MAIN.) EXAM.-2025, (EXAM. DATED:-06/10/2026)",
+      "link": "https://uppsc.up.nic.in/Open_PDF.aspx?I4PnQ0tBagmNKfqXmoSUnpbtUMRDf7GA",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
@@ -349,23 +332,6 @@
       "fetchMethod": "html"
     },
     {
-      "id": "ce63b0d778abdfcc",
-      "title": "उत्तर प्रदेश पुलिस में आरक्षी नागरिक पुलिस एवं समकक्ष पदों पर सीधी भर्ती-2025 के अन्तर्गत शारीरिक दक्षता परीक्षा (पीईटी) के प्रवेश पत्र डाउनलोड किये जाने हेतु लिंक ।",
-      "link": "https://upcons2025.com/upconadmitcardPET/loginpage.aspx",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "police-up",
-      "sourceName": "UP Police Recruitment Board (UPPRPB)",
-      "dept": "UP Police Recruitment Board (UPPRPB)",
-      "state": "Uttar Pradesh",
-      "category": "police",
-      "stateIds": [
-        "up"
-      ],
-      "fetchMethod": "html"
-    },
-    {
       "id": "1b53fc767d3f8552",
       "title": "पदनाम-कनिष्ठ कैमरामैन/प्रोजेक्टनिस्ट व फोटोग्राफर और शोध अधिकारी के प्रवेश पत्र डाउनलोड(ADMIT CARD) से सम्बंधित विज्ञप्ति हेतु क्लिक करें",
       "link": "https://cdnbbsr.s3waas.gov.in/s34ffd0e19d2069412274bd3025b0e176c/uploads/2026/09/20260928639492025.pdf",
@@ -527,6 +493,57 @@
       "fetchMethod": "html"
     },
     {
+      "id": "dab406e23a6537a1",
+      "title": "E-Admit Cards for various Recruitment Posts",
+      "link": "https://upsconline.gov.in/oraadmitcard/",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "upsc-e-admit-hub",
+      "sourceName": "UPSC — e-Admit cards",
+      "dept": "Union Public Service Commission",
+      "state": "All India",
+      "category": "upsc",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "7a2db368e13d4a7b",
+      "title": "NOTICE REGARDING ADMIT CARD FOR ADVT.NO.D-6/E-1/2025, VETERINARY OFFICER (SCREEN..",
+      "link": "https://uppsc.up.nic.in/Open_PDF_DB.aspx?I4PnQ0tBagmNKfqXmoSUnqe31UVS6Xc9",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "uppsc-hall-tickets",
+      "sourceName": "UPPSC — Hall tickets",
+      "dept": "Uttar Pradesh PSC",
+      "state": "Uttar Pradesh",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "ce63b0d778abdfcc",
+      "title": "उत्तर प्रदेश पुलिस में आरक्षी नागरिक पुलिस एवं समकक्ष पदों पर सीधी भर्ती-2025 के अन्तर्गत शारीरिक दक्षता परीक्षा (पीईटी) के प्रवेश पत्र डाउनलोड किये जाने हेतु लिंक ।",
+      "link": "https://upcons2025.com/upconadmitcardPET/loginpage.aspx",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "police-up",
+      "sourceName": "UP Police Recruitment Board (UPPRPB)",
+      "dept": "UP Police Recruitment Board (UPPRPB)",
+      "state": "Uttar Pradesh",
+      "category": "police",
+      "stateIds": [
+        "up"
+      ],
+      "fetchMethod": "html"
+    },
+    {
       "id": "3ab90b393ed54006",
       "title": "Advt. No. ISTRAC:02:2026 dated 27.06.2026 - Download Admit Card for Computer Based Test (CBT) Read More",
       "link": "https://www.isro.gov.in/ISTRACRecruitment4.html",
@@ -564,23 +581,6 @@
       "id": "1ef5255ac7c74e68",
       "title": "NOTICE REGARDING ADMIT CARD OF ADVT. NO. A-7/E-1/2025, ASSISTANT PROFESSOR, GOVT..",
       "link": "https://uppsc.up.nic.in/Open_PDF_DB.aspx?I4PnQ0tBaglFjifabMvCvQhkTL2Hie7+",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "uppsc-hall-tickets",
-      "sourceName": "UPPSC — Hall tickets",
-      "dept": "Uttar Pradesh PSC",
-      "state": "Uttar Pradesh",
-      "category": "state",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "e88314f91bcadbe5",
-      "title": "06 Oct 2026 NOTICE REGARDING ADMIT CARD FOR ADVT NO. A-10/E-1/2025, ASSISTANT TOWN PLANNER (SPL. RECT.) (MAIN.) EXAM.-2025, (EXAM. DATED:-06/10/2026)",
-      "link": "https://uppsc.up.nic.in/Open_PDF.aspx?I4PnQ0tBagmNKfqXmoSUnpbtUMRDf7GA",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],

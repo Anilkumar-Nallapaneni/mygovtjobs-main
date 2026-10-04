@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-03T10:22:16.485Z",
+  "generatedAt": "2026-10-04T10:36:54.188Z",
   "count": 104,
   "items": [
     {
@@ -105,37 +105,18 @@
       "fetchMethod": "rss-discovered"
     },
     {
-      "id": "0d1f705a55a6db5f",
-      "title": "11th September 2026 Result of Online Interview Advt. No. WII/ADVT. 1/RP-CELL/July, 2026",
-      "link": "https://www.wii.gov.in/news/result_online_interview_advt_no_wii_advt1_rp_cell_july_2026",
+      "id": "9e7e8810785833f5",
+      "title": "A World Class Sea Survival Centre",
+      "link": "https://ongcindia.com/web/eng/sea-survival-training",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
-      "sourceId": "wii",
-      "sourceName": "Wildlife Institute of India (WII)",
-      "dept": "Wildlife Institute of India (WII)",
+      "sourceId": "ongc",
+      "sourceName": "ONGC — Careers",
+      "dept": "ONGC — Careers",
       "state": "All India",
       "category": "psu",
       "stateIds": [
-        "uk",
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "10368d4d8ec4fd69",
-      "title": "11th September 2026 Result of Online Interview Advt. No. WII/ADVT. 2/RP-CELL/June, 2026",
-      "link": "https://www.wii.gov.in/news/result_online_interview_advt_no_wii_advt2_rpcell_june2026",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "wii",
-      "sourceName": "Wildlife Institute of India (WII)",
-      "dept": "Wildlife Institute of India (WII)",
-      "state": "All India",
-      "category": "psu",
-      "stateIds": [
-        "uk",
         "all"
       ],
       "fetchMethod": "html"
@@ -617,23 +598,6 @@
       "fetchMethod": "html"
     },
     {
-      "id": "9e7e8810785833f5",
-      "title": "A World Class Sea Survival Centre",
-      "link": "https://ongcindia.com/web/eng/sea-survival-training",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "ongc",
-      "sourceName": "ONGC — Careers",
-      "dept": "ONGC — Careers",
-      "state": "All India",
-      "category": "psu",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
       "id": "cb9f4381c5672f18",
       "title": "RESULT OF PERSONAL INTERVIEW — ENGAGEMENT OF YOUNG PROFESSIONALS Advt. No. ISP/YP/2026/01 dated 22.05.2026",
       "link": "https://aima-web-images.s3.ap-south-1.amazonaws.com/sailcareers.com/Downloads/IISCO_News%20&%20Jobs_01102026_091532.pdf",
@@ -992,6 +956,42 @@
       "category": "teaching",
       "stateIds": [
         "od"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "0d1f705a55a6db5f",
+      "title": "11th September 2026 Result of Online Interview Advt. No. WII/ADVT. 1/RP-CELL/July, 2026",
+      "link": "https://www.wii.gov.in/news/result_online_interview_advt_no_wii_advt1_rp_cell_july_2026",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "wii",
+      "sourceName": "Wildlife Institute of India (WII)",
+      "dept": "Wildlife Institute of India (WII)",
+      "state": "All India",
+      "category": "psu",
+      "stateIds": [
+        "uk",
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "10368d4d8ec4fd69",
+      "title": "11th September 2026 Result of Online Interview Advt. No. WII/ADVT. 2/RP-CELL/June, 2026",
+      "link": "https://www.wii.gov.in/news/result_online_interview_advt_no_wii_advt2_rpcell_june2026",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "wii",
+      "sourceName": "Wildlife Institute of India (WII)",
+      "dept": "Wildlife Institute of India (WII)",
+      "state": "All India",
+      "category": "psu",
+      "stateIds": [
+        "uk",
+        "all"
       ],
       "fetchMethod": "html"
     },
