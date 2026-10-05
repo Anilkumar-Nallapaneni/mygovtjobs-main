@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-04T10:36:54.188Z",
+  "generatedAt": "2026-10-05T11:21:46.431Z",
   "count": 169,
   "items": [
     {
@@ -57,23 +57,6 @@
       "id": "48fb815187d0e46a",
       "title": "NOTICE REGARDING ADMIT CARD FOR ADVT NO. A-10/E-1/2025, ASSISTANT TOWN PLANNER (..",
       "link": "https://uppsc.up.nic.in/Open_PDF_DB.aspx?I4PnQ0tBagmNKfqXmoSUniHgNFAXqIvq",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "uppsc-hall-tickets",
-      "sourceName": "UPPSC — Hall tickets",
-      "dept": "Uttar Pradesh PSC",
-      "state": "Uttar Pradesh",
-      "category": "state",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "9d8946210ca4e566",
-      "title": "NOTICE REGARDING ADMIT CARD FOR ADVT.NO.D-6/E-1/2025, SWASTHYA SHIKSHA ADHIKARI ..",
-      "link": "https://uppsc.up.nic.in/Open_PDF_DB.aspx?I4PnQ0tBagmNKfqXmoSUnkhoZwOzbGVv",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
@@ -491,6 +474,23 @@
         "an"
       ],
       "fetchMethod": "html"
+    },
+    {
+      "id": "9d8946210ca4e566",
+      "title": "NOTICE REGARDING ADMIT CARD FOR ADVT.NO.D-6/E-1/2025, SWASTHYA SHIKSHA ADHIKARI ..",
+      "link": "https://uppsc.up.nic.in/Open_PDF_DB.aspx?I4PnQ0tBagmNKfqXmoSUnkhoZwOzbGVv",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "uppsc-hall-tickets",
+      "sourceName": "UPPSC — Hall tickets",
+      "dept": "Uttar Pradesh PSC",
+      "state": "Uttar Pradesh",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
     },
     {
       "id": "dab406e23a6537a1",

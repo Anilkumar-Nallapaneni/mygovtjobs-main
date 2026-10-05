@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-04T10:36:54.188Z",
+  "generatedAt": "2026-10-05T11:21:46.431Z",
   "count": 250,
   "items": [
     {
@@ -18,23 +18,6 @@
         "all"
       ],
       "fetchMethod": "rss-discovered"
-    },
-    {
-      "id": "83f796cc1cc6fbf6",
-      "title": "10 वर्षों के समर्पित प्रयासों के परिणामस्वरूप केंद्रीय पर्यावरण मंत्री और राजस्थान के मुख्यमंत्री ने जैसलमेर स्थित डेजर्ट नेशनल पार्क में बंदी बनाकर पाले गए ग्रेट इंडियन बस्टर्ड को जंगल में छोड़ने की प्रक्रिया शुरू की",
-      "link": "https://pib.gov.in/PressReleaseIframePage.aspx?PRID=2318674",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "pib-press-reg3",
-      "sourceName": "PIB — recent press releases",
-      "dept": "Press Information Bureau",
-      "state": "All India",
-      "category": "state",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "rss-feed"
     },
     {
       "id": "2fcd6ff34f094281",
@@ -434,6 +417,60 @@
         "all"
       ],
       "fetchMethod": "html-listing"
+    },
+    {
+      "id": "a1a44e1bd9d935b4",
+      "title": "11th September 2026 Result of Engagement of Office Assistant (Ex-servicemen) on Contract Basis (Advertisement No, WII/ADM/2026-27/02)",
+      "link": "https://www.wii.gov.in/news/result_ex_servicemen_wii_adm_2026_27_02",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "wii",
+      "sourceName": "Wildlife Institute of India (WII)",
+      "dept": "Wildlife Institute of India (WII)",
+      "state": "All India",
+      "category": "psu",
+      "stateIds": [
+        "uk",
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "0d1f705a55a6db5f",
+      "title": "11th September 2026 Result of Online Interview Advt. No. WII/ADVT. 1/RP-CELL/July, 2026",
+      "link": "https://www.wii.gov.in/news/result_online_interview_advt_no_wii_advt1_rp_cell_july_2026",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "wii",
+      "sourceName": "Wildlife Institute of India (WII)",
+      "dept": "Wildlife Institute of India (WII)",
+      "state": "All India",
+      "category": "psu",
+      "stateIds": [
+        "uk",
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "10368d4d8ec4fd69",
+      "title": "11th September 2026 Result of Online Interview Advt. No. WII/ADVT. 2/RP-CELL/June, 2026",
+      "link": "https://www.wii.gov.in/news/result_online_interview_advt_no_wii_advt2_rpcell_june2026",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "wii",
+      "sourceName": "Wildlife Institute of India (WII)",
+      "dept": "Wildlife Institute of India (WII)",
+      "state": "All India",
+      "category": "psu",
+      "stateIds": [
+        "uk",
+        "all"
+      ],
+      "fetchMethod": "html"
     },
     {
       "id": "f5ec72f5d069bbdc",
@@ -952,6 +989,23 @@
         "all"
       ],
       "fetchMethod": "html"
+    },
+    {
+      "id": "3cb3737965d5c83c",
+      "title": "Recruitment Result",
+      "link": "https://www.aiims.edu/index.php/en/notices/recruitment/archive-recruitment",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "aiims",
+      "sourceName": "AIIMS New Delhi — Recruitment",
+      "dept": "AIIMS New Delhi — Recruitment",
+      "state": "All India",
+      "category": "health",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "rss-discovered"
     },
     {
       "id": "5248b404d0a4fa81",
@@ -1749,75 +1803,21 @@
       "fetchMethod": "live-jobs-supplement"
     },
     {
-      "id": "a1a44e1bd9d935b4",
-      "title": "11th September 2026 Result of Engagement of Office Assistant (Ex-servicemen) on Contract Basis (Advertisement No, WII/ADM/2026-27/02)",
-      "link": "https://www.wii.gov.in/news/result_ex_servicemen_wii_adm_2026_27_02",
+      "id": "83f796cc1cc6fbf6",
+      "title": "10 वर्षों के समर्पित प्रयासों के परिणामस्वरूप केंद्रीय पर्यावरण मंत्री और राजस्थान के मुख्यमंत्री ने जैसलमेर स्थित डेजर्ट नेशनल पार्क में बंदी बनाकर पाले गए ग्रेट इंडियन बस्टर्ड को जंगल में छोड़ने की प्रक्रिया शुरू की",
+      "link": "https://pib.gov.in/PressReleaseIframePage.aspx?PRID=2318674",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
-      "sourceId": "wii",
-      "sourceName": "Wildlife Institute of India (WII)",
-      "dept": "Wildlife Institute of India (WII)",
+      "sourceId": "pib-press-reg3",
+      "sourceName": "PIB — recent press releases",
+      "dept": "Press Information Bureau",
       "state": "All India",
-      "category": "psu",
-      "stateIds": [
-        "uk",
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "0d1f705a55a6db5f",
-      "title": "11th September 2026 Result of Online Interview Advt. No. WII/ADVT. 1/RP-CELL/July, 2026",
-      "link": "https://www.wii.gov.in/news/result_online_interview_advt_no_wii_advt1_rp_cell_july_2026",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "wii",
-      "sourceName": "Wildlife Institute of India (WII)",
-      "dept": "Wildlife Institute of India (WII)",
-      "state": "All India",
-      "category": "psu",
-      "stateIds": [
-        "uk",
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "10368d4d8ec4fd69",
-      "title": "11th September 2026 Result of Online Interview Advt. No. WII/ADVT. 2/RP-CELL/June, 2026",
-      "link": "https://www.wii.gov.in/news/result_online_interview_advt_no_wii_advt2_rpcell_june2026",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "wii",
-      "sourceName": "Wildlife Institute of India (WII)",
-      "dept": "Wildlife Institute of India (WII)",
-      "state": "All India",
-      "category": "psu",
-      "stateIds": [
-        "uk",
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "3cb3737965d5c83c",
-      "title": "Recruitment Result",
-      "link": "https://www.aiims.edu/index.php/en/notices/recruitment/archive-recruitment",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "aiims",
-      "sourceName": "AIIMS New Delhi — Recruitment",
-      "dept": "AIIMS New Delhi — Recruitment",
-      "state": "All India",
-      "category": "health",
+      "category": "state",
       "stateIds": [
         "all"
       ],
-      "fetchMethod": "rss-discovered"
+      "fetchMethod": "rss-feed"
     },
     {
       "id": "e29413ad6aa891fe",
