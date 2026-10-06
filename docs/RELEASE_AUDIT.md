@@ -5,6 +5,8 @@ Audit run: 2026-10-06, on the current `New-Idea` worktree, using Node 24.18.0 an
 ## Local verification
 
 - `npm ci --dry-run` and clean `npm ci`: passed.
+- `npm audit`: the pre-repair lockfile had 15 advisories (11 high, 4 moderate). Compatible dependency updates and refreshed root overrides were applied; the final audit reports 0 vulnerabilities.
+- Vitest and coverage tooling are updated to 4.1.11; patched transitive overrides include `brace-expansion`, `fast-uri`, and `js-yaml`.
 - `npm ls --all`: exited 0. The tree lists platform-specific and optional packages as unmet optional dependencies, as expected; no invalid dependency tree was reported.
 - `npm run audit:india`: passed all 16 checks, including all 36 public and seeded States/UTs.
 - `npm run audit:india-explorer`: passed.
