@@ -1,18 +1,18 @@
 {
   "mode": "daily",
-  "started_at_epoch": 1791192221,
+  "started_at_epoch": 1791277923,
   "steps": [
     {
       "name": "production sync",
       "required": true,
       "returncode": 0,
-      "duration_seconds": 7646.03
+      "duration_seconds": 7322.29
     },
     {
       "name": "strict snapshot verification",
       "required": true,
       "returncode": 0,
-      "duration_seconds": 0.06
+      "duration_seconds": 0.04
     },
     {
       "name": "vacancy totals",
@@ -24,10 +24,10 @@
       "name": "alert delivery",
       "required": false,
       "returncode": 0,
-      "duration_seconds": 5.89
+      "duration_seconds": 5.26
     }
   ],
-  "run_id": "fd3c377f-02df-4d10-b3c8-4b67b8a74b9f",
-  "finished_at_epoch": 1791199878,
+  "run_id": "0c53ba93-5ad2-44b4-8af2-645e3452e10d",
+  "finished_at_epoch": 1791285256,
   "status": "succeeded"
 }

@@ -1,7 +1,58 @@
 {
-  "generatedAt": "2026-10-05T11:21:46.431Z",
-  "count": 106,
+  "generatedAt": "2026-10-06T11:07:52.179Z",
+  "count": 110,
   "items": [
+    {
+      "id": "ce57c10d5301fb06",
+      "title": "Tender No. BARC(T)/NRB/INRPC/ELE-67/2026/1855[e-Tender]",
+      "link": "http://www.barc.gov.in/tenders/tender275.pdf",
+      "publishedAt": "2026-10-05T09:24:50.000Z",
+      "summary": "Electrification alongwith networking, PA system, Fire alarm system and associated works of Block-120 at INRP Site, Tarapur Last date: 21-Oct-2026",
+      "pdfUrls": [],
+      "sourceId": "barc",
+      "sourceName": "Bhabha Atomic Research Centre (BARC)",
+      "dept": "Bhabha Atomic Research Centre (BARC)",
+      "state": "All India",
+      "category": "defence",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "rss-discovered"
+    },
+    {
+      "id": "176868904e689779",
+      "title": "Tender No. BARC/⁠HLUD/⁠ET/⁠14/⁠2026-⁠2027[e-Tender]",
+      "link": "http://www.barc.gov.in/tenders/tender274.pdf",
+      "publishedAt": "2026-10-05T06:00:35.000Z",
+      "summary": "Replacement of low side Re-circulatory air conditioning and ventilation system at RLG, BARC Mumbai-400085 Last date: 27-Oct-2026",
+      "pdfUrls": [],
+      "sourceId": "barc",
+      "sourceName": "Bhabha Atomic Research Centre (BARC)",
+      "dept": "Bhabha Atomic Research Centre (BARC)",
+      "state": "All India",
+      "category": "defence",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "rss-discovered"
+    },
+    {
+      "id": "b7d06c9ec6a79cc6",
+      "title": "Tender No. BARC/TSD/ET/32/2026-2027[e-Tender]",
+      "link": "http://www.barc.gov.in/tenders/tender273.pdf",
+      "publishedAt": "2026-10-05T05:10:19.000Z",
+      "summary": "Upgradation and renovation of 2 Nos of VIP lifts & 1 No of freight lift at CC, 1 nos of passenger lift at Auditorium and 2 Nos of dumbwaiter at Library, North site, BARC Trombay, Mumbai-400085 Last date: 27-Oct-2026",
+      "pdfUrls": [],
+      "sourceId": "barc",
+      "sourceName": "Bhabha Atomic Research Centre (BARC)",
+      "dept": "Bhabha Atomic Research Centre (BARC)",
+      "state": "All India",
+      "category": "defence",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "rss-discovered"
+    },
     {
       "id": "637f41abc4becfa2",
       "title": "Tender No. BARC/CED/ET/45/2026-2027[e-Tender]",
@@ -65,25 +116,6 @@
       "dept": "Bhabha Atomic Research Centre (BARC)",
       "state": "All India",
       "category": "defence",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "rss-discovered"
-    },
-    {
-      "id": "3ce8e0b95fc891ec",
-      "title": "The proposal for purchase of Remote and Leg Plate for the O.T Table installed at O.T., BPS, AIIMS under PAC",
-      "link": "https://www.aiims.edu/index.php/en/131-tender/proprietary-tender/24767-the-proposal-for-purchase-of-remote-and-leg-plate-for-the-o-t-table-installed-at-o-t-bps-aiims-under-pac",
-      "publishedAt": "2026-09-25T06:14:40.000Z",
-      "summary": "VIEW TENDER DETAILS Tender No B&PS/63/26-27 Title The proposal for purchase of Remote and Leg Plate for the O.T Table installed at O.T., BPS, AIIMS under PAC Date of Uploading 25/09/2026 Date of Closing 12/10/2026 Document",
-      "pdfUrls": [
-        "https://www.aiims.edu/images/pdf/tender/OTtable.pdf"
-      ],
-      "sourceId": "aiims",
-      "sourceName": "AIIMS New Delhi — Recruitment",
-      "dept": "AIIMS New Delhi — Recruitment",
-      "state": "All India",
-      "category": "health",
       "stateIds": [
         "all"
       ],
@@ -345,40 +377,6 @@
       "fetchMethod": "rss-discovered"
     },
     {
-      "id": "57521aee65e5d9b2",
-      "title": "Tender No. BARC/CSD/ET/13/2026-2027[e-Tender]",
-      "link": "http://www.barc.gov.in/tenders/tender254.pdf",
-      "publishedAt": "2026-09-08T08:50:46.000Z",
-      "summary": "Maintenance works related to Civil and PH works for BARC, EHPPL facilities at village Chinchvali, near Kalyan 2026-2027 Last date: 29-Sep-2026",
-      "pdfUrls": [],
-      "sourceId": "barc",
-      "sourceName": "Bhabha Atomic Research Centre (BARC)",
-      "dept": "Bhabha Atomic Research Centre (BARC)",
-      "state": "All India",
-      "category": "defence",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "rss-discovered"
-    },
-    {
-      "id": "0ecbf6a5e4e62969",
-      "title": "Tender No. BARC/CED/ET/37/2026-2027[e-Tender]",
-      "link": "http://www.barc.gov.in/tenders/tender252.pdf",
-      "publishedAt": "2026-09-07T08:37:22.000Z",
-      "summary": "Construction of 6 (six) numbers of new open ground water wells with RCC Steining in Phase-II,at various locations in BARC Premises, Trombay, Mumbai- 400085 Last date: 01-Oct-2026",
-      "pdfUrls": [],
-      "sourceId": "barc",
-      "sourceName": "Bhabha Atomic Research Centre (BARC)",
-      "dept": "Bhabha Atomic Research Centre (BARC)",
-      "state": "All India",
-      "category": "defence",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "rss-discovered"
-    },
-    {
       "id": "b9b47d86c4d80d3f",
       "title": "Tender No. BARC-V/ESS-V/2026/08[e-Tender]",
       "link": "http://www.barc.gov.in/tenders/tender250.pdf",
@@ -447,23 +445,6 @@
       "fetchMethod": "rss-discovered"
     },
     {
-      "id": "750292a36c498bf6",
-      "title": "Tender No. BARC/CED/ET/35/2026-2027[e-Tender]",
-      "link": "http://www.barc.gov.in/tenders/tender242.pdf",
-      "publishedAt": "2026-08-28T08:45:28.000Z",
-      "summary": "Construction of Bituminous Road including realignment of existing road, Construction of RCC Retaining walls & Storm Water Drains, Rubble pitching to slopes, Paver block works, upkeeping of area and miscellaneous works in CISF campus and inside BARC, Trombay, Mumbai Last date: 29-Sep-2026",
-      "pdfUrls": [],
-      "sourceId": "barc",
-      "sourceName": "Bhabha Atomic Research Centre (BARC)",
-      "dept": "Bhabha Atomic Research Centre (BARC)",
-      "state": "All India",
-      "category": "defence",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "rss-discovered"
-    },
-    {
       "id": "d7caa00e98497e38",
       "title": "Tender No. BARC(V)/CES/LTF&SRF/227[e-Tender]",
       "link": "http://www.barc.gov.in/tenders/tender239.pdf",
@@ -498,23 +479,6 @@
       "fetchMethod": "rss-discovered"
     },
     {
-      "id": "ce8e8be5c21fe53a",
-      "title": "Tender No. BARC (V)/CES/SeminarHall/225[e-Tender]",
-      "link": "http://www.barc.gov.in/tenders/tender231.pdf",
-      "publishedAt": "2026-08-19T09:08:13.000Z",
-      "summary": "Construction of Seminar Hall Building and other miscellaneous works in BARC main campus, Atchutapuram, Near Visakhapatnam, A.P Last date: 29-Sep-2026",
-      "pdfUrls": [],
-      "sourceId": "barc",
-      "sourceName": "Bhabha Atomic Research Centre (BARC)",
-      "dept": "Bhabha Atomic Research Centre (BARC)",
-      "state": "All India",
-      "category": "defence",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "rss-discovered"
-    },
-    {
       "id": "3c03a98b974c67d2",
       "title": "*CLICK HERE TO APPLY FOR LIC GOLDEN JUBILEE SCHOLARSHIPS 2026 \"Last date extended up to 15th October 2026\"*",
       "link": "https://licindia.in/en/web/guest/golden-jubilee-foundation",
@@ -532,194 +496,15 @@
       "fetchMethod": "html"
     },
     {
-      "id": "6b109e2f791def0f",
+      "id": "5067dde9636737cf",
       "title": "*CLICK HERE TO APPLY FOR LIC GOLDEN JUBILEE SCHOLARSHIPS 2026 \"Last date extended up to 15th October 2026\"*",
-      "link": "https://www.licindia.in/en/web/guest/golden-jubilee-foundation",
+      "link": "https://www.licindia.in/web/guest/golden-jubilee-foundation",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
       "sourceId": "lic",
       "sourceName": "Life Insurance Corporation — Careers",
       "dept": "Life Insurance Corporation — Careers",
-      "state": "All India",
-      "category": "banking",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "cf7727ab821fe25c",
-      "title": "Research, Recruitment, & Extension",
-      "link": "https://www.wii.gov.in/research-recruitment-and-extension",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "wii",
-      "sourceName": "Wildlife Institute of India (WII)",
-      "dept": "Wildlife Institute of India (WII)",
-      "state": "All India",
-      "category": "psu",
-      "stateIds": [
-        "uk",
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "a2acb547470561a0",
-      "title": "CORRIGENDUM: Extension of closing date of online applications for Advt. No. WII/ADVT. 1/RP–CELL/ August, 2026",
-      "link": "https://www.wii.gov.in/recruitments/corrigendum_advtno_wii_advt1_rpcell_august2026",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "wii",
-      "sourceName": "Wildlife Institute of India (WII)",
-      "dept": "Wildlife Institute of India (WII)",
-      "state": "All India",
-      "category": "psu",
-      "stateIds": [
-        "uk",
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "0aa466f8fd9d71bb",
-      "title": "Extension of last date of Applications for Scientist-D/E/F/G on deputation (Advertisement No. WII/ADM/2026-27/05/56)",
-      "link": "https://www.wii.gov.in/recruitments/date_extend_advertisement-no_wii_adm_2026_27_05_56",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "wii",
-      "sourceName": "Wildlife Institute of India (WII)",
-      "dept": "Wildlife Institute of India (WII)",
-      "state": "All India",
-      "category": "psu",
-      "stateIds": [
-        "uk",
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "ec7b727cf7b025f2",
-      "title": "Advt. No. WII/ADVT. 1/RP–CELL/ July, 2026 to engage 20 different categories of positions for various research projects at WII (extended close date until 07 August, 2026)",
-      "link": "https://www.wii.gov.in/recruitments/advtno_wii_advt1_rpcell_july2026",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "wii",
-      "sourceName": "Wildlife Institute of India (WII)",
-      "dept": "Wildlife Institute of India (WII)",
-      "state": "All India",
-      "category": "psu",
-      "stateIds": [
-        "uk",
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "91fb9aee663b1513",
-      "title": "Extension of last date of Applications for Section Officer on deputation (Advt. No. WII/ADM/2023/29/23)",
-      "link": "https://www.wii.gov.in/recruitments/extension-of-last-date-of-applications-for-section-officer-on-deputation",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "wii",
-      "sourceName": "Wildlife Institute of India (WII)",
-      "dept": "Wildlife Institute of India (WII)",
-      "state": "All India",
-      "category": "psu",
-      "stateIds": [
-        "uk",
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "e3d502ed3ef8ab05",
-      "title": "PUBLIC NOTICE: CTET SEP-2026 CORRECTION WINDOW (last date 10.09.2026)",
-      "link": "https://cdnbbsr.s3waas.gov.in/s3443dec3062d0286986e21dc0631734c9/uploads/2026/09/20260907461266783.pdf",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [
-        "https://cdnbbsr.s3waas.gov.in/s3443dec3062d0286986e21dc0631734c9/uploads/2026/09/20260907461266783.pdf"
-      ],
-      "sourceId": "ctet",
-      "sourceName": "CBSE — CTET",
-      "dept": "CBSE — CTET",
-      "state": "All India",
-      "category": "teaching",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "988ed4272bbf3f80",
-      "title": "Public Notice: CTET Feb-2026 Key Challenge / Scanned Images of OMR (last Date 15/03/2026,up-to 11:59 PM)",
-      "link": "https://cdnbbsr.s3waas.gov.in/s3443dec3062d0286986e21dc0631734c9/uploads/2026/03/202603121086699841.pdf",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [
-        "https://cdnbbsr.s3waas.gov.in/s3443dec3062d0286986e21dc0631734c9/uploads/2026/03/202603121086699841.pdf"
-      ],
-      "sourceId": "ctet",
-      "sourceName": "CBSE — CTET",
-      "dept": "CBSE — CTET",
-      "state": "All India",
-      "category": "teaching",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "ca02d329344a8460",
-      "title": "Login: CTET SEP 2026 CORRECTION WINDOW (last date 10.09.2026)",
-      "link": "https://examinationservices.nic.in/ExamSysCTET/root/Home.aspx?enc=Ei4cajBkK1gZSfgr53ImFfEytN2I3LFrLvNrMJcZJNmO/XE3+xNuu3rFt9agQvt0",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "ctet",
-      "sourceName": "CBSE — CTET",
-      "dept": "CBSE — CTET",
-      "state": "All India",
-      "category": "teaching",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "d0831531e36202c0",
-      "title": "APPLY ONLINE (Online Registration Extended till 05.10.2026)",
-      "link": "https://recruitment.sbi.bank.in/crpd-sco-2026-27-23/apply",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "sbi",
-      "sourceName": "State Bank of India — Careers",
-      "dept": "State Bank of India — Careers",
-      "state": "All India",
-      "category": "banking",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "1a8fa8b40cc21bb0",
-      "title": "APPLY ONLINE (Online Registration extended till 28.09.2026)",
-      "link": "https://recruitment.sbi.bank.in/crpd-sco-2026-27-15/apply",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "sbi",
-      "sourceName": "State Bank of India — Careers",
-      "dept": "State Bank of India — Careers",
       "state": "All India",
       "category": "banking",
       "stateIds": [
@@ -985,6 +770,289 @@
       "state": "All India",
       "category": "state",
       "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "3ce8e0b95fc891ec",
+      "title": "The proposal for purchase of Remote and Leg Plate for the O.T Table installed at O.T., BPS, AIIMS under PAC",
+      "link": "https://www.aiims.edu/index.php/en/131-tender/proprietary-tender/24767-the-proposal-for-purchase-of-remote-and-leg-plate-for-the-o-t-table-installed-at-o-t-bps-aiims-under-pac",
+      "publishedAt": "2026-09-25T06:14:40.000Z",
+      "summary": "VIEW TENDER DETAILS Tender No B&PS/63/26-27 Title The proposal for purchase of Remote and Leg Plate for the O.T Table installed at O.T., BPS, AIIMS under PAC Date of Uploading 25/09/2026 Date of Closing 12/10/2026 Document",
+      "pdfUrls": [
+        "https://www.aiims.edu/images/pdf/tender/OTtable.pdf"
+      ],
+      "sourceId": "aiims",
+      "sourceName": "AIIMS New Delhi — Recruitment",
+      "dept": "AIIMS New Delhi — Recruitment",
+      "state": "All India",
+      "category": "health",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "rss-discovered"
+    },
+    {
+      "id": "57521aee65e5d9b2",
+      "title": "Tender No. BARC/CSD/ET/13/2026-2027[e-Tender]",
+      "link": "http://www.barc.gov.in/tenders/tender254.pdf",
+      "publishedAt": "2026-09-08T08:50:46.000Z",
+      "summary": "Maintenance works related to Civil and PH works for BARC, EHPPL facilities at village Chinchvali, near Kalyan 2026-2027 Last date: 29-Sep-2026",
+      "pdfUrls": [],
+      "sourceId": "barc",
+      "sourceName": "Bhabha Atomic Research Centre (BARC)",
+      "dept": "Bhabha Atomic Research Centre (BARC)",
+      "state": "All India",
+      "category": "defence",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "rss-discovered"
+    },
+    {
+      "id": "0ecbf6a5e4e62969",
+      "title": "Tender No. BARC/CED/ET/37/2026-2027[e-Tender]",
+      "link": "http://www.barc.gov.in/tenders/tender252.pdf",
+      "publishedAt": "2026-09-07T08:37:22.000Z",
+      "summary": "Construction of 6 (six) numbers of new open ground water wells with RCC Steining in Phase-II,at various locations in BARC Premises, Trombay, Mumbai- 400085 Last date: 01-Oct-2026",
+      "pdfUrls": [],
+      "sourceId": "barc",
+      "sourceName": "Bhabha Atomic Research Centre (BARC)",
+      "dept": "Bhabha Atomic Research Centre (BARC)",
+      "state": "All India",
+      "category": "defence",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "rss-discovered"
+    },
+    {
+      "id": "750292a36c498bf6",
+      "title": "Tender No. BARC/CED/ET/35/2026-2027[e-Tender]",
+      "link": "http://www.barc.gov.in/tenders/tender242.pdf",
+      "publishedAt": "2026-08-28T08:45:28.000Z",
+      "summary": "Construction of Bituminous Road including realignment of existing road, Construction of RCC Retaining walls & Storm Water Drains, Rubble pitching to slopes, Paver block works, upkeeping of area and miscellaneous works in CISF campus and inside BARC, Trombay, Mumbai Last date: 29-Sep-2026",
+      "pdfUrls": [],
+      "sourceId": "barc",
+      "sourceName": "Bhabha Atomic Research Centre (BARC)",
+      "dept": "Bhabha Atomic Research Centre (BARC)",
+      "state": "All India",
+      "category": "defence",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "rss-discovered"
+    },
+    {
+      "id": "ce8e8be5c21fe53a",
+      "title": "Tender No. BARC (V)/CES/SeminarHall/225[e-Tender]",
+      "link": "http://www.barc.gov.in/tenders/tender231.pdf",
+      "publishedAt": "2026-08-19T09:08:13.000Z",
+      "summary": "Construction of Seminar Hall Building and other miscellaneous works in BARC main campus, Atchutapuram, Near Visakhapatnam, A.P Last date: 29-Sep-2026",
+      "pdfUrls": [],
+      "sourceId": "barc",
+      "sourceName": "Bhabha Atomic Research Centre (BARC)",
+      "dept": "Bhabha Atomic Research Centre (BARC)",
+      "state": "All India",
+      "category": "defence",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "rss-discovered"
+    },
+    {
+      "id": "6b109e2f791def0f",
+      "title": "*CLICK HERE TO APPLY FOR LIC GOLDEN JUBILEE SCHOLARSHIPS 2026 \"Last date extended up to 15th October 2026\"*",
+      "link": "https://www.licindia.in/en/web/guest/golden-jubilee-foundation",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "lic",
+      "sourceName": "Life Insurance Corporation — Careers",
+      "dept": "Life Insurance Corporation — Careers",
+      "state": "All India",
+      "category": "banking",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "cf7727ab821fe25c",
+      "title": "Research, Recruitment, & Extension",
+      "link": "https://www.wii.gov.in/research-recruitment-and-extension",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "wii",
+      "sourceName": "Wildlife Institute of India (WII)",
+      "dept": "Wildlife Institute of India (WII)",
+      "state": "All India",
+      "category": "psu",
+      "stateIds": [
+        "uk",
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "a2acb547470561a0",
+      "title": "CORRIGENDUM: Extension of closing date of online applications for Advt. No. WII/ADVT. 1/RP–CELL/ August, 2026",
+      "link": "https://www.wii.gov.in/recruitments/corrigendum_advtno_wii_advt1_rpcell_august2026",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "wii",
+      "sourceName": "Wildlife Institute of India (WII)",
+      "dept": "Wildlife Institute of India (WII)",
+      "state": "All India",
+      "category": "psu",
+      "stateIds": [
+        "uk",
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "0aa466f8fd9d71bb",
+      "title": "Extension of last date of Applications for Scientist-D/E/F/G on deputation (Advertisement No. WII/ADM/2026-27/05/56)",
+      "link": "https://www.wii.gov.in/recruitments/date_extend_advertisement-no_wii_adm_2026_27_05_56",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "wii",
+      "sourceName": "Wildlife Institute of India (WII)",
+      "dept": "Wildlife Institute of India (WII)",
+      "state": "All India",
+      "category": "psu",
+      "stateIds": [
+        "uk",
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "ec7b727cf7b025f2",
+      "title": "Advt. No. WII/ADVT. 1/RP–CELL/ July, 2026 to engage 20 different categories of positions for various research projects at WII (extended close date until 07 August, 2026)",
+      "link": "https://www.wii.gov.in/recruitments/advtno_wii_advt1_rpcell_july2026",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "wii",
+      "sourceName": "Wildlife Institute of India (WII)",
+      "dept": "Wildlife Institute of India (WII)",
+      "state": "All India",
+      "category": "psu",
+      "stateIds": [
+        "uk",
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "91fb9aee663b1513",
+      "title": "Extension of last date of Applications for Section Officer on deputation (Advt. No. WII/ADM/2023/29/23)",
+      "link": "https://www.wii.gov.in/recruitments/extension-of-last-date-of-applications-for-section-officer-on-deputation",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "wii",
+      "sourceName": "Wildlife Institute of India (WII)",
+      "dept": "Wildlife Institute of India (WII)",
+      "state": "All India",
+      "category": "psu",
+      "stateIds": [
+        "uk",
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "e3d502ed3ef8ab05",
+      "title": "PUBLIC NOTICE: CTET SEP-2026 CORRECTION WINDOW (last date 10.09.2026)",
+      "link": "https://cdnbbsr.s3waas.gov.in/s3443dec3062d0286986e21dc0631734c9/uploads/2026/09/20260907461266783.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://cdnbbsr.s3waas.gov.in/s3443dec3062d0286986e21dc0631734c9/uploads/2026/09/20260907461266783.pdf"
+      ],
+      "sourceId": "ctet",
+      "sourceName": "CBSE — CTET",
+      "dept": "CBSE — CTET",
+      "state": "All India",
+      "category": "teaching",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "988ed4272bbf3f80",
+      "title": "Public Notice: CTET Feb-2026 Key Challenge / Scanned Images of OMR (last Date 15/03/2026,up-to 11:59 PM)",
+      "link": "https://cdnbbsr.s3waas.gov.in/s3443dec3062d0286986e21dc0631734c9/uploads/2026/03/202603121086699841.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://cdnbbsr.s3waas.gov.in/s3443dec3062d0286986e21dc0631734c9/uploads/2026/03/202603121086699841.pdf"
+      ],
+      "sourceId": "ctet",
+      "sourceName": "CBSE — CTET",
+      "dept": "CBSE — CTET",
+      "state": "All India",
+      "category": "teaching",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "ca02d329344a8460",
+      "title": "Login: CTET SEP 2026 CORRECTION WINDOW (last date 10.09.2026)",
+      "link": "https://examinationservices.nic.in/ExamSysCTET/root/Home.aspx?enc=Ei4cajBkK1gZSfgr53ImFfEytN2I3LFrLvNrMJcZJNmO/XE3+xNuu3rFt9agQvt0",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "ctet",
+      "sourceName": "CBSE — CTET",
+      "dept": "CBSE — CTET",
+      "state": "All India",
+      "category": "teaching",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "d0831531e36202c0",
+      "title": "APPLY ONLINE (Online Registration Extended till 05.10.2026)",
+      "link": "https://recruitment.sbi.bank.in/crpd-sco-2026-27-23/apply",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "sbi",
+      "sourceName": "State Bank of India — Careers",
+      "dept": "State Bank of India — Careers",
+      "state": "All India",
+      "category": "banking",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "1a8fa8b40cc21bb0",
+      "title": "APPLY ONLINE (Online Registration extended till 28.09.2026)",
+      "link": "https://recruitment.sbi.bank.in/crpd-sco-2026-27-15/apply",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "sbi",
+      "sourceName": "State Bank of India — Careers",
+      "dept": "State Bank of India — Careers",
+      "state": "All India",
+      "category": "banking",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
     },
     {
       "id": "e4098f8933e2e1a0",
