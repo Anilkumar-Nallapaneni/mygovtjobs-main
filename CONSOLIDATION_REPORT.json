@@ -1,0 +1,7 @@
+{
+  "base": "mygovtjobs-main.zip (authoritative/newest)",
+  "historical_archives_reviewed": 7,
+  "merge_policy": "Never overwrite authoritative base. Add only paths absent from base. Exclude nested ZIPs, caches, virtualenvs, node_modules and build output.",
+  "historical_unique_files_added": 0,
+  "added_files": []
+}
