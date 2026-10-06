@@ -60,6 +60,11 @@ const SVG_TO_STATE_ID: Record<string, string> = {
   "IN-DN": "dd",
 };
 
+/** Public directory: 28 states + 8 union territories = 36 official units.
+ * The legacy `ne` shape is map-only geometry and is never presented as a real state.
+ */
+export const BROWSE_STATES = STATES.filter((state) => state.id !== 'ne');
+
 export const toSvgStateId = (stateId: string | null | undefined): string =>
   SVG_ID_EXCEPTIONS[String(stateId || "").toLowerCase()] ||
   `IN-${String(stateId || "").toUpperCase()}`;

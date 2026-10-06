@@ -14,7 +14,12 @@ import {
   ContactPage,
   DesignationLandingPage,
   DesignationsIndexPage,
+  DistrictExplorerPage,
   DisclaimerPage,
+  EducationAdminPage,
+  EducationCareerPage,
+  EducationDashboardPage,
+  EducationHubPage,
   ExamCalendarPage,
   ExamLandingPage,
   ExamPrepPage,
@@ -22,6 +27,7 @@ import {
   ExploreHubPage,
   FaqPage,
   HowToApplyPage,
+  IndiaExplorerPage,
   JobDetailPage,
   LatestNotificationsPage,
   LazyRoute,
@@ -35,6 +41,7 @@ import {
   ScholarshipsHubPage,
   SitemapPage,
   StatesIndexPage,
+  StateExplorerPage,
   TermsPage,
   YojanaHubPage,
 } from "@/components/appRoutePages";
@@ -83,6 +90,18 @@ export default function AppRoutes({
   return (
     <Routes>
       <Route path="/" element={homePageElement} />
+      <Route path="/india" element={<LazyRoute><IndiaExplorerPage /></LazyRoute>} />
+      <Route path="/india-map" element={<Navigate to="/india" replace />} />
+      <Route path="/india/:stateId" element={<LazyRoute><StateExplorerPage /></LazyRoute>} />
+      <Route path="/india/:stateId/district/:districtId" element={<LazyRoute><DistrictExplorerPage /></LazyRoute>} />
+      <Route path="/india/:stateId/district/:districtId/:category" element={<LazyRoute><DistrictExplorerPage /></LazyRoute>} />
+      <Route path="/india/:stateId/:category" element={<LazyRoute><StateExplorerPage /></LazyRoute>} />
+      <Route path="/education" element={<LazyRoute><EducationHubPage /></LazyRoute>} />
+      <Route path="/education/mock-tests" element={<LazyRoute><EducationHubPage /></LazyRoute>} />
+      <Route path="/education/careers/:slug" element={<LazyRoute><EducationCareerPage /></LazyRoute>} />
+      <Route path="/education/dashboard" element={<LazyRoute><EducationDashboardPage /></LazyRoute>} />
+      <Route path="/admin/education" element={<LazyRoute><AdminRouteGuard><EducationAdminPage /></AdminRouteGuard></LazyRoute>} />
+      <Route path="/career" element={<LazyRoute><EducationHubPage /></LazyRoute>} />
       <Route path="/jobs" element={homePageElement} />
       <Route path={ALL_INDIA_JOBS_PATH} element={homePageElement} />
       <Route

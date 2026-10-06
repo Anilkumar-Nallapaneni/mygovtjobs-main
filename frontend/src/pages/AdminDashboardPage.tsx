@@ -1,4 +1,5 @@
 import { FormEvent, useCallback, useEffect, useMemo, useState } from 'react'
+import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import Footer from '@/components/layout/Footer'
 import OperationsDashboard from '@/components/admin/OperationsDashboard'
@@ -137,6 +138,7 @@ export default function AdminDashboardPage({ onFooterLink }: AdminDashboardPageP
           <button type="button" onClick={() => void load()} disabled={loading}>
             {loading ? t('admin.loading', { defaultValue: 'Loading…' }) : t('admin.refresh', { defaultValue: 'Refresh' })}
           </button>
+          <Link className="admin-dashboard__action-link" to="/admin/education">Education CMS</Link>
           <button type="button" onClick={() => void onRunIngest()} disabled={ingestBusy}>
             {ingestBusy
               ? t('admin.ingestRunning', { defaultValue: 'Starting…' })

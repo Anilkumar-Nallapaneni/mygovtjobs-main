@@ -8,6 +8,12 @@ export type UserProfile = {
   preferred_language: string | null
   favorite_state_codes: string[] | null
   subscription_tier?: string | null
+  education_stage?: string | null
+  education_board?: string | null
+  education_stream?: string | null
+  education_state?: string | null
+  target_careers?: string[] | null
+  target_exams?: string[] | null
 }
 
 type AuthState = {
@@ -22,7 +28,7 @@ export function useAuth(): AuthState & {
   signInWithEmail: (email: string) => Promise<{ ok: boolean; error?: string }>
   signInWithGoogle: () => Promise<{ ok: boolean; error?: string }>
   signOut: () => Promise<void>
-  updateProfile: (patch: Partial<Pick<UserProfile, 'display_name' | 'preferred_language' | 'favorite_state_codes'>>) => Promise<{ ok: boolean; error?: string }>
+  updateProfile: (patch: Partial<Pick<UserProfile, 'display_name' | 'preferred_language' | 'favorite_state_codes' | 'education_stage' | 'education_board' | 'education_stream' | 'education_state' | 'target_careers' | 'target_exams'>>) => Promise<{ ok: boolean; error?: string }>
   reloadProfile: () => Promise<void>
 } {
   const configured = isSupabaseConfigured()
@@ -35,7 +41,7 @@ export function useAuth(): AuthState & {
     if (!supabase) return null
     const { data, error } = await supabase
       .from('profiles')
-      .select('id, display_name, preferred_language, favorite_state_codes, subscription_tier')
+      .select('id, display_name, preferred_language, favorite_state_codes, subscription_tier, education_stage, education_board, education_stream, education_state, target_careers, target_exams')
       .eq('id', userId)
       .maybeSingle()
     if (error) {
@@ -131,7 +137,7 @@ export function useAuth(): AuthState & {
   }, [])
 
   const updateProfile = useCallback(
-    async (patch: Partial<Pick<UserProfile, 'display_name' | 'preferred_language' | 'favorite_state_codes'>>) => {
+    async (patch: Partial<Pick<UserProfile, 'display_name' | 'preferred_language' | 'favorite_state_codes' | 'education_stage' | 'education_board' | 'education_stream' | 'education_state' | 'target_careers' | 'target_exams'>>) => {
       const supabase = await getSupabase()
       const userId = session?.user?.id
       if (!supabase || !userId) return { ok: false as const, error: 'not_signed_in' }

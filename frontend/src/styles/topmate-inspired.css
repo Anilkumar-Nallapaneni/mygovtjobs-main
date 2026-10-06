@@ -1,0 +1,252 @@
+/* LiveGovtJobs — original creator/storefront-inspired UI refresh.
+   This is an original design system; it does not reproduce third-party assets or code. */
+
+:root {
+  --lgj-accent: #ff6b00;
+  --lgj-accent-2: #ff9f43;
+  --lgj-ink: #101828;
+  --lgj-muted: #667085;
+  --lgj-line: #e7e9ee;
+  --lgj-card: #ffffff;
+  --lgj-soft: #f7f8fa;
+  --lgj-radius: 18px;
+  --lgj-shadow: 0 10px 35px rgba(16, 24, 40, .07);
+}
+
+[data-color-mode="dark"] {
+  --lgj-ink: #f4f7fb;
+  --lgj-muted: #9aa8ba;
+  --lgj-line: #223047;
+  --lgj-card: #0d1524;
+  --lgj-soft: #0a111e;
+  --lgj-shadow: 0 12px 40px rgba(0, 0, 0, .28);
+}
+
+/* Shell */
+.app-shell {
+  background:
+    radial-gradient(circle at 50% -10%, rgba(255, 107, 0, .07), transparent 30%),
+    var(--ds-bg0);
+}
+
+.app-main { width: 100%; }
+
+/* Navigation */
+.navbar {
+  background: color-mix(in srgb, var(--lgj-card) 94%, transparent) !important;
+  border-bottom: 1px solid var(--lgj-line) !important;
+  box-shadow: 0 1px 0 rgba(16,24,40,.02), 0 8px 25px rgba(16,24,40,.04) !important;
+  backdrop-filter: blur(18px);
+}
+.navbar__inner { max-width: 1440px !important; }
+.navbar__nav-btn {
+  border-radius: 999px !important;
+  border: 1px solid transparent !important;
+  transition: .18s ease !important;
+}
+.navbar__nav-btn:hover,
+.navbar__nav-btn--active {
+  background: rgba(255,107,0,.09) !important;
+  color: var(--lgj-accent) !important;
+  border-color: rgba(255,107,0,.16) !important;
+}
+.navbar__search-box {
+  border-radius: 999px !important;
+  background: var(--lgj-soft) !important;
+  border-color: var(--lgj-line) !important;
+}
+.navbar__search-submit,
+.navbar__search-submit:hover {
+  border-radius: 999px !important;
+}
+
+/* Homepage framing */
+.home-page-main {
+  width: min(1440px, calc(100% - 32px));
+  margin: 0 auto;
+}
+.home-page-main > section,
+.home-page-main > .career-marketplace,
+.home-page-main > .explore-hub-banner,
+.home-page-main > .home-jobs-section,
+.home-page-main > .home-discovery-block {
+  border-radius: var(--lgj-radius);
+}
+
+/* Hero */
+.home-hero-grid {
+  gap: 22px !important;
+}
+.home-hero-grid > div {
+  border-radius: 22px;
+}
+.home-hero-tagline__text { letter-spacing: .08em; }
+.home-stats-strip {
+  border-radius: 999px !important;
+  border: 1px solid var(--lgj-line) !important;
+  background: var(--lgj-card) !important;
+  box-shadow: var(--lgj-shadow);
+}
+.home-hero-stat {
+  border-radius: 18px !important;
+  border: 1px solid var(--lgj-line) !important;
+  background: var(--lgj-card) !important;
+  box-shadow: 0 4px 18px rgba(16,24,40,.045);
+  transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease !important;
+}
+.home-hero-stat:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--lgj-shadow);
+  border-color: rgba(255,107,0,.28) !important;
+}
+
+/* Job cards */
+.job-card,
+.home-job-card,
+.latest-job-card {
+  border-radius: 18px !important;
+  border-color: var(--lgj-line) !important;
+  background: var(--lgj-card) !important;
+  box-shadow: 0 4px 18px rgba(16,24,40,.04);
+  transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease !important;
+}
+.job-card:hover,
+.home-job-card:hover,
+.latest-job-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--lgj-shadow);
+  border-color: rgba(255,107,0,.25) !important;
+}
+
+/* New conversion/education section */
+.career-marketplace {
+  margin: 28px 0;
+  padding: clamp(22px, 4vw, 42px);
+  background: linear-gradient(135deg, var(--lgj-card), color-mix(in srgb, var(--lgj-soft) 75%, var(--lgj-card)));
+  border: 1px solid var(--lgj-line);
+  box-shadow: var(--lgj-shadow);
+}
+.career-marketplace__head {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+.career-marketplace__eyebrow {
+  display: inline-block;
+  margin-bottom: 8px;
+  color: var(--lgj-accent);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .14em;
+}
+.career-marketplace h2 {
+  max-width: 760px;
+  color: var(--lgj-ink);
+  font-size: clamp(24px, 3vw, 38px);
+  line-height: 1.08;
+  letter-spacing: -.035em;
+}
+.career-marketplace__head p {
+  max-width: 720px;
+  margin-top: 10px;
+  color: var(--lgj-muted);
+  font-size: 15px;
+}
+.career-marketplace__primary {
+  flex: 0 0 auto;
+  padding: 12px 18px;
+  border-radius: 999px;
+  background: var(--lgj-accent);
+  color: #fff !important;
+  font-weight: 750;
+  text-decoration: none;
+  box-shadow: 0 8px 20px rgba(255,107,0,.2);
+}
+.career-marketplace__grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0,1fr));
+  gap: 14px;
+}
+.career-offer-card {
+  min-height: 230px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  border: 1px solid var(--lgj-line);
+  border-radius: 18px;
+  background: var(--lgj-card);
+  color: inherit;
+  text-decoration: none;
+  transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+}
+.career-offer-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(255,107,0,.3);
+  box-shadow: var(--lgj-shadow);
+}
+.career-offer-card__icon {
+  width: 46px;
+  height: 46px;
+  display: grid;
+  place-items: center;
+  margin-bottom: 20px;
+  border-radius: 14px;
+  background: rgba(255,107,0,.09);
+  font-size: 23px;
+}
+.career-offer-card__title { color: var(--lgj-ink); font-weight: 800; font-size: 17px; }
+.career-offer-card__text { margin-top: 8px; color: var(--lgj-muted); font-size: 13px; line-height: 1.55; }
+.career-offer-card__action { margin-top: auto; padding-top: 18px; color: var(--lgj-accent); font-size: 13px; font-weight: 800; }
+.career-marketplace__quick {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-top: 22px;
+  padding-top: 20px;
+  border-top: 1px solid var(--lgj-line);
+}
+.career-marketplace__quick-label { color: var(--lgj-muted); font-size: 12px; font-weight: 750; }
+.career-marketplace__chips { display: flex; gap: 8px; flex-wrap: wrap; }
+.career-marketplace__chips a {
+  padding: 8px 12px;
+  border: 1px solid var(--lgj-line);
+  border-radius: 999px;
+  background: var(--lgj-card);
+  color: var(--lgj-ink);
+  font-size: 12px;
+  text-decoration: none;
+}
+.career-marketplace__chips a:hover { color: var(--lgj-accent); border-color: rgba(255,107,0,.3); }
+
+/* Common content cards */
+.explore-hub-banner,
+.home-discovery-block,
+.home-jobs-section,
+.home-map-block,
+.home-state-jobs-panel {
+  border-color: var(--lgj-line) !important;
+  box-shadow: 0 4px 20px rgba(16,24,40,.04);
+}
+
+button, a { -webkit-tap-highlight-color: transparent; }
+button:focus-visible, a:focus-visible, input:focus-visible {
+  outline: 3px solid rgba(255,107,0,.24);
+  outline-offset: 2px;
+}
+
+@media (max-width: 1050px) {
+  .career-marketplace__grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
+  .career-marketplace__head { align-items: flex-start; }
+}
+@media (max-width: 640px) {
+  .home-page-main { width: min(100% - 20px, 1440px); }
+  .career-marketplace { padding: 20px 16px; margin: 18px 0; }
+  .career-marketplace__head { display: block; }
+  .career-marketplace__primary { display: inline-block; margin-top: 16px; }
+  .career-marketplace__grid { grid-template-columns: 1fr; }
+  .career-offer-card { min-height: 190px; }
+  .career-marketplace__quick { align-items: flex-start; flex-direction: column; }
+}

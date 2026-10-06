@@ -21,6 +21,11 @@
     <priority>0.75</priority>
   </url>
   <url>
+    <loc>https://www.livegovtjobs.com/india</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.95</priority>
+  </url>
+  <url>
     <loc>https://www.livegovtjobs.com/boards</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -67,6 +72,36 @@
   </url>
   <url>
     <loc>https://www.livegovtjobs.com/alerts</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.livegovtjobs.com/education</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://www.livegovtjobs.com/career</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.livegovtjobs.com/education/mock-tests</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.livegovtjobs.com/admission</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.livegovtjobs.com/scholarships</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.livegovtjobs.com/yojana</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>

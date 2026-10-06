@@ -81,10 +81,13 @@ function record(id, layer, label, status, detail, fix, durationMs) {
  */
 function runNpm(id, layer, label, cmd, cmdArgs, opts = {}) {
   const started = Date.now()
-  const r = spawnSync(cmd, cmdArgs, {
+  const npmCli = process.env.npm_execpath
+  const invocation = npmCli && cmd === 'npm'
+    ? { command: process.execPath, args: [npmCli, ...cmdArgs] }
+    : { command: cmd, args: cmdArgs }
+  const r = spawnSync(invocation.command, invocation.args, {
     cwd: root,
     encoding: 'utf8',
-    shell: true,
     timeout: opts.timeoutMs ?? 600_000,
     env: { ...process.env, FORCE_COLOR: '0' },
   })

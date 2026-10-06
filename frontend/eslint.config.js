@@ -11,6 +11,7 @@ const browserGlobals = {
   localStorage: 'readonly',
   sessionStorage: 'readonly',
   URL: 'readonly',
+  URLSearchParams: 'readonly',
   HTMLElement: 'readonly',
   HTMLAnchorElement: 'readonly',
   HTMLLinkElement: 'readonly',

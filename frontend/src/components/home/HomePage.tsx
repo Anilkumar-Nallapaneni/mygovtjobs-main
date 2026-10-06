@@ -9,6 +9,7 @@ import EducationFilterPill from "@/components/home/EducationFilterPill";
 import HomeHeroMarketing from "@/components/home/HomeHeroMarketing";
 import ExploreHubBanner from "@/components/home/ExploreHubBanner";
 import HomeJobsListSection from "@/components/home/HomeJobsListSection";
+import HomeCareerMarketplace from "@/components/home/HomeCareerMarketplace";
 import ClosingDeadlinesStrip from "@/components/home/ClosingDeadlinesStrip";
 import ResultsHubFilters from "@/components/home/ResultsHubFilters";
 import { useHomePageDerived } from "@/components/home/useHomePageDerived";
@@ -427,6 +428,7 @@ export default function HomePage({
 
         {!selectedState && !isBrowseLanding && (
           <>
+            <HomeCareerMarketplace />
             <ExploreHubBanner />
             <Suspense fallback={null}>
               <HomeDiscoveryBlock

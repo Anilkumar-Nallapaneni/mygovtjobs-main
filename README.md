@@ -636,6 +636,11 @@ Run from **repo root** unless noted.
 | [docs/DEPLOY_VERCEL_SUPABASE.md](docs/DEPLOY_VERCEL_SUPABASE.md) | Deploy focus |
 | [docs/DAILY_8AM_SYNC.md](docs/DAILY_8AM_SYNC.md) | Daily ingest details |
 | [docs/GO_LIVE.md](docs/GO_LIVE.md) | Production go-live steps |
+| [docs/RELEASE_AUDIT.md](docs/RELEASE_AUDIT.md) | Latest local release audit and verification limits |
+| [docs/DEPLOYMENT.md](docs/DEPLOYMENT.md) | Node, npm, Vercel, Supabase, and release workflow |
+| [docs/INDIA_PLATFORM.md](docs/INDIA_PLATFORM.md) | India Explorer routes, APIs, and directory data |
+| [docs/DATA_TRUST_POLICY.md](docs/DATA_TRUST_POLICY.md) | Verification, attribution, and import policy |
+| [docs/SEO.md](docs/SEO.md) | Canonicals, structured data, robots, and sitemap |
 | [docs/COMPONENTS.md](docs/COMPONENTS.md) | Every React component |
 | [AGENTS.md](AGENTS.md) | AI/developer conventions |
 
@@ -670,3 +675,7 @@ mygovtjobs-main/
 | Daily GitHub ingest | 8 AM IST |
 | GA4 + Vercel Analytics | Configured |
 | Google Search Console | Sitemap at `/sitemap.xml` |
+
+## India Explorer production backend
+
+See `docs/INDIA_EXPLORER_PRODUCTION_2026-10-05.md` for the production backend, data-import policy, Supabase migration `042_india_explorer_backend.sql`, API endpoints, and deployment order.

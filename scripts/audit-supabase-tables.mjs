@@ -23,8 +23,8 @@ function loadEnv(path) {
 }
 
 const fe = loadEnv(join(root, "frontend/.env.local"));
-const url = (fe.VITE_SUPABASE_URL || "").replace(/\/$/, "");
-const anon = fe.VITE_SUPABASE_ANON_KEY;
+const url = (process.env.VITE_SUPABASE_URL || process.env.SUPABASE_URL || fe.VITE_SUPABASE_URL || "").replace(/\/$/, "");
+const anon = process.env.VITE_SUPABASE_ANON_KEY || process.env.SUPABASE_ANON_KEY || fe.VITE_SUPABASE_ANON_KEY;
 
 if (!url || !anon) {
   console.error("Set VITE_SUPABASE_URL and VITE_SUPABASE_ANON_KEY in frontend/.env.local");

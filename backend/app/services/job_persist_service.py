@@ -13,7 +13,7 @@ from sqlalchemy.dialects.postgresql import insert
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from app.config import get_settings
-from app.models.job import Job
+from app.models.job import Job, Source
 from app.services.dedupe_service import content_hash, title_fingerprint
 from app.services.document_classifier import classify_document, classify_from_normalized
 from app.services.job_completeness_service import calculate_completeness
@@ -140,6 +140,12 @@ class JobPersistService:
         dept = clean_plain_text(normalized.get("dept") or normalized.get("organization")) or None
         published_at = _upsert_published_at(normalized)
         source_url = _resolve_source_url(normalized, apply_url)
+        source_code = str(normalized.get("source") or normalized.get("source_code") or "").strip()
+        source_id = None
+        if source_code:
+            source_id = (
+                await session.execute(select(Source.id).where(Source.code == source_code).limit(1))
+            ).scalar_one_or_none()
         slug = normalized.get("slug") or slugify(
             title,
             digest,
@@ -273,6 +279,7 @@ class JobPersistService:
             ),
             "review_reasons": sanitize_json_for_postgres(review_reasons[:40]),
             "source_url": source_url,
+            "source_id": str(source_id) if source_id else None,
             "source_domain": _source_domain(source_url),
             "confidence_score": classification.confidence,
             "publication_confidence": validation.confidence,
@@ -318,6 +325,7 @@ class JobPersistService:
             "source_evidence": row["source_evidence"],
             "review_reasons": row["review_reasons"],
             "source_url": row["source_url"],
+            "source_id": row["source_id"],
             "source_domain": row["source_domain"],
             "confidence_score": row["confidence_score"],
             "publication_confidence": preserve_gate_value(

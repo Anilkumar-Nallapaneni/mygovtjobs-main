@@ -1,0 +1,168 @@
+/* India Explorer — premium responsive visual system. Scoped to the explorer only. */
+
+.india-explorer {
+  --ie-ink: var(--ds-text-body, #f5f7fb);
+  --ie-muted: var(--ds-text-muted, #91a0b5);
+  --ie-panel: var(--ds-bg1, #0b1220);
+  --ie-panel-2: var(--ds-bg2, #101827);
+  --ie-border: var(--ds-borderHi, rgba(148,163,184,.18));
+  --ie-accent: var(--ds-saffron, #ff6b00);
+  --ie-accent-2: var(--ds-gold, #ffaa00);
+  --ie-accent-soft: rgba(255,107,0,.12);
+  --ie-green: #22c55e;
+  width: min(1380px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 28px 0 88px;
+  color: var(--ie-ink);
+}
+
+.india-explorer *, .india-explorer *::before, .india-explorer *::after { box-sizing: border-box; }
+.india-explorer a { color: inherit; }
+.india-explorer h1, .india-explorer h2, .india-explorer h3, .india-explorer p { margin: 0; }
+.india-explorer p { color: var(--ie-muted); line-height: 1.7; }
+.india-explorer h1 { font-size: clamp(2.2rem, 5vw, 4.8rem); line-height: .98; letter-spacing: -.055em; font-weight: 900; }
+.india-explorer h2 { font-size: clamp(1.25rem, 2vw, 1.65rem); line-height: 1.1; letter-spacing: -.025em; font-weight: 850; }
+.india-explorer h3 { font-size: .9rem; }
+
+.india-explorer__hero {
+  position: relative; overflow: hidden; display: grid; grid-template-columns: minmax(0,1fr) 250px; gap: 24px;
+  padding: clamp(28px, 5vw, 54px); border: 1px solid var(--ie-border); border-radius: 32px;
+  background: radial-gradient(circle at 85% 15%, rgba(255,170,0,.18), transparent 28%),
+              radial-gradient(circle at 70% 80%, rgba(255,107,0,.13), transparent 30%),
+              linear-gradient(135deg, var(--ie-panel-2), var(--ie-panel));
+  box-shadow: 0 24px 70px rgba(0,0,0,.22); isolation: isolate;
+}
+.india-explorer__hero::after { content:""; position:absolute; width:360px; height:360px; right:-170px; top:-190px; border-radius:50%; border:1px solid rgba(255,170,0,.2); box-shadow:0 0 0 42px rgba(255,170,0,.025),0 0 0 84px rgba(255,170,0,.018); pointer-events:none; }
+.india-explorer__hero > * { position:relative; z-index:1; }
+.india-explorer__eyebrow { display:inline-flex; align-items:center; gap:8px; margin-bottom:13px; color: var(--ie-accent-2); font-size: .7rem; font-weight:900; letter-spacing:.18em; text-transform:uppercase; }
+.india-explorer__eyebrow::before { content:""; width:24px; height:2px; border-radius:2px; background:linear-gradient(90deg,var(--ie-accent),var(--ie-accent-2)); }
+.india-explorer__hero p { max-width: 780px; margin-top: 18px; font-size: 1rem; }
+.india-explorer__search { display:flex; align-items:center; gap:12px; max-width:760px; margin-top:28px; padding:5px 8px 5px 17px; border:1px solid rgba(255,255,255,.12); border-radius:18px; background:rgba(255,255,255,.065); box-shadow: inset 0 1px 0 rgba(255,255,255,.06), 0 12px 34px rgba(0,0,0,.16); }
+.india-explorer__search:focus-within { border-color:rgba(255,170,0,.55); box-shadow:0 0 0 4px rgba(255,170,0,.09); }
+.india-explorer__search span { display:grid; place-items:center; width:42px; height:42px; border-radius:13px; background:var(--ie-accent-soft); color:var(--ie-accent-2); font-size:1.35rem; }
+.india-explorer__search input { min-width:0; flex:1; height:44px; border:0; outline:0; background:transparent; color:var(--ie-ink); font:inherit; }
+.india-explorer__search input::placeholder { color:var(--ie-muted); }
+.india-explorer__hero-stat { display:flex; flex-direction:column; align-items:center; justify-content:center; min-height:190px; padding:24px; border:1px solid rgba(255,255,255,.1); border-radius:24px; background:rgba(255,255,255,.055); backdrop-filter:blur(16px); text-align:center; }
+.india-explorer__hero-stat strong { font-size:clamp(3.2rem,6vw,5.4rem); line-height:.9; letter-spacing:-.07em; background:linear-gradient(135deg,#fff,var(--ie-accent-2)); -webkit-background-clip:text; background-clip:text; color:transparent; }
+.india-explorer__hero-stat span { margin-top:14px; color:var(--ie-muted); font-size:.78rem; font-weight:800; text-transform:uppercase; letter-spacing:.09em; }
+
+.india-explorer__map-layout { display:grid; grid-template-columns:minmax(0,1.55fr) minmax(320px,.75fr); gap:20px; margin-top:22px; }
+.india-explorer__map-card, .india-explorer__state-list, .india-explorer__layers, .state-explorer__overview, .state-explorer__detail-grid article, .state-explorer__spotlight {
+  border:1px solid var(--ie-border); background:linear-gradient(180deg,var(--ie-panel),var(--ie-panel-2)); border-radius:24px; box-shadow:0 14px 42px rgba(0,0,0,.14);
+}
+.india-explorer__map-card { min-width:0; padding:22px; }
+.india-explorer__map-card .india-map-container { min-height:520px; border-radius:18px; overflow:hidden; background:radial-gradient(circle at 50% 45%,rgba(255,170,0,.08),transparent 44%), var(--ie-panel-2); }
+.india-explorer__map-card svg { max-height:560px; }
+.india-explorer__state-list { padding:22px; }
+.india-explorer__section-head { display:flex; justify-content:space-between; align-items:flex-start; gap:16px; margin-bottom:18px; }
+.india-explorer__section-head p { margin-top:6px; font-size:.82rem; }
+.india-explorer__live-dot { display:inline-flex; align-items:center; gap:7px; white-space:nowrap; color:var(--ie-green); font-size:.72rem; font-weight:850; padding:7px 10px; border:1px solid rgba(34,197,94,.2); border-radius:999px; background:rgba(34,197,94,.07); }
+.india-explorer__live-dot::first-letter { font-size:.55rem; }
+.india-explorer__state-grid { display:grid; grid-template-columns:1fr 1fr; gap:9px; max-height:535px; overflow:auto; padding-right:4px; scrollbar-width:thin; }
+.india-explorer__state-grid button { min-height:48px; display:flex; align-items:center; justify-content:space-between; gap:10px; text-align:left; border:1px solid var(--ie-border); background:rgba(255,255,255,.025); color:var(--ie-ink); border-radius:14px; padding:11px 12px; cursor:pointer; font:inherit; font-size:.8rem; font-weight:800; transition:.18s ease; }
+.india-explorer__state-grid button:hover { transform:translateY(-2px); border-color:rgba(255,170,0,.42); background:var(--ie-accent-soft); box-shadow:0 9px 20px rgba(0,0,0,.14); }
+.india-explorer__state-grid span { flex:none; color:var(--ie-muted); font-size:.65rem; font-weight:900; letter-spacing:.06em; }
+
+.india-explorer__layers { margin-top:20px; padding:24px; }
+.india-explorer__category-grid { display:flex; flex-wrap:wrap; gap:9px; }
+.india-layer-filter { border:1px solid var(--ie-border); background:rgba(255,255,255,.025); color:var(--ie-muted); padding:10px 14px; border-radius:999px; cursor:pointer; font:inherit; font-size:.76rem; font-weight:850; transition:.18s ease; }
+.india-layer-filter:hover { color:var(--ie-ink); border-color:rgba(255,170,0,.35); transform:translateY(-1px); }
+.india-layer-filter--active { color:#1b1000; border-color:transparent; background:linear-gradient(135deg,var(--ie-accent),var(--ie-accent-2)); box-shadow:0 8px 22px rgba(255,107,0,.2); }
+.india-explorer__category-grid--cards { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:13px; margin-top:18px; }
+.india-explorer-card { position:relative; min-width:0; display:flex; align-items:center; gap:14px; padding:18px; border:1px solid var(--ie-border); border-radius:18px; background:linear-gradient(145deg,rgba(255,255,255,.045),rgba(255,255,255,.015)); color:inherit; text-decoration:none; overflow:hidden; transition:transform .2s ease,border-color .2s ease,box-shadow .2s ease,background .2s ease; }
+.india-explorer-card::after { content:""; position:absolute; width:80px; height:80px; right:-40px; bottom:-45px; border-radius:50%; background:var(--ie-accent-soft); transition:.2s ease; }
+.india-explorer-card:hover { transform:translateY(-4px); border-color:rgba(255,170,0,.38); background:linear-gradient(145deg,rgba(255,107,0,.1),rgba(255,255,255,.025)); box-shadow:0 16px 34px rgba(0,0,0,.2); }
+.india-explorer-card:hover::after { transform:scale(2); }
+.india-explorer-card__icon { position:relative; z-index:1; flex:none; width:46px; height:46px; display:grid; place-items:center; border:1px solid rgba(255,170,0,.16); border-radius:14px; background:linear-gradient(145deg,rgba(255,170,0,.13),rgba(255,107,0,.06)); font-size:1.35rem; }
+.india-explorer-card__body { position:relative; z-index:1; display:flex; flex-direction:column; min-width:0; gap:4px; }
+.india-explorer-card__body strong { font-size:.85rem; font-weight:850; }
+.india-explorer-card__body span { color:var(--ie-muted); font-size:.7rem; line-height:1.5; }
+.india-explorer-card__arrow { position:relative; z-index:1; margin-left:auto; color:var(--ie-accent-2); font-size:1rem; transition:transform .18s ease; }
+.india-explorer-card:hover .india-explorer-card__arrow { transform:translateX(4px); }
+
+.state-explorer__header { display:flex; justify-content:space-between; align-items:flex-end; gap:24px; padding:12px 0 26px; }
+.india-explorer__back { display:inline-flex; align-items:center; gap:7px; margin-bottom:18px; color:var(--ie-accent-2); text-decoration:none; font-size:.78rem; font-weight:850; }
+.india-explorer__back:hover { color:var(--ie-ink); }
+.state-explorer__header p { max-width:850px; margin-top:14px; }
+.state-explorer__badge { min-width:140px; padding:24px; border:1px solid var(--ie-border); border-radius:22px; background:linear-gradient(145deg,var(--ie-accent-soft),rgba(255,255,255,.02)); text-align:center; }
+.state-explorer__badge strong { display:block; font-size:2.6rem; letter-spacing:-.05em; background:linear-gradient(135deg,#fff,var(--ie-accent-2)); -webkit-background-clip:text; background-clip:text; color:transparent; }
+.state-explorer__badge span { color:var(--ie-muted); font-size:.68rem; font-weight:850; text-transform:uppercase; letter-spacing:.08em; }
+.state-explorer__overview { display:grid; grid-template-columns:minmax(320px,.9fr) minmax(0,1.1fr); overflow:hidden; }
+.state-explorer__map { min-height:390px; display:grid; place-items:center; padding:28px; background:radial-gradient(circle at center,rgba(255,170,0,.09),transparent 52%),var(--ie-panel-2); }
+.state-explorer__facts { padding:32px; }
+.state-explorer__fact-grid { display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-top:20px; }
+.state-explorer__fact-grid div { padding:16px; border:1px solid var(--ie-border); border-radius:15px; background:rgba(255,255,255,.025); }
+.state-explorer__fact-grid span { display:block; color:var(--ie-muted); font-size:.63rem; text-transform:uppercase; letter-spacing:.1em; font-weight:850; }
+.state-explorer__fact-grid strong { display:block; margin-top:7px; font-size:.78rem; line-height:1.5; }
+.state-explorer__facts h3 { margin:25px 0 11px; color:var(--ie-muted); text-transform:uppercase; letter-spacing:.1em; font-size:.65rem; }
+.state-explorer__chips { display:flex; flex-wrap:wrap; gap:8px; }
+.state-explorer__chips span, .state-explorer__spotlight-list span { padding:8px 11px; border:1px solid var(--ie-border); border-radius:999px; background:rgba(255,255,255,.035); color:var(--ie-muted); font-size:.68rem; font-weight:750; }
+.state-explorer__spotlight { display:grid; grid-template-columns:minmax(0,1fr) minmax(280px,.9fr); gap:24px; align-items:center; margin-top:20px; padding:26px; background:radial-gradient(circle at 100% 0,rgba(255,170,0,.11),transparent 40%),linear-gradient(145deg,var(--ie-panel),var(--ie-panel-2)); }
+.state-explorer__spotlight h2 { margin-bottom:8px; }
+.state-explorer__spotlight-list { display:flex; flex-wrap:wrap; gap:8px; }
+.state-explorer__detail-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:18px; margin-top:20px; }
+.state-explorer__detail-grid article { padding:23px; }
+.state-explorer__detail-grid h2 { margin-bottom:16px; font-size:1rem; }
+.india-explorer--empty { min-height:60vh; display:grid; place-content:center; text-align:center; gap:14px; }
+.india-explorer--empty a { color:var(--ie-accent-2); font-weight:850; }
+
+@media (max-width: 1050px) {
+  .india-explorer__hero { grid-template-columns:1fr; }
+  .india-explorer__hero-stat { min-height:130px; }
+  .india-explorer__map-layout, .state-explorer__overview { grid-template-columns:1fr; }
+  .india-explorer__map-card .india-map-container { min-height:440px; }
+  .india-explorer__category-grid--cards { grid-template-columns:repeat(2,minmax(0,1fr)); }
+  .state-explorer__detail-grid { grid-template-columns:1fr; }
+}
+@media (max-width: 700px) {
+  .india-explorer { width:min(100% - 18px,1380px); padding:14px 0 60px; }
+  .india-explorer__hero { padding:25px 20px; border-radius:24px; }
+  .india-explorer h1 { font-size:clamp(2.15rem,12vw,3.2rem); }
+  .india-explorer__hero-stat { min-height:100px; }
+  .india-explorer__map-card, .india-explorer__state-list, .india-explorer__layers { padding:16px; border-radius:19px; }
+  .india-explorer__map-card .india-map-container { min-height:310px; }
+  .india-explorer__state-grid { grid-template-columns:1fr; max-height:380px; }
+  .india-explorer__category-grid--cards { grid-template-columns:1fr; }
+  .state-explorer__header { align-items:flex-start; flex-direction:column; }
+  .state-explorer__badge { min-width:100px; padding:16px 20px; }
+  .state-explorer__overview { border-radius:19px; }
+  .state-explorer__map { min-height:300px; padding:16px; }
+  .state-explorer__facts { padding:21px; }
+  .state-explorer__fact-grid { grid-template-columns:1fr; }
+  .state-explorer__spotlight { grid-template-columns:1fr; padding:21px; border-radius:19px; }
+  .india-explorer__section-head { flex-direction:column; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .india-explorer * { scroll-behavior:auto !important; transition:none !important; animation:none !important; }
+}
+
+.india-explorer__loading{grid-column:1/-1;padding:18px;border:1px dashed var(--ds-border,#334155);border-radius:16px;color:var(--ds-text-secondary,#94a3b8);text-align:center}
+.state-explorer__spotlight-list a{display:flex;flex-direction:column;gap:4px;text-decoration:none;color:inherit;padding:12px 14px;border:1px solid var(--ds-border,#334155);border-radius:14px;background:rgba(255,255,255,.035);transition:transform .18s ease,border-color .18s ease,background .18s ease}
+.state-explorer__spotlight-list a:hover{transform:translateY(-2px);border-color:rgba(255,170,0,.55);background:rgba(255,107,0,.07)}
+.state-explorer__spotlight-list a strong{color:var(--ds-text,#f8fafc);font-size:.95rem}
+.state-explorer__spotlight-list a small{color:var(--ds-text-secondary,#94a3b8);font-size:.78rem}
+
+
+.state-explorer__districts { margin-top: 28px; }
+.state-explorer__district-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(190px,1fr)); gap:12px; margin-top:14px; }
+.state-explorer__district-card { display:flex; flex-direction:column; gap:7px; padding:16px; border:1px solid var(--ds-border,#e2e8f0); border-radius:16px; background:var(--ds-surface,#fff); text-decoration:none; color:inherit; box-shadow:0 6px 18px rgba(15,23,42,.05); }
+.state-explorer__district-card:hover { transform:translateY(-1px); box-shadow:0 10px 24px rgba(15,23,42,.08); }
+.state-explorer__district-card span { font-size:.8rem; opacity:.7; }
+.india-explorer__empty-card { padding:20px; border:1px dashed #cbd5e1; border-radius:16px; background:#f8fafc; }
+
+
+.india-explorer__directory-glance { margin-top:20px; padding:24px; border:1px solid var(--ie-border); border-radius:22px; background:linear-gradient(145deg,rgba(255,255,255,.04),rgba(255,255,255,.015)); }
+.india-explorer__search--compact { max-width:620px; margin:16px 0 18px; }
+.india-explorer__verified-badge { padding:8px 11px; border:1px solid rgba(34,197,94,.22); border-radius:999px; color:#22c55e; font-size:.7rem; font-weight:850; }
+.india-explorer__district-glance-grid { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:10px; max-height:520px; overflow:auto; padding-right:3px; }
+.india-explorer__district-glance-grid button { display:flex; flex-direction:column; align-items:flex-start; gap:4px; min-height:88px; padding:13px; border:1px solid var(--ie-border); border-radius:15px; background:rgba(255,255,255,.025); color:var(--ie-ink); text-align:left; cursor:pointer; font:inherit; }
+.india-explorer__district-glance-grid button:hover { transform:translateY(-2px); border-color:rgba(255,170,0,.42); }
+.india-explorer__district-glance-grid button strong { font-size:.8rem; }
+.india-explorer__district-glance-grid button span { color:var(--ie-muted); font-size:.67rem; }
+.india-explorer__district-glance-grid button small { color:var(--ie-muted); font-size:.62rem; }
+.india-explorer__state-grid button { display:grid; grid-template-columns:1fr auto; grid-template-rows:auto auto; }
+.india-explorer__state-grid button strong { grid-column:1; }
+.india-explorer__state-grid button span { grid-column:2; grid-row:1; }
+.india-explorer__state-grid button small { grid-column:1/-1; color:var(--ie-muted); font-size:.61rem; font-weight:700; }
+@media (max-width:1050px){ .india-explorer__district-glance-grid{grid-template-columns:repeat(3,minmax(0,1fr));} }
+@media (max-width:700px){ .india-explorer__district-glance-grid{grid-template-columns:repeat(2,minmax(0,1fr));} }

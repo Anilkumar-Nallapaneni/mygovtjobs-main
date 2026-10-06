@@ -55,6 +55,13 @@ export const DesignationLandingPage = lazy(() => import("@/pages/DesignationLand
 export const DesignationsIndexPage = lazy(() => import("@/pages/DesignationsIndexPage"));
 export const AdminDashboardPage = lazy(() => import("@/pages/AdminDashboardPage"));
 export const NotFoundPage = lazy(() => import("@/pages/NotFoundPage"));
+export const EducationHubPage = lazy(() => import("@/pages/EducationHubPage"));
+export const EducationDashboardPage = lazy(() => import("@/pages/EducationDashboardPage"));
+export const EducationAdminPage = lazy(() => import("@/pages/EducationAdminPage"));
+export const EducationCareerPage = lazy(() => import("@/pages/EducationCareerPage"));
+export const IndiaExplorerPage = lazy(() => import("@/pages/IndiaExplorerPage"));
+export const StateExplorerPage = lazy(() => import("@/pages/StateExplorerPage"));
+export const DistrictExplorerPage = lazy(() => import("@/pages/DistrictExplorerPage"));
 
 export const AboutPage = lazyStaticLegalPage(() => import("@/pages/legalContent"), "ABOUT_PAGE");
 export const PrivacyPage = lazyStaticLegalPage(() => import("@/pages/legalContent"), "PRIVACY_PAGE");
