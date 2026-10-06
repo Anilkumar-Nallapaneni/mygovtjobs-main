@@ -234,6 +234,12 @@ export default function Navbar({
 
         {!isCompactNav ? (
           <div className="navbar__utilities">
+            <Link to="/india" className="navbar__account-link" style={{ color: "var(--accent, #0891b2)", fontWeight: 800 }}>
+              India Map
+            </Link>
+            <Link to="/education" className="navbar__account-link" style={{ color: "var(--accent, #0891b2)", fontWeight: 800 }}>
+              Career & Education
+            </Link>
             <IndianLanguageSelector />
 
             <Link to="/account" className="navbar__account-link">

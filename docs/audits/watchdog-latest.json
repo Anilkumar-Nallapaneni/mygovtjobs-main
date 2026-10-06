@@ -1,13 +1,21 @@
 {
-  "generatedAt": "2026-09-27T10:34:40.014048+00:00",
+  "generatedAt": "2026-09-30T10:50:46.636424+00:00",
   "apply": true,
-  "scanned": 30,
-  "ok": 18,
+  "scanned": 25,
+  "ok": 16,
   "demoted": [
     {
       "id": "510eb3b0-4c23-43b5-8fb9-a9b428c3d534",
       "slug": "export-import-bank-of-india-exim-bank-srd-deputy-manager-and-manager-hrm-dm-m-sr-d59386f2",
       "title": "Exim Bank SRD Deputy Manager and Manager — HRM/DM & M/SRD/2026-27/04 (8 posts)",
+      "reasons": [
+        "non-vacancy document"
+      ]
+    },
+    {
+      "id": "44770bec-8a2e-4d7e-8d3c-b610c69e2056",
+      "slug": "isro-propulsion-complex-iprc-mahendragiri-isro-iprc-technical-assistant-technici-63479bfd",
+      "title": "ISRO IPRC Technical Assistant, Technician B, Cook and Fireman — IPRC/RMT/2026/01 (22 posts)",
       "reasons": [
         "non-vacancy document"
       ]
@@ -24,14 +32,6 @@
       "id": "575958c6-4845-4496-b5eb-0fbe1b2ea9f2",
       "slug": "union-public-service-commission-upsc-upsc-advertisement-no-11-2026-specialist-ap-70237fd0",
       "title": "UPSC Advertisement No. 11/2026 — Specialist, APP and other posts",
-      "reasons": [
-        "non-vacancy document"
-      ]
-    },
-    {
-      "id": "44770bec-8a2e-4d7e-8d3c-b610c69e2056",
-      "slug": "isro-propulsion-complex-iprc-mahendragiri-isro-iprc-technical-assistant-technici-63479bfd",
-      "title": "ISRO IPRC Technical Assistant, Technician B, Cook and Fireman — IPRC/RMT/2026/01 (22 posts)",
       "reasons": [
         "non-vacancy document"
       ]
@@ -69,30 +69,6 @@
       ]
     },
     {
-      "id": "883e67fc-687d-482b-a915-f36f114b6670",
-      "slug": "addendum-notice-19-posts-of-manager-grade-i-section-officer-ministry-of-defence-67983808",
-      "title": "Addendum Notice: 19 Posts of Manager Grade - I - Section Officer, Ministry of Defence",
-      "reasons": [
-        "non-vacancy document"
-      ]
-    },
-    {
-      "id": "d46f5889-507b-46a6-b698-7d0cc8099eb0",
-      "slug": "addendum-notice-32-posts-of-accounts-officer-administration-of-union-territory-o-61662120",
-      "title": "Addendum Notice: 32 Posts of Accounts Officer, Administration of Union Territory of Ladakh",
-      "reasons": [
-        "non-vacancy document"
-      ]
-    },
-    {
-      "id": "437549f0-25db-4b07-8ea9-4800b3fc4242",
-      "slug": "addendum-notice-08-posts-of-administrative-officer-grade-i-ministry-of-defence-074b6ac5",
-      "title": "Addendum Notice: 08 Posts of Administrative Officer Grade - I, Ministry of Defence",
-      "reasons": [
-        "non-vacancy document"
-      ]
-    },
-    {
       "id": "5aaff605-8801-4455-bb34-a1ab6b8ef8bd",
       "slug": "tezpur-university-junior-research-fellow-recruitment-2026-apply-online-96f771fe",
       "title": "Tezpur University Junior Research Fellow Recruitment 2026 - Apply Online",
@@ -101,5 +77,5 @@
       ]
     }
   ],
-  "rowsUpdated": 12
+  "rowsUpdated": 9
 }

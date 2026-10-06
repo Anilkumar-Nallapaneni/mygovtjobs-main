@@ -65,6 +65,19 @@ export default function ExploreHubPage({ liveCount = 0, orgCount = 0, onFooterLi
         </div>
       </header>
 
+      <section className="explore-hub-page__section" aria-labelledby="india-explorer-link">
+        <div className="explore-hub-page__grid">
+          <HubCard
+            id="india-explorer"
+            href="/india"
+            icon="🇮🇳"
+            title="Explore India Map"
+            description="Explore every state and Union Territory with jobs, education, agriculture, industries, companies, tourism, heritage and knowledge."
+            accent="#0f766e"
+          />
+        </div>
+      </section>
+
       {HUB_SECTIONS.map((section) => (
         <section key={section.id} className="explore-hub-page__section" aria-labelledby={`hub-${section.id}`}>
           <h2 id={`hub-${section.id}`} className="explore-hub-page__section-title">

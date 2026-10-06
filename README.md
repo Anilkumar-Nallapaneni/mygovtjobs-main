@@ -670,3 +670,7 @@ mygovtjobs-main/
 | Daily GitHub ingest | 8 AM IST |
 | GA4 + Vercel Analytics | Configured |
 | Google Search Console | Sitemap at `/sitemap.xml` |
+
+## India Explorer production backend
+
+See `docs/INDIA_EXPLORER_PRODUCTION_2026-10-05.md` for the production backend, data-import policy, Supabase migration `042_india_explorer_backend.sql`, API endpoints, and deployment order.

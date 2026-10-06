@@ -87,6 +87,9 @@ export default function MobileNavDrawer({
               </button>
             );
           })}
+          <Link to="/education" className="mobile-nav-drawer__link" onClick={onClose}>
+            Career & Education
+          </Link>
           <Link to="/account" className="mobile-nav-drawer__link" onClick={onClose}>
             {t("nav.login")}
           </Link>

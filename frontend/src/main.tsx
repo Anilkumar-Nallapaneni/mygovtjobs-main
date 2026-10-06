@@ -185,3 +185,4 @@ if (import.meta.env.VITEST) {
   // Fallback if App mount fails — never leave users on a permanent shell.
   window.setTimeout(markAppReady, 5_000)
 }
+import './styles/premium-v4.css'

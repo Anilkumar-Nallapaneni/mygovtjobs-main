@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-09-27T10:25:26.507Z",
-  "count": 36,
+  "generatedAt": "2026-09-30T10:44:16.086Z",
+  "count": 37,
   "items": [
     {
       "id": "246cf795a95a5a9f",
@@ -14,6 +14,40 @@
       "dept": "Union Public Service Commission",
       "state": "All India",
       "category": "upsc",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "b3c33fffbb0b0748",
+      "title": "CLICK HERE TO DOWNLOAD MARKSHEET & CUT OFF FOR ADVT. NO. D-5-E-1-2025, [S-10-04].",
+      "link": "https://uppsc.up.nic.in/CandidatePages/Advertismentwise_DownloadDocument.aspx?inptprmtr=mc",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "uppsc-hall-tickets",
+      "sourceName": "UPPSC — Hall tickets",
+      "dept": "Uttar Pradesh PSC",
+      "state": "Uttar Pradesh",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "084c64752657e4bf",
+      "title": "05 Oct 2026 NOTICE REGARDING ADVT. NO. D-2/E-1/2025, DIRECTORATE OF MEDICAL AND HEALTH SERVICES UTTAR PRADESH, FILARIA CONTROL OFFICER, S-06/01(CUT OFF)",
+      "link": "https://uppsc.up.nic.in/Open_PDF.aspx?I4PnQ0tBagmNKfqXmoSUngRHocPuog4h",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "uppsc-hall-tickets",
+      "sourceName": "UPPSC — Hall tickets",
+      "dept": "Uttar Pradesh PSC",
+      "state": "Uttar Pradesh",
+      "category": "state",
       "stateIds": [
         "all"
       ],
@@ -109,23 +143,6 @@
         "ne"
       ],
       "fetchMethod": "html"
-    },
-    {
-      "id": "b3c33fffbb0b0748",
-      "title": "CLICK HERE TO DOWNLOAD MARKSHEET & CUT OFF FOR ADVT. NO. D-5-E-1-2025, [S-03-06].",
-      "link": "https://uppsc.up.nic.in/CandidatePages/Advertismentwise_DownloadDocument.aspx?inptprmtr=mc",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "uppsc-hall-tickets",
-      "sourceName": "UPPSC — Hall tickets",
-      "dept": "Uttar Pradesh PSC",
-      "state": "Uttar Pradesh",
-      "category": "state",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
     },
     {
       "id": "c70f8b20c685365f",

@@ -44,8 +44,12 @@
     "ingest:direct": "node scripts/run-python.mjs scripts/run-ingest-direct.py",
     "ingest:direct:quick": "node scripts/run-python.mjs scripts/run-ingest-direct.py --limit 20",
     "data:refresh": "node scripts/run-python.mjs scripts/run-full-data-refresh.py",
+    "education:seed": "tsx scripts/seed-education.ts",
+    "india:import": "node scripts/run-python.mjs scripts/india/import_directory.py csv",
+    "india:sync:education": "node scripts/run-python.mjs scripts/india/import_directory.py education-colleges",
     "sync:quick": "node scripts/run-python.mjs scripts/run-sync-quick.py",
     "sync:quick:rss": "node scripts/run-python.mjs scripts/run-sync-quick.py --rss-only",
+    "verify:production-seo": "node scripts/verify-production-seo.mjs",
     "sync:production": "npm run pipeline:production",
     "sync:production:core": "node scripts/run-python.mjs scripts/run-sync-production.py",
     "verify:production": "npm run pipeline:verify",
@@ -217,7 +221,10 @@
     "p8:audit": "npm run growth:audit && npm run check:performance-budgets",
     "p9:audit": "node scripts/audit-monetization-readiness.mjs",
     "phases:audit": "node scripts/run-all-phases.mjs",
-    "phases:apply": "node scripts/run-all-phases.mjs --apply"
+    "phases:apply": "node scripts/run-all-phases.mjs --apply",
+    "audit:india-explorer": "node scripts/audit-india-explorer.mjs",
+    "india:check": "npm run audit:india-explorer && node --check scripts/run-python.mjs",
+    "audit:india": "node scripts/audit-india-platform.mjs"
   },
   "dependencies": {
     "@vercel/analytics": "^2.0.1"

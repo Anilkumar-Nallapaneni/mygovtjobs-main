@@ -35,7 +35,7 @@ def test_upsert_normalized_updates_existing_source_url_row_without_insert():
         verification_status="UNVERIFIED",
     )
     session = AsyncMock()
-    session.execute = AsyncMock()
+    session.execute = AsyncMock(return_value=_execute_result("source-registry-id"))
     session.flush = AsyncMock()
     session.commit = AsyncMock()
 
@@ -47,6 +47,7 @@ def test_upsert_normalized_updates_existing_source_url_row_without_insert():
         "dept": "Wildlife Institute of India",
         "apply_url": "https://www.wii.gov.in/recruitments/advtno_wii_advt1_rpcell_july2026",
         "source_url": "https://www.wii.gov.in/recruitments/advtno_wii_advt1_rpcell_july2026",
+        "source": "wii",
         "content_hash": "new-content-hash",
         "detail": {"summary": "Recruitment notice for project positions"},
     }
@@ -57,7 +58,8 @@ def test_upsert_normalized_updates_existing_source_url_row_without_insert():
     assert result is existing
     assert existing.content_hash == "new-content-hash"
     assert existing.source_url == normalized["source_url"]
+    assert existing.source_id == "source-registry-id"
     assert existing.title == normalized["title"]
     session.flush.assert_awaited_once()
     session.commit.assert_awaited_once()
-    session.execute.assert_not_awaited()
+    session.execute.assert_awaited_once()

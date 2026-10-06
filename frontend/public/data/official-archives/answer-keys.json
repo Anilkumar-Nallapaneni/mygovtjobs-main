@@ -1,21 +1,38 @@
 {
-  "generatedAt": "2026-09-27T10:25:26.507Z",
+  "generatedAt": "2026-09-30T10:44:16.086Z",
   "count": 27,
   "items": [
     {
-      "id": "65b953b91c3e8ca2",
-      "title": "FINAL ANSWER KEY",
-      "link": "https://ctet.nic.in/previous-year-final-answer-key/",
+      "id": "b0408e9076d75cad",
+      "title": "Answer Key-OMR Exams",
+      "link": "https://www.keralapsc.gov.in/index.php/answerkey_omrexams",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
-      "sourceId": "ctet",
-      "sourceName": "CBSE — CTET",
-      "dept": "CBSE — CTET",
-      "state": "All India",
-      "category": "teaching",
+      "sourceId": "psc-kl",
+      "sourceName": "Kerala PSC",
+      "dept": "Kerala PSC",
+      "state": "Kerala",
+      "category": "state",
       "stateIds": [
-        "all"
+        "kl"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "bfc1c395481cde09",
+      "title": "Answer key-Online Exam",
+      "link": "https://www.keralapsc.gov.in/index.php/answerkey_onlineexams",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-kl",
+      "sourceName": "Kerala PSC",
+      "dept": "Kerala PSC",
+      "state": "Kerala",
+      "category": "state",
+      "stateIds": [
+        "kl"
       ],
       "fetchMethod": "html"
     },
@@ -54,36 +71,53 @@
       "fetchMethod": "html"
     },
     {
-      "id": "b0408e9076d75cad",
-      "title": "Answer Key-OMR Exams",
-      "link": "https://www.keralapsc.gov.in/index.php/answerkey_omrexams",
+      "id": "130a7eba0169af1c",
+      "title": "Notice to the candidates regarding Final Answer Key for the post of Primary Teacher (Mewat Cadre) against Advt. No. 05/2024, Cat. No.1 of Elementary Education Department, Haryana. | 2026-09-10",
+      "link": "https://hssc.gov.in/file/ac1f23cd-9fda-137e-81a0-89ede0820007/publicNotice",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
-      "sourceId": "psc-kl",
-      "sourceName": "Kerala PSC",
-      "dept": "Kerala PSC",
-      "state": "Kerala",
+      "sourceId": "ssb-hr",
+      "sourceName": "Haryana Staff Selection Commission (HSSC)",
+      "dept": "Haryana Staff Selection Commission (HSSC)",
+      "state": "Haryana",
       "category": "state",
       "stateIds": [
-        "kl"
+        "hr"
       ],
       "fetchMethod": "html"
     },
     {
-      "id": "bfc1c395481cde09",
-      "title": "Answer key-Online Exam",
-      "link": "https://www.keralapsc.gov.in/index.php/answerkey_onlineexams",
+      "id": "89583121f65e2f76",
+      "title": "Final Answer Key For The Post Of Primary Teacher (PRT) | 2026-09-10",
+      "link": "https://hssc.gov.in/file/ac1f23cd-9fda-137e-81a0-89a629190004/publicNotice",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
-      "sourceId": "psc-kl",
-      "sourceName": "Kerala PSC",
-      "dept": "Kerala PSC",
-      "state": "Kerala",
+      "sourceId": "ssb-hr",
+      "sourceName": "Haryana Staff Selection Commission (HSSC)",
+      "dept": "Haryana Staff Selection Commission (HSSC)",
+      "state": "Haryana",
       "category": "state",
       "stateIds": [
-        "kl"
+        "hr"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "65b953b91c3e8ca2",
+      "title": "FINAL ANSWER KEY",
+      "link": "https://ctet.nic.in/previous-year-final-answer-key/",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "ctet",
+      "sourceName": "CBSE — CTET",
+      "dept": "CBSE — CTET",
+      "state": "All India",
+      "category": "teaching",
+      "stateIds": [
+        "all"
       ],
       "fetchMethod": "html"
     },
@@ -122,40 +156,6 @@
       "category": "state",
       "stateIds": [
         "ne"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "130a7eba0169af1c",
-      "title": "Notice to the candidates regarding Final Answer Key for the post of Primary Teacher (Mewat Cadre) against Advt. No. 05/2024, Cat. No.1 of Elementary Education Department, Haryana. | 2026-09-10",
-      "link": "https://hssc.gov.in/file/ac1f23cd-9fda-137e-81a0-89ede0820007/publicNotice",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "ssb-hr",
-      "sourceName": "Haryana Staff Selection Commission (HSSC)",
-      "dept": "Haryana Staff Selection Commission (HSSC)",
-      "state": "Haryana",
-      "category": "state",
-      "stateIds": [
-        "hr"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "89583121f65e2f76",
-      "title": "Final Answer Key For The Post Of Primary Teacher (PRT) | 2026-09-10",
-      "link": "https://hssc.gov.in/file/ac1f23cd-9fda-137e-81a0-89a629190004/publicNotice",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "ssb-hr",
-      "sourceName": "Haryana Staff Selection Commission (HSSC)",
-      "dept": "Haryana Staff Selection Commission (HSSC)",
-      "state": "Haryana",
-      "category": "state",
-      "stateIds": [
-        "hr"
       ],
       "fetchMethod": "html"
     },

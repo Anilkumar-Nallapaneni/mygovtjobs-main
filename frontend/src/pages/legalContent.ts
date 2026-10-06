@@ -100,6 +100,13 @@ export const ABOUT_PAGE = {
       ],
     },
     {
+      heading: "Builder profile",
+      paragraphs: [
+        "Live Govt Jobs is an independent information platform built and maintained in India with a focus on making official recruitment information easier to discover.",
+        "The platform is being expanded into a location-first India directory so visitors can browse states, districts and cities even when a location has no current job notification.",
+      ],
+    },
+    {
       heading: "Why trust us",
       paragraphs: [
         "Live Govt Jobs lists recruitment notifications collected directly from official government portals (.gov.in, .gov, and verified employer career sites). We do not copy third-party aggregator sites.",

@@ -1,0 +1,15 @@
+{
+  "mode": "production",
+  "started_at_epoch": 1790960081,
+  "steps": [
+    {
+      "name": "production sync",
+      "required": true,
+      "returncode": 3221225478,
+      "duration_seconds": 72466.95
+    }
+  ],
+  "run_id": "fad6edec-f4c9-46a7-986a-55b9489e7804",
+  "finished_at_epoch": 1791032551,
+  "status": "failed"
+}
