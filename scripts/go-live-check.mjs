@@ -30,7 +30,11 @@ async function probeUrl(label, url, { expectSubstr } = {}) {
 }
 
 function run(label, cmd, args) {
-  const r = spawnSync(cmd, args, { cwd: root, encoding: 'utf8', shell: true })
+  const npmCli = process.env.npm_execpath
+  const invocation = npmCli && cmd === 'npm'
+    ? { command: process.execPath, args: [npmCli, ...args] }
+    : { command: cmd, args }
+  const r = spawnSync(invocation.command, invocation.args, { cwd: root, encoding: 'utf8' })
   const ok = r.status === 0
   console.log(ok ? `✓ ${label}` : `✗ ${label}`)
   if (!ok && r.stdout) process.stdout.write(r.stdout)
@@ -93,10 +97,11 @@ if (fe.VITE_GOOGLE_SITE_VERIFICATION?.trim()) {
   console.log('⚠ Search Console verification — add VITE_GOOGLE_SITE_VERIFICATION to frontend/.env.local then redeploy')
 }
 
-const apiUrl = fe.VITE_API_URL?.replace(/\/$/, '') || 'https://api.livegovtjobs.com'
+const localApiUrl = fe.VITE_API_URL?.replace(/\/$/, '')
 
 console.log('\n── Live probes (optional) ──')
-const apiHealth = process.env.API_HEALTH_URL || `${apiUrl}/health`
+const apiBaseUrl = (process.env.API_BASE_URL || 'https://api.livegovtjobs.com').replace(/\/$/, '')
+const apiHealth = process.env.API_HEALTH_URL || `${apiBaseUrl}/health`
 const sitemapUrl = process.env.SITEMAP_URL || 'https://www.livegovtjobs.com/sitemap.xml'
 const siteUrl = (process.env.SITE_URL || 'https://www.livegovtjobs.com').replace(/\/$/, '')
 const liveApiOk = await probeUrl('API /health', apiHealth, { expectSubstr: '"status"' })
@@ -109,6 +114,9 @@ await probeUrl('SPA /results (not Vercel 404)', `${siteUrl}/results`, {
 await probeUrl('SPA /results/admit-card', `${siteUrl}/results/admit-card`, {
   expectSubstr: 'id="root"',
 })
+if (localApiUrl && /localhost|127\.0\.0\.1/i.test(localApiUrl)) {
+  console.log(`ℹ Local VITE_API_URL=${localApiUrl} is reserved for development; production probe uses ${apiBaseUrl}`)
+}
 
 if (be.SENTRY_DSN) {
   console.log('✓ SENTRY_DSN configured locally')
@@ -128,12 +136,10 @@ if (be.TURNSTILE_SECRET_KEY) {
   console.log('⚠ Turnstile — optional bot protection; set TURNSTILE_SECRET_KEY + VITE_TURNSTILE_SITE_KEY')
 }
 
-if (fe.VITE_API_URL?.includes('api.livegovtjobs.com') || liveApiOk) {
-  console.log('\n✓ VITE_API_URL — production API reachable (or set in frontend/.env.local)')
-} else if (fe.VITE_API_URL) {
-  console.log(`\n⚠ VITE_API_URL=${fe.VITE_API_URL} — production should be https://api.livegovtjobs.com`)
+if (liveApiOk) {
+  console.log('\n✓ Production API health endpoint is reachable')
 } else {
-  console.log('\n⚠ VITE_API_URL — add to frontend/.env.local or run vercel:env:push:live')
+  console.log('\n⚠ Production API health endpoint is unavailable; verify the backend deployment and Vercel VITE_API_URL')
 }
 
 console.log('\n── Still manual (one-time) ──')

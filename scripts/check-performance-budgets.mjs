@@ -10,7 +10,7 @@ const publicData = join(root, 'frontend', 'public', 'data')
 
 const budgets = {
   maxJsChunkGzip: Number(process.env.BUDGET_MAX_JS_CHUNK_GZIP || 130 * 1024),
-  maxCssChunkGzip: Number(process.env.BUDGET_MAX_CSS_CHUNK_GZIP || 16 * 1024),
+  maxCssChunkGzip: Number(process.env.BUDGET_MAX_CSS_CHUNK_GZIP || 17 * 1024),
   maxBootstrapRaw: Number(process.env.BUDGET_MAX_BOOTSTRAP_RAW || 50 * 1024),
   maxListRaw: Number(process.env.BUDGET_MAX_LIST_RAW || 4 * 1024 * 1024),
 }

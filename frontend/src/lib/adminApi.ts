@@ -92,3 +92,24 @@ export type AdminOperations = {
 export async function fetchAdminOperations(adminKey: string): Promise<AdminOperations> {
   return adminFetch<AdminOperations>('/api/admin/operations', adminKey)
 }
+
+export type EducationCollection = 'careers' | 'resources' | 'tests' | 'colleges' | 'scholarships'
+export async function educationAdminFetch<T>(path: string, adminKey: string, init: RequestInit = {}): Promise<T> {
+  if (!API_BASE) throw new Error('VITE_API_URL is not set')
+  const res = await fetch(`${API_BASE}${path}`, {
+    ...init,
+    headers: { 'Content-Type': 'application/json', 'X-Admin-Key': adminKey, ...(init.headers || {}) },
+  })
+  if (!res.ok) throw new Error((await res.text()) || `HTTP ${res.status}`)
+  return res.json() as Promise<T>
+}
+export async function fetchEducationOverview(adminKey: string) { return educationAdminFetch<Record<string,{total:number;published:number}>>('/api/admin/education/overview', adminKey) }
+export async function fetchEducationCollection(kind: EducationCollection, adminKey: string, search = '') { return educationAdminFetch<{items: Record<string, unknown>[]}>(`/api/admin/education/${kind}${search ? `?search=${encodeURIComponent(search)}` : ''}`, adminKey) }
+export async function createEducationRecord(kind: EducationCollection, data: Record<string, unknown>, adminKey: string) { return educationAdminFetch<Record<string, unknown>>(`/api/admin/education/${kind}`, adminKey, { method: 'POST', body: JSON.stringify({data}) }) }
+export async function updateEducationRecord(kind: EducationCollection, id: string, data: Record<string, unknown>, adminKey: string) { return educationAdminFetch<Record<string, unknown>>(`/api/admin/education/${kind}/${id}`, adminKey, { method: 'PATCH', body: JSON.stringify({data}) }) }
+export async function deleteEducationRecord(kind: EducationCollection, id: string, adminKey: string) { return educationAdminFetch<Record<string, unknown>>(`/api/admin/education/${kind}/${id}`, adminKey, { method: 'DELETE' }) }
+export async function fetchEducationQuestions(testId: string, adminKey: string) { return educationAdminFetch<{items: Record<string, unknown>[]}>(`/api/admin/education/tests/${encodeURIComponent(testId)}/questions`, adminKey) }
+export async function createEducationQuestion(testId: string, data: Record<string, unknown>, adminKey: string) { return educationAdminFetch<Record<string, unknown>>(`/api/admin/education/tests/${encodeURIComponent(testId)}/questions`, adminKey, { method: 'POST', body: JSON.stringify(data) }) }
+export async function updateEducationQuestion(id: string, data: Record<string, unknown>, adminKey: string) { return educationAdminFetch<Record<string, unknown>>(`/api/admin/education/questions/${id}`, adminKey, { method: 'PATCH', body: JSON.stringify(data) }) }
+export async function deleteEducationQuestion(id: string, adminKey: string) { return educationAdminFetch<Record<string, unknown>>(`/api/admin/education/questions/${id}`, adminKey, { method: 'DELETE' }) }
+export async function recountEducationTest(testId: string, adminKey: string) { return educationAdminFetch<Record<string, unknown>>(`/api/admin/education/tests/${encodeURIComponent(testId)}/recount`, adminKey, { method: 'POST' }) }

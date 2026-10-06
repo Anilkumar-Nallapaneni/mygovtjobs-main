@@ -42,6 +42,7 @@ const STATIC_PATHS = [
   { loc: "/jobs/latest-notifications", changefreq: "hourly", priority: "0.85" },
   { loc: "/jobs/all-india", changefreq: "daily", priority: "0.75" },
   { loc: "/states", changefreq: "weekly", priority: "0.8" },
+  { loc: "/india", changefreq: "daily", priority: "0.95" },
   { loc: "/boards", changefreq: "weekly", priority: "0.8" },
   { loc: "/categories", changefreq: "weekly", priority: "0.6" },
   { loc: "/explore", changefreq: "weekly", priority: "0.8" },
@@ -57,6 +58,12 @@ const STATIC_PATHS = [
   { loc: "/results/topics", changefreq: "weekly", priority: "0.75" },
   { loc: "/results/admit-card", changefreq: "daily", priority: "0.8" },
   { loc: "/alerts", changefreq: "weekly", priority: "0.7" },
+  { loc: "/education", changefreq: "weekly", priority: "0.85" },
+  { loc: "/career", changefreq: "weekly", priority: "0.8" },
+  { loc: "/education/mock-tests", changefreq: "daily", priority: "0.8" },
+  { loc: "/admission", changefreq: "weekly", priority: "0.7" },
+  { loc: "/scholarships", changefreq: "weekly", priority: "0.7" },
+  { loc: "/yojana", changefreq: "weekly", priority: "0.7" },
   { loc: "/about", changefreq: "monthly", priority: "0.5" },
   { loc: "/contact", changefreq: "monthly", priority: "0.5" },
   { loc: "/sitemap", changefreq: "monthly", priority: "0.4" },
@@ -66,8 +73,9 @@ const STATIC_PATHS = [
 ];
 
 const STATE_IDS = [
-  "jk", "la", "hp", "pb", "hr", "dl", "uk", "rj", "up", "br", "sk", "wb", "as", "ne",
-  "jh", "od", "mp", "cg", "gj", "mh", "ga", "tg", "ap", "ka", "kl", "tn", "py", "an",
+  "jk", "la", "hp", "pb", "hr", "dl", "ch", "uk", "rj", "up", "br", "sk", "wb",
+  "as", "ar", "nl", "mn", "mz", "tr", "ml", "jh", "od", "mp", "cg", "gj", "dd",
+  "mh", "ga", "tg", "ap", "ka", "kl", "tn", "py", "an", "ld",
 ];
 
 const CATEGORY_IDS = [
@@ -135,13 +143,22 @@ function isApprovedArchiveJob(job) {
 
 async function loadJobsFromSupabase() {
   const fe = loadEnv(join(root, "frontend/.env.local"));
-  const url = (fe.VITE_SUPABASE_URL || process.env.VITE_SUPABASE_URL || "").replace(/\/$/, "");
-  const anon = fe.VITE_SUPABASE_ANON_KEY || process.env.VITE_SUPABASE_ANON_KEY;
-  if (!url || !anon) return null;
+  const url = (
+    fe.VITE_SUPABASE_URL ||
+    process.env.SUPABASE_URL ||
+    process.env.VITE_SUPABASE_URL ||
+    ""
+  ).replace(/\/$/, "");
+  const key =
+    process.env.SUPABASE_SERVICE_ROLE_KEY ||
+    process.env.SUPABASE_ANON_KEY ||
+    fe.VITE_SUPABASE_ANON_KEY ||
+    process.env.VITE_SUPABASE_ANON_KEY;
+  if (!url || !key) return null;
 
   const headers = {
-    apikey: anon,
-    Authorization: `Bearer ${anon}`,
+    apikey: key,
+    Authorization: `Bearer ${key}`,
   };
 
   const jobs = [];
@@ -165,6 +182,27 @@ async function loadJobsFromSupabase() {
   }
 
   return jobs;
+}
+
+async function loadVerifiedIndiaDistricts() {
+  const fe = loadEnv(join(root, "frontend/.env.local"));
+  const url = (fe.VITE_SUPABASE_URL || process.env.SUPABASE_URL || process.env.VITE_SUPABASE_URL || "").replace(/\/$/, "");
+  const key = process.env.SUPABASE_SERVICE_ROLE_KEY || process.env.SUPABASE_ANON_KEY || fe.VITE_SUPABASE_ANON_KEY || process.env.VITE_SUPABASE_ANON_KEY;
+  if (!url || !key) return [];
+  const headers = { apikey: key, Authorization: `Bearer ${key}` };
+  const rows = [];
+  const pageSize = 1000;
+  let offset = 0;
+  while (true) {
+    const res = await fetch(`${url}/rest/v1/india_districts?select=id,state_id,updated_at&verification_status=eq.verified&order=updated_at.desc&limit=${pageSize}&offset=${offset}`, { headers });
+    if (!res.ok) { console.warn(`India district sitemap fetch failed (${res.status})`); return []; }
+    const batch = await res.json();
+    if (!Array.isArray(batch) || !batch.length) break;
+    rows.push(...batch);
+    if (batch.length < pageSize) break;
+    offset += pageSize;
+  }
+  return rows;
 }
 
 function xmlEscape(s) {
@@ -207,9 +245,11 @@ async function main() {
 
   const supabaseJobs = await loadJobsFromSupabase();
   const jobs = supabaseJobs ?? loadJobsFromJson();
+  const indiaDistricts = await loadVerifiedIndiaDistricts();
 
   const staticPageEntries = [];
   const stateEntries = [];
+  const districtEntries = [];
   const qualificationEntries = [];
   const organizationEntries = [];
   const resultEntries = [];
@@ -229,6 +269,12 @@ async function main() {
 
   for (const id of STATE_IDS) {
     stateEntries.push(urlEntry(`${siteUrl}/state/${id}`, "daily", "0.7"));
+    stateEntries.push(urlEntry(`${siteUrl}/india/${id}`, "daily", "0.9"));
+  }
+
+  for (const district of indiaDistricts) {
+    if (!district?.id || !district?.state_id) continue;
+    districtEntries.push(urlEntry(`${siteUrl}/india/${district.state_id}/district/${district.id}`, "weekly", "0.75", district.updated_at ? new Date(district.updated_at).toISOString().slice(0, 10) : null));
   }
 
   for (const id of CATEGORY_IDS) {
@@ -288,6 +334,7 @@ async function main() {
   const groups = new Map([
     ["static-pages.xml", staticPageEntries],
     ["states.xml", stateEntries],
+    ["districts.xml", districtEntries],
     ["qualifications.xml", qualificationEntries],
     ["organizations.xml", organizationEntries],
     ["results.xml", resultEntries],

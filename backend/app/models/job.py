@@ -1,7 +1,7 @@
 from datetime import date, datetime
 from uuid import uuid4
 
-from sqlalchemy import Boolean, Date, DateTime, Float, Integer, Numeric, String, Text, UniqueConstraint, func
+from sqlalchemy import Boolean, Date, DateTime, Float, ForeignKey, Integer, Numeric, String, Text, UniqueConstraint, func
 from sqlalchemy.dialects.postgresql import ARRAY, JSONB, TSVECTOR, UUID
 from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column
 
@@ -57,6 +57,9 @@ class Job(Base):
     published_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True))
     normalized_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True))
     content_hash: Mapped[str] = mapped_column(String(64), unique=True, nullable=False)
+    source_id: Mapped[str | None] = mapped_column(
+        UUID(as_uuid=False), ForeignKey("sources.id", ondelete="SET NULL"), nullable=True
+    )
     detail: Mapped[dict | None] = mapped_column(JSONB, default=dict)
     search_vector: Mapped[str | None] = mapped_column(TSVECTOR, nullable=True)
     title_fingerprint: Mapped[str | None] = mapped_column(String(32), nullable=True)

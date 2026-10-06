@@ -56,6 +56,24 @@ export function browseSeoForPath(pathname: string, _search = ""): BrowseSeoMeta 
   const path = (pathname || "/").replace(/\/+$/, "") || "/";
   const parsed = parseBrowsePath(path);
 
+  if (path === "/india") {
+    return {
+      path,
+      title: `India Map — Jobs, Education, Companies & Knowledge | ${SITE_NAME}`,
+      description: "Explore India by state and Union Territory with jobs, education, agriculture, industries, companies, tourism, heritage and general knowledge.",
+    };
+  }
+
+  const indiaStateMatch = /^\/india\/([^/]+)$/.exec(path);
+  if (indiaStateMatch) {
+    const label = stateLabel(indiaStateMatch[1]);
+    return {
+      path,
+      title: `${label} Explorer — Jobs, Education, Tourism & More | ${SITE_NAME}`,
+      description: `Explore ${label}: jobs, education, agriculture, industries, companies, tourism, temples, hotels, transport and general knowledge.`,
+    };
+  }
+
   if (path === LATEST_NOTIFICATIONS_PATH) {
     const q = parseLatestNotifQuery(_search);
     if (q.professionSlug) {
