@@ -14,7 +14,12 @@ import {
   ContactPage,
   DesignationLandingPage,
   DesignationsIndexPage,
+  DistrictExplorerPage,
   DisclaimerPage,
+  EducationAdminPage,
+  EducationCareerPage,
+  EducationDashboardPage,
+  EducationHubPage,
   ExamCalendarPage,
   ExamLandingPage,
   ExamPrepPage,
@@ -22,6 +27,7 @@ import {
   ExploreHubPage,
   FaqPage,
   HowToApplyPage,
+  IndiaExplorerPage,
   JobDetailPage,
   LatestNotificationsPage,
   LazyRoute,
@@ -35,6 +41,7 @@ import {
   ScholarshipsHubPage,
   SitemapPage,
   StatesIndexPage,
+  StateExplorerPage,
   TermsPage,
   YojanaHubPage,
 } from "@/components/appRoutePages";
@@ -56,13 +63,6 @@ import {
   STATES_INDEX_PATH,
 } from "@/utils/browseRoutes";
 import type { JobRecord } from "@/types/job";
-import EducationHubPage from "@/pages/EducationHubPage";
-import EducationDashboardPage from "@/pages/EducationDashboardPage";
-import EducationAdminPage from "@/pages/EducationAdminPage";
-import EducationCareerPage from "@/pages/EducationCareerPage";
-import IndiaExplorerPage from "@/pages/IndiaExplorerPage";
-import StateExplorerPage from "@/pages/StateExplorerPage";
-import DistrictExplorerPage from "@/pages/DistrictExplorerPage";
 import type { FooterLinkTarget } from "@/hooks/browseStateTypes";
 import type { CatalogStats } from "@/utils/liveJobsPipeline";
 
@@ -96,12 +96,12 @@ export default function AppRoutes({
       <Route path="/india/:stateId/district/:districtId" element={<LazyRoute><DistrictExplorerPage /></LazyRoute>} />
       <Route path="/india/:stateId/district/:districtId/:category" element={<LazyRoute><DistrictExplorerPage /></LazyRoute>} />
       <Route path="/india/:stateId/:category" element={<LazyRoute><StateExplorerPage /></LazyRoute>} />
-      <Route path="/education" element={<EducationHubPage />} />
-      <Route path="/education/mock-tests" element={<EducationHubPage />} />
-      <Route path="/education/careers/:slug" element={<EducationCareerPage />} />
-      <Route path="/education/dashboard" element={<EducationDashboardPage />} />
+      <Route path="/education" element={<LazyRoute><EducationHubPage /></LazyRoute>} />
+      <Route path="/education/mock-tests" element={<LazyRoute><EducationHubPage /></LazyRoute>} />
+      <Route path="/education/careers/:slug" element={<LazyRoute><EducationCareerPage /></LazyRoute>} />
+      <Route path="/education/dashboard" element={<LazyRoute><EducationDashboardPage /></LazyRoute>} />
       <Route path="/admin/education" element={<LazyRoute><AdminRouteGuard><EducationAdminPage /></AdminRouteGuard></LazyRoute>} />
-      <Route path="/career" element={<EducationHubPage />} />
+      <Route path="/career" element={<LazyRoute><EducationHubPage /></LazyRoute>} />
       <Route path="/jobs" element={homePageElement} />
       <Route path={ALL_INDIA_JOBS_PATH} element={homePageElement} />
       <Route
