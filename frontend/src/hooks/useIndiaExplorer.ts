@@ -16,7 +16,7 @@ export function useIndiaStates() {
 }
 
 export function useIndiaState(stateId: string) {
-  const [data, setData] = useState<(IndiaState & { counts: { districts: number; cities: number; places: number }; source_name?: string; source_url?: string }) | null>(null)
+  const [data, setData] = useState<(IndiaState & { counts: { districts: number; cities: number; places: number; jobs: number }; source_name?: string; source_url?: string }) | null>(null)
   const [loading, setLoading] = useState(true)
   useEffect(() => { let active = true; setLoading(true); fetchIndiaState(stateId).then(value => { if (active) setData(value) }).catch(() => undefined).finally(() => { if (active) setLoading(false) }); return () => { active = false } }, [stateId])
   return { data, loading }

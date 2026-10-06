@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useState } from 'react';
 import { useNavigate, useSearchParams } from 'react-router-dom';
 import { IndiaMap } from '@/components/Maps/IndiaMap/IndiaMap';
-import { BROWSE_STATES, STATES, toSvgStateId } from '@/data/states';
+import { BROWSE_STATES, toSvgStateId } from '@/data/states';
 import { EXPLORER_CATEGORIES, EXPLORER_STATE_IDS } from '@/data/india/indiaExplorer';
 import { useIndiaDistrictDirectory, useIndiaOverview, useIndiaStates } from '@/hooks/useIndiaExplorer';
 import ExplorerCategoryCard from '@/components/india/ExplorerCategoryCard';
