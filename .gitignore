@@ -103,6 +103,8 @@ tools/
 
 # Vercel CLI may create additional env dumps — keep examples tracked
 .env*
+.tmp/
+.stage2-test-tmp/
 !.env.example
 !frontend/.env.example
 !backend/.env.example
