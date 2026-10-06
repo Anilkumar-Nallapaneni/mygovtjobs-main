@@ -67,12 +67,12 @@ export function useIndiaDistrictCategory(stateId: string, districtId: string, ca
 export function useIndiaDistrictDirectory(options: { stateId?: string; q?: string; limit?: number } = {}) {
   const [data, setData] = useState<{ items: IndiaDistrict[]; total: number } | null>(null)
   const [loading, setLoading] = useState(true)
-  const key = JSON.stringify(options)
+  const { stateId, q, limit } = options
   useEffect(() => {
     let active = true
     setLoading(true)
-    fetchIndiaDistrictDirectory(options).then(value => { if (active) setData(value) }).catch(() => undefined).finally(() => { if (active) setLoading(false) })
+    fetchIndiaDistrictDirectory({ stateId, q, limit }).then(value => { if (active) setData(value) }).catch(() => undefined).finally(() => { if (active) setLoading(false) })
     return () => { active = false }
-  }, [key])
+  }, [stateId, q, limit])
   return { data, loading }
 }

@@ -64,7 +64,7 @@ export default function IndiaExplorerPage() {
         <div>
           <span className="india-explorer__eyebrow">ONE INDIA PLATFORM</span>
           <h1>Explore India beyond jobs</h1>
-          <p>Start with any of India's 28 states or 8 Union Territories. Browse verified districts, cities and local information for education, jobs, healthcare, hotels, companies, tourism, transport and more.</p>
+          <p>Start with any of India&apos;s 28 states or 8 Union Territories. Browse verified districts, cities and local information for education, jobs, healthcare, hotels, companies, tourism, transport and more.</p>
           <label className="india-explorer__search"><span aria-hidden="true">⌕</span><input value={query} onChange={(event) => setQuery(event.target.value)} placeholder="Search a state or Union Territory" aria-label="Search state or Union Territory" /></label>
         </div>
         <div className="india-explorer__hero-stat"><strong>{apiOverview?.states ?? 36}</strong><span>Official States & Union Territories</span><small>Jobs are one category — directory coverage is independent.</small></div>
