@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-09-30T10:44:16.086Z",
-  "count": 244,
+  "generatedAt": "2026-10-05T11:21:46.431Z",
+  "count": 250,
   "items": [
     {
       "id": "2e7fa8a4ffb7c7be",
@@ -560,6 +560,437 @@
       "fetchMethod": "html"
     },
     {
+      "id": "3263ad107f9d8029",
+      "title": "PUBLIC NOTICE – CTET Feb 2026 – RESULT",
+      "link": "https://cdnbbsr.s3waas.gov.in/s3443dec3062d0286986e21dc0631734c9/uploads/2026/03/202603311458590440.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://cdnbbsr.s3waas.gov.in/s3443dec3062d0286986e21dc0631734c9/uploads/2026/03/202603311458590440.pdf"
+      ],
+      "sourceId": "ctet",
+      "sourceName": "CBSE — CTET",
+      "dept": "CBSE — CTET",
+      "state": "All India",
+      "category": "teaching",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "6b4bb0864740fc08",
+      "title": "PRELIMINARY EXAMINATION RESULT",
+      "link": "https://sbi.bank.in/webfiles/uploads/files_2627/08/SBIPO2026-Prelims-WTRESULT-15_columns.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://sbi.bank.in/webfiles/uploads/files_2627/08/SBIPO2026-Prelims-WTRESULT-15_columns.pdf"
+      ],
+      "sourceId": "sbi",
+      "sourceName": "State Bank of India — Careers",
+      "dept": "State Bank of India — Careers",
+      "state": "All India",
+      "category": "banking",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "c879df481549e8cb",
+      "title": "FINAL RESULT",
+      "link": "https://sbi.bank.in/csfile/CBO_RESULT-2025-26_18-15-COLUMNS.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://sbi.bank.in/csfile/CBO_RESULT-2025-26_18-15-COLUMNS.pdf"
+      ],
+      "sourceId": "sbi",
+      "sourceName": "State Bank of India — Careers",
+      "dept": "State Bank of India — Careers",
+      "state": "All India",
+      "category": "banking",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "3f73312a552a0aff",
+      "title": "MARKS SECURED BY THE CANDIDATES IN PRELIMINARY EXAMINATION",
+      "link": "https://sbi.bank.in/web/careers/popre-results-2026",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "sbi",
+      "sourceName": "State Bank of India — Careers",
+      "dept": "State Bank of India — Careers",
+      "state": "All India",
+      "category": "banking",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "fb221bbab36f2583",
+      "title": "MARKS SECURED BY THE CANDIDATES",
+      "link": "https://sbi.bank.in/web/careers/cbo-marks-2026-rs",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "sbi",
+      "sourceName": "State Bank of India — Careers",
+      "dept": "State Bank of India — Careers",
+      "state": "All India",
+      "category": "banking",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "24abadb8a1f73bfd",
+      "title": "MARKS SECURED BY THE CANDIDATES",
+      "link": "https://sbi.bank.in/web/careers/clk-mains-2025-rs",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "sbi",
+      "sourceName": "State Bank of India — Careers",
+      "dept": "State Bank of India — Careers",
+      "state": "All India",
+      "category": "banking",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "b0f23c3ef159d26e",
+      "title": "MARKS SECURED BY THE CANDIDATES",
+      "link": "https://sbi.bank.in/web/careers/po-mains-2025",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "sbi",
+      "sourceName": "State Bank of India — Careers",
+      "dept": "State Bank of India — Careers",
+      "state": "All India",
+      "category": "banking",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "4df513b2b54ccf7d",
+      "title": "MARKS SECURED BY THE CANDIDATES",
+      "link": "https://sbi.bank.in/web/careers/cbo-marks-2025",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "sbi",
+      "sourceName": "State Bank of India — Careers",
+      "dept": "State Bank of India — Careers",
+      "state": "All India",
+      "category": "banking",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "f000890a53fc3e32",
+      "title": "MARKS SECURED BY THE CANDIDATES",
+      "link": "https://sbi.bank.in/web/careers/po-main-2024-results",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "sbi",
+      "sourceName": "State Bank of India — Careers",
+      "dept": "State Bank of India — Careers",
+      "state": "All India",
+      "category": "banking",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "38d03e79d6d3decd",
+      "title": "MARKS SECURED BY THE CANDIDATES",
+      "link": "https://sbi.bank.in/web/careers/junior-associate-main-2024-results",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "sbi",
+      "sourceName": "State Bank of India — Careers",
+      "dept": "State Bank of India — Careers",
+      "state": "All India",
+      "category": "banking",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "cc67636f717c89e4",
+      "title": "MARKS SECURED BY THE CANDIDATES- JUNIOR ASSOCIATES (2024-25) WAITLIST-I",
+      "link": "https://sbi.bank.in/web/careers/ja-waitlist1-2025",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "sbi",
+      "sourceName": "State Bank of India — Careers",
+      "dept": "State Bank of India — Careers",
+      "state": "All India",
+      "category": "banking",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "b3b8e27a5d9cb958",
+      "title": "MARKS SECURED BY THE CANDIDATES- JUNIOR ASSOCIATES (2024-25) - WAITLIST-II",
+      "link": "https://sbi.bank.in/web/careers/ja-waitlist2-2025",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "sbi",
+      "sourceName": "State Bank of India — Careers",
+      "dept": "State Bank of India — Careers",
+      "state": "All India",
+      "category": "banking",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "843996b42a691583",
+      "title": "MARKS SECURED BY THE CANDIDATES- JUNIOR ASSOCIATES (2024-25) - WAITLIST-III",
+      "link": "https://sbi.bank.in/web/careers/ja-waitlist-3-2025",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "sbi",
+      "sourceName": "State Bank of India — Careers",
+      "dept": "State Bank of India — Careers",
+      "state": "All India",
+      "category": "banking",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "c49160fcf1598925",
+      "title": "FINAL RESULT – ASSISTANT MANAGER (SYSTEM)",
+      "link": "https://sbi.bank.in/documents/77530/43947057/SCO_15_AM_FINAL_RESULT-15+FORMAT.pdf/c07e3d98-a582-e753-8ca3-c71175f321b3?t=1742211884164",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "sbi",
+      "sourceName": "State Bank of India — Careers",
+      "dept": "State Bank of India — Careers",
+      "state": "All India",
+      "category": "banking",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "ea2cb4e60e6a56a5",
+      "title": "PRELIMINARY EXAM RESULT",
+      "link": "https://sbi.bank.in/web/careers/clk-prephase-2025",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "sbi",
+      "sourceName": "State Bank of India — Careers",
+      "dept": "State Bank of India — Careers",
+      "state": "All India",
+      "category": "banking",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "95f1a46a5c4e19af",
+      "title": "MAIN EXAM RESULT",
+      "link": "https://sbi.bank.in/documents/77530/52947104/27022026_Junior+Associates-mains-2025-RESULT-15+FORMAT.pdf/e4e8f7b3-d429-a855-3000-142dfdb5295b?t=1772180230964",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "sbi",
+      "sourceName": "State Bank of India — Careers",
+      "dept": "State Bank of India — Careers",
+      "state": "All India",
+      "category": "banking",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "60d78a216f442ef0",
+      "title": "PRELIMINARY EXAM RESULT",
+      "link": "https://sbi.bank.in/web/careers/po-pre-result-2025",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "sbi",
+      "sourceName": "State Bank of India — Careers",
+      "dept": "State Bank of India — Careers",
+      "state": "All India",
+      "category": "banking",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "4648c09dead6479a",
+      "title": "MAIN EXAM RESULT",
+      "link": "https://sbi.bank.in/documents/77530/52947104/SBIPO2025-Main-WTRESULT-15+columns.pdf/40d26751-4e5a-cef0-4dee-6f621893a3c9?t=1762423400237",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "sbi",
+      "sourceName": "State Bank of India — Careers",
+      "dept": "State Bank of India — Careers",
+      "state": "All India",
+      "category": "banking",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "5c961503d523abae",
+      "title": "MAIN EXAM RESULT",
+      "link": "https://sbi.bank.in/documents/77530/52947104/SBIPO2024-Main-WTRESULT-15+columns.pdf/6689270d-d6d3-5d6c-1798-3844e7db6759?t=1747816987666",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "sbi",
+      "sourceName": "State Bank of India — Careers",
+      "dept": "State Bank of India — Careers",
+      "state": "All India",
+      "category": "banking",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "9caa01cc6994665c",
+      "title": "PRELIMINARY EXAM RESULT",
+      "link": "https://sbi.bank.in/web/careers/crpd/2024/clk-pre-phase-1-result",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "sbi",
+      "sourceName": "State Bank of India — Careers",
+      "dept": "State Bank of India — Careers",
+      "state": "All India",
+      "category": "banking",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "f8cbcdc03e251679",
+      "title": "MAIN EXAM RESULT",
+      "link": "https://sbi.bank.in/documents/77530/52947104/Junior+Associates-mains-2024-RESULT-15+FORMAT.pdf/2be30817-a971-8bca-74ff-3f1274a37079?t=1749637240610",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "sbi",
+      "sourceName": "State Bank of India — Careers",
+      "dept": "State Bank of India — Careers",
+      "state": "All India",
+      "category": "banking",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "61059df29a614b9d",
+      "title": "PRELIMINARY EXAM RESULT",
+      "link": "https://sbi.bank.in/web/careers/special-drive-ja-pre-marks-2024",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "sbi",
+      "sourceName": "State Bank of India — Careers",
+      "dept": "State Bank of India — Careers",
+      "state": "All India",
+      "category": "banking",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "0e02adbe8df149c9",
+      "title": "MAIN EXAM RESULT",
+      "link": "https://sbi.bank.in/documents/77530/52947104/Junior+Associates-SPLDRIVE-2024-25-RESULT-15+FORMAT.pdf/a11c4ca7-f15c-0941-6a70-26d1acf1d717?t=1748419884479",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "sbi",
+      "sourceName": "State Bank of India — Careers",
+      "dept": "State Bank of India — Careers",
+      "state": "All India",
+      "category": "banking",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "632cce6146278d21",
+      "title": "MARKS SECURED BY THE CANDIDATES",
+      "link": "https://bank.sbi/web/careers/special-drive-main-2025-results",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "sbi",
+      "sourceName": "State Bank of India — Careers",
+      "dept": "State Bank of India — Careers",
+      "state": "All India",
+      "category": "banking",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "dc0551146e52d1fa",
+      "title": "MARKS SECURED BY THE CANDIDATES - ASSISTANT MANAGER (ENGINEER – CIVIL) & ASSISTANT MANAGER (ENGINEER – ELECTRICAL)",
+      "link": "https://bank.sbi/web/careers/sco-25-marks",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "sbi",
+      "sourceName": "State Bank of India — Careers",
+      "dept": "State Bank of India — Careers",
+      "state": "All India",
+      "category": "banking",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
       "id": "3cb3737965d5c83c",
       "title": "Recruitment Result",
       "link": "https://www.aiims.edu/index.php/en/notices/recruitment/archive-recruitment",
@@ -588,6 +1019,25 @@
       "dept": "Canara Bank — Careers",
       "state": "All India",
       "category": "banking",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "cb9f4381c5672f18",
+      "title": "RESULT OF PERSONAL INTERVIEW — ENGAGEMENT OF YOUNG PROFESSIONALS Advt. No. ISP/YP/2026/01 dated 22.05.2026",
+      "link": "https://aima-web-images.s3.ap-south-1.amazonaws.com/sailcareers.com/Downloads/IISCO_News%20&%20Jobs_01102026_091532.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://aima-web-images.s3.ap-south-1.amazonaws.com/sailcareers.com/Downloads/IISCO_News%20&%20Jobs_01102026_091532.pdf"
+      ],
+      "sourceId": "sail",
+      "sourceName": "Steel Authority of India (SAIL)",
+      "dept": "Steel Authority of India (SAIL)",
+      "state": "All India",
+      "category": "psu",
       "stateIds": [
         "all"
       ],
@@ -677,25 +1127,6 @@
       "summary": null,
       "pdfUrls": [
         "https://aima-web-images.s3.ap-south-1.amazonaws.com/sailcareers.com/Downloads/MTR_News_10092026_153557.pdf"
-      ],
-      "sourceId": "sail",
-      "sourceName": "Steel Authority of India (SAIL)",
-      "dept": "Steel Authority of India (SAIL)",
-      "state": "All India",
-      "category": "psu",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "3f5f0150d9a9618d",
-      "title": "Jharkhand Group of Mines: Result of the 'Walk-in-Interview' held on 12/08/2026 for Engagement of Consultants (Doctors in Medical Discipline) against Advertisement No. BSL/R-C/2026-07",
-      "link": "https://aima-web-images.s3.ap-south-1.amazonaws.com/sailcareers.com/Downloads/BSP_News_01092026_121727.pdf",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [
-        "https://aima-web-images.s3.ap-south-1.amazonaws.com/sailcareers.com/Downloads/BSP_News_01092026_121727.pdf"
       ],
       "sourceId": "sail",
       "sourceName": "Steel Authority of India (SAIL)",
@@ -863,6 +1294,59 @@
       "category": "state",
       "stateIds": [
         "hr"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "f9af03346752aa1b",
+      "title": "LATEST NOTICE: उत्तर प्रदेश होमगार्ड्स के पदों पर एनरोलमेंट - 2025 के अन्तर्गत अन्तिम चयन परिणाम का प्रकाशन ।",
+      "link": "https://uppbpb.gov.in/FilesUploaded/Notice/HG_03-10-2026d59cc153-9562-47ee-a56a-a1eede0e6ef0.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://uppbpb.gov.in/FilesUploaded/Notice/HG_03-10-2026d59cc153-9562-47ee-a56a-a1eede0e6ef0.pdf"
+      ],
+      "sourceId": "police-up",
+      "sourceName": "UP Police Recruitment Board (UPPRPB)",
+      "dept": "UP Police Recruitment Board (UPPRPB)",
+      "state": "Uttar Pradesh",
+      "category": "police",
+      "stateIds": [
+        "up"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "867d10556a0d50b6",
+      "title": "उत्तर प्रदेश होमगार्ड्स के पदों पर एनरोलमेंट - 2025 के अन्तर्गत अन्तिम चयन परिणाम की जनपदवार सूची देखने हेतु लिंक ।",
+      "link": "https://www.hgupexam2025.com/hg25finalresults/displayalldistricts.aspx",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "police-up",
+      "sourceName": "UP Police Recruitment Board (UPPRPB)",
+      "dept": "UP Police Recruitment Board (UPPRPB)",
+      "state": "Uttar Pradesh",
+      "category": "police",
+      "stateIds": [
+        "up"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "c9c54e2978338a31",
+      "title": "उत्तर प्रदेश होमगार्ड्स के पदों पर एनरोलमेंट - 2025 के अन्तर्गत अन्तिम चयन परिणाम देखने हेतु लिंक ।",
+      "link": "https://www.hgupexam2025.com/hg25finalresults/loginpage.aspx",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "police-up",
+      "sourceName": "UP Police Recruitment Board (UPPRPB)",
+      "dept": "UP Police Recruitment Board (UPPRPB)",
+      "state": "Uttar Pradesh",
+      "category": "police",
+      "stateIds": [
+        "up"
       ],
       "fetchMethod": "html"
     },
@@ -1304,12 +1788,12 @@
     },
     {
       "id": "6dd5502d9544e6ce",
-      "title": "Notice of Sub-Inspector in Delhi Police and Central Armed Police Forces Examination, 2026",
+      "title": "Notice of Combined Higher Secondary (10+2) Level Examination, 2026",
       "link": "https://ssc.gov.in",
-      "publishedAt": "2026-09-10T07:35:10.190000Z",
-      "summary": "(To be uploaded on the website of the Commission i.e. https://ssc.gov.in on 10.09.2026) भारत सरकार, कािमŊक, लोक िशकायत तथा पŐशन मंũालय, कािमŊक एवं ŮिशƗण िवभाग, कमŊचारी चयन आयोग, ɰॉक सं-12,केȾीय कायाŊलय पįरसर, लोधी रोड, नई िदʟी-110003 Government of India, Ministry of Personnel, Public Grievances & Pensions, Department of Personnel and Training, Staff Selection Commission, Block No. 12, CGO Complex,…",
+      "publishedAt": "2026-09-07T15:59:02.300000Z",
+      "summary": "(To be uploaded on the website of the Commission; i.e. https://ssc.gov.in/ on 07-09-2026) भारत सरकार, कार्मिक, लोक र्िकायत तथा पेंिन मंत्रालय, कार्मिक एवं प्रर्िक्षण र्वभाग, कमिचारी चयन आयोग, ब्लॉक स - 21 ,केन्द्रीय कायािलय पररसर, लोधी रोड, नई र्दल्ली-110003. Government of India, Ministry of Personnel, Public Grievances & Pensions, Department of Personnel and Training, Staff Selection Commission, …",
       "pdfUrls": [
-        "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_capf_2026.pdf"
+        "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_chsle_2026.pdf"
       ],
       "sourceId": "ssc",
       "sourceName": "Staff Selection Commission (SSC)",
@@ -1317,6 +1801,59 @@
       "state": "All India",
       "category": "ssc",
       "fetchMethod": "live-jobs-supplement"
+    },
+    {
+      "id": "83f796cc1cc6fbf6",
+      "title": "10 वर्षों के समर्पित प्रयासों के परिणामस्वरूप केंद्रीय पर्यावरण मंत्री और राजस्थान के मुख्यमंत्री ने जैसलमेर स्थित डेजर्ट नेशनल पार्क में बंदी बनाकर पाले गए ग्रेट इंडियन बस्टर्ड को जंगल में छोड़ने की प्रक्रिया शुरू की",
+      "link": "https://pib.gov.in/PressReleaseIframePage.aspx?PRID=2318674",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "pib-press-reg3",
+      "sourceName": "PIB — recent press releases",
+      "dept": "Press Information Bureau",
+      "state": "All India",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "rss-feed"
+    },
+    {
+      "id": "e29413ad6aa891fe",
+      "title": "प्रधानमंत्री श्री नरेन्द्र मोदी ने एशियाई खेलों में महिला रिकर्व टीम स्पर्धा में ऐतिहासिक स्वर्ण पदक जीतने पर अंकिता भक्त, कुमकुम अनिल मोहोड और कीर्ति को बधाई दी",
+      "link": "https://pib.gov.in/PressReleaseIframePage.aspx?PRID=2318157",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "pib",
+      "sourceName": "Press Information Bureau (PIB)",
+      "dept": "Press Information Bureau (PIB)",
+      "state": "All India",
+      "category": "general",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "rss-config"
+    },
+    {
+      "id": "3f5f0150d9a9618d",
+      "title": "Jharkhand Group of Mines: Result of the 'Walk-in-Interview' held on 12/08/2026 for Engagement of Consultants (Doctors in Medical Discipline) against Advertisement No. BSL/R-C/2026-07",
+      "link": "https://aima-web-images.s3.ap-south-1.amazonaws.com/sailcareers.com/Downloads/BSP_News_01092026_121727.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://aima-web-images.s3.ap-south-1.amazonaws.com/sailcareers.com/Downloads/BSP_News_01092026_121727.pdf"
+      ],
+      "sourceId": "sail",
+      "sourceName": "Steel Authority of India (SAIL)",
+      "dept": "Steel Authority of India (SAIL)",
+      "state": "All India",
+      "category": "psu",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
     },
     {
       "id": "5e04e28008e88c34",
@@ -1334,437 +1871,6 @@
         "all"
       ],
       "fetchMethod": "rss-feed"
-    },
-    {
-      "id": "3263ad107f9d8029",
-      "title": "PUBLIC NOTICE – CTET Feb 2026 – RESULT",
-      "link": "https://cdnbbsr.s3waas.gov.in/s3443dec3062d0286986e21dc0631734c9/uploads/2026/03/202603311458590440.pdf",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [
-        "https://cdnbbsr.s3waas.gov.in/s3443dec3062d0286986e21dc0631734c9/uploads/2026/03/202603311458590440.pdf"
-      ],
-      "sourceId": "ctet",
-      "sourceName": "CBSE — CTET",
-      "dept": "CBSE — CTET",
-      "state": "All India",
-      "category": "teaching",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "6b4bb0864740fc08",
-      "title": "PRELIMINARY EXAMINATION RESULT",
-      "link": "https://sbi.bank.in/webfiles/uploads/files_2627/08/SBIPO2026-Prelims-WTRESULT-15_columns.pdf",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [
-        "https://sbi.bank.in/webfiles/uploads/files_2627/08/SBIPO2026-Prelims-WTRESULT-15_columns.pdf"
-      ],
-      "sourceId": "sbi",
-      "sourceName": "State Bank of India — Careers",
-      "dept": "State Bank of India — Careers",
-      "state": "All India",
-      "category": "banking",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "c879df481549e8cb",
-      "title": "FINAL RESULT",
-      "link": "https://sbi.bank.in/csfile/CBO_RESULT-2025-26_18-15-COLUMNS.pdf",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [
-        "https://sbi.bank.in/csfile/CBO_RESULT-2025-26_18-15-COLUMNS.pdf"
-      ],
-      "sourceId": "sbi",
-      "sourceName": "State Bank of India — Careers",
-      "dept": "State Bank of India — Careers",
-      "state": "All India",
-      "category": "banking",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "3f73312a552a0aff",
-      "title": "MARKS SECURED BY THE CANDIDATES IN PRELIMINARY EXAMINATION",
-      "link": "https://sbi.bank.in/web/careers/popre-results-2026",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "sbi",
-      "sourceName": "State Bank of India — Careers",
-      "dept": "State Bank of India — Careers",
-      "state": "All India",
-      "category": "banking",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "fb221bbab36f2583",
-      "title": "MARKS SECURED BY THE CANDIDATES",
-      "link": "https://sbi.bank.in/web/careers/cbo-marks-2026-rs",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "sbi",
-      "sourceName": "State Bank of India — Careers",
-      "dept": "State Bank of India — Careers",
-      "state": "All India",
-      "category": "banking",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "24abadb8a1f73bfd",
-      "title": "MARKS SECURED BY THE CANDIDATES",
-      "link": "https://sbi.bank.in/web/careers/clk-mains-2025-rs",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "sbi",
-      "sourceName": "State Bank of India — Careers",
-      "dept": "State Bank of India — Careers",
-      "state": "All India",
-      "category": "banking",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "b0f23c3ef159d26e",
-      "title": "MARKS SECURED BY THE CANDIDATES",
-      "link": "https://sbi.bank.in/web/careers/po-mains-2025",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "sbi",
-      "sourceName": "State Bank of India — Careers",
-      "dept": "State Bank of India — Careers",
-      "state": "All India",
-      "category": "banking",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "4df513b2b54ccf7d",
-      "title": "MARKS SECURED BY THE CANDIDATES",
-      "link": "https://sbi.bank.in/web/careers/cbo-marks-2025",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "sbi",
-      "sourceName": "State Bank of India — Careers",
-      "dept": "State Bank of India — Careers",
-      "state": "All India",
-      "category": "banking",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "f000890a53fc3e32",
-      "title": "MARKS SECURED BY THE CANDIDATES",
-      "link": "https://sbi.bank.in/web/careers/po-main-2024-results",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "sbi",
-      "sourceName": "State Bank of India — Careers",
-      "dept": "State Bank of India — Careers",
-      "state": "All India",
-      "category": "banking",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "38d03e79d6d3decd",
-      "title": "MARKS SECURED BY THE CANDIDATES",
-      "link": "https://sbi.bank.in/web/careers/junior-associate-main-2024-results",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "sbi",
-      "sourceName": "State Bank of India — Careers",
-      "dept": "State Bank of India — Careers",
-      "state": "All India",
-      "category": "banking",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "cc67636f717c89e4",
-      "title": "MARKS SECURED BY THE CANDIDATES- JUNIOR ASSOCIATES (2024-25) WAITLIST-I",
-      "link": "https://sbi.bank.in/web/careers/ja-waitlist1-2025",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "sbi",
-      "sourceName": "State Bank of India — Careers",
-      "dept": "State Bank of India — Careers",
-      "state": "All India",
-      "category": "banking",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "b3b8e27a5d9cb958",
-      "title": "MARKS SECURED BY THE CANDIDATES- JUNIOR ASSOCIATES (2024-25) - WAITLIST-II",
-      "link": "https://sbi.bank.in/web/careers/ja-waitlist2-2025",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "sbi",
-      "sourceName": "State Bank of India — Careers",
-      "dept": "State Bank of India — Careers",
-      "state": "All India",
-      "category": "banking",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "843996b42a691583",
-      "title": "MARKS SECURED BY THE CANDIDATES- JUNIOR ASSOCIATES (2024-25) - WAITLIST-III",
-      "link": "https://sbi.bank.in/web/careers/ja-waitlist-3-2025",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "sbi",
-      "sourceName": "State Bank of India — Careers",
-      "dept": "State Bank of India — Careers",
-      "state": "All India",
-      "category": "banking",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "c49160fcf1598925",
-      "title": "FINAL RESULT – ASSISTANT MANAGER (SYSTEM)",
-      "link": "https://sbi.bank.in/documents/77530/43947057/SCO_15_AM_FINAL_RESULT-15+FORMAT.pdf/c07e3d98-a582-e753-8ca3-c71175f321b3?t=1742211884164",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "sbi",
-      "sourceName": "State Bank of India — Careers",
-      "dept": "State Bank of India — Careers",
-      "state": "All India",
-      "category": "banking",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "ea2cb4e60e6a56a5",
-      "title": "PRELIMINARY EXAM RESULT",
-      "link": "https://sbi.bank.in/web/careers/clk-prephase-2025",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "sbi",
-      "sourceName": "State Bank of India — Careers",
-      "dept": "State Bank of India — Careers",
-      "state": "All India",
-      "category": "banking",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "95f1a46a5c4e19af",
-      "title": "MAIN EXAM RESULT",
-      "link": "https://sbi.bank.in/documents/77530/52947104/27022026_Junior+Associates-mains-2025-RESULT-15+FORMAT.pdf/e4e8f7b3-d429-a855-3000-142dfdb5295b?t=1772180230964",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "sbi",
-      "sourceName": "State Bank of India — Careers",
-      "dept": "State Bank of India — Careers",
-      "state": "All India",
-      "category": "banking",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "60d78a216f442ef0",
-      "title": "PRELIMINARY EXAM RESULT",
-      "link": "https://sbi.bank.in/web/careers/po-pre-result-2025",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "sbi",
-      "sourceName": "State Bank of India — Careers",
-      "dept": "State Bank of India — Careers",
-      "state": "All India",
-      "category": "banking",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "4648c09dead6479a",
-      "title": "MAIN EXAM RESULT",
-      "link": "https://sbi.bank.in/documents/77530/52947104/SBIPO2025-Main-WTRESULT-15+columns.pdf/40d26751-4e5a-cef0-4dee-6f621893a3c9?t=1762423400237",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "sbi",
-      "sourceName": "State Bank of India — Careers",
-      "dept": "State Bank of India — Careers",
-      "state": "All India",
-      "category": "banking",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "5c961503d523abae",
-      "title": "MAIN EXAM RESULT",
-      "link": "https://sbi.bank.in/documents/77530/52947104/SBIPO2024-Main-WTRESULT-15+columns.pdf/6689270d-d6d3-5d6c-1798-3844e7db6759?t=1747816987666",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "sbi",
-      "sourceName": "State Bank of India — Careers",
-      "dept": "State Bank of India — Careers",
-      "state": "All India",
-      "category": "banking",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "9caa01cc6994665c",
-      "title": "PRELIMINARY EXAM RESULT",
-      "link": "https://sbi.bank.in/web/careers/crpd/2024/clk-pre-phase-1-result",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "sbi",
-      "sourceName": "State Bank of India — Careers",
-      "dept": "State Bank of India — Careers",
-      "state": "All India",
-      "category": "banking",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "f8cbcdc03e251679",
-      "title": "MAIN EXAM RESULT",
-      "link": "https://sbi.bank.in/documents/77530/52947104/Junior+Associates-mains-2024-RESULT-15+FORMAT.pdf/2be30817-a971-8bca-74ff-3f1274a37079?t=1749637240610",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "sbi",
-      "sourceName": "State Bank of India — Careers",
-      "dept": "State Bank of India — Careers",
-      "state": "All India",
-      "category": "banking",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "61059df29a614b9d",
-      "title": "PRELIMINARY EXAM RESULT",
-      "link": "https://sbi.bank.in/web/careers/special-drive-ja-pre-marks-2024",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "sbi",
-      "sourceName": "State Bank of India — Careers",
-      "dept": "State Bank of India — Careers",
-      "state": "All India",
-      "category": "banking",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "0e02adbe8df149c9",
-      "title": "MAIN EXAM RESULT",
-      "link": "https://sbi.bank.in/documents/77530/52947104/Junior+Associates-SPLDRIVE-2024-25-RESULT-15+FORMAT.pdf/a11c4ca7-f15c-0941-6a70-26d1acf1d717?t=1748419884479",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "sbi",
-      "sourceName": "State Bank of India — Careers",
-      "dept": "State Bank of India — Careers",
-      "state": "All India",
-      "category": "banking",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "632cce6146278d21",
-      "title": "MARKS SECURED BY THE CANDIDATES",
-      "link": "https://bank.sbi/web/careers/special-drive-main-2025-results",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "sbi",
-      "sourceName": "State Bank of India — Careers",
-      "dept": "State Bank of India — Careers",
-      "state": "All India",
-      "category": "banking",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "dc0551146e52d1fa",
-      "title": "MARKS SECURED BY THE CANDIDATES - ASSISTANT MANAGER (ENGINEER – CIVIL) & ASSISTANT MANAGER (ENGINEER – ELECTRICAL)",
-      "link": "https://bank.sbi/web/careers/sco-25-marks",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "sbi",
-      "sourceName": "State Bank of India — Careers",
-      "dept": "State Bank of India — Careers",
-      "state": "All India",
-      "category": "banking",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
     },
     {
       "id": "86dc09a156fe9120",

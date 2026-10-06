@@ -1,7 +1,41 @@
 {
-  "generatedAt": "2026-09-30T10:44:16.086Z",
-  "count": 98,
+  "generatedAt": "2026-10-05T11:21:46.431Z",
+  "count": 106,
   "items": [
+    {
+      "id": "637f41abc4becfa2",
+      "title": "Tender No. BARC/CED/ET/45/2026-2027[e-Tender]",
+      "link": "http://www.barc.gov.in/tenders/tender272.pdf",
+      "publishedAt": "2026-09-30T10:04:41.000Z",
+      "summary": "Upgradation of TSD building including Civil, Electrical, Mechanical, ventilation & Telecommunication works and Miscellaneous civil works at sea side buildings, BARC, Trombay, Mumbai Last date: 29-Oct-2026",
+      "pdfUrls": [],
+      "sourceId": "barc",
+      "sourceName": "Bhabha Atomic Research Centre (BARC)",
+      "dept": "Bhabha Atomic Research Centre (BARC)",
+      "state": "All India",
+      "category": "defence",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "rss-discovered"
+    },
+    {
+      "id": "430cc581dd3eb3c1",
+      "title": "Tender No. BARC/TSD/ET/23/2026-2027 [e-Tender]",
+      "link": "http://www.barc.gov.in/tenders/tender271.pdf",
+      "publishedAt": "2026-09-30T06:17:47.000Z",
+      "summary": "Replacement of Existing UPS Systems with 2 Nos. 60 kVA Online UPS Systems at Modlab, BARC, Trombay, Mumbai – 400085 Last date: 09-Nov-2026",
+      "pdfUrls": [],
+      "sourceId": "barc",
+      "sourceName": "Bhabha Atomic Research Centre (BARC)",
+      "dept": "Bhabha Atomic Research Centre (BARC)",
+      "state": "All India",
+      "category": "defence",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "rss-discovered"
+    },
     {
       "id": "5f0eea17d51aef93",
       "title": "Tender No. BARC(T)/NRB/INRPO/SWMF-63/2026/210          [e-Tender]",
@@ -129,23 +163,6 @@
       "link": "http://www.barc.gov.in/tenders/tender261.pdf",
       "publishedAt": "2026-09-18T05:23:21.000Z",
       "summary": "Miscellaneous Civil Works, Monsoon Maintenance including Housekeeping Works in General and plant rooms in RLG Buildings at BARC, Trombay, Mumbai 400085 Last date: 15-Oct-2026",
-      "pdfUrls": [],
-      "sourceId": "barc",
-      "sourceName": "Bhabha Atomic Research Centre (BARC)",
-      "dept": "Bhabha Atomic Research Centre (BARC)",
-      "state": "All India",
-      "category": "defence",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "rss-discovered"
-    },
-    {
-      "id": "84f5a74809908df4",
-      "title": "Tender No. BARC/TSD/ET/21/⁠2026-⁠27[e-Tender]",
-      "link": "http://www.barc.gov.in/tenders/tender262.pdf",
-      "publishedAt": "2026-09-18T05:23:12.000Z",
-      "summary": "Supply, installation, testing & commissioning of underground and over ground chilled water pipe lines, valves, MS structure near CC building, BARC, Trombay, Mumbai 400085 Last date: 28-Sep-2026",
       "pdfUrls": [],
       "sourceId": "barc",
       "sourceName": "Bhabha Atomic Research Centre (BARC)",
@@ -345,23 +362,6 @@
       "fetchMethod": "rss-discovered"
     },
     {
-      "id": "252214811535ddce",
-      "title": "Tender No. BARC/NRGP/ET/1/2026-2027[e-Tender]",
-      "link": "http://www.barc.gov.in/tenders/tender253.pdf",
-      "publishedAt": "2026-09-08T05:06:54.000Z",
-      "summary": "Painting, waterproofing and other miscellaneous works in WIP Building and other NRG structures, BARC, Trombay, Mumbai Last date: 28-Sep-2026",
-      "pdfUrls": [],
-      "sourceId": "barc",
-      "sourceName": "Bhabha Atomic Research Centre (BARC)",
-      "dept": "Bhabha Atomic Research Centre (BARC)",
-      "state": "All India",
-      "category": "defence",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "rss-discovered"
-    },
-    {
       "id": "0ecbf6a5e4e62969",
       "title": "Tender No. BARC/CED/ET/37/2026-2027[e-Tender]",
       "link": "http://www.barc.gov.in/tenders/tender252.pdf",
@@ -401,23 +401,6 @@
       "link": "http://www.barc.gov.in/tenders/tender251.pdf",
       "publishedAt": "2026-09-07T05:10:37.000Z",
       "summary": "Construction of Block -118 and associated structures along with ACVE works, panels and electrification at INRP, BARC Tarapur Last date: 05-Oct-2026",
-      "pdfUrls": [],
-      "sourceId": "barc",
-      "sourceName": "Bhabha Atomic Research Centre (BARC)",
-      "dept": "Bhabha Atomic Research Centre (BARC)",
-      "state": "All India",
-      "category": "defence",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "rss-discovered"
-    },
-    {
-      "id": "16ef2d12afe50083",
-      "title": "Tender No. BARC/TSD/ET/27/⁠2026-⁠27[e-Tender]",
-      "link": "http://www.barc.gov.in/tenders/tender248.pdf",
-      "publishedAt": "2026-09-04T09:09:13.000Z",
-      "summary": "Supply, Installation, Testing and Commissioning of AHUs, VFD panels, Chilled Water Piping, Valves, Insulation, etc. at Central Complex, CDM and PP Nursery inside BARC, Trombay, Mumbai – 400085 Last date: 28-Sep-2026",
       "pdfUrls": [],
       "sourceId": "barc",
       "sourceName": "Bhabha Atomic Research Centre (BARC)",
@@ -515,23 +498,6 @@
       "fetchMethod": "rss-discovered"
     },
     {
-      "id": "e75afc14c5b4fa65",
-      "title": "Tender No. BARC/TSD/ET/21/2026-2027[e-Tender]",
-      "link": "http://www.barc.gov.in/tenders/tender235.pdf",
-      "publishedAt": "2026-08-24T05:28:36.000Z",
-      "summary": "Supply, installation, testing & commissioning of underground and over ground chilled water pipe lines, valves, MS structure near CC building, BARC, Trombay, Mumbai 400085 Last date: 28-Sep-2026",
-      "pdfUrls": [],
-      "sourceId": "barc",
-      "sourceName": "Bhabha Atomic Research Centre (BARC)",
-      "dept": "Bhabha Atomic Research Centre (BARC)",
-      "state": "All India",
-      "category": "defence",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "rss-discovered"
-    },
-    {
       "id": "ce8e8be5c21fe53a",
       "title": "Tender No. BARC (V)/CES/SeminarHall/225[e-Tender]",
       "link": "http://www.barc.gov.in/tenders/tender231.pdf",
@@ -547,6 +513,40 @@
         "all"
       ],
       "fetchMethod": "rss-discovered"
+    },
+    {
+      "id": "3c03a98b974c67d2",
+      "title": "*CLICK HERE TO APPLY FOR LIC GOLDEN JUBILEE SCHOLARSHIPS 2026 \"Last date extended up to 15th October 2026\"*",
+      "link": "https://licindia.in/en/web/guest/golden-jubilee-foundation",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "lic",
+      "sourceName": "Life Insurance Corporation — Careers",
+      "dept": "Life Insurance Corporation — Careers",
+      "state": "All India",
+      "category": "banking",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "6b109e2f791def0f",
+      "title": "*CLICK HERE TO APPLY FOR LIC GOLDEN JUBILEE SCHOLARSHIPS 2026 \"Last date extended up to 15th October 2026\"*",
+      "link": "https://www.licindia.in/en/web/guest/golden-jubilee-foundation",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "lic",
+      "sourceName": "Life Insurance Corporation — Careers",
+      "dept": "Life Insurance Corporation — Careers",
+      "state": "All India",
+      "category": "banking",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
     },
     {
       "id": "cf7727ab821fe25c",
@@ -634,6 +634,112 @@
       "category": "psu",
       "stateIds": [
         "uk",
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "e3d502ed3ef8ab05",
+      "title": "PUBLIC NOTICE: CTET SEP-2026 CORRECTION WINDOW (last date 10.09.2026)",
+      "link": "https://cdnbbsr.s3waas.gov.in/s3443dec3062d0286986e21dc0631734c9/uploads/2026/09/20260907461266783.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://cdnbbsr.s3waas.gov.in/s3443dec3062d0286986e21dc0631734c9/uploads/2026/09/20260907461266783.pdf"
+      ],
+      "sourceId": "ctet",
+      "sourceName": "CBSE — CTET",
+      "dept": "CBSE — CTET",
+      "state": "All India",
+      "category": "teaching",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "988ed4272bbf3f80",
+      "title": "Public Notice: CTET Feb-2026 Key Challenge / Scanned Images of OMR (last Date 15/03/2026,up-to 11:59 PM)",
+      "link": "https://cdnbbsr.s3waas.gov.in/s3443dec3062d0286986e21dc0631734c9/uploads/2026/03/202603121086699841.pdf",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [
+        "https://cdnbbsr.s3waas.gov.in/s3443dec3062d0286986e21dc0631734c9/uploads/2026/03/202603121086699841.pdf"
+      ],
+      "sourceId": "ctet",
+      "sourceName": "CBSE — CTET",
+      "dept": "CBSE — CTET",
+      "state": "All India",
+      "category": "teaching",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "ca02d329344a8460",
+      "title": "Login: CTET SEP 2026 CORRECTION WINDOW (last date 10.09.2026)",
+      "link": "https://examinationservices.nic.in/ExamSysCTET/root/Home.aspx?enc=Ei4cajBkK1gZSfgr53ImFfEytN2I3LFrLvNrMJcZJNmO/XE3+xNuu3rFt9agQvt0",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "ctet",
+      "sourceName": "CBSE — CTET",
+      "dept": "CBSE — CTET",
+      "state": "All India",
+      "category": "teaching",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "d0831531e36202c0",
+      "title": "APPLY ONLINE (Online Registration Extended till 05.10.2026)",
+      "link": "https://recruitment.sbi.bank.in/crpd-sco-2026-27-23/apply",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "sbi",
+      "sourceName": "State Bank of India — Careers",
+      "dept": "State Bank of India — Careers",
+      "state": "All India",
+      "category": "banking",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "1a8fa8b40cc21bb0",
+      "title": "APPLY ONLINE (Online Registration extended till 28.09.2026)",
+      "link": "https://recruitment.sbi.bank.in/crpd-sco-2026-27-15/apply",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "sbi",
+      "sourceName": "State Bank of India — Careers",
+      "dept": "State Bank of India — Careers",
+      "state": "All India",
+      "category": "banking",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "aef1f77c1822dfd2",
+      "title": "The last date extended to 26 October 2026 - NTPC Limited inviting offer for arranging term loan of JPY",
+      "link": "https://ntpc.co.in/last-date-extended-26-october-2026-ntpc-limited-inviting-offer-arranging-term-loan-jpy",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "ntpc",
+      "sourceName": "NTPC — Careers",
+      "dept": "NTPC — Careers",
+      "state": "All India",
+      "category": "psu",
+      "stateIds": [
         "all"
       ],
       "fetchMethod": "html"
@@ -881,93 +987,23 @@
       "fetchMethod": "live-jobs-supplement"
     },
     {
-      "id": "e3d502ed3ef8ab05",
-      "title": "PUBLIC NOTICE: CTET SEP-2026 CORRECTION WINDOW (last date 10.09.2026)",
-      "link": "https://cdnbbsr.s3waas.gov.in/s3443dec3062d0286986e21dc0631734c9/uploads/2026/09/20260907461266783.pdf",
-      "publishedAt": null,
-      "summary": null,
+      "id": "e4098f8933e2e1a0",
+      "title": "Procurement of Various Consumables for GE Anesthesia Work station for the O.T., Burn & Plastic Surgery Block Under GFR 166 (iii) , New Delhi",
+      "link": "https://aiims.edu/index.php/en/131-tender/proprietary-tender/24821-160-consumablesforgeworkstation-25-26",
+      "publishedAt": "2026-10-01T06:45:35.000Z",
+      "summary": "VIEW TENDER DETAILS Tender No 160/Consumables for GE Workstation/25-26 Title Procurement of Various Consumables for GE Anesthesia Work station for the O.T., Burn & Plastic Surgery Block Under GFR 166 (iii) , New Delhi Date of Uploading 01/10/2026 Date of Closing 15/10/2026 Document",
       "pdfUrls": [
-        "https://cdnbbsr.s3waas.gov.in/s3443dec3062d0286986e21dc0631734c9/uploads/2026/09/20260907461266783.pdf"
+        "https://www.aiims.edu/images/pdf/tender/GE.pdf"
       ],
-      "sourceId": "ctet",
-      "sourceName": "CBSE — CTET",
-      "dept": "CBSE — CTET",
+      "sourceId": "aiims",
+      "sourceName": "AIIMS New Delhi — Recruitment",
+      "dept": "AIIMS New Delhi — Recruitment",
       "state": "All India",
-      "category": "teaching",
+      "category": "health",
       "stateIds": [
         "all"
       ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "988ed4272bbf3f80",
-      "title": "Public Notice: CTET Feb-2026 Key Challenge / Scanned Images of OMR (last Date 15/03/2026,up-to 11:59 PM)",
-      "link": "https://cdnbbsr.s3waas.gov.in/s3443dec3062d0286986e21dc0631734c9/uploads/2026/03/202603121086699841.pdf",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [
-        "https://cdnbbsr.s3waas.gov.in/s3443dec3062d0286986e21dc0631734c9/uploads/2026/03/202603121086699841.pdf"
-      ],
-      "sourceId": "ctet",
-      "sourceName": "CBSE — CTET",
-      "dept": "CBSE — CTET",
-      "state": "All India",
-      "category": "teaching",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "ca02d329344a8460",
-      "title": "Login: CTET SEP 2026 CORRECTION WINDOW (last date 10.09.2026)",
-      "link": "https://examinationservices.nic.in/ExamSysCTET/root/Home.aspx?enc=Ei4cajBkK1gZSfgr53ImFfEytN2I3LFrLvNrMJcZJNmO/XE3+xNuu3rFt9agQvt0",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "ctet",
-      "sourceName": "CBSE — CTET",
-      "dept": "CBSE — CTET",
-      "state": "All India",
-      "category": "teaching",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "d0831531e36202c0",
-      "title": "APPLY ONLINE (Online Registration Extended till 05.10.2026)",
-      "link": "https://recruitment.sbi.bank.in/crpd-sco-2026-27-23/apply",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "sbi",
-      "sourceName": "State Bank of India — Careers",
-      "dept": "State Bank of India — Careers",
-      "state": "All India",
-      "category": "banking",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "1a8fa8b40cc21bb0",
-      "title": "APPLY ONLINE (Online Registration extended till 28.09.2026)",
-      "link": "https://recruitment.sbi.bank.in/crpd-sco-2026-27-15/apply",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "sbi",
-      "sourceName": "State Bank of India — Careers",
-      "dept": "State Bank of India — Careers",
-      "state": "All India",
-      "category": "banking",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html"
+      "fetchMethod": "rss-discovered"
     },
     {
       "id": "730537a1e7d8fa68",
@@ -983,6 +1019,110 @@
       "dept": "AIIMS New Delhi — Recruitment",
       "state": "All India",
       "category": "health",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "rss-discovered"
+    },
+    {
+      "id": "b4b649cbb0c58886",
+      "title": "*CLICK HERE TO APPLY FOR LIC GOLDEN JUBILEE SCHOLARSHIPS 2026 \"Last date extended up to 15th October 2026\"*",
+      "link": "https://licindia.in/web/guest/golden-jubilee-foundation",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "lic",
+      "sourceName": "Life Insurance Corporation — Careers",
+      "dept": "Life Insurance Corporation — Careers",
+      "state": "All India",
+      "category": "banking",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "dc33c3253f0d919c",
+      "title": "Procurement of Various Consumables for GE Anesthesia Work station for the O.T., Burn & Plastic Surgery Block Under GFR 166 (iii) , New Delhi",
+      "link": "https://www.aiims.edu/index.php/en/131-tender/proprietary-tender/24821-160-consumablesforgeworkstation-25-26",
+      "publishedAt": "2026-10-01T06:45:35.000Z",
+      "summary": "VIEW TENDER DETAILS Tender No 160/Consumables for GE Workstation/25-26 Title Procurement of Various Consumables for GE Anesthesia Work station for the O.T., Burn & Plastic Surgery Block Under GFR 166 (iii) , New Delhi Date of Uploading 01/10/2026 Date of Closing 15/10/2026 Document",
+      "pdfUrls": [
+        "https://www.aiims.edu/images/pdf/tender/GE.pdf"
+      ],
+      "sourceId": "aiims",
+      "sourceName": "AIIMS New Delhi — Recruitment",
+      "dept": "AIIMS New Delhi — Recruitment",
+      "state": "All India",
+      "category": "health",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "rss-discovered"
+    },
+    {
+      "id": "84f5a74809908df4",
+      "title": "Tender No. BARC/TSD/ET/21/⁠2026-⁠27[e-Tender]",
+      "link": "http://www.barc.gov.in/tenders/tender262.pdf",
+      "publishedAt": "2026-09-18T05:23:12.000Z",
+      "summary": "Supply, installation, testing & commissioning of underground and over ground chilled water pipe lines, valves, MS structure near CC building, BARC, Trombay, Mumbai 400085 Last date: 28-Sep-2026",
+      "pdfUrls": [],
+      "sourceId": "barc",
+      "sourceName": "Bhabha Atomic Research Centre (BARC)",
+      "dept": "Bhabha Atomic Research Centre (BARC)",
+      "state": "All India",
+      "category": "defence",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "rss-discovered"
+    },
+    {
+      "id": "252214811535ddce",
+      "title": "Tender No. BARC/NRGP/ET/1/2026-2027[e-Tender]",
+      "link": "http://www.barc.gov.in/tenders/tender253.pdf",
+      "publishedAt": "2026-09-08T05:06:54.000Z",
+      "summary": "Painting, waterproofing and other miscellaneous works in WIP Building and other NRG structures, BARC, Trombay, Mumbai Last date: 28-Sep-2026",
+      "pdfUrls": [],
+      "sourceId": "barc",
+      "sourceName": "Bhabha Atomic Research Centre (BARC)",
+      "dept": "Bhabha Atomic Research Centre (BARC)",
+      "state": "All India",
+      "category": "defence",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "rss-discovered"
+    },
+    {
+      "id": "16ef2d12afe50083",
+      "title": "Tender No. BARC/TSD/ET/27/⁠2026-⁠27[e-Tender]",
+      "link": "http://www.barc.gov.in/tenders/tender248.pdf",
+      "publishedAt": "2026-09-04T09:09:13.000Z",
+      "summary": "Supply, Installation, Testing and Commissioning of AHUs, VFD panels, Chilled Water Piping, Valves, Insulation, etc. at Central Complex, CDM and PP Nursery inside BARC, Trombay, Mumbai – 400085 Last date: 28-Sep-2026",
+      "pdfUrls": [],
+      "sourceId": "barc",
+      "sourceName": "Bhabha Atomic Research Centre (BARC)",
+      "dept": "Bhabha Atomic Research Centre (BARC)",
+      "state": "All India",
+      "category": "defence",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "rss-discovered"
+    },
+    {
+      "id": "e75afc14c5b4fa65",
+      "title": "Tender No. BARC/TSD/ET/21/2026-2027[e-Tender]",
+      "link": "http://www.barc.gov.in/tenders/tender235.pdf",
+      "publishedAt": "2026-08-24T05:28:36.000Z",
+      "summary": "Supply, installation, testing & commissioning of underground and over ground chilled water pipe lines, valves, MS structure near CC building, BARC, Trombay, Mumbai 400085 Last date: 28-Sep-2026",
+      "pdfUrls": [],
+      "sourceId": "barc",
+      "sourceName": "Bhabha Atomic Research Centre (BARC)",
+      "dept": "Bhabha Atomic Research Centre (BARC)",
+      "state": "All India",
+      "category": "defence",
       "stateIds": [
         "all"
       ],

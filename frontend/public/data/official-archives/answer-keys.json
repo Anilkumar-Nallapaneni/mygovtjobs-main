@@ -1,38 +1,38 @@
 {
-  "generatedAt": "2026-09-30T10:44:16.086Z",
-  "count": 27,
+  "generatedAt": "2026-10-05T11:21:46.431Z",
+  "count": 28,
   "items": [
     {
-      "id": "b0408e9076d75cad",
-      "title": "Answer Key-OMR Exams",
-      "link": "https://www.keralapsc.gov.in/index.php/answerkey_omrexams",
+      "id": "3ab90b393ed54006",
+      "title": "Advertisement No. ISTRAC:02:2026 dated 27.06.2026 - The Computer Based Test (CBT) was successfully conducted on 25.09.2026. Candidates may now access their response sheets and can object to the published QP/Answer Key. Read More",
+      "link": "https://www.isro.gov.in/ISTRACRecruitment4.html",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
-      "sourceId": "psc-kl",
-      "sourceName": "Kerala PSC",
-      "dept": "Kerala PSC",
-      "state": "Kerala",
-      "category": "state",
+      "sourceId": "isro-careers",
+      "sourceName": "ISRO — Careers",
+      "dept": "Indian Space Research Organisation",
+      "state": "All India",
+      "category": "psu",
       "stateIds": [
-        "kl"
+        "all"
       ],
-      "fetchMethod": "html"
+      "fetchMethod": "html-listing"
     },
     {
-      "id": "bfc1c395481cde09",
-      "title": "Answer key-Online Exam",
-      "link": "https://www.keralapsc.gov.in/index.php/answerkey_onlineexams",
+      "id": "65b953b91c3e8ca2",
+      "title": "FINAL ANSWER KEY",
+      "link": "https://ctet.nic.in/previous-year-final-answer-key/",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
-      "sourceId": "psc-kl",
-      "sourceName": "Kerala PSC",
-      "dept": "Kerala PSC",
-      "state": "Kerala",
-      "category": "state",
+      "sourceId": "ctet",
+      "sourceName": "CBSE — CTET",
+      "dept": "CBSE — CTET",
+      "state": "All India",
+      "category": "teaching",
       "stateIds": [
-        "kl"
+        "all"
       ],
       "fetchMethod": "html"
     },
@@ -105,19 +105,36 @@
       "fetchMethod": "html"
     },
     {
-      "id": "65b953b91c3e8ca2",
-      "title": "FINAL ANSWER KEY",
-      "link": "https://ctet.nic.in/previous-year-final-answer-key/",
+      "id": "b0408e9076d75cad",
+      "title": "Answer Key-OMR Exams",
+      "link": "https://www.keralapsc.gov.in/index.php/answerkey_omrexams",
       "publishedAt": null,
       "summary": null,
       "pdfUrls": [],
-      "sourceId": "ctet",
-      "sourceName": "CBSE — CTET",
-      "dept": "CBSE — CTET",
-      "state": "All India",
-      "category": "teaching",
+      "sourceId": "psc-kl",
+      "sourceName": "Kerala PSC",
+      "dept": "Kerala PSC",
+      "state": "Kerala",
+      "category": "state",
       "stateIds": [
-        "all"
+        "kl"
+      ],
+      "fetchMethod": "html"
+    },
+    {
+      "id": "bfc1c395481cde09",
+      "title": "Answer key-Online Exam",
+      "link": "https://www.keralapsc.gov.in/index.php/answerkey_onlineexams",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-kl",
+      "sourceName": "Kerala PSC",
+      "dept": "Kerala PSC",
+      "state": "Kerala",
+      "category": "state",
+      "stateIds": [
+        "kl"
       ],
       "fetchMethod": "html"
     },
