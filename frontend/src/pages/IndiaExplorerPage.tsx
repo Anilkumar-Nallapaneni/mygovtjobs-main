@@ -16,7 +16,7 @@ export default function IndiaExplorerPage() {
   const [searchParams, setSearchParams] = useSearchParams();
   const [activeLayer, setActiveLayer] = useState(searchParams.get('layer') || '');
   const { data: apiOverview } = useIndiaOverview();
-  const { data: apiStates, loading: statesLoading } = useIndiaStates();
+  const { data: apiStates, loading: statesLoading, error: statesError } = useIndiaStates();
   const { data: districtDirectory, loading: districtsLoading, error: districtsError } = useIndiaDistrictDirectory({ q: districtQuery, limit: 72 });
   useEffect(() => {
     const seo = beginSeoHead();
@@ -35,7 +35,7 @@ export default function IndiaExplorerPage() {
     return BROWSE_STATES.filter((state) => EXPLORER_STATE_IDS.includes(state.id)).map((local) => {
       const remote = verified.get(local.id);
       return { ...local, n: remote?.name || local.n, ab: remote?.abbreviation || local.ab, reg: remote?.region || local.reg,
-        district_count: remote?.district_count ?? 0, city_count: remote?.city_count ?? 0, place_count: remote?.place_count ?? 0, job_count: remote?.job_count ?? 0 };
+        district_count: remote?.district_count, job_count: remote?.job_count ?? 0 };
     });
   }, [apiStates]);
 
@@ -56,7 +56,8 @@ export default function IndiaExplorerPage() {
     id: toSvgStateId(state.id),
     name: state.n,
     fill: '#e9eef5',
-    customData: { name: state.n, jobCount: state.job_count, listings: `${state.district_count} districts` },
+    customData: { name: state.n, jobCount: state.job_count,
+      ...(state.district_count !== undefined ? { 'verified districts': state.district_count } : {}) },
   })), [states]);
 
   return (
@@ -66,7 +67,6 @@ export default function IndiaExplorerPage() {
           <span className="india-explorer__eyebrow">ONE INDIA PLATFORM</span>
           <h1>Explore India beyond jobs</h1>
           <p>Start with any of India&apos;s 28 states or 8 Union Territories. Browse verified districts, cities and local information for education, jobs, healthcare, hotels, companies, tourism, transport and more.</p>
-          <label className="india-explorer__search"><span aria-hidden="true">⌕</span><input value={query} onChange={(event) => setQuery(event.target.value)} placeholder="Search a state or Union Territory" aria-label="Search state or Union Territory" /></label>
         </div>
         <div className="india-explorer__hero-stat"><strong>{apiOverview?.states ?? 36}</strong><span>Official States & Union Territories</span><small>Jobs are one category — directory coverage is independent.</small></div>
       </section>
@@ -78,9 +78,12 @@ export default function IndiaExplorerPage() {
         </div>
         <aside className="india-explorer__state-list">
           <div className="india-explorer__section-head"><div><h2>All 36 States & UTs</h2><p>{filtered.length} shown · every unit remains visible without jobs</p></div></div>
+          <label className="india-explorer__search india-explorer__state-search"><input value={query} onChange={(event) => setQuery(event.target.value)} placeholder="Search a state or UT" aria-label="Search state or Union Territory" /></label>
+          {statesLoading && <p role="status">Loading verified district counts…</p>}
+          {statesError && <div className="india-explorer__status india-explorer__status--error" role="alert"><strong>State service unavailable</strong><span>{statesError}. Verified district counts are unavailable.</span></div>}
           <div className="india-explorer__state-grid">
-            {statesLoading && <div className="india-explorer__loading">Enriching state counts from verified data…</div>}
-            {filtered.map((state) => <button key={state.id} type="button" onClick={() => navigate(`/india/${state.id}`)}><strong>{state.n}</strong><span>{state.ab}</span><small>{state.district_count || '—'} districts · {state.city_count || '—'} cities</small></button>)}
+            {!filtered.length && <p role="status">No states or UTs match your search.</p>}
+            {filtered.map((state) => <button key={state.id} type="button" onClick={() => navigate(`/india/${state.id}`)}><strong>{state.n}</strong><span>{state.ab}</span>{state.district_count !== undefined && <small>{state.district_count} verified districts</small>}</button>)}
           </div>
         </aside>
       </section>
@@ -90,7 +93,7 @@ export default function IndiaExplorerPage() {
         <label className="india-explorer__search india-explorer__search--compact"><span aria-hidden="true">⌕</span><input value={districtQuery} onChange={(e) => setDistrictQuery(e.target.value)} placeholder="Search district or state" aria-label="Search district or state" /></label>
         <div className="india-explorer__district-glance-grid">
           {districtsLoading && <div className="india-explorer__loading">Loading verified districts…</div>}
-          {!districtsLoading && districtDirectory?.items?.map((district) => <button key={district.id} type="button" onClick={() => navigate(`/india/${district.state_id}/district/${district.id}`)}><strong>{district.name}</strong><span>{district.state_name}</span><small>{district.city_count} cities · {district.place_count} places</small></button>)}
+          {!districtsLoading && districtDirectory?.items?.map((district) => <button key={district.id} type="button" onClick={() => navigate(`/india/${district.state_id}/district/${district.id}`)}><strong>{district.name}</strong><span>{district.state_name}</span>{!!district.city_count && <small>{district.city_count} verified cities</small>}</button>)}
           {!districtsLoading && districtsError && <div className="india-explorer__status india-explorer__status--error" role="alert"><strong>District service unavailable</strong><span>{districtsError}</span></div>}
           {!districtsLoading && !districtsError && !districtDirectory?.items?.length && <div className="india-explorer__empty-card">No verified district records match this search yet. Import the current LGD district dataset to populate this directory.</div>}
         </div>

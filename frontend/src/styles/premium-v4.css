@@ -85,7 +85,6 @@ main:not(.india-explorer) { min-width: 0; }
 }
 .india-explorer__map-card, .india-explorer__state-list { padding: clamp(18px, 2vw, 26px); }
 .india-explorer__map-card .india-map-container {
-  min-height: clamp(360px, 46vw, 570px);
   border: 1px solid color-mix(in srgb, var(--ie-border) 85%, var(--v4-gold) 15%);
   box-shadow: inset 0 0 70px rgba(255,170,0,.035);
 }
@@ -175,7 +174,6 @@ main:not(.india-explorer) { min-width: 0; }
 
 /* Desktop content density */
 @media (min-width: 1200px) {
-  .india-explorer__state-grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
   .india-explorer__category-grid--cards { grid-template-columns: repeat(4, minmax(0,1fr)); }
   .india-explorer__district-glance-grid { grid-template-columns: repeat(5, minmax(0,1fr)); }
 }
@@ -194,10 +192,8 @@ main:not(.india-explorer) { min-width: 0; }
   .india-explorer__hero-stat { min-height: 112px; padding: 18px; }
   .india-explorer__hero-stat strong { font-size: 3.5rem; }
   .india-explorer__map-layout { gap: 14px; }
-  .india-explorer__map-card .india-map-container { min-height: 300px; }
-  .india-explorer__state-grid { max-height: none; }
   .india-explorer__state-grid button { min-height: 70px; }
-  .india-explorer__district-glance-grid { grid-template-columns: repeat(2, minmax(0,1fr)); max-height: 500px; }
+  .india-explorer__district-glance-grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
   .india-explorer__district-glance-grid button { min-height: 96px; }
   .india-explorer__category-grid--cards { grid-template-columns: 1fr; }
   .india-explorer-card { min-height: 92px; }

@@ -11,8 +11,9 @@ export function useIndiaOverview() {
 export function useIndiaStates() {
   const [data, setData] = useState<IndiaState[] | null>(null)
   const [loading, setLoading] = useState(true)
-  useEffect(() => { let active = true; fetchIndiaStates().then(value => { if (active) setData(value) }).catch(() => undefined).finally(() => { if (active) setLoading(false) }); return () => { active = false } }, [])
-  return { data, loading }
+  const [error, setError] = useState<string | null>(null)
+  useEffect(() => { let active = true; fetchIndiaStates().then(value => { if (active) setData(value) }).catch((err: unknown) => { if (active) setError(err instanceof Error ? err.message : 'State API unavailable') }).finally(() => { if (active) setLoading(false) }); return () => { active = false } }, [])
+  return { data, loading, error }
 }
 
 export function useIndiaState(stateId: string) {

@@ -39,6 +39,8 @@ export const IndiaMap: React.FC<IndiaMapProps> = ({
   const [showTooltip, setShowTooltip] = useState(false);
   const [hoverTooltipEnabled, setHoverTooltipEnabled] = useState(canUseHoverTooltip);
   const [focusedPathId, setFocusedPathId] = useState<string | null>(null);
+  const [selectedPathId, setSelectedPathId] = useState<string | null>(null);
+  const selectedId = selectionSyncKey ?? selectedPathId;
 
   const originalColors = useRef<Map<string, string>>(new Map());
   const mapContainerRef = useRef<HTMLDivElement>(null);
@@ -77,11 +79,11 @@ export const IndiaMap: React.FC<IndiaMapProps> = ({
 
       const id = path.getAttribute("id") || "";
       const base = baseFillFor(id);
-      const isSelected = Boolean(selectionSyncKey && id === selectionSyncKey);
+      const isSelected = Boolean(selectedId && id === selectedId);
 
       path.setAttribute(
         "fill",
-        hovered && hoverTooltipEnabledRef.current ? mapStyle.hoverColor || base : base
+        hovered ? mapStyle.hoverColor || base : base
       );
       path.setAttribute("data-has-jobs", jobCountForPath(id) > 0 ? "true" : "false");
       path.setAttribute("data-hot-jobs", jobCountForPath(id) >= 8 ? "true" : "false");
@@ -102,7 +104,7 @@ export const IndiaMap: React.FC<IndiaMapProps> = ({
         path.setAttribute("stroke-width", String(mapStyle.strokeWidth || 1));
       }
     },
-    [baseFillFor, isIsolated, jobCountForPath, mapStyle.hoverColor, mapStyle.stroke, mapStyle.strokeWidth, selectionSyncKey]
+    [baseFillFor, isIsolated, jobCountForPath, mapStyle.hoverColor, mapStyle.stroke, mapStyle.strokeWidth, selectedId]
   );
 
   const resetAllPathStyles = useCallback(() => {
@@ -240,21 +242,21 @@ export const IndiaMap: React.FC<IndiaMapProps> = ({
 
     const paths = mapContainerRef.current.querySelectorAll("path");
     const data = stateData;
-    const focusTarget = focusedPathId || selectionSyncKey || pathIdsRef.current[0] || "";
+    const focusTarget = focusedPathId || selectedId || pathIdsRef.current[0] || "";
 
     paths.forEach((path) => {
       const pathElement = path as SVGPathElement;
       const id = pathElement.getAttribute("id") || "";
       const stateInfo = data.find((s) => s.id === id);
       const stateName =
-        pathElement.getAttribute("data-name") ||
         stateInfo?.customData?.name ||
-        stateInfo?.name;
+        stateInfo?.name ||
+        pathElement.getAttribute("data-name");
       if (stateName) {
         pathElement.setAttribute("data-name", stateName);
         pathElement.setAttribute(
           "aria-label",
-          isIsolated ? stateName : `Select ${stateName}`
+          isIsolated ? stateName : `Select ${stateName}${stateInfo?.customData?.['verified districts'] !== undefined ? `, ${stateInfo.customData['verified districts']} verified districts` : ''}`
         );
       } else if (id) {
         pathElement.setAttribute("aria-label", isIsolated ? id : `Select ${id}`);
@@ -267,7 +269,7 @@ export const IndiaMap: React.FC<IndiaMapProps> = ({
         pathElement.removeAttribute("tabindex");
       }
     });
-  }, [svgContent, stateData, focusedPathId, selectionSyncKey, isIsolated]);
+  }, [svgContent, stateData, focusedPathId, selectedId, isIsolated]);
 
   const handleMouseEnter = (e: React.MouseEvent, element: SVGPathElement) => {
     if (!hoverTooltipEnabledRef.current || isIsolated) return;
@@ -293,9 +295,10 @@ export const IndiaMap: React.FC<IndiaMapProps> = ({
       const id = path.getAttribute("id") || "";
       if (!id || isIsolated) return;
       dismissTooltip();
+      setSelectedPathId(id);
       applyPathStyle(path, false);
       path.setAttribute("data-tapped", "true");
-      window.setTimeout(() => path.removeAttribute("data-tapped"), 320);
+      window.setTimeout(() => path.removeAttribute("data-tapped"), 180);
       onStateClick?.(id);
     },
     [applyPathStyle, dismissTooltip, isIsolated, onStateClick]
@@ -313,6 +316,10 @@ export const IndiaMap: React.FC<IndiaMapProps> = ({
       const path = e.target as SVGPathElement;
       if (path?.tagName !== "path") return;
       const currentId = path.getAttribute("id") || "";
+      if (e.key === 'Escape') {
+        dismissTooltip();
+        return;
+      }
       if (e.key === "Enter" || e.key === " ") {
         e.preventDefault();
         activatePath(path);
@@ -329,15 +336,15 @@ export const IndiaMap: React.FC<IndiaMapProps> = ({
         focusPathById(ids[(idx - 1 + ids.length) % ids.length]);
       }
     },
-    [activatePath, focusPathById, isIsolated]
+    [activatePath, dismissTooltip, focusPathById, isIsolated]
   );
 
   const currentStateData = hoverInfo ? stateData.find((s) => s.id === hoverInfo.id) : undefined;
 
   const getTooltipStyles = () => ({
     position: "fixed" as const,
-    left: `${tooltipPos.x + 15}px`,
-    top: `${tooltipPos.y + 15}px`,
+    left: `${Math.max(8, Math.min(tooltipPos.x + 15, window.innerWidth - 270))}px`,
+    top: `${Math.max(8, Math.min(tooltipPos.y + 15, window.innerHeight - 110))}px`,
     backgroundColor: mapStyle.tooltipConfig?.backgroundColor || "rgba(0, 0, 0, 0.8)",
     color: mapStyle.tooltipConfig?.textColor || "#ffffff",
     padding: "8px 12px",
@@ -356,15 +363,16 @@ export const IndiaMap: React.FC<IndiaMapProps> = ({
       onMouseMove={handleMouseMove}
       onTouchStart={dismissTooltip}
     >
-      {showTooltip && hoverInfo && hoverTooltipEnabled && !isIsolated && (
-        <div className="state-tooltip" style={getTooltipStyles()}>
+      {showTooltip && hoverInfo && (hoverTooltipEnabled || focusedPathId) && !isIsolated && (
+        <div id="india-state-tooltip" role="tooltip" className="state-tooltip" style={getTooltipStyles()}>
           <div className="state-tooltip-header">
             {hoverInfo.title || currentStateData?.customData?.name || hoverInfo.id}
           </div>
+          {currentStateData?.customData?.['verified districts'] !== undefined && <div>{currentStateData.customData['verified districts']} verified districts</div>}
           {currentStateData?.customData && (
             <div className="state-tooltip-custom-data">
               {Object.entries(currentStateData.customData)
-                .filter(([key]) => key !== "name" && key !== "region" && key !== "jobCount")
+                .filter(([key]) => key !== "name" && key !== "region" && key !== "jobCount" && key !== 'verified districts')
                 .map(([key, value]) => (
                   <div key={key} className="state-tooltip-row">
                     <span>{key}:</span>
@@ -389,6 +397,27 @@ export const IndiaMap: React.FC<IndiaMapProps> = ({
         aria-label={isIsolated ? "Selected state map" : "India map — select a state"}
         dangerouslySetInnerHTML={{ __html: svgContent }}
         onKeyDown={handleMapKeyDown}
+        onFocus={(e) => {
+          const path = e.target;
+          if (isIsolated || !(path instanceof SVGPathElement)) return;
+          const id = path.getAttribute('id') || '';
+          const name = path.getAttribute('data-name') || id;
+          const rect = path.getBoundingClientRect();
+          setFocusedPathId(id);
+          applyPathStyle(path, true);
+          path.setAttribute('aria-describedby', 'india-state-tooltip');
+          setHoverInfo({ id, name, title: name });
+          setTooltipPos({ x: rect.left + rect.width / 2, y: rect.top + rect.height / 2 });
+          setShowTooltip(true);
+          onStateHover?.(id);
+        }}
+        onBlur={(e) => {
+          const path = e.target;
+          if (isIsolated || !(path instanceof SVGPathElement)) return;
+          path.removeAttribute('aria-describedby');
+          applyPathStyle(path, false);
+          dismissTooltip();
+        }}
         onMouseOver={(e) => {
           if (isIsolated) return;
           const path = e.target as SVGPathElement;

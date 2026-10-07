@@ -6,6 +6,13 @@
   "framework": "vite",
   "ignoreCommand": "node scripts/vercel-ignore-build.mjs",
   "cleanUrls": true,
+  "functions": {
+    "api/india.py": {
+      "maxDuration": 60,
+      "includeFiles": "{backend/app/**,shared/**}",
+      "excludeFiles": "{**/.venv/**,**/__pycache__/**,frontend/**,docs/**,data/**,scripts/**,backend/tests/**,**/.env,**/.env.*}"
+    }
+  },
   "headers": [
     {
       "source": "/(.*)",
@@ -120,6 +127,7 @@
     }
   ],
   "rewrites": [
+    { "source": "/api/india/:path*", "destination": "/api/india?_india_path=:path*" },
     { "source": "/india", "destination": "/" },
     { "source": "/india/:path*", "destination": "/" },
     { "source": "/india-map", "destination": "/" },

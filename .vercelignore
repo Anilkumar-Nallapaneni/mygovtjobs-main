@@ -1,5 +1,7 @@
 # Monorepo — exclude heavy/non-frontend paths (root-anchored so frontend/scripts/ is kept)
-/backend/
+/backend/*
+!/backend/app/
+!/backend/app/**
 /database/
 /docs/
 /all websites/

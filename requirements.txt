@@ -1,0 +1,11 @@
+# Minimal runtime for api/india.py; ingestion dependencies stay in backend/requirements.txt.
+# Pinned to the installed, tested backend runtime. No frontend secrets or admin routes.
+fastapi==0.141.1
+sqlalchemy[asyncio]==2.0.51
+asyncpg==0.31.0
+certifi==2026.7.22
+beautifulsoup4==4.15.0
+pydantic==2.13.4
+pydantic-settings==2.14.2
+python-dotenv==1.2.2
+email-validator==2.3.0

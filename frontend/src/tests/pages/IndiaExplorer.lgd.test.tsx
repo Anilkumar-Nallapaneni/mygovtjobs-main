@@ -55,6 +55,29 @@ describe('official LGD district browsing', () => {
   });
   afterEach(cleanup);
 
+  it('renders API district counts, including zero, without unavailable city counts', async () => {
+    vi.mocked(api.fetchIndiaStates).mockResolvedValue([
+      { id: 'ka', name: 'Karnataka', abbreviation: 'KA', administrative_type: 'state', region: 'south', svg_id: 'IN-KA', district_count: 31, city_count: 0, place_count: 0, job_count: 0 },
+      { id: 'dl', name: 'Delhi', abbreviation: 'DL', administrative_type: 'union_territory', region: 'north', svg_id: 'IN-DL', district_count: 0, city_count: 0, place_count: 0, job_count: 0 },
+    ]);
+    renderRoute('/india');
+    expect(await screen.findByText('31 verified districts')).toBeTruthy();
+    expect(screen.getByText('0 verified districts')).toBeTruthy();
+    expect(document.querySelector('.india-explorer__state-grid')?.textContent).not.toMatch(/cities|—/);
+  });
+
+  it('keeps state navigation and an explicit error when verified counts fail', async () => {
+    vi.mocked(api.fetchIndiaStates).mockRejectedValue(new Error('India API 503'));
+    renderRoute('/india');
+    const alert = await screen.findByRole('alert');
+    expect(alert.textContent).toContain('State service unavailable');
+    expect(alert.textContent).toContain('India API 503');
+    expect(document.querySelectorAll('.india-explorer__state-grid button')).toHaveLength(36);
+    expect(document.querySelectorAll('.india-explorer__state-grid small')).toHaveLength(0);
+    fireEvent.change(screen.getByRole('textbox', { name: 'Search state or Union Territory' }), { target: { value: 'Karnataka' } });
+    expect(document.querySelectorAll('.india-explorer__state-grid button')).toHaveLength(1);
+  });
+
   it('keeps all 36 states visible with an empty directory and shows official attribution', async () => {
     renderRoute('/india');
     await screen.findByText(/No verified district records match/);

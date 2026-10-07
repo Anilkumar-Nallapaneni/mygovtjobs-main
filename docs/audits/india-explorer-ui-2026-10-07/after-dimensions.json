@@ -1,0 +1,192 @@
+[
+  {
+    "width": 360,
+    "height": 800,
+    "mapCard": {
+      "x": 9,
+      "y": 727.171875,
+      "width": 342,
+      "height": 501.203125
+    },
+    "map": {
+      "x": 27,
+      "y": 862.171875,
+      "width": 306,
+      "height": 348.203125
+    },
+    "artwork": {
+      "width": 305.9999694824219,
+      "height": 347.93048095703125
+    },
+    "panel": {
+      "x": 9,
+      "y": 1248.375,
+      "width": 342,
+      "height": 2688.015625
+    },
+    "list": {
+      "x": 26,
+      "y": 1405.6875,
+      "width": 308,
+      "height": 2513.703125
+    },
+    "listScrollHeight": 2514,
+    "listOverflow": "visible",
+    "pageOverflow": 0,
+    "minTouchHeight": 60.375,
+    "bottomGap": 17,
+    "cardCount": 36
+  },
+  {
+    "width": 390,
+    "height": 844,
+    "mapCard": {
+      "x": 9,
+      "y": 735.796875,
+      "width": 372,
+      "height": 535.3125
+    },
+    "map": {
+      "x": 27,
+      "y": 870.796875,
+      "width": 336,
+      "height": 382.3125
+    },
+    "artwork": {
+      "width": 335.9999694824219,
+      "height": 382.04132080078125
+    },
+    "panel": {
+      "x": 9,
+      "y": 1291.109375,
+      "width": 372,
+      "height": 2670.8125
+    },
+    "list": {
+      "x": 26,
+      "y": 1448.421875,
+      "width": 338,
+      "height": 2496.5
+    },
+    "listScrollHeight": 2497,
+    "listOverflow": "visible",
+    "pageOverflow": 0,
+    "minTouchHeight": 60.375,
+    "bottomGap": 17,
+    "cardCount": 36
+  },
+  {
+    "width": 768,
+    "height": 1024,
+    "mapCard": {
+      "x": 16,
+      "y": 548.640625,
+      "width": 736,
+      "height": 714.3125
+    },
+    "map": {
+      "x": 40,
+      "y": 640.953125,
+      "width": 688,
+      "height": 598
+    },
+    "artwork": {
+      "width": 525.9325637817383,
+      "height": 597.9998779296875
+    },
+    "panel": {
+      "x": 16,
+      "y": 1282.953125,
+      "width": 736,
+      "height": 1434.0625
+    },
+    "list": {
+      "x": 39,
+      "y": 1446.265625,
+      "width": 690,
+      "height": 1247.75
+    },
+    "listScrollHeight": 1248,
+    "listOverflow": "visible",
+    "pageOverflow": 0,
+    "minTouchHeight": 60.375,
+    "bottomGap": 23,
+    "cardCount": 36
+  },
+  {
+    "width": 1024,
+    "height": 768,
+    "mapCard": {
+      "x": 16,
+      "y": 565.90625,
+      "width": 630.9375,
+      "height": 714.84375
+    },
+    "map": {
+      "x": 40,
+      "y": 658.75,
+      "width": 582.9375,
+      "height": 598
+    },
+    "artwork": {
+      "width": 525.9325637817383,
+      "height": 597.9998779296875
+    },
+    "panel": {
+      "x": 666.9375,
+      "y": 565.90625,
+      "width": 341.0625,
+      "height": 714.84375
+    },
+    "list": {
+      "x": 689.9375,
+      "y": 729.75,
+      "width": 295.0625,
+      "height": 528
+    },
+    "listScrollHeight": 2339,
+    "listOverflow": "auto",
+    "pageOverflow": 0,
+    "minTouchHeight": 56,
+    "bottomGap": 23,
+    "cardCount": 36
+  },
+  {
+    "width": 1440,
+    "height": 900,
+    "mapCard": {
+      "x": 27.5,
+      "y": 507.1875,
+      "width": 882.796875,
+      "height": 721.359375
+    },
+    "map": {
+      "x": 51.5,
+      "y": 606.546875,
+      "width": 834.796875,
+      "height": 598
+    },
+    "artwork": {
+      "width": 525.9325714111328,
+      "height": 597.9998779296875
+    },
+    "panel": {
+      "x": 930.296875,
+      "y": 507.1875,
+      "width": 477.203125,
+      "height": 721.359375
+    },
+    "list": {
+      "x": 953.296875,
+      "y": 677.546875,
+      "width": 431.203125,
+      "height": 528
+    },
+    "listScrollHeight": 2339,
+    "listOverflow": "auto",
+    "pageOverflow": -5,
+    "minTouchHeight": 56,
+    "bottomGap": 23,
+    "cardCount": 36
+  }
+]
