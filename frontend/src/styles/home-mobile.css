@@ -279,8 +279,8 @@ body {
 --------------------------------------------------------------------------- */
 .home-discovery-block {
   margin-top: 10px;
-  content-visibility: auto;
-  contain-intrinsic-size: auto 520px;
+  /* Discovery rows are already deferred by HomeDiscoveryBlock. Keep mounted
+     content visible for full-page capture, printing and anchor navigation. */
 }
 
 .home-discovery-block__placeholder {

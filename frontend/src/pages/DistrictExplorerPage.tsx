@@ -22,9 +22,10 @@ export default function DistrictExplorerPage() {
       seo.upsertMeta('robots', 'noindex,follow');
       return seo.restore;
     }
-    seo.upsertMeta('robots', categoryId && (!selected || !result?.items.length) ? 'noindex,follow' : 'index,follow');
+    const hasContent = categoryId ? Boolean(selected && result?.items.length) : district.city_count > 0 || district.place_count > 0;
+    seo.upsertMeta('robots', hasContent ? 'index,follow' : 'noindex,follow');
     seo.setTitle(`${selected ? `${selected.title} in ` : ""}${district.name} District | Live Govt Jobs`);
-    seo.upsertMeta('description', `Explore verified information for ${district.name} district: cities, jobs, education, healthcare, companies, tourism, hotels, transport and local records.`);
+    seo.upsertMeta('description', `Official LGD identity and source provenance for ${district.name} district. Verified local directory coverage is shown when available.`);
     seo.upsertLink('canonical', `${window.location.origin}/india/${encodeURIComponent(stateId)}/district/${encodeURIComponent(districtId)}${selected ? `/${selected.id}` : ""}`);
     seo.upsertJsonLd('district-explorer-schema', { '@context': 'https://schema.org', '@type': 'Place', name: district.name, containedInPlace: { '@type': 'AdministrativeArea', name: state?.name || district.state_name || 'India' }, url: `${window.location.origin}/india/${encodeURIComponent(stateId)}/district/${encodeURIComponent(districtId)}${selected ? `/${selected.id}` : ""}` });
     return seo.restore;

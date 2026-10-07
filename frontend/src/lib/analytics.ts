@@ -29,17 +29,18 @@ function flushPendingPageViews(): void {
 function sendPageView(path: string, title?: string): void {
   if (!GA_ID || !window.gtag) return
   const pageTitle = title ?? document.title
-  const pageLocation = `${window.location.origin}${path}`
+  const pagePath = path.split(/[?#]/, 1)[0] || '/'
+  const pageLocation = `${window.location.origin}${pagePath}`
   // Update route context without an implicit view; emit exactly one explicit event.
   window.gtag('config', GA_ID, {
     send_page_view: false,
-    page_path: path,
+    page_path: pagePath,
     page_title: pageTitle,
     page_location: pageLocation,
   })
   window.gtag('event', 'page_view', {
     send_to: GA_ID,
-    page_path: path,
+    page_path: pagePath,
     page_title: pageTitle,
     page_location: pageLocation,
   })

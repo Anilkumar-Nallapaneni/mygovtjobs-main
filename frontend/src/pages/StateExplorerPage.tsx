@@ -28,7 +28,7 @@ export default function StateExplorerPage() {
     return seo.restore;
   }, [apiState, localState, stateId, selectedCategory, categoryId, categoryResult]);
 
-  if (!localState && !apiState) return <main className="india-explorer india-explorer--empty"><h1>State not found</h1><Link to="/india">Return to India Map</Link></main>;
+  if (!localState && !apiState) return <div className="india-explorer india-explorer--empty"><h1>State not found</h1><Link to="/india">Return to India Map</Link></div>;
   const name = apiState?.name || localState?.n || stateId;
   const abbreviation = apiState?.abbreviation || localState?.ab || '';
   return (

@@ -1,0 +1,99 @@
+{
+  "robots.txt": {
+    "exists": true
+  },
+  "sitemap-index.xml": {
+    "exists": true,
+    "locations": 9
+  },
+  "sitemaps/jobs-active.xml": {
+    "exists": true,
+    "locations": 10
+  },
+  "sitemaps/districts.xml": {
+    "exists": true,
+    "locations": 0
+  },
+  "404.html": {
+    "exists": true
+  },
+  "jobs/all-india.html": {
+    "canonical": "https://www.livegovtjobs.com/jobs/all-india",
+    "jsonld_blocks": 0,
+    "has_jobposting": false,
+    "has_title": true
+  },
+  "jobs/iit-madras-assistant-professor-recruitment-2026-apply-online-for-40-posts-527824e5.html": {
+    "canonical": "https://www.livegovtjobs.com/jobs/iit-madras-assistant-professor-recruitment-2026-apply-online-for-40-posts-527824e5",
+    "jsonld_blocks": 1,
+    "has_jobposting": true,
+    "has_title": true
+  },
+  "jobs/index.html": {
+    "canonical": "https://www.livegovtjobs.com/jobs",
+    "jsonld_blocks": 0,
+    "has_jobposting": false,
+    "has_title": true
+  },
+  "jobs/latest-notifications.html": {
+    "canonical": "https://www.livegovtjobs.com/jobs/latest-notifications",
+    "jsonld_blocks": 0,
+    "has_jobposting": false,
+    "has_title": true
+  },
+  "jobs/mineral-exploration-and-consultancy-limited-mecl-mecl-non-executive-posts-techni-699116e9.html": {
+    "canonical": "https://www.livegovtjobs.com/jobs/mineral-exploration-and-consultancy-limited-mecl-mecl-non-executive-posts-techni-699116e9",
+    "jsonld_blocks": 1,
+    "has_jobposting": true,
+    "has_title": true
+  },
+  "jobs/nhm-chandigarh-medical-specialists-recruitment-2026-walkin-2d586198.html": {
+    "canonical": "https://www.livegovtjobs.com/jobs/nhm-chandigarh-medical-specialists-recruitment-2026-walkin-2d586198",
+    "jsonld_blocks": 1,
+    "has_jobposting": true,
+    "has_title": true
+  },
+  "jobs/recruitment-advertisement-for-assistant-director-farmer-welfare-and-agriculture--2e71db25.html": {
+    "canonical": "https://www.livegovtjobs.com/jobs/recruitment-advertisement-for-assistant-director-farmer-welfare-and-agriculture--2e71db25",
+    "jsonld_blocks": 1,
+    "has_jobposting": true,
+    "has_title": true
+  },
+  "jobs/recruitment-advertisement-for-scientific-officer-biology-2026-adv-no-07-2026-dat-e221204c.html": {
+    "canonical": "https://www.livegovtjobs.com/jobs/recruitment-advertisement-for-scientific-officer-biology-2026-adv-no-07-2026-dat-e221204c",
+    "jsonld_blocks": 1,
+    "has_jobposting": true,
+    "has_title": true
+  },
+  "jobs/recruitment-advertisement-for-scientific-officer-chemistry-2026-adv-no-06-2026-d-a99adcda.html": {
+    "canonical": "https://www.livegovtjobs.com/jobs/recruitment-advertisement-for-scientific-officer-chemistry-2026-adv-no-06-2026-d-a99adcda",
+    "jsonld_blocks": 1,
+    "has_jobposting": true,
+    "has_title": true
+  },
+  "jobs/recruitment-advertisement-for-scientific-officer-physics-2026-adv-no-05-2026-dat-a9e73cef.html": {
+    "canonical": "https://www.livegovtjobs.com/jobs/recruitment-advertisement-for-scientific-officer-physics-2026-adv-no-05-2026-dat-a9e73cef",
+    "jsonld_blocks": 1,
+    "has_jobposting": true,
+    "has_title": true
+  },
+  "jobs/sailcareers-com-rsp-engagement-of-young-professionals-at-cmlo-for-its-mines-unde-00fab713.html": {
+    "canonical": "https://www.livegovtjobs.com/jobs/sailcareers-com-rsp-engagement-of-young-professionals-at-cmlo-for-its-mines-unde-00fab713",
+    "jsonld_blocks": 1,
+    "has_jobposting": true,
+    "has_title": true
+  },
+  "jobs/staff-selection-commission-ssc-notice-of-combined-higher-secondary-10-2-level-ex-9b90b9f2.html": {
+    "canonical": "https://www.livegovtjobs.com/jobs/staff-selection-commission-ssc-notice-of-combined-higher-secondary-10-2-level-ex-9b90b9f2",
+    "jsonld_blocks": 0,
+    "has_jobposting": false,
+    "has_title": true
+  },
+  "jobs/tezpur-university-project-assistant-recruitment-2026-walkin-58554281.html": {
+    "canonical": "https://www.livegovtjobs.com/jobs/tezpur-university-project-assistant-recruitment-2026-walkin-58554281",
+    "jsonld_blocks": 1,
+    "has_jobposting": true,
+    "has_title": true
+  },
+  "404_noindex": true
+}

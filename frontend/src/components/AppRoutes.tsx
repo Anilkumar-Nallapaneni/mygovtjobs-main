@@ -1,5 +1,5 @@
 import { type ReactNode } from "react";
-import { Navigate, Route, Routes } from "react-router-dom";
+import { Navigate, Route, Routes, useLocation } from "react-router-dom";
 import AdminRouteGuard from "@/components/AdminRouteGuard";
 import RouteErrorBoundary from "@/components/RouteErrorBoundary";
 import {
@@ -87,9 +87,11 @@ export default function AppRoutes({
   onJobClick,
   onFooterLink,
 }: AppRoutesProps) {
+  const location = useLocation();
   return (
     <Routes>
       <Route path="/" element={homePageElement} />
+      <Route path="/search" element={<Navigate to={{ pathname: '/jobs', search: location.search }} replace />} />
       <Route path="/india" element={<LazyRoute><IndiaExplorerPage /></LazyRoute>} />
       <Route path="/india-map" element={<Navigate to="/india" replace />} />
       <Route path="/latest-notifications" element={<Navigate to={LATEST_NOTIFICATIONS_PATH} replace />} />

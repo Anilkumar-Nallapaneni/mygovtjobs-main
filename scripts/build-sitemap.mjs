@@ -191,6 +191,20 @@ async function loadVerifiedIndiaDistricts() {
   const key = process.env.SUPABASE_SERVICE_ROLE_KEY || process.env.SUPABASE_ANON_KEY || fe.VITE_SUPABASE_ANON_KEY || process.env.VITE_SUPABASE_ANON_KEY;
   if (!url || !key) return [];
   const headers = { apikey: key, Authorization: `Bearer ${key}` };
+  // Persisted identity alone is a thin page. Require sourced, verified local content.
+  const contentDistricts = new Set();
+  for (const table of ['india_cities', 'india_places']) {
+    let contentOffset = 0;
+    while (true) {
+      const res = await fetch(`${url}/rest/v1/${table}?select=district_id&verification_status=eq.verified&district_id=not.is.null&order=id.asc&limit=1000&offset=${contentOffset}`, { headers });
+      if (!res.ok) { console.warn(`District content eligibility fetch failed (${res.status})`); return []; }
+      const batch = await res.json();
+      if (!Array.isArray(batch)) return [];
+      for (const row of batch) contentDistricts.add(row.district_id);
+      if (batch.length < 1000) break;
+      contentOffset += 1000;
+    }
+  }
   const rows = [];
   const pageSize = 1000;
   let offset = 0;
@@ -199,7 +213,7 @@ async function loadVerifiedIndiaDistricts() {
     if (!res.ok) { console.warn(`India district sitemap fetch failed (${res.status})`); return []; }
     const batch = await res.json();
     if (!Array.isArray(batch) || !batch.length) break;
-    rows.push(...batch);
+    rows.push(...batch.map(row => ({ ...row, has_verified_local_content: contentDistricts.has(row.id) })));
     if (batch.length < pageSize) break;
     offset += pageSize;
   }

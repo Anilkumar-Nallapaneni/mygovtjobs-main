@@ -201,15 +201,17 @@ API docs: http://localhost:8000/docs
 
 `npm run dev:backend` is an alias for the same existing FastAPI app (`app.main:app`).
 The launcher uses `backend/.venv/Scripts/python.exe` on Windows; no activation is required.
-For development without admin credentials, use PowerShell:
+For public API development, use PowerShell:
 
 ```powershell
 $env:APP_ENV = 'development'
-$env:ALLOW_INSECURE_ADMIN = '1'
+$env:ALLOW_INSECURE_ADMIN = '0'
 npm run dev:backend
 ```
 
 This starts port 8000. `/health` may report degraded when the configured database is unavailable.
+Public read endpoints do not require `ADMIN_API_KEY` or insecure admin mode.
+Admin/ingest routes remain gated; configure `ADMIN_API_KEY` separately when testing those functions.
 
 If Supabase reports `CERTIFICATE_VERIFY_FAILED`, supply its trusted CA certificate:
 download it from the project's Supabase Dashboard → Database settings → SSL configuration,

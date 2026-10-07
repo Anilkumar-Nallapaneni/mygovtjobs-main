@@ -168,7 +168,7 @@
     "export:live-jobs": "node scripts/run-python.mjs scripts/export-live-jobs-now.py",
     "everything": "npm run check:frontend && npm run type-check && npm run lint && npm run test && npm run build && npm run env:check && npm run supabase:test && npm run supabase:audit && npm run db:test && npm run jobs:audit && npm run verify",
     "test": "npm run test --prefix frontend && npm run test:backend && npm run test:scripts",
-    "test:scripts": "node --test scripts/lib/audit-urls.test.mjs scripts/lib/india-district-sitemap.test.mjs",
+    "test:scripts": "node --test scripts/lib/audit-urls.test.mjs scripts/lib/india-district-sitemap.test.mjs scripts/lib/release-routing.test.mjs",
     "playwright:install": "npm run playwright:install --prefix frontend",
     "test:e2e": "npm run build:e2e --prefix frontend && npm run playwright:install --prefix frontend && npm run test:e2e --prefix frontend",
     "test:backend": "node scripts/run-python.mjs scripts/run-backend-tests.py",

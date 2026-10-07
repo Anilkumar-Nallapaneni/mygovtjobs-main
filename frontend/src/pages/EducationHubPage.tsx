@@ -94,7 +94,7 @@ function CareerDetail({ path, onClose }: { path: CareerPath; onClose: () => void
       <div className="edu-detail-grid">
         <div><span>Duration</span><strong>{path.duration}</strong></div>
         <div><span>Eligibility</span><strong>{path.eligibility}</strong></div>
-        <div><span>Starting salary</span><strong>{path.avgStartingSalary}</strong></div>
+        {path.salarySource && path.salarySourceUrl && <div><span>Indicative starting salary</span><strong>{path.avgStartingSalary}</strong><p>{path.salarySource}</p><a href={path.salarySourceUrl} target="_blank" rel="noopener noreferrer">Salary source</a></div>}
         <div><span>Scope</span><strong>{path.scope}</strong></div>
       </div>
       <div className="edu-detail-columns">

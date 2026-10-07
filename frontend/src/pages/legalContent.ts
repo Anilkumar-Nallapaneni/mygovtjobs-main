@@ -116,7 +116,7 @@ export const ABOUT_PAGE = {
     {
       heading: "How daily sync works",
       paragraphs: [
-        "Every morning (IST), our daily update process scans 100+ official sources, validates titles and deadlines, and publishes live listings on the website.",
+        "The scheduled update process checks configured official sources. Recruitment records are published only after they pass verification, completeness and deadline checks; a scan does not guarantee publication.",
         "The homepage shows when data was last synced. Job detail pages are enriched from official PDF notifications where available.",
         "The site interface is available in many Indian languages, but job notification text stays in its original language (usually English) as published by the recruiting body.",
       ],

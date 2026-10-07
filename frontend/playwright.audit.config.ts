@@ -5,6 +5,6 @@ export default defineConfig({
   testMatch: 'production-audit.spec.ts',
   workers: 2,
   reporter: 'list',
-  outputDir: '../docs/audits/screenshots-2026-10-07',
+  outputDir: '../docs/audits/release-screenshots-2026-10-07',
   use: { ...devices['Desktop Chrome'] },
 });

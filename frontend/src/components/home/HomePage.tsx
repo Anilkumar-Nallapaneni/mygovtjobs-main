@@ -7,6 +7,7 @@ import { numberLocale } from "@/utils/formatLocale";
 import type { HeroStatFilterKey } from "@/utils/homePageFilters";
 import EducationFilterPill from "@/components/home/EducationFilterPill";
 import HomeHeroMarketing from "@/components/home/HomeHeroMarketing";
+import IndiaGlancePanel from "@/components/home/IndiaGlancePanel";
 import ExploreHubBanner from "@/components/home/ExploreHubBanner";
 import HomeJobsListSection from "@/components/home/HomeJobsListSection";
 import HomeCareerMarketplace from "@/components/home/HomeCareerMarketplace";
@@ -257,16 +258,6 @@ export default function HomePage({
     <div className={resultsHubMode ? "results-hub-page" : undefined}>
       {!resultsHubMode ? <section className={`home-page-main${isBrowseLanding ? " home-page-main--landing" : ""}`}>
         {!selectedState && !isBrowseLanding && <header className="home-purpose"><h1>{t('home.heroHeading', { defaultValue: 'Live government job notifications across India' })}</h1><p>{t('home.firstVisitText', { defaultValue: 'Search jobs or browse by state and qualification. Check the official notification before applying.' })}</p></header>}
-        {!resultsHubMode && stateCounts && categoryCounts ? (
-          <Suspense fallback={<div className="sector-browser-fallback" aria-hidden style={{ minHeight: 120 }} />}>
-            <SectorBrowser
-              stateCounts={stateCounts}
-              categoryCounts={categoryCounts}
-              loading={jobsLoading}
-            />
-          </Suspense>
-        ) : null}
-
         {!selectedState && !resultsHubMode && !isBrowseLanding && (
           <div className="home-hero-tagline">
             <div className="home-hero-tagline__rule" aria-hidden />
@@ -361,6 +352,9 @@ export default function HomePage({
           />
         )}
 
+        {stateCounts && categoryCounts && <Suspense fallback={null}><SectorBrowser stateCounts={stateCounts} categoryCounts={categoryCounts} loading={jobsLoading} /></Suspense>}
+        {!selectedState && !isBrowseLanding && !search.trim() && <HomeCareerMarketplace />}
+
         {!isBrowseLanding && !search.trim() && (
         <div
           className={`home-hero-grid${selectedState ? " home-hero-grid--state" : ""}${resultsHubMode ? " home-hero-grid--hidden" : ""}`}
@@ -394,7 +388,7 @@ export default function HomePage({
             }
           >
             {!selectedState ? (
-              <HomeHeroMarketing
+              <><IndiaGlancePanel /><details className="home-catalog-breakdown"><summary>Catalog breakdown</summary><HomeHeroMarketing
                 totalListings={totalListings}
                 heroStats={displayHeroStats}
                 heroStatFilter={heroStatFilter}
@@ -402,7 +396,7 @@ export default function HomePage({
                 onHeroStatClick={handleHeroStatClick}
                 statsPending={paintShellStats}
                 t={t}
-              />
+              /></details></>
             ) : (
               <StateJobsPanel
                 stateName={stateName}
@@ -430,7 +424,6 @@ export default function HomePage({
 
         {!selectedState && !isBrowseLanding && (
           <>
-            <HomeCareerMarketplace />
             <ExploreHubBanner />
             <Suspense fallback={null}>
               <HomeDiscoveryBlock

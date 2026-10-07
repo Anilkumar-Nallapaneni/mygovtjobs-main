@@ -120,12 +120,14 @@
     }
   ],
   "rewrites": [
-    { "source": "/india", "destination": "/index.html" },
-    { "source": "/india/:path*", "destination": "/index.html" },
-    { "source": "/india-map", "destination": "/index.html" },
-    { "source": "/education/:path*", "destination": "/index.html" },
-    { "source": "/career", "destination": "/index.html" },
-    { "source": "/latest-notifications", "destination": "/index.html" },
+    { "source": "/india", "destination": "/" },
+    { "source": "/india/:path*", "destination": "/" },
+    { "source": "/india-map", "destination": "/" },
+    { "source": "/education", "destination": "/" },
+    { "source": "/education/:path*", "destination": "/" },
+    { "source": "/career", "destination": "/" },
+    { "source": "/search", "destination": "/" },
+    { "source": "/latest-notifications", "destination": "/" },
     { "source": "/api/(.*)", "destination": "/api/$1" },
     { "source": "/og/job.svg", "destination": "/api/og" },
     { "source": "/data/:path*", "destination": "/data/:path*" }

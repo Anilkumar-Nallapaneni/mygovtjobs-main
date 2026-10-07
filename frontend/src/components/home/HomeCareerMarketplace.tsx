@@ -2,8 +2,8 @@ import { Link } from "react-router-dom";
 import "@/styles/topmate-inspired.css";
 
 const offerings = [
-  { icon: "🎯", title: "Career Guidance", text: "Understand eligibility, career paths and the exams that fit your goals.", href: "/career", action: "Explore careers" },
-  { icon: "📚", title: "Exam Preparation", text: "Find structured preparation resources for SSC, Banking, Railway, UPSC and more.", href: "/education", action: "Start preparing" },
+  { icon: "📅", title: "Exams & Calendar", text: "Browse examinations and upcoming dates.", href: "/exams", action: "Browse exams" },
+  { icon: "📋", title: "Results & Admit Cards", text: "Check official exam updates and results.", href: "/results", action: "View results" },
   { icon: "📝", title: "Mock Tests", text: "Practice with topic-wise and exam-focused tests and track your progress.", href: "/education/mock-tests", action: "Take a test" },
   { icon: "🎓", title: "Scholarships & Education", text: "Discover scholarships, colleges, courses and useful education resources.", href: "/scholarships", action: "Explore scholarships" },
 ];
@@ -20,9 +20,7 @@ export default function HomeCareerMarketplace() {
     <section className="career-marketplace" aria-labelledby="career-marketplace-title">
       <div className="career-marketplace__head">
         <div>
-          <span className="career-marketplace__eyebrow">YOUR NEXT STEP</span>
-          <h2 id="career-marketplace-title">Find the job. Prepare smarter. Move forward.</h2>
-          <p>LiveGovtJobs connects government-job discovery with exam preparation and education resources in one place.</p>
+          <h2 id="career-marketplace-title">Exams, results and preparation</h2>
         </div>
         <Link className="career-marketplace__primary" to="/education">Explore Education <span aria-hidden>→</span></Link>
       </div>

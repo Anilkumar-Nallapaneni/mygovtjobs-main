@@ -1,0 +1,47 @@
+{
+  "https://livegovtjobs.com/india": {
+    "error": "HTTP Error 404: Not Found"
+  },
+  "https://www.livegovtjobs.com/india": {
+    "error": "HTTP Error 404: Not Found"
+  },
+  "https://www.livegovtjobs.com/api/india/states": {
+    "error": "HTTP Error 404: Not Found"
+  },
+  "https://www.livegovtjobs.com/": {
+    "status": 200,
+    "url": "https://www.livegovtjobs.com/",
+    "server": "Vercel",
+    "x_vercel_error": null,
+    "assets": [
+      "/assets/index-DnhWlAGn.js"
+    ]
+  },
+  "production_bundle_api_references": [],
+  "dns_api": {
+    "error": "[Errno 11001] getaddrinfo failed"
+  },
+  "india_chunk_api_references": [
+    {
+      "file": "IndiaExplorerPage-COZMt1un.js",
+      "has_same_origin_india_paths": false,
+      "has_api_subdomain": false,
+      "has_localhost": false
+    },
+    {
+      "file": "StateExplorerPage-CSFBwouk.js",
+      "has_same_origin_india_paths": false,
+      "has_api_subdomain": false,
+      "has_localhost": false
+    }
+  ],
+  "india_api_dependency_evidence": [
+    {
+      "file": "india-explorer-D1Mb1IVx.js",
+      "india_api_paths": true,
+      "api_subdomain": false,
+      "empty_base_literal": true,
+      "localhost": false
+    }
+  ]
+}

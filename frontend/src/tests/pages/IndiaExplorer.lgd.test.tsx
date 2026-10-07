@@ -100,6 +100,7 @@ describe('official LGD district browsing', () => {
     expect(screen.getByText(district.lgd_district_code!)).toBeTruthy();
     expect(screen.getByText('2026-10-07')).toBeTruthy();
     await waitFor(() => expect(document.head.querySelector('link[rel="canonical"]')?.getAttribute('href')).toMatch(new RegExp(`/india/ka/district/${district.id}$`)));
+    expect(document.head.querySelector('meta[name="robots"]')?.getAttribute('content')).toBe('noindex,follow');
   });
 
   it('does not render a district profile or indexable canonical URL on API errors', async () => {

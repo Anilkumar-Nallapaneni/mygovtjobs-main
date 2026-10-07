@@ -27,6 +27,8 @@
 .home-page-main .home-hero-stat--animate { animation: none; }
 .home-page-main :is(input, select, button) { min-height: 44px; }
 .home-page-main .home-jobs-section { scroll-margin-top: 100px; }
+.home-catalog-breakdown { padding: var(--space-3); margin-top: var(--space-3); border: 1px solid var(--ds-border); border-radius: var(--radius-sm); }
+.home-catalog-breakdown summary { cursor: pointer; font-size: var(--type-small); }
 
 /* ----- Global feel ----- */
 ::selection {

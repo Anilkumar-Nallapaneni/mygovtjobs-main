@@ -61,4 +61,16 @@ describe('analytics', () => {
     expect(views).toHaveLength(1)
     expect(gtag.mock.calls.find(call => call[0] === 'config')?.[2]).toMatchObject({ send_page_view: false })
   })
+
+  it('strips search terms and fragments even when a caller passes them', async () => {
+    vi.stubEnv('VITE_GA_MEASUREMENT_ID', 'G-TEST12345')
+    const { initAnalytics, trackPageView } = await import('@/lib/analytics')
+    initAnalytics()
+    const gtag = vi.fn()
+    window.gtag = gtag
+    trackPageView('/jobs?q=private@example.test#private')
+    const event = gtag.mock.calls.find(call => call[0] === 'event' && call[1] === 'page_view')
+    expect(event?.[2]).toMatchObject({ page_path: '/jobs', page_location: `${window.location.origin}/jobs` })
+    expect(JSON.stringify(gtag.mock.calls)).not.toContain('private@example.test')
+  })
 })

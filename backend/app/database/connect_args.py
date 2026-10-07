@@ -23,6 +23,12 @@ def asyncpg_connect_args(*, command_timeout: int = 120) -> dict:
     ctx.load_verify_locations(cafile=certifi.where())
     ca_file = os.environ.get("DATABASE_SSL_CA_FILE", "").strip()
     if ca_file:
-        ctx.load_verify_locations(cafile=ca_file)
+        try:
+            ctx.load_verify_locations(cafile=ca_file)
+        except (OSError, ssl.SSLError) as exc:
+            raise RuntimeError(
+                "DATABASE_SSL_CA_FILE must point to a readable, valid trusted CA PEM file. "
+                "Download the provider CA from your database dashboard; TLS verification stays enabled."
+            ) from exc
     args["ssl"] = ctx
     return args
