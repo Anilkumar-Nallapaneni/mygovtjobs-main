@@ -9,10 +9,11 @@ import '@/styles/india-explorer.css';
 import { beginSeoHead } from '@/utils/seoHead';
 
 export default function StateExplorerPage() {
-  const { stateId = '', category: categoryId = '' } = useParams();
-  const localState = getExplorerState(stateId);
+  const { stateId: routeStateId = '', category: categoryId = '' } = useParams();
+  const localState = getExplorerState(routeStateId);
+  const stateId = localState?.id || routeStateId;
   const { data: apiState, loading: stateLoading } = useIndiaState(stateId);
-  const { data: districts, loading: districtsLoading } = useIndiaDistricts(stateId);
+  const { data: districts, loading: districtsLoading, error: districtsError } = useIndiaDistricts(stateId);
   const selectedCategory = EXPLORER_CATEGORIES.find(c => c.id === categoryId);
   const { data: categoryResult, loading: categoryLoading } = useIndiaCategory(stateId, categoryId);
   useEffect(() => {
@@ -43,7 +44,8 @@ export default function StateExplorerPage() {
         <div className="india-explorer__section-head"><div><h2>Districts in {name}</h2><p>District browsing does not depend on jobs. Open any verified district for its schools, colleges, jobs, companies, hospitals, hotels, transport and other records.</p></div><strong>{districts?.length ?? 0}</strong></div>
         <div className="state-explorer__district-grid">
           {districtsLoading && <div className="india-explorer__loading">Loading verified districts…</div>}
-          {!districtsLoading && districts?.length === 0 && <div className="india-explorer__empty-card">No verified district records have been imported yet. Import LGD data before publishing this area.</div>}
+          {!districtsLoading && districtsError && <div className="india-explorer__status india-explorer__status--error"><strong>District service unavailable</strong><span>{districtsError}. The site will not substitute unverified district names.</span></div>}
+          {!districtsLoading && !districtsError && districts?.length === 0 && <div className="india-explorer__status india-explorer__status--warning"><strong>Verified district data is not loaded for {name}</strong><span>This page intentionally stays empty until the official LGD district dataset is imported and verified.</span></div>}
           {districts?.map(d => <Link key={d.id} to={`/india/${stateId}/district/${d.id}`} className="state-explorer__district-card"><strong>{d.name}</strong><span>Open district →</span></Link>)}
         </div>
       </section>

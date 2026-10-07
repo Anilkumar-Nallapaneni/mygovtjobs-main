@@ -1,0 +1,12 @@
+{
+  "provider": "Ministry of Panchayati Raj, Government of India",
+  "dataset": "Local Government Directory (LGD) - Districts",
+  "download_date": "2026-10-07",
+  "source_type": "official LGD XLSX download",
+  "source_url": "https://lgdirectory.gov.in/",
+  "original_filename": "All_Districtof_India_2026-10-07_17-55-02.xlsx",
+  "sha256": "387ce8805f54b68baaeda1dbc40751927e8eb981f2b48548ffeaf833a6881d68",
+  "record_count": 784,
+  "state_ut_count": 36,
+  "worksheet": "allDistrictofIndia"
+}

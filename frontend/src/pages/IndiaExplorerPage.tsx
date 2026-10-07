@@ -5,6 +5,7 @@ import { BROWSE_STATES, toSvgStateId } from '@/data/states';
 import { EXPLORER_CATEGORIES, EXPLORER_STATE_IDS } from '@/data/india/indiaExplorer';
 import { useIndiaDistrictDirectory, useIndiaOverview, useIndiaStates } from '@/hooks/useIndiaExplorer';
 import ExplorerCategoryCard from '@/components/india/ExplorerCategoryCard';
+import IndiaDataSources from '@/components/india/IndiaDataSources';
 import '@/styles/india-explorer.css';
 import { beginSeoHead } from '@/utils/seoHead';
 
@@ -16,7 +17,7 @@ export default function IndiaExplorerPage() {
   const [activeLayer, setActiveLayer] = useState(searchParams.get('layer') || '');
   const { data: apiOverview } = useIndiaOverview();
   const { data: apiStates, loading: statesLoading } = useIndiaStates();
-  const { data: districtDirectory, loading: districtsLoading } = useIndiaDistrictDirectory({ q: districtQuery, limit: 72 });
+  const { data: districtDirectory, loading: districtsLoading, error: districtsError } = useIndiaDistrictDirectory({ q: districtQuery, limit: 72 });
   useEffect(() => {
     const seo = beginSeoHead();
     seo.setTitle('Explore India — States, Districts, Jobs & Local Information | Live Govt Jobs');
@@ -85,12 +86,13 @@ export default function IndiaExplorerPage() {
       </section>
 
       <section className="india-explorer__directory-glance">
-        <div className="india-explorer__section-head"><div><h2>Districts at a glance</h2><p>District browsing is independent of job availability. Only verified imported district records are displayed.</p></div><span className="india-explorer__verified-badge">✓ Source-attributed</span></div>
+        <div className="india-explorer__section-head"><div><h2>Districts at a glance</h2><p>District browsing is independent of job availability. Only source-attributed, verified district records are displayed; missing data is never guessed.</p></div><span className="india-explorer__verified-badge">✓ Source-attributed</span></div>
         <label className="india-explorer__search india-explorer__search--compact"><span aria-hidden="true">⌕</span><input value={districtQuery} onChange={(e) => setDistrictQuery(e.target.value)} placeholder="Search district or state" aria-label="Search district or state" /></label>
         <div className="india-explorer__district-glance-grid">
           {districtsLoading && <div className="india-explorer__loading">Loading verified districts…</div>}
           {!districtsLoading && districtDirectory?.items?.map((district) => <button key={district.id} type="button" onClick={() => navigate(`/india/${district.state_id}/district/${district.id}`)}><strong>{district.name}</strong><span>{district.state_name}</span><small>{district.city_count} cities · {district.place_count} places</small></button>)}
-          {!districtsLoading && !districtDirectory?.items?.length && <div className="india-explorer__empty-card">No verified district records match this search yet. Import the current LGD district dataset to populate this directory.</div>}
+          {!districtsLoading && districtsError && <div className="india-explorer__status india-explorer__status--error" role="alert"><strong>District service unavailable</strong><span>{districtsError}</span></div>}
+          {!districtsLoading && !districtsError && !districtDirectory?.items?.length && <div className="india-explorer__empty-card">No verified district records match this search yet. Import the current LGD district dataset to populate this directory.</div>}
         </div>
       </section>
 
@@ -99,6 +101,7 @@ export default function IndiaExplorerPage() {
         <div className="india-explorer__category-grid">{EXPLORER_CATEGORIES.map((category) => <button key={category.id} type="button" className={activeLayer === category.id ? 'india-layer-filter india-layer-filter--active' : 'india-layer-filter'} onClick={() => setLayer(category.id)}>{category.icon} {category.title}</button>)}</div>
         <div className="india-explorer__category-grid india-explorer__category-grid--cards">{EXPLORER_CATEGORIES.filter((category) => !activeLayer || category.id === activeLayer).map((category) => <ExplorerCategoryCard key={category.id} category={category} />)}</div>
       </section>
+      <IndiaDataSources />
     </main>
   );
 }

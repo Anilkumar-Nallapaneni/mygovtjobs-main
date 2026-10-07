@@ -4,7 +4,7 @@
   "workspaces": [
     "frontend"
   ],
-  "description": "Live Govt Jobs \u2014 frontend (Vite) and official-site fetch scripts",
+  "description": "Live Govt Jobs — frontend (Vite) and official-site fetch scripts",
   "engines": {
     "node": ">=24 <25"
   },
@@ -46,6 +46,9 @@
     "data:refresh": "node scripts/run-python.mjs scripts/run-full-data-refresh.py",
     "education:seed": "tsx scripts/seed-education.ts",
     "india:import": "node scripts/run-python.mjs scripts/india/import_directory.py csv",
+    "india:normalize:lgd": "node scripts/run-python.mjs scripts/india/normalize_lgd_districts.py",
+    "india:validate:lgd": "node scripts/run-python.mjs scripts/india/validate_lgd_districts.py",
+    "india:import:lgd": "node scripts/run-python.mjs scripts/india/import_directory.py lgd-districts",
     "india:sync:education": "node scripts/run-python.mjs scripts/india/import_directory.py education-colleges",
     "sync:quick": "node scripts/run-python.mjs scripts/run-sync-quick.py",
     "sync:quick:rss": "node scripts/run-python.mjs scripts/run-sync-quick.py --rss-only",
@@ -164,7 +167,7 @@
     "export:live-jobs": "node scripts/run-python.mjs scripts/export-live-jobs-now.py",
     "everything": "npm run check:frontend && npm run type-check && npm run lint && npm run test && npm run build && npm run env:check && npm run supabase:test && npm run supabase:audit && npm run db:test && npm run jobs:audit && npm run verify",
     "test": "npm run test --prefix frontend && npm run test:backend && npm run test:scripts",
-    "test:scripts": "node --test scripts/lib/audit-urls.test.mjs",
+    "test:scripts": "node --test scripts/lib/audit-urls.test.mjs scripts/lib/india-district-sitemap.test.mjs",
     "playwright:install": "npm run playwright:install --prefix frontend",
     "test:e2e": "npm run build:e2e --prefix frontend && npm run playwright:install --prefix frontend && npm run test:e2e --prefix frontend",
     "test:backend": "node scripts/run-python.mjs scripts/run-backend-tests.py",
@@ -224,7 +227,8 @@
     "phases:apply": "node scripts/run-all-phases.mjs --apply",
     "audit:india-explorer": "node scripts/audit-india-explorer.mjs",
     "india:check": "npm run audit:india-explorer && node --check scripts/run-python.mjs",
-    "audit:india": "node scripts/audit-india-platform.mjs"
+    "audit:india": "node scripts/audit-india-platform.mjs",
+    "audit:india:data": "node scripts/audit-india-data-readiness.mjs"
   },
   "dependencies": {
     "@vercel/analytics": "^2.0.1"

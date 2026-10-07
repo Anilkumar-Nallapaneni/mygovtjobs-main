@@ -166,3 +166,50 @@
 .india-explorer__state-grid button small { grid-column:1/-1; color:var(--ie-muted); font-size:.61rem; font-weight:700; }
 @media (max-width:1050px){ .india-explorer__district-glance-grid{grid-template-columns:repeat(3,minmax(0,1fr));} }
 @media (max-width:700px){ .india-explorer__district-glance-grid{grid-template-columns:repeat(2,minmax(0,1fr));} }
+
+/* 2026-10-06 audit polish: readable, neutral surfaces and explicit data-trust states. */
+.india-explorer {
+  --ie-ink: var(--ds-text, #172033);
+  --ie-muted: var(--ds-text-secondary, #5f6b7a);
+  --ie-panel: var(--ds-surface, #ffffff);
+  --ie-panel-2: var(--ds-surface-subtle, #f7f9fc);
+  --ie-border: var(--ds-border, #dfe5ec);
+}
+.india-explorer__hero,
+.india-explorer__map-card,
+.india-explorer__state-list,
+.india-explorer__layers,
+.state-explorer__overview,
+.state-explorer__detail-grid article,
+.state-explorer__spotlight,
+.india-explorer__directory-glance { box-shadow:0 8px 28px rgba(15,23,42,.07); }
+.india-explorer__hero { background:linear-gradient(135deg,#fff 0%,#fffaf4 52%,#fff7e8 100%); }
+.india-explorer__hero-stat { background:#fff; border-color:var(--ie-border); }
+.india-explorer__hero-stat strong,
+.state-explorer__badge strong { background:linear-gradient(135deg,#e85d04,#d97706); -webkit-background-clip:text; background-clip:text; color:transparent; }
+.india-explorer__search { background:#fff; border-color:var(--ie-border); box-shadow:0 4px 16px rgba(15,23,42,.05); }
+.india-explorer__state-grid button,
+.india-explorer__district-glance-grid button,
+.india-layer-filter,
+.india-explorer-card,
+.state-explorer__fact-grid div { background:#fff; }
+.india-explorer__state-grid button:focus-visible,
+.india-explorer__district-glance-grid button:focus-visible,
+.india-layer-filter:focus-visible,
+.india-explorer-card:focus-visible,
+.state-explorer__district-card:focus-visible { outline:3px solid rgba(255,107,0,.28); outline-offset:2px; }
+.india-explorer__status { grid-column:1/-1; display:flex; flex-direction:column; gap:6px; padding:18px 20px; border-radius:16px; line-height:1.5; }
+.india-explorer__status strong { font-size:.9rem; }
+.india-explorer__status span { color:var(--ie-muted); font-size:.82rem; }
+.india-explorer__status--warning { border:1px solid #f4c66b; background:#fff9e8; color:#704900; }
+.india-explorer__status--error { border:1px solid #f3b1b1; background:#fff5f5; color:#8b1d1d; }
+.india-explorer__empty-card { background:#fff; color:var(--ie-muted); border-color:var(--ie-border); }
+.state-explorer__map { background:radial-gradient(circle at center,#fff7e8,transparent 58%),#f8fafc; }
+@media (prefers-color-scheme: dark) {
+  .india-explorer { --ie-ink:#f5f7fb; --ie-muted:#a8b3c2; --ie-panel:#101827; --ie-panel-2:#0b1220; --ie-border:rgba(148,163,184,.22); }
+  .india-explorer__hero { background:radial-gradient(circle at 85% 15%,rgba(255,170,0,.14),transparent 30%),linear-gradient(135deg,#101827,#0b1220); }
+  .india-explorer__hero-stat,.india-explorer__search,.india-explorer__state-grid button,.india-explorer__district-glance-grid button,.india-layer-filter,.india-explorer-card,.state-explorer__fact-grid div { background:rgba(255,255,255,.04); }
+  .india-explorer__status--warning { background:rgba(245,158,11,.10); color:#f8d98a; border-color:rgba(245,158,11,.35); }
+  .india-explorer__status--error { background:rgba(239,68,68,.10); color:#fecaca; border-color:rgba(239,68,68,.35); }
+  .india-explorer__empty-card { background:rgba(255,255,255,.03); }
+}

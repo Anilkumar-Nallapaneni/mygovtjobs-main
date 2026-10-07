@@ -8,6 +8,7 @@
 import { readFileSync, writeFileSync, existsSync, mkdirSync, readdirSync, unlinkSync } from "fs";
 import { join, dirname } from "path";
 import { fileURLToPath } from "url";
+import { verifiedDistrictLocations } from './lib/india-district-sitemap.mjs';
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
 const publicDir = join(root, "frontend/public");
@@ -194,7 +195,7 @@ async function loadVerifiedIndiaDistricts() {
   const pageSize = 1000;
   let offset = 0;
   while (true) {
-    const res = await fetch(`${url}/rest/v1/india_districts?select=id,state_id,updated_at&verification_status=eq.verified&order=updated_at.desc&limit=${pageSize}&offset=${offset}`, { headers });
+    const res = await fetch(`${url}/rest/v1/india_districts?select=id,state_id,updated_at,verification_status&verification_status=eq.verified&order=id.asc&limit=${pageSize}&offset=${offset}`, { headers });
     if (!res.ok) { console.warn(`India district sitemap fetch failed (${res.status})`); return []; }
     const batch = await res.json();
     if (!Array.isArray(batch) || !batch.length) break;
@@ -272,9 +273,8 @@ async function main() {
     stateEntries.push(urlEntry(`${siteUrl}/india/${id}`, "daily", "0.9"));
   }
 
-  for (const district of indiaDistricts) {
-    if (!district?.id || !district?.state_id) continue;
-    districtEntries.push(urlEntry(`${siteUrl}/india/${district.state_id}/district/${district.id}`, "weekly", "0.75", district.updated_at ? new Date(district.updated_at).toISOString().slice(0, 10) : null));
+  for (const district of verifiedDistrictLocations(indiaDistricts, siteUrl, STATE_IDS)) {
+    districtEntries.push(urlEntry(district.loc, "weekly", "0.75", district.lastmod));
   }
 
   for (const id of CATEGORY_IDS) {

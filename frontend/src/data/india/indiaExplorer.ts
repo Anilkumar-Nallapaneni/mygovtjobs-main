@@ -31,5 +31,6 @@ export const EXPLORER_CATEGORIES: ExplorerCategory[] = [
 export const EXPLORER_STATE_IDS = BROWSE_STATES.map((state) => state.id);
 
 export function getExplorerState(stateId: string) {
-  return BROWSE_STATES.find((state) => state.id === stateId) ?? null;
+  const value = stateId.toLowerCase();
+  return BROWSE_STATES.find((state) => state.id === value || state.n.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '') === value) ?? null;
 }

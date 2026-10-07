@@ -24,6 +24,15 @@ CATEGORY_GROUPS = {
     "transport": ("airport", "railway", "transport"),
 }
 
+# to_jsonb keeps the existing API available before additive migration 043 is applied.
+DISTRICT_PROVENANCE_SQL = """
+    d.source_record_id,
+    (SELECT name FROM india_sources WHERE id=d.source_id) AS source_name,
+    to_jsonb(d)->>'lgd_district_code' AS lgd_district_code,
+    to_jsonb(d)->>'lgd_state_code' AS lgd_state_code,
+    to_jsonb(d)->'lgd_provenance' AS provenance
+"""
+
 
 
 def _state_id(value: str) -> str:
@@ -114,6 +123,7 @@ async def india_district_directory(
     async with SessionLocal() as session:
         rows = await session.execute(text(f"""
             SELECT d.id::text, d.name, d.slug, d.state_id, s.name AS state_name, d.source_url,
+                   d.verification_status, {DISTRICT_PROVENANCE_SQL},
                    (SELECT count(*) FROM india_cities c WHERE c.district_id=d.id AND c.verification_status='verified')::int AS city_count,
                    (SELECT count(*) FROM india_places p WHERE p.district_id=d.id AND p.verification_status='verified')::int AS place_count
             FROM india_districts d
@@ -131,11 +141,12 @@ async def india_district_directory(
 async def state_districts(state_id: str, limit: int = Query(500, ge=1, le=1000)):
     state_id = _state_id(state_id)
     async with SessionLocal() as session:
-        result = await session.execute(text("""
-            SELECT id, name, slug, source_url, verification_status
-            FROM india_districts
-            WHERE state_id=:state_id AND verification_status='verified'
-            ORDER BY name LIMIT :limit
+        result = await session.execute(text(f"""
+            SELECT d.id::text, d.name, d.slug, d.state_id, d.source_url, d.verification_status,
+                   {DISTRICT_PROVENANCE_SQL}
+            FROM india_districts d
+            WHERE d.state_id=:state_id AND d.verification_status='verified'
+            ORDER BY d.name LIMIT :limit
         """), {"state_id": state_id, "limit": limit})
         return {"items": [dict(row._mapping) for row in result.fetchall()]}
 
@@ -159,9 +170,10 @@ async def state_cities(state_id: str, district_id: str | None = None, limit: int
 async def district_detail(state_id: str, district_id: str):
     state_id = _state_id(state_id)
     async with SessionLocal() as session:
-        result = await session.execute(text("""
+        result = await session.execute(text(f"""
             SELECT d.id::text, d.name, d.slug, d.state_id, s.name AS state_name,
                    d.source_url, d.verification_status, d.verified_at,
+                   {DISTRICT_PROVENANCE_SQL},
                    (SELECT count(*) FROM india_cities c WHERE c.district_id=d.id AND c.verification_status='verified')::int AS city_count,
                    (SELECT count(*) FROM india_places p WHERE p.district_id=d.id AND p.verification_status='verified')::int AS place_count
             FROM india_districts d JOIN india_states s ON s.id=d.state_id

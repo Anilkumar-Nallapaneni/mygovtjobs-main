@@ -67,7 +67,13 @@ export async function fetchIndiaState(stateId: string) {
   return getJson<IndiaState & { counts: { districts: number; cities: number; places: number; jobs: number }; source_name?: string; source_url?: string }>(`/api/india/states/${encodeURIComponent(stateId)}`)
 }
 
-export type IndiaDistrict = { id: string; name: string; slug: string | null; state_id?: string; state_name?: string; city_count?: number; place_count?: number; source_url?: string | null }
+export type IndiaDistrict = {
+  id: string; name: string; slug: string | null; state_id?: string; state_name?: string
+  city_count?: number; place_count?: number; source_url?: string | null; source_name?: string | null
+  verification_status?: string; source_record_id?: string | null
+  lgd_district_code?: string | null; lgd_state_code?: string | null
+  provenance?: { source_provider?: string; source_download_date?: string; source_filename?: string; source_sha256?: string } | null
+}
 
 export async function fetchIndiaDistricts(stateId: string) {
   const response = await getJson<{ items: IndiaDistrict[] }>(`/api/india/states/${encodeURIComponent(stateId)}/districts`)

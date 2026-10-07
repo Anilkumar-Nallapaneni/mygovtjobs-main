@@ -1,0 +1,20 @@
+{
+  "source_records": 784,
+  "valid_records": 784,
+  "rejected_records": 0,
+  "unique_district_lgd_codes": 784,
+  "state_ut_count": 36,
+  "unknown_states": [],
+  "duplicate_lgd_codes": [],
+  "duplicate_normalized_districts": [],
+  "source_sha256": "387ce8805f54b68baaeda1dbc40751927e8eb981f2b48548ffeaf833a6881d68",
+  "database_writes": 0,
+  "prospective_inserts": 784,
+  "prospective_updates": 0,
+  "prospective_unchanged": 0,
+  "conflicts": [],
+  "database_records_seen": 0,
+  "migration_043_required": true,
+  "status": "PASS",
+  "mode": "dry-run"
+}
