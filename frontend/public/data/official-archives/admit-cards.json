@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-06T11:07:52.179Z",
+  "generatedAt": "2026-10-07T10:56:49.744Z",
   "count": 175,
   "items": [
     {
@@ -48,40 +48,6 @@
       "dept": "Union Public Service Commission",
       "state": "All India",
       "category": "upsc",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "48fb815187d0e46a",
-      "title": "NOTICE REGARDING ADMIT CARD FOR ADVT NO. A-10/E-1/2025, ASSISTANT TOWN PLANNER (..",
-      "link": "https://uppsc.up.nic.in/Open_PDF_DB.aspx?I4PnQ0tBagmNKfqXmoSUniHgNFAXqIvq",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "uppsc-hall-tickets",
-      "sourceName": "UPPSC — Hall tickets",
-      "dept": "Uttar Pradesh PSC",
-      "state": "Uttar Pradesh",
-      "category": "state",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "e88314f91bcadbe5",
-      "title": "06 Oct 2026 NOTICE REGARDING ADMIT CARD FOR ADVT NO. A-10/E-1/2025, ASSISTANT TOWN PLANNER (SPL. RECT.) (MAIN.) EXAM.-2025, (EXAM. DATED:-06/10/2026)",
-      "link": "https://uppsc.up.nic.in/Open_PDF.aspx?I4PnQ0tBagmNKfqXmoSUnpbtUMRDf7GA",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "uppsc-hall-tickets",
-      "sourceName": "UPPSC — Hall tickets",
-      "dept": "Uttar Pradesh PSC",
-      "state": "Uttar Pradesh",
-      "category": "state",
       "stateIds": [
         "all"
       ],
@@ -510,6 +476,40 @@
         "an"
       ],
       "fetchMethod": "html"
+    },
+    {
+      "id": "48fb815187d0e46a",
+      "title": "NOTICE REGARDING ADMIT CARD FOR ADVT NO. A-10/E-1/2025, ASSISTANT TOWN PLANNER (..",
+      "link": "https://uppsc.up.nic.in/Open_PDF_DB.aspx?I4PnQ0tBagmNKfqXmoSUniHgNFAXqIvq",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "uppsc-hall-tickets",
+      "sourceName": "UPPSC — Hall tickets",
+      "dept": "Uttar Pradesh PSC",
+      "state": "Uttar Pradesh",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
+    },
+    {
+      "id": "e88314f91bcadbe5",
+      "title": "06 Oct 2026 NOTICE REGARDING ADMIT CARD FOR ADVT NO. A-10/E-1/2025, ASSISTANT TOWN PLANNER (SPL. RECT.) (MAIN.) EXAM.-2025, (EXAM. DATED:-06/10/2026)",
+      "link": "https://uppsc.up.nic.in/Open_PDF.aspx?I4PnQ0tBagmNKfqXmoSUnpbtUMRDf7GA",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "uppsc-hall-tickets",
+      "sourceName": "UPPSC — Hall tickets",
+      "dept": "Uttar Pradesh PSC",
+      "state": "Uttar Pradesh",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
     },
     {
       "id": "ceed403dd4f292d0",
