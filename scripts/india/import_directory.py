@@ -29,6 +29,14 @@ PLACE_CATEGORIES = {
     "school", "college", "university", "company", "industry", "tourism", "temple", "heritage",
     "hotel", "hospital", "airport", "railway", "transport", "government_office"
 }
+REQUIRED_COLUMNS = {
+    "districts": {"state_id", "name"},
+    "cities": {"state_id", "name"},
+    "places": {"state_id", "name", "category"},
+    "agriculture": {"state_id", "crop"},
+    "industries": {"state_id", "industry"},
+    "facts": {"state_id", "title", "body"},
+}
 
 
 def slug(value: str) -> str:
@@ -44,6 +52,24 @@ def required(row: dict, *keys: str) -> str:
     raise ValueError(f"Missing required column/value: {' or '.join(keys)}")
 
 
+def read_csv_rows(dataset: str, csv_path: Path) -> list[dict[str, str]]:
+    if dataset not in DATASETS:
+        raise ValueError(f"Unsupported dataset {dataset}")
+    resolved_path = csv_path if csv_path.is_absolute() else ROOT / csv_path
+    with resolved_path.open("r", encoding="utf-8-sig", newline="") as handle:
+        reader = csv.DictReader(handle)
+        if not reader.fieldnames:
+            raise ValueError(f"{dataset} CSV is empty or contains only a template/header row")
+        headers = set(reader.fieldnames or [])
+        missing = sorted(REQUIRED_COLUMNS[dataset] - headers)
+        if missing:
+            raise ValueError(f"Missing required CSV columns for {dataset}: {', '.join(missing)}")
+        rows = list(reader)
+    if not rows:
+        raise ValueError(f"{dataset} CSV is empty or contains only a template/header row")
+    return rows
+
+
 async def source_id(session, source_name: str | None):
     if not source_name:
         return None
@@ -55,13 +81,7 @@ async def source_id(session, source_name: str | None):
 
 
 async def import_rows(dataset: str, csv_path: Path, apply: bool, source_name: str | None):
-    if dataset not in DATASETS:
-        raise ValueError(f"Unsupported dataset {dataset}")
-    with csv_path.open("r", encoding="utf-8-sig", newline="") as handle:
-        rows = list(csv.DictReader(handle))
-    if not rows:
-        print("No records found.")
-        return
+    rows = read_csv_rows(dataset, csv_path)
 
     async with SessionLocal() as session:
         sid = await source_id(session, source_name)
