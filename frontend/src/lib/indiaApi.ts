@@ -28,6 +28,7 @@ export type IndiaRecord = {
   id: string
   name: string
   category: string
+  job_slug?: string | null
   description?: string | null
   website?: string | null
   address?: string | null

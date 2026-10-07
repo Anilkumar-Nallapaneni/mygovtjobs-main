@@ -60,7 +60,7 @@ export default function IndiaExplorerPage() {
   })), [states]);
 
   return (
-    <main className="india-explorer">
+    <div className="india-explorer">
       <section className="india-explorer__hero">
         <div>
           <span className="india-explorer__eyebrow">ONE INDIA PLATFORM</span>
@@ -102,6 +102,6 @@ export default function IndiaExplorerPage() {
         <div className="india-explorer__category-grid india-explorer__category-grid--cards">{EXPLORER_CATEGORIES.filter((category) => !activeLayer || category.id === activeLayer).map((category) => <ExplorerCategoryCard key={category.id} category={category} />)}</div>
       </section>
       <IndiaDataSources />
-    </main>
+    </div>
   );
 }

@@ -92,6 +92,7 @@ export default function AppRoutes({
       <Route path="/" element={homePageElement} />
       <Route path="/india" element={<LazyRoute><IndiaExplorerPage /></LazyRoute>} />
       <Route path="/india-map" element={<Navigate to="/india" replace />} />
+      <Route path="/latest-notifications" element={<Navigate to={LATEST_NOTIFICATIONS_PATH} replace />} />
       <Route path="/india/:stateId" element={<LazyRoute><StateExplorerPage /></LazyRoute>} />
       <Route path="/india/:stateId/district/:districtId" element={<LazyRoute><DistrictExplorerPage /></LazyRoute>} />
       <Route path="/india/:stateId/district/:districtId/:category" element={<LazyRoute><DistrictExplorerPage /></LazyRoute>} />

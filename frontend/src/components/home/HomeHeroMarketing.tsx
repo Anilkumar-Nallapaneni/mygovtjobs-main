@@ -72,11 +72,11 @@ export default function HomeHeroMarketing({
   return (
     <>
       <div className="home-hero-marketing">
-        <h1 className="home-hero-marketing__title">
+        <h2 className="home-hero-marketing__title">
           {t("home.heroHeading", {
             defaultValue: "Live government job notifications across India",
           })}
-        </h1>
+        </h2>
         <p className="home-hero-marketing__lede">
           {t("home.tagline", {
             defaultValue: "LIVE GOVERNMENT JOB NOTIFICATIONS · INDIA",

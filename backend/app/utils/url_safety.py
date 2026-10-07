@@ -16,7 +16,7 @@ _BLOCKED_HOSTS = frozenset(
     }
 )
 
-# Hosts allowed to use legacy TLS (CERT_NONE). Prefer verified TLS elsewhere.
+# Hosts allowed legacy protocol negotiation; certificate verification stays enabled.
 _LEGACY_TLS_SUFFIXES = (
     ".gov.in",
     ".nic.in",

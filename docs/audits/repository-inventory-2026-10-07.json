@@ -1,0 +1,3439 @@
+{
+  "tracked_file_count": 1146,
+  "source_file_count": 760,
+  "files": [
+    ".claude/settings.json",
+    ".env.example",
+    ".freebuff/project-id",
+    ".github/ISSUE_TEMPLATE/config.yml",
+    ".github/workflows/canonical-daily-pipeline.yml",
+    ".github/workflows/catalog-recovery-export.yml",
+    ".github/workflows/ci.yml",
+    ".github/workflows/fetch-official-feeds.yml",
+    ".github/workflows/notify-on-failure.yml",
+    ".github/workflows/uptime-check.yml",
+    ".github/workflows/weekly-enrich.yml",
+    ".github/workflows/weekly-portal-audit.yml",
+    ".gitignore",
+    ".nvmrc",
+    ".vercelignore",
+    "AGENTS.md",
+    "AUDIT.md",
+    "COMPLETION_AUDIT.md",
+    "CONSOLIDATION_REPORT.json",
+    "CONTRIBUTING.md",
+    "EDUPATH_RESOURCE_POLICY.md",
+    "FULL_CODE_AUDIT_2026-10-06.md",
+    "IMPLEMENTATION_GUIDE.md",
+    "INDIA_EXPLORER_UI_AUDIT_2026-10-05.md",
+    "INTEGRATION_STEP_BY_STEP.md",
+    "MERGE_AUDIT.md",
+    "README.md",
+    "README_FINAL_CONSOLIDATED.md",
+    "README_SINGLE_FOLDER.md",
+    "RELEASE_AUDIT_2026-10-06.md",
+    "RELEASE_READINESS_2026-10-06.md",
+    "RELEASE_READINESS_V4_2026-10-06.md",
+    "ROADMAP.md",
+    "RUN.md",
+    "SECURITY.md",
+    "SEO_TRAFFIC_AUDIT_2026-10-02.md",
+    "TOPMATE_STYLE_REDESIGN.md",
+    "VERSION_HISTORY.md",
+    "all websites/README.md",
+    "all websites/agent/__init__.py",
+    "all websites/agent/discover_agent.py",
+    "all websites/agent/load_sources.py",
+    "all websites/agent/probe.py",
+    "all websites/agent/state_map.py",
+    "all websites/data/unofficial-portals.json",
+    "all websites/output/.gitkeep",
+    "all websites/run.py",
+    "android-twa/app/build.gradle",
+    "android-twa/app/src/main/AndroidManifest.xml",
+    "android-twa/app/src/main/java/me/govtjobs/app/Application.java",
+    "android-twa/app/src/main/java/me/govtjobs/app/DelegationService.java",
+    "android-twa/app/src/main/java/me/govtjobs/app/LauncherActivity.java",
+    "android-twa/app/src/main/res/drawable-anydpi/shortcut_legacy_background.xml",
+    "android-twa/app/src/main/res/drawable-hdpi/ic_notification_icon.png",
+    "android-twa/app/src/main/res/drawable-hdpi/splash.png",
+    "android-twa/app/src/main/res/drawable-mdpi/ic_notification_icon.png",
+    "android-twa/app/src/main/res/drawable-mdpi/splash.png",
+    "android-twa/app/src/main/res/drawable-xhdpi/ic_notification_icon.png",
+    "android-twa/app/src/main/res/drawable-xhdpi/splash.png",
+    "android-twa/app/src/main/res/drawable-xxhdpi/ic_notification_icon.png",
+    "android-twa/app/src/main/res/drawable-xxhdpi/splash.png",
+    "android-twa/app/src/main/res/drawable-xxxhdpi/ic_notification_icon.png",
+    "android-twa/app/src/main/res/drawable-xxxhdpi/splash.png",
+    "android-twa/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml",
+    "android-twa/app/src/main/res/mipmap-hdpi/ic_launcher.png",
+    "android-twa/app/src/main/res/mipmap-hdpi/ic_maskable.png",
+    "android-twa/app/src/main/res/mipmap-mdpi/ic_launcher.png",
+    "android-twa/app/src/main/res/mipmap-mdpi/ic_maskable.png",
+    "android-twa/app/src/main/res/mipmap-xhdpi/ic_launcher.png",
+    "android-twa/app/src/main/res/mipmap-xhdpi/ic_maskable.png",
+    "android-twa/app/src/main/res/mipmap-xxhdpi/ic_launcher.png",
+    "android-twa/app/src/main/res/mipmap-xxhdpi/ic_maskable.png",
+    "android-twa/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png",
+    "android-twa/app/src/main/res/mipmap-xxxhdpi/ic_maskable.png",
+    "android-twa/app/src/main/res/raw/web_app_manifest.json",
+    "android-twa/app/src/main/res/values/colors.xml",
+    "android-twa/app/src/main/res/values/strings.xml",
+    "android-twa/app/src/main/res/xml/filepaths.xml",
+    "android-twa/app/src/main/res/xml/shortcuts.xml",
+    "android-twa/build.gradle",
+    "android-twa/gradle.properties",
+    "android-twa/gradle/wrapper/gradle-wrapper.jar",
+    "android-twa/gradle/wrapper/gradle-wrapper.properties",
+    "android-twa/gradlew",
+    "android-twa/gradlew.bat",
+    "android-twa/manifest-checksum.txt",
+    "android-twa/settings.gradle",
+    "android-twa/store_icon.png",
+    "android-twa/twa-manifest.json",
+    "api/og.js",
+    "backend/.env.example",
+    "backend/.local-test-tmp/tsx-CodexSandboxOffline/17864-3b7df416585d9804b3dcb99cd44de5ad950276f2",
+    "backend/.local-test-tmp/tsx-CodexSandboxOffline/17864-3d38783462d7671257e73494f98c422d89653265",
+    "backend/.local-test-tmp/tsx-CodexSandboxOffline/17864-56b0d797b3e8afb40667f075372e0fcd0a2d99e3",
+    "backend/.local-test-tmp/tsx-CodexSandboxOffline/17864-5944fea3688ee6b0eecfe2be7dfe7306af657a4d",
+    "backend/.local-test-tmp/tsx-CodexSandboxOffline/17864-5ddde4d7c9e31816d99d3b5a436c0451ced8d3a8",
+    "backend/.local-test-tmp/tsx-CodexSandboxOffline/17864-61b25ef6af707da22bebced483e6d72f75bb75fd",
+    "backend/.local-test-tmp/tsx-CodexSandboxOffline/17864-741a17a6ab219050c3195e71a01204b6a6cc2fd6",
+    "backend/.local-test-tmp/tsx-CodexSandboxOffline/17864-7fd991ba4480c24cd34858d9315575402a65f106",
+    "backend/.local-test-tmp/tsx-CodexSandboxOffline/17864-9fb7ef5a6730b8d86476b2e8cd6677db59dbe3e7",
+    "backend/.local-test-tmp/tsx-CodexSandboxOffline/17864-b749d36bd16d1e51c9b3e0d959c9c2e523102582",
+    "backend/.local-test-tmp/tsx-CodexSandboxOffline/17864-c3228b4d0e12b5d414fc1a01256d11a8a09ec09d",
+    "backend/.local-test-tmp/tsx-CodexSandboxOffline/17864-d295f3b1c9c70608d49300014295e34290617f82",
+    "backend/.local-test-tmp/tsx-CodexSandboxOffline/17864-f353e24011400fab7bf0ecdb21f34ba93e9e6007",
+    "backend/.local-test-tmp/tsx-CodexSandboxOffline/17864-fd9997b5ad8dbff7f42433de45747c4929bb4ae3",
+    "backend/.local-test-tmp/tsx-CodexSandboxOffline/17864-ff57e04859e34b3ff5d50bac72b4ede1520dc465",
+    "backend/Dockerfile",
+    "backend/app/__init__.py",
+    "backend/app/agents/ai_employees.py",
+    "backend/app/agents/ingest_agent.py",
+    "backend/app/agents/job_detail_agent.py",
+    "backend/app/agents/job_detail_sections.py",
+    "backend/app/agents/pdf_reader_agent.py",
+    "backend/app/agents/qa_review_agent.py",
+    "backend/app/agents/watchdog_agent.py",
+    "backend/app/config.py",
+    "backend/app/database/__init__.py",
+    "backend/app/database/connect_args.py",
+    "backend/app/database/retry.py",
+    "backend/app/database/session.py",
+    "backend/app/main.py",
+    "backend/app/middleware/admin_audit.py",
+    "backend/app/middleware/auth.py",
+    "backend/app/middleware/rate_limit.py",
+    "backend/app/middleware/supabase_auth.py",
+    "backend/app/models/__init__.py",
+    "backend/app/models/alert.py",
+    "backend/app/models/job.py",
+    "backend/app/models/job_related.py",
+    "backend/app/parsers/detail_extract.py",
+    "backend/app/parsers/notification_parser.py",
+    "backend/app/parsers/pdf_dates.py",
+    "backend/app/parsers/pdf_enrich.py",
+    "backend/app/parsers/pdf_fetch.py",
+    "backend/app/parsers/pdf_parser.py",
+    "backend/app/parsers/pdf_sections.py",
+    "backend/app/routes/__init__.py",
+    "backend/app/routes/admin.py",
+    "backend/app/routes/admin_education.py",
+    "backend/app/routes/admin_moderation.py",
+    "backend/app/routes/admin_operations.py",
+    "backend/app/routes/alerts.py",
+    "backend/app/routes/billing.py",
+    "backend/app/routes/contact.py",
+    "backend/app/routes/health.py",
+    "backend/app/routes/india.py",
+    "backend/app/routes/ingest.py",
+    "backend/app/routes/job_reports.py",
+    "backend/app/routes/jobs.py",
+    "backend/app/routes/meta.py",
+    "backend/app/schemas/alert.py",
+    "backend/app/schemas/contact.py",
+    "backend/app/schemas/job.py",
+    "backend/app/schemas/job_report.py",
+    "backend/app/scrapers/base.py",
+    "backend/app/scrapers/date_utils.py",
+    "backend/app/scrapers/http_client.py",
+    "backend/app/scrapers/pdf_discover.py",
+    "backend/app/scrapers/portal_listings.py",
+    "backend/app/scrapers/rss_feed.py",
+    "backend/app/scrapers/ssc_api.py",
+    "backend/app/scrapers/state_portal_html.py",
+    "backend/app/services/__init__.py",
+    "backend/app/services/alert_delivery_service.py",
+    "backend/app/services/alert_service.py",
+    "backend/app/services/contact_service.py",
+    "backend/app/services/daily_sync_service.py",
+    "backend/app/services/dedupe_service.py",
+    "backend/app/services/document_classifier.py",
+    "backend/app/services/ingest_service.py",
+    "backend/app/services/job_child_service.py",
+    "backend/app/services/job_completeness_service.py",
+    "backend/app/services/job_pdf_enrich_service.py",
+    "backend/app/services/job_persist_helpers.py",
+    "backend/app/services/job_persist_service.py",
+    "backend/app/services/job_review_service.py",
+    "backend/app/services/job_service.py",
+    "backend/app/services/job_sql_filters.py",
+    "backend/app/services/live_snapshot_clean.py",
+    "backend/app/services/llm_qa_assist.py",
+    "backend/app/services/noise_filter.py",
+    "backend/app/services/operations_dashboard_service.py",
+    "backend/app/services/pdf_candidate.py",
+    "backend/app/services/publish_gate.py",
+    "backend/app/services/raw_ingest_service.py",
+    "backend/app/services/razorpay_service.py",
+    "backend/app/services/source_funnel_service.py",
+    "backend/app/services/source_health_agent.py",
+    "backend/app/services/source_sync_service.py",
+    "backend/app/services/supabase_audit_service.py",
+    "backend/app/services/sync_run_service.py",
+    "backend/app/services/turnstile_service.py",
+    "backend/app/services/validation_service.py",
+    "backend/app/utils/__init__.py",
+    "backend/app/utils/catalog_import_sanitize.py",
+    "backend/app/utils/catalog_job_count.py",
+    "backend/app/utils/contact_extract.py",
+    "backend/app/utils/database_url.py",
+    "backend/app/utils/job_details_storage.py",
+    "backend/app/utils/job_pdf_urls.py",
+    "backend/app/utils/live_jobs_export.py",
+    "backend/app/utils/official_hosts.py",
+    "backend/app/utils/public_job_policy.py",
+    "backend/app/utils/repo_paths.py",
+    "backend/app/utils/sanitize_detail.py",
+    "backend/app/utils/slim_detail.py",
+    "backend/app/utils/state_resolve.py",
+    "backend/app/utils/url_safety.py",
+    "backend/app/utils/vacancy_extract.py",
+    "backend/app/workers/__init__.py",
+    "backend/app/workers/alert_delivery_worker.py",
+    "backend/requirements.txt",
+    "backend/tests/test_admin_audit.py",
+    "backend/tests/test_admin_dashboard.py",
+    "backend/tests/test_alert_delivery.py",
+    "backend/tests/test_alert_service.py",
+    "backend/tests/test_alerts.py",
+    "backend/tests/test_auth.py",
+    "backend/tests/test_build_pdf_job_details.py",
+    "backend/tests/test_catalog_import_sanitize.py",
+    "backend/tests/test_catalog_job_count.py",
+    "backend/tests/test_config.py",
+    "backend/tests/test_connect_args.py",
+    "backend/tests/test_contact.py",
+    "backend/tests/test_contact_extract.py",
+    "backend/tests/test_daily_sync_service.py",
+    "backend/tests/test_database_url.py",
+    "backend/tests/test_db_retry.py",
+    "backend/tests/test_detail_extract.py",
+    "backend/tests/test_http_client.py",
+    "backend/tests/test_india_explorer_api_contract.py",
+    "backend/tests/test_india_importer.py",
+    "backend/tests/test_ingest_agent.py",
+    "backend/tests/test_ingest_registry_path.py",
+    "backend/tests/test_job_detail_agent.py",
+    "backend/tests/test_job_persist_published.py",
+    "backend/tests/test_job_persist_service.py",
+    "backend/tests/test_job_review_service.py",
+    "backend/tests/test_job_service.py",
+    "backend/tests/test_job_service_etag.py",
+    "backend/tests/test_job_service_search.py",
+    "backend/tests/test_job_sql_filters.py",
+    "backend/tests/test_lgd_districts.py",
+    "backend/tests/test_lgd_postgres.py",
+    "backend/tests/test_live_jobs_audit.py",
+    "backend/tests/test_live_jobs_export.py",
+    "backend/tests/test_live_snapshot_clean.py",
+    "backend/tests/test_noise_filter.py",
+    "backend/tests/test_notification_parser_apply_url.py",
+    "backend/tests/test_notification_parser_dates.py",
+    "backend/tests/test_official_hosts.py",
+    "backend/tests/test_pdf_dates.py",
+    "backend/tests/test_pdf_fetch.py",
+    "backend/tests/test_pdf_parser_fields.py",
+    "backend/tests/test_pdf_reader_agent.py",
+    "backend/tests/test_pdf_sections.py",
+    "backend/tests/test_pipeline_contracts.py",
+    "backend/tests/test_portal_listings.py",
+    "backend/tests/test_publish_gate.py",
+    "backend/tests/test_qa_review_agent.py",
+    "backend/tests/test_rate_limit.py",
+    "backend/tests/test_razorpay_service.py",
+    "backend/tests/test_repo_paths.py",
+    "backend/tests/test_routes.py",
+    "backend/tests/test_routes_integration.py",
+    "backend/tests/test_sanitize_detail.py",
+    "backend/tests/test_source_funnel_service.py",
+    "backend/tests/test_ssc_api_scraper.py",
+    "backend/tests/test_state_portal_context.py",
+    "backend/tests/test_sync_run_service.py",
+    "backend/tests/test_title_fingerprint.py",
+    "backend/tests/test_turnstile_service.py",
+    "backend/tests/test_url_safety.py",
+    "backend/tests/test_vacancy_extract.py",
+    "backend/tests/test_validation_service.py",
+    "data/india/README.md",
+    "data/india/lgd-state-mapping.json",
+    "data/india/normalized/lgd-districts.csv",
+    "data/india/raw/lgd/2026-10-07/All_Districtof_India_2026-10-07_17-55-02.metadata.json",
+    "data/india/raw/lgd/2026-10-07/All_Districtof_India_2026-10-07_17-55-02.xlsx",
+    "data/india/templates/agriculture.csv",
+    "data/india/templates/cities.csv",
+    "data/india/templates/districts.csv",
+    "data/india/templates/facts.csv",
+    "data/india/templates/industries.csv",
+    "data/india/templates/places.csv",
+    "database/README.md",
+    "database/migrations/001_add_whatsapp_alert_channel.sql",
+    "database/migrations/002_supabase_rls_and_grants.sql",
+    "database/migrations/003_ensure_expired_jobs_public_read.sql",
+    "database/migrations/004_rename_structured_import_source.sql",
+    "database/migrations/005_jobs_list_index.sql",
+    "database/migrations/006_jobs_search_vector.sql",
+    "database/migrations/007_alert_subscription_validation.sql",
+    "database/migrations/008_remove_demo_seed_jobs.sql",
+    "database/migrations/009_user_profiles.sql",
+    "database/migrations/010_job_details_storage.sql",
+    "database/migrations/011_user_alerts_and_monetization.sql",
+    "database/migrations/012_title_fingerprint.sql",
+    "database/migrations/013_razorpay_payments.sql",
+    "database/migrations/014_alert_subscription_rate_limit.sql",
+    "database/migrations/015_sync_runs.sql",
+    "database/migrations/016_job_reports.sql",
+    "database/migrations/017_jobs_source_verification.sql",
+    "database/migrations/018_security_function_hardening.sql",
+    "database/migrations/019_security_advisor_hardening.sql",
+    "database/migrations/020_service_role_rls_policies.sql",
+    "database/migrations/021_alert_subscriptions_insert_rls.sql",
+    "database/migrations/022_fix_alert_public_insert.sql",
+    "database/migrations/023_jobs_publish_gate.sql",
+    "database/migrations/024_jobs_completeness_and_source_health.sql",
+    "database/migrations/025_trust_boundary_hardening.sql",
+    "database/migrations/026_align_public_job_policy.sql",
+    "database/migrations/027_job_review_queue.sql",
+    "database/migrations/028_publication_confidence.sql",
+    "database/migrations/029_harden_publication_rls_and_grants.sql",
+    "database/migrations/030_operational_control_plane.sql",
+    "database/migrations/031_bookmarks.sql",
+    "database/migrations/032_comments.sql",
+    "database/migrations/033_harden_control_plane_grants.sql",
+    "database/migrations/034_lock_profiles_subscription_tier.sql",
+    "database/migrations/035_sync_runs_one_running.sql",
+    "database/migrations/036_alert_update_and_sources_privacy.sql",
+    "database/migrations/037_lock_profile_insert_and_source_health_rls.sql",
+    "database/migrations/038_alert_deliveries_own_read.sql",
+    "database/migrations/039_education_platform.sql",
+    "database/migrations/040_jobs_source_registry_fk.sql",
+    "database/migrations/041_india_explorer.sql",
+    "database/migrations/042_india_explorer_backend.sql",
+    "database/migrations/043_india_lgd_district_identity.sql",
+    "database/supabase_setup.sql",
+    "docs/ALERTS_SETUP.md",
+    "docs/ALL_PHASES_IMPLEMENTATION_2026-09-22.md",
+    "docs/API_DECISION.md",
+    "docs/ARCHITECTURE.md",
+    "docs/BACKLOG_STATUS.md",
+    "docs/CODEBASE_AND_COMPETITOR_AUDIT_2026-08-11.md",
+    "docs/CODEBASE_AUDIT_2026-08-11.md",
+    "docs/CODE_AUDIT_2026-07-28.md",
+    "docs/COMPETITOR_GROWTH_PLAN_2026-10-06.md",
+    "docs/COMPONENTS.md",
+    "docs/DAILY_8AM_SYNC.md",
+    "docs/DATA_TRUST_POLICY.md",
+    "docs/DEPLOYMENT.md",
+    "docs/DEPLOY_BACKEND.md",
+    "docs/DEPLOY_RAILWAY_RENDER.md",
+    "docs/DEPLOY_VERCEL_SUPABASE.md",
+    "docs/EDUCATION_PRODUCTION.md",
+    "docs/FINAL_PLATFORM_RELEASE.md",
+    "docs/FINAL_RELEASE_AUDIT.md",
+    "docs/FULL_CODE_AUDIT_2026-10-06.md",
+    "docs/GOOGLE_INDEXING_AUDIT_2026-10-06.md",
+    "docs/GO_LIVE.md",
+    "docs/GROWTH_IMPLEMENTATION_2026-09.md",
+    "docs/HUMAN_CHECKLIST.md",
+    "docs/IMPLEMENTATION-PLAN.md",
+    "docs/IMPLEMENTATION_STATUS_2026-08-11.md",
+    "docs/INDIA_DISTRICTS_FIX_2026-10-06.md",
+    "docs/INDIA_EXPLORER_IMPLEMENTATION.md",
+    "docs/INDIA_EXPLORER_PRODUCTION_2026-10-05.md",
+    "docs/INDIA_EXPLORER_V2_IMPLEMENTATION_2026-10-06.md",
+    "docs/INDIA_PLATFORM.md",
+    "docs/INDIA_PLATFORM_RELEASE_AUDIT_2026-10-06.md",
+    "docs/INSTALLATION_AND_RUN.md",
+    "docs/LGD_DISTRICT_INTEGRATION_2026-10-07.md",
+    "docs/MONETIZATION.md",
+    "docs/OPS_WORKFLOWS.md",
+    "docs/P0_IMPLEMENTATION_2026-09-22.md",
+    "docs/PLAY_STORE.md",
+    "docs/RAZORPAY.md",
+    "docs/RELEASE_AUDIT.md",
+    "docs/ROADMAP.md",
+    "docs/SEO.md",
+    "docs/STAGE_1_2_BASELINE_2026-08-11.md",
+    "docs/UI_UX_AUDIT_V4_2026-10-06.md",
+    "docs/UPDATE_CHANGELOG_2026-09-20.md",
+    "docs/VERCEL_PRODUCTION.md",
+    "docs/audits/lgd-districts-dry-run.json",
+    "docs/audits/live-jobs-audit.csv",
+    "docs/audits/live-jobs-production-2026-10-01.csv",
+    "docs/audits/live-jobs-site-snapshot-2026-10-01.csv",
+    "docs/audits/p0-review-queue-latest.json",
+    "docs/audits/pipeline-daily-latest.json",
+    "docs/audits/pipeline-production-latest.json",
+    "docs/audits/pipeline-verify-latest.json",
+    "docs/audits/source-funnel-latest.json",
+    "docs/audits/watchdog-latest.json",
+    "docs/integration-audit-2026-07-28.md",
+    "docs/job-publication-map.md",
+    "docs/production-audit-roadmap.md",
+    "docs/workflow-audit.md",
+    "exports/_export_all_jobs.py",
+    "exports/_next_drafts.py",
+    "exports/all-jobs.xlsx",
+    "exports/jobs-export-2026-09-15.xlsx",
+    "frontend/.env.example",
+    "frontend/.gitignore",
+    "frontend/FRONTEND_STRUCTURE.md",
+    "frontend/e2e/a11y.spec.ts",
+    "frontend/e2e/browse.spec.ts",
+    "frontend/e2e/critical-path.spec.ts",
+    "frontend/e2e/fixtures/e2e-test-job.json",
+    "frontend/e2e/job-detail.spec.ts",
+    "frontend/e2e/latest-notifications.spec.ts",
+    "frontend/e2e/mobile-critical-path.spec.ts",
+    "frontend/eslint.config.js",
+    "frontend/index.html",
+    "frontend/package.json",
+    "frontend/playwright.config.ts",
+    "frontend/public/.well-known/assetlinks.json",
+    "frontend/public/app-icon.png",
+    "frontend/public/apple-touch-icon.png",
+    "frontend/public/data/daily-sync-state.json",
+    "frontend/public/data/live-jobs-bootstrap.json",
+    "frontend/public/data/live-jobs-list.json",
+    "frontend/public/data/live-jobs.json",
+    "frontend/public/data/official-archives/admit-cards.json",
+    "frontend/public/data/official-archives/answer-keys.json",
+    "frontend/public/data/official-archives/cutoff.json",
+    "frontend/public/data/official-archives/interview.json",
+    "frontend/public/data/official-archives/last-date.json",
+    "frontend/public/data/official-archives/previous-papers.json",
+    "frontend/public/data/official-archives/results.json",
+    "frontend/public/data/official-archives/syllabus.json",
+    "frontend/public/data/official-archives/written-marks.json",
+    "frontend/public/data/official-feed-items.json",
+    "frontend/public/data/org-index.json",
+    "frontend/public/data/pdf-memory-index.json",
+    "frontend/public/data/recruitment-events.json",
+    "frontend/public/data/source-health.json",
+    "frontend/public/favicon-32.png",
+    "frontend/public/images/alerts-bell-transparent.png",
+    "frontend/public/images/alerts-bell.png",
+    "frontend/public/india.svg",
+    "frontend/public/logo-og.jpg",
+    "frontend/public/logo-ui.png",
+    "frontend/public/logo.png",
+    "frontend/public/logo.webp",
+    "frontend/public/maps/states/IN-AN.svg",
+    "frontend/public/maps/states/IN-AP.svg",
+    "frontend/public/maps/states/IN-AR.svg",
+    "frontend/public/maps/states/IN-AS.svg",
+    "frontend/public/maps/states/IN-BR.svg",
+    "frontend/public/maps/states/IN-CH.svg",
+    "frontend/public/maps/states/IN-CT.svg",
+    "frontend/public/maps/states/IN-DD.svg",
+    "frontend/public/maps/states/IN-DH.svg",
+    "frontend/public/maps/states/IN-DL.svg",
+    "frontend/public/maps/states/IN-DN.svg",
+    "frontend/public/maps/states/IN-GA.svg",
+    "frontend/public/maps/states/IN-GJ.svg",
+    "frontend/public/maps/states/IN-HP.svg",
+    "frontend/public/maps/states/IN-HR.svg",
+    "frontend/public/maps/states/IN-JH.svg",
+    "frontend/public/maps/states/IN-JK.svg",
+    "frontend/public/maps/states/IN-KA.svg",
+    "frontend/public/maps/states/IN-KL.svg",
+    "frontend/public/maps/states/IN-LA.svg",
+    "frontend/public/maps/states/IN-LD.svg",
+    "frontend/public/maps/states/IN-MH.svg",
+    "frontend/public/maps/states/IN-ML.svg",
+    "frontend/public/maps/states/IN-MN.svg",
+    "frontend/public/maps/states/IN-MP.svg",
+    "frontend/public/maps/states/IN-MZ.svg",
+    "frontend/public/maps/states/IN-NE.svg",
+    "frontend/public/maps/states/IN-NL.svg",
+    "frontend/public/maps/states/IN-OR.svg",
+    "frontend/public/maps/states/IN-PB.svg",
+    "frontend/public/maps/states/IN-PY.svg",
+    "frontend/public/maps/states/IN-RJ.svg",
+    "frontend/public/maps/states/IN-SK.svg",
+    "frontend/public/maps/states/IN-TG.svg",
+    "frontend/public/maps/states/IN-TN.svg",
+    "frontend/public/maps/states/IN-TR.svg",
+    "frontend/public/maps/states/IN-UP.svg",
+    "frontend/public/maps/states/IN-UT.svg",
+    "frontend/public/maps/states/IN-WB.svg",
+    "frontend/public/og/job.svg",
+    "frontend/public/push-sw.js",
+    "frontend/public/pwa-192.png",
+    "frontend/public/pwa-512-maskable.png",
+    "frontend/public/pwa-512.png",
+    "frontend/public/robots.txt",
+    "frontend/public/sitemap-index.xml",
+    "frontend/public/sitemap.xml",
+    "frontend/public/sitemaps/admit-cards.xml",
+    "frontend/public/sitemaps/districts.xml",
+    "frontend/public/sitemaps/jobs-active.xml",
+    "frontend/public/sitemaps/jobs-archive.xml",
+    "frontend/public/sitemaps/organizations.xml",
+    "frontend/public/sitemaps/qualifications.xml",
+    "frontend/public/sitemaps/results.xml",
+    "frontend/public/sitemaps/states.xml",
+    "frontend/public/sitemaps/static-pages.xml",
+    "frontend/public/vite.svg",
+    "frontend/scripts/audit-locale-flats.mjs",
+    "frontend/scripts/build-e2e.mjs",
+    "frontend/scripts/clean-dist.mjs",
+    "frontend/scripts/e2e-webserver.mjs",
+    "frontend/scripts/fill-locale-flats.mjs",
+    "frontend/scripts/fix-government-labels.mjs",
+    "frontend/scripts/free-e2e-port.mjs",
+    "frontend/scripts/generate-locale-overrides.mjs",
+    "frontend/scripts/i18n-en-flat.mjs",
+    "frontend/scripts/merge-css.mjs",
+    "frontend/scripts/trees/flats/as.json",
+    "frontend/scripts/trees/flats/bn.json",
+    "frontend/scripts/trees/flats/brx.json",
+    "frontend/scripts/trees/flats/doi.json",
+    "frontend/scripts/trees/flats/gu.json",
+    "frontend/scripts/trees/flats/hi.json",
+    "frontend/scripts/trees/flats/kn.json",
+    "frontend/scripts/trees/flats/kok.json",
+    "frontend/scripts/trees/flats/ks.json",
+    "frontend/scripts/trees/flats/mai.json",
+    "frontend/scripts/trees/flats/ml.json",
+    "frontend/scripts/trees/flats/mni.json",
+    "frontend/scripts/trees/flats/mr.json",
+    "frontend/scripts/trees/flats/ne.json",
+    "frontend/scripts/trees/flats/or.json",
+    "frontend/scripts/trees/flats/pa.json",
+    "frontend/scripts/trees/flats/sa.json",
+    "frontend/scripts/trees/flats/sat.json",
+    "frontend/scripts/trees/flats/sd.json",
+    "frontend/scripts/trees/flats/ta.json",
+    "frontend/scripts/trees/flats/te.json",
+    "frontend/scripts/trees/flats/ur.json",
+    "frontend/src/App.tsx",
+    "frontend/src/components/AdminRouteGuard.tsx",
+    "frontend/src/components/AnalyticsClickTracker.tsx",
+    "frontend/src/components/AnalyticsPageTracker.tsx",
+    "frontend/src/components/AppRoutes.tsx",
+    "frontend/src/components/ErrorBoundary.tsx",
+    "frontend/src/components/Maps/IndiaMap/IndiaMap.tsx",
+    "frontend/src/components/Maps/IndiaMap/mapStateJobCount.ts",
+    "frontend/src/components/MobileRouteTransition.tsx",
+    "frontend/src/components/PageFallback.tsx",
+    "frontend/src/components/RouteErrorBoundary.tsx",
+    "frontend/src/components/RoutePageFallback.tsx",
+    "frontend/src/components/ScrollToTop.tsx",
+    "frontend/src/components/TrackedLink.tsx",
+    "frontend/src/components/TurnstileWidget.tsx",
+    "frontend/src/components/account/AccountAlertsPanel.tsx",
+    "frontend/src/components/account/PremiumUpgradePanel.tsx",
+    "frontend/src/components/admin/OperationsDashboard.tsx",
+    "frontend/src/components/ads/AdSlot.tsx",
+    "frontend/src/components/appRoutePages.tsx",
+    "frontend/src/components/browse/BrowseBreadcrumbs.tsx",
+    "frontend/src/components/browse/SectorBrowser.tsx",
+    "frontend/src/components/home/AlertSection.tsx",
+    "frontend/src/components/home/ClosingDeadlinesStrip.tsx",
+    "frontend/src/components/home/EducationFilterPill.tsx",
+    "frontend/src/components/home/ExamLifecycleTimeline.tsx",
+    "frontend/src/components/home/ExploreHubBanner.tsx",
+    "frontend/src/components/home/HeadlineStatusBadge.tsx",
+    "frontend/src/components/home/HomeBrowseStrips.tsx",
+    "frontend/src/components/home/HomeCareerMarketplace.tsx",
+    "frontend/src/components/home/HomeDiscoveryBlock.tsx",
+    "frontend/src/components/home/HomeExamUpdatesRow.tsx",
+    "frontend/src/components/home/HomeHeroMarketing.tsx",
+    "frontend/src/components/home/HomeJobsListSection.tsx",
+    "frontend/src/components/home/HomeJobsSkeleton.tsx",
+    "frontend/src/components/home/HomeMapBlock.tsx",
+    "frontend/src/components/home/HomePage.tsx",
+    "frontend/src/components/home/IndiaGlancePanel.tsx",
+    "frontend/src/components/home/JobCardSkeleton.tsx",
+    "frontend/src/components/home/LatestJobsSimpleTable.tsx",
+    "frontend/src/components/home/LatestNotificationsTable.tsx",
+    "frontend/src/components/home/OfficialHeadlinesSection.tsx",
+    "frontend/src/components/home/OfficialHeadlinesTable.tsx",
+    "frontend/src/components/home/ProfessionLandingExtras.tsx",
+    "frontend/src/components/home/ProfessionLandingFaq.tsx",
+    "frontend/src/components/home/QuickLinksGrid.tsx",
+    "frontend/src/components/home/ResultsHubFilters.tsx",
+    "frontend/src/components/home/SocialAlertBar.tsx",
+    "frontend/src/components/home/StateGlancePanel.tsx",
+    "frontend/src/components/home/StateJobsPanel.tsx",
+    "frontend/src/components/home/SubscribeBanner.tsx",
+    "frontend/src/components/home/TrustStrip.tsx",
+    "frontend/src/components/home/latestNotifications/LatestNotificationsCategoryFilter.tsx",
+    "frontend/src/components/home/latestNotifications/LatestNotificationsEducationFilter.tsx",
+    "frontend/src/components/home/latestNotifications/LatestNotificationsEmptyStates.tsx",
+    "frontend/src/components/home/latestNotifications/LatestNotificationsJobRow.tsx",
+    "frontend/src/components/home/latestNotifications/LatestNotificationsStateFilter.tsx",
+    "frontend/src/components/home/latestNotifications/latestNotificationsGroupFilters.ts",
+    "frontend/src/components/home/useHomePageDerived.ts",
+    "frontend/src/components/hub/HubCard.tsx",
+    "frontend/src/components/hub/RecruitmentEventsList.tsx",
+    "frontend/src/components/india/ExplorerCategoryCard.tsx",
+    "frontend/src/components/india/IndiaDataSources.tsx",
+    "frontend/src/components/jobs/BookmarkButton.tsx",
+    "frontend/src/components/jobs/CategoryGrid.tsx",
+    "frontend/src/components/jobs/JobCard.tsx",
+    "frontend/src/components/jobs/JobCardGrid.tsx",
+    "frontend/src/components/jobs/JobComments.tsx",
+    "frontend/src/components/jobs/JobDetail.tsx",
+    "frontend/src/components/jobs/JobDetailFaq.tsx",
+    "frontend/src/components/jobs/RelatedJobs.tsx",
+    "frontend/src/components/jobs/ReportJobButton.tsx",
+    "frontend/src/components/jobs/StateGrid.tsx",
+    "frontend/src/components/jobs/jobDetailUi/index.ts",
+    "frontend/src/components/jobs/jobDetailUi/jobDetailActions.tsx",
+    "frontend/src/components/jobs/jobDetailUi/jobDetailContent.tsx",
+    "frontend/src/components/jobs/jobDetailUi/jobDetailFacts.tsx",
+    "frontend/src/components/jobs/jobDetailUi/jobDetailGlance.tsx",
+    "frontend/src/components/jobs/jobDetailUi/jobDetailGrids.tsx",
+    "frontend/src/components/jobs/jobDetailUi/jobDetailHero.tsx",
+    "frontend/src/components/jobs/jobDetailUi/jobDetailSection.tsx",
+    "frontend/src/components/jobs/jobDetailUi/jobDetailStickyBar.tsx",
+    "frontend/src/components/layout/AlertBellIcon.tsx",
+    "frontend/src/components/layout/BottomNavIcons.tsx",
+    "frontend/src/components/layout/BrandLogo.tsx",
+    "frontend/src/components/layout/BrowseScrollRow.tsx",
+    "frontend/src/components/layout/BuildStamp.tsx",
+    "frontend/src/components/layout/EmploymentNewsBar.tsx",
+    "frontend/src/components/layout/EmploymentNewsBarShell.tsx",
+    "frontend/src/components/layout/Footer.tsx",
+    "frontend/src/components/layout/HeadlineStatsBar.tsx",
+    "frontend/src/components/layout/IndianLanguageSelector.tsx",
+    "frontend/src/components/layout/InstallAppBanner.tsx",
+    "frontend/src/components/layout/MobileBottomNav.tsx",
+    "frontend/src/components/layout/MobileNavDrawer.tsx",
+    "frontend/src/components/layout/Navbar.tsx",
+    "frontend/src/components/layout/NavbarPreferenceRows.tsx",
+    "frontend/src/components/layout/SearchMagnifyIcon.tsx",
+    "frontend/src/context/BrowseContext.tsx",
+    "frontend/src/data/admissionSources.ts",
+    "frontend/src/data/categories.ts",
+    "frontend/src/data/designations.ts",
+    "frontend/src/data/education/careerPathFamilies.ts",
+    "frontend/src/data/education/careerPaths.ts",
+    "frontend/src/data/education/collegeSyllabi.ts",
+    "frontend/src/data/education/collegeSyllabiExtra.ts",
+    "frontend/src/data/education/degreeExamGuides.ts",
+    "frontend/src/data/education/educationTypes.ts",
+    "frontend/src/data/education/interSyllabi.ts",
+    "frontend/src/data/education/officialSources.d.ts",
+    "frontend/src/data/education/officialSources.ts",
+    "frontend/src/data/education/originalMocks.ts",
+    "frontend/src/data/education/resourceRegistry.ts",
+    "frontend/src/data/education/stageStudySubjects.ts",
+    "frontend/src/data/education/studyContent.ts",
+    "frontend/src/data/examDiscovery.ts",
+    "frontend/src/data/exams.ts",
+    "frontend/src/data/homePageConstants.ts",
+    "frontend/src/data/homeShellStats.ts",
+    "frontend/src/data/hubSections.ts",
+    "frontend/src/data/india/indiaExplorer.ts",
+    "frontend/src/data/indiaFacts.ts",
+    "frontend/src/data/jobRegion.ts",
+    "frontend/src/data/officialSites.ts",
+    "frontend/src/data/org-index.json",
+    "frontend/src/data/orgIndex.ts",
+    "frontend/src/data/professionCrossLinks.ts",
+    "frontend/src/data/professionSeoContent.ts",
+    "frontend/src/data/professions.ts",
+    "frontend/src/data/qualifications.ts",
+    "frontend/src/data/resultTopics.ts",
+    "frontend/src/data/scholarshipSources.ts",
+    "frontend/src/data/siteLinks.ts",
+    "frontend/src/data/siteMeta.ts",
+    "frontend/src/data/stateCabinetFacts.ts",
+    "frontend/src/data/stateColors.ts",
+    "frontend/src/data/stateFacts.ts",
+    "frontend/src/data/stateGlanceHighlights.ts",
+    "frontend/src/data/states.ts",
+    "frontend/src/data/statesChips.ts",
+    "frontend/src/data/yojanaSources.ts",
+    "frontend/src/hooks/browse/browseScrollHelpers.ts",
+    "frontend/src/hooks/browse/useBrowseFilters.ts",
+    "frontend/src/hooks/browse/useBrowseFooterNavigation.ts",
+    "frontend/src/hooks/browse/useBrowseHeadlinesNavigation.ts",
+    "frontend/src/hooks/browse/useBrowseLandingMeta.ts",
+    "frontend/src/hooks/browse/useBrowseMapNavigation.ts",
+    "frontend/src/hooks/browse/useBrowseNavigation.ts",
+    "frontend/src/hooks/browse/useBrowseRouteSync.ts",
+    "frontend/src/hooks/browse/useBrowseStateCore.ts",
+    "frontend/src/hooks/browseStateTypes.ts",
+    "frontend/src/hooks/useAuth.ts",
+    "frontend/src/hooks/useBookmarks.ts",
+    "frontend/src/hooks/useBrowseState.ts",
+    "frontend/src/hooks/useColorMode.ts",
+    "frontend/src/hooks/useCountUp.ts",
+    "frontend/src/hooks/useIndiaExplorer.ts",
+    "frontend/src/hooks/useJobDetailFocusTrap.ts",
+    "frontend/src/hooks/useLiveJobs.ts",
+    "frontend/src/hooks/useMediaQuery.ts",
+    "frontend/src/hooks/useNow.ts",
+    "frontend/src/hooks/useOfficialArchive.ts",
+    "frontend/src/hooks/useOfficialArchivesBatch.ts",
+    "frontend/src/hooks/useOfficialFeed.ts",
+    "frontend/src/hooks/useOfficialTopicCounts.ts",
+    "frontend/src/hooks/usePrefersReducedMotion.ts",
+    "frontend/src/hooks/usePwaInstall.ts",
+    "frontend/src/hooks/useRecruitmentEvents.ts",
+    "frontend/src/hooks/useRevealOnScroll.ts",
+    "frontend/src/hooks/useServerJobSearch.ts",
+    "frontend/src/hooks/useStandaloneApp.ts",
+    "frontend/src/hooks/useTranslatedJob.ts",
+    "frontend/src/hooks/useTranslatedText.ts",
+    "frontend/src/hooks/useWebPushToken.ts",
+    "frontend/src/i18n/ensureLocale.ts",
+    "frontend/src/i18n/index.ts",
+    "frontend/src/i18n/languages.ts",
+    "frontend/src/i18n/localeOverrides/as.json",
+    "frontend/src/i18n/localeOverrides/bn.json",
+    "frontend/src/i18n/localeOverrides/brx.json",
+    "frontend/src/i18n/localeOverrides/doi.json",
+    "frontend/src/i18n/localeOverrides/gu.json",
+    "frontend/src/i18n/localeOverrides/hi.json",
+    "frontend/src/i18n/localeOverrides/kn.json",
+    "frontend/src/i18n/localeOverrides/kok.json",
+    "frontend/src/i18n/localeOverrides/ks.json",
+    "frontend/src/i18n/localeOverrides/mai.json",
+    "frontend/src/i18n/localeOverrides/ml.json",
+    "frontend/src/i18n/localeOverrides/mni.json",
+    "frontend/src/i18n/localeOverrides/mr.json",
+    "frontend/src/i18n/localeOverrides/ne.json",
+    "frontend/src/i18n/localeOverrides/or.json",
+    "frontend/src/i18n/localeOverrides/pa.json",
+    "frontend/src/i18n/localeOverrides/sa.json",
+    "frontend/src/i18n/localeOverrides/sat.json",
+    "frontend/src/i18n/localeOverrides/sd.json",
+    "frontend/src/i18n/localeOverrides/ta.json",
+    "frontend/src/i18n/localeOverrides/te.json",
+    "frontend/src/i18n/localeOverrides/ur.json",
+    "frontend/src/i18n/locales/en.json",
+    "frontend/src/i18n/locales/hi.json",
+    "frontend/src/i18n/mergeLocale.ts",
+    "frontend/src/i18n/stateNames.ts",
+    "frontend/src/lib/QueryProvider.tsx",
+    "frontend/src/lib/adminApi.ts",
+    "frontend/src/lib/alertsApi.ts",
+    "frontend/src/lib/analytics.ts",
+    "frontend/src/lib/appReady.ts",
+    "frontend/src/lib/billingApi.ts",
+    "frontend/src/lib/bookmarksApi.ts",
+    "frontend/src/lib/buildStamp.ts",
+    "frontend/src/lib/commentsApi.ts",
+    "frontend/src/lib/contactApi.ts",
+    "frontend/src/lib/dailySync.ts",
+    "frontend/src/lib/dataCacheBust.ts",
+    "frontend/src/lib/educationApi.ts",
+    "frontend/src/lib/indiaApi.ts",
+    "frontend/src/lib/jobsApi.ts",
+    "frontend/src/lib/liveJobsFetch.ts",
+    "frontend/src/lib/liveJobsSessionCache.ts",
+    "frontend/src/lib/officialFeed.ts",
+    "frontend/src/lib/queryClient.ts",
+    "frontend/src/lib/recruitmentEventsApi.ts",
+    "frontend/src/lib/sentry.ts",
+    "frontend/src/lib/supabase.ts",
+    "frontend/src/lib/turnstile.ts",
+    "frontend/src/main.tsx",
+    "frontend/src/pages/AccountPage.tsx",
+    "frontend/src/pages/AdminDashboardPage.tsx",
+    "frontend/src/pages/AdmissionHubPage.tsx",
+    "frontend/src/pages/AlertsPage.tsx",
+    "frontend/src/pages/BookmarksPage.tsx",
+    "frontend/src/pages/BrowseJobsLandingPage.tsx",
+    "frontend/src/pages/CategoriesIndexPage.tsx",
+    "frontend/src/pages/ContactPage.tsx",
+    "frontend/src/pages/DesignationLandingPage.tsx",
+    "frontend/src/pages/DesignationsIndexPage.tsx",
+    "frontend/src/pages/DistrictExplorerPage.tsx",
+    "frontend/src/pages/EducationAdminPage.tsx",
+    "frontend/src/pages/EducationCareerPage.tsx",
+    "frontend/src/pages/EducationDashboardPage.tsx",
+    "frontend/src/pages/EducationHubPage.tsx",
+    "frontend/src/pages/ExamCalendarPage.tsx",
+    "frontend/src/pages/ExamLandingPage.tsx",
+    "frontend/src/pages/ExamsIndexPage.tsx",
+    "frontend/src/pages/ExploreHubPage.tsx",
+    "frontend/src/pages/FaqPage.tsx",
+    "frontend/src/pages/IndiaExplorerPage.tsx",
+    "frontend/src/pages/JobDetailPage.tsx",
+    "frontend/src/pages/LatestNotificationsPage.tsx",
+    "frontend/src/pages/NotFoundPage.tsx",
+    "frontend/src/pages/OrganizationsIndexPage.tsx",
+    "frontend/src/pages/ProfessionsIndexPage.tsx",
+    "frontend/src/pages/QualificationsIndexPage.tsx",
+    "frontend/src/pages/ResultsHubPage.tsx",
+    "frontend/src/pages/ResultsTopicsIndexPage.tsx",
+    "frontend/src/pages/ScholarshipsHubPage.tsx",
+    "frontend/src/pages/SitemapPage.tsx",
+    "frontend/src/pages/StateExplorerPage.tsx",
+    "frontend/src/pages/StatesIndexPage.tsx",
+    "frontend/src/pages/StaticPage.tsx",
+    "frontend/src/pages/YojanaHubPage.tsx",
+    "frontend/src/pages/guideContent.ts",
+    "frontend/src/pages/legalContent.ts",
+    "frontend/src/styles/animations.css",
+    "frontend/src/styles/app.css",
+    "frontend/src/styles/education-admin.css",
+    "frontend/src/styles/education-dashboard.css",
+    "frontend/src/styles/education-hub.css",
+    "frontend/src/styles/extensions.css",
+    "frontend/src/styles/global.css",
+    "frontend/src/styles/home-hero.css",
+    "frontend/src/styles/home-mobile.css",
+    "frontend/src/styles/home.css",
+    "frontend/src/styles/india-explorer.css",
+    "frontend/src/styles/jobs.css",
+    "frontend/src/styles/layout.css",
+    "frontend/src/styles/map.css",
+    "frontend/src/styles/mobile-premium.css",
+    "frontend/src/styles/polish.css",
+    "frontend/src/styles/premium-v4.css",
+    "frontend/src/styles/tokens.css",
+    "frontend/src/styles/topmate-inspired.css",
+    "frontend/src/test/queryWrapper.tsx",
+    "frontend/src/test/setup.ts",
+    "frontend/src/tests/App.smoke.test.tsx",
+    "frontend/src/tests/components/ErrorBoundary.test.tsx",
+    "frontend/src/tests/components/Maps/IndiaMap/mapStateJobCount.test.ts",
+    "frontend/src/tests/components/RouteErrorBoundary.test.tsx",
+    "frontend/src/tests/components/home/AlertSection.test.tsx",
+    "frontend/src/tests/components/home/ClosingDeadlinesStrip.test.tsx",
+    "frontend/src/tests/components/home/HomeBrowseStrips.test.tsx",
+    "frontend/src/tests/components/home/HomeExamUpdatesRow.test.tsx",
+    "frontend/src/tests/components/home/HomePage.test.tsx",
+    "frontend/src/tests/components/home/LatestNotificationsTable.test.tsx",
+    "frontend/src/tests/components/home/SubscribeBanner.test.tsx",
+    "frontend/src/tests/components/jobs/CategoryGrid.test.tsx",
+    "frontend/src/tests/components/jobs/JobCard.test.tsx",
+    "frontend/src/tests/components/jobs/JobDetail.test.tsx",
+    "frontend/src/tests/components/jobs/RelatedJobs.test.tsx",
+    "frontend/src/tests/components/layout/MobileBottomNav.test.tsx",
+    "frontend/src/tests/components/layout/Navbar.test.tsx",
+    "frontend/src/tests/data/examDiscovery.test.ts",
+    "frontend/src/tests/data/exams.test.ts",
+    "frontend/src/tests/data/homeShellStats.test.ts",
+    "frontend/src/tests/data/professionCrossLinks.test.ts",
+    "frontend/src/tests/data/professionSeoContent.test.ts",
+    "frontend/src/tests/data/professions.test.ts",
+    "frontend/src/tests/data/resultTopics.test.ts",
+    "frontend/src/tests/data/siteLinks.test.ts",
+    "frontend/src/tests/data/sitemaps.test.ts",
+    "frontend/src/tests/data/stateMapCoverage.test.ts",
+    "frontend/src/tests/data/statesChips.test.ts",
+    "frontend/src/tests/hooks/useAuth.test.tsx",
+    "frontend/src/tests/hooks/useBrowseState.test.tsx",
+    "frontend/src/tests/hooks/useColorMode.test.ts",
+    "frontend/src/tests/hooks/useLiveJobs.test.tsx",
+    "frontend/src/tests/hooks/useMediaQuery.test.ts",
+    "frontend/src/tests/hooks/useNow.test.ts",
+    "frontend/src/tests/hooks/useOfficialArchive.test.tsx",
+    "frontend/src/tests/hooks/useOfficialArchivesBatch.test.tsx",
+    "frontend/src/tests/hooks/useOfficialFeed.test.tsx",
+    "frontend/src/tests/hooks/useServerJobSearch.test.tsx",
+    "frontend/src/tests/hooks/useTranslatedJob.test.tsx",
+    "frontend/src/tests/hooks/useTranslatedText.test.tsx",
+    "frontend/src/tests/i18n/languages.test.ts",
+    "frontend/src/tests/lib/analytics.test.ts",
+    "frontend/src/tests/lib/contactApi.test.ts",
+    "frontend/src/tests/lib/dailySync.test.ts",
+    "frontend/src/tests/lib/dataCacheBust.test.ts",
+    "frontend/src/tests/lib/jobsApi.test.ts",
+    "frontend/src/tests/lib/liveJobsFetch.schedule.test.ts",
+    "frontend/src/tests/lib/liveJobsSessionCache.test.ts",
+    "frontend/src/tests/lib/recruitmentEventsApi.test.ts",
+    "frontend/src/tests/lib/turnstile.test.ts",
+    "frontend/src/tests/pages/IndiaExplorer.lgd.test.tsx",
+    "frontend/src/tests/pages/JobDetailPage.test.tsx",
+    "frontend/src/tests/pages/pages.test.tsx",
+    "frontend/src/tests/utils/boardRoutes.test.ts",
+    "frontend/src/tests/utils/browseRoutes.test.ts",
+    "frontend/src/tests/utils/browseSeo.test.ts",
+    "frontend/src/tests/utils/extractPostName.test.ts",
+    "frontend/src/tests/utils/formatJobDate.test.ts",
+    "frontend/src/tests/utils/formatLocale.test.ts",
+    "frontend/src/tests/utils/headlineStats.test.ts",
+    "frontend/src/tests/utils/homePageFilters.test.ts",
+    "frontend/src/tests/utils/jobBoardExamLinks.test.ts",
+    "frontend/src/tests/utils/jobCategory.test.ts",
+    "frontend/src/tests/utils/jobContentTranslate.test.ts",
+    "frontend/src/tests/utils/jobDetailContentLead.test.ts",
+    "frontend/src/tests/utils/jobDetailHydration.test.ts",
+    "frontend/src/tests/utils/jobDetailLinks.test.ts",
+    "frontend/src/tests/utils/jobDetailStructured.test.ts",
+    "frontend/src/tests/utils/jobDetailsStorage.test.ts",
+    "frontend/src/tests/utils/jobFilters.test.ts",
+    "frontend/src/tests/utils/jobMetadataUtils.test.ts",
+    "frontend/src/tests/utils/jobNoiseFilter.test.ts",
+    "frontend/src/tests/utils/jobSearch.test.ts",
+    "frontend/src/tests/utils/jobSeo.test.ts",
+    "frontend/src/tests/utils/jobStateResolve.test.ts",
+    "frontend/src/tests/utils/latestNotificationsFilters.test.ts",
+    "frontend/src/tests/utils/liveJobsPipeline.test.ts",
+    "frontend/src/tests/utils/mapUtils.test.ts",
+    "frontend/src/tests/utils/officialContact.test.ts",
+    "frontend/src/tests/utils/officialDomains.test.ts",
+    "frontend/src/tests/utils/officialFilters.test.ts",
+    "frontend/src/tests/utils/orgSlug.test.ts",
+    "frontend/src/tests/utils/orgSourceHealth.test.ts",
+    "frontend/src/tests/utils/publicJobPolicy.test.ts",
+    "frontend/src/tests/utils/relatedJobs.test.ts",
+    "frontend/src/tests/utils/resolveJobDept.test.ts",
+    "frontend/src/tests/utils/resolvePdfUrl.test.ts",
+    "frontend/src/tests/utils/scrollToSection.test.ts",
+    "frontend/src/tests/utils/scrubSeoText.test.ts",
+    "frontend/src/tests/utils/stateGlanceMetrics.test.ts",
+    "frontend/src/tests/utils/structuredData.test.ts",
+    "frontend/src/theme/designSystem.ts",
+    "frontend/src/types/MapTypes.ts",
+    "frontend/src/types/homePage.ts",
+    "frontend/src/types/job.ts",
+    "frontend/src/utils/browseRoutes.ts",
+    "frontend/src/utils/browseSeo.ts",
+    "frontend/src/utils/educationVacancySummary.ts",
+    "frontend/src/utils/employmentNewsItems.ts",
+    "frontend/src/utils/extractPostName.ts",
+    "frontend/src/utils/formatJobDate.ts",
+    "frontend/src/utils/formatLocale.ts",
+    "frontend/src/utils/headlineStats.ts",
+    "frontend/src/utils/homeExamUpdatesConfig.ts",
+    "frontend/src/utils/homePageFilters.ts",
+    "frontend/src/utils/jobAggregates.ts",
+    "frontend/src/utils/jobBoardExamLinks.ts",
+    "frontend/src/utils/jobCategory.ts",
+    "frontend/src/utils/jobContentTranslate.ts",
+    "frontend/src/utils/jobDetailContent.ts",
+    "frontend/src/utils/jobDetailHydration.ts",
+    "frontend/src/utils/jobDetailLabels.ts",
+    "frontend/src/utils/jobDetailLinks.ts",
+    "frontend/src/utils/jobDetailStructured.ts",
+    "frontend/src/utils/jobDetailsStorage.ts",
+    "frontend/src/utils/jobFilters.ts",
+    "frontend/src/utils/jobMetadataUtils.ts",
+    "frontend/src/utils/jobNoiseFilter.ts",
+    "frontend/src/utils/jobQualification.ts",
+    "frontend/src/utils/jobRoutes.ts",
+    "frontend/src/utils/jobSearch.ts",
+    "frontend/src/utils/jobSeo.ts",
+    "frontend/src/utils/jobStateResolve.ts",
+    "frontend/src/utils/latestNotificationsFilters.ts",
+    "frontend/src/utils/latestNotificationsTable.ts",
+    "frontend/src/utils/liveJobAdapter.ts",
+    "frontend/src/utils/liveJobsPipeline.ts",
+    "frontend/src/utils/mapUtils.ts",
+    "frontend/src/utils/officialContact.ts",
+    "frontend/src/utils/officialDomains.ts",
+    "frontend/src/utils/officialFilters.ts",
+    "frontend/src/utils/orgSlug.ts",
+    "frontend/src/utils/orgSourceHealth.ts",
+    "frontend/src/utils/publicJobPolicy.ts",
+    "frontend/src/utils/relatedJobs.ts",
+    "frontend/src/utils/resolveJobDept.ts",
+    "frontend/src/utils/resolvePdfUrl.ts",
+    "frontend/src/utils/scrollToSection.ts",
+    "frontend/src/utils/scrubSeoText.ts",
+    "frontend/src/utils/seoHead.ts",
+    "frontend/src/utils/stateGlanceMetrics.ts",
+    "frontend/src/utils/stateLabels.ts",
+    "frontend/src/utils/structuredData.ts",
+    "frontend/src/vite-env.d.ts",
+    "frontend/tsconfig.build.json",
+    "frontend/tsconfig.json",
+    "frontend/tsconfig.node.json",
+    "frontend/tsconfig.strict.json",
+    "frontend/vite.config.ts",
+    "package-lock.json",
+    "package.json",
+    "play-store-assets/README.md",
+    "play-store-assets/website-logo-original.png",
+    "pyrightconfig.json",
+    "railway.toml",
+    "render.yaml",
+    "scripts/README.md",
+    "scripts/_dsssb_sample.txt",
+    "scripts/_pipeline_status.py",
+    "scripts/_portal_dumps/iocl_pdf.html",
+    "scripts/analyze-missing-pdfs.py",
+    "scripts/apply-database-schema.py",
+    "scripts/apply-database-schema.py.bak",
+    "scripts/audit-catalog-apply-urls.mjs",
+    "scripts/audit-external-job-coverage.py",
+    "scripts/audit-freejobalert-coverage.py",
+    "scripts/audit-india-data-readiness.mjs",
+    "scripts/audit-india-explorer.mjs",
+    "scripts/audit-india-platform.mjs",
+    "scripts/audit-job-detail-actions.ts",
+    "scripts/audit-job-pdfs.py",
+    "scripts/audit-job-quality.mjs",
+    "scripts/audit-job-sources.py",
+    "scripts/audit-live-detail-coverage.mjs",
+    "scripts/audit-live-jobs.py",
+    "scripts/audit-monetization-readiness.mjs",
+    "scripts/audit-official-sites.mjs",
+    "scripts/audit-pdf-dates.py",
+    "scripts/audit-review-queue.py",
+    "scripts/audit-sites.mjs",
+    "scripts/audit-source-funnel.py",
+    "scripts/audit-supabase-tables.mjs",
+    "scripts/audit-ui-v4.mjs",
+    "scripts/backfill-fields-from-summary.py",
+    "scripts/backfill-helpdesk-emails.py",
+    "scripts/backfill-job-dates.py",
+    "scripts/backfill-job-pdfs.py",
+    "scripts/backfill-live-job-state-codes.py",
+    "scripts/build-database-url-for-actions.mjs",
+    "scripts/build-live-jobs-bootstrap.mjs",
+    "scripts/build-live-jobs-list.mjs",
+    "scripts/build-official-archives.mjs",
+    "scripts/build-org-index.mjs",
+    "scripts/build-pdf-job-details.py",
+    "scripts/build-rss.mjs",
+    "scripts/build-shared-official-hosts.mjs",
+    "scripts/build-sitemap.mjs",
+    "scripts/check-env-alignment.mjs",
+    "scripts/check-frontend-hygiene.mjs",
+    "scripts/check-github-actions-secrets.mjs",
+    "scripts/check-job-links.py",
+    "scripts/check-job-status.py",
+    "scripts/check-merge-markers.mjs",
+    "scripts/check-performance-budgets.mjs",
+    "scripts/check-vacancy-totals.mjs",
+    "scripts/clean-live-jobs-json.py",
+    "scripts/compress-supabase-data.py",
+    "scripts/count-catalog-jobs.mjs",
+    "scripts/data/admit-result-portal-ids.json",
+    "scripts/data/official-site-overrides.json",
+    "scripts/data/site-audit.json",
+    "scripts/demote-publish-gate.py",
+    "scripts/deprecate-build-job-details.mjs",
+    "scripts/diagnose-database-url.mjs",
+    "scripts/enrich-and-promote-priority-drafts.py",
+    "scripts/enrich-draft-dates-from-titles.py",
+    "scripts/enrich-draft-jobs-from-pdf.py",
+    "scripts/enrich-jobs-metadata.py",
+    "scripts/export-live-jobs-now.py",
+    "scripts/export-recruitment-events.py",
+    "scripts/export-source-health-public.py",
+    "scripts/fetch-all-official.mjs",
+    "scripts/fetch-historical-notifications.mjs",
+    "scripts/fetch-official-feeds.mjs",
+    "scripts/fetch-official-sites.mjs",
+    "scripts/find-pooler-database-url.py",
+    "scripts/fix-i18n-brand.mjs",
+    "scripts/fix-i18n-domain.mjs",
+    "scripts/generate-admin-key.mjs",
+    "scripts/generate-app-icons.py",
+    "scripts/generate-brand-icons.mjs",
+    "scripts/generate-play-store-assets.mjs",
+    "scripts/generate-scraper-registry.mjs",
+    "scripts/go-live-check.mjs",
+    "scripts/growth-audit.mjs",
+    "scripts/import-official-json-to-db.py",
+    "scripts/india/import_directory.py",
+    "scripts/india/lgd_district_import.py",
+    "scripts/india/normalize_lgd_districts.py",
+    "scripts/india/validate_lgd_districts.py",
+    "scripts/ingest-closing-week-official.py",
+    "scripts/ingest-next-official-openings.py",
+    "scripts/ingest-official-batch-3.py",
+    "scripts/ingest-official-batch-4.py",
+    "scripts/ingest-official-batch-5.py",
+    "scripts/ingest-ssc-priority-notices.py",
+    "scripts/lib/audit-urls.mjs",
+    "scripts/lib/audit-urls.test.mjs",
+    "scripts/lib/fetch-official-rss-sources.mjs",
+    "scripts/lib/html-job-links.mjs",
+    "scripts/lib/india-district-sitemap.mjs",
+    "scripts/lib/india-district-sitemap.test.mjs",
+    "scripts/lib/lookback.mjs",
+    "scripts/lib/official-feed-utils.mjs",
+    "scripts/lib/site-overrides.mjs",
+    "scripts/lib/static-page-content.mjs",
+    "scripts/mark-daily-sync-failed.py",
+    "scripts/notify-workflow-failure.mjs",
+    "scripts/official-sites-fetch.json",
+    "scripts/official-sources.json",
+    "scripts/parser_templates/default_notification.json",
+    "scripts/patch-near-miss-draft-fields.py",
+    "scripts/patch-official-vacancies.py",
+    "scripts/play-store-check.mjs",
+    "scripts/populate-recruitment-events-from-feeds.py",
+    "scripts/prerender-home-shell.mjs",
+    "scripts/prerender-job-pages.mjs",
+    "scripts/priority-sources.json",
+    "scripts/promote-publish-gate.py",
+    "scripts/purge-catalog-jobs.mjs",
+    "scripts/push-github-actions-secrets.mjs",
+    "scripts/push-vercel-env-live.mjs",
+    "scripts/push-vercel-env.mjs",
+    "scripts/report-strict-ts-coverage.mjs",
+    "scripts/run-ai-employees.py",
+    "scripts/run-alert-delivery.py",
+    "scripts/run-all-phases.mjs",
+    "scripts/run-api-dev.mjs",
+    "scripts/run-backend-tests.py",
+    "scripts/run-complete-pipeline.ps1",
+    "scripts/run-daily-8am-sync.py",
+    "scripts/run-full-data-refresh.py",
+    "scripts/run-ingest-all.mjs",
+    "scripts/run-ingest-direct.py",
+    "scripts/run-job-detail-agent.py",
+    "scripts/run-live-jobs-pipeline.py",
+    "scripts/run-pdf-reader-agent.py",
+    "scripts/run-python.mjs",
+    "scripts/run-qa-review-agent.py",
+    "scripts/run-remaining-pipeline.ps1",
+    "scripts/run-source-health-agent.py",
+    "scripts/run-supabase-full-sync.py",
+    "scripts/run-supabase-sync-sources.py",
+    "scripts/run-sync-production.py",
+    "scripts/run-sync-quick.py",
+    "scripts/run-watchdog-agent.py",
+    "scripts/run_pipeline.py",
+    "scripts/sanitize-catalog-jobs.mjs",
+    "scripts/schedule-daily-8am-windows.ps1",
+    "scripts/scraper_registry.json",
+    "scripts/scrub-aggregator-from-db.py",
+    "scripts/scrub-expired-noise.py",
+    "scripts/scrub-noise-titles.py",
+    "scripts/scrub-tenders-from-db.py",
+    "scripts/scrub-vacancy-counts.py",
+    "scripts/seed-education.ts",
+    "scripts/setup-google-search.mjs",
+    "scripts/setup-production.mjs",
+    "scripts/setup-supabase-env.mjs",
+    "scripts/setup-supabase-env.ps1",
+    "scripts/setup-windows.ps1",
+    "scripts/split-india-map-svg.mjs",
+    "scripts/sync-home-shell-stats.mjs",
+    "scripts/sync-job-children.py",
+    "scripts/sync-ssc-lifecycle-events.py",
+    "scripts/sync-twa-manifest.mjs",
+    "scripts/test-backend-db.py",
+    "scripts/test-supabase-connection.mjs",
+    "scripts/upload-job-details-storage.mjs",
+    "scripts/vercel-ignore-build.mjs",
+    "scripts/verify-deploy.mjs",
+    "scripts/verify-job-detail-route.mjs",
+    "scripts/verify-live-jobs-snapshot.mjs",
+    "scripts/verify-production-seo.mjs",
+    "scripts/verify-stack.mjs",
+    "scripts/verify-vercel-jobs-source.mjs",
+    "scripts/website-health-agent.mjs",
+    "scripts/write-file-atomic.mjs",
+    "shared/official-hosts.json",
+    "shared/public-job-policy.json",
+    "shared/scrub-seo-text.mjs",
+    "skills-lock.json",
+    "tsconfig.json",
+    "vercel.json"
+  ],
+  "frontend_routes": [
+    {
+      "route": "/",
+      "components": [],
+      "home_element": true,
+      "redirect": false
+    },
+    {
+      "route": "/india",
+      "components": [
+        "LazyRoute",
+        "IndiaExplorerPage"
+      ],
+      "home_element": false,
+      "redirect": false
+    },
+    {
+      "route": "/india-map",
+      "components": [
+        "Navigate"
+      ],
+      "home_element": false,
+      "redirect": true
+    },
+    {
+      "route": "/latest-notifications",
+      "components": [
+        "Navigate"
+      ],
+      "home_element": false,
+      "redirect": true
+    },
+    {
+      "route": "/india/:stateId",
+      "components": [
+        "LazyRoute",
+        "StateExplorerPage"
+      ],
+      "home_element": false,
+      "redirect": false
+    },
+    {
+      "route": "/india/:stateId/district/:districtId",
+      "components": [
+        "LazyRoute",
+        "DistrictExplorerPage"
+      ],
+      "home_element": false,
+      "redirect": false
+    },
+    {
+      "route": "/india/:stateId/district/:districtId/:category",
+      "components": [
+        "LazyRoute",
+        "DistrictExplorerPage"
+      ],
+      "home_element": false,
+      "redirect": false
+    },
+    {
+      "route": "/india/:stateId/:category",
+      "components": [
+        "LazyRoute",
+        "StateExplorerPage"
+      ],
+      "home_element": false,
+      "redirect": false
+    },
+    {
+      "route": "/education",
+      "components": [
+        "LazyRoute",
+        "EducationHubPage"
+      ],
+      "home_element": false,
+      "redirect": false
+    },
+    {
+      "route": "/education/mock-tests",
+      "components": [
+        "LazyRoute",
+        "EducationHubPage"
+      ],
+      "home_element": false,
+      "redirect": false
+    },
+    {
+      "route": "/education/careers/:slug",
+      "components": [
+        "LazyRoute",
+        "EducationCareerPage"
+      ],
+      "home_element": false,
+      "redirect": false
+    },
+    {
+      "route": "/education/dashboard",
+      "components": [
+        "LazyRoute",
+        "EducationDashboardPage"
+      ],
+      "home_element": false,
+      "redirect": false
+    },
+    {
+      "route": "/admin/education",
+      "components": [
+        "LazyRoute",
+        "AdminRouteGuard",
+        "EducationAdminPage"
+      ],
+      "home_element": false,
+      "redirect": false
+    },
+    {
+      "route": "/career",
+      "components": [
+        "LazyRoute",
+        "EducationHubPage"
+      ],
+      "home_element": false,
+      "redirect": false
+    },
+    {
+      "route": "/jobs",
+      "components": [],
+      "home_element": true,
+      "redirect": false
+    },
+    {
+      "route": "/jobs/all-india",
+      "components": [],
+      "home_element": true,
+      "redirect": false
+    },
+    {
+      "route": "/qualification/:slug",
+      "components": [
+        "LazyRoute",
+        "BrowseJobsLandingPage"
+      ],
+      "home_element": false,
+      "redirect": false
+    },
+    {
+      "route": "/profession/:slug",
+      "components": [
+        "LazyRoute",
+        "BrowseJobsLandingPage"
+      ],
+      "home_element": false,
+      "redirect": false
+    },
+    {
+      "route": "/org/:slug",
+      "components": [
+        "LazyRoute",
+        "BrowseJobsLandingPage"
+      ],
+      "home_element": false,
+      "redirect": false
+    },
+    {
+      "route": "/explore",
+      "components": [
+        "LazyRoute",
+        "ExploreHubPage"
+      ],
+      "home_element": false,
+      "redirect": false
+    },
+    {
+      "route": "/qualifications",
+      "components": [
+        "LazyRoute",
+        "QualificationsIndexPage"
+      ],
+      "home_element": false,
+      "redirect": false
+    },
+    {
+      "route": "/professions",
+      "components": [
+        "LazyRoute",
+        "ProfessionsIndexPage"
+      ],
+      "home_element": false,
+      "redirect": false
+    },
+    {
+      "route": "/organizations",
+      "components": [
+        "LazyRoute",
+        "OrganizationsIndexPage"
+      ],
+      "home_element": false,
+      "redirect": false
+    },
+    {
+      "route": "/states",
+      "components": [
+        "LazyRoute",
+        "StatesIndexPage"
+      ],
+      "home_element": false,
+      "redirect": false
+    },
+    {
+      "route": "/boards",
+      "components": [
+        "LazyRoute",
+        "CategoriesIndexPage"
+      ],
+      "home_element": false,
+      "redirect": false
+    },
+    {
+      "route": "/categories",
+      "components": [
+        "LazyRoute",
+        "CategoriesIndexPage"
+      ],
+      "home_element": false,
+      "redirect": false
+    },
+    {
+      "route": "/jobs/latest-notifications",
+      "components": [
+        "LazyRoute",
+        "LatestNotificationsPage"
+      ],
+      "home_element": false,
+      "redirect": false
+    },
+    {
+      "route": "/state/:stateId",
+      "components": [
+        "LazyRoute",
+        "BrowseJobsLandingPage"
+      ],
+      "home_element": false,
+      "redirect": false
+    },
+    {
+      "route": "/board/:boardId",
+      "components": [
+        "LazyRoute",
+        "BrowseJobsLandingPage"
+      ],
+      "home_element": false,
+      "redirect": false
+    },
+    {
+      "route": "/category/:categoryId",
+      "components": [
+        "LazyRoute",
+        "BrowseJobsLandingPage"
+      ],
+      "home_element": false,
+      "redirect": false
+    },
+    {
+      "route": "/results/topics",
+      "components": [
+        "LazyRoute",
+        "ResultsTopicsIndexPage"
+      ],
+      "home_element": false,
+      "redirect": false
+    },
+    {
+      "route": "/results/admit-card",
+      "components": [
+        "LazyRoute",
+        "ResultsHubPage"
+      ],
+      "home_element": false,
+      "redirect": false
+    },
+    {
+      "route": "/results/answer-key",
+      "components": [
+        "LazyRoute",
+        "ResultsHubPage"
+      ],
+      "home_element": false,
+      "redirect": false
+    },
+    {
+      "route": "/results/:topicSlug",
+      "components": [],
+      "home_element": true,
+      "redirect": false
+    },
+    {
+      "route": "/results",
+      "components": [
+        "LazyRoute",
+        "ResultsHubPage"
+      ],
+      "home_element": false,
+      "redirect": false
+    },
+    {
+      "route": "/alerts",
+      "components": [
+        "LazyRoute",
+        "AlertsPage"
+      ],
+      "home_element": false,
+      "redirect": false
+    },
+    {
+      "route": "/exams",
+      "components": [
+        "LazyRoute",
+        "ExamsIndexPage"
+      ],
+      "home_element": false,
+      "redirect": false
+    },
+    {
+      "route": "/exam/:examSlug",
+      "components": [
+        "LazyRoute",
+        "ExamLandingPage"
+      ],
+      "home_element": false,
+      "redirect": false
+    },
+    {
+      "route": "/exam-calendar",
+      "components": [
+        "LazyRoute",
+        "ExamCalendarPage"
+      ],
+      "home_element": false,
+      "redirect": false
+    },
+    {
+      "route": "/faq",
+      "components": [
+        "LazyRoute",
+        "FaqPage"
+      ],
+      "home_element": false,
+      "redirect": false
+    },
+    {
+      "route": "/guide/how-to-apply",
+      "components": [
+        "LazyRoute",
+        "HowToApplyPage"
+      ],
+      "home_element": false,
+      "redirect": false
+    },
+    {
+      "route": "/guide/exam-preparation",
+      "components": [
+        "LazyRoute",
+        "ExamPrepPage"
+      ],
+      "home_element": false,
+      "redirect": false
+    },
+    {
+      "route": "/privacy",
+      "components": [
+        "LazyRoute",
+        "PrivacyPage"
+      ],
+      "home_element": false,
+      "redirect": false
+    },
+    {
+      "route": "/terms",
+      "components": [
+        "LazyRoute",
+        "TermsPage"
+      ],
+      "home_element": false,
+      "redirect": false
+    },
+    {
+      "route": "/about",
+      "components": [
+        "LazyRoute",
+        "AboutPage"
+      ],
+      "home_element": false,
+      "redirect": false
+    },
+    {
+      "route": "/contact",
+      "components": [
+        "LazyRoute",
+        "ContactPage"
+      ],
+      "home_element": false,
+      "redirect": false
+    },
+    {
+      "route": "/sitemap",
+      "components": [
+        "LazyRoute",
+        "SitemapPage"
+      ],
+      "home_element": false,
+      "redirect": false
+    },
+    {
+      "route": "/disclaimer",
+      "components": [
+        "LazyRoute",
+        "DisclaimerPage"
+      ],
+      "home_element": false,
+      "redirect": false
+    },
+    {
+      "route": "/account",
+      "components": [
+        "LazyRoute",
+        "AccountPage"
+      ],
+      "home_element": false,
+      "redirect": false
+    },
+    {
+      "route": "/account/bookmarks",
+      "components": [
+        "LazyRoute",
+        "BookmarksPage"
+      ],
+      "home_element": false,
+      "redirect": false
+    },
+    {
+      "route": "/admission",
+      "components": [
+        "LazyRoute",
+        "AdmissionHubPage"
+      ],
+      "home_element": false,
+      "redirect": false
+    },
+    {
+      "route": "/scholarships",
+      "components": [
+        "LazyRoute",
+        "ScholarshipsHubPage"
+      ],
+      "home_element": false,
+      "redirect": false
+    },
+    {
+      "route": "/yojana",
+      "components": [
+        "LazyRoute",
+        "YojanaHubPage"
+      ],
+      "home_element": false,
+      "redirect": false
+    },
+    {
+      "route": "/latest-results",
+      "components": [
+        "LazyRoute",
+        "ResultsHubPage"
+      ],
+      "home_element": false,
+      "redirect": false
+    },
+    {
+      "route": "/admit-cards",
+      "components": [
+        "LazyRoute",
+        "ResultsHubPage"
+      ],
+      "home_element": false,
+      "redirect": false
+    },
+    {
+      "route": "/answer-keys",
+      "components": [
+        "LazyRoute",
+        "ResultsHubPage"
+      ],
+      "home_element": false,
+      "redirect": false
+    },
+    {
+      "route": "/upcoming-exams",
+      "components": [
+        "Navigate"
+      ],
+      "home_element": false,
+      "redirect": true
+    },
+    {
+      "route": "/designations",
+      "components": [
+        "LazyRoute",
+        "DesignationsIndexPage"
+      ],
+      "home_element": false,
+      "redirect": false
+    },
+    {
+      "route": "/designation/:slug",
+      "components": [
+        "LazyRoute",
+        "DesignationLandingPage"
+      ],
+      "home_element": false,
+      "redirect": false
+    },
+    {
+      "route": "/admin",
+      "components": [
+        "LazyRoute",
+        "AdminRouteGuard",
+        "AdminDashboardPage"
+      ],
+      "home_element": false,
+      "redirect": false
+    },
+    {
+      "route": "/jobs/:slug",
+      "components": [
+        "LazyRoute",
+        "RouteErrorBoundary",
+        "JobDetailPage"
+      ],
+      "home_element": false,
+      "redirect": false
+    },
+    {
+      "route": "*",
+      "components": [
+        "LazyRoute",
+        "NotFoundPage"
+      ],
+      "home_element": false,
+      "redirect": false
+    }
+  ],
+  "backend_route_declarations": [
+    {
+      "file": "backend/app/routes/admin.py",
+      "method": "get",
+      "path": "/review-queues"
+    },
+    {
+      "file": "backend/app/routes/admin.py",
+      "method": "patch",
+      "path": "/review-queue/{review_id}"
+    },
+    {
+      "file": "backend/app/routes/admin.py",
+      "method": "get",
+      "path": "/jobs"
+    },
+    {
+      "file": "backend/app/routes/admin.py",
+      "method": "patch",
+      "path": "/jobs/{job_id}"
+    },
+    {
+      "file": "backend/app/routes/admin.py",
+      "method": "get",
+      "path": "/source-health"
+    },
+    {
+      "file": "backend/app/routes/admin.py",
+      "method": "get",
+      "path": "/dashboard"
+    },
+    {
+      "file": "backend/app/routes/admin.py",
+      "method": "get",
+      "path": "/sources/health"
+    },
+    {
+      "file": "backend/app/routes/admin.py",
+      "method": "post",
+      "path": "/sources/sync"
+    },
+    {
+      "file": "backend/app/routes/admin.py",
+      "method": "get",
+      "path": "/supabase/audit"
+    },
+    {
+      "file": "backend/app/routes/admin.py",
+      "method": "get",
+      "path": "/sync-status"
+    },
+    {
+      "file": "backend/app/routes/admin.py",
+      "method": "post",
+      "path": "/alerts/deliver"
+    },
+    {
+      "file": "backend/app/routes/admin.py",
+      "method": "get",
+      "path": "/sync-runs"
+    },
+    {
+      "file": "backend/app/routes/admin.py",
+      "method": "post",
+      "path": "/ingest/run-all"
+    },
+    {
+      "file": "backend/app/routes/admin_education.py",
+      "method": "get",
+      "path": "/education/overview"
+    },
+    {
+      "file": "backend/app/routes/admin_education.py",
+      "method": "get",
+      "path": "/education/{kind}"
+    },
+    {
+      "file": "backend/app/routes/admin_education.py",
+      "method": "post",
+      "path": "/education/{kind}"
+    },
+    {
+      "file": "backend/app/routes/admin_education.py",
+      "method": "patch",
+      "path": "/education/{kind}/{item_id}"
+    },
+    {
+      "file": "backend/app/routes/admin_education.py",
+      "method": "delete",
+      "path": "/education/{kind}/{item_id}"
+    },
+    {
+      "file": "backend/app/routes/admin_education.py",
+      "method": "get",
+      "path": "/education/tests/{test_id}/questions"
+    },
+    {
+      "file": "backend/app/routes/admin_education.py",
+      "method": "post",
+      "path": "/education/tests/{test_id}/questions"
+    },
+    {
+      "file": "backend/app/routes/admin_education.py",
+      "method": "patch",
+      "path": "/education/questions/{question_id}"
+    },
+    {
+      "file": "backend/app/routes/admin_education.py",
+      "method": "delete",
+      "path": "/education/questions/{question_id}"
+    },
+    {
+      "file": "backend/app/routes/admin_education.py",
+      "method": "post",
+      "path": "/education/tests/{test_id}/recount"
+    },
+    {
+      "file": "backend/app/routes/admin_moderation.py",
+      "method": "get",
+      "path": "/moderation"
+    },
+    {
+      "file": "backend/app/routes/admin_moderation.py",
+      "method": "patch",
+      "path": "/moderation/reports/{report_id}"
+    },
+    {
+      "file": "backend/app/routes/admin_operations.py",
+      "method": "get",
+      "path": "/source-funnel"
+    },
+    {
+      "file": "backend/app/routes/admin_operations.py",
+      "method": "get",
+      "path": "/stats"
+    },
+    {
+      "file": "backend/app/routes/admin_operations.py",
+      "method": "get",
+      "path": "/operations"
+    },
+    {
+      "file": "backend/app/routes/alerts.py",
+      "method": "get",
+      "path": "/channels"
+    },
+    {
+      "file": "backend/app/routes/alerts.py",
+      "method": "post",
+      "path": "/subscribe"
+    },
+    {
+      "file": "backend/app/routes/alerts.py",
+      "method": "post",
+      "path": "/unsubscribe"
+    },
+    {
+      "file": "backend/app/routes/billing.py",
+      "method": "get",
+      "path": "/config"
+    },
+    {
+      "file": "backend/app/routes/billing.py",
+      "method": "post",
+      "path": "/create-order"
+    },
+    {
+      "file": "backend/app/routes/billing.py",
+      "method": "post",
+      "path": "/verify"
+    },
+    {
+      "file": "backend/app/routes/billing.py",
+      "method": "post",
+      "path": "/webhook"
+    },
+    {
+      "file": "backend/app/routes/health.py",
+      "method": "get",
+      "path": "/health"
+    },
+    {
+      "file": "backend/app/routes/health.py",
+      "method": "get",
+      "path": "/health/detailed"
+    },
+    {
+      "file": "backend/app/routes/india.py",
+      "method": "get",
+      "path": "/overview"
+    },
+    {
+      "file": "backend/app/routes/india.py",
+      "method": "get",
+      "path": "/states"
+    },
+    {
+      "file": "backend/app/routes/india.py",
+      "method": "get",
+      "path": "/states/{state_id}"
+    },
+    {
+      "file": "backend/app/routes/india.py",
+      "method": "get",
+      "path": "/districts"
+    },
+    {
+      "file": "backend/app/routes/india.py",
+      "method": "get",
+      "path": "/states/{state_id}/districts"
+    },
+    {
+      "file": "backend/app/routes/india.py",
+      "method": "get",
+      "path": "/states/{state_id}/cities"
+    },
+    {
+      "file": "backend/app/routes/india.py",
+      "method": "get",
+      "path": "/states/{state_id}/districts/{district_id}"
+    },
+    {
+      "file": "backend/app/routes/india.py",
+      "method": "get",
+      "path": "/states/{state_id}/districts/{district_id}/cities"
+    },
+    {
+      "file": "backend/app/routes/india.py",
+      "method": "get",
+      "path": "/states/{state_id}/categories/{category}"
+    },
+    {
+      "file": "backend/app/routes/india.py",
+      "method": "get",
+      "path": "/search"
+    },
+    {
+      "file": "backend/app/routes/ingest.py",
+      "method": "post",
+      "path": "/run/{source_code}"
+    },
+    {
+      "file": "backend/app/routes/ingest.py",
+      "method": "post",
+      "path": "/run-all"
+    },
+    {
+      "file": "backend/app/routes/job_reports.py",
+      "method": "get",
+      "path": "/{report_id}"
+    },
+    {
+      "file": "backend/app/routes/jobs.py",
+      "method": "get",
+      "path": "/{slug}"
+    },
+    {
+      "file": "backend/app/routes/meta.py",
+      "method": "get",
+      "path": "/states"
+    },
+    {
+      "file": "backend/app/routes/meta.py",
+      "method": "get",
+      "path": "/categories"
+    },
+    {
+      "file": "backend/app/routes/meta.py",
+      "method": "get",
+      "path": "/sync-status"
+    }
+  ],
+  "frontend_import_graph": {
+    "frontend/src/App.tsx": [
+      "frontend/src/data/states.ts",
+      "frontend/src/utils/jobAggregates.ts",
+      "frontend/src/utils/stateLabels.ts",
+      "frontend/src/hooks/useLiveJobs.ts",
+      "frontend/src/hooks/useServerJobSearch.ts",
+      "frontend/src/hooks/useColorMode.ts",
+      "frontend/src/lib/dailySync.ts",
+      "frontend/src/components/layout/Navbar.tsx",
+      "frontend/src/components/layout/EmploymentNewsBarShell.tsx",
+      "frontend/src/components/layout/MobileBottomNav.tsx",
+      "frontend/src/components/MobileRouteTransition.tsx",
+      "frontend/src/components/RouteErrorBoundary.tsx",
+      "frontend/src/hooks/useStandaloneApp.ts",
+      "frontend/src/components/AppRoutes.tsx",
+      "frontend/src/context/BrowseContext.tsx",
+      "frontend/src/types/job.ts",
+      "frontend/src/utils/jobRoutes.ts",
+      "frontend/src/data/homeShellStats.ts",
+      "frontend/src/utils/browseSeo.ts",
+      "frontend/src/lib/appReady.ts",
+      "frontend/src/components/home/HomePage.tsx",
+      "frontend/src/components/layout/EmploymentNewsBar.tsx",
+      "frontend/src/components/home/SubscribeBanner.tsx",
+      "frontend/src/components/layout/InstallAppBanner.tsx"
+    ],
+    "frontend/src/components/AdminRouteGuard.tsx": [
+      "frontend/src/lib/adminApi.ts"
+    ],
+    "frontend/src/components/AnalyticsClickTracker.tsx": [
+      "frontend/src/lib/analytics.ts"
+    ],
+    "frontend/src/components/AnalyticsPageTracker.tsx": [
+      "frontend/src/lib/analytics.ts"
+    ],
+    "frontend/src/components/AppRoutes.tsx": [
+      "frontend/src/components/AdminRouteGuard.tsx",
+      "frontend/src/components/RouteErrorBoundary.tsx",
+      "frontend/src/components/appRoutePages.tsx",
+      "frontend/src/utils/browseRoutes.ts",
+      "frontend/src/types/job.ts",
+      "frontend/src/hooks/browseStateTypes.ts",
+      "frontend/src/utils/liveJobsPipeline.ts"
+    ],
+    "frontend/src/components/ErrorBoundary.tsx": [
+      "frontend/src/i18n/index.ts"
+    ],
+    "frontend/src/components/Maps/IndiaMap/IndiaMap.tsx": [
+      "frontend/src/types/MapTypes.ts",
+      "frontend/src/utils/mapUtils.ts",
+      "frontend/src/data/stateColors.ts",
+      "frontend/src/components/Maps/IndiaMap/mapStateJobCount.ts"
+    ],
+    "frontend/src/components/Maps/IndiaMap/mapStateJobCount.ts": [
+      "frontend/src/types/MapTypes.ts"
+    ],
+    "frontend/src/components/MobileRouteTransition.tsx": [],
+    "frontend/src/components/PageFallback.tsx": [],
+    "frontend/src/components/RouteErrorBoundary.tsx": [
+      "frontend/src/components/ErrorBoundary.tsx"
+    ],
+    "frontend/src/components/RoutePageFallback.tsx": [
+      "frontend/src/components/PageFallback.tsx"
+    ],
+    "frontend/src/components/ScrollToTop.tsx": [],
+    "frontend/src/components/TrackedLink.tsx": [
+      "frontend/src/lib/analytics.ts"
+    ],
+    "frontend/src/components/TurnstileWidget.tsx": [
+      "frontend/src/lib/turnstile.ts"
+    ],
+    "frontend/src/components/account/AccountAlertsPanel.tsx": [
+      "frontend/src/lib/alertsApi.ts"
+    ],
+    "frontend/src/components/account/PremiumUpgradePanel.tsx": [
+      "frontend/src/lib/billingApi.ts"
+    ],
+    "frontend/src/components/admin/OperationsDashboard.tsx": [
+      "frontend/src/lib/adminApi.ts"
+    ],
+    "frontend/src/components/ads/AdSlot.tsx": [],
+    "frontend/src/components/appRoutePages.tsx": [
+      "frontend/src/components/RoutePageFallback.tsx",
+      "frontend/src/pages/StaticPage.tsx",
+      "frontend/src/hooks/browseStateTypes.ts",
+      "frontend/src/pages/StaticPage.tsx",
+      "frontend/src/pages/JobDetailPage.tsx",
+      "frontend/src/pages/LatestNotificationsPage.tsx",
+      "frontend/src/pages/QualificationsIndexPage.tsx",
+      "frontend/src/pages/ProfessionsIndexPage.tsx",
+      "frontend/src/pages/OrganizationsIndexPage.tsx",
+      "frontend/src/pages/ResultsTopicsIndexPage.tsx",
+      "frontend/src/pages/StatesIndexPage.tsx",
+      "frontend/src/pages/CategoriesIndexPage.tsx",
+      "frontend/src/pages/ExploreHubPage.tsx",
+      "frontend/src/pages/AlertsPage.tsx",
+      "frontend/src/pages/ExamsIndexPage.tsx",
+      "frontend/src/pages/ExamLandingPage.tsx",
+      "frontend/src/pages/BrowseJobsLandingPage.tsx",
+      "frontend/src/pages/ExamCalendarPage.tsx",
+      "frontend/src/pages/FaqPage.tsx",
+      "frontend/src/pages/ContactPage.tsx",
+      "frontend/src/pages/SitemapPage.tsx",
+      "frontend/src/pages/AccountPage.tsx",
+      "frontend/src/pages/BookmarksPage.tsx",
+      "frontend/src/pages/AdmissionHubPage.tsx",
+      "frontend/src/pages/ScholarshipsHubPage.tsx",
+      "frontend/src/pages/YojanaHubPage.tsx",
+      "frontend/src/pages/ResultsHubPage.tsx",
+      "frontend/src/pages/DesignationLandingPage.tsx",
+      "frontend/src/pages/DesignationsIndexPage.tsx",
+      "frontend/src/pages/AdminDashboardPage.tsx",
+      "frontend/src/pages/NotFoundPage.tsx",
+      "frontend/src/pages/EducationHubPage.tsx",
+      "frontend/src/pages/EducationDashboardPage.tsx",
+      "frontend/src/pages/EducationAdminPage.tsx",
+      "frontend/src/pages/EducationCareerPage.tsx",
+      "frontend/src/pages/IndiaExplorerPage.tsx",
+      "frontend/src/pages/StateExplorerPage.tsx",
+      "frontend/src/pages/DistrictExplorerPage.tsx",
+      "frontend/src/pages/legalContent.ts",
+      "frontend/src/pages/legalContent.ts",
+      "frontend/src/pages/legalContent.ts",
+      "frontend/src/pages/legalContent.ts",
+      "frontend/src/pages/guideContent.ts",
+      "frontend/src/pages/guideContent.ts"
+    ],
+    "frontend/src/components/browse/BrowseBreadcrumbs.tsx": [
+      "frontend/src/data/professions.ts",
+      "frontend/src/data/qualifications.ts",
+      "frontend/src/data/categories.ts",
+      "frontend/src/utils/browseRoutes.ts",
+      "frontend/src/utils/stateLabels.ts"
+    ],
+    "frontend/src/components/browse/SectorBrowser.tsx": [
+      "frontend/src/components/jobs/CategoryGrid.tsx",
+      "frontend/src/components/jobs/StateGrid.tsx",
+      "frontend/src/context/BrowseContext.tsx",
+      "frontend/src/hooks/useMediaQuery.ts",
+      "frontend/src/utils/jobAggregates.ts"
+    ],
+    "frontend/src/components/home/AlertSection.tsx": [
+      "frontend/src/components/layout/AlertBellIcon.tsx",
+      "frontend/src/components/TurnstileWidget.tsx",
+      "frontend/src/hooks/useWebPushToken.ts",
+      "frontend/src/lib/alertsApi.ts",
+      "frontend/src/lib/turnstile.ts",
+      "frontend/src/data/states.ts",
+      "frontend/src/data/categories.ts"
+    ],
+    "frontend/src/components/home/ClosingDeadlinesStrip.tsx": [
+      "frontend/src/types/job.ts",
+      "frontend/src/utils/browseRoutes.ts",
+      "frontend/src/utils/jobRoutes.ts",
+      "frontend/src/utils/formatJobDate.ts"
+    ],
+    "frontend/src/components/home/EducationFilterPill.tsx": [],
+    "frontend/src/components/home/ExamLifecycleTimeline.tsx": [],
+    "frontend/src/components/home/ExploreHubBanner.tsx": [
+      "frontend/src/components/TrackedLink.tsx",
+      "frontend/src/utils/browseRoutes.ts"
+    ],
+    "frontend/src/components/home/HeadlineStatusBadge.tsx": [
+      "frontend/src/lib/officialFeed.ts"
+    ],
+    "frontend/src/components/home/HomeBrowseStrips.tsx": [
+      "frontend/src/components/layout/BrowseScrollRow.tsx",
+      "frontend/src/data/orgIndex.ts",
+      "frontend/src/data/qualifications.ts",
+      "frontend/src/data/professions.ts",
+      "frontend/src/lib/analytics.ts",
+      "frontend/src/utils/browseRoutes.ts",
+      "frontend/src/utils/educationVacancySummary.ts",
+      "frontend/src/utils/formatLocale.ts",
+      "frontend/src/types/job.ts"
+    ],
+    "frontend/src/components/home/HomeCareerMarketplace.tsx": [],
+    "frontend/src/components/home/HomeDiscoveryBlock.tsx": [
+      "frontend/src/components/home/HomeExamUpdatesRow.tsx",
+      "frontend/src/components/home/HomeBrowseStrips.tsx",
+      "frontend/src/hooks/useMediaQuery.ts",
+      "frontend/src/types/job.ts"
+    ],
+    "frontend/src/components/home/HomeExamUpdatesRow.tsx": [
+      "frontend/src/lib/analytics.ts",
+      "frontend/src/components/layout/BrowseScrollRow.tsx",
+      "frontend/src/components/home/ExamLifecycleTimeline.tsx",
+      "frontend/src/components/home/HeadlineStatusBadge.tsx",
+      "frontend/src/hooks/useOfficialArchivesBatch.ts",
+      "frontend/src/hooks/useOfficialFeed.ts",
+      "frontend/src/lib/officialFeed.ts",
+      "frontend/src/utils/latestNotificationsTable.ts",
+      "frontend/src/utils/officialFilters.ts",
+      "frontend/src/utils/browseRoutes.ts",
+      "frontend/src/utils/homeExamUpdatesConfig.ts",
+      "frontend/src/utils/jobRoutes.ts",
+      "frontend/src/types/job.ts"
+    ],
+    "frontend/src/components/home/HomeHeroMarketing.tsx": [
+      "frontend/src/components/home/IndiaGlancePanel.tsx",
+      "frontend/src/hooks/useCountUp.ts",
+      "frontend/src/utils/homePageFilters.ts"
+    ],
+    "frontend/src/components/home/HomeJobsListSection.tsx": [
+      "frontend/src/components/browse/BrowseBreadcrumbs.tsx",
+      "frontend/src/components/jobs/JobCard.tsx",
+      "frontend/src/components/jobs/JobCardGrid.tsx",
+      "frontend/src/data/homePageConstants.ts",
+      "frontend/src/data/professions.ts",
+      "frontend/src/data/professionCrossLinks.ts",
+      "frontend/src/data/qualifications.ts",
+      "frontend/src/lib/analytics.ts",
+      "frontend/src/utils/browseRoutes.ts",
+      "frontend/src/utils/homePageFilters.ts",
+      "frontend/src/types/job.ts",
+      "frontend/src/data/categories.ts",
+      "frontend/src/components/home/HomeJobsSkeleton.tsx",
+      "frontend/src/components/home/ProfessionLandingExtras.tsx"
+    ],
+    "frontend/src/components/home/HomeJobsSkeleton.tsx": [
+      "frontend/src/components/home/JobCardSkeleton.tsx"
+    ],
+    "frontend/src/components/home/HomeMapBlock.tsx": [
+      "frontend/src/data/states.ts",
+      "frontend/src/components/Maps/IndiaMap/IndiaMap.tsx",
+      "frontend/src/components/home/StateGlancePanel.tsx",
+      "frontend/src/types/MapTypes.ts"
+    ],
+    "frontend/src/components/home/HomePage.tsx": [
+      "frontend/src/utils/scrollToSection.ts",
+      "frontend/src/utils/stateLabels.ts",
+      "frontend/src/utils/formatLocale.ts",
+      "frontend/src/utils/homePageFilters.ts",
+      "frontend/src/components/home/EducationFilterPill.tsx",
+      "frontend/src/components/home/HomeHeroMarketing.tsx",
+      "frontend/src/components/home/ExploreHubBanner.tsx",
+      "frontend/src/components/home/HomeJobsListSection.tsx",
+      "frontend/src/components/home/HomeCareerMarketplace.tsx",
+      "frontend/src/components/home/ClosingDeadlinesStrip.tsx",
+      "frontend/src/components/home/ResultsHubFilters.tsx",
+      "frontend/src/components/home/useHomePageDerived.ts",
+      "frontend/src/components/layout/HeadlineStatsBar.tsx",
+      "frontend/src/data/homeShellStats.ts",
+      "frontend/src/components/home/StateJobsPanel.tsx",
+      "frontend/src/context/BrowseContext.tsx",
+      "frontend/src/utils/browseRoutes.ts",
+      "frontend/src/types/homePage.ts",
+      "frontend/src/lib/officialFeed.ts",
+      "frontend/src/components/home/OfficialHeadlinesSection.tsx",
+      "frontend/src/components/home/HomeDiscoveryBlock.tsx",
+      "frontend/src/components/home/HomeMapBlock.tsx",
+      "frontend/src/components/browse/SectorBrowser.tsx",
+      "frontend/src/components/layout/Footer.tsx",
+      "frontend/src/components/home/AlertSection.tsx"
+    ],
+    "frontend/src/components/home/IndiaGlancePanel.tsx": [
+      "frontend/src/data/indiaFacts.ts",
+      "frontend/src/data/states.ts",
+      "frontend/src/utils/formatLocale.ts"
+    ],
+    "frontend/src/components/home/JobCardSkeleton.tsx": [],
+    "frontend/src/components/home/LatestJobsSimpleTable.tsx": [
+      "frontend/src/utils/jobDetailLinks.ts",
+      "frontend/src/utils/latestNotificationsTable.ts",
+      "frontend/src/utils/formatJobDate.ts"
+    ],
+    "frontend/src/components/home/LatestNotificationsTable.tsx": [
+      "frontend/src/data/statesChips.ts",
+      "frontend/src/components/home/LatestJobsSimpleTable.tsx",
+      "frontend/src/components/home/latestNotifications/LatestNotificationsCategoryFilter.tsx",
+      "frontend/src/components/home/latestNotifications/LatestNotificationsEmptyStates.tsx",
+      "frontend/src/components/home/latestNotifications/LatestNotificationsEducationFilter.tsx",
+      "frontend/src/components/home/latestNotifications/LatestNotificationsJobRow.tsx",
+      "frontend/src/components/home/latestNotifications/latestNotificationsGroupFilters.ts",
+      "frontend/src/components/home/latestNotifications/LatestNotificationsStateFilter.tsx",
+      "frontend/src/utils/latestNotificationsTable.ts",
+      "frontend/src/hooks/useNow.ts",
+      "frontend/src/utils/latestNotificationsFilters.ts",
+      "frontend/src/utils/educationVacancySummary.ts",
+      "frontend/src/utils/browseRoutes.ts",
+      "frontend/src/utils/formatLocale.ts",
+      "frontend/src/types/job.ts"
+    ],
+    "frontend/src/components/home/OfficialHeadlinesSection.tsx": [
+      "frontend/src/data/resultTopics.ts",
+      "frontend/src/hooks/useOfficialArchive.ts",
+      "frontend/src/hooks/useOfficialFeed.ts",
+      "frontend/src/lib/officialFeed.ts",
+      "frontend/src/utils/officialFilters.ts",
+      "frontend/src/data/officialSites.ts",
+      "frontend/src/utils/formatLocale.ts",
+      "frontend/src/components/home/OfficialHeadlinesTable.tsx",
+      "frontend/src/components/home/QuickLinksGrid.tsx",
+      "frontend/src/components/home/HeadlineStatusBadge.tsx",
+      "frontend/src/lib/officialFeed.ts"
+    ],
+    "frontend/src/components/home/OfficialHeadlinesTable.tsx": [
+      "frontend/src/lib/officialFeed.ts",
+      "frontend/src/utils/officialFilters.ts",
+      "frontend/src/utils/formatLocale.ts",
+      "frontend/src/components/home/HeadlineStatusBadge.tsx"
+    ],
+    "frontend/src/components/home/ProfessionLandingExtras.tsx": [
+      "frontend/src/data/professions.ts",
+      "frontend/src/data/professionSeoContent.ts",
+      "frontend/src/components/home/ProfessionLandingFaq.tsx",
+      "frontend/src/utils/formatLocale.ts",
+      "frontend/src/types/job.ts"
+    ],
+    "frontend/src/components/home/ProfessionLandingFaq.tsx": [
+      "frontend/src/data/professions.ts"
+    ],
+    "frontend/src/components/home/QuickLinksGrid.tsx": [
+      "frontend/src/lib/officialFeed.ts",
+      "frontend/src/components/home/HeadlineStatusBadge.tsx"
+    ],
+    "frontend/src/components/home/ResultsHubFilters.tsx": [
+      "frontend/src/data/categories.ts",
+      "frontend/src/data/states.ts",
+      "frontend/src/lib/officialFeed.ts",
+      "frontend/src/hooks/useOfficialArchive.ts",
+      "frontend/src/hooks/useOfficialFeed.ts",
+      "frontend/src/data/resultTopics.ts",
+      "frontend/src/utils/officialFilters.ts",
+      "frontend/src/utils/formatLocale.ts"
+    ],
+    "frontend/src/components/home/SocialAlertBar.tsx": [],
+    "frontend/src/components/home/StateGlancePanel.tsx": [
+      "frontend/src/data/stateFacts.ts",
+      "frontend/src/data/stateGlanceHighlights.ts",
+      "frontend/src/data/stateCabinetFacts.ts",
+      "frontend/src/data/states.ts",
+      "frontend/src/utils/stateLabels.ts"
+    ],
+    "frontend/src/components/home/StateJobsPanel.tsx": [
+      "frontend/src/components/jobs/JobCard.tsx",
+      "frontend/src/components/jobs/JobCardGrid.tsx",
+      "frontend/src/data/homePageConstants.ts"
+    ],
+    "frontend/src/components/home/SubscribeBanner.tsx": [],
+    "frontend/src/components/home/TrustStrip.tsx": [],
+    "frontend/src/components/home/latestNotifications/LatestNotificationsCategoryFilter.tsx": [
+      "frontend/src/data/categories.ts",
+      "frontend/src/utils/latestNotificationsFilters.ts",
+      "frontend/src/utils/latestNotificationsTable.ts"
+    ],
+    "frontend/src/components/home/latestNotifications/LatestNotificationsEducationFilter.tsx": [
+      "frontend/src/components/home/EducationFilterPill.tsx",
+      "frontend/src/utils/educationVacancySummary.ts"
+    ],
+    "frontend/src/components/home/latestNotifications/LatestNotificationsEmptyStates.tsx": [],
+    "frontend/src/components/home/latestNotifications/LatestNotificationsJobRow.tsx": [
+      "frontend/src/utils/formatJobDate.ts",
+      "frontend/src/utils/latestNotificationsTable.ts"
+    ],
+    "frontend/src/components/home/latestNotifications/LatestNotificationsStateFilter.tsx": [
+      "frontend/src/data/statesChips.ts"
+    ],
+    "frontend/src/components/home/latestNotifications/latestNotificationsGroupFilters.ts": [
+      "frontend/src/utils/latestNotificationsTable.ts",
+      "frontend/src/data/categories.ts"
+    ],
+    "frontend/src/components/home/useHomePageDerived.ts": [
+      "frontend/src/data/states.ts",
+      "frontend/src/data/jobRegion.ts",
+      "frontend/src/utils/educationVacancySummary.ts",
+      "frontend/src/utils/homePageFilters.ts",
+      "frontend/src/utils/jobFilters.ts",
+      "frontend/src/utils/latestNotificationsFilters.ts",
+      "frontend/src/context/BrowseContext.tsx",
+      "frontend/src/types/homePage.ts",
+      "frontend/src/data/homePageConstants.ts",
+      "frontend/src/hooks/useNow.ts"
+    ],
+    "frontend/src/components/hub/HubCard.tsx": [
+      "frontend/src/components/TrackedLink.tsx"
+    ],
+    "frontend/src/components/hub/RecruitmentEventsList.tsx": [
+      "frontend/src/hooks/useRecruitmentEvents.ts",
+      "frontend/src/lib/recruitmentEventsApi.ts",
+      "frontend/src/components/PageFallback.tsx"
+    ],
+    "frontend/src/components/india/ExplorerCategoryCard.tsx": [
+      "frontend/src/data/india/indiaExplorer.ts"
+    ],
+    "frontend/src/components/india/IndiaDataSources.tsx": [],
+    "frontend/src/components/jobs/BookmarkButton.tsx": [
+      "frontend/src/hooks/useAuth.ts",
+      "frontend/src/hooks/useBookmarks.ts"
+    ],
+    "frontend/src/components/jobs/CategoryGrid.tsx": [
+      "frontend/src/components/layout/BrowseScrollRow.tsx",
+      "frontend/src/data/categories.ts"
+    ],
+    "frontend/src/components/jobs/JobCard.tsx": [
+      "frontend/src/hooks/useMediaQuery.ts",
+      "frontend/src/hooks/useNow.ts",
+      "frontend/src/utils/jobContentTranslate.ts",
+      "frontend/src/theme/designSystem.ts",
+      "frontend/src/data/categories.ts",
+      "frontend/src/types/job.ts",
+      "frontend/src/utils/jobMetadataUtils.ts",
+      "frontend/src/utils/officialDomains.ts",
+      "frontend/src/utils/jobDetailLinks.ts",
+      "frontend/src/utils/formatJobDate.ts",
+      "frontend/src/utils/formatLocale.ts",
+      "frontend/src/utils/extractPostName.ts",
+      "frontend/src/components/jobs/BookmarkButton.tsx"
+    ],
+    "frontend/src/components/jobs/JobCardGrid.tsx": [
+      "frontend/src/components/jobs/JobCard.tsx",
+      "frontend/src/hooks/useMediaQuery.ts"
+    ],
+    "frontend/src/components/jobs/JobComments.tsx": [
+      "frontend/src/hooks/useAuth.ts",
+      "frontend/src/lib/commentsApi.ts"
+    ],
+    "frontend/src/components/jobs/JobDetail.tsx": [
+      "frontend/src/hooks/useNow.ts",
+      "frontend/src/hooks/useJobDetailFocusTrap.ts",
+      "frontend/src/theme/designSystem.ts",
+      "frontend/src/data/categories.ts",
+      "frontend/src/hooks/useTranslatedJob.ts",
+      "frontend/src/hooks/useTranslatedText.ts",
+      "frontend/src/utils/jobDetailLabels.ts",
+      "frontend/src/utils/jobDetailContent.ts",
+      "frontend/src/utils/jobDetailStructured.ts",
+      "frontend/src/utils/extractPostName.ts",
+      "frontend/src/utils/jobDetailLinks.ts",
+      "frontend/src/utils/officialContact.ts",
+      "frontend/src/components/jobs/RelatedJobs.tsx",
+      "frontend/src/components/jobs/JobDetailFaq.tsx",
+      "frontend/src/components/jobs/JobComments.tsx",
+      "frontend/src/components/ads/AdSlot.tsx",
+      "frontend/src/components/home/SocialAlertBar.tsx",
+      "frontend/src/components/jobs/jobDetailUi/index.ts",
+      "frontend/src/components/jobs/jobDetailUi/jobDetailHero.tsx",
+      "frontend/src/types/job.ts",
+      "frontend/src/utils/formatLocale.ts"
+    ],
+    "frontend/src/components/jobs/JobDetailFaq.tsx": [
+      "frontend/src/types/job.ts"
+    ],
+    "frontend/src/components/jobs/RelatedJobs.tsx": [
+      "frontend/src/data/categories.ts",
+      "frontend/src/theme/designSystem.ts",
+      "frontend/src/utils/jobBoardExamLinks.ts",
+      "frontend/src/types/job.ts"
+    ],
+    "frontend/src/components/jobs/ReportJobButton.tsx": [
+      "frontend/src/components/TurnstileWidget.tsx",
+      "frontend/src/lib/turnstile.ts"
+    ],
+    "frontend/src/components/jobs/StateGrid.tsx": [
+      "frontend/src/components/layout/BrowseScrollRow.tsx",
+      "frontend/src/data/states.ts",
+      "frontend/src/utils/mapUtils.ts",
+      "frontend/src/data/stateColors.ts",
+      "frontend/src/utils/stateLabels.ts"
+    ],
+    "frontend/src/components/jobs/jobDetailUi/index.ts": [
+      "frontend/src/components/jobs/jobDetailUi/jobDetailSection.tsx",
+      "frontend/src/components/jobs/jobDetailUi/jobDetailFacts.tsx",
+      "frontend/src/components/jobs/jobDetailUi/jobDetailContent.tsx",
+      "frontend/src/components/jobs/jobDetailUi/jobDetailGrids.tsx",
+      "frontend/src/components/jobs/jobDetailUi/jobDetailStickyBar.tsx",
+      "frontend/src/components/jobs/jobDetailUi/jobDetailActions.tsx",
+      "frontend/src/components/jobs/jobDetailUi/jobDetailGlance.tsx"
+    ],
+    "frontend/src/components/jobs/jobDetailUi/jobDetailActions.tsx": [
+      "frontend/src/utils/officialDomains.ts"
+    ],
+    "frontend/src/components/jobs/jobDetailUi/jobDetailContent.tsx": [
+      "frontend/src/utils/jobDetailLabels.ts",
+      "frontend/src/utils/jobDetailLinks.ts",
+      "frontend/src/components/jobs/jobDetailUi/jobDetailSection.tsx",
+      "frontend/src/components/jobs/jobDetailUi/jobDetailFacts.tsx"
+    ],
+    "frontend/src/components/jobs/jobDetailUi/jobDetailFacts.tsx": [
+      "frontend/src/utils/jobDetailStructured.ts"
+    ],
+    "frontend/src/components/jobs/jobDetailUi/jobDetailGlance.tsx": [
+      "frontend/src/hooks/useRevealOnScroll.ts"
+    ],
+    "frontend/src/components/jobs/jobDetailUi/jobDetailGrids.tsx": [],
+    "frontend/src/components/jobs/jobDetailUi/jobDetailHero.tsx": [
+      "frontend/src/components/jobs/BookmarkButton.tsx",
+      "frontend/src/components/jobs/ReportJobButton.tsx",
+      "frontend/src/components/jobs/jobDetailUi/index.ts"
+    ],
+    "frontend/src/components/jobs/jobDetailUi/jobDetailSection.tsx": [
+      "frontend/src/hooks/useRevealOnScroll.ts"
+    ],
+    "frontend/src/components/jobs/jobDetailUi/jobDetailStickyBar.tsx": [],
+    "frontend/src/components/layout/AlertBellIcon.tsx": [],
+    "frontend/src/components/layout/BottomNavIcons.tsx": [],
+    "frontend/src/components/layout/BrandLogo.tsx": [],
+    "frontend/src/components/layout/BrowseScrollRow.tsx": [],
+    "frontend/src/components/layout/BuildStamp.tsx": [
+      "frontend/src/lib/buildStamp.ts"
+    ],
+    "frontend/src/components/layout/EmploymentNewsBar.tsx": [
+      "frontend/src/components/layout/BrowseScrollRow.tsx",
+      "frontend/src/hooks/useOfficialFeed.ts",
+      "frontend/src/lib/officialFeed.ts",
+      "frontend/src/utils/employmentNewsItems.ts",
+      "frontend/src/utils/formatLocale.ts",
+      "frontend/src/types/job.ts"
+    ],
+    "frontend/src/components/layout/EmploymentNewsBarShell.tsx": [],
+    "frontend/src/components/layout/Footer.tsx": [
+      "frontend/src/components/layout/BrandLogo.tsx",
+      "frontend/src/components/layout/BuildStamp.tsx",
+      "frontend/src/components/TrackedLink.tsx",
+      "frontend/src/data/states.ts",
+      "frontend/src/data/siteLinks.ts",
+      "frontend/src/utils/browseRoutes.ts",
+      "frontend/src/hooks/browseStateTypes.ts"
+    ],
+    "frontend/src/components/layout/HeadlineStatsBar.tsx": [
+      "frontend/src/utils/formatLocale.ts",
+      "frontend/src/utils/headlineStats.ts",
+      "frontend/src/utils/liveJobsPipeline.ts",
+      "frontend/src/utils/headlineStats.ts"
+    ],
+    "frontend/src/components/layout/IndianLanguageSelector.tsx": [
+      "frontend/src/i18n/ensureLocale.ts",
+      "frontend/src/i18n/languages.ts"
+    ],
+    "frontend/src/components/layout/InstallAppBanner.tsx": [
+      "frontend/src/hooks/usePwaInstall.ts"
+    ],
+    "frontend/src/components/layout/MobileBottomNav.tsx": [
+      "frontend/src/components/layout/BottomNavIcons.tsx",
+      "frontend/src/utils/browseRoutes.ts",
+      "frontend/src/lib/analytics.ts"
+    ],
+    "frontend/src/components/layout/MobileNavDrawer.tsx": [
+      "frontend/src/utils/browseRoutes.ts",
+      "frontend/src/lib/analytics.ts"
+    ],
+    "frontend/src/components/layout/Navbar.tsx": [
+      "frontend/src/components/layout/IndianLanguageSelector.tsx",
+      "frontend/src/components/layout/BrandLogo.tsx",
+      "frontend/src/components/layout/MobileNavDrawer.tsx",
+      "frontend/src/components/layout/NavbarPreferenceRows.tsx",
+      "frontend/src/components/layout/SearchMagnifyIcon.tsx",
+      "frontend/src/hooks/usePwaInstall.ts",
+      "frontend/src/hooks/useMediaQuery.ts",
+      "frontend/src/utils/browseRoutes.ts",
+      "frontend/src/lib/analytics.ts",
+      "frontend/src/utils/formatLocale.ts"
+    ],
+    "frontend/src/components/layout/NavbarPreferenceRows.tsx": [
+      "frontend/src/components/layout/IndianLanguageSelector.tsx"
+    ],
+    "frontend/src/components/layout/SearchMagnifyIcon.tsx": [],
+    "frontend/src/context/BrowseContext.tsx": [
+      "frontend/src/hooks/useBrowseState.ts"
+    ],
+    "frontend/src/data/admissionSources.ts": [],
+    "frontend/src/data/categories.ts": [],
+    "frontend/src/data/designations.ts": [],
+    "frontend/src/data/education/careerPathFamilies.ts": [
+      "frontend/src/data/education/careerPaths.ts"
+    ],
+    "frontend/src/data/education/careerPaths.ts": [
+      "frontend/src/data/education/careerPathFamilies.ts",
+      "frontend/src/data/education/originalMocks.ts"
+    ],
+    "frontend/src/data/education/collegeSyllabi.ts": [
+      "frontend/src/data/education/officialSources.ts",
+      "frontend/src/data/education/collegeSyllabiExtra.ts",
+      "frontend/src/data/education/educationTypes.ts"
+    ],
+    "frontend/src/data/education/collegeSyllabiExtra.ts": [
+      "frontend/src/data/education/officialSources.ts",
+      "frontend/src/data/education/educationTypes.ts"
+    ],
+    "frontend/src/data/education/degreeExamGuides.ts": [
+      "frontend/src/data/education/educationTypes.ts"
+    ],
+    "frontend/src/data/education/educationTypes.ts": [],
+    "frontend/src/data/education/interSyllabi.ts": [
+      "frontend/src/data/education/officialSources.ts",
+      "frontend/src/data/education/educationTypes.ts"
+    ],
+    "frontend/src/data/education/officialSources.d.ts": [],
+    "frontend/src/data/education/officialSources.ts": [],
+    "frontend/src/data/education/originalMocks.ts": [
+      "frontend/src/data/education/careerPaths.ts"
+    ],
+    "frontend/src/data/education/resourceRegistry.ts": [],
+    "frontend/src/data/education/stageStudySubjects.ts": [
+      "frontend/src/data/education/studyContent.ts"
+    ],
+    "frontend/src/data/education/studyContent.ts": [
+      "frontend/src/data/education/educationTypes.ts",
+      "frontend/src/data/education/interSyllabi.ts",
+      "frontend/src/data/education/collegeSyllabi.ts"
+    ],
+    "frontend/src/data/examDiscovery.ts": [
+      "frontend/src/data/exams.ts",
+      "frontend/src/data/exams.ts",
+      "frontend/src/utils/jobFilters.ts",
+      "frontend/src/utils/jobMetadataUtils.ts",
+      "frontend/src/types/job.ts",
+      "frontend/src/data/exams.ts",
+      "frontend/src/data/exams.ts"
+    ],
+    "frontend/src/data/exams.ts": [
+      "frontend/src/data/categories.ts",
+      "frontend/src/types/job.ts",
+      "frontend/src/utils/jobFilters.ts",
+      "frontend/src/utils/jobMetadataUtils.ts"
+    ],
+    "frontend/src/data/homePageConstants.ts": [
+      "frontend/src/utils/homePageFilters.ts",
+      "frontend/src/types/job.ts",
+      "frontend/src/utils/jobMetadataUtils.ts"
+    ],
+    "frontend/src/data/homeShellStats.ts": [
+      "frontend/src/utils/liveJobsPipeline.ts",
+      "frontend/src/utils/headlineStats.ts"
+    ],
+    "frontend/src/data/hubSections.ts": [
+      "frontend/src/utils/browseRoutes.ts",
+      "frontend/src/data/siteLinks.ts"
+    ],
+    "frontend/src/data/india/indiaExplorer.ts": [
+      "frontend/src/data/states.ts"
+    ],
+    "frontend/src/data/indiaFacts.ts": [],
+    "frontend/src/data/jobRegion.ts": [
+      "frontend/src/data/states.ts"
+    ],
+    "frontend/src/data/officialSites.ts": [],
+    "frontend/src/data/orgIndex.ts": [
+      "frontend/src/utils/orgSlug.ts",
+      "frontend/src/data/org-index.json"
+    ],
+    "frontend/src/data/professionCrossLinks.ts": [
+      "frontend/src/data/professions.ts",
+      "frontend/src/data/qualifications.ts"
+    ],
+    "frontend/src/data/professionSeoContent.ts": [],
+    "frontend/src/data/professions.ts": [
+      "frontend/src/data/categories.ts",
+      "frontend/src/types/job.ts",
+      "frontend/src/data/qualifications.ts",
+      "frontend/src/utils/educationVacancySummary.ts",
+      "frontend/src/utils/jobFilters.ts",
+      "frontend/src/utils/jobMetadataUtils.ts"
+    ],
+    "frontend/src/data/qualifications.ts": [
+      "frontend/src/data/categories.ts",
+      "frontend/src/types/job.ts",
+      "frontend/src/utils/educationVacancySummary.ts"
+    ],
+    "frontend/src/data/resultTopics.ts": [],
+    "frontend/src/data/scholarshipSources.ts": [],
+    "frontend/src/data/siteLinks.ts": [],
+    "frontend/src/data/siteMeta.ts": [],
+    "frontend/src/data/stateCabinetFacts.ts": [],
+    "frontend/src/data/stateColors.ts": [],
+    "frontend/src/data/stateFacts.ts": [],
+    "frontend/src/data/stateGlanceHighlights.ts": [],
+    "frontend/src/data/states.ts": [],
+    "frontend/src/data/statesChips.ts": [
+      "frontend/src/data/states.ts"
+    ],
+    "frontend/src/data/yojanaSources.ts": [],
+    "frontend/src/hooks/browse/browseScrollHelpers.ts": [
+      "frontend/src/utils/scrollToSection.ts"
+    ],
+    "frontend/src/hooks/browse/useBrowseFilters.ts": [
+      "frontend/src/data/qualifications.ts",
+      "frontend/src/utils/homePageFilters.ts",
+      "frontend/src/utils/browseRoutes.ts",
+      "frontend/src/hooks/browse/useBrowseStateCore.ts"
+    ],
+    "frontend/src/hooks/browse/useBrowseFooterNavigation.ts": [
+      "frontend/src/data/resultTopics.ts",
+      "frontend/src/hooks/browseStateTypes.ts",
+      "frontend/src/hooks/browse/useBrowseStateCore.ts",
+      "frontend/src/hooks/browse/browseScrollHelpers.ts",
+      "frontend/src/utils/browseRoutes.ts"
+    ],
+    "frontend/src/hooks/browse/useBrowseHeadlinesNavigation.ts": [
+      "frontend/src/data/resultTopics.ts",
+      "frontend/src/hooks/browse/useBrowseStateCore.ts",
+      "frontend/src/hooks/browse/browseScrollHelpers.ts",
+      "frontend/src/utils/browseRoutes.ts"
+    ],
+    "frontend/src/hooks/browse/useBrowseLandingMeta.ts": [
+      "frontend/src/data/categories.ts",
+      "frontend/src/data/orgIndex.ts",
+      "frontend/src/data/professions.ts",
+      "frontend/src/data/qualifications.ts",
+      "frontend/src/data/resultTopics.ts",
+      "frontend/src/data/states.ts",
+      "frontend/src/hooks/browse/useBrowseStateCore.ts"
+    ],
+    "frontend/src/hooks/browse/useBrowseMapNavigation.ts": [
+      "frontend/src/data/categories.ts",
+      "frontend/src/data/orgIndex.ts",
+      "frontend/src/data/professions.ts",
+      "frontend/src/data/qualifications.ts",
+      "frontend/src/hooks/browse/useBrowseStateCore.ts",
+      "frontend/src/hooks/browse/useBrowseFilters.ts",
+      "frontend/src/hooks/browse/browseScrollHelpers.ts",
+      "frontend/src/utils/browseRoutes.ts"
+    ],
+    "frontend/src/hooks/browse/useBrowseNavigation.ts": [
+      "frontend/src/hooks/browse/useBrowseStateCore.ts",
+      "frontend/src/hooks/browse/useBrowseFilters.ts",
+      "frontend/src/hooks/browse/useBrowseFooterNavigation.ts",
+      "frontend/src/hooks/browse/useBrowseHeadlinesNavigation.ts",
+      "frontend/src/hooks/browse/useBrowseMapNavigation.ts"
+    ],
+    "frontend/src/hooks/browse/useBrowseRouteSync.ts": [
+      "frontend/src/data/professions.ts",
+      "frontend/src/data/qualifications.ts",
+      "frontend/src/data/resultTopics.ts",
+      "frontend/src/utils/homePageFilters.ts",
+      "frontend/src/utils/browseRoutes.ts",
+      "frontend/src/utils/scrollToSection.ts",
+      "frontend/src/hooks/browse/useBrowseStateCore.ts"
+    ],
+    "frontend/src/hooks/browse/useBrowseStateCore.ts": [
+      "frontend/src/data/categories.ts",
+      "frontend/src/utils/homePageFilters.ts",
+      "frontend/src/utils/browseRoutes.ts",
+      "frontend/src/data/resultTopics.ts",
+      "frontend/src/hooks/browseStateTypes.ts"
+    ],
+    "frontend/src/hooks/browseStateTypes.ts": [
+      "frontend/src/utils/homePageFilters.ts",
+      "frontend/src/utils/browseRoutes.ts",
+      "frontend/src/data/resultTopics.ts"
+    ],
+    "frontend/src/hooks/useAuth.ts": [
+      "frontend/src/lib/supabase.ts"
+    ],
+    "frontend/src/hooks/useBookmarks.ts": [
+      "frontend/src/hooks/useAuth.ts",
+      "frontend/src/lib/bookmarksApi.ts"
+    ],
+    "frontend/src/hooks/useBrowseState.ts": [
+      "frontend/src/hooks/browse/useBrowseStateCore.ts",
+      "frontend/src/hooks/browse/useBrowseRouteSync.ts",
+      "frontend/src/hooks/browse/useBrowseFilters.ts",
+      "frontend/src/hooks/browse/useBrowseNavigation.ts",
+      "frontend/src/hooks/browse/useBrowseLandingMeta.ts",
+      "frontend/src/hooks/browseStateTypes.ts"
+    ],
+    "frontend/src/hooks/useColorMode.ts": [
+      "frontend/src/theme/designSystem.ts"
+    ],
+    "frontend/src/hooks/useCountUp.ts": [
+      "frontend/src/hooks/usePrefersReducedMotion.ts"
+    ],
+    "frontend/src/hooks/useIndiaExplorer.ts": [
+      "frontend/src/lib/indiaApi.ts"
+    ],
+    "frontend/src/hooks/useJobDetailFocusTrap.ts": [],
+    "frontend/src/hooks/useLiveJobs.ts": [
+      "frontend/src/lib/dailySync.ts",
+      "frontend/src/lib/liveJobsFetch.ts",
+      "frontend/src/lib/liveJobsSessionCache.ts",
+      "frontend/src/lib/queryClient.ts",
+      "frontend/src/utils/jobFilters.ts",
+      "frontend/src/utils/liveJobsPipeline.ts",
+      "frontend/src/hooks/useNow.ts"
+    ],
+    "frontend/src/hooks/useMediaQuery.ts": [],
+    "frontend/src/hooks/useNow.ts": [],
+    "frontend/src/hooks/useOfficialArchive.ts": [],
+    "frontend/src/hooks/useOfficialArchivesBatch.ts": [],
+    "frontend/src/hooks/useOfficialFeed.ts": [
+      "frontend/src/lib/officialFeed.ts"
+    ],
+    "frontend/src/hooks/useOfficialTopicCounts.ts": [
+      "frontend/src/data/resultTopics.ts",
+      "frontend/src/lib/officialFeed.ts",
+      "frontend/src/hooks/useOfficialFeed.ts",
+      "frontend/src/utils/officialFilters.ts"
+    ],
+    "frontend/src/hooks/usePrefersReducedMotion.ts": [],
+    "frontend/src/hooks/usePwaInstall.ts": [],
+    "frontend/src/hooks/useRecruitmentEvents.ts": [
+      "frontend/src/lib/recruitmentEventsApi.ts"
+    ],
+    "frontend/src/hooks/useRevealOnScroll.ts": [],
+    "frontend/src/hooks/useServerJobSearch.ts": [
+      "frontend/src/lib/jobsApi.ts",
+      "frontend/src/utils/liveJobAdapter.ts",
+      "frontend/src/utils/jobFilters.ts",
+      "frontend/src/types/job.ts"
+    ],
+    "frontend/src/hooks/useStandaloneApp.ts": [],
+    "frontend/src/hooks/useTranslatedJob.ts": [
+      "frontend/src/types/job.ts",
+      "frontend/src/utils/jobContentTranslate.ts"
+    ],
+    "frontend/src/hooks/useTranslatedText.ts": [
+      "frontend/src/utils/jobContentTranslate.ts"
+    ],
+    "frontend/src/hooks/useWebPushToken.ts": [],
+    "frontend/src/i18n/ensureLocale.ts": [
+      "frontend/src/i18n/locales/en.json",
+      "frontend/src/i18n/locales/hi.json",
+      "frontend/src/i18n/languages.ts",
+      "frontend/src/i18n/mergeLocale.ts",
+      "frontend/src/i18n/stateNames.ts"
+    ],
+    "frontend/src/i18n/index.ts": [
+      "frontend/src/i18n/locales/en.json",
+      "frontend/src/i18n/languages.ts",
+      "frontend/src/i18n/ensureLocale.ts",
+      "frontend/src/i18n/stateNames.ts"
+    ],
+    "frontend/src/i18n/languages.ts": [],
+    "frontend/src/i18n/mergeLocale.ts": [],
+    "frontend/src/i18n/stateNames.ts": [
+      "frontend/src/data/states.ts"
+    ],
+    "frontend/src/lib/QueryProvider.tsx": [
+      "frontend/src/lib/queryClient.ts"
+    ],
+    "frontend/src/lib/adminApi.ts": [],
+    "frontend/src/lib/alertsApi.ts": [
+      "frontend/src/lib/supabase.ts",
+      "frontend/src/lib/jobsApi.ts",
+      "frontend/src/lib/jobsApi.ts"
+    ],
+    "frontend/src/lib/analytics.ts": [],
+    "frontend/src/lib/appReady.ts": [],
+    "frontend/src/lib/billingApi.ts": [],
+    "frontend/src/lib/bookmarksApi.ts": [
+      "frontend/src/lib/supabase.ts"
+    ],
+    "frontend/src/lib/buildStamp.ts": [],
+    "frontend/src/lib/commentsApi.ts": [
+      "frontend/src/lib/supabase.ts"
+    ],
+    "frontend/src/lib/contactApi.ts": [
+      "frontend/src/lib/turnstile.ts"
+    ],
+    "frontend/src/lib/dailySync.ts": [
+      "frontend/src/lib/dataCacheBust.ts",
+      "frontend/src/utils/formatLocale.ts"
+    ],
+    "frontend/src/lib/dataCacheBust.ts": [
+      "frontend/src/lib/buildStamp.ts"
+    ],
+    "frontend/src/lib/educationApi.ts": [
+      "frontend/src/lib/supabase.ts",
+      "frontend/src/data/education/careerPaths.ts"
+    ],
+    "frontend/src/lib/indiaApi.ts": [],
+    "frontend/src/lib/jobsApi.ts": [
+      "frontend/src/lib/dataCacheBust.ts",
+      "frontend/src/lib/supabase.ts",
+      "frontend/src/utils/liveJobsPipeline.ts",
+      "frontend/src/utils/jobDetailsStorage.ts",
+      "frontend/src/utils/jobDetailHydration.ts",
+      "frontend/src/lib/turnstile.ts"
+    ],
+    "frontend/src/lib/liveJobsFetch.ts": [
+      "frontend/src/lib/jobsApi.ts",
+      "frontend/src/lib/dailySync.ts",
+      "frontend/src/lib/supabase.ts",
+      "frontend/src/types/job.ts",
+      "frontend/src/utils/liveJobsPipeline.ts"
+    ],
+    "frontend/src/lib/liveJobsSessionCache.ts": [
+      "frontend/src/lib/dataCacheBust.ts",
+      "frontend/src/lib/liveJobsFetch.ts",
+      "frontend/src/utils/liveJobsPipeline.ts"
+    ],
+    "frontend/src/lib/officialFeed.ts": [],
+    "frontend/src/lib/queryClient.ts": [],
+    "frontend/src/lib/recruitmentEventsApi.ts": [
+      "frontend/src/lib/dataCacheBust.ts",
+      "frontend/src/lib/supabase.ts"
+    ],
+    "frontend/src/lib/sentry.ts": [],
+    "frontend/src/lib/supabase.ts": [],
+    "frontend/src/lib/turnstile.ts": [],
+    "frontend/src/main.tsx": [
+      "frontend/src/i18n/index.ts",
+      "frontend/src/App.tsx",
+      "frontend/src/components/AnalyticsPageTracker.tsx",
+      "frontend/src/components/AnalyticsClickTracker.tsx",
+      "frontend/src/components/ScrollToTop.tsx",
+      "frontend/src/components/ErrorBoundary.tsx",
+      "frontend/src/lib/QueryProvider.tsx",
+      "frontend/src/lib/jobsApi.ts",
+      "frontend/src/hooks/useLiveJobs.ts",
+      "frontend/src/data/states.ts",
+      "frontend/src/utils/mapUtils.ts",
+      "frontend/src/lib/dataCacheBust.ts",
+      "frontend/src/theme/designSystem.ts",
+      "frontend/src/lib/sentry.ts",
+      "frontend/src/lib/appReady.ts"
+    ],
+    "frontend/src/pages/AccountPage.tsx": [
+      "frontend/src/hooks/useAuth.ts",
+      "frontend/src/data/states.ts",
+      "frontend/src/components/account/AccountAlertsPanel.tsx",
+      "frontend/src/components/account/PremiumUpgradePanel.tsx",
+      "frontend/src/components/layout/Footer.tsx",
+      "frontend/src/components/PageFallback.tsx",
+      "frontend/src/hooks/browseStateTypes.ts"
+    ],
+    "frontend/src/pages/AdminDashboardPage.tsx": [
+      "frontend/src/components/layout/Footer.tsx",
+      "frontend/src/components/admin/OperationsDashboard.tsx",
+      "frontend/src/hooks/browseStateTypes.ts",
+      "frontend/src/lib/adminApi.ts"
+    ],
+    "frontend/src/pages/AdmissionHubPage.tsx": [
+      "frontend/src/components/layout/Footer.tsx",
+      "frontend/src/data/admissionSources.ts",
+      "frontend/src/hooks/browseStateTypes.ts"
+    ],
+    "frontend/src/pages/AlertsPage.tsx": [
+      "frontend/src/data/siteMeta.ts",
+      "frontend/src/components/home/AlertSection.tsx",
+      "frontend/src/components/layout/Footer.tsx",
+      "frontend/src/components/TrackedLink.tsx",
+      "frontend/src/utils/browseRoutes.ts",
+      "frontend/src/utils/browseSeo.ts",
+      "frontend/src/hooks/browseStateTypes.ts"
+    ],
+    "frontend/src/pages/BookmarksPage.tsx": [
+      "frontend/src/hooks/useAuth.ts",
+      "frontend/src/hooks/useBookmarks.ts",
+      "frontend/src/components/jobs/JobCard.tsx",
+      "frontend/src/components/layout/Footer.tsx",
+      "frontend/src/components/PageFallback.tsx",
+      "frontend/src/hooks/browseStateTypes.ts",
+      "frontend/src/types/job.ts"
+    ],
+    "frontend/src/pages/BrowseJobsLandingPage.tsx": [
+      "frontend/src/components/jobs/JobCard.tsx",
+      "frontend/src/components/layout/Footer.tsx",
+      "frontend/src/pages/NotFoundPage.tsx",
+      "frontend/src/data/categories.ts",
+      "frontend/src/data/orgIndex.ts",
+      "frontend/src/data/professions.ts",
+      "frontend/src/data/qualifications.ts",
+      "frontend/src/data/states.ts",
+      "frontend/src/data/siteMeta.ts",
+      "frontend/src/hooks/browseStateTypes.ts",
+      "frontend/src/types/job.ts",
+      "frontend/src/utils/browseRoutes.ts",
+      "frontend/src/utils/browseSeo.ts",
+      "frontend/src/utils/homePageFilters.ts",
+      "frontend/src/utils/formatLocale.ts",
+      "frontend/src/utils/jobFilters.ts",
+      "frontend/src/utils/orgSlug.ts"
+    ],
+    "frontend/src/pages/CategoriesIndexPage.tsx": [
+      "frontend/src/data/siteMeta.ts",
+      "frontend/src/components/layout/Footer.tsx",
+      "frontend/src/components/TrackedLink.tsx",
+      "frontend/src/data/categories.ts",
+      "frontend/src/utils/jobAggregates.ts",
+      "frontend/src/utils/browseRoutes.ts",
+      "frontend/src/utils/browseSeo.ts",
+      "frontend/src/utils/formatLocale.ts",
+      "frontend/src/hooks/browseStateTypes.ts",
+      "frontend/src/types/job.ts"
+    ],
+    "frontend/src/pages/ContactPage.tsx": [
+      "frontend/src/data/siteMeta.ts",
+      "frontend/src/components/layout/Footer.tsx",
+      "frontend/src/components/TurnstileWidget.tsx",
+      "frontend/src/lib/contactApi.ts",
+      "frontend/src/lib/turnstile.ts",
+      "frontend/src/utils/browseSeo.ts",
+      "frontend/src/hooks/browseStateTypes.ts"
+    ],
+    "frontend/src/pages/DesignationLandingPage.tsx": [
+      "frontend/src/components/layout/Footer.tsx",
+      "frontend/src/components/jobs/JobCard.tsx",
+      "frontend/src/components/ads/AdSlot.tsx",
+      "frontend/src/data/designations.ts",
+      "frontend/src/hooks/browseStateTypes.ts",
+      "frontend/src/types/job.ts"
+    ],
+    "frontend/src/pages/DesignationsIndexPage.tsx": [
+      "frontend/src/components/layout/Footer.tsx",
+      "frontend/src/data/designations.ts",
+      "frontend/src/hooks/browseStateTypes.ts"
+    ],
+    "frontend/src/pages/DistrictExplorerPage.tsx": [
+      "frontend/src/components/india/ExplorerRecords.tsx",
+      "frontend/src/components/india/ExplorerCategoryCard.tsx",
+      "frontend/src/components/india/IndiaDataSources.tsx",
+      "frontend/src/data/india/indiaExplorer.ts",
+      "frontend/src/hooks/useIndiaExplorer.ts",
+      "frontend/src/utils/seoHead.ts"
+    ],
+    "frontend/src/pages/EducationAdminPage.tsx": [
+      "frontend/src/lib/adminApi.ts"
+    ],
+    "frontend/src/pages/EducationCareerPage.tsx": [
+      "frontend/src/data/education/careerPaths.ts",
+      "frontend/src/lib/educationApi.ts"
+    ],
+    "frontend/src/pages/EducationDashboardPage.tsx": [
+      "frontend/src/hooks/useAuth.ts",
+      "frontend/src/lib/educationApi.ts",
+      "frontend/src/data/education/careerPaths.ts"
+    ],
+    "frontend/src/pages/EducationHubPage.tsx": [
+      "frontend/src/data/education/careerPaths.ts",
+      "frontend/src/data/education/originalMocks.ts",
+      "frontend/src/data/education/studyContent.ts",
+      "frontend/src/lib/educationApi.ts",
+      "frontend/src/hooks/useAuth.ts"
+    ],
+    "frontend/src/pages/ExamCalendarPage.tsx": [
+      "frontend/src/data/siteMeta.ts",
+      "frontend/src/components/layout/Footer.tsx",
+      "frontend/src/components/TrackedLink.tsx",
+      "frontend/src/utils/browseRoutes.ts",
+      "frontend/src/utils/browseSeo.ts",
+      "frontend/src/utils/jobRoutes.ts",
+      "frontend/src/utils/formatLocale.ts",
+      "frontend/src/hooks/browseStateTypes.ts",
+      "frontend/src/types/job.ts"
+    ],
+    "frontend/src/pages/ExamLandingPage.tsx": [
+      "frontend/src/data/siteMeta.ts",
+      "frontend/src/components/jobs/JobCard.tsx",
+      "frontend/src/components/layout/Footer.tsx",
+      "frontend/src/components/TrackedLink.tsx",
+      "frontend/src/data/exams.ts",
+      "frontend/src/data/examDiscovery.ts",
+      "frontend/src/utils/browseRoutes.ts",
+      "frontend/src/utils/browseSeo.ts",
+      "frontend/src/lib/analytics.ts",
+      "frontend/src/utils/formatLocale.ts",
+      "frontend/src/hooks/browseStateTypes.ts",
+      "frontend/src/types/job.ts"
+    ],
+    "frontend/src/pages/ExamsIndexPage.tsx": [
+      "frontend/src/data/siteMeta.ts",
+      "frontend/src/components/layout/Footer.tsx",
+      "frontend/src/components/hub/HubCard.tsx",
+      "frontend/src/components/TrackedLink.tsx",
+      "frontend/src/data/exams.ts",
+      "frontend/src/data/examDiscovery.ts",
+      "frontend/src/utils/browseRoutes.ts",
+      "frontend/src/utils/browseSeo.ts",
+      "frontend/src/utils/formatLocale.ts",
+      "frontend/src/hooks/browseStateTypes.ts",
+      "frontend/src/types/job.ts"
+    ],
+    "frontend/src/pages/ExploreHubPage.tsx": [
+      "frontend/src/data/siteMeta.ts",
+      "frontend/src/components/layout/Footer.tsx",
+      "frontend/src/components/hub/HubCard.tsx",
+      "frontend/src/components/TrackedLink.tsx",
+      "frontend/src/data/hubSections.ts",
+      "frontend/src/utils/browseRoutes.ts",
+      "frontend/src/utils/browseSeo.ts",
+      "frontend/src/utils/formatLocale.ts",
+      "frontend/src/hooks/browseStateTypes.ts"
+    ],
+    "frontend/src/pages/FaqPage.tsx": [
+      "frontend/src/components/layout/Footer.tsx",
+      "frontend/src/components/TrackedLink.tsx",
+      "frontend/src/data/siteMeta.ts",
+      "frontend/src/pages/guideContent.ts",
+      "frontend/src/utils/browseRoutes.ts",
+      "frontend/src/utils/browseSeo.ts",
+      "frontend/src/utils/seoHead.ts",
+      "frontend/src/utils/structuredData.ts",
+      "frontend/src/hooks/browseStateTypes.ts"
+    ],
+    "frontend/src/pages/IndiaExplorerPage.tsx": [
+      "frontend/src/components/Maps/IndiaMap/IndiaMap.tsx",
+      "frontend/src/data/states.ts",
+      "frontend/src/data/india/indiaExplorer.ts",
+      "frontend/src/hooks/useIndiaExplorer.ts",
+      "frontend/src/components/india/ExplorerCategoryCard.tsx",
+      "frontend/src/components/india/IndiaDataSources.tsx",
+      "frontend/src/utils/seoHead.ts"
+    ],
+    "frontend/src/pages/JobDetailPage.tsx": [
+      "frontend/src/lib/jobsApi.ts",
+      "frontend/src/utils/liveJobAdapter.ts",
+      "frontend/src/utils/jobDetailHydration.ts",
+      "frontend/src/utils/jobSeo.ts",
+      "frontend/src/utils/relatedJobs.ts",
+      "frontend/src/utils/jobRoutes.ts",
+      "frontend/src/hooks/useNow.ts",
+      "frontend/src/components/PageFallback.tsx",
+      "frontend/src/types/job.ts",
+      "frontend/src/components/jobs/JobDetail.tsx"
+    ],
+    "frontend/src/pages/LatestNotificationsPage.tsx": [
+      "frontend/src/components/home/LatestNotificationsTable.tsx",
+      "frontend/src/components/home/SocialAlertBar.tsx",
+      "frontend/src/components/layout/Footer.tsx",
+      "frontend/src/components/layout/HeadlineStatsBar.tsx",
+      "frontend/src/types/job.ts",
+      "frontend/src/utils/liveJobsPipeline.ts",
+      "frontend/src/utils/browseRoutes.ts"
+    ],
+    "frontend/src/pages/NotFoundPage.tsx": [
+      "frontend/src/components/layout/Footer.tsx",
+      "frontend/src/data/siteMeta.ts",
+      "frontend/src/hooks/browseStateTypes.ts",
+      "frontend/src/utils/browseSeo.ts",
+      "frontend/src/utils/browseRoutes.ts"
+    ],
+    "frontend/src/pages/OrganizationsIndexPage.tsx": [
+      "frontend/src/data/siteMeta.ts",
+      "frontend/src/components/layout/Footer.tsx",
+      "frontend/src/data/orgIndex.ts",
+      "frontend/src/utils/browseRoutes.ts",
+      "frontend/src/utils/browseSeo.ts",
+      "frontend/src/utils/formatLocale.ts",
+      "frontend/src/hooks/browseStateTypes.ts"
+    ],
+    "frontend/src/pages/ProfessionsIndexPage.tsx": [
+      "frontend/src/data/siteMeta.ts",
+      "frontend/src/components/layout/Footer.tsx",
+      "frontend/src/data/professions.ts",
+      "frontend/src/utils/browseRoutes.ts",
+      "frontend/src/utils/browseSeo.ts",
+      "frontend/src/utils/formatLocale.ts",
+      "frontend/src/hooks/browseStateTypes.ts",
+      "frontend/src/types/job.ts"
+    ],
+    "frontend/src/pages/QualificationsIndexPage.tsx": [
+      "frontend/src/data/siteMeta.ts",
+      "frontend/src/components/layout/Footer.tsx",
+      "frontend/src/data/qualifications.ts",
+      "frontend/src/utils/educationVacancySummary.ts",
+      "frontend/src/utils/browseRoutes.ts",
+      "frontend/src/utils/browseSeo.ts",
+      "frontend/src/utils/formatLocale.ts",
+      "frontend/src/hooks/browseStateTypes.ts",
+      "frontend/src/types/job.ts"
+    ],
+    "frontend/src/pages/ResultsHubPage.tsx": [
+      "frontend/src/components/layout/Footer.tsx",
+      "frontend/src/components/hub/RecruitmentEventsList.tsx",
+      "frontend/src/components/home/OfficialHeadlinesSection.tsx",
+      "frontend/src/components/home/ResultsHubFilters.tsx",
+      "frontend/src/components/ads/AdSlot.tsx",
+      "frontend/src/hooks/browseStateTypes.ts",
+      "frontend/src/lib/recruitmentEventsApi.ts",
+      "frontend/src/data/categories.ts",
+      "frontend/src/data/resultTopics.ts",
+      "frontend/src/utils/browseRoutes.ts"
+    ],
+    "frontend/src/pages/ResultsTopicsIndexPage.tsx": [
+      "frontend/src/data/siteMeta.ts",
+      "frontend/src/components/layout/Footer.tsx",
+      "frontend/src/data/resultTopics.ts",
+      "frontend/src/hooks/useOfficialTopicCounts.ts",
+      "frontend/src/utils/browseSeo.ts",
+      "frontend/src/utils/browseRoutes.ts",
+      "frontend/src/data/resultTopics.ts",
+      "frontend/src/utils/formatLocale.ts",
+      "frontend/src/hooks/browseStateTypes.ts"
+    ],
+    "frontend/src/pages/ScholarshipsHubPage.tsx": [
+      "frontend/src/components/layout/Footer.tsx",
+      "frontend/src/data/scholarshipSources.ts",
+      "frontend/src/hooks/browseStateTypes.ts"
+    ],
+    "frontend/src/pages/SitemapPage.tsx": [
+      "frontend/src/data/siteMeta.ts",
+      "frontend/src/components/layout/Footer.tsx",
+      "frontend/src/data/categories.ts",
+      "frontend/src/data/states.ts",
+      "frontend/src/data/siteLinks.ts",
+      "frontend/src/utils/browseSeo.ts",
+      "frontend/src/utils/browseRoutes.ts",
+      "frontend/src/data/professions.ts",
+      "frontend/src/data/resultTopics.ts",
+      "frontend/src/hooks/browseStateTypes.ts"
+    ],
+    "frontend/src/pages/StateExplorerPage.tsx": [
+      "frontend/src/components/india/ExplorerRecords.tsx",
+      "frontend/src/components/Maps/IndiaMap/IndiaMap.tsx",
+      "frontend/src/data/india/indiaExplorer.ts",
+      "frontend/src/data/states.ts",
+      "frontend/src/components/india/ExplorerCategoryCard.tsx",
+      "frontend/src/hooks/useIndiaExplorer.ts",
+      "frontend/src/utils/seoHead.ts"
+    ],
+    "frontend/src/pages/StatesIndexPage.tsx": [
+      "frontend/src/data/siteMeta.ts",
+      "frontend/src/components/layout/Footer.tsx",
+      "frontend/src/components/TrackedLink.tsx",
+      "frontend/src/data/states.ts",
+      "frontend/src/utils/jobAggregates.ts",
+      "frontend/src/utils/browseRoutes.ts",
+      "frontend/src/utils/browseSeo.ts",
+      "frontend/src/utils/formatLocale.ts",
+      "frontend/src/hooks/browseStateTypes.ts",
+      "frontend/src/types/job.ts"
+    ],
+    "frontend/src/pages/StaticPage.tsx": [
+      "frontend/src/data/siteMeta.ts",
+      "frontend/src/components/layout/Footer.tsx",
+      "frontend/src/utils/browseSeo.ts"
+    ],
+    "frontend/src/pages/YojanaHubPage.tsx": [
+      "frontend/src/components/layout/Footer.tsx",
+      "frontend/src/data/yojanaSources.ts",
+      "frontend/src/hooks/browseStateTypes.ts"
+    ],
+    "frontend/src/pages/guideContent.ts": [
+      "frontend/src/pages/StaticPage.tsx",
+      "frontend/src/utils/browseRoutes.ts"
+    ],
+    "frontend/src/pages/legalContent.ts": [
+      "frontend/src/pages/StaticPage.tsx"
+    ],
+    "frontend/src/test/queryWrapper.tsx": [
+      "frontend/src/lib/queryClient.ts"
+    ],
+    "frontend/src/test/setup.ts": [],
+    "frontend/src/theme/designSystem.ts": [],
+    "frontend/src/types/MapTypes.ts": [],
+    "frontend/src/types/homePage.ts": [
+      "frontend/src/types/job.ts",
+      "frontend/src/types/MapTypes.ts",
+      "frontend/src/utils/liveJobsPipeline.ts",
+      "frontend/src/utils/jobAggregates.ts"
+    ],
+    "frontend/src/types/job.ts": [],
+    "frontend/src/utils/browseRoutes.ts": [
+      "frontend/src/data/categories.ts",
+      "frontend/src/data/states.ts",
+      "frontend/src/data/statesChips.ts",
+      "frontend/src/data/professions.ts",
+      "frontend/src/data/qualifications.ts",
+      "frontend/src/data/resultTopics.ts",
+      "frontend/src/utils/homePageFilters.ts",
+      "frontend/src/data/resultTopics.ts"
+    ],
+    "frontend/src/utils/browseSeo.ts": [
+      "frontend/src/data/categories.ts",
+      "frontend/src/data/states.ts",
+      "frontend/src/data/statesChips.ts",
+      "frontend/src/data/siteLinks.ts",
+      "frontend/src/data/orgIndex.ts",
+      "frontend/src/data/qualifications.ts",
+      "frontend/src/data/resultTopics.ts",
+      "frontend/src/utils/browseRoutes.ts",
+      "frontend/src/data/professions.ts",
+      "frontend/src/data/exams.ts",
+      "frontend/src/data/professionCrossLinks.ts",
+      "frontend/src/data/siteMeta.ts",
+      "frontend/src/utils/seoHead.ts",
+      "frontend/src/utils/structuredData.ts"
+    ],
+    "frontend/src/utils/educationVacancySummary.ts": [
+      "frontend/src/utils/jobFilters.ts",
+      "frontend/src/utils/jobMetadataUtils.ts"
+    ],
+    "frontend/src/utils/employmentNewsItems.ts": [
+      "frontend/src/lib/officialFeed.ts",
+      "frontend/src/types/job.ts",
+      "frontend/src/utils/latestNotificationsTable.ts",
+      "frontend/src/utils/officialFilters.ts",
+      "frontend/src/utils/jobRoutes.ts"
+    ],
+    "frontend/src/utils/extractPostName.ts": [
+      "frontend/src/types/job.ts"
+    ],
+    "frontend/src/utils/formatJobDate.ts": [],
+    "frontend/src/utils/formatLocale.ts": [],
+    "frontend/src/utils/headlineStats.ts": [
+      "frontend/src/utils/liveJobsPipeline.ts"
+    ],
+    "frontend/src/utils/homeExamUpdatesConfig.ts": [
+      "frontend/src/utils/browseRoutes.ts"
+    ],
+    "frontend/src/utils/homePageFilters.ts": [
+      "frontend/src/data/states.ts",
+      "frontend/src/data/jobRegion.ts",
+      "frontend/src/data/professions.ts",
+      "frontend/src/data/qualifications.ts",
+      "frontend/src/utils/educationVacancySummary.ts",
+      "frontend/src/data/orgIndex.ts",
+      "frontend/src/utils/orgSlug.ts",
+      "frontend/src/utils/latestNotificationsFilters.ts",
+      "frontend/src/utils/jobQualification.ts",
+      "frontend/src/utils/jobFilters.ts",
+      "frontend/src/utils/jobSearch.ts",
+      "frontend/src/types/job.ts",
+      "frontend/src/data/homePageConstants.ts"
+    ],
+    "frontend/src/utils/jobAggregates.ts": [
+      "frontend/src/data/states.ts",
+      "frontend/src/data/categories.ts",
+      "frontend/src/data/jobRegion.ts",
+      "frontend/src/utils/jobCategory.ts"
+    ],
+    "frontend/src/utils/jobBoardExamLinks.ts": [
+      "frontend/src/data/categories.ts",
+      "frontend/src/utils/browseRoutes.ts",
+      "frontend/src/utils/resolveJobDept.ts",
+      "frontend/src/types/job.ts"
+    ],
+    "frontend/src/utils/jobCategory.ts": [
+      "frontend/src/data/categories.ts",
+      "frontend/src/data/officialSites.ts"
+    ],
+    "frontend/src/utils/jobContentTranslate.ts": [
+      "frontend/src/types/job.ts"
+    ],
+    "frontend/src/utils/jobDetailContent.ts": [
+      "frontend/src/utils/officialDomains.ts",
+      "frontend/src/utils/jobDetailLinks.ts",
+      "frontend/src/utils/resolvePdfUrl.ts",
+      "frontend/src/utils/jobMetadataUtils.ts",
+      "frontend/src/utils/jobDetailStructured.ts",
+      "frontend/src/utils/resolveJobDept.ts"
+    ],
+    "frontend/src/utils/jobDetailHydration.ts": [
+      "frontend/src/utils/officialDomains.ts"
+    ],
+    "frontend/src/utils/jobDetailLabels.ts": [],
+    "frontend/src/utils/jobDetailLinks.ts": [
+      "frontend/src/data/officialSites.ts",
+      "frontend/src/utils/officialDomains.ts",
+      "frontend/src/utils/resolvePdfUrl.ts",
+      "frontend/src/utils/jobDetailStructured.ts"
+    ],
+    "frontend/src/utils/jobDetailStructured.ts": [
+      "frontend/src/utils/officialDomains.ts"
+    ],
+    "frontend/src/utils/jobDetailsStorage.ts": [
+      "frontend/src/lib/supabase.ts"
+    ],
+    "frontend/src/utils/jobFilters.ts": [
+      "frontend/src/utils/jobNoiseFilter.ts",
+      "frontend/src/utils/officialDomains.ts"
+    ],
+    "frontend/src/utils/jobMetadataUtils.ts": [
+      "frontend/src/utils/jobQualification.ts"
+    ],
+    "frontend/src/utils/jobNoiseFilter.ts": [],
+    "frontend/src/utils/jobQualification.ts": [],
+    "frontend/src/utils/jobRoutes.ts": [
+      "frontend/src/types/job.ts"
+    ],
+    "frontend/src/utils/jobSearch.ts": [
+      "frontend/src/data/states.ts"
+    ],
+    "frontend/src/utils/jobSeo.ts": [
+      "frontend/src/data/siteMeta.ts",
+      "frontend/src/data/siteLinks.ts",
+      "frontend/src/data/states.ts",
+      "frontend/src/types/job.ts",
+      "frontend/src/utils/jobRoutes.ts",
+      "frontend/src/utils/scrubSeoText.ts",
+      "frontend/src/utils/seoHead.ts"
+    ],
+    "frontend/src/utils/jobStateResolve.ts": [
+      "frontend/src/data/states.ts"
+    ],
+    "frontend/src/utils/latestNotificationsFilters.ts": [
+      "frontend/src/data/categories.ts",
+      "frontend/src/data/jobRegion.ts",
+      "frontend/src/data/statesChips.ts",
+      "frontend/src/data/professions.ts",
+      "frontend/src/utils/jobCategory.ts",
+      "frontend/src/utils/jobQualification.ts",
+      "frontend/src/utils/educationVacancySummary.ts",
+      "frontend/src/utils/jobFilters.ts",
+      "frontend/src/types/job.ts"
+    ],
+    "frontend/src/utils/latestNotificationsTable.ts": [
+      "frontend/src/data/categories.ts",
+      "frontend/src/data/states.ts",
+      "frontend/src/utils/jobNoiseFilter.ts",
+      "frontend/src/utils/officialDomains.ts",
+      "frontend/src/utils/extractPostName.ts",
+      "frontend/src/utils/jobCategory.ts",
+      "frontend/src/utils/jobStateResolve.ts",
+      "frontend/src/utils/latestNotificationsFilters.ts",
+      "frontend/src/utils/jobMetadataUtils.ts"
+    ],
+    "frontend/src/utils/liveJobAdapter.ts": [
+      "frontend/src/utils/resolvePdfUrl.ts",
+      "frontend/src/utils/jobNoiseFilter.ts",
+      "frontend/src/utils/jobMetadataUtils.ts",
+      "frontend/src/utils/jobFilters.ts",
+      "frontend/src/utils/jobStateResolve.ts",
+      "frontend/src/utils/jobQualification.ts",
+      "frontend/src/utils/jobCategory.ts",
+      "frontend/src/utils/officialDomains.ts",
+      "frontend/src/utils/jobDetailLinks.ts"
+    ],
+    "frontend/src/utils/liveJobsPipeline.ts": [
+      "frontend/src/utils/liveJobAdapter.ts",
+      "frontend/src/utils/jobFilters.ts",
+      "frontend/src/utils/jobNoiseFilter.ts",
+      "frontend/src/utils/officialDomains.ts",
+      "frontend/src/types/job.ts",
+      "frontend/src/utils/publicJobPolicy.ts"
+    ],
+    "frontend/src/utils/mapUtils.ts": [],
+    "frontend/src/utils/officialContact.ts": [
+      "frontend/src/utils/officialDomains.ts"
+    ],
+    "frontend/src/utils/officialDomains.ts": [
+      "frontend/src/utils/resolvePdfUrl.ts"
+    ],
+    "frontend/src/utils/officialFilters.ts": [
+      "frontend/src/data/states.ts",
+      "frontend/src/data/categories.ts",
+      "frontend/src/lib/officialFeed.ts"
+    ],
+    "frontend/src/utils/orgSlug.ts": [],
+    "frontend/src/utils/orgSourceHealth.ts": [],
+    "frontend/src/utils/publicJobPolicy.ts": [],
+    "frontend/src/utils/relatedJobs.ts": [
+      "frontend/src/types/job.ts"
+    ],
+    "frontend/src/utils/resolveJobDept.ts": [
+      "frontend/src/data/officialSites.ts",
+      "frontend/src/utils/jobNoiseFilter.ts",
+      "frontend/src/types/job.ts"
+    ],
+    "frontend/src/utils/resolvePdfUrl.ts": [
+      "frontend/src/utils/officialDomains.ts"
+    ],
+    "frontend/src/utils/scrollToSection.ts": [],
+    "frontend/src/utils/scrubSeoText.ts": [],
+    "frontend/src/utils/seoHead.ts": [],
+    "frontend/src/utils/stateGlanceMetrics.ts": [
+      "frontend/src/data/stateFacts.ts",
+      "frontend/src/data/stateGlanceHighlights.ts",
+      "frontend/src/data/stateCabinetFacts.ts"
+    ],
+    "frontend/src/utils/stateLabels.ts": [
+      "frontend/src/data/states.ts",
+      "frontend/src/i18n/stateNames.ts"
+    ],
+    "frontend/src/utils/structuredData.ts": [
+      "frontend/src/data/siteMeta.ts",
+      "frontend/src/data/siteLinks.ts",
+      "frontend/src/pages/guideContent.ts"
+    ],
+    "frontend/src/vite-env.d.ts": []
+  },
+  "statically_unreachable_component_candidates": [
+    "frontend/src/components/home/TrustStrip.tsx"
+  ],
+  "caveat": "Static reachability is a candidate signal; glob loaders, tests and generated imports may use these files. No deletion is authorized by this heuristic."
+}

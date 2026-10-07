@@ -32,6 +32,7 @@
   "scripts": {
     "dev": "npm run dev --prefix frontend",
     "api:dev": "node scripts/run-api-dev.mjs",
+    "dev:backend": "npm run api:dev",
     "build": "npm run build --prefix frontend",
     "lint": "npm run lint --prefix frontend",
     "type-check": "npm run type-check --prefix frontend",

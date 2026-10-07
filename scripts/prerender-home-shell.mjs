@@ -72,12 +72,13 @@ function formatJobDate(value) {
 
 function cardHtml(job) {
   const title = escapeHtml(job.title || job.post_name || 'Government recruitment')
+  const href = job.slug ? `/jobs/${encodeURIComponent(job.slug)}` : null
   const dept = escapeHtml(job.dept || '')
   const vac = formatVacancies(job.vacancies)
   const last = formatJobDate(job.last_date)
   const meta = [vac, last ? `Apply by ${last}` : ''].filter(Boolean).join(' · ')
   return `<article class="static-app-shell__job">
-  <h3 class="static-app-shell__job-title">${title}</h3>
+  <h3 class="static-app-shell__job-title">${href ? `<a href="${escapeHtml(href)}">${title}</a>` : title}</h3>
   ${dept ? `<p class="static-app-shell__job-dept">${dept}</p>` : ''}
   ${meta ? `<p class="static-app-shell__job-meta">${meta}</p>` : ''}
 </article>`

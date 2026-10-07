@@ -30,8 +30,9 @@ function sendPageView(path: string, title?: string): void {
   if (!GA_ID || !window.gtag) return
   const pageTitle = title ?? document.title
   const pageLocation = `${window.location.origin}${path}`
-  // Recommended SPA pattern: update config with page_path (sends page_view to GA4).
+  // Update route context without an implicit view; emit exactly one explicit event.
   window.gtag('config', GA_ID, {
+    send_page_view: false,
     page_path: path,
     page_title: pageTitle,
     page_location: pageLocation,
@@ -56,6 +57,7 @@ function markScriptReady(): void {
 
 /** Load gtag.js once when VITE_GA_MEASUREMENT_ID is set. No-op otherwise. */
 export function initAnalytics(): void {
+  if (import.meta.env.DEV && !import.meta.env.VITEST) return
   if (!GA_ID || initialized || typeof window === 'undefined') return
   initialized = true
 
@@ -110,6 +112,7 @@ export function initAnalytics(): void {
 
 /** SPA page view — call on route changes after initAnalytics(). */
 export function trackPageView(path: string, title?: string): void {
+  if (import.meta.env.DEV && !import.meta.env.VITEST) return
   if (!GA_ID) return
   if (!initialized) initAnalytics()
   if (scriptLoaded && window.gtag) {
@@ -123,6 +126,7 @@ type EventParams = Record<string, string | number | boolean | undefined>
 
 /** Custom GA4 event — no-op when measurement ID is unset. */
 export function trackEvent(eventName: string, params?: EventParams): void {
+  if (import.meta.env.DEV && !import.meta.env.VITEST) return
   if (!GA_ID) return
   if (!initialized) initAnalytics()
   if (!window.gtag) return

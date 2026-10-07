@@ -28,4 +28,4 @@ if(failures.length){
   console.error('\nSOURCE DATA READINESS: FAIL');
   process.exitCode=1;
 }else console.log('\nSOURCE DATA READINESS: PASS');
-console.log('Production import remains pending approval. This source audit does not certify database import or migration status.');
+console.log('Production import and migration status are not checked by this source audit. Use the guarded LGD database dry run for persisted-record evidence.');

@@ -199,6 +199,24 @@ npm run api:dev
 
 API docs: http://localhost:8000/docs
 
+`npm run dev:backend` is an alias for the same existing FastAPI app (`app.main:app`).
+The launcher uses `backend/.venv/Scripts/python.exe` on Windows; no activation is required.
+For development without admin credentials, use PowerShell:
+
+```powershell
+$env:APP_ENV = 'development'
+$env:ALLOW_INSECURE_ADMIN = '1'
+npm run dev:backend
+```
+
+This starts port 8000. `/health` may report degraded when the configured database is unavailable.
+
+If Supabase reports `CERTIFICATE_VERIFY_FAILED`, supply its trusted CA certificate:
+download it from the project's Supabase Dashboard → Database settings → SSL configuration,
+then set `$env:DATABASE_SSL_CA_FILE = 'C:/certificates/prod-ca-2021.crt'` before starting.
+Certificate and hostname verification remain enabled in local development, CI and production.
+Legacy `DATABASE_SSL_INSECURE`, `DATABASE_SSL_DISABLE` and `DATABASE_SSL_RELAX_HOSTNAME` flags no longer bypass verification.
+
 **No Supabase?** Homepage already uses committed `live-jobs.json`. Optional: set `VITE_JOBS_SOURCE=static` for detail/search fallbacks.
 
 ---

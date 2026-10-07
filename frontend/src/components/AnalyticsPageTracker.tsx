@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { useLocation } from 'react-router-dom'
-import { initAnalytics, trackAdmitTableView, trackPageView } from '@/lib/analytics'
+import { initAnalytics, trackAdmitTableView, trackEvent, trackPageView } from '@/lib/analytics'
 
 function scheduleAnalytics(fn: () => void): void {
   const start = () => {
@@ -36,8 +36,28 @@ export default function AnalyticsPageTracker() {
 
   useEffect(() => {
     if (!analyticsReady) return
-    trackPageView(`${pathname}${search}`)
+    // Search strings may contain personal data. Send route and bounded metadata only.
+    trackPageView(pathname)
+    const params = new URLSearchParams(search)
+    if (params.get('q')) trackEvent('search', { query_length: Math.min(params.get('q')!.length, 100) })
+    if (['state', 'category', 'filter'].some(key => params.has(key))) trackEvent('filter_use', { route: pathname })
+    if (/^\/jobs\/[^/]+$/.test(pathname)) trackEvent('job_detail_view')
+    if (/^\/india\/[^/]+$/.test(pathname)) trackEvent('state_view')
+    if (/^\/india\/[^/]+\/district\/[^/]+$/.test(pathname)) trackEvent('district_view')
   }, [analyticsReady, pathname, search])
+
+  useEffect(() => {
+    if (!analyticsReady) return
+    const onClick = (event: MouseEvent) => {
+      if (!(event.target instanceof Element)) return
+      const link = event.target.closest('a')
+      if (!link) return
+      if (link.matches('[data-testid="official-apply-link"]')) trackEvent('apply_click')
+      else if (link.matches('.job-card__pdf, [data-testid="official-pdf-link"]')) trackEvent('official_notification_click')
+    }
+    document.addEventListener('click', onClick)
+    return () => document.removeEventListener('click', onClick)
+  }, [analyticsReady])
 
   useEffect(() => {
     if (!analyticsReady) return

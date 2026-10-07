@@ -8,40 +8,21 @@ import ssl
 import certifi
 
 
-def _truthy(name: str) -> bool:
-    return os.environ.get(name, "").strip().lower() in ("1", "true", "yes", "on")
-
-
 def asyncpg_connect_args(*, command_timeout: int = 120) -> dict:
     """
     Build SQLAlchemy/asyncpg connect_args for Supabase pooler.
 
-    DATABASE_SSL_INSECURE=1 — TLS without cert verification (CI escape hatch).
-    Default — verify using Mozilla CA bundle via certifi (fixes GHA verify failures).
+    Verify using system roots and Mozilla's CA bundle on every deployment host.
+    DATABASE_SSL_CA_FILE can supply an additional trusted provider CA certificate.
     """
     args: dict = {
         "statement_cache_size": 0,
         "command_timeout": command_timeout,
     }
-    if _truthy("DATABASE_SSL_DISABLE"):
-        args["ssl"] = False
-        return args
-    if _truthy("DATABASE_SSL_INSECURE"):
-        ctx = ssl.create_default_context()
-        ctx.check_hostname = False
-        ctx.verify_mode = ssl.CERT_NONE
-        args["ssl"] = ctx
-        return args
-    # GitHub Actions / Render: Supabase pooler TLS chain fails strict verify on some hosts.
-    if os.environ.get("GITHUB_ACTIONS") == "true" or os.environ.get("RENDER") == "true":
-        ctx = ssl.create_default_context()
-        ctx.check_hostname = False
-        ctx.verify_mode = ssl.CERT_NONE
-        args["ssl"] = ctx
-        return args
     ctx = ssl.create_default_context()
     ctx.load_verify_locations(cafile=certifi.where())
-    if _truthy("DATABASE_SSL_RELAX_HOSTNAME"):
-        ctx.check_hostname = False
+    ca_file = os.environ.get("DATABASE_SSL_CA_FILE", "").strip()
+    if ca_file:
+        ctx.load_verify_locations(cafile=ca_file)
     args["ssl"] = ctx
     return args

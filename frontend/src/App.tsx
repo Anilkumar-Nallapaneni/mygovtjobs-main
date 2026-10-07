@@ -65,7 +65,7 @@ function AppShell() {
   }, []);
 
   useEffect(() => {
-    if (browse.isJobDetailRoute) return undefined;
+    if (browse.isJobDetailRoute || location.pathname.startsWith('/india')) return undefined;
     return applyBrowseSeo(location.pathname, location.search);
   }, [browse.isJobDetailRoute, location.pathname, location.search]);
 
@@ -192,6 +192,7 @@ function AppShell() {
           </button>
         </div>
       )}
+      {serverSearch.error && <p className="jobs-load-error-banner" role="status">Live search is unavailable. Results below use the last published job catalog.</p>}
       <main id="main-content" className="app-main">
         <MobileRouteTransition>
           <AppRoutes

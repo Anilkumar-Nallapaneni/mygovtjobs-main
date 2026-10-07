@@ -15,15 +15,35 @@ def test_default_uses_verifying_ssl_context(monkeypatch):
     assert ctx.verify_mode == ssl.CERT_REQUIRED
 
 
-def test_insecure_mode_skips_verification(monkeypatch):
+def test_legacy_insecure_flag_cannot_skip_verification(monkeypatch):
     monkeypatch.setenv("DATABASE_SSL_INSECURE", "1")
     ctx = asyncpg_connect_args()["ssl"]
-    assert ctx.verify_mode == ssl.CERT_NONE
+    assert ctx.verify_mode == ssl.CERT_REQUIRED
+    assert ctx.check_hostname is True
 
 
-def test_render_uses_pooler_friendly_ssl(monkeypatch):
+def test_render_verifies_pooler_ssl(monkeypatch):
     monkeypatch.delenv("DATABASE_SSL_INSECURE", raising=False)
     monkeypatch.delenv("GITHUB_ACTIONS", raising=False)
     monkeypatch.setenv("RENDER", "true")
     ctx = asyncpg_connect_args()["ssl"]
-    assert ctx.verify_mode == ssl.CERT_NONE
+    assert ctx.verify_mode == ssl.CERT_REQUIRED
+    assert ctx.check_hostname is True
+
+
+def test_ci_and_legacy_disable_flags_cannot_disable_tls(monkeypatch):
+    monkeypatch.setenv("GITHUB_ACTIONS", "true")
+    monkeypatch.setenv("DATABASE_SSL_DISABLE", "1")
+    monkeypatch.setenv("DATABASE_SSL_RELAX_HOSTNAME", "1")
+    ctx = asyncpg_connect_args()["ssl"]
+    assert ctx.verify_mode == ssl.CERT_REQUIRED
+    assert ctx.check_hostname is True
+
+
+def test_additional_ca_is_loaded_without_weakening_verification(monkeypatch):
+    from unittest.mock import Mock
+    ctx = Mock()
+    monkeypatch.setattr(ssl, "create_default_context", lambda: ctx)
+    monkeypatch.setenv("DATABASE_SSL_CA_FILE", "/trusted/provider-ca.pem")
+    assert asyncpg_connect_args()["ssl"] is ctx
+    assert ctx.load_verify_locations.call_args.kwargs == {"cafile": "/trusted/provider-ca.pem"}

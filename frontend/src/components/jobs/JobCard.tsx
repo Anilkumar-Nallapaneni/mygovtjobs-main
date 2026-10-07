@@ -73,8 +73,8 @@ function JobCard({
   const hasUpdated = updatedDate !== "—" && updatedDate !== publishedDate;
   const hasLastDate = hasKnownDisplayValue(lastDateRaw);
   const dateStatCount = (hasLastDate ? 1 : 0) + (hasUpdated ? 1 : 0);
-  const isExpired = job?.status === "expired";
   const lastMs = hasLastDate ? new Date(String(lastDateRaw)).getTime() : NaN;
+  const isExpired = job?.status === "expired" || (!Number.isNaN(lastMs) && lastMs + DAY_MS <= now);
   const daysLeft =
     hasLastDate && !isExpired && !Number.isNaN(lastMs)
       ? Math.ceil((lastMs - now) / DAY_MS)
@@ -147,9 +147,9 @@ function JobCard({
               {t(`category.${catId}`).toUpperCase()}
             </span>
             {job?.status === "new" && <span className="job-card__badge job-card__badge--new">{t("job.new")}</span>}
-            {job?.status === "hot" && (
+            {isUrgent && !isExpired && (
               <span className="job-card__badge job-card__badge--hot">
-                🔥 {t("job.hot")}
+                {t("job.closingSoon", { defaultValue: "Closing soon" })}
               </span>
             )}
             {isSponsored && (

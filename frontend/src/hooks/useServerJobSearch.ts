@@ -18,15 +18,20 @@ export function useServerJobSearch(
 
   const [rows, setRows] = useState<JobRecord[]>([])
   const [loading, setLoading] = useState(false)
+  const [error, setError] = useState(false)
 
   useEffect(() => {
     if (!enabled) {
       setRows([])
       setLoading(false)
+      setError(false)
       return undefined
     }
 
     let cancelled = false
+    setRows([])
+    setError(false)
+    setLoading(true)
     const timer = window.setTimeout(() => {
       setLoading(true)
       fetchJobsFromApi({
@@ -41,7 +46,7 @@ export function useServerJobSearch(
           setRows(filterDisplayJobs(adapted))
         })
         .catch(() => {
-          if (!cancelled) setRows([])
+          if (!cancelled) { setRows([]); setError(true) }
         })
         .finally(() => {
           if (!cancelled) setLoading(false)
@@ -57,9 +62,10 @@ export function useServerJobSearch(
   return useMemo(
     () => ({
       active: enabled,
-      jobs: enabled ? rows : null,
+      jobs: enabled && !error ? rows : null,
       loading: enabled && loading,
+      error: enabled && error,
     }),
-    [enabled, rows, loading]
+    [enabled, rows, loading, error]
   )
 }

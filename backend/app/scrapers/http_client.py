@@ -30,10 +30,8 @@ def _headers(user_agent: str | None) -> dict[str, str]:
 
 
 def _legacy_gov_ssl_context() -> ssl.SSLContext:
-    """Many Indian government portals still need older TLS/cert tolerance."""
+    """Permit legacy protocol negotiation while still authenticating the host."""
     ctx = ssl.create_default_context()
-    ctx.check_hostname = False
-    ctx.verify_mode = ssl.CERT_NONE
     if hasattr(ssl, "TLSVersion"):
         ctx.minimum_version = ssl.TLSVersion.TLSv1
     legacy_connect = getattr(ssl, "OP_LEGACY_SERVER_CONNECT", 0)
@@ -57,7 +55,7 @@ async def create_async_client(
 ) -> AsyncIterator[httpx.AsyncClient]:
     """Create an httpx client with SSRF redirect re-checks.
 
-    Legacy TLS (verify off) is off by default. Pass allow_legacy_tls=True only
+    Legacy protocol negotiation is off by default. Pass allow_legacy_tls=True only
     for known broken gov portals, or pass url_for_tls_policy so the host suffix
     allowlist can enable it automatically.
     """

@@ -5,14 +5,14 @@ const offerings = [
   { icon: "🎯", title: "Career Guidance", text: "Understand eligibility, career paths and the exams that fit your goals.", href: "/career", action: "Explore careers" },
   { icon: "📚", title: "Exam Preparation", text: "Find structured preparation resources for SSC, Banking, Railway, UPSC and more.", href: "/education", action: "Start preparing" },
   { icon: "📝", title: "Mock Tests", text: "Practice with topic-wise and exam-focused tests and track your progress.", href: "/education/mock-tests", action: "Take a test" },
-  { icon: "🎓", title: "Scholarships & Education", text: "Discover scholarships, colleges, courses and useful education resources.", href: "/education", action: "Explore education" },
+  { icon: "🎓", title: "Scholarships & Education", text: "Discover scholarships, colleges, courses and useful education resources.", href: "/scholarships", action: "Explore scholarships" },
 ];
 
 const quickLinks = [
   ["Government Jobs After 10th", "/qualification/10th"],
   ["Government Jobs After 12th", "/qualification/12th"],
-  ["Government Jobs After Graduation", "/qualification/graduation"],
-  ["Latest Notifications", "/latest-notifications"],
+  ["Government Jobs After Graduation", "/qualification/graduate"],
+  ["Latest Notifications", "/jobs/latest-notifications"],
 ];
 
 export default function HomeCareerMarketplace() {
@@ -39,7 +39,7 @@ export default function HomeCareerMarketplace() {
       </div>
 
       <div className="career-marketplace__quick">
-        <span className="career-marketplace__quick-label">Popular searches</span>
+        <span className="career-marketplace__quick-label">Useful shortcuts</span>
         <div className="career-marketplace__chips">
           {quickLinks.map(([label, href]) => <Link key={label} to={href}>{label}</Link>)}
         </div>

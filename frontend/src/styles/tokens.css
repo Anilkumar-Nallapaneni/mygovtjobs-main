@@ -32,7 +32,16 @@
   --z-tooltip: 1000;
 
   /* Layout */
-  --layout-max: min(1800px, calc(100vw - 24px));
+  --layout-max: min(1440px, calc(100vw - 32px));
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --type-small: .875rem;
+  --type-body: 1rem;
+  --type-heading: clamp(1.5rem, 3vw, 2.25rem);
 }
 
 

@@ -114,6 +114,7 @@ describe('useServerJobSearch', () => {
       },
       { timeout: 2000 }
     )
-    expect(result.current.jobs).toEqual([])
+    expect(result.current.jobs).toBeNull()
+    expect(result.current.error).toBe(true)
   })
 })

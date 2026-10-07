@@ -3,7 +3,7 @@ import { readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import process from 'node:process';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
-import { cleanup, render, screen, waitFor } from '@testing-library/react';
+import { cleanup, fireEvent, render, screen, waitFor } from '@testing-library/react';
 import { MemoryRouter, Route, Routes } from 'react-router-dom';
 import IndiaExplorerPage from '@/pages/IndiaExplorerPage';
 import StateExplorerPage from '@/pages/StateExplorerPage';
@@ -35,7 +35,9 @@ function renderRoute(path: string) {
   return render(<MemoryRouter initialEntries={[path]}><Routes>
     <Route path="/india" element={<IndiaExplorerPage />} />
     <Route path="/india/:stateId" element={<StateExplorerPage />} />
+    <Route path="/india/:stateId/:category" element={<StateExplorerPage />} />
     <Route path="/india/:stateId/district/:districtId" element={<DistrictExplorerPage />} />
+    <Route path="/india/:stateId/district/:districtId/:category" element={<DistrictExplorerPage />} />
   </Routes></MemoryRouter>);
 }
 
@@ -49,6 +51,7 @@ describe('official LGD district browsing', () => {
     vi.mocked(api.fetchIndiaDistrictDirectory).mockResolvedValue({ items: [], total: 0 });
     vi.mocked(api.fetchIndiaDistrict).mockResolvedValue(district);
     vi.mocked(api.fetchIndiaDistrictCities).mockResolvedValue([]);
+    vi.mocked(api.fetchIndiaCategory).mockResolvedValue({ items: [], total: 0, category: 'education', state_id: 'ka' });
   });
   afterEach(cleanup);
 
@@ -106,5 +109,29 @@ describe('official LGD district browsing', () => {
     expect(screen.queryByRole('heading', { name: district.name })).toBeNull();
     expect(document.head.querySelector('link[rel="canonical"]')).toBeNull();
     expect(document.head.querySelector('meta[name="robots"]')?.getAttribute('content')).toBe('noindex,follow');
+  });
+
+  it('searches persisted districts and shows a truthful no-match state', async () => {
+    renderRoute('/india/ka');
+    await screen.findByRole('link', { name: `${district.name} Open district →` });
+    fireEvent.change(screen.getByRole('textbox', { name: 'Search districts' }), { target: { value: 'no matching district' } });
+    expect(screen.getByText('No verified districts match your search.')).toBeTruthy();
+    expect(screen.queryByText(district.name)).toBeNull();
+  });
+
+  it('distinguishes category API failure from verified empty data', async () => {
+    vi.mocked(api.fetchIndiaCategory).mockRejectedValue(new Error('India API 503'));
+    renderRoute('/india/ka/education');
+    expect(await screen.findByText(/Category service unavailable/)).toBeTruthy();
+    expect(screen.queryByText('No verified records yet.')).toBeNull();
+    expect(document.head.querySelector('link[rel="canonical"]')?.getAttribute('href')).toMatch(/\/india\/ka\/education$/);
+    expect(document.head.querySelector('meta[name="robots"]')?.getAttribute('content')).toBe('noindex,follow');
+  });
+
+  it('reports city API failure without inventing an empty directory', async () => {
+    vi.mocked(api.fetchIndiaDistrictCities).mockRejectedValue(new Error('India API 503'));
+    renderRoute(`/india/ka/district/${district.id}`);
+    expect(await screen.findByText(/City service unavailable/)).toBeTruthy();
+    expect(screen.queryByText('No verified city records yet.')).toBeNull();
   });
 });

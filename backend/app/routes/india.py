@@ -218,6 +218,11 @@ async def state_category(
                 "source": "platform-module", "message": "This category is served by an existing platform module; verified India directory data is not fabricated here."}
 
     if category == "jobs":
+        if district_id:
+            # jobs currently has state_codes, but no verified district relationship.
+            # Returning statewide jobs here would mislabel them as district recruitment.
+            return {"items": [], "total": 0, "category": category, "state_id": state_id,
+                    "message": "Verified district-level job locations are not available. Browse state jobs instead."}
         jobs, total = await JobService().list_jobs(state=state_id, q=q, limit=limit, offset=offset)
         return {
             "items": [
@@ -252,6 +257,9 @@ async def state_category(
             return {"items": [dict(r._mapping) for r in result.fetchall()], "total": count.scalar_one(), "category": category, "state_id": state_id}
 
         if category == "industries":
+            if district_id:
+                return {"items": [], "total": 0, "category": category, "state_id": state_id,
+                        "message": "Verified district-level industry records are not available."}
             params = {"state_id": state_id, "limit": limit, "offset": offset}
             q_clause = ""
             if q and q.strip():

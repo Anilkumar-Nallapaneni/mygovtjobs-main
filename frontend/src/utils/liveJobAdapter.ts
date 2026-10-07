@@ -30,17 +30,13 @@ function deriveDisplayStatus(
   if (rawStatus === 'expired' || isJobExpired({ status: rawStatus, lastDate }, nowMs)) {
     return 'expired'
   }
-  if (rawStatus === 'hot') return 'hot'
-  if (rawStatus === 'new') return 'new'
 
   const publishedIso = row.published_at ?? (row.detail as Record<string, unknown> | undefined)?.published
   if (publishedIso) {
     const publishedMs = new Date(String(publishedIso)).getTime()
     if (!Number.isNaN(publishedMs)) {
       const ageDays = (nowMs - publishedMs) / DAY_MS
-      if (ageDays <= 10) return 'new'
-      const vac = Number(row.vacancies) || 0
-      if (ageDays <= 30 && vac >= 500) return 'hot'
+      if (ageDays >= 0 && ageDays <= 10) return 'new'
     }
   }
 
@@ -48,7 +44,6 @@ function deriveDisplayStatus(
   if (last) {
     const daysLeft = Math.ceil((last.getTime() - nowMs) / DAY_MS)
     if (daysLeft >= 0 && daysLeft <= 7) return 'hot'
-    if (daysLeft >= 0 && daysLeft <= 14) return 'new'
   }
 
   return 'live'

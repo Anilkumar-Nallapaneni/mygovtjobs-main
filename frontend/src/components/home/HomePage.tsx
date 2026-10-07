@@ -256,6 +256,7 @@ export default function HomePage({
   return (
     <div className={resultsHubMode ? "results-hub-page" : undefined}>
       {!resultsHubMode ? <section className={`home-page-main${isBrowseLanding ? " home-page-main--landing" : ""}`}>
+        {!selectedState && !isBrowseLanding && <header className="home-purpose"><h1>{t('home.heroHeading', { defaultValue: 'Live government job notifications across India' })}</h1><p>{t('home.firstVisitText', { defaultValue: 'Search jobs or browse by state and qualification. Check the official notification before applying.' })}</p></header>}
         {!resultsHubMode && stateCounts && categoryCounts ? (
           <Suspense fallback={<div className="sector-browser-fallback" aria-hidden style={{ minHeight: 120 }} />}>
             <SectorBrowser
@@ -330,7 +331,37 @@ export default function HomePage({
           </div>
         )}
 
-        {!isBrowseLanding && (
+        {!resultsHubMode && (
+          <HomeJobsListSection
+            filtered={filtered}
+            selectedState={selectedState}
+            activeCat={activeCat}
+            search={search}
+            quickFilter={quickFilter}
+            heroStatFilter={heroStatFilter}
+            sort={sort}
+            stateName={stateName}
+            browseLandingTitle={browseLandingTitle}
+            browseLandingDescription={browseLandingDescription}
+            professionSlug={professionSlug}
+            qualificationSlug={qualificationSlug}
+            orgDept={orgDept}
+            allIndiaBrowse={allIndiaBrowse}
+            jobsLoading={jobsLoading}
+            liveCount={liveCount}
+            locale={locale}
+            jobCardFilterProps={jobCardFilterProps}
+            onJobClick={onJobClick}
+            onClearListFilters={clearListFilters}
+            onSortChange={setSort}
+            sectionClassName={
+              selectedState && !search.trim() && !allIndiaBrowse ? " home-jobs-section--hidden" : ""
+            }
+            t={t}
+          />
+        )}
+
+        {!isBrowseLanding && !search.trim() && (
         <div
           className={`home-hero-grid${selectedState ? " home-hero-grid--state" : ""}${resultsHubMode ? " home-hero-grid--hidden" : ""}`}
         >
@@ -396,35 +427,6 @@ export default function HomePage({
           />
         )}
 
-        {!resultsHubMode && (
-          <HomeJobsListSection
-            filtered={filtered}
-            selectedState={selectedState}
-            activeCat={activeCat}
-            search={search}
-            quickFilter={quickFilter}
-            heroStatFilter={heroStatFilter}
-            sort={sort}
-            stateName={stateName}
-            browseLandingTitle={browseLandingTitle}
-            browseLandingDescription={browseLandingDescription}
-            professionSlug={professionSlug}
-            qualificationSlug={qualificationSlug}
-            orgDept={orgDept}
-            allIndiaBrowse={allIndiaBrowse}
-            jobsLoading={jobsLoading}
-            liveCount={liveCount}
-            locale={locale}
-            jobCardFilterProps={jobCardFilterProps}
-            onJobClick={onJobClick}
-            onClearListFilters={clearListFilters}
-            onSortChange={setSort}
-            sectionClassName={
-              selectedState && !search.trim() && !allIndiaBrowse ? " home-jobs-section--hidden" : ""
-            }
-            t={t}
-          />
-        )}
 
         {!selectedState && !isBrowseLanding && (
           <>
