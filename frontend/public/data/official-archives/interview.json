@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-06T11:07:52.179Z",
+  "generatedAt": "2026-10-07T10:56:49.744Z",
   "count": 104,
   "items": [
     {
@@ -86,6 +86,24 @@
         "all"
       ],
       "fetchMethod": "html-listing"
+    },
+    {
+      "id": "0d1f705a55a6db5f",
+      "title": "11th September 2026 Result of Online Interview Advt. No. WII/ADVT. 1/RP-CELL/July, 2026",
+      "link": "https://www.wii.gov.in/news/result_online_interview_advt_no_wii_advt1_rp_cell_july_2026",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "wii",
+      "sourceName": "Wildlife Institute of India (WII)",
+      "dept": "Wildlife Institute of India (WII)",
+      "state": "All India",
+      "category": "psu",
+      "stateIds": [
+        "uk",
+        "all"
+      ],
+      "fetchMethod": "html"
     },
     {
       "id": "a1bc7ecbd075f319",
@@ -814,6 +832,23 @@
       "fetchMethod": "html"
     },
     {
+      "id": "91558011355dca9d",
+      "title": "Recent Examinations/Interview",
+      "link": "https://jpsc.gov.in/Examination-Links.php",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "psc-jh",
+      "sourceName": "Jharkhand PSC (JPSC)",
+      "dept": "Jharkhand PSC (JPSC)",
+      "state": "Jharkhand",
+      "category": "state",
+      "stateIds": [
+        "jh"
+      ],
+      "fetchMethod": "html"
+    },
+    {
       "id": "29b69c62dccbbbba",
       "title": "Notification for Personal Interview",
       "link": "https://mpsc.meghalaya.gov.in/notifications-pi.html",
@@ -943,24 +978,6 @@
       "fetchMethod": "html"
     },
     {
-      "id": "0d1f705a55a6db5f",
-      "title": "11th September 2026 Result of Online Interview Advt. No. WII/ADVT. 1/RP-CELL/July, 2026",
-      "link": "https://www.wii.gov.in/news/result_online_interview_advt_no_wii_advt1_rp_cell_july_2026",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "wii",
-      "sourceName": "Wildlife Institute of India (WII)",
-      "dept": "Wildlife Institute of India (WII)",
-      "state": "All India",
-      "category": "psu",
-      "stateIds": [
-        "uk",
-        "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
       "id": "10368d4d8ec4fd69",
       "title": "11th September 2026 Result of Online Interview Advt. No. WII/ADVT. 2/RP-CELL/June, 2026",
       "link": "https://www.wii.gov.in/news/result_online_interview_advt_no_wii_advt2_rpcell_june2026",
@@ -975,23 +992,6 @@
       "stateIds": [
         "uk",
         "all"
-      ],
-      "fetchMethod": "html"
-    },
-    {
-      "id": "91558011355dca9d",
-      "title": "Recent Examinations/Interview",
-      "link": "https://jpsc.gov.in/Examination-Links.php",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "psc-jh",
-      "sourceName": "Jharkhand PSC (JPSC)",
-      "dept": "Jharkhand PSC (JPSC)",
-      "state": "Jharkhand",
-      "category": "state",
-      "stateIds": [
-        "jh"
       ],
       "fetchMethod": "html"
     },

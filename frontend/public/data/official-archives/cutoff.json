@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-06T11:07:52.179Z",
+  "generatedAt": "2026-10-07T10:56:49.744Z",
   "count": 37,
   "items": [
     {
@@ -14,23 +14,6 @@
       "dept": "Union Public Service Commission",
       "state": "All India",
       "category": "upsc",
-      "stateIds": [
-        "all"
-      ],
-      "fetchMethod": "html-listing"
-    },
-    {
-      "id": "b3c33fffbb0b0748",
-      "title": "CLICK HERE TO DOWNLOAD MARKSHEET & CUT OFF FOR ADVT. NO. D-5-E-1-2025, [S-10-04].",
-      "link": "https://uppsc.up.nic.in/CandidatePages/Advertismentwise_DownloadDocument.aspx?inptprmtr=mc",
-      "publishedAt": null,
-      "summary": null,
-      "pdfUrls": [],
-      "sourceId": "uppsc-hall-tickets",
-      "sourceName": "UPPSC — Hall tickets",
-      "dept": "Uttar Pradesh PSC",
-      "state": "Uttar Pradesh",
-      "category": "state",
       "stateIds": [
         "all"
       ],
@@ -92,6 +75,23 @@
         "all"
       ],
       "fetchMethod": "html"
+    },
+    {
+      "id": "b3c33fffbb0b0748",
+      "title": "CLICK HERE TO DOWNLOAD MARKSHEET & CUT OFF FOR ADVT. NO. D-5-E-1-2025, [S-10-04].",
+      "link": "https://uppsc.up.nic.in/CandidatePages/Advertismentwise_DownloadDocument.aspx?inptprmtr=mc",
+      "publishedAt": null,
+      "summary": null,
+      "pdfUrls": [],
+      "sourceId": "uppsc-hall-tickets",
+      "sourceName": "UPPSC — Hall tickets",
+      "dept": "Uttar Pradesh PSC",
+      "state": "Uttar Pradesh",
+      "category": "state",
+      "stateIds": [
+        "all"
+      ],
+      "fetchMethod": "html-listing"
     },
     {
       "id": "084c64752657e4bf",
