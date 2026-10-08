@@ -238,3 +238,17 @@
   .india-explorer__status--error { background:rgba(239,68,68,.10); color:#fecaca; border-color:rgba(239,68,68,.35); }
   .india-explorer__empty-card { background:rgba(255,255,255,.03); }
 }
+
+/* Mobile audit patch 2026-10-08: compact cards and safe viewport sizing */
+@media (max-width: 480px) {
+  .india-explorer { width: calc(100% - 24px); padding-bottom: calc(96px + env(safe-area-inset-bottom, 0px)); }
+  .india-explorer__map-card { padding: 12px; }
+  .india-explorer__map-card .india-map-container { width: 100%; max-height: min(66vh, 520px); }
+  .india-explorer__district-glance-grid { grid-template-columns: minmax(0, 1fr); }
+  .india-explorer__district-glance-grid button { min-height: 52px; padding: 12px 14px; }
+  .india-explorer__section-head { flex-wrap: wrap; }
+  .india-explorer__search input { min-width: 0; width: 100%; font-size: 16px; }
+}
+@media (pointer: coarse) {
+  .india-explorer__state-grid button, .india-explorer__district-glance-grid button, .india-layer-filter { min-height: 44px; }
+}

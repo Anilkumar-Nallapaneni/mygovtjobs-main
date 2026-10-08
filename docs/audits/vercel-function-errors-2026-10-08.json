@@ -1,0 +1,18 @@
+{
+  "generated_at": "2026-10-08T08:30:08.9332976Z",
+  "cli_exit": 0,
+  "contains_connection_refused": false,
+  "contains_localhost": false,
+  "contains_missing_module": false,
+  "function_error_codes": [],
+  "exception_classes": [],
+  "entries": [
+    {
+      "source": "serverless",
+      "level": "info",
+      "status": 500,
+      "nested_log_count": 0,
+      "path": "/api/india/states/ap"
+    }
+  ]
+}

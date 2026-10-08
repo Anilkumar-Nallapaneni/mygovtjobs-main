@@ -1,0 +1,544 @@
+{
+  "generated_at": "2026-10-08T08:32:49.766Z",
+  "origin": "http://127.0.0.1:8001",
+  "database_writes": 0,
+  "success": 36,
+  "unknown_state_mappings": 0,
+  "total_verified_districts": 784,
+  "probes": [
+    {
+      "path": "/api/india/health",
+      "status": 200,
+      "health": "ok"
+    },
+    {
+      "path": "/api/india/states",
+      "status": 200,
+      "items": 36
+    },
+    {
+      "path": "/api/india/districts",
+      "status": 200,
+      "items": 120,
+      "total": 784
+    },
+    {
+      "path": "/api/india/districts?state_id=ap",
+      "status": 200,
+      "items": 28,
+      "total": 28
+    },
+    {
+      "path": "/api/india/districts?state_id=ka",
+      "status": 200,
+      "items": 31,
+      "total": 31
+    }
+  ],
+  "states": [
+    {
+      "state_id": "jk",
+      "state_name": "Jammu & Kashmir",
+      "status": 200,
+      "verified_district_count": 20,
+      "capital": null,
+      "region": "north",
+      "counts": {
+        "districts": 20,
+        "cities": 0,
+        "places": 0,
+        "jobs": 2
+      }
+    },
+    {
+      "state_id": "hp",
+      "state_name": "Himachal Pradesh",
+      "status": 200,
+      "verified_district_count": 12,
+      "capital": null,
+      "region": "north",
+      "counts": {
+        "districts": 12,
+        "cities": 0,
+        "places": 0,
+        "jobs": 2
+      }
+    },
+    {
+      "state_id": "pb",
+      "state_name": "Punjab",
+      "status": 200,
+      "verified_district_count": 23,
+      "capital": null,
+      "region": "north",
+      "counts": {
+        "districts": 23,
+        "cities": 0,
+        "places": 0,
+        "jobs": 2
+      }
+    },
+    {
+      "state_id": "ch",
+      "state_name": "Chandigarh",
+      "status": 200,
+      "verified_district_count": 1,
+      "capital": null,
+      "region": "north",
+      "counts": {
+        "districts": 1,
+        "cities": 0,
+        "places": 0,
+        "jobs": 3
+      }
+    },
+    {
+      "state_id": "uk",
+      "state_name": "Uttarakhand",
+      "status": 200,
+      "verified_district_count": 13,
+      "capital": null,
+      "region": "north",
+      "counts": {
+        "districts": 13,
+        "cities": 0,
+        "places": 0,
+        "jobs": 2
+      }
+    },
+    {
+      "state_id": "hr",
+      "state_name": "Haryana",
+      "status": 200,
+      "verified_district_count": 23,
+      "capital": null,
+      "region": "north",
+      "counts": {
+        "districts": 23,
+        "cities": 0,
+        "places": 0,
+        "jobs": 2
+      }
+    },
+    {
+      "state_id": "dl",
+      "state_name": "Delhi",
+      "status": 200,
+      "verified_district_count": 13,
+      "capital": null,
+      "region": "north",
+      "counts": {
+        "districts": 13,
+        "cities": 0,
+        "places": 0,
+        "jobs": 2
+      }
+    },
+    {
+      "state_id": "rj",
+      "state_name": "Rajasthan",
+      "status": 200,
+      "verified_district_count": 41,
+      "capital": null,
+      "region": "north",
+      "counts": {
+        "districts": 41,
+        "cities": 0,
+        "places": 0,
+        "jobs": 2
+      }
+    },
+    {
+      "state_id": "up",
+      "state_name": "Uttar Pradesh",
+      "status": 200,
+      "verified_district_count": 75,
+      "capital": null,
+      "region": "north",
+      "counts": {
+        "districts": 75,
+        "cities": 0,
+        "places": 0,
+        "jobs": 2
+      }
+    },
+    {
+      "state_id": "br",
+      "state_name": "Bihar",
+      "status": 200,
+      "verified_district_count": 38,
+      "capital": null,
+      "region": "east",
+      "counts": {
+        "districts": 38,
+        "cities": 0,
+        "places": 0,
+        "jobs": 2
+      }
+    },
+    {
+      "state_id": "sk",
+      "state_name": "Sikkim",
+      "status": 200,
+      "verified_district_count": 6,
+      "capital": null,
+      "region": "northeast",
+      "counts": {
+        "districts": 6,
+        "cities": 0,
+        "places": 0,
+        "jobs": 2
+      }
+    },
+    {
+      "state_id": "ar",
+      "state_name": "Arunachal Pradesh",
+      "status": 200,
+      "verified_district_count": 27,
+      "capital": null,
+      "region": "northeast",
+      "counts": {
+        "districts": 27,
+        "cities": 0,
+        "places": 0,
+        "jobs": 2
+      }
+    },
+    {
+      "state_id": "nl",
+      "state_name": "Nagaland",
+      "status": 200,
+      "verified_district_count": 17,
+      "capital": null,
+      "region": "northeast",
+      "counts": {
+        "districts": 17,
+        "cities": 0,
+        "places": 0,
+        "jobs": 2
+      }
+    },
+    {
+      "state_id": "mn",
+      "state_name": "Manipur",
+      "status": 200,
+      "verified_district_count": 16,
+      "capital": null,
+      "region": "northeast",
+      "counts": {
+        "districts": 16,
+        "cities": 0,
+        "places": 0,
+        "jobs": 2
+      }
+    },
+    {
+      "state_id": "mz",
+      "state_name": "Mizoram",
+      "status": 200,
+      "verified_district_count": 11,
+      "capital": null,
+      "region": "northeast",
+      "counts": {
+        "districts": 11,
+        "cities": 0,
+        "places": 0,
+        "jobs": 2
+      }
+    },
+    {
+      "state_id": "tr",
+      "state_name": "Tripura",
+      "status": 200,
+      "verified_district_count": 8,
+      "capital": null,
+      "region": "northeast",
+      "counts": {
+        "districts": 8,
+        "cities": 0,
+        "places": 0,
+        "jobs": 2
+      }
+    },
+    {
+      "state_id": "ml",
+      "state_name": "Meghalaya",
+      "status": 200,
+      "verified_district_count": 12,
+      "capital": null,
+      "region": "northeast",
+      "counts": {
+        "districts": 12,
+        "cities": 0,
+        "places": 0,
+        "jobs": 2
+      }
+    },
+    {
+      "state_id": "as",
+      "state_name": "Assam",
+      "status": 200,
+      "verified_district_count": 35,
+      "capital": null,
+      "region": "northeast",
+      "counts": {
+        "districts": 35,
+        "cities": 0,
+        "places": 0,
+        "jobs": 3
+      }
+    },
+    {
+      "state_id": "wb",
+      "state_name": "West Bengal",
+      "status": 200,
+      "verified_district_count": 23,
+      "capital": null,
+      "region": "east",
+      "counts": {
+        "districts": 23,
+        "cities": 0,
+        "places": 0,
+        "jobs": 2
+      }
+    },
+    {
+      "state_id": "jh",
+      "state_name": "Jharkhand",
+      "status": 200,
+      "verified_district_count": 24,
+      "capital": null,
+      "region": "east",
+      "counts": {
+        "districts": 24,
+        "cities": 0,
+        "places": 0,
+        "jobs": 2
+      }
+    },
+    {
+      "state_id": "od",
+      "state_name": "Odisha",
+      "status": 200,
+      "verified_district_count": 30,
+      "capital": null,
+      "region": "east",
+      "counts": {
+        "districts": 30,
+        "cities": 0,
+        "places": 0,
+        "jobs": 2
+      }
+    },
+    {
+      "state_id": "cg",
+      "state_name": "Chhattisgarh",
+      "status": 200,
+      "verified_district_count": 33,
+      "capital": null,
+      "region": "central",
+      "counts": {
+        "districts": 33,
+        "cities": 0,
+        "places": 0,
+        "jobs": 2
+      }
+    },
+    {
+      "state_id": "mp",
+      "state_name": "Madhya Pradesh",
+      "status": 200,
+      "verified_district_count": 55,
+      "capital": null,
+      "region": "central",
+      "counts": {
+        "districts": 55,
+        "cities": 0,
+        "places": 0,
+        "jobs": 6
+      }
+    },
+    {
+      "state_id": "gj",
+      "state_name": "Gujarat",
+      "status": 200,
+      "verified_district_count": 34,
+      "capital": null,
+      "region": "west",
+      "counts": {
+        "districts": 34,
+        "cities": 0,
+        "places": 0,
+        "jobs": 2
+      }
+    },
+    {
+      "state_id": "mh",
+      "state_name": "Maharashtra",
+      "status": 200,
+      "verified_district_count": 36,
+      "capital": null,
+      "region": "west",
+      "counts": {
+        "districts": 36,
+        "cities": 0,
+        "places": 0,
+        "jobs": 2
+      }
+    },
+    {
+      "state_id": "ap",
+      "state_name": "Andhra Pradesh",
+      "status": 200,
+      "verified_district_count": 28,
+      "capital": null,
+      "region": "south",
+      "counts": {
+        "districts": 28,
+        "cities": 0,
+        "places": 0,
+        "jobs": 2
+      }
+    },
+    {
+      "state_id": "ka",
+      "state_name": "Karnataka",
+      "status": 200,
+      "verified_district_count": 31,
+      "capital": null,
+      "region": "south",
+      "counts": {
+        "districts": 31,
+        "cities": 0,
+        "places": 0,
+        "jobs": 2
+      }
+    },
+    {
+      "state_id": "ga",
+      "state_name": "Goa",
+      "status": 200,
+      "verified_district_count": 3,
+      "capital": null,
+      "region": "west",
+      "counts": {
+        "districts": 3,
+        "cities": 0,
+        "places": 0,
+        "jobs": 2
+      }
+    },
+    {
+      "state_id": "ld",
+      "state_name": "Lakshadweep",
+      "status": 200,
+      "verified_district_count": 1,
+      "capital": null,
+      "region": "south",
+      "counts": {
+        "districts": 1,
+        "cities": 0,
+        "places": 0,
+        "jobs": 2
+      }
+    },
+    {
+      "state_id": "kl",
+      "state_name": "Kerala",
+      "status": 200,
+      "verified_district_count": 14,
+      "capital": null,
+      "region": "south",
+      "counts": {
+        "districts": 14,
+        "cities": 0,
+        "places": 0,
+        "jobs": 2
+      }
+    },
+    {
+      "state_id": "tn",
+      "state_name": "Tamil Nadu",
+      "status": 200,
+      "verified_district_count": 38,
+      "capital": null,
+      "region": "south",
+      "counts": {
+        "districts": 38,
+        "cities": 0,
+        "places": 0,
+        "jobs": 3
+      }
+    },
+    {
+      "state_id": "py",
+      "state_name": "Puducherry",
+      "status": 200,
+      "verified_district_count": 2,
+      "capital": null,
+      "region": "south",
+      "counts": {
+        "districts": 2,
+        "cities": 0,
+        "places": 0,
+        "jobs": 2
+      }
+    },
+    {
+      "state_id": "an",
+      "state_name": "Andaman & Nicobar Islands",
+      "status": 200,
+      "verified_district_count": 3,
+      "capital": null,
+      "region": "east",
+      "counts": {
+        "districts": 3,
+        "cities": 0,
+        "places": 0,
+        "jobs": 2
+      }
+    },
+    {
+      "state_id": "tg",
+      "state_name": "Telangana",
+      "status": 200,
+      "verified_district_count": 33,
+      "capital": null,
+      "region": "south",
+      "counts": {
+        "districts": 33,
+        "cities": 0,
+        "places": 0,
+        "jobs": 2
+      }
+    },
+    {
+      "state_id": "la",
+      "state_name": "Ladakh",
+      "status": 200,
+      "verified_district_count": 2,
+      "capital": null,
+      "region": "north",
+      "counts": {
+        "districts": 2,
+        "cities": 0,
+        "places": 0,
+        "jobs": 2
+      }
+    },
+    {
+      "state_id": "dd",
+      "state_name": "Dadra & Nagar Haveli and Daman & Diu",
+      "status": 200,
+      "verified_district_count": 3,
+      "capital": null,
+      "region": "west",
+      "counts": {
+        "districts": 3,
+        "cities": 0,
+        "places": 0,
+        "jobs": 2
+      }
+    }
+  ]
+}

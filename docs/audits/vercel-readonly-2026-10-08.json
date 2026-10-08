@@ -1,0 +1,23 @@
+{
+  "generated_at": "2026-10-08T08:29:38.6616685Z",
+  "alias": "www.livegovtjobs.com",
+  "deployment_id": "dpl_9VDgBGpnBfHSkhaupPeSUrySZ8g1",
+  "deployment_state": "READY",
+  "deployment_target": "production",
+  "deployed_commit": "61117d0482255e4fdde6018e7ef419c83cc1bbfa",
+  "deployed_branch": "main",
+  "project": "mygovtjobs-main",
+  "root_directory": null,
+  "framework": "vite",
+  "build_command": "npm run build",
+  "output_directory": "frontend/dist",
+  "production_env_names": [
+    "VITE_SUPABASE_URL",
+    "VITE_SUPABASE_ANON_KEY",
+    "VITE_JOBS_SOURCE",
+    "VITE_DAILY_SYNC_ONLY",
+    "VITE_GA_MEASUREMENT_ID",
+    "VITE_GOOGLE_SITE_VERIFICATION",
+    "VITE_SITE_URL"
+  ]
+}

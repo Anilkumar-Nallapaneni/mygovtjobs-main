@@ -1,0 +1,1208 @@
+{
+  "generated_at": "2026-10-08T08:03:10.949474+00:00",
+  "database_writes": 0,
+  "job_status": [
+    {
+      "status": "draft",
+      "count": 3497
+    },
+    {
+      "status": "expired",
+      "count": 532
+    },
+    {
+      "status": "live",
+      "count": 12
+    }
+  ],
+  "job_completeness": [
+    {
+      "total": 4041,
+      "missing_deadline": 3261,
+      "missing_pdf_candidates": 1176,
+      "missing_source_and_apply": 1674,
+      "missing_verified_at": 3995,
+      "below_completeness_70": 3511
+    }
+  ],
+  "live_coverage": [
+    {
+      "state_codes": [
+        "mp"
+      ],
+      "dept": "Madhya Pradesh PSC (MPPSC)",
+      "count": 4
+    },
+    {
+      "state_codes": [
+        "mh"
+      ],
+      "dept": "BOBCAPS",
+      "count": 1
+    },
+    {
+      "state_codes": [
+        "ch"
+      ],
+      "dept": "NHM Chandigarh",
+      "count": 1
+    },
+    {
+      "state_codes": [],
+      "dept": "ESIC \u2014 Employees' State Insurance Corporation",
+      "count": 1
+    },
+    {
+      "state_codes": [],
+      "dept": "Mineral Exploration and Consultancy Limited (MECL)",
+      "count": 1
+    },
+    {
+      "state_codes": [],
+      "dept": "Sailcareers Com",
+      "count": 1
+    },
+    {
+      "state_codes": [],
+      "dept": "Staff Selection Commission (SSC)",
+      "count": 1
+    },
+    {
+      "state_codes": [
+        "as"
+      ],
+      "dept": "Tezpur University",
+      "count": 1
+    },
+    {
+      "state_codes": [
+        "tn"
+      ],
+      "dept": "IIT Madras",
+      "count": 1
+    }
+  ],
+  "source_yield": [
+    {
+      "code": "apprenticeship-india",
+      "stored": 0,
+      "live": 0
+    },
+    {
+      "code": "employment-news",
+      "stored": 0,
+      "live": 0
+    },
+    {
+      "code": "hpcl",
+      "stored": 0,
+      "live": 0
+    },
+    {
+      "code": "iaf",
+      "stored": 0,
+      "live": 0
+    },
+    {
+      "code": "dcourt-ujjain",
+      "stored": 0,
+      "live": 0
+    },
+    {
+      "code": "apeda",
+      "stored": 0,
+      "live": 0
+    },
+    {
+      "code": "psc-jh",
+      "stored": 0,
+      "live": 0
+    },
+    {
+      "code": "bel",
+      "stored": 0,
+      "live": 0
+    },
+    {
+      "code": "dcourt-coochbehar",
+      "stored": 0,
+      "live": 0
+    },
+    {
+      "code": "dcourt-angul",
+      "stored": 0,
+      "live": 0
+    },
+    {
+      "code": "police-up",
+      "stored": 0,
+      "live": 0
+    },
+    {
+      "code": "niti",
+      "stored": 0,
+      "live": 0
+    },
+    {
+      "code": "la-recruitment",
+      "stored": 0,
+      "live": 0
+    },
+    {
+      "code": "police-rj",
+      "stored": 0,
+      "live": 0
+    },
+    {
+      "code": "delhi-portal",
+      "stored": 0,
+      "live": 0
+    },
+    {
+      "code": "rrb-apply",
+      "stored": 0,
+      "live": 0
+    },
+    {
+      "code": "ssb",
+      "stored": 0,
+      "live": 0
+    },
+    {
+      "code": "ss-gopalganj",
+      "stored": 0,
+      "live": 0
+    },
+    {
+      "code": "psc-gj",
+      "stored": 0,
+      "live": 0
+    },
+    {
+      "code": "police-ka",
+      "stored": 0,
+      "live": 0
+    },
+    {
+      "code": "psc-ka",
+      "stored": 0,
+      "live": 0
+    },
+    {
+      "code": "indiapost",
+      "stored": 0,
+      "live": 0
+    },
+    {
+      "code": "psc-mh",
+      "stored": 0,
+      "live": 0
+    },
+    {
+      "code": "ctet",
+      "stored": 0,
+      "live": 0
+    },
+    {
+      "code": "psc-br",
+      "stored": 0,
+      "live": 0
+    },
+    {
+      "code": "psc-mz",
+      "stored": 0,
+      "live": 0
+    },
+    {
+      "code": "psc-tr",
+      "stored": 0,
+      "live": 0
+    },
+    {
+      "code": "army",
+      "stored": 0,
+      "live": 0
+    },
+    {
+      "code": "ib",
+      "stored": 0,
+      "live": 0
+    },
+    {
+      "code": "drdo",
+      "stored": 0,
+      "live": 0
+    },
+    {
+      "code": "dcourt-bhojpur",
+      "stored": 0,
+      "live": 0
+    },
+    {
+      "code": "rrb-cdg",
+      "stored": 0,
+      "live": 0
+    },
+    {
+      "code": "ssb-tn",
+      "stored": 0,
+      "live": 0
+    },
+    {
+      "code": "dcourt-balangir",
+      "stored": 0,
+      "live": 0
+    },
+    {
+      "code": "dcourt-nuapada",
+      "stored": 0,
+      "live": 0
+    },
+    {
+      "code": "pib",
+      "stored": 0,
+      "live": 0
+    },
+    {
+      "code": "ssb-od",
+      "stored": 0,
+      "live": 0
+    },
+    {
+      "code": "rrb-ald",
+      "stored": 0,
+      "live": 0
+    },
+    {
+      "code": "psc-tn",
+      "stored": 0,
+      "live": 0
+    },
+    {
+      "code": "npcil",
+      "stored": 0,
+      "live": 0
+    },
+    {
+      "code": "ies",
+      "stored": 0,
+      "live": 0
+    },
+    {
+      "code": "drdo-rss",
+      "stored": 0,
+      "live": 0
+    },
+    {
+      "code": "an-gov",
+      "stored": 0,
+      "live": 0
+    },
+    {
+      "code": "an-rec",
+      "stored": 0,
+      "live": 0
+    },
+    {
+      "code": "upsc",
+      "stored": 0,
+      "live": 0
+    },
+    {
+      "code": "dcourt-jagatsinghpur",
+      "stored": 0,
+      "live": 0
+    },
+    {
+      "code": "py-rec",
+      "stored": 0,
+      "live": 0
+    },
+    {
+      "code": "ibps",
+      "stored": 0,
+      "live": 0
+    },
+    {
+      "code": "esic",
+      "stored": 0,
+      "live": 0
+    },
+    {
+      "code": "psc-hr",
+      "stored": 0,
+      "live": 0
+    },
+    {
+      "code": "rrb-guwahati",
+      "stored": 0,
+      "live": 0
+    },
+    {
+      "code": "py-psc",
+      "stored": 0,
+      "live": 0
+    },
+    {
+      "code": "rrb-chennai",
+      "stored": 0,
+      "live": 0
+    },
+    {
+      "code": "dcourt-indore",
+      "stored": 0,
+      "live": 0
+    },
+    {
+      "code": "rrb-bbs",
+      "stored": 0,
+      "live": 0
+    },
+    {
+      "code": "psc-od",
+      "stored": 0,
+      "live": 0
+    },
+    {
+      "code": "fci",
+      "stored": 0,
+      "live": 0
+    },
+    {
+      "code": "psc-nl",
+      "stored": 0,
+      "live": 0
+    },
+    {
+      "code": "pnb",
+      "stored": 0,
+      "live": 0
+    },
+    {
+      "code": "police-mh",
+      "stored": 0,
+      "live": 0
+    },
+    {
+      "code": "uco",
+      "stored": 0,
+      "live": 0
+    },
+    {
+      "code": "dcourt-sitapur",
+      "stored": 0,
+      "live": 0
+    },
+    {
+      "code": "aiims",
+      "stored": 0,
+      "live": 0
+    },
+    {
+      "code": "psc-sk",
+      "stored": 0,
+      "live": 0
+    },
+    {
+      "code": "pib-rss",
+      "stored": 0,
+      "live": 0
+    },
+    {
+      "code": "psc-kl",
+      "stored": 0,
+      "live": 0
+    },
+    {
+      "code": "rrb",
+      "stored": 0,
+      "live": 0
+    },
+    {
+      "code": "rrb-rss",
+      "stored": 0,
+      "live": 0
+    },
+    {
+      "code": "psc-dl",
+      "stored": 0,
+      "live": 0
+    },
+    {
+      "code": "iocl",
+      "stored": 0,
+      "live": 0
+    },
+    {
+      "code": "ss-goalpara",
+      "stored": 0,
+      "live": 0
+    },
+    {
+      "code": "ss-bhubaneswar",
+      "stored": 0,
+      "live": 0
+    },
+    {
+      "code": "ssb-rj",
+      "stored": 0,
+      "live": 0
+    },
+    {
+      "code": "psc-as",
+      "stored": 0,
+      "live": 0
+    },
+    {
+      "code": "psc-ar",
+      "stored": 0,
+      "live": 0
+    },
+    {
+      "code": "sbi",
+      "stored": 0,
+      "live": 0
+    },
+    {
+      "code": "ssc-rss",
+      "stored": 0,
+      "live": 0
+    },
+    {
+      "code": "ssb-mh",
+      "stored": 0,
+      "live": 0
+    },
+    {
+      "code": "psc-mn",
+      "stored": 0,
+      "live": 0
+    },
+    {
+      "code": "dcourt-nayagarh",
+      "stored": 0,
+      "live": 0
+    },
+    {
+      "code": "ssb-uk",
+      "stored": 0,
+      "live": 0
+    },
+    {
+      "code": "nabard",
+      "stored": 0,
+      "live": 0
+    },
+    {
+      "code": "sebi",
+      "stored": 0,
+      "live": 0
+    },
+    {
+      "code": "barc",
+      "stored": 0,
+      "live": 0
+    },
+    {
+      "code": "gail",
+      "stored": 0,
+      "live": 0
+    },
+    {
+      "code": "bsf",
+      "stored": 0,
+      "live": 0
+    },
+    {
+      "code": "dcourt-dhenkanal",
+      "stored": 0,
+      "live": 0
+    },
+    {
+      "code": "rrb-gorakhpur",
+      "stored": 0,
+      "live": 0
+    },
+    {
+      "code": "psc-uk",
+      "stored": 0,
+      "live": 0
+    },
+    {
+      "code": "police-kl",
+      "stored": 0,
+      "live": 0
+    },
+    {
+      "code": "psc-mp",
+      "stored": 0,
+      "live": 0
+    },
+    {
+      "code": "rrb-kolkata",
+      "stored": 0,
+      "live": 0
+    },
+    {
+      "code": "ss-amaravathi",
+      "stored": 0,
+      "live": 0
+    },
+    {
+      "code": "dcourt-puri",
+      "stored": 0,
+      "live": 0
+    },
+    {
+      "code": "ntpc",
+      "stored": 0,
+      "live": 0
+    },
+    {
+      "code": "rrb-mumbai",
+      "stored": 0,
+      "live": 0
+    },
+    {
+      "code": "ugc",
+      "stored": 0,
+      "live": 0
+    },
+    {
+      "code": "kvs",
+      "stored": 0,
+      "live": 0
+    },
+    {
+      "code": "rbi",
+      "stored": 0,
+      "live": 0
+    },
+    {
+      "code": "la-gov",
+      "stored": 0,
+      "live": 0
+    },
+    {
+      "code": "ssb-jk",
+      "stored": 0,
+      "live": 0
+    },
+    {
+      "code": "rrb-muzaffarpur",
+      "stored": 0,
+      "live": 0
+    },
+    {
+      "code": "fssai",
+      "stored": 0,
+      "live": 0
+    },
+    {
+      "code": "bob",
+      "stored": 0,
+      "live": 0
+    },
+    {
+      "code": "rrb-ranchi",
+      "stored": 0,
+      "live": 0
+    },
+    {
+      "code": "wii",
+      "stored": 0,
+      "live": 0
+    },
+    {
+      "code": "dcourt-rayagada",
+      "stored": 0,
+      "live": 0
+    },
+    {
+      "code": "police-mp",
+      "stored": 0,
+      "live": 0
+    },
+    {
+      "code": "afcat",
+      "stored": 0,
+      "live": 0
+    },
+    {
+      "code": "dcourt-yamunanagar",
+      "stored": 0,
+      "live": 0
+    },
+    {
+      "code": "rrb-jammu",
+      "stored": 0,
+      "live": 0
+    },
+    {
+      "code": "ssb-gj",
+      "stored": 0,
+      "live": 0
+    },
+    {
+      "code": "psc-pb",
+      "stored": 0,
+      "live": 0
+    },
+    {
+      "code": "rrb-ahmedabad",
+      "stored": 0,
+      "live": 0
+    },
+    {
+      "code": "dcourt-jharsuguda",
+      "stored": 0,
+      "live": 0
+    },
+    {
+      "code": "bisag-n",
+      "stored": 0,
+      "live": 0
+    },
+    {
+      "code": "employment-news-rss",
+      "stored": 0,
+      "live": 0
+    },
+    {
+      "code": "itbp",
+      "stored": 0,
+      "live": 0
+    },
+    {
+      "code": "psc-tg",
+      "stored": 0,
+      "live": 0
+    },
+    {
+      "code": "rrb-bilaspur",
+      "stored": 0,
+      "live": 0
+    },
+    {
+      "code": "coast-guard",
+      "stored": 0,
+      "live": 0
+    },
+    {
+      "code": "psc-jk",
+      "stored": 0,
+      "live": 0
+    },
+    {
+      "code": "ibps-rss",
+      "stored": 0,
+      "live": 0
+    },
+    {
+      "code": "psc-rj",
+      "stored": 0,
+      "live": 0
+    },
+    {
+      "code": "official-fetch",
+      "stored": 0,
+      "live": 0
+    },
+    {
+      "code": "delhi-police",
+      "stored": 0,
+      "live": 0
+    },
+    {
+      "code": "dcourt-howrah",
+      "stored": 0,
+      "live": 0
+    },
+    {
+      "code": "dcourt-begusarai",
+      "stored": 0,
+      "live": 0
+    },
+    {
+      "code": "bhel",
+      "stored": 0,
+      "live": 0
+    },
+    {
+      "code": "ss-jhansi",
+      "stored": 0,
+      "live": 0
+    },
+    {
+      "code": "rrb-patna",
+      "stored": 0,
+      "live": 0
+    },
+    {
+      "code": "ssb-hr",
+      "stored": 0,
+      "live": 0
+    },
+    {
+      "code": "psc-hp",
+      "stored": 0,
+      "live": 0
+    },
+    {
+      "code": "psc-up",
+      "stored": 0,
+      "live": 0
+    },
+    {
+      "code": "bpcl",
+      "stored": 0,
+      "live": 0
+    },
+    {
+      "code": "structured-import",
+      "stored": 0,
+      "live": 0
+    },
+    {
+      "code": "psc-cg",
+      "stored": 0,
+      "live": 0
+    },
+    {
+      "code": "psc-ml",
+      "stored": 0,
+      "live": 0
+    },
+    {
+      "code": "navy",
+      "stored": 0,
+      "live": 0
+    },
+    {
+      "code": "ircon",
+      "stored": 0,
+      "live": 0
+    },
+    {
+      "code": "rrb-malda",
+      "stored": 0,
+      "live": 0
+    },
+    {
+      "code": "rrcb",
+      "stored": 0,
+      "live": 0
+    },
+    {
+      "code": "dcourt-ludhiana",
+      "stored": 0,
+      "live": 0
+    },
+    {
+      "code": "emrs-pakur",
+      "stored": 0,
+      "live": 0
+    },
+    {
+      "code": "psc-ga",
+      "stored": 0,
+      "live": 0
+    },
+    {
+      "code": "rrb-tvm",
+      "stored": 0,
+      "live": 0
+    },
+    {
+      "code": "isro-rss",
+      "stored": 0,
+      "live": 0
+    },
+    {
+      "code": "rrb-siliguri",
+      "stored": 0,
+      "live": 0
+    },
+    {
+      "code": "lic",
+      "stored": 0,
+      "live": 0
+    },
+    {
+      "code": "epfo",
+      "stored": 0,
+      "live": 0
+    },
+    {
+      "code": "dcourt-kullu",
+      "stored": 0,
+      "live": 0
+    },
+    {
+      "code": "nsut",
+      "stored": 0,
+      "live": 0
+    },
+    {
+      "code": "isro",
+      "stored": 0,
+      "live": 0
+    },
+    {
+      "code": "dcourt-siddipet",
+      "stored": 0,
+      "live": 0
+    },
+    {
+      "code": "upsc-rss",
+      "stored": 0,
+      "live": 0
+    },
+    {
+      "code": "psc-ap",
+      "stored": 0,
+      "live": 0
+    },
+    {
+      "code": "rrb-ajmer",
+      "stored": 0,
+      "live": 0
+    },
+    {
+      "code": "ssb-mp",
+      "stored": 0,
+      "live": 0
+    },
+    {
+      "code": "crpf",
+      "stored": 0,
+      "live": 0
+    },
+    {
+      "code": "ssb-up",
+      "stored": 0,
+      "live": 0
+    },
+    {
+      "code": "police-tn",
+      "stored": 0,
+      "live": 0
+    },
+    {
+      "code": "nvs",
+      "stored": 0,
+      "live": 0
+    },
+    {
+      "code": "canara",
+      "stored": 0,
+      "live": 0
+    },
+    {
+      "code": "sail",
+      "stored": 0,
+      "live": 0
+    },
+    {
+      "code": "ssc",
+      "stored": 0,
+      "live": 0
+    },
+    {
+      "code": "rrb-bhopal",
+      "stored": 0,
+      "live": 0
+    },
+    {
+      "code": "ongc",
+      "stored": 0,
+      "live": 0
+    },
+    {
+      "code": "rrb-sec",
+      "stored": 0,
+      "live": 0
+    },
+    {
+      "code": "psc-wb",
+      "stored": 0,
+      "live": 0
+    },
+    {
+      "code": "ncert",
+      "stored": 0,
+      "live": 0
+    },
+    {
+      "code": "cisf",
+      "stored": 0,
+      "live": 0
+    },
+    {
+      "code": "rrb-bangalore",
+      "stored": 0,
+      "live": 0
+    },
+    {
+      "code": "hal",
+      "stored": 0,
+      "live": 0
+    }
+  ],
+  "review_queue": [
+    {
+      "status": "pending",
+      "count": 1580
+    }
+  ],
+  "district_identity": [
+    {
+      "total": 784,
+      "unique_lgd_codes": 784,
+      "state_count": 36,
+      "verified": 784,
+      "matching_source_hash": 784
+    }
+  ],
+  "lgd_snapshots": [
+    {
+      "sha256": "387ce8805f54b68baaeda1dbc40751927e8eb981f2b48548ffeaf833a6881d68",
+      "record_count": 784,
+      "imported_at": "2026-10-07 13:13:17.531290+00:00"
+    }
+  ],
+  "migration_043_history": [
+    {
+      "filename": "migrations/043_india_lgd_district_identity.sql"
+    }
+  ],
+  "rls": [
+    {
+      "relname": "bookmarks",
+      "relrowsecurity": true
+    },
+    {
+      "relname": "india_cities",
+      "relrowsecurity": true
+    },
+    {
+      "relname": "india_districts",
+      "relrowsecurity": true
+    },
+    {
+      "relname": "india_lgd_district_snapshots",
+      "relrowsecurity": true
+    },
+    {
+      "relname": "india_places",
+      "relrowsecurity": true
+    },
+    {
+      "relname": "india_states",
+      "relrowsecurity": true
+    },
+    {
+      "relname": "job_review_queue",
+      "relrowsecurity": true
+    },
+    {
+      "relname": "jobs",
+      "relrowsecurity": true
+    },
+    {
+      "relname": "payment_orders",
+      "relrowsecurity": true
+    },
+    {
+      "relname": "profiles",
+      "relrowsecurity": true
+    },
+    {
+      "relname": "sources",
+      "relrowsecurity": true
+    }
+  ],
+  "public_policies": [
+    {
+      "tablename": "india_districts",
+      "policyname": "india_districts_public_read",
+      "roles": [
+        "public"
+      ],
+      "cmd": "SELECT",
+      "qual": "(verification_status = 'verified'::text)"
+    },
+    {
+      "tablename": "india_states",
+      "policyname": "india_states_public_read",
+      "roles": [
+        "public"
+      ],
+      "cmd": "SELECT",
+      "qual": "(verification_status = 'verified'::text)"
+    },
+    {
+      "tablename": "job_review_queue",
+      "policyname": "job_review_queue_admin_read",
+      "roles": [
+        "authenticated"
+      ],
+      "cmd": "SELECT",
+      "qual": "((( SELECT ((auth.jwt() -> 'app_metadata'::text) ->> 'role'::text)) = 'admin'::text) OR (( SELECT ((auth.jwt() -> 'app_metadata'::text) ->> 'is_admin'::text)) = 'true'::text))"
+    },
+    {
+      "tablename": "job_review_queue",
+      "policyname": "job_review_queue_service_role_all",
+      "roles": [
+        "service_role"
+      ],
+      "cmd": "ALL",
+      "qual": "true"
+    },
+    {
+      "tablename": "jobs",
+      "policyname": "jobs_public_read",
+      "roles": [
+        "anon",
+        "authenticated"
+      ],
+      "cmd": "SELECT",
+      "qual": "((published_to_site IS TRUE) AND (document_type = 'RECRUITMENT'::text) AND (completeness_score >= 70) AND (((publication_confidence >= (90)::numeric) AND (verification_status = ANY (ARRAY['VERIFIED'::text, 'PARTIALLY_VERIFIED'::text]))) OR (verification_status = 'MANUALLY_APPROVED'::text)) AND (status = 'live'::text) AND (last_date IS NOT NULL) AND (last_date >= ((CURRENT_TIMESTAMP AT TIME ZONE 'Asia/Kolkata'::text))::date))"
+    },
+    {
+      "tablename": "sources",
+      "policyname": "sources_public_read",
+      "roles": [
+        "public"
+      ],
+      "cmd": "SELECT",
+      "qual": "true"
+    }
+  ],
+  "private_table_grants": [
+    {
+      "table_name": "job_review_queue",
+      "grantee": "authenticated",
+      "privilege_type": "SELECT"
+    }
+  ],
+  "account_policies": [
+    {
+      "tablename": "bookmarks",
+      "policyname": "bookmarks_owner_delete",
+      "roles": [
+        "authenticated"
+      ],
+      "cmd": "DELETE",
+      "qual": "(auth.uid() = user_id)",
+      "with_check": null
+    },
+    {
+      "tablename": "bookmarks",
+      "policyname": "bookmarks_owner_insert",
+      "roles": [
+        "authenticated"
+      ],
+      "cmd": "INSERT",
+      "qual": null,
+      "with_check": "(auth.uid() = user_id)"
+    },
+    {
+      "tablename": "bookmarks",
+      "policyname": "bookmarks_owner_select",
+      "roles": [
+        "authenticated"
+      ],
+      "cmd": "SELECT",
+      "qual": "(auth.uid() = user_id)",
+      "with_check": null
+    },
+    {
+      "tablename": "payment_orders",
+      "policyname": "payment_orders_own_read",
+      "roles": [
+        "authenticated"
+      ],
+      "cmd": "SELECT",
+      "qual": "(user_id = ( SELECT auth.uid() AS uid))",
+      "with_check": null
+    },
+    {
+      "tablename": "profiles",
+      "policyname": "profiles_own_insert",
+      "roles": [
+        "authenticated"
+      ],
+      "cmd": "INSERT",
+      "qual": null,
+      "with_check": "((( SELECT auth.uid() AS uid) = id) AND (COALESCE(subscription_tier, 'free'::text) = 'free'::text))"
+    },
+    {
+      "tablename": "profiles",
+      "policyname": "profiles_own_read",
+      "roles": [
+        "authenticated"
+      ],
+      "cmd": "SELECT",
+      "qual": "(( SELECT auth.uid() AS uid) = id)",
+      "with_check": null
+    },
+    {
+      "tablename": "profiles",
+      "policyname": "profiles_own_update",
+      "roles": [
+        "authenticated"
+      ],
+      "cmd": "UPDATE",
+      "qual": "(( SELECT auth.uid() AS uid) = id)",
+      "with_check": "(( SELECT auth.uid() AS uid) = id)"
+    }
+  ],
+  "account_grants": [
+    {
+      "table_name": "bookmarks",
+      "grantee": "authenticated",
+      "privilege_type": "DELETE"
+    },
+    {
+      "table_name": "bookmarks",
+      "grantee": "authenticated",
+      "privilege_type": "INSERT"
+    },
+    {
+      "table_name": "bookmarks",
+      "grantee": "authenticated",
+      "privilege_type": "REFERENCES"
+    },
+    {
+      "table_name": "bookmarks",
+      "grantee": "authenticated",
+      "privilege_type": "SELECT"
+    },
+    {
+      "table_name": "bookmarks",
+      "grantee": "authenticated",
+      "privilege_type": "TRIGGER"
+    },
+    {
+      "table_name": "bookmarks",
+      "grantee": "authenticated",
+      "privilege_type": "TRUNCATE"
+    },
+    {
+      "table_name": "bookmarks",
+      "grantee": "authenticated",
+      "privilege_type": "UPDATE"
+    },
+    {
+      "table_name": "payment_orders",
+      "grantee": "authenticated",
+      "privilege_type": "SELECT"
+    },
+    {
+      "table_name": "profiles",
+      "grantee": "authenticated",
+      "privilege_type": "SELECT"
+    }
+  ]
+}

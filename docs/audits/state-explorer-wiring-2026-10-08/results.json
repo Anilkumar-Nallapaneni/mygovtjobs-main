@@ -1,0 +1,242 @@
+{
+  "generated_at": "2026-10-08T08:27:30.667Z",
+  "origin": "http://127.0.0.1:3691",
+  "mode": "local compilation + configured rewrite + real read-only API; not a release build or Vercel deployment",
+  "results": [
+    {
+      "route": "/india/ap",
+      "action": "direct",
+      "status": 200,
+      "districts": 28
+    },
+    {
+      "route": "/india/ap",
+      "action": "refresh",
+      "status": 200,
+      "districts": 28
+    },
+    {
+      "route": "/india/ka",
+      "action": "direct",
+      "status": 200,
+      "districts": 31
+    },
+    {
+      "route": "/india/ka",
+      "action": "refresh",
+      "status": 200,
+      "districts": 31
+    },
+    {
+      "route": "/india/tn",
+      "action": "direct",
+      "status": 200,
+      "districts": 38
+    },
+    {
+      "route": "/india/tn",
+      "action": "refresh",
+      "status": 200,
+      "districts": 38
+    },
+    {
+      "route": "/india/up",
+      "action": "direct",
+      "status": 200,
+      "districts": 75
+    },
+    {
+      "route": "/india/up",
+      "action": "refresh",
+      "status": 200,
+      "districts": 75
+    },
+    {
+      "route": "/india/dl",
+      "action": "direct",
+      "status": 200,
+      "districts": 13
+    },
+    {
+      "route": "/india/dl",
+      "action": "refresh",
+      "status": 200,
+      "districts": 13
+    },
+    {
+      "route": "/india/jk",
+      "action": "direct",
+      "status": 200,
+      "districts": 20
+    },
+    {
+      "route": "/india/jk",
+      "action": "refresh",
+      "status": 200,
+      "districts": 20
+    },
+    {
+      "viewport": "360x800",
+      "dimensions": {
+        "map": {
+          "x": 9,
+          "y": 727.171875,
+          "width": 342,
+          "height": 501.203125,
+          "bottom": 1228.375
+        },
+        "panel": {
+          "x": 9,
+          "y": 1248.375,
+          "width": 342,
+          "height": 2688.015625,
+          "bottom": 3936.390625
+        },
+        "list": {
+          "x": 26,
+          "y": 1405.6875,
+          "width": 308,
+          "height": 2513.703125,
+          "bottom": 3919.390625
+        },
+        "overflow": 0,
+        "listScrollHeight": 2514,
+        "touchHeight": 60.375
+      },
+      "stateMapVisible": true,
+      "horizontalOverflow": false
+    },
+    {
+      "viewport": "390x844",
+      "dimensions": {
+        "map": {
+          "x": 9,
+          "y": 735.796875,
+          "width": 372,
+          "height": 535.3125,
+          "bottom": 1271.109375
+        },
+        "panel": {
+          "x": 9,
+          "y": 1291.109375,
+          "width": 372,
+          "height": 2670.8125,
+          "bottom": 3961.921875
+        },
+        "list": {
+          "x": 26,
+          "y": 1448.421875,
+          "width": 338,
+          "height": 2496.5,
+          "bottom": 3944.921875
+        },
+        "overflow": 0,
+        "listScrollHeight": 2497,
+        "touchHeight": 60.375
+      },
+      "stateMapVisible": true,
+      "horizontalOverflow": false
+    },
+    {
+      "viewport": "768x1024",
+      "dimensions": {
+        "map": {
+          "x": 16,
+          "y": 548.640625,
+          "width": 736,
+          "height": 714.3125,
+          "bottom": 1262.953125
+        },
+        "panel": {
+          "x": 16,
+          "y": 1282.953125,
+          "width": 736,
+          "height": 1434.0625,
+          "bottom": 2717.015625
+        },
+        "list": {
+          "x": 39,
+          "y": 1446.265625,
+          "width": 690,
+          "height": 1247.75,
+          "bottom": 2694.015625
+        },
+        "overflow": 0,
+        "listScrollHeight": 1248,
+        "touchHeight": 60.375
+      },
+      "stateMapVisible": true,
+      "horizontalOverflow": false
+    },
+    {
+      "viewport": "1024x768",
+      "dimensions": {
+        "map": {
+          "x": 16,
+          "y": 565.90625,
+          "width": 630.9375,
+          "height": 714.84375,
+          "bottom": 1280.75
+        },
+        "panel": {
+          "x": 666.9375,
+          "y": 565.90625,
+          "width": 341.0625,
+          "height": 714.84375,
+          "bottom": 1280.75
+        },
+        "list": {
+          "x": 689.9375,
+          "y": 729.75,
+          "width": 295.0625,
+          "height": 528,
+          "bottom": 1257.75
+        },
+        "overflow": 0,
+        "listScrollHeight": 2339,
+        "touchHeight": 56
+      },
+      "stateMapVisible": true,
+      "horizontalOverflow": false
+    },
+    {
+      "viewport": "1440x900",
+      "dimensions": {
+        "map": {
+          "x": 27.5,
+          "y": 507.1875,
+          "width": 882.796875,
+          "height": 721.359375,
+          "bottom": 1228.546875
+        },
+        "panel": {
+          "x": 930.296875,
+          "y": 507.1875,
+          "width": 477.203125,
+          "height": 721.359375,
+          "bottom": 1228.546875
+        },
+        "list": {
+          "x": 953.296875,
+          "y": 677.546875,
+          "width": 431.203125,
+          "height": 528,
+          "bottom": 1205.546875
+        },
+        "overflow": -5,
+        "listScrollHeight": 2339,
+        "touchHeight": 56
+      },
+      "stateMapVisible": true,
+      "horizontalOverflow": false
+    },
+    {
+      "scenario": "simulated state-profile 503",
+      "explicitError": true
+    },
+    {
+      "scenario": "default analytics consent",
+      "optionalAnalyticsRequests": 0
+    }
+  ]
+}

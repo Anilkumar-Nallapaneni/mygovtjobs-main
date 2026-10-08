@@ -1,0 +1,705 @@
+{
+  "secret_findings": [
+    {
+      "file": "backend/tests/test_database_url.py",
+      "secret_type": "database URI test fixture",
+      "severity": "informational",
+      "action": "Synthetic localhost/parser fixture; no rotation required."
+    },
+    {
+      "file": "backend/tests/test_database_url.py",
+      "secret_type": "database URI test fixture",
+      "severity": "informational",
+      "action": "Synthetic localhost/parser fixture; no rotation required."
+    },
+    {
+      "file": "backend/tests/test_database_url.py",
+      "secret_type": "database URI test fixture",
+      "severity": "informational",
+      "action": "Synthetic localhost/parser fixture; no rotation required."
+    }
+  ],
+  "unresolved_merge_marker_files": [],
+  "catalog_reconciliation": {
+    "live-jobs.json": {
+      "original_conflict_blocks": 2,
+      "current_rows": 9,
+      "duplicates": 0,
+      "missing_from_original_branch_union": [
+        "staff-selection-commission-ssc-notice-of-combined-higher-secondary-10-2-level-ex-9b90b9f2"
+      ]
+    },
+    "live-jobs-list.json": {
+      "original_conflict_blocks": 1,
+      "current_rows": 9,
+      "duplicates": 0,
+      "missing_from_original_branch_union": [
+        "staff-selection-commission-ssc-notice-of-combined-higher-secondary-10-2-level-ex-9b90b9f2"
+      ]
+    },
+    "live-jobs-bootstrap.json": {
+      "original_conflict_blocks": 1,
+      "current_rows": 9,
+      "duplicates": 0,
+      "missing_from_original_branch_union": [
+        "staff-selection-commission-ssc-notice-of-combined-higher-secondary-10-2-level-ex-9b90b9f2"
+      ]
+    }
+  },
+  "environment_references": {
+    "ADMIN_API_KEY": [
+      "backend/.env.example",
+      "backend/app/config.py",
+      "scripts/run-ingest-all.mjs",
+      "scripts/setup-supabase-env.mjs"
+    ],
+    "AI_REVIEW_API_KEY": [
+      "backend/app/services/llm_qa_assist.py"
+    ],
+    "AI_REVIEW_MODEL": [
+      "backend/app/services/llm_qa_assist.py"
+    ],
+    "ALERT_DELIVERY_AFTER_SYNC": [
+      "backend/app/config.py"
+    ],
+    "ALERT_DELIVERY_LOOKBACK_HOURS": [
+      "backend/app/config.py"
+    ],
+    "ALERT_FROM_EMAIL": [
+      ".github/workflows/canonical-daily-pipeline.yml",
+      ".github/workflows/notify-on-failure.yml",
+      "backend/app/config.py",
+      "scripts/notify-workflow-failure.mjs"
+    ],
+    "ALERT_SITE_URL": [
+      ".env.example",
+      ".github/workflows/canonical-daily-pipeline.yml",
+      "api/og.js",
+      "backend/app/config.py",
+      "scripts/build-rss.mjs",
+      "scripts/build-sitemap.mjs",
+      "scripts/prerender-job-pages.mjs"
+    ],
+    "ALERT_SUBSCRIBE_RATE_LIMIT_PER_MINUTE": [
+      "backend/app/config.py"
+    ],
+    "ALLOW_DRASTIC_JSON_EXPORT": [
+      "backend/app/services/job_persist_service.py",
+      "scripts/run-sync-production.py"
+    ],
+    "ALLOW_EMPTY_JSON_EXPORT": [
+      "backend/app/services/job_persist_helpers.py"
+    ],
+    "ALLOW_FALLBACK_JSON_EXPORT": [
+      "backend/.env.example",
+      "backend/app/config.py"
+    ],
+    "ALLOW_INSECURE_ADMIN": [
+      "backend/.env.example",
+      "backend/app/config.py"
+    ],
+    "ANTHROPIC_API_KEY": [
+      "backend/app/services/llm_qa_assist.py"
+    ],
+    "API_BASE_URL": [
+      "scripts/go-live-check.mjs"
+    ],
+    "API_HEALTH_URL": [
+      ".github/workflows/uptime-check.yml",
+      "scripts/go-live-check.mjs",
+      "scripts/website-health-agent.mjs"
+    ],
+    "APP_ENV": [
+      "backend/.env.example",
+      "backend/app/config.py"
+    ],
+    "AUTO_PUBLISH_VERIFIED": [
+      "backend/.env.example",
+      "backend/app/config.py"
+    ],
+    "BUDGET_MAX_BOOTSTRAP_RAW": [
+      "scripts/check-performance-budgets.mjs"
+    ],
+    "BUDGET_MAX_CSS_CHUNK_GZIP": [
+      "scripts/check-performance-budgets.mjs"
+    ],
+    "BUDGET_MAX_JS_CHUNK_GZIP": [
+      "scripts/check-performance-budgets.mjs"
+    ],
+    "BUDGET_MAX_LIST_RAW": [
+      "scripts/check-performance-budgets.mjs"
+    ],
+    "CI": [
+      "frontend/playwright.config.ts",
+      "scripts/check-env-alignment.mjs"
+    ],
+    "CONTACT_TO_EMAIL": [
+      "backend/app/config.py"
+    ],
+    "CORS_ORIGINS": [
+      "backend/app/config.py"
+    ],
+    "DAILY_SYNC_ENFORCE_ONCE": [
+      "backend/app/config.py"
+    ],
+    "DAILY_SYNC_HOUR_IST": [
+      "backend/app/config.py"
+    ],
+    "DAILY_SYNC_MINUTE_IST": [
+      "backend/app/config.py"
+    ],
+    "DAILY_SYNC_STATE_PATH": [
+      "backend/app/config.py"
+    ],
+    "DATABASE_COMMAND_TIMEOUT": [
+      "backend/app/config.py"
+    ],
+    "DATABASE_SSL_CA_FILE": [
+      "backend/app/database/connect_args.py"
+    ],
+    "DATABASE_URL": [
+      ".github/workflows/canonical-daily-pipeline.yml",
+      ".github/workflows/catalog-recovery-export.yml",
+      ".github/workflows/fetch-official-feeds.yml",
+      ".github/workflows/weekly-enrich.yml",
+      ".github/workflows/weekly-portal-audit.yml",
+      "api/india.py",
+      "backend/.env.example",
+      "backend/app/config.py",
+      "scripts/diagnose-database-url.mjs",
+      "scripts/find-pooler-database-url.py",
+      "scripts/push-github-actions-secrets.mjs",
+      "scripts/setup-supabase-env.mjs"
+    ],
+    "DEPLOY_URL": [
+      "scripts/verify-deploy.mjs"
+    ],
+    "DEV": [
+      "frontend/src/components/ErrorBoundary.tsx",
+      "frontend/src/components/home/OfficialHeadlinesSection.tsx",
+      "frontend/src/lib/analytics.ts"
+    ],
+    "E2E_PORT": [
+      "frontend/playwright.config.ts",
+      "frontend/scripts/e2e-webserver.mjs"
+    ],
+    "E2E_REUSE_SERVER": [
+      "frontend/playwright.config.ts"
+    ],
+    "FEED_FETCH_CONCURRENCY": [
+      "scripts/lib/fetch-official-rss-sources.mjs"
+    ],
+    "GITHUB_ACTIONS": [
+      "scripts/audit-official-sites.mjs",
+      "scripts/lib/fetch-official-rss-sources.mjs"
+    ],
+    "GITHUB_ACTOR": [
+      "scripts/notify-workflow-failure.mjs"
+    ],
+    "GITHUB_ENV": [
+      "scripts/build-database-url-for-actions.mjs"
+    ],
+    "GITHUB_HEAD_REF": [
+      "scripts/notify-workflow-failure.mjs"
+    ],
+    "GITHUB_REF_NAME": [
+      "scripts/notify-workflow-failure.mjs"
+    ],
+    "GITHUB_REPO": [
+      "scripts/push-github-actions-secrets.mjs"
+    ],
+    "GITHUB_REPOSITORY": [
+      "scripts/notify-workflow-failure.mjs"
+    ],
+    "GITHUB_RUN_ID": [
+      "scripts/notify-workflow-failure.mjs"
+    ],
+    "GITHUB_SERVER_URL": [
+      "scripts/notify-workflow-failure.mjs"
+    ],
+    "GITHUB_SHA": [
+      "backend/app/services/sync_run_service.py"
+    ],
+    "GITHUB_TOKEN": [
+      ".github/workflows/notify-on-failure.yml",
+      "scripts/notify-workflow-failure.mjs"
+    ],
+    "GITHUB_WORKFLOW": [
+      "scripts/notify-workflow-failure.mjs"
+    ],
+    "GO_LIVE": [
+      "scripts/push-vercel-env.mjs"
+    ],
+    "HEALTH_CODE": [
+      "scripts/website-health-agent.mjs"
+    ],
+    "HEALTH_FULL": [
+      "scripts/website-health-agent.mjs"
+    ],
+    "HOME_SHELL_CARD_COUNT": [
+      "scripts/prerender-home-shell.mjs"
+    ],
+    "INDIA_API_AUDIT_URL": [
+      "scripts/audit-state-api.mjs"
+    ],
+    "INDIA_UI_AUDIT_URL": [
+      "scripts/audit-india-explorer-ui.mjs"
+    ],
+    "INGEST_CONCURRENCY": [
+      "backend/app/config.py"
+    ],
+    "INGEST_LOOKBACK_DAYS": [
+      "backend/app/config.py"
+    ],
+    "INGEST_MAX_ITEMS_PER_SOURCE": [
+      "backend/app/config.py"
+    ],
+    "INGEST_SKIP_PER_SOURCE_EXPORT": [
+      "backend/app/config.py",
+      "scripts/run-daily-8am-sync.py"
+    ],
+    "INGEST_SOCKET_TIMEOUT_SECONDS": [
+      "scripts/run-daily-8am-sync.py",
+      "scripts/run-sync-production.py"
+    ],
+    "JOBS_AUDIT_MAX_BLOCKED_HOST": [
+      "scripts/audit-job-quality.mjs"
+    ],
+    "JOBS_AUDIT_MAX_NO_LINK_PCT_LIVE": [
+      "scripts/audit-job-quality.mjs"
+    ],
+    "JOBS_AUDIT_MAX_SHORT_TITLE_PCT": [
+      "scripts/audit-job-quality.mjs"
+    ],
+    "JOBS_AUDIT_MIN_LIVE": [
+      "scripts/audit-job-quality.mjs"
+    ],
+    "JOBS_AUDIT_MIN_RECRUIT_PCT": [
+      "scripts/audit-job-quality.mjs"
+    ],
+    "JOBS_AUDIT_STRICT": [
+      "scripts/audit-job-quality.mjs"
+    ],
+    "JOB_DETAILS_STORAGE_BUCKET": [
+      "backend/app/config.py",
+      "scripts/upload-job-details-storage.mjs"
+    ],
+    "JOB_DETAIL_AUDIT_MAX_ISSUE_PCT": [
+      "scripts/audit-job-detail-actions.ts"
+    ],
+    "LIVE_JOBS_BOOTSTRAP_ROWS": [
+      "scripts/build-live-jobs-bootstrap.mjs"
+    ],
+    "LIVE_JOBS_JSON_PATH": [
+      "backend/app/config.py"
+    ],
+    "MAX_CATALOG_DROP_RATE": [
+      "scripts/verify-live-jobs-snapshot.mjs"
+    ],
+    "MIN_PUBLIC_CATALOG_ROWS": [
+      "backend/app/services/job_persist_helpers.py",
+      "scripts/verify-live-jobs-snapshot.mjs"
+    ],
+    "MODE": [
+      "frontend/src/lib/sentry.ts"
+    ],
+    "MYGOVTJOBS_API_URL": [
+      "scripts/run-ingest-all.mjs"
+    ],
+    "NOTIFY_DEDUPE_HOURS": [
+      "scripts/notify-workflow-failure.mjs"
+    ],
+    "NOTIFY_EMAIL": [
+      ".github/workflows/notify-on-failure.yml",
+      "scripts/notify-workflow-failure.mjs"
+    ],
+    "NPM_STEP_TIMEOUT_SECONDS": [
+      "scripts/run-daily-8am-sync.py",
+      "scripts/run-sync-production.py"
+    ],
+    "OPENAI_API_KEY": [
+      "backend/app/services/llm_qa_assist.py"
+    ],
+    "OPENAI_BASE_URL": [
+      "backend/app/services/llm_qa_assist.py"
+    ],
+    "OPENAI_MODEL": [
+      "backend/app/services/llm_qa_assist.py"
+    ],
+    "PDF_OCR_ENABLED": [
+      "backend/.env.example",
+      "backend/app/config.py"
+    ],
+    "PLAY_STORE_SITE_URL": [
+      "scripts/play-store-check.mjs"
+    ],
+    "PORT": [
+      "backend/Dockerfile"
+    ],
+    "PORTAL_AUDIT_CONCURRENCY": [
+      "scripts/audit-official-sites.mjs"
+    ],
+    "PORTAL_AUDIT_MAX_FAIL_PCT": [
+      "scripts/audit-official-sites.mjs"
+    ],
+    "PORTAL_AUDIT_RETRIES": [
+      "scripts/audit-official-sites.mjs"
+    ],
+    "PORTAL_AUDIT_STRICT": [
+      "scripts/audit-official-sites.mjs"
+    ],
+    "PORTAL_AUDIT_TIMEOUT_MS": [
+      "scripts/audit-official-sites.mjs"
+    ],
+    "PRERENDER_JOB_LIMIT": [
+      ".env.example",
+      "scripts/prerender-job-pages.mjs"
+    ],
+    "PROD": [
+      "frontend/src/components/layout/AnalyticsPreferences.tsx",
+      "frontend/src/components/layout/BuildStamp.tsx",
+      "frontend/src/main.tsx"
+    ],
+    "PUSH_WEBHOOK_URL": [
+      "backend/app/config.py"
+    ],
+    "PYTHONPATH": [
+      "scripts/run-python.mjs"
+    ],
+    "RATE_LIMIT_PER_MINUTE": [
+      "backend/app/config.py"
+    ],
+    "RAZORPAY_CHECKOUT_NAME": [
+      "backend/app/config.py"
+    ],
+    "RAZORPAY_KEY_ID": [
+      "backend/app/config.py"
+    ],
+    "RAZORPAY_KEY_SECRET": [
+      "backend/app/config.py"
+    ],
+    "RAZORPAY_PREMIUM_AMOUNT_PAISE": [
+      "backend/app/config.py"
+    ],
+    "RAZORPAY_PREMIUM_DESCRIPTION": [
+      "backend/app/config.py"
+    ],
+    "RAZORPAY_WEBHOOK_SECRET": [
+      "backend/app/config.py"
+    ],
+    "REDIS_URL": [
+      "backend/.env.example",
+      "backend/app/config.py"
+    ],
+    "RELEASE_INDIA_API_URL": [
+      "scripts/serve-release-output.mjs"
+    ],
+    "RESEND_API_KEY": [
+      ".github/workflows/canonical-daily-pipeline.yml",
+      ".github/workflows/notify-on-failure.yml",
+      "backend/.env.example",
+      "backend/app/config.py",
+      "scripts/notify-workflow-failure.mjs"
+    ],
+    "SENTRY_DSN": [
+      "backend/app/config.py"
+    ],
+    "SENTRY_TRACES_SAMPLE_RATE": [
+      "backend/app/config.py"
+    ],
+    "SITEMAP_URL": [
+      "scripts/go-live-check.mjs"
+    ],
+    "SITE_URL": [
+      "scripts/go-live-check.mjs",
+      "scripts/website-health-agent.mjs"
+    ],
+    "SLACK_WEBHOOK_URL": [
+      ".github/workflows/notify-on-failure.yml",
+      "scripts/notify-workflow-failure.mjs"
+    ],
+    "SQL_ECHO": [
+      "backend/app/config.py"
+    ],
+    "STATE_UI_AUDIT_URL": [
+      "scripts/audit-state-explorer-wiring.mjs"
+    ],
+    "SUPABASE_ANON_KEY": [
+      "scripts/audit-job-quality.mjs",
+      "scripts/audit-supabase-tables.mjs",
+      "scripts/build-sitemap.mjs",
+      "scripts/test-supabase-connection.mjs"
+    ],
+    "SUPABASE_DB_PASSWORD": [
+      ".github/workflows/canonical-daily-pipeline.yml",
+      ".github/workflows/catalog-recovery-export.yml",
+      ".github/workflows/fetch-official-feeds.yml",
+      ".github/workflows/weekly-enrich.yml",
+      ".github/workflows/weekly-portal-audit.yml",
+      "scripts/build-database-url-for-actions.mjs"
+    ],
+    "SUPABASE_DB_REGION": [
+      ".github/workflows/canonical-daily-pipeline.yml",
+      ".github/workflows/catalog-recovery-export.yml",
+      ".github/workflows/fetch-official-feeds.yml",
+      ".github/workflows/weekly-enrich.yml",
+      ".github/workflows/weekly-portal-audit.yml",
+      "scripts/build-database-url-for-actions.mjs"
+    ],
+    "SUPABASE_POOLER_HOST": [
+      ".github/workflows/canonical-daily-pipeline.yml",
+      ".github/workflows/catalog-recovery-export.yml",
+      ".github/workflows/fetch-official-feeds.yml",
+      ".github/workflows/weekly-enrich.yml",
+      ".github/workflows/weekly-portal-audit.yml",
+      "scripts/build-database-url-for-actions.mjs"
+    ],
+    "SUPABASE_POOLER_PORT": [
+      "scripts/build-database-url-for-actions.mjs"
+    ],
+    "SUPABASE_PROJECT_REF": [
+      ".github/workflows/canonical-daily-pipeline.yml",
+      ".github/workflows/catalog-recovery-export.yml",
+      ".github/workflows/fetch-official-feeds.yml",
+      ".github/workflows/weekly-enrich.yml",
+      ".github/workflows/weekly-portal-audit.yml",
+      "scripts/build-database-url-for-actions.mjs"
+    ],
+    "SUPABASE_SERVICE_ROLE_KEY": [
+      ".github/workflows/canonical-daily-pipeline.yml",
+      ".github/workflows/catalog-recovery-export.yml",
+      ".github/workflows/weekly-enrich.yml",
+      "backend/.env.example",
+      "backend/app/config.py",
+      "scripts/build-sitemap.mjs",
+      "scripts/check-github-actions-secrets.mjs",
+      "scripts/push-github-actions-secrets.mjs",
+      "scripts/seed-education.ts",
+      "scripts/setup-supabase-env.mjs"
+    ],
+    "SUPABASE_URL": [
+      "backend/.env.example",
+      "backend/app/config.py",
+      "scripts/audit-job-quality.mjs",
+      "scripts/audit-supabase-tables.mjs",
+      "scripts/build-sitemap.mjs",
+      "scripts/seed-education.ts",
+      "scripts/setup-supabase-env.mjs",
+      "scripts/test-supabase-connection.mjs"
+    ],
+    "SYNC_CONCURRENCY": [
+      "scripts/run-sync-production.py"
+    ],
+    "SYNC_FAIL_REASON": [
+      "scripts/mark-daily-sync-failed.py"
+    ],
+    "SYNC_FORCE": [
+      "backend/app/services/sync_run_service.py",
+      "scripts/run-sync-production.py"
+    ],
+    "SYNC_HARD_WALLCLOCK_SECONDS": [
+      "scripts/run-daily-8am-sync.py",
+      "scripts/run-sync-production.py"
+    ],
+    "SYNC_INGEST_BUDGET_SECONDS": [
+      "scripts/run-daily-8am-sync.py",
+      "scripts/run-sync-production.py"
+    ],
+    "SYNC_TRIGGER_TYPE": [
+      "scripts/run-sync-production.py",
+      "scripts/run_pipeline.py"
+    ],
+    "TELEGRAM_BOT_TOKEN": [
+      ".github/workflows/canonical-daily-pipeline.yml",
+      "backend/.env.example",
+      "backend/app/config.py"
+    ],
+    "TELEGRAM_CHAT_ID": [
+      "backend/.env.example"
+    ],
+    "TRUSTED_PROXY_IPS": [
+      "backend/app/config.py"
+    ],
+    "TURNSTILE_SECRET_KEY": [
+      "backend/.env.example",
+      "backend/app/config.py"
+    ],
+    "TWILIO_ACCOUNT_SID": [
+      "backend/app/config.py"
+    ],
+    "TWILIO_AUTH_TOKEN": [
+      "backend/app/config.py"
+    ],
+    "TWILIO_WHATSAPP_FROM": [
+      "backend/app/config.py"
+    ],
+    "VERCEL": [
+      "api/india.py"
+    ],
+    "VERCEL_API_URL": [
+      "scripts/push-vercel-env.mjs"
+    ],
+    "VERCEL_DAILY_SYNC_ONLY": [
+      "scripts/push-vercel-env.mjs"
+    ],
+    "VERCEL_ENV_TARGETS": [
+      "scripts/push-vercel-env.mjs"
+    ],
+    "VERCEL_GA_MEASUREMENT_ID": [
+      "scripts/push-vercel-env.mjs"
+    ],
+    "VERCEL_GIT_COMMIT_MESSAGE": [
+      "scripts/vercel-ignore-build.mjs"
+    ],
+    "VERCEL_GIT_COMMIT_SHA": [
+      "backend/app/services/sync_run_service.py"
+    ],
+    "VERCEL_GOOGLE_SITE_VERIFICATION": [
+      "scripts/push-vercel-env.mjs"
+    ],
+    "VERCEL_JOBS_SOURCE": [
+      "scripts/push-vercel-env.mjs"
+    ],
+    "VERCEL_SITE_URL": [
+      "scripts/push-vercel-env-live.mjs",
+      "scripts/push-vercel-env.mjs"
+    ],
+    "VERIFY_ALERT_SECRETS": [
+      "scripts/check-github-actions-secrets.mjs"
+    ],
+    "VERIFY_SERVICE_ROLE_KEY": [
+      "scripts/check-github-actions-secrets.mjs"
+    ],
+    "VITEST": [
+      "frontend/src/components/home/HomeDiscoveryBlock.tsx",
+      "frontend/src/components/home/HomeMapBlock.tsx",
+      "frontend/src/lib/analytics.ts",
+      "frontend/src/main.tsx"
+    ],
+    "VITE_ADSENSE_CLIENT": [
+      "frontend/.env.example",
+      "frontend/src/components/ads/AdSlot.tsx"
+    ],
+    "VITE_API_PROXY": [
+      "frontend/vite.config.ts"
+    ],
+    "VITE_API_URL": [
+      "frontend/.env.example",
+      "frontend/src/components/AdminRouteGuard.tsx",
+      "frontend/src/components/jobs/ReportJobButton.tsx",
+      "frontend/src/hooks/useServerJobSearch.ts",
+      "frontend/src/lib/adminApi.ts",
+      "frontend/src/lib/alertsApi.ts",
+      "frontend/src/lib/billingApi.ts",
+      "frontend/src/lib/contactApi.ts",
+      "frontend/src/lib/dailySync.ts",
+      "frontend/src/lib/indiaApi.ts",
+      "frontend/src/lib/jobsApi.ts",
+      "frontend/src/pages/AdminDashboardPage.tsx",
+      "scripts/website-health-agent.mjs"
+    ],
+    "VITE_BUILD_STAMP": [
+      "frontend/src/lib/buildStamp.ts",
+      "frontend/vite.config.ts"
+    ],
+    "VITE_DAILY_SYNC_ONLY": [
+      "frontend/.env.example",
+      "frontend/src/hooks/useLiveJobs.ts",
+      "frontend/src/lib/liveJobsFetch.ts"
+    ],
+    "VITE_ENABLE_ADMIN_UI": [
+      "frontend/.env.example",
+      "frontend/src/components/AdminRouteGuard.tsx"
+    ],
+    "VITE_ENABLE_BILLING": [
+      "frontend/.env.example",
+      "frontend/src/lib/billingApi.ts"
+    ],
+    "VITE_GA_MEASUREMENT_ID": [
+      "frontend/.env.example",
+      "frontend/src/lib/analytics.ts",
+      "scripts/play-store-check.mjs"
+    ],
+    "VITE_GOOGLE_SITE_VERIFICATION": [
+      "frontend/.env.example"
+    ],
+    "VITE_JOBS_SOURCE": [
+      "frontend/.env.example",
+      "frontend/src/lib/jobsApi.ts"
+    ],
+    "VITE_JOB_DETAILS_BUCKET": [
+      "frontend/src/utils/jobDetailsStorage.ts"
+    ],
+    "VITE_SENTRY_DSN": [
+      "frontend/src/lib/sentry.ts"
+    ],
+    "VITE_SITE_URL": [
+      ".env.example",
+      "api/og.js",
+      "frontend/.env.example",
+      "frontend/src/data/siteLinks.ts",
+      "scripts/build-rss.mjs",
+      "scripts/build-sitemap.mjs",
+      "scripts/prerender-job-pages.mjs"
+    ],
+    "VITE_SOCIAL_INSTAGRAM_URL": [
+      "frontend/.env.example",
+      "frontend/src/data/siteLinks.ts"
+    ],
+    "VITE_SOCIAL_TELEGRAM_URL": [
+      "frontend/.env.example",
+      "frontend/src/components/home/SocialAlertBar.tsx",
+      "frontend/src/data/siteLinks.ts"
+    ],
+    "VITE_SOCIAL_X_URL": [
+      "frontend/.env.example",
+      "frontend/src/data/siteLinks.ts"
+    ],
+    "VITE_SOCIAL_YOUTUBE_URL": [
+      "frontend/.env.example",
+      "frontend/src/data/siteLinks.ts"
+    ],
+    "VITE_SUPABASE_ANON_KEY": [
+      ".github/workflows/canonical-daily-pipeline.yml",
+      ".github/workflows/ci.yml",
+      ".github/workflows/weekly-enrich.yml",
+      "frontend/.env.example",
+      "frontend/src/lib/supabase.ts",
+      "scripts/audit-job-quality.mjs",
+      "scripts/audit-supabase-tables.mjs",
+      "scripts/build-sitemap.mjs",
+      "scripts/setup-supabase-env.mjs",
+      "scripts/test-supabase-connection.mjs"
+    ],
+    "VITE_SUPABASE_URL": [
+      ".github/workflows/canonical-daily-pipeline.yml",
+      ".github/workflows/catalog-recovery-export.yml",
+      ".github/workflows/ci.yml",
+      ".github/workflows/weekly-enrich.yml",
+      "frontend/.env.example",
+      "frontend/src/lib/supabase.ts",
+      "frontend/src/utils/jobDetailsStorage.ts",
+      "scripts/audit-job-quality.mjs",
+      "scripts/audit-supabase-tables.mjs",
+      "scripts/build-sitemap.mjs",
+      "scripts/seed-education.ts",
+      "scripts/setup-supabase-env.mjs",
+      "scripts/test-supabase-connection.mjs"
+    ],
+    "VITE_TELEGRAM_CHANNEL_URL": [
+      "frontend/src/components/home/SocialAlertBar.tsx"
+    ],
+    "VITE_TURNSTILE_SITE_KEY": [
+      "frontend/.env.example",
+      "frontend/src/lib/turnstile.ts"
+    ],
+    "VITE_VAPID_PUBLIC_KEY": [
+      "frontend/.env.example",
+      "frontend/src/hooks/useWebPushToken.ts"
+    ],
+    "VITE_WHATSAPP_GROUP_URL": [
+      "frontend/src/components/home/SocialAlertBar.tsx"
+    ]
+  },
+  "limitations": "Pattern scan, not proof no secrets exist. No secret values are recorded. Binary files excluded; Git history not exhaustively scanned."
+}
