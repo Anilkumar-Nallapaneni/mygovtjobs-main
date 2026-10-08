@@ -20,6 +20,9 @@ describe("browseRoutes", () => {
   it("parses hub URLs", () => {
     expect(parseBrowsePath("/jobs").view).toBe("jobs");
     expect(parseBrowsePath("/state/up").stateId).toBe("up");
+    expect(parseBrowsePath("/state/ka/district/bagalkot").stateId).toBe("ka");
+    expect(parseBrowsePath("/state/ka/district/bagalkot").districtSlug).toBe("bagalkot");
+    expect(parseBrowsePath("/state/ka/district/../bagalkot").view).toBe("home");
     expect(parseBrowsePath("/state/ar").stateId).toBe("ar");
     expect(parseBrowsePath("/state/tr").stateId).toBe("tr");
     expect(parseBrowsePath("/category/banking").categoryId).toBe("banking");

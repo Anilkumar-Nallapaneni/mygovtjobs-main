@@ -2,7 +2,7 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import { fromSvgStateId } from "@/data/states";
 import { IndiaMap } from "@/components/Maps/IndiaMap/IndiaMap";
 import StateDistrictMap from "@/components/home/StateDistrictMap";
-import { formatDistrictName } from "@/data/stateDistricts";
+import { districtLabel } from "@/data/stateDistricts";
 import type { IndiaMapProps } from "@/types/MapTypes";
 
 type HomeMapBlockProps = {
@@ -90,8 +90,8 @@ export default function HomeMapBlock({
         <div className="home-map-block__title-row">
           <span className="home-map-block__dot" aria-hidden />
           <span className="home-map-block__title">
-            {selectedDistrict
-              ? t("home.jobMap", { state: formatDistrictName(selectedDistrict) })
+            {selectedDistrict && selectedState
+              ? t("home.jobMap", { state: districtLabel(selectedState, selectedDistrict) })
               : stateName
                 ? t("home.jobMap", { state: stateName })
                 : t("home.allIndiaJobMap")}
@@ -127,9 +127,9 @@ export default function HomeMapBlock({
       </div>
 
       <p className="home-map-block__hint">
-        {selectedDistrict
+        {selectedDistrict && selectedState
           ? t("home.mapDistrictHint", {
-              district: formatDistrictName(selectedDistrict),
+              district: districtLabel(selectedState, selectedDistrict),
               state: stateName,
               defaultValue: "{{district}} in {{state}}. Jobs for this district are listed below.",
             })

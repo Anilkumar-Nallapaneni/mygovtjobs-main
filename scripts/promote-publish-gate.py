@@ -110,7 +110,11 @@ async def main(apply: bool, export: bool, limit: int, slugs: set[str]) -> int:
         }
         rows = (
             await session.execute(
-                select(Job).where(Job.status.in_(("draft", "expired", "pending")))
+                select(Job).where(
+                    Job.status.in_(("draft", "expired", "pending")),
+                    Job.last_date.is_not(None),
+                    Job.last_date >= today,
+                )
             )
         ).scalars().all()
 

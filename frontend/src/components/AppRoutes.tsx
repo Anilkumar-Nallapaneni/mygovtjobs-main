@@ -221,6 +221,7 @@ export default function AppRoutes({
           </LazyRoute>
         }
       />
+      <Route path="/state/:stateId/district/:districtSlug" element={homePageElement} />
       <Route path="/state/:stateId" element={homePageElement} />
       <Route
         path="/board/:boardId"

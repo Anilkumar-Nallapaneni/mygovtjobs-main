@@ -30,7 +30,7 @@ export function isBrowseRoutePath(pathname: string): boolean {
   return (
     BROWSE_ROUTE_PATHS.some((pattern) => {
       if (!pattern.includes(":")) return pathname === pattern;
-      if (pattern.startsWith("/state/")) return /^\/state\/[^/]+$/.test(pathname);
+      if (pattern.startsWith("/state/")) return /^\/state\/[^/]+(?:\/district\/[a-z0-9]+)?$/i.test(pathname);
       if (pattern.startsWith("/board/")) return /^\/board\/[^/]+$/.test(pathname);
       if (pattern.startsWith("/category/")) return /^\/category\/[^/]+$/.test(pathname);
       return false;

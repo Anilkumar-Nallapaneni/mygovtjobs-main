@@ -1,3 +1,5 @@
+import { districtNamesMatch } from "@/data/stateDistricts";
+
 export type DistrictShape = { name: string; d: string };
 
 function pointKeys(path: string): Set<string> {
@@ -13,11 +15,11 @@ function pointKeys(path: string): Set<string> {
 
 /** Districts that share a drawn border with the selected district on this map. */
 export function neighboringDistricts(districts: DistrictShape[], selectedName: string): string[] {
-  const selected = districts.find((district) => district.name === selectedName);
+  const selected = districts.find((district) => districtNamesMatch(district.name, selectedName));
   if (!selected) return [];
   const selectedPoints = pointKeys(selected.d);
   return districts
-    .filter((district) => district.name !== selectedName)
+    .filter((district) => !districtNamesMatch(district.name, selected.name))
     .map((district) => {
       const points = pointKeys(district.d);
       let shared = 0;

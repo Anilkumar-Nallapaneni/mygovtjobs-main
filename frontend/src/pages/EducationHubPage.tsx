@@ -11,7 +11,7 @@ import {
 import { extraMockTests } from "@/data/education/originalMocks";
 import { subjects } from "@/data/education/studyContent";
 import "@/styles/education-hub.css";
-import { loadPublishedCareers, loadPublishedMockTests, submitEducationAttempt } from "@/lib/educationApi";
+import { gradeStaticMock, loadPublishedCareers, loadPublishedMockTests, submitEducationAttempt } from "@/lib/educationApi";
 import { useAuth } from "@/hooks/useAuth";
 
 type Tab = "overview" | "careers" | "exams" | "tests" | "resources";
@@ -191,6 +191,32 @@ function MockTests({ tests = allTests }: { tests?: typeof allTests }) {
       }));
       setResultScore(result.score);
       setAttemptSaved(true);
+    } else {
+      setSavingAttempt(true);
+      setSaveError(false);
+      const result = await gradeStaticMock({
+        testId: selected.id,
+        answers: selected.questions.map((question) => ({
+          questionId: question.id,
+          selectedIndex: answers[question.id],
+        })),
+      });
+      setSavingAttempt(false);
+      if (!result.ok) {
+        finishing.current = false;
+        setSaveError(true);
+        return;
+      }
+      const byId = new Map(result.questions.map((question) => [Number(question.questionId), question]));
+      setSelected((current) => ({
+        ...current,
+        questions: current.questions.map((question) => {
+          const graded = byId.get(question.id);
+          if (!graded) return question;
+          return { ...question, correctAnswer: graded.correctIndex, explanation: graded.explanation };
+        }),
+      }));
+      setResultScore(result.score);
     }
     setSubmitted(true);
   }, [answers, remainingSeconds, selected, submitted, user]);
@@ -208,7 +234,7 @@ function MockTests({ tests = allTests }: { tests?: typeof allTests }) {
   }, [tests, selected.id]);
 
   const localScore = useMemo(
-    () => selected.questions.reduce((sum, q) => sum + (q.correctAnswer >= 0 && answers[q.id] === q.correctAnswer ? 4 : 0), 0),
+    () => selected.questions.reduce((sum, q) => sum + ((q.correctAnswer ?? -1) >= 0 && answers[q.id] === q.correctAnswer ? 4 : 0), 0),
     [answers, selected],
   );
   const score = resultScore ?? localScore;
@@ -245,7 +271,7 @@ function MockTests({ tests = allTests }: { tests?: typeof allTests }) {
             {revealAnswers && q.explanation ? <p className="edu-explanation">{q.explanation}</p> : null}
           </article>
         ))}
-        {saveError ? <p className="edu-explanation">Could not save this attempt. Check that you are signed in, then submit again.</p> : null}
+        {saveError ? <p className="edu-explanation">Could not score this attempt. The answer key stays on the server, so submit again when the site can reach it.</p> : null}
         <button type="button" className="edu-primary-btn" disabled={savingAttempt} onClick={() => {
           if (submitted) { reset(); return; }
           void finishTest();

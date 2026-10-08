@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-10-07T13:23:49.537521+00:00",
-  "review_queue_total": 1579,
+  "generated_at": "2026-10-08T14:47:36.449163+00:00",
+  "review_queue_total": 1580,
   "review_queue_status": {
-    "pending": 1579
+    "pending": 1580
   },
   "confidence_bands": {
-    "60-79": 1303,
-    "80-84": 130,
+    "60-79": 1305,
+    "80-84": 129,
     "90-100": 25,
     "85-89": 82,
     "<60": 39
@@ -14,23 +14,23 @@
   "top_validation_errors": [
     [
       "Missing or malformed deadline",
-      1414
+      1415
     ],
     [
       "Job has not been verified",
-      1141
+      1142
     ],
     [
       "Completeness score 45 below 70",
-      1088
+      1089
     ],
     [
       "Document is not classified as recruitment",
-      692
+      693
     ],
     [
       "Missing official notification PDF",
-      572
+      574
     ],
     [
       "Completeness score 52 below 70",
@@ -38,7 +38,7 @@
     ],
     [
       "Past deadline",
-      132
+      133
     ],
     [
       "Completeness score 66 below 70",
@@ -92,15 +92,15 @@
   "top_validation_warnings": [
     [
       "Vacancy count is not specified",
-      1381
+      1382
     ],
     [
       "Qualification is not specified",
-      1264
+      1265
     ],
     [
       "Separate HTML notification URL present",
-      826
+      827
     ],
     [
       "Missing apply URL",
@@ -170,7 +170,7 @@
     ],
     [
       "ISRO — Careers",
-      73
+      74
     ],
     [
       "Websitenew Tgpsc",
@@ -269,12 +269,12 @@
       11
     ]
   ],
-  "jobs_total": 4044,
+  "jobs_total": 4041,
   "job_status": {
-    "draft": 3499,
-    "expired": 533,
+    "draft": 3497,
+    "expired": 532,
     "live": 12
   },
   "live_jobs": 12,
-  "draft_pending_jobs": 3499
+  "draft_pending_jobs": 3497
 }

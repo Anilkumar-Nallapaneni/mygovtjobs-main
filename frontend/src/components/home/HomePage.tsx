@@ -1,5 +1,5 @@
 import { lazy, Suspense, useCallback, useEffect, useRef, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { scrollToSection } from "@/utils/scrollToSection";
 import { useStateLabel } from "@/utils/stateLabels";
@@ -26,7 +26,8 @@ import DistrictGlancePanel from "@/components/home/DistrictGlancePanel";
 import StateGlancePanel from "@/components/home/StateGlancePanel";
 import StateJobsPanel from "@/components/home/StateJobsPanel";
 import { useBrowseContext } from "@/context/BrowseContext";
-import { RESULTS_TOPICS_INDEX_PATH } from "@/utils/browseRoutes";
+import { parseBrowsePath, RESULTS_TOPICS_INDEX_PATH } from "@/utils/browseRoutes";
+import { normalizeDistrictKey } from "@/data/stateDistricts";
 import type { HomePageProps } from "@/types/homePage";
 
 import type { HeadlinesViewMode } from "@/lib/officialFeed";
@@ -269,11 +270,8 @@ export default function HomePage({
 
   const showOfficialHeadlines = resultsHubMode || Boolean(effectiveTopicKey);
   const stateName = selectedState ? stateLabel(selectedState) : "";
-  const [selectedDistrict, setSelectedDistrict] = useState<string | null>(null);
-
-  useEffect(() => {
-    setSelectedDistrict(null);
-  }, [selectedState]);
+  const location = useLocation();
+  const selectedDistrict = parseBrowsePath(location.pathname).districtSlug;
   const totalListings = jobs.length;
   const paintShellStats = jobsLoading && jobs.length === 0;
   const displayHeroStats = paintShellStats ? HOME_SHELL_HERO_STATS : heroStats;
@@ -376,7 +374,11 @@ export default function HomePage({
             <button
               type="button"
               className="home-state-selected__back"
-              onClick={() => (selectedDistrict ? setSelectedDistrict(null) : handleStateSelect(null))}
+              onClick={() =>
+                selectedDistrict && selectedState
+                  ? navigate(`/state/${selectedState}`)
+                  : handleStateSelect(null)
+              }
             >
               {selectedDistrict ? `← ${stateName} map` : "← India map"}
             </button>
@@ -387,10 +389,13 @@ export default function HomePage({
                 stateName={stateName}
                 selectedDistrict={selectedDistrict}
                 onDistrictSelect={(name) => {
-                  setSelectedDistrict(name);
+                  if (!selectedState) return;
+                  navigate(`/state/${selectedState}/district/${normalizeDistrictKey(name)}`);
                   scrollToSection("india-map-panel");
                 }}
-                onClearDistrict={() => setSelectedDistrict(null)}
+                onClearDistrict={() => {
+                  if (selectedState) navigate(`/state/${selectedState}`);
+                }}
                 onStateSelect={handleStateSelect}
                 onClearState={() => handleStateSelect(null)}
                 t={t}
@@ -409,6 +414,7 @@ export default function HomePage({
             <div id="state-jobs-panel" className="home-state-jobs-panel home-state-jobs-panel--below">
               <StateJobsPanel
                 stateName={stateName}
+                stateId={selectedState}
                 districtName={selectedDistrict}
                 stateJobs={filtered}
                 nationwideJobs={nationwideForState}

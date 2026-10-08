@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { formatDistrictName } from "@/data/stateDistricts";
+import { districtLabel, districtNamesMatch } from "@/data/stateDistricts";
 
 type DistrictShape = { name: string; d: string };
 type DistrictMapFile = { viewBox: string; districts: DistrictShape[] };
@@ -45,7 +45,7 @@ export default function StateDistrictMap({
   }, [stateId]);
 
   const districts = selectedDistrict
-    ? (data?.districts.filter((district) => district.name === selectedDistrict) ?? [])
+    ? (data?.districts.filter((district) => districtNamesMatch(district.name, selectedDistrict)) ?? [])
     : (data?.districts ?? []);
 
   useEffect(() => {
@@ -70,7 +70,7 @@ export default function StateDistrictMap({
     activeRef.current?.classList.remove("is-active");
     activeRef.current = null;
     if (labelRef.current) {
-      labelRef.current.textContent = selectedDistrict ? formatDistrictName(selectedDistrict) : HOVER_HINT;
+      labelRef.current.textContent = selectedDistrict ? districtLabel(stateId, selectedDistrict) : HOVER_HINT;
     }
     if (tipRef.current) tipRef.current.hidden = true;
   };
@@ -86,7 +86,7 @@ export default function StateDistrictMap({
       activeRef.current?.classList.remove("is-active");
       path.classList.add("is-active");
       activeRef.current = path;
-      const name = formatDistrictName(path.dataset.name ?? "");
+      const name = districtLabel(stateId, path.dataset.name ?? "");
       if (labelRef.current) labelRef.current.textContent = name;
       tip.textContent = name;
     }
@@ -109,7 +109,7 @@ export default function StateDistrictMap({
 
   return (
     <div className="state-district-map" onPointerMove={onPointerMove} onPointerLeave={clearHover} onClick={onClick}>
-      <svg ref={svgRef} viewBox={data.viewBox} role="img" aria-label={selectedDistrict ? formatDistrictName(selectedDistrict) : "District borders"}>
+      <svg ref={svgRef} viewBox={data.viewBox} role="img" aria-label={selectedDistrict ? districtLabel(stateId, selectedDistrict) : "District borders"}>
         {districts.map((district) => (
           <path
             key={district.name}
@@ -121,7 +121,7 @@ export default function StateDistrictMap({
       </svg>
       <div ref={tipRef} className="state-district-map__tip" hidden />
       <p ref={labelRef} className="state-district-map__label">
-        {selectedDistrict ? formatDistrictName(selectedDistrict) : HOVER_HINT}
+        {selectedDistrict ? districtLabel(stateId, selectedDistrict) : HOVER_HINT}
       </p>
     </div>
   );

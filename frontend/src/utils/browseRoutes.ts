@@ -40,6 +40,7 @@ export const EXAMS_INDEX_PATH = "/exams";
 export type BrowseLocation = {
   view: BrowseView;
   stateId: string | null;
+  districtSlug: string | null;
   categoryId: CategoryId | null;
   headlinesTopicKey: string | null;
   qualificationSlug: string | null;
@@ -115,6 +116,7 @@ export function parseBrowsePath(pathname: string): BrowseLocation {
   const path = (pathname || "/").replace(/\/+$/, "") || "/";
   const empty = {
     stateId: null as string | null,
+    districtSlug: null as string | null,
     categoryId: null as CategoryId | null,
     headlinesTopicKey: null as string | null,
     qualificationSlug: null as string | null,
@@ -179,6 +181,15 @@ export function parseBrowsePath(pathname: string): BrowseLocation {
     const orgSlug = decodeURIComponent(orgMatch[1]).toLowerCase();
     if (orgSlug) {
       return { view: "jobs", ...empty, orgSlug };
+    }
+  }
+
+  const districtMatch = /^\/state\/([^/]+)\/district\/([^/]+)$/i.exec(path);
+  if (districtMatch) {
+    const stateId = decodeURIComponent(districtMatch[1]).toLowerCase();
+    const districtSlug = decodeURIComponent(districtMatch[2]).toLowerCase();
+    if (isValidStateId(stateId) && /^[a-z0-9]+$/.test(districtSlug)) {
+      return { view: "jobs", ...empty, stateId, districtSlug };
     }
   }
 

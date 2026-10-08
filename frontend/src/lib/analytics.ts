@@ -1,4 +1,19 @@
 const GA_ID = (import.meta.env.VITE_GA_MEASUREMENT_ID || '').trim()
+const CONSENT_KEY = 'lgj-analytics-consent'
+
+export type AnalyticsConsent = 'accepted' | 'declined'
+
+export function getAnalyticsConsent(): AnalyticsConsent | null {
+  if (typeof localStorage === 'undefined') return null
+  const value = localStorage.getItem(CONSENT_KEY)
+  return value === 'accepted' || value === 'declined' ? value : null
+}
+
+export function setAnalyticsConsent(value: AnalyticsConsent): void {
+  if (typeof localStorage === 'undefined') return
+  localStorage.setItem(CONSENT_KEY, value)
+  if (value === 'accepted') initAnalytics()
+}
 
 declare global {
   interface Window {
@@ -58,6 +73,7 @@ function markScriptReady(): void {
 
 /** Load gtag.js once when VITE_GA_MEASUREMENT_ID is set. No-op otherwise. */
 export function initAnalytics(): void {
+  if (getAnalyticsConsent() === 'declined') return
   if (import.meta.env.DEV && !import.meta.env.VITEST) return
   if (!GA_ID || initialized || typeof window === 'undefined') return
   initialized = true

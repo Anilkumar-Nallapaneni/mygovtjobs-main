@@ -6,7 +6,7 @@ from fastapi.openapi.utils import get_openapi
 from app.config import get_settings
 from app.middleware.admin_audit import AdminAuditMiddleware
 from app.middleware.rate_limit import RateLimitMiddleware
-from app.routes import admin, admin_education, admin_moderation, admin_operations, alerts, billing, contact, health, ingest, india, job_reports, jobs, meta
+from app.routes import admin, admin_education, admin_moderation, admin_operations, alerts, billing, contact, education, health, ingest, india, job_reports, jobs, meta
 
 load_dotenv()
 
@@ -59,6 +59,7 @@ app.include_router(meta.router, prefix="/api/meta", tags=["meta"])
 app.include_router(india.router, prefix="/api/india", tags=["india"])
 app.include_router(ingest.router, prefix="/api/ingest", tags=["ingest"])
 app.include_router(alerts.router, prefix="/api/alerts", tags=["alerts"])
+app.include_router(education.router, prefix="/api/education", tags=["education"])
 app.include_router(contact.router, prefix="/api/contact", tags=["contact"])
 app.include_router(job_reports.router, prefix="/api/job-reports", tags=["job-reports"])
 app.include_router(billing.router, prefix="/api/billing", tags=["billing"])

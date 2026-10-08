@@ -2,7 +2,7 @@ import { useTranslation } from "react-i18next";
 import JobCard from "@/components/jobs/JobCard";
 import JobCardGrid from "@/components/jobs/JobCardGrid";
 import { VIRTUAL_GRID_MIN } from "@/data/homePageConstants";
-import { formatDistrictName } from "@/data/stateDistricts";
+import { districtLabel, formatDistrictName } from "@/data/stateDistricts";
 import type { JobRecord } from "@/types/job";
 
 function jobMentionsDistrict(job: JobRecord, district: string): boolean {
@@ -18,6 +18,7 @@ function jobMentionsDistrict(job: JobRecord, district: string): boolean {
 
 type StateJobsPanelProps = {
   stateName: string;
+  stateId?: string | null;
   districtName?: string | null;
   stateJobs: Parameters<typeof JobCard>[0]["job"][];
   nationwideJobs: Parameters<typeof JobCard>[0]["job"][];
@@ -51,6 +52,7 @@ function JobGridBlock({
 
 export default function StateJobsPanel({
   stateName,
+  stateId = null,
   districtName = null,
   stateJobs,
   nationwideJobs,
@@ -61,11 +63,17 @@ export default function StateJobsPanel({
   onStateClick,
 }: StateJobsPanelProps) {
   const { t } = useTranslation();
-  const districtJobs = districtName ? stateJobs.filter((job) => jobMentionsDistrict(job, districtName)) : [];
-  const otherStateJobs = districtName ? stateJobs.filter((job) => !jobMentionsDistrict(job, districtName)) : stateJobs;
+  const placeName = districtName
+    ? (stateId ? districtLabel(stateId, districtName) : formatDistrictName(districtName))
+    : stateName;
+  const mentionsDistrict = (job: (typeof stateJobs)[number]) =>
+    Boolean(districtName) &&
+    (jobMentionsDistrict(job, districtName as string) ||
+      (placeName !== districtName && jobMentionsDistrict(job, placeName)));
+  const districtJobs = districtName ? stateJobs.filter(mentionsDistrict) : [];
+  const otherStateJobs = districtName ? stateJobs.filter((job) => !mentionsDistrict(job)) : stateJobs;
   const primaryJobs = districtName && districtJobs.length > 0 ? districtJobs : otherStateJobs;
   const extraStateJobs = districtName && districtJobs.length > 0 ? otherStateJobs : [];
-  const placeName = districtName ? formatDistrictName(districtName) : stateName;
   const stateVac = primaryJobs.reduce((s, j) => s + (Number(j.vacancies) || 0), 0);
   const nwVac = nationwideJobs.reduce((s, j) => s + (Number(j.vacancies) || 0), 0);
   const jobCardFilterProps = { onEducationClick, onStateClick };

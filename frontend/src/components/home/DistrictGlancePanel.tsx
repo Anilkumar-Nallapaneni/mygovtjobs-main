@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { STATE_GLANCE_AS_OF_YEAR } from "@/data/stateFacts";
-import { formatDistrictName, lookupLgdDistrict } from "@/data/stateDistricts";
+import { districtLabel, lookupLgdDistrict } from "@/data/stateDistricts";
 import { neighboringDistricts, type DistrictShape } from "@/utils/districtBorders";
 
 type DistrictGlancePanelProps = {
@@ -16,7 +16,7 @@ function censusCode(code: string | undefined): string | null {
 }
 
 function displayName(stateId: string, mapName: string): string {
-  return lookupLgdDistrict(stateId, mapName)?.name ?? formatDistrictName(mapName);
+  return districtLabel(stateId, mapName);
 }
 
 export default function DistrictGlancePanel({
@@ -26,7 +26,7 @@ export default function DistrictGlancePanel({
   t,
 }: DistrictGlancePanelProps) {
   const identity = lookupLgdDistrict(stateId, districtName);
-  const name = identity?.name ?? formatDistrictName(districtName);
+  const name = districtLabel(stateId, districtName);
   const [borders, setBorders] = useState<string[]>([]);
 
   useEffect(() => {
@@ -107,7 +107,9 @@ export default function DistrictGlancePanel({
       ) : null}
 
       <p className="india-glance__note">
-        These facts are for {name} only, from the Local Government Directory and this district map.
+        {identity
+          ? `These facts are for ${name} only, from the Local Government Directory and this district map.`
+          : `${name} is drawn on this state map. This Local Government Directory extract has no separate code for that shape.`}
       </p>
     </aside>
   );

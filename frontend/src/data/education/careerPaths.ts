@@ -672,9 +672,9 @@ export interface MockQuestion {
   dbId?: string;
   question: string;
   options: string[];
-  /** -1 until the server grades a database-backed question. */
-  correctAnswer: number;
-  explanation: string;
+  /** Present only after the server grades the attempt. Never shipped in the question list. */
+  correctAnswer?: number;
+  explanation?: string;
   subject: string;
   difficulty: "Easy" | "Medium" | "Hard";
 }
@@ -702,16 +702,16 @@ export const mockTests: MockTest[] = [
     totalMarks: 40,
     stages: ["after10th", "after12th"],
     questions: [
-      { id: 1, question: "A body of mass 5 kg is moving with a velocity of 10 m/s. What is its kinetic energy?", options: ["250 J", "500 J", "100 J", "50 J"], correctAnswer: 0, explanation: "KE = ½mv² = ½ × 5 × 10² = 250 J", subject: "Physics", difficulty: "Easy" },
-      { id: 2, question: "The SI unit of force is:", options: ["Joule", "Newton", "Watt", "Pascal"], correctAnswer: 1, explanation: "Force is measured in Newtons (N). 1 N = 1 kg⋅m/s²", subject: "Physics", difficulty: "Easy" },
-      { id: 3, question: "According to Newton's third law, every action has:", options: ["An equal reaction", "An equal and opposite reaction", "A proportional reaction", "No reaction"], correctAnswer: 1, explanation: "Newton's 3rd Law: For every action, there is an equal and opposite reaction.", subject: "Physics", difficulty: "Easy" },
-      { id: 4, question: "The acceleration due to gravity on the Moon is approximately:", options: ["9.8 m/s²", "1.6 m/s²", "3.3 m/s²", "6.2 m/s²"], correctAnswer: 1, explanation: "g_moon ≈ 1.6 m/s² which is about 1/6 of Earth's gravity.", subject: "Physics", difficulty: "Medium" },
-      { id: 5, question: "A projectile is launched at 45°. At what other angle (with same speed) will it have the same range?", options: ["30°", "60°", "45°", "90°"], correctAnswer: 1, explanation: "Complementary angles (90° - θ) give same range. 90° - 45° = 45°. But for any θ, (90° - θ) works.", subject: "Physics", difficulty: "Medium" },
-      { id: 6, question: "Moment of inertia of a solid sphere about its diameter is:", options: ["2/5 MR²", "2/3 MR²", "MR²", "1/2 MR²"], correctAnswer: 0, explanation: "For a solid sphere about diameter: I = 2/5 MR²", subject: "Physics", difficulty: "Medium" },
-      { id: 7, question: "The escape velocity from Earth is approximately:", options: ["7.2 km/s", "11.2 km/s", "15.4 km/s", "9.8 km/s"], correctAnswer: 1, explanation: "Escape velocity from Earth ≈ 11.2 km/s. v_e = √(2gR)", subject: "Physics", difficulty: "Medium" },
-      { id: 8, question: "In SHM, the maximum kinetic energy equals:", options: ["Maximum potential energy", "Half the maximum PE", "Double the maximum PE", "Zero"], correctAnswer: 0, explanation: "In SHM, max KE = max PE (by conservation of energy).", subject: "Physics", difficulty: "Hard" },
-      { id: 9, question: "The frequency of a spring-mass system depends on:", options: ["Mass only", "Spring constant only", "Both mass and spring constant", "Neither"], correctAnswer: 2, explanation: "f = (1/2π)√(k/m). Frequency depends on both k and m.", subject: "Physics", difficulty: "Hard" },
-      { id: 10, question: "Two blocks connected by a string over a pulley. If m₁ = 4kg, m₂ = 6kg, find acceleration (frictionless).", options: ["2 m/s²", "4 m/s²", "1 m/s²", "9.8 m/s²"], correctAnswer: 0, explanation: "a = (m₂ - m₁)g/(m₁ + m₂) = (6-4)×10/(6+4) = 20/10 = 2 m/s²", subject: "Physics", difficulty: "Hard" },
+      { id: 1, question: "A body of mass 5 kg is moving with a velocity of 10 m/s. What is its kinetic energy?", options: ["250 J", "500 J", "100 J", "50 J"], subject: "Physics", difficulty: "Easy" },
+      { id: 2, question: "The SI unit of force is:", options: ["Joule", "Newton", "Watt", "Pascal"], subject: "Physics", difficulty: "Easy" },
+      { id: 3, question: "According to Newton's third law, every action has:", options: ["An equal reaction", "An equal and opposite reaction", "A proportional reaction", "No reaction"], subject: "Physics", difficulty: "Easy" },
+      { id: 4, question: "The acceleration due to gravity on the Moon is approximately:", options: ["9.8 m/s²", "1.6 m/s²", "3.3 m/s²", "6.2 m/s²"], subject: "Physics", difficulty: "Medium" },
+      { id: 5, question: "A projectile is launched at 45°. At what other angle (with same speed) will it have the same range?", options: ["30°", "60°", "45°", "90°"], subject: "Physics", difficulty: "Medium" },
+      { id: 6, question: "Moment of inertia of a solid sphere about its diameter is:", options: ["2/5 MR²", "2/3 MR²", "MR²", "1/2 MR²"], subject: "Physics", difficulty: "Medium" },
+      { id: 7, question: "The escape velocity from Earth is approximately:", options: ["7.2 km/s", "11.2 km/s", "15.4 km/s", "9.8 km/s"], subject: "Physics", difficulty: "Medium" },
+      { id: 8, question: "In SHM, the maximum kinetic energy equals:", options: ["Maximum potential energy", "Half the maximum PE", "Double the maximum PE", "Zero"], subject: "Physics", difficulty: "Hard" },
+      { id: 9, question: "The frequency of a spring-mass system depends on:", options: ["Mass only", "Spring constant only", "Both mass and spring constant", "Neither"], subject: "Physics", difficulty: "Hard" },
+      { id: 10, question: "Two blocks connected by a string over a pulley. If m₁ = 4kg, m₂ = 6kg, find acceleration (frictionless).", options: ["2 m/s²", "4 m/s²", "1 m/s²", "9.8 m/s²"], subject: "Physics", difficulty: "Hard" },
     ],
   },
   {
@@ -724,16 +724,16 @@ export const mockTests: MockTest[] = [
     totalMarks: 40,
     stages: ["after10th", "after12th"],
     questions: [
-      { id: 1, question: "The normal blood pressure of a healthy adult is:", options: ["120/80 mmHg", "140/90 mmHg", "100/60 mmHg", "160/100 mmHg"], correctAnswer: 0, explanation: "Normal BP is 120/80 mmHg. 120 = systolic, 80 = diastolic.", subject: "Biology", difficulty: "Easy" },
-      { id: 2, question: "Which chamber of the heart pumps blood to the entire body?", options: ["Right Atrium", "Left Atrium", "Right Ventricle", "Left Ventricle"], correctAnswer: 3, explanation: "Left ventricle pumps oxygenated blood to the entire body through the aorta.", subject: "Biology", difficulty: "Easy" },
-      { id: 3, question: "The functional unit of the kidney is:", options: ["Nephron", "Alveolus", "Neuron", "Hepatocyte"], correctAnswer: 0, explanation: "Nephron is the functional unit of the kidney where filtration occurs.", subject: "Biology", difficulty: "Easy" },
-      { id: 4, question: "Insulin is secreted by:", options: ["Alpha cells of pancreas", "Beta cells of pancreas", "Gamma cells of pancreas", "Liver cells"], correctAnswer: 1, explanation: "Beta cells of Islets of Langerhans secrete insulin.", subject: "Biology", difficulty: "Medium" },
-      { id: 5, question: "The red blood cells are produced in:", options: ["Liver", "Spleen", "Red bone marrow", "Lymph nodes"], correctAnswer: 2, explanation: "RBCs (erythropoiesis) are produced in red bone marrow.", subject: "Biology", difficulty: "Medium" },
-      { id: 6, question: "Which part of the brain controls balance and coordination?", options: ["Cerebrum", "Cerebellum", "Medulla", "Hypothalamus"], correctAnswer: 1, explanation: "Cerebellum controls balance, coordination, and posture.", subject: "Biology", difficulty: "Medium" },
-      { id: 7, question: "Hemoglobin binds most strongly with:", options: ["Carbon dioxide", "Oxygen", "Carbon monoxide", "Nitrogen"], correctAnswer: 2, explanation: "Hb binds CO ~200x more strongly than O₂, which is why CO is toxic.", subject: "Biology", difficulty: "Hard" },
-      { id: 8, question: "The Counter Current Mechanism occurs in:", options: ["Liver", "Lungs", "Kidney (Loop of Henle)", "Heart"], correctAnswer: 2, explanation: "Counter current multiplier system in Loop of Henle concentrates urine.", subject: "Biology", difficulty: "Hard" },
-      { id: 9, question: "ADH (Vasopressin) acts on:", options: ["Distal Convoluted Tubule", "Collecting Duct", "Proximal Convoluted Tubule", "Glomerulus"], correctAnswer: 1, explanation: "ADH makes collecting duct permeable to water, concentrating urine.", subject: "Biology", difficulty: "Hard" },
-      { id: 10, question: "The sinoatrial (SA) node is located in:", options: ["Left Atrium", "Right Atrium", "Left Ventricle", "Interventricular septum"], correctAnswer: 1, explanation: "SA node (pacemaker) is in the right atrium wall.", subject: "Biology", difficulty: "Medium" },
+      { id: 1, question: "The normal blood pressure of a healthy adult is:", options: ["120/80 mmHg", "140/90 mmHg", "100/60 mmHg", "160/100 mmHg"], subject: "Biology", difficulty: "Easy" },
+      { id: 2, question: "Which chamber of the heart pumps blood to the entire body?", options: ["Right Atrium", "Left Atrium", "Right Ventricle", "Left Ventricle"], subject: "Biology", difficulty: "Easy" },
+      { id: 3, question: "The functional unit of the kidney is:", options: ["Nephron", "Alveolus", "Neuron", "Hepatocyte"], subject: "Biology", difficulty: "Easy" },
+      { id: 4, question: "Insulin is secreted by:", options: ["Alpha cells of pancreas", "Beta cells of pancreas", "Gamma cells of pancreas", "Liver cells"], subject: "Biology", difficulty: "Medium" },
+      { id: 5, question: "The red blood cells are produced in:", options: ["Liver", "Spleen", "Red bone marrow", "Lymph nodes"], subject: "Biology", difficulty: "Medium" },
+      { id: 6, question: "Which part of the brain controls balance and coordination?", options: ["Cerebrum", "Cerebellum", "Medulla", "Hypothalamus"], subject: "Biology", difficulty: "Medium" },
+      { id: 7, question: "Hemoglobin binds most strongly with:", options: ["Carbon dioxide", "Oxygen", "Carbon monoxide", "Nitrogen"], subject: "Biology", difficulty: "Hard" },
+      { id: 8, question: "The Counter Current Mechanism occurs in:", options: ["Liver", "Lungs", "Kidney (Loop of Henle)", "Heart"], subject: "Biology", difficulty: "Hard" },
+      { id: 9, question: "ADH (Vasopressin) acts on:", options: ["Distal Convoluted Tubule", "Collecting Duct", "Proximal Convoluted Tubule", "Glomerulus"], subject: "Biology", difficulty: "Hard" },
+      { id: 10, question: "The sinoatrial (SA) node is located in:", options: ["Left Atrium", "Right Atrium", "Left Ventricle", "Interventricular septum"], subject: "Biology", difficulty: "Medium" },
     ],
   },
   {
@@ -746,16 +746,16 @@ export const mockTests: MockTest[] = [
     totalMarks: 40,
     stages: ["after10th", "after12th"],
     questions: [
-      { id: 1, question: "If f(x) = x³, then f'(x) =", options: ["3x", "3x²", "x²", "3x³"], correctAnswer: 1, explanation: "Using power rule: d/dx(xⁿ) = nxⁿ⁻¹. So d/dx(x³) = 3x²", subject: "Mathematics", difficulty: "Easy" },
-      { id: 2, question: "∫ 2x dx =", options: ["x² + C", "2x² + C", "x + C", "2 + C"], correctAnswer: 0, explanation: "∫2x dx = 2·(x²/2) + C = x² + C", subject: "Mathematics", difficulty: "Easy" },
-      { id: 3, question: "The derivative of sin(x) is:", options: ["cos(x)", "-cos(x)", "sin(x)", "-sin(x)"], correctAnswer: 0, explanation: "d/dx(sin x) = cos x", subject: "Mathematics", difficulty: "Easy" },
-      { id: 4, question: "lim(x→0) sin(x)/x =", options: ["0", "1", "∞", "Does not exist"], correctAnswer: 1, explanation: "This is a standard limit. lim(x→0) sin(x)/x = 1", subject: "Mathematics", difficulty: "Medium" },
-      { id: 5, question: "The integral ∫₀^π sin(x) dx equals:", options: ["0", "1", "2", "π"], correctAnswer: 2, explanation: "∫₀^π sin(x) dx = [-cos(x)]₀^π = -cos(π) + cos(0) = 1 + 1 = 2", subject: "Mathematics", difficulty: "Medium" },
-      { id: 6, question: "If y = eˣ, then dy/dx =", options: ["xeˣ⁻¹", "eˣ", "eˣ⁺¹", "1/eˣ"], correctAnswer: 1, explanation: "d/dx(eˣ) = eˣ. The exponential function is its own derivative.", subject: "Mathematics", difficulty: "Easy" },
-      { id: 7, question: "The area under y = x² from x=0 to x=2 is:", options: ["4", "8/3", "2", "4/3"], correctAnswer: 1, explanation: "∫₀² x² dx = [x³/3]₀² = 8/3", subject: "Mathematics", difficulty: "Medium" },
-      { id: 8, question: "If f(x) = ln(x), then f'(x) =", options: ["x", "1/x", "ln(x)", "eˣ"], correctAnswer: 1, explanation: "d/dx(ln x) = 1/x", subject: "Mathematics", difficulty: "Easy" },
-      { id: 9, question: "The order of the differential equation y'' + 3y' + 2y = 0 is:", options: ["1", "2", "3", "0"], correctAnswer: 1, explanation: "The order is the highest derivative present, which is y'' (second derivative).", subject: "Mathematics", difficulty: "Medium" },
-      { id: 10, question: "∫ eˣ sin(x) dx using integration by parts equals:", options: ["eˣsin(x) - eˣcos(x))/2 + C", "eˣ(cos(x) + sin(x))/2 + C", "eˣsin(x)/2 + C", "eˣcos(x) + C"], correctAnswer: 0, explanation: "Using IBP twice: ∫eˣsin(x)dx = (eˣsin(x) - eˣcos(x))/2 + C", subject: "Mathematics", difficulty: "Hard" },
+      { id: 1, question: "If f(x) = x³, then f'(x) =", options: ["3x", "3x²", "x²", "3x³"], subject: "Mathematics", difficulty: "Easy" },
+      { id: 2, question: "∫ 2x dx =", options: ["x² + C", "2x² + C", "x + C", "2 + C"], subject: "Mathematics", difficulty: "Easy" },
+      { id: 3, question: "The derivative of sin(x) is:", options: ["cos(x)", "-cos(x)", "sin(x)", "-sin(x)"], subject: "Mathematics", difficulty: "Easy" },
+      { id: 4, question: "lim(x→0) sin(x)/x =", options: ["0", "1", "∞", "Does not exist"], subject: "Mathematics", difficulty: "Medium" },
+      { id: 5, question: "The integral ∫₀^π sin(x) dx equals:", options: ["0", "1", "2", "π"], subject: "Mathematics", difficulty: "Medium" },
+      { id: 6, question: "If y = eˣ, then dy/dx =", options: ["xeˣ⁻¹", "eˣ", "eˣ⁺¹", "1/eˣ"], subject: "Mathematics", difficulty: "Easy" },
+      { id: 7, question: "The area under y = x² from x=0 to x=2 is:", options: ["4", "8/3", "2", "4/3"], subject: "Mathematics", difficulty: "Medium" },
+      { id: 8, question: "If f(x) = ln(x), then f'(x) =", options: ["x", "1/x", "ln(x)", "eˣ"], subject: "Mathematics", difficulty: "Easy" },
+      { id: 9, question: "The order of the differential equation y'' + 3y' + 2y = 0 is:", options: ["1", "2", "3", "0"], subject: "Mathematics", difficulty: "Medium" },
+      { id: 10, question: "∫ eˣ sin(x) dx using integration by parts equals:", options: ["eˣsin(x) - eˣcos(x))/2 + C", "eˣ(cos(x) + sin(x))/2 + C", "eˣsin(x)/2 + C", "eˣcos(x) + C"], subject: "Mathematics", difficulty: "Hard" },
     ],
   },
   ...extraMockTests,

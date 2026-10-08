@@ -159,6 +159,57 @@ export async function submitEducationAttempt(input: {
   }
 }
 
+const API_BASE = (import.meta.env.VITE_API_URL || "").replace(/\/$/, "");
+
+/** Grade a bundled practice test. The answer key stays on the server. */
+export async function gradeStaticMock(input: {
+  testId: string;
+  answers: Array<{ questionId: number; selectedIndex?: number }>;
+}): Promise<
+  | { ok: true; score: number; maxScore: number; questions: GradedQuestion[] }
+  | { ok: false; error: "failed" }
+> {
+  try {
+    const response = await fetch(`${API_BASE}/api/education/grade-static`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        testId: input.testId,
+        answers: input.answers.map((answer) => ({
+          questionId: answer.questionId,
+          selectedIndex: answer.selectedIndex ?? null,
+        })),
+      }),
+    });
+    if (!response.ok) return { ok: false, error: "failed" };
+    const body = (await response.json()) as {
+      score?: number;
+      maxScore?: number;
+      questions?: Array<{
+        questionId?: number;
+        correctIndex?: number;
+        explanation?: string;
+        selectedIndex?: number | null;
+        isCorrect?: boolean;
+      }>;
+    };
+    return {
+      ok: true,
+      score: Number(body.score ?? 0),
+      maxScore: Number(body.maxScore ?? 0),
+      questions: (body.questions ?? []).map((item) => ({
+        questionId: String(item.questionId ?? ""),
+        correctIndex: Number(item.correctIndex ?? -1),
+        explanation: item.explanation ?? "",
+        selectedIndex: item.selectedIndex ?? null,
+        isCorrect: Boolean(item.isCorrect),
+      })),
+    };
+  } catch {
+    return { ok: false, error: "failed" };
+  }
+}
+
 /** @deprecated Scores are computed by submitEducationAttempt. Client inserts are rejected. */
 export async function saveEducationAttempt(input: {
   testId: string
