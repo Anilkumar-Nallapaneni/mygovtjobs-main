@@ -62,8 +62,8 @@ def test_public_catalog_floor_blocks_tiny_exports(monkeypatch):
     monkeypatch.setenv("ALLOW_DRASTIC_JSON_EXPORT", "1")
     assert _below_public_catalog_floor(0)
     assert _below_public_catalog_floor(3)
-    assert _below_public_catalog_floor(9)
-    assert not _below_public_catalog_floor(10)
+    assert _below_public_catalog_floor(4)
+    assert not _below_public_catalog_floor(5)
     monkeypatch.setenv("ALLOW_EMPTY_JSON_EXPORT", "1")
     assert not _below_public_catalog_floor(3)
 

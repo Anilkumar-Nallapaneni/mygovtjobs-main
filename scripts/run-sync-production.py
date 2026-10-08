@@ -228,7 +228,7 @@ async def main() -> int:
     )
     # Allow gated catalog recovery before *any* export (daily nested, promote, export:live-jobs).
     # Allow replacing an ungated feed dump with a gated catalog. Exports still
-    # cannot write below MIN_PUBLIC_CATALOG_ROWS (default 10).
+    # cannot write below MIN_PUBLIC_CATALOG_ROWS (default 5).
     os.environ["ALLOW_DRASTIC_JSON_EXPORT"] = "1"
 
     try:

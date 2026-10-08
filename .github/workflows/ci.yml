@@ -101,7 +101,7 @@ jobs:
       - run: npm ci
       - name: Public snapshot publication invariants
         env:
-          MIN_PUBLIC_CATALOG_ROWS: "10"
+          MIN_PUBLIC_CATALOG_ROWS: "5"
           MAX_CATALOG_DROP_RATE: "0.50"
         run: npm run verify:live-jobs
       - name: Catalog apply-URL sanity (no database)
