@@ -9,12 +9,12 @@
   "functions": {
     "api/india.py": {
       "maxDuration": 60,
-      "includeFiles": "{backend/app/**,shared/**}",
+      "includeFiles": "backend/app/**,shared/**"
       "excludeFiles": "{**/.venv/**,**/__pycache__/**,frontend/**,docs/**,data/**,scripts/**,backend/tests/**,**/.env,**/.env.*}"
     },
     "api/education.py": {
       "maxDuration": 10,
-      "includeFiles": "{backend/app/data/static_mock_keys.json,backend/app/routes/education.py,backend/app/services/static_mock_grade.py}"
+      "includeFiles": "backend/app/**"
     }
   },
   "headers": [
