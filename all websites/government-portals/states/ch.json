@@ -1,0 +1,15 @@
+{
+  "id": "ch",
+  "name": "Chandigarh",
+  "count": 1,
+  "portals": [
+    {
+      "id": "ch-personnel",
+      "name": "Chandigarh Administration — Personnel",
+      "url": "https://chandigarh.gov.in/",
+      "notificationsUrl": "https://chandigarh.gov.in/personnel",
+      "category": "state",
+      "scope": "state"
+    }
+  ]
+}

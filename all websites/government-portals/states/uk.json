@@ -1,0 +1,31 @@
+{
+  "id": "uk",
+  "name": "Uttarakhand",
+  "count": 3,
+  "portals": [
+    {
+      "id": "wii",
+      "name": "Wildlife Institute of India (WII)",
+      "url": "https://www.wii.gov.in/",
+      "notificationsUrl": "https://www.wii.gov.in/recruitments",
+      "category": "psu",
+      "scope": "central"
+    },
+    {
+      "id": "psc-uk",
+      "name": "Uttarakhand PSC (UKPSC)",
+      "url": "https://psc.uk.gov.in/",
+      "notificationsUrl": "https://psc.uk.gov.in/",
+      "category": "state",
+      "scope": "state"
+    },
+    {
+      "id": "ssb-uk",
+      "name": "Uttarakhand Subordinate Service Selection (UKSSSC)",
+      "url": "https://sssc.uk.gov.in/",
+      "notificationsUrl": "https://sssc.uk.gov.in/",
+      "category": "state",
+      "scope": "state"
+    }
+  ]
+}

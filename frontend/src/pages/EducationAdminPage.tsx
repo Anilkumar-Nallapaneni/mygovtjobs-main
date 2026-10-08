@@ -1,8 +1,6 @@
 import { useCallback, useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { getStoredAdminKey, setStoredAdminKey, type EducationCollection, fetchEducationCollection, fetchEducationOverview, createEducationRecord, updateEducationRecord, deleteEducationRecord, fetchEducationQuestions, createEducationQuestion, updateEducationQuestion, deleteEducationQuestion, recountEducationTest } from '@/lib/adminApi'
-import '@/styles/education-admin.css'
-
 const collections: {key: EducationCollection; label: string; starter: Record<string, unknown>}[] = [
  {key:'careers',label:'Careers',starter:{id:'new-career',name:'New Career',stage:'after12th',description:'',duration:'',eligibility:'',difficulty:'Moderate',avg_starting_salary:'',scope:'Medium',icon:'🎓',exams:[],top_colleges:[],key_skills:[],job_roles:[],next_steps:[],is_published:false,verified:false}},
  {key:'resources',label:'Resources',starter:{title:'New Resource',kind:'official',provider:'',description:'',source_url:'',file_url:'',exam:'',subject:'',stage:'',is_published:false,verified:false}},

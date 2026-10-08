@@ -1,0 +1,31 @@
+{
+  "id": "rj",
+  "name": "Rajasthan",
+  "count": 3,
+  "portals": [
+    {
+      "id": "psc-rj",
+      "name": "Rajasthan PSC (RPSC)",
+      "url": "https://rpsc.rajasthan.gov.in/",
+      "notificationsUrl": "https://rpsc.rajasthan.gov.in/advertisements",
+      "category": "state",
+      "scope": "state"
+    },
+    {
+      "id": "ssb-rj",
+      "name": "Rajasthan Staff Selection Board (RSSB)",
+      "url": "https://rsmssb.rajasthan.gov.in/",
+      "notificationsUrl": "https://rsmssb.rajasthan.gov.in/",
+      "category": "state",
+      "scope": "state"
+    },
+    {
+      "id": "police-rj",
+      "name": "Rajasthan Police Recruitment",
+      "url": "https://police.rajasthan.gov.in/",
+      "notificationsUrl": "https://recruitment2.rajasthan.gov.in/",
+      "category": "police",
+      "scope": "state"
+    }
+  ]
+}

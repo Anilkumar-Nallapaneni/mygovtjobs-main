@@ -1,0 +1,15 @@
+{
+  "id": "cg",
+  "name": "Chhattisgarh",
+  "count": 1,
+  "portals": [
+    {
+      "id": "psc-cg",
+      "name": "Chhattisgarh PSC (CGPSC)",
+      "url": "https://psc.cg.gov.in/",
+      "notificationsUrl": "https://psc.cg.gov.in/",
+      "category": "state",
+      "scope": "state"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "id": "ap",
+  "name": "Andhra Pradesh",
+  "count": 1,
+  "portals": [
+    {
+      "id": "psc-ap",
+      "name": "Andhra Pradesh PSC (APPSC)",
+      "url": "https://psc.ap.gov.in/",
+      "notificationsUrl": "https://psc.ap.gov.in/",
+      "category": "state",
+      "scope": "state"
+    }
+  ]
+}

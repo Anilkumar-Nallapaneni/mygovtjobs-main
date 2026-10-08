@@ -1,0 +1,23 @@
+{
+  "id": "pb",
+  "name": "Punjab",
+  "count": 2,
+  "portals": [
+    {
+      "id": "psc-pb",
+      "name": "Punjab PSC (PPSC)",
+      "url": "https://ppsc.gov.in/",
+      "notificationsUrl": "https://ppsc.gov.in/Notifications.aspx",
+      "category": "state",
+      "scope": "state"
+    },
+    {
+      "id": "dcourt-ludhiana",
+      "name": "District & Sessions Judge, Ludhiana",
+      "url": "https://ludhiana.dcourts.gov.in/",
+      "notificationsUrl": "https://ludhiana.dcourts.gov.in/notice-category/recruitments/",
+      "category": "state",
+      "scope": "state"
+    }
+  ]
+}

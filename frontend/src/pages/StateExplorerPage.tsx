@@ -6,7 +6,6 @@ import { getExplorerState, EXPLORER_CATEGORIES } from '@/data/india/indiaExplore
 import { toSvgStateId } from '@/data/states';
 import ExplorerCategoryCard from '@/components/india/ExplorerCategoryCard';
 import { useIndiaCategory, useIndiaDistricts, useIndiaState } from '@/hooks/useIndiaExplorer';
-import '@/styles/india-explorer.css';
 import { beginSeoHead } from '@/utils/seoHead';
 
 export default function StateExplorerPage() {

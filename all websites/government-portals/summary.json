@@ -1,0 +1,191 @@
+{
+  "generatedAt": "2026-10-08T15:55:38Z",
+  "whatThisIs": "Official recruitment portals already curated in this project, filed under central and all 36 states and union territories.",
+  "whatThisIsNot": "Not every government department website in India, and not the live vacancy list.",
+  "centralPortals": 77,
+  "statePortals": 89,
+  "statesAndUnionTerritories": 36,
+  "statesWithNoPortal": [],
+  "states": [
+    {
+      "id": "jk",
+      "name": "Jammu & Kashmir",
+      "count": 3
+    },
+    {
+      "id": "la",
+      "name": "Ladakh",
+      "count": 2
+    },
+    {
+      "id": "hp",
+      "name": "Himachal Pradesh",
+      "count": 2
+    },
+    {
+      "id": "pb",
+      "name": "Punjab",
+      "count": 2
+    },
+    {
+      "id": "hr",
+      "name": "Haryana",
+      "count": 3
+    },
+    {
+      "id": "dl",
+      "name": "Delhi",
+      "count": 4
+    },
+    {
+      "id": "ch",
+      "name": "Chandigarh",
+      "count": 1
+    },
+    {
+      "id": "uk",
+      "name": "Uttarakhand",
+      "count": 3
+    },
+    {
+      "id": "rj",
+      "name": "Rajasthan",
+      "count": 3
+    },
+    {
+      "id": "up",
+      "name": "Uttar Pradesh",
+      "count": 5
+    },
+    {
+      "id": "br",
+      "name": "Bihar",
+      "count": 5
+    },
+    {
+      "id": "sk",
+      "name": "Sikkim",
+      "count": 1
+    },
+    {
+      "id": "wb",
+      "name": "West Bengal",
+      "count": 3
+    },
+    {
+      "id": "as",
+      "name": "Assam",
+      "count": 2
+    },
+    {
+      "id": "ar",
+      "name": "Arunachal Pradesh",
+      "count": 1
+    },
+    {
+      "id": "nl",
+      "name": "Nagaland",
+      "count": 1
+    },
+    {
+      "id": "mn",
+      "name": "Manipur",
+      "count": 1
+    },
+    {
+      "id": "mz",
+      "name": "Mizoram",
+      "count": 1
+    },
+    {
+      "id": "tr",
+      "name": "Tripura",
+      "count": 1
+    },
+    {
+      "id": "ml",
+      "name": "Meghalaya",
+      "count": 1
+    },
+    {
+      "id": "jh",
+      "name": "Jharkhand",
+      "count": 2
+    },
+    {
+      "id": "od",
+      "name": "Odisha",
+      "count": 12
+    },
+    {
+      "id": "mp",
+      "name": "Madhya Pradesh",
+      "count": 5
+    },
+    {
+      "id": "cg",
+      "name": "Chhattisgarh",
+      "count": 1
+    },
+    {
+      "id": "gj",
+      "name": "Gujarat",
+      "count": 3
+    },
+    {
+      "id": "dd",
+      "name": "Dadra & Nagar Haveli and Daman & Diu",
+      "count": 1
+    },
+    {
+      "id": "mh",
+      "name": "Maharashtra",
+      "count": 3
+    },
+    {
+      "id": "ga",
+      "name": "Goa",
+      "count": 1
+    },
+    {
+      "id": "tg",
+      "name": "Telangana",
+      "count": 2
+    },
+    {
+      "id": "ap",
+      "name": "Andhra Pradesh",
+      "count": 1
+    },
+    {
+      "id": "ka",
+      "name": "Karnataka",
+      "count": 2
+    },
+    {
+      "id": "kl",
+      "name": "Kerala",
+      "count": 2
+    },
+    {
+      "id": "ld",
+      "name": "Lakshadweep",
+      "count": 1
+    },
+    {
+      "id": "tn",
+      "name": "Tamil Nadu",
+      "count": 4
+    },
+    {
+      "id": "py",
+      "name": "Puducherry",
+      "count": 2
+    },
+    {
+      "id": "an",
+      "name": "Andaman & Nicobar",
+      "count": 2
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "id": "nl",
+  "name": "Nagaland",
+  "count": 1,
+  "portals": [
+    {
+      "id": "psc-nl",
+      "name": "Nagaland PSC (NPSC)",
+      "url": "https://npsc.nagaland.gov.in/",
+      "notificationsUrl": "https://npsc.nagaland.gov.in/",
+      "category": "state",
+      "scope": "state"
+    }
+  ]
+}

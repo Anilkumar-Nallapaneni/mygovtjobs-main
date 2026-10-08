@@ -1,0 +1,15 @@
+{
+  "id": "ld",
+  "name": "Lakshadweep",
+  "count": 1,
+  "portals": [
+    {
+      "id": "ld-recruitment",
+      "name": "Lakshadweep Administration — Recruitments",
+      "url": "https://lakshadweep.gov.in/",
+      "notificationsUrl": "https://lakshadweep.gov.in/notice_category/recruitment/",
+      "category": "state",
+      "scope": "state"
+    }
+  ]
+}

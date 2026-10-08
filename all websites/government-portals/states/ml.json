@@ -1,0 +1,15 @@
+{
+  "id": "ml",
+  "name": "Meghalaya",
+  "count": 1,
+  "portals": [
+    {
+      "id": "psc-ml",
+      "name": "Meghalaya PSC",
+      "url": "https://mpsc.meghalaya.gov.in/",
+      "notificationsUrl": "https://mpsc.meghalaya.gov.in/advertisements.html",
+      "category": "state",
+      "scope": "state"
+    }
+  ]
+}

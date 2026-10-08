@@ -81,6 +81,31 @@ def load_official_sites() -> list[dict[str, Any]]:
             }
         )
 
+    for match in re.finditer(
+        r'dcourt\(\s*"([^"]+)"\s*,\s*"([^"]+)"\s*,\s*"([^"]+)"\s*\)',
+        text,
+    ):
+        slug, name, state_id = match.groups()
+        url = f"https://{slug}.dcourts.gov.in/"
+        latest = f"{url}notice-category/recruitments/"
+        sites.append(
+            {
+                "id": f"dcourt-{slug}",
+                "name": name,
+                "url": url,
+                "latestUrl": latest,
+                "domain": _host(url),
+                "baseUrl": _base_url(url),
+                "type": "official",
+                "scope": "state",
+                "category": "state",
+                "stateIds": [state_id],
+                "stateNames": [STATE_NAMES.get(state_id, state_id)],
+                "notes": "District court recruitments (hyper-local)",
+                "source": "officialSites.ts",
+            }
+        )
+
     return sites
 
 

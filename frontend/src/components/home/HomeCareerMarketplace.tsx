@@ -1,6 +1,4 @@
 import { Link } from "react-router-dom";
-import "@/styles/topmate-inspired.css";
-
 const offerings = [
   { icon: "📅", title: "Exams & Calendar", text: "Browse examinations and upcoming dates.", href: "/exams", action: "Browse exams" },
   { icon: "📋", title: "Results & Admit Cards", text: "Check official exam updates and results.", href: "/results", action: "View results" },

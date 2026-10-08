@@ -1,0 +1,15 @@
+{
+  "id": "ar",
+  "name": "Arunachal Pradesh",
+  "count": 1,
+  "portals": [
+    {
+      "id": "psc-ar",
+      "name": "Arunachal Pradesh PSC (APPSC)",
+      "url": "https://appsc.gov.in/Index/institute_index/ins/RECINS001",
+      "notificationsUrl": "https://appsc.gov.in/Index/institute_index/ins/RECINS001",
+      "category": "state",
+      "scope": "state"
+    }
+  ]
+}

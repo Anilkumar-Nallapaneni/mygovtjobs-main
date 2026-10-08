@@ -1,0 +1,23 @@
+{
+  "id": "as",
+  "name": "Assam",
+  "count": 2,
+  "portals": [
+    {
+      "id": "psc-as",
+      "name": "Assam PSC (APSC)",
+      "url": "https://apsc.nic.in/",
+      "notificationsUrl": "https://apsc.nic.in/notifications",
+      "category": "state",
+      "scope": "state"
+    },
+    {
+      "id": "ss-goalpara",
+      "name": "Sainik School Goalpara",
+      "url": "https://sainikschoolgoalpara.org/",
+      "notificationsUrl": "https://sainikschoolgoalpara.org/",
+      "category": "teaching",
+      "scope": "state"
+    }
+  ]
+}

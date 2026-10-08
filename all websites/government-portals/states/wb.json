@@ -1,0 +1,31 @@
+{
+  "id": "wb",
+  "name": "West Bengal",
+  "count": 3,
+  "portals": [
+    {
+      "id": "psc-wb",
+      "name": "West Bengal PSC (WBPSC)",
+      "url": "https://wbpsc.gov.in/",
+      "notificationsUrl": "https://wbpsc.gov.in/",
+      "category": "state",
+      "scope": "state"
+    },
+    {
+      "id": "dcourt-howrah",
+      "name": "District & Sessions Judge, Howrah",
+      "url": "https://howrah.dcourts.gov.in/",
+      "notificationsUrl": "https://howrah.dcourts.gov.in/notice-category/recruitments/",
+      "category": "state",
+      "scope": "state"
+    },
+    {
+      "id": "dcourt-coochbehar",
+      "name": "District & Sessions Judge, Cooch Behar",
+      "url": "https://coochbehar.dcourts.gov.in/",
+      "notificationsUrl": "https://coochbehar.dcourts.gov.in/notice-category/recruitments/",
+      "category": "state",
+      "scope": "state"
+    }
+  ]
+}

@@ -4,8 +4,6 @@ import { Link } from 'react-router-dom'
 import { useAuth } from '@/hooks/useAuth'
 import { loadEducationAttempts, updateEducationProfile, loadPublishedCareers, type EducationAttempt } from '@/lib/educationApi'
 import type { CareerPath } from '@/data/education/careerPaths'
-import '@/styles/education-dashboard.css'
-
 const stages = ['after10th', 'after12th', 'afterDegree', 'afterPG']
 const exams = ['JEE Main', 'NEET', 'CUET', 'GATE', 'CAT', 'UPSC CSE', 'SSC', 'Banking', 'Railway']
 

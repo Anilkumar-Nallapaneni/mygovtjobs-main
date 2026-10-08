@@ -31,9 +31,6 @@ import { normalizeDistrictKey } from "@/data/stateDistricts";
 import type { HomePageProps } from "@/types/homePage";
 
 import type { HeadlinesViewMode } from "@/lib/officialFeed";
-import "@/styles/home.css";
-import "@/styles/polish.css";
-import "@/styles/animations.css";
 
 const OfficialHeadlinesSection = lazy(() => import("@/components/home/OfficialHeadlinesSection"));
 const HomeDiscoveryBlock = lazy(() => import("@/components/home/HomeDiscoveryBlock"));

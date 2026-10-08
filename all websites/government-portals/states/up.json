@@ -1,0 +1,47 @@
+{
+  "id": "up",
+  "name": "Uttar Pradesh",
+  "count": 5,
+  "portals": [
+    {
+      "id": "psc-up",
+      "name": "Uttar Pradesh PSC (UPPSC)",
+      "url": "https://uppsc.up.nic.in/",
+      "notificationsUrl": "https://uppsc.up.nic.in/Notifications.aspx",
+      "category": "state",
+      "scope": "state"
+    },
+    {
+      "id": "ssb-up",
+      "name": "UP Subordinate Services Selection Comm (UPSSSC)",
+      "url": "https://upsssc.gov.in/",
+      "notificationsUrl": "https://upsssc.gov.in/AllNotifications.aspx",
+      "category": "state",
+      "scope": "state"
+    },
+    {
+      "id": "police-up",
+      "name": "UP Police Recruitment Board (UPPRPB)",
+      "url": "https://uppbpb.gov.in/",
+      "notificationsUrl": "https://uppbpb.gov.in/",
+      "category": "police",
+      "scope": "state"
+    },
+    {
+      "id": "ss-jhansi",
+      "name": "Sainik School Jhansi",
+      "url": "https://www.sainikschooljhansi.com/",
+      "notificationsUrl": "https://www.sainikschooljhansi.com/files/recruitments/",
+      "category": "teaching",
+      "scope": "state"
+    },
+    {
+      "id": "dcourt-sitapur",
+      "name": "District & Sessions Judge, Sitapur",
+      "url": "https://sitapur.dcourts.gov.in/",
+      "notificationsUrl": "https://sitapur.dcourts.gov.in/notice-category/recruitments/",
+      "category": "state",
+      "scope": "state"
+    }
+  ]
+}

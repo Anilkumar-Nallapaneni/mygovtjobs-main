@@ -1,0 +1,23 @@
+{
+  "id": "la",
+  "name": "Ladakh",
+  "count": 2,
+  "portals": [
+    {
+      "id": "la-gov",
+      "name": "Ladakh UT — Official Portal",
+      "url": "https://ladakh.gov.in/",
+      "notificationsUrl": "https://ladakh.gov.in/",
+      "category": "state",
+      "scope": "state"
+    },
+    {
+      "id": "la-recruitment",
+      "name": "Ladakh UT — Recruitment",
+      "url": "https://ladakh.gov.in/recruitment",
+      "notificationsUrl": "https://ladakh.gov.in/recruitment",
+      "category": "state",
+      "scope": "state"
+    }
+  ]
+}

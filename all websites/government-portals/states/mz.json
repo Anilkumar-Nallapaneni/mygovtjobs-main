@@ -1,0 +1,15 @@
+{
+  "id": "mz",
+  "name": "Mizoram",
+  "count": 1,
+  "portals": [
+    {
+      "id": "psc-mz",
+      "name": "Mizoram PSC",
+      "url": "https://mpsc.mizoram.gov.in/",
+      "notificationsUrl": "https://mpsc.mizoram.gov.in/",
+      "category": "state",
+      "scope": "state"
+    }
+  ]
+}

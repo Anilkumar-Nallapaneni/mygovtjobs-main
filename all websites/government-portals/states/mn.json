@@ -1,0 +1,15 @@
+{
+  "id": "mn",
+  "name": "Manipur",
+  "count": 1,
+  "portals": [
+    {
+      "id": "psc-mn",
+      "name": "Manipur PSC",
+      "url": "https://mpscmanipur.gov.in/",
+      "notificationsUrl": "https://mpscmanipur.gov.in/",
+      "category": "state",
+      "scope": "state"
+    }
+  ]
+}

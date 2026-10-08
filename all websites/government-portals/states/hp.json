@@ -1,0 +1,23 @@
+{
+  "id": "hp",
+  "name": "Himachal Pradesh",
+  "count": 2,
+  "portals": [
+    {
+      "id": "psc-hp",
+      "name": "Himachal Pradesh PSC (HPPSC)",
+      "url": "https://hppsc.hp.gov.in/",
+      "notificationsUrl": "https://hppsc.hp.gov.in/hppsc/",
+      "category": "state",
+      "scope": "state"
+    },
+    {
+      "id": "dcourt-kullu",
+      "name": "District & Sessions Judge, Kullu",
+      "url": "https://kullu.dcourts.gov.in/",
+      "notificationsUrl": "https://kullu.dcourts.gov.in/notice-category/recruitments/",
+      "category": "state",
+      "scope": "state"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "id": "py",
+  "name": "Puducherry",
+  "count": 2,
+  "portals": [
+    {
+      "id": "py-rec",
+      "name": "Puducherry Recruitment Portal",
+      "url": "https://recruitment.py.gov.in/",
+      "notificationsUrl": "https://recruitment.py.gov.in/",
+      "category": "state",
+      "scope": "state"
+    },
+    {
+      "id": "py-psc",
+      "name": "Puducherry PSC",
+      "url": "https://py.gov.in/websites/PuducherryPublicServiceCommission",
+      "notificationsUrl": "https://py.gov.in/websites/PuducherryPublicServiceCommission",
+      "category": "state",
+      "scope": "state"
+    }
+  ]
+}

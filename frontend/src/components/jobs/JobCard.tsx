@@ -14,8 +14,6 @@ import { formatJobDate } from "@/utils/formatJobDate";
 import { dateTimeLocale, numberLocale } from "@/utils/formatLocale";
 import { extractPostName } from "@/utils/extractPostName";
 import BookmarkButton from "@/components/jobs/BookmarkButton";
-import "@/styles/jobs.css";
-
 const DAY_MS = 1000 * 60 * 60 * 24;
 
 function formatCardDate(value: string | undefined | null, _locale: string, compact: boolean) {

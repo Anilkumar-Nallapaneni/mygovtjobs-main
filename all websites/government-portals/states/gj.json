@@ -1,0 +1,31 @@
+{
+  "id": "gj",
+  "name": "Gujarat",
+  "count": 3,
+  "portals": [
+    {
+      "id": "bisag-n",
+      "name": "BISAG-N — Careers",
+      "url": "https://bisag-n.gov.in/",
+      "notificationsUrl": "https://bisag-n.gov.in/",
+      "category": "psu",
+      "scope": "state"
+    },
+    {
+      "id": "psc-gj",
+      "name": "Gujarat PSC (GPSC)",
+      "url": "https://gpsc.gujarat.gov.in/",
+      "notificationsUrl": "https://gpsc.gujarat.gov.in/",
+      "category": "state",
+      "scope": "state"
+    },
+    {
+      "id": "ssb-gj",
+      "name": "Gujarat Subordinate Services Selection Board",
+      "url": "https://gsssb.gujarat.gov.in/",
+      "notificationsUrl": "https://gsssb.gujarat.gov.in/",
+      "category": "state",
+      "scope": "state"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "id": "tr",
+  "name": "Tripura",
+  "count": 1,
+  "portals": [
+    {
+      "id": "psc-tr",
+      "name": "Tripura PSC (TPSC)",
+      "url": "https://tpsc.tripura.gov.in/",
+      "notificationsUrl": "https://tpsc.tripura.gov.in/",
+      "category": "state",
+      "scope": "state"
+    }
+  ]
+}

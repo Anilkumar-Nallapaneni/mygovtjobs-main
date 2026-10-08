@@ -1,0 +1,47 @@
+{
+  "id": "br",
+  "name": "Bihar",
+  "count": 5,
+  "portals": [
+    {
+      "id": "rrb-muzaffarpur",
+      "name": "Railway Recruitment Board (RRB) — Muzaffarpur",
+      "url": "https://rrb.indianrailways.gov.in/",
+      "notificationsUrl": "https://rrb.indianrailways.gov.in/muzaffarpur",
+      "category": "railways",
+      "scope": "central"
+    },
+    {
+      "id": "psc-br",
+      "name": "Bihar PSC (BPSC)",
+      "url": "https://bpsc.bihar.gov.in/",
+      "notificationsUrl": "https://onlinebpsc.bihar.gov.in/",
+      "category": "state",
+      "scope": "state"
+    },
+    {
+      "id": "ss-gopalganj",
+      "name": "Sainik School Gopalganj",
+      "url": "https://www.ssgopalganj.in/",
+      "notificationsUrl": "https://www.ssgopalganj.in/Documents/vacancy/",
+      "category": "teaching",
+      "scope": "state"
+    },
+    {
+      "id": "dcourt-begusarai",
+      "name": "District & Sessions Judge, Begusarai",
+      "url": "https://begusarai.dcourts.gov.in/",
+      "notificationsUrl": "https://begusarai.dcourts.gov.in/notice-category/recruitments/",
+      "category": "state",
+      "scope": "state"
+    },
+    {
+      "id": "dcourt-bhojpur",
+      "name": "District & Sessions Judge, Bhojpur",
+      "url": "https://bhojpur.dcourts.gov.in/",
+      "notificationsUrl": "https://bhojpur.dcourts.gov.in/notice-category/recruitments/",
+      "category": "state",
+      "scope": "state"
+    }
+  ]
+}

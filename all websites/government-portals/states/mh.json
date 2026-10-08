@@ -1,0 +1,31 @@
+{
+  "id": "mh",
+  "name": "Maharashtra",
+  "count": 3,
+  "portals": [
+    {
+      "id": "psc-mh",
+      "name": "Maharashtra PSC (MPSC)",
+      "url": "https://mpsc.gov.in/",
+      "notificationsUrl": "https://mpsc.gov.in/english/notices",
+      "category": "state",
+      "scope": "state"
+    },
+    {
+      "id": "ssb-mh",
+      "name": "Maharashtra PSC notices (MahaPariksha host retired)",
+      "url": "https://mpsc.gov.in/",
+      "notificationsUrl": "https://mpsc.gov.in/english/notices",
+      "category": "state",
+      "scope": "state"
+    },
+    {
+      "id": "police-mh",
+      "name": "Maharashtra Police Recruitment",
+      "url": "https://www.mahapolice.gov.in/",
+      "notificationsUrl": "https://www.mahapolice.gov.in/",
+      "category": "police",
+      "scope": "state"
+    }
+  ]
+}

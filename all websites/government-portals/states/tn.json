@@ -1,0 +1,39 @@
+{
+  "id": "tn",
+  "name": "Tamil Nadu",
+  "count": 4,
+  "portals": [
+    {
+      "id": "psc-tn",
+      "name": "Tamil Nadu PSC (TNPSC)",
+      "url": "https://www.tnpsc.gov.in/",
+      "notificationsUrl": "https://www.tnpsc.gov.in/",
+      "category": "state",
+      "scope": "state"
+    },
+    {
+      "id": "ssb-tn",
+      "name": "TN Teachers Recruitment Board (TRB)",
+      "url": "https://trb.tn.gov.in/",
+      "notificationsUrl": "https://trb.tn.gov.in/",
+      "category": "teaching",
+      "scope": "state"
+    },
+    {
+      "id": "police-tn",
+      "name": "Tamil Nadu Uniformed Services (TNUSRB)",
+      "url": "https://tnusrb.tn.gov.in/",
+      "notificationsUrl": "https://tnusrb.tn.gov.in/",
+      "category": "police",
+      "scope": "state"
+    },
+    {
+      "id": "ss-amaravathi",
+      "name": "Sainik School Amaravathinagar",
+      "url": "https://www.sainikschoolamaravathinagar.edu.in/",
+      "notificationsUrl": "https://www.sainikschoolamaravathinagar.edu.in/careers.php",
+      "category": "teaching",
+      "scope": "state"
+    }
+  ]
+}

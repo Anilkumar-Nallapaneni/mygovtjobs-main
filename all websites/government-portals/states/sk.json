@@ -1,0 +1,15 @@
+{
+  "id": "sk",
+  "name": "Sikkim",
+  "count": 1,
+  "portals": [
+    {
+      "id": "psc-sk",
+      "name": "Sikkim PSC (SPSC)",
+      "url": "https://spscskm.gov.in/",
+      "notificationsUrl": "https://spscskm.gov.in/",
+      "category": "state",
+      "scope": "state"
+    }
+  ]
+}

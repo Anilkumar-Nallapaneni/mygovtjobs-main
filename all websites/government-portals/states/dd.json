@@ -1,0 +1,15 @@
+{
+  "id": "dd",
+  "name": "Dadra & Nagar Haveli and Daman & Diu",
+  "count": 1,
+  "portals": [
+    {
+      "id": "dd-recruitment",
+      "name": "Dadra & Nagar Haveli and Daman & Diu — Recruitments",
+      "url": "https://ddd.gov.in/",
+      "notificationsUrl": "https://ddd.gov.in/notice-category/recruitments/",
+      "category": "state",
+      "scope": "state"
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "id": "jk",
+  "name": "Jammu & Kashmir",
+  "count": 3,
+  "portals": [
+    {
+      "id": "rrb-jammu",
+      "name": "Railway Recruitment Board (RRB) — Jammu & Srinagar",
+      "url": "https://rrb.indianrailways.gov.in/",
+      "notificationsUrl": "https://rrb.indianrailways.gov.in/jammu",
+      "category": "railways",
+      "scope": "central"
+    },
+    {
+      "id": "psc-jk",
+      "name": "Jammu & Kashmir PSC (JKPSC)",
+      "url": "https://jkpsc.nic.in/",
+      "notificationsUrl": "https://jkpsc.nic.in/Notifications.html",
+      "category": "state",
+      "scope": "state"
+    },
+    {
+      "id": "ssb-jk",
+      "name": "J&K Services Selection Board (JKSSB)",
+      "url": "https://jkssb.nic.in/",
+      "notificationsUrl": "https://jkssb.nic.in/",
+      "category": "state",
+      "scope": "state"
+    }
+  ]
+}

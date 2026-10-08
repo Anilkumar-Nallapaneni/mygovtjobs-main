@@ -1,0 +1,39 @@
+{
+  "id": "dl",
+  "name": "Delhi",
+  "count": 4,
+  "portals": [
+    {
+      "id": "nsut",
+      "name": "Netaji Subhas University of Technology (NSUT)",
+      "url": "https://www.nsut.ac.in/",
+      "notificationsUrl": "https://www.nsut.ac.in/teaching-post/105",
+      "category": "teaching",
+      "scope": "state"
+    },
+    {
+      "id": "delhi-police",
+      "name": "Delhi Police — Recruitment",
+      "url": "https://www.delhipolice.gov.in/",
+      "notificationsUrl": "https://www.delhipolice.gov.in/recruitment",
+      "category": "police",
+      "scope": "uniform"
+    },
+    {
+      "id": "delhi-portal",
+      "name": "Delhi Govt — Job Notifications",
+      "url": "https://delhi.gov.in/",
+      "notificationsUrl": "https://labour.delhi.gov.in/",
+      "category": "state",
+      "scope": "state"
+    },
+    {
+      "id": "psc-dl",
+      "name": "Delhi Subordinate Services (DSSSB)",
+      "url": "https://dsssbonline.nic.in/",
+      "notificationsUrl": "https://dsssbonline.nic.in/",
+      "category": "state",
+      "scope": "state"
+    }
+  ]
+}

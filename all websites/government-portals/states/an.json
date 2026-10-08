@@ -1,0 +1,23 @@
+{
+  "id": "an",
+  "name": "Andaman & Nicobar",
+  "count": 2,
+  "portals": [
+    {
+      "id": "an-rec",
+      "name": "Andaman & Nicobar e-Recruitment",
+      "url": "https://erecruitment.andamannicobar.gov.in/",
+      "notificationsUrl": "https://erecruitment.andamannicobar.gov.in/",
+      "category": "state",
+      "scope": "state"
+    },
+    {
+      "id": "an-gov",
+      "name": "Andaman & Nicobar Administration",
+      "url": "https://andamannicobar.gov.in/",
+      "notificationsUrl": "https://andamannicobar.gov.in/",
+      "category": "state",
+      "scope": "state"
+    }
+  ]
+}

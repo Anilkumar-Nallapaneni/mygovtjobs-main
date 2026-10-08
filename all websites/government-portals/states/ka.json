@@ -1,0 +1,23 @@
+{
+  "id": "ka",
+  "name": "Karnataka",
+  "count": 2,
+  "portals": [
+    {
+      "id": "psc-ka",
+      "name": "Karnataka PSC (KPSC)",
+      "url": "https://kpsc.kar.nic.in/",
+      "notificationsUrl": "https://kpsc.kar.nic.in/notifications.html",
+      "category": "state",
+      "scope": "state"
+    },
+    {
+      "id": "police-ka",
+      "name": "Karnataka State Police Recruitment",
+      "url": "https://ksp.karnataka.gov.in/",
+      "notificationsUrl": "https://ksp.karnataka.gov.in/",
+      "category": "police",
+      "scope": "state"
+    }
+  ]
+}

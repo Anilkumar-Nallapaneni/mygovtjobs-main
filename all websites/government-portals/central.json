@@ -1,0 +1,623 @@
+{
+  "level": "central",
+  "name": "Central and All India",
+  "count": 77,
+  "portals": [
+    {
+      "id": "employment-news",
+      "name": "Employment News (Government of India)",
+      "url": "https://employmentnews.gov.in/",
+      "notificationsUrl": "https://employmentnews.gov.in/",
+      "category": "general",
+      "scope": "central"
+    },
+    {
+      "id": "pib",
+      "name": "Press Information Bureau (PIB)",
+      "url": "https://www.pib.gov.in/",
+      "notificationsUrl": "https://www.pib.gov.in/",
+      "category": "general",
+      "scope": "central"
+    },
+    {
+      "id": "upsc",
+      "name": "Union Public Service Commission (UPSC)",
+      "url": "https://upsc.gov.in/",
+      "notificationsUrl": "https://upsc.gov.in/whats-new",
+      "category": "upsc",
+      "scope": "central"
+    },
+    {
+      "id": "ssc",
+      "name": "Staff Selection Commission (SSC)",
+      "url": "https://ssc.gov.in/",
+      "notificationsUrl": "https://ssc.gov.in/home/notice-board",
+      "category": "ssc",
+      "scope": "central"
+    },
+    {
+      "id": "ibps",
+      "name": "Institute of Banking Personnel Selection",
+      "url": "https://www.ibps.in/",
+      "notificationsUrl": "https://www.ibps.in/notification",
+      "category": "banking",
+      "scope": "central"
+    },
+    {
+      "id": "rbi",
+      "name": "Reserve Bank of India — Careers",
+      "url": "https://www.rbi.org.in/",
+      "notificationsUrl": "https://www.rbi.org.in/Scripts/Opportunities.aspx",
+      "category": "banking",
+      "scope": "central"
+    },
+    {
+      "id": "sebi",
+      "name": "Securities and Exchange Board of India",
+      "url": "https://www.sebi.gov.in/",
+      "notificationsUrl": "https://www.sebi.gov.in/sebiweb/home/HomeAction.do?doListingAll=yes&search=&category=Notifications",
+      "category": "banking",
+      "scope": "central"
+    },
+    {
+      "id": "lic",
+      "name": "Life Insurance Corporation — Careers",
+      "url": "https://licindia.in/",
+      "notificationsUrl": "https://licindia.in/careers",
+      "category": "banking",
+      "scope": "central"
+    },
+    {
+      "id": "epfo",
+      "name": "Employees' Provident Fund Organisation",
+      "url": "https://www.epfindia.gov.in/",
+      "notificationsUrl": "https://www.epfindia.gov.in/site_en/Recruitment.php",
+      "category": "psu",
+      "scope": "central"
+    },
+    {
+      "id": "esic",
+      "name": "Employees' State Insurance Corporation",
+      "url": "https://www.esic.gov.in/",
+      "notificationsUrl": "https://www.esic.gov.in/recruitments",
+      "category": "health",
+      "scope": "central"
+    },
+    {
+      "id": "niti",
+      "name": "NITI Aayog",
+      "url": "https://www.niti.gov.in/",
+      "notificationsUrl": "https://www.niti.gov.in/whats-new",
+      "category": "psu",
+      "scope": "central"
+    },
+    {
+      "id": "apeda",
+      "name": "APEDA / BEDF — Recruitments",
+      "url": "https://apeda.gov.in/",
+      "notificationsUrl": "https://apeda.gov.in/recruitment-appointment",
+      "category": "psu",
+      "scope": "central"
+    },
+    {
+      "id": "apprenticeship-india",
+      "name": "National Apprenticeship Promotion Scheme",
+      "url": "https://www.apprenticeshipindia.gov.in/",
+      "notificationsUrl": "https://www.apprenticeshipindia.gov.in/",
+      "category": "general",
+      "scope": "central"
+    },
+    {
+      "id": "isro",
+      "name": "Indian Space Research Organisation (ISRO)",
+      "url": "https://www.isro.gov.in/",
+      "notificationsUrl": "https://www.isro.gov.in/Careers.html",
+      "category": "psu",
+      "scope": "central"
+    },
+    {
+      "id": "drdo",
+      "name": "Defence Research & Development Organisation",
+      "url": "https://www.drdo.gov.in/",
+      "notificationsUrl": "https://www.drdo.gov.in/",
+      "category": "defence",
+      "scope": "central"
+    },
+    {
+      "id": "barc",
+      "name": "Bhabha Atomic Research Centre (BARC)",
+      "url": "https://www.barc.gov.in/",
+      "notificationsUrl": "https://www.barc.gov.in/careers/",
+      "category": "defence",
+      "scope": "central"
+    },
+    {
+      "id": "npcil",
+      "name": "Nuclear Power Corporation of India (NPCIL)",
+      "url": "https://www.npcil.nic.in/",
+      "notificationsUrl": "https://www.npcil.nic.in/content/331_1_Recruitments.aspx",
+      "category": "psu",
+      "scope": "psu"
+    },
+    {
+      "id": "rrb",
+      "name": "Railway Recruitment Board — unified portal",
+      "url": "https://rrb.indianrailways.gov.in/",
+      "notificationsUrl": "https://rrb.indianrailways.gov.in/",
+      "category": "railways",
+      "scope": "central"
+    },
+    {
+      "id": "rrb-apply",
+      "name": "RRB — Apply online",
+      "url": "https://www.rrbapply.gov.in/",
+      "notificationsUrl": "https://www.rrbapply.gov.in/",
+      "category": "railways",
+      "scope": "central"
+    },
+    {
+      "id": "rrb-cdg",
+      "name": "Railway Recruitment Board (RRB) — Chandigarh",
+      "url": "https://rrb.indianrailways.gov.in/",
+      "notificationsUrl": "https://rrb.indianrailways.gov.in/chandigarh",
+      "category": "railways",
+      "scope": "central"
+    },
+    {
+      "id": "rrb-ald",
+      "name": "Railway Recruitment Board (RRB) — Prayagraj",
+      "url": "https://rrb.indianrailways.gov.in/",
+      "notificationsUrl": "https://rrb.indianrailways.gov.in/prayagraj",
+      "category": "railways",
+      "scope": "central"
+    },
+    {
+      "id": "rrb-mumbai",
+      "name": "Railway Recruitment Board (RRB) — Mumbai",
+      "url": "https://rrb.indianrailways.gov.in/",
+      "notificationsUrl": "https://rrb.indianrailways.gov.in/mumbai",
+      "category": "railways",
+      "scope": "central"
+    },
+    {
+      "id": "rrb-ajmer",
+      "name": "Railway Recruitment Board (RRB) — Ajmer",
+      "url": "https://rrb.indianrailways.gov.in/",
+      "notificationsUrl": "https://rrb.indianrailways.gov.in/ajmer",
+      "category": "railways",
+      "scope": "central"
+    },
+    {
+      "id": "rrb-bhopal",
+      "name": "Railway Recruitment Board (RRB) — Bhopal",
+      "url": "https://rrb.indianrailways.gov.in/",
+      "notificationsUrl": "https://rrb.indianrailways.gov.in/bhopal",
+      "category": "railways",
+      "scope": "central"
+    },
+    {
+      "id": "rrb-bbs",
+      "name": "Railway Recruitment Board (RRB) — Bhubaneswar",
+      "url": "https://rrb.indianrailways.gov.in/",
+      "notificationsUrl": "https://rrb.indianrailways.gov.in/bhubaneswar",
+      "category": "railways",
+      "scope": "central"
+    },
+    {
+      "id": "rrb-bilaspur",
+      "name": "Railway Recruitment Board (RRB) — Bilaspur",
+      "url": "https://rrb.indianrailways.gov.in/",
+      "notificationsUrl": "https://rrb.indianrailways.gov.in/bilaspur",
+      "category": "railways",
+      "scope": "central"
+    },
+    {
+      "id": "rrb-gorakhpur",
+      "name": "Railway Recruitment Board (RRB) — Gorakhpur",
+      "url": "https://rrb.indianrailways.gov.in/",
+      "notificationsUrl": "https://rrb.indianrailways.gov.in/gorakhpur",
+      "category": "railways",
+      "scope": "central"
+    },
+    {
+      "id": "rrb-guwahati",
+      "name": "Railway Recruitment Board (RRB) — Guwahati",
+      "url": "https://rrb.indianrailways.gov.in/",
+      "notificationsUrl": "https://rrb.indianrailways.gov.in/guwahati",
+      "category": "railways",
+      "scope": "central"
+    },
+    {
+      "id": "rrb-kolkata",
+      "name": "Railway Recruitment Board (RRB) — Kolkata",
+      "url": "https://rrb.indianrailways.gov.in/",
+      "notificationsUrl": "https://rrb.indianrailways.gov.in/kolkata",
+      "category": "railways",
+      "scope": "central"
+    },
+    {
+      "id": "rrb-malda",
+      "name": "Railway Recruitment Board (RRB) — Malda",
+      "url": "https://rrb.indianrailways.gov.in/",
+      "notificationsUrl": "https://rrb.indianrailways.gov.in/malda",
+      "category": "railways",
+      "scope": "central"
+    },
+    {
+      "id": "rrb-patna",
+      "name": "Railway Recruitment Board (RRB) — Patna",
+      "url": "https://rrb.indianrailways.gov.in/",
+      "notificationsUrl": "https://rrb.indianrailways.gov.in/patna",
+      "category": "railways",
+      "scope": "central"
+    },
+    {
+      "id": "rrb-ranchi",
+      "name": "Railway Recruitment Board (RRB) — Ranchi",
+      "url": "https://rrb.indianrailways.gov.in/",
+      "notificationsUrl": "https://rrb.indianrailways.gov.in/ranchi",
+      "category": "railways",
+      "scope": "central"
+    },
+    {
+      "id": "rrb-sec",
+      "name": "Railway Recruitment Board (RRB) — Secunderabad",
+      "url": "https://rrb.indianrailways.gov.in/",
+      "notificationsUrl": "https://rrb.indianrailways.gov.in/secunderabad",
+      "category": "railways",
+      "scope": "central"
+    },
+    {
+      "id": "rrb-siliguri",
+      "name": "Railway Recruitment Board (RRB) — Siliguri",
+      "url": "https://rrb.indianrailways.gov.in/",
+      "notificationsUrl": "https://rrb.indianrailways.gov.in/siliguri",
+      "category": "railways",
+      "scope": "central"
+    },
+    {
+      "id": "rrb-tvm",
+      "name": "Railway Recruitment Board (RRB) — Thiruvananthapuram",
+      "url": "https://rrb.indianrailways.gov.in/",
+      "notificationsUrl": "https://rrb.indianrailways.gov.in/thiruvananthapuram",
+      "category": "railways",
+      "scope": "central"
+    },
+    {
+      "id": "rrb-ahmedabad",
+      "name": "Railway Recruitment Board (RRB) — Ahmedabad",
+      "url": "https://rrb.indianrailways.gov.in/",
+      "notificationsUrl": "https://rrb.indianrailways.gov.in/ahmedabad",
+      "category": "railways",
+      "scope": "central"
+    },
+    {
+      "id": "rrb-bangalore",
+      "name": "Railway Recruitment Board (RRB) — Bangalore",
+      "url": "https://rrb.indianrailways.gov.in/",
+      "notificationsUrl": "https://rrb.indianrailways.gov.in/bangalore",
+      "category": "railways",
+      "scope": "central"
+    },
+    {
+      "id": "rrb-chennai",
+      "name": "Railway Recruitment Board (RRB) — Chennai",
+      "url": "https://rrb.indianrailways.gov.in/",
+      "notificationsUrl": "https://rrb.indianrailways.gov.in/chennai",
+      "category": "railways",
+      "scope": "central"
+    },
+    {
+      "id": "rrcb",
+      "name": "Railway Recruitment Cells (RRC)",
+      "url": "https://www.rrcb.gov.in/",
+      "notificationsUrl": "https://www.rrcb.gov.in/",
+      "category": "railways",
+      "scope": "central"
+    },
+    {
+      "id": "ircon",
+      "name": "IRCON International",
+      "url": "https://ircon.org/",
+      "notificationsUrl": "https://ircon.org/",
+      "category": "railways",
+      "scope": "psu"
+    },
+    {
+      "id": "fci",
+      "name": "Food Corporation of India (FCI)",
+      "url": "https://fci.gov.in/",
+      "notificationsUrl": "https://fci.gov.in/en/careers/recruitment-notices/",
+      "category": "psu",
+      "scope": "psu"
+    },
+    {
+      "id": "fssai",
+      "name": "Food Safety and Standards Authority (FSSAI)",
+      "url": "https://www.fssai.gov.in/",
+      "notificationsUrl": "https://www.fssai.gov.in/cms/recruitment.php",
+      "category": "health",
+      "scope": "central"
+    },
+    {
+      "id": "indiapost",
+      "name": "India Post — Gramin Dak Sevak / GDS",
+      "url": "https://www.indiapost.gov.in/",
+      "notificationsUrl": "https://www.indiapost.gov.in/VAS/Pages/IndiaPosthome.aspx",
+      "category": "psu",
+      "scope": "central"
+    },
+    {
+      "id": "army",
+      "name": "Indian Army — Join Indian Army",
+      "url": "https://joinindianarmy.nic.in/",
+      "notificationsUrl": "https://joinindianarmy.nic.in/",
+      "category": "defence",
+      "scope": "uniform"
+    },
+    {
+      "id": "navy",
+      "name": "Indian Navy — Join Indian Navy",
+      "url": "https://www.joinindiannavy.gov.in/",
+      "notificationsUrl": "https://www.joinindiannavy.gov.in/",
+      "category": "defence",
+      "scope": "uniform"
+    },
+    {
+      "id": "iaf",
+      "name": "Indian Air Force — Careers",
+      "url": "https://indianairforce.nic.in/",
+      "notificationsUrl": "https://indianairforce.nic.in/",
+      "category": "defence",
+      "scope": "uniform"
+    },
+    {
+      "id": "afcat",
+      "name": "AFCAT — IAF officer entry",
+      "url": "https://afcat.cdac.in/",
+      "notificationsUrl": "https://afcat.cdac.in/",
+      "category": "defence",
+      "scope": "uniform"
+    },
+    {
+      "id": "coast-guard",
+      "name": "Indian Coast Guard — Recruitment",
+      "url": "https://joinindiancoastguard.cdac.in/",
+      "notificationsUrl": "https://joinindiancoastguard.cdac.in/",
+      "category": "defence",
+      "scope": "uniform"
+    },
+    {
+      "id": "bsf",
+      "name": "Border Security Force (BSF) — Recruitment",
+      "url": "https://rectt.bsf.gov.in/",
+      "notificationsUrl": "https://rectt.bsf.gov.in/",
+      "category": "police",
+      "scope": "uniform"
+    },
+    {
+      "id": "crpf",
+      "name": "Central Reserve Police Force (CRPF)",
+      "url": "https://crpf.gov.in/",
+      "notificationsUrl": "https://crpf.gov.in/recruitment.htm",
+      "category": "police",
+      "scope": "uniform"
+    },
+    {
+      "id": "cisf",
+      "name": "Central Industrial Security Force (CISF)",
+      "url": "https://www.cisf.gov.in/",
+      "notificationsUrl": "https://cisf.gov.in/cisfeng/Recruitment",
+      "category": "police",
+      "scope": "uniform"
+    },
+    {
+      "id": "itbp",
+      "name": "Indo-Tibetan Border Police (ITBP)",
+      "url": "https://recruitment.itbpolice.nic.in/",
+      "notificationsUrl": "https://recruitment.itbpolice.nic.in/",
+      "category": "police",
+      "scope": "uniform"
+    },
+    {
+      "id": "ssb",
+      "name": "Sashastra Seema Bal (SSB)",
+      "url": "https://www.ssb.nic.in/",
+      "notificationsUrl": "https://ssbrectt.gov.in/",
+      "category": "police",
+      "scope": "uniform"
+    },
+    {
+      "id": "ib",
+      "name": "Intelligence Bureau (IB) — MHA",
+      "url": "https://www.mha.gov.in/",
+      "notificationsUrl": "https://www.mha.gov.in/en/notifications/vacancies",
+      "category": "police",
+      "scope": "uniform"
+    },
+    {
+      "id": "ugc",
+      "name": "University Grants Commission (UGC)",
+      "url": "https://www.ugc.gov.in/",
+      "notificationsUrl": "https://www.ugc.gov.in/page/Notices.aspx",
+      "category": "teaching",
+      "scope": "central"
+    },
+    {
+      "id": "ncert",
+      "name": "NCERT",
+      "url": "https://ncert.nic.in/",
+      "notificationsUrl": "https://ncert.nic.in/vacancies.php",
+      "category": "teaching",
+      "scope": "central"
+    },
+    {
+      "id": "ctet",
+      "name": "CBSE — CTET",
+      "url": "https://ctet.nic.in/",
+      "notificationsUrl": "https://ctet.nic.in/",
+      "category": "teaching",
+      "scope": "central"
+    },
+    {
+      "id": "kvs",
+      "name": "Kendriya Vidyalaya Sangathan",
+      "url": "https://kvsangathan.nic.in/",
+      "notificationsUrl": "https://kvsangathan.nic.in/",
+      "category": "teaching",
+      "scope": "central"
+    },
+    {
+      "id": "nvs",
+      "name": "Navodaya Vidyalaya Samiti",
+      "url": "https://navodaya.gov.in/",
+      "notificationsUrl": "https://navodaya.gov.in/nvs/en/Recruitment-Notice/Recruitment/",
+      "category": "teaching",
+      "scope": "central"
+    },
+    {
+      "id": "aiims",
+      "name": "AIIMS New Delhi — Recruitment",
+      "url": "https://www.aiims.edu/",
+      "notificationsUrl": "https://www.aiimsexams.ac.in/",
+      "category": "health",
+      "scope": "central"
+    },
+    {
+      "id": "sbi",
+      "name": "State Bank of India — Careers",
+      "url": "https://sbi.bank.in/",
+      "notificationsUrl": "https://sbi.bank.in/web/careers/current-openings",
+      "category": "banking",
+      "scope": "bank"
+    },
+    {
+      "id": "bob",
+      "name": "Bank of Baroda — Careers",
+      "url": "https://www.bankofbaroda.in/",
+      "notificationsUrl": "https://www.bankofbaroda.in/career",
+      "category": "banking",
+      "scope": "bank"
+    },
+    {
+      "id": "pnb",
+      "name": "Punjab National Bank — Careers",
+      "url": "https://www.pnbindia.in/",
+      "notificationsUrl": "https://www.pnbindia.in/Recruitments.html",
+      "category": "banking",
+      "scope": "bank"
+    },
+    {
+      "id": "canara",
+      "name": "Canara Bank — Careers",
+      "url": "https://canarabank.com/",
+      "notificationsUrl": "https://canarabank.com/pages/recruitment",
+      "category": "banking",
+      "scope": "bank"
+    },
+    {
+      "id": "uco",
+      "name": "UCO Bank — Careers",
+      "url": "https://www.uco.bank.in/",
+      "notificationsUrl": "https://www.uco.bank.in/job-opportunities",
+      "category": "banking",
+      "scope": "bank"
+    },
+    {
+      "id": "nabard",
+      "name": "NABARD — Careers",
+      "url": "https://www.nabard.org/",
+      "notificationsUrl": "https://www.nabard.org/career.aspx",
+      "category": "banking",
+      "scope": "bank"
+    },
+    {
+      "id": "ongc",
+      "name": "ONGC — Careers",
+      "url": "https://ongcindia.com/",
+      "notificationsUrl": "https://ongcindia.com/web/eng/career/recruitment-notice",
+      "category": "psu",
+      "scope": "psu"
+    },
+    {
+      "id": "iocl",
+      "name": "Indian Oil Corporation — Careers",
+      "url": "https://iocl.com/",
+      "notificationsUrl": "https://iocl.com/latest-job-opening",
+      "category": "psu",
+      "scope": "psu"
+    },
+    {
+      "id": "bpcl",
+      "name": "Bharat Petroleum — Careers",
+      "url": "https://www.bharatpetroleum.in/",
+      "notificationsUrl": "https://www.bharatpetroleum.in/careers/job-openings",
+      "category": "psu",
+      "scope": "psu"
+    },
+    {
+      "id": "hpcl",
+      "name": "Hindustan Petroleum — Careers",
+      "url": "https://www.hindustanpetroleum.com/",
+      "notificationsUrl": "https://hindustanpetroleum.com/careersopportunities",
+      "category": "psu",
+      "scope": "psu"
+    },
+    {
+      "id": "gail",
+      "name": "GAIL India — Careers",
+      "url": "https://gailonline.com/",
+      "notificationsUrl": "https://gailonline.com/careers/",
+      "category": "psu",
+      "scope": "psu"
+    },
+    {
+      "id": "ntpc",
+      "name": "NTPC — Careers",
+      "url": "https://www.ntpc.co.in/",
+      "notificationsUrl": "https://www.ntpc.co.in/en/career",
+      "category": "psu",
+      "scope": "psu"
+    },
+    {
+      "id": "bhel",
+      "name": "BHEL — Careers",
+      "url": "https://www.bhel.com/",
+      "notificationsUrl": "https://careers.bhel.in/index.jsp",
+      "category": "psu",
+      "scope": "psu"
+    },
+    {
+      "id": "hal",
+      "name": "Hindustan Aeronautics (HAL)",
+      "url": "https://hal-india.co.in/",
+      "notificationsUrl": "https://hal-india.co.in/Careers/M__93",
+      "category": "defence",
+      "scope": "psu"
+    },
+    {
+      "id": "bel",
+      "name": "Bharat Electronics (BEL)",
+      "url": "https://bel-india.in/",
+      "notificationsUrl": "https://bel-india.in/job-notifications/",
+      "category": "defence",
+      "scope": "psu"
+    },
+    {
+      "id": "sail",
+      "name": "Steel Authority of India (SAIL)",
+      "url": "https://sail.co.in/",
+      "notificationsUrl": "https://sailcareers.com/",
+      "category": "psu",
+      "scope": "psu"
+    },
+    {
+      "id": "ies",
+      "name": "Indian Statistical Service / ESE",
+      "url": "https://upsc.gov.in/",
+      "notificationsUrl": "https://upsc.gov.in/whats-new",
+      "category": "upsc",
+      "scope": "central"
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "id": "mp",
+  "name": "Madhya Pradesh",
+  "count": 5,
+  "portals": [
+    {
+      "id": "psc-mp",
+      "name": "Madhya Pradesh PSC (MPPSC)",
+      "url": "https://mppsc.mp.gov.in/",
+      "notificationsUrl": "https://mppsc.mp.gov.in/news.aspx",
+      "category": "state",
+      "scope": "state"
+    },
+    {
+      "id": "ssb-mp",
+      "name": "MP Employees Selection Board (MPESB)",
+      "url": "https://esb.mp.gov.in/",
+      "notificationsUrl": "https://esb.mp.gov.in/",
+      "category": "state",
+      "scope": "state"
+    },
+    {
+      "id": "police-mp",
+      "name": "MP Police Headquarters — Recruitment",
+      "url": "https://mppolice.gov.in/",
+      "notificationsUrl": "https://mppolice.gov.in/",
+      "category": "police",
+      "scope": "state"
+    },
+    {
+      "id": "dcourt-indore",
+      "name": "District & Sessions Judge, Indore",
+      "url": "https://indore.dcourts.gov.in/",
+      "notificationsUrl": "https://indore.dcourts.gov.in/notice-category/recruitments/",
+      "category": "state",
+      "scope": "state"
+    },
+    {
+      "id": "dcourt-ujjain",
+      "name": "District & Sessions Judge, Ujjain",
+      "url": "https://ujjain.dcourts.gov.in/",
+      "notificationsUrl": "https://ujjain.dcourts.gov.in/notice-category/recruitments/",
+      "category": "state",
+      "scope": "state"
+    }
+  ]
+}

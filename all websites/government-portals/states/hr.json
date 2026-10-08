@@ -1,0 +1,31 @@
+{
+  "id": "hr",
+  "name": "Haryana",
+  "count": 3,
+  "portals": [
+    {
+      "id": "psc-hr",
+      "name": "Haryana PSC (HPSC)",
+      "url": "https://hpsc.gov.in/",
+      "notificationsUrl": "https://hpsc.gov.in/en-us/Recruitment",
+      "category": "state",
+      "scope": "state"
+    },
+    {
+      "id": "ssb-hr",
+      "name": "Haryana Staff Selection Commission (HSSC)",
+      "url": "https://hssc.gov.in/",
+      "notificationsUrl": "https://hssc.gov.in/",
+      "category": "state",
+      "scope": "state"
+    },
+    {
+      "id": "dcourt-yamunanagar",
+      "name": "District & Sessions Judge, Yamunanagar",
+      "url": "https://yamunanagar.dcourts.gov.in/",
+      "notificationsUrl": "https://yamunanagar.dcourts.gov.in/notice-category/recruitments/",
+      "category": "state",
+      "scope": "state"
+    }
+  ]
+}

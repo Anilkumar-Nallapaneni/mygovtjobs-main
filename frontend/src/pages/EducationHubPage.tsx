@@ -10,7 +10,6 @@ import {
 } from "@/data/education/careerPaths";
 import { extraMockTests } from "@/data/education/originalMocks";
 import { subjects } from "@/data/education/studyContent";
-import "@/styles/education-hub.css";
 import { gradeStaticMock, loadPublishedCareers, loadPublishedMockTests, submitEducationAttempt } from "@/lib/educationApi";
 import { useAuth } from "@/hooks/useAuth";
 

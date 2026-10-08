@@ -1,0 +1,15 @@
+{
+  "id": "ga",
+  "name": "Goa",
+  "count": 1,
+  "portals": [
+    {
+      "id": "psc-ga",
+      "name": "Goa PSC",
+      "url": "https://gpsc.goa.gov.in/",
+      "notificationsUrl": "https://gpsc.goa.gov.in/",
+      "category": "state",
+      "scope": "state"
+    }
+  ]
+}

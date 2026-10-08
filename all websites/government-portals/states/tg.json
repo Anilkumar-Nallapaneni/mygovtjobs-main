@@ -1,0 +1,23 @@
+{
+  "id": "tg",
+  "name": "Telangana",
+  "count": 2,
+  "portals": [
+    {
+      "id": "psc-tg",
+      "name": "Telangana PSC (TGPSC)",
+      "url": "https://www.tgpsc.gov.in/",
+      "notificationsUrl": "https://websitenew.tgpsc.gov.in/notifications",
+      "category": "state",
+      "scope": "state"
+    },
+    {
+      "id": "dcourt-siddipet",
+      "name": "District & Sessions Judge, Siddipet",
+      "url": "https://siddipet.dcourts.gov.in/",
+      "notificationsUrl": "https://siddipet.dcourts.gov.in/notice-category/recruitments/",
+      "category": "state",
+      "scope": "state"
+    }
+  ]
+}

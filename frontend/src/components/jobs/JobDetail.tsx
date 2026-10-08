@@ -25,7 +25,6 @@ import JobDetailFaq from "@/components/jobs/JobDetailFaq";
 import JobComments from "@/components/jobs/JobComments";
 import AdSlot from "@/components/ads/AdSlot";
 import SocialAlertBar from "@/components/home/SocialAlertBar";
-import "@/styles/jobs.css";
 import {
   ContentSections,
   displayValue,

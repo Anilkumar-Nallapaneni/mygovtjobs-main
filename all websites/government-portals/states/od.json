@@ -1,0 +1,103 @@
+{
+  "id": "od",
+  "name": "Odisha",
+  "count": 12,
+  "portals": [
+    {
+      "id": "psc-od",
+      "name": "Odisha PSC (OPSC)",
+      "url": "https://opsc.gov.in/",
+      "notificationsUrl": "https://opsc.gov.in/?LK=NRA",
+      "category": "state",
+      "scope": "state"
+    },
+    {
+      "id": "ssb-od",
+      "name": "Odisha Staff Selection Commission (OSSC)",
+      "url": "https://www.ossc.gov.in/",
+      "notificationsUrl": "https://www.ossc.gov.in/Public/OSSC/Default.aspx",
+      "category": "state",
+      "scope": "state"
+    },
+    {
+      "id": "ss-bhubaneswar",
+      "name": "Sainik School Bhubaneswar",
+      "url": "https://www.sainikschoolbhubaneswar.edu.in/",
+      "notificationsUrl": "https://www.sainikschoolbhubaneswar.edu.in/",
+      "category": "teaching",
+      "scope": "state"
+    },
+    {
+      "id": "dcourt-angul",
+      "name": "District & Sessions Judge, Angul",
+      "url": "https://angul.dcourts.gov.in/",
+      "notificationsUrl": "https://angul.dcourts.gov.in/notice-category/recruitments/",
+      "category": "state",
+      "scope": "state"
+    },
+    {
+      "id": "dcourt-balangir",
+      "name": "District & Sessions Judge, Balangir",
+      "url": "https://balangir.dcourts.gov.in/",
+      "notificationsUrl": "https://balangir.dcourts.gov.in/notice-category/recruitments/",
+      "category": "state",
+      "scope": "state"
+    },
+    {
+      "id": "dcourt-nayagarh",
+      "name": "District & Sessions Judge, Nayagarh",
+      "url": "https://nayagarh.dcourts.gov.in/",
+      "notificationsUrl": "https://nayagarh.dcourts.gov.in/notice-category/recruitments/",
+      "category": "state",
+      "scope": "state"
+    },
+    {
+      "id": "dcourt-jagatsinghpur",
+      "name": "District & Sessions Judge, Jagatsinghpur",
+      "url": "https://jagatsinghpur.dcourts.gov.in/",
+      "notificationsUrl": "https://jagatsinghpur.dcourts.gov.in/notice-category/recruitments/",
+      "category": "state",
+      "scope": "state"
+    },
+    {
+      "id": "dcourt-jharsuguda",
+      "name": "District & Sessions Judge, Jharsuguda",
+      "url": "https://jharsuguda.dcourts.gov.in/",
+      "notificationsUrl": "https://jharsuguda.dcourts.gov.in/notice-category/recruitments/",
+      "category": "state",
+      "scope": "state"
+    },
+    {
+      "id": "dcourt-puri",
+      "name": "District & Sessions Judge, Puri",
+      "url": "https://puri.dcourts.gov.in/",
+      "notificationsUrl": "https://puri.dcourts.gov.in/notice-category/recruitments/",
+      "category": "state",
+      "scope": "state"
+    },
+    {
+      "id": "dcourt-rayagada",
+      "name": "District & Sessions Judge, Rayagada",
+      "url": "https://rayagada.dcourts.gov.in/",
+      "notificationsUrl": "https://rayagada.dcourts.gov.in/notice-category/recruitments/",
+      "category": "state",
+      "scope": "state"
+    },
+    {
+      "id": "dcourt-dhenkanal",
+      "name": "District & Sessions Judge, Dhenkanal",
+      "url": "https://dhenkanal.dcourts.gov.in/",
+      "notificationsUrl": "https://dhenkanal.dcourts.gov.in/notice-category/recruitments/",
+      "category": "state",
+      "scope": "state"
+    },
+    {
+      "id": "dcourt-nuapada",
+      "name": "District & Sessions Judge, Nuapada",
+      "url": "https://nuapada.dcourts.gov.in/",
+      "notificationsUrl": "https://nuapada.dcourts.gov.in/notice-category/recruitments/",
+      "category": "state",
+      "scope": "state"
+    }
+  ]
+}

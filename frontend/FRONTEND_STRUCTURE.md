@@ -10,7 +10,7 @@ All application source under `src/` uses TypeScript React extensions:
 | Test helpers | `.ts` / `.tsx` | `test/setup.ts`, `test/queryWrapper.tsx` |
 | Entry | `main.tsx` | |
 | Types | `.ts` | `types/` |
-| Styles | `styles/*.css` via `styles/app.css` `@import` bundle (imported in `main.tsx`) |
+| Styles | `styles/app.css` only (imported in `main.tsx`). One file for tokens, shell, home, jobs, India map, education, and mobile. |
 
 ## Key modules (split for maintainability)
 

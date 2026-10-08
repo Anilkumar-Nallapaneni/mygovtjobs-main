@@ -1,0 +1,23 @@
+{
+  "id": "jh",
+  "name": "Jharkhand",
+  "count": 2,
+  "portals": [
+    {
+      "id": "psc-jh",
+      "name": "Jharkhand PSC (JPSC)",
+      "url": "https://jpsc.gov.in/",
+      "notificationsUrl": "https://jpsc.gov.in/",
+      "category": "state",
+      "scope": "state"
+    },
+    {
+      "id": "emrs-pakur",
+      "name": "EMRS Pakur (Eklavya Model Residential School)",
+      "url": "https://pakur.nic.in/",
+      "notificationsUrl": "https://pakur.nic.in/",
+      "category": "teaching",
+      "scope": "state"
+    }
+  ]
+}
