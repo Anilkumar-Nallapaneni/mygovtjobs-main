@@ -1,7 +1,10 @@
-# Monorepo — exclude heavy/non-frontend paths (root-anchored so frontend/scripts/ is kept)
-/backend/*
-!/backend/app/
-!/backend/app/**
+# Monorepo — keep backend/app and shared/ in the upload. The Python
+# functions import that package; a broad /backend/* ignore drops it even
+# when a later rule tries to put it back.
+/backend/.venv/
+/backend/tests/
+/backend/.pytest_cache/
+/backend/.local-test-tmp/
 /database/
 /docs/
 /all websites/

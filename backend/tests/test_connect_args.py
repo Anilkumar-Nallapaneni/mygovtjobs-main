@@ -41,6 +41,17 @@ def test_ci_and_legacy_disable_flags_cannot_disable_tls(monkeypatch):
     assert ctx.check_hostname is True
 
 
+def test_bundled_supabase_root_is_trusted(monkeypatch):
+    from unittest.mock import Mock
+
+    ctx = Mock()
+    monkeypatch.setattr(ssl, "create_default_context", lambda: ctx)
+    monkeypatch.delenv("DATABASE_SSL_CA_FILE", raising=False)
+    assert asyncpg_connect_args()["ssl"] is ctx
+    loaded = [call.kwargs["cafile"] for call in ctx.load_verify_locations.call_args_list]
+    assert any(path.endswith("supabase-root-2021.crt") for path in loaded)
+
+
 def test_additional_ca_is_loaded_without_weakening_verification(monkeypatch):
     from unittest.mock import Mock
     ctx = Mock()
