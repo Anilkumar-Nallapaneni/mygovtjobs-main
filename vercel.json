@@ -9,7 +9,7 @@
   "functions": {
     "api/india.py": {
       "maxDuration": 60,
-      "includeFiles": "backend/app/**,shared/**"
+      "includeFiles": "backend/app/**,shared/**",
       "excludeFiles": "{**/.venv/**,**/__pycache__/**,frontend/**,docs/**,data/**,scripts/**,backend/tests/**,**/.env,**/.env.*}"
     },
     "api/education.py": {
