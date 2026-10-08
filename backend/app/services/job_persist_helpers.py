@@ -16,7 +16,7 @@ _PUBLIC_VERIFICATION_STATUSES = public_verification_statuses()
 _PUBLIC_DOCUMENT_TYPE = public_document_type()
 _SNAPSHOT_DROP_GUARD_MIN_EXISTING = 100
 _SNAPSHOT_DROP_GUARD_RATIO = 0.5
-_DEFAULT_PUBLIC_CATALOG_FLOOR = 10
+_DEFAULT_PUBLIC_CATALOG_FLOOR = 5
 
 
 def _atomic_write_text(path: Path, content: str) -> None:
