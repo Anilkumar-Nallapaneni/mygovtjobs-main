@@ -168,6 +168,7 @@ export default function Navbar({
   const [menuOpen, setMenuOpen] = useState(false);
   const mobileSearchRef = useRef<HTMLInputElement | null>(null);
   const isCompactNav = useMediaQuery("(max-width: 1024px)");
+  const { pathname } = useLocation();
 
   useEffect(() => {
     if (isCompactNav) return undefined;
@@ -234,7 +235,16 @@ export default function Navbar({
 
         {!isCompactNav ? (
           <div className="navbar__utilities">
-            <Link to="/india" className="navbar__account-link" style={{ color: "var(--accent, #0891b2)", fontWeight: 800 }}>
+            <Link
+              to="/#india-map-panel"
+              className="navbar__account-link"
+              style={{ color: "var(--accent, #0891b2)", fontWeight: 800 }}
+              onClick={(event) => {
+                if (pathname !== "/") return;
+                event.preventDefault();
+                document.getElementById("india-map-panel")?.scrollIntoView({ behavior: "smooth", block: "start" });
+              }}
+            >
               India Map
             </Link>
             <Link to="/education" className="navbar__account-link" style={{ color: "var(--accent, #0891b2)", fontWeight: 800 }}>

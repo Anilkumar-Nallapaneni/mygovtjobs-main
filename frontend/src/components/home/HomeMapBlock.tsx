@@ -1,10 +1,9 @@
 import { useCallback, useEffect, useRef, useState } from "react";
-import { fromSvgStateId, toSvgStateId } from "@/data/states";
+import { fromSvgStateId } from "@/data/states";
 import { IndiaMap } from "@/components/Maps/IndiaMap/IndiaMap";
-import StateGlancePanel from "@/components/home/StateGlancePanel";
+import StateDistrictMap from "@/components/home/StateDistrictMap";
+import { formatDistrictName } from "@/data/stateDistricts";
 import type { IndiaMapProps } from "@/types/MapTypes";
-
-const STATE_MAP_SYNC_MQ = "(min-width: 1181px)";
 
 type HomeMapBlockProps = {
   mapStateData: IndiaMapProps["stateData"];
@@ -12,6 +11,9 @@ type HomeMapBlockProps = {
   stateName: string;
   onStateSelect: (stateId: string | null) => void;
   onClearState: () => void;
+  selectedDistrict?: string | null;
+  onDistrictSelect?: (name: string) => void;
+  onClearDistrict?: () => void;
   t: (key: string, opts?: Record<string, unknown>) => string;
 };
 
@@ -21,12 +23,12 @@ export default function HomeMapBlock({
   stateName,
   onStateSelect,
   onClearState,
+  selectedDistrict = null,
+  onDistrictSelect,
+  onClearDistrict,
   t,
 }: HomeMapBlockProps) {
-  const glanceRowRef = useRef<HTMLDivElement>(null);
-  const glancePanelRef = useRef<HTMLElement>(null);
   const shellRef = useRef<HTMLDivElement>(null);
-  const isolatedSvgId = selectedState ? toSvgStateId(selectedState) : null;
   // Defer SVG fetch so logo/bootstrap paint first (PSI mobile LCP/TBT).
   const [mapReady, setMapReady] = useState(Boolean(import.meta.env.VITEST));
 
@@ -82,98 +84,61 @@ export default function HomeMapBlock({
     };
   }, [mapReady]);
 
-  useEffect(() => {
-    if (!selectedState) return undefined;
-
-    const row = glanceRowRef.current;
-    const glance = glancePanelRef.current;
-    if (!row || !glance) return undefined;
-
-    const mq = window.matchMedia(STATE_MAP_SYNC_MQ);
-    let frame = 0;
-
-    const syncMapToGlance = () => {
-      cancelAnimationFrame(frame);
-      frame = requestAnimationFrame(() => {
-        if (!mq.matches) {
-          row.style.removeProperty("--state-map-sync-height");
-          return;
-        }
-        const glanceHeight = Math.ceil(glance.getBoundingClientRect().height);
-        if (glanceHeight > 0) {
-          row.style.setProperty("--state-map-sync-height", `${glanceHeight}px`);
-        }
-      });
-    };
-
-    syncMapToGlance();
-
-    const observer =
-      typeof ResizeObserver !== "undefined" ? new ResizeObserver(syncMapToGlance) : null;
-    observer?.observe(glance);
-    mq.addEventListener("change", syncMapToGlance);
-    window.addEventListener("resize", syncMapToGlance);
-
-    return () => {
-      cancelAnimationFrame(frame);
-      observer?.disconnect();
-      mq.removeEventListener("change", syncMapToGlance);
-      window.removeEventListener("resize", syncMapToGlance);
-      row.style.removeProperty("--state-map-sync-height");
-    };
-  }, [selectedState, stateName]);
-
   return (
-    <div className="home-map-block">
+    <div className={`home-map-block${selectedState ? " home-map-block--with-districts" : ""}`}>
       <div className="home-map-block__head">
         <div className="home-map-block__title-row">
           <span className="home-map-block__dot" aria-hidden />
           <span className="home-map-block__title">
-            {stateName ? t("home.jobMap", { state: stateName }) : t("home.allIndiaJobMap")}
+            {selectedDistrict
+              ? t("home.jobMap", { state: formatDistrictName(selectedDistrict) })
+              : stateName
+                ? t("home.jobMap", { state: stateName })
+                : t("home.allIndiaJobMap")}
           </span>
         </div>
         {selectedState && (
-          <button type="button" className="home-map-block__clear" onClick={onClearState}>
+          <button
+            type="button"
+            className="home-map-block__clear"
+            onClick={selectedDistrict ? onClearDistrict : onClearState}
+          >
             {t("home.clear")}
           </button>
         )}
       </div>
 
       <div
-        className={selectedState ? "home-state-map-glance-row" : undefined}
-        ref={selectedState ? glanceRowRef : undefined}
+        ref={shellRef}
+        className={`home-map-shell${selectedState ? " home-map-shell--isolated" : ""}`}
+        style={mapReady ? undefined : { minHeight: 280 }}
       >
-        <div
-          ref={shellRef}
-          className={`home-map-shell${selectedState ? " home-map-shell--isolated" : ""}`}
-          style={mapReady ? undefined : { minHeight: 280 }}
-        >
-          {mapReady ? (
-            <IndiaMap
-              stateData={mapStateData}
-              isolateStateId={isolatedSvgId}
-              onStateClick={handleMapStateClick}
-            />
-          ) : (
-            <div className="home-map-shell__placeholder" aria-hidden />
-          )}
-        </div>
         {selectedState ? (
-          <StateGlancePanel
-            ref={glancePanelRef}
+          <StateDistrictMap
             stateId={selectedState}
-            stateName={stateName}
-            t={t}
+            selectedDistrict={selectedDistrict}
+            onDistrictSelect={onDistrictSelect}
           />
-        ) : null}
+        ) : mapReady ? (
+          <IndiaMap stateData={mapStateData} onStateClick={handleMapStateClick} />
+        ) : (
+          <div className="home-map-shell__placeholder" aria-hidden />
+        )}
       </div>
 
       <p className="home-map-block__hint">
-        {selectedState
-          ? t("home.mapStateGlanceHint", {
-              defaultValue: "State map and facts — live jobs listed below",
+        {selectedDistrict
+          ? t("home.mapDistrictHint", {
+              district: formatDistrictName(selectedDistrict),
+              state: stateName,
+              defaultValue: "{{district}} in {{state}}. Jobs for this district are listed below.",
             })
-          : t("home.mapTapHint", { defaultValue: "Tap a state to filter live vacancies" })}
+          : selectedState
+            ? t("home.mapStateGlanceHint", {
+                defaultValue: "Click a district to open it. Hover to see its name.",
+                state: stateName,
+              })
+            : t("home.mapTapHint", { defaultValue: "Tap a state to see its districts, facts, and jobs" })}
       </p>
     </div>
   );

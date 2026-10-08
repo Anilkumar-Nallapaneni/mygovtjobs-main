@@ -69,7 +69,7 @@ export default function ExploreHubPage({ liveCount = 0, orgCount = 0, onFooterLi
         <div className="explore-hub-page__grid">
           <HubCard
             id="india-explorer"
-            href="/india"
+            href="/#india-map-panel"
             icon="🇮🇳"
             title="Explore India Map"
             description="Explore every state and Union Territory with jobs, education, agriculture, industries, companies, tourism, heritage and knowledge."

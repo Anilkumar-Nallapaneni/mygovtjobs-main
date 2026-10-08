@@ -72,13 +72,15 @@ export async function loadPublishedCareers(): Promise<CareerPath[] | null> {
   })) as CareerPath[]
 }
 
+const QUESTION_COLUMNS = 'id,test_id,question_text,options,subject,difficulty,marks,negative_marks,sort_order'
+
 export async function loadPublishedMockTests(): Promise<MockTest[] | null> {
   const supabase = await getSupabase()
   if (!supabase) return null
   const { data, error } = await supabase.from('education_mock_tests').select('*').eq('is_published', true).order('title')
   if (error || !data?.length) return null
   const tests = await Promise.all(data.map(async (row) => {
-    const q = await supabase.from('education_questions').select('*').eq('test_id', row.id).eq('is_published', true).order('sort_order')
+    const q = await supabase.from('education_questions').select(QUESTION_COLUMNS).eq('test_id', row.id).eq('is_published', true).order('sort_order')
     return {
       id: row.id,
       title: row.title,
@@ -90,10 +92,11 @@ export async function loadPublishedMockTests(): Promise<MockTest[] | null> {
       totalMarks: row.total_marks ?? 0,
       questions: (q.data ?? []).map((item, index) => ({
         id: index + 1,
+        dbId: item.id,
         question: item.question_text,
         options: item.options ?? [],
-        correctAnswer: item.correct_index,
-        explanation: item.explanation ?? '',
+        correctAnswer: -1,
+        explanation: '',
         subject: item.subject ?? row.subject,
         difficulty: (item.difficulty ?? 'Medium') as 'Easy' | 'Medium' | 'Hard',
       })),
@@ -102,45 +105,70 @@ export async function loadPublishedMockTests(): Promise<MockTest[] | null> {
   return tests
 }
 
-export async function saveEducationAttempt(input: {
-  userId: string
+export type GradedQuestion = {
+  questionId: string
+  correctIndex: number
+  explanation: string
+  selectedIndex: number | null
+  isCorrect: boolean
+}
+
+export async function submitEducationAttempt(input: {
   testId: string
-  score: number
-  maxScore: number
-  correctCount: number
-  wrongCount: number
-  unansweredCount: number
-  accuracy: number
   durationSeconds?: number
-  answers?: Array<{ questionId: string | number; selectedIndex?: number; isCorrect: boolean; marksAwarded: number }>
-}) {
+  answers: Array<{ questionId: string; selectedIndex?: number }>
+}): Promise<
+  | { ok: true; id: string; score: number; maxScore: number; questions: GradedQuestion[] }
+  | { ok: false; error: 'supabase_not_configured' | 'failed' }
+> {
   const supabase = await getSupabase()
-  if (!supabase) return { ok: false as const, error: 'supabase_not_configured' }
-  const { data, error } = await supabase.from('education_test_attempts').insert({
-    user_id: input.userId,
-    test_id: input.testId,
-    score: input.score,
-    max_score: input.maxScore,
-    correct_count: input.correctCount,
-    wrong_count: input.wrongCount,
-    unanswered_count: input.unansweredCount,
-    accuracy: input.accuracy,
-    duration_seconds: input.durationSeconds ?? null,
-  }).select('id').single()
-  if (error || !data?.id) return { ok: false as const, error: 'failed' }
-  if (input.answers?.length) {
-    // The UI's question ids are stable only inside a test. We resolve them to DB question UUIDs.
-    const questions = await supabase.from('education_questions').select('id,sort_order').eq('test_id', input.testId).order('sort_order')
-    if (!questions.error) {
-      const rows = input.answers.map((answer) => ({
-        attempt_id: data.id,
-        question_id: questions.data?.[Number(answer.questionId) - 1]?.id,
-        selected_index: answer.selectedIndex ?? null,
-        is_correct: answer.isCorrect,
-        marks_awarded: answer.marksAwarded,
-      })).filter((row) => Boolean(row.question_id))
-      if (rows.length) await supabase.from('education_attempt_answers').insert(rows)
-    }
+  if (!supabase) return { ok: false, error: 'supabase_not_configured' }
+  const { data, error } = await supabase.rpc('submit_education_attempt', {
+    p_test_id: input.testId,
+    p_answers: input.answers.map((answer) => ({
+      question_id: answer.questionId,
+      selected_index: answer.selectedIndex ?? null,
+    })),
+    p_duration_seconds: input.durationSeconds ?? null,
+  })
+  if (error || !data || typeof data !== 'object') return { ok: false, error: 'failed' }
+  const body = data as {
+    id?: string
+    score?: number
+    max_score?: number
+    questions?: Array<{
+      question_id?: string
+      correct_index?: number
+      explanation?: string | null
+      selected_index?: number | null
+      is_correct?: boolean
+    }>
   }
-  return { ok: true as const, id: String(data.id) }
+  return {
+    ok: true,
+    id: String(body.id ?? ''),
+    score: Number(body.score ?? 0),
+    maxScore: Number(body.max_score ?? 0),
+    questions: (body.questions ?? []).map((item) => ({
+      questionId: String(item.question_id ?? ''),
+      correctIndex: Number(item.correct_index ?? -1),
+      explanation: item.explanation ?? '',
+      selectedIndex: item.selected_index ?? null,
+      isCorrect: Boolean(item.is_correct),
+    })),
+  }
+}
+
+/** @deprecated Scores are computed by submitEducationAttempt. Client inserts are rejected. */
+export async function saveEducationAttempt(input: {
+  testId: string
+  durationSeconds?: number
+  answers?: Array<{ questionId: string; selectedIndex?: number }>
+}) {
+  const answers = (input.answers ?? []).filter((answer) => typeof answer.questionId === 'string')
+  return submitEducationAttempt({
+    testId: input.testId,
+    durationSeconds: input.durationSeconds,
+    answers,
+  })
 }

@@ -1,5 +1,4 @@
 import { useMemo } from "react";
-import IndiaGlancePanel from "@/components/home/IndiaGlancePanel";
 import { useCountUp } from "@/hooks/useCountUp";
 import type { HeroStatFilterKey } from "@/utils/homePageFilters";
 
@@ -111,9 +110,6 @@ export default function HomeHeroMarketing({
               </button>
             );
           })}
-        </div>
-        <div className="home-hero-panels">
-          <IndiaGlancePanel />
         </div>
       </div>
     </>

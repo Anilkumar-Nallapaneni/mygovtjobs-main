@@ -427,47 +427,11 @@ export async function fetchJobBySlug(slug: string): Promise<ApiJob | null> {
   return hydrateJobDetail(slug, base)
 }
 
-async function subscribeToAlertsViaSupabase(
-  payload: AlertSubscribePayload
-): Promise<{ ok: true; id: string } | { ok: false; error: string }> {
-  if (payload.website?.trim()) {
-    return { ok: true, id: 'ok' }
-  }
-  const supabase = await getSupabase()
-  if (!supabase) {
-    console.warn('[jobsApi] alert subscribe unavailable — auth not configured')
-    return { ok: false, error: 'unavailable' }
-  }
-
-  const session = supabase.auth
-    ? (await supabase.auth.getSession()).data.session
-    : null
-
-  // No `.select()` here: anonymous visitors can INSERT (RLS `alerts_public_insert`)
-  // but have no SELECT policy, so requesting the row back would fail with 42501.
-  const { error } = await supabase.from('alert_subscriptions').insert({
-    channel: payload.channel,
-    channel_address: payload.channel_address.trim(),
-    state_codes: payload.state_codes ?? [],
-    categories: payload.categories ?? [],
-    qualification_tags: payload.qualification_tags ?? [],
-    ...(session?.user?.id ? { user_id: session.user.id } : {}),
-  })
-
-  if (error) {
-    console.warn('[jobsApi] alert subscribe failed', error.message)
-    return { ok: false, error: 'failed' }
-  }
-  return { ok: true, id: 'subscribed' }
-}
-
 export async function subscribeToAlerts(
   payload: AlertSubscribePayload
 ): Promise<{ ok: true; id: string } | { ok: false; error: string }> {
-  if (!API_BASE) {
-    return subscribeToAlertsViaSupabase(payload)
-  }
-
+  // Signups go through the API so Turnstile and the server rate limit always apply.
+  // The anon key must not insert alert rows directly.
   try {
     const { turnstileToken, ...body } = payload
     const { turnstileHeaders } = await import('@/lib/turnstile')
@@ -487,16 +451,12 @@ export async function subscribeToAlerts(
     if (!res.ok) {
       const text = await res.text().catch(() => '')
       console.warn('[jobsApi] alert API failed', res.status, text.slice(0, 200))
-      const fallback = await subscribeToAlertsViaSupabase(payload)
-      if (fallback.ok) return fallback
       return { ok: false, error: 'failed' }
     }
     const json = await res.json()
     return { ok: true, id: String(json.id ?? 'subscribed') }
   } catch (err) {
     console.warn('[jobsApi] alert network error', err)
-    const fallback = await subscribeToAlertsViaSupabase(payload)
-    if (fallback.ok) return fallback
     return { ok: false, error: 'Network error' }
   }
 }

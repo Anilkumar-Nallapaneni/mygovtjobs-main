@@ -101,6 +101,32 @@ class RazorpayService:
         expected = hmac.new(secret.encode(), body, hashlib.sha256).hexdigest()
         return hmac.compare_digest(expected, signature)
 
+    async def fetch_captured_payment(self, payment_id: str) -> dict:
+        """Confirm with Razorpay that this payment is captured for the expected amount."""
+        key_id, key_secret = self._require_keys()
+        async with httpx.AsyncClient(timeout=20.0) as client:
+            res = await client.get(
+                f"{RAZORPAY_API}/payments/{payment_id}",
+                auth=(key_id, key_secret),
+            )
+        if res.status_code >= 400:
+            raise ValueError("Payment could not be verified")
+        payment = res.json()
+        if payment.get("status") != "captured":
+            raise ValueError("Payment is not captured")
+        amount = payment.get("amount")
+        currency = payment.get("currency")
+        order_id = payment.get("order_id")
+        if not isinstance(amount, int) or not currency or not order_id:
+            raise ValueError("Payment is not captured")
+        return {
+            "id": payment.get("id") or payment_id,
+            "amount": amount,
+            "currency": str(currency),
+            "order_id": str(order_id),
+            "status": "captured",
+        }
+
     async def mark_order_paid(
         self,
         session: AsyncSession,
@@ -108,13 +134,17 @@ class RazorpayService:
         order_id: str,
         payment_id: str,
         user_id: str | None = None,
+        amount_paise: int | None = None,
+        currency: str | None = None,
     ) -> bool:
         row = (
             await session.execute(
                 text(
                     """
-                    SELECT user_id, status FROM payment_orders
+                    SELECT user_id, status, amount_paise, currency, razorpay_payment_id
+                    FROM payment_orders
                     WHERE razorpay_order_id = :order_id
+                    FOR UPDATE
                     """
                 ),
                 {"order_id": order_id},
@@ -125,8 +155,13 @@ class RazorpayService:
             return False
         if user_id and str(row["user_id"]) != user_id:
             return False
+        if amount_paise is None or int(row["amount_paise"]) != int(amount_paise):
+            return False
+        if (currency or "").upper() != str(row["currency"] or "").upper():
+            return False
         if row["status"] == "paid":
-            return True
+            existing = row["razorpay_payment_id"]
+            return existing is None or str(existing) == payment_id
 
         uid = str(row["user_id"])
         now = datetime.now(timezone.utc)

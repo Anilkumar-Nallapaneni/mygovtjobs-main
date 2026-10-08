@@ -51,11 +51,23 @@ def test_health_degraded_when_db_fails(monkeypatch):
 
     res = client.get("/health")
     assert res.status_code == 200
-    assert res.json()["status"] == "degraded"
-    assert res.json()["database"]["connected"] is False
+    body = res.json()
+    assert body["status"] == "degraded"
+    assert body["database"]["connected"] is False
+    assert "error" not in body["database"]
+    assert "url_checks" not in body["database"]
 
 
-def test_list_jobs_503_when_db_unavailable():
+def test_health_detailed_requires_admin(monkeypatch):
+    monkeypatch.setenv("APP_ENV", "production")
+    monkeypatch.delenv("ALLOW_INSECURE_ADMIN", raising=False)
+    monkeypatch.delenv("ADMIN_API_KEY", raising=False)
+    from app.config import get_settings
+
+    get_settings.cache_clear()
+    res = client.get("/health/detailed")
+    get_settings.cache_clear()
+    assert res.status_code in (401, 503)
     with patch("app.routes.jobs.service.list_jobs", new_callable=AsyncMock) as mock_list:
         mock_list.side_effect = DatabaseUnavailableError()
         res = client.get("/api/jobs?limit=5")

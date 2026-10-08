@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import {
   afterDegreePaths,
@@ -11,7 +11,7 @@ import {
 import { extraMockTests } from "@/data/education/originalMocks";
 import { subjects } from "@/data/education/studyContent";
 import "@/styles/education-hub.css";
-import { loadPublishedCareers, loadPublishedMockTests, saveEducationAttempt } from "@/lib/educationApi";
+import { loadPublishedCareers, loadPublishedMockTests, submitEducationAttempt } from "@/lib/educationApi";
 import { useAuth } from "@/hooks/useAuth";
 
 type Tab = "overview" | "careers" | "exams" | "tests" | "resources";
@@ -130,14 +130,20 @@ function MockTests({ tests = allTests }: { tests?: typeof allTests }) {
   const [submitted, setSubmitted] = useState(false);
   const [savingAttempt, setSavingAttempt] = useState(false);
   const [attemptSaved, setAttemptSaved] = useState(false);
+  const [saveError, setSaveError] = useState(false);
+  const [resultScore, setResultScore] = useState<number | null>(null);
   const [remainingSeconds, setRemainingSeconds] = useState((tests[0]?.duration ?? 30) * 60);
   const { user } = useAuth();
+  const finishing = useRef(false);
 
   const reset = (test = selected) => {
+    finishing.current = false;
     setSelected(test);
     setAnswers({});
     setSubmitted(false);
     setAttemptSaved(false);
+    setSaveError(false);
+    setResultScore(null);
     setRemainingSeconds((test.duration ?? 30) * 60);
   };
 
@@ -148,9 +154,50 @@ function MockTests({ tests = allTests }: { tests?: typeof allTests }) {
     }
   }, [submitted, remainingSeconds]);
 
+  const finishTest = useCallback(async () => {
+    if (finishing.current || submitted) return;
+    finishing.current = true;
+    const serverQuestions = selected.questions.filter((question) => question.dbId);
+    if (serverQuestions.length && !user) {
+      finishing.current = false;
+      setSaveError(true);
+      return;
+    }
+    if (serverQuestions.length && user) {
+      setSavingAttempt(true);
+      setSaveError(false);
+      const result = await submitEducationAttempt({
+        testId: selected.id,
+        durationSeconds: Math.max(0, (selected.duration ?? 30) * 60 - remainingSeconds),
+        answers: serverQuestions.map((question) => ({
+          questionId: question.dbId as string,
+          selectedIndex: answers[question.id],
+        })),
+      });
+      setSavingAttempt(false);
+      if (!result.ok) {
+        finishing.current = false;
+        setSaveError(true);
+        return;
+      }
+      const byId = new Map(result.questions.map((question) => [question.questionId, question]));
+      setSelected((current) => ({
+        ...current,
+        questions: current.questions.map((question) => {
+          const graded = question.dbId ? byId.get(question.dbId) : undefined;
+          if (!graded) return question;
+          return { ...question, correctAnswer: graded.correctIndex, explanation: graded.explanation };
+        }),
+      }));
+      setResultScore(result.score);
+      setAttemptSaved(true);
+    }
+    setSubmitted(true);
+  }, [answers, remainingSeconds, selected, submitted, user]);
+
   useEffect(() => {
-    if (!submitted && remainingSeconds === 0) setSubmitted(true);
-  }, [remainingSeconds, submitted]);
+    if (!submitted && remainingSeconds === 0) void finishTest();
+  }, [finishTest, remainingSeconds, submitted]);
 
   useEffect(() => {
     if (tests[0] && !tests.some((test) => test.id === selected.id)) {
@@ -160,7 +207,12 @@ function MockTests({ tests = allTests }: { tests?: typeof allTests }) {
     }
   }, [tests, selected.id]);
 
-  const score = useMemo(() => selected.questions.reduce((sum, q) => sum + (answers[q.id] === q.correctAnswer ? 4 : 0), 0), [answers, selected]);
+  const localScore = useMemo(
+    () => selected.questions.reduce((sum, q) => sum + (q.correctAnswer >= 0 && answers[q.id] === q.correctAnswer ? 4 : 0), 0),
+    [answers, selected],
+  );
+  const score = resultScore ?? localScore;
+  const revealAnswers = submitted && selected.questions.every((question) => !question.dbId || question.correctAnswer >= 0);
 
   return (
     <div className="edu-test-shell">
@@ -184,42 +236,19 @@ function MockTests({ tests = allTests }: { tests?: typeof allTests }) {
             <h3>{q.question}</h3>
             <div className="edu-options">
               {q.options.map((option, optionIndex) => (
-                <label key={option} className={`edu-option${answers[q.id] === optionIndex ? " is-selected" : ""}${submitted && optionIndex === q.correctAnswer ? " is-correct" : ""}${submitted && answers[q.id] === optionIndex && optionIndex !== q.correctAnswer ? " is-wrong" : ""}`}>
+                <label key={option} className={`edu-option${answers[q.id] === optionIndex ? " is-selected" : ""}${revealAnswers && optionIndex === q.correctAnswer ? " is-correct" : ""}${revealAnswers && answers[q.id] === optionIndex && optionIndex !== q.correctAnswer ? " is-wrong" : ""}`}>
                   <input type="radio" name={`q-${q.id}`} checked={answers[q.id] === optionIndex} onChange={() => !submitted && setAnswers((prev) => ({ ...prev, [q.id]: optionIndex }))} />
                   <span>{String.fromCharCode(65 + optionIndex)}</span>{option}
                 </label>
               ))}
             </div>
-            {submitted && <p className="edu-explanation">{q.explanation}</p>}
+            {revealAnswers && q.explanation ? <p className="edu-explanation">{q.explanation}</p> : null}
           </article>
         ))}
-        <button type="button" className="edu-primary-btn" disabled={savingAttempt} onClick={async () => {
+        {saveError ? <p className="edu-explanation">Could not save this attempt. Check that you are signed in, then submit again.</p> : null}
+        <button type="button" className="edu-primary-btn" disabled={savingAttempt} onClick={() => {
           if (submitted) { reset(); return; }
-          setSubmitted(true);
-          if (user && !attemptSaved) {
-            const correctCount = selected.questions.filter((q) => answers[q.id] === q.correctAnswer).length;
-            const wrongCount = selected.questions.filter((q) => answers[q.id] !== undefined && answers[q.id] !== q.correctAnswer).length;
-            const unansweredCount = selected.questions.length - correctCount - wrongCount;
-            setSavingAttempt(true);
-            const result = await saveEducationAttempt({
-              userId: user.id,
-              testId: selected.id,
-              score,
-              maxScore: selected.totalMarks,
-              correctCount,
-              wrongCount,
-              unansweredCount,
-              accuracy: selected.questions.length ? (correctCount / selected.questions.length) * 100 : 0,
-              answers: selected.questions.map((q) => ({
-                questionId: q.id,
-                selectedIndex: answers[q.id],
-                isCorrect: answers[q.id] === q.correctAnswer,
-                marksAwarded: answers[q.id] === q.correctAnswer ? 4 : 0,
-              })),
-            });
-            setSavingAttempt(false);
-            setAttemptSaved(result.ok);
-          }
+          void finishTest();
         }}>
           {submitted ? "Retake test" : savingAttempt ? "Saving result…" : attemptSaved ? "Result saved ✓" : "Submit test"}
         </button>

@@ -1,8 +1,9 @@
-from fastapi import APIRouter
+from fastapi import APIRouter, Depends
 
 from sqlalchemy import text
 
 from app.config import get_settings
+from app.middleware.auth import require_admin_key
 from app.utils.database_url import database_url_issues, sanitize_db_error
 
 router = APIRouter()
@@ -21,23 +22,15 @@ async def _probe_database() -> tuple[bool, str | None]:
 
 @router.get("/health")
 async def health():
-    """Liveness + DB connectivity — use /health/detailed for counts."""
-    settings = get_settings()
-    db_ok, db_error = await _probe_database()
-    payload: dict = {
+    """Public liveness. Error text and job counts stay on the admin route."""
+    db_ok, _db_error = await _probe_database()
+    return {
         "status": "ok" if db_ok else "degraded",
         "database": {"connected": db_ok},
     }
-    if not db_ok:
-        checks = database_url_issues(settings.database_url, supabase_url=settings.supabase_url)
-        if checks:
-            payload["database"]["url_checks"] = checks
-        if db_error:
-            payload["database"]["error"] = db_error
-    return payload
 
 
-@router.get("/health/detailed")
+@router.get("/health/detailed", dependencies=[Depends(require_admin_key)])
 async def health_detailed():
     settings = get_settings()
     db_ok, db_error = await _probe_database()

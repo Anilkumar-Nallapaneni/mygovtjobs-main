@@ -1894,8 +1894,31 @@
 }
 
 @media (max-width: 520px) {
+  .india-glance {
+    padding: 16px;
+  }
+
+  .india-glance__title {
+    font-size: 18px;
+  }
+
   .india-glance__grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .india-glance__section + .india-glance__section {
+    margin-top: 16px;
+    padding-top: 16px;
+  }
+
+  .india-glance__label {
+    font-size: 11px;
+  }
+
+  .india-glance__value {
+    font-size: 15px;
+    line-height: 1.4;
   }
 }
 

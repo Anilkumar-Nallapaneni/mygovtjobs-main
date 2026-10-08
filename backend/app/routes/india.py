@@ -204,7 +204,7 @@ async def state_category(
     category: str,
     district_id: str | None = None,
     city_id: str | None = None,
-    q: str | None = None,
+    q: str | None = Query(None, max_length=100),
     limit: int = Query(50, ge=1, le=100),
     offset: int = Query(0, ge=0),
 ):

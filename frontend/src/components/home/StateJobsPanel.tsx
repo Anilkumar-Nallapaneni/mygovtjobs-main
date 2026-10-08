@@ -2,9 +2,23 @@ import { useTranslation } from "react-i18next";
 import JobCard from "@/components/jobs/JobCard";
 import JobCardGrid from "@/components/jobs/JobCardGrid";
 import { VIRTUAL_GRID_MIN } from "@/data/homePageConstants";
+import { formatDistrictName } from "@/data/stateDistricts";
+import type { JobRecord } from "@/types/job";
+
+function jobMentionsDistrict(job: JobRecord, district: string): boolean {
+  const needle = district.replace(/\s+/g, " ").trim();
+  if (needle.length < 3) return false;
+  const extra = job as JobRecord & { location?: string; city?: string; district?: string };
+  const hay = [job.title, job.post_name, job.dept, job.about, job.detail?.summary, extra.location, extra.city, extra.district]
+    .filter((part): part is string => typeof part === "string" && part.length > 0)
+    .join(" ");
+  const pattern = needle.replace(/[.*+?^${}()|[\]\\]/g, "\\$&").replace(/\s+/g, "\\s+");
+  return new RegExp(`(?:^|[^A-Za-z])${pattern}(?=$|[^A-Za-z])`, "i").test(hay);
+}
 
 type StateJobsPanelProps = {
   stateName: string;
+  districtName?: string | null;
   stateJobs: Parameters<typeof JobCard>[0]["job"][];
   nationwideJobs: Parameters<typeof JobCard>[0]["job"][];
   sort: string;
@@ -37,6 +51,7 @@ function JobGridBlock({
 
 export default function StateJobsPanel({
   stateName,
+  districtName = null,
   stateJobs,
   nationwideJobs,
   sort,
@@ -46,19 +61,26 @@ export default function StateJobsPanel({
   onStateClick,
 }: StateJobsPanelProps) {
   const { t } = useTranslation();
-  const stateVac = stateJobs.reduce((s, j) => s + (Number(j.vacancies) || 0), 0);
+  const districtJobs = districtName ? stateJobs.filter((job) => jobMentionsDistrict(job, districtName)) : [];
+  const otherStateJobs = districtName ? stateJobs.filter((job) => !jobMentionsDistrict(job, districtName)) : stateJobs;
+  const primaryJobs = districtName && districtJobs.length > 0 ? districtJobs : otherStateJobs;
+  const extraStateJobs = districtName && districtJobs.length > 0 ? otherStateJobs : [];
+  const placeName = districtName ? formatDistrictName(districtName) : stateName;
+  const stateVac = primaryJobs.reduce((s, j) => s + (Number(j.vacancies) || 0), 0);
   const nwVac = nationwideJobs.reduce((s, j) => s + (Number(j.vacancies) || 0), 0);
   const jobCardFilterProps = { onEducationClick, onStateClick };
 
   return (
-    <section className="state-jobs-panel" aria-label={t("home.jobsInState", { state: stateName })}>
+    <section className="state-jobs-panel" aria-label={t("home.jobsInState", { state: placeName })}>
       <header className="state-jobs-panel__header">
         <div>
-          <h2 className="state-jobs-panel__title">{t("home.jobsInState", { state: stateName })}</h2>
+          <h2 className="state-jobs-panel__title">{t("home.jobsInState", { state: placeName })}</h2>
           <p className="state-jobs-panel__meta">
-            {stateJobs.length > 0
+            {districtName && districtJobs.length === 0
+              ? `No notice names ${formatDistrictName(districtName)} yet. Showing ${stateName} jobs you can still apply for.`
+              : primaryJobs.length > 0
               ? t("home.stateJobsCount", {
-                  count: stateJobs.length,
+                  count: primaryJobs.length,
                   vacancies: stateVac.toLocaleString("en-IN"),
                   defaultValue: "{{count}} state listings · {{vacancies}} vacancies",
                 })
@@ -86,10 +108,10 @@ export default function StateJobsPanel({
       </header>
 
       <div
-        key={`${stateName}-${sort}-${stateJobs.length}`}
+        key={`${placeName}-${sort}-${primaryJobs.length}`}
         className="state-jobs-panel__body home-jobs-section__panel home-jobs-section__panel--animate"
       >
-        {stateJobs.length === 0 ? (
+        {primaryJobs.length === 0 ? (
           <div className="state-jobs-panel__empty">
             <div className="state-jobs-panel__empty-icon">📋</div>
             <p>{t("home.noStateListings")}</p>
@@ -99,10 +121,21 @@ export default function StateJobsPanel({
           </div>
         ) : (
           <JobGridBlock
-            jobs={stateJobs}
+            jobs={primaryJobs}
             onJobClick={onJobClick}
             jobCardFilterProps={jobCardFilterProps}
           />
+        )}
+
+        {extraStateJobs.length > 0 && (
+          <div className="state-jobs-panel__nationwide">
+            <h3 className="state-jobs-panel__section-label">Other jobs in {stateName}</h3>
+            <JobGridBlock
+              jobs={extraStateJobs}
+              onJobClick={onJobClick}
+              jobCardFilterProps={jobCardFilterProps}
+            />
+          </div>
         )}
 
         {nationwideJobs.length > 0 && (

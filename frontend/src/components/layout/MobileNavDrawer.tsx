@@ -1,3 +1,5 @@
+import { useEffect } from "react";
+import { createPortal } from "react-dom";
 import { Link, useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { LATEST_NOTIFICATIONS_PATH, EXPLORE_HUB_PATH } from "@/utils/browseRoutes";
@@ -35,9 +37,18 @@ export default function MobileNavDrawer({
   const { t } = useTranslation();
   const { pathname } = useLocation();
 
+  useEffect(() => {
+    if (!open) return undefined;
+    const previous = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.body.style.overflow = previous;
+    };
+  }, [open]);
+
   if (!open) return null;
 
-  return (
+  return createPortal(
     <div className="mobile-nav-drawer" role="dialog" aria-modal="true" aria-label={t("nav.mobilePrimary", { defaultValue: "Primary navigation" })}>
       <button type="button" className="mobile-nav-drawer__backdrop" aria-label={t("nav.closeMenu", { defaultValue: "Close menu" })} onClick={onClose} />
       <div className="mobile-nav-drawer__panel">
@@ -103,6 +114,7 @@ export default function MobileNavDrawer({
           </div>
         ) : null}
       </div>
-    </div>
+    </div>,
+    document.body
   );
 }

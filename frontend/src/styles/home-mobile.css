@@ -46,8 +46,9 @@ body {
 
   .home-jobs-grid-virtual,
   .home-jobs-grid--scroll {
-    max-height: min(72dvh, 640px);
-    min-height: 260px;
+    max-height: none;
+    min-height: 0;
+    overflow: visible;
   }
 
   .job-card {
@@ -215,15 +216,54 @@ body {
   }
 
   .home-state-jobs-panel--below .state-jobs-panel__grid,
-  .home-state-jobs-panel--below .home-jobs-grid-virtual {
-    max-height: min(72dvh, 640px);
-    min-height: 260px;
-  }
-
+  .home-state-jobs-panel--below .home-jobs-grid-virtual,
   .home-state-jobs-panel--below .state-jobs-panel__nationwide .state-jobs-panel__grid,
   .home-state-jobs-panel--below .state-jobs-panel__nationwide .home-jobs-grid-virtual {
-    max-height: min(56dvh, 480px);
-    min-height: 200px;
+    max-height: none;
+    min-height: 0;
+    overflow: visible;
+  }
+
+  .home-state-jobs-panel--below .state-jobs-panel {
+    overflow: visible;
+  }
+
+  .home-state-selected {
+    gap: 20px;
+  }
+
+  .home-map-block--with-districts,
+  .india-glance {
+    padding: 16px;
+  }
+
+  .state-district-map svg,
+  .home-map-shell {
+    max-height: none;
+    overflow: visible;
+  }
+
+  .india-glance__grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .india-glance__section + .india-glance__section {
+    margin-top: 16px;
+    padding-top: 16px;
+  }
+
+  .india-glance__label {
+    font-size: 11px;
+  }
+
+  .india-glance__value {
+    font-size: 15px;
+    line-height: 1.4;
+  }
+
+  .india-glance__title {
+    font-size: 18px;
   }
 
   .state-jobs-panel {
@@ -900,6 +940,36 @@ body {
 }
 
 @media (max-width: 640px) {
+  .latest-notif__wrap {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .latest-notif__table {
+    min-width: 0;
+    table-layout: auto;
+  }
+
+  .latest-notif__table thead th,
+  .latest-notif__table tbody td {
+    white-space: normal;
+    overflow-wrap: anywhere;
+  }
+
+  .latest-notif__table:not(.latest-notif__table--simple) th:nth-child(5),
+  .latest-notif__table:not(.latest-notif__table--simple) td:nth-child(5),
+  .latest-notif__table:not(.latest-notif__table--simple) th:nth-child(6),
+  .latest-notif__table:not(.latest-notif__table--simple) td:nth-child(6) {
+    display: none;
+  }
+
+  .latest-notif__table--simple th:nth-child(1),
+  .latest-notif__table--simple td:nth-child(1),
+  .latest-notif__table--simple th:nth-child(2),
+  .latest-notif__table--simple td:nth-child(2) {
+    min-width: 0;
+  }
+
   .home-browse-strip__track .home-discovery-chip {
     width: 156px;
     max-width: 156px;

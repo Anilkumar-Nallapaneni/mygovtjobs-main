@@ -91,14 +91,20 @@
     font-family: var(--font-display);
     letter-spacing: -0.025em;
     line-height: 1.28;
-    background: linear-gradient(
-      180deg,
-      var(--ds-text-body, var(--ds-white)) 0%,
-      color-mix(in srgb, var(--ds-goldChampagne) 35%, var(--ds-text-body, var(--ds-white))) 100%
-    );
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
+    color: var(--ds-text-body, var(--ds-white));
+  }
+
+  @supports ((-webkit-background-clip: text) or (background-clip: text)) {
+    .job-detail-page--premium .job-detail-title {
+      background: linear-gradient(
+        180deg,
+        var(--ds-text-body, var(--ds-white)) 0%,
+        color-mix(in srgb, var(--ds-goldChampagne) 35%, var(--ds-text-body, var(--ds-white))) 100%
+      );
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
   }
 
   .job-detail-page--premium .job-detail-hero__vacancy-pill {

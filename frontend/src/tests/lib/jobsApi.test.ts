@@ -69,16 +69,22 @@ describe("shouldHardBustLiveJobsCache", () => {
 describe("subscribeToAlerts", () => {
   afterEach(() => {
     vi.unstubAllEnvs();
+    vi.unstubAllGlobals();
     vi.mocked(getSupabase).mockReset();
   });
 
-  it("uses Supabase insert when VITE_API_URL is empty", async () => {
-    vi.stubEnv("VITE_API_URL", "");
-    // Anonymous insert must NOT chain `.select()` (anon has no SELECT policy → 42501).
-    const insert = vi.fn().mockResolvedValue({ error: null });
+  it("posts to the alerts API and does not insert through Supabase", async () => {
+    vi.stubEnv("VITE_API_URL", "https://api.example.test");
+    const insert = vi.fn();
     vi.mocked(getSupabase).mockResolvedValue({
+      auth: { getSession: vi.fn().mockResolvedValue({ data: { session: null } }) },
       from: vi.fn().mockReturnValue({ insert }),
     } as never);
+    const fetchMock = vi.fn().mockResolvedValue({
+      ok: true,
+      json: async () => ({ id: "sub-1" }),
+    });
+    vi.stubGlobal("fetch", fetchMock);
 
     const result = await subscribeToAlerts({
       channel: "email",
@@ -87,36 +93,45 @@ describe("subscribeToAlerts", () => {
       categories: ["banking"],
     });
 
-    expect(result).toEqual({ ok: true, id: "subscribed" });
-    expect(insert).toHaveBeenCalledWith({
-      channel: "email",
-      channel_address: "user@example.com",
-      state_codes: ["up"],
-      categories: ["banking"],
-      qualification_tags: [],
-    });
+    expect(result).toEqual({ ok: true, id: "sub-1" });
+    expect(fetchMock).toHaveBeenCalledWith(
+      expect.stringContaining("/api/alerts/subscribe"),
+      expect.objectContaining({ method: "POST" })
+    );
+    expect(insert).not.toHaveBeenCalled();
   });
 
-  it("derives authenticated alert ownership from the Supabase session", async () => {
+  it("sends the signed-in session and does not fall back when the API rejects", async () => {
     vi.stubEnv("VITE_API_URL", "");
-    const insert = vi.fn().mockResolvedValue({ error: null });
+    const insert = vi.fn();
     vi.mocked(getSupabase).mockResolvedValue({
       auth: {
         getSession: vi.fn().mockResolvedValue({
-          data: { session: { user: { id: "user-1" } } },
+          data: { session: { access_token: "token-1", user: { id: "user-1" } } },
         }),
       },
       from: vi.fn().mockReturnValue({ insert }),
     } as never);
+    const fetchMock = vi.fn().mockResolvedValue({
+      ok: false,
+      status: 400,
+      text: async () => "bot",
+    });
+    vi.stubGlobal("fetch", fetchMock);
 
     const result = await subscribeToAlerts({
       channel: "email",
       channel_address: "owner@example.com",
     });
 
-    expect(result.ok).toBe(true);
-    expect(insert).toHaveBeenCalledWith(
-      expect.objectContaining({ user_id: "user-1" })
+    expect(result).toEqual({ ok: false, error: "failed" });
+    expect(fetchMock).toHaveBeenCalledWith(
+      expect.stringContaining("/api/alerts/subscribe"),
+      expect.objectContaining({
+        method: "POST",
+        headers: expect.objectContaining({ Authorization: "Bearer token-1" }),
+      })
     );
+    expect(insert).not.toHaveBeenCalled();
   });
 });

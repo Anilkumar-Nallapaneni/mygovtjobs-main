@@ -1,6 +1,6 @@
-import { forwardRef } from "react";
-import { Link } from "react-router-dom";
-import { useIndiaState } from "@/hooks/useIndiaExplorer";
+import { useMemo } from "react";
+import { STATE_GLANCE_AS_OF_YEAR, STATE_GLANCE_SECTIONS } from "@/data/stateFacts";
+import { getStateGlanceValueMap } from "@/utils/stateGlanceMetrics";
 
 type StateGlancePanelProps = {
   stateId: string;
@@ -8,20 +8,52 @@ type StateGlancePanelProps = {
   t: (key: string, opts?: Record<string, unknown>) => string;
 };
 
-const StateGlancePanel = forwardRef<HTMLElement, StateGlancePanelProps>(function StateGlancePanel(
-  { stateId, stateName, t }, ref
-) {
-  const { data, loading, error } = useIndiaState(stateId);
-  return <aside ref={ref} className="state-glance india-glance" aria-label={t("home.stateGlance.aria", { state: stateName, defaultValue: "{{state}} at a glance" })}>
-    <h2 className="india-glance__title">{stateName} directory</h2>
-    {loading ? <p>Loading verified directory counts…</p> : error ? <p role="status">Verified directory counts are unavailable.</p> : data ? <dl className="india-glance__grid">
-      <div className="india-glance__item"><dt>Verified districts</dt><dd>{data.counts.districts}</dd></div>
-      <div className="india-glance__item"><dt>Verified cities</dt><dd>{data.counts.cities}</dd></div>
-      <div className="india-glance__item"><dt>Verified places</dt><dd>{data.counts.places}</dd></div>
-    </dl> : null}
-    <p><Link to={`/india/${stateId}`}>Browse the state directory →</Link></p>
-    <p>District identity comes from the <a href="https://lgdirectory.gov.in/" target="_blank" rel="noopener noreferrer">official Local Government Directory</a>. Local coverage depends on verified records.</p>
-  </aside>;
-});
-StateGlancePanel.displayName = "StateGlancePanel";
-export default StateGlancePanel;
+export default function StateGlancePanel({ stateId, stateName, t }: StateGlancePanelProps) {
+  const valueByKey = useMemo(() => getStateGlanceValueMap(stateId), [stateId]);
+  const sections = STATE_GLANCE_SECTIONS.map((section) => ({
+    ...section,
+    facts: section.facts.filter((key) => valueByKey[key] !== "—"),
+  })).filter((section) => section.facts.length > 0);
+
+  return (
+    <aside
+      className="state-glance india-glance"
+      aria-label={t("home.stateGlance.aria", { state: stateName, defaultValue: "{{state}} at a glance" })}
+    >
+      <header className="india-glance__head">
+        <h2 className="india-glance__title">
+          {t("home.stateGlance.title", { state: stateName, defaultValue: "{{state}} at a glance" })}
+        </h2>
+        <span className="india-glance__year">
+          {t("home.stateGlance.asOf", { year: STATE_GLANCE_AS_OF_YEAR, defaultValue: "As of {{year}}" })}
+        </span>
+      </header>
+
+      {sections.map((section) => (
+        <section key={section.id} className="india-glance__section">
+          <h3 className="india-glance__section-title">
+            {t(`home.stateGlance.${section.labelKey}`, { defaultValue: section.labelKey })}
+          </h3>
+          <dl className="india-glance__grid">
+            {section.facts.map((key) => (
+              <div key={key} className="india-glance__item">
+                <dt className="india-glance__label">
+                  {t(`home.stateGlance.${key}`, { defaultValue: key })}
+                </dt>
+                <dd className="india-glance__value">{valueByKey[key]}</dd>
+              </div>
+            ))}
+          </dl>
+        </section>
+      ))}
+
+      <p className="india-glance__note">
+        {t("home.stateGlance.note", {
+          state: stateName,
+          defaultValue:
+            "Each colour on the map is a district of {{state}}. Live jobs for this state are listed below.",
+        })}
+      </p>
+    </aside>
+  );
+}

@@ -63,15 +63,24 @@ async def verify_payment(body: VerifyPaymentBody, user_id: str = Depends(get_cur
     ):
         raise HTTPException(status_code=400, detail="Invalid payment signature")
 
+    try:
+        captured = await service.fetch_captured_payment(body.razorpay_payment_id)
+    except ValueError as exc:
+        raise HTTPException(status_code=400, detail=str(exc)) from exc
+    if captured["order_id"] != body.razorpay_order_id:
+        raise HTTPException(status_code=400, detail="Payment does not match the order")
+
     async with SessionLocal() as session:
         ok = await service.mark_order_paid(
             session,
             order_id=body.razorpay_order_id,
             payment_id=body.razorpay_payment_id,
             user_id=user_id,
+            amount_paise=int(captured["amount"]),
+            currency=str(captured["currency"]),
         )
     if not ok:
-        raise HTTPException(status_code=404, detail="Order not found")
+        raise HTTPException(status_code=400, detail="Payment does not match the stored order")
     return {"ok": True, "subscription_tier": "premium"}
 
 
@@ -87,7 +96,10 @@ async def razorpay_webhook(request: Request):
     if not service.verify_webhook_signature(body, signature):
         raise HTTPException(status_code=400, detail="Invalid webhook signature")
 
-    event = json.loads(body.decode())
+    try:
+        event = json.loads(body.decode())
+    except json.JSONDecodeError:
+        raise HTTPException(status_code=400, detail="Invalid webhook payload") from None
     event_type = event.get("event", "")
     if event_type != "payment.captured":
         return {"ok": True, "ignored": event_type}
@@ -95,9 +107,17 @@ async def razorpay_webhook(request: Request):
     payment = event.get("payload", {}).get("payment", {}).get("entity", {})
     order_id = payment.get("order_id")
     payment_id = payment.get("id")
-    if not order_id or not payment_id:
-        return {"ok": False}
+    if not order_id or not payment_id or payment.get("status") != "captured":
+        raise HTTPException(status_code=400, detail="Captured payment is missing")
 
     async with SessionLocal() as session:
-        await service.mark_order_paid(session, order_id=order_id, payment_id=payment_id)
+        ok = await service.mark_order_paid(
+            session,
+            order_id=order_id,
+            payment_id=payment_id,
+            amount_paise=payment.get("amount"),
+            currency=payment.get("currency"),
+        )
+    if not ok:
+        raise HTTPException(status_code=400, detail="Payment does not match the stored order")
     return {"ok": True}

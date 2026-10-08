@@ -21,6 +21,9 @@ import {
   HOME_SHELL_OFFICIAL_SOURCE_COUNT,
   HOME_SHELL_ORG_COUNT,
 } from "@/data/homeShellStats";
+import HomeDistrictBoard from "@/components/home/HomeDistrictBoard";
+import DistrictGlancePanel from "@/components/home/DistrictGlancePanel";
+import StateGlancePanel from "@/components/home/StateGlancePanel";
 import StateJobsPanel from "@/components/home/StateJobsPanel";
 import { useBrowseContext } from "@/context/BrowseContext";
 import { RESULTS_TOPICS_INDEX_PATH } from "@/utils/browseRoutes";
@@ -201,23 +204,23 @@ export default function HomePage({
     const mapNode = mapPanelRef.current;
     const clearMapCap = () => mapNode?.style.removeProperty("--home-map-max-height");
 
-    if (selectedState || resultsHubMode) {
+    if (resultsHubMode || selectedState) {
       clearMapCap();
       return;
     }
 
-    const canSyncHeights =
-      typeof window !== "undefined" && window.matchMedia("(min-width: 901px)").matches;
-    const heroNode = heroColRef.current;
-    if (!canSyncHeights || !mapNode || !heroNode) {
-      clearMapCap();
-      return;
-    }
-
+    const mq = window.matchMedia("(min-width: 901px)");
     let frame = 0;
+    let observer: ResizeObserver | null = null;
+
     const syncMapHeight = () => {
       cancelAnimationFrame(frame);
       frame = requestAnimationFrame(() => {
+        const heroNode = heroColRef.current;
+        if (!mq.matches || !mapNode || !heroNode) {
+          clearMapCap();
+          return;
+        }
         const heroHeight = Math.ceil(heroNode.getBoundingClientRect().height);
         const mapHead = mapNode.querySelector(".home-map-block__head");
         const headHeight = mapHead ? Math.ceil(mapHead.getBoundingClientRect().height) : 0;
@@ -229,27 +232,48 @@ export default function HomePage({
 
     syncMapHeight();
 
-    const Observer = window.ResizeObserver;
-    const observer = Observer ? new Observer(syncMapHeight) : null;
-    observer?.observe(heroNode);
-    observer?.observe(mapNode);
-    window.addEventListener("resize", syncMapHeight);
+    const watchHero = () => {
+      observer?.disconnect();
+      const heroNode = heroColRef.current;
+      if (!mq.matches || !mapNode || !heroNode || typeof ResizeObserver === "undefined") return;
+      observer = new ResizeObserver(syncMapHeight);
+      observer.observe(heroNode);
+      observer.observe(mapNode);
+    };
+    watchHero();
+
+    const onViewportChange = () => {
+      watchHero();
+      syncMapHeight();
+    };
+    mq.addEventListener("change", onViewportChange);
+    window.addEventListener("resize", onViewportChange);
     const viewport = window.visualViewport;
-    viewport?.addEventListener("resize", syncMapHeight);
-    viewport?.addEventListener("scroll", syncMapHeight);
+    viewport?.addEventListener("resize", onViewportChange);
 
     return () => {
       cancelAnimationFrame(frame);
       observer?.disconnect();
-      window.removeEventListener("resize", syncMapHeight);
-      viewport?.removeEventListener("resize", syncMapHeight);
-      viewport?.removeEventListener("scroll", syncMapHeight);
+      mq.removeEventListener("change", onViewportChange);
+      window.removeEventListener("resize", onViewportChange);
+      viewport?.removeEventListener("resize", onViewportChange);
       clearMapCap();
     };
-  }, [selectedState, resultsHubMode]);
+  }, [resultsHubMode, selectedState]);
+
+  useEffect(() => {
+    if (window.location.hash !== "#india-map-panel") return undefined;
+    const timer = window.setTimeout(() => scrollToSection("india-map-panel"), 0);
+    return () => window.clearTimeout(timer);
+  }, []);
 
   const showOfficialHeadlines = resultsHubMode || Boolean(effectiveTopicKey);
   const stateName = selectedState ? stateLabel(selectedState) : "";
+  const [selectedDistrict, setSelectedDistrict] = useState<string | null>(null);
+
+  useEffect(() => {
+    setSelectedDistrict(null);
+  }, [selectedState]);
   const totalListings = jobs.length;
   const paintShellStats = jobsLoading && jobs.length === 0;
   const displayHeroStats = paintShellStats ? HOME_SHELL_HERO_STATS : heroStats;
@@ -301,6 +325,101 @@ export default function HomePage({
             </p>
           </div>
         )}
+
+        {!isBrowseLanding && !search.trim() && !selectedState && (
+        <div
+          className={`home-hero-grid${resultsHubMode ? " home-hero-grid--hidden" : ""}`}
+        >
+          <div id="india-map-panel" ref={mapPanelRef}>
+            <Suspense
+              fallback={
+                <div
+                  className="home-map-block home-map-block--placeholder"
+                  aria-hidden
+                  style={{ minHeight: 280 }}
+                />
+              }
+            >
+              <HomeMapBlock
+                mapStateData={mapStateData}
+                selectedState={null}
+                stateName=""
+                onStateSelect={handleStateSelect}
+                onClearState={() => handleStateSelect(null)}
+                t={t}
+              />
+            </Suspense>
+          </div>
+
+          <div ref={heroColRef} className="home-map-companion">
+            <HomeHeroMarketing
+              totalListings={totalListings}
+              heroStats={displayHeroStats}
+              heroStatFilter={heroStatFilter}
+              locale={locale}
+              onHeroStatClick={handleHeroStatClick}
+              statsPending={paintShellStats}
+              t={t}
+            />
+            <IndiaGlancePanel />
+            <HomeDistrictBoard
+              stateId={null}
+              stateName=""
+              onStateSelect={(stateId) => handleStateSelect(stateId)}
+            />
+          </div>
+        </div>
+        )}
+
+        {!isBrowseLanding && !search.trim() && selectedState ? (
+          <section className="home-state-selected" id="india-map-panel" aria-label={`${stateName} map, districts, and jobs`}>
+            <button
+              type="button"
+              className="home-state-selected__back"
+              onClick={() => (selectedDistrict ? setSelectedDistrict(null) : handleStateSelect(null))}
+            >
+              {selectedDistrict ? `← ${stateName} map` : "← India map"}
+            </button>
+            <div className="home-state-selected__overview">
+              <HomeMapBlock
+                mapStateData={mapStateData}
+                selectedState={selectedState}
+                stateName={stateName}
+                selectedDistrict={selectedDistrict}
+                onDistrictSelect={(name) => {
+                  setSelectedDistrict(name);
+                  scrollToSection("india-map-panel");
+                }}
+                onClearDistrict={() => setSelectedDistrict(null)}
+                onStateSelect={handleStateSelect}
+                onClearState={() => handleStateSelect(null)}
+                t={t}
+              />
+            </div>
+            {selectedDistrict ? (
+              <DistrictGlancePanel
+                stateId={selectedState}
+                stateName={stateName}
+                districtName={selectedDistrict}
+                t={t}
+              />
+            ) : (
+              <StateGlancePanel stateId={selectedState} stateName={stateName} t={t} />
+            )}
+            <div id="state-jobs-panel" className="home-state-jobs-panel home-state-jobs-panel--below">
+              <StateJobsPanel
+                stateName={stateName}
+                districtName={selectedDistrict}
+                stateJobs={filtered}
+                nationwideJobs={nationwideForState}
+                sort={sort}
+                onSortChange={setSort}
+                onJobClick={onJobClick}
+                {...jobCardFilterProps}
+              />
+            </div>
+          </section>
+        ) : null}
 
         {selectedState && (
           <div className="home-state-filters">
@@ -354,63 +473,6 @@ export default function HomePage({
 
         {stateCounts && categoryCounts && <Suspense fallback={null}><SectorBrowser stateCounts={stateCounts} categoryCounts={categoryCounts} loading={jobsLoading} /></Suspense>}
         {!selectedState && !isBrowseLanding && !search.trim() && <HomeCareerMarketplace />}
-
-        {!isBrowseLanding && !search.trim() && (
-        <div
-          className={`home-hero-grid${selectedState ? " home-hero-grid--state" : ""}${resultsHubMode ? " home-hero-grid--hidden" : ""}`}
-        >
-          <div id="india-map-panel" ref={mapPanelRef}>
-            <Suspense
-              fallback={
-                <div
-                  className="home-map-block home-map-block--placeholder"
-                  aria-hidden
-                  style={{ minHeight: 280 }}
-                />
-              }
-            >
-              <HomeMapBlock
-                mapStateData={mapStateData}
-                selectedState={selectedState}
-                stateName={stateName}
-                onStateSelect={handleStateSelect}
-                onClearState={() => handleStateSelect(null)}
-                t={t}
-              />
-            </Suspense>
-          </div>
-
-          <div
-            id="state-jobs-panel"
-            ref={selectedState ? undefined : heroColRef}
-            className={
-              selectedState ? "home-state-jobs-panel home-state-jobs-panel--below" : undefined
-            }
-          >
-            {!selectedState ? (
-              <><IndiaGlancePanel /><details className="home-catalog-breakdown"><summary>Catalog breakdown</summary><HomeHeroMarketing
-                totalListings={totalListings}
-                heroStats={displayHeroStats}
-                heroStatFilter={heroStatFilter}
-                locale={locale}
-                onHeroStatClick={handleHeroStatClick}
-                statsPending={paintShellStats}
-                t={t}
-              /></details></>
-            ) : (
-              <StateJobsPanel
-                stateName={stateName}
-                stateJobs={filtered}
-                nationwideJobs={nationwideForState}
-                sort={sort}
-                onSortChange={setSort}
-                onJobClick={onJobClick}
-                {...jobCardFilterProps}
-              />
-            )}
-          </div>
-        </div>
-        )}
 
         {!resultsHubMode && !isBrowseLanding && (
           <ClosingDeadlinesStrip

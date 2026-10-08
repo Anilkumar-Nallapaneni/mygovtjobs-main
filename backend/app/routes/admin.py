@@ -1,4 +1,5 @@
 from datetime import datetime, timedelta, timezone
+import logging
 
 from fastapi import APIRouter, Depends, HTTPException, Query
 from pydantic import BaseModel
@@ -17,6 +18,7 @@ from app.services.supabase_audit_service import SupabaseAuditService
 from app.utils.repo_paths import resolve_repo_path
 
 router = APIRouter(dependencies=[Depends(require_admin_key)])
+logger = logging.getLogger(__name__)
 
 
 class JobStatusUpdate(BaseModel):
@@ -74,7 +76,8 @@ async def admin_review_queues(limit: int = Query(40, ge=1, le=200)):
                 )
             ).scalars().all()
         except Exception:
-            return {"queues": queues}
+            logger.exception("Admin review queue query failed")
+            raise HTTPException(status_code=503, detail="Review queue unavailable") from None
 
     queues["quarantine"] = [
         {
@@ -142,8 +145,8 @@ async def admin_update_review_queue(review_id: str, body: ReviewStatusUpdate):
 async def admin_list_jobs(
     status: str | None = None,
     verification_status: str | None = None,
-    limit: int = 50,
-    offset: int = 0,
+    limit: int = Query(50, ge=1, le=200),
+    offset: int = Query(0, ge=0),
 ):
     async with SessionLocal() as session:
         stmt = select(Job).order_by(Job.published_at.desc().nullslast()).limit(limit).offset(offset)

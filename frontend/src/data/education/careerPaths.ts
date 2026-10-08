@@ -668,8 +668,11 @@ export const stageInfo = {
 
 export interface MockQuestion {
   id: number;
+  /** Database question id. Present only for tests loaded from Supabase. */
+  dbId?: string;
   question: string;
   options: string[];
+  /** -1 until the server grades a database-backed question. */
   correctAnswer: number;
   explanation: string;
   subject: string;

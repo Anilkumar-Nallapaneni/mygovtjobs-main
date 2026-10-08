@@ -221,20 +221,7 @@ export default function AppRoutes({
           </LazyRoute>
         }
       />
-      <Route
-        path="/state/:stateId"
-        element={
-          <LazyRoute>
-            <BrowseJobsLandingPage
-              kind="state"
-              jobs={jobs}
-              jobsLoading={jobsLoading}
-              onJobClick={onJobClick}
-              onFooterLink={onFooterLink}
-            />
-          </LazyRoute>
-        }
-      />
+      <Route path="/state/:stateId" element={homePageElement} />
       <Route
         path="/board/:boardId"
         element={

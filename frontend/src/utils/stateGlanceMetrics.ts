@@ -6,7 +6,7 @@ import {
 import { getStateGlanceHighlights } from "@/data/stateGlanceHighlights";
 import { getStateCabinetFacts } from "@/data/stateCabinetFacts";
 
-function glanceValues(stateId: string): Record<StateGlanceFactKey, string> {
+export function getStateGlanceValueMap(stateId: string): Record<StateGlanceFactKey, string> {
   const record = getStateGlanceRecord(stateId);
   const highlights = getStateGlanceHighlights(stateId);
   const cabinet = getStateCabinetFacts(stateId);
@@ -51,7 +51,7 @@ export type StateGlanceMetrics = {
 
 /** Mirrors visible rows in `StateGlancePanel` — used for layout sync tests. */
 export function countStateGlanceVisibleFacts(stateId: string): StateGlanceMetrics {
-  const valueByKey = glanceValues(stateId);
+  const valueByKey = getStateGlanceValueMap(stateId);
   let sections = 0;
   let facts = 0;
   const sectionFacts: Record<string, number> = {};
