@@ -5,7 +5,7 @@ export function Section({
   title,
   children,
   className = "",
-  reveal = true,
+  reveal = false,
   revealDelay = 0,
   id,
 }: {

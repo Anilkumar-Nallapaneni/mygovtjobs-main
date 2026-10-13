@@ -9,8 +9,12 @@ From repo root:
 """
 import argparse
 import asyncio
+import multiprocessing
+import queue
 import re
 import sys
+import threading
+import time
 from datetime import date, datetime, timezone
 from pathlib import Path
 
@@ -31,7 +35,7 @@ def _log(message: str) -> None:
         print(message.encode("ascii", "replace").decode("ascii"), flush=True)
 
 
-from sqlalchemy import select
+from sqlalchemy import func, select
 
 from app.database.session import SessionLocal
 from app.models.job import Job
@@ -39,6 +43,7 @@ from app.parsers.notification_parser import NotificationParser
 from app.parsers.pdf_dates import to_published_datetime
 from app.parsers.pdf_enrich import merge_pdf_fields
 from app.services.job_child_service import sync_job_children
+from app.services.job_completeness_service import calculate_completeness
 from app.services.job_persist_service import JobPersistService, _parse_date
 from app.services.pdf_candidate import validate_extracted_dates
 from app.services.noise_filter import (
@@ -50,6 +55,226 @@ from app.services.publish_gate import india_today
 from app.scrapers.pdf_discover import ensure_pdf_urls
 
 COMMIT_EVERY = 15
+_TRANSIENT = (
+    "getaddrinfo",
+    "timeout",
+    "timed out",
+    "connection",
+    "closed",
+    "reset",
+    "network",
+    "ssl",
+    "temporarily",
+    "could not connect",
+)
+
+
+def _is_transient(exc: BaseException) -> bool:
+    if isinstance(exc, (TimeoutError, OSError, ConnectionError)):
+        return True
+    text = str(exc).lower()
+    return any(token in text for token in _TRANSIENT)
+
+
+_JOB_TIMEOUT_S = 180
+
+
+def _note_counts(stats: dict, result: dict) -> None:
+    if result.get("note") == "no-pdf":
+        stats["no_pdf"] += 1
+        _log("  · no PDF discovered")
+    elif result.get("dates_changed"):
+        stats["date_fixed"] += 1
+        _log(f"  ✓ posted {result['posted']} | last {result['last']}")
+    elif result.get("note") == "still-duplicate":
+        stats["still_dup"] += 1
+        _log(
+            f"  = still same ({result['posted']}) — pdf: "
+            f"pub={result['pdf_pub']} last={result['pdf_last']}"
+        )
+    elif result.get("note") == "pdf-no-dates":
+        stats["no_dates"] += 1
+        _log("  ? PDF read but no dates found")
+    if result.get("changed"):
+        stats["updated"] += 1
+
+
+async def _worker_async(job_ids: list[str], total: int, start_index: int, out_q) -> None:
+    """Process jobs in this process so a native PDF crash does not kill the batch."""
+    parser = NotificationParser()
+    async with SessionLocal() as session:
+        for offset, job_id in enumerate(job_ids):
+            n = start_index + offset + 1
+            try:
+                job = await _retry(
+                    session,
+                    f"[{n}/{total}] database",
+                    lambda jid=job_id: session.get(Job, jid),
+                    attempts=8,
+                )
+            except Exception as exc:
+                out_q.put({"event": "db-down", "id": job_id, "n": n, "error": str(exc)})
+                return
+            title = (job.title or "")[:58] if job else ""
+            out_q.put({"event": "start", "id": job_id, "n": n, "total": total, "title": title})
+            if not job:
+                out_q.put({"event": "result", "id": job_id, "missing": True})
+                continue
+            try:
+                result = await _retry(
+                    session,
+                    f"[{n}/{total}] pdf",
+                    lambda j=job: backfill_one(session, j, parser),
+                )
+                await session.commit()
+                out_q.put({"event": "result", "id": job_id, "result": result})
+            except Exception as exc:
+                try:
+                    await session.rollback()
+                except Exception:
+                    pass
+                if _is_transient(exc):
+                    out_q.put({"event": "db-down", "id": job_id, "n": n, "error": str(exc)})
+                    return
+                out_q.put({"event": "result", "id": job_id, "error": str(exc)})
+            done = offset + 1
+            if done % COMMIT_EVERY == 0:
+                out_q.put({"event": "commit"})
+        try:
+            await session.commit()
+        except Exception as exc:
+            out_q.put({"event": "db-down", "id": job_ids[-1], "n": total, "error": f"final commit failed: {exc}"})
+            return
+        out_q.put({"event": "finished"})
+
+
+def _worker_main(job_ids: list[str], total: int, start_index: int, out_q) -> None:
+    asyncio.run(_worker_async(job_ids, total, start_index, out_q))
+
+
+def _supervise(target_ids: list[str]) -> dict:
+    """Run the batch in a child process and resume after a native crash."""
+    stats = {
+        "scanned": 0,
+        "date_fixed": 0,
+        "still_dup": 0,
+        "no_dates": 0,
+        "no_pdf": 0,
+        "updated": 0,
+        "stopped_early": False,
+    }
+    remaining = list(target_ids)
+    total = len(target_ids)
+    crashes: dict[str, int] = {}
+    db_restarts = 0
+    ctx = multiprocessing.get_context("spawn")
+
+    while remaining and not stats["stopped_early"]:
+        out_q = ctx.Queue()
+        start_index = total - len(remaining)
+        proc = ctx.Process(
+            target=_worker_main,
+            args=(remaining, total, start_index, out_q),
+        )
+        proc.start()
+        local_q: queue.Queue = queue.Queue()
+
+        def _drain(src=out_q, dest=local_q) -> None:
+            try:
+                while True:
+                    dest.put(src.get())
+            except Exception:
+                return
+
+        threading.Thread(target=_drain, name="backfill-queue", daemon=True).start()
+        current: str | None = None
+        started_at = time.monotonic()
+        finished = False
+        db_down = False
+        while True:
+            if current and time.monotonic() - started_at > _JOB_TIMEOUT_S:
+                _log(f"  timeout after {_JOB_TIMEOUT_S}s — restarting worker")
+                proc.kill()
+                break
+            try:
+                msg = local_q.get(timeout=2)
+            except queue.Empty:
+                if not proc.is_alive():
+                    break
+                continue
+            event = msg.get("event")
+            if event == "start":
+                current = msg["id"]
+                started_at = time.monotonic()
+                _log(f"[{msg['n']}/{msg['total']}] {msg.get('title') or ''}")
+            elif event == "result":
+                stats["scanned"] += 1
+                if msg.get("missing"):
+                    _log(f"  missing id={msg['id']}")
+                elif msg.get("error"):
+                    _log(f"  skip: {msg['error']}")
+                else:
+                    _note_counts(stats, msg.get("result") or {})
+                if remaining and remaining[0] == msg.get("id"):
+                    remaining.pop(0)
+                current = None
+            elif event == "commit":
+                _log(f"  — committed ({stats['date_fixed']} date fixes so far)")
+            elif event == "db-down":
+                _log(f"[{msg.get('n')}/{total}] database connection failed: {msg.get('error')}")
+                db_down = True
+                break
+            elif event == "finished":
+                finished = True
+                break
+        proc.join(timeout=5)
+        if proc.is_alive():
+            proc.kill()
+            proc.join(timeout=5)
+        if finished:
+            break
+        if db_down:
+            db_restarts += 1
+            if db_restarts > 12:
+                _log("Rerun the same command. Rows that already received a last_date are skipped.")
+                stats["stopped_early"] = True
+                break
+            _log(f"  database blip — resuming in 15s ({db_restarts}/12)")
+            time.sleep(15)
+            continue
+        failed_id = current or (remaining[0] if remaining else None)
+        if not failed_id:
+            stats["stopped_early"] = True
+            break
+        crashes[failed_id] = crashes.get(failed_id, 0) + 1
+        if crashes[failed_id] >= 2:
+            stats["scanned"] += 1
+            _log(f"  skip: PDF reader crashed on {failed_id}")
+            if remaining and remaining[0] == failed_id:
+                remaining.pop(0)
+            elif failed_id in remaining:
+                remaining.remove(failed_id)
+        else:
+            _log(f"  PDF reader crashed — retrying {failed_id}")
+
+    return stats
+
+
+async def _retry(session, label: str, op, attempts: int = 6):
+    """Retry a DB or PDF call after a short network drop, then re-raise."""
+    for attempt in range(attempts):
+        try:
+            return await op()
+        except Exception as exc:
+            try:
+                await session.rollback()
+            except Exception:
+                pass
+            if not _is_transient(exc) or attempt == attempts - 1:
+                raise
+            delay = min(20, 2**attempt)
+            _log(f"{label} retry {attempt + 1}/{attempts - 1} in {delay}s: {exc}")
+            await asyncio.sleep(delay)
 
 
 def _has_pdf(job: Job) -> bool:
@@ -185,7 +410,6 @@ async def backfill_one(session, job: Job, parser: NotificationParser) -> dict:
     if last_d and (
         "implausibly distant" in err_blob
         or "before publication" in err_blob
-        or last_d < today
     ):
         new_last = None
         last_d = None
@@ -197,6 +421,10 @@ async def backfill_one(session, job: Job, parser: NotificationParser) -> dict:
         job.last_date = new_last
         changed = True
         dates_changed = True
+    if isinstance(last_d, date) and last_d < today and job.last_date:
+        job.status = "expired"
+        job.published_to_site = False
+        changed = True
 
     if new_pub:
         pub_day = new_pub.date()
@@ -215,6 +443,47 @@ async def backfill_one(session, job: Job, parser: NotificationParser) -> dict:
         changed = True
     if pdf_fields.get("summary"):
         detail["summary"] = str(pdf_fields["summary"])[:12_000]
+        changed = True
+
+    for key in ("qualification", "salary", "age_limit"):
+        value = pdf_fields.get(key) or norm.get(key)
+        current = getattr(job, key, None)
+        if value and not str(current or "").strip():
+            limit = 4000 if key == "qualification" else 128
+            setattr(job, key, str(value).strip()[:limit])
+            changed = True
+    raw_vacancies = pdf_fields.get("vacancies") or norm.get("vacancies")
+    try:
+        vacancy_count = int(raw_vacancies) if raw_vacancies not in (None, "") else 0
+    except (TypeError, ValueError):
+        vacancy_count = 0
+    if vacancy_count > 0 and not job.vacancies:
+        job.vacancies = vacancy_count
+        changed = True
+    for key in ("application_fee", "how_to_apply", "selection_process"):
+        value = pdf_fields.get(key) or norm.get(key)
+        if value and not detail.get(key):
+            detail[key] = str(value).strip()[:2000]
+            changed = True
+    score, _missing = calculate_completeness(
+        {
+            "title": job.title,
+            "dept": job.dept,
+            "apply_url": job.apply_url,
+            "source_url": getattr(job, "source_url", None),
+            "last_date": job.last_date,
+            "qualification": job.qualification,
+            "vacancies": job.vacancies,
+            "salary": job.salary,
+            "age_limit": job.age_limit,
+            "application_fee": detail.get("application_fee"),
+            "selection_process": detail.get("selection_process"),
+            "how_to_apply": detail.get("how_to_apply"),
+            "detail": detail,
+        }
+    )
+    if score != int(job.completeness_score or 0):
+        job.completeness_score = score
         changed = True
 
     if changed:
@@ -282,18 +551,14 @@ async def main() -> None:
 
     statuses = {s.strip().lower() for s in args.status.split(",") if s.strip()}
 
-    parser = NotificationParser()
-    updated = 0
-    date_fixed = 0
-    still_dup = 0
-    no_dates = 0
-    no_pdf = 0
-    scanned = 0
-
     async with SessionLocal() as session:
-        rows = (
-            await session.execute(select(Job).order_by(Job.published_at.desc().nullslast()))
-        ).scalars().all()
+        stmt = select(Job).order_by(Job.published_at.desc().nullslast())
+        if not args.duplicates_only:
+            if statuses:
+                stmt = stmt.where(func.lower(Job.status).in_(sorted(statuses)))
+            if args.missing_last_date:
+                stmt = stmt.where(Job.last_date.is_(None))
+        rows = (await _retry(session, "load jobs", lambda: session.execute(stmt))).scalars().all()
 
         if args.duplicates_only:
             targets = [j for j in rows if _duplicate_dates(j) and _has_pdf(j)]
@@ -332,60 +597,21 @@ async def main() -> None:
             f" quality={args.quality_only}"
         )
 
-        for job_id in target_ids:
-            scanned += 1
-            job = await session.get(Job, job_id)
-            if not job:
-                _log(f"[{scanned}/{total}] missing id={job_id}")
-                continue
-            title = (job.title or "")[:58]
-            _log(f"[{scanned}/{total}] {title}")
-            try:
-                result = await backfill_one(session, job, parser)
-                if result.get("note") == "no-pdf":
-                    no_pdf += 1
-                    _log("  · no PDF discovered")
-                elif result.get("dates_changed"):
-                    date_fixed += 1
-                    _log(f"  ✓ posted {result['posted']} | last {result['last']}")
-                elif result.get("note") == "still-duplicate":
-                    still_dup += 1
-                    _log(
-                        f"  = still same ({result['posted']}) — pdf: "
-                        f"pub={result['pdf_pub']} last={result['pdf_last']}"
-                    )
-                elif result.get("note") == "pdf-no-dates":
-                    no_dates += 1
-                    _log("  ? PDF read but no dates found")
-                if result.get("changed"):
-                    updated += 1
-            except Exception as exc:
-                await session.rollback()
-                _log(f"  skip: {exc}")
-
-            if scanned % COMMIT_EVERY == 0:
-                try:
-                    await session.commit()
-                except Exception as exc:
-                    await session.rollback()
-                    _log(f"  commit failed: {exc}")
-                _log(f"  — committed ({date_fixed} date fixes so far)")
-
-        try:
-            await session.commit()
-        except Exception as exc:
-            await session.rollback()
-            _log(f"final commit failed: {exc}")
-
-        if args.export:
+    stats = _supervise(target_ids)
+    if args.export and not stats["stopped_early"]:
+        async with SessionLocal() as session:
             count = await JobPersistService().export_live_jobs_json(session)
             _log(f"Re-exported {count} jobs -> live-jobs.json")
 
     _log(
-        f"Done: scanned={scanned} date_fixed={date_fixed} still_duplicate={still_dup} "
-        f"pdf_no_dates={no_dates} no_pdf={no_pdf} rows_touched={updated}"
+        f"Done: scanned={stats['scanned']} date_fixed={stats['date_fixed']} "
+        f"still_duplicate={stats['still_dup']} pdf_no_dates={stats['no_dates']} "
+        f"no_pdf={stats['no_pdf']} rows_touched={stats['updated']}"
     )
+    if stats["stopped_early"]:
+        raise SystemExit(1)
 
 
 if __name__ == "__main__":
+    multiprocessing.freeze_support()
     asyncio.run(main())

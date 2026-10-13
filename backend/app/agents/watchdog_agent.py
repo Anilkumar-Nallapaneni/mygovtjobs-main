@@ -7,7 +7,7 @@ from __future__ import annotations
 
 import json
 import logging
-from datetime import date, datetime, timedelta, timezone
+from datetime import date, datetime, timezone
 from pathlib import Path
 from typing import Any
 
@@ -18,22 +18,16 @@ from app.database.session import SessionLocal
 from app.models.job import Job
 from app.services.document_classifier import classify_document_type
 from app.services.noise_filter import sanitize_source_text_fields
-from app.services.publish_gate import can_publish_job, india_today
+from app.services.publish_gate import NON_RECRUITMENT_DOCUMENT_TYPES, can_publish_job, india_today
 from app.utils.vacancy_extract import is_non_vacancy_document
 
 logger = logging.getLogger(__name__)
 
-_NON_RECRUITMENT = {
-    "RESULT",
-    "ADMIT_CARD",
-    "ANSWER_KEY",
-    "CORRIGENDUM",
-    "EXAM_NOTICE",
-    "RECRUITMENT_RULES",
-    "FORM",
-    "TENDER",
-    "GENERAL_NOTICE",
-}
+def demotion_target(reasons: list[str]) -> str:
+    """Past India deadlines leave the catalog as expired. Other failures return to draft."""
+    if "deadline expired" in reasons:
+        return "expired"
+    return "draft"
 
 
 def _repo_root() -> Path:
@@ -89,32 +83,44 @@ class WatchdogAgent:
                 doc_type = (job.document_type or "").upper() or classify_document_type(
                     title=title, url=url, text=summary, dept=job.dept or ""
                 )
-                if doc_type in _NON_RECRUITMENT:
+                if doc_type in NON_RECRUITMENT_DOCUMENT_TYPES:
                     reasons.append(f"document_type={doc_type}")
 
                 last = _as_date(job.last_date)
                 if last is None:
                     reasons.append("missing last_date")
-                elif last < today - timedelta(days=1):
+                elif last < today:
                     reasons.append("deadline expired")
 
                 pub = _as_date(job.published_at)
                 if pub and last and last < pub:
                     reasons.append("deadline before publication")
 
-                if not (job.apply_url or job.source_url or job.primary_pdf_url):
+                detail_url = (
+                    detail.get("pdf_url")
+                    or detail.get("primary_pdf_url")
+                    or detail.get("notification_url")
+                    or detail.get("source_url")
+                )
+                if not (job.apply_url or job.source_url or job.primary_pdf_url or detail_url):
                     reasons.append("missing official links")
 
                 payload = {
                     "title": title,
                     "dept": job.dept,
                     "apply_url": job.apply_url,
-                    "source_url": job.source_url,
+                    "source_url": job.source_url or detail.get("source_url"),
+                    "primary_pdf_url": job.primary_pdf_url or detail.get("primary_pdf_url") or detail.get("pdf_url"),
                     "document_type": doc_type if doc_type else "RECRUITMENT",
                     "verification_status": job.verification_status or "VERIFIED",
                     "published_at": job.published_at,
                     "last_date": job.last_date,
                     "vacancies": job.vacancies,
+                    "qualification": job.qualification,
+                    "salary": job.salary,
+                    "age_limit": job.age_limit,
+                    "completeness_score": job.completeness_score,
+                    "state_codes": list(job.state_codes or []),
                     "detail": detail,
                 }
                 if not can_publish_job(payload, today=today) and not reasons:
@@ -130,19 +136,18 @@ class WatchdogAgent:
                         }
                     )
                     if apply:
-                        await session.execute(
-                            update(Job)
-                            .where(Job.id == job.id)
-                            .values(
-                                status="draft",
-                                published_to_site=False,
-                                verification_status="NEEDS_REVIEW",
-                                title=title or job.title,
-                                document_type=doc_type if doc_type else job.document_type,
-                                review_reasons=[f"watchdog:{r}" for r in reasons[:8]],
-                                updated_at=datetime.now(timezone.utc),
-                            )
-                        )
+                        target = demotion_target(reasons)
+                        values: dict[str, Any] = {
+                            "status": target,
+                            "published_to_site": False,
+                            "title": title or job.title,
+                            "document_type": doc_type if doc_type else job.document_type,
+                            "review_reasons": [f"watchdog:{r}" for r in reasons[:8]],
+                            "updated_at": datetime.now(timezone.utc),
+                        }
+                        if target != "expired":
+                            values["verification_status"] = "NEEDS_REVIEW"
+                        await session.execute(update(Job).where(Job.id == job.id).values(**values))
                         report["rowsUpdated"] += 1
                 else:
                     report["ok"] += 1

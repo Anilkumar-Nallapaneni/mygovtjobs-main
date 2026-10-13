@@ -253,10 +253,121 @@ describe("buildStructuredJobDetail", () => {
     expect(structured.overviewFacts.some((f) => /^answer$/i.test(f.label))).toBe(false);
     expect(structured.overviewFacts.some((f) => /paper\s*code/i.test(f.label))).toBe(false);
     expect(structured.overviewFacts.some((f) => /Advt No/i.test(f.label))).toBe(true);
-    // FAQ dump paragraph should not remain as overview body when facts exist
     const overviewArticle = structured.articleSections.find((s) => /overview/i.test(s.heading));
-    if (overviewArticle) {
-      expect(overviewArticle.paragraphs.some((p) => /frequently\s+asked/i.test(p))).toBe(false);
-    }
+    const overviewText = overviewArticle?.paragraphs.join(" ") || "";
+    expect(overviewText).not.toMatch(/frequently\s+asked/i);
+  });
+
+  it("keeps the memorized PDF notice on the page when overview facts also exist", () => {
+    const notice =
+      "Opening for Business Development Manager at BOB Capital. " +
+      "Minimum graduation or 12th pass with 6 months capital market experience. " +
+      "Applications should be submitted on careers@bobcaps.in.";
+    const structured = buildStructuredJobDetail({
+      title: "BOBCAPS Business Development Manager",
+      detail: {
+        memorized_at: "2026-10-08T20:28:45Z",
+        detail_source: "pdf",
+        summary: notice,
+        content_sections: [
+          {
+            heading: "Overview",
+            paragraphs: [notice],
+            tables: [
+              [
+                { label: "Role Description", value: "Full-time on-site Business Development Manager." },
+                { label: "Qualifications", value: "Graduation or 12th pass" },
+              ],
+            ],
+            lists: [],
+            links: [],
+          },
+        ],
+      },
+    });
+
+    expect(structured.overviewFacts.some((f) => /Role Description/i.test(f.label))).toBe(true);
+    const body = structured.articleSections.find((s) => /overview/i.test(s.heading));
+    expect(body?.paragraphs.join(" ")).toContain("careers@bobcaps.in");
+  });
+
+  it("turns a mislabeled age-limit table into posts, with one age sentence", () => {
+    const structured = buildStructuredJobDetail({
+      title: "SAIL Young Professionals",
+      qualification: "Engagement",
+      age_limit: "Min. Post",
+      salary: "Rs. 500",
+      detail: {
+        memorized_at: "2026-10-08T20:28:52Z",
+        detail_source: "pdf",
+        summary: "SAIL invites applications for Young Professionals.",
+        content_sections: [
+          {
+            heading: "Age Limit",
+            paragraphs: [
+              "A. Marketing Division M-1 Marketing - Market Analyst, Kolkata YP-3 1 42 yrs 10 yrs M-2 Marketing - Business Development of Coated Steel, Kolkata YP-1 1 35 yrs 3 yrs",
+              "C. Finance Division F-1 F&A - GST & Tax Planning, Kolkata YP-2 1 38 yrs 6 yrs",
+            ],
+            tables: [],
+            lists: [["Qualification & Experience Eligibility:"]],
+            links: [],
+          },
+          {
+            heading: "Desirable Qualification",
+            paragraphs: [
+              "General: Candidate must be an Indian national. Minimum age for this engagement is 23 years. The upper age-limit shall be reckoned as on the closing date.",
+            ],
+            tables: [],
+            lists: [],
+            links: [],
+          },
+        ],
+      },
+    });
+
+    expect(structured.ageLimit).toEqual(["Minimum age for this engagement is 23 years"]);
+    expect(structured.vacancyRows.map((row) => row.post)).toEqual([
+      "M-1 Marketing - Market Analyst, Kolkata",
+      "M-2 Marketing - Business Development of Coated Steel, Kolkata",
+      "F-1 F&A - GST & Tax Planning, Kolkata",
+    ]);
+    expect(structured.vacancyRows[0]).toMatchObject({
+      vacancies: "1",
+      payLevel: "YP-3",
+      age: "42 years",
+      experience: "10 years",
+    });
+    expect(structured.articleSections.some((s) => /age limit/i.test(s.heading))).toBe(false);
+  });
+
+  it("pulls who-can-apply rules out of the general notice", () => {
+    const structured = buildStructuredJobDetail({
+      detail: {
+        memorized_at: "2026-10-08T00:00:00Z",
+        detail_source: "pdf",
+        summary: "SAIL young professional engagement.",
+        content_sections: [
+          {
+            heading: "Desirable Qualification",
+            paragraphs: [],
+            tables: [
+              [
+                {
+                  label: "General",
+                  value:
+                    "a. Candidate must be an Indian national. b. Minimum age for this engagement is 23 years. c. Candidates not fulfilling the requirements specified in this advertisement need not apply.",
+                },
+              ],
+            ],
+            lists: [["Who can Apply", "Tenure of Engagement:"]],
+            links: [],
+          },
+        ],
+      },
+    });
+
+    expect(structured.whoCanApply.some((line) => /Indian national/i.test(line))).toBe(true);
+    expect(structured.whoCanApply.some((line) => /23 years/i.test(line))).toBe(true);
+    expect(structured.eligibility.some((line) => /^who can apply$/i.test(line))).toBe(false);
   });
 });

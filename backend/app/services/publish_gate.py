@@ -22,6 +22,19 @@ from app.utils.state_resolve import normalize_state_codes
 INDIA_TZ = ZoneInfo("Asia/Kolkata")
 AUTO_PUBLISH_MIN_CONFIDENCE = public_min_confidence()
 PUBLIC_VERIFICATION_STATUSES = public_verification_statuses()
+NON_RECRUITMENT_DOCUMENT_TYPES = frozenset(
+    {
+        "RESULT",
+        "ADMIT_CARD",
+        "ANSWER_KEY",
+        "CORRIGENDUM",
+        "EXAM_NOTICE",
+        "RECRUITMENT_RULES",
+        "FORM",
+        "TENDER",
+        "GENERAL_NOTICE",
+    }
+)
 
 
 @dataclass(frozen=True)
@@ -394,8 +407,10 @@ def resolve_persist_status(
 
     if not auto_publish_verified:
         vstatus = "NEEDS_REVIEW"
-        if document_type != "RECRUITMENT":
-            vstatus = "REJECTED" if document_type in ("TENDER", "FORM", "RECRUITMENT_RULES") else "NEEDS_REVIEW"
+        if document_type in NON_RECRUITMENT_DOCUMENT_TYPES:
+            vstatus = "REJECTED"
+        elif document_type != "RECRUITMENT":
+            vstatus = "NEEDS_REVIEW"
         return "draft", vstatus, False, errors or ["Auto-publish disabled"]
 
     if not structural_ok:

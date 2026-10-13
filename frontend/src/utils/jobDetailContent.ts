@@ -2,7 +2,14 @@ import { pickOfficialDetailUrl } from "@/utils/officialDomains";
 import { resolveJobApplyHref } from "@/utils/jobDetailLinks";
 import { collectPdfUrls } from "@/utils/resolvePdfUrl";
 import { normalizeIsoDate, resolveVacancyCount } from "@/utils/jobMetadataUtils";
-import { buildStructuredJobDetail, isRealFeeEntry, sanitizeFeeDict } from "@/utils/jobDetailStructured";
+import {
+  buildStructuredJobDetail,
+  isRealFeeEntry,
+  isUsableAgeText,
+  isUsableQualification,
+  isUsableSalary,
+  sanitizeFeeDict,
+} from "@/utils/jobDetailStructured";
 import { resolveJobDept } from "@/utils/resolveJobDept";
 
 const MISSING_DETAIL = "See official notification";
@@ -381,24 +388,19 @@ export function buildJobDetailView(job) {
   )?.value;
   const overviewAge = structured.overviewFacts.find((f) => /age/i.test(f.label))?.value;
 
-  const qual =
-    job.qual && job.qual !== "—" && job.qual !== "See notification"
-      ? job.qual
-      : overviewQual || job.detail?.qualification || "See official notification";
+  const qualCandidate = [job.qual, overviewQual, job.detail?.qualification].find((value) =>
+    isUsableQualification(value)
+  );
+  const qual = qualCandidate || "See official notification";
 
-  const salary =
-    meaningfulValue(job.salary) ||
-    overviewSalary ||
-    structured.salaryInfo[0] ||
-    extractSalary(summary) ||
-    MISSING_DETAIL;
-  const age =
-    meaningfulValue(job.age) ||
-    meaningfulValue(job.age_limit) ||
-    overviewAge ||
-    structured.ageLimit[0] ||
-    extractAge(summary) ||
-    MISSING_DETAIL;
+  const salaryCandidate = [job.salary, overviewSalary, structured.salaryInfo[0], extractSalary(summary)].find(
+    (value) => isUsableSalary(value)
+  );
+  const salary = salaryCandidate || MISSING_DETAIL;
+  const ageCandidate = [job.age, job.age_limit, overviewAge, structured.ageLimit[0], extractAge(summary)].find(
+    (value) => isUsableAgeText(value)
+  );
+  const age = ageCandidate || MISSING_DETAIL;
 
   const dates = buildDates({ ...job, vacancies, lastDate: job.lastDate });
   if (useStructured) {

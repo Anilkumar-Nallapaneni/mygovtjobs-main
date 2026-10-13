@@ -273,6 +273,22 @@ def test_india_today_handles_utc_date_boundary(monkeypatch):
     assert india_today() == date(2026, 7, 27)
 
 
+def test_resolve_persist_status_rejects_non_recruitment():
+    today = date(2026, 7, 24)
+    status, verification, published, _ = resolve_persist_status(
+        last_date=today + timedelta(days=10),
+        document_type="TENDER",
+        verification_status="UNVERIFIED",
+        normalized={"title": "E-Tender for furniture", "dept": "UPSC"},
+        auto_publish_verified=False,
+        today=today,
+        completeness_score=80,
+    )
+    assert status == "draft"
+    assert verification == "REJECTED"
+    assert published is False
+
+
 def test_resolve_persist_status_freeze_defaults_to_draft():
     today = date(2026, 7, 24)
     status, verification, published, _ = resolve_persist_status(

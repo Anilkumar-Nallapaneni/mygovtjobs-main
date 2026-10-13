@@ -9752,7 +9752,7 @@ a.navbar__nav-btn {
 }
 
 .job-detail-hero__inner {
-  padding: 22px 24px 20px;
+  padding: 14px 16px 12px;
 }
 
 .job-detail-hero__top {
@@ -11318,15 +11318,13 @@ a.navbar__nav-btn {
 }
 
 .job-detail-toolbar {
-  position: sticky;
-  top: 66px;
-  z-index: 5;
+  position: relative;
+  z-index: 1;
   margin-bottom: 16px;
   padding: 10px 12px;
   border: 1px solid var(--ds-border);
   border-radius: 12px;
-  background: color-mix(in srgb, var(--ds-bg1) 92%, transparent);
-  backdrop-filter: blur(10px);
+  background: var(--ds-bg1);
   box-shadow: var(--ds-shadowCard);
 }
 
@@ -11367,7 +11365,6 @@ a.navbar__nav-btn {
   }
 
   .job-detail-toolbar {
-    top: 0;
     flex-wrap: wrap;
     gap: 8px;
   }
@@ -11986,7 +11983,7 @@ main:not(.india-explorer) { min-width: 0; }
 
   .job-detail-page--premium .job-detail-page__shell {
     padding-top: 8px;
-    padding-bottom: calc(128px + env(safe-area-inset-bottom, 0));
+    padding-bottom: calc(84px + env(safe-area-inset-bottom, 0));
   }
 
   /* Hero — gold mesh + entrance */

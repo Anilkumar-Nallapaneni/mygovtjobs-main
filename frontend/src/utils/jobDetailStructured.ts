@@ -3,7 +3,13 @@ import { isBlockedAggregatorHost, isStructuredImportSource } from "@/utils/offic
 export type DetailFact = { label: string; value: string };
 export type DetailDate = { event: string; date: string };
 export type DetailLink = { label: string; url: string };
-export type DetailVacancyRow = { post: string; vacancies: string };
+export type DetailVacancyRow = {
+  post: string;
+  vacancies: string;
+  payLevel?: string;
+  age?: string;
+  experience?: string;
+};
 
 export type DisplaySection = {
   heading: string;
@@ -26,6 +32,7 @@ export type StructuredJobDetail = {
   howToApply: string[];
   officialLinks: DetailLink[];
   applyMode: string;
+  whoCanApply: string[];
   displaySections: DisplaySection[];
   /** Full article body — same section order as source notification pages. */
   articleSections: DisplaySection[];
@@ -105,6 +112,15 @@ function isGarbledParagraph(text: string) {
   return false;
 }
 
+function isFaqDumpParagraph(text: string) {
+  const s = cleanText(text);
+  if (!s) return false;
+  return (
+    /frequently\s+asked\s+questions/i.test(s) ||
+    (/\banswer\s*:/i.test(s) && /\d+\.\s+.+\?/.test(s) && s.length > 120)
+  );
+}
+
 function isDumpParagraph(text: string) {
   const s = cleanText(text);
   if (!s) return true;
@@ -113,13 +129,7 @@ function isDumpParagraph(text: string) {
     return true;
   }
   if (/^download\b/i.test(s) && /\.pdf/i.test(s)) return true;
-  // FAQ dump paragraphs (often merged into Overview from a second PDF).
-  if (
-    /frequently\s+asked\s+questions/i.test(s) ||
-    (/\banswer\s*:/i.test(s) && /\d+\.\s+.+\?/.test(s) && s.length > 120)
-  ) {
-    return true;
-  }
+  if (isFaqDumpParagraph(s)) return true;
   return false;
 }
 
@@ -130,10 +140,139 @@ const _FEE_CATEGORY_LABEL =
 const _FEE_AMOUNT_VALUE = /(?:rs\.?|inr|₹)\s*[\d,]+(?:\s*\/\s*-)?/i;
 const _FEE_NIL_VALUE = /^(?:nil|n\/?a|exempt(?:ed)?|free|no\s+fee|zero|0(?:\.0+)?|-|—)$/i;
 
+/** A real age line, not a vacancy-table paragraph that merely mentions years. */
+export function isUsableAgeText(value: unknown): boolean {
+  const s = cleanText(value);
+  if (!s || s.length > 180) return false;
+  if (/^(?:min\.?\s*post|engagement|see official notification)$/i.test(s)) return false;
+  if (/\b[A-Z]-\d+\b/.test(s) && /\bYP-\d+\b/.test(s)) return false;
+  return /\b\d{1,2}\s*(?:years?|yrs?)\b/i.test(s);
+}
+
+/** Degree or class, not a stray word pulled from a table header. */
+export function isUsableQualification(value: unknown): boolean {
+  const s = cleanText(value);
+  if (!s || s.length > 400) return false;
+  if (/^(?:engagement|min\.?\s*post|see official notification)$/i.test(s)) return false;
+  return /(?:\bgraduate\b|\bdiploma\b|\bdegree\b|b\.?\s*e\b|b\.?\s*tech|m\.?\s*tech|\bmba\b|\bmbbs\b|\b12th\b|\b10th\b|intermediate|\biti\b|\bca\b|\bcma\b|ph\.?\s*d|bachelor|master|\bclass\b)/i.test(
+    s
+  );
+}
+
+/** Pay or pay level. A bare Rs. 500 is usually the application fee. */
+export function isUsableSalary(value: unknown): boolean {
+  const s = cleanText(value);
+  if (!s || /^(?:engagement|see official notification)$/i.test(s)) return false;
+  if (/\bpay\s*level\b/i.test(s)) return true;
+  if (/\b(?:lakh|lac|per\s+month|p\.?m\.?|consolidated|retainership)\b/i.test(s)) return true;
+  const amount = s.match(/(?:rs\.?|₹|inr)\s*([\d,]+)/i);
+  if (!amount) return false;
+  const n = Number(amount[1].replace(/,/g, ""));
+  return Number.isFinite(n) && n >= 1000;
+}
+
+const _ENGAGEMENT_ROW =
+  /\b([A-Z]-\d+)\s+(.+?)\s+(YP-\d+)\s+(\d+)\s+(\d+)\s*yrs?\s+(\d+)\s*yrs?\b/gi;
+
+/** SAIL-style rows: code, post, grade, posts, max age, experience. */
+export function extractEngagementRows(text: string): DetailVacancyRow[] {
+  const rows: DetailVacancyRow[] = [];
+  const seen = new Set<string>();
+  for (const match of cleanText(text).matchAll(_ENGAGEMENT_ROW)) {
+    const code = match[1];
+    const name = cleanText(match[2]).replace(/^(?:[A-Z]\.\s+)?[A-Za-z &]+\s+Division\s+/i, "");
+    const grade = match[3];
+    const key = `${code}|${name}`.toLowerCase();
+    if (!name || seen.has(key)) continue;
+    seen.add(key);
+    rows.push({
+      post: `${code} ${name}`,
+      vacancies: match[4],
+      payLevel: grade,
+      age: `${match[5]} years`,
+      experience: `${match[6]} years`,
+    });
+  }
+  return rows;
+}
+
+function isHeadingOnly(item: string) {
+  const raw = cleanText(item);
+  const s = raw.replace(/:$/, "");
+  if (!s) return false;
+  if (/:\s*$/.test(raw) && raw.length < 80) return true;
+  if (s.length > 48) return false;
+  return /^(?:who can apply|tenure of engagement|remuneration|selection process|how to apply|general|guidelines|other benefits|scope of engagement|engagement hours and leave|other terms(?:\s*&\s*conditions)?|termination of engagement|process for submission of application form|receipt of applications and registration fee|contract for engagement)$/i.test(
+    s
+  );
+}
+
+function splitNoticeClauses(text: string): string[] {
+  const parts = cleanText(text)
+    .split(/\s+(?=(?:[a-z]|\d+)\.\s+)/i)
+    .map((part) => cleanText(part).replace(/^(?:[a-z]|\d+)\.\s+/i, ""))
+    .filter((part) => part.length >= 24 && part.length <= 320);
+  return parts.length >= 2 ? parts : [];
+}
+
+/** Rules that say who may apply, taken from the notification's General / Who can apply text. */
+export function extractWhoCanApply(sections: unknown[]): string[] {
+  const chunks: string[] = [];
+  for (const section of sections) {
+    if (!section || typeof section !== "object") continue;
+    const s = section as Record<string, unknown>;
+    for (const table of normalizeSectionTables(s.tables)) {
+      for (const row of table) {
+        const label = cleanText(row.label);
+        const value = cleanText(row.value);
+        if (/who can apply|^general$|^guidelines$/i.test(label) && value.length > 40) chunks.push(value);
+      }
+    }
+    const paragraphs = Array.isArray(s.paragraphs) ? s.paragraphs : [];
+    for (const paragraph of paragraphs) {
+      const text = cleanText(paragraph);
+      if (/must be an indian national|who can apply|need not apply/i.test(text)) chunks.push(text);
+    }
+  }
+  const lines = chunks
+    .flatMap(splitNoticeClauses)
+    .filter((line) =>
+      /national|age|eligib|qualif|experience|appoint|need not apply|closing date|citizen/i.test(line)
+    );
+  const unique: string[] = [];
+  for (const line of lines) {
+    const norm = line.toLowerCase();
+    const overlap = unique.findIndex((existing) => {
+      const other = existing.toLowerCase();
+      return other === norm || other.includes(norm) || norm.includes(other);
+    });
+    if (overlap === -1) unique.push(line);
+    else if (line.length > unique[overlap].length) unique[overlap] = line;
+  }
+  return unique.slice(0, 8);
+}
+
+function pullAgeSentences(text: string): string[] {
+  const s = cleanText(text);
+  const found: string[] = [];
+  const minimum = s.match(/\bminimum age\b[^.]{0,50}\d{1,2}\s*(?:years?|yrs?)/i);
+  if (minimum && isUsableAgeText(minimum[0])) {
+    const line = cleanText(minimum[0]);
+    found.push(line.charAt(0).toUpperCase() + line.slice(1));
+  }
+  const upper = s.match(/\bupper age[-\s]*limit\b[^.]{0,140}/i);
+  if (upper && isUsableAgeText(upper[0])) found.push(cleanText(upper[0]));
+  return found;
+}
+
 export function isJunkKvFact(fact: DetailFact | null | undefined): boolean {
   if (!fact?.label || !fact?.value) return true;
   const label = cleanText(fact.label);
   const value = cleanText(fact.value);
+  if (/https?$/i.test(label)) return true;
+  if (/^(?:step|action)\s*\d/i.test(label)) return true;
+  if (/^(?:note|now click|general instructions|go to\b|select\b)/i.test(label)) return true;
+  if (/^(?:engagement|fresh|-|—)$/i.test(value)) return true;
   if (_JUNK_KV_LABEL.test(label)) return true;
   if (/\[?\s*paper\s*code\s*$/i.test(label)) return true;
   if (/^\[?paper\s*code/i.test(label)) return true;
@@ -373,6 +512,7 @@ export function buildStructuredJobDetail(job: Record<string, unknown>): Structur
     howToApply: [],
     officialLinks: [],
     applyMode: "",
+    whoCanApply: [],
     displaySections: [],
     articleSections: [],
   };
@@ -426,9 +566,10 @@ export function buildStructuredJobDetail(job: Record<string, unknown>): Structur
   for (const section of effectiveSections) {
     const s = section as Record<string, unknown>;
     const kind = classifyHeading(String(s.heading || ""));
-    const paragraphs = Array.isArray(s.paragraphs)
-      ? s.paragraphs.map((p) => cleanText(p)).filter((p) => !isDumpParagraph(p))
+    const rawParagraphs = Array.isArray(s.paragraphs)
+      ? s.paragraphs.map((p) => cleanText(p)).filter(Boolean)
       : [];
+    const paragraphs = rawParagraphs.filter((p) => !isDumpParagraph(p));
     const lists = flattenLists(s.lists);
     const tables = normalizeSectionTables(s.tables);
     const links = Array.isArray(s.links)
@@ -448,8 +589,24 @@ export function buildStructuredJobDetail(job: Record<string, unknown>): Structur
       if (kind === "dates" || kind === "overview") importantDates.push(...parsed.dates);
     }
 
-    if (kind === "eligibility") eligibility.push(...lists, ...paragraphs);
-    if (kind === "age") ageLimit.push(...lists, ...paragraphs);
+    if (kind === "eligibility") {
+      eligibility.push(
+        ...lists.filter((item) => item.length <= 280 && !isHeadingOnly(item)),
+        ...paragraphs.filter((item) => item.length <= 280 && !isHeadingOnly(item))
+      );
+    }
+    for (const chunk of rawParagraphs) ageLimit.push(...pullAgeSentences(chunk));
+    if (kind === "age") {
+      for (const chunk of [...paragraphs, ...lists]) {
+        const posts = extractEngagementRows(chunk);
+        if (posts.length) {
+          vacancyRows.push(...posts);
+          continue;
+        }
+        if (isUsableAgeText(chunk)) ageLimit.push(chunk);
+        ageLimit.push(...pullAgeSentences(chunk));
+      }
+    }
     if (kind === "salary") salaryInfo.push(...lists, ...paragraphs);
     if (kind === "selection") selection.push(...lists, ...paragraphs);
     if (kind === "howApply") howToApply.push(...lists, ...paragraphs);
@@ -461,7 +618,11 @@ export function buildStructuredJobDetail(job: Record<string, unknown>): Structur
   selection = [...new Set(selection.map((s) => cleanText(s)).filter((s) => s && !isGarbledParagraph(s)))];
   howToApply = [...new Set(howToApply.map((s) => cleanText(s)).filter((s) => s && !isGarbledParagraph(s)))];
   eligibility = eligibility.map((s) => cleanText(s)).filter((s) => s && !isDumpParagraph(s));
-  ageLimit = ageLimit.map((s) => cleanText(s)).filter((s) => s && !isGarbledParagraph(s));
+  ageLimit = [...new Set(ageLimit.map((s) => cleanText(s)).filter((s) => isUsableAgeText(s)))];
+  vacancyRows = vacancyRows.filter((row, index) => {
+    const key = `${row.post}|${row.vacancies}`.toLowerCase();
+    return vacancyRows.findIndex((other) => `${other.post}|${other.vacancies}`.toLowerCase() === key) === index;
+  });
   salaryInfo = salaryInfo.map((s) => cleanText(s)).filter((s) => s && !isGarbledParagraph(s));
 
   const applyModeFact = overviewFacts.find((f) => /apply mode/i.test(f.label));
@@ -531,6 +692,7 @@ export function buildStructuredJobDetail(job: Record<string, unknown>): Structur
     skipOverview: overviewFacts.length > 0,
     skipDates: importantDates.length > 0,
     keepDumpParagraphs: pdfMemorized,
+    skipAge: vacancyRows.some((row) => Boolean(row.age)),
   });
 
   return {
@@ -546,6 +708,7 @@ export function buildStructuredJobDetail(job: Record<string, unknown>): Structur
     howToApply,
     officialLinks,
     applyMode,
+    whoCanApply: extractWhoCanApply(effectiveSections),
     displaySections,
     articleSections,
   };
@@ -567,6 +730,8 @@ type ArticleSectionOptions = {
   skipDates?: boolean;
   /** PDF memorized bodies often include field keywords — do not treat as dump. */
   keepDumpParagraphs?: boolean;
+  /** Post table already shows each age. */
+  skipAge?: boolean;
 };
 
 /** Article layout — strip promos, duplicate summary, and link-only blocks (shown in action bar). */
@@ -577,8 +742,10 @@ function buildArticleSections(sections: unknown[], options: ArticleSectionOption
     skipOverview = false,
     skipDates = false,
     keepDumpParagraphs = false,
+    skipAge = false,
   } = options;
   const seenHeadings = new Set<string>();
+  const seenParagraphs = new Set<string>();
 
   return sections
     .map((section) => {
@@ -594,10 +761,14 @@ function buildArticleSections(sections: unknown[], options: ArticleSectionOption
       if (kind === "links") {
         return null;
       }
-      if (skipOverview && kind === "overview") {
+      // Fact cards replace a short overview. A memorized PDF overview is the notice itself.
+      if (skipOverview && kind === "overview" && !keepDumpParagraphs) {
         return null;
       }
       if (skipDates && kind === "dates") {
+        return null;
+      }
+      if (skipAge && kind === "age") {
         return null;
       }
       let tables = stripJunkRowsFromTables(normalizeSectionTables(s.tables));
@@ -608,21 +779,33 @@ function buildArticleSections(sections: unknown[], options: ArticleSectionOption
         ? s.paragraphs
             .map((p) => cleanText(p))
             .filter((p) => {
-              if (!p || isPromoParagraph(p) || isGarbledParagraph(p)) return false;
+              if (!p || isPromoParagraph(p) || isGarbledParagraph(p) || isFaqDumpParagraph(p)) return false;
               if (!keepDumpParagraphs && isDumpParagraph(p)) return false;
+              if (kind === "age" && extractEngagementRows(p).length > 0) return false;
+              const key = p.toLowerCase().slice(0, 180);
+              if (seenParagraphs.has(key)) return false;
+              seenParagraphs.add(key);
               return true;
             })
         : [];
       if (summary && !keepDumpParagraphs) {
         paragraphs = paragraphs.filter((p) => !isSimilarText(p, summary));
       }
-      const lists = Array.isArray(s.lists)
+      if (paragraphs.length > 0) {
+        tables = tables.filter((table) => !isKvOverviewTable(table));
+      }
+      let lists = Array.isArray(s.lists)
         ? (s.lists as string[][])
             .map((list) =>
               (Array.isArray(list) ? list : []).map((item) => cleanText(item)).filter(Boolean)
             )
             .filter((list) => list.length > 0)
         : [];
+      if (kind === "age") {
+        lists = lists
+          .map((list) => list.filter((item) => isUsableAgeText(item)))
+          .filter((list) => list.length > 0);
+      }
       const links: DetailLink[] = [];
 
       return { heading, paragraphs, tables, lists, links };

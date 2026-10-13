@@ -1,6 +1,5 @@
--- Prepared by `supabase migration new harden_bookmark_grants`.
--- REVIEW ONLY: not applied by this audit. No rows or policies are changed.
--- Preserve the existing auth.uid() ownership policies and backend service role.
+-- Authenticated keeps owner SELECT, INSERT, and DELETE.
+-- TRUNCATE ignores row-level security, so that grant is revoked.
 BEGIN;
 REVOKE ALL ON TABLE public.bookmarks FROM PUBLIC, anon;
 REVOKE UPDATE, REFERENCES, TRIGGER, TRUNCATE ON TABLE public.bookmarks FROM authenticated;

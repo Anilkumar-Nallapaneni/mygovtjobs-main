@@ -13,7 +13,7 @@ import {
   translateFeeKey,
 } from "@/utils/jobDetailLabels";
 import { buildJobDetailView } from "@/utils/jobDetailContent";
-import { isJunkKvFact } from "@/utils/jobDetailStructured";
+import { isJunkKvFact, isUsableAgeText, isUsableSalary } from "@/utils/jobDetailStructured";
 import { extractPostName } from "@/utils/extractPostName";
 import {
   buildUnifiedDetailActions,
@@ -107,6 +107,9 @@ export default function JobDetail({
           }))
           .filter((row) => row.post);
   const showPayLevel = vacancyRows.some((row) => row.payLevel);
+  const gradeColumn = vacancyRows.every((row) => !row.payLevel || /^YP-\d+$/i.test(row.payLevel));
+  const showPostAge = vacancyRows.some((row) => row.age);
+  const showExperience = vacancyRows.some((row) => row.experience);
   const rawApplyMode =
     structured?.applyMode ||
     structured?.overviewFacts.find((f) => /apply mode/i.test(f.label))?.value ||
@@ -134,7 +137,19 @@ export default function JobDetail({
   const rawSummary = view.about || "";
   const summaryText = formatSummaryForDisplay(sanitizeParagraphText(rawSummary, actionUrls));
   const bodySections = useStructured ? structured.articleSections : [];
-  const showSummaryLead = Boolean(summaryText) && summaryText.length >= 40;
+  const hasNoticeBody = bodySections.some(
+    (s) => /overview|notification/i.test(s.heading || "") && (s.paragraphs || []).length > 0
+  );
+  const hasFullQualification = bodySections.some(
+    (s) =>
+      /qualification/i.test(s.heading || "") &&
+      !/eligibility/i.test(s.heading || "") &&
+      (s.paragraphs || []).join(" ").length > 400
+  );
+  const showSummaryLead =
+    Boolean(summaryText) &&
+    summaryText.length >= 40 &&
+    !(useStructured && (vacancyRows.length > 0 || (structured?.whoCanApply?.length ?? 0) > 0));
 
   const highlights = (view.highlights || []).filter(Boolean);
   const extraDetails = (view.extraDetails || []).map((item: { label: string; value: string }) => ({
@@ -143,11 +158,14 @@ export default function JobDetail({
   }));
 
   const eligibilityList = structured?.eligibility?.length ? structured.eligibility : [];
+  const whoCanApply = structured?.whoCanApply?.length ? structured.whoCanApply : [];
 
   const eligibilityRows = [
     showField(view.qual) ? { label: t("jobDetail.qualification", { defaultValue: "Qualification" }), value: displayValue(view.qual) } : null,
     showField(view.nationality) ? { label: t("jobDetail.nationality", { defaultValue: "Nationality" }), value: displayValue(view.nationality) } : null,
-    showField(view.age) ? { label: t("jobDetail.ageLimit", { defaultValue: "Age limit" }), value: displayValue(view.age) } : null,
+    showField(view.age) && isUsableAgeText(view.age)
+      ? { label: t("jobDetail.ageLimit", { defaultValue: "Age limit" }), value: displayValue(view.age) }
+      : null,
     showField(view.ageRelax) ? { label: t("jobDetail.ageRelaxation", { defaultValue: "Age relaxation" }), value: displayValue(view.ageRelax) } : null,
     showField(view.attempts) ? { label: t("jobDetail.attempts", { defaultValue: "Attempts" }), value: displayValue(view.attempts) } : null,
     showField(view.syllabus) ? { label: t("jobDetail.syllabus", { defaultValue: "Syllabus" }), value: displayValue(view.syllabus) } : null,
@@ -162,11 +180,16 @@ export default function JobDetail({
           ),
         }
       : null,
-    ...(structured?.ageLimit || []).map((value) => ({
-      label: t("jobDetail.ageLimit", { defaultValue: "Age limit" }),
-      value,
-    })),
-    ...(structured?.salaryInfo || []).map((value) => ({
+    ...(showPostAge
+      ? []
+      : (structured?.ageLimit || [])
+          .filter((value) => isUsableAgeText(value) && value !== view.age)
+          .slice(0, 3)
+          .map((value) => ({
+            label: t("jobDetail.ageLimit", { defaultValue: "Age limit" }),
+            value,
+          }))),
+    ...(structured?.salaryInfo || []).filter((value) => isUsableSalary(value)).map((value) => ({
       label: t("jobDetail.salary", { defaultValue: "Salary" }),
       value,
     })),
@@ -176,7 +199,10 @@ export default function JobDetail({
     showSummaryLead ? { id: "jd-about", label: t("jobDetail.aboutRecruitment", { defaultValue: "About" }) } : null,
     dateEntries.length > 0 ? { id: "jd-dates", label: t("jobDetail.importantDates") } : null,
     vacancyRows.length > 0 ? { id: "jd-vacancies", label: t("jobDetail.vacancyDetails", { defaultValue: "Posts" }) } : null,
-    eligibilityList.length > 0 || eligibilityRows.length > 0
+    whoCanApply.length > 0
+      ? { id: "jd-who", label: t("jobDetail.whoCanApply", { defaultValue: "Who can apply" }) }
+      : null,
+    whoCanApply.length === 0 && (eligibilityList.length > 0 || eligibilityRows.length > 0)
       ? { id: "jd-eligibility", label: t("jobDetail.eligibilityDetails", { defaultValue: "Eligibility" }) }
       : null,
     helpdeskEmails.length > 0 || helpdeskUrl
@@ -292,7 +318,15 @@ export default function JobDetail({
                   <th>{t("jobDetail.postName")}</th>
                   <th>{t("job.posts")}</th>
                   {showPayLevel ? (
-                    <th>{t("jobDetail.payLevel", { defaultValue: "Pay level" })}</th>
+                    <th>
+                      {gradeColumn
+                        ? t("jobDetail.grade", { defaultValue: "Grade" })
+                        : t("jobDetail.payLevel", { defaultValue: "Pay level" })}
+                    </th>
+                  ) : null}
+                  {showPostAge ? <th>{t("jobDetail.ageLimit", { defaultValue: "Max age" })}</th> : null}
+                  {showExperience ? (
+                    <th>{t("jobDetail.experience", { defaultValue: "Experience" })}</th>
                   ) : null}
                 </tr>
               </thead>
@@ -302,6 +336,8 @@ export default function JobDetail({
                     <td>{row.post}</td>
                     <td>{row.vacancies}</td>
                     {showPayLevel ? <td>{"payLevel" in row ? row.payLevel || "—" : "—"}</td> : null}
+                    {showPostAge ? <td>{row.age || "—"}</td> : null}
+                    {showExperience ? <td>{row.experience || "—"}</td> : null}
                   </tr>
                 ))}
               </tbody>
@@ -310,7 +346,17 @@ export default function JobDetail({
         </Section>
       ) : null}
 
-      {overviewFacts.length > 0 ? (
+      {whoCanApply.length > 0 ? (
+        <Section id="jd-who" title={t("jobDetail.whoCanApply", { defaultValue: "Who can apply" })}>
+          <ul className="job-detail-bullets">
+            {whoCanApply.map((rule) => (
+              <li key={rule}>{rule}</li>
+            ))}
+          </ul>
+        </Section>
+      ) : null}
+
+      {overviewFacts.length > 0 && !bodySections.some((s) => /overview|notification/i.test(s.heading || "")) ? (
         <Section title={t("jobDetail.overview", { defaultValue: "Overview" })}>
           <FactsGrid
             items={overviewFacts.map((f) => ({
@@ -321,7 +367,7 @@ export default function JobDetail({
         </Section>
       ) : null}
 
-      {eligibilityList.length > 0 || eligibilityRows.length > 0 ? (
+      {(eligibilityList.length > 0 || eligibilityRows.length > 0) && whoCanApply.length === 0 ? (
         <Section id="jd-eligibility" title={t("jobDetail.eligibilityDetails", { defaultValue: "Eligibility details" })}>
           <EligibilityBlock items={eligibilityList} rows={eligibilityRows} />
         </Section>
@@ -365,20 +411,33 @@ export default function JobDetail({
       {useStructured ? (
         <>
           <ContentSections
-            sections={bodySections.filter(
-              (s) =>
-                !/full details are being verified/i.test((s.paragraphs || []).join(" ")) &&
-                !/verification information/i.test(s.heading || "") &&
-                !/^faqs?$/i.test(s.heading || "") &&
-                !/frequently\s+asked/i.test(s.heading || "") &&
-                !(/application\s*fee|exam\s*fee/i.test(s.heading || "") && feeEntries.length > 0) &&
-                !(/important\s*dates/i.test(s.heading || "") && dateEntries.length > 0) &&
-                !(/vacancy/i.test(s.heading || "") && vacancyRows.length > 0)
-            )}
+            sections={bodySections
+              .filter(
+                (s) =>
+                  !/full details are being verified/i.test((s.paragraphs || []).join(" ")) &&
+                  !/verification information/i.test(s.heading || "") &&
+                  !/^faqs?$/i.test(s.heading || "") &&
+                  !/frequently\s+asked/i.test(s.heading || "") &&
+                  !(/application\s*fee|exam\s*fee/i.test(s.heading || "") && feeEntries.length > 0) &&
+                  !(/important\s*dates/i.test(s.heading || "") && dateEntries.length > 0) &&
+                  !(/vacancy/i.test(s.heading || "") && vacancyRows.length > 0) &&
+                  !(/age\s*limit/i.test(s.heading || "") && showPostAge) &&
+                  !(hasFullQualification && /eligibility/i.test(s.heading || ""))
+              )
+              .map((s) =>
+                /^overview$/i.test(s.heading || "")
+                  ? {
+                      ...s,
+                      heading: t("jobDetail.officialNotification", {
+                        defaultValue: "Official notification",
+                      }),
+                    }
+                  : s
+              )}
             skipDateTables
             actionUrls={actionUrls}
           />
-          {!bodySections.some((s) => /selection/i.test(s.heading || "")) && view.selection?.length > 0 ? (
+          {!hasNoticeBody && !bodySections.some((s) => /selection/i.test(s.heading || "")) && view.selection?.length > 0 ? (
             <Section title={t("jobDetail.selectionProcess")}>
               <ol className="job-detail-steps">
                 {view.selection.map((step, i) => (
@@ -387,7 +446,8 @@ export default function JobDetail({
               </ol>
             </Section>
           ) : null}
-          {!bodySections.some((s) => /how\s*to\s*apply|application\s+procedure/i.test(s.heading || "")) &&
+          {!hasNoticeBody &&
+          !bodySections.some((s) => /how\s*to\s*apply|application\s+procedure/i.test(s.heading || "")) &&
           view.howApply?.length > 0 ? (
             <Section title={t("jobDetail.howToApply")}>
               <ol className="job-detail-steps">

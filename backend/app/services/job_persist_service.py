@@ -140,7 +140,14 @@ class JobPersistService:
         dept = clean_plain_text(normalized.get("dept") or normalized.get("organization")) or None
         published_at = _upsert_published_at(normalized)
         source_url = _resolve_source_url(normalized, apply_url)
-        source_code = str(normalized.get("source") or normalized.get("source_code") or "").strip()
+        detail_for_source = normalized.get("detail") if isinstance(normalized.get("detail"), dict) else {}
+        source_code = str(
+            normalized.get("source")
+            or normalized.get("source_code")
+            or detail_for_source.get("source")
+            or detail_for_source.get("source_code")
+            or ""
+        ).strip()
         source_id = None
         if source_code:
             source_id = (
@@ -232,6 +239,10 @@ class JobPersistService:
             published_to_site = False
 
         detail_blob = dict(normalized.get("detail") or {})
+        for key in ("application_fee", "how_to_apply", "selection_process"):
+            text_value = clean_plain_text(normalized.get(key))
+            if text_value and not detail_blob.get(key):
+                detail_blob[key] = text_value
         post_name = clean_plain_text(normalized.get("post_name")) or None
         if post_name:
             detail_blob["post_name"] = post_name
@@ -325,7 +336,7 @@ class JobPersistService:
             "source_evidence": row["source_evidence"],
             "review_reasons": row["review_reasons"],
             "source_url": row["source_url"],
-            "source_id": row["source_id"],
+            "source_id": row["source_id"] or Job.source_id,
             "source_domain": row["source_domain"],
             "confidence_score": row["confidence_score"],
             "publication_confidence": preserve_gate_value(
@@ -365,6 +376,8 @@ class JobPersistService:
                 python_updates.pop("vacancies", None)
             elif row["last_date"] is None:
                 python_updates.pop("last_date", None)
+            if not row["source_id"]:
+                python_updates.pop("source_id", None)
             for key, value in python_updates.items():
                 setattr(persisted_job, key, value)
             await session.flush()

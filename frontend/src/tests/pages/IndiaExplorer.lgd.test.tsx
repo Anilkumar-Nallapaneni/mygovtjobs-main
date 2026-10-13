@@ -12,6 +12,7 @@ import * as api from '@/lib/indiaApi';
 import { getExplorerState } from '@/data/india/indiaExplorer';
 
 vi.mock('@/components/Maps/IndiaMap/IndiaMap', () => ({ IndiaMap: () => <div aria-label="India map" /> }));
+vi.mock('@/hooks/useLiveJobs', () => ({ useLiveJobs: () => ({ jobs: [], loading: false }) }));
 vi.mock('@/lib/indiaApi', () => ({
   fetchIndiaOverview: vi.fn(), fetchIndiaStates: vi.fn(), fetchIndiaState: vi.fn(),
   fetchIndiaDistricts: vi.fn(), fetchIndiaDistrictDirectory: vi.fn(), fetchIndiaDistrict: vi.fn(),
